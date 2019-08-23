@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce3e3e4baeaa351c5ed1d9e5ca2c03631c3fce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cb7be64089a55e7b653fcd6272219abba311af8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750110"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960799"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2-Schnittstelle
 
-Enthält Methoden, die die Funktionen "ICorDebugCode" erweitern.  
+Stellt Methoden bereit, mit denen die Funktionen von "ICorDebugCode" erweitert werden.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -37,14 +37,14 @@ Enthält Methoden, die die Funktionen "ICorDebugCode" erweitern.
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

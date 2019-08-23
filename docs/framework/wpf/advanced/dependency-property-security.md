@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940838"
 ---
 # <a name="dependency-property-security"></a>Sicherheit von Abhängigkeitseigenschaften
 Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschaften betrachtet werden. Die Art des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems verhindert die Möglichkeit von Sicherheitsgarantien in Bezug auf einen Abhängigkeitseigenschaftswert.  
@@ -29,7 +29,7 @@ Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschafte
  Bei einer benutzerdefinierten Abhängigkeits Eigenschaft können Sie die-Eigenschaft als schreibgeschützte Abhängigkeits Eigenschaft registrieren. Dies stellt eine effektive Methode dar, um zu verhindern, dass eine Eigenschaft von allen Personen festgelegt wird, die <xref:System.Windows.DependencyPropertyKey> keinen Verweis auf die für diese Eigenschaft enthalten. Weitere Informationen finden Sie unter [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Das Deklarieren eines <xref:System.Windows.DependencyProperty> privaten Bezeichnerfelds ist nicht unzulässig und kann verwendet werden, um den sofort verfügbar gemachten Namespace einer benutzerdefinierten Klasse zu verringern. eine solche Eigenschaft sollte jedoch nicht als "Privat" betrachtet werden, wie die Common Language. Lauf Zeitdefinitionen (Common Language Runtime, CLR) definieren diese Zugriffsebene aus den im nächsten Abschnitt beschriebenen Gründen.  
+> Das Deklarieren eines <xref:System.Windows.DependencyProperty> privaten Bezeichnerfelds ist nicht unzulässig und kann verwendet werden, um den sofort verfügbar gemachten Namespace einer benutzerdefinierten Klasse zu verringern. eine solche Eigenschaft sollte jedoch nicht als "Privat" betrachtet werden, wie die Common Language. Lauf Zeitdefinitionen (Common Language Runtime, CLR) definieren diese Zugriffsebene aus den im nächsten Abschnitt beschriebenen Gründen.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Offenlegen des Eigenschaftensystems von Abhängigkeitseigenschaften  

@@ -2,12 +2,12 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772332"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933052"
 ---
 # <a name="nettcp"></a>\<net.tcp>
 Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, der ermöglicht, dass mehrere Prozesse den gleichen TCP-Anschluss nutzen.  
@@ -52,29 +52,29 @@ Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, de
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`listenBacklog`|Eine ganze Zahl, die den Höchstwert für ausstehenden Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden, aber noch nicht auf Windows Communication Foundation (WCF)-Dienste weitergeleitet werden. Der Standard ist 10.|  
-|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist&amp;#160;2.|  
+|`listenBacklog`|Eine ganze Zahl, die die maximale Anzahl ausstehender Verbindungen angibt, die von der freigegebenen Verbindung angenommen werden, aber noch nicht an Windows Communication Foundation (WCF)-Dienste weitergeleitet werden. Der Standard ist 10.|  
+|`maxPendingAccepts`|Eine ganze Zahl, die den Höchstwert für ausstehende gleichzeitig annehmende Threads am überwachenden Endpunkt für den Freigabedienst festlegt. Der Standardwert ist&#160;2.|  
 |`MaxPendingConnections`|Die maximale Anzahl von Verbindungen, die für einen Listener darauf warten können, von der Anwendung angenommen zu werden. Wenn dieser Kontingentwert überstiegen wird, werden neue eingehende Verbindungen gelöscht, statt weiter auf die Annahme zu warten. Verbindungsfunktionen, wie Nachrichtensicherheit, können dazu führen, dass ein Client mehr als eine Verbindung öffnet. Dienstadministratoren sollten diese zusätzlichen Verbindungen bei der Einrichtung des Kontingentwerts berücksichtigen. Der Standard ist 10.|  
 |`receiveTimeout`|Eine <xref:System.TimeSpan>, die das Timeout für das Lesen der Rahmendaten und das Ausführen der Verbindungsverteilung der zugrunde liegenden Verbindungen angibt. Der Standardwert ist "00:00:10".|  
-|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der anschlussfreigabedienst den Dienst Microsoft Teredo verwendet, für das Lauschen an TCP-Anschlüssen für WCF-Dienste. Die Standardeinstellung ist `false`.|  
+|`teredoEnabled`|Ein boolescher Wert, der angibt, ob der Port Freigabe Dienst den Microsoft Teredo-Dienst verwendet, um im Auftrag von WCF-Diensten TCP-Ports zu lauschen. Die Standardeinstellung ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Eine Auflistung von Konfigurationselementen, enthalten eine `securityIdentifier` Attribut, um Benutzerkonten für Prozesse angeben, die WCF-Dienste hosten, und denen Verbindungszugriff auf den Freigabedienst gewährt wurde.|  
+|[\<allowAccounts>](allowaccounts.md)|Eine Auflistung von Konfigurationselementen, die ein `securityIdentifier` -Attribut zum Angeben von Benutzerkonten für Prozesse enthalten, die WCF-Dienste hosten und Verbindungs Zugriff auf den Freigabe Dienst erhalten.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Enthält Konfigurationseinstellungen für den Listenerprozess SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zur Anschlussfreigabe finden Sie unter [Net.TCP Port Sharing](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Um zu verstehen, wie der anschlussfreigabedienst den Dienst zu konfigurieren, finden Sie unter [konfigurieren den Net.TCP-Portfreigabedienst](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
+ Weitere Informationen zur Port Freigabe finden Sie unter [net. TCP-Port Freigabe](../../../wcf/feature-details/net-tcp-port-sharing.md). Informationen zum Konfigurieren des Port Freigabe diensdienstanbieter finden Sie unter [Konfigurieren des net. TCP-Port Freigabe Dienstanbieter](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Net.TCP-Portfreigabe](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Net.TCP-Portfreigabe](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Konfigurieren des Net.TCP-Portfreigabediensts](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

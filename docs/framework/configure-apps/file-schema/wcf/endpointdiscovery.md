@@ -2,12 +2,12 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919047"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.  
@@ -42,27 +42,27 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|enabled|Ein boolescher Wert, der angibt, ob die ermittelbarkeit für diesen Endpunkt aktiviert ist. Die Standardeinstellung ist `false`.|  
+|aktiviert|Ein boolescher Wert, der angibt, ob die Auffindbarkeit für diesen Endpunkt aktiviert ist. Die Standardeinstellung ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Eine Auflistung von Bereichs-URIs für den Endpunkt. Einem Endpunkt können mehrere Bereichs-URIs zugeordnet werden.|  
-|[\<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [von \<EndpointDiscovery >]|Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.|  
-|\<types>|Eine Auflistung von Schnittstellen, nach denen gesucht werden soll.|  
+|[\<Bereiche >](scopes.md)|Eine Auflistung von Bereichs-URIs für den Endpunkt. Einem Endpunkt können mehrere Bereichs-URIs zugeordnet werden.|  
+|Erweiterungen > [von \<endpointdiscovery >] [ \<](extensions.md)|Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.|  
+|\<Typen >|Eine Auflistung von Schnittstellen, nach denen gesucht werden soll.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
 |||  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Hinzufügung zur Verhaltenskonfiguration des Endpunkts und bei Festlegen des `enabled`-Attributs auf `true` aktiviert dieses Konfigurationselement seine Ermittelbarkeit. Darüber hinaus können Sie die [ \<Bereiche >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)untergeordnetes Element angeben benutzerdefinierter Bereichs-Uris, die verwendet werden kann, um Dienstendpunkte während der Abfrage filtern als auch die [ \<Extensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) untergeordnetes Element, um benutzerdefinierte Metadaten anzugeben, die zusammen mit den standardmäßigen sichtbaren Metadaten (EPR, ContractTypeName, BindingName, Scope und ListenURI) veröffentlicht werden sollen.  
+ Bei Hinzufügung zur Verhaltenskonfiguration des Endpunkts und bei Festlegen des `enabled`-Attributs auf `true` aktiviert dieses Konfigurationselement seine Ermittelbarkeit. Außerdem können Sie die [ \<Bereiche >](scopes.md)untergeordneten Elements verwenden, um benutzerdefinierte Bereichs-URIs anzugeben, die verwendet werden können, um Dienst Endpunkte während der Abfrage zu filtern, sowie die [ \<Erweiterungen >](extensions.md) untergeordneten Elements, um benutzerdefinierte Elemente anzugeben. Metadaten, die zusammen mit den standardmäßigen sichtbaren Metadaten (EPR, "Kontoname", "bindingName", "Scope" und "ListenUri") veröffentlicht werden sollen.  
   
- Dieses Konfigurationselement ist abhängig von der [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element, das der dienststeuerungs-Ebene für die Auffindbarkeit bereitstellt. Dies bedeutet, dass die Einstellungen dieses Elements ignoriert werden, wenn [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) nicht in der Konfiguration vorhanden ist.  
+ Dieses Konfigurationselement ist vom Service [ \<Discovery->](servicediscovery.md) Element abhängig, das die serviservimebene Kontrolle über die Auffindbarkeit bereitstellt. Dies bedeutet, dass die Einstellungen dieses Elements ignoriert werden, wenn [ \<Service Discovery >](servicediscovery.md) nicht in der Konfiguration vorhanden ist.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Konfigurationsbeispiel werden Filterbereiche und Erweiterungsmetadaten angegeben, die für einen Endpunkt veröffentlicht werden sollen.  

@@ -11,27 +11,27 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd525ea5a295411e509f3bc37285675d15a8c4f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930050"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>Rückgabewerte für die CStr-Funktion (Visual Basic)
-Die folgende Tabelle beschreibt die Rückgabewerte für `CStr` für verschiedene Datentypen der `expression`.  
+In der folgenden Tabelle werden die Rückgabewerte `CStr` für unterschiedliche Datentypen `expression`von beschrieben.  
   
-|Wenn `expression` Typ ist|`CStr`-Rückgaben|  
+|Wenn `expression` der Typ ist|`CStr`-Rückgaben|  
 |-----------------------------|--------------------|  
-|[Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Eine Zeichenfolge, die mit "True" oder "False".|  
-|[Date-Datentyp](../../../visual-basic/language-reference/data-types/date-data-type.md)|Eine Zeichenfolge mit einem `Date` Wert (Datum und Uhrzeit), in dem kurzen Datumsformat Ihres Systems.|  
-|[Numerische Datentypen](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Eine Zeichenfolge, die die Anzahl darstellt.|  
+|[Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Eine Zeichenfolge, die "true" oder "false" enthält.|  
+|[Date-Datentyp](../../../visual-basic/language-reference/data-types/date-data-type.md)|Eine Zeichenfolge mit `Date` einem Wert (Datum und Uhrzeit) im kurzen Datumsformat Ihres Systems.|  
+|[Numerische Datentypen](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Eine Zeichenfolge, die die Zahl darstellt.|  
   
-## <a name="cstr-and-date"></a>Datum und die CStr  
- Die `Date` geben immer sowohl Datums-und Uhrzeitinformationen enthält. Für Zwecke der typkonvertierung berücksichtigt Visual Basic 1/1/0001 (1. Januar des Jahres 1), werden eine *neutrale Wert* für das Datum und 00:00:00 (Mitternacht) einen neutralen Wert für die Zeit sein. `CStr` umfasst nicht neutrale Werte in die resultierende Zeichenfolge. Wenn Sie konvertieren, z. B. `#January 1, 0001 9:30:00#` in eine Zeichenfolge, das Ergebnis "9:30:00 Uhr"; die Datumsinformationen unterdrückt wird. Die Datumsinformationen ist jedoch weiterhin vorhanden, in der ursprünglichen `Date` Wert und kann mit Funktionen wiederhergestellt werden, z. B. <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr und Datum  
+ Der `Date` -Typ enthält immer Datums-und Uhrzeit Informationen. Für den Zweck der Typkonvertierung berücksichtigt Visual Basic 1/1/0001 (1. Januar des Jahres 1) als *neutralen Wert* für das Datum und 00:00:00 (Mitternacht) als neutralen Wert für die Zeit. `CStr`schließt keine neutralen Werte in die resultierende Zeichenfolge ein. Wenn Sie z. b. `#January 1, 0001 9:30:00#` in eine Zeichenfolge konvertieren, ist das Ergebnis "9:30:00 am"; die Datumsinformationen werden unterdrückt. Die Datumsinformationen sind jedoch weiterhin im ursprünglichen `Date` Wert vorhanden und können mit Funktionen <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>wie wieder hergestellt werden.  
   
 > [!NOTE]
->  Die `CStr` Funktion führt die Konvertierung, die basierend auf den Einstellungen der aktuellen Kultur für die Anwendung. Um die Zeichenfolgendarstellung einer Zahl in einer bestimmten Kultur zu erhalten, verwenden Sie der Anzahl der `ToString(IFormatProvider)` Methode. Verwenden Sie z. B. <xref:System.Double.ToString%2A?displayProperty=nameWithType> beim Konvertieren eines Werts vom Typ `Double` zu einem `String`.  
+> Die `CStr` -Funktion führt die Konvertierung basierend auf den aktuellen Kultur Einstellungen für die Anwendung aus. Um die Zeichen folgen Darstellung einer Zahl in einer bestimmten Kultur zu erhalten, verwenden Sie die `ToString(IFormatProvider)` -Methode der Zahl. Verwenden <xref:System.Double.ToString%2A?displayProperty=nameWithType> Sie beispielsweise, wenn Sie einen Wert vom `Double` Typ in `String`einen-Wert umrechnen.  
   
 ## <a name="see-also"></a>Siehe auch
 

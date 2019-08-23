@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966546"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Vorgehensweise: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms
-Es ist manchmal hilfreich, um jeden Knoten in einer Windows Forms überprüfen <xref:System.Windows.Forms.TreeView> Steuerelement, um einige Berechnungen für die Knotenwerte durchzuführen. Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.  
+Es ist manchmal hilfreich, jeden Knoten in einem Windows Forms <xref:System.Windows.Forms.TreeView> -Steuerelement zu untersuchen, um eine Berechnung der Knotenwerte auszuführen. Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.  
   
- Jede <xref:System.Windows.Forms.TreeNode> Objekt in einer Strukturansicht verfügt über Eigenschaften, die Sie verwenden können, in der Strukturansicht navigieren: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, und <xref:System.Windows.Forms.TreeNode.Parent%2A>. Der Wert des der <xref:System.Windows.Forms.TreeNode.Parent%2A> -Eigenschaft ist der übergeordnete Knoten des aktuellen Knotens. Die untergeordneten Knoten des aktuellen Knotens, sofern vorhanden, finden Sie der <xref:System.Windows.Forms.TreeNode.Nodes%2A> Eigenschaft. Die <xref:System.Windows.Forms.TreeView> -Steuerelement selbst verfügt über die <xref:System.Windows.Forms.TreeView.TopNode%2A> Eigenschaft, die den Stammknoten der gesamten Strukturansicht.  
+ Jedes <xref:System.Windows.Forms.TreeNode> Objekt in einer Strukturansicht verfügt über Eigenschaften, mit denen Sie in der Strukturansicht navigieren <xref:System.Windows.Forms.TreeNode.FirstNode%2A>können <xref:System.Windows.Forms.TreeNode.LastNode%2A>: <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,, <xref:System.Windows.Forms.TreeNode.Parent%2A>und. Der Wert <xref:System.Windows.Forms.TreeNode.Parent%2A> der-Eigenschaft ist der übergeordnete Knoten des aktuellen Knotens. Die untergeordneten Knoten des aktuellen Knotens (sofern vorhanden) werden in der <xref:System.Windows.Forms.TreeNode.Nodes%2A> -Eigenschaft aufgelistet. Das <xref:System.Windows.Forms.TreeView> -Steuerelement verfügt <xref:System.Windows.Forms.TreeView.TopNode%2A> über die-Eigenschaft, die den Stamm Knoten der gesamten Strukturansicht enthält.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>So durchlaufen Sie alle Knoten des TreeView-Steuerelements  
   
@@ -28,7 +28,7 @@ Es ist manchmal hilfreich, um jeden Knoten in einer Windows Forms überprüfen <
   
 2. Rufen Sie die Prozedur auf.  
   
-     Das folgende Beispiel zeigt, wie jede gedruckt <xref:System.Windows.Forms.TreeNode> des Objekts <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft:  
+     Im folgenden Beispiel wird gezeigt, wie die <xref:System.Windows.Forms.TreeNode> -Eigenschaft <xref:System.Windows.Forms.TreeNode.Text%2A> jedes-Objekts gedruckt wird:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ Es ist manchmal hilfreich, um jeden Knoten in einer Windows Forms überprüfen <
 ## <a name="see-also"></a>Siehe auch
 
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
-- [Rekursive Prozeduren](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Rekursive Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

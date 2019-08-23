@@ -2,17 +2,17 @@
 title: Benutzerdefinierte SQL-CLR-Typenzuordnungen
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037049"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945048"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Benutzerdefinierte SQL-CLR-Typenzuordnungen
 Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird bei der Verwendung des SQLMetal-Befehlszeilentools oder des Object Relational Designer (O/R-Designer) automatisch festgelegt.  
   
- Wenn kein benutzerdefiniertes Mapping ausgeführt wird, weisen diese Tools replikationsdatentyp-Zuordnungen wie in beschrieben [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Wenn Sie von den Standardeinstellungen abweichende Typmappings benötigen, müssen die Typmappings angepasst werden.  
+ Wenn keine angepasste Zuordnung durchgeführt wird, weisen diese Tools standardmäßige Typzuordnungen zu, wie in [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)beschrieben. Wenn Sie von den Standardeinstellungen abweichende Typmappings benötigen, müssen die Typmappings angepasst werden.  
   
  Beim Anpassen der Typmappings wird empfohlen, die Änderungen in einer vorübergehend verwendeten DBML-Datei vorzunehmen. Anschließend sollte die benutzerdefinierte DBML-Datei beim Erstellen des Codes und der Mappingdateien mit SQLMetal oder O/R-Designer verwendet werden.  
   
@@ -21,10 +21,10 @@ Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird be
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>Anpassung mit SQLMetal oder O/R-Designer  
  Mit SQLMetal und O/R-Designer kann automatisch ein Objektmodell erstellt werden, das die Typmappinginformationen innerhalb oder außerhalb der Codedatei enthält. Da diese Dateien von SQLMetal oder O/R-Designer überschrieben werden, wird beim erneuten Erstellen der Mappings für das Festlegen benutzerdefinierter Typmappings empfohlen, eine DBML-Datei anzupassen.  
   
- Um Typmappings mit SQLMetal oder O/R-Designer anzupassen, muss zunächst eine DBML-Datei erstellt werden. Anschließend (und noch vor dem Erstellen der Code- oder Mappingdatei) muss die DBML-Datei bearbeitet werden, um die gewünschten Typmappings festzulegen. In SQLMetal müssen die Attribute `Type` und `DbType` in der DBML-Datei manuell geändert werden, um die Anpassungen am Typmapping vorzunehmen. In O/R-Designer können Sie die Änderungen im Designer vornehmen. Weitere Informationen zur Verwendung von O/R-Designer finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Um Typmappings mit SQLMetal oder O/R-Designer anzupassen, muss zunächst eine DBML-Datei erstellt werden. Anschließend (und noch vor dem Erstellen der Code- oder Mappingdatei) muss die DBML-Datei bearbeitet werden, um die gewünschten Typmappings festzulegen. In SQLMetal müssen die Attribute `Type` und `DbType` in der DBML-Datei manuell geändert werden, um die Anpassungen am Typmapping vorzunehmen. In O/R-Designer können Sie die Änderungen im Designer vornehmen. Weitere Informationen zur Verwendung des O/R-Designers finden Sie unter [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
->  Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Überprüfen Sie sorgfältig die Run-Time Type Mapping Laufzeitverhaltens-Matrix in [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) bevor Sie die Anpassungen vornehmen.  
+> Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Überprüfen Sie sorgfältig die Lauf Zeit Verhaltens-Matrix für die Typzuordnung in der [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) , bevor Sie Anpassungen vornehmen.  
   
  Damit Ihre Anpassungen der Typmappings in SQLMetal oder O/R-Designer erkannt werden, muss sichergestellt werden, dass diese Tools über den Pfad zu Ihrer benutzerdefinierten DBML-Datei verfügen, wenn Sie Ihre Code- oder externe Mappingdatei erstellen. Obwohl dies für die Anpassung des Typmappings nicht erforderlich ist, wird empfohlen, die Typmappinginformationen stets von der Codedatei zu trennen und eine zusätzliche externe Typmappingdatei zu erstellen. Dadurch erhalten Sie eine gewisse Flexibilität, da die Codedatei nicht erneut kompiliert werden muss.  
   

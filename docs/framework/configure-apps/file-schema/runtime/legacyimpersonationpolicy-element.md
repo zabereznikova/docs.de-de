@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663626"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927327"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<Legacy-Identitätswechsel Richtlinien-> Element
 Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, unabhängig von den Floweinstellungen für den Ausführungskontext im aktuellen Thread.  
@@ -63,7 +63,7 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
  Beginnend mit dem .NET Framework 2,0 können Sie das `<legacyImpersonationPolicy>` -Element verwenden, um anzugeben, dass <xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte fließt.  
   
 > [!NOTE]
->  Der Common Language Runtime (CLR) kennt Identitätswechsel Vorgänge, die nur mit verwaltetem Code ausgeführt werden, nicht den Identitätswechsel außerhalb von verwaltetem Code, wie z. b. durch Platt Form Aufrufe zu nicht verwaltetem Code oder durch direkte Aufrufe von Win32-Funktionen. Nur verwaltete <xref:System.Security.Principal.WindowsIdentity> Objekte können über asynchrone Punkte hinweg fließen, es `alwaysFlowImpersonationPolicy` sei denn, das Element wurde auf`<alwaysFlowImpersonationPolicy enabled="true"/>`true () festgelegt. Das Festlegen `alwaysFlowImpersonationPolicy` des-Elements auf true gibt an, dass die Windows-Identität immer über asynchrone Punkte hinweg verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde. Weitere Informationen zum Übertragen von nicht verwaltetem Identitätswechsel über asynchrone Punkte hinweg finden [ \<Sie unter alwaysFlowImpersonationPolicy > Element](alwaysflowimpersonationpolicy-element.md).  
+> Der Common Language Runtime (CLR) kennt Identitätswechsel Vorgänge, die nur mit verwaltetem Code ausgeführt werden, nicht den Identitätswechsel außerhalb von verwaltetem Code, wie z. b. durch Platt Form Aufrufe zu nicht verwaltetem Code oder durch direkte Aufrufe von Win32-Funktionen. Nur verwaltete <xref:System.Security.Principal.WindowsIdentity> Objekte können über asynchrone Punkte hinweg fließen, es `alwaysFlowImpersonationPolicy` sei denn, das Element wurde auf`<alwaysFlowImpersonationPolicy enabled="true"/>`true () festgelegt. Das Festlegen `alwaysFlowImpersonationPolicy` des-Elements auf true gibt an, dass die Windows-Identität immer über asynchrone Punkte hinweg verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde. Weitere Informationen zum Übertragen von nicht verwaltetem Identitätswechsel über asynchrone Punkte hinweg finden [ \<Sie unter alwaysFlowImpersonationPolicy > Element](alwaysflowimpersonationpolicy-element.md).  
   
  Sie können dieses Standardverhalten auf zwei verschiedene Arten ändern:  
   

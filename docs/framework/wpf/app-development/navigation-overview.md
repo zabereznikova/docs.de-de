@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817999"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964592"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 
@@ -106,7 +106,7 @@ Ein Markup <xref:System.Windows.Controls.Page> ist zum Anzeigen von Inhalten nü
 
 Damit eine Markup- und eine Code-Behind-Datei zusammenarbeiten können, ist die folgende Konfiguration erforderlich:
 
-- Im Markup muss das `Page` -Element das `x:Class` -Attribut enthalten. Wenn die Anwendung erstellt wird `x:Class` , bewirkt [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] das vorhanden sein von in der Markup Datei, dass `partial` eine Klasse erstellt, <xref:System.Windows.Controls.Page> die von abgeleitet wird und den Namen hat, `x:Class` der vom-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace Deklaration für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] das Schema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). Die generierte `partial` -Klasse `InitializeComponent`implementiert, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.
+- Im Markup muss das `Page` -Element das `x:Class` -Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden `x:Class` sein von in der Markup Datei, dass Microsoft Build Engine (MSBuild) `partial` eine Klasse erstellt, <xref:System.Windows.Controls.Page> die von abgeleitet wird und den Namen `x:Class` hat, der vom-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace Deklaration für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] das Schema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). Die generierte `partial` -Klasse `InitializeComponent`implementiert, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.
 
 - Bei Code-Behind muss die Klasse eine `partial` Klasse mit dem gleichen Namen sein, der im Markup durch das `x:Class` -Attribut angegeben ist, und Sie muss von <xref:System.Windows.Controls.Page>abgeleitet werden. Dadurch kann die Code-Behind-Datei mit der `partial` -Klasse verknüpft werden, die beim Erstellen der Anwendung für die Markup Datei generiert wird (siehe [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).
 
@@ -123,7 +123,7 @@ Wenn Sie über ein <xref:System.Windows.Controls.Page>verfügen, können Sie dor
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s erfordern einen gewissen Umfang an Anwendungsinfrastruktur, um in einem Browser gehostet zu werden. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ist die <xref:System.Windows.Application> -Klasse Teil einer Anwendungs Definition, die die erforderliche Anwendungs Infrastruktur festlegt (siehe [Übersicht über die Anwendungs Verwaltung](application-management-overview.md)).
 
-Eine Anwendungs Definition wird in der Regel unter Verwendung von Markup und Code Behind implementiert, wobei die Markup Datei als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` Element konfiguriert ist. Im folgenden finden Sie eine Anwendungs Definition für [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]eine.
+Eine Anwendungs Definition wird in der Regel unter Verwendung von Markup und Code Behind implementiert, wobei die Markup Datei als MSBuild`ApplicationDefinition` -Element konfiguriert ist. Im folgenden finden Sie eine Anwendungs Definition für [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]eine.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -322,7 +322,7 @@ Wie Sie sehen, gibt es viele Möglichkeiten zum Einleiten der Navigation. Wenn d
 
 - <xref:System.Windows.Navigation.NavigationService.LoadCompleted> Tritt ein, wenn der Inhalt, zu dem navigiert wurde, geladen und analysiert wird und mit dem Rendering begonnen wurde.
 
-- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>. Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:
+- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:
 
   - Sofort, falls sich das gewünschte Fragment im aktuellen Inhalt befindet.
 
@@ -527,7 +527,7 @@ Wenn Sie ein Cookie über Anwendungssitzungen speichern möchten, muss dem Cooki
 
 *NAME* `=` *WERT* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-Ein Cookie mit einem Ablaufdatum wird im Ordner "temporäre [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Internet Dateien" der aktuellen Installation gespeichert, bis das Cookie abläuft. Ein solches Cookie wird als *dauerhaftes Cookie* bezeichnet, da es über Anwendungs Sitzungen hinweg beibehalten wird.
+Ein Cookie mit einem Ablaufdatum wird im Ordner "temporäre Internet Dateien" der aktuellen Windows-Installation gespeichert, bis das Cookie abläuft. Ein solches Cookie wird als *dauerhaftes Cookie* bezeichnet, da es über Anwendungs Sitzungen hinweg beibehalten wird.
 
 Sie rufen sowohl Sitzungs-als auch persistente Cookies <xref:System.Windows.Application.GetCookie%2A> durch Aufrufen der- <xref:System.Uri> Methode ab, indem Sie die der Position übergeben, <xref:System.Windows.Application.SetCookie%2A> an der das Cookie mit der-Methode festgelegt wurde
 

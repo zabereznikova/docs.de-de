@@ -9,24 +9,24 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913003"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Vorgehensweise: Suchen von Assemblys mit DEVPATH
-Entwickler sollten sicherstellen, dass eine freigegebene Assembly, die sie erstellen mit mehreren Anwendungen funktioniert. Anstatt kontinuierlich platzieren die Assembly im globalen Assemblycache während des Entwicklungszyklus, kann Entwickler eine DEVPATH-Umgebungsvariable erstellen, die in das Ausgabeverzeichnis des Builds für die Assembly verweist.  
+Entwickler möchten möglicherweise sicherstellen, dass eine freigegebene Assembly, die Sie erstellen, mit mehreren Anwendungen ordnungsgemäß funktioniert. Anstatt die Assembly während des Entwicklungsprozesses ständig in den globalen Assemblycache zu versetzen, kann der Entwickler eine DEVPATH-Umgebungsvariable erstellen, die auf das Buildausgabeverzeichnis für die Assembly zeigt.  
   
- Nehmen wir beispielsweise an, dass Sie eine freigegebene Assembly, die mit dem Namen MySharedAssembly erstellen und das Ausgabeverzeichnis C:\MySharedAssembly\Debug ist. Sie können in der Variablen DEVPATH C:\MySharedAssembly\Debug einbinden. Sie müssen angeben, die [ \<DevelopmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) Element in der Computerkonfigurationsdatei. Dieses Element weist die common Language Runtime DEVPATH verwenden, um Assemblys zu suchen.  
+ Nehmen Sie beispielsweise an, dass Sie eine freigegebene Assembly namens MySharedAssembly erstellen und das Ausgabeverzeichnis c:\MySharedAssembly\Debug. Sie können "c:\MySharedAssembly\Debug" in der DEVPATH-Variablen ablegen. Anschließend müssen Sie das [ \<Element DevelopmentMode >](./file-schema/runtime/developmentmode-element.md) in der Computer Konfigurationsdatei angeben. Dieses Element teilt dem Common Language Runtime mit, DEVPATH zum Suchen nach Assemblys zu verwenden.  
   
- Die freigegebene Assembly muss von der Laufzeit erkannt werden.  Zum Angeben eines privaten Verzeichnisses für das Auflösen von Assembly-Verweise verwendet die [ \<codeBase > Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) oder [ \<probing > Element](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) in einer Konfigurationsdatei, wie in beschrieben [Angeben des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md).  Sie können auch die Assembly in einem Unterverzeichnis des Anwendungsverzeichnisses einfügen. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)(Seite möglicherweise auf Englisch).  
+ Die freigegebene Assembly muss von der Laufzeit erkannt werden können.  Um ein privates Verzeichnis zum Auflösen von Assemblyverweisen anzugeben, verwenden Sie das [ \<CodeBase->-Element](./file-schema/runtime/codebase-element.md) oder [ \<](./file-schema/runtime/probing-element.md) das Suchen >-Elements in einer Konfigurationsdatei, wie unter [angeben des Speicher Orts einer Assembly](specify-assembly-location.md)beschrieben.  Sie können die Assembly auch in einem Unterverzeichnis des Anwendungs Verzeichnisses platzieren. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)(Seite möglicherweise auf Englisch).  
   
 > [!NOTE]
->  Dies ist eine erweiterte Funktion, die nur für die Entwicklung vorgesehen.  
+> Dies ist eine erweiterte Funktion, die nur für die Entwicklung vorgesehen ist.  
   
- Das folgende Beispiel zeigt, wie Sie dazu führen, dass die Runtime sucht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben wird.  
+ Im folgenden Beispiel wird gezeigt, wie Sie bewirken, dass die Laufzeit Assemblys in Verzeichnissen sucht, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -38,11 +38,11 @@ Entwickler sollten sicherstellen, dass eine freigegebene Assembly, die sie erste
 </configuration>  
 ```  
   
- Diese Einstellung wird standardmäßig auf "false".  
+ Diese Einstellung ist standardmäßig auf false festgelegt.  
   
 > [!NOTE]
->  Verwenden Sie diese Einstellung nur zum Zeitpunkt der Entwicklung. Die Runtime überprüft nicht die Versionen auf Assemblys mit starkem Namen finden Sie in die DEVPATH. Sie verwendet einfach die erste Assembly gefundenen.  
+> Verwenden Sie diese Einstellung nur zur Entwicklungszeit. Die Laufzeit überprüft nicht die Versionen von Assemblys mit starkem Namen, die im DEVPATH gefunden werden. Es wird einfach die erste gefundene Assembly verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurieren von Apps mithilfe von Konfigurationsdateien](index.md)
+- [Konfigurieren von apps mithilfe von Konfigurationsdateien](index.md)

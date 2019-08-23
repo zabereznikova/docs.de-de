@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 197ab9dbc1ec85bf8961f60bb26496eab788e63f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee56b23b6d5fca6d0527d509c9b6a6fc6dd82336
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663692"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920781"
 ---
 # <a name="gccpugroup-element"></a>\<Gccpugroup-> Element
 
@@ -82,4 +82,4 @@ Im folgenden Beispiel wird das Aktivieren der Garbage Collection für mehrere CP
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [So deaktivieren Sie die parallele Garbage Collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

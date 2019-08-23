@@ -9,38 +9,38 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36066d6b2405051a3d35befffe53af8895e26220
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052923"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964834"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime-XAML-Syntax
-Einige Steuerelemente, z. B. <xref:System.Windows.Controls.Calendar> und <xref:System.Windows.Controls.DatePicker>, verfügen über Eigenschaften, mit denen die <xref:System.DateTime> Typ. Auch wenn Sie in der Regel ein Anfangsdatum oder eine Uhrzeit für diese Steuerelemente im CodeBehind zur Laufzeit angeben, können Sie ein Anfangsdatum oder eine Uhrzeit in XAML angeben. Der WPF XAML-Parser behandelt die Analyse von <xref:System.DateTime> Werte mithilfe einer integrierten XAML-Textsyntax. In diesem Thema wird beschrieben, die Einzelheiten der <xref:System.DateTime> XAML-Textsyntax.  
+Einige Steuerelemente, z <xref:System.Windows.Controls.Calendar> . <xref:System.Windows.Controls.DatePicker>b. und, verfügen über <xref:System.DateTime> Eigenschaften, die den-Typ verwenden. Auch wenn Sie in der Regel ein Anfangsdatum oder eine Uhrzeit für diese Steuerelemente im CodeBehind zur Laufzeit angeben, können Sie ein Anfangsdatum oder eine Uhrzeit in XAML angeben. Der WPF-XAML-Parser behandelt die <xref:System.DateTime> Analyse von Werten mithilfe einer integrierten XAML-Text Syntax. In diesem Thema werden die Besonderheiten der <xref:System.DateTime> XAML-Text Syntax beschrieben.  
 
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## <a name="when-to-use-datetime-xaml-syntax"></a>Verwenden von DateTime-XAML-Syntax  
- Das Festlegen von Datumsangaben in XAML ist nicht immer erforderlich und möglicherweise auch nicht erwünscht. Beispielsweise können Sie die <xref:System.DateTime.Now%2A?displayProperty=nameWithType> -Eigenschaft zum Initialisieren einer Datumsangabe zur Laufzeit ausgeführt wird oder Sie möglich aller Ihrer Datum Korrekturen für den Kalender im Code-Behind auf Grundlage der Benutzereingabe. Es gibt jedoch Szenarien unter Umständen Sie zum Programmieren von Datumsangaben in möchten einem <xref:System.Windows.Controls.Calendar> und <xref:System.Windows.Controls.DatePicker> in einer Steuerelementvorlage. Die <xref:System.DateTime> XAML-Syntax für diese Szenarien verwendet werden dürfen.  
+ Das Festlegen von Datumsangaben in XAML ist nicht immer erforderlich und möglicherweise auch nicht erwünscht. Beispielsweise können Sie die <xref:System.DateTime.Now%2A?displayProperty=nameWithType> -Eigenschaft verwenden, um ein Datum zur Laufzeit zu initialisieren, oder Sie können alle Datums Anpassungen für einen Kalender im Code-Behind basierend auf Benutzereingaben durchführen. Es gibt jedoch Szenarios, in denen Sie möglicherweise Datumsangaben in einem <xref:System.Windows.Controls.Calendar> und <xref:System.Windows.Controls.DatePicker> in einer Steuerelement Vorlage hart codieren möchten. Die <xref:System.DateTime> XAML-Syntax muss für diese Szenarien verwendet werden.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>DateTime-XAML-Syntax als natives Verhalten  
- <xref:System.DateTime> ist eine Klasse, die in der CLR den Basisklassenbibliotheken definiert ist. Aufgrund der Art, die Basisklassenbibliotheken zum Rest der CLR beziehen, ist es nicht möglich, gelten <xref:System.ComponentModel.TypeConverterAttribute> auf die Klasse und verwendet einen Typkonverter zum Verarbeiten von Zeichenfolgen aus XAML und konvertieren sie <xref:System.DateTime> im Objektmodell zur Laufzeit. Es gibt keine `DateTimeConverter`-Klasse, die das Konvertierungsverhalten ermöglicht. Das in diesem Thema beschriebene Konvertierungsverhalten ist vielmehr ein natives Verhalten im WPF-XAML-Parser.  
+ <xref:System.DateTime>ist eine Klasse, die in den Basisklassen Bibliotheken der CLR definiert ist. Da sich die Basisklassen Bibliotheken auf den Rest der CLR beziehen, ist es nicht möglich, auf die Klasse <xref:System.ComponentModel.TypeConverterAttribute> anzuwenden und einen Typkonverter zu verwenden, um Zeichen folgen aus XAML zu verarbeiten und Sie <xref:System.DateTime> in das Laufzeitobjekt Modell zu konvertieren. Es gibt keine `DateTimeConverter`-Klasse, die das Konvertierungsverhalten ermöglicht. Das in diesem Thema beschriebene Konvertierungsverhalten ist vielmehr ein natives Verhalten im WPF-XAML-Parser.  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>Formatzeichenfolgen für DateTime-XAML-Syntax  
- Sie können angeben, das Format einer <xref:System.DateTime> mit einer Formatzeichenfolge. Formatzeichenfolgen formalisieren die Textsyntax, die zum Erstellen eines Werts verwendet werden kann. <xref:System.DateTime> Werte für die vorhandenen WPF-in der Regel nur verwenden, die Datumskomponenten von Steuerelemente <xref:System.DateTime> und nicht die Zeitkomponenten.  
+ Sie können das Format <xref:System.DateTime> eines mit einer Format Zeichenfolge angeben. Formatzeichenfolgen formalisieren die Textsyntax, die zum Erstellen eines Werts verwendet werden kann. <xref:System.DateTime>Werte für die vorhandenen WPF-Steuerelemente verwenden im Allgemeinen nur die <xref:System.DateTime> Datums Komponenten von und nicht die Zeit Komponenten.  
   
- Beim Angeben einer <xref:System.DateTime> in XAML, können Sie mithilfe eines Formatzeichenfolgen sind austauschbar.  
+ Wenn Sie in <xref:System.DateTime> XAML angeben, können Sie eine beliebige Format Zeichenfolge verwenden.  
   
- Sie können auch Formate und Formatzeichenfolgen verwenden, die in diesem Thema nicht speziell beschrieben werden. Technisch gesehen das XAML für eine beliebige <xref:System.DateTime> -Wert, der angegeben ist, und klicken Sie dann vom WPF XAML-Parser analysiert verwendet einen internen Aufruf für <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, daher können Sie eine beliebige Zeichenfolge, die vom akzeptiert <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> als Eingabe für Ihre XAML. Weitere Informationen finden Sie unter <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.  
+ Sie können auch Formate und Formatzeichenfolgen verwenden, die in diesem Thema nicht speziell beschrieben werden. Technisch gesehen verwendet der XAML- <xref:System.DateTime> Code für einen beliebigen Wert, der vom WPF-XAML-Parser analysiert und dann analysiert wird <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, einen internen-Befehl, daher können Sie <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> jede von akzeptierte Zeichenfolge für Ihre XAML-Eingabe verwenden. Weitere Informationen finden Sie unter <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Die DateTime XAML-Syntax verwendet immer `en-us` als die <xref:System.Globalization.CultureInfo> für die native Konvertierung. Dies wird nicht beeinflusst, indem <xref:System.Windows.FrameworkElement.Language%2A> Wert oder `xml:lang` Wert in das XAML, da die typkonvertierung für XAML-Attributebene ohne diesen Kontext funktioniert. Versuchen Sie nicht, die hier angezeigten Formatzeichenfolgen aufgrund von kulturellen Abweichungen, wie z. B. der Reihenfolge von Tag und Monat, zu interpolieren. Die hier angezeigten Formatzeichenfolgen sind die genauen Formatzeichenfolgen für die Analyse von XAML unabhängig von anderen Kultureinstellungen.  
+> Die DateTime-XAML-Syntax `en-us` verwendet immer <xref:System.Globalization.CultureInfo> als für die systemeigene Konvertierung. Dies wird nicht durch <xref:System.Windows.FrameworkElement.Language%2A> den Wert oder `xml:lang` Wert in der XAML beeinflusst, da die Typkonvertierung auf Attribut Ebene ohne diesen Kontext erfolgt. Versuchen Sie nicht, die hier angezeigten Formatzeichenfolgen aufgrund von kulturellen Abweichungen, wie z. B. der Reihenfolge von Tag und Monat, zu interpolieren. Die hier angezeigten Formatzeichenfolgen sind die genauen Formatzeichenfolgen für die Analyse von XAML unabhängig von anderen Kultureinstellungen.  
   
- Den folgenden Abschnitten werden einige der gängigsten <xref:System.DateTime> Formatzeichenfolgen.  
+ In den folgenden Abschnitten werden einige der allgemeinen <xref:System.DateTime> -Format Zeichenfolgen beschrieben.  
   
 ### <a name="short-date-pattern-d"></a>Kurzes Datumsmuster („d“)  
- Das folgende Beispiel zeigt das kurze Datumsformat für eine <xref:System.DateTime> in XAML:  
+ Das folgende Beispiel zeigt das kurze Datumsformat für <xref:System.DateTime> ein in XAML:  
   
  `M/d/YYYY`  
   
@@ -53,7 +53,7 @@ Einige Steuerelemente, z. B. <xref:System.Windows.Controls.Calendar> und <xref:S
  Weitere Informationen finden Sie unter <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>.  
   
 ### <a name="sortable-datetime-pattern-s"></a>Sortierbares DateTime-Muster („s“)  
- Das folgende Beispiel zeigt das sortierbare <xref:System.DateTime> Muster in XAML:  
+ Der folgende Code zeigt das Sortier <xref:System.DateTime> Bare Muster in XAML:  
   
  `yyyy'-'MM'-'dd'T'HH':'mm':'ss`  
   
@@ -62,7 +62,7 @@ Einige Steuerelemente, z. B. <xref:System.Windows.Controls.Calendar> und <xref:S
  `2010-06-01T000:00:00`  
   
 ### <a name="rfc1123-pattern-r"></a>RFC1123-Muster („r“)  
- Das RFC1123-Muster ist hilfreich, da es sich um eine Zeichenfolgeneingabe aus anderen Datumsgeneratoren handeln könnte, die aus kulturinvarianten Gründen auch das RFC1123-Muster verwenden. Das folgende Beispiel zeigt das RFC1123 <xref:System.DateTime> Muster in XAML:  
+ Das RFC1123-Muster ist hilfreich, da es sich um eine Zeichenfolgeneingabe aus anderen Datumsgeneratoren handeln könnte, die aus kulturinvarianten Gründen auch das RFC1123-Muster verwenden. Der folgende Code zeigt das <xref:System.DateTime> RFC1123-Muster in XAML:  
   
  `ddd, dd MMM yyyy HH':'mm':'ss 'UTC'`  
   
@@ -71,7 +71,7 @@ Einige Steuerelemente, z. B. <xref:System.Windows.Controls.Calendar> und <xref:S
  `Mon, 01 Jun 2010 00:00:00 UTC`  
   
 ### <a name="other-formats-and-patterns"></a>Andere Formate und Muster  
- Wie zuvor erwähnt ein <xref:System.DateTime> in XAML als eine beliebige Zeichenfolge, die akzeptable angegeben werden als Eingabe für <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Dies schließt andere formalisierte Formate (z. B. <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>), und Formate, die nicht als ein bestimmtes formalisiert werden <xref:System.Globalization.DateTimeFormatInfo> Formular. Z. B. das Formular `YYYY/mm/dd` ist akzeptabel, als Eingabe für <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. In diesem Thema werden nicht alle Formate beschrieben, die funktionieren, sondern das kurze Datumsmuster als Standardverfahren empfohlen werden.  
+ Wie bereits erwähnt, kann <xref:System.DateTime> ein in XAML als eine beliebige Zeichenfolge angegeben werden, die als Eingabe <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>für zulässig ist. Dies schließt andere formalisierte Formate (z <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>. b.) und Formate ein, die nicht als bestimmtes <xref:System.Globalization.DateTimeFormatInfo> Formular formalisiert werden. Beispielsweise ist das Formular `YYYY/mm/dd` als Eingabe für <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>zulässig. In diesem Thema werden nicht alle Formate beschrieben, die funktionieren, sondern das kurze Datumsmuster als Standardverfahren empfohlen werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

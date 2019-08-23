@@ -2,21 +2,21 @@
 title: 'Vorgehensweise: Dynamisches Update'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773048"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911154"
 ---
 # <a name="how-to-dynamic-update"></a>Vorgehensweise: Dynamisches Update
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um die Routingkonfiguration zu erstellen und dynamisch zu aktualisieren. In diesem Beispiel wird die ursprüngliche Routingkonfiguration aus der Konfigurationsdatei abgerufen, die alle Nachrichten an den regularCalc-Rechnerdienst weiterleitet. Die Konfiguration wird anschließend jedoch programmgesteuert aktualisiert, um den Zielendpunkt in den roundingCalc-Dienst zu ändern.  
   
 > [!NOTE]
->  In vielen Implementierungen läuft die Konfiguration komplett dynamisch ab und erfordert keine Standardkonfiguration. Es gibt jedoch einige Szenarien, z. B. die in diesem Thema, in denen es wünschenswert ist, dass beim Starten des Diensts ein Standardkonfigurationszustand herrscht.  
+> In vielen Implementierungen läuft die Konfiguration komplett dynamisch ab und erfordert keine Standardkonfiguration. Es gibt jedoch einige Szenarien, z. B. die in diesem Thema, in denen es wünschenswert ist, dass beim Starten des Diensts ein Standardkonfigurationszustand herrscht.  
   
 > [!NOTE]
->  Dynamische Updates treten nur im Arbeitsspeicher auf und führen nicht zur Änderung von Konfigurationsdateien.  
+> Dynamische Updates treten nur im Arbeitsspeicher auf und führen nicht zur Änderung von Konfigurationsdateien.  
   
  regularCalc und roundingCalc unterstützen die gleichen Vorgänge zum Addieren, Subtrahieren, Mulltiplizieren und Dividieren. roundingCalc rundet alle Berechnungsergebnisse vor der Rückgabe jedoch auf den nächsten ganzzahligen Wert. Es wird eine Konfigurationsdatei verwendet, um den Dienst so zu konfigurieren, dass er alle Nachrichten an den regularCalc-Dienst weiterleitet. Nachdem der Routingdienst gestartet wurde, wird <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> für die Neukonfiguration des Diensts verwendet, um Nachrichten an den roundingCalc-Dienst weiterzuleiten.  
   
@@ -64,7 +64,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filterTables>  
     ```  
   
-3. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" mit dem Dienstendpunkt.  
+3. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Im folgenden Beispiel wird die Zuordnung von "filterTable1" zum Dienst Endpunkt veranschaulicht.  
   
     ```xml  
     <behaviors>  

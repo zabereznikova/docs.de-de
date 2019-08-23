@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca77360c36ff2cdce7ee47d5c3883dd824c6cef8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959329"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3-Schnittstelle
-Erweitert logisch die ICorDebugAssembly-Schnittstelle, um die Container-Assemblys und der darin enthaltenen Assemblys unterstützen.  
+Erweitert die ICorDebugAssembly-Schnittstelle logisch, um die Unterstützung für containerassemblys und ihre enthaltenen Assemblys  
   
 ## <a name="methods"></a>Methoden  
   
@@ -24,14 +24,14 @@ Erweitert logisch die ICorDebugAssembly-Schnittstelle, um die Container-Assembly
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Bei dem Versuch, `QueryInterface` aufzurufen, um einen Schnittstellenzeiger abzurufen, wird für ICorDebug-Szenarien außerhalb von .NET Native `E_NOINTERFACE` zurückgegeben.  
+> Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Bei dem Versuch, `QueryInterface` aufzurufen, um einen Schnittstellenzeiger abzurufen, wird für ICorDebug-Szenarien außerhalb von .NET Native `E_NOINTERFACE` zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

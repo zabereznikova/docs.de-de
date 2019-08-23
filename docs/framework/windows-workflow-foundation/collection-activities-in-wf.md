@@ -2,18 +2,18 @@
 title: Auflistungsaktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935460"
 ---
 # <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
-Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection` und `RemoveFromCollection` haben eine <xref:System.Activities.OutArgument%601> des Typs <xref:System.Boolean>, das das Ergebnis angibt.  
+Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection`und `RemoveFromCollection` verfügen über <xref:System.Activities.OutArgument%601> einen vom <xref:System.Boolean>Typ, der das Ergebnis angibt.  
   
 > [!IMPORTANT]
->  Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
+> Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
   
 ## <a name="collection-activities"></a>Auflistungsaktivitäten  
   

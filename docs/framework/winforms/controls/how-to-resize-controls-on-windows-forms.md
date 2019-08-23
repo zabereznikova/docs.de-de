@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 18c3b300d4e32cee06208caecb7166b73ae1c565
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913107"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915038"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Vorgehensweise: Ändern der Größe von Steuerelementen in Windows Forms
-Sie können einzelne Steuerelemente ändern und Sie können mehrere Steuerelemente, die demselben oder einem anderen Art, wie z. B. ändern <xref:System.Windows.Forms.Button> und <xref:System.Windows.Forms.GroupBox> Steuerelemente.  
+Sie können die Größe einzelner Steuerelemente ändern, und Sie können die Größe mehrerer Steuerelemente derselben oder einer anderen Art ändern <xref:System.Windows.Forms.Button> , <xref:System.Windows.Forms.GroupBox> z. b.-und-Steuerelemente.  
   
-### <a name="to-resize-a-control"></a>Zum Ändern der Größe eines Steuerelements  
+### <a name="to-resize-a-control"></a>So ändern Sie die Größe eines Steuer Elements  
   
-1. Klicken Sie auf das Steuerelement, um die Größe geändert werden, und Ziehen eines der acht Ziehpunkte.  
+1. Klicken Sie auf das Steuerelement, um die Größe zu ändern, und ziehen Sie eines der acht Zieh Punkte.  
   
     > [!NOTE]
-    >  Wählen Sie das Steuerelement, und drücken Sie die Pfeiltasten bei gedrückter Umschalttaste auf das Steuerelement einen Pixel zu ändern. Drücken Sie die Pfeiltasten nach unten oder rechts bei gedrückter UMSCHALTTASTE und STRG-Taste zum Ändern der Steuerelementgröße in großen Schritten.  
+    > Wählen Sie das Steuerelement aus, und drücken Sie die Pfeiltasten, während Sie die UMSCHALTTASTE gedrückt halten, um die Größe des Steuer Elements jeweils ein Pixel zu ändern. Drücken Sie die nach-unten-oder nach-rechts-Taste, und halten Sie die UMSCHALTTASTE gedrückt, um die Größe des Steuer Elements in großen Schritten zu ändern.  
   
-### <a name="to-resize-multiple-controls-on-a-form"></a>Mehrere Steuerelemente in einem Formular ändern der Größe  
+### <a name="to-resize-multiple-controls-on-a-form"></a>So ändern Sie die Größe mehrerer Steuerelemente in einem Formular  
   
-1. Halten Sie die STRG- oder UMSCHALTTASTE gedrückt, und wählen Sie die Steuerelemente, die Sie die Größe ändern möchten. Die Größe des ersten Steuerelements, die Sie auswählen, wird für den anderen Steuerelementen verwendet.  
+1. Halten Sie die STRG-oder UMSCHALTTASTE gedrückt, und wählen Sie die Steuerelemente aus, die Sie ändern möchten. Die Größe des ersten Steuer Elements, das Sie auswählen, wird für die anderen Steuerelemente verwendet.  
   
-2. Auf der **Format** Menü wählen **Größe angleichen**, und wählen Sie eine der vier Optionen. Die ersten drei Befehle ändern die Dimensionen der Steuerelemente auf der ersten ausgewählten Steuerelement überein.  
+2. Wählen Sie im Menü **Format** die Option **Größe angleichen**, und wählen Sie eine der vier Optionen aus. Die ersten drei Befehle ändern die Dimensionen der Steuerelemente so, dass Sie dem ersten ausgewählten Steuerelement entsprechen.  
   
 ## <a name="see-also"></a>Siehe auch
 

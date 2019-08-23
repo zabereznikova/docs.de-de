@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796174"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937251"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandelt.  
@@ -26,8 +26,8 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
   
 |Begriff|Definition|  
 |---|---|  
-|+ &#124; -|Dies ist optional. Standardmäßig ist `-warnaserror-` aktiviert, sodass Warnungen den Compiler nicht daran hindern, eine Ausgabedatei zu erstellen. Die `-warnaserror`-Option, die mit `-warnaserror+` identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.|  
-|`numberList`|Dies ist optional. Mit Kommas als Trennzeichen getrennte Liste der Warnungs-ID-Nummern, für die die `-warnaserror`-Option gilt. Ist keine Warnungs-ID angegeben, gilt die `-warnaserror`-Option für alle Warnungen.|  
+|+ &#124; -|Optional. Standardmäßig ist `-warnaserror-` aktiviert, sodass Warnungen den Compiler nicht daran hindern, eine Ausgabedatei zu erstellen. Die `-warnaserror`-Option, die mit `-warnaserror+` identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.|  
+|`numberList`|Optional. Mit Kommas als Trennzeichen getrennte Liste der Warnungs-ID-Nummern, für die die `-warnaserror`-Option gilt. Ist keine Warnungs-ID angegeben, gilt die `-warnaserror`-Option für alle Warnungen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `-warnaserror`-Option bewirkt, dass alle Warnungen als Fehler behandelt werden. Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet. Der Compiler meldet weitere Vorkommen derselben Warnung als Warnungen.  
@@ -37,7 +37,7 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
  Wenn nur bestimmte Warnungen als Fehler behandelt werden sollen, können Sie eine durch Kommas als Trennzeichen getrennte Liste mit Warnungsnummern angeben, die als Fehler behandelt werden sollen.  
   
 > [!NOTE]
->  Die `-warnaserror`-Option steuert nicht, wie Warnungen angezeigt werden. Verwenden Sie die [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)-Option, um Warnungen zu deaktivieren.  
+> Die `-warnaserror`-Option steuert nicht, wie Warnungen angezeigt werden. Verwenden Sie die [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)-Option, um Warnungen zu deaktivieren.  
   
 |So legen Sie „-warnaserror“ so fest, dass alle Warnungen in der Visual Studio-IDE als Fehler behandelt werden|  
 |---|  

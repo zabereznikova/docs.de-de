@@ -1,15 +1,15 @@
 ---
-title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)
+title: Klassifizierung von Standard Abfrage Operatoren nach Ausführungs Arten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e89c58707b4980b208395cce67434a6e5efa5d22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021764"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939275"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klassifizierung von Standard Abfrage Operatoren nach Ausführungs Arten (Visual Basic)
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
   
 ## <a name="manners-of-execution"></a>Arten der Ausführung  
@@ -32,7 +32,7 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
  In der folgenden Tabelle wird jede Standardabfrageoperator-Methode laut der Ausführungsmethode klassifiziert.  
   
 > [!NOTE]
->  Wenn ein Operator in zwei Spalten gekennzeichnet ist, werden zwei Eingabesequenzen in den Vorgang einbezogen, und jede Sequenz wird unterschiedlich ausgewertet. In diesen Fällen ist es immer die erste Sequenz in der Parameterliste, die verzögert und mit der Nicht-Straming-Methode ausgewertet wird.  
+> Wenn ein Operator in zwei Spalten gekennzeichnet ist, werden zwei Eingabesequenzen in den Vorgang einbezogen, und jede Sequenz wird unterschiedlich ausgewertet. In diesen Fällen ist es immer die erste Sequenz in der Parameterliste, die verzögert und mit der Nicht-Straming-Methode ausgewertet wird.  
   
 |Standardabfrageoperator|Rückgabetyp|Sofortige Ausführung|Verzögerte Streaming-Ausführung|Verzögerte Nicht-Streaming-Ausführung|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -91,5 +91,5 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 
 - <xref:System.Linq.Enumerable>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Abfrage Ausdrucks Syntax für Standard Abfrage Operatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

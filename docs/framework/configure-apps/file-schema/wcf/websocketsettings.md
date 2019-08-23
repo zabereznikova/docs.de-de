@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940323"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.  
@@ -58,7 +58,7 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 |Nie|Verwendet niemals das WebSocket-Protokoll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -67,7 +67,7 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 |\<netHttpBinding>|Gibt das NetHttpBinding-Element an.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der \<WebSocketSettings > Element.  
+ Im folgenden Beispiel wird gezeigt, wie das \<websocketsettings >-Element verwendet wird.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

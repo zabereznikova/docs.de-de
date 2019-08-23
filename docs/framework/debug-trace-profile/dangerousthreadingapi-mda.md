@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46b0add67fc6bc139ef02e09190670870749d4c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d635100c4e8214a7a8659c2d3e4da61825cf243
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966301"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI-MDA
 Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>-Methode für einen anderen Thread als den aktuellen Thread aufgerufen wird.  
@@ -38,7 +38,7 @@ Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für ver
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über problematische Threadoperationen gemeldet.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Der MDA identifiziert die problematische Threadmethode, die zu seiner Aktivierung führte.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -71,4 +71,4 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 
 - <xref:System.Threading.Thread>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [lock-Anweisung](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [lock-Anweisung](../../csharp/language-reference/keywords/lock-statement.md)

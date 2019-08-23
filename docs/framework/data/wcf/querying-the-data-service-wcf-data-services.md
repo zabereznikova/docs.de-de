@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 50dc56a3c4c87bf9ac197b127c036c41ac833a88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931126"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Abfragen des Datendiensts (WCF Data Services)
 
-Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek ermöglicht es Ihnen, mit vertrauten .NET Framework-Programmierungsmustern Abfragen für einen Datendienst auszuführen und hierbei auch LINQ (Language Integrated Query) zu verwenden. Die Clientbibliothek übersetzt eine Abfrage, die auf dem Client als Instanz der <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse definiert wird, in eine HTTP GET-Anforderungsnachricht. Die Bibliothek empfängt die Antwortnachricht und übersetzt sie in Instanzen von clientdatendienstklassen. Diese Klassen werden vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem <xref:System.Data.Services.Client.DataServiceQuery%601> gehört.
+Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek ermöglicht es Ihnen, mit vertrauten .NET Framework-Programmierungsmustern Abfragen für einen Datendienst auszuführen und hierbei auch LINQ (Language Integrated Query) zu verwenden. Die Clientbibliothek übersetzt eine Abfrage, die auf dem Client als Instanz der <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse definiert wird, in eine HTTP GET-Anforderungsnachricht. Die Bibliothek empfängt die Antwortnachricht und übersetzt Sie in Instanzen von Client Datendienst Klassen. Diese Klassen werden vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem <xref:System.Data.Services.Client.DataServiceQuery%601> gehört.
 
 ## <a name="data-service-queries"></a>Datendienstabfragen
 
 Die generische Klasse <xref:System.Data.Services.Client.DataServiceQuery%601> stellt eine Abfrage dar, die eine Auflistung von null oder mehr Entitätstypinstanzen zurückgibt. Eine Datendienstabfrage ist immer einem vorhandenen Datendienstkontext zugeordnet. Dieser Kontext verwaltet den Dienst-URI und die Metadateninformationen, die zum Erstellen und Ausführen der Abfrage erforderlich sind.
 
-Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld zum Hinzufügen eines Datendiensts in einer .NET Framework-basierten Client-Anwendung, eine entitätscontainerklasse erstellt, die von erbt die <xref:System.Data.Services.Client.DataServiceContext> Klasse. Diese Klasse enthält Eigenschaften, die typisierte <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanzen zurückgeben. Es ist eine Eigenschaft für jede Entitätenmenge vorhanden, die der Datendienst verfügbar macht. Diese Eigenschaften erleichtern es, eine Instanz eines typisierten <xref:System.Data.Services.Client.DataServiceQuery%601>-Objekts zu erstellen.
+Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " verwenden, um einer .NET Framework basierten Client Anwendung einen Datendienst hinzuzufügen, wird eine Entitäts Container Klasse erstellt, <xref:System.Data.Services.Client.DataServiceContext> die von der-Klasse erbt. Diese Klasse enthält Eigenschaften, die typisierte <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanzen zurückgeben. Es ist eine Eigenschaft für jede Entitätenmenge vorhanden, die der Datendienst verfügbar macht. Diese Eigenschaften erleichtern es, eine Instanz eines typisierten <xref:System.Data.Services.Client.DataServiceQuery%601>-Objekts zu erstellen.
 
 In den folgenden Szenarien wird eine Abfrage ausgeführt:
 
@@ -43,18 +43,18 @@ Wenn die folgende Abfrage ausgeführt wird, gibt sie alle `Customers`-Entitäten
 [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]
 [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Datendienstabfragen](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Datendienst](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)Abfragen.
 
-Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client unterstützt Abfragen für spät gebundene Objekte, z. B. bei Verwendung der *dynamische* geben C#. Aus Leistungsgründen sollten für den Datendienst jedoch immer stark typisierte Abfragen verfasst werden. Der <xref:System.Tuple>-Typ und dynamische Objekte werden nicht vom Client unterstützt.
+Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Client unterstützt Abfragen für spät gebundene Objekte, z. b. bei Verwendung des *dynamischen* Typs C#in. Aus Leistungsgründen sollten für den Datendienst jedoch immer stark typisierte Abfragen verfasst werden. Der <xref:System.Tuple>-Typ und dynamische Objekte werden nicht vom Client unterstützt.
 
 ## <a name="linq-queries"></a>LINQ-Abfragen
 
-Da die <xref:System.Data.Services.Client.DataServiceQuery%601> -Klasse implementiert die <xref:System.Linq.IQueryable%601> von LINQ definierte Schnittstelle die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek kann zum Transformieren von LINQ-Abfragen für entitätenmengendaten in einen URI, der einen für einen Datendienst ausgewerteten Abfrageausdruck darstellt. die Ressource. Das folgende Beispiel ist eine LINQ-Abfrage, die der vorherigen <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage entspricht, die `Orders` mit Frachtkosten von mehr als $30 zurückgibt und die Ergebnisse nach den Frachtkosten sortiert:
+Da die <xref:System.Data.Services.Client.DataServiceQuery%601> -Klasse die <xref:System.Linq.IQueryable%601> von LINQ definierte-Schnittstelle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementiert, kann die-Client Bibliothek LINQ-Abfragen für entitätenmengendaten in einen URI transformieren, der einen für einen Datendienst ausgewerteten Abfrage Ausdruck darstellt. Ressource. Das folgende Beispiel ist eine LINQ-Abfrage, die der vorherigen <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage entspricht, die `Orders` mit Frachtkosten von mehr als $30 zurückgibt und die Ergebnisse nach den Frachtkosten sortiert:
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
 
-Diese LINQ-Abfrage wird in der folgenden Abfrage-URI, der in der Northwind-basierten ausgeführt wird, übersetzt [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendienst:
+Diese LINQ-Abfrage wird in den folgenden Abfrage-URI übersetzt, der für den auf Northwind basierenden [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) -Datendienst ausgeführt wird:
 
 ```
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 > [!NOTE]
 > Die Gruppe von Abfragen, die in der LINQ-Syntax ausgedrückt werden kann, ist umfangreicher als bei der von Datendiensten verwendeten REST-basierten (Representational State Transfer) URI-Syntax. Wenn die Abfrage keinem URI im Zieldatendienst zugeordnet werden kann, wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst.
 
-Weitere Informationen finden Sie unter [Überlegungen zu LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
+Weitere Informationen finden Sie unter [LINQ-Überlegungen](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
 
 ## <a name="adding-query-options"></a>Hinzufügen von Abfrageoptionen
 
@@ -77,12 +77,12 @@ Sie können die `$orderby`-Abfrageoption verwenden, um eine Abfrage auf der Grun
 [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
 [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]
 
-Sie können die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode aufrufen, um nacheinander komplexe Abfrageausdrücke zu erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Abfrageoptionen zu einer Datendienstabfrage](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).
+Sie können die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode aufrufen, um nacheinander komplexe Abfrageausdrücke zu erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Abfrage Optionen zu einer Daten](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)Dienst Abfrage
 
-Abfrageoptionen sind eine weitere Möglichkeit, die syntaktischen Komponenten einer LINQ-Abfrage auszudrücken. Weitere Informationen finden Sie unter [Überlegungen zu LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
+Abfrageoptionen sind eine weitere Möglichkeit, die syntaktischen Komponenten einer LINQ-Abfrage auszudrücken. Weitere Informationen finden Sie unter [LINQ-Überlegungen](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).
 
 > [!NOTE]
->  Die `$select`-Abfrageoption kann einem Abfrage-URI nicht mit der <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode hinzugefügt werden. Es wird empfohlen, die <xref:System.Linq.Enumerable.Select%2A>-LINQ-Methode zu verwenden, damit der Client die `$select`-Abfrageoption im Anforderungs-URI generiert.
+> Die `$select`-Abfrageoption kann einem Abfrage-URI nicht mit der <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode hinzugefügt werden. Es wird empfohlen, die <xref:System.Linq.Enumerable.Select%2A>-LINQ-Methode zu verwenden, damit der Client die `$select`-Abfrageoption im Anforderungs-URI generiert.
 
 <a name="executingQueries"></a>
 
@@ -118,18 +118,18 @@ Der <xref:System.Data.Services.Client.QueryOperationResponse%601> verfügt auch 
 
 - <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>- gibt ein <xref:System.Data.Services.Client.DataServiceQueryContinuation>-Objekt zurück, das den URI der nächsten Seite mit Ergebnissen enthält.
 
-In der Standardeinstellung [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gibt nur Daten, die explizit von der Abfrage-URI ausgewählt ist. Dies gibt Ihnen die Möglichkeit, bei Bedarf weitere Daten explizit vom Datendienst zu laden. Jedes Mal, wenn Daten explizit aus dem Datendienst geladen werden, wird eine Anforderung an den Datendienst gesendet. Zu den Daten, die explizit geladen werden können, gehören verknüpfte Entitäten, ausgelagerte Antwortdaten und Binärdatenströme.
+Standardmäßig gibt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] nur Daten zurück, die explizit durch den Abfrage-URI ausgewählt werden. Dies gibt Ihnen die Möglichkeit, bei Bedarf weitere Daten explizit vom Datendienst zu laden. Jedes Mal, wenn Daten explizit aus dem Datendienst geladen werden, wird eine Anforderung an den Datendienst gesendet. Zu den Daten, die explizit geladen werden können, gehören verknüpfte Entitäten, ausgelagerte Antwortdaten und Binärdatenströme.
 
 > [!NOTE]
-> Da ein Datendienst möglicherweise eine ausgelagerte Antwort zurückgibt, empfiehlt es sich, dass die Anwendung das Programmiermuster zur Behandlung ausgelagerter Datendienstantworten verwendet. Weitere Informationen finden Sie unter [verzögerte Inhalte laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+> Da ein Datendienst möglicherweise eine ausgelagerte Antwort zurückgibt, empfiehlt es sich, dass die Anwendung das Programmiermuster zur Behandlung ausgelagerter Datendienstantworten verwendet. Weitere Informationen finden Sie unter [Laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)von verzögertem Inhalt.
 
-Die von einer Abfrage zurückgegebene Datenmenge kann auch durch die Angabe reduziert werden, dass nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden. Weitere Informationen finden Sie unter [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).
+Die von einer Abfrage zurückgegebene Datenmenge kann auch durch die Angabe reduziert werden, dass nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden. Weitere Informationen finden Sie unter [Abfrage Projektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).
 
 ## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>Abrufen der Gesamtanzahl der in der Menge enthaltenen Entitäten
 
 In einigen Szenarien ist es hilfreich zu wissen, wie viele Entitäten in einer Entitätenmenge insgesamt enthalten sind, statt nur die von der Abfrage zurückgegebene Anzahl zu kennen. Rufen Sie die <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A>-Methode für <xref:System.Data.Services.Client.DataServiceQuery%601> auf, um anzufordern, dass die Gesamtanzahl von Entitäten dieser Entitätenmenge in das Abfrageergebnis aufgenommen wird. In diesem Fall gibt die <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A>-Eigenschaft der zurückgegebenen <xref:System.Data.Services.Client.QueryOperationResponse%601>-Instanz die Gesamtzahl der in der Menge enthaltenen Entitäten zurück.
 
-Sie können auch nur die Gesamtanzahl der Entitäten in der Menge als <xref:System.Int32>-Wert oder <xref:System.Int64>-Wert abrufen, indem Sie <xref:System.Linq.Enumerable.Count%2A>-Methode bzw. die <xref:System.Linq.Enumerable.LongCount%2A>-Methode aufrufen. Wenn diese Methoden aufgerufen werden, wird kein <xref:System.Data.Services.Client.QueryOperationResponse%601>-Objekt zurückgegeben. Es wird nur die Anzahl zurückgegeben. Weitere Informationen finden Sie unter [Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegebenen](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md).
+Sie können auch nur die Gesamtanzahl der Entitäten in der Menge als <xref:System.Int32>-Wert oder <xref:System.Int64>-Wert abrufen, indem Sie <xref:System.Linq.Enumerable.Count%2A>-Methode bzw. die <xref:System.Linq.Enumerable.LongCount%2A>-Methode aufrufen. Wenn diese Methoden aufgerufen werden, wird kein <xref:System.Data.Services.Client.QueryOperationResponse%601>-Objekt zurückgegeben. Es wird nur die Anzahl zurückgegeben. Weitere Informationen finden Sie unter [Vorgehensweise: Bestimmen Sie die Anzahl der von einer Abfrage](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)zurückgegebenen Entitäten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -139,17 +139,17 @@ Sie können auch nur die Gesamtanzahl der Entitäten in der Menge als <xref:Syst
 
 - [Überlegungen zu LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)
 
-- [Vorgehensweise: Ausführen von Datendienstabfragen](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
+- [Vorgehensweise: Ausführen von Datendienst Abfragen](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [Vorgehensweise: Hinzufügen von Abfrageoptionen zu einer Datendienstabfrage](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Vorgehensweise: Hinzufügen von Abfrage Optionen zu einer Datendienst Abfrage](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
-- [Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden.](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)
+- [Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)
 
-- [Vorgehensweise: Geben Sie die Anmeldeinformationen des Clients für einen Datendienst anfordern](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)
+- [Vorgehensweise: Angeben von Client Anmelde Informationen für eine Datendienst Anforderung](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [Vorgehensweise: Festlegen von Headern in der Anforderung des Clients](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [Vorgehensweise: Festlegen von Headern in der Client Anforderung](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
-- [Vorgehensweise: Projekt-Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+- [Vorgehensweise: Projekt Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
 
 ## <a name="see-also"></a>Siehe auch
 

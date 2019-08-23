@@ -8,26 +8,26 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b7eac942a7e857ad731c0f77389e84aee287c08
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012801"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952166"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Übersicht über das ListView-Steuerelement (Windows Forms)
-Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt. Das Steuerelement hat vier Anzeigemodi an: LargeIcon "," SmallIcon "," Liste, und "Details".  
+Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt. Das-Steuerelement verfügt über vier Ansichtsmodi: LargeIcon, SmallIcon, List und Details.  
   
-## <a name="what-you-can-do-with-the-listview-control"></a>Was können Sie mit dem ListView-Steuerelement tun.  
+## <a name="what-you-can-do-with-the-listview-control"></a>Was Sie mit dem ListView-Steuerelement tun können  
   
 > [!NOTE]
->  Eine zusätzliche Ansicht nebeneinander, ist nur unter Windows XP und das Betriebssystem Windows Server 2003 zur Verfügung. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von Tile-Ansicht in einer Windows Forms-ListView-Steuerelement](how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+> Ein zusätzlicher Ansichtsmodus (Kachel) ist nur unter Windows XP und dem Betriebssystem Windows Server 2003 verfügbar. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie die Kachel Ansicht in einem Windows Forms ListView-Steuer](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)Element.  
   
- Der Modus LargeIcon Anzeigen großer Symbole neben den Elementtext im; die Elemente werden in mehreren Spalten auf, wenn das Steuerelement groß genug ist. Der SmallIcon-Modus ist identisch, außer dass es sich um kleine Symbole angezeigt. Die Listenmodus werden kleine Symbole angezeigt, aber es ist immer in einer einzelnen Spalte. Die Details-Modus zeigt die Elemente in mehreren Spalten. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Spalten, die Windows Forms-ListView-Steuerelement](how-to-add-columns-to-the-windows-forms-listview-control.md). Der Ansichtsmodus richtet sich nach der <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft. Alle Ansichtsmodi können Images aus einer Bildliste anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in der Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ Im LargeIcon-Modus werden große Symbole neben dem Element Text angezeigt. Wenn das Steuerelement groß genug ist, werden die Elemente in mehreren Spalten angezeigt. Der SmallIcon-Modus ist identisch, mit dem Unterschied, dass kleine Symbole angezeigt werden. Der Listenmodus zeigt kleine Symbole an, befindet sich jedoch immer in einer einzelnen Spalte. Im Detail Modus werden Elemente in mehreren Spalten angezeigt. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie dem Windows Forms ListView-Steuer](how-to-add-columns-to-the-windows-forms-listview-control.md)Element Spalten hinzu. Der Ansichtsmodus wird von der <xref:System.Windows.Forms.ListView.View%2A> -Eigenschaft bestimmt. Alle Ansichtsmodi können Bilder aus Bildlisten anzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Zeigen Sie Symbole für das Windows Forms ListView](how-to-display-icons-for-the-windows-forms-listview-control.md)-Steuerelement an.  
   
- Die folgende Tabelle enthält einige der <xref:System.Windows.Forms.ListView> Member und die Ansichten, die sie in gültig sind.  
+ In der folgenden Tabelle sind einige <xref:System.Windows.Forms.ListView> der Member und Sichten aufgeführt, in denen Sie gültig sind.  
   
-|ListView-Element|Ansicht|  
+|ListView-Member|Ansicht|  
 |---------------------|----------|  
 |<xref:System.Windows.Forms.ListView.Alignment%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
@@ -37,27 +37,27 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
 |<xref:System.Windows.Forms.ListView.FindItemWithText%2A>-Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>oder <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A>-Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A>-Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> -Eigenschaft|Alle Ansichten, mit Ausnahme <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> -Eigenschaft|Alle Sichten außer<xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> -Eigenschaft|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>oder <xref:System.Windows.Forms.View.Tile>|  
   
- Die wichtigste Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement <xref:System.Windows.Forms.ListView.Items%2A>, die vom Steuerelement angezeigten Elemente enthält. Die <xref:System.Windows.Forms.ListView.SelectedItems%2A> Eigenschaft enthält eine Auflistung der derzeit im Steuerelement ausgewählten Elemente. Der Benutzer kann mehrere Elemente auswählen, z. B. um Drag & drop mehrere Elemente gleichzeitig zu einem anderen Steuerelement, wenn die <xref:System.Windows.Forms.ListView.MultiSelect%2A> -Eigenschaftensatz auf `true`. Die <xref:System.Windows.Forms.ListView> Steuerelement können Sie die Kontrollkästchen neben den Elementen angezeigt, wenn die <xref:System.Windows.Forms.ListView.CheckBoxes%2A> -Eigenschaftensatz auf `true`.  
+ Die Schlüsseleigenschaft des <xref:System.Windows.Forms.ListView> -Steuer Elements ist <xref:System.Windows.Forms.ListView.Items%2A>, das die vom-Steuerelement angezeigten Elemente enthält. Die <xref:System.Windows.Forms.ListView.SelectedItems%2A> -Eigenschaft enthält eine Auflistung der Elemente, die derzeit im-Steuerelement ausgewählt sind. Der Benutzer kann mehrere Elemente auswählen, z. b. zum Ziehen und Ablegen mehrerer Elemente gleichzeitig auf ein anderes Steuerelement <xref:System.Windows.Forms.ListView.MultiSelect%2A> , wenn die- `true`Eigenschaft auf festgelegt ist. Das <xref:System.Windows.Forms.ListView> -Steuerelement kann Kontrollkästchen neben den Elementen anzeigen, wenn <xref:System.Windows.Forms.ListView.CheckBoxes%2A> die-Eigenschaft auf `true`festgelegt ist.  
   
- Die <xref:System.Windows.Forms.ListView.Activation%2A> Eigenschaft bestimmt, welche Art von Aktion des Benutzers ausführen muss, um ein Element in der Liste aktivieren: die Optionen sind <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, und <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> -Aktivierung erfordert ein Klick auf das Element zu aktivieren. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktivierung muss der Benutzer doppelklicken, um das Element zu aktivieren. die Farbe des Elementtextes ändert sich ein einzigen Klick. <xref:System.Windows.Forms.ItemActivation.Standard> Aktivierung muss der Benutzer doppelklicken, um ein Element zu aktivieren, aber das Element ändert sich nicht auf die Darstellung.  
+ Die <xref:System.Windows.Forms.ListView.Activation%2A> -Eigenschaft bestimmt, welche Art von Aktion der Benutzer ausführen muss, um ein Element in der Liste zu aktivieren <xref:System.Windows.Forms.ItemActivation.Standard>: die Optionen <xref:System.Windows.Forms.ItemActivation.TwoClick>sind, <xref:System.Windows.Forms.ItemActivation.OneClick>und. <xref:System.Windows.Forms.ItemActivation.OneClick>die Aktivierung erfordert nur einen Mausklick, um das Element zu aktivieren. <xref:System.Windows.Forms.ItemActivation.TwoClick>die Aktivierung erfordert, dass der Benutzer doppelklicken muss, um das Element zu aktivieren. mit einem einzigen Mausklick wird die Farbe des Element Texts geändert. <xref:System.Windows.Forms.ItemActivation.Standard>die Aktivierung erfordert, dass der Benutzer einen Doppelklick durchführt, um ein Element zu aktivieren, aber das Element ändert sich nicht.  
   
- Die <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere verfügbare Features auf der Windows XP-Plattform, einschließlich der Gruppierung, Ansicht "Nebeneinander" und Einfügen von Markierungen.  
+ Das <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere Features, die auf der Windows XP-Plattform verfügbar sind, einschließlich Gruppierung, Kachel Ansicht und Einfügemarkierungen.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView-Steuerelement](listview-control-windows-forms.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Hinzufügen von Spalten zu dem ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Wählen Sie ein Element in dem ListView-Steuerelement in Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Gruppieren von Elementen in ein ListView-Steuerelement in Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen einer Einfügemarke in ein ListView-Steuerelement in Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem Windows Forms ListView-Steuerelement](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen von Spalten zum Windows Forms ListView-Steuerelement](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Anzeige Symbole für das Windows Forms ListView-Steuerelement](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Anzeigen von unter Elementen in Spalten mit dem Windows Forms ListView-Steuerelement](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Wählen Sie ein Element im Windows Forms ListView-Steuerelement aus.](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Gruppieren von Elementen in einem Windows Forms ListView-Steuerelement](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Vorgehensweise: Einfügemarke in einem Windows Forms ListView-Steuerelement anzeigen](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
 - [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](how-to-add-search-capabilities-to-a-listview-control.md)
-- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Vorgehensweise: Hinzufügen von benutzerdefinierten Informationen zu einem TreeView-oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)

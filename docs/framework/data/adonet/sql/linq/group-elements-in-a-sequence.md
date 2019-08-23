@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877356"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915053"
 ---
 # <a name="group-elements-in-a-sequence"></a>Gruppieren von Elementen in einer Sequenz
 Der <xref:System.Linq.Enumerable.GroupBy%2A>-Operator gruppiert die Elemente einer Sequenz. In den folgenden Beispielen wird die Datenbank Northwind verwendet.  
   
 > [!NOTE]
->  NULL-Spaltenwerte in <xref:System.Linq.Enumerable.GroupBy%2A>-Abfragen können manchmal eine <xref:System.InvalidOperationException> auslösen. Weitere Informationen finden Sie im Abschnitt "GroupBy InvalidOperationException" [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> NULL-Spaltenwerte in <xref:System.Linq.Enumerable.GroupBy%2A>-Abfragen können manchmal eine <xref:System.InvalidOperationException> auslösen. Weitere Informationen finden Sie im Abschnitt "GroupBy InvalidOperationException" unter [Problem](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)Behandlung.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird `Products` nach `CategoryID` partitioniert.  

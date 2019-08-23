@@ -16,28 +16,28 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb3aca0713b8b11bdfaa23bf33c8e1a0b302e272
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931983"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum-Schnittstelle
 
-Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwendung Debuggen verwendet werden.  
+Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debugginganwendung verwendet werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` Objekt.|  
-|[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der Enumeration.|  
-|[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Verschiebt den Cursor auf den Anfang der Enumeration.|  
-|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.|  
+|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` -Objekts.|  
+|[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der-Enumeration ab.|  
+|[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Verschiebt den Cursor an den Anfang der Enumeration.|  
+|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
   
 ## <a name="remarks"></a>Hinweise  
- Leiten Sie die folgenden Enumeratoren von `ICorDebugEnum`:  
+ Die folgenden Enumeratoren werden von `ICorDebugEnum`abgeleitet:  
   
 - "ICorDebugAppDomainEnum"  
   
@@ -47,11 +47,11 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwe
   
 - "ICorDebugBreakpointEnum"  
   
-- "ICorDebugChainEnum"  
+- ICorDebugChainEnum  
   
 - "ICorDebugCodeEnum"  
   
-- "ICorDebugErrorInfoEnum"  
+- ICorDebugErrorInfoEnum  
   
 - [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
@@ -65,7 +65,7 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwe
   
 - [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
-- "ICorDebugModuleEnum"  
+- ICorDebugModuleEnum  
   
 - "ICorDebugObjectEnum"  
   
@@ -77,19 +77,19 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwe
   
 - "ICorDebugTypeEnum"  
   
-- "ICorDebugValueEnum"  
+- ICorDebugValueEnum  
   
 - [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

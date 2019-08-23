@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920492"
 ---
-# <a name="listeners-element-for-source"></a>\<Listener >-Element für \<Quelle >
-Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.Listeners%2A> Sammlung für einen <xref:System.Diagnostics.TraceSource>. Ein Listener leitet die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, z. B. ein Protokoll, Fenster oder Text-Datei.  
+# <a name="listeners-element-for-source"></a>\<Listener > Element für \<Quell >
+Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> -Auflistung für eine <xref:System.Diagnostics.TraceSource>hinzu oder entfernt Sie. Ein Listener leitet die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel, z. b. ein Protokoll, ein Fenster oder eine Textdatei.  
   
  \<configuration>  
 \<system.diagnostics>  
 \<Quellen >  
-\<Quelle >  
-\<Listener >-Element  
+\<Quell >  
+\<Listener > Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.List
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -59,10 +59,10 @@ Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.List
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der `<listeners>` Element, um einen Konsolen-Ablaufverfolgungslistener hinzugefügt werden die `mySource` Quelle und den standardmäßigen Ablaufverfolgungslistener zu entfernen.  
+ Im folgenden Beispiel wird gezeigt, wie das `<listeners>` -Element verwendet wird, um der Quelle einen `mySource` Ablaufverfolgungslistener für die-Quelle hinzuzufügen und um den Standard  
   
 ```xml  
 <configuration>  
@@ -90,5 +90,5 @@ Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.List
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.TraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../debug-trace-profile/trace-listeners.md)

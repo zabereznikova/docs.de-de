@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927188"
 ---
-# <a name="assert-element"></a>\<Assert->-Element
+# <a name="assert-element"></a>\<Assert >-Element
 Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.  
   
  \<configuration>  
@@ -35,15 +35,15 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`assertuienabled`|Optionales Attribut.<br /><br /> Gibt an, ob die anzuzeigende ein Meldungsfeld, wenn die **Debug.Assert** Methode ergibt **"false"**.|  
-|`logfilename`|Optionales Attribut.<br /><br /> Gibt den Namen der Datei zum Schreiben der Nachricht auf, wenn **Debug.Assert** ergibt **"false"**.|  
+|`assertuienabled`|Optionales Attribut.<br /><br /> Gibt an, ob ein Meldungs Feld angezeigt werden soll, wenn die **Debug. Assert** -Methode als **false**ausgewertet wird.|  
+|`logfilename`|Optionales Attribut.<br /><br /> Gibt den Namen der Datei an, in die die Nachricht geschrieben werden soll, wenn **Debug. Assert** als **false**ausgewertet wird.|  
   
-## <a name="assertuienabled-attribute"></a>assertuienabled-Attribut  
+## <a name="assertuienabled-attribute"></a>assertuiaktiviertes Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`true`|Zeigt das Meldungsfeld an. Dies ist die Standardeinstellung.|  
-|`false`|Das Meldungsfeld wird nicht angezeigt werden.|  
+|`true`|Zeigt das Meldungs Feld an. Dies ist die Standardeinstellung.|  
+|`false`|Das Meldungs Feld wird nicht angezeigt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -56,10 +56,10 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beide Attribute in der  **\<assert >** -Element sind optional. Können Sie Meldungsfelder deaktivieren, ohne dass eine Datei zum Schreiben der Nachrichten an, oder Sie können eine Datei zum Schreiben, dass Nachrichten bei verlassen Felder aktiviert Nachricht angeben.  
+ Beide Attribute im  **\<Assert->** Element sind optional. Sie können Meldungs Felder deaktivieren, ohne eine Datei anzugeben, in die die Nachrichten geschrieben werden sollen, oder Sie können eine Datei angeben, in die Nachrichten geschrieben werden, während die Nachrichten Felder aktiviert werden  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die zum Anzeigen von Meldungsfeldern zu deaktivieren, beim Aufrufen **Debug.Assert** und schreiben die Nachrichten an `c:\log.txt`.  
+ Im folgenden Beispiel wird gezeigt, wie Sie das Anzeigen von Meldungs Feldern deaktivieren, wenn Sie **Debug. Assert** aufzurufen und die Nachrichten in `c:\log.txt`schreiben.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.Debug>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Custom Element for SingleTagSectionHandler element
+title: Benutzerdefiniertes Element für SingleTagSectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927501"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a>Custom Element for SingleTagSectionHandler element
+# <a name="custom-element-for-singletagsectionhandler"></a>Benutzerdefiniertes Element für SingleTagSectionHandler
 
-Definiert die Einstellungen in einem benutzerdefinierten Konfigurationsabschnitt, der durch definiert ist eine \<Abschnitt >-Element und verwendet die <xref:System.Configuration.SingleTagSectionHandler> Klasse.
+Definiert Einstellungen in einem benutzerdefinierten Konfigurations Abschnitt, der von einem \<Abschnitt >-Elements definiert wird <xref:System.Configuration.SingleTagSectionHandler> und die-Klasse verwendet.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[ **\<configuration>** ](configuration-element.md)   
 &nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Syntax
@@ -30,13 +30,13 @@ Definiert die Einstellungen in einem benutzerdefinierten Konfigurationsabschnitt
 
 ## <a name="attributes"></a>Attribute
 
-Attribute und Attributwerte sind benutzerdefiniert.
+Attribute und Attributwerte sind Benutzer definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [ **\<configuration>** ](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -44,11 +44,11 @@ None
 
 ## <a name="remarks"></a>Hinweise
 
-Die  **\<SectionName >** Element ist ein benutzerdefiniertes Element, das definiert, indem eine [  **\<Abschnitt >** ](~/docs/framework/configure-apps/file-schema/section-element.md) -Tag in die [  **\<ConfigSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) Element. Gibt zurück, das Konfigurationssystem eine <xref:System.Collections.IDictionary> Objekt beim Aufrufen <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+**Das\<Element sectionName >** ist ein benutzerdefiniertes Element, das durch einen [ **\<Abschnitt >** ](section-element.md) -Tag im [ **\<>** ](configsections-element-for-configuration.md) -Element von configabschnitts definiert wird. Das Konfigurationssystem gibt ein <xref:System.Collections.IDictionary> -Objekt zurück, <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>wenn aufgerufen wird.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel deklariert ein benutzerdefiniertes Element namens  **\<SampleSection >** , das Lesen von Einstellungen enthält die <xref:System.Configuration.SingleTagSectionHandler> Klasse:
+Im folgenden Beispiel wird ein benutzerdefiniertes Element namens  **\<sampleSection >** deklariert, das die <xref:System.Configuration.SingleTagSectionHandler> von der-Klasse gelesenen Einstellungen enthält:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Das folgende Beispiel deklariert ein benutzerdefiniertes Element namens  **\<Sam
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

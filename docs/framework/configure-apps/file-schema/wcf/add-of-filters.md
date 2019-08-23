@@ -2,20 +2,20 @@
 title: <add> von <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926687"
 ---
-# <a name="add-of-filters"></a>\<Hinzufügen > der \<Filter >
+# <a name="add-of-filters"></a>\<Fügen Sie > \<von Filtern hinzu >
 Ein XPath-Filter, der den zu protokolliernden Nachrichtentyp angibt.  
   
  \<system.ServiceModel>  
-\<diagnostic>  
+\<Diagnose >  
 \<messageLogging>  
-\<filters>  
+\<Filter >  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ Ein XPath-Filter, der den zu protokolliernden Nachrichtentyp angibt.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Enthält eine Auflistung von XPath-Filtern, mit denen gesteuert wird, welcher Nachrichtentyp protokolliert wird.|  
+|[\<filters>](filters.md)|Enthält eine Auflistung von XPath-Filtern, mit denen gesteuert wird, welcher Nachrichtentyp protokolliert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Filter werden nur auf Transportebene angewendet, wenn `logMessagesAtTransportLevel` auf `true` festgelegt ist. Die Protokollierung von fehlerhaften Nachrichten und die Protokollierung von Nachrichten auf Dienstebene wird nicht von Filtern beeinflusst.  
@@ -79,5 +79,5 @@ Ein XPath-Filter, der den zu protokolliernden Nachrichtentyp angibt.
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Konfigurieren der Nachrichtenprotokollierung](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Konfigurieren der Nachrichtenprotokollierung](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

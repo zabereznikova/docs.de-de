@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953271"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  
@@ -30,7 +30,7 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Tritt ein, wenn die `DataTable` in den `Disposed`-Status versetzt wurde. Wird von <xref:System.ComponentModel.MarshalByValueComponent> geerbt.|  
   
 > [!NOTE]
->  Die meisten Operationen, die Zeilen hinzufügen oder löschen, führen nicht zum Auslösen der Ereignisse `ColumnChanged` und `ColumnChanging`. Die `ReadXml`-Methode löst jedoch weiterhin das `ColumnChanged`-Ereignis und das `ColumnChanging`-Ereignis aus, bis `XmlReadMode` auf `DiffGram` oder auf `Auto` festgelegt ist, wenn das gelesene XML-Dokument ein `DiffGram` ist.  
+> Die meisten Operationen, die Zeilen hinzufügen oder löschen, führen nicht zum Auslösen der Ereignisse `ColumnChanged` und `ColumnChanging`. Die `ReadXml`-Methode löst jedoch weiterhin das `ColumnChanged`-Ereignis und das `ColumnChanging`-Ereignis aus, bis `XmlReadMode` auf `DiffGram` oder auf `Auto` festgelegt ist, wenn das gelesene XML-Dokument ein `DiffGram` ist.  
   
 > [!WARNING]
 >  Wenn Daten in einem `DataSet` geändert werden, über das das `RowChanged`-Ereignis ausgelöst wird, können Daten beschädigt werden. Bei einer solchen Datenbeschädigung wird keine Ausnahme ausgelöst.  
@@ -68,7 +68,7 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
 10. Die Einschränkungen für Ausdrucksspalten werden überprüft.  
   
 > [!NOTE]
->  Änderungen an Ausdrucksspalten führen nie dazu, dass `DataTable`-Ereignisse ausgelöst werden. Änderungen an Ausdrucksspalten lösen lediglich die Ereignisse `DataView` und `DataRowView` aus. Ausdrucksspalten können Abhängigkeiten von mehreren anderen Spalten besitzen und während eines einzelnen `DataRow`-Vorgangs mehrmals ausgewertet werden. Jede Ausdrucksauswertung löst Ereignisse aus, und ein einzelner `DataRow`-Vorgang kann mehrere `ListChanged`- und `PropertyChanged`-Ereignisse auslösen, sofern Ausdrucksspalten betroffen sind. Dabei ist es auch möglich, dass für ein und dieselbe Ausdrucksspalte mehrere Ereignisse ausgelöst werden.  
+> Änderungen an Ausdrucksspalten führen nie dazu, dass `DataTable`-Ereignisse ausgelöst werden. Änderungen an Ausdrucksspalten lösen lediglich die Ereignisse `DataView` und `DataRowView` aus. Ausdrucksspalten können Abhängigkeiten von mehreren anderen Spalten besitzen und während eines einzelnen `DataRow`-Vorgangs mehrmals ausgewertet werden. Jede Ausdrucksauswertung löst Ereignisse aus, und ein einzelner `DataRow`-Vorgang kann mehrere `ListChanged`- und `PropertyChanged`-Ereignisse auslösen, sofern Ausdrucksspalten betroffen sind. Dabei ist es auch möglich, dass für ein und dieselbe Ausdrucksspalte mehrere Ereignisse ausgelöst werden.  
   
 > [!WARNING]
 >  Lösen Sie keine <xref:System.NullReferenceException> im `RowChanged`-Ereignishandler aus. Wenn eine <xref:System.NullReferenceException> im `RowChanged`-Ereignis einer `DataTable` ausgelöst wird, führt dies zur Beschädigung der `DataTable`.  

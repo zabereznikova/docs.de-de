@@ -7,25 +7,25 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49b8493575685a220808df1522ce16835b3ce0ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013542"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917155"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse-Operator (Visual Basic)
-Bestimmt, ob ein Ausdruck ist `False`.  
+Bestimmt, ob ein Ausdruck `False`ist.  
   
- Sie können nicht aufrufen `IsFalse` explizit in Ihrem Code, aber die Visual Basic Compiler können sie zum Generieren von Code aus `AndAlso` Klauseln. Wenn Sie eine Klasse oder Struktur definieren und verwenden Sie dann auf eine Variable dieses Typs in eine `AndAlso` -Klausel, müssen Sie definieren `IsFalse` für diese Klasse oder Struktur.  
+ Sie können nicht `IsFalse` explizit in Ihrem Code aufzurufen, der Visual Basic Compiler kann es jedoch zum Generieren von `AndAlso` Code aus Klauseln verwenden. Wenn Sie eine Klasse oder Struktur definieren und dann eine Variable dieses Typs in einer `AndAlso` -Klausel verwenden, müssen Sie für diese Klasse oder Struktur definieren. `IsFalse`  
   
- Der Compiler betrachtet die `IsFalse` und `IsTrue` Operatoren als eine *zueinander passendes Paar*. Dies bedeutet, dass wenn Sie einen dieser definieren, Sie auch die anderen Knoten definieren müssen.  
+ Der Compiler betrachtet die `IsFalse` Operatoren und `IsTrue` als ein *übereinstimmendes Paar*. Dies bedeutet, dass Sie, wenn Sie einen von Ihnen definieren, auch den anderen definieren müssen.  
   
 > [!NOTE]
->  Die `IsFalse` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn der Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Der `IsFalse` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn der Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Gliederung einer Struktur, die Definitionen für enthält die `IsFalse` und `IsTrue` Operatoren.  
+ Im folgenden Codebeispiel wird die Gliederung einer-Struktur definiert, die Definitionen `IsFalse` für `IsTrue` die Operatoren und enthält.  
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   

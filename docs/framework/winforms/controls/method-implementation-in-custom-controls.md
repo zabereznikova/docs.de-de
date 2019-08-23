@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012762"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931752"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementierung von Methoden in benutzerdefinierten Steuerelementen
 Eine Methode wird genauso in ein Steuerelement implementiert, wie sie in eine beliebige andere Komponente implementiert würde.  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  Wenn Benutzer des Steuerelements in der Lage sein sollen, verschiedene Kombinationen von Parametern für Methoden anzugeben, müssen mehrere Überladungen der Methode unter Verwendung expliziter Datentypen bereitgestellt werden. Vermeiden Sie das Erstellen von Parametern, die als `As Object` deklariert sind und beliebige Datentypen enthalten können. Dies könnte zu Fehlern führen, die möglicherweise während des Testens nicht aufgefangen werden.  
   
 > [!NOTE]
->  Bei dem universellen Datentyp in der Common Language Runtime handelt es sich um `Object` und nicht um `Variant`. `Variant` wurde aus der Sprache entfernt.  
+> Bei dem universellen Datentyp in der Common Language Runtime handelt es sich um `Object` und nicht um `Variant`. `Variant` wurde aus der Sprache entfernt.  
   
  Mit der `Spin`-Methode eines hypothetischen `Widget`-Steuerelements könnte beispielsweise entweder die direkte Angabe der Richtung und Geschwindigkeit des Drehfelds oder die Angabe eines anderen `Widget`-Objekts ermöglicht werden, von dem das Drehmoment übernommen wird:  
   

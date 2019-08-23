@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 1064e4f8d4fce16d0505eb79b5e862be7c2e4ce6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0795784f4090fca02c89cdfb396d217620b1ba68
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760544"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948235"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Beispiele für die methodenbasierte Abfragesyntax: Filtern
-In diesem Thema wird gezeigt, wie mit der `Where` und `Where…Contains` Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mit der methodenbasierten Abfragesyntax. Beachten Sie, wo...`Contains` kann nicht verwendet werden, als Teil einer [kompilierten Abfrage](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+In den Beispielen in diesem Thema wird gezeigt, wie `Where` die `Where…Contains` -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Hinweis: Where...`Contains` kann nicht als Teil einer [kompilierten Abfrage](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)verwendet werden.  
   
  Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
   
- In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
+ In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -57,7 +57,7 @@ In diesem Thema wird gezeigt, wie mit der `Where` und `Where…Contains` Methode
  [!code-vb[DP L2E ArraysAndListsInQueries#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#3)]  
   
 > [!NOTE]
->  Als Teil des Prädikats in einer `Where…Contains`-Klausel können Sie ein <xref:System.Array>, eine <xref:System.Collections.Generic.List%601> oder eine Auflistung eines beliebigen Typs verwenden, der die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert. Sie können auch eine Auflistung innerhalb einer LINQ to Entities-Abfrage deklarieren und initialisieren. Weitere Informationen finden Sie im nächsten Beispiel.  
+> Als Teil des Prädikats in einer `Where…Contains`-Klausel können Sie ein <xref:System.Array>, eine <xref:System.Collections.Generic.List%601> oder eine Auflistung eines beliebigen Typs verwenden, der die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert. Sie können auch eine Auflistung innerhalb einer LINQ to Entities-Abfrage deklarieren und initialisieren. Weitere Informationen finden Sie im nächsten Beispiel.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden Arrays in einer `Where…Contains`-Klausel deklariert und initialisiert, um alle Produkte zu suchen, die eine `ProductModelID` oder `Size` aufweisen, die einem Wert in den Arrays entspricht.  

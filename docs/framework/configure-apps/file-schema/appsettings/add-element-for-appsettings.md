@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: f8b426dc0e1e180afbfccce50d3b45774991a572
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927747"
 ---
-# <a name="add-element-for-appsettings"></a>\<Hinzufügen >-Element für \<AppSettings >
+# <a name="add-element-for-appsettings"></a>\<> Element für \<appSettings hinzufügen >
 
-Fügt eine benutzerdefinierte anwendungseinstellung an.
+Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Syntax
@@ -36,22 +36,22 @@ Fügt eine benutzerdefinierte anwendungseinstellung an.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzuzufügenden Schlüssels. |
-| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzuzufügenden Schlüssels. |
+| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzu zufügenden Schlüssels an. |
+| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzu zufügenden Schlüssels an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie eine benutzerdefinierte Einstellung für den Namen der Anwendung hinzugefügt wird:
+Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationseinstellung für den Namen der Anwendung hinzugefügt wird:
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ Das folgende Beispiel zeigt, wie eine benutzerdefinierte Einstellung für den Na
 </appSettings>
 ```
 
-Im folgenden Beispiel wird die `<add>` Element, um zwei Einstellungen in einer ASP.NET-Anwendung zu definieren:
+Im folgenden Beispiel wird das `<add>` -Element verwendet, um zwei Kompatibilitäts Einstellungen in einer ASP.NET-Anwendung zu definieren:
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ Im folgenden Beispiel wird die `<add>` Element, um zwei Einstellungen in einer A
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](../index.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-ms.openlocfilehash: 063ef780793eef87ed08cbf2d98d387bd811c166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 537ab4485cb85fde12325ad9bb95bfd2c430e7b3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911911"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „Group“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementmuster ein.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "61785228"
 |------------------|------------------|  
 |Gruppieren<br /><br /> -0 oder viele Steuerelemente|Gruppieren<br /><br /> -0 oder viele Steuerelemente|  
   
- Gruppensteuerelemente weisen in der Regel die [Benutzeroberflächenautomatisierungs-Unterstützung für den Steuerelementtyp "ListItem"](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [Benutzeroberflächenautomatisierungs-Unterstützung für den Steuerelementtyp "TreeItem"](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md), oder [Benutzeroberflächenautomatisierungs-Unterstützung für die Steuerelementtyp "DataItem"](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) Steuerelementtypen finden Sie in der Unterstruktur unterhalb der Steuerelemente. Da es sich bei „Group“ um einen generischen Container handelt, kann sich in der Struktur unter dem Group-Steuerelement jeder Typ von Steuerelement befinden.  
+ Gruppen Steuerelemente haben in der Regel die Benutzeroberflächenautomatisierungs- [Unterstützung für den Steuer Elementtyp "ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)", die Benutzeroberflächenautomatisierungs- [Unterstützung für den TreeItem-Steuer Elementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)oder die Benutzeroberflächenautomatisierungs- [Unterstützung für](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) Steuerelement Typen in der Teilstruktur. Da es sich bei „Group“ um einen generischen Container handelt, kann sich in der Struktur unter dem Group-Steuerelement jeder Typ von Steuerelement befinden.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
@@ -64,13 +64,13 @@ ms.locfileid: "61785228"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
-|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
-|Durch geänderte<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|None|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Required|None|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Required|None|  
+|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|None|  
+|Durch geänderte<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Required|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|None|  
   
 ## <a name="see-also"></a>Siehe auch
 

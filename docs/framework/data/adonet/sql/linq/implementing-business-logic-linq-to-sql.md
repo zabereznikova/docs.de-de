@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9456340834c06e87f977cd784a37f7436523d29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743129"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938655"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementieren von Geschäftslogik (LINQ to SQL)
 Der Begriff "Geschäftslogik" bezieht sich in diesem Thema auf benutzerdefinierte Regeln oder Validierungstests, die auf Daten angewendet werden, bevor diese eingefügt, aktualisiert oder aus der Datenbank gelöscht werden. Der Begriff Geschäftslogik wird zeitweise synonym mit "Geschäftsregeln" oder "Domänenlogik" verwendet. In N-Tier-Anwendungen wird Geschäftslogik normalerweise als logische Ebene bezeichnet, die somit unabhängig von der Präsentationsebene oder Datenzugriffsebene geändert werden kann. Die Geschäftslogik kann von der Datenzugriffsebene aufgerufen werden, bevor oder nachdem Daten in der Datenbank aktualisiert, eingefügt oder gelöscht werden.  
   
- Mit der Geschäftslogik kann genauso einfach wie anhand einer Schemavalidierung festgestellt werden, ob der Typ des Feldes mit dem Typ der Tabellenspalte kompatibel ist. Alternativ kann sie aus einem Satz von Objekten bestehen, die auf beliebig komplexe Weisen interagieren. Die Regeln werden möglicherweise als gespeicherte Prozeduren in der Datenbank oder als Objekte im Arbeitsspeicher implementiert. Jedoch die Geschäftslogik implementiert wird, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] können Sie die partielle Klassen und Methoden verwenden, um die Geschäftslogik vom Datenzugriffscode zu trennen.  
+ Mit der Geschäftslogik kann genauso einfach wie anhand einer Schemavalidierung festgestellt werden, ob der Typ des Feldes mit dem Typ der Tabellenspalte kompatibel ist. Alternativ kann sie aus einem Satz von Objekten bestehen, die auf beliebig komplexe Weisen interagieren. Die Regeln werden möglicherweise als gespeicherte Prozeduren in der Datenbank oder als Objekte im Arbeitsspeicher implementiert. Wenn die Geschäftslogik jedoch implementiert ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , ermöglicht es Ihnen, partielle Klassen und partielle Methoden zu verwenden, um die Geschäftslogik vom Datenzugriffs Code zu trennen.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Aufrufen der Geschäftslogik durch LINQ to SQL  
- Wenn Sie eine Entitätsklasse zur Entwurfszeit entweder manuell oder mithilfe des Object Relational Designer oder SQLMetal generieren, wird es als partielle Klasse definiert. Dies bedeutet, dass Sie in einer separaten Codedatei einen anderen Teil der Entitätsklasse festlegen können, in der die benutzerdefinierte Geschäftslogik enthalten ist. Zur Kompilierungszeit werden die beiden Teile in eine einzelne Klasse zusammengeführt. Aber wenn Sie die Entitätsklassen mithilfe des Object Relational Designer oder das SQLMetal Regenerieren müssen, können Sie dies tun, und Ihr Teil der Klasse wird nicht geändert werden.  
+ Wenn Sie zur Entwurfszeit eine Entitäts Klasse generieren, entweder manuell oder mithilfe des objektrelationaler Designer oder SQLMetal, wird Sie als partielle Klasse definiert. Dies bedeutet, dass Sie in einer separaten Codedatei einen anderen Teil der Entitätsklasse festlegen können, in der die benutzerdefinierte Geschäftslogik enthalten ist. Zur Kompilierungszeit werden die beiden Teile in eine einzelne Klasse zusammengeführt. Wenn Sie jedoch die Entitäts Klassen mithilfe der objektrelationaler Designer oder SQLMetal neu generieren müssen, können Sie dies tun, und Ihr Teil der Klasse wird nicht geändert.  
   
  Die partiellen Klassen, durch die Entitäten definiert werden, und <xref:System.Data.Linq.DataContext> enthalten partielle Methoden. Dabei handelt es sich um Erweiterungspunkte, über die Sie die Geschäftslogik anwenden können, bevor und nachdem Sie Updates, Einfügungen oder Löschungen für eine Entität oder Entitätseigenschaft ausführen. Partielle Methoden können als Kompilierzeitereignisse betrachtet werden. Der Code-Generator definiert eine Methodensignatur und ruft die Methoden in den get- und set-Eigenschaftenaccessoren, im `DataContext`-Konstruktor und in einigen Fällen im Hintergrund auf, sobald <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen wird. Wenn Sie jedoch keine bestimmte partielle Methode implementieren, werden alle darauf gerichteten Verweise sowie die Definition während der Kompilierung entfernt.  
   
  In der Implementierungsdefinition, die Sie in eine separate Codedatei schreiben, können Sie beliebige benutzerdefinierte Logik aufnehmen. Sie können die partielle Klasse selbst als Domänenebene verwenden oder einen Aufruf von der Implementierungsdefinition der partiellen Methode in separate Objekte ausführen. Die Geschäftslogik wird auf beide Weisen klar sowohl vom Datenzugriffscode als auch vom Präsentationsebenencode getrennt.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Genauere Betrachtung der Erweiterungspunkte  
- Im folgende Beispiel zeigt einen Teil der durch den Object Relational Designer für die generierte Code die `DataContext` -Klasse, die verfügt über zwei Tabellen: `Customers` und `Orders`. Beachten Sie, dass Einfüge-, Update- und Löschmethoden für jede Tabelle in der Klasse definiert werden.  
+ Das folgende Beispiel zeigt einen Teil des Codes, der vom-objektrelationaler Designer für `DataContext` die-Klasse generiert wurde, `Customers` die `Orders`über zwei Tabellen verfügt: und. Beachten Sie, dass Einfüge-, Update- und Löschmethoden für jede Tabelle in der Klasse definiert werden.  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Wenn Sie die Einfüge-, Update- und Löschmethoden in Ihrer partiellen Klasse implementieren, werden sie von der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Laufzeit anstelle ihrer eigenen Standardmethoden aufgerufen, sobald <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen wird. Auf diese Weise können Sie das Standardverhalten für Erstellungs-, Lese-, Update- und Löschoperationen überschreiben. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anpassen des Einfüge-, Update- und delete-Verhalten von Entitätsklassen](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ Wenn Sie die Einfüge-, Update- und Löschmethoden in Ihrer partiellen Klasse implementieren, werden sie von der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Laufzeit anstelle ihrer eigenen Standardmethoden aufgerufen, sobald <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen wird. Auf diese Weise können Sie das Standardverhalten für Erstellungs-, Lese-, Update- und Löschoperationen überschreiben. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anpassen des Einfüge-, Aktualisierungs-und Lösch Verhaltens von](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)Entitäts Klassen.  
   
  Die `OnCreated`-Methode wird im Klassenkonstruktor aufgerufen.  
   
@@ -155,7 +155,7 @@ public string CustomerID
 }  
 ```  
   
- In Ihren Teil der Klasse schreiben Sie eine Implementierungsdefinition der Methode. In Visual Studio nach der Eingabe `partial` IntelliSense wird für die Methodendefinitionen im anderen Teil der Klasse angezeigt.  
+ In Ihren Teil der Klasse schreiben Sie eine Implementierungsdefinition der Methode. In Visual Studio wird IntelliSense für `partial` die Methoden Definitionen im anderen Teil der Klasse angezeigt, nachdem Sie Sie eingeben.  
   
 ```vb  
 Partial Public Class Customer  
@@ -181,11 +181,11 @@ partial class Customer
   
  [Exemplarische Vorgehensweise: Anpassen des Einfüge-, Update- und Löschverhaltens in Entitätsklassen](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Exemplarische Vorgehensweise: Hinzufügen von Validierungen zu Entitätsklassen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [Exemplarische Vorgehensweise: Hinzufügen von Validierung zu Entitäts Klassen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Partielle Klassen und Methoden](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
-- [Partielle Methoden](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Partielle Methoden](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

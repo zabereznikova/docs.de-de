@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940582"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingeschlossen werden soll.  
@@ -57,9 +57,9 @@ Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingesc
 ## <a name="remarks"></a>Hinweise  
  Durch Überprüfen der Typbibliothek werden von der Laufzeit der COM+-Integration Dienste erstellt. Wenn COM+-Komponenten Methoden enthalten, die einen VARIANT übergeben, können die tatsächlichen Typen, die vor der Laufzeit übergeben werden sollen, vom System nicht bestimmt werden. Aus diesem Grund tritt beim Versuch, einen benutzerdefinierten Typ in einem VARIANT zu übergeben, ein Fehler auf, da der Typ für die Serialisierung nicht bekannt ist.  
   
- Sie können jedoch der Konfigurationsdatei die UDTs hinzufügen, sodass diese als bekannte Typen im entsprechenden Dienstvertrag eingefügt werden können, um das Problem zu umgehen. Voraussetzung hierfür ist eine eindeutige Identifizierung des UDT und der Verträge, d.&amp;#160;h. der ursprünglich verwendeten COM-Schnittstelle.  
+ Sie können jedoch der Konfigurationsdatei die UDTs hinzufügen, sodass diese als bekannte Typen im entsprechenden Dienstvertrag eingefügt werden können, um das Problem zu umgehen. Voraussetzung hierfür ist eine eindeutige Identifizierung des UDT und der Verträge, d.&#160;h. der ursprünglich verwendeten COM-Schnittstelle.  
   
- Das folgende Beispiel zeigt zwei spezifische UDTs hinzugefügt die <`userDefinedTypes`>-Abschnitt der Konfigurationsdatei für diesen Zweck.  
+ Im folgenden Beispiel wird das Hinzufügen von zwei spezifischen UDTs`userDefinedTypes`zum < > Abschnitt der Konfigurationsdatei zu diesem Zweck veranschaulicht.  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingesc
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integrieren von COM+-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integrieren von COM+-Anwendungen](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Vorgehensweise: Konfigurieren der com+-Dienst Einstellungen](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

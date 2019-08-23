@@ -2,15 +2,15 @@
 title: Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88ce22c9376313db26a5cbe377bdc8aaee83c118
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965559"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
-In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer Nachrichten in einem Dienst erfolgen soll. Dieses Beispiel basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird der `netMsmqBinding` verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
+In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer Nachrichten in einem Dienst erfolgen soll. Dieses Beispiel basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird der `netMsmqBinding` verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
 
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.
 
@@ -20,20 +20,20 @@ In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer
 
  In diesem Beispiel sehen Sie die eingeschränkten Funktionen für die Handhabung nicht verarbeiteter Nachrichten auf den Plattformen [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und die vollständigen Funktionen, die [!INCLUDE[wv](../../../../includes/wv-md.md)] bietet. In beiden Beispielen besteht das Ziel darin, die nicht verarbeitbare Nachricht aus der Warteschlange in eine andere Warteschlange zu verschieben, in der dann ein Dienst für nicht verarbeitbare Nachrichten darauf angewendet werden kann.
 
-## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 &amp;#8211; Beispiel für Handhabung nicht verarbeitbarer Nachrichten
+## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 &#8211; Beispiel für Handhabung nicht verarbeitbarer Nachrichten
  In [!INCLUDE[wv](../../../../includes/wv-md.md)] stellt MSMQ eine Funktion mit einer Unterwarteschlange zur Verfügung, in der nicht verarbeitbare Nachrichten gespeichert werden können. In diesem Beispiel wird die empfohlene Vorgehensweise für den Umgang mit nicht verarbeitbaren Nachrichten unter [!INCLUDE[wv](../../../../includes/wv-md.md)] veranschaulicht.
 
  Die Erkennung nicht verarbeitbarer Nachrichten in [!INCLUDE[wv](../../../../includes/wv-md.md)] ist ziemlich ausgereift. Es gibt 3 Eigenschaften, die bei der Erkennung behilflich sind. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> gibt an, wie oft eine bestimmte Nachricht erneut aus der Warteschlange gelesen und zur Verarbeitung an die Anwendung übergeben wird. Eine Nachricht wird erneut aus der Warteschlange eingelesen, wenn sie wieder in die Warteschlange eingestellt wurde, weil sie nicht an die Anwendung übergeben werden konnte oder weil die Anwendung die Transaktion im Dienstvorgang zurücksetzt. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> gibt an, wie oft die Nachricht in die Wiederholungswarteschlange verschoben wird. Wenn <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> erreicht wird, wird die Nachricht in die Wiederholungswarteschlange verschoben. Die Eigenschaft <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> ist die Zeitverzögerung, nach der die Nachricht aus der Wiederholungswarteschlange zurück in die Hauptwarteschlange verschoben wird. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wird auf 0 zurückgesetzt. Es wird ein erneuter Versuch gestartet. Wenn alle Versuche, die Nachricht zu lesen, fehlgeschlagen sind, wird die Nachricht als nicht verarbeitbar markiert.
 
  Sobald eine Nachricht als nicht verarbeitbar markiert wurde, wird damit gemäß den Einstellungen in der <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>-Enumeration verfahren. So können Sie die möglichen Werte erneut durchlaufen:
 
-- Fehler (Standard): Um den Listener und auch auf dem Diensthost einen Fehler.
+- Fehler (Standard): , Wenn der Listener und auch der Dienst Host fehlerhaft sind.
 
-- Löschen: So löschen Sie die Nachricht.
+- Dropdown , Um die Meldung zu löschen.
 
-- bewegen: Um die Nachricht in die Unterwarteschlange für nicht verarbeitbare Nachrichten zu verschieben. Dieser Wert ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
+- Voranschreiten Zum Verschieben der Nachricht in die unter Warteschlange für nicht verarbeitbare Nachrichten. Dieser Wert ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
 
-- Ablehnen: Senden der Nachricht zurück an die Dead Letter-Warteschlange des Absenders die Nachricht ablehnen. Dieser Wert ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
+- Gegen , Um die Nachricht abzulehnen, und sendet die Nachricht zurück an die Warteschlange für unzustellbare Nachrichten des Absenders. Dieser Wert ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
 
  Im Beispiel wird die Verwendung der `Move`-Disposition für die nicht verarbeitbare Nachricht veranschaulicht. `Move` führt dazu, dass die Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten verschoben wird.
 
@@ -157,7 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>Verarbeiten von Nachrichten aus der Warteschlange für potenziell schädliche Nachrichten
  Der Dienst für nicht verarbeitbare Nachrichten liest Nachrichten aus der endgültigen Warteschlange für potenziell schädliche Nachrichten und verarbeitet sie.
 
- Nachrichten in der Warteschlange für potenziell schädliche Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet; dieser kann vom Dienst-Endpunkt für nicht verarbeitbare Nachrichten abweichen. Aus diesem Grund, wenn der Dienst für nicht verarbeitbare Nachrichten aus der Warteschlange liest, die WCF-Kanalschicht-Kanalebene die fehlende Übereinstimmung bei den Endpunkten und verteilt die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für nicht verarbeitete Nachrichten empfangen. Damit die Nachricht empfangen wird, selbst wenn sie an einen anderen Endpunkt adressiert ist, muss `ServiceBehavior` zum Filtern von Adressen hinzugefügt werden, wobei das Übereinstimmungskriterium darin besteht, mit jedem Dienst-Endpunkt übereinzustimmen, an den die Nachricht adressiert ist. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für potenziell schädliche Nachrichten gelesen werden, erfolgreich zu verarbeiten.
+ Nachrichten in der Warteschlange für potenziell schädliche Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet; dieser kann vom Dienst-Endpunkt für nicht verarbeitbare Nachrichten abweichen. Wenn der Dienst für nicht verarbeitbare Nachrichten Nachrichten aus der Warteschlange liest, findet die WCF-Kanal Schicht daher die nicht Übereinstimmung in Endpunkten und versendet die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für nicht verarbeitete Nachrichten empfangen. Damit die Nachricht empfangen wird, selbst wenn sie an einen anderen Endpunkt adressiert ist, muss `ServiceBehavior` zum Filtern von Adressen hinzugefügt werden, wobei das Übereinstimmungskriterium darin besteht, mit jedem Dienst-Endpunkt übereinzustimmen, an den die Nachricht adressiert ist. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für potenziell schädliche Nachrichten gelesen werden, erfolgreich zu verarbeiten.
 
  Die Implementierung des Diensts für nicht verarbeitbare Nachrichten selbst weist große Ähnlichkeiten mit der Dienstimplementierung auf. Sie implementiert den Vertrag und verarbeitet die Aufträge. Hier das Codebeispiel.
 
@@ -209,7 +209,7 @@ public class OrderProcessorService : IOrderProcessor
  Im Gegensatz zum Auftragsverarbeitungsdienst, der Nachrichten aus der Auftragswarteschlange liest, liest der Dienst für nicht verarbeitbare Nachrichten Nachrichten aus der Unterwarteschlange für potenziell schädliche Nachrichten. Die Warteschlange für potenziell schädliche Nachrichten ist eine Unterwarteschlange der Hauptwarteschlange, trägt den Namen "poison" und wird automatisch von MSMQ generiert. Um darauf zuzugreifen, geben Sie den Namen der Hauptwarteschlange, gefolgt von ";" und dem Namen der Unterwarteschlange (in diesem Fall -"poison") an, wie in der folgenden Beispielkonfiguration gezeigt.
 
 > [!NOTE]
->  Im Beispiel für MSMQ v3.0 handelt es sich beim Namen der Warteschlange für potenziell schädliche Nachrichten ("poison") nicht um eine Unterwarteschlange, sondern vielmehr um die Warteschlange, in die die Nachricht verschoben wurde.
+> Im Beispiel für MSMQ v3.0 handelt es sich beim Namen der Warteschlange für potenziell schädliche Nachrichten ("poison") nicht um eine Unterwarteschlange, sondern vielmehr um die Warteschlange, in die die Nachricht verschoben wurde.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -273,25 +273,25 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
 2. Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
 
     1. Öffnen Sie Server-Manager in Visual Studio 2012.
 
-    2. Erweitern Sie die **Features** Registerkarte.
+    2. Erweitern Sie die Registerkarte **Features** .
 
-    3. Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
+    3. Klicken Sie mit der rechten Maustaste auf **private**Meldungs Warteschlangen, und wählen Sie **neu**, **private**
 
-    4. Überprüfen Sie die **transaktional** Feld.
+    4. Aktivieren Sie das Kontrollkästchen **transaktional** .
 
-    5. Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
+    5. Geben `ServiceModelSamplesTransacted` Sie als Namen für die neue Warteschlange ein.
 
 3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-4. Um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, ändern Sie die Warteschlangennamen den tatsächlichen Hostnamen anstelle von Localhost ein, und befolgen die Anweisungen in [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Wenn Sie das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend ausführen möchten, ändern Sie die Warteschlangen Namen so, dass Sie den tatsächlichen Hostnamen anstelle von "localhost" widerspiegeln, und befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus als `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie in diesem Beispiel auf einem Computer, die nicht Teil einer Domäne ist ausführen, erhalten Sie den folgenden Fehler: "Des Benutzers interne Message Queuing-Zertifikat ist nicht vorhanden".
+ Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus als `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, erhalten Sie die folgende Fehlermeldung: Das interne Message queuingzertifikat des Benutzers ist nicht vorhanden.
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört
 
@@ -314,13 +314,13 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.  
   
-3. Damit Meta Data Exchange funktionieren kann, registrieren Sie eine URL mit http-Bindung. Dazu muss der Dienst in einem Befehlsfenster auf Administratorebene ausgeführt werden. Andernfalls erhalten Sie eine Ausnahme wie z. B.: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Damit Meta Data Exchange funktionieren kann, registrieren Sie eine URL mit http-Bindung. Dazu muss der Dienst in einem Befehlsfenster auf Administratorebene ausgeführt werden. Andernfalls erhalten Sie eine Ausnahme wie z. b `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.:.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

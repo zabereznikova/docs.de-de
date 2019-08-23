@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917318"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML- und benutzerdefinierte Klassen für WPF
 XAML wird in Common Language Runtime (CLR)-Frameworks implementiert und unterstützt die Möglichkeit, eine benutzerdefinierte Klasse oder Struktur in jeder beliebigen Common Language Runtime (CLR)-Sprache zu definieren und dann mithilfe von XAML-Markup auf diese Klasse zuzugreifen. Sie können eine Mischung aus [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Typen und ihren benutzerdefinierten Typen innerhalb derselben Markupdatei verwenden. Die übliche Vorgehensweise hierbei ist, Ihren benutzerdefinierten Typen ein XAML-Namespace-Präfix zuzuordnen. Dieses Thema beschreibt die Anforderungen, die eine benutzerdefinierte Klasse erfüllen muss, um als XAML-Element verwendet werden zu können.  
@@ -69,7 +69,7 @@ XAML wird in Common Language Runtime (CLR)-Frameworks implementiert und unterst�
  Um als CLR-Ereignis verwendet werden zu können, muss das Ereignis als öffentliches Ereignis für eine Klasse verfügbar gemacht werden, die einen Parameter losen Konstruktor unterstützt, oder für eine abstrakte Klasse, bei der auf das Ereignis in abgeleiteten Klassen zugegriffen werden kann. Damit das CLR-Ereignis bequem als Routing Ereignis verwendet werden kann, sollte das CLR `add` - `remove` Ereignis explizite-und-Methoden implementieren, die Handler für die CLR-Ereignis Signatur hinzufügen und entfernen <xref:System.Windows.UIElement.AddHandler%2A> und <xref:System.Windows.UIElement.RemoveHandler%2A> diese Handler an den und weiterleiten. anzuwenden. Diese Methoden fügen die Handler zum Routingereignis-Handlerspeicher auf der Instanz, der das Ereignis zugeordnet ist, hinzu oder entfernen sie.  
   
 > [!NOTE]
->  Es ist möglich, Handler für Routing Ereignisse mithilfe <xref:System.Windows.UIElement.AddHandler%2A>von direkt zu registrieren und absichtlich kein CLR-Ereignis zu definieren, das das Routing Ereignis verfügbar macht. Davon wird im Allgemeinen abgeraten, da das Ereignis in diesem Fall keine XAML-Attributsyntax zum Anhängen von Handlern ermöglicht, und die resultierende Klasse eine weniger transparente XAML-Ansicht der Möglichkeiten dieses Typs bieten wird.  
+> Es ist möglich, Handler für Routing Ereignisse mithilfe <xref:System.Windows.UIElement.AddHandler%2A>von direkt zu registrieren und absichtlich kein CLR-Ereignis zu definieren, das das Routing Ereignis verfügbar macht. Davon wird im Allgemeinen abgeraten, da das Ereignis in diesem Fall keine XAML-Attributsyntax zum Anhängen von Handlern ermöglicht, und die resultierende Klasse eine weniger transparente XAML-Ansicht der Möglichkeiten dieses Typs bieten wird.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>Schreiben von Auflistungseigenschaften  
@@ -92,7 +92,7 @@ XAML wird in Common Language Runtime (CLR)-Frameworks implementiert und unterst�
  Jeder dieser Typen in CLR verfügt über eine `Add`-Methode, die vom XAML-Prozessor verwendet wird, um der zugrunde liegenden Auflistung bei der Erstellung des Objektdiagramms Elemente hinzuzufügen.  
   
 > [!NOTE]
->  `List` Die generischen `Dictionary` -und<xref:System.Collections.Generic.IList%601> - <xref:System.Collections.Generic.IDictionary%602>Schnittstellen (und) werden nicht für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sammlungs Erkennung durch den XAML-Prozessor unterstützt. Allerdings <xref:System.Collections.Generic.List%601> können Sie die-Klasse als Basisklasse verwenden, da Sie direkt implementiert <xref:System.Collections.IList> , oder <xref:System.Collections.Generic.Dictionary%602> als Basisklasse, da Sie direkt implementiert <xref:System.Collections.IDictionary> .  
+> `List` Die generischen `Dictionary` -und<xref:System.Collections.Generic.IList%601> - <xref:System.Collections.Generic.IDictionary%602>Schnittstellen (und) werden nicht für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sammlungs Erkennung durch den XAML-Prozessor unterstützt. Allerdings <xref:System.Collections.Generic.List%601> können Sie die-Klasse als Basisklasse verwenden, da Sie direkt implementiert <xref:System.Collections.IList> , oder <xref:System.Collections.Generic.Dictionary%602> als Basisklasse, da Sie direkt implementiert <xref:System.Collections.IDictionary> .  
   
  Wenn Sie eine Eigenschaft, die eine Auflistung annimmt, deklarieren, sollten Sie sorgfältig darauf achten, wie dieser Eigenschaftswert in neuen Instanzen des Typs initialisiert wird. Wenn Sie die Eigenschaft nicht als Abhängigkeitseigenschaft implementieren, ist es angebracht, der Eigenschaft ein unterstützendes Feld zuzuweisen, das den Typkonstruktor der Auflistung aufruft. Wenn die Eigenschaft eine Abhängigkeitseigenschaft ist, müssen Sie die Auflistungseigenschaft als Teil des standardmäßigen Typkonstruktors initialisieren. Der Grund dafür ist, dass eine Abhängigkeitseigenschaft ihren Standardwert aus Metadaten übernimmt, und Sie in der Regel nicht möchten, dass der Anfangswert einer Auflistungseigenschaft eine statische, gemeinsam genutzte Auflistung ist. Es sollte eine Auflistungsinstanz pro enthaltender Typinstanz geben. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).  
   

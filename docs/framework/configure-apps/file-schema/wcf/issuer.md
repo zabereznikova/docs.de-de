@@ -2,14 +2,14 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08fda249b526961ff711f439cf729a18e15b412b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756259"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929375"
 ---
-# <a name="issuer"></a>\<issuer>
+# <a name="issuer"></a>\<Aussteller >
 Gibt den Sicherheitstokendienst an, der Sicherheitstoken ausstellt.  
   
  \<system.serviceModel>  
@@ -17,8 +17,8 @@ Gibt den Sicherheitstokendienst an, der Sicherheitstoken ausstellt.
 \<wsFederationHttpBinding>  
 \<binding>  
 \<security>  
-\<message>  
-\<issuer>  
+\<Message >  
+\<Aussteller >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,23 +56,23 @@ Gibt den Sicherheitstokendienst an, der Sicherheitstoken ausstellt.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Eine Auflistung mit Adressheadern für die Endpunkte, die vom Generator erstellt werden können.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt bei Verwendung eines ausgestellten Tokens die Einstellungen an, mit denen der Client den Server authentifizieren kann.|  
+|[\<headers>](headers-element.md)|Eine Auflistung mit Adressheadern für die Endpunkte, die vom Generator erstellt werden können.|  
+|[\<identity>](identity.md)|Gibt bei Verwendung eines ausgestellten Tokens die Einstellungen an, mit denen der Client den Server authentifizieren kann.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ \<WsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) Element.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für das [ \<WSFederationHttpBinding->](wsfederationhttpbinding.md) Element.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)

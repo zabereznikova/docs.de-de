@@ -1,5 +1,5 @@
 ---
-title: <remove> -Element für <listeners> für <source>
+title: <remove>-Element <listeners> für für<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edd27dd262004aead7db4d81db8ecab0e831dac1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701605"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926991"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<Entfernen Sie >-Element für \<Listener > für \<Quelle >
+# <a name="remove-element-for-listeners-for-source"></a>\<Entfernen Sie > Element \<für Listener > \<für Quell >
 Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.  
   
  \<configuration>  
 \<system.diagnostics>  
 \<Quellen >  
-\<Quelle >  
-\<listeners>  
+\<Quell >  
+\<Listener >  
 \<remove>  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +37,7 @@ Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungs
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`name`|Erforderliches Attribut.<br /><br /> Der Name des Listeners, Aufheben der `Listeners` Auflistung.|  
+|`name`|Erforderliches Attribut.<br /><br /> Der Name des Listener, der aus der `Listeners` Auflistung entfernt werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -50,17 +50,17 @@ Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungs
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |`sources`|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
 |`source`|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
-|`listeners`|Gibt die Listener, die sammeln, speichern und Weiterleiten von Nachrichten an.|  
+|`listeners`|Gibt Listener an, die Nachrichten erfassen, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<remove>` Element entfernt einen angegebenen Listener aus der `Listeners` -Sammlung für eine Ablaufverfolgungsquelle.  
+ Das `<remove>` -Element entfernt einen angegebenen Listener aus `Listeners` der-Auflistung für eine Ablauf Verfolgungs Quelle.  
   
- Können Sie ein Element Entfernen der `Listeners` Sammlung für eine Ablaufverfolgungsquelle programmgesteuert durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> Methode für die <xref:System.Diagnostics.TraceSource.Listeners%2A> Eigenschaft der <xref:System.Diagnostics.TraceSource> Instanz.  
+ Sie können ein Element aus der `Listeners` -Auflistung für eine Ablauf Verfolgungs Quelle Programm gesteuert entfernen, indem Sie die <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> -Methode für <xref:System.Diagnostics.TraceSource> die-Eigenschaft der-Instanz aufrufen.  
   
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der `<remove>` Element vor der Verwendung der `<add>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`.  
+ Im folgenden Beispiel wird gezeigt, wie das `<remove>` -Element verwendet wird `<add>` , bevor das-Element verwendet wird, um der-Auflistung `TraceSourceApp`für die Ablauf Verfolgungs Quelle den Listener `console` `Listeners` hinzuzufügen.  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungs
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [\<clear>](clear-element-for-listeners-for-source.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../debug-trace-profile/trace-listeners.md)

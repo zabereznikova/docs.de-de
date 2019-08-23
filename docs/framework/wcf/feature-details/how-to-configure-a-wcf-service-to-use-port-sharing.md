@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Konfigurieren Sie einen Windows Communication Foundation-Dienstes zur Anschlussfreigabe'
+title: 'Vorgehensweise: Konfigurieren eines Windows Communication Foundation Dienstanbieter für die Verwendung der Port Freigabe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912223"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren Sie einen Windows Communication Foundation-Dienstes zur Anschlussfreigabe
-Die einfachste Möglichkeit zur Verwendung von net.tcp://-Anschlussfreigabe in der Windows Communication Foundation (WCF)-Anwendung wird zum Bereitstellen eines Diensts mithilfe der <xref:System.ServiceModel.NetTcpBinding>.  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren eines Windows Communication Foundation Dienstanbieter für die Verwendung der Port Freigabe
+Die einfachste Möglichkeit zur Verwendung von net. TCP://-Port Freigabe in Ihrer Windows Communication Foundation (WCF)-Anwendung besteht darin, einen <xref:System.ServiceModel.NetTcpBinding>Dienst mit dem verfügbar zu machen.  
   
  Diese Bindung verfügt über eine <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft, die festlegt, ob die net.tcp://-Anschlussfreigabe für den mit dieser Bindung zu konfigurierenden Dienst aktiviert ist.  
   
@@ -21,7 +21,7 @@ Die einfachste Möglichkeit zur Verwendung von net.tcp://-Anschlussfreigabe in d
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>So aktivieren Sie die net.tcp://-Anschlussfreigabe für eine NetTcpBinding im Code  
   
-1. Erstellen Sie einen Dienst zum Implementieren der eines Vertrags mit dem Namen `IMyService` und nennen Sie sie `MyService`,.  
+1. Erstellen Sie einen Dienst, um einen Vertrag `IMyService` namens zu implementieren `MyService`, und rufen Sie ihn auf.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -37,7 +37,7 @@ Die einfachste Möglichkeit zur Verwendung von net.tcp://-Anschlussfreigabe in d
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
   
     > [!NOTE]
-    >  In diesem Beispiel wird der Standard-TCP-Anschluss 808 verwendet, da der Endpunkt-Adress-URI keine andere Anschlussnummer angibt. Da die Anschlussfreigabe explizit für die Transportbindung aktiviert wurde, kann dieser Dienst den Anschluss 808 für andere Dienste in anderen Vorgängen freigeben. Wenn die Anschlussfreigabe nicht zulässig wäre und eine andere Anwendung bereits den Anschluss 808 verwenden würde, würde dieser Dienst beim Öffnen eine <xref:System.ServiceModel.AddressAlreadyInUseException> ausgeben.  
+    > In diesem Beispiel wird der Standard-TCP-Anschluss 808 verwendet, da der Endpunkt-Adress-URI keine andere Anschlussnummer angibt. Da die Anschlussfreigabe explizit für die Transportbindung aktiviert wurde, kann dieser Dienst den Anschluss 808 für andere Dienste in anderen Vorgängen freigeben. Wenn die Anschlussfreigabe nicht zulässig wäre und eine andere Anwendung bereits den Anschluss 808 verwenden würde, würde dieser Dienst beim Öffnen eine <xref:System.ServiceModel.AddressAlreadyInUseException> ausgeben.  
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>So aktivieren Sie die net.tcp://-Anschlussfreigabe für eine NetTcpBinding in der Konfiguration  
   
@@ -63,4 +63,4 @@ Die einfachste Möglichkeit zur Verwendung von net.tcp://-Anschlussfreigabe in d
 ## <a name="see-also"></a>Siehe auch
 
 - [Net.TCP-Portfreigabe](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Vorgehensweise: Aktivieren Sie den Net. TCP-Port Freigabe Dienst.](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

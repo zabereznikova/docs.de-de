@@ -6,16 +6,16 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eceafee4d02478c9e011a473ee1d036df91075d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932184"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IGridProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignissen. Links zu zusätzlichen Referenzen sind am Ende dieser Übersicht aufgelistet.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64622977"
   
 - Auch wenn eine Zelle leer ist, muss ein Benutzeroberflächenautomatisierungs-Element zurückgegeben werden, um die <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> -Eigenschaft dieser Zelle zu unterstützen. Dies ist möglich, wenn das Layout von untergeordneten Elementen im Raster dem eines unregelmäßigen Arrays entspricht (siehe folgendes Beispiel).  
   
- ![Windows Explorer-Ansicht mit Flatterlayout. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ Windows Explorer-Ansicht, die das unregelmäßige ![Layout anzeigt.](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Beispiel für ein Grid-Steuerelement mit leeren Koordinaten  
   
 - Ein Raster mit einem einzelnen Element muss weiterhin <xref:System.Windows.Automation.Provider.IGridProvider> implementieren, wenn es logisch als Raster gilt. Die Anzahl untergeordneter Elemente im Raster ist unwesentlich.  
@@ -48,9 +48,9 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
   
 |Erforderliche Member|Typ|Hinweise|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Methode|None|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -60,8 +60,8 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Wenn die angeforderte Zeilenkoordinate größer als die <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> oder die Spaltenkoordinate ist größer als die <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> – Wenn Sie entweder von der angeforderten Zeilen- oder Spaltenkoordinaten kleiner als 0 (null).|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -, Wenn die angeforderte Zeilen Koordinate größer <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> als ist oder die Spalten Koordinate größer <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>als ist.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -, Wenn eine der angeforderten Zeilen-oder Spalten Koordinaten kleiner als 0 (null) ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 

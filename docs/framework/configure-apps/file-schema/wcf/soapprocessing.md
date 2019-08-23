@@ -2,22 +2,22 @@
 title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 678b1f71ac15d3ad30df28cec5abbe403fb08c95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937052"
 ---
 # <a name="soapprocessing"></a>\<soapProcessing>
 
 Definiert das Clientendpunktverhalten, das verwendet wird, um Nachrichten zwischen unterschiedlichen Bindungstypen und Nachrichtenversionen zu marshallen.
 
-**\<system.ServiceModel>**   
-&nbsp;&nbsp;**\<behaviors>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors>**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing>**
+**\<system.ServiceModel>**    
+&nbsp;&nbsp; **\<Verhaltens >**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<endpointverhaltens->**    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Verhaltens >**    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<soapprocessing->**
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<behavior>**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | Gibt ein Endpunktverhalten an. |
+| [ **\<behavior>** ](behavior-of-endpointbehaviors.md) | Gibt ein Endpunktverhalten an. |
 
 ## <a name="remarks"></a>Hinweise
 
 SOAP-Verarbeitung ist der Prozess, bei dem Nachrichten zwischen Nachrichtenversionen konvertiert werden.
 
-Der Windows Communication Foundation (WCF)-Routingdienst kann Nachrichten von einem Protokoll in einen anderen konvertieren. Wenn die Versionen eingehender und ausgehender Nachrichten unterschiedlich sind, wird eine neue Nachricht mit der richtigen Version erstellt. Meldungen werden von einer <xref:System.ServiceModel.Channels.MessageVersion> zu einer anderen verarbeitet, indem eine neue WCF-Meldung erstellt wird, die den Textteil und relevante Header von der eingehenden WCF-Meldung enthält. Header, die adressierungsspezifisch sind oder auf Routerebene verstanden werden, werden während der Erstellung der neuen WCF-Nachricht nicht verwendet, da diese Header entweder eine andere Version haben (im Fall von Adressierungsheadern) oder als Teil der Kommunikation zwischen dem Client und dem Router verarbeitet wurden.
+Der Windows Communication Foundation (WCF)-Routing Dienst kann Nachrichten von einem Protokoll in ein anderes Protokoll konvertieren. Wenn die Versionen eingehender und ausgehender Nachrichten unterschiedlich sind, wird eine neue Nachricht mit der richtigen Version erstellt. Meldungen werden von einer <xref:System.ServiceModel.Channels.MessageVersion> zu einer anderen verarbeitet, indem eine neue WCF-Meldung erstellt wird, die den Textteil und relevante Header von der eingehenden WCF-Meldung enthält. Header, die adressierungsspezifisch sind oder auf Routerebene verstanden werden, werden während der Erstellung der neuen WCF-Nachricht nicht verwendet, da diese Header entweder eine andere Version haben (im Fall von Adressierungsheadern) oder als Teil der Kommunikation zwischen dem Client und dem Router verarbeitet wurden.
 
 Ob ein Header in der ausgehenden Nachricht eingefügt wird, wird dadurch bestimmt, ob er als verstanden markiert wurde, als er die eingehende Channelebene durchlief. Nicht akzeptierte Header (z. B. benutzerdefinierte Header) werden nicht entfernt und durchlaufen den Routingdienst, indem sie in die ausgehende Nachricht kopiert werden. Der Nachrichtentext wird in die ausgehende Nachricht kopiert. Die Nachricht wird dann über den Kanal für ausgehende Nachrichten gesendet. Zu diesem Zeitpunkt werden alle relevanten Header und anderen für das Kommunikationsprotokoll/den Transport relevanten Umschlagdaten erstellt und hinzugefügt.
 
-Diese Verarbeitungsschritte erfolgen, wenn das SOAP-Verarbeitungsverhalten angegeben ist. Dies [ \<SoapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) Verhalten ist ein Endpunktverhalten, die auf alle (ausgehenden) Clientendpunkte angewendet wird, wenn der Routingdienst startet. standardmäßig die [ \<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) Verhalten erstellt, und fügt eine neue [ \<SoapProcessingExtension >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md) Verhalten bei `processMessages` festgelegt `true` für jede Clientendpunkt. Wenn Sie ein Protokoll haben, das vom Routingdienst nicht akzeptiert wird, oder das Standardverarbeitungsverhalten überschreiben möchten, können Sie die SOAP-Verarbeitung entweder für den gesamten Routingdienst oder für bestimmte Endpunkte deaktivieren.  Um SOAP-Verarbeitung für den gesamten Routingdienst auf allen Endpunkten zu deaktivieren, legen die `soapProcessing` Attribut der [ \<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) Verhalten `false`. Um die SOAP-Verarbeitung für einen bestimmten Endpunkt zu deaktivieren, verwenden Sie dieses Verhalten und legen Sie das `processMessages`-Attribut dieses Verhaltens auf `false` fest. Fügen Sie das Verhalten dann an den Endpunkt an, für den Sie den Standardverarbeitungscode deaktivieren möchten.  Wenn die [ \<routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing-of-servicebehavior.md) Verhalten richtet den Routingdienst, überspringt die erneute Anwenden des Endpunktverhaltens, da bereits eine vorhanden ist.
+Diese Verarbeitungsschritte erfolgen, wenn das SOAP-Verarbeitungsverhalten angegeben ist. Bei diesem [ \<soapprocessingextension->](soapprocessing.md) Verhalten handelt es sich um ein Endpunkt Verhalten, das auf alle Client Endpunkte (ausgehend) angewendet wird, wenn der Routing Dienst gestartet wird. Standardmäßig wird mit dem [ \<Routing >](routing-of-servicebehavior.md) Verhalten ein neues [ \<soapprocessingextension->](soapprocessing.md) Verhalten erstellt `processMessages` und angefügt, wobei für jeden Client Endpunkt auf `true` festgelegt ist. Wenn Sie ein Protokoll haben, das vom Routingdienst nicht akzeptiert wird, oder das Standardverarbeitungsverhalten überschreiben möchten, können Sie die SOAP-Verarbeitung entweder für den gesamten Routingdienst oder für bestimmte Endpunkte deaktivieren.  Um die SOAP-Verarbeitung für den gesamten Routing Dienst auf allen Endpunkten zu deaktivieren `soapProcessing` , legen Sie das-Attribut [ \<des Routing >](routing-of-servicebehavior.md) Verhalten auf `false`fest. Um die SOAP-Verarbeitung für einen bestimmten Endpunkt zu deaktivieren, verwenden Sie dieses Verhalten und legen Sie das `processMessages`-Attribut dieses Verhaltens auf `false` fest. Fügen Sie das Verhalten dann an den Endpunkt an, für den Sie den Standardverarbeitungscode deaktivieren möchten.  Wenn das Routing > Verhalten den Routing Dienst einrichtet, wird das erneute Anwenden des Endpunkt Verhaltens übersprungen, da bereits eine vorhanden ist. [ \<](routing-of-servicebehavior.md)

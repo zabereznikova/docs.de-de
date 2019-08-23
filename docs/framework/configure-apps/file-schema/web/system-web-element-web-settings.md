@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941380"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System.Web >-Element (Webeinstellungen)
-Enthält Informationen dazu, wie die hostingebene von ASP.NET prozessübergreifende Verhalten verwaltet.  
+# <a name="systemweb-element-web-settings"></a>\<System. Web >-Element (Webeinstellungen)
+Enthält Informationen dazu, wie die ASP.net-hostingschicht Prozess weites Verhalten verwaltet.  
   
  \<configuration>  
-\<System.Web >-Element (Webeinstellungen)  
+\<System. Web >-Element (Webeinstellungen)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ Enthält Informationen dazu, wie die hostingebene von ASP.NET prozessübergreife
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Gibt Konfigurationseinstellungen für die IIS-Anwendungspools in eine Datei "aspnet.config" an.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Gibt Konfigurationseinstellungen für IIS-Anwendungs Pools in einer ASPNET. config-Datei an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Gibt das Stammelement in jeder Konfigurationsdatei an, die von der common Language Runtime und .NET Framework-Anwendungen verwendet wird.|  
+|[\<configuration>](../configuration-element.md)|Gibt das Stamm Element in jeder Konfigurationsdatei an, die von den Common Language Runtime-und .NET Framework Anwendungen verwendet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `system.web` Element und dessen untergeordnete `applicationPool` Element wurden hinzugefügt, um .NET Framework ab .NET Framework 3.5 SP1. Wenn Sie IIS 7.0 oder höher im integrierten Modus ausführen, Sie können diese Kombination Element konfigurieren, wie sie Anforderungen Warteschlange, wenn ASP.NET in einem IIS-Anwendungspool gehostet wird und wie ASP.NET Threads verwaltet. Wenn Sie IIS 7.0 oder höher im klassischen Bereitstellungsmodell oder ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
+ Das `system.web` -Element und `applicationPool` das zugehörige untergeordnete Element wurden der .NET Framework ab .NET Framework 3,5 SP1 hinzugefügt. Wenn Sie IIS 7,0 oder höhere Versionen im integrierten Modus ausführen, können Sie mit dieser Element Kombination konfigurieren, wie ASP.NET Threads verwaltet und wie Anforderungen in die Warteschlange eingereiht werden, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Wenn Sie IIS 7,0 oder höhere Versionen im klassischen oder ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie ASP.NET prozessübergreifende Verhalten in der Datei "aspnet.config" konfigurieren, wenn ASP.NET in einem IIS-Anwendungspool gehostet wird. Im Beispiel wird davon ausgegangen, dass IIS, im integrierten ausgeführt wird Modus und die Anwendung .NET Framework 3.5 SP1 oder höher verwendet wird. Dieses Verhalten tritt nicht in Versionen von .NET Framework-Versionen als .NET Framework 3.5 SP1. Die Werte im Beispiel werden die Standardwerte.  
+ Das folgende Beispiel zeigt, wie Sie das Prozess weite Verhalten von ASP.net in der Datei Aspnet. config konfigurieren, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Im Beispiel wird davon ausgegangen, dass IIS im integrierten Modus ausgeführt wird und die Anwendung den .NET Framework 3,5 SP1 oder eine höhere Version verwendet. Dieses Verhalten tritt nicht in früheren Versionen .NET Framework von als der .NET Framework 3,5 SP1 auf. Bei den Werten im Beispiel handelt es sich um die Standardwerte.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ Enthält Informationen dazu, wie die hostingebene von ASP.NET prozessübergreife
 |Namespace||  
 |Schemaname||  
 |Validierungsdatei||  
-|Leer kann sein||  
+|Kann leer sein||  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<applicationPool>-Element (Webeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool>-Element (Webeinstellungen)](applicationpool-element-web-settings.md)

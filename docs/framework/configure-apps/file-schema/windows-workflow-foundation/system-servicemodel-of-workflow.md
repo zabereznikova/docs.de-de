@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > des Workflows
+title: < System. Service Model-> des Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947369"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > des Workflows
+# <a name="systemservicemodel-of-workflow"></a>\<System. Service Model-> des Workflows
 Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.  
   
 ## <a name="syntax"></a>Syntax  
@@ -95,14 +95,14 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keiner  
+ None  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Dieser Abschnitt definiert die **ServiceBehaviors** Auflistung.  Jedes Element der Auflistung definiert von Diensten verarbeitete Verhaltenselemente. Jedes verhaltenselement wird durch seinen eindeutigen identifiziert **Namen** Attribut.|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.<br /><br /> Weitere Informationen workflownachverfolgung und zur Konfiguration finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Konfigurieren der nachverfolgung für einen Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<behaviors>](behaviors-of-workflow.md)|In diesem Abschnitt wird die serviceverhaltenauflistung definiert.  Jedes Element der Auflistung definiert von Diensten verarbeitete Verhaltenselemente. Jedes Behavior-Element wird durch das eindeutige **Name** -Attribut identifiziert.|  
+|[\<tracking>](tracking.md)|Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.<br /><br /> Weitere Informationen zur Workflow Überwachung und deren Konfiguration finden Sie unter [Workflow Überwachung und](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) -Ablauf Verfolgung und [Konfigurieren der Nachverfolgung für einen Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

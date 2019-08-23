@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 8ac04a94fb567afa184172c0685438e26834fe5b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1aa22501eb3d15b30be4ea4918473cf5a48cfe94
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964292"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Vorgehensweise: Ändern von Tastatureingaben in ein Standardsteuerelement
 Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern. Nutzen einer Taste bezieht sich auf die Behandlung einer Taste innerhalb einer Methode oder eines Ereignishandlers, sodass andere Methoden und Ereignisse weiter unten in der Meldungswarteschlange den Tastenwert nicht empfangen. Ändern einer Taste bezieht sich auf ein Ändern des Werts einer Taste, sodass Methoden und Ereignishandler weiter unten in der Meldungswarteschlange einen anderen Tastenwert empfangen. In diesem Thema wird gezeigt, wie Sie diese Aufgaben ausführen.  
@@ -24,12 +24,12 @@ Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern
   
 - Legen Sie in einem <xref:System.Windows.Forms.Control.KeyPress>-Ereignishandler die <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A>-Eigenschaft der <xref:System.Windows.Forms.KeyPressEventArgs>-Klasse auf `true` fest.  
   
-     - oder -   
+     - oder -  
   
      Legen Sie in einem <xref:System.Windows.Forms.Control.KeyDown>-Ereignishandler die <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>-Eigenschaft der <xref:System.Windows.Forms.KeyEventArgs>-Klasse auf `true` fest.  
   
     > [!NOTE]
-    >  Ein Festlegen der <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>-Eigenschaft im <xref:System.Windows.Forms.Control.KeyDown>-Ereignishandler verhindert nicht, dass das <xref:System.Windows.Forms.Control.KeyPress>- und das <xref:System.Windows.Forms.Control.KeyUp>-Ereignis für die aktuelle Tastatureingabe ausgelöst werden. Verwenden Sie die <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>-Eigenschaft für diesen Zweck.  
+    > Ein Festlegen der <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>-Eigenschaft im <xref:System.Windows.Forms.Control.KeyDown>-Ereignishandler verhindert nicht, dass das <xref:System.Windows.Forms.Control.KeyPress>- und das <xref:System.Windows.Forms.Control.KeyUp>-Ereignis für die aktuelle Tastatureingabe ausgelöst werden. Verwenden Sie die <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>-Eigenschaft für diesen Zweck.  
   
      Das folgende Beispiel ist ein Auszug aus einer `switch`-Anweisung, von der die <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A>-Eigenschaft der <xref:System.Windows.Forms.KeyPressEventArgs>-Klasse ausgewertet wird, die von einem <xref:System.Windows.Forms.Control.KeyPress>-Ereignishandler empfangen wurde. In diesem Code werden die Zeichentasten 'A' und 'a' genutzt.  
   
@@ -49,7 +49,7 @@ Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern
   
 - Überschreiben Sie eine <xref:System.Windows.Forms.Control>-Methode, von der Windows-Meldungen verarbeitet werden, suchen Sie die Meldung WM_KEYDOWN oder WM_SYSKEYDOWN, und legen Sie die <xref:System.Windows.Forms.Message.WParam%2A>-Eigenschaft des <xref:System.Windows.Forms.Message>-Parameters auf den <xref:System.Windows.Forms.Keys>-Wert fest, der den neuen Wert der Nicht-Zeichentaste darstellt.  
   
-     Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Forms.Control.PreProcessMessage%2A>-Methode eines Steuerelements überschreiben, um die Tasten F1 bis F9 zu erkennen und jede Betätigung der Taste F3 in F1 zu ändern. Weitere Informationen zu <xref:System.Windows.Forms.Control> Methoden, die Sie zum Abfangen von tastaturmeldungen überschreiben können, finden Sie unter [Benutzereingaben in Windows Forms-Anwendungen](user-input-in-a-windows-forms-application.md) und [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md).  
+     Im folgenden Codebeispiel wird veranschaulicht, wie Sie die <xref:System.Windows.Forms.Control.PreProcessMessage%2A>-Methode eines Steuerelements überschreiben, um die Tasten F1 bis F9 zu erkennen und jede Betätigung der Taste F3 in F1 zu ändern. Weitere Informationen <xref:System.Windows.Forms.Control> zu Methoden, die Sie zum Abfangen von Tastatur Meldungen außer Kraft setzen können, finden Sie unter [Benutzereingabe in einer Windows Forms Anwendung](user-input-in-a-windows-forms-application.md) und [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md).  
   
      [!code-csharp[System.Windows.Forms.KeyBoardInput#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.KeyBoardInput#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  

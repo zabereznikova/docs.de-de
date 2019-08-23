@@ -2,12 +2,12 @@
 title: Registrierungstool für Workflow Services (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402472"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916824"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Registrierungstool für Workflow Services (WFServicesReg.exe)
 Beim Registrierungstool für Workflow Services (WFServicesReg.exe) handelt es sich um ein eigenständiges Tool zum Hinzufügen, Entfernen oder Reparieren der Konfigurationselemente für Windows Workflow Foundation (WF)-Dienste.  
@@ -56,16 +56,16 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Auch XOML und RULES-Skriptzuordnungen und -Handler werden in der IIS-Metabasis registriert.  
   
- Auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../includes/wxp-md.md)] Computer (IIS 5.1 und IIS 6.0), einen Satz von xoml- und Rules-Skriptzuordnungen registriert sind.  
+ Auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] - [!INCLUDE[wxp](../../../includes/wxp-md.md)] und-Computern (IIS 5,1 und IIS 6,0) werden ein Satz von XOML-und Rules-Skript Zuordnungen registriert.  
   
  Auf 64-Bit-Computern werden bei aktiviertem `Enable32BitAppOnWin64`-Schalter WOW-Modus-Skriptzuordnungen registriert, bei aktiviertem `Enable32BitAppOnWin64`-Schalter werden systemeigene 64-Bit-Skriptzuordnungen registriert.  
   
- Auf [!INCLUDE[wv](../../../includes/wv-md.md)] und Windows Server 2008 (IIS 7.0 und höher) zwei Sätze von xoml-und Rules-Computern registriert sind: eine für den integrierten und einer für den klassischen Modus.  
+ Auf [!INCLUDE[wv](../../../includes/wv-md.md)] Computern unter und Windows Server 2008 (IIS 7,0 und höher) werden zwei Sätze von XOML-und Rules-Handlern registriert: eine für den integrierten Modus und eine für den klassischen Modus.  
   
  Auf 64-Bit-Computern werden drei Handlersätze registriert (unabhängig vom Zustand des `Enable32BitAppOnWin64`-Schalters): einer für den integrierten Modus, einer für den klassischen WOW-Modus und einer für den systemeigenen klassischen 64-Bit-Modus.  
   
 > [!NOTE]
->  Im Gegensatz zu ServiceModelreg.exe ist es bei WFServicesReg.exe nicht zulässig, Skriptzuordnungen oder Handler für eine bestimmte Website hinzuzufügen, zu entfernen oder zu reparieren. Eine Möglichkeit zum Umgehen dieses Problems finden Sie im Abschnitt "Reparieren der Skriptzuordnungen".  
+> Im Gegensatz zu ServiceModelreg.exe ist es bei WFServicesReg.exe nicht zulässig, Skriptzuordnungen oder Handler für eine bestimmte Website hinzuzufügen, zu entfernen oder zu reparieren. Eine Möglichkeit zum Umgehen dieses Problems finden Sie im Abschnitt "Reparieren der Skriptzuordnungen".  
   
 ## <a name="usage-scenarios"></a>Verwendungsszenarien  
   
@@ -82,7 +82,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Gelöschte Skriptzuordnung einer bestimmten Website  
  Auf einem Computer unter [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] wurde XOML oder RULES nicht aus dem Websites-Knoten, sondern versehentlich aus einer bestimmten Website (beispielsweise der Standardwebsite) gelöscht.  
   
- Führen Sie zum Reparieren der gelöschten Handler einer bestimmten Website "WFServicesReg.exe/r" führen Sie "WFServicesReg.exe/c", um Handler von allen Websites zu entfernen, um die entsprechenden Handler für alle Websites zu erstellen.  
+ Zum Reparieren von gelöschten Handlern für eine bestimmte Website sollten Sie "WFServicesReg. exe/r" ausführen, um Handler von allen Websites zu entfernen. führen Sie dann "WFServicesReg. exe/c" aus, um die entsprechenden Handler für alle Websites zu erstellen.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>Konfigurieren von Handlern nach Wechseln des IIS-Modus  
- Befindet sich IIS im freigegebenen Konfigurationsmodus und ist [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installiert, wird die IIS-Metabasis an einem freigegebenen Speicherort konfiguriert. Wird für IIS zum nicht freigegebenen Konfigurationsmodus gewechselt, sind die erforderlichen Handler nicht in der lokalen Metabasis vorhanden. Um die lokale Metabasis ordnungsgemäß zu konfigurieren, können Sie entweder die freigegebene Metabasis lokal, oder führen "WFServicesReg.exe/c", die die lokale Metabasis konfiguriert importieren.
+ Befindet sich IIS im freigegebenen Konfigurationsmodus und ist [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installiert, wird die IIS-Metabasis an einem freigegebenen Speicherort konfiguriert. Wird für IIS zum nicht freigegebenen Konfigurationsmodus gewechselt, sind die erforderlichen Handler nicht in der lokalen Metabasis vorhanden. Zum ordnungsgemäßen Konfigurieren der lokalen Metabase können Sie entweder die freigegebene Metabase in eine lokale Version importieren oder "WFServicesReg. exe/c" ausführen, um die lokale Metabase zu konfigurieren.

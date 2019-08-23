@@ -6,20 +6,20 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: bf0a74bd010a188f38cf1a2088a449d97405fa0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626390"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918644"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generieren der Datendienst-Clientbibliothek (WCF Data Services)
-Ein Datendienst, die implementiert die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kann ein dienstmetadatendokument an, die von verfügbar gemachten Datenmodell beschreibt Zurückgeben der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Weitere Informationen finden Sie unter [OData: Service Metadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070). Können Sie die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio zum Hinzufügen eines Verweises auf ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst. Wenn Sie dieses Tool verwenden, um einen Verweis auf das vom zurückgegebenen Metadaten Hinzufügen einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in einem Clientprojekt die folgenden Aktionen ausgeführt:  
+Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, kann ein dienstmetadatendokument zurückgeben, das das Datenmodell beschreibt, das [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vom Feed verfügbar gemacht wird. Weitere Informationen finden [Sie unter odata: Dienstmetadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070). Sie können das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio verwenden, um einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst einen Verweis hinzuzufügen. Wenn Sie dieses Tool verwenden, um einen Verweis auf die von einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed in einem Client Projekt zurückgegebenen Metadaten hinzuzufügen, führt es die folgenden Aktionen aus:  
   
 - Fordert das Dienstmetadatendokument vom Datendienst an und interpretiert die zurückgegebenen Metadaten.  
   
     > [!NOTE]
-    >  Die zurückgegebenen Metadaten werden im Clientprojekt als EDMX-Datei gespeichert. Diese EDMX-Datei kann nicht mit dem Entity Data Model-Designer geöffnet werden, da sie nicht das gleiche Format wie eine vom Entity Framework verwendete EDMX-Datei aufweist. Sie können diese Metadatendatei mit dem XML-Editor oder einem beliebigen Texteditor anzeigen. Weitere Informationen finden Sie unter den [ \[MC-EDMX\]: Entity Data Model für Data Services Packaging Format](https://go.microsoft.com/fwlink/?LinkID=178833) Spezifikation  
+    > Die zurückgegebenen Metadaten werden im Clientprojekt als EDMX-Datei gespeichert. Diese EDMX-Datei kann nicht mit dem Entity Data Model-Designer geöffnet werden, da sie nicht das gleiche Format wie eine vom Entity Framework verwendete EDMX-Datei aufweist. Sie können diese Metadatendatei mit dem XML-Editor oder einem beliebigen Texteditor anzeigen. Weitere Informationen finden Sie unter [ \[MC-edmx\]: Entity Data Model für Data Services Paket Format](https://go.microsoft.com/fwlink/?LinkID=178833) Spezifikation  
   
 - Generiert eine Darstellung des Diensts als Entitätscontainerklasse, die vom <xref:System.Data.Services.Client.DataServiceContext> erbt. Diese generierte Entitätscontainerklasse entspricht dem Entitätscontainer, den die Entity Data Model-Tools generieren. Weitere Informationen finden Sie unter [Übersicht über Object Services (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
@@ -27,12 +27,12 @@ Ein Datendienst, die implementiert die [!INCLUDE[ssODataFull](../../../../includ
   
 - Fügt dem Projekt einen Verweis auf die `System.Data.Services.Client`-Assembly hinzu.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie einen Datendienst](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)Verweis hinzu.  
   
- Die Client-Datendienstklassen können auch generiert werden, mithilfe der [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) Tool an der Eingabeaufforderung. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ Die Client Datendienst Klassen können auch mit dem Tool [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) an der Eingabeaufforderung generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Client Daten](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)Dienst Klassen.  
   
 ## <a name="client-data-type-mapping"></a>Zuordnung von Clientdatentypen  
- Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio oder die `DataSvcUtil.exe` clientdatenklassen generieren auf der Grundlage von eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, den primitiven Typen von der .NET Framework-Datentypen zugeordnet sind die Datenmodell wie folgt:  
+ Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio `DataSvcUtil.exe` oder das Tool verwenden, um Client Daten Klassen zu generieren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , die auf einem-Feed basieren, werden die .NET Framework-Datentypen wie folgt den primitiven Typen aus dem Datenmodell zugeordnet:  
   
 |Datenmodelltyp|.NET Framework-Datentyp|  
 |---------------------|------------------------------|  
@@ -50,7 +50,7 @@ Ein Datendienst, die implementiert die [!INCLUDE[ssODataFull](../../../../includ
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Weitere Informationen finden Sie unter [OData: Primitive Datentypen](https://go.microsoft.com/fwlink/?LinkId=186072).  
+ Weitere Informationen finden [Sie unter odata: Primitive Datentypen](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>Siehe auch
 

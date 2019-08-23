@@ -8,22 +8,22 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: f0d4b99f9ee0134fc7334a941dd5ef4fd7ba3df3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170603"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930194"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Steuerelemente mit integrierter Ownerdrawing-Unterstützung
 Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeichnet, ist ein Verfahren zum Ändern der Darstellung bestimmter Steuerelemente.  
   
 > [!NOTE]
->  Das Wort "Control" in diesem Thema wird verwendet, um Klassen bezeichnet, die entweder ableiten <xref:System.Windows.Forms.Control> oder <xref:System.ComponentModel.Component>.  
+> Mit dem Wort "Steuerelement" in diesem Thema werden Klassen gemeint, die von <xref:System.Windows.Forms.Control> oder <xref:System.ComponentModel.Component>abgeleitet werden.  
   
- In der Regel Windows das Zeichnen behandelt automatisch indem eigenschafteneinstellungen wie z. B. <xref:System.Windows.Forms.Control.BackColor%2A> um die Darstellung eines Steuerelements zu bestimmen. Beim Ownerdrawing übernehmen Sie das Zeichnen und können Darstellungselemente ändern, die nicht mithilfe von Eigenschaften angepasst werden können. Beispielsweise kann bei zahlreichen Steuerelementen die Farbe des angezeigten Textes festgelegt werden. Dabei ist die Anzeige jedoch auf eine Farbe beschränkt. Das Ownerdrawing bietet beispielsweise die Möglichkeit, einen Teil des Textes schwarz und den anderen rot anzuzeigen.  
+ In der Regel verarbeitet Windows das Zeichnen automatisch mithilfe von Eigenschafts <xref:System.Windows.Forms.Control.BackColor%2A> Einstellungen wie z. b., um die Darstellung eines Steuer Elements zu bestimmen. Beim Ownerdrawing übernehmen Sie das Zeichnen und können Darstellungselemente ändern, die nicht mithilfe von Eigenschaften angepasst werden können. Beispielsweise kann bei zahlreichen Steuerelementen die Farbe des angezeigten Textes festgelegt werden. Dabei ist die Anzeige jedoch auf eine Farbe beschränkt. Das Ownerdrawing bietet beispielsweise die Möglichkeit, einen Teil des Textes schwarz und den anderen rot anzuzeigen.  
   
- In der Praxis ähnelt Ownerdrawing dem Zeichnen von Grafiken auf einem Formular. Angenommen, Sie können Grafikmethoden in einem Ereignishandler für Verwenden des Formulars <xref:System.Windows.Forms.Control.Paint> Ereignis zum Emulieren einer `ListBox` -Steuerelement, müssten Sie jedoch Ihren eigenen Code so ändern alle Benutzerinteraktionen zu schreiben. Beim Ownerdrawing verwendet das Steuerelement den von Ihnen geschriebenen Code, um den Inhalt zu zeichnen, behält im Übrigen aber seine gesamte systeminterne Funktionalität bei. Sie können Grafikmethoden zum Zeichnen der einzelnen Elemente im Steuerelement oder zum Anpassen einiger Aspekte einzelner Elemente verwenden, während für andere Aspekte einzelner Elemente wiederum die Standarddarstellung übernommen werden kann.  
+ In der Praxis ähnelt Ownerdrawing dem Zeichnen von Grafiken auf einem Formular. Sie können z. b. Grafik Methoden in einem Handler für das- <xref:System.Windows.Forms.Control.Paint> Ereignis des Formulars verwenden, um ein `ListBox` Steuerelement zu emulieren, aber Sie müssen eigenen Code schreiben, um die gesamte Benutzerinteraktion zu verarbeiten. Beim Ownerdrawing verwendet das Steuerelement den von Ihnen geschriebenen Code, um den Inhalt zu zeichnen, behält im Übrigen aber seine gesamte systeminterne Funktionalität bei. Sie können Grafikmethoden zum Zeichnen der einzelnen Elemente im Steuerelement oder zum Anpassen einiger Aspekte einzelner Elemente verwenden, während für andere Aspekte einzelner Elemente wiederum die Standarddarstellung übernommen werden kann.  
   
 ## <a name="owner-drawing-in-windows-forms-controls"></a>Ownerdrawing in Windows Forms-Steuerelementen  
  Um Ownerdrawing in Steuerelementen auszuführen, die diese Art des Zeichnens unterstützen, legen Sie normalerweise eine Eigenschaft fest und behandeln mindestens ein Ereignis.  
@@ -32,7 +32,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
  Zu den Steuerelementen, die keine `OwnerDraw`-Eigenschaft oder `DrawMode`-Eigenschaft aufweisen, gehört das `DataGridView`-Steuerelement, das automatisch ausgelöste Zeichnungsereignisse bereitstellt, sowie das `ToolStrip`-Steuerelement, das unter Verwendung einer externen Renderklasse gezeichnet wird, die eigene zeichnungsbezogene Ereignisse aufweist.  
   
- Es stehen viele verschiedene Arten von Zeichnungsereignissen zur Verfügung. Ein typisches Zeichnungsereignis tritt jedoch auf, wenn ein einzelnes Element innerhalb eines Steuerelements gezeichnet werden soll. Der Ereignishandler empfängt ein `EventArgs`-Objekt mit Informationen zum gezeichneten Element sowie zu den Tools, die zum Zeichnen verwendet werden können. Dieses Objekt enthält z. B. in der Regel Indexnummer des Elements, in der übergeordneten Auflistung, eine <xref:System.Drawing.Rectangle> , der angibt, die Anzeige des Elements der Grenzen, und ein <xref:System.Drawing.Graphics> Objekt zum Aufrufen von Zeichnungsmethoden. Bei einigen Ereignissen umfasst das `EventArgs`-Objekt zusätzliche Informationen zum Element sowie zu den Methoden, die aufgerufen werden können, um einige Aspekte des Elements in der Standarddarstellung zu zeichnen, z. B. den Hintergrund oder ein Fokusrechteck.  
+ Es stehen viele verschiedene Arten von Zeichnungsereignissen zur Verfügung. Ein typisches Zeichnungsereignis tritt jedoch auf, wenn ein einzelnes Element innerhalb eines Steuerelements gezeichnet werden soll. Der Ereignishandler empfängt ein `EventArgs`-Objekt mit Informationen zum gezeichneten Element sowie zu den Tools, die zum Zeichnen verwendet werden können. Dieses Objekt enthält z. b. in der Regel die Indexnummer des Elements in der über <xref:System.Drawing.Rectangle> geordneten Auflistung, ein-Objekt, das die Anzeige <xref:System.Drawing.Graphics> Grenzen des Elements angibt, und ein-Objekt zum Aufrufen von Paint-Methoden. Bei einigen Ereignissen umfasst das `EventArgs`-Objekt zusätzliche Informationen zum Element sowie zu den Methoden, die aufgerufen werden können, um einige Aspekte des Elements in der Standarddarstellung zu zeichnen, z. B. den Hintergrund oder ein Fokusrechteck.  
   
  Zum Erstellen eines wiederverwendbaren Steuerelements, das Ownerdrawing-Anpassungen enthält, erstellen Sie eine neue Klasse, die von einer Steuerelementklasse mit Ownerdrawing-Unterstützung abgeleitet ist. Anstatt Zeichnungsereignisse zu behandeln, sollten Sie Ownerdrawing-Code in Überschreibungen für mindestens eine geeignete `On`*EventName*-Methode in der neuen Klasse einfügen. Stellen Sie in diesem Fall sicher, dass die `On`*EventName*-Methoden der Basisklasse aufgerufen werden, damit Benutzer des Steuerelements Ownerdrawing-Ereignisse behandeln und weitere Anpassungen vornehmen können.  
   
@@ -42,11 +42,11 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - <xref:System.Windows.Forms.ComboBox>  
   
-- <xref:System.Windows.Forms.MenuItem> (verwendet von <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem>(verwendet von <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu>)  
   
 - <xref:System.Windows.Forms.TabControl>  
   
- Die folgenden Steuerelemente unterstützen Ownerdrawing nur in .NET Framework 2.0:  
+ Die folgenden Steuerelemente unterstützen das Zeichnen von Besitzern nur in .NET Framework 2,0:  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - <xref:System.Windows.Forms.TreeView>  
   
- Die folgenden Steuerelemente unterstützen Ownerdrawing und sind neu in .NET Framework 2.0:  
+ Die folgenden Steuerelemente unterstützen das Zeichnen von Besitzern und sind neu in .NET Framework 2,0:  
   
 - <xref:System.Windows.Forms.DataGridView>  
   
@@ -63,14 +63,14 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
  Die folgenden Abschnitte enthalten zusätzliche Details zu jedem dieser Steuerelemente.  
   
 ### <a name="listbox-and-combobox-controls"></a>Die Steuerelemente ListBox und ComboBox  
- Die <xref:System.Windows.Forms.ListBox> und <xref:System.Windows.Forms.ComboBox> Steuerelemente ermöglichen Ihnen, einzelne Elemente im Steuerelement entweder in derselben oder in verschiedenen Größen zu zeichnen.  
+ Mit <xref:System.Windows.Forms.ListBox> den <xref:System.Windows.Forms.ComboBox> Steuerelementen und können Sie einzelne Elemente im Steuerelement entweder in einer Größe oder in unterschiedlichen Größen zeichnen.  
   
 > [!NOTE]
->  Obwohl die <xref:System.Windows.Forms.CheckedListBox> Steuerelement ergibt sich aus der <xref:System.Windows.Forms.ListBox> -Steuerelement, er unterstützt keine Ownerdrawing.  
+> Obwohl das <xref:System.Windows.Forms.CheckedListBox> -Steuerelement <xref:System.Windows.Forms.ListBox> vom-Steuerelement abgeleitet ist, wird das Zeichnen von Besitzern nicht unterstützt.  
   
- Um alle Elemente in derselben Größe zu zeichnen, legen die `DrawMode` Eigenschaft <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> und behandeln die `DrawItem` Ereignis.  
+ Um jedes Element in derselben Größe zu zeichnen, legen `DrawMode` Sie die <xref:System.Windows.Forms.DrawMode.OwnerDrawFixed> -Eigenschaft auf `DrawItem` fest und behandeln das-Ereignis.  
   
- Um alle Elemente in einer anderen Größe zu zeichnen, legen die `DrawMode` Eigenschaft <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> und behandeln sowohl die `MeasureItem` und `DrawItem` Ereignisse. Mit dem `MeasureItem`-Ereignis können Sie die Größe eines Elements angeben, bevor das `DrawItem`-Ereignis für das jeweilige Element auftritt.  
+ Um jedes Element mit einer anderen Größe zu zeichnen, legen `DrawMode` Sie die <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable> -Eigenschaft auf fest `MeasureItem` und `DrawItem` behandeln sowohl das-als auch das-Ereignis. Mit dem `MeasureItem`-Ereignis können Sie die Größe eines Elements angeben, bevor das `DrawItem`-Ereignis für das jeweilige Element auftritt.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Themen:  
   
@@ -89,9 +89,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - [Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem-Komponente  
- Die <xref:System.Windows.Forms.MenuItem> -Komponente darstellt, ein einzelnes Menüelement in einem <xref:System.Windows.Forms.MainMenu> oder <xref:System.Windows.Forms.ContextMenu> Komponente.  
+ Die <xref:System.Windows.Forms.MenuItem> Komponente stellt ein einzelnes Menü Element in einer <xref:System.Windows.Forms.MainMenu> - <xref:System.Windows.Forms.ContextMenu> oder-Komponente dar.  
   
- Zum Zeichnen einer <xref:System.Windows.Forms.MenuItem>, legen die `OwnerDraw` Eigenschaft `true` und behandeln die `DrawItem` Ereignis. Um die Größe des Menüelements anzupassen, bevor das `DrawItem`-Ereignis auftritt, behandeln Sie das `MeasureItem`-Ereignis des Elements.  
+ Um einen <xref:System.Windows.Forms.MenuItem>zu zeichnen, legen `OwnerDraw` Sie seine `true` -Eigenschaft auf `DrawItem` fest und behandeln das zugehörige-Ereignis Um die Größe des Menüelements anzupassen, bevor das `DrawItem`-Ereignis auftritt, behandeln Sie das `MeasureItem`-Ereignis des Elements.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
@@ -102,9 +102,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl-Steuerelement  
- Die <xref:System.Windows.Forms.TabControl> -Steuerelement ermöglicht Ihnen, einzelne Registerkarten im Steuerelement zu zeichnen. Ownerdrawing wirkt sich nur die Registerkarten an. die <xref:System.Windows.Forms.TabPage> Inhalt sind nicht betroffen.  
+ Das <xref:System.Windows.Forms.TabControl> -Steuerelement ermöglicht es Ihnen, einzelne Registerkarten im-Steuerelement zu zeichnen. Besitzer Zeichnung wirkt sich nur auf die Registerkarten aus; der <xref:System.Windows.Forms.TabPage> Inhalt ist nicht betroffen.  
   
- Zum Zeichnen der einzelnen Registerkarten in einem <xref:System.Windows.Forms.TabControl>, legen die `DrawMode` Eigenschaft, um <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> und behandeln die `DrawItem` Ereignis. Dieses Ereignis tritt jeweils einmal für jede Registerkarte auf, jedoch nur dann, wenn die Registerkarte im Steuerelement sichtbar ist.  
+ Wenn Sie jede Registerkarte in <xref:System.Windows.Forms.TabControl>einem zeichnen möchten `DrawMode` , legen <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> Sie die- `DrawItem` Eigenschaft auf fest und behandeln das-Ereignis. Dieses Ereignis tritt jeweils einmal für jede Registerkarte auf, jedoch nur dann, wenn die Registerkarte im Steuerelement sichtbar ist.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
@@ -113,9 +113,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip-Komponente  
- Die <xref:System.Windows.Forms.ToolTip> -Komponente können Sie die gesamte QuickInfo zu zeichnen, wenn er angezeigt wird.  
+ Mit <xref:System.Windows.Forms.ToolTip> der-Komponente können Sie die gesamte QuickInfo zeichnen, wenn Sie angezeigt wird.  
   
- Zum Zeichnen einer <xref:System.Windows.Forms.ToolTip>, legen die `OwnerDraw` Eigenschaft `true` und behandeln die `Draw` Ereignis. Zum Anpassen der Größe des der <xref:System.Windows.Forms.ToolTip> vor der `Draw` -Ereignis auftritt, behandeln die `Popup` -Ereignis und legen die <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> Eigenschaft im Ereignishandler.  
+ Um einen <xref:System.Windows.Forms.ToolTip>zu zeichnen, legen `OwnerDraw` Sie seine `true` -Eigenschaft auf `Draw` fest und behandeln das zugehörige-Ereignis Um die Größe <xref:System.Windows.Forms.ToolTip> von vor dem Auftreten des `Draw` Ereignisses anzupassen, behandeln Sie das `Popup` -Ereignis, <xref:System.Windows.Forms.PopupEventArgs.ToolTipSize%2A> und legen Sie die-Eigenschaft im-Ereignishandler fest.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
@@ -126,13 +126,13 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView-Steuerelement  
- Die <xref:System.Windows.Forms.ListView> -Steuerelement ermöglicht Ihnen, einzelne Elemente, Unterelemente und Spaltenheader im Steuerelement zu zeichnen.  
+ Das <xref:System.Windows.Forms.ListView> -Steuerelement ermöglicht es Ihnen, einzelne Elemente, unter Elemente und Spaltenheader im-Steuerelement zu zeichnen.  
   
  Um Ownerdrawing im Steuerelement zu aktivieren, legen Sie die `OwnerDraw`-Eigenschaft `true` fest.  
   
  Um jedes Element im Steuerelement zu zeichnen, behandeln Sie das `DrawItem`-Ereignis.  
   
- Um jedes Unterelement oder jeden Spaltenheader im Steuerelement zu zeichnen. wenn der <xref:System.Windows.Forms.ListView.View%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.View.Details>, behandeln die `DrawSubItem` und `DrawColumnHeader` Ereignisse.  
+ Um jeden Unterelement-oder Spaltenheader im-Steuerelement zu zeichnen <xref:System.Windows.Forms.ListView.View%2A> , wenn die- <xref:System.Windows.Forms.View.Details>Eigenschaft auf fest `DrawSubItem` gelegt `DrawColumnHeader` ist, behandeln Sie die Ereignisse und.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
@@ -145,11 +145,11 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView-Steuerelement  
- Die <xref:System.Windows.Forms.TreeView> -Steuerelement ermöglicht Ihnen, einzelne Knoten im Steuerelement zu zeichnen.  
+ Das <xref:System.Windows.Forms.TreeView> -Steuerelement ermöglicht es Ihnen, einzelne Knoten im-Steuerelement zu zeichnen.  
   
- Um nur den in den einzelnen Knoten angezeigten Text zu zeichnen, legen die `DrawMode` Eigenschaft <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> und behandeln die `DrawNode` -Ereignis zum Zeichnen des Texts.  
+ Wenn Sie nur den in jedem Knoten angezeigten Text zeichnen möchten, `DrawMode` legen Sie <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawText> die-Eigenschaft `DrawNode` auf fest und behandeln das-Ereignis, um den Text zu zeichnen.  
   
- Um alle Elemente der einzelnen Knoten zu zeichnen, legen die `DrawMode` Eigenschaft <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> und behandeln die `DrawNode` -Ereignis zum Zeichnen Sie benötigen, wie z. B. Text, Symbole, Kontrollkästchen, Plus- und Minuszeichen sowie der Verbindungslinien zwischen die Knoten.  
+ Um alle Elemente der einzelnen Knoten zu zeichnen, legen `DrawMode` Sie die <xref:System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll> -Eigenschaft auf `DrawNode` fest und behandeln das-Ereignis, um die Elemente zu zeichnen, die Sie benötigen, z. b. Text, Symbole, Kontrollkästchen, plus-und Minuszeichen sowie Zeilen, die die Knoten verbinden.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Referenzthemen:  
   
@@ -158,7 +158,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
 - <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView-Steuerelement  
- Die <xref:System.Windows.Forms.DataGridView> -Steuerelement ermöglicht Ihnen, einzelne Zellen und Zeilen im Steuerelement zu zeichnen.  
+ Das <xref:System.Windows.Forms.DataGridView> -Steuerelement ermöglicht es Ihnen, einzelne Zellen und Zeilen im-Steuerelement zu zeichnen.  
   
  Um einzelne Zellen zu zeichnen, behandeln Sie das `CellPainting`-Ereignis.  
   
@@ -172,14 +172,14 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
-- [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [Vorgehensweise: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuerelement](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
-- [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [Vorgehensweise: Anpassen der Darstellung von Zeilen im Windows Forms DataGridView-Steuerelement](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip-Steuerelement  
- <xref:System.Windows.Forms.ToolStrip> und abgeleitete Steuerelemente ermöglichen Ihnen, alle Aspekte der steuerelementdarstellung anzupassen.  
+ <xref:System.Windows.Forms.ToolStrip>und abgeleitete Steuerelemente ermöglichen es Ihnen, beliebige Aspekte ihrer Darstellung anzupassen.  
   
- Benutzerdefiniert Rendern zu <xref:System.Windows.Forms.ToolStrip> legen Sie die Steuerelemente, die `Renderer` Eigenschaft eine <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, oder <xref:System.Windows.Forms.ToolStripContentPanel> auf eine `ToolStripRenderer` -Objekt fest und behandeln mindestens eine der zahlreichen Zeichnungsereignisse, die von der `ToolStripRenderer` Klasse. Alternativ eine `Renderer` -Eigenschaft auf eine Instanz Ihrer eigenen Klasse abgeleitet `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, oder <xref:System.Windows.Forms.ToolStripSystemRenderer> implementiert oder überschreibt bestimmte `On` *EventName* Methoden.  
+ Um benutzerdefiniertes Rendering <xref:System.Windows.Forms.ToolStrip> für Steuerelemente bereitzustellen, legen <xref:System.Windows.Forms.ToolStrip>Sie <xref:System.Windows.Forms.ToolStripManager>die <xref:System.Windows.Forms.ToolStripPanel> `Renderer` -Eigenschaft <xref:System.Windows.Forms.ToolStripContentPanel> eines, `ToolStripRenderer` , oder auf ein-Objekt fest, und behandeln Sie mindestens eines der vielen Zeichen Ereignisse, die von bereitgestellt werden. `ToolStripRenderer` -Klasse. Alternativ können Sie eine `Renderer` -Eigenschaft auf eine Instanz Ihrer eigenen Klasse festlegen, `ToolStripRenderer`die <xref:System.Windows.Forms.ToolStripProfessionalRenderer>von, <xref:System.Windows.Forms.ToolStripSystemRenderer> oder abgeleitet ist, die bestimmte `On` *EventName* -Methoden implementiert oder überschreibt.  
   
  Weitere Informationen, einschließlich Codebeispiele, finden Sie unter den folgenden Themen:  
   
@@ -187,7 +187,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 - [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
-- [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](how-to-custom-draw-a-toolstrip-control.md)  
+- [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuer Elements](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

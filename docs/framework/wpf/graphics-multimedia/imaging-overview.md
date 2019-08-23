@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 13d5ea2735a799332edd8e552198de0f2b970dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914102"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -99,7 +99,7 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
  Im folgenden Beispiel wird veranschaulicht, wie ein Bild mithilfe von Code auf eine Breite von 200 Pixel gerendert wird.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>implementiert die <xref:System.ComponentModel.ISupportInitialize> -Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Wird <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> aufgerufen, um zu signalisieren, dass die <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Initialisierung begonnen hat, und signalisiert, dass die Initialisierung abgeschlossen wurde. Nach der Initialisierung werden Eigenschaftenänderungen Eigenschaften ignoriert.  
+> <xref:System.Windows.Media.Imaging.BitmapImage>implementiert die <xref:System.ComponentModel.ISupportInitialize> -Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Wird <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> aufgerufen, um zu signalisieren, dass die <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Initialisierung begonnen hat, und signalisiert, dass die Initialisierung abgeschlossen wurde. Nach der Initialisierung werden Eigenschaftenänderungen Eigenschaften ignoriert.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
@@ -185,7 +185,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
  Ein Beispiel für die Erweiterbarkeits-API finden Sie im [Win32](https://go.microsoft.com/fwlink/?LinkID=160052)-Beispielcodec. In diesem Beispiel wird veranschaulicht, wie ein Decoder und Encoder für ein benutzerdefiniertes Bildformat erstellt werden.  
   
 > [!NOTE]
->  Der Codec muss digital signiert werden, damit das System ihn erkennt.  
+> Der Codec muss digital signiert werden, damit das System ihn erkennt.  
   
 ## <a name="see-also"></a>Siehe auch
 

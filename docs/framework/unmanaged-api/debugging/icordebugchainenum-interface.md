@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8a64b7dcaf4758cba217be06fa7d09f6c76920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e41cf2ebf0cc64ee7cf720643ae3229cdfbad1ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989247"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969289"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum-Schnittstelle
 
-ICorDebugEnum-Methoden implementiert, und listet ICorDebugChain-Arrays.  
+Implementiert ICorDebugEnum-Methoden und listet ICorDebugChain-Arrays auf.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugChain` Instanzen aus der Enumeration, die an der aktuellen Position ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugChain` -Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

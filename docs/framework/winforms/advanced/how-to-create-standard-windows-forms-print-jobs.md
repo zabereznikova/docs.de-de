@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 96122302610d143c34404eac105ca9794b1cb15a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 44673e6b26f088e71813aaac26c4b9a03429597a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938241"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms
-Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Printing.PrintDocument> Komponente – genauer gesagt die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis. Durch das Schreiben von Code zum Behandeln der <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis können Sie angeben, was gedruckt und wie es gedruckt.  
+Die Grundlage für das Drucken in Windows Forms ist <xref:System.Drawing.Printing.PrintDocument> die Komponente – genauer gesagt das <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis. Wenn Sie Code schreiben, um <xref:System.Drawing.Printing.PrintDocument.PrintPage> das Ereignis zu behandeln, können Sie angeben, was gedruckt und gedruckt werden soll.  
   
-### <a name="to-create-a-print-job"></a>Um einen Druckauftrag zu erstellen.  
+### <a name="to-create-a-print-job"></a>So erstellen Sie einen Druckauftrag  
   
-1. Hinzufügen einer <xref:System.Drawing.Printing.PrintDocument> Ihrem Formular.  
+1. Fügen Sie <xref:System.Drawing.Printing.PrintDocument> dem Formular eine Komponente hinzu.  
   
 2. Erstellen Sie Code zur Behandlung des <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignisses.  
   
-     Sie müssen Ihre eigene Logik zum Drucken zu codieren. Darüber hinaus müssen Sie sich an das Material, das gedruckt werden.  
+     Sie müssen ihre eigene Druck Logik programmieren. Außerdem müssen Sie das Material angeben, das gedruckt werden soll.  
   
-     Im folgenden Codebeispiel wird eine Beispielgrafik in der Form eines roten Rechtecks in erstellt die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignishandler als Material zu druckenden fungieren.  
+     Im folgenden Codebeispiel wird eine Beispiel Grafik in der Form eines roten Rechtecks im-Ereignishandler <xref:System.Drawing.Printing.PrintDocument.PrintPage> erstellt, der als Material zum Drucken fungiert.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -55,7 +55,7 @@ Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Pri
        }  
     ```  
   
-     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visualisierung C# und Visualisierung C++) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,12 +69,12 @@ Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Pri
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     Sie sollten auch zum Schreiben von Code für die <xref:System.Drawing.Printing.PrintDocument.BeginPrint> und <xref:System.Drawing.Printing.PrintDocument.EndPrint> Ereignisse, die durch eine ganze Zahl, der die Gesamtzahl der Seiten darstellt, drucken, die abgezogen wird bei jeder gedruckten Seite.  
+     Möglicherweise möchten Sie auch Code für das- <xref:System.Drawing.Printing.PrintDocument.BeginPrint> Ereignis <xref:System.Drawing.Printing.PrintDocument.EndPrint> und das-Ereignis schreiben, z. b. eine ganze Zahl, die die Gesamtzahl der zu druckenden Seiten darstellt, die bei jeder Seite gedruckt wird.  
   
     > [!NOTE]
-    >  Sie können Hinzufügen einer <xref:System.Windows.Forms.PrintDialog> Ihrem Formular eine saubere und effizienten Benutzeroberfläche (UI) für Ihre Benutzer bereitstellen. Festlegen der <xref:System.Windows.Forms.PrintDialog.Document%2A> Eigenschaft der <xref:System.Windows.Forms.PrintDialog> Komponente ermöglicht, die Sie zum Festlegen von Eigenschaften, die im Zusammenhang mit dem Drucken dokumentieren Sie arbeiten mit in Ihrem Formular. Weitere Informationen zu den <xref:System.Windows.Forms.PrintDialog> Komponente finden Sie unter [PrintDialog-Komponente](../controls/printdialog-component-windows-forms.md).  
+    > Sie können dem Formular <xref:System.Windows.Forms.PrintDialog> eine Komponente hinzufügen, um Benutzern eine saubere und effiziente Benutzeroberfläche zur Verfügung zu stellen. Durch Festlegen <xref:System.Windows.Forms.PrintDialog.Document%2A> der-Eigenschaft <xref:System.Windows.Forms.PrintDialog> der-Komponente können Sie Eigenschaften festlegen, die sich auf das Druck Dokument beziehen, mit dem Sie in Ihrem Formular arbeiten. Weitere Informationen <xref:System.Windows.Forms.PrintDialog> zur-Komponente finden Sie unter [PrintDialog-Komponente](../controls/printdialog-component-windows-forms.md).  
   
-     Weitere Informationen zu den Besonderheiten von Windows Forms Druckaufträge, wie Sie einen Druckauftrag programmgesteuert erstellen finden Sie unter <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+     Weitere Informationen zu den Besonderheiten Windows Forms Druckaufträgen, einschließlich der programmgesteuerten Erstellung eines Druckauftrags, finden <xref:System.Drawing.Printing.PrintPageEventArgs>Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
 

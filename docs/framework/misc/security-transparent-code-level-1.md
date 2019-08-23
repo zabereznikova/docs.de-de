@@ -1,5 +1,5 @@
 ---
-title: Sicherheitstransparenter Code, Ebene 1
+title: Sicherheits transparenter Code, Ebene 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487875"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910711"
 ---
-# <a name="security-transparent-code-level-1"></a>Sicherheitstransparenter Code, Ebene 1
+# <a name="security-transparent-code-level-1"></a>Sicherheits transparenter Code, Ebene 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4, können Sie [Transparenz der Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Allerdings wurde Transparenz der Ebene 1 beibehalten wurde, damit Legacycode identifiziert werden können, die mit den früheren Sicherheitsregeln ausgeführt werden muss.  
+ Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)verwenden. Transparenz der Ebene 1 wurde jedoch beibehalten, sodass Sie Legacy Code identifizieren können, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
   
 > [!IMPORTANT]
->  Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wird, immer Transparenz der Ebene 2 an.  
+> Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wurde, immer Transparenz der Ebene 2.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
-- [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
+- [Das Transparenz Modell der Ebene 1](#the_level_1_transparency_model)  
   
-- [Transparenzattribute](#transparency_attributes)  
+- [Transparenz Attribute](#transparency_attributes)  
   
-- [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
+- [Beispiele für Sicherheits Transparenz](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Das Transparenzmodell der Ebene 1  
@@ -53,7 +53,7 @@ ms.locfileid: "66487875"
  Sie müssen Transparenz explizit anwenden. Der Großteil des Codes, der die Datenbearbeitung und Logik behandelt, kann in der Regel als sicherheitstransparent markiert werden, wohingegen die geringere Menge an Code, die Berechtigungen heraufstuft, als sicherheitskritisch oder sicherheitsgeschützt markiert wird.  
   
 > [!IMPORTANT]
->  Transparenz der Ebene 1 gilt nur für den Assemblybereich und wird nicht zwischen Assemblys erzwungen. Transparenz der Ebene 1 wurde hauptsächlich bei Microsoft für Sicherheitsüberwachungszwecke verwendet. Sicherheitstransparenter Code in einer Assembly kann auf sicherheitskritische Typen und Member in einer Assembly der Ebene 1 zugreifen. Es ist wichtig, dass Sie Linkaufrufe für volle Vertrauenswürdigkeit in allen sicherheitskritischen Typen und Membern der Ebene 1 ausführen. Sicherheitsgeschützte Typen und Member müssen auch bestätigen, dass Aufrufer über Berechtigungen für geschützte Ressourcen verfügen, auf die der Typ oder Member zugreift.  
+> Transparenz der Ebene 1 gilt nur für den Assemblybereich und wird nicht zwischen Assemblys erzwungen. Transparenz der Ebene 1 wurde hauptsächlich bei Microsoft für Sicherheitsüberwachungszwecke verwendet. Sicherheitstransparenter Code in einer Assembly kann auf sicherheitskritische Typen und Member in einer Assembly der Ebene 1 zugreifen. Es ist wichtig, dass Sie Linkaufrufe für volle Vertrauenswürdigkeit in allen sicherheitskritischen Typen und Membern der Ebene 1 ausführen. Sicherheitsgeschützte Typen und Member müssen auch bestätigen, dass Aufrufer über Berechtigungen für geschützte Ressourcen verfügen, auf die der Typ oder Member zugreift.  
   
  Für die Abwärtskompatibilität mit früheren Versionen von .NET Framework gelten alle Member, die nicht durch Transparenzattribute gekennzeichnet sind, als sicherheitsgeschützt. Alle Typen, die nicht mit einer Anmerkung versehen sind, werden als transparent betrachtet. Es gibt keine statischen Analyseregeln für die Überprüfung der Transparenz. Daher müssen Sie Transparenzfehler gegebenenfalls zur Laufzeit debuggen.  
   
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Sicherheits transparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)

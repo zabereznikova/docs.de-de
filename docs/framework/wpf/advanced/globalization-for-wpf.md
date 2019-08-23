@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937709"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme vorgestellt, die Sie beim Schreiben [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] von Anwendungen für den globalen Markt berücksichtigen sollten. Die Globalisierungs Programmier Elemente werden in [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`definiert.
@@ -152,7 +152,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
  Aus Sicht der Sicht ist eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, die zum Beschreiben eines sprach abhängigen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] entworfen wurde, ein Ressourcen Element. Daher muss das endgültige Verteilungs Format lokalisierbar sein, um internationale Sprachen zu unterstützen. Da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ereignisse von nicht behandelt [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] werden können, enthalten viele Anwendungen Code Blöcke zu diesem Zweck. Weitere Informationen finden Sie unter [Übersicht über XAML (WPF)](xaml-overview-wpf.md). Der Code wird entfernt und in verschiedene Binärdateien kompiliert, wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] eine Datei in die BAML-Form von XAML mit Token versehen wird. Die BAML-Form von XAML-Dateien, Bilder und andere verwaltete Ressourcenobjekte werden in die Satellitenressourcenassembly, die in andere Sprachen lokalisiert werden kann, oder in die Hauptassembly eingebettet, wenn keine Lokalisierung erforderlich ist.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen unterstützen alle [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR-Ressourcen, einschließlich Zeichen folgen Tabellen, Bildern usw.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen unterstützen alle [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]CLR-Ressourcen, einschließlich Zeichen folgen Tabellen, Bildern usw.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Erstellen von lokalisierbaren Anwendungen

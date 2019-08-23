@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582742"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952925"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -34,7 +34,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
 - Ein Nachrichtenaustausch kann unidirektional sein, unabhängig von der Implementierung des Clients oder Dienstes.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>Vorgeschlagene asynchrone Szenarien  
- Verwenden Sie den asynchronen Ansatz in der Implementierung eines Dienstvorgangs, wenn dieser Dienstvorgang blockierende Aufrufe, beispielsweise E/A-Vorgänge, vornimmt. Bei der Implementierung eines asynchronen Vorgangs sollten Sie versuchen, asynchrone Vorgänge und Methoden aufzurufen, um den asynchronen Aufrufpfad so weit wie möglich zu erweitern. Rufen Sie z.&amp;#160;B. innerhalb von `BeginOperationTwo()``BeginOperationOne()` auf.  
+ Verwenden Sie den asynchronen Ansatz in der Implementierung eines Dienstvorgangs, wenn dieser Dienstvorgang blockierende Aufrufe, beispielsweise E/A-Vorgänge, vornimmt. Bei der Implementierung eines asynchronen Vorgangs sollten Sie versuchen, asynchrone Vorgänge und Methoden aufzurufen, um den asynchronen Aufrufpfad so weit wie möglich zu erweitern. Rufen Sie z.&#160;B. innerhalb von `BeginOperationTwo()``BeginOperationOne()` auf.  
   
 - Verwenden Sie in den folgenden Fällen einen asynchronen Ansatz in einem Client oder in einer aufrufenden Anwendung:  
   
@@ -56,7 +56,7 @@ In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvor
 3. Das asynchrone IAsyncResult-Muster  
   
 #### <a name="task-based-asynchronous-pattern"></a>Taskbasiertes asynchrones Muster  
- Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Zum Beispiel:  
+ Das aufgabenbasierte asynchrone Muster ist die bevorzugte Methode zum Implementieren asynchroner Vorgänge, weil es einfach und verständlich ist. Um diese Methode zu verwenden, implementieren Sie einfach den Dienstvorgang, und geben Sie den Rückgabetyp Task\<T> an, wobei T der Typ ist, der von der logischen Operation zurückgegeben wird. Beispiel:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -110,11 +110,11 @@ public class AsyncExample
  Weitere Informationen über das ereignisbasierte asynchrone Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Das asynchrone IAsyncResult-Muster  
- Ein Dienstvorgang kann implementiert werden, und auf asynchrone Weise die asynchrone Programmierung .NET Framework-Muster verwenden, und Markieren der `<Begin>` -Methode mit der <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> -Eigenschaftensatz auf `true`. In diesem Fall wird der asynchrone Vorgang in Metadaten in die gleiche Form wie ein synchroner Vorgang verfügbar gemacht: Es wird als einzelner Vorgang mit einer Anforderungsnachricht und einer korrelierten Antwortnachricht verfügbar gemacht. Clientprogrammierungsmodelle haben dann eine Wahl. Sie können dieses Muster als synchronen oder als asynchronen Vorgang darstellen, solange beim Aufrufen des Diensts ein Anforderung-Antwort-Nachrichtenaustausch stattfindet.  
+ Ein Dienst Vorgang kann asynchron implementiert werden, indem das .NET Framework asynchrone Programmier Muster verwendet wird, und die `<Begin>` -Methode wird <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> mit der- `true`Eigenschaft markiert, die auf festgelegt ist. In diesem Fall wird der asynchrone Vorgang in Metadaten in derselben Form wie ein synchroner Vorgang verfügbar gemacht: Sie wird als einzelner Vorgang mit einer Anforderungs Nachricht und einer korrelierten Antwortnachricht verfügbar gemacht. Clientprogrammierungsmodelle haben dann eine Wahl. Sie können dieses Muster als synchronen oder als asynchronen Vorgang darstellen, solange beim Aufrufen des Diensts ein Anforderung-Antwort-Nachrichtenaustausch stattfindet.  
   
  Aufgrund der asynchronen Natur der Systeme sollte i. A. eine Abhängigkeit von den Threads vermieden werden.  Die verlässlichste Möglichkeit, Daten an verschiedene Stufen der Vorgangsverteilungsverarbeitung zu übergeben, ist die Verwendung von Erweiterungen.  
   
- Ein Beispiel finden Sie unter [Gewusst wie: Implementieren ein asynchronen Dienstvorgangs](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
+ Ein Beispiel finden Sie unter [Gewusst wie: Implementieren Sie einen asynchronen Dienst](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)Vorgang.  
   
  So definieren Sie ein Vertragsvorgang `X`, der unabhängig von der Art des Aufrufs in der Clientanwendung asynchron ausgeführt wird:  
   
@@ -155,7 +155,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ```  
   
 > [!NOTE]
->  Das <xref:System.ServiceModel.OperationContractAttribute>-Attribut wird nur auf die `BeginDoWork`-Methode angewendet. Der resultierende Vertrag verfügt über einen WSDL-Vorgang mit der Bezeichnung `DoWork`.  
+> Das <xref:System.ServiceModel.OperationContractAttribute>-Attribut wird nur auf die `BeginDoWork`-Methode angewendet. Der resultierende Vertrag verfügt über einen WSDL-Vorgang mit der Bezeichnung `DoWork`.  
   
 ### <a name="client-side-asynchronous-invocations"></a>Clientseitige asynchrone Aufrufe  
  Eine WCF-Clientanwendung kann eine der drei asynchronen, oben beschriebenen Aufrufmodelle verwenden  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- Dadurch generiert „Svcutil.exe“ eine WCF-Clientklasse mit der Ereignisinfrastruktur, die es der aufrufenden Anwendung ermöglicht, einen Ereignishandler zu implementieren und zuzuweisen, der die Antwort empfängt und die entsprechende Aktion einleitet. Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Dadurch generiert „Svcutil.exe“ eine WCF-Clientklasse mit der Ereignisinfrastruktur, die es der aufrufenden Anwendung ermöglicht, einen Ereignishandler zu implementieren und zuzuweisen, der die Antwort empfängt und die entsprechende Aktion einleitet. Ein vollständiges Beispiel finden Sie unter [Vorgehensweise: Dienst Vorgänge werden asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)aufgerufen.  
   
  Das ereignisbasierte asynchrone Modell ist jedoch nur in [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] verfügbar. Es wird darüber hinaus nicht einmal in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] unterstützt, wenn ein WCF-Clientkanal mithilfe einer <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> erstellt wird. Bei WCF-Clientkanalobjekten müssen Sie <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekte verwenden, um die Vorgänge asynchron aufzurufen. Geben Sie zum Verwenden dieses Ansatzes die **/async**-Befehlsoption für das [Service Model Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) an, wie in folgendem Beispiel dargestellt.  
   
@@ -180,9 +180,9 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- Dadurch wird ein Dienstvertrag generiert, in dem jeder Vorgang als eine `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft und einer entsprechenden `<End>`-Methode modelliert wird. Für ein vollständiges Beispiel mit einem <xref:System.ServiceModel.ChannelFactory%601>, finden Sie unter [Vorgehensweise: Aufrufen von Vorgängen, die asynchron mit einer Kanalfactory](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+ Dadurch wird ein Dienstvertrag generiert, in dem jeder Vorgang als eine `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft und einer entsprechenden `<End>`-Methode modelliert wird. Ein umfassendes Beispiel mit einem <xref:System.ServiceModel.ChannelFactory%601>finden [Sie unter Gewusst wie: Asynchrones Abrufen von Vorgängen mithilfe](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)einer Kanalfactory.  
   
- In jedem Fall können Anwendungen einen Vorgang asynchron aufrufen, auch wenn der Dienst synchron implementiert wurde, ebenso wie eine Anwendung mit dem gleichen Muster eine lokale synchrone Methode asynchron aufrufen kann. Es ist nicht relevant ist, an den Client, wie der Vorgang implementiert wird. Wenn die Antwortnachricht eintrifft, dessen Inhalt wird gesendet an des Clients die asynchrone <`End`>-Methode und der Client Ruft die Informationen ab.  
+ In jedem Fall können Anwendungen einen Vorgang asynchron aufrufen, auch wenn der Dienst synchron implementiert wurde, ebenso wie eine Anwendung mit dem gleichen Muster eine lokale synchrone Methode asynchron aufrufen kann. Wie der Vorgang implementiert wird, ist für den Client nicht von Bedeutung. Wenn die Antwortnachricht eintrifft, wird Ihr Inhalt an die asynchrone <`End`> Methode des Clients gesendet, und der Client ruft die Informationen ab.  
   
 ### <a name="one-way-message-exchange-patterns"></a>Unidirektionale Nachrichtenaustauschmuster  
  Sie können auch ein asynchrones Nachrichtenaustauschmuster erstellen, in dem unidirektionale Vorgänge (Vorgänge, bei denen das <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>`true` ist, verfügen über keine korrelierte Antwort) vom Client oder vom Dienst unabhängig von der anderen Seite in beide Richtungen gesendet werden können. (Dabei wird das Duplex-Nachrichtenaustauschmuster mit unidirektionalen Nachrichten verwendet.) In diesem Fall gibt der Dienstvertrag einen unidirektionalen Nachrichtenaustausch an, den eine der beiden Seiten ggf. als asynchrone Aufrufe oder Implementierungen oder nicht implementieren kann. Wenn der Vertrag ein Austausch von unidirektionalen Nachrichten ist, können die Implementierungen im Allgemeinen hauptsächlich asynchron sein, da die Anwendung nach dem Senden der Nachricht nicht auf eine Antwort wartet und andere Aktivitäten weiter ausführen kann.  

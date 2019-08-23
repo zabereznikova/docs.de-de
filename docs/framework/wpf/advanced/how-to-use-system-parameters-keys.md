@@ -5,20 +5,20 @@ helpviewer_keywords:
 - resource keys [WPF], SystemParameters class
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-ms.openlocfilehash: 147f65b4bb214c12317309081c345251d7426cd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edacb4b98ab01f081f668dc3374f6588492210d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918371"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Vorgehensweise: Verwenden von Systemparameterschlüsseln
-Systemressourcen machen eine Reihe von Systemmetriken als Ressourcen verfügbar, damit Entwickler visuelle Elemente erstellen können, die mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemParameters> ist eine Klasse, die sowohl Systemparameterwerte und Ressourcenschlüssel, der an die Werte gebunden enthält – z. B. <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> und <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>. Systemparametereigenschaften können als statische oder dynamische Ressourcen verwendet werden. Verwenden Sie eine dynamische Ressource, wenn sich die Parametereigenschaft während der Ausführung der Anwendung aktualisieren soll; verwenden Sie andernfalls eine statische Ressource.  
+Systemressourcen machen eine Reihe von Systemmetriken als Ressourcen verfügbar, damit Entwickler visuelle Elemente erstellen können, die mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemParameters>ist eine Klasse, die sowohl Systemparameter Werte als auch Ressourcen Schlüssel enthält, die an die Werte gebunden werden <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> , <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>z. –. und. Systemparametereigenschaften können als statische oder dynamische Ressourcen verwendet werden. Verwenden Sie eine dynamische Ressource, wenn sich die Parametereigenschaft während der Ausführung der Anwendung aktualisieren soll; verwenden Sie andernfalls eine statische Ressource.  
   
 > [!NOTE]
->  Dynamische Ressourcen haben das Schlüsselwort *Schlüssel* an den Eigenschaftennamen angefügt.  
+> Dynamischen Ressourcen wird der Schlüsselwort *Schlüssel* an den Eigenschaftsnamen angehängt.  
   
- Im folgenden Beispiel wird veranschaulicht, wie Sie auf dynamische Ressourcen der Systemparamter zugreifen und diese verwenden, um eine Schaltfläche zu formatieren oder anzupassen. Dies [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel die Größe einer Schaltfläche durch Zuweisen von <xref:System.Windows.SystemParameters> Werte für Breite und Höhe der Schaltfläche.  
+ Im folgenden Beispiel wird veranschaulicht, wie Sie auf dynamische Ressourcen der Systemparamter zugreifen und diese verwenden, um eine Schaltfläche zu formatieren oder anzupassen. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] diesem Beispiel wird eine Schaltfläche <xref:System.Windows.SystemParameters> durch Zuweisen von Werten zur Breite und Höhe der Schaltfläche unterschiedlich dargestellt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[SystemRes_snip#ParameterDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  

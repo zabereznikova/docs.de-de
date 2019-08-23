@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749986"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928667"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits-Methode
-Legt die Größe des Segments und die maximale Größe für Generation 0 fest.  
+Legt die Segmentgröße und die maximale Größe für die Generation 0 fest.  
   
 > [!IMPORTANT]
->  Ab .NET Framework 4.5, Sie können festlegen Segmentgröße und Größe von maximal Generation 0 zu Werten größer als `DWORD` mithilfe der [igchost2:: Setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) Methode.  
+> Beginnend mit dem .NET Framework 4,5 können Sie die Segmentgröße und die maximale Generation 0-Größe auf Werte `DWORD` festlegen, die größer als sind, indem Sie die [IGCHost2:: setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) -Methode verwenden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="parameters"></a>Parameter  
  `SegmentSize`  
- [in] Die Größe des Segments, die von der Garbage Collection-System verwendet werden soll.  
+ in Die Größe des Segments, das vom Garbage Collection System verwendet wird.  
   
  `MaxGen0Size`  
- [in] Die maximale Größe für Generation 0.  
+ in Die maximale Größe für die Generation 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetGCStartupLimits` Methode nur einmal aufgerufen werden kann. Diese Werte können nicht später geändert werden.  
+ Die `SetGCStartupLimits` -Methode kann nur einmal aufgerufen werden. Diese Werte können später nicht mehr geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** GCHost.idl, GCHost.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -2,25 +2,25 @@
 title: <peerAuthentication>-Element
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 6aa11c50ef950a8a9d902a0fb77fdf301d18f7cb
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 09094c00b8faa28c37e202112251fee7cb4580be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423047"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934020"
 ---
-# <a name="peerauthentication-element"></a>\<PeerAuthentication >-Element
+# <a name="peerauthentication-element"></a>\<> Element "Peer Authentication"
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.  
   
- Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-zu-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
 \<clientCredentials>  
-\<peer>  
-\<PeerAuthentication >  
+\<Peer >  
+\<> "Peer Authentifizierung"  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.
 |`customCertificateValidatorType`|Optionale Zeichenfolge. Ein Typ und eine Assembly, die zum Überprüfen eines benutzerdefinierten Typs verwendet werden. Das Attribut muss festgelegt werden, wenn für `certificateValidationMode` der Wert `Custom` festgelegt wurde.|  
 |`certificateValidationMode`|Optionale Enumeration. Gibt einen der drei für die Überprüfung von Anmeldeinformationen verwendeten Modi an. Wenn dies auf `Custom` festgelegt wurde, muss auch ein `customCertificateValidator` bereitgestellt werden. Die Standardeinstellung ist `ChainTrust`.|  
 |`revocationMode`|Optionale Enumeration. Einer der Modi zum Prüfen auf eine Liste gesperrter Zertifikate. Die Standardeinstellung ist `Online`.|  
-|`trustedStoreLocation`|Optionale Enumeration. Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Validierung wird ausgeführt, für die **vertrauenswürdige Personen** am angegebenen Speicherort zu speichern. Die Standardeinstellung ist `CurrentUser`.|  
+|`trustedStoreLocation`|Optionale Enumeration. Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Die Überprüfung wird für den Speicher für **Vertrauenswürdige Personen** am angegebenen Speicherort durchgeführt. Die Standardeinstellung ist `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType-Attribut  
   
@@ -53,13 +53,13 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Einer der folgenden Werte: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Die Standardeinstellung ist `ChainTrust`.<br /><br /> Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumeration|Einer der folgenden Werte: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Die Standardeinstellung ist `ChainTrust`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Einer der folgenden Werte: `NoCheck`, `Online`, `Offline`. Die Standardeinstellung ist `Online`.<br /><br /> Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Enumeration|Einer der folgenden Werte: `NoCheck`, `Online`, `Offline`. Die Standardeinstellung ist `Online`.<br /><br /> Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation-Attribut  
   
@@ -74,7 +74,7 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Gibt Anmeldeinformationen an, die zur Authentifizierung des Clients bei einem Peerdienst verwendet werden.|  
+|[\<peer>](peer-of-clientcredentials-element.md)|Gibt Anmeldeinformationen an, die zur Authentifizierung des Clients bei einem Peerdienst verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `<authentication>`-Element entspricht der <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>-Klasse. Mit diesem Element wird ein Validierungssteuerelement angegeben, das bei Nachbar-zu-Nachbar-Authentifizierung im Mesh aufgerufen wird. Versucht ein neuer Peer, eine Nachbarverbindung herzustellen, übergibt er seine eigenen Anmeldeinformationen an den antwortenden Peer. Das Validierungssteuerelement des antwortenden Peers wird aufgerufen, um die Anmeldeinformationen der Remotepartei zu überprüfen. Bei jeder Herstellung einer Peerverbindung im Mesh werden beide Peers gegenseitig authentifziert, das heißt, die Validierungssteuerelemente werden an beiden Enden aufgerufen.  
@@ -107,8 +107,8 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Benutzerdefinierter Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [Peer-to-Peer-Netzwerke](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Peer Kanalnachrichten-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Benutzerdefinierte Peer Kanal Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Sichern von Peerkanalanwendungen](../../../wcf/feature-details/securing-peer-channel-applications.md)

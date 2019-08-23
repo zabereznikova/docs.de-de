@@ -9,29 +9,29 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 543717873f3ef6d0d44c5bcbbef013817c06357c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13ad6c85bbde57cd6ad19848de71dabc23ed8f49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583581"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953921"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Szenarien und Codebeispiele zum Veranschaulichen, wie und wann Sie die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwenden können, um ein Element in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur zu suchen.  
   
  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> unterscheidet ein Automatisierungselement eindeutig von dessen nebengeordneten Elementen. Weitere Informationen zu Eigenschaftenbezeichnern, die zur Identifikation von Steuerelementen dienen, finden Sie unter [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  Durch<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird keine in der gesamten Struktur garantiert eindeutige Identität zur Verfügung gestellt. Für diese Eigenschaft sind normalerweise Container- und Bereichsinformationen erforderlich, damit sie nützlich ist. Eine Anwendung kann beispielsweise ein Menüsteuerelement mit mehreren Menüeinträgen oberster Ebene enthalten, die wiederum mehrere untergeordnete Menüeinträge aufweisen. Diese sekundären Menüeinträge könnten durch ein allgemeines Schema wie „Element1"“, „Element2“, „Element3“ usw. bezeichnet werden, wodurch doppelte Bezeichner für untergeordnete Elemente über die Menüeinträge oberster Ebene hinweg möglich sind.  
+> Durch<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird keine in der gesamten Struktur garantiert eindeutige Identität zur Verfügung gestellt. Für diese Eigenschaft sind normalerweise Container- und Bereichsinformationen erforderlich, damit sie nützlich ist. Eine Anwendung kann beispielsweise ein Menüsteuerelement mit mehreren Menüeinträgen oberster Ebene enthalten, die wiederum mehrere untergeordnete Menüeinträge aufweisen. Diese sekundären Menüeinträge könnten durch ein allgemeines Schema wie „Element1"“, „Element2“, „Element3“ usw. bezeichnet werden, wodurch doppelte Bezeichner für untergeordnete Elemente über die Menüeinträge oberster Ebene hinweg möglich sind.  
   
 ## <a name="scenarios"></a>Szenarien  
  Es wurden drei primäre Szenarien für Benutzeroberflächenautomatisierungs-Client-Anwendungen bestimmt, in denen <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwendet werden muss, damit richtige und konsistente Ergebnisse erzielt werden, wenn nach Elementen gesucht wird.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelementansicht unterstützt. Davon ausgenommen sind lediglich Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelementen ohne ID oder x:Uid abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die aus [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Steuerelementen abgeleitet wurden, die keine Steuerelement-ID haben.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird von allen Benutzeroberflächenautomatisierungs-Elementen in der Steuerelementansicht unterstützt. Davon ausgenommen sind lediglich Anwendungsfenster der obersten Ebene, Benutzeroberflächenautomatisierungs-Elemente, die von [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelementen ohne ID oder x:Uid abgeleitet wurden, und Benutzeroberflächenautomatisierungs-Elemente, die aus [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Steuerelementen abgeleitet wurden, die keine Steuerelement-ID haben.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   
@@ -45,7 +45,7 @@ ms.locfileid: "64583581"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Verwenden eines persistenten Pfads zum Zurückkehren zu einem vorher identifizierten AutomationElement  
   
-- Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem reproduziert (oder "wiedergegeben") eine bestimmte Sequenz von UI-Aktionen mithilfe der Benutzeroberflächenautomatisierungs-Eigenschaften wie z. B. AutomationID, Steuerelementmuster und Ereignislistener.
+- Möglicherweise müssen Clientanwendungen (von einfachen Testskripts bis zu robusten Aufzeichnungs- und Wiedergabeprogrammen) auf Elemente (z. B. ein Dialogfeld zum Öffnen von Dateien oder ein Menüelement) zugreifen, die zurzeit nicht instanziiert und deshalb in der Benutzeroberflächenautomatisierungs-Struktur nicht vorhanden sind. Diese Elemente können nur instanziiert werden, indem eine bestimmte Sequenz von UI-Aktionen mithilfe von Benutzeroberflächenautomatisierungs-Eigenschaften wie AutomationID, Steuerelement Mustern und Ereignislistener reproduziert oder wiedergegeben wird.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

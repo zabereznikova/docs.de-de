@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922623"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Eingebettete Ausdrücke in XML (Visual Basic)
-Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, das ist identisch mit der Syntax in ASP.NET.  
+Mit eingebetteten Ausdrücken können Sie XML-Literale erstellen, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, was mit der in ASP.NET verwendeten Syntax identisch ist.  
   
- Beispielsweise können Sie ein XML-Element Zeichenliteral erstellen eingebettete Ausdrücke mit Inhalt für Literaltext kombinieren.  
+ Sie können z. b. ein XML-Elementliteral erstellen, indem Sie eingebettete Ausdrücke mit literalem Text Inhalt kombinieren.  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- Wenn `isbnNumber` enthält die ganze Zahl 12345 und `modifiedDate` enthält das Datum, 3/5/2006, wenn dieser Code ausgeführt wird, den Wert der `book` ist:  
+ Wenn `isbnNumber` die Ganzzahl 12345 enthält `modifiedDate` und das Datum 3/5/2006 enthält, ist der Wert von `book` , wenn dieser Code ausgeführt wird,:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,55 +30,55 @@ Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die 
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Speicherort des eingebetteten Ausdrucks und Überprüfung  
- Eingebettete Ausdrücke können nur an bestimmten Speicherorten innerhalb der XML-Literale Ausdrücke verwendet werden. Position des Ausdrucks legt die Typen der Ausdruck zurückgeben können und wie `Nothing` erfolgt. Die folgende Tabelle beschreibt die zulässigen Standorte und die Typen von eingebetteten Ausdrücken.  
+## <a name="embedded-expression-location-and-validation"></a>Speicherort und Validierung des eingebetteten Ausdrucks  
+ Eingebettete Ausdrücke können nur an bestimmten Positionen innerhalb von XML-Literalausdrücken vorkommen. Der Ausdrucks Speicherort steuert, welche Typen der Ausdruck zurückgeben `Nothing` kann und wie verarbeitet wird. In der folgenden Tabelle werden die zulässigen Speicherorte und Typen von eingebetteten Ausdrücken beschrieben.  
   
-|Position im literal|Der Typ des Ausdrucks|Behandlung von `Nothing`|  
+|Speicherort in Literalen|Typ des Ausdrucks|Behandlung von`Nothing`|  
 |---|---|---|  
 |XML-Elementname|<xref:System.Xml.Linq.XName>|Fehler|  
-|XML-Elementinhalt.|`Object` oder ein Array von `Object`|Ignoriert|  
-|XML-Elementname-Attribut|<xref:System.Xml.Linq.XName>|Fehler, es sei denn, der den Wert des Attributs auch ist `Nothing`|  
-|XML-Element-Attributwert|`Object`|Attributdeklaration ignoriert|  
-|XML-Element-Attribut|<xref:System.Xml.Linq.XAttribute> oder eine Auflistung von <xref:System.Xml.Linq.XAttribute>|Ignoriert|  
-|Stammelement des XML-Dokuments|<xref:System.Xml.Linq.XElement> oder eine Auflistung von einem <xref:System.Xml.Linq.XElement> -Objekt und eine beliebige Anzahl von <xref:System.Xml.Linq.XProcessingInstruction> und <xref:System.Xml.Linq.XComment> Objekte|Ignoriert|  
+|Inhalt des XML-Elements|`Object`oder Array von`Object`|Ignoriert|  
+|Name des XML-Element Attributs|<xref:System.Xml.Linq.XName>|Fehler, es sei denn, der Attribut Wert ist ebenfalls`Nothing`|  
+|XML-Element Attribut Wert|`Object`|Attribut Deklaration wird ignoriert|  
+|XML-Element Attribut|<xref:System.Xml.Linq.XAttribute>oder eine Auflistung von<xref:System.Xml.Linq.XAttribute>|Ignoriert|  
+|Stamm Element des XML-Dokuments|<xref:System.Xml.Linq.XElement>oder eine Auflistung von einem <xref:System.Xml.Linq.XElement> -Objekt und eine beliebige Anzahl <xref:System.Xml.Linq.XProcessingInstruction> von <xref:System.Xml.Linq.XComment> -Objekten und-Objekten|Ignoriert|  
   
-- Beispiel für einen eingebetteten Ausdruck in ein XML-Elementname:  
+- Beispiel für einen eingebetteten Ausdruck in einem XML-Elementnamen:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- Beispiel für einen eingebetteten Ausdruck in den Inhalt eines XML-Elements:  
+- Beispiel eines eingebetteten Ausdrucks im Inhalt eines XML-Elements:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- Beispiel für einen eingebetteten Ausdruck in eine XML-Elementname-Attribut:  
+- Beispiel für einen eingebetteten Ausdruck in einem XML-Element Attributnamen:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- Beispiel für einen eingebetteten Ausdruck in einem XML-Element-Attributwert:  
+- Beispiel für einen eingebetteten Ausdruck in einem Attribut Wert des XML-Elements:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- Beispiel für einen eingebetteten Ausdruck in ein XML-Element-Attribut:  
+- Beispiel für einen eingebetteten Ausdruck in einem XML-Element Attribut:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- Beispiel für einen eingebetteten Ausdruck in das Stammelement eines XML-Dokuments:  
+- Beispiel eines eingebetteten Ausdrucks in einem XML-Dokument Stamm Element:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- Wenn Sie aktivieren `Option Strict`, überprüft der Compiler, dass der Typ jedes eingebetteten Ausdrucks in den erforderlichen Typ erweitert wird. Die einzige Ausnahme ist für das Stammelement eines XML-Dokuments, das überprüft wird, wenn der Code ausgeführt wird. Wenn Sie ohne Kompilieren `Option Strict`, können Sie Ausdrücke vom Typ einbetten `Object` und deren Typ wird zur Laufzeit überprüft.  
+ Wenn Sie aktivieren `Option Strict`, prüft der Compiler, ob der Typ jedes eingebetteten Ausdrucks auf den erforderlichen Typ erweitert wird. Die einzige Ausnahme gilt für das Stamm Element eines XML-Dokuments, das überprüft wird, wenn der Code ausgeführt wird. Wenn Sie ohne `Option Strict`kompilieren, können Sie Ausdrücke vom Typ `Object` einbetten, und der Typ wird zur Laufzeit überprüft.  
   
- An Standorten, in dem der Inhalt optional ist, eingebettete Ausdrücke, die enthalten `Nothing` werden ignoriert. Dies bedeutet, Sie haben keinen Elementinhalt, Attributwerte zu überprüfen und die Elemente des Arrays sind nicht `Nothing` vor der Verwendung eines XML-Literals. Erforderlich, nicht möglich, Werte, z. B. Element- und Attributnamen, `Nothing`.  
+ An Standorten, an denen Inhalt optional ist, werden `Nothing` eingebettete Ausdrücke, die enthalten, ignoriert. Dies bedeutet, dass Sie nicht überprüfen müssen, ob Element Inhalt, Attributwerte und Array Elemente nicht `Nothing` vor der Verwendung eines XML-Literals vorhanden sind. Erforderliche Werte, z. b. Element-und Attributnamen `Nothing`, dürfen nicht sein.  
   
- Weitere Informationen zur Verwendung von eines eingebetteten Ausdrucks in einen bestimmten Typ eines Literals finden Sie unter [XML-Dokument-Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML-Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ Weitere Informationen zum Verwenden eines eingebetteten Ausdrucks in einem bestimmten Literaltyp finden Sie unter [XML-dokumentliterale](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML-Elementliterale](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Bereichsregeln  
- Der Compiler konvertiert jedes XML-literal in einen Konstruktoraufruf für den entsprechenden literal. Die literalen Inhalt und eingebettete Ausdrücke in einem XML-Literal werden als Argumente an den Konstruktor übergeben. Dies bedeutet, dass alle Programmierelemente Visual Basic zur Verfügung, um ein XML-literal auch für die eingebettete Ausdrücke verfügbar sind.  
+ Der Compiler konvertiert alle XML-Literale in einen konstruktorrückruf für den entsprechenden Literaltyp. Der Literale Inhalt und eingebettete Ausdrücke in einem XML-Literalformat werden als Argumente an den Konstruktor übergeben. Dies bedeutet, dass alle Visual Basic Programmier Elemente, die für ein XML-wahrsten verfügbar sind, auch für eingebettete Ausdrücke verfügbar sind.  
   
- Sie können in einem XML-literal, den XML-Namespace-Präfixe, die mit deklariert zugreifen der `Imports` Anweisung. Sie können ein neues XML-Namespacepräfix deklariert oder Shadowing für eine vorhandene XML-Namespacepräfix, in einem Element mit dem `xmlns` Attribut. Der neue Namespace ist verfügbar, die untergeordneten Knoten dieses Elements, aber nicht auf XML-Literalen in eingebettete Ausdrücke.  
+ Innerhalb eines XML-Literals können Sie auf die XML-Namespace Präfixe zugreifen `Imports` , die mit der-Anweisung deklariert werden. Mithilfe des `xmlns` -Attributs können Sie ein neues XML-Namespace Präfix oder einen Schatten für ein vorhandenes XML-Namespace Präfix in einem-Element deklarieren. Der neue Namespace ist für die untergeordneten Knoten dieses Elements verfügbar, jedoch nicht für XML-Literale in eingebetteten Ausdrücken.  
   
 > [!NOTE]
->  Wenn Sie ein XML-Namespacepräfix deklarieren, indem die `xmlns` Namespace-Attribut den Wert des Attributs muss eine Konstante Zeichenfolge sein. In dieser Hinsicht mithilfe der `xmlns` Attribut ist, wie die Verwendung der `Imports` Anweisung, um ein XML-Namespace zu deklarieren. Sie können keinen eingebetteten Ausdruck verwenden, um die XML-Namespacewert anzugeben.  
+> Wenn Sie ein XML-Namespace Präfix mithilfe des `xmlns` Namespace-Attributs deklarieren, muss der Attribut Wert eine Konstante Zeichenfolge sein. In dieser Hinsicht ähnelt die Verwendung `xmlns` des-Attributs der `Imports` Verwendung der-Anweisung, um einen XML-Namespace zu deklarieren. Sie können keinen eingebetteten Ausdruck verwenden, um den XML-Namespace Wert anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

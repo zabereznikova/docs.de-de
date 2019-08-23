@@ -2,12 +2,12 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07fc2c4c52c29de1cfc9f498a6dc6b6da887b502
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758236"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925344"
 ---
 # <a name="issuedtokenparameters"></a>\<issuedTokenParameters>
 Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sicherheitsszenario ausgegeben wird.  
@@ -58,17 +58,17 @@ Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sich
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Eine Auflistung von Konfigurationselementen, die zusätzliche Anforderungsparameter angeben.|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Gibt eine Auflistung von erforderlichen Anspruchstypen an.<br /><br /> In einem verbundenen Szenario legen Dienste die Anforderungen für eingehende Anmeldeinformationen fest. Zum Beispiel müssen die eingehenden Anmeldeinformationen einen bestimmten Satz an Anspruchstypen aufweisen. Jedes Element in dieser Auflistung gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen.|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Ein Konfigurationselement, das den Endpunkt angibt, der das aktuelle Token ausgibt.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Ein Konfigurationselement, das die Endpunktadresse der Metadaten des Tokenausstellers angibt.|  
+|[\<additionalRequestParameters>](additionalrequestparameters-element.md)|Eine Auflistung von Konfigurationselementen, die zusätzliche Anforderungsparameter angeben.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gibt eine Auflistung von erforderlichen Anspruchstypen an.<br /><br /> In einem verbundenen Szenario legen Dienste die Anforderungen für eingehende Anmeldeinformationen fest. Zum Beispiel müssen die eingehenden Anmeldeinformationen einen bestimmten Satz an Anspruchstypen aufweisen. Jedes Element in dieser Auflistung gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen.|  
+|[\<issuer>](issuer-of-issuedtokenparameters.md)|Ein Konfigurationselement, das den Endpunkt angibt, der das aktuelle Token ausgibt.|  
+|[\<issuerMetadata>](issuermetadata-of-issuedtokenparameters.md)|Ein Konfigurationselement, das die Endpunktadresse der Metadaten des Tokenausstellers angibt.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Gibt die Standardwerte an, die zum Initiieren eines sicheren Konversationsdiensts verwendet werden.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Gibt die Standardwerte an, die zum Initiieren eines sicheren Konversationsdiensts verwendet werden.|  
+|[\<security>](security-of-custombinding.md)|Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -76,13 +76,13 @@ Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sich
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Sicherheit mit benutzerdefinierten Bindungen](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Sicherheit mit benutzerdefinierten Bindungen](../../../wcf/samples/custom-binding-security.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)

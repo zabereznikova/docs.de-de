@@ -13,15 +13,15 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05322ba831aac6173ac9d7fa7f369a208b676d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965378"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Frühes und spätes Binden (Visual Basic)
-Visual Basic-Compiler führt einen Prozess namens `binding` Wenn ein Objekt einer Objektvariablen zugewiesen wird. Objekt wird *früh gebunden*, wenn es einer Variablen zugeordnet wird, für die ein spezifischer Objekttyp deklariert wurde. Früh gebundene Objekte ermöglichen es dem Compiler, die Speicherbelegung und andere Optimierungen vor der Ausführung einer Anwendung durchzuführen. Das folgende Codefragment deklariert beispielsweise eine Variable des Typs <xref:System.IO.FileStream>:  
+Der Visual Basic-Compiler führt einen Prozess `binding` aus, der aufgerufen wird, wenn ein Objekt einer Objektvariablen zugewiesen wird. Objekt wird *früh gebunden*, wenn es einer Variablen zugeordnet wird, für die ein spezifischer Objekttyp deklariert wurde. Früh gebundene Objekte ermöglichen es dem Compiler, die Speicherbelegung und andere Optimierungen vor der Ausführung einer Anwendung durchzuführen. Das folgende Codefragment deklariert beispielsweise eine Variable des Typs <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
@@ -32,13 +32,13 @@ Visual Basic-Compiler führt einen Prozess namens `binding` Wenn ein Objekt eine
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
 ## <a name="advantages-of-early-binding"></a>Vorteile der frühen Bindung  
- Sie sollten soweit möglich früh gebundene Objekte verwenden, da diese dem Compiler wichtige Optimierungen ermöglichen, die zu effizienteren Anwendungen führen. Früh gebundene Objekte sind bedeutend schneller als spät gebundene Objekte, verbessern die Lesbarkeit des Codes und erleichtern dessen Verwaltung, weil sie die Art der verwendeten Objekte genau angeben. Ein weiterer Vorteil der frühen Bindung ist, dass sie nützliche Funktionen wie automatische codevervollständigung und die dynamische Hilfe ermöglicht, da die integrierte Entwicklungsumgebung (IDE) von Visual Studio nicht genau den Typ des Objekts Ausdruckskategorie bestimmen kann während der Bearbeitung der Code. Die frühe Bindung reduziert die Anzahl und den Schweregrad von Laufzeitfehlern, da sie dem Compiler die Ausgabe von Fehlern während der Programmkompilierung ermöglicht.  
+ Sie sollten soweit möglich früh gebundene Objekte verwenden, da diese dem Compiler wichtige Optimierungen ermöglichen, die zu effizienteren Anwendungen führen. Früh gebundene Objekte sind bedeutend schneller als spät gebundene Objekte, verbessern die Lesbarkeit des Codes und erleichtern dessen Verwaltung, weil sie die Art der verwendeten Objekte genau angeben. Ein weiterer Vorteil der frühen Bindung besteht darin, dass Sie nützliche Features wie automatische Codevervollständigung und dynamische Hilfe ermöglicht, da die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio genau bestimmen kann, mit welchem Objekttyp Sie arbeiten, während Sie das Ordnung. Die frühe Bindung reduziert die Anzahl und den Schweregrad von Laufzeitfehlern, da sie dem Compiler die Ausgabe von Fehlern während der Programmkompilierung ermöglicht.  
   
 > [!NOTE]
->  Die späte Bindung kann nur für den Zugriff auf als `Public` deklarierte Typmember verwendet werden. Der Zugriff auf als `Friend` oder `Protected Friend` deklarierte Member führt zu Laufzeitfehlern.  
+> Die späte Bindung kann nur für den Zugriff auf als `Public` deklarierte Typmember verwendet werden. Der Zugriff auf als `Friend` oder `Protected Friend` deklarierte Member führt zu Laufzeitfehlern.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Objekt Lebensdauer: Erstellen und zerstören von Objekten](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)

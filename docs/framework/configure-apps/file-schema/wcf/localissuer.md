@@ -2,19 +2,19 @@
 title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ec5a99139112ae600c1c2bc44feb6d3f62da1e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766401"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931740"
 ---
 # <a name="localissuer"></a>\<localIssuer>
 Gibt die Adresse und Bindung des lokalen Ausstellers zum Abrufen eines Sicherheitstokens an.  
   
  \<system.ServiceModel>  
 \<behaviors>  
-EndpointBehaviors-Abschnitt  
+endpointverhaltenbereich  
 \<behavior>  
 \<clientCredentials>  
 \<issuedToken>  
@@ -36,24 +36,24 @@ EndpointBehaviors-Abschnitt
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |Adresse|Erforderliche Zeichenfolge. Gibt den URI des lokalen Ausstellers an.|  
-|Bindung|Optionale Zeichenfolge. Eine der vom System bereitgestellten Bindungen. Eine Liste finden Sie unter [System-provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).|  
+|Bindung|Optionale Zeichenfolge. Eine der vom System bereitgestellten Bindungen. Eine Liste finden Sie unter vom [System bereitgestellte Bindungen](../../../wcf/system-provided-bindings.md).|  
 |bindingConfiguration|Optionale Zeichenfolge. Gibt eine Bindungskonfiguration aus der Konfigurationsdatei an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt Identitätsinformationen für den lokalen Aussteller an.|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Eine Auflistung von Adressheadern, die erforderlich sind, um den lokalen Aussteller ordnungsgemäß zu adressieren. Sie können das `add`-Schlüsselwort verwenden, um dieser Auflistung einen Header hinzuzufügen.|  
+|[\<identity>](identity.md)|Gibt Identitätsinformationen für den lokalen Aussteller an.|  
+|[\<headers>](headers-element.md)|Eine Auflistung von Adressheadern, die erforderlich sind, um den lokalen Aussteller ordnungsgemäß zu adressieren. Sie können das `add`-Schlüsselwort verwenden, um dieser Auflistung einen Header hinzuzufügen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.|  
+|[\<issuedToken>](issuedtoken.md)|Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Abrufen eines von einem Sicherheitstokendienst ( Security Token Service, STS) ausgestellten Tokens muss die Clientanwendung mit der zu verwendenden Adresse und Bindung konfiguriert sein, um mit dem STS kommunizieren zu können. Wenn die <xref:System.ServiceModel.WSFederationHttpBinding> stellt keine URL für den Sicherheitstokendienst, oder wenn die Ausstelleradresse einer verbundbindung `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` oder `null`, Windows Communication Foundation (WCF)-Clientchannel verwendet die angegebenen Werte von `address`und `binding` für die Kommunikation mit dem STS, um das ausgestellte Token abgerufen. Weitere Informationen zum Konfigurieren eines lokalen Ausstellers finden Sie unter [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Beim Abrufen eines von einem Sicherheitstokendienst ( Security Token Service, STS) ausgestellten Tokens muss die Clientanwendung mit der zu verwendenden Adresse und Bindung konfiguriert sein, um mit dem STS kommunizieren zu können. Wenn das <xref:System.ServiceModel.WSFederationHttpBinding> keine URL für den Sicherheitstokendienst bereitstellt oder wenn die Aussteller Adresse einer Verbund Bindung oder `null`ist `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` , verwendet der Windows Communication Foundation (WCF)-Kanal des Clients die Werte, die von `address`angegebenwerden. und`binding` zur Kommunikation mit dem STS, um das ausgestellte Token abzurufen. Weitere Informationen zum Konfigurieren eines lokalen Ausstellers finden [Sie unter Gewusst wie: Konfigurieren Sie einen lokalen](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)Aussteller.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden die Attribute `address`, `binding` und `bindingConfiguration` eines `localIssuer`-Elements festgelegt:  
@@ -82,12 +82,12 @@ EndpointBehaviors-Abschnitt
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
-- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Sicherheitsverhalten](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Sicherheitsverhalten](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Clients](../../../wcf/securing-clients.md)
+- [Vorgehensweise: Erstellen eines Verbund Clients](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)

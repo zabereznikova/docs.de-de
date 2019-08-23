@@ -1,25 +1,25 @@
 ---
-title: <add> der <scopedCertificates> Element
+title: <add>of <scopedCertificates> -Element
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9756d37527fcf888cad930b24677ae8e6a2c8fba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920055"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<Hinzufügen > der \<ScopedCertificates >-Element
+# <a name="add-of-scopedcertificates-element"></a>\<> von \<"scopedzertifikate" > Element hinzufügen
 Fügt ein X.509-Zertifikat zur Auflistung der Zertifikate mit Gültigkeitsbereich hinzu.  
   
  \<system.ServiceModel>  
 \<behaviors>  
-EndpointBehaviors-Abschnitt  
+endpointverhaltenbereich  
 \<behavior>  
 \<clientCredentials>  
 \<serviceCertificate>  
 \<scopedCertificates>  
-\<Hinzufügen >-Element für \<ScopedCertificates >  
+\<Fügen Sie >- \<Element für scopedzertifikate hinzu >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeration|Mögliche Werte: FindByThumbprint, findbysubjetname, findbysubjetissushedname, FindByIssuerName, findbyissuererkennbar shedname, findbyserialnumber, FindByTimeValid, FindByTimeNotYetValid, findbyserialnumber, findbytimeabgelauf, findbytemplatename , Findbyapplicationpolicy, findbycertificatepolicy, findbyextension, findbykeyusage, findbysubjetkeyidentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
@@ -66,7 +66,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
+|Enumeration|Mögliche Werte: Addressbook, AuthRoot, CertificateAuthority, unallowed, my, root, treuhändpeople und Treuhänder Publisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -75,14 +75,14 @@ EndpointBehaviors-Abschnitt
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden.|  
+|[\<scopedzertifikate->](scopedcertificates-element.md)|Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieses Element ermöglicht dem Client, ein zu verwendendes Dienstzertifikat basierend auf der URL des Dienstes, mit dem er kommuniziert, zu konfigurieren. Dies ist vor allem hilfreich bei Szenarien mit ausgestellten Token, in denen ein Client mit verschiedenen Diensten kommuniziert (dem Endservice und den zwischengeschalteten Sicherheitstokendiensten). Bei Bindungen mit Zertifikat-basierter Nachrichtensicherheit wird dieses Zertifikat zum Verschlüsseln von Nachrichten für den Dienst sowie für die Signierung von Antworten an den Client verwendet.  
   
  Wenn eine Bindung ein Zertifikat für den Dienst erfordert und kein bestimmtes Zertifikat für die Dienst-URL in ScopedCertificates gefunden wird, wird das Standardzertifikat verwendet.  
   
- Weitere Informationen finden Sie im Abschnitt "Zertifikate mit Gültigkeitsbereich" [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Weitere Informationen finden Sie im Abschnitt "Bereichs bezogene Zertifikate" unter [Gewusst wie: Erstellen Sie einen Verbund Client](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Auflistung ein X.509-Zertifikat hinzugefügt.  
@@ -114,7 +114,7 @@ EndpointBehaviors-Abschnitt
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Vorgehensweise: Erstellen eines Verbund Clients](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [Sichern von Clients](../../../wcf/securing-clients.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)

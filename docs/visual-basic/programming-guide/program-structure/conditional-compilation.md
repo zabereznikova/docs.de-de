@@ -5,61 +5,61 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 4698435cb2ab15d16d8a8a898a01a9ffbc4f69c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1bee64568ff92468e29226a395f7e5335387e256
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639807"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945587"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Bedingte Kompilierung in Visual Basic
-In *für die bedingte Kompilierung*, selektiv bestimmte Codeblöcke in einem Programm kompiliert werden, während andere ignoriert werden.  
+Bei der *bedingten Kompilierung*werden bestimmte Code Blöcke in einem Programm selektiv kompiliert, während andere ignoriert werden.  
   
- Sie möchten z. B. Schreiben Debuggen-Anweisungen, die von der Geschwindigkeit der Ansätze mit den gleichen Programmiertask, oder Sie vergleichen kann eine Anwendung für mehrere Sprachen lokalisieren möchten. Anweisungen für die bedingte Kompilierung dienen, die während der Zeitpunkt der Kompilierung zur Laufzeit nicht ausgeführt.  
+ Beispielsweise können Sie Debuganweisungen schreiben, die die Geschwindigkeit verschiedener Ansätze mit derselben Programmieraufgabe vergleichen, oder Sie möchten eine Anwendung für mehrere Sprachen lokalisieren. Bedingte Kompilierungs Anweisungen sind so konzipiert, dass Sie zur Kompilierzeit und nicht zur Laufzeit ausgeführt werden.  
   
- Sie kennzeichnen Codeblöcke mit bedingt kompiliert werden die `#If...Then...#Else` Richtlinie. Z. B. Französisch und Deutsch-Sprache erstellen Versionen der gleichen Anwendung aus dem Quellcode, die Sie einbetten, plattformspezifischen Codesegmente in `#If...Then` Anweisungen, die mithilfe der definierten Konstanten `FrenchVersion` und `GermanVersion`. Im folgende Beispiel wird veranschaulicht, wie:  
+ Code Blöcke, die mit der `#If...Then...#Else` -Direktive bedingt kompiliert werden sollen. Wenn Sie z. b. Französisch-und deutschsprachige Versionen derselben Anwendung aus demselben Quellcode erstellen möchten, Betten Sie plattformspezifische Code Segmente in `#If...Then` -Anweisungen ein, die die vordefinierten Konstanten `GermanVersion` `FrenchVersion` und verwenden. Im folgenden Beispiel wird veranschaulicht, wie:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- Wenn Sie festlegen, dass den Wert des der `FrenchVersion` Konstante für bedingte Kompilierung auf `True` zum Zeitpunkt der Kompilierung der bedingte Code für die französische Version kompiliert wird. Wenn Sie festlegen, dass den Wert des der `GermanVersion` zu Konstante `True`, verwendet der Compiler die deutsche Version. Wenn keine, um festgelegt ist `True`, den Code in den letzten `Else` -Block ausgeführt.  
+ Wenn Sie den Wert der `FrenchVersion` bedingten Kompilierungs Konstante zur Kompilierzeit auf `True` festlegen, wird der bedingte Code für die französische Version kompiliert. Wenn Sie den Wert der `GermanVersion` Konstante auf `True`festlegen, verwendet der Compiler die deutsche Version. Wenn keines von auf `True`festgelegt ist, wird der Code im letzten `Else` -Block ausgeführt.  
   
 > [!NOTE]
->  Automatische Vervollständigung wird nicht die Funktion beim Bearbeiten von code und mit bedingten Kompilierungsdirektiven, wenn der Code nicht Teil von current Branch ist.  
+> Die automatische Vervollständigung funktioniert nicht, wenn Code bearbeitet und bedingte Kompilierungs Direktiven verwendet werden, wenn der Code nicht Teil der aktuellen Verzweigung ist.  
   
-## <a name="declaring-conditional-compilation-constants"></a>Deklarieren von Konstanten für bedingte Kompilierung  
- Sie können die Konstanten für bedingte Kompilierung in eine von drei Arten festlegen:  
+## <a name="declaring-conditional-compilation-constants"></a>Deklarieren bedingter Kompilierungs Konstanten  
+ Sie können auf eine von drei Arten bedingte Kompilierungs Konstanten festlegen:  
   
-- In der **Projekt-Designer**  
+- Im **Projekt-Designer**  
   
-- In der Befehlszeile, wenn Sie den Befehlszeilencompiler verwenden  
+- Bei Verwendung des Befehlszeilen Compilers an der Befehlszeile  
   
-- In Ihrem code  
+- In Ihrem Code  
   
- Bedingte Kompilierungskonstanten haben einen speziellen Bereich und können nicht aus dem Standardcode zugegriffen werden. Der Bereich einer Konstante für bedingte Kompilierung ist abhängig von der sie eingerichtet wurde. Die folgende Tabelle enthält den Bereich der Konstanten, die mit jeder der drei oben genannten Methoden deklariert werden.  
+ Die Konstanten für die bedingte Kompilierung haben einen speziellen Bereich und können nicht über Standard Code aufgerufen werden. Der Gültigkeitsbereich einer Konstanten für die bedingte Kompilierung hängt davon ab, wie er festgelegt wird. In der folgenden Tabelle wird der Gültigkeitsbereich der Konstanten aufgelistet, die mit den drei oben erwähnten Methoden deklariert werden.  
   
-|Festlegung der Konstante|Bereich der Konstante|  
+|Festlegen der Konstante|Gültigkeitsbereich der Konstante|  
 |---|---|  
 |**Projekt-Designer**|Öffentlich für alle Dateien im Projekt|  
-|Befehlszeile|Öffentlich für alle Dateien, die an den Befehlszeilencompiler|  
-|`#Const` -Anweisung in code|Privat für die Datei, die in der sie deklariert ist|  
+|Befehlszeile|Öffentlich für alle Dateien, die an den Befehlszeilen Compiler übermittelt werden|  
+|`#Const`Anweisung im Code|Privat für die Datei, in der Sie deklariert ist|  
   
-|Zum Festlegen von Konstanten in den Projekt-Designer|  
+|So legen Sie Konstanten im Projekt-Designer fest|  
 |---|  
-|– Bevor Sie die ausführbare Datei erstellen, legen Sie Konstanten der **Projekt-Designer** anhand der Schritte im [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties).|  
+|-Legen Sie vor dem Erstellen der ausführbaren Datei Konstanten im **Projekt-Designer** fest, indem Sie die Schritte unter Verwalten von [Projekt-und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)befolgen.|  
   
-|Konstanten in der Befehlszeile festlegen.|  
+|So legen Sie Konstanten in der Befehlszeile fest|  
 |---|  
-|– Verwenden Sie die **/d** Switch Konstanten für bedingte Kompilierung, wie im folgenden Beispiel eingeben:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Kein Speicherplatz ist erforderlich, zwischen den **/d** Switch und das erste Konstante. Weitere Informationen finden Sie unter [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Befehlszeile-Deklarationen Überschreiben von Deklarationen, die in eingegebenen der **Projekt-Designer**, aber nicht gelöscht werden können. Legen Sie die Argumente in **Projekt-Designer** bleiben für nachfolgende Kompilierungen wirksam.<br />     Beim Konstanten im Code selbst schreiben möchten, stehen keine strengen Regeln bezüglich ihrer Platzierung, da deren Bereich das gesamte Modul ist in dem sie deklariert werden.|  
+|-Verwenden Sie den Schalter **/d** , um die Konstanten für die bedingte Kompilierung einzugeben, wie im folgenden Beispiel gezeigt:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Zwischen dem Schalter " **/d** " und der ersten Konstante ist kein Leerzeichen erforderlich. Weitere Informationen finden Sie unter [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Befehlszeilen Deklarationen überschreiben Deklarationen, die im **Projekt-Designer**eingegeben wurden, löschen Sie aber nicht. Die im **Projekt-Designer** festgelegten Argumente bleiben für nachfolgende Kompilierungen wirksam.<br />     Beim Schreiben von Konstanten im Code selbst gibt es keine strengen Regeln für die Platzierung, da der Gültigkeitsbereich das gesamte Modul ist, in dem Sie deklariert werden.|  
   
-|Um Konstanten im Code festgelegt werden.|  
+|So legen Sie Konstanten im Code fest|  
 |---|  
-|-Fügen Sie die Konstanten in der Deklarationsblock des Moduls, in dem sie verwendet werden. Dadurch bleibt Ihr Code organisiert und leichter zu lesen.|  
+|-Platzieren Sie die Konstanten im Deklarations Block des Moduls, in dem Sie verwendet werden. Dadurch wird der Code organisiert und leichter lesbar.|  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
 |---|---|  
-|[Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Enthält Vorschläge für Ihren Code leicht zu lesen und zu verwalten.|  
+|[Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Bietet Vorschläge, wie Sie Ihren Code auf einfache Weise lesen und warten können.|  
   
 ## <a name="reference"></a>Referenz  
  [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md)  

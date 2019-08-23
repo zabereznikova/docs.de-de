@@ -1,5 +1,5 @@
 ---
-title: <section> Element
+title: <section> element
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 94f7709f4bd273515d9fcdd727354ec579c46207
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927229"
 ---
 # <a name="section-element"></a>\<Abschnitt >-Element
 
-Enthält die Deklaration einer Konfigurations-Abschnitt.
+Enthält eine Konfigurations Abschnitts Deklaration.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Abschnitt >**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Abschnitts >**
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Abschnitts >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,27 +43,27 @@ Enthält die Deklaration einer Konfigurations-Abschnitt.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **name**  | Gibt den Namen des Konfigurationsabschnitts. |
-| **Typ**  | Gibt den Namen der Konfiguration im Abschnitt Handler-Klasse, die im Abschnitt aus der Konfigurationsdatei liest. Der Typwert muss es sich um die Syntax "Fully-qualified-section-handler-class-name, Simple-Assembly-Name". Der einfachen Assemblynamen ist der Stamm-Dateiname ohne die *DLL* Dateierweiterung. |
+| **name**  | Gibt den Namen des Konfigurations Abschnitts an. |
+| **Typ**  | Gibt den Namen der Konfigurations Abschnitts-Handlerklasse an, die den Abschnitt aus der Konfigurationsdatei liest. Der Typwert weist die Syntax "vollständig qualifiziert-section-Handler-Class-Name, Simple-Assembly-Name" auf. Der einfache Assemblyname ist der Stamm Dateiname ohne die *dll* -Dateierweiterung. |
 
 ## <a name="optional-attributes"></a>Optionale Attribute
 
-Die folgenden Attribute gelten nur für ASP.NET-Anwendungen zur Verfügung. Das Konfigurationssystem ignoriert diese Attribute für andere Anwendungstypen.
+Die folgenden Attribute sind nur für ASP.NET-Anwendungen anwendbar. Das Konfigurationssystem ignoriert diese Attribute für andere Anwendungs Typen.
 
 |                     | Beschreibung |
 | ------------------- | ----------- |
-| **allowDefinition** | Gibt die Konfigurationsdatei an, die in Abschnitt verwendet werden kann. Verwenden Sie einen der folgenden Werte:<br><br>**Überall**<br>Können den Abschnitt in den Konfigurationsdateien verwendet werden. Dies ist die Standardeinstellung.<br>**MachineOnly**<br>Der Abschnitt kann nur in der Computerkonfigurationsdatei verwendet werden ( *"Machine.config"* ).<br>**MachineToApplication**<br>Können den Abschnitt in der Konfigurationsdatei des Computers oder der Konfigurationsdatei der Anwendung verwendet werden. |
-| **allowLocation**   | Bestimmt, ob im Abschnitt kann, in verwendet werden der  **\<Speicherort >** Element. Verwenden Sie einen der folgenden Werte:<br><br>**true**<br>Der Abschnitt kann verwendet werden die  **\<Speicherort >** Element. Dies ist die Standardeinstellung.<br>**false**<br>Im Abschnitt zu verwendenden lässt nicht zu den  **\<Speicherort >** Element. |
+| **allowDefinition** | Gibt an, in welcher Konfigurationsdatei der Abschnitt verwendet werden kann. Verwenden Sie einen der folgenden Werte:<br><br>**Überall**<br>Ermöglicht die Verwendung des Abschnitts in jeder beliebigen Konfigurationsdatei. Dies ist die Standardeinstellung.<br>**MachineOnly**<br>Ermöglicht die Verwendung des Abschnitts nur in der Computer Konfigurationsdatei (*Machine. config*).<br>**MachineToApplication**<br>Ermöglicht die Verwendung des Abschnitts in der Computer Konfigurationsdatei oder der Anwendungs Konfigurationsdatei. |
+| **allowLocation**   | Bestimmt, ob der Abschnitt innerhalb der  **\<Position >** Elements verwendet werden kann. Verwenden Sie einen der folgenden Werte:<br><br>**true**<br>Ermöglicht die Verwendung des Abschnitts innerhalb des  **\<Speicherort >** Elements. Dies ist die Standardeinstellung.<br>**false**<br>Lässt nicht zu, dass der Abschnitt innerhalb der  **\<Position >** -Elements verwendet wird. |
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
-| [ **\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurationsabschnitte. |
+| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [SectionGroup-> Element  **\<** ](sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurations Abschnitte. |
 
 > [!NOTE]
-> Ein  **\<Abschnitt >** Element ist ein untergeordnetes Element des entweder  **\<ConfigSections >** oder  **\<SectionGroup >** aber nicht beide.
+> **Ein\<Abschnitt >** -Element ist ein untergeordnetes Element von  **\<configabschnitts >** oder  **\<sectionGroup >** , aber nicht beides.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -71,13 +71,13 @@ None
 
 ## <a name="remarks"></a>Hinweise
 
-Deklarieren im Wesentlichen einen Konfigurationsabschnitt definiert ein neues Element für die Konfigurationsdatei an. Das neue Element enthält Einstellungen, die eine Konfiguration Handler im Abschnitt (d. h. eine Klasse, implementiert die <xref:System.Configuration.IConfigurationSectionHandler> Schnittstelle) liest. Die Attribute und untergeordneten Elemente eines Abschnitts, die Sie definieren, hängt von der Abschnittshandler, die, den Sie verwenden, um Ihre Einstellungen zu lesen.
+Das Deklarieren eines Konfigurations Abschnitts definiert im Wesentlichen ein neues Element für die Konfigurationsdatei. Das neue-Element enthält die Einstellungen, die ein Konfigurations Abschnitts Handler (d. h. eine <xref:System.Configuration.IConfigurationSectionHandler> Klasse, die die-Schnittstelle implementiert) liest. Die Attribute und untergeordneten Elemente eines Abschnitts, den Sie definieren, sind von dem Abschnitts Handler abhängig, den Sie zum Lesen der Einstellungen verwenden.
 
-Deklarieren einen Konfigurationsabschnittshandler in der *"Machine.config"* Datei können Sie Abschnitt "Konfiguration" in den Konfigurationsdateien der Anwendung auf diesem Computer verwenden, es sei denn, die **AllowDefinition**Attribut angibt.
+Wenn Sie einen Konfigurations Abschnitts Handler in der Datei *Machine. config* deklarieren, können Sie den Konfigurations Abschnitt in jeder beliebigen Anwendungs Konfigurationsdatei auf diesem Computer verwenden, es sei denn, das **AllowDefinition** -Attribut gibt andernfalls an.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie definieren einen Konfigurationsabschnitt aus, und definieren Sie Einstellungen für diesen Abschnitt:
+Im folgenden Beispiel wird gezeigt, wie ein Konfigurations Abschnitt definiert und Einstellungen für diesen Abschnitt definiert werden:
 
 ```xml
 <configuration>
@@ -94,8 +94,8 @@ Das folgende Beispiel zeigt, wie Sie definieren einen Konfigurationsabschnitt au
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

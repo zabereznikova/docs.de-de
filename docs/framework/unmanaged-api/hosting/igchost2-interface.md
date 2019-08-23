@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75bef91eb70c8109653741452362cd2e85f625ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21ce9cbd007858c0f39e12622eff819154ab83f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928616"
 ---
 # <a name="igchost2-interface"></a>IGCHost2-Schnittstelle
-Stellt Methoden zum Abrufen von Informationen über die Garbage Collection-System und zum Steuern einige Aspekte der Garbagecollection.  
+Bietet Methoden zum Abrufen von Informationen über das Garbage Collection System und zum Steuern einiger Aspekte von Garbage Collection.  
   
 > [!NOTE]
->  Für Neuentwicklungen, wir empfehlen die Verwendung der [ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md) Schnittstelle.  
+> Für eine neue Entwicklung empfiehlt es sich, stattdessen die [ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md) -Schnittstelle zu verwenden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx-Methode](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Legt die Größe des Segments und die maximale Größe für Generation 0 fest. Ermöglicht die Generation 0 und größer als Größe der Segmente `DWORD`.|  
+|[SetGCStartupLimitsEx-Methode](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Legt die Segmentgröße und die maximale Größe für die Generation 0 fest. Aktiviert die Generation 0 und die Segment `DWORD`Größen größer als.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** GCHost.idl, GCHost.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

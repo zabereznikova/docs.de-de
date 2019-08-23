@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964882"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
 Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierungs Einstellungen, die von WPF-Anwendungen verwendet werden.  
@@ -36,12 +36,12 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
 |Pixelstruktur|Beschreibt die Anordnung der Pixel für ein Anzeigegerät.|  
 |Textkontrastebene|Beschreibt die Kontrastebene für den angezeigten Text.|  
   
- Auf diese Einstellungen kann von einem externen Konfigurations Hilfsprogramm zugegriffen werden, das auf die identifizierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen verweist. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen.  
+ Auf diese Einstellungen kann von einem externen Konfigurations Hilfsprogramm zugegriffen werden, das auf die identifizierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen verweist. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den Windows-Registrierungs-Editor auf die Werte zugreifen.  
   
- Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen nicht festgelegt sind (Dies ist der Standardzustand) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , fragt die [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendung die Systemparameter Informationen für die Einstellungen der Schriftart Glättung ab.  
+ Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType-Registrierungs Einstellungen nicht festgelegt sind (Dies ist der Standardzustand) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , fragt die Anwendung die Windows-Systemparameter Informationen für die Einstellungen der Schriftart Glättung ab.  
   
 > [!NOTE]
->  Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `SystemParametersInfo` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
+> Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `SystemParametersInfo` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType-Ebene  
@@ -59,7 +59,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
  ![ClearType-Einstellungen im Registrierungs-Editor.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen RenderText in einem von zwei Modi, mit und ohne ClearType. Wenn Text ohne ClearType gerendert wird, wird er als Graustufen Rendering bezeichnet.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen RenderText in einem von zwei Modi, mit und ohne ClearType. Wenn Text ohne ClearType gerendert wird, wird er als Graustufen Rendering bezeichnet.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gammastufe  
@@ -89,7 +89,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
  Die Pixelstruktur entspricht einem Ganzzahlwert zwischen 0 und 2. Der Standardwert ist 0, was einer flachen Pixelstruktur entspricht.  
   
 > [!NOTE]
->  Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `EnumDisplayDevices` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
+> Weitere Informationen zum Aufzählen von Anzeigegeräte Namen finden Sie unter `EnumDisplayDevices` der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Funktion.  
   
 ### <a name="registry-setting"></a>Registrierungseinstellung  
  Der Ort für die Registrierungseinstellung der Pixelstruktur ist eine lokale Computereinstellung und entspricht einem bestimmten Anzeigegerätenamen:  

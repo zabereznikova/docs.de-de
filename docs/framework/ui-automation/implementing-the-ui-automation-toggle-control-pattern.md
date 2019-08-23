@@ -6,16 +6,16 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: b37d7f36cc19803a993b1d1707a055495bb4f5fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2293dc77369ecf019bd1093808135eeefd99c115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932063"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementieren des Toggle-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Richtlinien und Konventionen zum Implementieren von <xref:System.Windows.Automation.Provider.IToggleProvider>, einschließlich Informationen über Methoden und Eigenschaften. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "64662448"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Methode|None|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Eigenschaft|None|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   

@@ -2,12 +2,12 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700877"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925700"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
 Dieser Abschnitt registriert einen neuen Standardendpunkt im Erweiterungsabschnitt einer Konfigurationsdatei auf Computer- oder Anwendungsebene. Sie können dieser Auflistung einen Standardendpunkt hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf den Endpunkttyp sowie das `name`-Attribut auf den Namen des Standardendpunkts festlegen.  
@@ -25,7 +25,7 @@ Dieser Abschnitt registriert einen neuen Standardendpunkt im Erweiterungsabschni
 </system.serviceModel>
 ```  
   
- Nachdem der Standardendpunkt registriert wurde, können Sie ihn verwenden wie im folgenden Beispiel gezeigt. In der [ \<Endpunkt >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) -Element, das `kind` Attribut gibt an, den standardendpunkttyp an, die in registriert wurde die `<endpointExtensions>` Abschnitt. Die `endpointConfiguration` Attribut werden identisch mit der `name` Attribut des Konfigurationselements für den Standardendpunkt im der `<standardEndpoints>` Abschnitt.  
+ Nachdem der Standardendpunkt registriert wurde, können Sie ihn verwenden wie im folgenden Beispiel gezeigt. Im Endpunkt > Element gibt das `kind` -Attribut den standardend `<endpointExtensions>` Punkttyp an, der im-Abschnitt registriert wurde. [ \<](endpoint-element.md) Das `endpointConfiguration` -Attribut ist mit dem `name` -Attribut des-Konfigurations Elements des Standard Endpunkts im `<standardEndpoints>` -Abschnitt identisch.  
   
 ```xml  
 <system.serviceModel>

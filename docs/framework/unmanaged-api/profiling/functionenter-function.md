@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781290"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952901"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
-Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben wird.  
+Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übermittelt wird.  
   
 > [!NOTE]
->  Die `FunctionEnter` Funktion ist in .NET Framework, Version 2.0, veraltet und dessen Verwendung fallen die Leistungseinbußen. Verwenden der [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) stattdessen funktionieren.  
+> Die `FunctionEnter` Funktion ist in der .NET Framework Version 2,0 veraltet, und ihre Verwendung führt zu einer Leistungs Einbuße. Verwenden Sie stattdessen die [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) -Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parameter  
  `funcID`  
- [in] Der Bezeichner der Funktion an der Steuerelement übergeben wird.  
+ in Der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FunctionEnter` Funktion ist ein Rückruf, müssen Sie sie implementieren. Verwenden Sie die Implementierung muss die `__declspec`(`naked`) Storage-Class-Attribut.  
+ Die `FunctionEnter` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec`Speicher`naked`Klassen Attribut () verwenden.  
   
- Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
+ Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
   
-- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
   
-- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
   
- Die Implementierung der `FunctionEnter` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionEnter` zurückgibt.  
+ Die Implementierung von `FunctionEnter` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit `FunctionEnter` blockiert, bis von zurückgegeben wird.  
   
- Darüber hinaus die `FunctionEnter` Funktion darf keinen Aufrufen in verwaltetem Code oder auch eine verwaltete speicherbelegung.  
+ Außerdem darf die `FunctionEnter` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
- **.NET Framework-Versionen:** 1.1, 1.0  
+ **.NET Framework Versionen:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

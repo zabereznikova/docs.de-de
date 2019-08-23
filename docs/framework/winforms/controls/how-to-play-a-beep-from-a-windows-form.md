@@ -11,12 +11,12 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a72f88c05fb21c11864058ffbe81c1957525375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966510"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Vorgehensweise: Wiedergabe eines Signaltons in Windows Forms
 In diesem Beispiel wird einen Signalton zur Laufzeit wiedergegeben.  
@@ -37,14 +37,14 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  Der Sound wiedergegeben, der C# Codebeispiel richtet sich nach der <xref:System.Media.SystemSounds.Beep%2A> sound Systemeinstellung. Weitere Informationen finden Sie unter <xref:System.Media.SystemSounds>.  
+> Der im C# Codebeispiel wiedergegebene Sound wird von der <xref:System.Media.SystemSounds.Beep%2A> System Sound Einstellung bestimmt. Weitere Informationen finden Sie unter <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für C#, in diesem Beispiel erfordert einen Verweis auf die <xref:System.Media?displayProperty=nameWithType> Namespace.  
+ Für C#erfordert dieses Beispiel einen Verweis auf den <xref:System.Media?displayProperty=nameWithType> -Namespace.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Vorgehensweise: Wiedergabe eines Systemsounds in Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe eines System Sounds in Windows Form](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Vorgehensweise: Abspielen eines Sounds in einem Windows Form](how-to-play-a-sound-from-a-windows-form.md)

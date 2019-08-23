@@ -11,15 +11,15 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4140152079b93e3c0a3d5fcda0e1b2c6f9fb89a4
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 0a7756684d5a133fa9cb014f109d14e413223ea9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945225"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Vorgehensweise: Remoteüberwachung des Druckerstatus
-In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere Drucker wegen eines Papierstaus oder fehlenden Papiers oder anderer problematischer Situationen ausfallen. Die umfangreichen verfügbar gemacht werden, in .NET Framework-APIs von Microsoft bieten eine Möglichkeit für eine schnelle Überwachung der Druckerzustände.  
+In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere Drucker wegen eines Papierstaus oder fehlenden Papiers oder anderer problematischer Situationen ausfallen. Der umfangreiche Satz von Druckereigenschaften, der in den APIs von Microsoft .NET Framework verfügbar gemacht wird, bietet die Möglichkeit, einen schnellen Überblick über die Zustände von Druckern zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
  Die wichtigsten Schritte beim Erstellen dieses Dienstprogramms sind die folgenden.  
@@ -30,20 +30,20 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
   
 3. Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, und lesen Sie jede Eigenschaft, die auf eine nicht ordnungsgemäß funktionierende Warteschlange hinweisen könnte.  
   
- Der folgende Code ist eine Reihe von Ausschnitten. Der Einfachheit halber wird in diesem Beispiel davon ausgegangen, dass eine CRLF-getrennte Liste der Druckerserver vorhanden ist. Die Variable `fileOfPrintServers` ist eine <xref:System.IO.StreamReader> Objekt für diese Datei. Da die Namen aller Server in einer eigenen Zeile ist, jeden Aufruf der <xref:System.IO.StreamReader.ReadLine%2A> Ruft den Namen des Servers weiter ab und verschiebt die <xref:System.IO.StreamReader>des Cursors am Anfang der nächsten Zeile.  
+ Der folgende Code ist eine Reihe von Ausschnitten. Der Einfachheit halber wird in diesem Beispiel davon ausgegangen, dass eine CRLF-getrennte Liste der Druckerserver vorhanden ist. Die- `fileOfPrintServers` Variable ist <xref:System.IO.StreamReader> ein-Objekt für diese Datei. Da sich jeder Servername in einer eigenen Zeile befindet, ruft jeder <xref:System.IO.StreamReader.ReadLine%2A> Aufrufe von den Namen des nächsten Servers ab und verschiebt <xref:System.IO.StreamReader>den Cursor an den Anfang der nächsten Zeile.  
   
- In der äußeren Schleife wird der Code erstellt eine <xref:System.Printing.PrintServer> -Objekt für den letzten Druckerserver, und gibt an, dass die Anwendung über Administratorrechte auf dem Server verfügen.  
+ Innerhalb der äußeren Schleife erstellt der Code ein <xref:System.Printing.PrintServer> -Objekt für den neuesten Druckserver und gibt an, dass die Anwendung über Administratorrechte für den Server verfügen soll.  
   
 > [!NOTE]
->  Wenn viele Server vorhanden sind, können Sie die Leistung verbessern, mit der <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> Konstruktoren, die nur die Eigenschaften zu initialisieren müssen werden soll.  
+> Wenn viele Server vorhanden sind, können Sie die Leistung verbessern, indem Sie <xref:System.Printing.PrintServer.%23ctor%28System.String%2CSystem.String%5B%5D%2CSystem.Printing.PrintSystemDesiredAccess%29> die Konstruktoren verwenden, die nur die benötigten Eigenschaften initialisieren.  
   
- Anschließend wird <xref:System.Printing.PrintServer.GetPrintQueues%2A> ist zum Erstellen einer Sammlung aller von dem Server, Warteschlangen und beginnt mit der durchlaufen werden. Diese innere Schleife enthält eine Verzweigungsstruktur, die den beiden Möglichkeiten entspricht, den Status eines Druckers zu überprüfen:  
+ Im Beispiel wird dann <xref:System.Printing.PrintServer.GetPrintQueues%2A> verwendet, um eine Auflistung aller Warteschlangen des Servers zu erstellen und mit der Schleife zu beginnen. Diese innere Schleife enthält eine Verzweigungsstruktur, die den beiden Möglichkeiten entspricht, den Status eines Druckers zu überprüfen:  
   
-- Sie können die Flags der Lesen der <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintQueueStatus>.  
+- Sie können die Flags <xref:System.Printing.PrintQueue.QueueStatus%2A> der Eigenschaft lesen, die vom Typ <xref:System.Printing.PrintQueueStatus>ist.  
   
-- Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, und <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Sie können jede relevante Eigenschaft lesen <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, z. b. und. <xref:System.Printing.PrintQueue.IsPaperJammed%2A>  
   
- In diesem Beispiel werden beide Methoden veranschaulicht, damit der Benutzer zuvor hinsichtlich der zu verwendenden Methode aufgefordert und hat "y", wenn er die Flags der verwenden die <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft. Weitere Informationen zu den beiden Methoden finden Sie unten.  
+ In diesem Beispiel werden beide Methoden veranschaulicht. Daher wurde der Benutzer zuvor gefragt, welche Methode verwendet werden soll, und mit "y" geantwortet, wenn er die Flags <xref:System.Printing.PrintQueue.QueueStatus%2A> der Eigenschaft verwenden wollte. Weitere Informationen zu den beiden Methoden finden Sie unten.  
   
  Abschließend werden dem Benutzer die Ergebnisse präsentiert.  
   
@@ -51,7 +51,7 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- Überprüfen Sie den Status des Druckers mit den Flags der der <xref:System.Printing.PrintQueue.QueueStatus%2A> -Eigenschaft, zu überprüfen jedes relevante Flag überprüfen, ob es festgelegt ist. Standardmäßig wird durch Ausführen eines logischen AND-Vorgangs mit einem Satz von Flags als einem Operanden und dem Flag selbst als zweiten Operanden überprüft, ob ein Bit in einem Satz von Bitflags festgelegt ist. Da das Flag selbst nur über einen Bitsatz verfügt, ergibt der logische AND-Vorgang lediglich, dass dasselbe Bit festgelegt ist. Um herauszufinden, ob das Bit festgelegt ist, können Sie das Ergebnis des logischen AND-Vorgangs einfach mit dem Flag selbst vergleichen. Weitere Informationen finden Sie unter <xref:System.Printing.PrintQueueStatus>, [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), und <xref:System.FlagsAttribute>.  
+ Wenn Sie den Druckerstatus mithilfe der Flags der <xref:System.Printing.PrintQueue.QueueStatus%2A> Eigenschaft überprüfen möchten, überprüfen Sie jedes relevante Flag, um festzustellen, ob es festgelegt ist. Standardmäßig wird durch Ausführen eines logischen AND-Vorgangs mit einem Satz von Flags als einem Operanden und dem Flag selbst als zweiten Operanden überprüft, ob ein Bit in einem Satz von Bitflags festgelegt ist. Da das Flag selbst nur über einen Bitsatz verfügt, ergibt der logische AND-Vorgang lediglich, dass dasselbe Bit festgelegt ist. Um herauszufinden, ob das Bit festgelegt ist, können Sie das Ergebnis des logischen AND-Vorgangs einfach mit dem Flag selbst vergleichen. Weitere Informationen finden <xref:System.Printing.PrintQueueStatus>Sie unter, dem [&-OperatorC# (Verweis)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)und <xref:System.FlagsAttribute>.  
   
  Für jedes Attribut, dessen Bit festgelegt ist, fügt der Code einen Hinweis zum endgültigen Bericht hinzu, der dem Benutzer präsentiert wird. (Die **ReportAvailabilityAtThisTime**-Methode, die am Ende des Codes aufgerufen wird, wird unten erläutert.)  
   
@@ -67,7 +67,7 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
   
  Die **ReportAvailabilityAtThisTime**-Methode wurde für die Fälle erstellt, bei denen Sie bestimmen müssen, ob die Warteschlange zum aktuellen Zeitpunkt zur Verfügung steht.  
   
- Die Methode keine Wirkung, wenn die <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> und <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> Eigenschaften gleich sind, da in diesem Fall der Drucker immer verfügbar ist. Wenn sich die Werte unterscheiden, ruft die Methode die aktuelle Uhrzeit, die dann in der Gesamtzahl der Minuten nach Mitternacht konvertiert werden, da die <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> und <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> Eigenschaften sind <xref:System.Int32>Minuten nach Mitternacht, nicht darstellen <xref:System.DateTime> -Objekte. Schließlich überprüft die Methode, ob die aktuelle Zeit zwischen der Startzeit und der „bis“-Zeit liegt.  
+ Die-Methode führt keine Aktion aus <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> , <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> wenn die-Eigenschaft und die-Eigenschaft gleich sind, da in diesem Fall der Drucker jederzeit verfügbar ist. Wenn Sie unterschiedlich sind, ruft die-Methode die aktuelle Zeit ab, die dann in die Gesamt Minuten nach Mitternacht konvertiert <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> werden <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> muss, <xref:System.Int32>da die-Eigenschaft und die-Eigenschaft die <xref:System.DateTime> Anzahl der Minuten nach Mitternacht darstellen, nicht Gütern. Schließlich überprüft die Methode, ob die aktuelle Zeit zwischen der Startzeit und der „bis“-Zeit liegt.  
   
  [!code-cpp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/cpp/VS_Snippets_Wpf/PrinterStatusSurvey/CPP/Program.cpp#usingstartanduntiltimes)]
  [!code-csharp[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#usingstartanduntiltimes)]
@@ -85,6 +85,6 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
+- [&-OperatorC# (Referenz)](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: <clear> Element für NameValueSectionHandler und DictionarySectionHandler
+title: <clear>-Element für NameValueSectionHandler und diktarysectionhandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301246"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927709"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Deaktivieren Sie >-Element für NameValueSectionHandler und DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<> Element für NameValueSectionHandler und "diktarysectionhandler" Löschen
 
-Löscht alle zuvor definierte Einstellungen in einem Abschnitt.
+Löscht alle zuvor definierten Einstellungen in einem Abschnitt.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Löschen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,13 +32,13 @@ Löscht alle zuvor definierte Einstellungen in einem Abschnitt.
 
 ## <a name="attributes"></a>Attribute
 
-Keiner
+None
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ------------|
-| [ **\<sectionName>** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definiert die Einstellungen für die benutzerdefinierten Konfigurationsabschnitte, mit denen die <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> Klassen. |
+| [sectionName > Element  **\<** ](custom-element-2.md) | Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, die <xref:System.Configuration.NameValueSectionHandler> die <xref:System.Configuration.DictionarySectionHandler> -Klasse und die-Klasse verwenden. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -46,13 +46,13 @@ None
 
 ## <a name="remarks"></a>Hinweise
 
-Können Sie die  **\<Löschen >** Element So entfernen Sie alle Einstellungen aus Ihrer Anwendung, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Sie können das  **\<Clear >** -Element verwenden, um alle Einstellungen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel definiert eine Computer-Konfigurationsdatei und eine Anwendungskonfigurationsdatei und zeigt, wie die  **\<Löschen >** Element in der Konfigurationsdatei einer Anwendung zum Entfernen von Abschnitten, die zuvor definiert, der die Computerkonfigurationsdatei.
+In diesem Beispiel werden eine Computer Konfigurationsdatei und eine Anwendungs Konfigurationsdatei definiert, und es wird gezeigt, wie das  **\<Clear >** -Element in einer Anwendungs Konfigurationsdatei verwendet wird, um die zuvor in der Computerkonfiguration definierten Abschnitte Datei.
 
-Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<MySection >** :
+Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt  **\<mySection->** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<MySecti
 </configuration>
 ```
 
-Der folgende Code für eine Anwendungskonfigurationsdatei entfernt alle Einstellungen von  **\<MySection >** . Die Anwendung kann nicht abgerufen werden, die Einstellungen, die in deklariert wurden die in der  **\<MySection >** Abschnitt der Konfigurationsdatei des Computers.
+Der folgende Anwendungs Konfigurationsdatei-Code entfernt alle Einstellungen aus  **\<dem mySection->** . Die Anwendung kann keine der Einstellungen abrufen, die im  **\<Abschnitt "mySection >** " der Computer Konfigurationsdatei deklariert wurden.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ Der folgende Code für eine Anwendungskonfigurationsdatei entfernt alle Einstell
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

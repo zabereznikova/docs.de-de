@@ -2,20 +2,20 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: b6ae5faa2dd2ffef9669a0245a75227b0f669cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b159488efa2a80a9dea625e4c6dfe2f215dfc457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758222"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939184"
 ---
 # <a name="timeouts"></a>\<timeOuts>
 Stellt ein Konfigurationselement dar, das das für das Öffnen und Schließen des Diensthosts zulässige Zeitintervall angibt.  
   
  \<system.ServiceModel>  
 \<client>  
-\<endpoint>  
-\<host>  
+\<Endpunkt >  
+\<Host >  
 \<timeOuts>  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,10 +42,10 @@ Stellt ein Konfigurationselement dar, das das für das Öffnen und Schließen de
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Ein Konfigurationselement, das Einstellungen für einen Diensthost angibt.|  
+|[\<host>](host.md)|Ein Konfigurationselement, das Einstellungen für einen Diensthost angibt.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hosting](../../../wcf/feature-details/hosting.md)

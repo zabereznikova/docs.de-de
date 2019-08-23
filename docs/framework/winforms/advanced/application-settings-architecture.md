@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916696"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.
@@ -142,7 +142,7 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
  Ein Anbieter kann von mehreren Threads gleichzeitig aufgerufen werden, schreibt jedoch immer in den gleichen Speicherort. Aus diesem Grund instanziiert die Architektur für Anwendungseinstellungen immer nur eine einzelne Instanz der Anbieterklasse.
 
 > [!IMPORTANT]
->  Sie sollten sicherstellen, dass der Anbieter threadsicher ist und jeweils nur einem Thread gestattet, in die Konfigurationsdateien zu schreiben.
+> Sie sollten sicherstellen, dass der Anbieter threadsicher ist und jeweils nur einem Thread gestattet, in die Konfigurationsdateien zu schreiben.
 
  Der Anbieter muss nicht alle Einstellungs Attribute <xref:System.Configuration?displayProperty=nameWithType> unterstützen, die im-Namespace definiert sind, er muss jedoch mindestens unterstützt <xref:System.Configuration.ApplicationScopedSettingAttribute> werden und <xref:System.Configuration.UserScopedSettingAttribute>muss ebenfalls unterstützen. <xref:System.Configuration.DefaultSettingValueAttribute> Für die Attribute, die nicht unterstützt werden, sollte der Anbieter ohne Benachrichtigung fehlschlagen und keine Ausnahme auslösen. Wenn die Settings-Klasse eine ungültige Kombination von Attributen verwendet – z. <xref:System.Configuration.ApplicationScopedSettingAttribute> b <xref:System.Configuration.UserScopedSettingAttribute> . Anwenden von und auf dieselbe Einstellung –, sollte der Anbieter eine Ausnahme auslösen und den Vorgang beenden.
 

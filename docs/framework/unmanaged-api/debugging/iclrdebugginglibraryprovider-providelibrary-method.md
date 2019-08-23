@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965138"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary-Methode
-Ruft eine Bibliotheksanbieter-Rückrufschnittstelle, die es common Language Runtime (CLR) hängt von der Version Debugbibliotheken ermöglicht zu suchen und zu laden, auf Anforderung ab.  
+Ruft eine Bibliotheks Anbieter-Rückruf Schnittstelle ab, die es ermöglicht, Common Language Runtime (CLR) versionsspezifische Debugbibliotheken zu finden und bei Bedarf geladen zu werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +39,16 @@ HRESULT ProvideLibrary(
   
 ## <a name="parameters"></a>Parameter  
  `pwszFilename`  
- [in] Der Name des Moduls, das angefordert wird.  
+ in Der Name des Moduls, das angefordert wird.  
   
  `dwTimestamp`  
- [in] Die Datums-/ Zeitstempel im COFF-Dateiheader der PE-Dateien gespeichert.  
+ in Der Datums-/Uhrzeitstempel, der im COFF-Dateiheader von PE-Dateien gespeichert ist.  
   
  `pLibraryProvider`  
- [in] Die `SizeOfImage` Feld in der optionalen COFF-Dateiheader der PE-Dateien gespeichert.  
+ in Das `SizeOfImage` Feld, das in der optionalen COFF-Datei Kopfzeile von PE-Dateien gespeichert ist.  
   
  `hModule`  
- [out] Das Handle für das angeforderte Modul.  
+ vorgenommen Das Handle für das angeforderte Modul.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -60,21 +60,21 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- `ProvideLibrary` ermöglicht dem Debugger, Module bereitzustellen, die für das Debuggen von bestimmten CLR-Dateien wie z. B. "mscordbi.dll" und mscordacwks.dll erforderlich sind. Die Modul-Handles zu haben, gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) -Methode gibt an, dass sie freigegeben werden können, die an diesem Punkt wird es der Verantwortung des Aufrufers, die Handles freizugeben.  
+ `ProvideLibrary`ermöglicht es dem Debugger, Module bereitzustellen, die zum Debuggen bestimmter CLR-Dateien wie mscordbi. dll und mscordacwert. dll erforderlich sind. Die Modul Handles müssen gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) -Methode anzeigt, dass Sie freigegeben werden können. an diesem Punkt ist es die Aufgabe des Aufrufers, die Handles freizugeben.  
   
- Der Debugger können Sie alle verfügbaren Verfahren suchen oder die debugging-Modul bereitzustellen.  
+ Der Debugger kann beliebige verfügbare Mittel verwenden, um das Debug-Modul zu suchen oder zu beschaffen.  
   
 > [!IMPORTANT]
->  Dieses Feature ermöglicht den API-Aufrufer, Module bereitzustellen, die ausführbare Datei, und möglicherweise böswilligen Code enthalten. Als Sicherheitsmaßnahme, der Aufrufer nicht verwenden sollten `ProvideLibrary` keinen Code zu verteilen, dass es nicht selbst ausführen.  
+> Diese Funktion ermöglicht es dem API-Aufrufer, Module bereitzustellen, die ausführbare und möglicherweise bösartigen Code enthalten. Als Sicherheitsmaßnahme sollte der Aufrufer nicht verwenden `ProvideLibrary` , um Code zu verteilen, der nicht für die Selbstausführung bereit ist.  
 >   
->  Wenn ein ernsthaftes Sicherheitsproblem an einem bereits freigegebenen Bibliothek, z. B. mscordbi.dll oder mscordacwks.dll, erkannt wird, kann das Shim gepatcht werden, so, dass um die fehlerhaften Versionen der Dateien zu erkennen. Das Shim kann Anforderungen für die gepatchten Versionen der Dateien ausgegeben und die ungültigen Versionen ablehnen, wenn sie als Antwort auf jede Anforderung bereitgestellt werden. Dies kann auftreten, nur dann, wenn der Benutzer auf eine neue Version des Shims gepatcht wurde. Nicht gepatchte Versionen bleiben ein Sicherheitsrisiko.  
+>  Wenn in einer bereits veröffentlichten Bibliothek, wie z. b. mscordbi. dll oder mscordacwks. dll, ein schwerwiegendes Sicherheitsproblem entdeckt wird, kann das Shim gepatcht werden, um die ungültigen Versionen der Dateien zu erkennen. Der Shim kann dann Anforderungen für die gepatchten Versionen der Dateien ausgeben und die ungültigen Versionen ablehnen, wenn Sie als Antwort auf eine Anforderung bereitgestellt werden. Dies kann nur auftreten, wenn der Benutzer auf eine neue Version des Shims gepatcht hat. Nicht gepatchte Versionen bleiben anfällig.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

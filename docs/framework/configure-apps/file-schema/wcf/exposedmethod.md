@@ -2,20 +2,20 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919003"
 ---
-# <a name="exposedmethod"></a>\<ExposedMethod >
+# <a name="exposedmethod"></a>\<exposedMethod->
 Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.  
   
  \<system.ServiceModel>  
 \<comContracts>  
 \<comContract>  
-\<methods>  
+\<Methoden >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Eine Auflistung von [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente.|  
+|[\<exposedmethods->](exposedmethods.md)|Eine Auflistung von [ \<exposedMethod->](exposedmethod.md) Elementen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Mit dem Konfigurationstool für die COM+-Integration (ComSvcConfig.exe) können dem erzeugten Dienstvertrag spezifische Methoden aus einer COM-Schnittstelle hinzugefügt werden.  
@@ -54,7 +54,7 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Wenn Sie auch die ComSvcConfig.exe ausführen, wird die folgende Dienstvertrag mit den bereits erwähnten Methoden als [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente.  
+ Wenn Sie auch die Datei ComSvcConfig. exe ausführen, generiert Sie den folgenden Dienstvertrag, in dem die zuvor erwähnten Methoden als [ \<exposedMethod->](exposedmethod.md) Elemente aufgelistet werden.  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +66,12 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
 </comContract>
 ```  
   
- Zum Zeitpunkt der dienstinitialisierung, versucht die Runtime, die einen Dienstvertrag zu erzeugen, durch Reflektieren über und nur die Methoden in der Liste der enthaltenen [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente. Eine Ablaufverfolgung wird für jede Schnittstellenmethode erzeugt, die nicht im Dienstvertrag enthalten ist.  
+ Bei der Dienst Initialisierung versucht die Common Language Runtime, einen Dienstvertrag zu generieren, indem reflektiert wird und nur die Methoden hinzugefügt werden, die in der Liste der [ \<exposedMethod->](exposedmethod.md) Elemente enthalten sind. Eine Ablaufverfolgung wird für jede Schnittstellenmethode erzeugt, die nicht im Dienstvertrag enthalten ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integrieren von COM+-Anwendungen](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integrieren von COM+-Anwendungen](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Vorgehensweise: Konfigurieren der com+-Dienst Einstellungen](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

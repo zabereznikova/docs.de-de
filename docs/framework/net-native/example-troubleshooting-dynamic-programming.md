@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e482303e684813574a092f0a2d5812445ed7fa6e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910603"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Beispiel: Problembehandlung bei dynamischer Programmierung
 > [!NOTE]
->  Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
+> Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
   
- Nicht alle Metadaten-Suchfehler in apps entwickelt unter Verwendung der .NET Native-Tool-Chain-Ergebnisse eine Ausnahme ausgelöst.  Einige können sich auf unvorhersehbare Weise in einer App zeigen.  Das folgende Beispiel zeigt eine Zugriffsverletzung, die durch das Verweisen auf ein Nullobjekt verursacht wurde:  
+ Nicht alle Metadaten-Suche-Fehler in apps, die mit der .net Native-Toolkette entwickelt wurden, führen zu einer Ausnahme.  Einige können sich auf unvorhersehbare Weise in einer App zeigen.  Das folgende Beispiel zeigt eine Zugriffsverletzung, die durch das Verweisen auf ein Nullobjekt verursacht wurde:  
   
 ```  
 Access violation - code c0000005 (first chance)  
@@ -52,7 +52,7 @@ AppViewModel.Current.LayoutVM.PageMap
   
  In diesem Fall wurde das Problem durch Hinzufügen einer Laufzeitanweisung für `App.Core.ViewModels` behoben. Die Grundursache war ein API-Aufruf an die <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType>-Methode, die **NULL** zurückgegeben hat. Die App hat das Problem ignoriert, bis ein Absturz aufgetreten ist.  
   
- Bei der dynamischen Programmierung empfiehlt sich bei Verwendung von Reflektions-APIs unter .NET Native ist die Verwendung der <xref:System.Type.GetType%2A?displayProperty=nameWithType> Überladungen, die bei einem Fehler eine Ausnahme ausgelöst.  
+ Bei der dynamischen Programmierung empfiehlt es sich, bei der Verwendung von Reflection-APIs unter .net Native <xref:System.Type.GetType%2A?displayProperty=nameWithType> die über Ladungen zu verwenden, die bei einem Fehler eine Ausnahme auslösen.  
   
 ## <a name="is-this-an-isolated-case"></a>Handelt es sich um einen Einzelfall?  
  Andere Probleme können mit `App.Core.ViewModels` ebenfalls auftreten.  Sie müssen entscheiden, ob es sich lohnt, jede Ausnahme aufgrund von fehlenden Metadaten zu identifizieren und zu lösen, oder ob Sie Zeit sparen und Anweisungen für eine größere Typenklasse hinzufügen möchten.  Hier ist das Hinzufügen von `dynamic`-Metadaten für `App.Core.ViewModels` möglicherweise der beste Ansatz, wenn die daraus resultierende Größenzunahme der Ausgabebinärdatei kein Problem ist.  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 62913face910ae9500aa5e6f2f443db67ffd4240
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301277"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921282"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Entfernen Sie >-Element für \<AppSettings >
+# <a name="remove-element-for-appsettings"></a>\<Entfernen Sie > Element \<für appSettings >
 
-Entfernt die benutzerdefinierte Anwendungseinstellungen.
+Entfernt benutzerdefinierte Anwendungseinstellungen.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<entfernen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,21 +36,21 @@ Entfernt die benutzerdefinierte Anwendungseinstellungen.
 
 |         | Beschreibung |
 | ------- | ----------- |
-| **key** | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Schlüssels. |
+| **key** | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Schlüssels an. |
 
 ### <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Vorgehensweise beim Entfernen einer benutzerdefinierten Konfigurationseinstellung für `ApplicationName`:
+Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationseinstellung `ApplicationName`für entfernt wird:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ Das folgende Beispiel zeigt die Vorgehensweise beim Entfernen einer benutzerdefi
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](../index.md)

@@ -2,14 +2,14 @@
 title: <add> von <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 939718e8dacca2698b6f71a3bdc1262a5dc3ee20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704699"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926679"
 ---
-# <a name="add-of-knowncertificates"></a>\<Hinzufügen > der \<KnownCertificates >
+# <a name="add-of-knowncertificates"></a>\<Fügen Sie > \<von knownzertifikate hinzu >
 Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.  
   
  \<system.ServiceModel>  
@@ -18,7 +18,7 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
 \<behavior>  
 \<serviceCredentials>  
 \<issuedTokenAuthentication>  
-\<knownCertificates>  
+\<knownzertifikate->  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -54,7 +54,7 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeration|Mögliche Werte: FindByThumbprint, findbysubjetname, findbysubjetissushedname, FindByIssuerName, findbyissuererkennbar shedname, findbyserialnumber, FindByTimeValid, FindByTimeNotYetValid, findbyserialnumber, findbytimeabgelauf, findbytemplatename , Findbyapplicationpolicy, findbycertificatepolicy, findbyextension, findbykeyusage, findbysubjetkeyidentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
@@ -66,7 +66,7 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
+|Enumeration|Mögliche Werte: Addressbook, AuthRoot, CertificateAuthority, unallowed, my, root, treuhändpeople und Treuhänder Publisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -75,12 +75,12 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Gibt eine Auflistung von X.509-Zertifikaten wieder, die von einem Sicherheitstokendienst für die Validierung von Sicherheitstoken bereitgestellt werden.|  
+|[\<knownzertifikate->](knowncertificates.md)|Gibt eine Auflistung von X.509-Zertifikaten wieder, die von einem Sicherheitstokendienst für die Validierung von Sicherheitstoken bereitgestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Szenario für ausgestellte Token weist drei Phasen auf. In der ersten Phase wird ein Client einen Dienst zugreifen möchten bezeichnet einen *secure token Service*. Der Sicherheitstokendienst authentifiziert den Client und stellt dann ein Token (in der Regel ein SAML-Token (SAML = Security Assertions Markup Language, XML-basierte Auszeichnungssprache für Sicherheitsbestätigungen) für den Client aus. Der Client kehrt dann mit dem Token zum Dienst zurück. Der Dienst überprüft das Token auf Daten, die ihm die Authentifizierung des Tokens und somit des Clients erlauben. Damit das Token authentifiziert werden kann, muss dem Dienst das vom Sicherheitstokendienst verwendete Zertifikat bekannt sein.  
+ Das Szenario für ausgestellte Token weist drei Phasen auf. In der ersten Phase wird ein Client, der versucht, auf einen Dienst zuzugreifen, als *sicherer Tokendienst*bezeichnet. Der Sicherheitstokendienst authentifiziert den Client und stellt dann ein Token (in der Regel ein SAML-Token (SAML = Security Assertions Markup Language, XML-basierte Auszeichnungssprache für Sicherheitsbestätigungen) für den Client aus. Der Client kehrt dann mit dem Token zum Dienst zurück. Der Dienst überprüft das Token auf Daten, die ihm die Authentifizierung des Tokens und somit des Clients erlauben. Damit das Token authentifiziert werden kann, muss dem Dienst das vom Sicherheitstokendienst verwendete Zertifikat bekannt sein.  
   
- Die [ \<IssuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) Element ist das Repository für die Zertifikate des Sicherheitstokendiensts. Verwenden Sie zum Hinzufügen von Zertifikaten der [ \<KnownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Fügen Sie eine [ \<hinzufügen > Element \<KnownCertificates >-Element](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) für jedes Zertifikat, wie im folgenden Beispiel gezeigt.  
+ [ Das\<IssuedTokenAuthentication->](issuedtokenauthentication-of-servicecredentials.md) -Element ist das Repository für alle solchen Zertifikate des Sicherheitstokendiensts. Verwenden Sie zum Hinzufügen von Zertifikaten die [ \<> Known-Zertifikate](knowncertificates.md). Fügen Sie für jedes Zertifikat, wie im folgenden Beispiel gezeigt, ein [ \<Add >- \<Element >-Element](add-of-knowncertificates.md) für jedes Zertifikat hinzu.  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -95,7 +95,7 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
   
  Standardmäßig müssen die Zertifikate von einem Sicherheitstokendienst bezogen werden. Durch diese "bekannten" Zertifikate wird sichergestellt, dass nur berechtigte Clients auf einen Dienst zugreifen können.  
   
- Bedingungen, die ein Client von einem Verbunddienst sowie weitere Informationen zur Verwendung dieses Konfigurationselements authentifiziert werden benötigt, finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Weitere Informationen zu Verbundszenarien finden Sie unter [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Informationen zum Überprüfen der Bedingungen, die für die Authentifizierung eines Clients durch einen Verbund Dienst erforderlich sind, sowie weitere Informationen zur Verwendung dieses Konfigurations Elements finden [Sie unter Gewusst wie: Konfigurieren Sie die Anmelde Informationen](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)für einen Verbunddienst. Weitere Informationen zu Verbund Szenarien finden Sie unter Verbund [-und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Zertifikat dem Repository für beliebige STS-Zertifikate hinzugefügt.  
@@ -126,8 +126,8 @@ Fügt ein X.509-Zertifikat zur Auflistung bekannter Zertifikate hinzu.
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
-- [\<knownCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [\<knownzertifikate->](knowncertificates.md)
+- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [Verbund und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Vorgehensweise: Konfigurieren von Anmelde Informationen für eine Verbunddienst](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)

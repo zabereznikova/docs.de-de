@@ -1,23 +1,23 @@
 ---
-title: <workflowInstanceQueries> von WCF
+title: <workflowInstanceQueries>von WCF
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: feae65a75f9f0b2b1b398f3f9e80ac4c8d971dcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915300"
 ---
-# <a name="workflowinstancequeries-of-wcf"></a>\<WorkflowInstanceQueries > von WCF
+# <a name="workflowinstancequeries-of-wcf"></a>\<workflowinstancequeries-> von WCF
 
 Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgen, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.  
   
-Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
 \<system.serviceModel>  
-\<tracking>  
-\<profiles>  
+\<Überwachungs >  
+\<Profile >  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
@@ -60,7 +60,7 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow identifizierte enthält die [ActivityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) Eigenschaft.|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die [activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) -Eigenschaft identifiziert wird.|  
   
 ## <a name="remarks"></a>Hinweise
 
@@ -94,5 +94,5 @@ In der folgende Konfiguration werden mithilfe einer Abfrage Workflownachverfolgu
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../windows-workflow-foundation/tracking-profiles.md)

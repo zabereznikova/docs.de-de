@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d5149c7e3430c5e7c59a47c4ab5dc98d878de39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10245541718fd5e5f30ef6bba4ab289bcef767fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950208"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime-Methode
-Ruft die gesamte Prozessorzeit, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne seit der Erstellung der Anwendungsdomäne verwendet wurde.  
+Ruft die gesamte Prozessorzeit ab, die während der Ausführung in der aktuellen Anwendungsdomäne von allen Threads verwendet wurde, seit die Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,28 +36,28 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
   
 ## <a name="parameters"></a>Parameter  
  `dwAppDomainId`  
- [in] Die ID des angeforderten Anwendungsdomäne.  
+ in Die ID der angeforderten Anwendungsdomäne.  
   
  `pMilliseconds`  
- [out] Ein Zeiger auf die gesamte Prozessorzeit, die von allen Threads beim Ausführen in der aktuellen Anwendungsdomäne seit der Erstellung der Anwendungsdomäne verwendet wurde. Dieser Parameter kann `null` sein.  
+ vorgenommen Ein Zeiger auf die gesamte Prozessorzeit, die von allen Threads während der Ausführung in der aktuellen Anwendungsdomäne seit der Erstellung der Anwendungsdomäne verwendet wurde. Dieser Parameter kann `null` sein.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|COR_E_APPDOMAINUNLOADED|Die Anwendungsdomäne entladen wurde, oder es ist nicht vorhanden.|  
-|E_FAIL|Ressourcenüberwachung der Anwendungsdomäne ist nicht aktiviert.<br /><br /> - oder -<br /><br /> Alle anderen Fehler.|  
+|COR_E_APPDOMAINUNLOADED|Die Anwendungsdomäne wurde entladen oder ist nicht vorhanden.|  
+|E_FAIL|Die Überwachung der Anwendungs Domänen Ressource ist nicht aktiviert.<br /><br /> -oder-<br /><br /> Alle anderen Fehler.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist, die nicht verwaltete Entsprechung der verwalteten <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> Eigenschaft.  
+ Bei dieser Methode handelt es sich um das nicht verwaltete <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> Äquivalent der verwalteten-Eigenschaft.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -65,5 +65,5 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 
 - [ICLRAppDomainResourceMonitor-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
 - [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Überwachung von Anwendungsdomänenressourcen](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Überwachung von Anwendungsdomänenressourcen](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

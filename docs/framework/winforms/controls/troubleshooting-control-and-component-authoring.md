@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 6494a154b9b4bd5bf29fc0e2fbd0b4e5e84550ff
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c05e849705f851b51a362d3a1d1d3f81a9eaf0e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923593"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Problembehandlung beim Erstellen von Komponenten und Steuerelementen
 Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln von Komponenten und Steuerelementen auftreten. Weitere Informationen finden Sie unter [Programmieren mit Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -96,7 +96,7 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
  Weitere Informationen zum Debuggen finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) und [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)Steuerelementen zur Entwurfszeit  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst  
- Dies liegt wahrscheinlich an einer doppelten `Handles`-Klausel. Weitere Informationen finden Sie unter [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
+ Dies liegt wahrscheinlich an einer doppelten `Handles`-Klausel. Weitere Informationen finden Sie unter [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="design-time-error-failed-to-create-component-component-name"></a>Entwurfs Zeitfehler: "Fehler beim Erstellen der Komponente ' Komponenten Name '".  
  Die Komponente oder das Steuerelement muss einen Parameter losen Konstruktor ohne Parameter bereitstellen. Wenn die Entwurfsumgebung eine Instanz der Komponente oder des Steuerelements erstellt, versucht sie nicht, Parameter auf Konstruktorüberladungen bereitzustellen, die Parameter annehmen.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602510"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916281"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
@@ -29,7 +29,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 - Verwenden Sie den <xref:System.Security.Cryptography.RSACryptoServiceProvider> (ein asymmetrischer Algorithmus), um den Schlüssel für die Daten zu ver- und zu entschlüsseln, die mit <xref:System.Security.Cryptography.RijndaelManaged> verschlüsselt wurden. Asymmetrische Algorithmen sind am besten für kleinere Datenmengen geeignet, zum Beispiel für einen Schlüssel.  
   
     > [!NOTE]
-    >  Wenn Sie Daten auf Ihrem Computer schützen möchten, anstatt verschlüsselte Inhalte mit anderen Personen auszutauschen, sollten Sie überlegen, die <xref:System.Security.Cryptography.ProtectedData>-Klasse oder die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse zu verwenden.  
+    > Wenn Sie Daten auf Ihrem Computer schützen möchten, anstatt verschlüsselte Inhalte mit anderen Personen auszutauschen, sollten Sie überlegen, die <xref:System.Security.Cryptography.ProtectedData>-Klasse oder die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse zu verwenden.  
   
  In der folgenden Tabelle sind die kryptografischen Aufgaben in diesem Thema zusammengefasst.  
   
@@ -82,7 +82,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Verschlüsseln einer Datei  
- Diese Aufgabe bedingt zwei Methoden: die Ereignishandlermethode für die `Encrypt File` Schaltfläche (`buttonEncryptFile_Click`) und die `EncryptFile` Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
+ Diese Aufgabe umfasst zwei Methoden: die Ereignishandlermethode `Encrypt File` für die`buttonEncryptFile_Click`Schaltfläche ( `EncryptFile` ) und die-Methode. Die erste Methode zeigt ein Dialogfeld zum Auswählen einer Datei an und übergibt den Dateinamen an die zweite Methode, die die Verschlüsselung ausführt.  
   
  Der verschlüsselte Inhalt, der Schlüssel und der IV werden zusammen in einem <xref:System.IO.FileStream>-Objekt gespeichert, das als Verschlüsselungspaket bezeichnet wird.  
   
@@ -90,7 +90,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 1. Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu verschlüsseln.  
   
-2. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.   
+2. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.  
   
 3. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel-<xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.  
   
@@ -133,7 +133,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 3. Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.  
   
-4. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.   
+4. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.  
   
 5. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den Verschlüsselungsverfahrenstext-Abschnitt des <xref:System.IO.FileStream>-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln. Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.  
   

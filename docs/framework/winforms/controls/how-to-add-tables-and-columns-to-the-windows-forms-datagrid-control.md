@@ -10,27 +10,27 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 55e30744f57364fb37c9fde5b6bade6bab60fa26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925088"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Sie können Daten anzeigen, in Windows Forms <xref:System.Windows.Forms.DataGrid> -Steuerelement in Tabellen und Spalten durch das Erstellen **DataGridTableStyle** Objekte und Hinzufügen der Benutzer zur der **GridTableStylesCollection** -Objekt, das ist erfolgt über die <xref:System.Windows.Forms.DataGrid> des Steuerelements **TableStyles** Eigenschaft. Jedes Format zeigt den Inhalt der Datentabelle, in angegeben ist der **DataGridTableStyle** des Objekts **%MappingName** Eigenschaft. Standardmäßig zeigt ein Tabellenformat ohne Spaltenformate angegeben, dass alle Spalten in der Datentabelle. Sie können einschränken, welche Spalten aus der Tabelle angezeigt werden, indem das Hinzufügen von **DataGridColumnStyle** Objekte die **GridColumnStylesCollection** -Objekt, das über zugegriffen wird die  **Angezeigten** Eigenschaft der einzelnen **DataGridTableStyle** Objekt.  
+ Sie können Daten <xref:System.Windows.Forms.DataGrid> im Windows Forms-Steuerelement in Tabellen und Spalten anzeigen, indem Sie **DataGridTableStyle** -Objekte erstellen und Sie dem **GridTableStylesCollection** -Objekt hinzufügen, <xref:System.Windows.Forms.DataGrid> auf das über das Steuerelement **TableStyles** -Eigenschaft. Jedes Tabellenformat zeigt den Inhalt einer beliebigen Datentabelle an, die in der **MappingName** -Eigenschaft des **DataGridTableStyle** -Objekts angegeben ist. Standardmäßig werden in einem Tabellenformat ohne Angabe von Spalten Formaten alle Spalten in der Datentabelle angezeigt. Sie können einschränken, welche Spalten aus der Tabelle angezeigt werden, indem Sie dem **GridColumnStylesCollection** -Objekt **DataGridColumnStyle** -Objekte hinzufügen, auf das über die **GridColumnStyles** -Eigenschaft der einzelnen **DataGridTableStyle** -Objekte zugegriffen wird. Objekt.  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>So eine Tabelle und Spalte ein DataGrid-Steuerelement programmgesteuert hinzu  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>So fügen Sie einem DataGrid eine Tabelle und eine Spalte Programm gesteuert hinzu  
   
-1. Sie müssen zuerst binden, um Daten in der Tabelle anzuzeigen, die <xref:System.Windows.Forms.DataGrid> Steuerelement zu einem Dataset. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Um Daten in der Tabelle anzuzeigen, müssen Sie zuerst das <xref:System.Windows.Forms.DataGrid> Steuerelement an ein DataSet binden. Weitere Informationen finden Sie unter [Vorgehensweise: Binden Sie das Windows Forms DataGrid-Steuerelement an](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)eine Datenquelle.  
   
     > [!CAUTION]
-    >  Wenn Sie Spaltenformate programmgesteuert festlegen zu können, erstellen Sie immer **DataGridColumnStyle** -Objekte und fügen sie der **GridColumnStylesCollection** Objekt vor dem Hinzufügen von  **DataGridTableStyle** Objekte die **GridTableStylesCollection** Objekt. Wenn Sie eine leere hinzufügen **DataGridTableStyle** Objekt, das der Auflistung **DataGridColumnStyle** Objekte automatisch für Sie generiert werden. Daher eine Ausnahme wird ausgelöst, wenn Sie versuchen, das Hinzufügen neuer **DataGridColumnStyle** Objekte mit doppelten **%MappingName** -Werte in der **GridColumnStylesCollection**Objekt.  
+    >  Erstellen Sie beim programmgesteuerten Angeben von Spalten **Formaten immer DataGridColumnStyle** -Objekte, und fügen Sie Sie dem **GridColumnStylesCollection** -Objekt hinzu, bevor Sie **DataGridTableStyle** -Objekte zum  **GridTableStylesCollection** -Objekt. Wenn Sie der Auflistung ein leeres **DataGridTableStyle** -Objekt hinzufügen, werden automatisch **DataGridColumnStyle** -Objekte für Sie generiert. Folglich wird eine Ausnahme ausgelöst, wenn Sie versuchen, dem **GridColumnStylesCollection** -Objekt neue **DataGridColumnStyle** -Objekte mit doppelten **MappingName** -Werten hinzuzufügen.  
   
-2. Deklarieren Sie ein neues Tabellenformat, und legen Sie dessen Zuordnungsnamen.  
+2. Deklarieren Sie einen neuen Tabellen Stil, und legen Sie seinen Zuordnungsnamen  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59319910"
     ts1->MappingName = S"Customers";  
     ```  
   
-3. Deklarieren Sie einen neuen Stil für die Spalte, und legen Sie den Zuordnungsnamen und andere Eigenschaften.  
+3. Deklarieren Sie einen neuen Spalten Stil, und legen Sie seinen Zuordnungsnamen und andere Eigenschaften fest  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59319910"
     myDataCol->MappingName = "Current";  
     ```  
   
-4. Rufen Sie die **hinzufügen** -Methode der der **GridColumnStylesCollection** Objekt, das die Spalte das Tabellenformat hinzufügen  
+4. Ruft die **Add** -Methode des **GridColumnStylesCollection** -Objekts auf, um die Spalte dem Tabellenformat hinzuzufügen.  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59319910"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5. Rufen Sie die **hinzufügen** Methode der **GridTableStylesCollection** Objekt, das Tabellenformat das Datenraster hinzugefügt.  
+5. Greifen Sie auf die **Add** -Methode des **GridTableStylesCollection** -Objekts zu, um dem Datenraster den Tabellen Stil hinzuzufügen.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -98,4 +98,4 @@ ms.locfileid: "59319910"
 ## <a name="see-also"></a>Siehe auch
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten im Windows Forms DataGrid-Steuerelement](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

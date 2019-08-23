@@ -1,5 +1,5 @@
 ---
-title: <<-Operator (Visual Basic)
+title: < < Operator (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: e11dbc453934f1aac4a8092cdc6539ec11f0cc21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6b186ad519bcd7cf82cce12523f2d75e09317cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663184"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966885"
 ---
-# <a name="-operator-visual-basic"></a>\<\< -Operator (Visual Basic)
-Führt eine arithmetische linksverschiebung in einem Bitmuster aus.  
+# <a name="-operator-visual-basic"></a>\<\<Operator (Visual Basic)
+Führt eine arithmetische linke Verschiebung in einem Bitmuster aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,51 +26,51 @@ result = pattern << amount
   
 ## <a name="parts"></a>Teile  
  `result`  
- Erforderlich. Ganzzahliger numerischer Wert. Das Ergebnis der Verschiebung des Bitmusters. Der Datentyp ist identisch mit der `pattern`.  
+ Erforderlich. Ganzzahliger numerischer Wert. Das Ergebnis der Verschiebung des Bitmusters. Der-Datentyp ist mit dem von `pattern`identisch.  
   
  `pattern`  
- Erforderlich. Ein ganzzahliger numerischer Ausdruck. Das Bitmuster verschoben werden sollen. Der Datentyp muss ein ganzzahliger Typ sein (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).  
+ Erforderlich. Ganzzahliger numerischer Ausdruck. Das Bitmuster, das verschoben werden soll. Der Datentyp muss ein ganzzahliger Typ`SByte`( `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`) sein.  
   
  `amount`  
- Erforderlich. Numerischer Ausdruck. Die Anzahl der Bits, um das Bitmuster verschoben werden soll. Der Datentyp muss `Integer` oder zu verbreitern `Integer`.  
+ Erforderlich. Numerischer Ausdruck. Die Anzahl der Bits, um die das Bitmuster verschoben werden soll. Der Datentyp muss oder `Integer` `Integer`erweitert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Arithmetische Verschiebungen sind nicht zirkuläre, was bedeutet die Bits verschoben aus einem Ende des Resultsets nicht am anderen Ende wieder eingeführt werden. In eine arithmetische Verschiebung nach links die Bits, die außerhalb des Gültigkeitsbereichs für den Ergebnisdatentyp verschoben werden verworfen, und die Bitpositionen auf der rechten Seite werden auf 0 (null) festgelegt.  
+ Arithmetische Verschiebungen sind nicht zirkulär, d. h., dass die Bits, die von einem Ende des Ergebnisses entfernt wurden, nicht erneut am anderen Ende eingefügt werden. In einer arithmetischen linken Schicht werden die Bits, die nach dem Bereich des Ergebnis Datentyps verschoben werden, verworfen, und die auf der rechten Seite frei gewordenen Bitpositionen werden auf 0 (null) festgelegt.  
   
- Um zu verhindern, dass eine Verschiebung um mehr Bits, die als Ergebnis werden kann, maskiert Visual Basic den Wert der `amount` mit einer Größenmaske, die den Datentyp der entspricht `pattern`. Das binäre AND der folgenden Werte wird für den Betrag der Verschiebung verwendet. Die Größenmasken lauten wie folgt aus:  
+ Um eine Verschiebung um mehr Bits zu verhindern, als das Ergebnis enthalten kann, Visual Basic den Wert `amount` von mit einer Größen Maske, die dem Datentyp von `pattern`entspricht. Die Binärdatei und diese Werte werden für die UMSCHALT Menge verwendet. Die Größen Masken lauten wie folgt:  
   
-|Datentyp `pattern`|Size-Maske (dezimal)|Size-Maske (hexadezimal)|  
+|Datentyp von`pattern`|Größen Maske (dezimal)|Größen Maske (hexadezimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&AMP; H0000000F|  
-|`Integer`, `UInteger`|31|&AMP; H0000001F|  
-|`Long`, `ULong`|63|&AMP; H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Wenn `amount` NULL ist, den Wert der `result` ist identisch mit dem Wert des `pattern`. Wenn `amount` ist negativ, dabei handelt es sich als ein Wert ohne Vorzeichen mit der entsprechenden Größe maskiert.  
+ Wenn `amount` 0 (null) ist, `result` ist der Wert von mit dem `pattern`Wert von identisch. Wenn `amount` negativ ist, wird es als nicht signierter Wert angenommen und mit der entsprechenden Größen Maske maskiert.  
   
- Arithmetische Schichten generieren keine Stapelüberlauf-Ausnahmen.  
+ Arithmetische Verschiebungen generieren niemals Überlauf Ausnahmen.  
   
 > [!NOTE]
->  Die `<<` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Der `<<` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `<<` Operator, um die Durchführung von Berechnungen nach links verschiebt für ganzzahlige Werte. Das Ergebnis hat immer den gleichen Datentyp wie der Ausdruck, der verschoben werden.  
+ Im folgenden Beispiel wird der `<<` -Operator verwendet, um die arithmetischen linken Verschiebungen für ganzzahlige Werte auszuführen. Das Ergebnis weist immer den gleichen Datentyp wie der zu Verschiebe Ausdruck auf.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
+ Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `result1` ist Sie 192 (0000 0000 1100 0000).  
+- `result1`ist 192 (0000 0000 1100 0000).  
   
-- `result2` 3072 (1100-0000-0000 0000) ist.  
+- `result2`ist 3072 (0000 1100 0000 0000).  
   
-- `result3` ist-32768 (1000-0000-0000-0000).  
+- `result3`ist-32768 (1000 0000 0000 0000).  
   
-- `result4` ist 384 (0000 0001 1000 0000).  
+- `result4`ist 384 (0000 0001 1000 0000).  
   
-- `result5` ist 0 (15 Stellen links verschoben).  
+- `result5`ist 0 (von 15 Stellen nach links verschoben).  
   
- Der Betrag der Verschiebung für `result4` wird berechnet als 17 und 15, die gleich 1 ist.  
+ Die UMSCHALT Menge für `result4` wird als 17 und 15 berechnet, was dem Wert 1 entspricht.  
   
 ## <a name="see-also"></a>Siehe auch
 

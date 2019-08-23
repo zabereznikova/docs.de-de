@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)'
+title: 'Vorgehensweise: Anführungszeichen in einer Zeichenfolge platzieren (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053463"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910425"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)
-Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Textzeichenfolge. Zum Beispiel:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Vorgehensweise: Anführungszeichen in einer Zeichenfolge platzieren (Windows Forms)
+Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Textzeichenfolge. Beispiel:  
   
  She said, "You deserve a treat!" (Sie sagte: „Du verdienst eine Belohnung!“)  
   
- Als Alternative können Sie auch die <xref:Microsoft.VisualBasic.ControlChars.Quote> Feld als Konstante.  
+ Als Alternative können Sie das <xref:Microsoft.VisualBasic.ControlChars.Quote> Feld auch als Konstante verwenden.  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>So platzieren Sie Anführungszeichen in einer Zeichenfolge in Ihrem Code  
   
-1. Fügen Sie in Visual Basic zwei Anführungszeichen in einer Zeile als eingebettetes Anführungszeichen ein. In visuellen C# und visuelle C++, fügen Sie die Escape-Sequenz \\"als eingebettetes Anführungszeichen ein. Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.  
+1. Fügen Sie in Visual Basic zwei Anführungszeichen in eine Zeile als eingebettetes Anführungszeichen ein. Fügen Sie C# die Escapesequenz C++ \\in Visualisierung und Visualisierung als eingebettetes Anführungszeichen ein. Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -48,9 +48,9 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
        }  
     ```  
   
-     - oder -   
+     -oder-  
   
-2. Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein. Verwenden Sie in Visual Basic das ASCII-Zeichen (34). In visuellen C#, verwenden Sie das Unicode-Zeichen (\u0022).  
+2. Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein. Verwenden Sie in Visual Basic das ASCII-Zeichen (34). Verwenden Sie C#in Visual das Unicode-Zeichen (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,9 +65,9 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
     ```  
   
     > [!NOTE]
-    >  In diesem Beispiel können Sie \u0022 nicht verwenden, da Sie keinen universellen Zeichennamen verwenden dürfen, der ein Zeichen im Basiszeichensatz bezeichnet. Andernfalls wird C3851 ausgelöst. Weitere Informationen finden Sie unter [Compilerfehler C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
+    > In diesem Beispiel können Sie \u0022 nicht verwenden, da Sie keinen universellen Zeichennamen verwenden dürfen, der ein Zeichen im Basiszeichensatz bezeichnet. Andernfalls wird C3851 ausgelöst. Weitere Informationen finden Sie unter [Compilerfehler C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     - oder -   
+     -oder-  
   
 3. Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.  
   
@@ -93,9 +93,9 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem Windows Forms TextBox-Steuerelement](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Textfeld "Kennwort" mit dem Windows Forms TextBox-Steuerelement erstellen](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Text im TextBox-Steuerelement Windows Forms auswählen](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

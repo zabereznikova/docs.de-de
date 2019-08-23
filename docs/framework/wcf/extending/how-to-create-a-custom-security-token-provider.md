@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8daf025212e34c5d37d09ae5108d186d13b99eca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767194"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951823"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters
 In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefinierten Sicherheitstokenanbieter erstellen und den Anbieter in einen benutzerdefinierten Sicherheitstoken-Manager integrieren.  
   
 > [!NOTE]
->  Erstellen Sie einen benutzerdefinierten Tokenanbieter, wenn die im <xref:System.IdentityModel.Tokens>-Namespace gefundenen vom System bereitgestellten Token Ihren Anforderungen nicht entsprechen.  
+> Erstellen Sie einen benutzerdefinierten Tokenanbieter, wenn die im <xref:System.IdentityModel.Tokens>-Namespace gefundenen vom System bereitgestellten Token Ihren Anforderungen nicht entsprechen.  
   
- Der Sicherheitstokenanbieter erstellt eine Sicherheitstokendarstellung basierend auf Daten in den Client- oder Dienstanmeldeinformationen. Um den benutzerdefinierten Sicherheitstokenanbieter in Windows Communication Foundation (WCF)-Sicherheit zu verwenden, müssen Sie benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen.  
+ Der Sicherheitstokenanbieter erstellt eine Sicherheitstokendarstellung basierend auf Daten in den Client- oder Dienstanmeldeinformationen. Um den benutzerdefinierten Sicherheitstokenanbieter in Windows Communication Foundation (WCF)-Sicherheit zu verwenden, müssen Sie benutzerdefinierte Anmelde Informationen und Sicherheits Token-Manager-Implementierungen erstellen.  
   
- Weitere Informationen über benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-Manager finden Sie unter den [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Weitere Informationen über benutzerdefinierte Anmelde Informationen und den Sicherheits Token- [Manager finden Sie in der exemplarischen Vorgehensweise: Erstellen von benutzerdefinierten Client-](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>So erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter  
   
@@ -39,7 +39,7 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
   
 2. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>-Methode, wenn sie noch nicht überschrieben ist.  
   
-     Die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Methode ist verantwortlich für die Rückgabe einer Instanz von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider> Klasse entsprechend den <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> Parameter an die Methode übergeben werden, durch das Framework der WCF-Sicherheit. Ändern Sie die Methode zur Rückgabe der Implementierung des benutzerdefinierten Sicherheitstokenanbieters (die mit dem vorherigen Verfahren erstellt wurde), wenn die Methode mit einem entsprechenden Sicherheitstokenparameter aufgerufen wird. Weitere Informationen zu der Sicherheitstoken-Manager, finden Sie unter den [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     Die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> -Methode ist dafür verantwortlich, eine Instanz <xref:System.IdentityModel.Selectors.SecurityTokenProvider> der-Klasse zurückzugeben <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> , die dem-Parameter entspricht, der vom WCF-Sicherheits Framework an die-Methode übergeben wird. Ändern Sie die Methode zur Rückgabe der Implementierung des benutzerdefinierten Sicherheitstokenanbieters (die mit dem vorherigen Verfahren erstellt wurde), wenn die Methode mit einem entsprechenden Sicherheitstokenparameter aufgerufen wird. Weitere Informationen zum Sicherheits Token-Manager finden Sie in der [exemplarischen Vorgehensweise: Erstellen von benutzerdefinierten Client-](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
   
 3. Fügen Sie benutzerdefinierte Logik zur Methode hinzu, um diese zu befähigen, den benutzerdefinierten Sicherheitstokenanbieter basierend auf dem <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>-Parameter zurückzugeben. Im folgenden Beispiel wird der benutzerdefinierte Sicherheitstokenanbieter zurückgegeben, wenn die Tokenanforderungen erfüllt werden. Die Anforderungen umfassen ein  X.509-Sicherheitstoken und die Nachrichtenrichtung (die das Token für die Nachrichtenausgabe verwendet). In allen anderen Fällen ruft der Code die Basisklasse ab, um das vom System bereitgestellte Verhalten für andere Sicherheitstokenanforderungen zu verwalten.  
   
@@ -58,5 +58,5 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
-- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-und Dienst Anmelde Informationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)

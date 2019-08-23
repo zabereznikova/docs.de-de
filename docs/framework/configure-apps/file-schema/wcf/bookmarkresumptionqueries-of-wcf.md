@@ -1,23 +1,23 @@
 ---
-title: <bookmarkResumptionQueries> von WCF
+title: <bookmarkResumptionQueries>von WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec9827e9862866096265da576c91b10573012d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673432"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919744"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<BookmarkResumptionQueries > von WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkresumptionqueries > von WCF
   
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um die Wiederaufnahme eines Lesezeichens innerhalb einer Workflowinstanz nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensätze mit Lesezeichenwiederaufnahmen abonnieren kann.  
   
-Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<tracking>  
-\<profiles>  
+\<Überwachungs >  
+\<Profile >  
 \<trackingProfile>  
 \<workflow>  
 \<bookmarkResumptionQueries>  
@@ -57,11 +57,11 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die `activityDefinitionId`-Eigenschaft identifiziert wird.|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die `activityDefinitionId`-Eigenschaft identifiziert wird.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../windows-workflow-foundation/tracking-profiles.md)

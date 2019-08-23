@@ -3,15 +3,15 @@ title: Windows Identity Foundation-Konfigurationsschema
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fddff8428da7efad2823f068e89c6f621283183f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791668"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942683"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation-Konfigurationsschema
-Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema von Windows Identity Foundation (WIF). Sie können auch eine Anwendung zur Verwendung von WIF durch Klassen, die verfügbar gemacht werden, durch das Framework konfigurieren. Diese Klassen sind in den Abschnitten aufgeführt, die die für das Schema relevanten Elemente behandeln. Im Folgenden wird die grundlegende Struktur von XML-Tags dargestellt, die vom WIF-Konfigurationsschema verfügbar gemacht wird. Attribute werden ausgelassen. Hervorgehobene Kommentare zeigen die Hauptkomponenten des Schemas an.  
+Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema von Windows Identity Foundation (WIF). Sie können eine Anwendung auch so konfigurieren, dass Sie WIF über Klassen verwendet, die vom Framework verfügbar gemacht werden. Diese Klassen sind in den Abschnitten aufgeführt, die die für das Schema relevanten Elemente behandeln. Im Folgenden wird die grundlegende Struktur von XML-Tags dargestellt, die vom WIF-Konfigurationsschema verfügbar gemacht wird. Attribute werden ausgelassen. Hervorgehobene Kommentare zeigen die Hauptkomponenten des Schemas an.  
   
 ```xml  
 <system.identityModel>  
@@ -107,6 +107,6 @@ Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationss
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Stellt Konfigurationen für das Aktivieren von WIF-Optionen in Anwendungen bereit.  
+ [\<system.identityModel>](system-identitymodel.md) Stellt Konfigurationen für das Aktivieren von WIF-Optionen in Anwendungen bereit.  
   
- [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Stellt Konfigurationen für den passiven Verbund mit WIF bereit. Konfiguriert das Sitzungsauthentifizierungsmodul (SAM) und das Verbundsauthentifizierungsmodul (WSFAM).
+ [\<system.identityModel.services>](system-identitymodel-services.md) Stellt Konfigurationen für den passiven Verbund mit WIF bereit. Konfiguriert das Sitzungsauthentifizierungsmodul (SAM) und das Verbundsauthentifizierungsmodul (WSFAM).

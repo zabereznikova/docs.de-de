@@ -2,12 +2,12 @@
 title: SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ec67637c416f2560c1f5d0a9fd0e856703820a84
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954972"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient für Entity Framework
 Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (SqlClient), der dem Entity Framework die Arbeit mit Microsoft SQL Server ermöglicht.  
@@ -18,9 +18,9 @@ Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (Sq
  Um SqlClient zu verwenden, weisen Sie dem `Provider`-Attribut des `Schema`-Elements die Zeichenfolge "System.Data.SqlClient" zu.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>'ProviderManifestToken'-Schemaattribut  
- Das `ProviderManifestToken`-Element ist ein erforderliches Attribut des `Schema`-Elements. Dieses Token wird verwendet, um das Anbietermanifest für Offlineszenarien zu laden. Weitere Informationen zu `ProviderManifestToken` Attribut, finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
+ Das `ProviderManifestToken`-Element ist ein erforderliches Attribut des `Schema`-Elements. Dieses Token wird verwendet, um das Anbietermanifest für Offlineszenarien zu laden. Weitere Informationen `ProviderManifestToken` zum-Attribut finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
- SqlClient kann als Datenanbieter für verschiedene Versionen von SQL Server verwendet werden. Diese Versionen haben verschiedene Funktionen. SQL Server 2000 unterstützt beispielsweise keine `varchar(max)` und `nvarchar(max)` Typen, die mit SQL Server 2005 eingeführt wurden.  
+ SqlClient kann als Datenanbieter für verschiedene Versionen von SQL Server verwendet werden. Diese Versionen haben verschiedene Funktionen. Beispielsweise unterstützt `varchar(max)` SQL Server 2000 nicht die Typen und `nvarchar(max)` , die mit SQL Server 2005 eingeführt wurden.  
   
  SqlClient erzeugt und akzeptiert die folgenden Anbietermanifesttoken für die verschiedenen Versionen von SQL Server.  
   
@@ -29,16 +29,16 @@ Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (Sq
 |2000|2005|2008|  
   
 > [!NOTE]
->  Beginnend mit Visual Studio 2010 die [ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) SQL Server 2000 nicht unterstützt.  
+> Ab Visual Studio 2010 unterstützen die [ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) SQL Server 2000 nicht.  
   
 ## <a name="provider-namespace-name"></a>Anbieternamespacename  
  Alle Anbieter müssen einen Namespace angeben. Anhand dieser Eigenschaft ermittelt Entity Framework, welches Präfix von diesem Anbieter für spezifische Konstrukte wie Typen und Funktionen verwendet wird. Der Namespace für SqlClient-Anbietermanifeste lautet `SqlServer`. Weitere Informationen zu Namespaces finden Sie unter [Namespaces](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  
   
 ## <a name="types"></a>Typen  
- Der SqlClient-Anbieter für das Entity Framework stellt Zuordnungsinformationen zwischen Typen des konzeptionellen Modells und SQL Server-Typen bereit. Weitere Informationen finden Sie unter [SqlClient für Entity Framework-Typen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+ Der SqlClient-Anbieter für das Entity Framework stellt Zuordnungsinformationen zwischen Typen des konzeptionellen Modells und SQL Server-Typen bereit. Weitere Informationen finden Sie unter [SqlClient für Entity frameworktypes](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 ## <a name="functions"></a>Funktionen  
- Der SqlClient-Anbieter für das Entity Framework definiert die Liste der vom Anbieter unterstützten Funktionen. Eine Liste der unterstützten Funktionen, finden Sie unter [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Der SqlClient-Anbieter für das Entity Framework definiert die Liste der vom Anbieter unterstützten Funktionen. Eine Liste der unterstützten Funktionen finden Sie unter [SqlClient für Entity Framework Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
@@ -51,4 +51,4 @@ Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (Sq
 
 - [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [Sprachreferenz](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
-- [Bekannte Probleme in SqlClient-Anbieter für Entitätsframework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [Bekannte Probleme im SqlClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
