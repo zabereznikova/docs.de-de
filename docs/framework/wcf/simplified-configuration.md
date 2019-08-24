@@ -2,12 +2,12 @@
 title: Vereinfachte Konfiguration
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 5aaca8ae8c456e2377326ee2e9e22c3dcf6a21a7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cdb5d819ce3af372ce44ee2c038556c1383acfe3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922998"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987218"
 ---
 # <a name="simplified-configuration"></a>Vereinfachte Konfiguration
 Das Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine komplexe Aufgabe sein. Es gibt viele verschiedene Optionen, und es ist nicht immer einfach zu bestimmen, welche Einstellungen erforderlich sind. Konfigurationsdateien erhöhen zwar die Flexibilität von WCF-Diensten, Sie sind jedoch auch die Quelle für viele schwer zu suchende Probleme. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] behandelt diese Probleme und gibt Benutzern die Möglichkeit, den Umfang und die Komplexität der Dienstkonfiguration zu reduzieren.  
@@ -49,7 +49,7 @@ Das Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine 
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]vereinfacht das Konfigurieren eines WCF-Dienstanbieter, indem die Anforderung`service`für das < >-Element entfernt wird. Wenn Sie keine <`service`> Abschnitt hinzufügen oder Endpunkte in einem <`service`> Abschnitt hinzufügen und der Dienst keine Endpunkte Programm gesteuert definiert, wird dem Dienst automatisch ein Satz von Standard Endpunkten hinzugefügt. Dienst Basisadresse und für jeden Vertrag, der von Ihrem Dienst implementiert wird. An jedem dieser Endpunkte entspricht die Endpunktadresse der Basisadresse, die Bindung wird anhand des Basisadressenschemas bestimmt, und der Vertrag ist der Vertrag, der vom Dienst implementiert wird. Wenn es nicht erforderlich ist, Endpunkte oder Dienstverhalten anzugeben oder Änderungen an den Bindungseinstellungen vorzunehmen, müssen Sie keine Dienstkonfigurationsdatei angeben. Wenn ein Dienst zwei Verträge implementiert und der Host sowohl HTTP- als auch TCP-Transporte zulässt, erstellt der Diensthost vier Standardendpunkte, einen für jeden Vertrag mit den einzelnen Transporten. Um Standardendpunkte zu erstellen, muss der Diensthost wissen, welche Bindungen verwendet werden können. Diese Einstellungen werden in einem <`protocolMappings`> Abschnitt innerhalb des Abschnitts <`system.serviceModel`> angegeben. Der Abschnitt`protocolMappings`< > enthält eine Liste von Transportprotokoll Schemas, die Bindungs Typen zugeordnet sind. Der Diensthost verwendet die übergebene Basisadresse, um die zu verwendende Bindung zu ermitteln. Im folgenden Beispiel wird das <`protocolMappings`>-Element verwendet.  
   
 > [!WARNING]
->  Das Ändern von Standardkonfigurationselementen, z. B. Bindungen oder Verhalten, wirkt sich möglicherweise auf Dienste aus, die auf niedrigeren Ebenen der Konfigurationshierarchie definiert sind, da sie eventuell diese Standardbindungen bzw. dieses Standardverhalten verwenden. Daher muss jede Person, die Standardbindungen und -verhalten ändert, berücksichtigen, dass sich diese Änderungen auf andere Dienste in der Hierarchie auswirken können.  
+> Das Ändern von Standardkonfigurationselementen, z. B. Bindungen oder Verhalten, wirkt sich möglicherweise auf Dienste aus, die auf niedrigeren Ebenen der Konfigurationshierarchie definiert sind, da sie eventuell diese Standardbindungen bzw. dieses Standardverhalten verwenden. Daher muss jede Person, die Standardbindungen und -verhalten ändert, berücksichtigen, dass sich diese Änderungen auf andere Dienste in der Hierarchie auswirken können.  
   
 > [!NOTE]
 > Unter Internetinformationsdienste (IIS) oder dem Windows-Prozessaktivierungsdienst (WAS) gehostete Dienste verwenden das virtuelle Verzeichnis als Basisadresse.  

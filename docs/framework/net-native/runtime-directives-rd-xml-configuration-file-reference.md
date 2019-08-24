@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052453"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988286"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 
@@ -17,19 +17,19 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-<Application>
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+  <Application>
+    <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+    <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
 
-  <Namespace Name="System.Collections.ObjectModel" >
-    <TypeInstantiation Name="ObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
-    <TypeInstantiation Name="ReadOnlyObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
-  </Namespace>
-</Application>
+    <Namespace Name="System.Collections.ObjectModel" >
+      <TypeInstantiation Name="ObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+      <TypeInstantiation Name="ReadOnlyObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+    </Namespace>
+  </Application>
 </Directives>
 ```
 
@@ -41,27 +41,27 @@ Das Stammelement ist [Directives](../../../docs/framework/net-native/directives-
 
 Um Referenzinformationen anzuzeigen, wählen Sie Elemente aus der folgenden Struktur aus, oder lesen Sie unter [Laufzeitanweisungselemente](../../../docs/framework/net-native/runtime-directive-elements.md) nach. In der folgenden Hierarchie kennzeichnet die Ellipse eine rekursive Struktur. Die Informationen in Klammern zeigen an, ob dieses Element optional oder erforderlich ist, und wenn es verwendet wird, wie viele Instanzen (eine oder viele) zulässig sind.
 
-[Direktiven](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [Anwendung](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [o: 1] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [o: 1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [ TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: m] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: m] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: m] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) () konstruierte generische Methode) [0: m] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [Bibliothek](../../../docs/framework/net-native/library-element-net-native.md) [0: m] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [o: 1] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [o: 1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: m] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierter generischer -Methode) [0: m] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: m] [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: m]. sein. sein.
-[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m]. sein. sein.
-[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: m] [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: m] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: m] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: m] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md)[0: m]
+[Direktiven](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [Anwendungs](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Bibliothek](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
 
 Das [Application](../../../docs/framework/net-native/application-element-net-native.md)-Element kann entweder keine Attribute oder die im [Abschnitt zu Laufzeitanweisungen und -richtlinien](#Directives) beschriebenen Richtlinienattribute besitzen.
 
@@ -405,7 +405,7 @@ Die Anwendung der `Serialize`-Richtlinie auf ein Feld bewirkt die folgenden Rich
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Die Auswirkungen der Richtlinien XmlSerializer, DataContractSerializer und DataContractJsonSerializer
 
-Im Gegensatz zu den `Serialize` Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, die <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Richtlinien werden verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die die .NET Native-toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
+Anders als `Serialize` bei der Richtlinie, die für reflektionsbasierte Serialisierungstypen vorgesehen <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ist, werden die <xref:System.Xml.Serialization.XmlSerializer>Richtlinien, <xref:System.Runtime.Serialization.DataContractSerializer>und verwendet, um einen Satz von serialisierungssoren zu aktivieren, die der .net Native-Toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
 
 Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisierung des Typs mit dem entsprechenden Serialisierungsprogramm. Außerdem können alle Typen, von denen das Serialisierungsmodul statisch bestimmen kann, dass für sie Serialisierung erforderlich ist, serialisierbar sein.
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988690"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
-Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits komponentenbasierte Anwendungslogik, die in COM+ gehostet verwenden, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
+Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Erstellen verteilter Anwendungen bereit. Wenn Sie bereits komponentenbasierte Anwendungslogik verwenden, die in com+ gehostet wird, können Sie die vorhandene Logik mithilfe von WCF erweitern, anstatt Sie neu schreiben zu müssen. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
   
  Wenn eine Schnittstelle auf einer COM+-Komponente als Webdienst verfügbar gemacht wird, werden die Spezifikation und der Vertrag dieser Dienste von einer automatischen Zuordnung bestimmt, die zur Anwendungsinitialisierungszeit ausgeführt wird. In der folgenden Liste wird das Modell für diese Zuordnung gezeigt:  
   
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
  Standardadressen und Transportbindungen für den Dienst werden in einer Dienstkonfigurationsdatei bereitgestellt, sie können jedoch ggf. neu konfiguriert werden.  
   
 > [!NOTE]
->  Die Verträge für die verfügbar gemachten Webdienste bleiben konstant, solange die COM+-Schnittstellen und die Konfiguration unverändert bleiben. Bei einer Änderung mehrerer Schnittstellen werden die verfügbaren Dienste nicht automatisch aktualisiert; das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) muss jedoch erneut ausgeführt werden.  
+> Die Verträge für die verfügbar gemachten Webdienste bleiben konstant, solange die COM+-Schnittstellen und die Konfiguration unverändert bleiben. Bei einer Änderung mehrerer Schnittstellen werden die verfügbaren Dienste nicht automatisch aktualisiert; das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) muss jedoch erneut ausgeführt werden.  
   
  Die Authentifizierungs- und Autorisierungsanforderungen der COM+-Anwendung und ihrer Komponenten werden bei der Verwendung als Webdienst weiterhin erzwungen.  
   
@@ -40,16 +40,16 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
   
 2. Wählen Sie einen entsprechenden Hostingmodus aus.  
   
-3. Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig.exe finden Sie unter [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig. exe finden [Sie unter Gewusst wie: Verwenden Sie das Konfigurations Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)für das COM+-Dienstmodell.  
   
-4. Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponentenfehlers finden Sie unter [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponente finden [Sie unter Gewusst wie: Konfigurieren Sie die com+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)-Dienst Einstellungen.  
   
 ## <a name="supported-interfaces"></a>Unterstützte Schnittstellen  
  Es gibt einige Beschränkungen beim Typ von Schnittstellen, die als Webdienst verfügbar gemacht werden können. Die folgenden Typen von Schnittstellen werden nicht unterstützt:  
   
 - Schnittstellen, die Objektverweise als Parameter übergeben; der folgende beschränkte Objektverweisansatz wird im Abschnitt "Beschränkte Objektverweisunterstützung" beschrieben.  
   
-- Schnittstellen, die Typen zu übergeben, die mit der .NET Framework-COM-interoperabilitätskonvertierungen nicht kompatibel sind.  
+- Schnittstellen, die Typen übergeben, die mit den .NET Framework com-Interoperabilitäts Konvertierungen nicht kompatibel sind.  
   
 - Schnittstellen für Anwendungen, in denen beim Hosten durch COM+ das Anwendungspooling aktiviert ist.  
   
@@ -64,14 +64,14 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
 ### <a name="limited-object-reference-support"></a>Beschränkte Objektverweisunterstützung  
  Da einige bereitgestellte COM+-Komponenten Objekte als Verweisparameter verwenden, wie Rückgabe eines ADO-Recordset-Objekts, schließt die COM+-Integration beschränkte Unterstützung für Objektverweisparameter ein. Die Unterstützung ist auf Objekte beschränkt, die die `IPersistStream`-COM-Schnittstelle implementieren. Sie schließt ADO-Recordset-Objekte ein und kann für anwendungsspezifische COM-Objekte implementiert werden.  
   
- Zum Aktivieren dieser Unterstützung stellt das Tool ComSvcConfig.exe der **Allowreferences** Switch, der den regulären methodensignaturparameter deaktiviert und stellt sicher, dass das Tool ausgeführt wird, um sicherzustellen, dass Objektverweisparameter nicht verwendet werden . Darüber hinaus die Objekttypen, die Sie als Parameter übergeben müssen benannt werden und innerhalb von identifiziert die <`persistableTypes`> Konfigurationselement, das ein untergeordnetes Element der <`comContract`> Element.  
+ Um diese Unterstützung zu aktivieren, stellt das Tool ComSvcConfig. exe den **allowreferences** -Schalter bereit, der den regulären Methoden Signatur Parameter deaktiviert und überprüft, ob das Tool ausgeführt wird, um sicherzustellen, dass Objekt Verweis Parameter nicht verwendet werden. Außerdem müssen die Objekttypen, die Sie als Parameter übergeben, benannt und innerhalb der <`persistableTypes`> Configuration-Elements identifiziert werden, das dem <`comContract`> Element untergeordnet ist.  
   
  Wenn diese Funktion verwendet wird, nutzt der COM+-Integrationsdienst die `IPersistStream`-Schnittstelle zum Serialisieren oder Deserialisieren der Objektinstanz. Wenn die Objektinstanz `IPersistStream` nicht unterstützt, wird eine Ausnahme ausgelöst.  
   
  In einer Clientanwendung können die Methoden im <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper>-Objekt zum Übergeben eines Objekt an einen Dienst und entsprechend zum Abrufen eines Objekts verwendet werden.  
   
 > [!NOTE]
->  Aufgrund der benutzerdefinierten und plattformspezifischen Art des Ansatzes Serialisierung ist dies am besten geeignet für die Verwendung zwischen WCF-Clients und WCF-Dienste.  
+> Aufgrund der benutzerdefinierten und plattformspezifischen Art des Serialisierungsansatzes eignet sich dies am besten für die Verwendung zwischen WCF-Clients und WCF-Diensten.  
   
 ## <a name="selecting-the-hosting-mode"></a>Auswählen des Hostingmodus  
  COM+ macht Webdienste in einem der folgenden Hostingmodi verfügbar:  
@@ -82,7 +82,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
   
 - Im Internet gehostet  
   
-     Der Webdienst wird in einem Webserver-Arbeitsprozess gehostet. In diesem Modus muss COM+ nicht aktiv sein, wenn die ursprüngliche Anforderung empfangen wird. Wenn die Anwendung beim Empfangen dieser Anforderung nicht aktiv ist, wird sie automatisch vor dem Verarbeiten der Anforderung aktiviert. Dieser Modus bietet ebenfalls Webdiensten und DCOM Zugriff auf die Serveranwendung, er bewirkt jedoch einen Prozesshop für Webdienstanforderungen. Dies erfordert in der Regel, dass der Client den Identitätswechsel aktiviert. In WCF dies erreichen Sie mit der <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Eigenschaft der <xref:System.ServiceModel.Security.WindowsClientCredential> -Klasse, die als Eigenschaft der generischen erfolgt <xref:System.ServiceModel.ChannelFactory%601> -Klasse, als auch die <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> Enumerationswert.  
+     Der Webdienst wird in einem Webserver-Arbeitsprozess gehostet. In diesem Modus muss COM+ nicht aktiv sein, wenn die ursprüngliche Anforderung empfangen wird. Wenn die Anwendung beim Empfangen dieser Anforderung nicht aktiv ist, wird sie automatisch vor dem Verarbeiten der Anforderung aktiviert. Dieser Modus bietet ebenfalls Webdiensten und DCOM Zugriff auf die Serveranwendung, er bewirkt jedoch einen Prozesshop für Webdienstanforderungen. Dies erfordert in der Regel, dass der Client den Identitätswechsel aktiviert. In WCF kann <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> dies mit der-Eigenschaft <xref:System.ServiceModel.Security.WindowsClientCredential> der-Klasse erfolgen, auf die als Eigenschaft der generischen <xref:System.ServiceModel.ChannelFactory%601> -Klasse zugegriffen wird, sowie mit dem <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> -Enumerationswert.  
   
 - Prozessintern im Internet gehostet  
   
@@ -93,11 +93,11 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
   
  Bei Verwendung einer nicht gesicherten Bindung kann für die Kommunikation die Gefahr von Manipulationen oder der Offenlegung von Informationen bestehen. Verwenden Sie eine gesicherte Bindung, um dies zu verhindern.  
   
- Für die Modi "COM+-gehostet" und "Im Internet gehostet" müssen die Clientanwendungen dem Serverprozess den Identitätswechsel für den Clientbenutzer gestatten. Dies kann erfolgen in WCF-Clients durch Festlegen der Identitätswechselebene auf <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Für die Modi "COM+-gehostet" und "Im Internet gehostet" müssen die Clientanwendungen dem Serverprozess den Identitätswechsel für den Clientbenutzer gestatten. Dies kann in WCF-Clients erfolgen, indem die Identitätswechsel Ebene auf <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>festgelegt wird.  
   
  Wenn Internetinformationsdienste (IIS) oder Windows Process Activation Service (WAS) den HTTP-Transport verwenden, kann mit dem Tool Httpcfg.exe eine Transportendpunktadresse reserviert werden. In anderen Konfigurationen ist der Schutz vor nicht autorisierten Diensten wichtig, die als der gewünschte Dienst fungieren. Um den Start eines nicht autorisierten Dienstes am gewünschten Endpunkt zu verhindern, kann der legitime Dienst so konfiguriert werden, dass er als NT Dienst-ausgeführt wird. Dadurch hat der legitime Dienst vor jedem nicht autorisierten Dienst Anspruch auf die Endpunktadresse.  
   
- Wenn Sie eine COM+-Anwendung mit konfigurierten COM+-Rollen als ein im Internet gehosteten Dienst verfügbar machen, muss die "Starten Sie IIS-Prozesskonto" auf einen der die Rollen der Anwendung hinzugefügt werden. Dieses Konto, in der Regel mit der Bezeichnung IWAM_computername, muss hinzugefügt werden, um das saubere Herunterfahren von Objekten nach der Verwendung zu ermöglichen. Dem Konto sollten keine weiteren Berechtigungen gewährt werden.  
+ Wenn Sie eine COM+-Anwendung mit konfigurierten com+-Rollen als im Internet gehosteten Dienst verfügbar machen, muss das "IIS-Prozess Konto starten" zu einer der Rollen der Anwendung hinzugefügt werden. Dieses Konto, in der Regel mit der Bezeichnung IWAM_computername, muss hinzugefügt werden, um das saubere Herunterfahren von Objekten nach der Verwendung zu ermöglichen. Dem Konto sollten keine weiteren Berechtigungen gewährt werden.  
   
  Die COM+-Funktionen zur Prozesswiederverwendung können für integrierte Anwendungen nicht verwendet werden. Wenn die Anwendung für die Verwendung der Prozesswiederverwendung konfiguriert ist und die Komponenten in einem COM+-gehosteten Prozess ausgeführt werden, tritt beim Start des Dienstes ein Fehler auf. Diese Anforderung schließt Dienste nicht ein, die den Modus „Prozessintern im Internet gehostet“ verwenden, da die Einstellungen für die Prozesswiederverwendung nicht angewendet werden.  
   

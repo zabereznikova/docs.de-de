@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fef4d757cf528cd3dc7d79db04d33c2cad9bbf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c557df3c69b9d18b95ebf33815b92dcb9097f4e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69987534"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum-Schnittstelle
 
-ICorDebugEnum-Methoden implementiert, und listet ICorDebugAssembly-Arrays.  
+Implementiert ICorDebugEnum-Methoden und listet ICorDebugAssembly-Arrays auf.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugAssembly` -Instanzen in der Enumeration, die von der aktuellen Position ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugAssembly` -Instanzen in der-Enumeration ab der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

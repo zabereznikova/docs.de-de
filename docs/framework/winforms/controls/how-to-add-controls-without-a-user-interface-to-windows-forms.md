@@ -14,39 +14,39 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 49bf927085d29b60c1d9cf5d61df3894495349db
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc1f844e5a2cf4d4f3b64ebf20e935f36ff85e12
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210409"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987089"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
 
-Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer nicht und müssen somit auch nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt der Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Nach einem Steuerelement der Komponentenleiste hinzugefügt wurde, können Sie wählen die Komponente aus und legen Sie seine Eigenschaften fest, wie jedes andere Steuerelement im Formular.
+Ein nicht visuelles Steuerelement (oder eine Komponente) stellt Funktionen für Ihre Anwendung bereit. Im Gegensatz zu anderen Steuerelementen bieten Komponenten keine Benutzeroberfläche für den Benutzer und müssen daher nicht auf der Windows Forms-Designer Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt der Windows Forms-Designer am unteren Rand des Formulars, in dem alle Komponenten angezeigt werden, eine Größe an, die geändert werden kann. Nachdem ein Steuerelement der Komponenten Leiste hinzugefügt wurde, können Sie die Komponente auswählen und deren Eigenschaften wie jedes andere Steuerelement im Formular festlegen.
 
 ## <a name="add-a-component-to-a-windows-form"></a>Hinzufügen einer Komponente zu einem Windows Form
 
-1. Öffnen Sie das Formular in Visual Studio. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Öffnen Sie das Formular in Visual Studio. Weitere Informationen finden Sie unter [Vorgehensweise: Zeigen Sie Windows Forms im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))an.
 
-2. In der **Toolbox**, klicken Sie auf eine Komponente, und ziehen Sie es in Ihrem Formular.
+2. Klicken Sie in der **Toolbox**auf eine Komponente, und ziehen Sie Sie in das Formular.
 
-     Die Komponente wird auf der Komponentenleiste angezeigt.
+     Die Komponente wird in der Komponenten Leiste angezeigt.
 
-Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt werden. Dies ist ein häufiges Szenario, insbesondere deshalb, weil Komponenten keine visuellen Ausdruck im Gegensatz zu Steuerelementen haben, die eine Benutzeroberfläche verfügen. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente wird zur Laufzeit hinzugefügt. (Beachten Sie, dass Visual Studio eine Reihe von verschiedenen Zeitgeber enthält; in diesem Fall verwenden Sie ein Windows Forms <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen zu den verschiedenen Zeitgeber in Visual Studio, finden Sie unter [Einführung in serverbasierte Timer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)
+Darüber hinaus können Komponenten zur Laufzeit einem Formular hinzugefügt werden. Dies ist ein häufiges Szenario, insbesondere, da Komponenten keinen visuellen Ausdruck aufweisen, anders als Steuerelemente mit einer Benutzeroberfläche. Im folgenden Beispiel wird eine <xref:System.Windows.Forms.Timer> Komponente zur Laufzeit hinzugefügt. (Beachten Sie, dass Visual Studio eine Reihe von unterschiedlichen Timern enthält. verwenden Sie in <xref:System.Windows.Forms.Timer> diesem Fall eine Windows Forms Komponente. Weitere Informationen zu den verschiedenen Timern in Visual Studio finden [Sie unter Einführung in Server basierte Timer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).)
 
 > [!CAUTION]
-> Komponenten haben häufig steuerelementspezifischen Eigenschaften, die für die Komponente effektive Funktionsweise festgelegt werden müssen. Im Fall von der <xref:System.Windows.Forms.Timer> folgenden Komponenten, Sie legen die `Interval` Eigenschaft. Achten Sie darauf, wenn Komponenten zu Ihrem Projekt hinzufügen, die die Eigenschaften für die jeweilige Komponente erforderlich.
+> Komponenten verfügen häufig über Steuerungs spezifische Eigenschaften, die für eine effektive Funktionsweise der Komponente festgelegt werden müssen. Im Fall der <xref:System.Windows.Forms.Timer> nachfolgenden Komponente legen Sie die `Interval` -Eigenschaft fest. Stellen Sie sicher, dass Sie beim Hinzufügen von Komponenten zu Ihrem Projekt die Eigenschaften festlegen, die für diese Komponente erforderlich sind.
 
-## <a name="add-a-component-to-a-windows-form-programmatically"></a>Eine Komponente programmgesteuert zu einem Windows Form hinzufügen
+## <a name="add-a-component-to-a-windows-form-programmatically"></a>Programm gesteuertes Hinzufügen einer Komponente zu einem Windows Form
 
-1. Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.Timer> Klasse im Code.
+1. Erstellen Sie im Code eine <xref:System.Windows.Forms.Timer> Instanz der-Klasse.
 
-2. Legen Sie die `Interval` Eigenschaft, um die Zeit zwischen den Ticks des Zeitgebers zu bestimmen.
+2. Legen Sie `Interval` die-Eigenschaft fest, um die Zeit zwischen Ticks des Timers zu bestimmen.
 
-3. Konfigurieren Sie alle anderen erforderlichen Eigenschaften für die Komponente an.
+3. Konfigurieren Sie alle anderen erforderlichen Eigenschaften für die Komponente.
 
-     Der folgende Code zeigt die Erstellung einer <xref:System.Windows.Forms.Timer> mit seiner `Interval` Eigenschaftensatz.
+     Der folgende Code zeigt die Erstellung eines- <xref:System.Windows.Forms.Timer> Objekts, `Interval` dessen-Eigenschaft auf festgelegt ist.
 
     ```vb
     Public Sub CreateTimer()
@@ -75,14 +75,13 @@ Darüber hinaus können Komponenten zu einem Formular zur Laufzeit hinzugefügt 
     ```
 
     > [!IMPORTANT]
-    > Sie können Ihrem lokalen Computer über das Netzwerk ein Sicherheitsrisiko durch Verweisen auf eine böswillige UserControl verfügbar machen. Dies wäre nur ein Problem, wenn ein böswilliger Benutzer erstellt ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.
+    > Sie können den lokalen Computer mit einem Sicherheitsrisiko über das Netzwerk verfügbar machen, indem Sie auf ein schädliches UserControl-Steuerelement verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [Vorgehensweise: Kopieren von Steuerelementen zwischen Windows Forms](how-to-copy-controls-between-windows-forms.md)
+- [Vorgehensweise: ActiveX-Steuerelemente zu Windows Forms hinzufügen](how-to-add-activex-controls-to-windows-forms.md)
 - [Einfügen von Steuerelementen in Windows Forms](putting-controls-on-windows-forms.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

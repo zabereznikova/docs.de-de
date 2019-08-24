@@ -2,24 +2,24 @@
 title: Optionen zum Hosten von Workflows
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b85f656d6262c850c81833d5c4fe4d1fb5b1ec55
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487363"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988518"
 ---
 # <a name="workflow-hosting-options"></a>Optionen zum Hosten von Workflows
-Die meisten Windows Workflow Foundation (WF)-Beispiele verwenden die Workflows, die in einer Konsolenanwendung gehostet werden, aber dies ist ein realistisches Szenario für realer Workflows nicht. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen – entweder ein Windows-Dienst erstellt vom Entwickler oder in einer Serveranwendung, z. B. IIS 7.0 oder AppFabric gehostet werden. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
+In den meisten Windows Workflow Foundation WF-Beispielen (WF) werden Workflows verwendet, die in einer Konsolenanwendung gehostet werden. Dies ist jedoch kein realistisches Szenario für Workflows in der Praxis. Workflows in tatsächlichen Geschäftsanwendungen werden in persistenten Prozessen gehostet. dabei handelt es sich entweder um einen vom Entwickler erstellten Windows-Dienst oder um eine Serveranwendung wie IIS 7,0 oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosten von Workflows in IIS mit Windows AppFabric  
  Das Verwenden von IIS mit AppFabric ist die bevorzugte Hostmethode für Workflows. Die Hostanwendung für Workflows mit AppFabric ist Windows Activation Service (WAS). Durch diesen Dienst wird nur die Abhängigkeit von "HTTP over IIS" entfernt.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Hosten von Workflows nur in IIS  
- Mit IIS 7.0 allein sollte nicht vorliegen, Verwaltungs- und Überwachungstools mit AppFabric verfügbar sind, die die Wartung ausgeführter Anwendungen zu erleichtern. Workflows sollten nur in IIS 7.0 nur, wenn Infrastrukturprobleme dem Wechsel zu AppFabric gehostet werden.  
+ Die Verwendung von IIS 7,0 allein ist nicht empfehlenswert, da in AppFabric Verwaltungs-und Überwachungstools verfügbar sind, die die Wartung von laufenden Anwendungen vereinfachen. Workflows sollten nur in IIS 7,0 gehostet werden, wenn Infrastrukturprobleme beim Umstieg auf AppFabric bestehen.  
   
 > [!WARNING]
->  IIS 7.0 wird Anwendungspools in regelmäßigen Abständen aus verschiedenen Gründen wiederverwendet. Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren. Wenn ein Workflow weiter nach dem Senden einer Antwort, IIS 7.0 werden nicht über die Arbeit und möglicherweise der hostanwendungspool wiederverwendet. Wenn dies geschieht, wird der Workflow abgebrochen und Überwachungsdienste zeichnen eine [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) Nachricht mit einem leeren Feld "Grund".  
+> IIS 7,0 verwendet Anwendungs Pools in regelmäßigen Abständen aus verschiedenen Gründen wieder. Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren. Wenn ein Workflow nach dem Senden einer Antwort weiterhin funktioniert, ist IIS 7,0 nicht in der Arbeit, die ausgeführt wird, und kann den hostinganwendungspool wieder verwenden. Wenn dies der Fall ist, wird der Workflow abgebrochen, und Überwachungsdienste zeichnen eine [1004-workflowinstanceabgeb Rochen-](1004-workflowinstanceaborted.md) Nachricht mit einem leeren Grund Feld auf.  
 >   
 >  Wenn Persistenz verwendet wird, müssen die seit dem letzten Persistenzpunkt abgebrochenen Instanzen explizit neu gestartet werden.  
 >   

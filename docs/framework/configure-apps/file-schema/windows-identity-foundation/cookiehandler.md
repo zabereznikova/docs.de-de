@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942800"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988344"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) zum Lesen und Schreiben von Cookies verwendet.  
@@ -77,7 +77,7 @@ Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <x
  Der folgende XML-Code `<cookieHandler>` zeigt ein-Element. Da das `mode` -Attribut in diesem Beispiel nicht angegeben wird, wird der standardmäßige Cookie-Handler von Sam verwendet. Dies ist eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Klasse. Da das `<chunkedCookieHandler>` untergeordnete-Element nicht angegeben ist, wird die Standard Segmentgröße verwendet. HTTPS ist nicht erforderlich, da das `requireSsl` -Attribut fest `false`gelegt ist.  
   
 > [!WARNING]
->  In diesem Beispiel ist HTTPS nicht erforderlich, um Sitzungs Cookies zu schreiben. Dies liegt daran, `requireSsl` dass das- `<cookieHandler>` Attribut des-Elements `false`auf festgelegt ist. Diese Einstellung wird für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen kann.  
+> In diesem Beispiel ist HTTPS nicht erforderlich, um Sitzungs Cookies zu schreiben. Dies liegt daran, `requireSsl` dass das- `<cookieHandler>` Attribut des-Elements `false`auf festgelegt ist. Diese Einstellung wird für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen kann.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

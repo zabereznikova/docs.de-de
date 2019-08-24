@@ -2,15 +2,15 @@
 title: Objektmodell für WCF-Web-HTTP-Programmierung
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 43ec16927c703ca373eaa4299093503b2fab2266
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487690"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988562"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
-Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Communication Foundation (WCF)-Webdienste durch grundlegende HTTP-Anforderungen, die ohne SOAP verfügbar machen. Der WCF-HTTP-Webprogrammierungsmodell basiert auf der vorhandenen WCF-Erweiterbarkeitsmodell. Mit diesem Modell werden folgende Klassen definiert:  
+Das WCF-Web-HTTP-Programmiermodell ermöglicht es Entwicklern, Windows Communication Foundation (WCF)-Webdienste über einfache HTTP-Anforderungen ohne SOAP verfügbar zu machen. Das WCF-Web-HTTP-Programmiermodell basiert auf dem vorhandenen WCF-Erweiterbarkeits Modell. Mit diesem Modell werden folgende Klassen definiert:  
   
  **Programmiermodell:**  
   
@@ -22,13 +22,13 @@ Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Commun
   
 - <xref:System.ServiceModel.Web.WebServiceHost>  
   
- **Kanäle und Verteilerinfrastruktur:**  
+ **Kanäle und Dispatcher-Infrastruktur:**  
   
 - <xref:System.ServiceModel.WebHttpBinding>  
   
 - <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
- **Hilfsprogrammklassen und Erweiterungspunkte:**  
+ **Hilfsprogrammklassen und Erweiterbarkeits Punkte:**  
   
 - <xref:System.UriTemplate>  
   
@@ -68,10 +68,10 @@ Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Commun
 |`UriTemplate`|Gibt die URI-Vorlage an, mit der gesteuert wird, welche GET-Anforderungen dem Dienstvorgang zugeordnet werden, auf den das Attribut angewendet wird.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- Mit der <xref:System.UriTemplate>-Klasse können Sie einen Satz strukturell ähnlicher URIs definieren. Vorlagen bestehen aus zwei Teilen, einem Pfad und einer Abfrage. Ein Pfad besteht aus einer Reihe von Segmenten, die durch einen Schrägstrich (/) voneinander getrennt werden. Jedes Segment kann ein Literalwert, einen Variablenwert (in geschweiften Klammern [{}], beschränkt auf den Inhalt genau eines Segments entsprechen) oder einen Platzhalter verfügen (geschrieben als Sternchen [\*], der "den Rest des Pfads" entspricht), müssen die am angezeigt das Ende des Pfads. Der Abfrageausdruck kann vollständig weggelassen werden. Sofern der Abfrageausdruck vorhanden ist, wird eine ungeordnete Reihe von Name-Wert-Paaren angegeben. Elemente des Abfrageausdrucks kann entweder um Literale Paare (? X = 2) oder Variable Paare (? x = {*Wert*}). Alleinstehende Werte sind nicht zulässig. <xref:System.UriTemplate> wird intern von der WCF-HTTP-Webprogrammierungsmodell verwendet, um Dienstvorgängen bestimmte URIs oder Gruppen von URIs zuzuordnen.  
+ Mit der <xref:System.UriTemplate>-Klasse können Sie einen Satz strukturell ähnlicher URIs definieren. Vorlagen bestehen aus zwei Teilen, einem Pfad und einer Abfrage. Ein Pfad besteht aus einer Reihe von Segmenten, die durch einen Schrägstrich (/) voneinander getrennt werden. Jedes Segment kann einen Literalwert, einen variablen Wert (geschrieben in geschweiften Klammern [{}], so eingeschränkt, dass er mit dem Inhalt von genau einem Segment übereinstimmt) oder einen Platzhalter (\*geschrieben als Sternchen [], der "der Rest des Pfades" entspricht) enthalten, der unter das Ende des Pfads. Der Abfrageausdruck kann vollständig weggelassen werden. Sofern der Abfrageausdruck vorhanden ist, wird eine ungeordnete Reihe von Name-Wert-Paaren angegeben. Bei den Elementen des Abfrage Ausdrucks kann es sich entweder um Literale Paare (? x = 2) oder Variablen Paare (? x = {*value*}) handeln. Alleinstehende Werte sind nicht zulässig. <xref:System.UriTemplate>wird intern vom WCF-Web-HTTP-Programmiermodell verwendet, um Dienst Vorgängen bestimmte URIs oder Gruppen von URIs zuzuordnen.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- Die <xref:System.UriTemplateTable>-Klasse stellt einen assoziativen Satz von <xref:System.UriTemplate>-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind. Sie ermöglicht es Ihnen, mögliche URIs (Uniform Resource Identifiers) mit den Vorlagen im Satz abzugleichen und die den übereinstimmenden Vorlagen zugeordneten Daten abzurufen. <xref:System.UriTemplateTable> wird intern von der WCF-HTTP-Webprogrammierungsmodell verwendet, um Dienstvorgängen bestimmte URIs oder Gruppen von URIs zuzuordnen.  
+ Die <xref:System.UriTemplateTable>-Klasse stellt einen assoziativen Satz von <xref:System.UriTemplate>-Objekten dar, die an ein Objekt nach Wahl des Entwicklers gebunden sind. Sie ermöglicht es Ihnen, mögliche URIs (Uniform Resource Identifiers) mit den Vorlagen im Satz abzugleichen und die den übereinstimmenden Vorlagen zugeordneten Daten abzurufen. <xref:System.UriTemplateTable>wird intern vom WCF-Web-HTTP-Programmiermodell verwendet, um Dienst Vorgängen bestimmte URIs oder Gruppen von URIs zuzuordnen.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
  <xref:System.ServiceModel.Web.WebServiceHost> erweitert <xref:System.ServiceModel.ServiceHost>, um das Hosten eines Nicht-SOAP-Webdiensts zu vereinfachen. Werden von <xref:System.ServiceModel.Web.WebServiceHost> in der Dienstbeschreibung keine Endpunkte gefunden, wird automatisch ein Standardendpunkt an der Basisadresse des Diensts erstellt. Beim Erstellen eines standardmäßigen HTTP-Endpunkts deaktiviert <xref:System.ServiceModel.Web.WebServiceHost> auch die HTTP-Hilfeseite und die GET-Funktion der Web Services Description Language (WSDL), damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP-Endpunkt gerät. Von <xref:System.ServiceModel.Web.WebServiceHost> wird zudem gewährleistet, dass an alle Endpunkte, die <xref:System.ServiceModel.WebHttpBinding> verwenden, das erforderliche <xref:System.ServiceModel.Description.WebHttpBehavior> angehängt ist. Zuletzt konfiguriert <xref:System.ServiceModel.Web.WebServiceHost> automatisch die Bindung des Endpunkts für die Kooperation mit den entsprechenden Sicherheitseinstellungen für Internetinformationsdienste (IIS), wenn sie in einem sicheren virtuellen Verzeichnis verwendet wird.  
@@ -85,19 +85,19 @@ Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Commun
 ### <a name="extending-webhttpbehavior"></a>Erweitern von WebHttpBehavior  
  <xref:System.ServiceModel.Description.WebHttpBehavior> ist durch eine Reihe von virtuellen Methoden erweiterbar: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> und <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Entwickler können eine Klasse von <xref:System.ServiceModel.Description.WebHttpBehavior> ableiten und diese Methoden überschreiben, um das Standardverhalten anzupassen.  
   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> ist ein Beispiel für die Erweiterung von <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Windows Communication Foundation (WCF)-Endpunkte zum Empfangen von HTTP-Anforderungen von einem browserbasierten ASP.NET AJAX-Client aktiviert. Die [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) ist ein Beispiel zur Verwendung dieses Erweiterungspunkts.  
+ <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> ist ein Beispiel für die Erweiterung von <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>ermöglicht Windows Communication Foundation (WCF)-Endpunkten, HTTP-Anforderungen von einem browserbasierten ASP.NET AJAX-Client zu empfangen. Der [AJAX-Dienst mit HTTP Post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) ist ein Beispiel für die Verwendung dieses Erweiterungs Punkts.  
   
 > [!WARNING]
->  Wenn das <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> verwendet wird, wird <xref:System.UriTemplate> im <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut oder im <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut nicht unterstützt.  
+> Wenn das <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> verwendet wird, wird <xref:System.UriTemplate> im <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut oder im <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut nicht unterstützt.  
   
 ## <a name="webhttpdispatchoperationselector"></a>WebHttpDispatchOperationSelector  
  Die <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>-Klasse verwendet die <xref:System.UriTemplate>-Klasse und die <xref:System.UriTemplateTable>-Klasse, um Aufrufe an Dienstvorgänge zu senden.  
   
 ## <a name="compatibility"></a>Kompatibilität  
- Der WCF-HTTP-Webprogrammierungsmodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-* Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Weitere Informationen finden Sie unter [How to: Verfügbarmachen eines Vertrags für SOAP- und Webclients](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) verdeutlicht.  
+ Das WCF-Web-HTTP-Programmiermodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-*-Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Weitere Informationen finden Sie unter [How to: Verfügbar machen eines Vertrags für SOAP-und](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) Webclients für ein Beispiel.  
   
 ## <a name="security"></a>Sicherheit  
- Da die WCF-HTTP-Webprogrammierungsmodell nicht der WS - unterstützt * Protokolle, die einzige Möglichkeit zum Sichern eines Webdiensts basiert auf der WCF-HTTP-Webprogrammierungsmodell Verfügbarmachen des Diensts mithilfe von SSL ist. Weitere Informationen zum Einrichten von SSL in IIS 7.0 finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Da das WCF-Web-HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, besteht die einzige Möglichkeit zum Sichern eines Webdiensts, der auf dem WCF-Web-HTTP-Programmiermodell basiert, darin, den Dienst mithilfe von SSL Weitere Informationen zum Einrichten von SSL mit IIS 7,0 finden Sie unter [Implementieren von SSL in IIS](https://go.microsoft.com/fwlink/?LinkId=131613) .  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949207"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988659"
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
 Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>das. Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt zwischen .NET Framework-Objekten und XML in beide Richtungen. In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, <
  WCF enthält auch einen begleitenden Serialisierer, <xref:System.Runtime.Serialization.NetDataContractSerializer>den. Das <xref:System.Runtime.Serialization.NetDataContractSerializer> -Element ähnelt dem <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> und dem-Serialisierungstyp, da es auch .NET Framework Typnamen als Teil der serialisierten Daten ausgibt. Es wird verwendet, wenn die Endpunkte, die die Serialisierung und die Deserialisierung durchführen, die gleichen Datentypen verwenden. Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Runtime.Serialization.NetDataContractSerializer> sind von der gemeinsamen Basisklasse <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet.  
   
 > [!WARNING]
->  Der <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert Zeichenfolgen mit Steuerzeichen mit einem Hexadezimalwert kleiner als 20 als XML-Entitäten. Dies kann zu einem Problem mit einem nicht-WCF-Client führen, wenn solche Daten an einen WCF-Dienst gesendet werden.  
+> Der <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert Zeichenfolgen mit Steuerzeichen mit einem Hexadezimalwert kleiner als 20 als XML-Entitäten. Dies kann zu einem Problem mit einem nicht-WCF-Client führen, wenn solche Daten an einen WCF-Dienst gesendet werden.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Erstellen einer DataContractSerializer-Instanz  
  Das Erstellen einer <xref:System.Runtime.Serialization.DataContractSerializer> -Instanz ist ein wichtiger Schritt. Sie können nach der Erstellung dieser Instanz keine Einstellungen mehr ändern.  

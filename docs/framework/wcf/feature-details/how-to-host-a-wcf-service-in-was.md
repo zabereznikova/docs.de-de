@@ -2,22 +2,22 @@
 title: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 1ebce4f0182b68e0e3c10d3d04e07560130c0245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cdab0876b65c190cd5d46f82218eb9fbb8234298
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635293"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988198"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Vorgehensweise: Hosten eines WCF-Diensts in WAS
-Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows Process Activation Service (auch bekannt als WAS) gehostet, Windows Communication Foundation (WCF)-Dienst. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF verwendet die Listeneradapter-Schnittstelle, um aktivierungsanforderungen weiterzugeben, die über die von WCF, z. B. TCP, named Pipes und Message Queuing-unterstützten nicht-HTTP-Protokolle empfangen werden.  
+In diesem Thema werden die grundlegenden Schritte beschrieben, die zum Erstellen eines Windows-Prozess Aktivierungs Diensts (auch bekannt als was) Windows Communication Foundation gehostet werden müssen. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF kommuniziert mithilfe der Listeneradapter-Schnittstelle Aktivierungs Anforderungen, die über die von WCF unterstützten nicht-HTTP-Protokolle empfangen werden, wie z. b. TCP, Named Pipes und Message Queuing.  
   
- Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von WAS finden Sie unter [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Diese Hostingoption erfordert, dass die WAS-Aktivierungskomponenten korrekt installiert und konfiguriert wurden. Es muss jedoch keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Installieren und Konfigurieren von was finden [Sie unter Vorgehensweise: Installieren und konfigurieren Sie WCF-](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)Aktivierungs Komponenten.  
   
 > [!WARNING]
->  Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist. Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.  
+> Die WAS-Aktivierung wird nicht unterstützt, wenn die Anforderungsverarbeitungspipeline des Webservers auf den klassischen Modus festgelegt ist. Die Anforderungsverarbeitungspipeline des Webservers muss auf den integrierten Modus festgelegt sein, wenn die WAS-Aktivierung verwendet werden soll.  
   
- Wenn Sie ein WCF-Dienst in WAS gehostet wird, werden die standardbindungen auf die übliche Weise verwendet. Werden jedoch <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> verwendet, um einen WAS-gehosteten Dienst zu konfigurieren, muss eine Bedingung erfüllt sein. Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:  
+ Wenn ein WCF-Dienst in was gehostet wird, werden die Standard Bindungen auf die übliche Weise verwendet. Werden jedoch <xref:System.ServiceModel.NetTcpBinding> und <xref:System.ServiceModel.NetNamedPipeBinding> verwendet, um einen WAS-gehosteten Dienst zu konfigurieren, muss eine Bedingung erfüllt sein. Wenn verschiedene Endpunkte denselben Transport verwenden, müssen die Bindungseinstellungen für die folgenden sieben Eigenschaften übereinstimmen:  
   
 - ConnectionBufferSize  
   
@@ -35,7 +35,7 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
   
  Andernfalls bestimmt der zuerst initialisierte Endpunkt die Werte dieser Eigenschaften, und später hinzugefügte Endpunkte lösen eine <xref:System.ServiceModel.ServiceActivationException> aus, wenn ihre Einstellungen diesen Einstellungen nicht entsprechen.  
   
- Die Quellkopie dieses Beispiels, finden Sie unter [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Die Quell Kopie dieses Beispiels finden Sie unter [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>So erstellen Sie einen grundlegenden durch WAS gehosteten Dienst  
   
@@ -74,7 +74,7 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
   
 ### <a name="to-create-a-client-to-use-the-service"></a>So erstellen Sie einen Client, der den Dienst verwendet  
   
-1. Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile, um Code aus Dienstmetadaten zu generieren.  
+1. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in der Befehlszeile, um Code aus Dienst Metadaten zu generieren.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
@@ -88,7 +88,7 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&amp;#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
+4. Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   

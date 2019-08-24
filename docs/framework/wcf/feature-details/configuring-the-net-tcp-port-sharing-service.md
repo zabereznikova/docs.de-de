@@ -2,12 +2,12 @@
 title: Konfigurieren des Net.TCP-Portfreigabediensts
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949617"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988230"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurieren des Net.TCP-Portfreigabediensts
 Selbst gehostete Dienste, die den Net.TCP-Transport verwenden, können erweiterte Einstellungen festlegen, etwa `ListenBacklog` und `MaxPendingAccepts`, die das Verhalten des zugrunde liegenden, für die Netzwerkkommunikation verwendeten TCP-Sockets bestimmen. Diese Einstellungen werden auf Bindungsebene jedoch nur für jeden Socket wirksam, wenn die Transportbindung die standardmäßig aktivierte Anschlussfreigabe deaktiviert hat.  
@@ -59,7 +59,7 @@ Selbst gehostete Dienste, die den Net.TCP-Transport verwenden, können erweitert
 > Auf [!INCLUDE[wv](../../../../includes/wv-md.md)]-Systemen, auf denen die Benutzerkontensteuerung (User Account Control, UAC) aktiviert ist, benötigen lokale Benutzer erweiterte Berechtigungen, auch wenn ihr Konto Mitglied der Administratorgruppe ist. Damit diese Benutzer den Port Freigabe Dienst ohne erhöhte Rechte nutzen können, muss die SID des Benutzers (oder die SID einer Gruppe, in der der Benutzer Mitglied ist) explizit dem \<Abschnitt "allowaccounts >" der Datei "SMSvcHost. exe. config" hinzugefügt werden.  
   
 > [!WARNING]
->  In der Standarddatei SMSvcHost.exe.config wird eine benutzerdefinierte `etwProviderId` angeben, um zu verhindern, dass Konflikte zwischen der SMSvcHost.exe-Ablaufverfolgung und Dienstablaufverfolgungen auftreten.  
+> In der Standarddatei SMSvcHost.exe.config wird eine benutzerdefinierte `etwProviderId` angeben, um zu verhindern, dass Konflikte zwischen der SMSvcHost.exe-Ablaufverfolgung und Dienstablaufverfolgungen auftreten.  
   
 ## <a name="see-also"></a>Siehe auch
 

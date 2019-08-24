@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942780"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988326"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguriert den <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) und den <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam), wenn die Verbund Authentifizierung über das WS-Verbund Protokoll verwendet wird. Konfiguriert den <xref:System.Security.Claims.ClaimsAuthorizationManager> , wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Klasse oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> die-Klasse zum Bereitstellen der Anspruchs basierten Zugriffs Steuerung verwendet wird.  
@@ -74,7 +74,7 @@ Konfiguriert den <xref:System.IdentityModel.Services.WSFederationAuthenticationM
  Der folgende XML-Code `<federationConfiguration>` zeigt ein-Element, das Einstellungen für das wsfam angibt und angibt, dass der standardmäßige Cookie <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Handler (eine Instanz der-Klasse) von Sam verwendet wird.  
   
 > [!WARNING]
->  In diesem Beispiel ist weder der cookiehandler noch wsfam für die Verwendung von HTTPS erforderlich. Dies liegt daran, `requireHttps` dass das- `<wsFederation>` Attribut für das `requireSsl` -Element und `<cookieHandlerElement>` `false`das-Attribut auf dem-Element ist. Diese Einstellungen werden für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen können.  
+> In diesem Beispiel ist weder der cookiehandler noch wsfam für die Verwendung von HTTPS erforderlich. Dies liegt daran, `requireHttps` dass das- `<wsFederation>` Attribut für das `requireSsl` -Element und `<cookieHandlerElement>` `false`das-Attribut auf dem-Element ist. Diese Einstellungen werden für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen können.  
   
 ```xml  
 <system.identityModel.services>  

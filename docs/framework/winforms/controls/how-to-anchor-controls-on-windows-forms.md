@@ -12,51 +12,53 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: b48761bda2baad4f7d1e6db9b41d73d6d54bc081
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 94fa6fe90e5583a3bfecf376af59d53f6d8528af
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211275"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987495"
 ---
-# <a name="how-to-anchor-controls-on-windows-forms"></a>Vorgehensweise: Verankern von Steuerelementen in Windows Forms
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Vorgehensweise: Verankern von Steuerelementen auf Windows Forms
 
-Wenn Sie ein Formular entwerfen, das der Benutzer zur Laufzeit ändern kann, sollten die Steuerelemente im Formular ändern der Größe und ordnungsgemäß neu zu positionieren. Steuerelemente dynamisch mit dem Formular ändern möchten, können Sie die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft von Windows Forms-Steuerelementen. Die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft definiert eine Ankerposition, die für das Steuerelement. Wenn ein Steuerelement zu einem Formular verankert ist, und des Formulars geändert wird, behält das Steuerelement den Abstand zwischen dem Steuerelement und das Anchorpositionen. Angenommen, Sie haben eine <xref:System.Windows.Forms.TextBox> -Steuerelement, das auf der linken, rechten und unteren Rand des Formulars, verankert ist, wie des Formulars geändert wird, die <xref:System.Windows.Forms.TextBox> horizontal-Steuerelements geändert wird, sodass er die gleiche Distanz vom die Rechte und linke Seite des Formulars verwaltet. Darüber hinaus wird das Steuerelement vertikal positioniert, sodass am Speicherort immer den gleichen Abstand vom unteren Rand des Formulars ist. Wenn ein Steuerelement nicht verankert ist und die Größe des Formulars ist, wird die Position des Steuerelements relativ zu den Rändern des Formulars geändert.
+Wenn Sie ein Formular entwerfen, in dem der Benutzer zur Laufzeit die Größe ändern kann, sollten die Steuerelemente auf dem Formular die Größe ändern und die Position ordnungsgemäß ändern. Um die Größe der Steuerelemente dynamisch mit dem Formular zu ändern, <xref:System.Windows.Forms.Control.Anchor%2A> können Sie die-Eigenschaft von Windows Forms-Steuerelementen verwenden. Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft definiert eine Ankerposition für das-Steuerelement. Wenn ein Steuerelement in einem Formular verankert ist und die Größe des Formulars geändert wird, behält das Steuerelement den Abstand zwischen dem Steuerelement und den Anker Positionen. Wenn Sie z. b. ein <xref:System.Windows.Forms.TextBox> Steuerelement haben, das am linken, rechten und unteren Rand des Formulars verankert ist, während die Größe des Formulars geändert wird, <xref:System.Windows.Forms.TextBox> ändert sich das Steuerelement horizontal, sodass es die gleiche Entfernung von der rechten und linken Seite des Formulars erhält. Außerdem positioniert sich das Steuerelement selbst vertikal, sodass seine Position immer die gleiche Entfernung vom unteren Rand des Formulars ist. Wenn ein Steuerelement nicht verankert ist und die Größe des Formulars geändert wird, wird die Position des Steuer Elements relativ zu den Rändern des Formulars geändert.
 
-Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft interagiert mit der <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md).
+Die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft interagiert mit <xref:System.Windows.Forms.Control.AutoSize%2A> der-Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md).
 
-## <a name="anchor-a-control-on-a-form"></a>Verankern eines Steuerelements in einem Formular
+## <a name="anchor-a-control-on-a-form"></a>Verankern eines Steuer Elements in einem Formular
 
-1. Wählen Sie in Visual Studio das Steuerelement zu verankern.
+1. Wählen Sie in Visual Studio das Steuerelement aus, das Sie verankern möchten.
 
     > [!NOTE]
-    > Sie können mehrere Steuerelemente gleichzeitig durch Drücken der STRG-Taste, auf jedes Steuerelement, um ihn auszuwählen und dann folgen den Rest dieses Verfahrens verankern.
+    > Sie können mehrere Steuerelemente gleichzeitig verankern, indem Sie die STRG-Taste drücken, auf jedes Steuerelement klicken, um es auszuwählen, und dann die restlichen Schritte dieses Verfahrens ausführen.
 
-2. In der **Eigenschaften** Fenster, klicken Sie auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft.
+2. Klicken Sie im **Eigenschaften** Fenster auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaft.
 
-     Ein Editor wird mit einem Kreuz angezeigt.
+     Es wird ein Editor angezeigt, der eine Kreuz Darstellung anzeigt.
 
-3. Um einen Anker festzulegen, klicken Sie auf die oberen, linken, rechten oder unteren Teil der Cross.
+3. Um einen Anker festzulegen, klicken Sie auf den oberen, linken, rechten oder unteren Abschnitt des Kreuz-.
 
-     Steuerelemente sind oben verankert und wird standardmäßig links.
+     Steuerelemente werden standardmäßig oben und Links verankert.
 
-4. Um eine Seite des Steuerelements zu löschen, die verankert ist, klicken Sie auf diese Arm, der die kreuzfilterrichtung.
+4. Um eine Seite des verankerten Steuer Elements zu löschen, klicken Sie auf den Arm des Kreuz-.
 
-5. Schließen der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaften-Editor, klicken Sie auf die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaftennamen erneut.
+5. Klicken Sie erneut <xref:System.Windows.Forms.Control.Anchor%2A> auf den <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaften Namen, um den Eigenschaften-Editor zu schließen.
 
-Wenn das Formular zur Laufzeit angezeigt wird, wird die Größe des Steuerelements die gleiche Distanz vom Rand des Formulars positioniert bleiben. Der Abstand zwischen dem verankerten Rand bleibt unverändert immer, wie der Abstand definiert, wenn das Steuerelement im Windows Forms-Designer befindet.
+Wenn das Formular zur Laufzeit angezeigt wird, wird die Größe des Steuer Elements so geändert, dass es in der gleichen Entfernung vom Rand des Formulars positioniert bleibt. Der Abstand vom verankerten Rand bleibt immer identisch mit dem Abstand, der definiert wird, wenn das Steuerelement im Windows Forms-Designer positioniert ist.
 
 > [!NOTE]
-> Bestimmte Steuerelemente, z. B. die <xref:System.Windows.Forms.ComboBox> steuern, besteht ein Limit, deren Größe. Verankerung des Steuerelements am unteren Rand der Form oder den Container kann nicht erzwingen, dass das Steuerelement seine Höhe Grenzwert überschritten.
+> Bestimmte Steuerelemente, z. <xref:System.Windows.Forms.ComboBox> b. das-Steuerelement, haben eine Beschränkung auf Ihre Höhe. Wenn das Steuerelement am unteren Rand des Formulars oder Containers verankert wird, kann das Steuerelement das Höhen Limit nicht überschreiten.
 
-Geerbte Steuerelemente muss `Protected` verankert werden können. Um die Zugriffsebene eines Steuerelements zu ändern, legen Sie dessen `Modifiers` -Eigenschaft in der **Eigenschaften** Fenster.
+Geerbte Steuerelemente `Protected` müssen in der Lage sein, verankert zu werden. Um die Zugriffsebene eines Steuer Elements zu ändern, legen `Modifiers` Sie die zugehörige-Eigenschaft im **Eigenschaften** Fenster fest.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)
-- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)
+- [Vorgehensweise: Steuerelemente auf Windows Forms Andocken](how-to-dock-controls-on-windows-forms.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen auf Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen auf Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mit Auffüll Zeichen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)

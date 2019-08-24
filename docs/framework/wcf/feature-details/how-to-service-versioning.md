@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Dienstversionsverwaltung'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654540"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988709"
 ---
 # <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
   
 > [!WARNING]
->  Um eine Nachricht an eine bestimmte Dienstversion weiterzuleiten, muss der Routingdienst das Nachrichtziel anhand des Nachrichteninhalts ermitteln können. In der Methode unten veranschaulichten Methode gibt der Client die Version an, indem er Informationen in einen Nachrichtenheader einfügt. Es gibt Methoden für die Dienstversionsverwaltung, für es nicht erforderlich ist, dass Clients zusätzliche Daten übergeben. Eine Nachricht kann z. B. an die aktuelle Version oder die Version mit dem höchsten Kompatibilitätsgrad eines Diensts weitergeleitet werden, oder der Router kann einen Teil des SOAP-Standardumschlags verwenden.  
+> Um eine Nachricht an eine bestimmte Dienstversion weiterzuleiten, muss der Routingdienst das Nachrichtziel anhand des Nachrichteninhalts ermitteln können. In der Methode unten veranschaulichten Methode gibt der Client die Version an, indem er Informationen in einen Nachrichtenheader einfügt. Es gibt Methoden für die Dienstversionsverwaltung, für es nicht erforderlich ist, dass Clients zusätzliche Daten übergeben. Eine Nachricht kann z. B. an die aktuelle Version oder die Version mit dem höchsten Kompatibilitätsgrad eines Diensts weitergeleitet werden, oder der Router kann einen Teil des SOAP-Standardumschlags verwenden.  
   
  Beide Dienste machen die folgenden Vorgänge verfügbar:  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer", welche Version die Nachricht soll, um weitergeleitet werden zu erkennen. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "CalcVer" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "calcver" zu erkennen, um zu bestimmen, an welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "calcver" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Das Namespacepräfix s12 wird in der namespacetabelle standardmäßig definiert und steht für den Namespace `http://www.w3.org/2003/05/soap-envelope`.
+    > Das Namespace Präfix "S12" ist standardmäßig in der Namespace Tabelle definiert und stellt den `http://www.w3.org/2003/05/soap-envelope`Namespace dar.
   
-3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "CalcVer" mit dem Wert 1 enthält, wird sie an den RegularCalc-Dienst gesendet werden. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
+3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "calcver" mit dem Wert "1" enthält, wird Sie an den RegularCalc-Dienst gesendet. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht das zuordnen `filterTable1` mit den Dienstendpunkten:  
+4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht `filterTable1` die Zuordnung zu den Dienst Endpunkten:  
   
     ```xml  
     <behaviors>  
