@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039508"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015629"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einer Windows Forms-Instanz
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Vorgehensweise: Erstellen eines einfach gebundenen Steuer Elements in einem Windows Form
 
 Mit der *einfachen Bindung*können Sie in einem-Steuerelement ein einzelnes Datenelement, z. b. einen Spaltenwert aus einer Datasettabelle, anzeigen. Sie können eine beliebige Eigenschaft eines Steuer Elements an einen Datenwert binden.
 
-### <a name="to-simple-bind-a-control"></a>So binden Sie ein Steuerelement einfach
+## <a name="to-simple-bind-a-control"></a>So binden Sie ein Steuerelement einfach
 
 1. Stellen Sie die Verbindung zu einer Datenquelle her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle](../data/adonet/connecting-to-a-data-source.md).
 
-2. Wählen Sie im Formular das Steuerelement aus, und zeigen Sie das **Eigenschaften** Fenster an.
+2. Wählen Sie in Visual Studio das Steuerelement auf dem Formular aus, und zeigen Sie das **Eigenschaften** Fenster an.
 
 3. Erweitern Sie die Eigenschaft **(DataBindings)** .
 

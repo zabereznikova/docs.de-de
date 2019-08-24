@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964882"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015608"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
 Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierungs Einstellungen, die von WPF-Anwendungen verwendet werden.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen, die Text auf einem Anzeigegerät darstellen, verwenden ClearType-Funktionen, um ein verbessertes Leseverhalten bereitzustellen. ClearType ist eine von entwickelte Softwaretechnologie [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Weitere Informationen zu ClearType finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen, die Text auf einem Anzeigegerät darstellen, verwenden ClearType-Funktionen, um ein verbessertes Leseverhalten bereitzustellen. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Weitere Informationen zu ClearType finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  Text, der mit ClearType gerendert wird, kann bei Anzeige auf verschiedenen Anzeigegeräten erheblich anders erscheinen. Beispielsweise implementiert eine kleine Anzahl von Monitoren die Farbstreifen Elemente in der blauen, grünen und roten Reihenfolge anstelle der gängigeren roten, grünen und blauen Reihen [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]Folge ().  
   

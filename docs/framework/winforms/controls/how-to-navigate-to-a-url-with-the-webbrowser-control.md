@@ -12,35 +12,35 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c1255fa17d91daaa73001fea04f26e73dba0ae
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649220"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015825"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Vorgehensweise: Navigieren zu einem URL mit dem WebBrowser-Steuerelement
-Im folgenden Codebeispiel wird veranschaulicht, wie zum Navigieren der <xref:System.Windows.Forms.WebBrowser> Steuerelement an eine bestimmte URL.  
-  
- Um zu bestimmen, wann das neue Dokument vollständig geladen wurde, behandelt der <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Ereignis. Eine Demonstration dieses Ereignisses finden Sie unter [Vorgehensweise: Mit einem WebBrowser-Steuerelement Drucken](how-to-print-with-a-webbrowser-control.md).  
-  
-## <a name="example"></a>Beispiel  
-  
-```vb  
-Me.webBrowser1.Navigate("http://www.microsoft.com")  
-```  
-  
-```csharp  
-this.webBrowser1.Navigate("http://www.microsoft.com");  
-```  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
-  
-- Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.  
-  
-- Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
-  
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie <xref:System.Windows.Forms.WebBrowser> das-Steuerelement zu einer bestimmten URL navigieren.
+
+ Behandeln Sie das <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> -Ereignis, um zu bestimmen, wann das neue Dokument vollständig geladen wurde. Eine Demonstration dieses Ereignisses finden [Sie unter Gewusst wie: Drucken mit einem Webbrowser-](how-to-print-with-a-webbrowser-control.md)Steuerelement.
+
+## <a name="example"></a>Beispiel
+
+```vb
+Me.webBrowser1.Navigate("http://www.microsoft.com")
+```
+
+```csharp
+this.webBrowser1.Navigate("http://www.microsoft.com");
+```
+
+## <a name="compiling-the-code"></a>Kompilieren des Codes
+ Für dieses Beispiel benötigen Sie Folgendes:
+
+- Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.
+
+- Verweise auf die Assemblys `System` und `System.Windows.Forms`.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.WebBrowser>
@@ -48,4 +48,4 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
 - [WebBrowser-Steuerelement](webbrowser-control-windows-forms.md)
-- [Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
+- [Vorgehensweise: Drucken mit einem Webbrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)

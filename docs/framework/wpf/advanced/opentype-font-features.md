@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933684"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016141"
 ---
 # <a name="opentype-font-features"></a>Features für OpenType-Schriftarten
 
@@ -22,7 +22,7 @@ Dieses Thema enthält eine Übersicht über einige der wichtigsten Features der 
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType-Schriftartformat  
- Das OpenType-Schriftart Format ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftart Formats und fügt Unterstützung für PostScript-Schriftart Daten hinzu. Das OpenType-Schriftformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe Corporation entwickelt. OpenType-Schriftarten und die Betriebssystem Dienste, die OpenType-Schriftarten unterstützen, bieten Benutzern eine einfache Möglichkeit zum Installieren und verwenden [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] von Schriftarten, unabhängig davon, ob die Schriftarten umrissen oder CFF-Gliederungen enthalten.  
+ Das OpenType-Schriftart Format ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftart Formats und fügt Unterstützung für PostScript-Schriftart Daten hinzu. Das OpenType-Schriftformat wurde von Microsoft und Adobe Corporation gemeinsam entwickelt. OpenType-Schriftarten und die Betriebssystem Dienste, die OpenType-Schriftarten unterstützen, bieten Benutzern eine einfache Möglichkeit zum Installieren und verwenden [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] von Schriftarten, unabhängig davon, ob die Schriftarten umrissen oder CFF-Gliederungen enthalten.  
   
  Das OpenType-Schriftformat behandelt die folgenden Entwickler Herausforderungen:  
   

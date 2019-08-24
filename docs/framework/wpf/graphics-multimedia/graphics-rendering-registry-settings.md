@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960229"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016085"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -70,7 +70,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Zeichenfolge|  
   
- Im November 2004 wurde von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] eine neue Version der Richtlinien für Treibertests herausgegeben. Die nach diesem Datum erstellten Treiber bieten eine höhere Stabilität. In der Standardeinstellung nutzt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Hardwarebeschleunigungspipeline für diese Treiber und greift bei vor diesem Datum veröffentlichten XPDM-Treibern auf Softwarerendering zurück.  
+ Im November 2004 veröffentlichte Microsoft eine neue Version der Richtlinien für Treiber Tests. die nach diesem Datum geschriebenen Treiber bieten eine bessere Stabilität. In der Standardeinstellung nutzt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die Hardwarebeschleunigungspipeline für diese Treiber und greift bei vor diesem Datum veröffentlichten XPDM-Treibern auf Softwarerendering zurück.  
   
  Die **Einstellung für das erforderliche Videotreiberdatum** ermöglicht es Ihnen, einen alternativen minimalen Datumswert für XPDM-Treiber anzugeben. Ein Datum vor November 2004 sollten Sie nur dann angeben, wenn Sie sicher sind, dass Ihr Videotreiber stabil genug für die Unterstützung von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist.  
   

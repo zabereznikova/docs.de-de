@@ -7,23 +7,23 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7b0ee8efa62175e2ced2a810ca6dd76e8adc103b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 08cb07ceebf08b3096415f9b7370e2d955152cb6
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039892"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015936"
 ---
-# <a name="how-to-author-composite-controls"></a>Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen
+# <a name="how-to-author-composite-controls"></a>Vorgehensweise: Zusammengesetzte Steuerelemente verfassen
 
 Zusammengesetzte Steuerelemente können auf viele Arten eingesetzt werden. Sie können sie als Teil eines Desktopanwendungsprojekts von Windows erstellen und nur für Formulare im Projekt verwenden. Oder Sie können sie in einem Windows-Steuerelementbibliothek-Projekt erstellen, das Projekt in eine Assembly kompilieren und die Steuerelemente in anderen Projekten verwenden. Sie können sogar von Ihnen erben und visuelle Vererbung verwenden, um Sie schnell für spezielle Zwecke anzupassen.
 
-> [!NOTE]
-> Wenn Sie ein zusammengesetztes Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)) lesen.
-
 ## <a name="to-author-a-composite-control"></a>So erstellen Sie ein zusammengesetztes Steuerelement
 
-1. Erstellen Sie in Visual Studio ein neues **Windows-Anwendungs** Projekt `DemoControlHost`mit dem Namen.
+1. Erstellen Sie in Visual Studio ein neues **Windows-Anwendungs** Projekt, und nennen Sie es **DemoControlHost**.
 
 2. Klicken Sie im Menü **Projekt** auf **Benutzersteuerelement hinzufügen**.
 
@@ -79,10 +79,8 @@ Zusammengesetzte Steuerelemente können auf viele Arten eingesetzt werden. Sie k
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [Empfehlungen zum Typ von Steuerelementen](control-type-recommendations.md)
 - [Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)
 - [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)

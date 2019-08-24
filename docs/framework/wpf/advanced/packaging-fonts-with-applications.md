@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7d69f299b0b7638d6f8052e6aa0e77fac39c8e4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960338"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016098"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ihrer Anwendung.  
   
 > [!NOTE]
-> Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, unterscheiden sich von Hersteller zu Hersteller, aber in den meisten Lizenzen [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , einschließlich derjenigen, die die Schriftarten in Bezug auf die Schriftarten und Windows abdecken, dürfen die Schriftarten nicht in Anwendungen eingebettet werden oder anderweitig neu verteilt. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
+> Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, unterscheiden sich von Hersteller zu Hersteller, aber in den meisten Lizenzen, einschließlich derjenigen, die die Schriftarten von Microsoft für Anwendungen und Windows abdecken, ist es nicht zulässig, dass die Schriftarten in Anwendungen eingebettet oder anderweitig neu verteilt werden. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Einführung in das Verpacken von Schriftarten  

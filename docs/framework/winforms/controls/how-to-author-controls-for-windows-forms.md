@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039872"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015919"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Vorgehensweise: Erstellen von Steuerelementen für Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Vorgehensweise: Steuerelemente für Windows Forms erstellen
 
 Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und der Anwendung dar. Ein Steuerelement kann Daten bereitstellen oder verarbeiten, Benutzereingaben akzeptieren, auf Ereignisse reagieren oder eine beliebige Anzahl von anderen Funktionen ausführen, die eine Verbindung zwischen dem Benutzer und der Anwendung herstellen. Da es sich bei einem Steuerelement im Wesentlichen um eine Komponente mit grafischer Schnittstelle handelt, kann sie den gleichen Zwecken dienen wie eine Komponente, sowie Benutzerinteraktion bereitstellen. Steuerelemente werden erstellt, um bestimmte Zwecke zu erfüllen, und das Erstellen von Steuerelementen ist einfach eine weitere Aufgabe als Programmierer. Vor diesem Hintergrund bieten die folgenden Schritte einen Überblick über das Erstellen von Steuerelementen. Links bieten zusätzliche Informationen zu den einzelnen Schritten.
-
-> [!NOTE]
-> Wenn Sie ein benutzerdefiniertes Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)) lesen.
 
 ## <a name="to-author-a-control"></a>So erstellen Sie ein Steuerelement
 
@@ -42,7 +42,7 @@ Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und d
 
 6. Wenn das Steuerelement von <xref:System.Windows.Forms.UserControl>erbt, können Sie das Laufzeitverhalten testen, indem Sie das Steuerelement Projekt entwickeln und im **UserControl-Test Container**ausführen. Weitere Informationen finden Sie unter [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl-](how-to-test-the-run-time-behavior-of-a-usercontrol.md)Steuer Elements.
 
-7. Sie können Ihr Steuerelement auch testen und debuggen, indem Sie ein neues Projekt erstellen, z.B. eine Windows-Anwendung, und es in einem Container platzieren. Dieser Prozess wird als Teil der [exemplarischen Vorgehensweise veranschaulicht: Erstellen eines zusammengesetzten Steuer Elements](walkthrough-authoring-a-composite-control-with-visual-basic.md)mit Visual Basic.
+7. Sie können Ihr Steuerelement auch testen und debuggen, indem Sie ein neues Projekt erstellen, z.B. eine Windows-Anwendung, und es in einem Container platzieren. Dieser Prozess wird als Teil der [exemplarischen Vorgehensweise veranschaulicht: Erstellen eines zusammengesetzten](walkthrough-authoring-a-composite-control-with-visual-csharp.md)Steuer Elements.
 
 8. Fügen Sie jedes Mal, wenn Sie die Funktionen hinzufügen, auch Funktionen zum Testprojekt hinzu, um die neue Funktionalität auszuführen.
 
@@ -52,8 +52,6 @@ Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und d
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
 - [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
 - [Vorgehensweise: Von vorhandenen Windows Forms Steuerelementen erben](how-to-inherit-from-existing-windows-forms-controls.md)

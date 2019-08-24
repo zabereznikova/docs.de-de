@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: b4ae0d03c0207413d826e62de1d157f938b4d775
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545245"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016127"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
 In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Zu diesen Features gehören verbesserte Qualität und Leistung von Text Rendering, Unterstützung von OpenType-typografiken, erweiterter internationaler Text, verbesserte Schriftart Unterstützung und neue Text-Anwendungs Programmierschnittstellen (APIs).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Verbesserte Textqualität und -leistung  
- Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mithilfe von Microsoft ClearType gerendert, wodurch die Übersichtlichkeit und Lesbarkeit von Text verbessert wird. ClearType ist eine von entwickelte Softwaretechnologie [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType verwendet das Subpixel-Rendering, das es ermöglicht, Text mit einer größeren Genauigkeit als echte Form anzuzeigen, indem Zeichen an einem Bruchteil eines Pixels ausgerichtet werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in ist das Antialiasing in y-Richtung, bei dem die Ober-und Unterstriche von flachen Kurven in Textzeichen glättet werden. Weitere Informationen zu ClearType-Features finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
+ Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mithilfe von Microsoft ClearType gerendert, wodurch die Übersichtlichkeit und Lesbarkeit von Text verbessert wird. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType verwendet das Subpixel-Rendering, das es ermöglicht, Text mit einer größeren Genauigkeit als echte Form anzuzeigen, indem Zeichen an einem Bruchteil eines Pixels ausgerichtet werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von ClearType [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in ist das Antialiasing in y-Richtung, bei dem die Ober-und Unterstriche von flachen Kurven in Textzeichen glättet werden. Weitere Informationen zu ClearType-Features finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  ![Text mit ClearType-Y-Richtung-Antialiasing](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Text mit ClearType-Antialiasing auf der y-Achse  
@@ -29,7 +29,7 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Umfangreiche Typografie  
- Das OpenType-Schriftformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftart Formats. Das OpenType-Schriftformat wurde von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe gemeinsam entwickelt und bietet eine umfangreiche Palette an erweiterten typografischen Features. Das <xref:System.Windows.Documents.Typography> -Objekt macht viele erweiterte Funktionen von OpenType-Schriftarten verfügbar, wie z. b. Stilvarianten und Swashes. Der Windows SDK bietet eine Reihe von OpenType-Beispiel Schriftarten, die mit umfangreichen Funktionen wie den Schriftarten "Pericles" und "Pescadero" entworfen wurden. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
+ Das OpenType-Schriftformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftart Formats. Das OpenType-Schriftformat wurde von Microsoft und Adobe gemeinsam entwickelt und bietet eine umfangreiche Palette an erweiterten typografischen Features. Das <xref:System.Windows.Documents.Typography> -Objekt macht viele erweiterte Funktionen von OpenType-Schriftarten verfügbar, wie z. b. Stilvarianten und Swashes. Der Windows SDK bietet eine Reihe von OpenType-Beispiel Schriftarten, die mit umfangreichen Funktionen wie den Schriftarten "Pericles" und "Pescadero" entworfen wurden. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
   
  Die Schriftart "Pericles OpenType" enthält zusätzliche Symbole, die eine stilistische Alternative zum Standardsatz von Symbolen bereitstellen. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
   

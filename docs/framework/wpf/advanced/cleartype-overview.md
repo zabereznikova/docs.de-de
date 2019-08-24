@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964928"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015641"
 ---
 # <a name="cleartype-overview"></a>Übersicht über ClearType
 Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Technologie, die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]in der enthalten ist.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
- ClearType ist eine von entwickelte Softwaretechnologie [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird.  ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Vor ClearType war der kleinste Detailgrad, der von einem Computer angezeigt werden konnte, ein einzelnes Pixel, aber mit ClearType, der auf einem LCD-Monitor ausgeführt wird, können wir jetzt Funktionen von Text anzeigen, die kleiner als ein Bruchteil eines Pixels in der Breite sind. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert.  
+ ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird.  ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Vor ClearType war der kleinste Detailgrad, der von einem Computer angezeigt werden konnte, ein einzelnes Pixel, aber mit ClearType, der auf einem LCD-Monitor ausgeführt wird, können wir jetzt Funktionen von Text anzeigen, die kleiner als ein Bruchteil eines Pixels in der Breite sind. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert.  
   
  Der in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügbare ClearType ist die neueste Generation von ClearType, die über mehrere Verbesserungen gegenüber der Version in Microsoft Windows Graphics Device Interface (GDI) verfügt.  
   

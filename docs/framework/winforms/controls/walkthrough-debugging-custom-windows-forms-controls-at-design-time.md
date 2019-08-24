@@ -15,62 +15,49 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882459"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015699"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms Steuerelementen zur Entwurfszeit
 
-Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden Sie es erforderlich, um das Verhalten während der Entwurfszeit zu debuggen. Dies ist insbesondere dann, wenn Sie einen benutzerdefinierten Designer für das benutzerdefinierte Steuerelement erstellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Windows Forms-Steuerelement, das Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md).
+Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, ist es häufig erforderlich, das Entwurfszeit Verhalten zu debuggen. Dies trifft vor allem dann zu, wenn Sie einen benutzerdefinierten Designer für Ihr benutzerdefiniertes Steuerelement erstellen. Weitere Informationen finden [Sie unter Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen](creating-a-wf-control-design-time-features.md)nutzt.
 
-Sie können Ihre benutzerdefinierten Steuerelemente mithilfe von Visual Studio debuggen, ebenso wie alle anderen .NET Framework-Klassen Sie debuggen. Der Unterschied besteht darin, dass Sie eine separate Instanz von Visual Studio debuggen, die das benutzerdefinierte Steuerelement Code ausgeführt wird
-
-In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
-
-- Erstellen ein Windows Forms-Projekt, um Ihr benutzerdefiniertes Steuerelement zu hosten.
-
-- Erstellen ein Steuerelementbibliothek-Projekt
-
-- Hinzufügen einer Eigenschaft für Ihr benutzerdefiniertes Steuerelement
-
-- Das benutzerdefinierte Steuerelement hinzufügen dem Formular host
-
-- Einrichten des Projekts für das Debuggen zur Entwurfszeit
-
-- Debuggen von benutzerdefinierten Steuerelements zur Entwurfszeit
-
-Wenn Sie fertig sind, müssen Sie einen Überblick über die Aufgaben, die für das Debuggen eines benutzerdefinierten Steuerelements das Entwurfszeitverhalten erforderlich sind.
+Sie können Ihre benutzerdefinierten Steuerelemente mithilfe von Visual Studio debuggen, genauso wie Sie alle anderen .NET Framework Klassen debuggen. Der Unterschied besteht darin, dass Sie eine separate Instanz von Visual Studio debuggen, in der der Code des benutzerdefinierten Steuer Elements ausgeführt wird.
 
 ## <a name="create-the-project"></a>Erstellen eines Projekts
 
-Der erste Schritt ist das Anwendungsprojekt zu erstellen. Sie können dieses Projekt zum Erstellen der Anwendung, die das benutzerdefinierte Steuerelement hostet.
+Im ersten Schritt erstellen Sie das Anwendungsprojekt. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
 
-Erstellen Sie in Visual Studio ein Windows-Anwendungsprojekt mit dem Namen "DebuggingExample" (**Datei** > **neu** > **Projekt**  >  **Visual C#**  oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
+Erstellen Sie in Visual Studio ein Windows-Anwendungsprojekt, und nennen Sie es **DebuggingExample**.
 
-## <a name="create-the-control-library-project"></a>Erstellen Sie die Steuerelementbibliothek-Projekt
+## <a name="create-the-control-library-project"></a>Erstellen des Steuerelement Bibliothek-Projekts
 
-1. Hinzufügen einer **Windows-Steuerelementbibliothek** Projekt der Projektmappe.
+1. Fügen Sie der Projekt Mappe ein **Windows-Steuerelement Bibliothek** -Projekt hinzu.
 
-2. Fügen Sie einen neuen **UserControl** dem DebugControlLibrary-Projekt. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen neuer Projektelemente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Weisen Sie der neuen Quelldatei einen Basisnamen "DebugControl".
+2. Fügen Sie dem Projekt "Debug Controller" ein neues **UserControl** -Element hinzu. Nennen Sie es "Debug **Control**".
 
-3. Mithilfe der **Projektmappen-Explorer**, löschen Sie das standardmäßige Steuerelement des Projekts durch Löschen der Codedatei mit dem Basisnamen der "`UserControl1`". Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+3. Löschen Sie in **Projektmappen-Explorer**das Standard Steuerelement des Projekts, indem Sie die Codedatei mit dem Basisnamen UserControl1 löschen.
 
 4. Erstellen Sie die Projektmappe.
 
 ## <a name="checkpoint"></a>Checkpoint
 
-Können Sie das benutzerdefinierte Steuerelement in an diesem Punkt werden die **Toolbox**.
+An diesem Punkt können Sie Ihr benutzerdefiniertes Steuerelement in der **Toolbox**sehen.
 
-Um den Status zu überprüfen, suchen Sie die neue Registerkarte **DebugControlLibrary Komponenten** und klicken Sie auf, um es auszuwählen. Wenn sie geöffnet wird, sehen Sie das Steuerelement als aufgeführt **DebugControl** mit dem Standardsymbol daneben.
+Um den Fortschritt zu überprüfen, suchen Sie die neue Registerkarte **DebugControlLibrary Components** , und klicken Sie, um Sie auszuwählen. Beim Öffnen wird das Steuerelement als "Debug **Control** " mit dem Standard Symbol neben diesem angezeigt.
 
-## <a name="add-a-property-to-your-custom-control"></a>Fügen Sie eine Eigenschaft für Ihr benutzerdefiniertes Steuerelement
+## <a name="add-a-property-to-your-custom-control"></a>Hinzufügen einer Eigenschaft zu einem benutzerdefinierten Steuerelement
 
-Um zu veranschaulichen, dass Ihr Code des benutzerdefinierten Steuerelements zur Entwurfszeit ausgeführt wird, Sie fügen eine Eigenschaft hinzu und legen Sie einen Haltepunkt im Code, der die Eigenschaft implementiert.
+Um zu veranschaulichen, dass der Code des benutzerdefinierten Steuer Elements zur Entwurfszeit ausgeführt wird, fügen Sie eine Eigenschaft hinzu, und legen Sie einen Breakpoint im Code fest, der die Eigenschaft implementiert.
 
-1. Open **DebugControl** in die **Code-Editor**. Fügen Sie den folgenden Code zur Klassendefinition hinzu:
+1. Öffnen Sie **DebugControl** im **Code-Editor**. Fügen Sie der Klassendefinition folgenden Code hinzu:
 
     ```vb
     Private demoStringValue As String = Nothing
@@ -106,64 +93,62 @@ Um zu veranschaulichen, dass Ihr Code des benutzerdefinierten Steuerelements zur
 
 2. Erstellen Sie die Projektmappe.
 
-## <a name="add-your-custom-control-to-the-host-form"></a>Das benutzerdefinierte Steuerelement dem Hostformular hinzufügen
+## <a name="add-your-custom-control-to-the-host-form"></a>Hinzufügen des benutzerdefinierten Steuer Elements zum Host Formular
 
-Um das Verhalten während der Entwurfszeit des benutzerdefinierten Steuerelements zu debuggen, geben Sie eine Instanz der Klasse des benutzerdefinierten Steuerelements in einem Hostformular an.
+Um das Entwurfszeit Verhalten des benutzerdefinierten Steuer Elements zu debuggen, platzieren Sie eine Instanz der benutzerdefinierten Steuerelement Klasse auf einem Host Formular.
 
-1. Öffnen Sie im Projekt "DebuggingExample" Form1 im der **Windows Forms-Designer**.
+1. Öffnen Sie im Projekt "DebuggingExample" Form1 im **Windows Forms-Designer**.
 
-2. In der **Toolbox**öffnen die **DebugControlLibrary Komponenten** Registerkarte, und ziehen Sie eine **DebugControl** Instanz auf das Formular.
+2. Öffnen Sie in der **Toolbox**die Registerkarte **DebugControlLibrary Components** , und ziehen Sie eine **DebugControl** -Instanz auf das Formular.
 
-3. Suchen der `DemoString` benutzerdefinierte Eigenschaft in der **Eigenschaften** Fenster. Beachten Sie, dass Sie den Wert ändern können, wie Sie eine andere Eigenschaft. Beachten Sie außerdem, dass bei der `DemoString` Eigenschaft ausgewählt ist, wird der Eigenschaftenwert Beschreibungszeichenfolge angezeigt wird, am unteren Rand der **Eigenschaften** Fenster.
+3. Suchen Sie `DemoString` die benutzerdefinierte Eigenschaft im Fenster **Eigenschaften** . Beachten Sie, dass Sie den Wert wie jede andere Eigenschaft ändern können. Beachten Sie auch, dass `DemoString` die Beschreibungs Zeichenfolge der Eigenschaft im unteren Bereich des Fensters **Eigenschaften** angezeigt wird, wenn die Eigenschaft ausgewählt ist.
 
-## <a name="set-up-the-project-for-design-time-debugging"></a>Richten Sie das Projekt zum Debuggen zur Entwurfszeit
+## <a name="set-up-the-project-for-design-time-debugging"></a>Einrichten des Projekts für das Debuggen zur Entwurfszeit
 
-Um Entwurfszeitverhalten für das benutzerdefinierte Steuerelement zu debuggen, Debuggen Sie eine separate Instanz von Visual Studio, die das benutzerdefinierte Steuerelement Code ausgeführt wird.
+Um das Entwurfszeit Verhalten des benutzerdefinierten Steuer Elements zu debuggen, Debuggen Sie eine separate Instanz von Visual Studio, die den Code des benutzerdefinierten Steuer Elements ausgeführt.
 
-1. Mit der rechten Maustaste auf die **DebugControlLibrary** -Projekt in der **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.
+1. Klicken Sie mit **Projektmappen-Explorer** der rechten Maustaste auf das Projekt Projekt Debug **Controller** , und wählen Sie **Eigenschaften**aus.
 
-2. In der **DebugControlLibrary** Eigenschaftenblatt, wählen die **Debuggen** Registerkarte.
+2. Wählen Sie im Eigenschaften Blatt **DebugControlLibrary** die Register Karte Debuggen aus.
 
-     In der **Startaktion** wählen Sie im Abschnitt **externes Programm starten**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei ist **devenv.exe**, und wenn Sie am Standardspeicherort installiert haben, lautet %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+     Wählen Sie im Abschnitt **Start Aktion** die Option **externes Programm starten**aus. Wenn Sie eine separate Instanz von Visual Studio debuggen, klicken Sie auf die Schalt![Fläche mit den Auslassungs Punkten (...) im Eigenschaftenfenster von Visual](./media/visual-studio-ellipsis-button.png)Studio), um nach der Visual Studio-IDE zu suchen. Der Name der ausführbaren Datei lautet " **devenv. exe".** Wenn Sie am Standard Speicherort installiert haben, lautet der Pfad *% Program Files (x86)% \ Microsoft Visual\\studio\2019\<Edition > \Common7\IDE*.
 
 3. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
 
-4. Mit der rechten Maustaste die **DebugControlLibrary** Projekt, und wählen **als Startprojekt festlegen** So aktivieren Sie diese Konfiguration für Remotedebugging.
+4. Klicken Sie mit der rechten Maustaste auf das Projekt **DebugControlLibrary** , und wählen Sie **als Startprojekt festlegen** , um diese Debugkonfiguration zu aktivieren.
 
-## <a name="debug-your-custom-control-at-design-time"></a>Debuggen von benutzerdefinierten Steuerelements zur Entwurfszeit
+## <a name="debug-your-custom-control-at-design-time"></a>Debuggen des benutzerdefinierten Steuer Elements zur Entwurfszeit
 
-Jetzt können Sie Ihr benutzerdefinierte Steuerelement zu debuggen, während der Ausführung im Entwurfsmodus befindet. Wenn Sie die Debugsitzung starten, wird eine neue Instanz von Visual Studio erstellt werden, und Sie verwenden es zum Laden der Projektmappe "DebuggingExample". Wenn öffnen Sie Form1 in der **Formulardesigner**, eine Instanz des benutzerdefinierten Steuerelements erstellt werden, und die Ausführung beginnt.
+Nun können Sie das benutzerdefinierte Steuerelement Debuggen, während es im Entwurfs Modus ausgeführt wird. Wenn Sie die Debugsitzung starten, wird eine neue Instanz von Visual Studio erstellt, und Sie verwenden Sie zum Laden der Projekt Mappe "DebuggingExample". Wenn Sie Form1 im Forms- **Designer**öffnen, wird eine Instanz des benutzerdefinierten Steuer Elements erstellt, und die Ausführung wird gestartet.
 
-1. Öffnen der **DebugControl** Quelldatei in die **Code-Editor** und platzieren Sie einen Haltepunkt auf der `Set` Accessor die `DemoString` Eigenschaft.
+1. Öffnen Sie die **DebugControl** -Quelldatei im **Code-Editor** , und platzieren Sie einen `Set` Haltepunkt für den `DemoString` -Accessor der-Eigenschaft.
 
-2. Drücken Sie F5, um die Debugsitzung zu starten. Beachten Sie, dass eine neue Instanz von Visual Studio erstellt wird. Sie können zwischen den Instanzen auf zwei Arten unterschieden:
+2. Drücken Sie **F5** , um die Debugsitzung zu starten. Es wird eine neue Instanz von Visual Studio erstellt. Es gibt zwei Möglichkeiten, um zwischen den Instanzen zu unterscheiden:
 
-    - Die Debuginstanz enthält das Wort **ausführen** auf dessen eigener Titelleiste
+    - In der debugginginstanz wird das Wort in der Titelleiste **ausgeführt** .
 
-    - Die Debuginstanz enthält die **starten** Schaltfläche seine **Debuggen** Symbolleiste deaktiviert
+    - Die debugginginstanz hat die Schaltfläche **Start** auf der debugsymbolleiste
 
-     Der Haltepunkt wird in der Debuginstanz festgelegt.
+   Der Breakpoint wird in der debugginginstanz festgelegt.
 
-3. Öffnen Sie in der neuen Instanz von Visual Studio die Projektmappe "DebuggingExample". Finden Sie die Projektmappe durch Auswahl **zuletzt geöffnete Projekte** aus der **Datei** Menü. Die Projektmappendatei "DebuggingExample.sln" wird als die zuletzt Datei verwendete aufgeführt.
+3. Öffnen Sie in der neuen Instanz von Visual Studio die Projekt Mappe "DebuggingExample". Sie können die Lösung problemlos finden, indem Sie im Menü **Datei** die Option **zuletzt verwendete Projekte** auswählen. Die Projektmappendatei "DebuggingExample. sln" wird als zuletzt verwendete Datei aufgeführt.
 
-4. Öffnen Sie Form1 in der **Formulardesigner** , und wählen Sie die **DebugControl** Steuerelement.
+4. Öffnen Sie Form1 im **Forms-Designer** , und wählen Sie das Steuerelement Debug **Control** aus.
 
-5. Ändern Sie den Wert der `DemoString` -Eigenschaft. Beachten Sie, dass Sie die Änderung zu übernehmen, die Debuginstanz von Visual Studio aktiviert und die Ausführung am Breakpoint hält. Können Sie Schritt für Schritt durch den Eigenschaftenaccessor ebenso wie Ihre anderen Code würde.
+5. Ändern Sie den Wert der `DemoString` -Eigenschaft. Wenn Sie die Änderung ausführen, erhält die debugginginstanz von Visual Studio den Fokus, und die Ausführung wird am Haltepunkt angehalten. Sie können den Eigenschafts Accessor genau so wie jeden anderen Code in Einzelschritten durchlaufen.
 
-6. Wenn Sie mit der Debugsitzung abgeschlossen haben, können Sie beenden, schließen die gehostete Instanz von Visual Studio oder durch Klicken auf die **Debuggen beenden** Schaltfläche in der Debuginstanz.
+6. Zum Beenden des Debuggens beenden Sie die gehostete Instanz von Visual Studio, oder wählen Sie in der debugginstanz die Schaltfläche **Debugging beenden**
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, dass Sie Ihre benutzerdefinierten Steuerelemente zur Entwurfszeit Debuggen können, gibt es viele Möglichkeiten zum Erweitern des Steuerelements-Interaktion mit Visual Studio-IDE.
+Nachdem Sie Ihre benutzerdefinierten Steuerelemente zur Entwurfszeit debuggen können, gibt es viele Möglichkeiten, die Interaktion Ihres Steuer Elements mit der Visual Studio-IDE zu erweitern.
 
-- Können Sie die <xref:System.ComponentModel.Component.DesignMode%2A> Eigenschaft der <xref:System.ComponentModel.Component> Klasse zum Schreiben von Code, der nur zur Entwurfszeit ausgeführt wird. Ausführliche Informationen finden Sie unter <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Sie können die <xref:System.ComponentModel.Component.DesignMode%2A> -Eigenschaft <xref:System.ComponentModel.Component> der-Klasse verwenden, um Code zu schreiben, der nur zur Entwurfszeit ausgeführt wird. Ausführliche Informationen finden Sie unter <xref:System.ComponentModel.Component.DesignMode%2A>.
 
-- Es gibt mehrere Attribute können Sie auf die Eigenschaften des Steuerelements zum Bearbeiten des benutzerdefinierten Steuerelements Interaktion mit dem Designer anwenden. Sie finden diese Attribute in der <xref:System.ComponentModel?displayProperty=nameWithType> Namespace.
+- Es gibt mehrere Attribute, die Sie auf die Eigenschaften des Steuer Elements anwenden können, um die Interaktion des benutzerdefinierten Steuer Elements mit dem Designer zu bearbeiten. Sie finden diese Attribute im <xref:System.ComponentModel?displayProperty=nameWithType> -Namespace.
 
-- Sie können einen benutzerdefinierten Designer für das benutzerdefinierte Steuerelement schreiben. Dies bietet Ihnen vollständige Kontrolle über die entwurfsumgebung, die mithilfe der erweiterbaren Designer-Infrastruktur, die von Visual Studio verfügbar gemacht werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Windows Forms-Steuerelement, das Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md).
+- Sie können einen benutzerdefinierten Designer für Ihr benutzerdefiniertes Steuerelement schreiben. Dadurch erhalten Sie die komplette Kontrolle über die Entwurfs Möglichkeiten mithilfe der erweiterbaren Designer Infrastruktur, die von Visual Studio verfügbar gemacht wird. Weitere Informationen finden [Sie unter Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen](creating-a-wf-control-design-time-features.md)nutzt.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md)
-- [Vorgehensweise: Während der Entwurfszeit von Access Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [Vorgehensweise: Zugriff während der Entwurfszeit-Unterstützung in Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen nutzt](creating-a-wf-control-design-time-features.md)

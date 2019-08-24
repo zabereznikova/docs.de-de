@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966589"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015870"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen
+
 Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten, können Sie ein Steuerelement erstellen, dass durch Vererbung von einem vorhandenen Steuerelement abgeleitet ist. Beim Erben von einem vorhandenen Steuerelement erben Sie die gesamte Funktionalität und die visuellen Eigenschaften dieses Steuerelements. Wenn Sie z. b. ein Steuerelement erstellen, das <xref:System.Windows.Forms.Button>von geerbt wurde, würde das neue Steuerelement Aussehen und genauso <xref:System.Windows.Forms.Button> Vorgehen wie ein Standard Steuerelement. Sie können die Funktionalität Ihres neuen Steuerelements durch Implementieren von benutzerdefinierten Methoden und Eigenschaften erweitern oder ändern. In einigen Steuerelementen können Sie auch die visuelle Darstellung des geerbten Steuer Elements ändern, indem <xref:System.Windows.Forms.Control.OnPaint%2A> Sie die zugehörige-Methode überschreiben.
 
 ## <a name="to-create-an-inherited-control"></a>So erstellen Sie ein geerbtes Steuerelement
 
-1. Erstellen Sie ein neues **Windows Forms-Anwendungsprojekt**.
+1. Erstellen Sie in Visual Studio ein neues **Windows Forms-Anwendungs** Projekt.
 
 2. Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.
 
@@ -30,9 +34,10 @@ Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten
 
      Ein neues benutzerdefiniertes Steuerelement wird zu Ihrem Projekt hinzugefügt.
 
-4. Wenn Sie Visual Basic verwenden, klicken Sie am Anfang des **Projektmappen-Explorers** auf **Alle Dateien anzeigen**. Erweitern Sie „CustomControl1.vb“ und öffnen Sie „CustomControl1.Designer.vb“ im Code-Editor.
+4. Wenn Sie Folgendes verwenden:
 
-5. Wenn Sie C# verwenden, öffnen Sie „CustomControl1.cs“ im Code-Editor.
+   - Klicken Sie Visual Basic oben in **Projektmappen-Explorer**auf **alle Dateien anzeigen**. Erweitern Sie „CustomControl1.vb“ und öffnen Sie „CustomControl1.Designer.vb“ im Code-Editor.
+   - C#Öffnen Sie CustomControl1.cs im Code-Editor.
 
 6. Suchen Sie nach der Klassen Deklaration, die <xref:System.Windows.Forms.Control>von erbt.
 
@@ -86,6 +91,5 @@ Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten
 - [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
 - [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
 - [Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)
-- [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

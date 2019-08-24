@@ -8,22 +8,25 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: b553dd6f6c5e760a671dea6400586d7074d49f5f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: cce9baf1523391e281593428b633c401103b42b5
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211325"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015973"
 ---
-# <a name="design-time-errors-in-the-windows-forms-designer"></a>Entwurfszeitfehler im Windows Forms-Designer
+# <a name="design-time-errors-in-the-windows-forms-designer"></a>Entwurfs Zeitfehler im Windows Forms-Designer
 
-In diesem Thema wird erläutert, die Bedeutung und die Verwendung der Entwurfszeit-Fehlerliste, die in Visual Studio angezeigt werden soll, wenn der Windows Forms-Designer nicht geladen. Wenn diese Fehlerliste angezeigt wird, sollten Sie sie nicht als Fehler im Designer, sondern als Hilfe beim Beheben von Fehlern in Ihrem Code interpretieren.
+In diesem Thema werden die Bedeutung und die Verwendung der Entwurfszeit-Fehlerliste erläutert, die in Visual Studio angezeigt wird, wenn das Windows Forms-Designer nicht geladen werden kann. Wenn diese Fehlerliste angezeigt wird, sollten Sie sie nicht als Fehler im Designer, sondern als Hilfe beim Beheben von Fehlern in Ihrem Code interpretieren.
 
 Ein grundlegendes Verständnis dieser Fehlerliste hilft Ihnen beim Debuggen Ihrer Anwendungen, indem detaillierte Informationen zu den Fehlern und mögliche Lösungen vorgeschlagen werden.
 
-## <a name="the-design-time-error-list-interface"></a>Die Schnittstelle für Entwurfszeitfehlerliste
+## <a name="the-design-time-error-list-interface"></a>Die Schnittstelle zur Entwurfszeit-Fehlerliste
 
-Wenn der Windows Forms-Designer nicht geladen werden kann, wird im Designer eine Fehlerliste angezeigt. Die Fehler werden in Kategorien gruppiert. Wenn Sie beispielsweise über vier Instanzen von nicht deklarierten Variablen verfügen, werden diese in der gleichen Fehlerkategorie gruppiert. Jede Fehlerkategorie enthält eine kurze Beschreibung, die den Fehler zusammenfasst.
+Wenn das Windows Forms-Designer nicht geladen werden kann, wird im Designer eine Fehlerliste angezeigt. Die Fehler werden in Kategorien gruppiert. Wenn Sie beispielsweise über vier Instanzen von nicht deklarierten Variablen verfügen, werden diese in der gleichen Fehlerkategorie gruppiert. Jede Fehlerkategorie enthält eine kurze Beschreibung, die den Fehler zusammenfasst.
 
 Sie können eine Fehlerkategorie erweitern oder reduzieren, indem Sie auf die Überschrift der Fehlerkategorie klicken oder indem Sie auf das Chevron zum Erweitern/Reduzieren klicken. Wenn Sie eine Fehlerkategorie erweitern, wird folgende zusätzliche Hilfe angezeigt:
 
@@ -35,24 +38,20 @@ Sie können eine Fehlerkategorie erweitern oder reduzieren, indem Sie auf die Ü
 
 ### <a name="instances-of-this-error"></a>Instanzen dieses Fehlers
 
-In der zusätzlichen Hilfe werden alle Instanzen des Fehlers im aktuellen Projekt aufgeführt. Viele Fehler enthalten eine genaue Position im folgenden Format: *[Projektname]* *[Formularname]* Zeile:*[Zeilennummer]* Spalte:*[Spaltennummer]*. Über den Link **Gehe zu Code** gelangen Sie zu der Position im Code, an der der Fehler auftritt.
+In der zusätzlichen Hilfe werden alle Instanzen des Fehlers im aktuellen Projekt aufgeführt. Viele Fehler enthalten eine genaue Position im folgenden Format: *[Projektname]* *[Formularname]* Zeile: *[Zeilennummer]* Spalte: *[Spaltennummer]* . Über den Link **Gehe zu Code** gelangen Sie zu der Position im Code, an der der Fehler auftritt.
 
 Wenn dem Fehler eine Aufrufliste zugeordnet ist, können Sie zur näheren Erläuterung des Fehlers auf den Link **Aufrufliste anzeigen** klicken, um die Aufrufliste anzuzeigen. Durch Überprüfen des Stapels können Sie wertvolle Debuginformationen erhalten. Sie können beispielsweise die Funktionen nachverfolgen, die vor Auftreten des Fehlers aufgerufen wurden. Die Aufrufliste ist auswählbar, sodass sie kopiert und gespeichert werden kann.
 
 > [!NOTE]
 > In Visual Basic wird in der Entwurfszeit-Fehlerliste nicht mehr als ein Fehler angezeigt, es können jedoch mehrere Instanzen desselben Fehlers angezeigt werden. In Visual C++ weisen die Fehler keine Verknüpfungen mit GoTo-Codes/Zeilennummern auf.
 
-### <a name="help-with-this-error"></a>Hilfe zu diesem Fehler
-
-Wenn der Fehler einen Link zu einem MSDN-Hilfethema enthält, umfasst die zusätzliche Hilfe einen Link zum Hilfethema. Wenn Sie auf den Link klicken, wird das zugehörige Hilfethema in Visual Studio angezeigt.
-
 ### <a name="forum-posts-about-this-error"></a>Forumbeiträge zu diesem Fehler
 
-Die zusätzliche Hilfe umfasst einen Link zu MSDN-Forenbeiträgen zu dem Fehler. Die Foren werden basierend auf der Zeichenfolge der Fehlermeldung durchsucht. Sie können auch die folgenden Foren durchsuchen:
+Die zusätzliche Hilfe enthält einen Link zu Forumsbeiträgen im Zusammenhang mit dem Fehler. Die Foren werden basierend auf der Zeichenfolge der Fehlermeldung durchsucht. Sie können auch versuchen, die Suche in den folgenden Foren durchführen:
 
-- [Forum von Windows Forms-Designer](https://go.microsoft.com/fwlink/?LinkId=203524)
+- [Windows Forms-Designer Forum](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)
 
-- [Windows Forms-Foren](https://go.microsoft.com/fwlink/?LinkId=203523)
+- [Windows Forms Forum](https://social.msdn.microsoft.com/Forums/windows/home?category=windowsforms)
 
 ### <a name="ignore-and-continue"></a>Ignorieren und fortfahren
 
@@ -60,7 +59,7 @@ Sie können die Fehlerbedingung ignorieren und mit dem Laden des Designers fortf
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Problembehandlung bei der Entwurfszeitentwicklung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [Problembehandlung bei der Entwurfszeit Entwicklung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](troubleshooting-control-and-component-authoring.md)
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
 - [Fehlermeldungen im Windows Forms-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
