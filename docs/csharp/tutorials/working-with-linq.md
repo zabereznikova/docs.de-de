@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609306"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587181"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 In der Standardbibliothek ist jedoch keine Mischmethode vorhanden, Sie müssen sie also selbst schreiben. Die Mischmethode, die Sie erstellen, veranschaulicht verschiedene Techniken, die Sie mit LINQ-basierten Programmen verwenden, sodass jeder Teil dieses Prozesses in Schritten erläutert wird.
 
-Um Funktionalität für Ihre Interaktion mit den <xref:System.Collections.Generic.IEnumerable%601>-Formen, die Sie von einigen LINQ-Abfragen erhalten, hinzuzufügen, müssen Sie einige besondere Arten von Methoden schreiben, die als [Erweiterungsmethoden](../../csharp/programming-guide/classes-and-structs/extension-methods.md) bezeichnet werden. Eine Erweiterungsmethode ist im Wesentlichen eine *statische Methode* für einen speziellen Zweck, die einem bereits vorhandenen Typ Funktionalität hinzufügt, ohne diesen ursprünglichen Typ ändern zu müssen.
+Um Funktionalität für Ihre Interaktion mit den <xref:System.Collections.Generic.IEnumerable%601>-Formen, die Sie von einigen LINQ-Abfragen erhalten, hinzuzufügen, müssen Sie einige besondere Arten von Methoden schreiben, die als [Erweiterungsmethoden](../programming-guide/classes-and-structs/extension-methods.md) bezeichnet werden. Eine Erweiterungsmethode ist im Wesentlichen eine *statische Methode* für einen speziellen Zweck, die einem bereits vorhandenen Typ Funktionalität hinzufügt, ohne diesen ursprünglichen Typ ändern zu müssen.
 
 Fügen Sie für Ihre Erweiterungsmethoden eine neue *statische* Klassendatei namens `Extensions.cs` Ihrem Programm hinzu, und beginnen Sie dann, die erste Erweiterungsmethode zu erstellen:
 

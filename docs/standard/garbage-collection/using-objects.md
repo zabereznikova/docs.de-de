@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597795"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666480"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Verwenden von Objekten, die IDisposable implementieren
 
@@ -63,5 +63,5 @@ Sie können dieses grundlegende Muster beibehalten, wenn Sie einen `try/finally`
 ## <a name="see-also"></a>Siehe auch
 
 - [Bereinigen von nicht verwalteten Ressourcen](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using-Anweisung (C#-Referenz)](~/docs/csharp/language-reference/keywords/using-statement.md)
-- [Using-Anweisung (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [using-Anweisung (C#-Referenz)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using-Anweisung (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

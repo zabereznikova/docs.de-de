@@ -2,12 +2,12 @@
 title: Partitionieren von Daten (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: b857c8c6e6b56a7263e6725a747e98ccfe4ff4fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832462"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591589"
 ---
 # <a name="partitioning-data-c"></a>Partitionieren von Daten (C#)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
@@ -20,7 +20,7 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
   
 ## <a name="operators"></a>Operatoren  
   
-|Name des Operators|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Name des Operators|BESCHREIBUNG|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|Überspringt Elemente bis zu einer angegebenen Position in einer Sequenz|Nicht zutreffend.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|Überspringt Elemente, die auf einer Prädikatfunktion basieren, bis ein Element die Bedingung nicht erfüllt|Nicht zutreffend.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
@@ -30,4 +30,4 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)

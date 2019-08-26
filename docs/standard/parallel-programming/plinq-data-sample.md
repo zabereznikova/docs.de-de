@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946458"
 ---
 # <a name="plinq-data-sample"></a>PLINQ-Datenbeispiel
 Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die sie in Sammlungen von „Customers“, „Products“, „Orders“ und „Order Details“ im Arbeitsspeicher umwandeln. Zum weiteren Experimentieren mit PLINQ können Sie Codebeispiele aus bestimmten anderen Themen in den Code dieses Themas einfügen und ihn von der `Main`-Methode aus aufrufen. Sie können diese Daten auch mit Ihren eigenen PLINQ-Abfragen verwenden.  
@@ -23,7 +23,7 @@ Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die 
  Die Daten stellen eine Teilmenge der Northwind-Datenbank dar. Fünfzig (50) Kundendatensätze sind enthalten, aber nicht alle Felder. Eine Teilmenge der Zeilen aus den „Orders“ und entsprechende Order_Detail-Daten für jeden Kunden sind enthalten. Alle „Products“ sind enthalten.  
   
 > [!NOTE]
->  Das Dataset ist nicht groß genug ist, um zu veranschaulichen, dass PLINQ für Abfragen, die nur grundlegende `where`- und `select`-Klauseln enthalten, schneller als LINQ to Objects ist. Um die Geschwindigkeitssteigerung bei kleinen Datasets wie diesem zu beobachten, verwenden Sie Abfragen, die rechenintensive Vorgänge für jedes Element im Dataset enthalten.  
+> Das Dataset ist nicht groß genug ist, um zu veranschaulichen, dass PLINQ für Abfragen, die nur grundlegende `where`- und `select`-Klauseln enthalten, schneller als LINQ to Objects ist. Um die Geschwindigkeitssteigerung bei kleinen Datasets wie diesem zu beobachten, verwenden Sie Abfragen, die rechenintensive Vorgänge für jedes Element im Dataset enthalten.  
   
 ### <a name="to-set-up-this-sample"></a>So richten Sie dieses Beispiel ein  
   

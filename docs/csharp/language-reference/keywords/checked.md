@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533130"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605915"
 ---
 # <a name="checked-c-reference"></a>checked (C#-Referenz)
 
@@ -29,7 +29,7 @@ Die Überlaufüberprüfung kann durch Compileroptionen, Umgebungskonfiguration o
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-Das [unchecked](../../../csharp/language-reference/keywords/unchecked.md)-Schlüsselwort kann verwendet werden, um die Überlaufüberprüfung zu verhindern.
+Das [unchecked](./unchecked.md)-Schlüsselwort kann verwendet werden, um die Überlaufüberprüfung zu verhindern.
 
 ## <a name="example"></a>Beispiel
 
@@ -43,8 +43,8 @@ Dieses Beispiel zeigt, wie mit `checked` die Überlaufüberprüfung zur Laufzeit
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [AKtiviert und nicht aktiviert](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](./index.md)
+- [AKtiviert und nicht aktiviert](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

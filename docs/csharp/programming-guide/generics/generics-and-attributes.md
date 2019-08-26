@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 000ce5a72cede9d1f23b0efb7ccf8638090a9032
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 99a24a7069145dfad5ce6c9c91f2a8653eb9a224
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979587"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589639"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Generics und Attribute (C#-Programmierhandbuch)
-Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen. Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../../../csharp/programming-guide/concepts/attributes/index.md).  
+Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen. Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../concepts/attributes/index.md).  
   
  Benutzerdefinierte Attribute dürfen nur auf offene generische Typen (generische Typen, für die keine Typargumente bereitgestellt werden) und auf geschlossene konstruierte generische Typen (generische Typen, die Argumente für alle Typparameter bereitstellen) verweisen.  
   
@@ -42,10 +42,10 @@ Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie 
   
  [!code-csharp[csProgGuideGenerics#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#53)]  
   
- Um zur Laufzeit Informationen zu einem generischen Typ oder Typparameter abzurufen, können Sie die Methoden von <xref:System.Reflection> verwenden. Weitere Informationen finden Sie unter [Generics und Reflektion](../../../csharp/programming-guide/generics/generics-and-reflection.md).  
+ Um zur Laufzeit Informationen zu einem generischen Typ oder Typparameter abzurufen, können Sie die Methoden von <xref:System.Reflection> verwenden. Weitere Informationen finden Sie unter [Generics und Reflektion](./generics-and-reflection.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Generics](../../../csharp/programming-guide/generics/index.md)
-- [Attribute](../../../../docs/standard/attributes/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Generics](./index.md)
+- [Attribute](../../../standard/attributes/index.md)

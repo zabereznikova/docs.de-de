@@ -1,5 +1,5 @@
 ---
-title: Entfernen von XML-Daten mit XPathNavigator
+title: Entfernen von XML-Daten mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674140"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909684"
 ---
-# <a name="remove-xml-data-using-xpathnavigator"></a>Entfernen von XML-Daten mit XPathNavigator
+# <a name="remove-xml-data-using-xpathnavigator"></a>Entfernen von XML-Daten mit "XPathNavigator"
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, mit denen Knoten und Werte aus einem XML-Dokument entfernt werden. Diese Methoden können nur dann verwendet werden, wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt bearbeitet werden kann, d. h. seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss `true` sein.  
   
  <xref:System.Xml.XPath.XPathNavigator>-Objekte, die ein XML-Dokument bearbeiten können, werden von der <xref:System.Xml.XmlDocument.CreateNavigator%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse erstellt. <xref:System.Xml.XPath.XPathNavigator>-Objekte, die von der <xref:System.Xml.XPath.XPathDocument>-Klasse erstellt werden, sind schreibgeschützt. Der Versuch, die Bearbeitungsmethoden eines <xref:System.Xml.XPath.XPathNavigator>-Objekts anzuwenden, das von einem <xref:System.Xml.XPath.XPathDocument>-Objekt erstellt wurde, führt zu einer <xref:System.NotSupportedException>.  
@@ -30,10 +30,10 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methode
   
  Nachdem ein Knoten mithilfe der <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A>-Methode gelöscht wurde, kann vom Stamm eines <xref:System.Xml.XmlDocument>-Objekts aus nicht mehr darauf zugegriffen werden. Nachdem der Knoten gelöscht wurde, wird der <xref:System.Xml.XPath.XPathNavigator> auf dem übergeordneten Knoten des gelöschten Knotens positioniert.  
   
- Der Löschvorgang hat keine Auswirkungen auf die Position der <xref:System.Xml.XPath.XPathNavigator>-Objekte, die sich auf dem gelöschten Knoten befinden. Diese <xref:System.Xml.XPath.XPathNavigator>-Objekte sind insofern gültig, als sie innerhalb der gelöschten Teilstruktur verschoben werden können. Sie können jedoch nicht mit einer der regulären Knotensatz-Navigationsmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse in die Hauptknotenstruktur verschoben werden.  
+ Der Löschvorgang hat keine Auswirkungen auf die Position der <xref:System.Xml.XPath.XPathNavigator>-Objekte, die sich auf dem gelöschten Knoten befinden. Diese <xref:System.Xml.XPath.XPathNavigator>-Objekte sind insofern gültig, als sie innerhalb der gelöschten Unterstruktur verschoben werden können. Sie können jedoch nicht mit einer der regulären Knotensatz-Navigationsmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse in die Hauptknotenstruktur verschoben werden.  
   
 > [!NOTE]
->  Mithilfe der <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse können diese <xref:System.Xml.XPath.XPathNavigator>-Objekte zurück in die entsprechende Hauptknotenstruktur verschoben werden bzw. aus dieser in die gelöschte Teilstruktur verschoben werden.  
+> Mithilfe der <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse können diese <xref:System.Xml.XPath.XPathNavigator>-Objekte zurück in die entsprechende Hauptknotenstruktur verschoben werden bzw. aus dieser in die gelöschte Unterstruktur verschoben werden.  
   
  Im folgenden Beispiel wird das `price`-Element des ersten `book`-Elements der Datei `contosoBooks.xml` mithilfe der <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A>-Methode gelöscht. Die Position des <xref:System.Xml.XPath.XPathNavigator>-Objekts, nachdem das `price`-Element im übergeordneten `book`-Element gelöscht wurde.  
   

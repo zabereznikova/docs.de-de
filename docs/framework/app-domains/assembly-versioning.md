@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921661"
 ---
 # <a name="assembly-versioning"></a>Assemblyversionen
 Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
   
 > [!NOTE]
->  Versionen werden nur bei Assemblys mit starken Namen erstellt.  
+> Versionen werden nur bei Assemblys mit starken Namen erstellt.  
   
  Zur Auflösung einer Assemblybindungsanforderung werden von der Laufzeit mehrere Schritte ausgeführt:  
   
@@ -65,7 +65,7 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
  Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformationen an eine Assembly anfügt und ausschließlich Informationszwecken dient. Die Informationen werden nicht zur Laufzeit verwendet. Die textbasierte Informationsversion entspricht dem Marketingtext des Produkts, der Verpackung oder dem Produktnamen und wird nicht zur Laufzeit verwendet. Eine Informationsversion könnte z. B. wie folgt lauten: "Common Language Runtime Version 1.0" oder "NET Control SP 2". Diese Angabe wird in Microsoft Windows im Eigenschaftendialogfeld der Datei auf der Registerkarte Version als Eintrag "Produktversion" angezeigt.  
   
 > [!NOTE]
->  Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält. Sie können diese Warnung ignorieren.  
+> Obwohl Sie einen beliebigen Text eingeben können, wird beim Kompilieren eine Warnung angezeigt, wenn die Zeichenfolge nicht das für die Versionsnummer der Assembly verwendete Format aufweist oder das Format zwar korrekt ist, die Zeichenfolge jedoch Platzhalterzeichen enthält. Sie können diese Warnung ignorieren.  
   
  Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   

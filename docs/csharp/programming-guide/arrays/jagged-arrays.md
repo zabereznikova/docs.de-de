@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200675"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597329"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Verzweigte Arrays (C#-Programmierhandbuch)
 
@@ -45,7 +45,7 @@ Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die E
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- Es ist möglich, verzweigte und mehrdimensionale Arrays zu mischen. Das folgende Beispiel zeigt die Deklaration und Initialisierung eines eindimensionalen verzweigten Arrays, das drei zweidimensionale Arrayelemente unterschiedlicher Größe enthält. Weitere Informationen zu zweidimensionalen Arrays finden Sie unter [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).  
+ Es ist möglich, verzweigte und mehrdimensionale Arrays zu mischen. Das folgende Beispiel zeigt die Deklaration und Initialisierung eines eindimensionalen verzweigten Arrays, das drei zweidimensionale Arrayelemente unterschiedlicher Größe enthält. Weitere Informationen zu zweidimensionalen Arrays finden Sie unter [Mehrdimensionale Arrays](./multidimensional-arrays.md).  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
@@ -68,7 +68,7 @@ Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die E
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Array>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Arrays](../../../csharp/programming-guide/arrays/index.md)
-- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Arrays](./index.md)
+- [Eindimensionale Arrays](./single-dimensional-arrays.md)
+- [Mehrdimensionale Arrays](./multidimensional-arrays.md)

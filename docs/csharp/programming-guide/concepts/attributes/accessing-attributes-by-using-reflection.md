@@ -2,12 +2,12 @@
 title: Zugriff auf Attribute mit Reflektion (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660410"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595502"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Zugriff auf Attribute mit Reflektion (C#)
 Die Tatsache, dass Sie benutzerdefinierte Attribute definieren und diese in Ihren Quellcode platzieren können, hätte keinen Nutzen, wenn Sie diese Informationen nicht abrufen und darauf reagieren könnten. Mithilfe der Reflektion können Sie die Informationen abrufen, die mit benutzerdefinierten Attributen definiert wurden. Die Schlüsselmethode ist `GetCustomAttributes`, die ein Array von Objekten zurück gibt, die die Laufzeitäquivalente der Quellcodeattribute sind. Diese Methode hat mehrere überladene Versionen. Weitere Informationen finden Sie unter <xref:System.Attribute>.  
@@ -117,8 +117,8 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+- [C#-Programmierhandbuch](../../index.md)
 - [Abrufen von Informationen aus Attributen](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Reflektion (C#)](../reflection.md)
+- [Attribute (C#)](./index.md)
+- [Erstellen benutzerdefinierter Attribute (C#)](./creating-custom-attributes.md)

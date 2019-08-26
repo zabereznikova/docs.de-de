@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307255"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952512"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  
   
 > [!NOTE]
->  Eigenschaftswerte für Ihren Dienst werden aus der Dienstklasse in die Klasse des Installers kopiert. Wenn Sie die Eigenschaftswerte in der Dienstklasse aktualisieren, werden sie nicht automatisch im Installer aktualisiert.  
+> Eigenschaftswerte für Ihren Dienst werden aus der Dienstklasse in die Klasse des Installers kopiert. Wenn Sie die Eigenschaftswerte in der Dienstklasse aktualisieren, werden sie nicht automatisch im Installer aktualisiert.  
   
  Wenn Sie einen Installer zu Ihrem Projekt hinzufügen, wird in dem Projekt eine neue Klasse erstellt (sie trägt standardmäßig den Namen `ProjectInstaller`), und in dieser Klasse werden Instanzen der entsprechenden Installationskomponenten erstellt. Diese Klasse fungiert als Mittelpunkt für sämtliche Installationspunkte, die für Ihr Projekt erforderlich sind. Wenn Sie beispielsweise einen zweiten Dienst zu Ihrer App hinzufügen und auf den Link „Installer hinzufügen“ klicken, wird keine zweite Installerklasse erstellt. Stattdessen wird die erforderliche zusätzliche Installationskomponente für den zweiten Dienst zur vorhandenen Klasse hinzugefügt.  
   
  Für eine ordnungsgemäße Installation Ihrer Dienste ist innerhalb der Installer keine besondere Codierung erforderlich. Sie müssen jedoch möglicherweise gelegentlich die Inhalte der Installer ändern, wenn Sie besondere Funktionen zum Installer hinzufügen müssen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Vorgehensweise beim Hinzufügen von Installern zu Ihrer Dienstanwendung  
   
@@ -58,7 +58,7 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
 8. Führen Sie für jeden weiteren Dienst in Ihrem Projekt die Schritte 1 bis 7 durch.  
   
     > [!NOTE]
-    >  Sie müssen für jeden weiteren Dienst in Ihrem Projekt eine zusätzliche <xref:System.ServiceProcess.ServiceInstaller>-Komponente für die Klasse `ProjectInstaller` des Projekts hinzufügen. Die in Schritt 3 hinzugefügte Komponente <xref:System.ServiceProcess.ServiceProcessInstaller> kann mit allen Dienstinstallern im Projekt ausgeführt werden.  
+    > Sie müssen für jeden weiteren Dienst in Ihrem Projekt eine zusätzliche <xref:System.ServiceProcess.ServiceInstaller>-Komponente für die Klasse `ProjectInstaller` des Projekts hinzufügen. Die in Schritt 3 hinzugefügte Komponente <xref:System.ServiceProcess.ServiceProcessInstaller> kann mit allen Dienstinstallern im Projekt ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7484e67202c430df6ec2d4bea9cff5a850720ff5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593615"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921563"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
@@ -24,7 +24,7 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
  Wenn Sie die Bypass-Funktion deaktivieren, wird der starke Name nur auf Korrektheit geprüft. Er wird nicht auf <xref:System.Security.Permissions.StrongNameIdentityPermission> geprüft. Wenn Sie einen bestimmten starken Namen überprüfen möchten, müssen Sie diesen Test separat durchführen.  
   
 > [!IMPORTANT]
->  Ob Sie die Möglichkeit haben, die Validierung eines starken Namens zu erzwingen, hängt vom Registrierungsschlüssel ab, wie in folgender Prozedur beschrieben. Wenn eine Anwendung unter einem Konto ausgeführt wird, dass keine ACL-Berechtigung (Access Control List) hat, um auf diesen Registrierungsschlüssel zuzugreifen, ist diese Einstellung unwirksam. Sie müssen sicherstellen, dass die ACL-Rechte für diesen Schlüssel so konfiguriert sind, dass er für alle Assemblys gelesen werden kann.  
+> Ob Sie die Möglichkeit haben, die Validierung eines starken Namens zu erzwingen, hängt vom Registrierungsschlüssel ab, wie in folgender Prozedur beschrieben. Wenn eine Anwendung unter einem Konto ausgeführt wird, dass keine ACL-Berechtigung (Access Control List) hat, um auf diesen Registrierungsschlüssel zuzugreifen, ist diese Einstellung unwirksam. Sie müssen sicherstellen, dass die ACL-Rechte für diesen Schlüssel so konfiguriert sind, dass er für alle Assemblys gelesen werden kann.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>So können Sie die Strong-Name-Bypass-Funktion für alle Anwendungen deaktivieren  
   
@@ -51,7 +51,7 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
  Sie können die Bypass-Funktion für die Anwendung wieder aktivieren, indem Sie die Einstellung der Konfigurationsdatei entfernen oder das Attribut auf „TRUE“ festlegen.  
   
 > [!NOTE]
->  Sie können die Überprüfung von starken Namen für eine Anwendung nur dann aktivieren oder deaktivieren, wenn die Bypass-Funktion auf dem Computer aktiviert ist. Wenn die Bypass-Funktion auf dem Computer deaktiviert wurde, werden starke Namen für alle Anwendungen überprüft, und Sie können die Überprüfung nicht für eine einzelne Anwendung umgehen.  
+> Sie können die Überprüfung von starken Namen für eine Anwendung nur dann aktivieren oder deaktivieren, wenn die Bypass-Funktion auf dem Computer aktiviert ist. Wenn die Bypass-Funktion auf dem Computer deaktiviert wurde, werden starke Namen für alle Anwendungen überprüft, und Sie können die Überprüfung nicht für eine einzelne Anwendung umgehen.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950299"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)  
+ [Grundlagen der Anwendung](../standard/application-essentials.md)  
  Bietet Informationen über grundlegende App-Entwicklungsaufgaben, wie z. B. Programmieren mit App-Domänen und Assemblys, Verwenden von Attributen, Formatieren und Analysieren von Basistypen, Verwenden von Auflistungen, Behandeln von Ereignissen und Ausnahmen, Verwenden von Dateien und Datenstreams und Verwenden von Generics.  
   
  [Daten und Modellierung](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  [Windows-Dienstanwendungen](../../docs/framework/windows-services/index.md)  
  Erläutert die Verwendung von Visual Studio und .NET Framework zum Erstellen einer App, die als Dienst installiert wird, und zum Starten, Beenden und Steuern ihres Verhaltens.  
   
- [Parallel Processing, Concurrency, and Async Programming in .NET (Parallelverarbeitung, Parallelität und asynchrone Programmierung in .NET)](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Parallel Processing, Concurrency, and Async Programming in .NET (Parallelverarbeitung, Parallelität und asynchrone Programmierung in .NET)](../standard/parallel-processing-and-concurrency.md)  
  Enthält Informationen über verwaltetes Threading, parallele Programmierung und Entwurfsmuster für die asynchrone Programmierung.  
   
  [Netzwerkprogrammierung in .NET Framework](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  [Kompilieren von Apps mit .NET Native](../../docs/framework/net-native/index.md)  
  Erläutert, wie Sie die .NET Native-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. .NET Native kompiliert Apps zu nativem Code, die in verwaltetem Code (C#) für .NET Framework geschrieben wurden.  
   
- [Sicherheit](../../docs/standard/security/index.md)  
+ [Sicherheit](../standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste in .NET Framework, die die sichere Appentwicklung erleichtern.  
   
  [Debuggen, Ablaufverfolgung und Profilerstellung](../../docs/framework/debug-trace-profile/index.md)  
  Erläutert, wie .NET Framework-Apps und die Appumgebung getestet und optimiert und wie Profile davon erstellt werden. Dieser Abschnitt enthält Informationen für Administratoren und Entwickler.  
   
- [Entwickeln für mehrere Plattformen](../../docs/standard/cross-platform/index.md)  
+ [Entwickeln für mehrere Plattformen](../standard/cross-platform/index.md)  
  Bietet Informationen zur Verwendung von .NET Framework zum Erstellen von Assemblys, die über mehrere Plattformen auf mehreren Geräten wie Telefone, Desktopcomputer und über das Internet freigegeben werden können.  
   
  [Bereitstellung](../../docs/framework/deployment/index.md)  

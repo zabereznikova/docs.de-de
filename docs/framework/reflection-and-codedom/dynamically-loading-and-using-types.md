@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469675"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915477"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamisches Laden und Verwenden von Typen
 Reflektion stellt Infrastruktur bereit, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. Visual Basic ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>Benutzerdefinierte Bindung  
  Abgesehen davon, dass Reflektion implizit von Compilern für das späte Binden verwendet wird, kann sie auch explizit im Code für das späte Binden angewandt werden.  
   
- Die [Common Language Runtime](../../../docs/standard/clr.md) unterstützt verschiedene Programmiersprachen, wobei sich die Bindungsregeln dieser Sprachen unterscheiden. Beim frühen Binden können Codegeneratoren den Bindungsvorgang vollständig steuern. Beim späten Binden durch Reflektion muss der Vorgang durch eine benutzerdefinierte Bindung gesteuert werden. Die <xref:System.Reflection.Binder>-Klasse stellt die benutzerdefinierte Steuerung der Auswahl und des Aufrufs von Membern bereit.  
+ Die [Common Language Runtime](../../standard/clr.md) unterstützt verschiedene Programmiersprachen, wobei sich die Bindungsregeln dieser Sprachen unterscheiden. Beim frühen Binden können Codegeneratoren den Bindungsvorgang vollständig steuern. Beim späten Binden durch Reflektion muss der Vorgang durch eine benutzerdefinierte Bindung gesteuert werden. Die <xref:System.Reflection.Binder>-Klasse stellt die benutzerdefinierte Steuerung der Auswahl und des Aufrufs von Membern bereit.  
   
  Mithilfe der benutzerdefinierten Bindung können Sie eine Assembly zur Runtime laden, Informationen über Typen in dieser Assembly abrufen, den gewünschten Typ angeben und dann für diesen Typ die Methoden aufrufen oder auf die Felder bzw. Eigenschaften zugreifen. Diese Technik ist hilfreich, wenn Sie den Typ eines Objekts zur Kompilierzeit nicht kennen, z.B., wenn der Objekttyp von der Benutzereingabe abhängt.  
   
@@ -79,7 +79,7 @@ End Module
   
  In Fall 3 des Codebeispiels wird ein Argument des Typs **String** mit dem Wert „5,5“ an eine Methode mit einem formalen Argument vom Typ **Double** übergeben. Damit der Aufruf erfolgreich ausgeführt werden kann, muss der Zeichenfolgenwert „5,5“ in einen Double-Wert konvertiert werden. Für diese Konvertierung ist **ChangeType** zuständig.  
   
- **ChangeType** führt nur verlustfreie oder [Erweiterungsumwandlungen](../../../docs/standard/base-types/type-conversion.md) aus, wie in der folgenden Tabelle dargestellt.  
+ **ChangeType** führt nur verlustfreie oder [Erweiterungsumwandlungen](../../standard/base-types/type-conversion.md) aus, wie in der folgenden Tabelle dargestellt.  
   
 |Quelltyp|Zieltyp|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Typkonvertierung in .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+- [Typkonvertierung in .NET Framework](../../standard/base-types/type-conversion.md)

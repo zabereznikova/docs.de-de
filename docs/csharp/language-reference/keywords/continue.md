@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: d5fd2f5edf85c3ac2c8f0367b85b37e76e2e856e
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 74d166dbcf03b868baf464864e4c246f789df9cc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422112"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605875"
 ---
 # <a name="continue-c-reference"></a>continue (C#-Referenz)
 
-Die `continue`-Anweisung übergibt die Steuerung an die nächste Iteration der einschließenden [while](../../../csharp/language-reference/keywords/while.md), [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md) oder [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung, in der sie angegeben ist.
+Die `continue`-Anweisung übergibt die Steuerung an die nächste Iteration der einschließenden [while](./while.md), [do](./do.md), [for](./for.md) oder [foreach](./foreach-in.md)-Anweisung, in der sie angegeben ist.
 
 ## <a name="example"></a>Beispiel
 
@@ -31,7 +31,7 @@ In diesem Beispiel wird ein Zähler initialisiert, um von 1 bis 10 zu zählen. I
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](./index.md)
 - [break-Anweisung](/cpp/cpp/break-statement-cpp)

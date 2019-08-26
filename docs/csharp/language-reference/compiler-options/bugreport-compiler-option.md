@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587388"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603080"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C#-Compileroptionen)
 Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei eingefügt werden sollen.  
@@ -55,6 +55,6 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
-- [-errorreport (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
+- [C#-Compileroptionen](./index.md)
+- [-errorreport (C#-Compileroptionen)](./errorreport-compiler-option.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

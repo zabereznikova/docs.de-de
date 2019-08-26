@@ -2,12 +2,12 @@
 title: Übersicht der LINQ to XML-Klassen (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484452"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591887"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Übersicht der LINQ to XML-Klassen (C#)
 In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen im <xref:System.Xml.Linq>-Namespace sowie jeweils eine kurze Beschreibung.  
@@ -15,7 +15,7 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
 ## <a name="linq-to-xml-classes"></a>LINQ to XML-Klassen  
   
 ### <a name="xattribute-class"></a>"XAttribute"-Klasse  
- <xref:System.Xml.Linq.XAttribute> stellt ein XML-Attribut dar. Ausführliche Informationen und Beispiele finden Sie unter [XAttribute Class Overview (C#) (Übersicht über die XAttribute-Klasse (C#))](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).  
+ <xref:System.Xml.Linq.XAttribute> stellt ein XML-Attribut dar. Ausführliche Informationen und Beispiele finden Sie unter [XAttribute Class Overview (C#) (Übersicht über die XAttribute-Klasse (C#))](./xattribute-class-overview.md).  
   
 ### <a name="xcdata-class"></a>"XCData"-Klasse  
  <xref:System.Xml.Linq.XCData> stellt einen CDATA-Textknoten dar.  
@@ -34,16 +34,16 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
  <xref:System.Xml.Linq.XDeclaration> stellt eine XML-Deklaration dar. XML-Deklarationen werden zum Deklarieren der XML-Version und zum Codieren von Dokumenten verwendet. Außerdem geben XML-Deklarationen an, ob das XML-Dokument eigenständig ist. Wenn ein Dokument eigenständig ist, sind keine externen Markupdeklarationen vorhanden (weder in einer externen DTD, noch in einer externen Parameterentität, auf die von der internen Teilmenge aus verwiesen wird).  
   
 ### <a name="xdocument-class"></a>"XDocument"-Klasse  
- <xref:System.Xml.Linq.XDocument> stellt ein XML-Dokument dar. Ausführliche Informationen und Beispiele finden Sie unter [XDocument Class Overview (C#) (Übersicht über die XDocument-Klasse (C#))](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XDocument> stellt ein XML-Dokument dar. Ausführliche Informationen und Beispiele finden Sie unter [XDocument Class Overview (C#) (Übersicht über die XDocument-Klasse (C#))](./xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>"XDocumentType"-Klasse  
  <xref:System.Xml.Linq.XDocumentType> stellt eine XML-Dokumenttypdefinition (DTD) dar.  
   
 ### <a name="xelement-class"></a>"XElement"-Klasse  
- <xref:System.Xml.Linq.XElement> stellt ein XML-Element dar. Ausführliche Informationen und Beispiele finden Sie unter [XElement Class Overview (C#) (Übersicht über die XElement-Klasse (C#))](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).  
+ <xref:System.Xml.Linq.XElement> stellt ein XML-Element dar. Ausführliche Informationen und Beispiele finden Sie unter [XElement Class Overview (C#) (Übersicht über die XElement-Klasse (C#))](./xelement-class-overview.md).  
   
 ### <a name="xname-class"></a>"XName"-Klasse  
- <xref:System.Xml.Linq.XName> stellt Namen von Elementen (<xref:System.Xml.Linq.XElement>) und Attributen (<xref:System.Xml.Linq.XAttribute>) dar. Ausführliche Informationen und Beispiele finden Sie unter [XDocument Class Overview (C#) (Übersicht über die XDocument-Klasse (C#))](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+ <xref:System.Xml.Linq.XName> stellt Namen von Elementen (<xref:System.Xml.Linq.XElement>) und Attributen (<xref:System.Xml.Linq.XAttribute>) dar. Ausführliche Informationen und Beispiele finden Sie unter [XDocument Class Overview (C#) (Übersicht über die XDocument-Klasse (C#))](./xdocument-class-overview.md).  
   
  Bei der Entwicklung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wurde auf einen möglichst einfachen Umgang mit XML-Namen Wert gelegt. Aufgrund ihrer Komplexität werden XML-Namen in XML oft als Angelegenheit für Fortgeschrittene betrachtet. Ursache dieser Komplexität sind aber nicht die von den Entwicklern regelmäßig beim Programmieren verwendeten Namespaces, sondern die Namespacepräfixe. Namespacepräfixe können helfen, die Anzahl der Tastaturanschläge zu verringern, die beim Eingeben von XML oder beim Bearbeiten von XML im Sinne einer besseren Lesbarkeit notwendig sind. Präfixe sind jedoch häufig nur eine Verknüpfung zur Verwendung des vollständigen XML-Namespace und in den meisten Fällen nicht erforderlich. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] vereinfacht XML-Namen, indem alle Präfixe in ihren entsprechenden XML-Namespace aufgelöst werden. Wenn erforderlich, sind Präfixe über die <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>-Methode verfügbar.  
   
@@ -88,4 +88,4 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

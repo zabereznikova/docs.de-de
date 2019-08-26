@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608738"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590630"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Vorgehensweise: Deklarieren, Instanziieren und Verwenden von Delegaten (C#-Programmierhandbuch)
 In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklariert werden.  
@@ -23,7 +23,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- In C# 2.0 und höher ist es außerdem möglich, eine anonyme Methode zum Deklarieren und Initialisieren eines [Delegaten](../../../csharp/language-reference/keywords/delegate.md) zu verwenden. Dies wird im nachstehenden Beispiel gezeigt.  
+ In C# 2.0 und höher ist es außerdem möglich, eine anonyme Methode zum Deklarieren und Initialisieren eines [Delegaten](../../language-reference/keywords/delegate.md) zu verwenden. Dies wird im nachstehenden Beispiel gezeigt.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   
@@ -31,7 +31,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Weitere Informationen finden Sie unter [Lambdaausdrücke](../statements-expressions-operators/lambda-expressions.md).  
   
  Im folgenden Beispiel wird verdeutlicht, wie Sie einen Delegaten deklarieren, instanziieren und verwenden. In der `BookDB`-Klasse ist eine Buchhandlungsdatenbank gekapselt, die eine Buchtiteldatenbank enthält. Sie stellt eine `ProcessPaperbackBooks`-Methode zur Verfügung, durch die alle Taschenbücher in der Datenbank gefunden werden und für jedes Taschenbuch ein Delegat aufgerufen wird. Der verwendete `delegate`-Typ hat den Namen `ProcessBookDelegate`. Die `Test`-Klasse verwendet diese Klasse, um die Buchtitel und Durchschnittspreise der Taschenbücher auszugeben.  
   
@@ -56,7 +56,7 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     Hierdurch wird ein neues Delegatobjekt erstellt, das der [statischen](../../../csharp/language-reference/keywords/static.md) Methode `Test.PrintTitle` zugeordnet ist. Auf ähnliche Weise wird die nicht statische Methode `AddBookToTotal` für das Objekt `totaller` übergeben, wie im folgenden Beispiel gezeigt:  
+     Hierdurch wird ein neues Delegatobjekt erstellt, das der [statischen](../../language-reference/keywords/static.md) Methode `Test.PrintTitle` zugeordnet ist. Auf ähnliche Weise wird die nicht statische Methode `AddBookToTotal` für das Objekt `totaller` übergeben, wie im folgenden Beispiel gezeigt:  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -74,6 +74,6 @@ In C# 1.0 und höher können Delegaten wie im folgenden Beispiel gezeigt deklari
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Ereignisse](../events/index.md)
+- [Delegaten](./index.md)

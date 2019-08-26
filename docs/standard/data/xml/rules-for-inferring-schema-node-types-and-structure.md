@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338708"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939645"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
 In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem XML-Dokument auftretenden Knotentypen in eine XSD-Struktur (XML Schema Definition) übersetzt.  
@@ -35,7 +35,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 8. Element mit einer Sequenz von Auswahlmöglichkeiten direkt untergeordneter Elemente und Attribute  
   
 > [!NOTE]
->  Alle `complexType`-Deklarationen werden als anonyme Typen hergeleitet. Das einzige globale hergeleitete Element ist das Stammelement. Alle anderen Elemente sind lokal.  
+> Alle `complexType`-Deklarationen werden als anonyme Typen hergeleitet. Das einzige globale hergeleitete Element ist das Stammelement. Alle anderen Elemente sind lokal.  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -79,7 +79,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für ein Element mit einer Sequenz von direkt untergeordneten Elementen hergeleitete Schema dar.  
   
 > [!NOTE]
->  Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
+> Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -91,7 +91,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für ein Element mit einer Sequenz von direkt untergeordneten Elementen und Attributen hergeleitete Schema dar.  
   
 > [!NOTE]
->  Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
+> Ein Element wird auch wie eine Sequenz behandelt, wenn es nur über ein direkt untergeordnetes Element verfügt.  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -103,7 +103,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für ein Element mit einer Sequenz und Auswahlmöglichkeiten von direkt untergeordneten Elementen hergeleitete Schema dar.  
   
 > [!NOTE]
->  Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
+> Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -115,7 +115,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
  In der folgenden Tabelle wird die XML-Eingabe für die <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A>-Methode und das generierte XML-Schema dargestellt. Die fett formatierten Elemente stellen das für ein Element mit einer Sequenz und Auswahlmöglichkeit von direkt untergeordneten Elementen und Attributen hergeleitete Schema dar.  
   
 > [!NOTE]
->  Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
+> Das `maxOccurs`-Attribut des `xs:choice`-Elements wird im hergeleiteten Schema auf `"unbounded"` festgelegt.  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -129,7 +129,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ### <a name="occurrence-constraints"></a>Beschränkungen hinsichtlich des Vorkommens  
  Während des Schemarückschlussprozesses wird das `minOccurs`-Attribut und das `maxOccurs`-Attribut mit den Werten `"0"` oder `"1"` und `"1"` oder `"unbounded"` für hergeleitete Komponenten eines Schemas generiert. Die Werte `"1"` und `"unbounded"` werden nur verwendet, wenn die Werte `"0"` und `"1"` keine Validierung für das XML-Dokument durchführen können (wenn `MinOccurs="0"` ein Element beispielsweise nicht genau beschreibt, wird `minOccurs="1"` verwendet).  
   
-### <a name="mixed-content"></a>	Gemischter Inhalt  
+### <a name="mixed-content"></a>Gemischter Inhalt  
  Wenn ein Element gemischte Inhalte (z. B. Text mit eingefügten Elementen) enthält, wird das `mixed="true"`-Attribut für die hergeleitete komplexe Typdefinition generiert.  
   
 ## <a name="other-node-type-inference-rules"></a>Rückschlussregeln für andere Knotentypen  

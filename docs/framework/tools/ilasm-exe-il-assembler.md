@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567064"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933663"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
-Der IL-Assembler generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus der Zwischensprache (Intermediate Language, IL). Weitere Informationen über die Zwischensprache finden Sie unter [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md). Die erstellte ausführbare Datei, die IL und die erforderlichen Metadaten enthält, können Sie ausführen, um zu überprüfen, ob die IL wie erwartet funktioniert.
+Der IL-Assembler generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus der Zwischensprache (Intermediate Language, IL). Weitere Informationen über die Zwischensprache finden Sie unter [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md). Die erstellte ausführbare Datei, die IL und die erforderlichen Metadaten enthält, können Sie ausführen, um zu überprüfen, ob die IL wie erwartet funktioniert.
 
 Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -231,5 +231,5 @@ Das folgende IL-Codebeispiel entspricht dem vorherigen C#-Codebeispiel. Sie kön
 
 - [Extras](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
+- [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

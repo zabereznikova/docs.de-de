@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550486"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968426"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  
@@ -40,7 +40,7 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
  Sie können ein <xref:System.Threading.Semaphore>-Objekt erstellen, das ein benanntes Systemsemaphor darstellt, indem Sie einen der Konstruktoren verwenden, die einen Namen angeben.  
   
 > [!NOTE]
->  Da benannte Semaphoren systemweit sichtbar sind, ist es möglich, mehrere <xref:System.Threading.Semaphore>-Objekte zu haben, die dasselbe benannte Semaphor darstellen. Bei jedem Aufruf eines Konstruktors oder der <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>-Methode wird ein neues <xref:System.Threading.Semaphore>-Objekt erstellt. Wenn Sie wiederholt denselben Namen angeben, werden mehrere Objekte erstellt, die desselbe benannte Semaphor darstellen.  
+> Da benannte Semaphoren systemweit sichtbar sind, ist es möglich, mehrere <xref:System.Threading.Semaphore>-Objekte zu haben, die dasselbe benannte Semaphor darstellen. Bei jedem Aufruf eines Konstruktors oder der <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>-Methode wird ein neues <xref:System.Threading.Semaphore>-Objekt erstellt. Wenn Sie wiederholt denselben Namen angeben, werden mehrere Objekte erstellt, die desselbe benannte Semaphor darstellen.  
   
  Vorsicht ist geboten, wenn Sie benannte Semaphoren verwenden. Da sie systemweit sichtbar sind, kann ein anderer Prozess, der den gleichen Namen verwendet, unerwartet in das Semaphor wechseln. Böswilliger Code, der auf demselben Computer ausgeführt wird, könnte dies als Grundlage für einen Denial-of-Service-Angriff verwenden.  
   

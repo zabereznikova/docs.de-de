@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844735"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666578"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
@@ -30,7 +30,7 @@ Tasks machen ein API-Protokoll zum Überwachen des Ergebniswerts (im Fall von `T
 
 Mithilfe von `await` kann Ihre Anwendung bzw. Ihr Dienst sinnvolle Aufgaben erledigen, während ein Task ausgeführt wird, indem die Steuerung an seinen Aufrufer übergeben wird, bis der Task abgeschlossen ist. Ihr Code muss sich nicht auf Rückrufe oder Ereignisse verlassen, um die Ausführung nach Abschluss des Tasks fortzusetzen. Die Sprach- und Task-API-Integration erledigt dies für Sie. Bei Verwendung von `Task<T>` „enthüllt“ das Schlüsselwort `await` darüber hinaus den Wert, der bei Abschluss des Tasks zurückgegeben wird.  Wie dies funktioniert, wird weiter unten erläutert.
 
-Weitere Informationen zu Tasks und den verschiedenen Arten, mit ihnen zu interagieren, finden Sie in dem Artikel [Task-based Asynchronous Pattern (Taskbasiertes asynchrones Muster (TAP))](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
+Weitere Informationen zu Tasks und den verschiedenen Arten, mit ihnen zu interagieren, finden Sie in dem Artikel [Task-based Asynchronous Pattern (Taskbasiertes asynchrones Muster (TAP))](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tieferer Einblick in Tasks für einen E/A-gebundenen Vorgang
 
@@ -146,7 +146,7 @@ Sobald `await` festgestellt wird, wird die Ausführung von `CalculateResult()` a
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Asynchrone Programmierung in C#](~/docs/csharp/async.md)
+- [Asynchrone Programmierung in C#](../csharp/async.md)
 - [Asynchrone Programmierung mit Async und Await (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung in F#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

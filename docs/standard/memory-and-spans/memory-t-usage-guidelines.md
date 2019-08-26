@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362905"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666414"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
@@ -78,7 +78,7 @@ Sie verwenden die <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWith
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-Wir können dieses Beispiel auch mit dem [`using`](~/docs/csharp/language-reference/keywords/using-statement.md) schreiben:
+Wir können dieses Beispiel auch mit dem [`using`](../../csharp/language-reference/keywords/using-statement.md) schreiben:
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ Wenn wir diese Regel und Regel 1 kombinieren, können wir die Methodensignatur w
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Die `DisplayBufferToConsole`-Methode funktioniert nun mit praktisch jedem denkbaren Puffertyp: `T[]`, Speicher, der mit [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) zugewiesen wurde, und so weiter. Sie können einen <xref:System.String> sogar direkt übergeben!
+Die `DisplayBufferToConsole`-Methode funktioniert nun mit praktisch jedem denkbaren Puffertyp: `T[]`, Speicher, der mit [stackalloc](../../csharp/language-reference/operators/stackalloc.md) zugewiesen wurde, und so weiter. Sie können einen <xref:System.String> sogar direkt übergeben!
 
 **Regel 3: Wenn Ihre Methode Memory\<T> akzeptiert und `void` zurückgibt, dürfen Sie die Memory\<T>-Instanz nicht verwenden, nachdem Ihre Methode ein Ergebnis zurückgegeben hat.**
 
@@ -246,7 +246,7 @@ Jede Komponente, die den Besitz der <xref:System.Buffers.IMemoryOwner%601>-Insta
 
 **Regel 9: Wenn Sie eine synchrone P/Invoke-Methode umschließen, sollte Ihre API Span\<T> als Parameter akzeptieren.**
 
-Gemäß Regel 1 ist <xref:System.Span%601> im Allgemeinen der richtige Typ für synchrone APIs. Sie können <xref:System.Span%601>-Instanzen über das Schlüsselwort [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) anheften, wie im folgenden Beispiel.
+Gemäß Regel 1 ist <xref:System.Span%601> im Allgemeinen der richtige Typ für synchrone APIs. Sie können <xref:System.Span%601>-Instanzen über das Schlüsselwort [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) anheften, wie im folgenden Beispiel.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Regel 10: Wenn Sie eine synchrone P/Invoke-Methode umschließen, sollte Ihre API Memory\<T> als Parameter akzeptieren.**
 
-Da Sie das Schlüsselwort [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) nicht über asynchrone Vorgänge hinweg verwenden können, verwenden Sie die <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>-Methode, um <xref:System.Memory%601>-Instanzen anzuheften, unabhängig von der Art des zusammenhängenden Speichers, den die Instanz repräsentiert. Das folgende Beispiel zeigt, wie man diese API verwendet, um einen asynchronen P/Invoke-Aufruf durchzuführen.
+Da Sie das Schlüsselwort [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) nicht über asynchrone Vorgänge hinweg verwenden können, verwenden Sie die <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>-Methode, um <xref:System.Memory%601>-Instanzen anzuheften, unabhängig von der Art des zusammenhängenden Speichers, den die Instanz repräsentiert. Das folgende Beispiel zeigt, wie man diese API verwendet, um einen asynchronen P/Invoke-Aufruf durchzuführen.
 
 ```csharp
 using System.Runtime.InteropServices;

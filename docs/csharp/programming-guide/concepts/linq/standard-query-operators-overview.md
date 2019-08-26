@@ -2,12 +2,12 @@
 title: Übersicht über Standardabfrageoperatoren (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537958"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590976"
 ---
 # <a name="standard-query-operators-overview-c"></a>Übersicht über Standardabfrageoperatoren (C#)
 Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
- Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen über Standardabfrageoperatoren, die über dedizierte Schlüsselwörter und deren entsprechende Syntax verfügen, finden Sie unter [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen über Standardabfrageoperatoren, die über dedizierte Schlüsselwörter und deren entsprechende Syntax verfügen, finden Sie unter [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Erweitern der Standardabfrageoperatoren  
  Sie können die Gruppe von Standardabfrageoperatoren durch Erstellen von domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder -technologie geeignet sind. Sie können die Standardabfrageoperatoren auch mit ihren eigenen Implementierungen ersetzen, die zusätzliche Dienste bieten, z.B. Remote-Auswertung, Abfrageübersetzung und Optimierung. Ein Beispiel finden Sie unter <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Über die folgenden Links gelangen Sie zu Themen, die Ihnen weitere Informationen über die verschiedenen Standardabfrageoperatoren basierend auf deren Funktionen bieten.  
   
- [Sorting Data (C#) (Sortieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+ [Sorting Data (C#) (Sortieren von Daten (C#))](./sorting-data.md)  
   
- [Set Operations (C#) (Set-Vorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/set-operations.md)  
+ [Set Operations (C#) (Set-Vorgänge (C#))](./set-operations.md)  
   
- [Filtering Data (C#) (Filtern von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtering Data (C#) (Filtern von Daten (C#))](./filtering-data.md)  
   
- [Quantifier Operations (C#) (Quantifizierer-Vorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)  
+ [Quantifier Operations (C#) (Quantifizierer-Vorgänge (C#))](./quantifier-operations.md)  
   
- [Projection Operations (C#) (Projektionsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+ [Projection Operations (C#) (Projektionsvorgänge (C#))](./projection-operations.md)  
   
- [Partitioning Data (C#) (Partitionieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md)  
+ [Partitioning Data (C#) (Partitionieren von Daten (C#))](./partitioning-data.md)  
   
- [Join Operations (C#) (Verknüpfungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/join-operations.md)  
+ [Join Operations (C#) (Verknüpfungsvorgänge (C#))](./join-operations.md)  
   
- [Grouping Data (C#) (Gruppieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/grouping-data.md)  
+ [Grouping Data (C#) (Gruppieren von Daten (C#))](./grouping-data.md)  
   
- [Generation Operations (C#) (Generierungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/generation-operations.md)  
+ [Generation Operations (C#) (Generierungsvorgänge (C#))](./generation-operations.md)  
   
- [quality Operations (C#) (Gleichheitsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/equality-operations.md)  
+ [quality Operations (C#) (Gleichheitsvorgänge (C#))](./equality-operations.md)  
   
- [Element Operations (C#) (Elementvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/element-operations.md)  
+ [Element Operations (C#) (Elementvorgänge (C#))](./element-operations.md)  
   
- [Converting Data Types (C#) (Konvertieren von Datentypen (C#))](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)  
+ [Converting Data Types (C#) (Konvertieren von Datentypen (C#))](./converting-data-types.md)  
   
- [Concatenation Operations (C#) (Verkettungsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md)  
+ [Concatenation Operations (C#) (Verkettungsvorgänge (C#))](./concatenation-operations.md)  
   
- [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+ [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](./aggregation-operations.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classification of Standard Query Operators by Manner of Execution (C#) (Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#))](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](./introduction-to-linq-queries.md)
+- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [Classification of Standard Query Operators by Manner of Execution (C#) (Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#))](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Erweiterungsmethoden](../../classes-and-structs/extension-methods.md)

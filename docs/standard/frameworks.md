@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641474"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666522"
 ---
 # <a name="target-frameworks"></a>Zielframeworks
 
 Wenn Sie ein Framework in einer App oder Bibliothek als Ziel verwenden, geben Sie mehrere APIs an, die Sie für die App oder Bibliothek verfügbar machen möchten. Sie geben das Zielframework mit Zielframeworkmonikers (TFMs) in Ihrer Projektdatei an.
 
-Eine App oder Bibliothek kann eine Version des [.NET Standards](~/docs/standard/net-standard.md) als Ziel verwenden. .NET Standard-Versionen stellen standardisierte APIs in allen .NET-Implementierungen dar. Eine Bibliothek kann z.B. NET Standard 1.6 als Ziel verwenden und Zugriff auf APIs erhalten, die sowohl in .NET Core und .NET Framework mit der gleichen Codebasis funktionieren.
+Eine App oder Bibliothek kann eine Version des [.NET Standards](net-standard.md) als Ziel verwenden. .NET Standard-Versionen stellen standardisierte APIs in allen .NET-Implementierungen dar. Eine Bibliothek kann z.B. NET Standard 1.6 als Ziel verwenden und Zugriff auf APIs erhalten, die sowohl in .NET Core und .NET Framework mit der gleichen Codebasis funktionieren.
 
 Eine App oder Bibliothek kann auch eine spezifische .NET-Implementierung als Ziel verwenden, um Zugriff auf implementierungsspezifische APIs zu erhalten. Eine App, die beispielsweise Xamarin.iOS als Ziel verwendet (z.B. `Xamarin.iOS10`), erhält Zugriff auf von Xamarin bereitgestellte API-Wrapper für iOS 10, und eine App, die die universelle Windows-Plattform (UWP, `uap10.0`) als Ziel verwendet, erhält Zugriff auf APIs, die für Geräte kompilieren, die unter Windows 10 ausgeführt werden.
 
@@ -27,7 +27,7 @@ Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die 
 
 ## <a name="latest-target-framework-versions"></a>Neueste Zielframeworkversionen
 
-Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](~/docs/standard/net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek.
+Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek.
 
 | Zielframework      | Latest <br/> Stabile Version | Zielframeworkmoniker (Target Framework Moniker, TFM) | Implementiert <br/> .NET-Standardversion |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |

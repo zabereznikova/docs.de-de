@@ -6,24 +6,24 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924463"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Main-Methode ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.  
   
 > [!NOTE]
->  In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+> In diesem Thema werden benannte Methoden erläutert. Informationen über anonyme Funktionen finden Sie unter [Anonyme Funktionen](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="method-signatures"></a>Methodensignaturen  
- Methoden werden in einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) deklariert, indem die Zugriffsebene wie z. B. `public` oder `private`, optionale Modifizierer wie z. B. `abstract` oder `sealed`, der Rückgabewert, der Name der Methode und die Methodenparameter angegeben werden. Diese Teile bilden zusammen die Signatur der Methode.  
+ Methoden werden in einer [Klasse](../../language-reference/keywords/class.md) oder [Struktur](../../language-reference/keywords/struct.md) deklariert, indem die Zugriffsebene wie z. B. `public` oder `private`, optionale Modifizierer wie z. B. `abstract` oder `sealed`, der Rückgabewert, der Name der Methode und die Methodenparameter angegeben werden. Diese Teile bilden zusammen die Signatur der Methode.  
   
 > [!NOTE]
->  Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.  
+> Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.  
   
  Methodenparameter werden in Klammern eingeschlossen und durch Kommas getrennt. Leere Klammern geben an, dass für die Methode keine Parameter erforderlich sind. Diese Klasse enthält vier Methoden:  
   
@@ -40,7 +40,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
  [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Übergeben als Verweis und Übergeben als Wert  
- Wenn ein Werttyp an eine Methode übergeben wird, wird anstelle des eigentlichen Objekts standardmäßig eine Kopie übergeben. Änderungen am Argument haben daher keine Auswirkungen auf die ursprüngliche Kopie in der aufrufenden Methode. Sie können einen Werttyp als Verweis übergeben, indem Sie das ref-Schlüsselwort verwenden. Weitere Informationen finden Sie unter [Übergeben von Werttypparametern](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Eine Liste der integrierten Werttypen finden Sie unter [Tabelle der Typen und Variablen](../../../csharp/language-reference/keywords/value-types-table.md).  
+ Wenn ein Werttyp an eine Methode übergeben wird, wird anstelle des eigentlichen Objekts standardmäßig eine Kopie übergeben. Änderungen am Argument haben daher keine Auswirkungen auf die ursprüngliche Kopie in der aufrufenden Methode. Sie können einen Werttyp als Verweis übergeben, indem Sie das ref-Schlüsselwort verwenden. Weitere Informationen finden Sie unter [Übergeben von Werttypparametern](./passing-value-type-parameters.md). Eine Liste der integrierten Werttypen finden Sie unter [Tabelle der Typen und Variablen](../../language-reference/keywords/value-types-table.md).  
   
  Wenn ein Objekt eines Verweistyps an eine Methode übergeben wird, wird ein Verweis auf das Objekt übergeben. Das heißt, die Methode erhält nicht das Objekt selbst, sondern ein Argument, das den Speicherort des Objekts angibt. Wenn Sie einen Member des Objekts unter Verwendung dieses Verweises ändern, wird die Änderung im Argument in der aufrufenden Methode berücksichtigt, selbst wenn Sie das Objekt als Wert übergeben.  
   
@@ -54,7 +54,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
   
  Das Beispiel entspricht im Wesentlichen dem vorherigen Beispiel und übergibt ein Argument als Wert an eine Methode. Aber da ein Verweistyp verwendet wird, unterscheidet sich das Ergebnis. Die Änderung, die in `ModifyObject` am `value` -Feld des Parameters ( `obj`) vorgenommen wird, ändert auch das `value` -Feld des Arguments ( `rt`) in der `TestRefType` -Methode. Die `TestRefType` -Methode zeigt 33 als Ausgabe an.  
   
- Weitere Informationen zum Übergeben von Verweistypen als Verweis oder als Wert finden Sie unter [Übergeben von Verweistypparametern ](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) und [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md).  
+ Weitere Informationen zum Übergeben von Verweistypen als Verweis oder als Wert finden Sie unter [Übergeben von Verweistypparametern ](./passing-reference-type-parameters.md) und [Verweistypen](../../language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Rückgabewerte  
 Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp – der vor dem Methodennamen aufgeführte Typ – nicht `void`ist, kann die Methode den Wert mithilfe des `return` -Schlüsselworts zurückgeben. Eine Anweisung mit der `return` -Schlüsselwort, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. 
@@ -108,15 +108,15 @@ public static void FillMatrix(int[,] matrix)
 }
 ```  
   
- Weitere Informationen finden Sie unter [return](../../../csharp/language-reference/keywords/return.md).  
+ Weitere Informationen finden Sie unter [return](../../language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Asynchrone Methoden  
  Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen. 
   
- Wenn Sie eine Methode mit dem [async](../../../csharp/language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../../csharp/language-reference/keywords/await.md) Operator in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.  
+ Wenn Sie eine Methode mit dem [async](../../language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](../../language-reference/keywords/await.md) Operator in der Methode verwenden. Wenn ein await-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, und die Ausführung der Methode wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.  
   
 > [!NOTE]
->  Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.  
+> Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.  
   
  Eine asynchrone Methode kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oder „void“ haben. Der void-Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein void-Rückgabetyp erforderlich ist. Auf eine asynchrone Methode, die „void“ zurückgibt, kann nicht gewartet werden, und der Aufrufer einer Methode mit void-Rückgabe kann keine Ausnahmen auffangen, die die Methode auslöst.  
   
@@ -126,9 +126,9 @@ public static void FillMatrix(int[,] matrix)
   
  [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
- Mit einer asynchronen Methode können keine [ref](../../../csharp/language-reference/keywords/ref.md) - oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) -Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.  
+ Mit einer asynchronen Methode können keine [ref](../../language-reference/keywords/ref.md) - oder [out](../../language-reference/keywords/out-parameter-modifier.md) -Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.  
   
- Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](../../../csharp/programming-guide/concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](../concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](../concepts/async/async-return-types.md).  
   
 ## <a name="expression-body-definitions"></a>Ausdruckstextdefinitionen  
  Es gibt häufig Methodendefinitionen, die einfach direkt das Ergebnis eines Ausdrucks zurückgeben oder eine einzige Anweisung als Text der Methode aufweisen.  Es ist eine Syntaxabkürzung zur Definition solcher Methoden mithilfe von `=>`verfügbar:  
@@ -145,27 +145,27 @@ public Customer this[long id] => store.LookupCustomer(id);
  Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get`-Accessorschlüsselwort.  
   
 ## <a name="iterators"></a>Iterators  
- Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](../../../csharp/language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../../csharp/language-reference/keywords/yield.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
+ Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die [yield return](../../language-reference/keywords/yield.md) -Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [yield return](../../language-reference/keywords/yield.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  
   
- Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md) Anweisung auf.  
+ Sie rufen einen Iterator im Clientcode mithilfe einer [foreach](../../language-reference/keywords/foreach-in.md) Anweisung auf.  
   
  Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.  
   
- Weitere Informationen finden Sie unter [Iteratoren](../../../csharp/programming-guide/concepts/iterators.md).  
+ Weitere Informationen finden Sie unter [Iteratoren](../concepts/iterators.md).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](index.md)
 - [Zugriffsmodifizierer](access-modifiers.md)
 - [Statische Klassen und statische Klassenmember](static-classes-and-static-class-members.md)
 - [Vererbung](inheritance.md)
 - [Abstrakte und versiegelte Klassen und Klassenmember](abstract-and-sealed-classes-and-class-members.md)
-- [params](../../../csharp/language-reference/keywords/params.md)
-- [return](../../../csharp/language-reference/keywords/return.md)
-- [out](../../../csharp/language-reference/keywords/out.md)
-- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [params](../../language-reference/keywords/params.md)
+- [return](../../language-reference/keywords/return.md)
+- [out](../../language-reference/keywords/out.md)
+- [ref](../../language-reference/keywords/ref.md)
 - [Übergeben von Parametern](passing-parameters.md)

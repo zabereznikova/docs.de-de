@@ -2,12 +2,12 @@
 title: SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden des SeedWork-Konzepts als Ausgangspunkt zum Implementieren eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676307"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660773"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
@@ -23,7 +23,7 @@ Viele Entwickler verwenden diese Vorgänge zum Kopieren und Einfügen (und kein 
 
 ## <a name="the-custom-entity-base-class"></a>Die benutzerdefinierte Entity-Basisklasse
 
-Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-operators.md) oder eine Liste der Domänenereignisse pro Entität.
+Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](../../../csharp/language-reference/operators/equality-operators.md) oder eine Liste der Domänenereignisse pro Entität.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935445"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
@@ -47,7 +47,7 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
 |<xref:System.ServiceProcess.ServiceBase.OnPowerEvent%2A>|Angabe, wie der Dienst reagieren soll, wenn ein Energieverwaltungsereignis empfangen wird, wie z.B. ein niedriger Akkustand oder ein ausgesetzter Vorgang.|  
   
 > [!NOTE]
->  Diese Methoden stellen Status dar, die der Dienst in seiner Lebensdauer durchläuft: Er geht von einem Status in den nächsten über. So wird der Dienst niemals auf den Befehl <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> reagieren, bevor nicht <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aufgerufen wurde.  
+> Diese Methoden stellen Status dar, die der Dienst in seiner Lebensdauer durchläuft: Er geht von einem Status in den nächsten über. So wird der Dienst niemals auf den Befehl <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> reagieren, bevor nicht <xref:System.ServiceProcess.ServiceBase.OnStart%2A> aufgerufen wurde.  
   
  Es gibt einige andere Eigenschaften und Methoden, die von Interesse sind. Dazu gehören:  
   
@@ -57,12 +57,12 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Ein Beispiel finden Sie unter [Gewusst wie: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Ein Beispiel finden Sie unter [Gewusst wie: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 - Eine Reihe von Eigenschaften in der Klasse <xref:System.ServiceProcess.ServiceBase>. Mit diesen Eigenschaften wird bestimmt, welche Methoden in Ihrem Dienst aufgerufen werden können. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanStop%2A> beispielsweise auf `true` festgelegt wird, kann die Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> in Ihrem Dienst aufgerufen werden. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `true` festgelegt wird, können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A> und <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> aufgerufen werden. Wenn Sie eine dieser Eigenschaften auf `true` festlegen, sollten Sie anschließend die Verarbeitung für die zugeordneten Methoden außer Kraft setzen und definieren.  
   
     > [!NOTE]
-    >  Ihr Dienst muss mindestens <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> außer Kraft setzen, um hilfreich zu sein.  
+    > Ihr Dienst muss mindestens <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> außer Kraft setzen, um hilfreich zu sein.  
   
  Sie können auch die Komponente <xref:System.ServiceProcess.ServiceController> verwenden, um mit dem vorhandenen Dienst zu kommunizieren und sein Verhalten zu steuern.  
   

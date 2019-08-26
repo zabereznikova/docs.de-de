@@ -2,12 +2,12 @@
 title: Eigenschaften
 description: Erfahren Sie mehr über C#-Eigenschaften, die Funktionen für die Validierung, berechnete Werte, die verzögerte Auswertung und Benachrichtigungen für Eigenschaftsänderungen umfassen.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878282"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587404"
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -104,7 +104,7 @@ Eine Eigenschaft muss nicht einfach den Wert eines Memberfelds zurückgeben. Sie
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-Im Beispiel oben wird das Feature [Zeichenfolgeninterpolation](../csharp/language-reference/tokens/interpolated.md) verwendet, um die formatierte Zeichenfolge für den vollständigen Namen zu erstellen.
+Im Beispiel oben wird das Feature [Zeichenfolgeninterpolation](./language-reference/tokens/interpolated.md) verwendet, um die formatierte Zeichenfolge für den vollständigen Namen zu erstellen.
 
 Sie können auch einen *Ausdruckskörpermember* verwenden, was eine kompaktere Möglichkeit zum Erstellen der berechneten `FullName`-Eigenschaft darstellt:
 

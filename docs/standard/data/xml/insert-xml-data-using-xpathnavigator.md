@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966951"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Einfügen von XML-Daten mit "XPathNavigator"
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zum Einfügen von nebengeordneten und untergeordneten Knoten sowie von Attributknoten in ein XML-Dokument verwendet werden. Diese Methoden können nur dann verwendet werden, wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt bearbeitet werden kann, d. h. seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss `true` sein.  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - Wenn das Präfix sowie der Namespace-URI im Kontext des <xref:System.Xml.XmlReader>-Objekts und im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts gleich sind, wird dem neu eingefügten Knoten keine neue Namespacedeklaration hinzugefügt.  
   
 > [!NOTE]
->  Die oben genannte Beschreibung gilt auch für Namespacedeklarationen mit einem leeren `string` als Präfix (z. B. die Standardnamespacedeklaration).  
+> Die oben genannte Beschreibung gilt auch für Namespacedeklarationen mit einem leeren `string` als Präfix (z. B. die Standardnamespacedeklaration).  
   
  Nachfolgend werden alle möglicherweise auftretenden Konflikte bei `xml:lang` dargestellt.  
   
@@ -256,7 +256,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  In der folgenden Tabelle werden die Methoden der <xref:System.Xml.XmlWriter>-Klasse beschrieben, die nicht von der <xref:System.Xml.XPath.XPathNavigator>-Klasse unterstützt werden.  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Löst eine <xref:System.NotSupportedException>-Ausnahme aus.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Wird auf der Stammebene ignoriert und löst beim Aufrufen auf einer anderen Ebene im XML-Dokument eine <xref:System.NotSupportedException>-Ausnahme aus.|  

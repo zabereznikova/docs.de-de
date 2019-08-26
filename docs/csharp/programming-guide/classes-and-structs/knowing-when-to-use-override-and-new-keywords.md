@@ -7,16 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398426"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596476"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 
-In C# kann eine Methode in einer abgeleiteten Klasse den gleichen Namen wie eine Methode in einer Basisklasse haben. Sie können mit den Schlüsselwörtern [new](../../../csharp/language-reference/keywords/new-modifier.md) und [override](../../../csharp/language-reference/keywords/override.md) festlegen, wie die Methoden interagieren. Der `override`-Modifizierer *erweitert* die `virtual`-Methode der Basisklasse, und der `new`-Modifizierer *verbirgt* eine zugängliche Methode der Basisklasse. Der Unterschied wird in den Beispielen in diesem Thema veranschaulicht.  
+In C# kann eine Methode in einer abgeleiteten Klasse den gleichen Namen wie eine Methode in einer Basisklasse haben. Sie können mit den Schlüsselwörtern [new](../../language-reference/keywords/new-modifier.md) und [override](../../language-reference/keywords/override.md) festlegen, wie die Methoden interagieren. Der `override`-Modifizierer *erweitert* die `virtual`-Methode der Basisklasse, und der `new`-Modifizierer *verbirgt* eine zugängliche Methode der Basisklasse. Der Unterschied wird in den Beispielen in diesem Thema veranschaulicht.  
   
  Deklarieren Sie in einer Konsolenanwendung die folgenden beiden Klassen: `BaseClass` und `DerivedClass`. `DerivedClass` erbt von `BaseClass`.  
   
@@ -115,7 +115,7 @@ public new void Method2()
 }  
 ```  
   
- Führen Sie das Programm erneut aus, um sicherzustellen, dass die Ausgabe gleich geblieben ist. Überprüfen Sie außerdem, ob die Warnung weiterhin angezeigt wird. Wenn Sie `new` verwenden, bestätigen Sie, dass Ihnen bewusst ist, dass der davon modifizierte Member einen Member verbirgt, der von der Basisklasse vererbt wird. Weitere Informationen zum Verbergen von Namen durch die Vererbung finden Sie unter [new-Modifizierer](../../../csharp/language-reference/keywords/new-modifier.md).  
+ Führen Sie das Programm erneut aus, um sicherzustellen, dass die Ausgabe gleich geblieben ist. Überprüfen Sie außerdem, ob die Warnung weiterhin angezeigt wird. Wenn Sie `new` verwenden, bestätigen Sie, dass Ihnen bewusst ist, dass der davon modifizierte Member einen Member verbirgt, der von der Basisklasse vererbt wird. Weitere Informationen zum Verbergen von Namen durch die Vererbung finden Sie unter [new-Modifizierer](../../language-reference/keywords/new-modifier.md).  
   
  Fügen Sie die folgende Methode in `DerivedClass` ein, um dieses Verhalten den Auswirkungen durch das Verwenden von `override` gegenüberzustellen. Der `override`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
   
@@ -545,8 +545,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Klassen und Strukturen](./index.md)
+- [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

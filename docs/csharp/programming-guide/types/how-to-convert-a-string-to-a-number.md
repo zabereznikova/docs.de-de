@@ -8,20 +8,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: ef219f2b98e37b8a62d3ee7b88dbc5374d87fca5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b2e6fdc6248ca65213ea83942d792f983bd3b3b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423531"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588394"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
 
-Sie können eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) in eine Zahl umwandeln, indem Sie die Methode `Parse` oder `TryParse` in den verschiedenen numerischen Typen (`int`, `long`, `double` usw.) oder Methoden in der <xref:System.Convert?displayProperty=nameWithType>-Klasse aufrufen.  
+Sie können eine [Zeichenfolge](../../language-reference/keywords/string.md) in eine Zahl umwandeln, indem Sie die Methode `Parse` oder `TryParse` in den verschiedenen numerischen Typen (`int`, `long`, `double` usw.) oder Methoden in der <xref:System.Convert?displayProperty=nameWithType>-Klasse aufrufen.  
   
  Bei einer Zeichenfolge ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) oder eine `Parse`-Methode (beispielsweise [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)) aufzurufen.  Die Verwendung einer <xref:System.Convert>-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
   
- Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../../csharp/language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` [false](../../../csharp/language-reference/keywords/false-literal.md) zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
+ Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Die `Parse`-Methode gibt die konvertierte Zahl zurück, und die `TryParse`-Methode gibt einen <xref:System.Boolean>-Wert zurück, der angibt, ob die Konvertierung erfolgreich war. Anschließend wird die konvertierte Zahl in einem [`out`-Parameter](../../language-reference/keywords/out.md) zurückgegeben. Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` [false](../../language-reference/keywords/false-literal.md) zurückgibt. Beim Aufrufen einer `Parse`-Methode sollten Sie grundsätzlich die Ausnahmebehandlung zum Abfangen einer <xref:System.FormatException> verwenden, falls beim Analysevorgang ein Fehler auftritt.  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Aufrufen der Methoden „Parse“ und „TryParse“
 
@@ -51,12 +51,12 @@ In der folgenden Tabelle werden einige der Methoden aus der <xref:System.Convert
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- In diesem Beispiel wird die <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType>-Methode aufgerufen, um eine Eingabezeichenfolge in einen [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)-Typ zu konvertieren. Das Beispiel fängt die zwei häufigsten Ausnahmen ab, die von dieser Methode ausgelöst werden können: <xref:System.FormatException> und <xref:System.OverflowException>. Wenn die resultierende Zahl schrittweise erhöht werden kann, ohne <xref:System.Int32.MaxValue?displayProperty=nameWithType> zu überschreiten, fügt der Beispielcode dem Ergebnis 1 hinzu und zeigt die Ausgabe an.  
+ In diesem Beispiel wird die <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType>-Methode aufgerufen, um eine Eingabezeichenfolge in einen [int](../../language-reference/builtin-types/integral-numeric-types.md)-Typ zu konvertieren. Das Beispiel fängt die zwei häufigsten Ausnahmen ab, die von dieser Methode ausgelöst werden können: <xref:System.FormatException> und <xref:System.OverflowException>. Wenn die resultierende Zahl schrittweise erhöht werden kann, ohne <xref:System.Int32.MaxValue?displayProperty=nameWithType> zu überschreiten, fügt der Beispielcode dem Ergebnis 1 hinzu und zeigt die Ausgabe an.  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Typen](../../../csharp/programming-guide/types/index.md)
-- [Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Typen](./index.md)
+- [Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [.NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

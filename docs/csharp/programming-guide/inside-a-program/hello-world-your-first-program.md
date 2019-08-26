@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 62aaf8785b0dfb646ea804dab6918940f1e33346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9a50de0bb583a1dfccfa609be1cca732868505ba
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635285"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589377"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hallo Welt: Ihr erstes Programm (C#-Programmierhandbuch)
 
@@ -32,7 +32,7 @@ Weitere Beispiele zu einführenden Konzepten finden Sie unter [Erste Schritte mi
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. Erweitern Sie nacheinander **Installiert**, **Vorlagen**, **Visual C#**, und wählen Sie dann **Konsolenanwendung** aus.
+3. Erweitern Sie nacheinander **Installiert**, **Vorlagen**, **Visual C#** , und wählen Sie dann **Konsolenanwendung** aus.
 
 4. Geben Sie im Feld **Name** einen Namen für das Projekt an, und klicken Sie dann auf die Schaltfläche **OK**.
 
@@ -62,7 +62,7 @@ Sie können auch einen Kommentar aus einem Textblock einfügen, indem Sie ihn zw
 
 Eine C#-Konsolenanwendung muss eine `Main`-Methode enthalten, in der die Steuerung beginnt und endet. Innerhalb der `Main`-Methode erstellen Sie Objekte und führen andere Methoden aus.
 
-Bei der `Main`-Methode handelt es sich um eine [statische](../../../csharp/language-reference/keywords/static.md) Methode, die sich innerhalb einer Klasse oder Struktur befindet. Im vorherigen „Hello World!“-Beispiel befindet sie sich in einer Klasse namens `Hello`. Sie können die `Main`-Methode auf eine der folgenden Arten deklarieren:
+Bei der `Main`-Methode handelt es sich um eine [statische](../../language-reference/keywords/static.md) Methode, die sich innerhalb einer Klasse oder Struktur befindet. Im vorherigen „Hello World!“-Beispiel befindet sie sich in einer Klasse namens `Hello`. Sie können die `Main`-Methode auf eine der folgenden Arten deklarieren:
 
 - Es kann `void` zurückgegeben werden.
 
@@ -76,13 +76,13 @@ Bei der `Main`-Methode handelt es sich um eine [statische](../../../csharp/langu
 
      [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-     - oder - 
+     Oder
 
      [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 Der Parameter der `Main`-Methode, `args`, ist ein `string`-Array, das die Befehlszeilenargumente enthält, die zum Aufrufen des Programms verwendet werden. Im Gegensatz zu C++ enthält dieses Array nicht den Namen der ausführbaren Datei (EXE).
 
-Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie unter [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md) und [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
+Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie unter [Main() und Befehlszeilenargumente](../main-and-command-args/index.md) und [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
 
 Der Aufruf von <xref:System.Console.ReadKey%2A> am Ende der `Main`-Methode verhindert, dass das Konsolenfenster geschlossen wird, bevor Sie die Ausgabe lesen können, wenn Sie das Programm durch Drücken von F5 im Debugmodus ausführen.
 
@@ -116,7 +116,7 @@ Sie können das „Hallo Welt“ -Programm über die Befehlszeile statt mit der 
 
     - Aktivieren Sie Befehlszeilenbuilds von einem Standardeingabeaufforderungsfenster.
 
-         Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
+         Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
 3. Navigieren Sie im Eingabeaufforderungsfenster zu dem Ordner, der die Datei `Hello.cs` enthält.
 
@@ -130,14 +130,14 @@ Sie können das „Hallo Welt“ -Programm über die Befehlszeile statt mit der 
 
      `Hello`
 
- Weitere Informationen über den C#-Compiler und seine Optionen finden Sie unter [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md).
+ Weitere Informationen über den C#-Compiler und seine Optionen finden Sie unter [C#-Compileroptionen](../../language-reference/compiler-options/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)
-- [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Einblicke in ein C#-Programm](./index.md)
+- [Zeichenfolgen](../strings/index.md)
 - [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [C#-Referenz](../../language-reference/index.md)
+- [Main() und Befehlszeilenargumente](../main-and-command-args/index.md)
 - [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

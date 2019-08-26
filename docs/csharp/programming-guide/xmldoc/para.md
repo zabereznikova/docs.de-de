@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c9584d6c7fec064e2234df9db7e21a38806e8992
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481390"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587947"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -28,14 +28,14 @@ ms.locfileid: "57481390"
  Der Text des Absatzes  
   
 ## <a name="remarks"></a>Anmerkungen  
- Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md), [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) oder [\<returns>](../../../csharp/programming-guide/xmldoc/returns.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
+ Das Tag \<para> ist für die Verwendung innerhalb eines Tags wie [\<summary>](./summary.md), [\<remarks>](./remarks.md) oder [\<returns>](./returns.md) gedacht und ermöglicht es Ihnen, den Text zu strukturieren.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
- Unter [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) finden Sie ein Beispiel für die Verwendung von \<para>.  
+ Unter [\<summary>](./summary.md) finden Sie ein Beispiel für die Verwendung von \<para>.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

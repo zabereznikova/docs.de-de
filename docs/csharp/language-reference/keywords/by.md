@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 23daf2aaf5d9456c76c5b2ac889243b1ed31b077
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241300"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602223"
 ---
 # <a name="by-c-reference"></a>by (C#-Referenz)
 
-Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdruck verwendet, um anzugeben, wie die zurückgegebenen Elemente gruppiert werden sollen. Weitere Informationen finden Sie unter [group-Klausel](../../../csharp/language-reference/keywords/group-clause.md).
+Das Kontextschlüsselwort `by` wird in der `group`-Klausel in einem Abfrageausdruck verwendet, um anzugeben, wie die zurückgegebenen Elemente gruppiert werden sollen. Weitere Informationen finden Sie unter [group-Klausel](./group-clause.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -27,4 +27,4 @@ Im folgenden Beispiel wird gezeigt, wie das Kontextschlüsselwort `by` in einer 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ-Abfrageausdrücke](../../programming-guide/linq-query-expressions/index.md)

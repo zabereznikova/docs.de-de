@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 5675099f66ec99c652ef95a5328f31c360e2dc59
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195799"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602831"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C#-Compileroptionen)
 
@@ -55,7 +55,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 
  Darüber hinaus sind die neue Syntax und die neuen Features nicht unbedingt an die spezifische Version des Frameworks gebunden, während C#-Versionsupdates für gewöhnlich mit den Releases von .NET Framework einhergehen. Während die neuen Features ein Compilerupdate erfordern, das mit der C#-Revision veröffentlicht wird, hat jedes Feature seine eigene mindestens erforderliche .NET-API- oder CLR-Anforderungen, durch die es auf abwärtskompatiblen Frameworks ausgeführt werden kann, indem NuGet-Pakete oder andere Bibliotheken einbezogen werden.
   
- Unabhängig von der verwendeten **-langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen. Davon ausgenommen sind Friend-Assemblys und [-moduleassemblyname (C#-Compileroption)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), die unter **-langversion:ISO-1** laufen.  
+ Unabhängig von der verwendeten **-langversion**-Einstellung verwenden Sie die aktuelle Version der CLR, um Ihre EXE- oder DLL-Dateien zu erstellen. Davon ausgenommen sind Friend-Assemblys und [-moduleassemblyname (C#-Compileroption)](./moduleassemblyname-compiler-option.md), die unter **-langversion:ISO-1** laufen.  
 
  Weitere Möglichkeiten zum Angeben der C#-Sprachversion finden Sie unter [Select the C# language version (Auswählen der C#-Sprachversion)](../configure-language-version.md).
   
@@ -68,7 +68,7 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 
 ### <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-|Version|Link|Beschreibung|
+|Version|Link|BESCHREIBUNG|
 |-------|----|-----------|
 |C# 7.0 und höher||aktuell nicht verfügbar|
 |C# 6.0|[Link](../language-specification/index.md)|C#-Spezifikation Version 6, inoffizieller Entwurf: .NET Foundation|

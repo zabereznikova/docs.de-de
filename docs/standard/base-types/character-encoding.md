@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960329"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987185"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
@@ -31,7 +31,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  Die Zeichencodierung gibt die Regeln für die Funktionsweise von Encoder und Decoder an. Zum Beispiel beschreibt die <xref:System.Text.UTF8Encoding> -Klasse die Regeln zum Codieren und Decodieren von UTF-8 (8-Bit-Unicode Transformation Format). In diesem Format werden für die Darstellung eines einzelnen Unicode-Zeichens ein bis vier Bytes verwendet. Die Codierung und Decodierung können auch eine Validierung beinhalten. Die <xref:System.Text.UnicodeEncoding> -Klasse prüft z. B. alle Ersatzzeichen, um sicherzustellen, dass sie gültige Ersatzzeichenpaare bilden. (Ein Ersatzzeichenpaar besteht aus einem Zeichen mit einem Codepunkt zwischen U+D800 und U+DBFF gefolgt von einem Zeichen mit einem Codepunkt zwischen U+DC00 und U+DFFF.)  Eine Fallbackstrategie legt fest, wie ein Encoder ungültige Zeichen behandelt oder wie ein Decoder ungültige Bytes behandelt.  
   
 > [!WARNING]
->  Die .NET-Codierungsklassen bieten eine Möglichkeit, Zeichendaten zu speichern und zu konvertieren. Sie sollten nicht verwendet werden, um Binärdaten im Zeichenfolgenformat zu speichern. Abhängig von der verwendeten Codierung kann das Konvertieren von Binärdaten in das Zeichenfolgenformat mithilfe der Codierungsklassen zu unerwartetem Verhalten und ungenauen oder beschädigten Daten führen. Um Binärdaten in ein Zeichenfolgenformat zu konvertieren, verwenden Sie die <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> -Methode.  
+> Die .NET-Codierungsklassen bieten eine Möglichkeit, Zeichendaten zu speichern und zu konvertieren. Sie sollten nicht verwendet werden, um Binärdaten im Zeichenfolgenformat zu speichern. Abhängig von der verwendeten Codierung kann das Konvertieren von Binärdaten in das Zeichenfolgenformat mithilfe der Codierungsklassen zu unerwartetem Verhalten und ungenauen oder beschädigten Daten führen. Um Binärdaten in ein Zeichenfolgenformat zu konvertieren, verwenden Sie die <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> -Methode.  
   
  .NET verwendet die UTF-16-Codierung (angegeben durch die <xref:System.Text.UnicodeEncoding>-Klasse), um Zeichen und Zeichenfolgen darzustellen. Anwendungen, die auf die Common Language Runtime abzielen, verwenden Encoder, um von der Common Language Runtime unterstützte Unicode-Zeichendarstellungen anderen Codierungsschemen zuzuordnen. Decoder werden verwendet, um Zeichen aus Nicht-Unicode-Codierungen Unicode zuzuordnen.  
   
@@ -60,13 +60,13 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
 - Rufen Sie die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>-Methode auf, die jede in .NET verfügbare Standard-, Codepage- oder DBCS-Codierung zurückgibt. Mithilfe von Überladungen können Sie sowohl für den Encoder als auch den Decoder ein Fallbackobjekt angeben.  
   
 > [!NOTE]
->  Gemäß Unicode-Standard werden jedem Zeichen aller unterstützten Skripts ein Codepunkt (eine Zahl) und ein Name zugewiesen. Das Zeichen "A" wird beispielsweise durch den Codepunkt U+0041 und den Namen "LATIN CAPITAL LETTER A" dargestellt. Die UTF (Unicode-Transformation Format)-Codierungen definieren Möglichkeiten, diesen Codepunkt in eine Abfolge aus einem oder mehreren Bytes zu codieren. Ein Unicode-Datencodierungsschema vereinfacht die Entwicklung weltweit einsetzbarer Anwendungen, da es die Darstellung von Zeichen aus beliebigen Zeichensätzen in einer Codierung ermöglicht. Anwendungsentwickler müssen nicht mehr das Codierungsschema verfolgen, das für die Erstellung von Zeichen für eine bestimmte Sprache oder ein Schreibsystem verwendet wurde, und die Daten können länderübergreifend auf allen Systemen verwendet werden, ohne beschädigt zu werden.  
+> Gemäß Unicode-Standard werden jedem Zeichen aller unterstützten Skripts ein Codepunkt (eine Zahl) und ein Name zugewiesen. Das Zeichen "A" wird beispielsweise durch den Codepunkt U+0041 und den Namen "LATIN CAPITAL LETTER A" dargestellt. Die UTF (Unicode-Transformation Format)-Codierungen definieren Möglichkeiten, diesen Codepunkt in eine Abfolge aus einem oder mehreren Bytes zu codieren. Ein Unicode-Datencodierungsschema vereinfacht die Entwicklung weltweit einsetzbarer Anwendungen, da es die Darstellung von Zeichen aus beliebigen Zeichensätzen in einer Codierung ermöglicht. Anwendungsentwickler müssen nicht mehr das Codierungsschema verfolgen, das für die Erstellung von Zeichen für eine bestimmte Sprache oder ein Schreibsystem verwendet wurde, und die Daten können länderübergreifend auf allen Systemen verwendet werden, ohne beschädigt zu werden.  
 >   
 >  .NET unterstützt drei Codierungen, die durch den Unicode-Standard definiert sind: UTF-8, UTF-16 und UTF-32. Weitere Informationen finden Sie im Unicode-Standard auf der [Unicode-Homepage](https://www.unicode.org/).  
   
  Sie können Informationen über alle in .NET verfügbaren Codierungen abrufen, indem Sie die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>-Methode aufrufen. .NET unterstützt die in der folgenden Tabelle aufgelisteten Zeichencodierungssysteme.  
   
-|Codierung|Klasse|Beschreibung|Vorteile/Nachteile|  
+|Codierung|Klasse|BESCHREIBUNG|Vorteile/Nachteile|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codiert einen begrenzten Bereich von Zeichen mithilfe der unteren sieben Bits eines Bytes.|Da diese Codierung nur Zeichenwerte von U+0000 bis U+007F unterstützt, ist sie in den meisten Fällen für weltweit einsetzbare Anwendungen nicht geeignet.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Stellt Zeichen als Sequenzen von 7-Bit-ASCII-Zeichen dar. Nicht-ASCII-Unicode-Zeichen werden durch eine Escapesequenz von ASCII-Zeichen dargestellt.|UTF-7 unterstützt Protokolle wie E-Mail- und Newsgroupprotokolle. UTF-7 ist jedoch nicht besonders sicher oder robust. In einigen Fällen kann die Änderung eines Bits die Interpretation einer gesamten UTF-7-Zeichenfolge radikal ändern. In anderen Fällen können verschiedene UTF-7-Zeichenfolgen denselben Text codieren. Bei Sequenzen, die Nicht-ASCII-Zeichen enthalten, benötigt UTF-7 mehr Speicherplatz als UTF-8, und auch die Codierung/Decodierung erfolgt langsamer. Daher sollten Sie nach Möglichkeit UTF-8 anstelle von UTF-7 verwenden.|  
@@ -137,19 +137,19 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
 - Exception Fallback  
   
 > [!IMPORTANT]
->  Bei Codierungsvorgängen treten Probleme am häufigsten dann auf, wenn ein Unicode-Zeichen keiner bestimmten Codepagecodierung zugeordnet werden kann. Zu den am häufigsten auftretenden Problem bei Decodierungsvorgängen gehört es, wenn ungültige Bytefolgen nicht in gültige Unicode-Zeichen übersetzt werden können. Aus diesen Gründen sollten Sie wissen, welche Fallbackstrategien von bestimmten Codierungsobjekten verwendet werden. Nach Möglichkeit sollten Sie die von einem Codierungsobjekt verwendete Fallbackstrategie beim Instanziieren des Objekts festlegen.  
+> Bei Codierungsvorgängen treten Probleme am häufigsten dann auf, wenn ein Unicode-Zeichen keiner bestimmten Codepagecodierung zugeordnet werden kann. Zu den am häufigsten auftretenden Problem bei Decodierungsvorgängen gehört es, wenn ungültige Bytefolgen nicht in gültige Unicode-Zeichen übersetzt werden können. Aus diesen Gründen sollten Sie wissen, welche Fallbackstrategien von bestimmten Codierungsobjekten verwendet werden. Nach Möglichkeit sollten Sie die von einem Codierungsobjekt verwendete Fallbackstrategie beim Instanziieren des Objekts festlegen.  
   
 <a name="BestFit"></a>   
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback  
  Wenn ein Zeichen nicht über eine genaue Entsprechung in der Zielcodierung verfügt, kann der Encoder versuchen, eine Zuordnung zu einem ähnlichen Zeichen zu erstellen. (Ein Fallback mit ähnlichen Zeichen ist meist vielmehr ein Codierungs- als ein Decodierungsproblem. Es gibt sehr wenige Codepages, die Zeichen enthalten, die in Unicode nicht erfolgreich zugeordnet werden können.) Der Fallback mit ähnlichen Zeichen ist die Standardeinstellung für Codepage- und DBCS-Codierungen, die von der <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType>-Überladung und der <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>-Überladung abgerufen werden.  
   
 > [!NOTE]
->  Theoretisch unterstützen die in .NET bereitgestellten Unicode-Codierungsklassen (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> und <xref:System.Text.UTF32Encoding>) alle Zeichen in jedem Zeichensatz, sodass sie verwendet werden können, um Probleme beim Fallback mit ähnlichen Zeichen zu vermeiden.  
+> Theoretisch unterstützen die in .NET bereitgestellten Unicode-Codierungsklassen (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> und <xref:System.Text.UTF32Encoding>) alle Zeichen in jedem Zeichensatz, sodass sie verwendet werden können, um Probleme beim Fallback mit ähnlichen Zeichen zu vermeiden.  
   
  Strategien mit ähnlichen Zeichen variieren für unterschiedliche Codepages. Beispielsweise werden bei einigen Codepages lateinische Zeichen in voller Breite den gängigeren halbbreiten lateinischen Zeichen zugeordnet. Bei anderen Codepages hingegen erfolgt diese Zuordnung nicht. Selbst bei einer aggressiven Strategie mit ähnlichen Zeichen besteht in einigen Codierungen für manche Zeichen keine denkbare Zuordnung. Ein chinesisches ideografisches Zeichen hat z. B. keine angemessene Zuordnung in der Codepage 1252. Im diesem Fall wird eine Ersatzzeichenfolge verwendet. Standardmäßig handelt es sich bei dieser Zeichenfolge um ein einzelnes QUESTION MARK (Fragezeichen, U+003F).  
   
 > [!NOTE]
->  Strategien mit ähnlichen Zeichen sind nicht detailliert dokumentiert. Einige Codepages sind jedoch auf der Website des [Unicode-Konsortiums](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) dokumentiert. Lesen Sie die **readme.txt**-Datei in diesem Ordner, um zu erfahren, wie die Zuordnungsdateien interpretiert werden.
+> Strategien mit ähnlichen Zeichen sind nicht detailliert dokumentiert. Einige Codepages sind jedoch auf der Website des [Unicode-Konsortiums](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) dokumentiert. Lesen Sie die **readme.txt**-Datei in diesem Ordner, um zu erfahren, wie die Zuordnungsdateien interpretiert werden.
   
  Im folgenden Beispiel wird die Codepage 1252 (Windows-Codepage für westeuropäische Sprachen) verwendet, um eine Zuordnung mit ähnlichen Zeichen und deren Nachteile zu veranschaulichen. Die <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> -Methode wird verwendet, um ein Codierungsobjekt für Codepage 1252 abzurufen. Standardmäßig wird eine Zuordnung mit ähnlichen Zeichen für nicht unterstützte Unicode-Zeichen verwendet. Im Beispiel wird eine Zeichenfolge instanziiert, die drei durch Leerzeichen getrennte Nicht-ASCII-Zeichen enthält: CIRCLED LATIN CAPITAL LETTER S (eingekreister lateinischer Großbuchstabe S, U+24C8), SUPERSCRIPT FIVE (hochgestellte Fünf, U+2075) und INFINITY (Unendlichkeit, U+221E). Die Ausgabe im Beispiel zeigt, dass die drei ursprünglichen Nicht-Leerzeichen bei der Codierung der Zeichenfolge durch QUESTION MARK (Fragezeichen, U+003F), DIGIT FIVE (Ziffer Fünf, U+0035) und DIGIT EIGHT (Ziffer Acht, U+0038) ersetzt. Insbesondere DIGIT EIGHT (Ziffer Acht) ist ein ungeeigneter Ersatz für das nicht unterstützte INFINITY-Zeichen (Unendlichkeit), und QUESTION MARK (Fragezeichen) weist darauf hin, dass für das ursprüngliche Zeichen keine Zuordnung verfügbar war.  
   
@@ -159,7 +159,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  Die Zuordnung mit ähnlichen Zeichen ist das Standardverhalten für ein <xref:System.Text.Encoding> -Objekt, das Unicode-Daten in Codepagedaten codiert. Es gibt ältere Anwendungen, die auf diesem Verhalten basieren. In den meisten neuen Anwendungen sollte dieses Verhalten jedoch aus Sicherheitsgründen vermieden werden. Durch eine Codierung mit ähnlichen Zeichen sollten Anwendungen z. B. keinen Domänennamen ausdrücken.  
   
 > [!NOTE]
->  Sie können für eine Codierung auch eine benutzerdefinierte Zuordnung mit einem Fallback mit ähnlichen Zeichen implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
+> Sie können für eine Codierung auch eine benutzerdefinierte Zuordnung mit einem Fallback mit ähnlichen Zeichen implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
   
  Wenn der Fallback mit ähnlichen Zeichen die Standardeinstellung für ein Codierungsobjekt ist, können Sie eine andere Fallbackstrategie auswählen, wenn Sie ein <xref:System.Text.Encoding> -Objekt abrufen, indem Sie die <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> -Überladung aufrufen oder die <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> -Überladung aufrufen. Der folgende Abschnitt enthält ein Beispiel, in dem jedes Zeichen, das Codepage 1252 nicht zugeordnet werden kann, durch ein Sternchen (*) ersetzt wird.  
   
@@ -179,7 +179,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
   
 > [!NOTE]
->  Sie können für eine Codierung auch eine Ersatzklasse implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
+> Sie können für eine Codierung auch eine Ersatzklasse implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
   
  Zusätzlich zu QUESTION MARK (Fragezeichen, U+003F) wird in der Regel REPLACEMENT CHARACTER (Unicode-Ersatzzeichen, U+FFFD) als Ersatzzeichenfolge verwendet, insbesondere bei der Decodierung von Bytesequenzen, die nicht erfolgreich in Unicode-Zeichen übersetzt werden können. Allerdings können Sie eine beliebige Ersatzzeichenfolge auswählen, die mehrere Zeichen enthalten kann.  
   
@@ -191,7 +191,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
   
 > [!NOTE]
->  Sie können für einen Codierungsvorgang auch einen benutzerdefinierten Ausnahmehandler implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
+> Sie können für einen Codierungsvorgang auch einen benutzerdefinierten Ausnahmehandler implementieren. Weitere Informationen finden Sie im Abschnitt [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) .  
   
  Das <xref:System.Text.EncoderFallbackException> -Objekt und das <xref:System.Text.DecoderFallbackException> -Objekt stellen die folgenden Informationen über die Bedingung bereit, durch die die Ausnahme ausgelöst wurde:  
   

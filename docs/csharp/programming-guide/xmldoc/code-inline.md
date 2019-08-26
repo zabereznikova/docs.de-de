@@ -11,12 +11,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: f97e8a8f07b13e509516d13cb5181109f2340e0d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c881b9ec577fb04381f9e10c7df8f9d0da44cd66
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474188"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588187"
 ---
 # <a name="c-c-programming-guide"></a>\<c> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -30,14 +30,14 @@ ms.locfileid: "57474188"
  Der Text, der als Code angegeben werden soll.  
   
 ## <a name="remarks"></a>Anmerkungen  
- Mit dem \<c>-Tag kann angegeben werden, dass Text in einer Beschreibung als Code gekennzeichnet werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../../../csharp/programming-guide/xmldoc/code.md) verwendet.  
+ Mit dem \<c>-Tag kann angegeben werden, dass Text in einer Beschreibung als Code gekennzeichnet werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](./code.md) verwendet.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

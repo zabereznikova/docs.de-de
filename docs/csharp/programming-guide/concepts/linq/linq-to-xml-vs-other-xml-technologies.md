@@ -2,17 +2,17 @@
 title: LINQ to XML im Vergleich zu anderen XML-Technologien3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484312"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591876"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML im Vergleich zu anderen XML-Technologien
 In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit den folgenden XML-Technologien verglichen: <xref:System.Xml.XmlReader>, XSLT, MSXML und XmlLite. Diese Informationen helfen Ihnen bei Ihrer Entscheidung für eine dieser Technologien.  
   
- Einen Vergleich von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit dem Dokumentobjektmodell (DOM) finden Sie unter [LINQ to XML im Vergleich zu DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Einen Vergleich von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit dem Dokumentobjektmodell (DOM) finden Sie unter [LINQ to XML im Vergleich zu DOM (C#)](./linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML im Vergleich zu XmlReader  
  <xref:System.Xml.XmlReader> ist ein schneller Parser, der ausschließlich in Vorwärtsrichtung und ohne Zwischenspeicherung arbeitet.  
@@ -54,4 +54,4 @@ In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Erste Schritte (LINQ to XML)](./linq-to-xml-overview.md)

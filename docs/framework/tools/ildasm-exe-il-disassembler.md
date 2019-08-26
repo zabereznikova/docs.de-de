@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912494"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -53,7 +53,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 |**/linenum**|Enthält Verweise auf die ursprünglichen Quellzeilen.|
 |**/nobar**|Unterdrückt die Anzeige des Popupfensters mit der Statusanzeige für die Disassembly.|
 |**/noca**|Unterdrückt die Ausgabe von benutzerdefinierten Attributen.|
-|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in der nativen Windows-Runtime. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in der nativen Windows-Runtime. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembliert ausschließlich öffentliche Typen und Member. Entspricht **/visibility:PUB**.|
 |**/quoteallnames**|Schließt alle Namen in einfache Anführungszeichen ein.|
 |**/raweh**|Zeigt Klauseln für die Ausnahmebehandlung in unformatierter Form an.|
@@ -188,5 +188,5 @@ Bei einem geschachtelten Typ muss die Klasse, in der er enthalten ist, vorangest
 
 - [Extras](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (IL-Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
+- [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

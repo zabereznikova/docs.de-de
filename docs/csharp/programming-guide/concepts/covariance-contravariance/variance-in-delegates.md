@@ -2,12 +2,12 @@
 title: Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924380"
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
 Mit .NET Framework 3.5 wurde die Unterstützung von Varianz eingeführt, um Methodensignaturen und Delegattypen in allen Delegaten in C# vergleichen zu können. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- Weitere Beispiele finden Sie unter [Using Variance in Delegates (C#) (Verwenden von Varianz bei Delegaten (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) und [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Weitere Beispiele finden Sie unter [Using Variance in Delegates (C#) (Verwenden von Varianz bei Delegaten (C#))](./using-variance-in-delegates.md) und [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Varianz in generischen Typparametern  
  In .NET Framework 4 oder höher können Sie die implizierte Konvertierung zwischen Delegaten aktivieren. Das bedeutet, dass generische Delegaten, die über verschiedene von generischen Typparametern angegebene Typen verfügen, sich gegenseitig zugewiesen werden können, wenn die Typen voneinander geerbt werden. Dies ist für die Varianz erforderlich.  
@@ -122,7 +122,7 @@ public static void Test()
   
 - Der <xref:System.Converter%602>-Delegat.  
   
- Weitere Informationen und Beispiele finden Sie unter [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Weitere Informationen und Beispiele finden Sie unter [Using Variance for Func and Action Generic Delegates (C#) (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](./using-variance-for-func-and-action-generic-delegates.md).  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Angeben varianter Typparameter in generischen Delegaten  
  Wenn ein generischer Delegat über kovariante oder kontravariante generische Typparameter verfügt, kann er als *varianter generischer Delegat* bezeichnet werden.  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  Die Parameter `ref`, `in` und `out` in C# können nicht als variant markiert werden.  
+> Die Parameter `ref`, `in` und `out` in C# können nicht als variant markiert werden.  
   
  Es ist auch möglich, Varianz und Kovarianz im gleichen Delegaten, aber für verschiedene Typparameter, zu unterstützen. Dies wird im folgenden Beispiel gezeigt.  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Generics](~/docs/standard/generics/index.md)
-- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Generics](../../../../standard/generics/index.md)
+- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

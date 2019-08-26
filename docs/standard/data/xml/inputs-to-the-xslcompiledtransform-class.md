@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5240ee24a2f017e37b057c9fb74e551927b8bee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 043c37a17375bf2dcdad9e4b429cfca7b96ef7cb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590172"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966973"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Eingaben für die XslCompiledTransform-Klasse
 Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.  
   
 > [!NOTE]
->  Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten. Dies entspricht [Abschnitt 3.4 der W3C-Empfehlung zu XSLT, Version 1.0](https://www.w3.org/TR/xslt.html#strip).  
+> Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten. Dies entspricht [Abschnitt 3.4 der W3C-Empfehlung zu XSLT, Version 1.0](https://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>"IXPathNavigable"-Schnittstelle  
  Die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle ist in der <xref:System.Xml.XmlNode>-Klasse und der <xref:System.Xml.XPath.XPathDocument>-Klasse implementiert. Diese Klassen stellen einen speicherinternen Cache der XML-Daten dar.  
@@ -29,7 +29,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert d
 - Die <xref:System.Xml.XPath.XPathDocument>-Klasse ist ein schreibgeschützter Datenspeicher, der auf dem XPath-Datenmodell basiert. <xref:System.Xml.XPath.XPathDocument> ist die empfohlene Klasse zu XSLT-Verarbeitung. Im Vergleich zur <xref:System.Xml.XmlNode>-Klasse bietet sie eine schnellere Leistung.  
   
 > [!NOTE]
->  Transformationen werden auf das gesamte Dokument angewendet. Wenn Sie einen anderen Knoten als den Stammknoten des Dokuments übergeben, wird dadurch nicht verhindert, dass im Transformationsprozess auf alle Knoten im geladenen Dokument zugegriffen wird. Zum Transformieren eines Knotenfragments müssen Sie ein Objekt erstellen, das nur das Knotenfragment enthält, und dieses Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben. Weitere Informationen finden Sie unter [Vorgehensweise: Transformieren eines Knotenfragments](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+> Transformationen werden auf das gesamte Dokument angewendet. Wenn Sie einen anderen Knoten als den Stammknoten des Dokuments übergeben, wird dadurch nicht verhindert, dass im Transformationsprozess auf alle Knoten im geladenen Dokument zugegriffen wird. Zum Transformieren eines Knotenfragments müssen Sie ein Objekt erstellen, das nur das Knotenfragment enthält, und dieses Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben. Weitere Informationen finden Sie unter [Vorgehensweise: Transformieren eines Knotenfragments](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
   
  Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet. Die Dateien „books.xml“ und „transform.xsl“ befinden sich in diesem Thema: [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
   

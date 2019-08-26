@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 80f9fd4e86abbdcc316ff22090cc980bbb8245d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb6af4b43e04b231feca2f996eca0f8dc60da6c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595447"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589364"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)
 C#-Programme bestehen aus mindestens einer Datei. Jede Datei kann 0 (null) oder mehrere Namespaces enthalten. Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten. Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.  
@@ -18,17 +18,17 @@ C#-Programme bestehen aus mindestens einer Datei. Jede Datei kann 0 (null) oder 
  [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- Weitere Informationen finden Sie unter:   
+ Weitere Informationen finden Sie unter:  
   
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Klassen](../classes-and-structs/classes.md)  
   
-- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Strukturen](../classes-and-structs/structs.md)  
   
-- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
+- [Namespaces](../namespaces/index.md)  
   
-- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
+- [Schnittstellen](../interfaces/index.md)  
   
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
+- [Delegaten](../delegates/index.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
@@ -36,6 +36,6 @@ Weitere Informationen finden Sie in den [grundlegenden Konzepten](~/_csharplang/
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)
-- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Einblicke in ein C#-Programm](./index.md)
+- [C#-Referenz](../../language-reference/index.md)

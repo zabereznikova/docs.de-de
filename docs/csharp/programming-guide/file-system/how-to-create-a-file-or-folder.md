@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595641"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590102"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Vorgehensweise: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
@@ -71,5 +71,5 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](./index.md)

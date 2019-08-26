@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868835"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590558"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
-Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
+Ein [Delegat](../../language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../language-reference/keywords/string.md) als Argument übernimmt und [void](../../language-reference/keywords/void.md) zurückgibt:  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Funktion](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Beispiel:  
+ Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Funktion](../statements-expressions-operators/anonymous-functions.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- Delegattypen werden von der <xref:System.Delegate>-Klasse im .NET Framework abgeleitet. Delegattypen sind [versiegelt](../../../csharp/language-reference/keywords/sealed.md) – von Ihnen kann nicht abgeleitet werden – und es ist nicht möglich benutzerdefinierte Klassen von <xref:System.Delegate> abzuleiten. Da der instanziierte Delegat ein Objekt ist, kann er als Parameter übergeben oder einer Eigenschaft zugewiesen werden. Dies ermöglicht es einer Methode, einen Delegaten als Parameter zu akzeptieren und den Delegaten zu einem späteren Zeitpunkt aufzurufen. Dies wird als asynchroner Rückruf bezeichnet und ist eine häufig verwendete Methode, um einen Aufrufer darüber zu benachrichtigen, dass ein langer Prozess abgeschlossen wurde. Wenn ein Delegat auf diese Weise verwendet wird, benötigt der Code, der den Delegaten verwendet, keine Kenntnisse über die Implementierung der verwendeten Methode. Die Funktion ähnelt den bereitgestellten Kapselungsschnittstellen.  
+ Delegattypen werden von der <xref:System.Delegate>-Klasse im .NET Framework abgeleitet. Delegattypen sind [versiegelt](../../language-reference/keywords/sealed.md) – von Ihnen kann nicht abgeleitet werden – und es ist nicht möglich benutzerdefinierte Klassen von <xref:System.Delegate> abzuleiten. Da der instanziierte Delegat ein Objekt ist, kann er als Parameter übergeben oder einer Eigenschaft zugewiesen werden. Dies ermöglicht es einer Methode, einen Delegaten als Parameter zu akzeptieren und den Delegaten zu einem späteren Zeitpunkt aufzurufen. Dies wird als asynchroner Rückruf bezeichnet und ist eine häufig verwendete Methode, um einen Aufrufer darüber zu benachrichtigen, dass ein langer Prozess abgeschlossen wurde. Wenn ein Delegat auf diese Weise verwendet wird, benötigt der Code, der den Delegaten verwendet, keine Kenntnisse über die Implementierung der verwendeten Methode. Die Funktion ähnelt den bereitgestellten Kapselungsschnittstellen.  
   
  Ein weiterer häufiger Einsatzbereich von Rückrufen ist die Definition einer benutzerdefinierten Vergleichsmethode und die Übergabe dieses Delegaten an eine Sortiermethode. Dadurch kann der Code des Aufrufers Teil des Sortieralgorithmus werden. Im folgenden Beispiel wird der Typ `Del` als Parameter verwendet:  
   
@@ -59,7 +59,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  Delegaten mit mehr als einer Methode in der Aufrufliste werden von <xref:System.MulticastDelegate>, einer Unterklasse von `System.Delegate`, abgeleitet. Der obige Code funktioniert in jedem Fall, da beide Klassen `GetInvocationList` unterstützen.  
   
- Multicastdelegaten werden ausgiebig bei der Ereignisbehandlung verwendet. Ereignisquellobjekte senden Ereignisbenachrichtigungen an Empfängerobjekte, die für den Erhalt dieses Ereignisses registriert wurden. Um sich für ein Ereignis zu registrieren, erstellt der Empfänger eine Methode zur Behandlung des Ereignisses, dann erstellt er einen Delegaten für die Methode und übergibt den Delegaten an die Ereignisquelle. Die Quelle ruft den Delegaten auf, wenn das Ereignis eintritt. Der Delegat ruft dann die Ereignisbehandlungsmethode für den Empfänger auf und übermittelt die Ereignisdaten. Der Delegattyp für ein bestimmtes Ereignis wird von der Ereignisquelle definiert. Weitere Informationen finden Sie unter [Ereignisse](../../../csharp/programming-guide/events/index.md).  
+ Multicastdelegaten werden ausgiebig bei der Ereignisbehandlung verwendet. Ereignisquellobjekte senden Ereignisbenachrichtigungen an Empfängerobjekte, die für den Erhalt dieses Ereignisses registriert wurden. Um sich für ein Ereignis zu registrieren, erstellt der Empfänger eine Methode zur Behandlung des Ereignisses, dann erstellt er einen Delegaten für die Methode und übergibt den Delegaten an die Ereignisquelle. Die Quelle ruft den Delegaten auf, wenn das Ereignis eintritt. Der Delegat ruft dann die Ereignisbehandlungsmethode für den Empfänger auf und übermittelt die Ereignisdaten. Der Delegattyp für ein bestimmtes Ereignis wird von der Ereignisquelle definiert. Weitere Informationen finden Sie unter [Ereignisse](../events/index.md).  
   
  Beim Vergleichen von zwei unterschiedlichen zugewiesenen Typen zur Kompilierzeit kommt es zu einem Kompilierungsfehler. Falls die Delegatinstanzen statisch vom Typ `System.Delegate` sind, dann ist der Vergleich zulässig, gibt jedoch zur Laufzeit "False" zurück. Beispiel:  
   
@@ -67,9 +67,9 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
-- [Verwenden von Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Verwenden von Varianz für die generischen Delegaten Func und Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Delegaten](./index.md)
+- [Verwenden von Varianz bei Delegaten](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Varianz bei Delegaten](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Verwenden von Varianz für die generischen Delegaten Func und Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Ereignisse](../events/index.md)

@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966999"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Extrahieren von XML-Daten mit XPathNavigator
 Es gibt in Microsoft .NET Framework mehre Möglichkeiten zur Darstellung eines XML-Dokuments. Es kann ein <xref:System.String> oder eine der Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathDocument> verwendet werden. Um den Wechsel zwischen verschiedenen Darstellungen eines XML-Dokuments zu erleichtern, stellt die <xref:System.Xml.XPath.XPathNavigator>-Klasse eine Reihe von Methoden und Eigenschaften zum Extrahieren von XML als <xref:System.String>, als <xref:System.Xml.XmlReader>-Objekt oder als <xref:System.Xml.XmlWriter>-Objekt bereit.  
   
-## <a name="convert-an-xpathnavigator-to-a-string"></a>Konvertiert einen "XPathNavigator" in eine Zeichenfolge.  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Konvertiert einen XPathNavigator in eine Zeichenfolge.  
  Die <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse wird zum Abrufen des Markups des ganzen XML-Dokuments oder des Markups eines einzelnen Knotens und seiner untergeordneten Knoten verwendet.  
   
 > [!NOTE]
->  Die <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>-Eigenschaft ruft das Markup der einem Knoten untergeordneten Knoten ab.  
+> Die <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A>-Eigenschaft ruft das Markup der einem Knoten untergeordneten Knoten ab.  
   
  Im folgenden Codebeispiel wird das ganze in einem <xref:System.Xml.XPath.XPathNavigator>-Objekt enthaltene XML-Dokument sowohl als <xref:System.String> als auch als einzelner Knoten mit untergeordneten Knoten gespeichert.  
   

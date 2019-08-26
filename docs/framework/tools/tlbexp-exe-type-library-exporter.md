@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937990"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*assemblyName*|Die Assembly, für die eine Typbibliothek exportiert werden soll.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/asmpath:** *verzeichnis*|Gibt den Speicherort an, der nach Assemblys durchsucht werden soll. Wenn Sie diese Option verwenden, müssen Sie die Speicherorte, die nach Assemblys durchsucht werden sollen, auf die verwiesen wird, explizit angeben, einschließlich des aktuellen Verzeichnisses.<br /><br /> Wenn Sie die **asmpath**-Option verwenden, sucht das Type Library Exporter-Tool nicht nach einer Assembly im globalen Assemblycache (GAC).|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
@@ -54,13 +54,13 @@ tlbexp assemblyName [options]
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 > [!NOTE]
->  Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
+> Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Anmerkungen  
  "Tlbexp.exe" generiert eine Typbibliothek, die Definitionen der in der Assembly definierten Typen enthält. Anwendungen wie Visual Basic 6.0 können mithilfe der generierten Typbibliothek Bindungen zu den in der Assembly definierten .NET-Typen erstellen.  
   
 > [!IMPORTANT]
->  Sie können "Tlbexp.exe" nicht verwenden, um Windows-Metadatendateien (.winmd) zu exportieren. Das Exportieren von Windows Runtime-Assemblys wird nicht unterstützt.  
+> Sie können "Tlbexp.exe" nicht verwenden, um Windows-Metadatendateien (.winmd) zu exportieren. Das Exportieren von Windows Runtime-Assemblys wird nicht unterstützt.  
   
  Die Assembly wird immer vollständig konvertiert. Sie können mit Tlbexp.exekeine Typinformationen für einen Teil der in der Assembly definierten Typen generieren.  
   
@@ -132,7 +132,7 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Assembly Registration-Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
 - [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)

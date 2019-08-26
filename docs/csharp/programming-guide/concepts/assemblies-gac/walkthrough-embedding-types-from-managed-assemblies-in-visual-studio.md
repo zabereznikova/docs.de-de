@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844884"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595793"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
 
@@ -61,7 +61,7 @@ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben au
 
 4. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceInterface“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Erstellen**. Legen Sie den Ausgabepfad auf einen gültigen Speicherort auf dem Entwicklungscomputer fest, z.B. auf `C:\TypeEquivalenceSample`. Dieser Speicherort wird auch in einem späteren Schritt in dieser exemplarischen Vorgehensweise verwendet.
 
-5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **\<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
+5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **\<Neu...>** . Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
 
 6. Öffnen Sie die Datei „ISampleInterface.cs“. Fügen Sie den folgenden Code zur Klasse „ISampleInterface“ hinzu, um die ISampleInterface-Schnittstelle zu erstellen.
 
@@ -109,7 +109,7 @@ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben au
 
 4. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Eigenschaften**. Klicken Sie auf die Registerkarte **Erstellen**. Legen Sie den Ausgabepfad auf denselben Speicherort fest, den Sie im Projekt „TypeEquivalenceInterface“ verwendet haben, z.B. auf `C:\TypeEquivalenceSample`.
 
-5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **\<Neu...>**. Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
+5. Klicken Sie auf die Schaltfläche **Signierung**, während Sie noch die Projekteigenschaften bearbeiten. Wählen Sie die Option **Assembly signieren** aus. Klicken Sie in der Liste **Schlüsseldatei mit starkem Namen auswählen** auf **\<Neu...>** . Geben Sie im Feld **Schlüsseldateiname** `key.snk`ein. Deaktivieren Sie das Kontrollkästchen **Schlüsseldatei mit Kennwort schützen**. Klicken Sie auf **OK**.
 
 6. Klicken Sie mit der rechten Maustaste auf das Projekt „TypeEquivalenceRuntime“, und klicken Sie auf **Verweis hinzufügen**. Klicken Sie auf die Registerkarte **Durchsuchen**, und navigieren Sie zum Ausgabeordner für den Pfad. Wählen Sie die Datei „TypeEquivalenceInterface.dll“ aus, und klicken Sie auf **OK**.
 
@@ -235,7 +235,7 @@ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben au
 
 ## <a name="see-also"></a>Siehe auch
 
-- [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+- [-link (C#-Compileroptionen)](../../../language-reference/compiler-options/link-compiler-option.md)
+- [C#-Programmierhandbuch](../../index.md)
 - [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assemblys in .NET](../../../../standard/assembly/index.md)

@@ -2,12 +2,12 @@
 title: WordprocessingML-Dokumente mit Formatvorlagen 3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 4f465294ad299e83156ca458f28717c3abae741f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483137"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590872"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML-Dokumente mit Formatvorlagen
 Kompliziertere WordprocessingML-Dokumente besitzen Absätze, die mit Formatvorlagen formatiert sind.  
@@ -17,7 +17,7 @@ Kompliziertere WordprocessingML-Dokumente besitzen Absätze, die mit Formatvorla
  Beim Zugriff auf Pakete ist es wichtig, dass Sie dies über die Beziehungen zwischen den Teilen und nicht über einen beliebigen Pfad tun. Auf dieses Problem wird zwar im Tutorial „Bearbeiten von Inhalten in einem WordprocessingML-Dokument“ nicht eingegangen, die Beispielprogramme in diesem Tutorial zeigen aber die korrekte Herangehensweise.  
   
 ## <a name="a-document-that-uses-styles"></a>Ein Dokument mit Formatvorlagen  
- Das im Thema [Form von WordprocessingML-Dokumenten (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) verwendete WordML-Beispiel ist ein sehr einfaches Beispiel. Das folgende Dokument ist komplizierter: Es weist Absätze auf, die mit Formatvorlagen formatiert wurden. Die einfachste Möglichkeit, den XML-Code zu sehen, der ein Office Open XML-Dokument ausmacht, besteht darin, das [Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md) auszuführen.  
+ Das im Thema [Form von WordprocessingML-Dokumenten (C#)](./shape-of-wordprocessingml-documents.md) verwendete WordML-Beispiel ist ein sehr einfaches Beispiel. Das folgende Dokument ist komplizierter: Es weist Absätze auf, die mit Formatvorlagen formatiert wurden. Die einfachste Möglichkeit, den XML-Code zu sehen, der ein Office Open XML-Dokument ausmacht, besteht darin, das [Beispiel für die Ausgabe von Office Open-XML-Dokumentbausteinen (C#)](./example-that-outputs-office-open-xml-document-parts.md) auszuführen.  
   
  Im folgenden Dokument ist der erste Absatz mit der Formatvorlage `Heading1` formatiert worden. Eine Reihe von Absätzen sind mit der Standardformatvorlage formatiert worden. Einigen Absätzen wurde die Formatvorlage `Code` zugewiesen. Aufgrund dieser relativen Komplexität ist dieses Dokument für das Analysieren mit LINQ to XML interessanter.  
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern von XML-Daten mit XPathNavigator
+title: Ändern von XML-Daten mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967355"
 ---
-# <a name="modify-xml-data-using-xpathnavigator"></a>Ändern von XML-Daten mit XPathNavigator
+# <a name="modify-xml-data-using-xpathnavigator"></a>Ändern von XML-Daten mit "XPathNavigator"
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zum Ändern von Knoten und Werten eines XML-Dokuments verwendet werden. Diese Methoden können nur dann verwendet werden, wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt bearbeitet werden kann, d. h. seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss `true` sein.  
   
  <xref:System.Xml.XPath.XPathNavigator>-Objekte, die ein XML-Dokument bearbeiten können, werden von der <xref:System.Xml.XmlDocument.CreateNavigator%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse erstellt. <xref:System.Xml.XPath.XPathNavigator>-Objekte, die von der <xref:System.Xml.XPath.XPathDocument>-Klasse erstellt werden, sind schreibgeschützt. Der Versuch, die Bearbeitungsmethoden eines <xref:System.Xml.XPath.XPathNavigator>-Objekts anzuwenden, das von einem <xref:System.Xml.XPath.XPathDocument>-Objekt erstellt wurde, führt zu einer <xref:System.NotSupportedException>.  
@@ -39,7 +39,7 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methode
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|Nicht unterstützt.|  
   
 > [!NOTE]
->  Das Bearbeiten von <xref:System.Xml.XPath.XPathNodeType.Namespace>-Knoten oder des <xref:System.Xml.XPath.XPathNodeType.Root>-Knotens wird nicht unterstützt.  
+> Das Bearbeiten von <xref:System.Xml.XPath.XPathNodeType.Namespace>-Knoten oder des <xref:System.Xml.XPath.XPathNodeType.Root>-Knotens wird nicht unterstützt.  
   
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt ebenfalls eine Gruppe von Methoden zum Einfügen und Entfernen von Knoten bereit. Weitere Informationen zum Einfügen und Entfernen von Knoten aus einem XML-Dokument finden Sie in den Themen [Einfügen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) und [Entfernen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse verwendet das W3C-XML-Schema als Grundlage für die Beschreibung von stark typisiertem XML. Zu Elementen und Attributen können auf der Grundlage der Validierung mit einem W3C-XML-Schemadokument Typinformationen angemerkt werden. Elemente, die andere Elemente oder Attribute enthalten können, werden als komplexe Typen bezeichnet. Elemente, die nur Inhalt in Form von Text enthalten können, werden als einfache Typen bezeichnet.  
   
 > [!NOTE]
->  Attribute können nur einfache Typen haben.  
+> Attribute können nur einfache Typen haben.  
   
  Ein Element oder Attribut kann als Schema-gültig betrachtet werden, wenn es alle spezifischen Regeln der Typdefinition genügt. Ein Element mit dem einfachen Typ `xs:int` ist nur dann gültig, wenn es einen numerischen Wert zwischen -2147483648 und 2147483647 enthält. Bei komplexen Typen hängt die Schema-Gültigkeit der Elemente von der Schema-Gültigkeit der untergeordneten Elemente und Attribute ab. Wenn ein Element bezüglich einer komplexen Typdefinition gültig ist, dann sind auch alle untergeordneten Elemente und Attribute bezüglich deren Definitionen gültig. Wenn auch nur ein einziges untergeordnetes Element oder Attribut bezüglich seiner Typdefinition ungültig ist oder wenn die Gültigkeit nicht bekannt ist, ist das Element entweder ungültig, oder die Gültigkeit ist unbekannt.  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  Wenn einem gültigen Element, dessen <xref:System.Xml.XPath.XPathNavigator>-Attribut den Wert `xsi:nil` hat, mittels eines `true`-Objekts Inhalt hinzugefügt wird, wird der Wert des `xsi:nil`-Attributs auf `false` festgelegt.  
   
 > [!NOTE]
->  Wenn der Inhalt eines Elements, dessen `xsi:nil`-Attribut den Wert `false` hat, gelöscht wird, wird der Wert des Attributs nicht auf `true` geändert.  
+> Wenn der Inhalt eines Elements, dessen `xsi:nil`-Attribut den Wert `false` hat, gelöscht wird, wird der Wert des Attributs nicht auf `true` geändert.  
   
 ## <a name="saving-an-xml-document"></a>Speichern eines XML-Dokuments  
  Änderungen eines <xref:System.Xml.XmlDocument>-Objekts, die von den in diesem Thema beschriebenen Bearbeitungsmethoden vorgenommen wurden, werden mit den Methoden der <xref:System.Xml.XmlDocument>-Klasse gespeichert. Weitere Informationen zum Speichern der an einem <xref:System.Xml.XmlDocument>-Objekt vorgenommenen Änderungen finden Sie unter [Speichern und Ausgeben eines Dokuments](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  

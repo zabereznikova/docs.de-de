@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956687"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
@@ -32,19 +32,19 @@ ms.locfileid: "67347316"
  Unabhängig davon, wie Sie dynamischen Code generieren, erfordert die Ausführung des generierten Codes alle Berechtigungen, die für die Typen und Methoden erforderlich sind, die von dem generierten Code verwendet werden.  
   
 > [!NOTE]
->  Die Berechtigungen, die für das Reflektieren und Ausgeben von Code erforderlich sind, haben sich mit den Nachfolgeversionen von .NET Framework geändert. Siehe weiter unten in diesem Thema unter [Versionsinformationen](#Version_Information).  
+> Die Berechtigungen, die für das Reflektieren und Ausgeben von Code erforderlich sind, haben sich mit den Nachfolgeversionen von .NET Framework geändert. Siehe weiter unten in diesem Thema unter [Versionsinformationen](#Version_Information).  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
  Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
->  Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
+> Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
   
  Code in einer dynamischen Assembly kann auf sichtbare Typen und Member in anderen Assemblys zugreifen.  
   
 > [!NOTE]
->  Dynamische Assemblys verwenden nicht die Flags <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> und <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, die es dynamischen Methoden gestatten, auf nicht öffentliche Typen und Member zuzugreifen.  
+> Dynamische Assemblys verwenden nicht die Flags <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> und <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, die es dynamischen Methoden gestatten, auf nicht öffentliche Typen und Member zuzugreifen.  
   
  Flüchtige dynamische Assemblys werden im Arbeitsspeicher erstellt und nie auf dem Datenträger gespeichert, weshalb sie keine Berechtigungen für den Dateizugriff benötigen. Für das Speichern einer dynamischen Assembly auf dem Datenträger ist <xref:System.Security.Permissions.FileIOPermission> mit den geeigneten Flags erforderlich.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67347316"
  Stattdessen wird, wenn eine anonym gehostete dynamische Methode erstellt wird, wird die Aufrufliste erfasst. Wenn die Methode erstellt wird, werden anhand der erfassten Aufrufliste Sicherheitsanforderungen aufgestellt.  
   
 > [!NOTE]
->  Konzeptionell werden Anforderungen während der Erstellung der Methode gestellt. Das heißt, dass bei jeder Ausgabe einer MSIL-Anweisung Anforderungen gestellt werden könnten. In der aktuellen Implementierung werden alle Forderungen gestellt, wenn die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType>-Methode aufgerufen wird oder wenn der JIT-Compiler (Just-in-Time) aufgerufen wird, falls die Methode ohne Aufruf von <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> aufgerufen wird.  
+> Konzeptionell werden Anforderungen während der Erstellung der Methode gestellt. Das heißt, dass bei jeder Ausgabe einer MSIL-Anweisung Anforderungen gestellt werden könnten. In der aktuellen Implementierung werden alle Forderungen gestellt, wenn die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType>-Methode aufgerufen wird oder wenn der JIT-Compiler (Just-in-Time) aufgerufen wird, falls die Methode ohne Aufruf von <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> aufgerufen wird.  
   
  Wenn die Anwendungsdomäne es zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentlichen Typen und Member, auf die durch eine anonym gehostete dynamische Methode zugegriffen wird, müssen sich in Assemblys befinden, deren Berechtigungssätze entweder mit den Berechtigungssätzen der ausgebenden Aufrufliste übereinstimmen oder Teilmengen davon sind. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67347316"
 - Die für alle von der dynamischen Methode verwendeten Typen und Member erforderlichen Berechtigungen sind in dem Berechtigungssatz der teilweise vertrauenswürdigen Assembly enthalten.  
   
 > [!NOTE]
->  Dynamische Methoden unterstützen keine Debugsymbole.  
+> Dynamische Methoden unterstützen keine Debugsymbole.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Vorhandenen Assemblys zugeordnete dynamische Methoden  
@@ -113,7 +113,7 @@ ms.locfileid: "67347316"
 - Wenn Sie die dynamische Methode einem Typ oder Modul in einer anderen Assembly zuordnen, erfordert der Konstruktor zwei Dinge: <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag sowie den Berechtigungssatz der Assembly, die das andere Modul enthält. Das heißt, Ihre Aufrufliste muss alle Berechtigungen aus dem Berechtigungssatz des Zielmoduls enthalten, zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  Um Abwärtskompatibilität zu gewährleisten, wenn die Anforderung des Zielberechtigungssatzes zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> fehlschlägt, erfordert der Konstruktor <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>-Flag.  
+    > Um Abwärtskompatibilität zu gewährleisten, wenn die Anforderung des Zielberechtigungssatzes zuzüglich <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> fehlschlägt, erfordert der Konstruktor <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>-Flag.  
   
  Obgleich die Elemente in dieser Liste unter dem Aspekt des Berechtigungssatzes der ausgebenden Assembly beschrieben werden, sollten Sie daran denken, dass die Anforderungen an die gesamte Aufrufliste, einschließlich der Grenze der Anwendungsdomäne, gestellt werden.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67347316"
 ### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>Generieren von dynamischen Methoden aus teilweise vertrauenswürdigem Code  
   
 > [!NOTE]
->  Die empfohlene Vorgehensweise zum Generieren dynamischer Methoden aus teilweise vertrauenswürdigem Code besteht in der Verwendung [anonym gehosteter dynamischer Methoden](#Anonymously_Hosted_Dynamic_Methods).  
+> Die empfohlene Vorgehensweise zum Generieren dynamischer Methoden aus teilweise vertrauenswürdigem Code besteht in der Verwendung [anonym gehosteter dynamischer Methoden](#Anonymously_Hosted_Dynamic_Methods).  
   
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine dynamische Methode generieren und ausführen kann:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67347316"
 - Die dynamische Methode überspringt keine JIT-Sichtbarkeitsprüfungen.  
   
 > [!NOTE]
->  Dynamische Methoden unterstützen keine Debugsymbole.  
+> Dynamische Methoden unterstützen keine Debugsymbole.  
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Versionsinformationen  
@@ -144,7 +144,7 @@ ms.locfileid: "67347316"
  Ab .NET Framework 2.0 Service Pack 1 ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag ist standardmäßig in den benannten Berechtigungsätzen `FullTrust` und `LocalIntranet` enthalten, aber nicht im `Internet`-Berechtigungssatz. Aus diesem Grund kann in früheren Versionen von .NET Framework eine Bibliothek mit Internetberechtigungen nur dann verwendet werden, wenn dafür ein <xref:System.Security.PermissionSet.Assert%2A>-Element für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt wird. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In .NET Framework 2.SP1 0 ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Dies ermöglicht es, dass Bibliotheken, die Code ausgeben, sicherheitstransparent sein können, und beseitigt die Notwendigkeit der Assertion von <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, was das Schreiben einer sicheren Bibliothek vereinfacht.  
+> <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag ist standardmäßig in den benannten Berechtigungsätzen `FullTrust` und `LocalIntranet` enthalten, aber nicht im `Internet`-Berechtigungssatz. Aus diesem Grund kann in früheren Versionen von .NET Framework eine Bibliothek mit Internetberechtigungen nur dann verwendet werden, wenn dafür ein <xref:System.Security.PermissionSet.Assert%2A>-Element für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt wird. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In .NET Framework 2.SP1 0 ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Dies ermöglicht es, dass Bibliotheken, die Code ausgeben, sicherheitstransparent sein können, und beseitigt die Notwendigkeit der Assertion von <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, was das Schreiben einer sicheren Bibliothek vereinfacht.  
   
  Darüber hinaus wurde in .NET Framework 2.0 SP1 das <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag für den Zugriff auf nicht öffentliche Typen und Member aus teilweise vertrauenswürdigen dynamischen Methoden eingeführt. Frühere Versionen von .NET Framework erfordern das <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>-Flag für dynamische Methoden, die auf nicht öffentliche Typen und Member zugreifen. Diese Berechtigung sollte niemals teilweise vertrauenswürdigem Code erteilt werden.  
   

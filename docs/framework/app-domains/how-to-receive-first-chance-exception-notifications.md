@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921518"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
 Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.AppDomain>-Klasse erhalten Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme, bevor die CLR mit der Suche nach Ausnahmehandlern beginnt.
@@ -91,7 +91,7 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
  Jedes Mal, wenn die `Thrower`-Methode eine Ausnahme in `AD1` auslöst, wird das <xref:System.AppDomain.FirstChanceException>-Ereignis in `AD1` ausgelöst, und der Ereignishandler zeigt eine Meldung an. Die Runtime sucht nach einem Ausnahmehandler. Im ersten Fall befindet sich der Ausnahmehandler in `AD1`. Im zweiten Fall wird die Ausnahme in `AD1` nicht behandelt und stattdessen in der Standardanwendungsdomäne abgefangen.
 
 > [!NOTE]
->  Der Name der Standardanwendungsdomäne ist identisch mit dem Namen der ausführbaren Datei.
+> Der Name der Standardanwendungsdomäne ist identisch mit dem Namen der ausführbaren Datei.
 
  Wenn Sie der Standardanwendungsdomäne einen Handler für das <xref:System.AppDomain.FirstChanceException>-Ereignis hinzufügen, wird das Ereignis ausgelöst und behandelt, bevor die Standardanwendungsdomäne die Ausnahme behandelt. Um dies zu veranschaulichen, fügen Sie den C#-Code `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (in Visual Basic: `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) am Anfang von `Main()` ein.
 

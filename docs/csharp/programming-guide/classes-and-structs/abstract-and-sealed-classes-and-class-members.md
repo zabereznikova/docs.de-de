@@ -8,17 +8,17 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: fc3e29ad606cf8a60318a320e8ebc65b0d7f6e48
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965253"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597290"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Abstrakte und versiegelte Klassen und Klassenmember (C#-Programmierhandbuch)
-Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstract.md) ermöglicht die Erstellung von Klassen und [Klassenmembern](../../../csharp/language-reference/keywords/class.md), die unvollständig sind und in einer abgeleiteten Klasse implementiert werden müssen.  
+Das Schlüsselwort [abstract](../../language-reference/keywords/abstract.md) ermöglicht die Erstellung von Klassen und [Klassenmembern](../../language-reference/keywords/class.md), die unvollständig sind und in einer abgeleiteten Klasse implementiert werden müssen.  
   
- Mit dem Schlüsselwort [sealed](../../../csharp/language-reference/keywords/sealed.md) können Sie die Vererbung von Klassen oder bestimmten Klassenmembern unterbinden, die zuvor als [virtuell](../../../csharp/language-reference/keywords/virtual.md) gekennzeichnet wurden.  
+ Mit dem Schlüsselwort [sealed](../../language-reference/keywords/sealed.md) können Sie die Vererbung von Klassen oder bestimmten Klassenmembern unterbinden, die zuvor als [virtuell](../../language-reference/keywords/virtual.md) gekennzeichnet wurden.  
   
 ## <a name="abstract-classes-and-class-members"></a>Abstrakte Klassen und Klassenmember  
  Klassen können durch Festlegen des Schlüsselworts `abstract` vor der Klassendefinition als abstrakt deklariert werden. Beispiel:  
@@ -38,21 +38,21 @@ Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstra
  Wenn eine `virtual`-Methode als `abstract` deklariert ist, bleibt sie für alle Klassen virtuell, die von der abstrakten Klasse erben. Eine Klasse, die eine abstrakte Methode erbt, kann nicht auf die ursprüngliche Implementierung der Methode zugreifen. Im vorherigen Beispiel konnte `DoWork` auf Klasse F `DoWork` auf Klasse D nicht aufrufen. So kann eine abstrakte Klasse abgeleitete Klassen dazu zwingen, neue Methodenimplementierungen für virtuelle Methoden bereitzustellen.  
   
 ## <a name="sealed-classes-and-class-members"></a>Versiegelte Klassen und Klassenmember  
- Klassen können durch Festlegen des Schlüsselworts `sealed` vor der Klassendefinition als [sealed](../../../csharp/language-reference/keywords/sealed.md) deklariert werden. Beispiel:  
+ Klassen können durch Festlegen des Schlüsselworts `sealed` vor der Klassendefinition als [sealed](../../language-reference/keywords/sealed.md) deklariert werden. Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  Eine versiegelte Klasse kann nicht als Basisklasse verwendet werden. Aus diesem Grund kann sie auch keine abstrakte Klasse sein. Von versiegelten Klassen kann nicht abgeleitet werden. Weil sie nicht als Basisklasse verwendet werden können, können Aufrufe an versiegelte Klassenmember durch Laufzeitoptimierungen etwas beschleunigt werden.  
   
- Methoden, Indexer, Eigenschaften oder Ereignisse einer abgeleiteten Klasse, die einen virtuellen Member der Basisklasse überschreiben, können diesen Member als versiegelt deklarieren. Damit wird der virtuelle Aspekt des Members für jede weitere abgeleitete Klasse aufgehoben. Dazu wird in die Klassenmemberdeklaration das Schlüsselwort `sealed` vor dem Schlüsselwort [override](../../../csharp/language-reference/keywords/override.md) eingefügt. Beispiel:  
+ Methoden, Indexer, Eigenschaften oder Ereignisse einer abgeleiteten Klasse, die einen virtuellen Member der Basisklasse überschreiben, können diesen Member als versiegelt deklarieren. Damit wird der virtuelle Aspekt des Members für jede weitere abgeleitete Klasse aufgehoben. Dazu wird in die Klassenmemberdeklaration das Schlüsselwort `sealed` vor dem Schlüsselwort [override](../../language-reference/keywords/override.md) eingefügt. Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Vorgehensweise: Definieren von abstrakten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Klassen und Strukturen](./index.md)
+- [Vererbung](./inheritance.md)
+- [Methoden](./methods.md)
+- [Felder](./fields.md)
+- [Vorgehensweise: Definieren von abstrakten Eigenschaften](./how-to-define-abstract-properties.md)

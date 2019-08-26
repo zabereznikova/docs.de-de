@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942376"
 ---
 # <a name="time-based-cache-policies"></a>zeitbasierte Cacherichtlinien
 Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, der Header, die mit der Ressource zurückgegeben wurden und der aktuellen Uhrzeit. Wenn Sie eine zeitbasierte Cacherichtlinie festlegen, können Sie entweder die zeitbasierte Richtlinie <xref:System.Net.Cache.HttpRequestCacheLevel.Default> verwenden, oder eine benutzerdefinierte zeitbasierte Richtlinie erstellen. Bei Verwendung der zeitbasierten Standardrichtlinie für Ressourcen, die mithilfe des Hypertext Transfer Protocol (HTTP) abgerufen wurde, wird das exakte Cacheverhalten von den Headern bestimmt, die in der zwischengespeicherten Antwort enthalten sind, und von den Verhaltensweisen in den Abschnitten 13 und 14 des RFC 2616, verfügbar auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Ein Codebeispiel, das das Festlegen der zeitbasierten Standardrichtlinie für HTTP-Ressourcen veranschaulicht, finden Sie unter [Vorgehensweise: Festlegen der zeitbasierten Standardcacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -39,7 +39,7 @@ Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeic
 - Datum für die Cachesynchronisierung  
   
 > [!NOTE]
->  Die Verwendung der zeitbasierten Standardcacherichtlinie darf nicht mit dem Festlegen einer Standardcacherichtlinie für Ihre Anwendung verwechselt werden. Die zeitbasierte Standardrichtlinie ist eine bestimmte Richtlinie, die auf Ebene der Anforderung oder einer Anwendung verwendet werden kann. Die Standardcacherichtlinie für Ihre Anwendung ist eine Richtlinie (standortbasiert oder zeitbasiert), die wirksam wird, wenn keine Richtlinie für eine Anforderung festgelegt ist. Weitere Informationen zum Festlegen einer Standardcacherichtlinie für Ihre Anwendung finden Sie unter <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
+> Die Verwendung der zeitbasierten Standardcacherichtlinie darf nicht mit dem Festlegen einer Standardcacherichtlinie für Ihre Anwendung verwechselt werden. Die zeitbasierte Standardrichtlinie ist eine bestimmte Richtlinie, die auf Ebene der Anforderung oder einer Anwendung verwendet werden kann. Die Standardcacherichtlinie für Ihre Anwendung ist eine Richtlinie (standortbasiert oder zeitbasiert), die wirksam wird, wenn keine Richtlinie für eine Anforderung festgelegt ist. Weitere Informationen zum Festlegen einer Standardcacherichtlinie für Ihre Anwendung finden Sie unter <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
 ### <a name="maximum-age"></a>Maximales Alter  
  Das Kriterium der Richtlinie zum maximalen Alter gibt die Zeitspanne an, in der eine zwischengespeicherte Kopie einer Ressource verwendet werden kann. Wenn die zwischengespeicherte Kopie der Ressource älter als die angegebene Zeitspanne ist, muss die Ressource anhand der Inhalte auf dem Server erneut überprüft werden. Wenn das maximale Alter erlauben würde, dass die Ressource nach dem Ablaufdatum verwendet werden könnte, wird dieses Kriterium nicht berücksichtigt, außer es ist auch ein Wert für die maximale Überalterung angegeben.  

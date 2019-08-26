@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938017"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -30,7 +30,7 @@ Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [star
  Das Strong Name-Tool wird automatisch mit Visual Studio installiert. Zum Starten des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
->  Auf 64-Bit-Computern können die 32-Bit-Version von Sn.exe über die Developer-Eingabeaufforderung für Visual Studio und auch die 64-Bit-Version über die Eingabeaufforderung für Visual Studio x64 Win64 ausgeführt werden. 
+> Auf 64-Bit-Computern können die 32-Bit-Version von Sn.exe über die Developer-Eingabeaufforderung für Visual Studio und auch die 64-Bit-Version über die Eingabeaufforderung für Visual Studio x64 Win64 ausgeführt werden. 
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>Parameter  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**-a** *identitätschlüsselpaardatei* *öffentlichersignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einer Datei.|  
 |**-ac** *öffentlicheridentitätschlüsseldatei* *identitätsschlüsselpaarcontainer* *öffentlicherSignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einem Schlüsselcontainer.|  
@@ -62,7 +62,7 @@ sn [-quiet][option [parameter(s)]]
 |**-R**[**a**] *assembly* *eingabedatei*|Signiert eine bereits signierte oder eine verzögert signierte Assembly mit dem Schlüsselpaar in der *Eingabedatei* neu.<br /><br /> Bei Angabe von **-Ra** werden Hashes für alle Dateien in der Assembly neu berechnet.|  
 |**-Rc**[**a**] *assembly container*|Signiert eine bereits signierte oder eine verzögert signierte Assembly mit dem Schlüsselpaar in *Container*.<br /><br /> Bei Angabe von **-Rca** werden Hashes für alle Dateien in der Assembly neu berechnet.|  
 |**-Rh** *assembly*|Berechnet Hashes für alle Dateien in der Assembly neu.|  
-|**-t**[**p**] *eingabedatei*|Zeigt das in der *Eingabedatei* gespeicherte Token für den öffentlichen Schlüssel an. Die *Eingabedatei* muss einen öffentlichen Schlüssel enthalten, der zuvor mittels **-p** aus einer Schlüsselpaardatei generiert wurde.  Verwenden Sie nicht die Option **-t[p]**, um das Token direkt aus einer Schlüsselpaardatei zu extrahieren.<br /><br /> SN.EXE berechnet das Token mithilfe einer Hashfunktion aus dem öffentlichen Schlüssel. Um Speicherplatz zu sparen, werden Token für öffentliche Schlüssel von der Common Language Runtime als Teil eines Verweises auf eine weitere Assembly im Manifest gespeichert, wenn eine Abhängigkeit zu einer Assembly mit starkem Namen aufgezeichnet wird. Bei der Option **-Tp** wird zusätzlich zum Token auch der öffentliche Schlüssel angezeigt. Wenn das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut auf die Assembly angewendet wurde, dient das Token für den Identitätsschlüssel, und der Name des Hashalgorithmus und der Identitätsschlüssel werden angezeigt.<br /><br /> Beachten Sie, dass bei Verwendung dieser Option die Assemblysignatur nicht überprüft wird und daher nicht für Entscheidungen über Vertrauensstellungen verwendet werden sollte.  Bei Angabe dieser Option werden nur die unformatierten Tokendaten des öffentlichen Schlüssels angezeigt.|  
+|**-t**[**p**] *eingabedatei*|Zeigt das in der *Eingabedatei* gespeicherte Token für den öffentlichen Schlüssel an. Die *Eingabedatei* muss einen öffentlichen Schlüssel enthalten, der zuvor mittels **-p** aus einer Schlüsselpaardatei generiert wurde.  Verwenden Sie nicht die Option **-t[p]** , um das Token direkt aus einer Schlüsselpaardatei zu extrahieren.<br /><br /> SN.EXE berechnet das Token mithilfe einer Hashfunktion aus dem öffentlichen Schlüssel. Um Speicherplatz zu sparen, werden Token für öffentliche Schlüssel von der Common Language Runtime als Teil eines Verweises auf eine weitere Assembly im Manifest gespeichert, wenn eine Abhängigkeit zu einer Assembly mit starkem Namen aufgezeichnet wird. Bei der Option **-Tp** wird zusätzlich zum Token auch der öffentliche Schlüssel angezeigt. Wenn das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut auf die Assembly angewendet wurde, dient das Token für den Identitätsschlüssel, und der Name des Hashalgorithmus und der Identitätsschlüssel werden angezeigt.<br /><br /> Beachten Sie, dass bei Verwendung dieser Option die Assemblysignatur nicht überprüft wird und daher nicht für Entscheidungen über Vertrauensstellungen verwendet werden sollte.  Bei Angabe dieser Option werden nur die unformatierten Tokendaten des öffentlichen Schlüssels angezeigt.|  
 |**-T**[**p**] *assembly*|Zeigt das Token des öffentlichen Schlüssels für *Assembly* an. Die *Assembly* muss dem Namen einer Datei entsprechen, die ein Assemblymanifest enthält.<br /><br /> SN.EXE berechnet das Token mithilfe einer Hashfunktion aus dem öffentlichen Schlüssel. Um Speicherplatz zu sparen, werden Token für öffentliche Schlüssel von der Runtime als Teil eines Verweises auf eine weitere Assembly im Manifest gespeichert, wenn eine Abhängigkeit zu einer Assembly mit starkem Namen aufgezeichnet wird. Bei der Option **-Tp** wird zusätzlich zum Token auch der öffentliche Schlüssel angezeigt. Wenn das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut auf die Assembly angewendet wurde, dient das Token für den Identitätsschlüssel, und der Name des Hashalgorithmus und der Identitätsschlüssel werden angezeigt.<br /><br /> Beachten Sie, dass bei Verwendung dieser Option die Assemblysignatur nicht überprüft wird und daher nicht für Entscheidungen über Vertrauensstellungen verwendet werden sollte.  Bei Angabe dieser Option werden nur die unformatierten Tokendaten des öffentlichen Schlüssels angezeigt.|  
 |`-TS` `assembly` `infile`|Signiert testweise die vollständig oder teilweise signierte `assembly` mit dem Schlüsselpaar aus der `infile`.|  
 |-`TSc` `assembly` `container`|Signiert testweise die vollständig oder teilweise signierte `assembly` mit dem Schlüsselpaar aus dem Schlüsselcontainer `container`.|  
@@ -77,13 +77,13 @@ sn [-quiet][option [parameter(s)]]
 |**-?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 > [!NOTE]
->  Bei allen Optionen für SN.EXE wird zwischen der Groß- und Kleinschreibung unterschieden. Sie müssen die Optionen daher exakt wie gezeigt angeben, damit sie vom Tool richtig interpretiert werden.  
+> Bei allen Optionen für SN.EXE wird zwischen der Groß- und Kleinschreibung unterschieden. Sie müssen die Optionen daher exakt wie gezeigt angeben, damit sie vom Tool richtig interpretiert werden.  
   
 ## <a name="remarks"></a>Anmerkungen  
  Die Optionen **-R** und **-Rc** sind bei Assemblys nützlich, die verzögert signiert wurden. In diesem Szenario wurde während der Kompilierung nur der öffentliche Schlüssel festgelegt. Die Signierung wird auf einen späteren Zeitpunkt verschoben, wenn der private Schlüssel bekannt ist.  
   
 > [!NOTE]
->  Bei Parametern (wie –**Vr)**, die Schreibzugriffe auf geschützte Ressourcen (z.B. die Registrierung) durchführen, müssen Sie „sn.exe“ als Administrator ausführen.  
+> Bei Parametern (wie –**Vr)** , die Schreibzugriffe auf geschützte Ressourcen (z.B. die Registrierung) durchführen, müssen Sie „sn.exe“ als Administrator ausführen.  
   
 Das Strong Name-Tool geht davon aus, dass die Paaren aus öffentlichen und privaten Schlüsseln mit dem `AT_SIGNATURE`-Algorithmusbezeichner generiert werden. Mit dem `AT_KEYEXCHANGE`-Algorithmus erstellte Paare aus öffentlichen und privaten Schlüsseln verursachen einen Fehler. 
 
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

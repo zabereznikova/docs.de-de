@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: ecf07a11b92dccee888fb8113b6f3e2f333cf591
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 57c7811246dd1de3f009033403ec269082915c09
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595324"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590024"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Vorgehensweise: Abrufen von Informationen über Dateien, Ordner und Laufwerke (C#-Programmierhandbuch)
 Sie können im .NET Framework auf die Dateisysteminformationen mithilfe folgender Klassen zugreifen:  
@@ -56,5 +56,5 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](./index.md)

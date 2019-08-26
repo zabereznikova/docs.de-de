@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b2fc0846b3f3801d64ee3bf1f1dc4b347034ad38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939565"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Auswählen von Knoten mithilfe der XPath-Navigation
 Das XML-DOM (Document Object Model) enthält Methoden, die Ihnen ermöglichen, mithilfe der XPath-Navigation (XML Path Language) Informationen im DOM abzufragen. Mit XPath können Sie einen bestimmten einzelnen Knoten oder alle Knoten suchen, die bestimmte Kriterien erfüllen.  
@@ -121,13 +121,13 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
  Alle <xref:System.Xml.XmlNodeList>-Objekte werden mit dem zugrunde liegenden Dokument synchronisiert. Wenn Sie die Knotenliste durchlaufen und den Wert eines Knotens ändern, wird dieser Knoten daher auch in dem Dokument aktualisiert, aus dem er stammt. Beachten Sie, dass im vorhergehenden Beispiel auch das zugrunde liegende Dokument geändert wird, wenn ein Knoten in der ausgewählten <xref:System.Xml.XmlNodeList> geändert wird.  
   
 > [!NOTE]
->  Wenn das zugrunde liegenden Dokument verändert wird, ist es empfehlenswert, die Auswahl erneut auszuführen. Wenn die Änderung des Knoten dazu führen kann, dass der Knoten der Knotenliste hinzugefügt wird, wenn dies vorher nicht der Fall war, oder dass der Knoten aus der Knotenliste entfernt wird, kann nicht garantiert werden, dass die Knotenliste korrekt ist.  
+> Wenn das zugrunde liegenden Dokument verändert wird, ist es empfehlenswert, die Auswahl erneut auszuführen. Wenn die Änderung des Knoten dazu führen kann, dass der Knoten der Knotenliste hinzugefügt wird, wenn dies vorher nicht der Fall war, oder dass der Knoten aus der Knotenliste entfernt wird, kann nicht garantiert werden, dass die Knotenliste korrekt ist.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>Namespaces in XPath-Ausdrücken  
  XPath-Ausdrücke können Namespaces enthalten. Namespace-Auflösung wird mithilfe von <xref:System.Xml.XmlNamespaceManager> unterstützt. Wenn der XPath-Ausdruck ein Präfix umfasst, muss das Paar aus Präfix- und Namespace-URI <xref:System.Xml.XmlNamespaceManager> hinzugefügt werden, und <xref:System.Xml.XmlNamespaceManager> wird an die <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29>-Methode oder die <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>-Methode übergeben. Beachten Sie, dass die oben aufgeführten Codebeispiele <xref:System.Xml.XmlNamespaceManager> verwenden, um den Namespace des Dokuments bookstore.xml aufzulösen.  
   
 > [!NOTE]
->  Wenn der XPath-Ausdruck kein Präfix umfasst, wird davon ausgegangen, dass der Namespace-URI (Uniform Resource Identifier) der leere Namespace ist. Wenn die XML einen Standardnamespace umfasst, muss <xref:System.Xml.XmlNamespaceManager> trotzdem ein Präfix und Namespace-URI hinzugefügt werden. Andernfalls werden keine Knoten ausgewählt.  
+> Wenn der XPath-Ausdruck kein Präfix umfasst, wird davon ausgegangen, dass der Namespace-URI (Uniform Resource Identifier) der leere Namespace ist. Wenn die XML einen Standardnamespace umfasst, muss <xref:System.Xml.XmlNamespaceManager> trotzdem ein Präfix und Namespace-URI hinzugefügt werden. Andernfalls werden keine Knoten ausgewählt.  
   
 #### <a name="input-file"></a>Eingabedatei  
  Nachfolgend ist die Datei bookstore.xml aufgeführt, die für die Beispiele in diesem Thema als Eingabedatei verwendet wird:  

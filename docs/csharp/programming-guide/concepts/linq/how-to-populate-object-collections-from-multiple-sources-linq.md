@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584394"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593055"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)
 
@@ -18,7 +18,7 @@ In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in 
 
 ## <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei
 
-Kopieren Sie die Dateien „names.csv“ und „scores.csv“ in Ihren Projektordner wie unter [Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) beschrieben.
+Kopieren Sie die Dateien „names.csv“ und „scores.csv“ in Ihren Projektordner wie unter [Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) beschrieben.
 
 ## <a name="example"></a>Beispiel
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-In der [select](../../../../csharp/language-reference/keywords/select-clause.md)-Klausel wird ein Objektinitialisierer zur Instanziierung jedes neuen `Student`-Objekts mithilfe der Daten aus den beiden Quellen verwendet.
+In der [select](../../../language-reference/keywords/select-clause.md)-Klausel wird ein Objektinitialisierer zur Instanziierung jedes neuen `Student`-Objekts mithilfe der Daten aus den beiden Quellen verwendet.
 
 Wenn Sie die Ergebnisse einer Abfrage nicht speichern müssen, können anonyme Typen praktischer als benannte Typen sein. Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich. Im folgenden Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt. Allerdings werden statt benannter anonyme Typen verwendet:
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Objekt- und Auflistungsinitialisierer](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [Objekt- und Auflistungsinitialisierer](../../classes-and-structs/object-and-collection-initializers.md)
+- [Anonyme Typen](../../classes-and-structs/anonymous-types.md)

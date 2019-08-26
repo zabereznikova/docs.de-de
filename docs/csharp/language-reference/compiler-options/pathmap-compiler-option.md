@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 063cee694e8367a86fead2f1258c3cbda5ab7018
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635831"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606629"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (C#-Compileroptionen)
 
@@ -32,7 +32,7 @@ Mit der Compileroption **-pathmap** wird angegeben, wie physische Pfade den Quel
 
 Trennen Sie mehrere zugeordnete Quellpfade durch ein Komma.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Aus folgenden Gründen schreibt der Compiler den Quellpfad in die Ausgabe:
 
@@ -52,5 +52,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

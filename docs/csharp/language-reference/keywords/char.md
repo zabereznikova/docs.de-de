@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661459"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605948"
 ---
 # <a name="char-c-reference"></a>char (C#-Referenz)
 
@@ -44,12 +44,12 @@ Weitere Informationen finden Sie unter [Intregrale Datentypen](~/_csharplang/spe
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Char>
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [Integrale Typen](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)
-- [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](./index.md)
+- [Integrale Typen](../builtin-types/integral-numeric-types.md)
+- [Tabelle integrierter Typen](./built-in-types-table.md)
+- [Tabelle für implizite numerische Konvertierungen](./implicit-numeric-conversions-table.md)
+- [Tabelle für explizite numerische Konvertierungen](./explicit-numeric-conversions-table.md)
+- [Typen mit Nullwert](../../programming-guide/nullable-types/index.md)
+- [Zeichenfolgen](../../programming-guide/strings/index.md)

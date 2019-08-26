@@ -2,12 +2,12 @@
 title: Aufruferinformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185273"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595342"
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
 
@@ -15,7 +15,7 @@ Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufruf
 
 Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:
 
-|Attribut|Beschreibung |Typ|
+|Attribut|BESCHREIBUNG|Typ|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|
@@ -49,7 +49,7 @@ public void TraceMessage(string message,
 //  source line number: 31
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sie müssen einen expliziten Standardwert für jeden optionalen Parameter angeben. Sie können Aufrufer-Informationsattribute nicht auf Parameter anwenden, die nicht als optional festgelegt wurden.
 
@@ -81,7 +81,7 @@ Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Attribute (C#)](./attributes/index.md)
+- [Allgemeine Attribute (C#)](./attributes/common-attributes.md)
+- [Benannte und optionale Argumente](../classes-and-structs/named-and-optional-arguments.md)
+- [Programmierkonzepte (C#)](./index.md)

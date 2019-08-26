@@ -2,18 +2,18 @@
 title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 712ae4c9b4cf577ab728e4b78582445070e08049
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481105"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595292"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.
 
-Arrays am besten zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ geeignet. Weitere Informationen zu Arrays finden Sie unter [Arrays](../../../csharp/programming-guide/arrays/index.md).
+Arrays am besten zum Erstellen und Arbeiten mit einer festen Anzahl von Objekten mit starkem Typ geeignet. Weitere Informationen zu Arrays finden Sie unter [Arrays](../arrays/index.md).
 
 Auflistungen ermöglichen ein flexibleres Arbeiten mit Objektgruppen. Im Gegensatz zu Arrays kann sich die Gruppe von Objekten, mit denen Sie arbeiten, in Abhängigkeit von den sich ändernden Anforderungen der Anwendung dynamisch vergrößern bzw. verkleinern. Bei einigen Auflistungen können Sie jedem Objekt, das Sie in die Auflistung einfügen, einen Schlüssel zuweisen, sodass das Objekt anhand des Schlüssels schnell abgerufen werden kann.
 
@@ -22,7 +22,7 @@ Eine Auflistung ist eine Klasse. Daher müssen Sie eine Instanzen der Klasse dek
 Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Eine generische Auflistung erzwingt Typsicherheit, sodass der Auflistung kein anderer Datentyp hinzugefügt werden kann. Wenn Sie ein Element aus einer generischen Auflistung abrufen, brauchen Sie dessen Datentyp nicht zu bestimmen oder zu konvertieren.
 
 > [!NOTE]
-> Schließen Sie bei den Beispielen in diesem Thema [using](../../../csharp/language-reference/keywords/using-directive.md)-Anweisungen für die `System.Collections.Generic`- und `System.Linq`-Namespaces ein.
+> Schließen Sie bei den Beispielen in diesem Thema [using](../../language-reference/keywords/using-directive.md)-Anweisungen für die `System.Collections.Generic`- und `System.Linq`-Namespaces ein.
 
  **Inhalt**
 
@@ -52,7 +52,7 @@ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klas
 
 In den Beispielen in diesem Abschnitt wird die generische Klasse <xref:System.Collections.Generic.List%601> verwendet, die es Ihnen ermöglicht, mit einer stark typisierten Liste von Objekten zu arbeiten.
 
-Im folgenden Beispiel wird eine Liste von Zeichenfolgen erstellt, und die Zeichenfolgen werden unter Verwendung einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung durchlaufen.
+Im folgenden Beispiel wird eine Liste von Zeichenfolgen erstellt, und die Zeichenfolgen werden unter Verwendung einer [foreach](../../language-reference/keywords/foreach-in.md)-Anweisung durchlaufen.
 
 ```csharp
 // Create a list of strings.
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Wenn der Inhalt einer Auflistung im Voraus bekannt ist, können Sie einen *Auflistungsinitialisierer* verwenden, um die Auflistung zu initialisieren. Weitere Informationen finden Sie unter [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+Wenn der Inhalt einer Auflistung im Voraus bekannt ist, können Sie einen *Auflistungsinitialisierer* verwenden, um die Auflistung zu initialisieren. Weitere Informationen finden Sie unter [Objekt- und Auflistungsinitialisierer](../classes-and-structs/object-and-collection-initializers.md).
 
 Das folgende Beispiel entspricht dem vorherigen Beispiel, außer dass ein Auflistungsinitialisierer verwendet wird, um der Auflistung Elemente hinzuzufügen.
 
@@ -87,7 +87,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-Sie können anstelle einer [for](../../../csharp/language-reference/keywords/for.md)-Anweisung eine `foreach`-Anweisung verwenden, um eine Auflistung zu durchlaufen. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.
+Sie können anstelle einer [for](../../language-reference/keywords/for.md)-Anweisung eine `foreach`-Anweisung verwenden, um eine Auflistung zu durchlaufen. Sie erreichen dies, indem Sie durch die Indexposition auf die Auflistungselemente zugreifen. Der Index der Elemente beginnt mit 0 und endet an der Elementanzahl minus 1.
 
 Im folgenden Beispiel werden die Elemente einer Auflistung unter Verwendung von `for` anstelle von `foreach` durchlaufen.
 
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Anstelle einer `foreach`-Anweisung wird eine [for](../../../csharp/language-reference/keywords/for.md)-Anweisung verwendet, die die Elemente in absteigender Reihenfolge durchläuft. Dies liegt daran, dass die <xref:System.Collections.Generic.List%601.RemoveAt%2A>-Methode dazu führt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.
+Im folgenden Beispiel werden alle Elemente aus einer generischen Liste entfernt. Anstelle einer `foreach`-Anweisung wird eine [for](../../language-reference/keywords/for.md)-Anweisung verwendet, die die Elemente in absteigender Reihenfolge durchläuft. Dies liegt daran, dass die <xref:System.Collections.Generic.List%601.RemoveAt%2A>-Methode dazu führt, dass Elemente nach einem entfernten Element einen niedrigeren Indexwert haben.
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -200,7 +200,7 @@ Zum Erstellen einer generischen Auflistung verwenden Sie eine der Klassen im <xr
 
 In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace aufgelistet:
 
-|Klasse|Beschreibung|
+|Klasse|BESCHREIBUNG|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|
 |<xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|
@@ -230,7 +230,7 @@ Sofern möglich sollten die generischen Auflistungen im <xref:System.Collections
 
 In der folgenden Tabelle werden einige der häufig verwendeten Klassen im `System.Collections`-Namespace aufgelistet:
 
-|Klasse|Beschreibung|
+|Klasse|BESCHREIBUNG|
 |---|---|
 |<xref:System.Collections.ArrayList>|Stellt ein Array von Objekten dar, das je nach Bedarf dynamisch vergrößert wird.|
 |<xref:System.Collections.Hashtable>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Verwenden von LINQ zum Zugriff auf eine Auflistung
 
-LINQ (Language-Integrated Query) kann verwendet werden, um auf Auflistungen zuzugreifen. LINQ-Abfragen stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).
+LINQ (Language-Integrated Query) kann verwendet werden, um auf Auflistungen zuzugreifen. LINQ-Abfragen stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [Erste Schritte mit LINQ in C#](./linq/getting-started-with-linq.md).
 
 Im folgenden Beispiel wird eine LINQ-Abfrage für eine generische `List` ausgeführt. Die LINQ-Abfrage gibt eine andere Auflistung zurück, die die Ergebnisse enthält.
 
@@ -563,13 +563,13 @@ public class Color
 
 ## <a name="iterators"></a>Iterators
 
-Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung, um jedes Element der Auflistung separat zurückzugeben.
+Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [yield return](../../language-reference/keywords/yield.md)-Anweisung, um jedes Element der Auflistung separat zurückzugeben.
 
-Sie rufen einen Iterator mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung auf. Jede Iteration der `foreach`-Schleife ruft den Iterator auf. Wenn eine `yield return`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Sie rufen einen Iterator mithilfe einer [foreach](../../language-reference/keywords/foreach-in.md)-Anweisung auf. Jede Iteration der `foreach`-Schleife ruft den Iterator auf. Wenn eine `yield return`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
-Weitere Informationen finden Sie unter [Iteratoren (C#)](../../../csharp/programming-guide/concepts/iterators.md).
+Weitere Informationen finden Sie unter [Iteratoren (C#)](./iterators.md).
 
-Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iteratormethode verfügt über eine `yield return`-Anweisung, die sich innerhalb einer [for](../../../csharp/language-reference/keywords/for.md)-Schleife befindet. In der `ListEvenNumbers`-Methode erstellt jede Iteration des `foreach`-Anweisungstexts einen Aufruf der Iteratormethode, der zur nächsten `yield return`-Anweisung übergeht.
+Im folgenden Beispiel wird eine Iteratormethode verwendet. Die Iteratormethode verfügt über eine `yield return`-Anweisung, die sich innerhalb einer [for](../../language-reference/keywords/for.md)-Schleife befindet. In der `ListEvenNumbers`-Methode erstellt jede Iteration des `foreach`-Anweisungstexts einen Aufruf der Iteratormethode, der zur nächsten `yield return`-Anweisung übergeht.
 
 ```csharp
 private static void ListEvenNumbers()
@@ -598,10 +598,10 @@ private static IEnumerable<int> EvenSequence(
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Objekt- und Auflistungsinitialisierer](../classes-and-structs/object-and-collection-initializers.md)
+- [Programmierkonzepte (C#)](./index.md)
 - [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)
 - [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)

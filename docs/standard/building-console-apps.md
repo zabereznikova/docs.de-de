@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c1658f27b66d9447d191d23801eba2d659ce9c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933896"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Erstellen von Konsolenanwendungen in .NET Framework
 Anwendungen in .NET Framework können die <xref:System.Console?displayProperty=nameWithType>-Klasse verwenden, um Zeichen aus der Konsole zu lesen und in ihr zu schreiben. Daten aus der Konsole werden aus dem Standardeingabestream gelesen, in die Konsole eingehende Daten werden in den Standardausgabestream geschrieben. In die Konsole eingehende Fehlerdaten werden in den Standard-Fehlerausgabestream geschrieben. Diese Streams werden automatisch mit der Konsole verknüpft, wenn die Anwendung gestartet wird, und werden entsprechend als Eigenschaften <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> und <xref:System.Console.Error%2A> dargestellt.  
@@ -22,7 +22,7 @@ Anwendungen in .NET Framework können die <xref:System.Console?displayProperty=n
  Der Wert der <xref:System.Console.In%2A?displayProperty=nameWithType>-Eigenschaft ist ein <xref:System.IO.TextReader?displayProperty=nameWithType>-Objekt. Die Werte der Eigenschaften <xref:System.Console.Out%2A?displayProperty=nameWithType> und <xref:System.Console.Error%2A?displayProperty=nameWithType> hingegen sind <xref:System.IO.TextWriter?displayProperty=nameWithType>-Objekte. Sie können diese Eigenschaften mit Streams verknüpfen, die nicht für die Konsole stehen. So können Sie den Stream auf einen anderen Ort für eingehende oder ausgehende Daten lenken. Sie können die Ausgabe zum Beispiel zu einer Datei umlenken, indem Sie die <xref:System.Console.Out%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.IO.StreamWriter?displayProperty=nameWithType> einstellen. Dadurch wird ein <xref:System.IO.FileStream?displayProperty=nameWithType> mit der <xref:System.Console.SetOut%2A?displayProperty=nameWithType>-Methode gekapselt. Die Eigenschaften <xref:System.Console.In%2A?displayProperty=nameWithType> und <xref:System.Console.Out%2A?displayProperty=nameWithType> müssen sich nicht auf denselben Stream beziehen.  
   
 > [!NOTE]
->  Weitere Informationen zum Erstellen von Konsolenanwendungen, einschließlich Beispielen in C#, Visual Basic und C++, finden Sie in der Dokumentation zur <xref:System.Console>-Klasse.  
+> Weitere Informationen zum Erstellen von Konsolenanwendungen, einschließlich Beispielen in C#, Visual Basic und C++, finden Sie in der Dokumentation zur <xref:System.Console>-Klasse.  
   
  Wenn keine Konsole vorhanden ist, wie beispielsweise in einer Windows-basierten Anwendung, ist die Ausgabe, die in den Standardausgabestream geschrieben wird, nicht sichtbar. Dies liegt daran, dass keine Konsole vorhanden ist, in die die Information geschrieben werden kann. Werden Informationen in eine Konsole geschrieben, auf die nicht zugegriffen werden kann, wird keine Ausnahme ausgelöst.  
   

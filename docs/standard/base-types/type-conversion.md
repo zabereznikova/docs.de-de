@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a8fc6f59b7a295cb73489a644da80976345cb172
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922687"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 <a name="top"></a> Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  
@@ -63,7 +63,7 @@ ms.locfileid: "65593519"
  Erweiterungskonvertierungen umfassen die Erstellung eines neuen Werts aus dem Wert eines vorhandenen Typs, der einen restriktiveren Bereich oder eine eingeschränktere Memberliste als der Zieltyp aufweist. Erweiterungskonvertierungen können nicht zu Datenverlust, möglicherweise jedoch zu einem Genauigkeitsverlust führen. Da keine Daten verloren gehen können, können Compiler die Konvertierung implizit oder transparent behandeln, ohne eine explizite Konvertierungsmethode oder einen Typumwandlungsoperator verwenden zu müssen.  
   
 > [!NOTE]
->  Obwohl in Code, der eine implizite Konvertierung ausführt, eine Konvertierungsmethode aufgerufen oder ein Typumwandlungsoperator verwendet werden kann, ist ihre Verwendung für Compiler, die implizite Konvertierungen unterstützen, nicht erforderlich.  
+> Obwohl in Code, der eine implizite Konvertierung ausführt, eine Konvertierungsmethode aufgerufen oder ein Typumwandlungsoperator verwendet werden kann, ist ihre Verwendung für Compiler, die implizite Konvertierungen unterstützen, nicht erforderlich.  
   
  Beispielsweise unterstützt der <xref:System.Decimal>-Typ implizite Konvertierungen aus Werten vom Typ <xref:System.Byte>, <xref:System.Char>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.UInt16>, <xref:System.UInt32> und <xref:System.UInt64>. Im folgenden Beispiel werden einige dieser impliziten Konvertierungen beim Zuweisen von Werten zu einer <xref:System.Decimal>-Variablen veranschaulicht.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65593519"
  Einschränkende Konvertierungen umfassen die Erstellung eines neuen Werts aus dem Wert eines vorhandenen Typs, der einen größeren Bereich oder eine größere Memberliste als der Zieltyp aufweist. Da eine einschränkende Konvertierung zu Datenverlust an Daten führen kann, erfordern Compiler oft, dass die Konvertierung durch den Aufruf einer Konvertierungsmethode oder eines Typumwandlungsoperators als explizite Konvertierung erfolgt. Das bedeutet, dass die Konvertierung in Entwicklercode explizit behandelt werden muss.  
   
 > [!NOTE]
->  Eine Konvertierungsmethode oder ein Typumwandlungsoperator ist vor allem deswegen für einschränkende Konvertierungen erforderlich, um den Entwickler auf die Möglichkeit von Datenverlust oder einer <xref:System.OverflowException> aufmerksam zu machen, damit sie in Code behandelt werden kann. Bei einigen Compilern wird diese Anforderung jedoch weniger streng gehandhabt. Wenn beispielsweise in Visual Basic `Option Strict` deaktiviert ist (die Standardeinstellung), versucht der Visual Basic-Compiler, einschränkende Konvertierungen implizit auszuführen.  
+> Eine Konvertierungsmethode oder ein Typumwandlungsoperator ist vor allem deswegen für einschränkende Konvertierungen erforderlich, um den Entwickler auf die Möglichkeit von Datenverlust oder einer <xref:System.OverflowException> aufmerksam zu machen, damit sie in Code behandelt werden kann. Bei einigen Compilern wird diese Anforderung jedoch weniger streng gehandhabt. Wenn beispielsweise in Visual Basic `Option Strict` deaktiviert ist (die Standardeinstellung), versucht der Visual Basic-Compiler, einschränkende Konvertierungen implizit auszuführen.  
   
  Beispielsweise weisen die Datentypen <xref:System.UInt32>, <xref:System.Int64> und <xref:System.UInt64> größere Bereiche als der <xref:System.Int32>-Datentyp auf, wie in der folgenden Tabelle gezeigt.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65593519"
  Die meisten Compiler ermöglichen die überprüfte und nicht überprüfte Ausführung expliziter Konvertierungen. Bei überprüften Konvertierungen wird eine <xref:System.OverflowException> ausgelöst, wenn der Wert des konvertierten Typs außerhalb des Bereichs des Zieltyps liegt. Wird unter denselben Umständen eine nicht überprüfte Konvertierung durchgeführt, wird möglicherweise keine Ausnahme ausgelöst. Die genauen Auswirkungen lassen sich jedoch nicht vorhersagen. Dies kann zu einem fehlerhaften Wert führen.  
   
 > [!NOTE]
->  In C# können überprüfte Konvertierungen mithilfe des Schlüsselworts `checked` zusammen mit einem Umwandlungsoperator oder durch Festlegen der Compileroption `/checked+` ausgeführt werden. Umgekehrt können nicht überprüfte Konvertierungen mithilfe des Schlüsselworts `unchecked` zusammen mit dem Umwandlungsoperator oder durch Festlegen der Compileroption `/checked-` ausgeführt werden. In der Standardeinstellung werden explizite Konvertierungen nicht überprüft. In Visual Basic können überprüfte Konvertierungen durch Deaktivieren des Kontrollkästchens **Überprüfungen auf Ganzzahlüberlauf entfernen** im Dialogfeld **Erweiterte Compilereinstellungen** des Projekts oder durch Festlegen der Compileroption `/removeintchecks-` ausgeführt werden. Umgekehrt können nicht überprüfte Konvertierungen durch Aktivieren des Kontrollkästchens **Überprüfungen auf Ganzzahlüberlauf entfernen** im Dialogfeld **Erweiterte Compilereinstellungen** des Projekts oder durch Festlegen der Compileroption `/removeintchecks+` ausgeführt werden. In der Standardeinstellung werden explizite Konvertierungen überprüft.  
+> In C# können überprüfte Konvertierungen mithilfe des Schlüsselworts `checked` zusammen mit einem Umwandlungsoperator oder durch Festlegen der Compileroption `/checked+` ausgeführt werden. Umgekehrt können nicht überprüfte Konvertierungen mithilfe des Schlüsselworts `unchecked` zusammen mit dem Umwandlungsoperator oder durch Festlegen der Compileroption `/checked-` ausgeführt werden. In der Standardeinstellung werden explizite Konvertierungen nicht überprüft. In Visual Basic können überprüfte Konvertierungen durch Deaktivieren des Kontrollkästchens **Überprüfungen auf Ganzzahlüberlauf entfernen** im Dialogfeld **Erweiterte Compilereinstellungen** des Projekts oder durch Festlegen der Compileroption `/removeintchecks-` ausgeführt werden. Umgekehrt können nicht überprüfte Konvertierungen durch Aktivieren des Kontrollkästchens **Überprüfungen auf Ganzzahlüberlauf entfernen** im Dialogfeld **Erweiterte Compilereinstellungen** des Projekts oder durch Festlegen der Compileroption `/removeintchecks+` ausgeführt werden. In der Standardeinstellung werden explizite Konvertierungen überprüft.  
   
  Im folgenden C#-Beispiel wird mit dem `checked`-Schlüsselwort und mit dem `unchecked`-Schlüsselwort das unterschiedliche Verhalten bei der Konvertierung eines Werts außerhalb des <xref:System.Byte>-Bereichs in eine <xref:System.Byte> veranschaulicht. Die überprüfte Konvertierung löst eine Ausnahme aus, während die nicht überprüfte Konvertierung <xref:System.Byte.MaxValue?displayProperty=nameWithType> der Variablen <xref:System.Byte> zuweist.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "65593519"
  Durch die Anforderung, die Konvertierungsmethode für die Schnittstelle statt für den Implementierungstyp aufzurufen, werden explizite Schnittstellenimplementierungen relativ kostenintensiv. Stattdessen wird für die Konvertierung zwischen Common Language Runtime-Basistypen empfohlen, den entsprechenden Member der <xref:System.Convert>-Klasse aufzurufen. Weitere Informationen finden Sie im folgenden Abschnitt [Die Convert-Klasse](#Convert).  
   
 > [!NOTE]
->  Zusätzlich zu der <xref:System.IConvertible>-Schnittstelle und der <xref:System.Convert>-Klasse, die von dem .NET Framework bereitgestellt werden, stellen einzelne Sprachen eventuell ebenfalls Möglichkeiten zum Durchführen von Konvertierungen bereit. C# verwendet beispielsweise Typumwandlungsoperatoren und Visual Basic im Compiler implementierte Konvertierungsfunktionen wie `CType`, `CInt` und `DirectCast`.  
+> Zusätzlich zu der <xref:System.IConvertible>-Schnittstelle und der <xref:System.Convert>-Klasse, die von dem .NET Framework bereitgestellt werden, stellen einzelne Sprachen eventuell ebenfalls Möglichkeiten zum Durchführen von Konvertierungen bereit. C# verwendet beispielsweise Typumwandlungsoperatoren und Visual Basic im Compiler implementierte Konvertierungsfunktionen wie `CType`, `CInt` und `DirectCast`.  
   
  Für die Unterstützung der Konvertierung zwischen den Basistypen im .NET Framework ist hauptsächlich die <xref:System.IConvertible>-Schnittstelle vorgesehen. Die Schnittstelle kann jedoch auch von einem benutzerdefinierten Typ implementiert werden, um die Konvertierung dieses Typs in andere benutzerdefinierte Typen zu unterstützen. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte Konvertierungen mit der ChangeType-Methode](#ChangeType) weiter unten in diesem Thema.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "65593519"
  Die <xref:System.Convert>-Klasse ermöglicht sprachneutrale Konvertierungen zwischen Basistypen, und sie ist für alle Sprachen verfügbar, die für die Common Language Runtime entwickelt wurden. Sie enthält einen vollständigen Satz von Methoden für erweiternde Konvertierungen und für einschränkende Konvertierungen und löst eine <xref:System.InvalidCastException> für Konvertierungen aus, die nicht unterstützt werden (z. B. die Konvertierung eines <xref:System.DateTime>-Werts in einen ganzzahligen Wert). Einschränkende Konvertierungen werden in einem geprüften Kontext ausgeführt, und bei einem Konvertierungsfehler wird eine <xref:System.OverflowException> ausgelöst.  
   
 > [!IMPORTANT]
->  Da die <xref:System.Convert>-Klasse Methoden für die Konvertierung in jeden Basistyp und von jedem Basistyp enthält, ist es nicht erforderlich, die explizite <xref:System.IConvertible>-Schnittstellenimplementierung jedes Basistyps aufzurufen.  
+> Da die <xref:System.Convert>-Klasse Methoden für die Konvertierung in jeden Basistyp und von jedem Basistyp enthält, ist es nicht erforderlich, die explizite <xref:System.IConvertible>-Schnittstellenimplementierung jedes Basistyps aufzurufen.  
   
  Im folgenden Beispiel wird veranschaulicht, wie mit der <xref:System.Convert?displayProperty=nameWithType>-Klasse verschiedene Erweiterungskonvertierungen und einschränkende Konvertierungen zwischen .NET Framework-Basistypen ausgeführt werden.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "65593519"
  Zusätzlich zur Unterstützung von Konvertierungen in die einzelnen Basistypen kann die <xref:System.Convert>-Klasse zum Konvertieren eines benutzerdefinierten Typs in einen oder mehrere vordefinierte Typen verwendet werden. Diese Konvertierung wird von der <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Methode ausgeführt, die wiederum einen Aufruf der <xref:System.IConvertible.ToType%2A?displayProperty=nameWithType>-Methode des `value`-Parameters umschließt. Dies bedeutet, dass das vom `value`-Parameter dargestellte Objekt eine Implementierung der <xref:System.IConvertible>-Schnittstelle bereitstellen muss.  
   
 > [!NOTE]
->  Da die Methoden <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> und <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> mithilfe eines <xref:System.Type>-Objekts den Zieltyp für die Konvertierung von `value` angeben, können sie verwendet werden, um eine dynamische Konvertierung in ein Objekt auszuführen, dessen Typ zur Kompilierzeit nicht bekannt ist. Beachten Sie jedoch, dass die <xref:System.IConvertible> Implementierung von `value` diese Konvertierung nach wie vor unterstützen muss.  
+> Da die Methoden <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%29?displayProperty=nameWithType> und <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> mithilfe eines <xref:System.Type>-Objekts den Zieltyp für die Konvertierung von `value` angeben, können sie verwendet werden, um eine dynamische Konvertierung in ein Objekt auszuführen, dessen Typ zur Kompilierzeit nicht bekannt ist. Beachten Sie jedoch, dass die <xref:System.IConvertible> Implementierung von `value` diese Konvertierung nach wie vor unterstützen muss.  
   
  Im folgenden Beispiel wird eine mögliche Implementierung der <xref:System.IConvertible>-Schnittstelle veranschaulicht, die die Konvertierung eines `TemperatureCelsius`-Objekts in ein `TemperatureFahrenheit`-Objekt und umgekehrt zulässt. Im Beispiel wird die Basisklasse `Temperature` definiert, die die <xref:System.IConvertible>-Schnittstelle implementiert, und die <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode wird überschrieben. Die abgeleitete `TemperatureCelsius`-Klasse und die abgeleitete `TemperatureFahrenheit`-Klasse überschreiben jeweils die `ToType`-Methode und die `ToString`-Methode der Basisklasse.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "65593519"
  .NET Framework ermöglicht Ihnen das Definieren eines Typkonverters für einen benutzerdefinierten Typ, indem Sie die <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>-Klasse erweitern und dem Typ über das <xref:System.ComponentModel.TypeConverterAttribute?displayProperty=nameWithType>-Attribut den Typkonverter zuordnen. In der folgenden Tabelle werden die Unterschiede zwischen dieser Vorgehensweise und dem Implementieren der <xref:System.IConvertible>-Schnittstelle für einen benutzerdefinierten Typ hervorgehoben.  
   
 > [!NOTE]
->  Entwurfszeitunterstützung steht für einen benutzerdefinierten Typ nur zur Verfügung, wenn dieser über einen für ihn definierten Typkonverter verfügt.  
+> Entwurfszeitunterstützung steht für einen benutzerdefinierten Typ nur zur Verfügung, wenn dieser über einen für ihn definierten Typkonverter verfügt.  
   
 |Konvertierung mit TypeConverter|Konvertierung mit IConvertible|  
 |------------------------------------|-----------------------------------|  

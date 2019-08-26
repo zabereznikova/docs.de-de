@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599035"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595375"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)
 Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher angeordnet werden. Sie können z.B. das erstellen, was als eine Union in C/C++ bekannt ist, indem Sie die mit `StructLayout(LayoutKind.Explicit)`- und `FieldOffset`-Attribute verwenden.  
@@ -70,9 +70,9 @@ Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher 
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
-- [Attribute](../../../../../docs/standard/attributes/index.md)
-- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [C#-Programmierhandbuch](../../index.md)
+- [Attribute](../../../../standard/attributes/index.md)
+- [Reflektion (C#)](../reflection.md)
+- [Attribute (C#)](./index.md)
+- [Erstellen benutzerdefinierter Attribute (C#)](./creating-custom-attributes.md)
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](./accessing-attributes-by-using-reflection.md)

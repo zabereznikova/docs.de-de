@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 1d49733531507fc80165e034fde1969305cfd2e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae309a8de6c4691f0009e5beb8ac2adc8772805b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681728"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603025"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C#-Compileroptionen)
 
@@ -29,11 +29,11 @@ Durch diese Option reserviert der Compiler Speicherplatz in der Ausgabedatei, da
 
 `+` &#124; `-`
 
-Verwenden Sie **-delaysign-**, wenn die Assembly vollständig signiert werden soll. Verwenden Sie **-delaysign+**, wenn Sie nur den öffentlichen Schlüssel in der Assembly platzieren möchten. Der Standardwert ist **-delaysign-**.
+Verwenden Sie **-delaysign-** , wenn die Assembly vollständig signiert werden soll. Verwenden Sie **-delaysign+** , wenn Sie nur den öffentlichen Schlüssel in der Assembly platzieren möchten. Der Standardwert ist **-delaysign-** .
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
-Die Option **-delaysign** hat keine Auswirkung, wenn Sie nicht mit [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) oder [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md) verwendet wird.
+Die Option **-delaysign** hat keine Auswirkung, wenn Sie nicht mit [-keyfile](./keyfile-compiler-option.md) oder [-keycontainer](./keycontainer-compiler-option.md) verwendet wird.
 
 Die Optionen **-delaysign** und **-publicsign** schließen sich gegenseitig aus.
 

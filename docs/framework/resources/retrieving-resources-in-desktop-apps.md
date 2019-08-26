@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650496"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941457"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
@@ -159,7 +159,7 @@ GetObject.exe
  Nachdem Sie Ihre Ressourcen erstellt und im richtigen Verzeichnis gespeichert haben, erstellen Sie ein <xref:System.Resources.ResourceManager> -Objekt, um die Ressourcen durch Aufrufen der <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> -Methode zu verwenden. Der erste Parameter gibt den Stammnamen der Standard-Ressourcendatei der App an (dies wäre „strings“ für das Beispiel im vorherigen Abschnitt). Der zweite Parameter gibt den Speicherort der Ressourcen an („Resources“ im vorherigen Beispiel). Der dritte Parameter gibt die zu verwendende <xref:System.Resources.ResourceSet> -Implementierung an. Wenn der dritte Parameter `null`ist, wird das Standard-Laufzeit <xref:System.Resources.ResourceSet> verwendet.  
   
 > [!NOTE]
->  Stellen Sie keine ASP.NET-Apps mit eigenständigen Ressourcendateien bereit. Dies kann zu Sperrproblemen führen und unterbricht die XCOPY-Bereitstellung. Es wird empfohlen, dass Sie ASP.NET-Ressourcen in Satellitenassemblys bereitstellen. Weitere Informationen finden Sie unter [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
+> Stellen Sie keine ASP.NET-Apps mit eigenständigen Ressourcendateien bereit. Dies kann zu Sperrproblemen führen und unterbricht die XCOPY-Bereitstellung. Es wird empfohlen, dass Sie ASP.NET-Ressourcen in Satellitenassemblys bereitstellen. Weitere Informationen finden Sie unter [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Nach dem Instanziieren des <xref:System.Resources.ResourceManager> -Objekts verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden wie bereits erwähnt, um die Ressourcen abzurufen. Das direkte Abrufen von Ressourcen aus Ressourcendateien unterscheidet sich jedoch von dem Abruf von eingebetteten Ressourcen aus Assemblys. Beim Abrufen von Ressourcen aus Ressourcendateien rufen die Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> immer die Standardkultur-Ressourcen ab, unabhängig von der aktuellen Kultur. Um die Ressourcen entweder der aktuellen Kultur der Anwendung oder einer bestimmten Kultur abrufen zu können, müssen Sie, die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>oder <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> -Methode aufrufen und die Kultur angeben, deren Ressourcen abgerufen werden sollen. Um die Ressourcen der aktuellen Kultur abzurufen, geben Sie den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft als `culture` Argument an. Wenn der Ressourcen-Manager die Ressourcen von `culture`nicht abrufen kann, verwendet er die Standard-Ressourcen-Fallback-Regeln, um die entsprechenden Ressourcen abzurufen.  
   

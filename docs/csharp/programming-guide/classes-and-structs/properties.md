@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583067"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596153"
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -23,12 +23,12 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
   
 - Mithilfe von Eigenschaften kann eine Klasse eine öffentliche Methode zum Abrufen und Festlegen von Werten verfügbar machen und dabei den Implementierungs- oder Verifizierungscode ausblenden.  
   
-- Eine [get](../../../csharp/language-reference/keywords/get.md)-Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../../csharp/language-reference/keywords/set.md)-Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Eine [get](../../language-reference/keywords/get.md)-Eigenschaftenaccessor wird verwendet, um den Wert der Eigenschaft zurückzugeben. Ein [set](../../language-reference/keywords/set.md)-Eigenschaftenaccessor wird verwendet, um einen neuen Wert zuzuweisen. Diese Zugriffsmethoden können über verschiedene Zugriffsebenen verfügen. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](./restricting-accessor-accessibility.md).  
   
-- Das [value](../../../csharp/language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Accessor zugewiesen wird.  
+- Das [value](../../language-reference/keywords/value.md)-Schlüsselwort wird verwendet, um den Wert zu definieren, der vom `set`-Accessor zugewiesen wird.  
 - Eigenschaften können sein: *Lesen/Schreiben* (beide verfügen über einen `get`- und `set`-Accessor), *schreibgeschützt* (verfügen über einen `get`-Accessor, jedoch keinen `set`-Accessor), oder *lesegeschützt* (verfügen über einen `set`-Accessor, jedoch keinen `get` Accessor). Lesegeschützte Eigenschaften sind selten und werden am häufigsten verwendet, um den Zugriff auf vertrauliche Daten einzuschränken.
 
-- Einfache Eigenschaften, die keinen benutzerdefinierten Accessorcode erfordern können implementiert werden, entweder als Ausdruckstextdefinitionen oder als [automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- Einfache Eigenschaften, die keinen benutzerdefinierten Accessorcode erfordern können implementiert werden, entweder als Ausdruckstextdefinitionen oder als [automatisch implementierte Eigenschaften](./auto-implemented-properties.md).
  
 ## <a name="properties-with-backing-fields"></a>Eigenschaften mit Unterstützungsfeldern
 
@@ -60,15 +60,15 @@ Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, m�
 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
-- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Verwenden von Eigenschaften](./using-properties.md)  
   
-- [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Schnittstelleneigenschaften](./interface-properties.md)  
   
-- [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Vergleich zwischen Eigenschaften und Indexern](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [Einschränken des Zugriffsmethodenzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Einschränken des Zugriffsmethodenzugriffs](./restricting-accessor-accessibility.md)  
   
-- [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Automatisch implementierte Eigenschaften](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
@@ -76,8 +76,8 @@ Weitere Informationen finden Sie unter [Eigenschaften](~/_csharplang/spec/classe
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)
-- [get-Schlüsselwort](../../../csharp/language-reference/keywords/get.md)
-- [set-Schlüsselwort](../../../csharp/language-reference/keywords/set.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Verwenden von Eigenschaften](./using-properties.md)
+- [Indexer](../indexers/index.md)
+- [get-Schlüsselwort](../../language-reference/keywords/get.md)
+- [set-Schlüsselwort](../../language-reference/keywords/set.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910466"
 ---
 # <a name="automatic-proxy-detection"></a>Automatische Proxyerkennung
 Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom System identifiziert und zum Senden von Anforderungen im Auftrag des Clients verwendet wird. Diese Funktion ist auch bekannt als Web Proxy Auto-Discovery (WPAD). Wenn die automatische Proxyerkennung aktiviert ist, versucht das System, ein Proxykonfigurationsskript zu finden, das für die Rückgabe des Proxysatzes verantwortlich ist, der für die Anforderung verwendet werden kann. Wenn das Proxykonfigurationsskript gefunden wird, wird es heruntergeladen, kompiliert und auf dem lokalen Computer ausgeführt, wenn Proxyinformationen, der Anforderungsstream oder die Antwort für eine Anforderung abgerufen werden, die eine <xref:System.Net.WebProxy>-Instanz verwendet.  
@@ -27,7 +27,7 @@ Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom Syst
  Automatische Proxyerkennung erfolgt durch die <xref:System.Net.WebProxy>-Klasse und kann die Einstellungen auf Anforderungsebene und in Konfigurationsdateien und Einstellungen verwenden, die das Internet Explorer-Dialogfeld **Local Area Network (LAN)** verwenden.  
   
 > [!NOTE]
->  Sie können das Internet Explorer-Dialogfeld **Local Area Network (LAN)-Einstellungen** anzeigen, indem Sie **Tools** aus dem Internet Explorer-Hauptmenü und anschließend **Internetoptionen** auswählen. Klicken Sie anschließend auf der Registerkarte **Verbindungen** auf **LAN-Einstellungen**.  
+> Sie können das Internet Explorer-Dialogfeld **Local Area Network (LAN)-Einstellungen** anzeigen, indem Sie **Tools** aus dem Internet Explorer-Hauptmenü und anschließend **Internetoptionen** auswählen. Klicken Sie anschließend auf der Registerkarte **Verbindungen** auf **LAN-Einstellungen**.  
   
  Wenn die automatische Proxyerkennung aktiviert ist, versucht die <xref:System.Net.WebProxy>-Klasse das Proxykonfigurationsskript wie folgt zu finden:  
   
@@ -40,7 +40,7 @@ Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom Syst
 4. Wenn der Host nicht identifiziert wird und der Speicherort eines Proxykonfigurationsskripts durch die Internet Explorer-LAN-Einstellungen oder eine Konfigurationsdatei angegeben ist, wird dieser Speicherort verwendet.  
   
 > [!NOTE]
->  Anwendungen, die als NT-Dienst oder als Teil von ASP.NET ausgeführt werden, verwenden die Internet Explorer-Proxyeinstellungen (falls vorhanden) des aufrufenden Benutzers. Diese Einstellungen sind möglicherweise nicht für alle Dienstanwendungen verfügbar.  
+> Anwendungen, die als NT-Dienst oder als Teil von ASP.NET ausgeführt werden, verwenden die Internet Explorer-Proxyeinstellungen (falls vorhanden) des aufrufenden Benutzers. Diese Einstellungen sind möglicherweise nicht für alle Dienstanwendungen verfügbar.  
   
  Proxys werden pro Benutzeroberfläche konfiguriert. Eine Benutzeroberfläche ist ein Element im Netzwerkverbindungsdialogfeld und kann ein physisches Netzwerkgerät (Modem oder Ethernet-Karte) oder eine virtuelle Schnittstelle (z.B. eine über ein Netzwerkgerät ausgeführte VPN-Verbindung) sein. Wenn sich eine Benutzeroberfläche ändert (z.B. ändert eine Funkverbindung einen Zugriffspunkt oder ein VPN wird aktiviert), wird der Proxyerkennungsalgorithmus erneut ausgeführt.  
   

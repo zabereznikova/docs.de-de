@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301503"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968530"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 <a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
-|Substitution|Beschreibung|  
+|Substitution|BESCHREIBUNG|  
 |------------------|-----------------|  
 |$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
 |${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
@@ -44,7 +44,7 @@ ms.locfileid: "66301503"
  Das einzige Zeichen, das entweder in einem Muster eines regulären Ausdrucks oder in einer Ersetzung vorkommen kann, ist das `$` -Zeichen, obwohl es in jedem Kontext eine andere Bedeutung hat. In einem Muster eines regulären Ausdrucks ist `$` ein Anker, der dem Ende der Zeichenfolge entspricht. In einem Ersetzungsmuster gibt `$` den Anfang einer Ersetzung an.  
   
 > [!NOTE]
->  Für die Funktionalität, die mit einem Ersetzungsmuster innerhalb eines regulären Ausdrucks vergleichbar ist, verwenden Sie einen Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Für die Funktionalität, die mit einem Ersetzungsmuster innerhalb eines regulären Ausdrucks vergleichbar ist, verwenden Sie einen Rückverweis. Weitere Informationen zu Rückverweisen finden Sie unter [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>Ersetzen einer nummerierten Gruppe  
@@ -63,7 +63,7 @@ ms.locfileid: "66301503"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -89,7 +89,7 @@ ms.locfileid: "66301503"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66301503"
   
  Das Muster für reguläre Ausdrücke `\b(\d+)(\.(\d+))?` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Abgleich am Anfang einer Wortgrenze.|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die erste Erfassungsgruppe.|  
@@ -130,7 +130,7 @@ ms.locfileid: "66301503"
   
  Das Muster für reguläre Ausdrücke `^(\w+\s?)+$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`^`|Beginnt den Abgleich am Anfang der Eingabezeichenfolge.|  
 |`(\w+\s?)+`|Übereinstimmung mit dem Muster mindestens eines Wortzeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
@@ -193,7 +193,7 @@ ms.locfileid: "66301503"
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s\1\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  

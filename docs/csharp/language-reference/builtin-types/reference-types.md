@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566259"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604212"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Integrierte Verweistypen (C#-Referenz)
 
@@ -172,7 +172,7 @@ Das folgende Beispiel verwendet `dynamic` in einigen Deklarationen. Die `Main`-M
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](../keywords/index.md)
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)
+- [Ereignisse](../../programming-guide/events/index.md)
 - [Verwenden von dynamischen Typen](../../programming-guide/types/using-type-dynamic.md)
 - [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)
 - [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)

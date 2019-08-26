@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: fc259f0e0a83d2f55bf2d50fa336c9201b8b5bef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: aceda6cfd33a53388a5afb046359c4dcfddfd1f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633216"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602022"
 ---
 # <a name="where-clause-c-reference"></a>where-Klausel (C#-Referenz)
 
@@ -51,5 +51,5 @@ Zur Kompilierzeit wird das Schlüsselwort `where` in einen Aufruf der Standardab
 - [from-Klausel](from-clause.md)
 - [select-Klausel](select-clause.md)
 - [Filtern von Daten](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [LINQ-Abfrageausdrücke](../../programming-guide/linq-query-expressions/index.md)
 - [Erste Schritte mit LINQ in C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen von LINQ to XML-Beispielen (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 116f708eb18d642cbe914cea1ea44bd1833f2af6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9bbd04731854d67b9276f339a15f2c7f2193f9b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486062"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594120"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Vorgehensweise: Erstellen von LINQ to XML-Beispielen (C#)
 Die verschiedenen Ausschnitte und Beispiele in dieser Dokumentation verwenden Klassen und Typen aus verschiedenen Namespaces. Beim Kompilieren von C#-Code müssen Sie entsprechende `using`-Direktiven angeben.  
@@ -36,4 +36,4 @@ using System.IO.Packaging;
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

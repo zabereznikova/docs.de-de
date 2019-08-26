@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen eines untergeordneten Elements (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 4a6d18c86416f7c54df554bc2f518994446a2a84
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 315cf782aa886bba484eb1fb06a4c4dbcf3cb4df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485726"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593720"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen eines untergeordneten Elements (XPath-LINQ to XML) (C#)
 In diesem Thema wird die Achse der untergeordneten XPath-Elemente mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>-Methode verglichen.  
@@ -17,7 +17,7 @@ In diesem Thema wird die Achse der untergeordneten XPath-Elemente mit der [!INCL
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel ermittelt das untergeordnete Element `DeliveryNotes`.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

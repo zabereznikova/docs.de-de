@@ -2,12 +2,12 @@
 title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711771"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924294"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#)
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
@@ -32,7 +32,7 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
  In der folgenden Tabelle wird jede Standardabfrageoperator-Methode laut der Ausführungsmethode klassifiziert.  
   
 > [!NOTE]
->  Wenn ein Operator in zwei Spalten gekennzeichnet ist, werden zwei Eingabesequenzen in den Vorgang einbezogen, und jede Sequenz wird unterschiedlich ausgewertet. In diesen Fällen ist es immer die erste Sequenz in der Parameterliste, die verzögert und mit der Nicht-Straming-Methode ausgewertet wird.  
+> Wenn ein Operator in zwei Spalten gekennzeichnet ist, werden zwei Eingabesequenzen in den Vorgang einbezogen, und jede Sequenz wird unterschiedlich ausgewertet. In diesen Fällen ist es immer die erste Sequenz in der Parameterliste, die verzögert und mit der Nicht-Straming-Methode ausgewertet wird.  
   
 |Standardabfrageoperator|Rückgabetyp|Sofortige Ausführung|Verzögerte Streaming-Ausführung|Verzögerte Nicht-Streaming-Ausführung|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

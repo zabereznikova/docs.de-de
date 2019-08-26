@@ -2,12 +2,12 @@
 title: Bezeichnernamen
 description: Lernen Sie die Regeln für gültige Bezeichnernamen in der C#-Programmiersprache kennen.
 ms.date: 08/21/2018
-ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606951"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589353"
 ---
 # <a name="identifier-names"></a>Bezeichnernamen
 
@@ -19,7 +19,7 @@ Sie können Bezeichner deklarieren, die mit C#-Schlüsselworten übereinstimmen,
 
 Eine vollständige Definition der gültigen Bezeichner finden Sie im [Thema „Bezeichner“ in der C#-Sprachspezifikation](../../../../_csharplang/spec/lexical-structure.md#identifiers).
 
-## <a name="naming-conventions"></a>Namenskonventionen 
+## <a name="naming-conventions"></a>Namenskonventionen
 
 Neben diesen Regeln gibt es mehrere [Namenskonventionen](../../../standard/design-guidelines/naming-guidelines.md) für Bezeichner, die in den .NET-APIs verwendet werden. Gemäß der Konventionen verwenden C#-Programme `PascalCase` für Typnamen, Namespaces und alle öffentlichen Member. Darüber hinaus werden folgende Konventionen häufig angewandt:
 
@@ -35,7 +35,7 @@ Neben diesen Regeln gibt es mehrere [Namenskonventionen](../../../standard/desig
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [Einblicke in ein C#-Programm](../inside-a-program/index.md)
+- [Einblicke in ein C#-Programm](./index.md)
 - [C#-Referenz](../../language-reference/index.md)
 - [Klassen](../classes-and-structs/classes.md)
 - [Strukturen](../classes-and-structs/structs.md)

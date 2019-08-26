@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 922de11567af9409265ee18bfa6a2637951c57c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93d45b58433dc3c7231cea741aa7ea67dfab2d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570996"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912038"
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
 Mit XSLT (Extensible Stylesheet Language Transformation) können Sie den Inhalt eines XML-Quelldokuments in ein anderes Dokument mit anderem Format oder einer anderen Struktur transformieren. Mit XSLT können Sie beispielsweise XML in HTML für eine Website transformieren oder in ein Dokument, das nur die für eine Anwendung erforderlichen Felder enthält. Dieser Transformationsprozess wird in der [W3C-Empfehlung zu XSL-Transformationen (XSLT) Version 1.0](https://www.w3.org/TR/xslt-10/) spezifiziert.  
@@ -18,7 +18,7 @@ Mit XSLT (Extensible Stylesheet Language Transformation) können Sie den Inhalt 
  Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ist der XSLT-Prozessor in .NET. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt die [W3C-Empfehlung zu XSLT 1.0](https://www.w3.org/TR/xslt-10/).  
   
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ist eine neue Implementierung des XSLT-Moduls. Sie enthält Leistungsverbesserungen und neue Sicherheitsfunktionen. Es wird empfohlen, XSLT-Anwendungen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse zu erstellen.  
+> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ist eine neue Implementierung der XSLT-Engine. Sie enthält Leistungsverbesserungen und neue Sicherheitsfunktionen. Es wird empfohlen, XSLT-Anwendungen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse zu erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  

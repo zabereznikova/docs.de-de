@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3134477198f0cd4c821bea456450e98cc73c6ad2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957467"
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
@@ -52,7 +52,7 @@ COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Regis
      Die Aktivierung ohne Registrierung ist für COM-Komponenten unter Windows XP optional. Detaillierte Anweisungen zum Hinzufügen einer parallelen Assembly zu einer Anwendung finden Sie unter [Verwenden paralleler Assemblys](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
     > [!NOTE]
-    >  Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können. Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.  
+    > Die parallele Ausführung ist eine .NET Framework-Funktion, mit der mehrere Versionen der Common Language Runtime und mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausgeführt werden können. Die parallele Ausführung und parallele Assemblys sind unterschiedliche Mechanismen für die Bereitstellung paralleler Funktionen.  
   
 ## <a name="see-also"></a>Siehe auch
 

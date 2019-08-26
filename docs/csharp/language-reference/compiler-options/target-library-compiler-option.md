@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313644"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606397"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (C#-Compileroptionen)
 Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link Library (DLL) statt einer ausführbaren Datei (EXE) zu erstellen.  
@@ -27,11 +27,11 @@ Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link L
 ## <a name="remarks"></a>Anmerkungen  
  Die DLL wird mit der DLL-Dateiendung erstellt.  
   
- Sofern es nicht anders mit der Option [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) angegeben wurde, erhält die Ausgabedatei den Namen der ersten Eingabedatei.  
+ Sofern es nicht anders mit der Option [-out](./out-compiler-option.md) angegeben wurde, erhält die Ausgabedatei den Namen der ersten Eingabedatei.  
   
  Wenn es in der Befehlszeile angegeben wurde, werden alle Dateien bis zur nächsten Option **-out** oder **-target:module** verwendet, um die DLL-Datei zu erstellen.  
   
- Beim Erstellen einer DLL-Datei ist eine [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode nicht erforderlich.  
+ Beim Erstellen einer DLL-Datei ist eine [Main](../../programming-guide/main-and-command-args/index.md)-Methode nicht erforderlich.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -52,5 +52,5 @@ csc -target:library in.cs
   
 ## <a name="see-also"></a>Siehe auch
 
-- [-target (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (C#-Compileroptionen)](./target-compiler-option.md)
+- [C#-Compileroptionen](./index.md)

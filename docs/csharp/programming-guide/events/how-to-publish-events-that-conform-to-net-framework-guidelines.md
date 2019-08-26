@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 8cf0f57caad41da0a29b935029731260154a2dc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347603"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924027"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch)
 Das folgende Verfahren veranschaulicht, wie Sie Ereignisse hinzufügen können, die auf dem .NET Framework-Standardmuster ihrer Klassen und Strukturen basieren. Alle Ereignisse in der .NET Framework-Klassenbibliothek basieren auf dem <xref:System.EventHandler>-Delegaten, der wie folgt definiert ist:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  Das NET Framework 2.0 führt eine generische Version dieses Delegaten ein: <xref:System.EventHandler%601>. Die folgenden Beispiele zeigen, wie Sie beide Versionen verwenden können.  
+> Das NET Framework 2.0 führt eine generische Version dieses Delegaten ein: <xref:System.EventHandler%601>. Die folgenden Beispiele zeigen, wie Sie beide Versionen verwenden können.  
   
  Auch wenn Ereignisse in von Ihnen definierten Klassen auf jedem beliebigen Delegattyp basieren können – sogar Delegate, die einen Wert zurückgeben –, wird allgemein empfohlen, dass Sie für Ihre Ereignisse das .NET Framework-Muster mithilfe von <xref:System.EventHandler> verwenden. Dies wird im folgenden Beispiel veranschaulicht.  
   
@@ -77,6 +77,6 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Delegate>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Ereignisse](./index.md)
+- [Delegaten](../delegates/index.md)

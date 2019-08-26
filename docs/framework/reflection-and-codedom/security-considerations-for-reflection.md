@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956708"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 
@@ -98,7 +98,7 @@ Beispiel: Angenommen, Sie gewähren einer Anwendungsdomäne Internetberechtigung
 
 ## <a name="serialization"></a>Serialisierung
 
-Für Serialisierung bietet <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType>-Flag die Möglichkeit, Member von serialisierbaren Typen unabhängig davon, ob grundsätzlich auf sie zugegriffen werden kann, abzurufen und festzulegen. Mit dieser Berechtigung kann Code den privaten Status einer Instanz erkennen und ändern. (Zusätzlich dazu, dass dem Typ die entsprechenden Berechtigungen gewährt werden, muss er in den Metadaten als serialisierbar [markiert](../../../docs/standard/attributes/applying-attributes.md) sein.)
+Für Serialisierung bietet <xref:System.Security.Permissions.SecurityPermission> mit dem <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType>-Flag die Möglichkeit, Member von serialisierbaren Typen unabhängig davon, ob grundsätzlich auf sie zugegriffen werden kann, abzurufen und festzulegen. Mit dieser Berechtigung kann Code den privaten Status einer Instanz erkennen und ändern. (Zusätzlich dazu, dass dem Typ die entsprechenden Berechtigungen gewährt werden, muss er in den Metadaten als serialisierbar [markiert](../../standard/attributes/applying-attributes.md) sein.)
 
 ## <a name="parameters-of-type-methodinfo"></a>Parameter des MethodInfo-Typs
 
@@ -121,5 +121,5 @@ Sie sollten keine öffentlichen Member schreiben, an die <xref:System.Reflection
 - [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)
 - [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Anwenden von Attributen](../../../docs/standard/attributes/applying-attributes.md)
+- [Anwenden von Attributen](../../standard/attributes/applying-attributes.md)
 - [Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

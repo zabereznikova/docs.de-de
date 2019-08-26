@@ -9,32 +9,32 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: f29b656a3db08d35692e375fe2175ff75e510941
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0630639433aed4c8dfddbf0144e9802ed3f4ee73
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499850"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606451"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C#-Compileroptionen)
 Die Compileroption **-target** kann in einem von vier Formaten angegeben werden:  
   
- [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+ [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
  So erstellen Sie eine EXE-Datei für [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-Anwendungen.  
   
- [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
+ [/target:exe](./target-exe-compiler-option.md)  
  So erstellen Sie eine EXE-Datei.  
   
- [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md)  
+ [/target:library](./target-library-compiler-option.md)  
  So erstellen Sie eine Codebibliothek.  
   
- [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)  
+ [/target:module](./target-module-compiler-option.md)  
  So erstellen Sie ein Modul.  
   
- [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+ [/target:winexe](./target-winexe-compiler-option.md)  
  So erstellen Sie ein Windows-Programm.  
   
- [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+ [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  So erstellen Sie eine WINMDOBJ-Zwischendatei.  
   
  Wenn Sie **-target:module** nicht angegeben haben, verursacht **-target**, dass ein .NET Framework-Assemblymanifest in einer Ausgabedatei platziert wird. Weitere Informationen finden Sie unter [Assemblys in der Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) und [Häufige Attribute](../../programming-guide/concepts/attributes/common-attributes.md).  
@@ -45,7 +45,7 @@ Die Compileroption **-target** kann in einem von vier Formaten angegeben werden:
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Der Compiler erstellt nur ein Assemblymanifest pro Kompilierung. Informationen über alle Dateien in einer Kompilierung werden im Assemblymanifest platziert. Alle Ausgabedateien außer denen, die mit **-target:module** erstellt wurden, können ein Assemblymanifest enthalten. Wenn mehrere Ausgabedateien in der Befehlszeile erstellt werden, kann nur ein Assemblymanifest erstellt werden, und es muss in die erste Ausgabedatei gehen, die in der Befehlszeile angegeben wurde. Unabhängig von der ersten Ausgabedatei (**-target:exe**, **-target:winexe**, **-target:library** oder **-target:module**) müssen alle anderen Ausgabedateien, die in der selben Kompilierung erzeugt wurden, Module sein (**-target:module**).  
+ Der Compiler erstellt nur ein Assemblymanifest pro Kompilierung. Informationen über alle Dateien in einer Kompilierung werden im Assemblymanifest platziert. Alle Ausgabedateien außer denen, die mit **-target:module** erstellt wurden, können ein Assemblymanifest enthalten. Wenn mehrere Ausgabedateien in der Befehlszeile erstellt werden, kann nur ein Assemblymanifest erstellt werden, und es muss in die erste Ausgabedatei gehen, die in der Befehlszeile angegeben wurde. Unabhängig von der ersten Ausgabedatei ( **-target:exe**, **-target:winexe**, **-target:library** oder **-target:module**) müssen alle anderen Ausgabedateien, die in der selben Kompilierung erzeugt wurden, Module sein ( **-target:module**).  
   
  Wenn Sie eine Assembly erstellen, können Sie angeben, dass der ganze oder ein Teil des Codes mit dem <xref:System.CLSCompliantAttribute>-Attribut CLS-kompatibel ist.  
   
@@ -64,6 +64,6 @@ public class TestClass
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
-- [-subsystemversion (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+- [-subsystemversion (C#-Compileroptionen)](./subsystemversion-compiler-option.md)

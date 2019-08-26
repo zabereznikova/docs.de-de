@@ -2,12 +2,12 @@
 title: Leistung verketteter Abfragen (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689993"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591572"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Leistung verketteter Abfragen (LINQ to XML) (C#)
 
@@ -53,6 +53,6 @@ Diese verkettete Abfrage bietet dasselbe Leistungsprofil wie das Durchlaufen ein
 
 Die Iteration durch `query2` ist daher direkt proportional zur Anzahl der Elemente in der Quelle der ersten Abfrage, mit anderen Worten, zeitlich linear. Ein entsprechendes Visual Basic-Beispiel hätte dasselbe Leistungsprofil.
 
-Weitere Informationen zu Iteratoren finden Sie unter [yield](../../../../csharp/language-reference/keywords/yield.md).
+Weitere Informationen zu Iteratoren finden Sie unter [yield](../../../language-reference/keywords/yield.md).
 
-Ein ausführlicheres Tutorial finden Sie unter [Tutorial: Verketten von Abfragen](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Ein ausführlicheres Tutorial finden Sie unter [Tutorial: Verketten von Abfragen](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

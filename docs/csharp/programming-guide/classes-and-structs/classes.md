@@ -7,17 +7,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: ad19099242a3bedbb7283219dfd7733db13231ec
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398591"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597177"
 ---
 # <a name="classes-c-programming-guide"></a>Klassen (C#-Programmierhandbuch)
 
 ## <a name="reference-types"></a>Verweistypen  
-Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit eine Instanz der Klasse mithilfe des Operators [new](../../../csharp/language-reference/operators/new-operator.md) erstellen oder ihr ein Objekt eines kompatiblen Typs zuweisen, das wie im folgenden Beispiel möglicherweise an anderer Stelle erstellt wurde:
+Ein Typ, der als [Klasse](../../language-reference/keywords/class.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../language-reference/keywords/null.md), bis Sie explizit eine Instanz der Klasse mithilfe des Operators [new](../../language-reference/operators/new-operator.md) erstellen oder ihr ein Objekt eines kompatiblen Typs zuweisen, das wie im folgenden Beispiel möglicherweise an anderer Stelle erstellt wurde:
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +31,7 @@ Beim Erstellen des Objekts wird im verwalteten Heap für dieses bestimmte Objekt
   
 ## <a name="declaring-classes"></a>Deklarieren von Klassen
 
- Klassen werden mithilfe des Schlüsselworts [class](../../../csharp/language-reference/keywords/class.md) gefolgt von einem eindeutigen Bezeichner deklariert, wie im folgenden Beispiel dargestellt:
+ Klassen werden mithilfe des Schlüsselworts [class](../../language-reference/keywords/class.md) gefolgt von einem eindeutigen Bezeichner deklariert, wie im folgenden Beispiel dargestellt:
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -70,7 +70,7 @@ Obwohl sie manchmal synonym werden, sind eine Klasse und ein Objekt unterschiedl
   
 ## <a name="class-inheritance"></a>Klassenvererbung  
 
-Klassen unterstützen die *Vererbung* vollständig. Dies ist ein wesentliches Merkmal der objektorientierten Programmierung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben.
+Klassen unterstützen die *Vererbung* vollständig. Dies ist ein wesentliches Merkmal der objektorientierten Programmierung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](../../language-reference/keywords/sealed.md) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben.
 
 Die Vererbung erfolgt durch Verwendung einer *Ableitung*, d.h., dass eine Klasse mithilfe einer *Basisklasse* deklariert wird, aus der Sie Daten und das Verhalten erbt. Eine Basisklasse wird durch Anhängen eines Doppelpunkts sowie den Namen der Basisklasse angegeben, die dem abgeleiteten Klassennamen folgt, z.B.:  
 

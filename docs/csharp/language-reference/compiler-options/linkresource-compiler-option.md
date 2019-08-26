@@ -11,15 +11,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 699ae27df2423638f38a22cc17dc83b828383394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711345"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606753"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
-Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
+Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
  `accessibility-modifier` (optional)  
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist „öffentlich“.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Verknüpfte Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mit den C#-Compiler erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Modifizierer zulässig.  
   
- **-linkresource** erfordert eine andere [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)-Option als **-target:module**.  
+ **-linkresource** erfordert eine andere [-target](./target-compiler-option.md)-Option als **-target:module**.  
   
  Wenn es sich bei `filename` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise von [resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`-Methoden in der <xref:System.Reflection.Assembly>-Klasse, um zur Laufzeit auf die Ressource zuzugreifen.  
   
@@ -76,7 +76,7 @@ gacutil -i A.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](./index.md)
 - [Al.exe (Assembly Linker-Tool)](../../../framework/tools/al-exe-assembly-linker.md)
 - [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

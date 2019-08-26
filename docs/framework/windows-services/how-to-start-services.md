@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3544f7d846ecf68ed5ed01812b9c69b295c63c69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591459"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952422"
 ---
 # <a name="how-to-start-services"></a>Vorgehensweise: Starten von Diensten
 Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wird die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode für die Dienstklasse aufgerufen. In der Regel werden die Vorgänge, die vom Dienst durchgeführt werden, von der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode definiert. Nachdem ein Dienst gestartet worden ist, bleibt er aktiv, solange er nicht manuell angehalten oder beendet wird.  
@@ -19,7 +19,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
  Für Dienste kann festgelegt werden, ob sie automatisch oder manuell gestartet werden. Ein automatisch startender Dienst wird gestartet, wenn der Computer, auf dem er installiert ist, neu gestartet oder zum ersten Mal eingeschaltet wird. Ein Dienst, der manuell gestartet wird, muss von Benutzern gestartet werden.  
   
 > [!NOTE]
->  Mit Visual Studio erstellte Dienste sind standardmäßig auf manuelles Starten festgelegt.  
+> Mit Visual Studio erstellte Dienste sind standardmäßig auf manuelles Starten festgelegt.  
   
  Ein Dienst kann auf verschiedene Weise manuell gestartet werden: Mit dem **Server-Explorer**, dem **Dienststeuerungs-Manager** oder indem im Code die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet wird.  
   
@@ -42,7 +42,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
     >  Wenn der Dienst nie gestartet werden soll, legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf **Deaktiviert** fest. Wenn ein Server mehrmals neu gestartet wird, kann damit Zeit gespart werden, indem das Starten von Diensten verhindert wird, die in der Regel gestartet würden.  
   
     > [!NOTE]
-    >  Diese und weitere Eigenschaften können geändert werden, nachdem der Dienst installiert wurde.  
+    > Diese und weitere Eigenschaften können geändert werden, nachdem der Dienst installiert wurde.  
   
      Es stehen mehrere Möglichkeiten zur Verfügung, einen Dienst zu starten, dessen <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Vorgang auf **Manuell** festgelegt ist: mit dem **Server-Explorer**, dem **Dienststeuerungs-Manager** von Windows oder programmgesteuert. Wichtig dabei ist, dass der Dienst nicht von allen Methoden im Kontext des **Dienststeuerungs-Managers** gestartet wird. Tatsächlich wird der Controller mit dem **Server-Explorer** und mit programmgesteuerten Startmethoden geändert.  
   

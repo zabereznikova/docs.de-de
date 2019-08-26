@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661532"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608370"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
 
@@ -45,7 +45,7 @@ Diese Operatoren unterstützen alle numerischen [Ganzzahl](../builtin-types/inte
 
 ## <a name="increment-operator-"></a>Inkrementoperator ++
 
-Der unäre Inkrementoperator (`++`) erhöht seinen Operanden um 1. Der Operand muss eine Variable, ein [Eigenschaftenzugriff](../../programming-guide/classes-and-structs/properties.md) oder ein [Indexerzugriff](../../../csharp/programming-guide/indexers/index.md) sein.
+Der unäre Inkrementoperator (`++`) erhöht seinen Operanden um 1. Der Operand muss eine Variable, ein [Eigenschaftenzugriff](../../programming-guide/classes-and-structs/properties.md) oder ein [Indexerzugriff](../../programming-guide/indexers/index.md) sein.
 
 Der Inkrementoperator wird in zwei Formen unterstützt: als Postfix-Inkrementoperator `x++` und als Präfix-Inkrementoperator `++x`.
 
@@ -63,7 +63,7 @@ Das Ergebnis von `++x` ist der Wert von `x` *nach* dem Vorgang, wie das folgende
 
 ## <a name="decrement-operator---"></a>Dekrementoperator --
 
-Der unäre Dekrementoperator `--` verringert seinen Operanden um 1. Der Operand muss eine Variable, ein [Eigenschaftenzugriff](../../programming-guide/classes-and-structs/properties.md) oder ein [Indexerzugriff](../../../csharp/programming-guide/indexers/index.md) sein.
+Der unäre Dekrementoperator `--` verringert seinen Operanden um 1. Der Operand muss eine Variable, ein [Eigenschaftenzugriff](../../programming-guide/classes-and-structs/properties.md) oder ein [Indexerzugriff](../../programming-guide/indexers/index.md) sein.
 
 Der Dekrementoperator wird in zwei Formen unterstützt: als Postfix-Dekrementoperator `x--` und als Präfix-Dekrementoperator `--x`.
 

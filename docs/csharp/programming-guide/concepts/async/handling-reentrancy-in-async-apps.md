@@ -2,12 +2,12 @@
 title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480871"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595643"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
@@ -141,7 +141,7 @@ Aufgrund der Änderungen reagiert die Schaltfläche nicht, während die Websites
 
 Anstatt die Schaltfläche **Start** zu deaktivieren, kann die Schaltfläche aktiv bleiben. Wenn der Benutzer die Schaltfläche dann erneut anklickt, brechen Sie den bereits ausgeführten Vorgang ab und lassen den zuletzt begonnenen Vorgang fortsetzen.
 
-Weitere Informationen zum Abbrechen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Weitere Informationen zum Abbrechen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](./fine-tuning-your-async-application.md).
 
 Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Der Name des Projekts lautet „CancelAndRestart“.
 
@@ -577,7 +577,7 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. Erweitern Sie im Bereich **Installed Templates** (Installierte Vorlagen) den Eintrag **Visual C#**, und erweitern Sie dann **Windows**.
+3. Erweitern Sie im Bereich **Installed Templates** (Installierte Vorlagen) den Eintrag **Visual C#** , und erweitern Sie dann **Windows**.
 
 4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.
 
@@ -724,5 +724,5 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)

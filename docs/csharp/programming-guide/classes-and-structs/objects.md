@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398414"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596385"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
   
 > [!NOTE]
-> Statische Typen verhalten sich anders, als die hier beschriebenen. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+> Statische Typen verhalten sich anders, als die hier beschriebenen. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](./static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Strukturinstanzen im Vergleich zu Klasseninstanzen  
  Da Klassen Verweistypen sind, enthält eine Variable eines Klassenobjekts einen Verweis auf die Adresse des Objekts auf dem verwalteten Heap. Wenn dem ersten Objekt ein zweites Objekt desselben Typs zugewiesen wird, verweisen beide Variablen auf das Objekt in dieser Adresse. Dieser Punkt wird in diesem Thema an späterer Stelle ausführlicher behandelt.  
   
- Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/operators/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person 2` sind Instanzen oder Objekte des Typs.  
+ Instanzen von Klassen werden mit dem [new-Operator](../../language-reference/operators/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person 2` sind Instanzen oder Objekte des Typs.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -46,27 +46,27 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  Die Implementierung <xref:System.ValueType?displayProperty=nameWithType> von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
   
-- Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die hier beschriebenen Richtlinien zu befolgen: [Vorgehensweise: Definieren von Wertgleichheit für einen Typ ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../language-reference/operators/equality-operators.md#equality-operator-) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die hier beschriebenen Richtlinien zu befolgen: [Vorgehensweise: Definieren von Wertgleichheit für einen Typ ](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
   
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Klassen](./classes.md)  
   
-- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Strukturen](./structs.md)  
   
-- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktoren](./constructors.md)  
   
-- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizer](./destructors.md)  
   
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Ereignisse](../events/index.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [class](../../../csharp/language-reference/keywords/class.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new-Operator](../../../csharp/language-reference/operators/new-operator.md)
+- [C#-Programmierhandbuch](../index.md)
+- [object](../../language-reference/keywords/object.md)
+- [Vererbung](./inheritance.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [new-Operator](../../language-reference/operators/new-operator.md)
 - [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927903"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne verwendet werden, aktualisiert werden können, ohne die Anwendungsdomäne zu entladen. Dies ist besonders hilfreich für Anwendungen, die permanent verfügbar sein müssen, wie ASP.NET-Websites.  
   
 > [!IMPORTANT]
->  Schattenkopien werden in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht unterstützt.  
+> Schattenkopien werden in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht unterstützt.  
   
  Die Common Language Runtime sperrt eine Assemblydatei, wenn die Assembly geladen ist, daher kann die Datei erst aktualisiert werden, wenn die Assembly entladen wurde. Die einzige Möglichkeit zum Entladen einer Assembly aus einer Anwendungsdomäne besteht darin, die Anwendungsdomäne zu entladen, sodass eine Assembly unter normalen Umständen erst auf dem Datenträger aktualisiert werden kann, wenn alle Anwendungsdomänen, in der sie genutzt wird, entladen wurden.  
   
  Wenn eine Anwendungdomäne für die Erstellung von Schattenkopien von Dateien konfiguriert ist, werden Assemblys aus dem Anwendungspfad an einen anderen Speicherort kopiert und von dort aus geladen. Die Kopie wird gesperrt, aber die ursprüngliche Assemblydatei wird entsperrt und kann aktualisiert werden.  
   
 > [!IMPORTANT]
->  Die einzigen Assemblys, von denen Schattenkopien erstellt werden können, sind diejenigen, die im Anwendungsverzeichnis oder dessen Unterverzeichnissen gespeichert sind, die bei der Konfiguration der Anwendungsdomäne von den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> festgelegt werden. Von Assemblys, die im globalen Assemblycache gespeichert sind, werden keine Schattenkopien erstellt.  
+> Die einzigen Assemblys, von denen Schattenkopien erstellt werden können, sind diejenigen, die im Anwendungsverzeichnis oder dessen Unterverzeichnissen gespeichert sind, die bei der Konfiguration der Anwendungsdomäne von den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> festgelegt werden. Von Assemblys, die im globalen Assemblycache gespeichert sind, werden keine Schattenkopien erstellt.  
   
  Dieser Artikel enthält folgende Abschnitte:  
   
@@ -49,7 +49,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
      Der Basispfad für den Speicherort wird gebildet, indem die Eigenschaft <xref:System.AppDomainSetup.ApplicationName%2A> mit der Eigenschaft <xref:System.AppDomainSetup.CachePath%2A> als Unterverzeichnis verkettet wird. Schattenkopien von Assemblys werden in die Unterverzeichnisse dieses Pfades gesetzt und nicht in den Basispfad selbst.  
   
     > [!NOTE]
-    >  Wenn die <xref:System.AppDomainSetup.ApplicationName%2A>-Eigenschaft nicht festgelegt wird, wird die <xref:System.AppDomainSetup.CachePath%2A>-Eigenschaft ignoriert und der Downloadcache wird verwendet. Es werden keine Ausnahmen ausgelöst.  
+    > Wenn die <xref:System.AppDomainSetup.ApplicationName%2A>-Eigenschaft nicht festgelegt wird, wird die <xref:System.AppDomainSetup.CachePath%2A>-Eigenschaft ignoriert und der Downloadcache wird verwendet. Es werden keine Ausnahmen ausgelöst.  
   
      Wenn Sie einen benutzerdefinierten Speicherort festlegen, sind Sie selbst für die Bereinigung der Verzeichnisse und das Löschen der kopierten Dateien zuständig, wenn diese nicht mehr benötigt werden. Sie werden nicht automatisch gelöscht.  
   
@@ -60,7 +60,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
      Wenn Sie die Schattenkopiefunktion für eine Anwendungsdomäne aktivieren, werden standardmäßig alle Assemblys im Anwendungspfad kopiert, d. h. in den Verzeichnissen, die von den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> festgelegt wurden. Sie können den Kopiervorgang auf ausgewählte Verzeichnisse beschränken, indem Sie eine Zeichenfolge erstellen, der nur die Verzeichnisse enthält, in denen Schattenkopien erstellt werden sollen. Weisen Sie die Zeichenfolge dann der <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft zu. Trennen Sie die Verzeichnisse mit Semikolons. Die einzigen Assemblys, von denen Schattenkopien erstellt werden, sind nun die in den ausgewählten Verzeichnissen.  
   
     > [!NOTE]
-    >  Wenn Sie der <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft keine Zeichenfolge zuweisen oder wenn Sie diese Eigenschaft nicht auf `null` festlegen, werden von allen Assemblys in den Verzeichnissen, die mit den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> angegeben werden, Schattenkopien erstellt.  
+    > Wenn Sie der <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft keine Zeichenfolge zuweisen oder wenn Sie diese Eigenschaft nicht auf `null` festlegen, werden von allen Assemblys in den Verzeichnissen, die mit den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> angegeben werden, Schattenkopien erstellt.  
   
     > [!IMPORTANT]
     >  Verzeichnispfade dürfen keine Semikolons enthalten, da das Semikolon das Trennzeichen ist. Es gibt kein Escapezeichen für Semikolons.  

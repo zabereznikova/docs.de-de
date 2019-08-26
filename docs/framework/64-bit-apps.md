@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11295f4b0d1a425fd3859c904b8ebc7830c64d1f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4ff02c5856e4ee48c8e5cf375cc68d92c76737c7
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815949"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988397"
 ---
 # <a name="64-bit-applications"></a>64-Bit-Anwendungen
 Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll. WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht. WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.  
@@ -24,7 +24,7 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
  Visual Studio installiert die 32-Bit-Version der CLR auf einem x86-Computer und sowohl die 32-Bit-Version als auch die entsprechende 64-Bit-Version der CLR auf einem 64-Bit-Windows-Computer. (Da Visual Studio eine 32-Bit-Anwendung ist, wenn sie in einem 64-Bit-System installiert ist, wird sie unter WOW64 ausgeführt.)  
   
 > [!NOTE]
->  Aufgrund des Designs der x86-Emulation und des WOW64-Subsystems für die Itanium-Prozessorfamilie ist die Ausführung von Anwendungen auf einen Prozessor beschränkt. Diese Faktoren beeinträchtigen die Leistung und Skalierbarkeit der 32-Bit-Version von .NET Framework-Anwendungen, die unter Itanium-basierten Systemen ausgeführt werden. Wir empfehlen die Verwendung von .NET Framework 4, das zur Verbesserung von Leistung und Skalierbarkeit systemeigene 64-Bit-Unterstützung für Itanium-basierte Systeme bietet.  
+> Aufgrund des Designs der x86-Emulation und des WOW64-Subsystems für die Itanium-Prozessorfamilie ist die Ausführung von Anwendungen auf einen Prozessor beschränkt. Diese Faktoren beeinträchtigen die Leistung und Skalierbarkeit der 32-Bit-Version von .NET Framework-Anwendungen, die unter Itanium-basierten Systemen ausgeführt werden. Wir empfehlen die Verwendung von .NET Framework 4, das zur Verbesserung von Leistung und Skalierbarkeit systemeigene 64-Bit-Unterstützung für Itanium-basierte Systeme bietet.  
   
  Wenn Sie eine verwaltete 64-Bit-Anwendung auf einem 64-Bit-Windows-Betriebssystem ausführen, können Sie standardmäßig ein Objekt mit einer Größe von maximal 2 Gigabyte (GB) erstellen. In .NET Framework 4.5 können Sie diesen Grenzwert jedoch erhöhen.  Weitere Informationen finden Sie unter [\<gcAllowVeryLargeObjects>-Element](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md).  
   
@@ -56,8 +56,8 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
   
 |Compiler|Compileroption|  
 |--------------|---------------------|  
-|Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[/platform (C# Compileroptionen)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual Basic|[/platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual C#|[/platform (C# Compileroptionen)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|Sie können plattformagnostische Microsoft Intermediate Language (MSIL)-Anwendungen erstellen, indem Sie **/clr:safe** verwenden. Weitere Informationen finden Sie unter [/clr (Common Language Runtime-Kompilierung)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ enthält einen gesonderten Compiler für jedes 64-Bit-Betriebssystem. Weitere Informationen zur Verwendung von Visual C++ für die Erstellung von nativen Anwendungen, die auf einem 64-Bit-Windows-Betriebssystem ausgeführt werden, finden Sie unter [64-Bit-Programmierung](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bestimmen des Status einer EXE- oder DLL-Datei  

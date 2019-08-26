@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: d225b30b8bfcae09c5824d974e194f8a06ddfc86
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c64806c4505b507a9058a03d5cb882412f6868da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485387"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593405"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)
 Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen. Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.  
@@ -19,7 +19,7 @@ Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht zuerst nach einem `Book`-Element und dann nach allen nebengeordneten Elementen mit dem Namen `Book`. Die resultierende Auflistung enthält den Kontextknoten.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

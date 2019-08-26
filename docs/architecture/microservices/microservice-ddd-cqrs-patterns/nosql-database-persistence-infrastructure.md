@@ -2,12 +2,12 @@
 title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Verwendung von NoSql-Datenbanken im Allgemeinen – und Azure Cosmos DB im Speziellen – als Option zum Implementieren von Persistenz
 ms.date: 10/08/2018
-ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2ea3841aa3bdbad3b67b529e0e9820b96f0fa038
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676337"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015075"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -333,7 +333,7 @@ services:
   <https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/>
 
 - **The MongoDB Docker image (Linux and Windows Container) (Das MongoDB-Docker-Image (Linux- und Windows-Container))**   \
-  <https://hub.docker.com/\_/mongo/>
+  <https://hub.docker.com/_/mongo/>
 
 - **Verwenden von MongoChef (Studio 3T) mit der Azure Cosmos DB-API für MongoDB-Konten**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
