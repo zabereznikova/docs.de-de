@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674845"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913230"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
 
@@ -27,7 +27,7 @@ Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -K
  Beim verwalteten Threading ist <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> die stabile ID für den verwalteten Thread. Für die Lebensdauer des Threads wird kein Konflikt mit dem Wert eines anderen Threads entstehen, unabhängig von der Anwendungsdomäne, aus der Sie diesen Wert erhalten.  
   
 > [!NOTE]
->  Eine Betriebssystem- **ThreadId** hat keine feste Beziehung zu einem verwalteten Thread, da ein nicht verwalteter Host die Beziehung zwischen verwalteten und nicht verwalteten Threads steuern kann. Insbesondere kann ein komplexer Host die Fiber-API verwenden, um viele verwaltete mit demselben Betriebssystemthread zu verwalten oder einen verwalteten Thread unter verschiedenen Betriebssystemthreads zu verschieben.  
+> Eine Betriebssystem- **ThreadId** hat keine feste Beziehung zu einem verwalteten Thread, da ein nicht verwalteter Host die Beziehung zwischen verwalteten und nicht verwalteten Threads steuern kann. Insbesondere kann ein komplexer Host die Fiber-API verwenden, um viele verwaltete mit demselben Betriebssystemthread zu verwalten oder einen verwalteten Thread unter verschiedenen Betriebssystemthreads zu verschieben.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Zuordnen zwischen Win32-Threading und verwaltetem Threading
 
@@ -57,7 +57,7 @@ Ein verwalteter Thread kann gekennzeichnet werden, um anzugeben, dass er ein [Si
  Wenn der Apartmentzustand nicht festgelegt ist, bevor der Thread gestartet wird, wird der Thread als Multithread-Apartment (MTA) initialisiert. Der Finalizerthread und alle von <xref:System.Threading.ThreadPool> gesteuerten Threads sind MTAs.  
   
 > [!IMPORTANT]
->  Bei Anwendungsstartcode besteht die einzige Möglichkeit zum Steuern des Apartmentstatus darin, <xref:System.MTAThreadAttribute> oder <xref:System.STAThreadAttribute> für das Einstiegspunktverfahren anzuwenden. In .NET Framework 1.0 und 1.1 kann die Eigenschaft <xref:System.Threading.Thread.ApartmentState%2A> als erste Codezeile festgelegt werden. Das ist in .NET Framework 2.0 nicht zulässig.  
+> Bei Anwendungsstartcode besteht die einzige Möglichkeit zum Steuern des Apartmentstatus darin, <xref:System.MTAThreadAttribute> oder <xref:System.STAThreadAttribute> für das Einstiegspunktverfahren anzuwenden. In .NET Framework 1.0 und 1.1 kann die Eigenschaft <xref:System.Threading.Thread.ApartmentState%2A> als erste Codezeile festgelegt werden. Das ist in .NET Framework 2.0 nicht zulässig.  
   
  Verwaltete Objekte, die für COM verfügbar gemacht werden, verhalten sich, als hätten sie den Freethread-Marshaler aggregiert. Anders gesagt können Sie von jedem COM-Apartment auf eine Freethreadweise aufgerufen werden. Die einzigen verwalteten Objekte, die dieses Freethread-Verhalten nicht zeigen, die Objekte, die von <xref:System.EnterpriseServices.ServicedComponent> oder <xref:System.Runtime.InteropServices.StandardOleMarshalObject> abgeleitet werden.  
   

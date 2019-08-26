@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946842"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Verwenden nicht verwalteter DLL-Funktionen
 Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Windows-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
@@ -43,7 +43,7 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
   
      [C#] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Methode mit den Modifizierern **static** und **extern**.  
   
-     [C++] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Wrappermethode oder Funktion mit **extern "C"**.  
+     [C++] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Wrappermethode oder Funktion mit **extern "C"** .  
   
 4. [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md).  
   
@@ -65,7 +65,7 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
 3. Suchen der Adresse der Funktion im Arbeitsspeicher und Übertragen ihrer Argumente auf den Stapel, wobei die Daten bei Bedarf gemarshallt werden.  
   
     > [!NOTE]
-    >  Das Suchen und Laden der DLL sowie das Suchen der Adresse der Funktion im Arbeitsspeicher erfolgen nur beim ersten Aufruf der Funktion.  
+    > Das Suchen und Laden der DLL sowie das Suchen der Adresse der Funktion im Arbeitsspeicher erfolgen nur beim ersten Aufruf der Funktion.  
   
 4. Übertragen der Kontrolle an die nicht verwaltete Funktion.  
   

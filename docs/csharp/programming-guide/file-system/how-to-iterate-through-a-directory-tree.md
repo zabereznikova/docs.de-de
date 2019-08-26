@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585798"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923979"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Vorgehensweise: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
 Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder dem Unterverzeichnis als `string` abrufen, oder Sie können zusätzliche Informationen eines <xref:System.IO.FileInfo?displayProperty=nameWithType> oder <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>-Objekts abrufen.  
   
 > [!NOTE]
->  In Windows sind die Begriffe „Verzeichnis“ und „Ordner“ austauschbar. Die meisten Dokumentationen und der Text der Benutzeroberfläche verwenden den Begriff „Ordner“, aber in der .NET Framework-Klassenbibliothek wird der Begriff „Verzeichnis“ verwendet.  
+> In Windows sind die Begriffe „Verzeichnis“ und „Ordner“ austauschbar. Die meisten Dokumentationen und der Text der Benutzeroberfläche verwenden den Begriff „Ordner“, aber in der .NET Framework-Klassenbibliothek wird der Begriff „Verzeichnis“ verwendet.  
   
  Im einfachsten Fall, in dem Sie ganz sicher sind, dass Sie über die Zugriffsberechtigungen für alle Verzeichnisse in einem angegebenen Stamm verfügen, können Sie das `System.IO.SearchOption.AllDirectories`-Flag verwenden. Dieses Flag gibt alle geschachtelten Unterverzeichnisse zurück, die mit dem angegebenen Muster übereinstimmen. Im folgenden Beispiel wird die Verwendung dieses Flags veranschaulicht.  
   
@@ -34,7 +34,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Wenn Sie mehrere Vorgänge für Dateien und Ordner ausführen müssen, können Sie diese Beispiele modularisieren, indem Sie den Vorgang in separate Funktionen umgestalten, die Sie mit einem einzelnen Delegaten aufrufen können.  
   
 > [!NOTE]
->  NTFS-Dateisysteme können *Analysepunkte* in Form von *Verknüpfungspunkten*, *symbolischen Verknüpfungen* und *festen Links* enthalten. .NET Framework-Methoden wie z.B. <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unter einem Analysepunkt zurück. Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Analysepunkte aufeinander verweisen. Im Allgemeinen sollten Sie bei Analysepunkten äußerst vorsichtig sein, um sicherzustellen, dass Sie nicht versehentlich Dateien ändern oder löschen. Wenn Sie genaue Kontrolle über Analysepunkte benötigen, verwenden Sie einen Plattformaufruf oder nativen Code, um die entsprechenden Win32-Dateisystemmethoden direkt aufzurufen.  
+> NTFS-Dateisysteme können *Analysepunkte* in Form von *Verknüpfungspunkten*, *symbolischen Verknüpfungen* und *festen Links* enthalten. .NET Framework-Methoden wie z.B. <xref:System.IO.DirectoryInfo.GetFiles%2A> und <xref:System.IO.DirectoryInfo.GetDirectories%2A> geben keine Unterverzeichnisse unter einem Analysepunkt zurück. Dieses Verhalten schützt vor dem Risiko einer Endlosschleife, wenn zwei Analysepunkte aufeinander verweisen. Im Allgemeinen sollten Sie bei Analysepunkten äußerst vorsichtig sein, um sicherzustellen, dass Sie nicht versehentlich Dateien ändern oder löschen. Wenn Sie genaue Kontrolle über Analysepunkte benötigen, verwenden Sie einen Plattformaufruf oder nativen Code, um die entsprechenden Win32-Dateisystemmethoden direkt aufzurufen.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie eine Verzeichnisstruktur mit Rekursion direkt durchlaufen. Der rekursive Ansatz ist elegant, kann aber eine Stapelüberlaufausnahme verursachen, wenn die Verzeichnisstruktur groß und tief verschachtelt ist.  
@@ -60,5 +60,5 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO>
-- [LINQ und Dateiverzeichnisse](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+- [LINQ und Dateiverzeichnisse](../concepts/linq/linq-and-file-directories.md)
+- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](./index.md)

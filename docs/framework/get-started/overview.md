@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878038"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917972"
 ---
 # <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
 
@@ -75,7 +75,7 @@ So wird beispielsweise durch die Auflistungsklassen in .NET Framework ein Schnit
 
 Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit den .NET Framework-Typen viele gängige Programmieraufgaben erledigen, darunter auch Zeichenfolgenverwaltung, Datenerfassung, Datenbankkonnektivität und Dateizugriff. Neben diesen Typen für normale Aufgaben beinhaltet die Klassenbibliothek auch Typen, die verschiedene spezielle Entwicklungsszenarien unterstützen. Verwenden Sie NET Framework beispielsweise zur Entwicklung der folgenden Typen von Apps und Diensten:
 
-- Konsolen-Apps Siehe [Erstellen von Konsolenanwendungen](../../../docs/standard/building-console-apps.md).
+- Konsolen-Apps Siehe [Erstellen von Konsolenanwendungen](../../standard/building-console-apps.md).
 
 - GUI-Apps für Windows (Windows Forms) Siehe [Windows Forms](../../../docs/framework/winforms/index.md).
 

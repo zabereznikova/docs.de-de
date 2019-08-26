@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204889"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965890"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Ereignisbehandlung in einem XML-Dokument mit "XmlNodeChangedEventArgs"
-**XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden. 	Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
+**XmlNodeChangedEventArgs** kapselt die Argumente, die den beim **XmlDocument**-Objekt zur Verarbeitung von Ereignissen registrierten Ereignishandlern übergeben werden. Die folgende Tabelle enthält die Ereignisse und eine Beschreibung der Situation, in der sie ausgelöst werden.  
   
 |event|Wird ausgelöst|  
 |-----------|-----------|  
@@ -28,7 +28,7 @@ ms.locfileid: "44204889"
 |<xref:System.Xml.XmlDocument.NodeChanged>|Wenn der Wert eines Knotens geändert wurde.|  
   
 > [!NOTE]
->  Wenn die Speicherauslastung von **XmlDataDocument** vollständig für die **DataSet**-Speicherung optimiert ist, wird durch **XmlDataDocument** bei Änderungen des zugrunde liegenden **DataSet** möglicherweise keines der oben aufgeführten Ereignisse ausgelöst. Wenn diese Ereignisse benötigt werden, muss das ganze **XmlDocument** einmal durchlaufen werden, damit die Speicherauslastung nicht vollständig optimiert wird.  
+> Wenn die Speicherauslastung von **XmlDataDocument** vollständig für die **DataSet**-Speicherung optimiert ist, wird durch **XmlDataDocument** bei Änderungen des zugrunde liegenden **DataSet** möglicherweise keines der oben aufgeführten Ereignisse ausgelöst. Wenn diese Ereignisse benötigt werden, muss das ganze **XmlDocument** einmal durchlaufen werden, damit die Speicherauslastung nicht vollständig optimiert wird.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie ein Ereignishandler definiert und dann einem Ereignis hinzugefügt wird.  
   

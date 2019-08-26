@@ -17,24 +17,24 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648971"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987207"
 ---
 # <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  
   
-|Methodenname|Mit|  
+|Methodenname|Verwendung|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Konvertiert alle Zeichen in einer Zeichenfolge in Großbuchstaben.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Konvertiert alle Zeichen in einer Zeichenfolge in Kleinbuchstaben.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Konvertiert eine Zeichenfolge in Titelschreibung.|  
   
 > [!WARNING]
->  Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
+> Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Schreibung  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927996"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 
@@ -46,7 +46,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 - Einzelne Anwendungen können beendet werden, ohne den gesamten Prozess zu beenden. Mit Anwendungsdomänen können Sie den in einer Anwendung ausgeführten Code entladen.  
   
     > [!NOTE]
-    >  Einzelne Assemblys oder Typen können nicht entladen werden. Es können nur vollständige Domänen entladen werden.  
+    > Einzelne Assemblys oder Typen können nicht entladen werden. Es können nur vollständige Domänen entladen werden.  
   
 - Der in einer Anwendung ausgeführte Code kann nicht direkt auf Code oder Ressourcen anderer Anwendungen zugreifen. Die Common Language Runtime stellt diese Isolierung sicher, indem direkte Aufrufe zwischen Objekten unterschiedlicher Anwendungsdomänen verhindert werden. Zwischen Domänen übergebene Objekte werden kopiert, oder der Zugriff erfolgt über einen Proxy. Wenn das Objekt kopiert wird, erfolgen die Aufrufe des Objekts lokal. Das heißt, dass der Aufrufer und das Objekt, auf das verwiesen wird, zur gleichen Anwendungsdomäne gehören. Wenn auf das Objekt über einen Proxy zugegriffen wird, erfolgt der Aufruf des Objekts remote. In diesem Fall befinden sich der Aufrufer und das Objekt, auf das verwiesen wird, in unterschiedlichen Anwendungsdomänen. Bei domänenübergreifenden Aufrufen wird die gleiche Infrastruktur für Remoteaufrufe verwendet wie bei Aufrufen zwischen Prozessen oder Computern. Daher müssen die Metadaten zu dem Objekt, auf das verwiesen wird, für beide Anwendungsdomänen verfügbar sein, damit die JIT-Kompilierung des Methodenaufrufs ordnungsgemäß durchgeführt werden kann. Wenn die aufrufende Domäne nicht über Zugriff auf die Metadaten des aufgerufenen Objekts verfügt, kann die Kompilierung mit einer Ausnahme vom Typ <xref:System.IO.FileNotFoundException> fehlschlagen. Weitere Informationen finden Sie unter [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Der Mechanismus, mit dem ermittelt wird, wie domänenübergreifend auf Objekte zugegriffen werden kann, wird durch das Objekt bestimmt. Weitere Informationen finden Sie unter <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
@@ -110,7 +110,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Die <xref:System.AppDomain> ist die programmgesteuerte Schnittstelle zu Anwendungsdomänen. Diese Klasse enthält Methoden zum Erstellen und Entladen von Domänen, zum Erstellen von Instanzen von Typen in Domänen und zum Registrieren von verschiedenen Benachrichtigungen wie das Entladen von Domänen. In der folgenden Tabelle werden häufig verwendete <xref:System.AppDomain>-Methoden aufgelistet.  
   
-|AppDomain-Methode|Beschreibung|  
+|AppDomain-Methode|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Erstellt eine neue Anwendungsdomäne. Es wird empfohlen, dass Sie eine Überladung dieser Methode verwenden, die ein <xref:System.AppDomainSetup>-Objekt angibt. Dies ist die bevorzugte Methode zum Festlegen der Eigenschaften einer neuen Domäne, z. B. die Anwendungsbasis oder das Stammverzeichnis für die Anwendung, des Speicherorts der Konfigurationsdatei für die Domäne und des Suchpfads, den die Common Language Runtime verwenden soll, um Assemblys in die Domäne zu laden.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> und <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Führt eine Assembly in der Anwendungsdomäne aus. Hierbei handelt es sich um eine Instanzmethode, mit der Code in einer anderen Anwendungsdomäne ausgeführt werden kann, für die ein Verweis vorhanden ist.|  
@@ -118,11 +118,11 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 |<xref:System.AppDomain.Unload%2A>|Fährt die Domäne ordnungsgemäß herunter. Die Anwendungsdomäne wird erst entladen, wenn alle in der Domäne ausgeführten Threads beendet wurden oder nicht mehr in der Domäne ausgeführt werden.|  
   
 > [!NOTE]
->  Die Common Language Runtime unterstützt keine Serialisierung der globalen Methoden. Daher können Delegaten nicht verwendet werden, um globale Methoden in anderen Anwendungsdomänen auszuführen.  
+> Die Common Language Runtime unterstützt keine Serialisierung der globalen Methoden. Daher können Delegaten nicht verwendet werden, um globale Methoden in anderen Anwendungsdomänen auszuführen.  
   
  Auch die in der Spezifikation zu den Hostingschnittstellen der Common Language Runtime beschriebenen nicht verwalteten Schnittstellen bieten Zugriff auf Anwendungsdomänen. Mit Schnittstellen von nicht verwaltetem Code können Laufzeithosts Anwendungsdomänen in einem Prozess erstellen und Zugriff auf diese erlangen.  
   
-## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization-Umgebungsvariable
+## <a name="the-complus_loaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization-Umgebungsvariable
 
  Eine Umgebungsvariable, die die Standardladeprogramm-Optimierungsrichtlinie einer ausführbaren Anwendung festgelegt.  
   

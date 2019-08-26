@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328698"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603011"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C#-Compileroptionen)
 Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.  
@@ -57,5 +57,5 @@ Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Au
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

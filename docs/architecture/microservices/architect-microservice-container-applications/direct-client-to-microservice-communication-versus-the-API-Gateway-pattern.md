@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914664"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -170,7 +170,7 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Charles Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)**  \
+- **Chris Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)**  \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API-Gatewaymuster** \

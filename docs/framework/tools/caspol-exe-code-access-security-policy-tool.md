@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959066"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
   
 > [!IMPORTANT]
->  Ab .NET Framework 4 wirkt sich „Caspol.exe“ nur dann auf CAS-Richtlinien (Code Access Security, Codezugriffssicherheit) aus, wenn das [\<legacyCasPolicy](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)-Element auf `true` festgelegt ist. Alle von CasPol.exe angezeigten oder geänderten Einstellungen gelten nur für Anwendungen, die die Verwendung der CAS-Richtlinie abonnieren. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+> Ab .NET Framework 4 wirkt sich „Caspol.exe“ nur dann auf CAS-Richtlinien (Code Access Security, Codezugriffssicherheit) aus, wenn das [\<legacyCasPolicy](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)-Element auf `true` festgelegt ist. Alle von CasPol.exe angezeigten oder geänderten Einstellungen gelten nur für Anwendungen, die die Verwendung der CAS-Richtlinie abonnieren. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
->  64-Bit-Computer enthalten 64-Bit- und 32-Bit-Versionen der Sicherheitsrichtlinie. Um sicherzustellen, dass die Richtlinienänderungen sowohl für 32-Bit- als auch für 64-Bit-Anwendungen gelten, führen Sie die 32- und die 64-Bit-Version von Caspol.exe aus.  
+> 64-Bit-Computer enthalten 64-Bit- und 32-Bit-Versionen der Sicherheitsrichtlinie. Um sicherzustellen, dass die Richtlinienänderungen sowohl für 32-Bit- als auch für 64-Bit-Anwendungen gelten, führen Sie die 32- und die 64-Bit-Version von Caspol.exe aus.  
   
  Das Sicherheitsrichtlinientool für den Codezugriff wird automatisch mit Visual Studio und .NET Framework installiert. Sie finden Caspol.exe auf 32-Bit-Systemen in %windir%\Microsoft.NET\Framework\\*Version* bzw. in %windir%\Microsoft.NET\Framework64\\*Version* auf 64-Bit-Systemen. (Zum Beispiel ist %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe der Speicherort für .NET Framework 4 auf einem 64-Bit-System.) Wenn auf Ihrem Computer mehrere .NET Framework-Versionen parallel ausgeführt werden, sind unter Umständen mehrere Versionen des Tools installiert. Sie können das Tool aus dem Installationsverzeichnis heraus ausführen. Es empfiehlt sich jedoch, die [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md) zu verwenden, da Sie dann nicht zum Installationsordner navigieren müssen.  
   
@@ -45,7 +45,7 @@ caspol [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> oder<br /><br /> **-af** *assembly_file*|Fügt eine Assembly, die ein benutzerdefiniertes Sicherheitsobjekt implementiert, z. B. eine benutzerdefinierte Berechtigung oder Mitgliedschaftsbedingung, zur Liste der vollständig vertrauenswürdigen Assemblys einer bestimmten Richtlinienebene hinzu. Das Argument *assembly_file* gibt die hinzuzufügende Assembly an. Diese Datei muss mit einem [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md) signiert werden. Sie können eine Assembly mit dem [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) mit einem starken Namen signieren.<br /><br /> Wenn ein Berechtigungssatz, der eine benutzerdefinierte Berechtigung enthält, einer Richtlinie hinzugefügt wird, muss außerdem die Assembly, die diese Berechtigung implementiert, zur Liste der vollständig vertrauenswürdigen Assemblys dieser Richtlinienebene hinzugefügt werden. Assemblys, die benutzerdefinierte Sicherheitsobjekte implementieren, z. B. benutzerdefinierte Codegruppen oder Mitgliedschaftsbedingungen, die in Sicherheitsrichtlinien wie der Computerrichtlinie angewendet werden, sollten generell zur Liste der vollständig vertrauenswürdigen Assemblys hinzugefügt werden. **Vorsicht**:  Wenn die Assembly, die das benutzerdefinierte Sicherheitsobjekt implementiert, auf andere Assemblys verweist, müssen Sie zur Liste der vollständig vertrauenswürdigen Assemblys zunächst die Assemblys hinzufügen, auf die verwiesen wird. Benutzerdefinierte Sicherheitsobjekte, die mit Visual Basic, C++ und JScript erstellt wurden, verweisen entweder auf Microsoft.VisualBasic.dll, Microsoft.VisualC.dll oder Microsoft.JScript.dll. In der Standardeinstellung befinden sich diese Assemblys nicht in der Liste der vollständig vertrauenswürdigen Assemblys. Sie müssen die entsprechende Assembly zur Liste der vollständig vertrauenswürdigen Assemblys hinzufügen, bevor Sie ein benutzerdefiniertes Sicherheitsobjekt hinzufügen. Wenn Sie dies unterlassen, wird das Sicherheitssystem beschädigt, und sämtliche Assemblys können nicht mehr geladen werden. In diesem Fall wird die Sicherheit nicht durch die Option **-all -reset** von Caspol.exe repariert. Zum Wiederherstellen der Sicherheit müssen Sie die Sicherheitsdateien manuell bearbeiten und das benutzerdefinierte Sicherheitsobjekt entfernen.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> oder<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Fügt der Hierarchie der Codegruppen eine neue Codegruppe hinzu. Es kann entweder *parent_label* oder *parent_name* angegeben werden. Das Argument *parent_label* gibt die Bezeichnung der Codegruppe an (z.B. 1 oder 1.1), die der hinzuzufügenden Codegruppe übergeordnet ist. Das Argument *parent_name* gibt den Namen der Codegruppe an, die der hinzuzufügenden Codegruppe übergeordnet ist. Da sich *parent_label* und *parent_name* synonym verwenden lassen, müssen sie von Caspol.exe unterschieden werden können. Aus diesem Grund darf *parent_name* nicht mit einer Zahl beginnen. Außerdem kann *parent_name* nur die Zeichen A-Z, 0-9 und den Unterstrich enthalten.<br /><br /> Das Argument *mship* gibt die Mitgliedschaftsbedingung für die neue Codegruppe an. Weitere Informationen zu *mship*-Argumenten finden Sie in der Tabelle weiter unten in diesem Abschnitt.<br /><br /> Das Argument *pset_name* stellt den Namen des Berechtigungssatzes dar, der der neuen Codegruppe zugeordnet wird. Darüber hinaus können ein oder mehrere *Flags* für die neue Gruppe festgelegt werden. Weitere Informationen zu *flags*-Argumenten finden Sie in der Tabelle weiter unten in diesem Abschnitt.|  
@@ -81,7 +81,7 @@ caspol [options]
   
  Das Argument *mship*, das die Mitgliedschaftsbedingung für eine Codegruppe angibt, kann mit der Option **-addgroup** und der Option **-chggroup** verwendet werden. Jedes *mship*-Argument wird als .NET Framework-Klasse implementiert. *mship* wird mit einem der folgenden Argumente angegeben:  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**-allcode**|Gibt den gesamten Code an. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Gibt das Anwendungsverzeichnis an. Wenn Sie **-appdir** als Mitgliedschaftsbedingung angeben, wird der URL-Beweis des Codes mit dem Anwendungsverzeichnisbeweis dieses Codes verglichen. Wenn die Beweiswerte identisch sind, ist die Mitgliedschaftsbedingung erfüllt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
@@ -95,7 +95,7 @@ caspol [options]
   
  Das Argument *flags*, das mit der Option **-addgroup** und der Option **-chggroup** verwendet werden kann, wird wie folgt angegeben:  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**-description** „*Beschreibung*“|Gibt bei Verwendung mit der Option **-addgroup** die Beschreibung für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** die Beschreibung für eine zu bearbeitende Codegruppe an. Das Argument *description* muss in doppelte Anführungszeichen eingeschlossen sein.|  
 |**-exclusive** {**on**&#124;**off**}|**on** gibt an, dass lediglich der Berechtigungssatz berücksichtigt wird, der der hinzuzufügenden bzw. zu ändernden Codegruppe zugeordnet ist, wenn ein Code die Mitgliedschaftsbedingung der Codegruppe erfüllt. Wenn für diese Option **off** festgelegt ist, berücksichtigt Caspol.exe die Berechtigungssätze aller auf der Richtlinienebene übereinstimmenden Codegruppen.|  

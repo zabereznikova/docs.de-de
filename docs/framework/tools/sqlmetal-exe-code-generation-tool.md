@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f435c93f68feb564aaca0f52842e567aa688ac64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938008"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]-Komponente von .NET Framework. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
@@ -28,7 +28,7 @@ Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE
  Dieses Tool wird automatisch mit Visual Studio installiert. Standardmäßig befindet sich die Datei unter " `drive`:\Programme\Microsoft SDKs\Windows\v`n.nn`\bin". Wenn Sie Visual Studio nicht installieren, können Sie die SQLMetal-Datei auch über einen Download des [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)erhalten.  
   
 > [!NOTE]
->  Entwickler, die Visual Studio verwenden, können auch den objektrelationalen Designer verwenden, um Entitätsklassen zu generieren. Die Befehlszeilenmethode ist für umfangreiche Datenbanken gut skalierbar. Da SqlMetal ein Befehlszeilentool ist, können Sie es in einem Buildprozess verwenden.  
+> Entwickler, die Visual Studio verwenden, können auch den objektrelationalen Designer verwenden, um Entitätsklassen zu generieren. Die Befehlszeilenmethode ist für umfangreiche Datenbanken gut skalierbar. Da SqlMetal ein Befehlszeilentool ist, können Sie es in einem Buildprozess verwenden.  
   
  Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Command Prompts (Eingabeaufforderung)](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Geben Sie bei er Eingabeaufforderung Folgendes ein:  
   
@@ -130,7 +130,7 @@ sqlmetal [options] [<input file>]
  **sqlmetal /server:myserver /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
->  Wenn Sie die Option **/pluralize** mit der Northwind-Beispieldatenbank verwenden, stellen Sie folgendes Verhalten fest. Wenn SqlMetal Zeilentypnamen für Tabellen erstellt, wird für Tabellennamen die Singularform verwendet. Wenn <xref:System.Data.Linq.DataContext> -Eigenschaften für Tabellen erstellt werden, wird für Tabellennamen die Pluralform verwendet. Zufällig treten die Tabellen in der Northwind-Beispieldatenbank bereits in Pluralform auf. Deshalb ist nicht erkennbar, dass dieser Schritt funktioniert. Obwohl es üblich ist, Datenbanktabellen im Singular zu benennen, ist es in .NET auch verbreitet, Auflistungen in Pluralform zu benennen.  
+> Wenn Sie die Option **/pluralize** mit der Northwind-Beispieldatenbank verwenden, stellen Sie folgendes Verhalten fest. Wenn SqlMetal Zeilentypnamen für Tabellen erstellt, wird für Tabellennamen die Singularform verwendet. Wenn <xref:System.Data.Linq.DataContext> -Eigenschaften für Tabellen erstellt werden, wird für Tabellennamen die Pluralform verwendet. Zufällig treten die Tabellen in der Northwind-Beispieldatenbank bereits in Pluralform auf. Deshalb ist nicht erkennbar, dass dieser Schritt funktioniert. Obwohl es üblich ist, Datenbanktabellen im Singular zu benennen, ist es in .NET auch verbreitet, Auflistungen in Pluralform zu benennen.  
   
 ## <a name="see-also"></a>Siehe auch
 

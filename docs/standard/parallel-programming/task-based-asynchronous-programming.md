@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300637"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666304"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
 
@@ -97,7 +97,7 @@ Jeder Aufgabe wird eine ganzzahlige ID zugeordnet, durch die diese in einer Anwe
 
 Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe einer dieser Optionen teilen Sie dem Aufgabenplaner mit, wie die Aufgabe im Threadpool geplant werden soll. In der folgenden Tabelle sind die verschiedenen Aufgabenerstellungsoptionen aufgeführt.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|Beschreibung|
+|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|BESCHREIBUNG|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Dies ist die Standardoption, wenn keine Option angegeben wurde. Der Planer verwendet zum Planen der Aufgabe seine Standardheuristik.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Gibt an, dass die Aufgabe so geplant werden soll, dass früher erstellte Aufgaben mit großer Wahrscheinlichkeit auch früher ausgeführt werden als Aufgaben, die später erstellt wurden.|
@@ -268,13 +268,13 @@ Die TPL beinhaltet zahlreiche neue öffentliche Typen, die sowohl in parallelen,
 
 ## <a name="custom-task-types"></a>Benutzerdefinierte Aufgabentypen
 
-Es wird empfohlen, nicht von <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> zu erben. Stattdessen sollten Sie die <xref:System.Threading.Tasks.Task.AsyncState%2A>-Eigenschaft verwenden, um einem <xref:System.Threading.Tasks.Task>-Objekt oder einem <xref:System.Threading.Tasks.Task%601>-Objekt zusätzliche Daten oder einen zusätzlichen Zustand zuzuordnen. Sie können auch Erweiterungsmethoden verwenden, um die Funktionen der <xref:System.Threading.Tasks.Task>-Klasse und der <xref:System.Threading.Tasks.Task%601>-Klasse zu erweitern. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Erweiterungsmethoden](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) und [Erweiterungsmethoden](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+Es wird empfohlen, nicht von <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> zu erben. Stattdessen sollten Sie die <xref:System.Threading.Tasks.Task.AsyncState%2A>-Eigenschaft verwenden, um einem <xref:System.Threading.Tasks.Task>-Objekt oder einem <xref:System.Threading.Tasks.Task%601>-Objekt zusätzliche Daten oder einen zusätzlichen Zustand zuzuordnen. Sie können auch Erweiterungsmethoden verwenden, um die Funktionen der <xref:System.Threading.Tasks.Task>-Klasse und der <xref:System.Threading.Tasks.Task%601>-Klasse zu erweitern. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Erweiterungsmethoden](../../csharp/programming-guide/classes-and-structs/extension-methods.md) und [Erweiterungsmethoden](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
 Wenn Sie von <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> erben müssen, können Sie weder <xref:System.Threading.Tasks.Task.Run%2A> und <xref:System.Threading.Tasks.Task.Run%2A> noch die Klassen <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> zum Erstellen von Instanzen des benutzerdefinierten Aufgabentyps verwenden, da von diesen Mechanismen nur <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden. Außerdem können Sie nicht die von <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> und <xref:System.Threading.Tasks.TaskFactory%601> bereitgestellten Aufgabenfortsetzungsmechanismen verwenden, um Instanzen des benutzerdefinierten Aufgabentyps zu erstellen, da mit diesen Mechanismen ebenfalls nur <xref:System.Threading.Tasks.Task>-Objekte und <xref:System.Threading.Tasks.Task%601>-Objekte erstellt werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-|-|
 |[Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Beschreibt die Funktionsweise von Fortsetzungen.|
 |[Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Beschreibt den Unterschied zwischen angefügten und getrennten untergeordneten Aufgaben.|

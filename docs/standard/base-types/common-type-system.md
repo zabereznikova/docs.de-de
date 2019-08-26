@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782630"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934760"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -82,7 +82,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 |exported oder not exported|Gibt an, ob eine Klasse außerhalb der Assembly, in der sie definiert wurde, sichtbar ist. Dieses Merkmal gilt nur für Klassen der obersten Ebene und nicht für geschachtelte Klassen.|  
   
 > [!NOTE]
->  Eine Klasse kann auch in einer übergeordneten Klasse oder Struktur geschachtelt werden. Auch geschachtelte Klassen verfügen über Membermerkmale. Weitere Informationen finden Sie unter [Geschachtelte Typen](#NestedTypes).  
+> Eine Klasse kann auch in einer übergeordneten Klasse oder Struktur geschachtelt werden. Auch geschachtelte Klassen verfügen über Membermerkmale. Weitere Informationen finden Sie unter [Geschachtelte Typen](#NestedTypes).  
   
  Klassenmember, die keine Implementierung haben, sind abstrakte Member. Eine Klasse mit einem oder mehreren abstrakten Membern ist selbst abstrakt, und von dieser Klasse können keine Instanzen erstellt werden. Bei einigen Sprachen, die für die Laufzeit konzipiert sind, können Klassen selbst dann als abstrakt gekennzeichnet werden, wenn sie keine abstrakten Member haben. Sie können eine abstrakte Klasse verwenden, um eine gewisse Basisfunktionalität einzuschließen, die von abgeleiteten Klassen ggf. geerbt bzw. überschrieben werden kann. Nicht abstrakte Klassen werden als konkrete Klassen bezeichnet.  
   
@@ -115,7 +115,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 - Sie können nicht generisch sein, es sei denn, sie sind nur deshalb generisch, weil sie in einem generischen Typ geschachtelt sind. Das bedeutet, dass eine Enumeration nicht über eigene Typparameter verfügen kann.  
   
     > [!NOTE]
-    >  Geschachtelte Typen (z. B. Enumerationen), die mit Visual Basic, C# oder C++ erstellt wurden, enthalten die Typparameter aller einschließenden generischen Typen und sind daher generisch, auch wenn sie über keine eigenen Typparameter verfügen. Weitere Informationen finden Sie im Referenzthema <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> unter "Geschachtelte Typen".  
+    > Geschachtelte Typen (z. B. Enumerationen), die mit Visual Basic, C# oder C++ erstellt wurden, enthalten die Typparameter aller einschließenden generischen Typen und sind daher generisch, auch wenn sie über keine eigenen Typparameter verfügen. Weitere Informationen finden Sie im Referenzthema <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> unter "Geschachtelte Typen".  
   
  Durch das <xref:System.FlagsAttribute>-Attribut wird eine spezielle Art von Enumeration, das so genannte Bitfeld, ausgewiesen. Von der Laufzeit selbst wird nicht zwischen herkömmlichen Enumerationen und Bitfeldern unterschieden, in Ihrer Programmiersprache könnte dies jedoch der Fall sein. Wird diese Unterscheidung getroffen, können zum Generieren nicht benannter Werte zwar bitweise Operatoren für Bitfelder, jedoch nicht für Enumerationen verwendet werden. Enumerationen werden im Allgemeinen für Listen eindeutiger Elemente verwendet, z. B. für Wochentage bzw. Namen für Regionen oder Länder usw. Bitfelder werden in der Regel für Listen verwendet, in denen Qualitätsmerkmale oder Mengen definiert sind, die kombiniert auftreten können, z. B. `Red And Big And Fast`.  
   
@@ -157,14 +157,14 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Da Delegaten von <xref:System.MulticastDelegate> erben, verfügt ein Delegat über eine Aufrufliste. Dabei handelt es sich um eine Liste der Methoden, die dieser Delegat darstellt und die beim Aufrufen des Delegaten ausgeführt werden. Alle Methoden in der Liste empfangen die beim Aufrufen des Delegaten angegebenen Argumente.  
   
 > [!NOTE]
->  Der Rückgabewert von Delegaten mit mehr als einer Methode in der Aufrufliste ist nicht definiert, selbst wenn diese über einen Rückgabetyp verfügen.  
+> Der Rückgabewert von Delegaten mit mehr als einer Methode in der Aufrufliste ist nicht definiert, selbst wenn diese über einen Rückgabetyp verfügen.  
   
  In vielen Fällen (z. B. bei Rückrufmethoden) stellt ein Delegat nur eine Methode dar. Sie müssen den Delegaten lediglich erstellen und aufrufen.  
   
  Für Delegaten, die mehrere Methoden darstellen, enthält .NET Methoden der <xref:System.Delegate>-Delegatklasse und <xref:System.MulticastDelegate>-Delegatklasse, um verschiedene Vorgänge zu unterstützen. Dazu gehören das Hinzufügen einer Methode zur Aufrufliste eines Delegaten (die <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>-Methode), das Entfernen einer Methode (die <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>-Methode) und das Abrufen der Aufrufliste (die <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>-Methode).  
   
 > [!NOTE]
->  Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
+> Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Typdefinitionen  
@@ -307,7 +307,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Jeder Typmember verfügt über eine eindeutige Signatur. Methodensignaturen bestehen aus dem Methodennamen und einer Parameterliste (die Reihenfolge und Typen der Argumente der Methode). Solange die Signaturen unterschiedlich sind, können innerhalb eines Typs mehrere Methoden mit demselben Namen definiert werden. Wenn zwei oder mehrere Methoden mit demselben Namen definiert sind, wird von einer "überladenen" Methode gesprochen. In <xref:System.Char?displayProperty=nameWithType> wird z. B. die <xref:System.Char.IsDigit%2A>-Methode überladen. Eine Methode nimmt einen <xref:System.Char> an. Die andere Methode nimmt einen <xref:System.String> und einen <xref:System.Int32> an.  
   
 > [!NOTE]
->  Der Rückgabetyp wird nicht als Teil der Signatur einer Methode betrachtet. Dies bedeutet, dass Methoden nicht überladen werden können, wenn sich nur ihr Rückgabetyp unterscheidet.  
+> Der Rückgabetyp wird nicht als Teil der Signatur einer Methode betrachtet. Dies bedeutet, dass Methoden nicht überladen werden können, wenn sich nur ihr Rückgabetyp unterscheidet.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>Vererben, Überschreiben und Verdecken von Membern  
  Ein abgeleiteter Typ erbt alle Member seines Basistyps. Dies bedeutet, dass diese Member für den abgeleiteten Typ definiert und verfügbar sind. Das Verhalten oder die Merkmale geerbter Member können auf zwei Weisen geändert werden:  

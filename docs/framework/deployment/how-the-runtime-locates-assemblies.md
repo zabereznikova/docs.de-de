@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941786"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -24,7 +24,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
  Die Common Language Runtime führt eine Reihe von Schritten aus, um eine Assembly zu finden und einen Assemblyverweis aufzulösen. Die einzelnen Schritte werden in den folgenden Abschnitten erläutert. Der Begriff "Überprüfung" wird häufig verwendet, um zu beschreiben, wie die Common Language Runtime nach Assemblys sucht. Er bezieht sich auf die Heuristiken, mit denen die Assembly auf Basis ihres Namens und ihrer Kultur gesucht wird.  
   
 > [!NOTE]
->  Bindungsinformationen in der Protokolldatei können mit dem [Assembly Binding Log Viewer („Fuslogvw.exe“)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)angezeigt werden, der im Windows SDK enthalten ist.  
+> Bindungsinformationen in der Protokolldatei können mit dem [Assembly Binding Log Viewer („Fuslogvw.exe“)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)angezeigt werden, der im Windows SDK enthalten ist.  
   
 ## <a name="initiating-the-bind"></a>Initiieren der Bindung  
  Das Auffinden einer und Binden an eine Assembly beginnt mit dem Versuch der Common Language Runtime, einen Verweis auf eine andere Assembly aufzulösen. Dieser Verweis kann statisch oder dynamisch sein. Der Compiler zeichnet statische Verweise in den Metadaten des Assemblymanifests während der Erstellungszeit auf. Dynamische Verweise werden dynamisch erstellt und resultieren aus dem Aufruf verschiedener Methoden, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
  Mit einer Methode wie <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> können Sie auch einen dynamischen Verweis erstellen und nur partielle Informationen angeben. Dann qualifizieren Sie den Verweis mithilfe des [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)-Elements in der Anwendungskonfigurationsdatei. Mit diesem Element können Sie die vollständigen Verweisinformationen (Name, Version, Kultur und ggf. das Token des öffentlichen Schlüssels) in der Anwendungskonfigurationsdatei statt im Code bereitstellen. Dieses Verfahren sollten Sie anwenden, wenn Sie einen Verweis auf eine Assembly außerhalb des Anwendungsverzeichnisses vollständig qualifizieren oder auf eine Assembly im globalen Assemblycache verweisen möchten, aber gleichzeitig aus praktischen Gründen den vollständigen Verweis in der Konfigurationsdatei statt im Code angeben möchten.  
   
 > [!NOTE]
->  Diesen Typ des partiellen Verweises sollten Sie nicht bei Assemblys verwenden, die für mehrere Anwendungen freigegeben sind. Da Konfigurationseinstellungen nach Anwendung und nicht nach Assembly erfolgen, müssten bei einer freigegebenen Assembly mit diesem Typ des partiellen Verweises für jede Anwendung, die diese freigegebene Assembly verwendet, die qualifizierenden Informationen in der jeweiligen Konfigurationsdatei enthalten sein.  
+> Diesen Typ des partiellen Verweises sollten Sie nicht bei Assemblys verwenden, die für mehrere Anwendungen freigegeben sind. Da Konfigurationseinstellungen nach Anwendung und nicht nach Assembly erfolgen, müssten bei einer freigegebenen Assembly mit diesem Typ des partiellen Verweises für jede Anwendung, die diese freigegebene Assembly verwendet, die qualifizierenden Informationen in der jeweiligen Konfigurationsdatei enthalten sein.  
   
  Die Common Language Runtime verwendet die folgenden Schritte, um einen Assemblyverweis aufzulösen:  
   
@@ -45,7 +45,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
 2. [Überprüfen, ob der Assemblyname bereits zuvor gebunden wurde](#step2) . Ist dies der Fall, wird die zuvor geladene Assembly verwendet. Wenn eine vorherige Anforderung zum Laden der Assembly nicht ausgeführt werden konnte, führt die Anforderung sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu laden.  
   
     > [!NOTE]
-    >  Das Caching von Assemblybindungsfehlern ist neu in .NET Framework Version 2.0.  
+    > Das Caching von Assemblybindungsfehlern ist neu in .NET Framework Version 2.0.  
   
 3. [Durchsuchen des globalen Assemblycache](#step3). Wird die Assembly dort gefunden, wird sie von der Common Language Runtime verwendet.  
   
@@ -73,7 +73,7 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
  Diese Dateien verwenden dieselbe Syntax und stellen Informationen wie Bindungsumleitungen, den Speicherort des Codes und Bindungsarten für bestimmte Assemblys zur Verfügung. Jede Konfigurationsdatei kann ein [\<assemblyBinding>-Element](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) enthalten, das den Bindungsprozess umleitet. Die untergeordneten Elemente des [\<assemblyBinding>-Elements](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) enthalten das [\<dependentAssembly>-Element](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Die untergeordneten Elemente des [\<dependentAssembly>-Elements](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) schließen das [\<assemblyIdentity>-Element](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), das [\<bindingRedirect>-Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) und das [\<codeBase>-Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) ein.  
   
 > [!NOTE]
->  Konfigurationsinformationen sind in den drei Konfigurationsdateien enthalten. Nicht alle Elemente sind auch in allen Konfigurationsdateien gültig. So können sich z. B. Informationen zum Bindungsmodus und privaten Pfad nur in der Anwendungskonfigurationsdatei befinden. Eine vollständige Liste der Informationen, die in jeder Datei enthalten sind, finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../../../docs/framework/configure-apps/index.md).  
+> Konfigurationsinformationen sind in den drei Konfigurationsdateien enthalten. Nicht alle Elemente sind auch in allen Konfigurationsdateien gültig. So können sich z. B. Informationen zum Bindungsmodus und privaten Pfad nur in der Anwendungskonfigurationsdatei befinden. Eine vollständige Liste der Informationen, die in jeder Datei enthalten sind, finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../../../docs/framework/configure-apps/index.md).  
   
 ### <a name="application-configuration-file"></a>Anwendungskonfigurationsdatei  
  Im ersten Schritt durchsucht die Common Language Runtime die Anwendungskonfigurationsdatei nach Informationen, die die im Manifest der aufrufenden Assembly gespeicherten Versionsinformationen überschreiben. Die Anwendungskonfigurationsdatei kann mit einer Anwendung bereitgestellt werden, wird aber nicht für die Ausführung der Anwendung benötigt. In der Regel erfolgt der Abruf dieser Datei fast unmittelbar, aber in Fällen, in denen sich die Anwendungsbasis auf einem Remotecomputer befindet, wie z. B. in einem webbasierten Szenario mit Internet Explorer, muss die Konfigurationsdatei heruntergeladen werden.  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat` ist eine Schlüsseldatei mit starkem Namen. Dieser Befehl erstellt eine Assembly mit starkem Namen, die Sie im globalen Assemblycache einfügen können.  
   
 > [!NOTE]
->  Herausgeberrichtlinien haben Auswirkungen auf alle Anwendungen, die eine freigegebene Komponente verwenden.  
+> Herausgeberrichtlinien haben Auswirkungen auf alle Anwendungen, die eine freigegebene Komponente verwenden.  
   
  Die Konfigurationsdatei für Herausgeberrichtlinien überschreibt Versionsinformationen, die aus der Anwendung stammen (d. h. aus dem Assemblymanifest oder aus der Anwendungskonfigurationsdatei). Wenn in der Anwendungskonfigurationsdatei keine Anweisung zur Umleitung der im Assemblymanifest angegebenen Version enthalten ist, überschreibt die Herausgeberrichtliniendatei die Version, die im Assemblymanifest angeben ist. Enthält die Anwendungskonfigurationsdatei hingegen eine Umleitungsanweisung, überschreibt die Herausgeberrichtlinie die dort angegebene Version und nicht diejenige, die im Manifest angegeben ist.  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Wenn eine vorherige Anforderung für die Assembly nicht ausgeführt werden konnte, führen weitere Anforderungen sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu laden. Ab .NET Framework Version 2.0 werden Assemblybindungsfehler zwischengespeichert. Anhand der zwischengespeicherten Informationen wird bestimmt, ob versucht wird, die Assembly zu laden.  
   
 > [!NOTE]
->  Um zu dem Verhalten der .NET Framework-Versionen 1.0 und 1.1 zurückzukehren, in denen Bindungsfehler nicht zwischengespeichert wurden, nehmen Sie das [\<disableCachingBindingFailures>-Element](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) in Ihre Konfigurationsdatei auf.  
+> Um zu dem Verhalten der .NET Framework-Versionen 1.0 und 1.1 zurückzukehren, in denen Bindungsfehler nicht zwischengespeichert wurden, nehmen Sie das [\<disableCachingBindingFailures>-Element](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) in Ihre Konfigurationsdatei auf.  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>Schritt 3: Durchsuchen des globalen Assemblycache  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. Die Common Language Runtime sucht daraufhin nach der Assembly, auf die verwiesen wurde, und wendet dabei die Regeln an, die weiter unten im Abschnitt erläutert sind.  
   
 > [!NOTE]
->  Wenn mehrere Versionen einer Assembly in einem Verzeichnis vorhanden sind und Sie auf eine bestimmte Version dieser Assembly verweisen möchten, müssen Sie das [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element anstelle des `privatePath`-Attributs des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements verwenden. Bei Verwendung des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements beendet die Common Language Runtime die Überprüfung beim ersten Auffinden einer Assembly mit dem einfachen Assemblynamen, auf den verwiesen wird, ganz gleich, ob es sich um eine korrekte Übereinstimmung handelt oder nicht. Bei einer korrekten Übereinstimmung wird diese Assembly verwendet. Wenn es sich nicht um eine korrekte Übereinstimmung handelt, wird die Überprüfung beendet und die Bindung schlägt fehl.  
+> Wenn mehrere Versionen einer Assembly in einem Verzeichnis vorhanden sind und Sie auf eine bestimmte Version dieser Assembly verweisen möchten, müssen Sie das [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element anstelle des `privatePath`-Attributs des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements verwenden. Bei Verwendung des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements beendet die Common Language Runtime die Überprüfung beim ersten Auffinden einer Assembly mit dem einfachen Assemblynamen, auf den verwiesen wird, ganz gleich, ob es sich um eine korrekte Übereinstimmung handelt oder nicht. Bei einer korrekten Übereinstimmung wird diese Assembly verwendet. Wenn es sich nicht um eine korrekte Übereinstimmung handelt, wird die Überprüfung beendet und die Bindung schlägt fehl.  
   
 ### <a name="locating-the-assembly-through-codebases"></a>Assemblysuche mit CodeBases  
  CodeBase-Informationen können über ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element in einer Konfigurationsdatei zur Verfügung gestellt werden. Diese CodeBase wird stets überprüft, bevor die Common Language Runtime nach der Assembly sucht, auf die verwiesen wird. Enthält eine Herausgeberrichtliniendatei, in der die Umleitung der endgültigen Version enthalten ist, auch ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element, wird dieses [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element verwendet. Wenn beispielsweise Ihre Anwendungskonfigurationsdatei ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element festlegt, gleichzeitig aber eine Herausgeberrichtliniendatei, die Anwendungsinformationen überschreibt, ebenfalls ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element festlegt, wird das [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element in der Herausgeberrichtliniendatei verwendet.  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Wenn am Speicherort, der durch das [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element angegeben ist, keine Übereinstimmung gefunden wird, schlägt die Bindungsanforderung fehl und es werden keine weiteren Schritte ausgeführt. Wird durch die Common Language Runtime ermittelt, dass eine Assembly den Kriterien der aufrufenden Assembly entspricht, wird diese Assembly verwendet. Wenn die durch das angegebene [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element festgelegte Datei geladen wird, überprüft die Common Language Runtime, ob Name, Version, Kultur und öffentlicher Schlüssel dem Verweis der aufrufenden Assembly entsprechen.  
   
 > [!NOTE]
->  Assemblys, auf die verwiesen wird und die sich außerhalb des Stammverzeichnisses der Anwendung befinden, müssen einen starken Namen aufweisen und entweder im globalen Assemblycache installiert sein oder mithilfe des [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Elements angegeben werden.  
+> Assemblys, auf die verwiesen wird und die sich außerhalb des Stammverzeichnisses der Anwendung befinden, müssen einen starken Namen aufweisen und entweder im globalen Assemblycache installiert sein oder mithilfe des [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Elements angegeben werden.  
   
 ### <a name="locating-the-assembly-through-probing"></a>Assemblysuche durch Überprüfung  
  Wenn sich kein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element in der Anwendungskonfigurationsdatei befindet, führt die Common Language Runtime eine Überprüfung für die Assembly anhand von vier Kriterien durch:  

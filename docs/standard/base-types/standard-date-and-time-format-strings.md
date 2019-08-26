@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267919"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949600"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standard-Formatzeichenfolgen für Datum und Uhrzeit
 Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:  
@@ -79,7 +79,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  Informationen zum Anpassen der Muster oder Zeichenfolgen, die beim Formatieren der Datums- und Uhrzeitwerte verwendet werden, finden Sie im Thema zur <xref:System.Globalization.NumberFormatInfo>-Klasse.  
+> Informationen zum Anpassen der Muster oder Zeichenfolgen, die beim Formatieren der Datums- und Uhrzeitwerte verwendet werden, finden Sie im Thema zur <xref:System.Globalization.NumberFormatInfo>-Klasse.  
   
  In einigen Fällen dient die Standardformatzeichenfolge als praktische Abkürzung für eine längere benutzerdefinierte Formatzeichenfolge, die unveränderlich ist. Vier Standardformatzeichenfolgen fallen in diese Kategorie: „O“ (oder „o“), „R“ (oder „r“), „s“ und „u“. Diese Zeichenfolgen entsprechen benutzerdefinierten Formatzeichenfolgen, die durch die invariante Kultur definiert werden. Sie erzeugen Zeichenfolgenentsprechungen von Datums- und Uhrzeitwerten, die über Kulturen hinweg identisch sein sollen. In der folgenden Tabelle werden Informationen über dieses vier Standardformatzeichenfolgen für Datum und Uhrzeit bereitgestellt.  
   

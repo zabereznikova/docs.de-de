@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634722"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988828"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 <a name="top"></a> Das Modul für reguläre Ausdrücke in .NET ist ein leistungsstarkes Tool mit vollem Funktionsumfang, das Texte auf Grundlage von Musterübereinstimmungen verarbeitet, anstatt Literaltext zu vergleichen und nach Übereinstimmungen mit diesem zu suchen. In den meisten Fällen wird die Suche nach Musterabgleichen schnell und effizient ausgeführt. Gelegentlich kann die Engine für reguläre Ausdrücke jedoch sehr langsam wirken. In Extremfällen kann auch der Eindruck entstehen, dass das Modul nicht mehr reagiert, wenn für die Verarbeitung relativ kleiner Eingaben mehrere Stunden oder sogar Tage benötigt werden.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634722"
  Der letzte Texttyp ist besonders problematisch für reguläre Ausdrücke, die für die Behandlung eingeschränkter Eingaben vorgesehen sind. Wenn ein solcher regulärer Ausdruck zudem auf umfangreicher [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) beruht, kann die Engine für reguläre Ausdrücke für die Verarbeitung von scheinbar harmlosem Text übermäßig lange Zeit brauchen (in manchen Fällen mehrere Stunden oder Tage).  
   
 > [!WARNING]
->  Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Einen regulären Ausdruck, der E-Mail-Adressen überprüft, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+> Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Einen regulären Ausdruck, der E-Mail-Adressen überprüft, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Als Beispiel dient hier ein sehr häufig verwendeter, jedoch äußerst problematischer regulärer Ausdruck zum Überprüfen des Alias einer E-Mail-Adresse. Der reguläre Ausdruck `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` wird konzipiert, um eine als gültig angenommene E-Mail-Adresse zu verarbeiten, die aus einem alphanumerischen Zeichen gefolgt von keinem oder weiteren Zeichen besteht, bei denen es sich um alphanumerische Zeichen, Punkte oder Bindestriche handeln kann. Der reguläre Ausdruck muss mit einem alphanumerischen Zeichen enden. Die Verarbeitung von gültigen Eingaben durch diesen regulären Ausdruck erfolgt zwar reibungslos, aber das folgende Beispiel zeigt, dass die Leistung bei der Verarbeitung von fast gültigen Eingaben sehr schlecht ist.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634722"
  Den Kern des .NET-Objektmodells für reguläre Ausdrücke bildet die <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klasse, die die Engine für reguläre Ausdrücke darstellt. Häufig ist die einzige Hauptursache für Leistungsbeeinträchtigungen bei regulären Ausdrücken die Art, wie die <xref:System.Text.RegularExpressions.Regex>-Engine verwendet wird. Das Definieren eines regulären Ausdrucks beinhaltet das enge Verbinden der Engine für reguläre Ausdrücke mit einem Muster für reguläre Ausdrücke. Hierzu wird ein <xref:System.Text.RegularExpressions.Regex>-Objekt durch Übergeben des Konstruktors an ein reguläres Ausdrucksmuster instanziiert, oder eine statische Methode wird aufgerufen, indem das reguläre Ausdrucksmuster zusammen mit der zu analysierenden Zeichenfolge an sie übergeben wird. Somit ist dieser Verbindungsprozess zwangsläufig aufwendig.  
   
 > [!NOTE]
->  Eine ausführlichere Erläuterung der Leistungseinbußen bei der Verwendung interpretierter und kompilierter regulärer Ausdrücke finden Sie unter [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) im BCL-Teamblog.  
+> Eine ausführlichere Erläuterung der Leistungseinbußen bei der Verwendung interpretierter und kompilierter regulärer Ausdrücke finden Sie unter [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) im BCL-Teamblog.  
   
  Sie können die Engine für reguläre Ausdrücke mit einem bestimmten Muster für reguläre Ausdrücke verknüpfen und die Engine dann verwenden, um Textübereinstimmungen auf verschiedene Weise zu suchen:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634722"
  Die Art und Weise, wie Sie Methoden für Übereinstimmungen mit regulären Ausdrucken aufrufen, kann erhebliche Auswirkungen auf die Anwendung haben. In den folgenden Abschnitten wird erläutert, wann statische Methodenaufrufe, interpretierte reguläre Ausdrücke und kompilierte reguläre Ausdrücke verwendet werden, um die Leistung Ihrer Anwendung zu verbessern.  
   
 > [!IMPORTANT]
->  Die Art des Methodenaufrufs (statisch, interpretiert, kompiliert) wirkt sich auf die Leistung aus, wenn ein regulärer Ausdruck wiederholt in Methodenaufrufen verwendet wird oder wenn eine Anwendung umfassenden Gebrauch von Objekten regulärer Ausdrücke macht.  
+> Die Art des Methodenaufrufs (statisch, interpretiert, kompiliert) wirkt sich auf die Leistung aus, wenn ein regulärer Ausdruck wiederholt in Methodenaufrufen verwendet wird oder wenn eine Anwendung umfassenden Gebrauch von Objekten regulärer Ausdrücke macht.  
   
 ### <a name="static-regular-expressions"></a>Statische reguläre Ausdrücke  
  Statische Methoden für reguläre Ausdrücke werden als Alternative zum wiederholten Instanziieren eines Objekts für reguläre Ausdrücke mit demselben regulären Ausdruck empfohlen. Im Gegensatz zu Mustern regulärer Ausdrücke, die von Objekten regulärer Ausdrücke verwendet werden, werden die Vorgangscodes oder die kompilierte Microsoft Intermediate Language (MSIL) von in Instanzmethoden aufgerufenen Mustern von der Engine für reguläre Ausdrücke intern zwischengespeichert.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634722"
  Normalerweise bewegt sich die Engine für reguläre Ausdrücke für den Vergleich mit einem regulären Ausdrucksmuster linear durch eine Eingabezeichenfolge. Wenn jedoch unbestimmte Quantifizierer, z. B. `*`, `+` oder `?` in einem Muster für reguläre Ausdrücke verwendet werden, gibt die Engine für reguläre Ausdrücke möglicherweise einen Teil der erfolgreichen Teilübereinstimmungen auf und kehrt zu einem zuvor gespeicherten Zustand zurück, um nach einer erfolgreichen Übereinstimmung mit dem gesamten Muster zu suchen. Dieser Prozess wird als Rückverfolgung bezeichnet.  
   
 > [!NOTE]
->  Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) und [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) im BCL-Teamblog.  
+> Weitere Informationen zur Rückverfolgung finden Sie unter [Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) und [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Eine ausführliche Erörterung der Rückverfolgung finden Sie in [Optimieren der Leistung regulärer Ausdrücke, Teil II: Steuern der Rückverfolgung](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) im BCL-Teamblog.  
   
  Durch die Unterstützung des Zurückverfolgens werden reguläre Ausdrücke leistungsstark und flexibel. Außerdem wird die Steuerung der Ausführung der Engine für reguläre Ausdrücke in die Hände der Entwickler von regulären Ausdrücken gelegt. Entwickler sind sich dieser Verantwortung oft nicht bewusst und verwenden die Rückverfolgung falsch oder übermäßig. Dies ist einer der Hauptfaktoren für die Beeinträchtigung der Leistung von regulären Ausdrücken. Im ungünstigsten Fall kann sich die Ausführungszeit für jedes zusätzliche Zeichen in der Eingabezeichenfolge verdoppeln. Durch Verwendung der Rückverfolgung ist es tatsächlich leicht, eine programmatische Entsprechung einer Endlosschleife zu erstellen, wenn die Eingabe fast mit dem Muster für reguläre Ausdrücke übereinstimmt. Für die Verarbeitung einer relativ kurzen Eingabezeichenfolge kann die Engine mehrere Stunden oder sogar Tage brauchen.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634722"
  In vielen Fällen ist das Zurückverfolgen wichtig, um ein Muster für reguläre Ausdrücke mit dem Eingabetext abzugleichen. Eine übermäßige Rückverfolgung kann jedoch die Leistung erheblich beeinträchtigen und den Eindruck erwecken, dass eine Anwendung nicht mehr reagiert. Dies geschieht insbesondere dann, wenn Quantifizierer geschachtelt sind und der Text, der dem äußeren Teilausdruck entspricht, eine Teilmenge des Texts ist, der dem inneren Teilausdruck entspricht.  
   
 > [!WARNING]
->  Vermeiden Sie übermäßige Rückverfolgung, und verwenden Sie außerdem die Timeoutfunktion, um sicherzustellen, dass eine übermäßige Rückverfolgung die Leistung von regulären Ausdrücken nicht zu sehr beeinträchtigt. Weitere Informationen finden Sie im Abschnitt [Verwenden von Timeoutwerten](#Timeouts).  
+> Vermeiden Sie übermäßige Rückverfolgung, und verwenden Sie außerdem die Timeoutfunktion, um sicherzustellen, dass eine übermäßige Rückverfolgung die Leistung von regulären Ausdrücken nicht zu sehr beeinträchtigt. Weitere Informationen finden Sie im Abschnitt [Verwenden von Timeoutwerten](#Timeouts).  
   
  Beispielsweise soll das Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` einer Teilenummer entsprechen, die aus mindestens einem alphanumerischen Zeichen besteht. Alle zusätzlichen Zeichen können aus einem alphanumerischen Zeichen, einem Bindestrich, einem Unterstrich oder einem Punkt bestehen. Das letzte Zeichen muss jedoch alphanumerisch sein. Ein Dollarzeichen beendet die Teilenummer. In einigen Fällen kann dieses Muster für reguläre Ausdrücke eine sehr schlechte Leistung aufweisen, da die Quantifizierer geschachtelt sind und der Teilausdruck `[0-9A-Z]` eine Teilmenge des Teilausdrucks `[-.\w]*` ist.  
   

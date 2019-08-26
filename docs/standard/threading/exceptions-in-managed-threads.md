@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960059"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung. Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
   
 > [!NOTE]
->  Dies ist eine wichtige Änderung im Vergleich zu den .NET Framework-Versionen 1.0 und 1.1, die für zahlreiche unbehandelte Ausnahmen ein Sicherheitsnetz bereitstellen, z. B. für unbehandelte Ausnahmen in Threadpoolthreads. Weitere Informationen finden Sie später in diesem Thema unter [Änderung von früheren Versionen](#ChangeFromPreviousVersions).  
+> Dies ist eine wichtige Änderung im Vergleich zu den .NET Framework-Versionen 1.0 und 1.1, die für zahlreiche unbehandelte Ausnahmen ein Sicherheitsnetz bereitstellen, z. B. für unbehandelte Ausnahmen in Threadpoolthreads. Weitere Informationen finden Sie später in diesem Thema unter [Änderung von früheren Versionen](#ChangeFromPreviousVersions).  
   
  Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zum Steuern des Programmablaufs verwendet werden, ein Sicherheitsnetz bereit:  
   
@@ -36,7 +36,7 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
  Wenn diese Ausnahmen im Hauptthread oder in Threads, die von nicht verwaltetem Code in die Laufzeit eintreten, nicht behandelt werden, werden sie normal fortgesetzt, d. h., sie beenden die Anwendung.  
   
 > [!NOTE]
->  Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann. Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
+> Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann. Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Aufdecken von Threadingproblemen bei der Entwicklung  
  Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Dadurch kann sich die Anwendungsleistung verschlechtern, und es kann passieren, dass die Anwendung nicht mehr reagiert.  

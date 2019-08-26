@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364065"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935714"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion
-Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ereignisse nicht mit Sprachfunktionen wie dem Operator `+=` von C# oder der [AddHandler-Anweisung](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) von Visual Basic verknüpfen. In den folgenden Verfahrensweisen wird veranschaulicht, wie eine vorhandene Methode mit einem Ereignis verknüpft wird, indem alle erforderlichen Typen über Reflektion abgerufen werden, und wie eine dynamische Methode mithilfe von Reflektionsausgabe erstellt und mit einem Ereignis verknüpft wird.  
+Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ereignisse nicht mit Sprachfunktionen wie dem Operator `+=` von C# oder der [AddHandler-Anweisung](../../visual-basic/language-reference/statements/addhandler-statement.md) von Visual Basic verknüpfen. In den folgenden Verfahrensweisen wird veranschaulicht, wie eine vorhandene Methode mit einem Ereignis verknüpft wird, indem alle erforderlichen Typen über Reflektion abgerufen werden, und wie eine dynamische Methode mithilfe von Reflektionsausgabe erstellt und mit einem Ereignis verknüpft wird.  
   
 > [!NOTE]
->  Eine andere Möglichkeit, einen Delegaten für die Ereignisbehandlung zu verknüpfen, zeigt das Codebeispiel für die <xref:System.Reflection.EventInfo.AddEventHandler%2A>-Methode der <xref:System.Reflection.EventInfo>-Klasse.  
+> Eine andere Möglichkeit, einen Delegaten für die Ereignisbehandlung zu verknüpfen, zeigt das Codebeispiel für die <xref:System.Reflection.EventInfo.AddEventHandler%2A>-Methode der <xref:System.Reflection.EventInfo>-Klasse.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>So verknüpfen Sie einen Delegaten mithilfe von Reflektion  
   
@@ -57,7 +57,7 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Rufen Sie die `add`-Accessormethode ab, und rufen Sie sie auf, auf das Ereignis zu verknüpfen. Alle Ereignisse verfügen über einen `add`-Accessor und einen `remove`-Accessor, die durch die Syntax hoch entwickelter Sprachen verborgen sind. Ereignisse werden beispielsweise in C# mit dem Operator `+=` und in Visual Basic mit der [AddHandler-Anweisung](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) verknüpft. Im folgenden Code wird der `add`-Accessor des <xref:System.Windows.Forms.Control.Click>-Ereignisses abgerufen und dieses dann spät gebunden aufgerufen, indem die Delegatinstanz übergeben wird. Die Argumente müssen als Array übergeben werden.  
+6. Rufen Sie die `add`-Accessormethode ab, und rufen Sie sie auf, auf das Ereignis zu verknüpfen. Alle Ereignisse verfügen über einen `add`-Accessor und einen `remove`-Accessor, die durch die Syntax hoch entwickelter Sprachen verborgen sind. Ereignisse werden beispielsweise in C# mit dem Operator `+=` und in Visual Basic mit der [AddHandler-Anweisung](../../visual-basic/language-reference/statements/addhandler-statement.md) verknüpft. Im folgenden Code wird der `add`-Accessor des <xref:System.Windows.Forms.Control.Click>-Ereignisses abgerufen und dieses dann spät gebunden aufgerufen, indem die Delegatinstanz übergeben wird. Die Argumente müssen als Array übergeben werden.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

@@ -2,12 +2,12 @@
 title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933972"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988670"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit, der Nachrichten basierend auf dem Nachrichteninhalts weiterleiten kann. Mit dem Routingdienst können Sie eine komplexe Routinglogik erstellen, mit der Sie Szenarios wie Dienstaggregation, Dienstversionsverwaltung, Prioritätsrouting und Multicastrouting implementieren können. Außerdem stellt der Routingdienst eine Fehlerbehandlung bereit. Damit können Sie Listen von Sicherungsendpunkten einrichten, an die Nachrichten gesendet werden, falls beim Senden an den primären Zielendpunkt ein Fehler auftritt.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  Der Identitätswechsel mit dem Routingdienst erfordert entweder die Verwendung des ASP.NET-Identitätswechsels (im ASP.NET-Kompatibilitätsmodus) oder die Verwendung von Windows-Anmeldeinformationen, die konfiguriert wurden, um den Identitätswechsel zu ermöglichen. Weitere Informationen zum ASP.NET-Kompatibilitätsmodus finden Sie unter [WCF-Dienste und ASP.net](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
->  Der WCF-Routingdienst unterstützt keinen Identitätswechsel mit Standardauthentifizierung.  
+> Der WCF-Routingdienst unterstützt keinen Identitätswechsel mit Standardauthentifizierung.  
   
  Um den ASP.NET-Identitätswechsel mit dem Routingdienst zu verwenden, aktivieren Sie den ASP.NET-Kompatibilitätsmodus für die Hostingumgebung des Diensts. Der Routingdienst ist bereits für die Verwendung des ASP.NET-Kompatibilitätsmodus gekennzeichnet, und der Identitätswechsel wird automatisch aktiviert. Der Identitätswechsel ist die einzige unterstützte Verwendung der ASP.NET-Integration mit dem Routingdienst.  
   

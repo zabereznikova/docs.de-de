@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13a07be13294cc408cd381bef6eec1f9095365f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5aca9d3eae3f566e02e7bf3dae4ac971b8fae5c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742463"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956634"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
   
 > [!NOTE]
->  Vor .NET Framework 3.5 war zur Ausgabe von Code <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag erforderlich. Diese Berechtigung ist standardmäßig im benannten `FullTrust`- und `Intranet`-Berechtigungssatz enthalten, jedoch nicht im `Internet`-Berechtigungssatz. Daher kann eine Bibliothek nur mit teilweiser Vertrauenswürdigkeit verwendet werden, wenn sie über das <xref:System.Security.SecurityCriticalAttribute>-Attribut verfügt und eine <xref:System.Security.PermissionSet.Assert%2A>-Methode für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt hat. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In .NET Framework 3.5 ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Bibliotheken, die Code ausgeben, können somit sicherheitstransparent sein und setzen keine <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>-Assertion voraus, sodass zum Schreiben einer sicheren Bibliothek keine genaue Sicherheitsüberprüfung erforderlich ist.  
+> Vor .NET Framework 3.5 war zur Ausgabe von Code <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag erforderlich. Diese Berechtigung ist standardmäßig im benannten `FullTrust`- und `Intranet`-Berechtigungssatz enthalten, jedoch nicht im `Internet`-Berechtigungssatz. Daher kann eine Bibliothek nur mit teilweiser Vertrauenswürdigkeit verwendet werden, wenn sie über das <xref:System.Security.SecurityCriticalAttribute>-Attribut verfügt und eine <xref:System.Security.PermissionSet.Assert%2A>-Methode für <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> ausgeführt hat. Diese Bibliotheken erfordern einen sorgfältigen Sicherheitsreview, da Codierungsfehler zu Sicherheitslücken führen können. In .NET Framework 3.5 ist es möglich, Code in teilweise vertrauenswürdigen Szenarios ohne Sicherheitsanforderungen auszugeben, da das Generieren von Code an sich keinen privilegierten Vorgang darstellt. Das bedeutet, dass der generierte Code nicht mehr Berechtigungen aufweist als die Assembly, die ihn ausgibt. Bibliotheken, die Code ausgeben, können somit sicherheitstransparent sein und setzen keine <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>-Assertion voraus, sodass zum Schreiben einer sicheren Bibliothek keine genaue Sicherheitsüberprüfung erforderlich ist.  
   
  In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
   
@@ -85,7 +85,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
  Beispielsweise kann ein Host Internetanwendungen sowohl Internetberechtigungen als auch eingeschränkten Memberzugriff (RestrictedMemberAccess, RMA) erteilen, sodass eine Internetanwendung Code ausgeben kann, der auf private Daten in den eigenen Assemblys zugreift. Da der Zugriff auf Assemblys mit gleicher oder geringerer Vertrauenswürdigkeit beschränkt ist, kann eine Internetanwendung nicht auf Member voll vertrauenswürdiger Assemblys zugreifen, z. B. .NET Framework-Assemblys.  
   
 > [!NOTE]
->  Um Rechteerweiterungen zu verhindern, werden beim Erstellen anonym gehosteter dynamischer Methoden Stapelinformationen für die ausgebende Assembly einbezogen. Wenn die Methode aufgerufen wird, werden die Stapelinformationen überprüft. Daher ist eine anonym gehostete dynamische Methode, die über voll vertrauenswürdigen Code aufgerufen wird, auf die Vertrauensebene der ausgebenden Assembly beschränkt.  
+> Um Rechteerweiterungen zu verhindern, werden beim Erstellen anonym gehosteter dynamischer Methoden Stapelinformationen für die ausgebende Assembly einbezogen. Wenn die Methode aufgerufen wird, werden die Stapelinformationen überprüft. Daher ist eine anonym gehostete dynamische Methode, die über voll vertrauenswürdigen Code aufgerufen wird, auf die Vertrauensebene der ausgebenden Assembly beschränkt.  
   
 #### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit und eingeschränktem Memberzugriff  
   
@@ -97,7 +97,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      Wenn die Berechtigung noch nicht im Berechtigungssatz enthalten ist, wird sie mit der <xref:System.Security.PermissionSet.AddPermission%2A>-Methode hinzugefügt. Wenn die Berechtigung bereits im Berechtigungssatz enthalten ist, werden die angegebenen Flags der vorhandenen Berechtigung hinzugefügt.  
   
     > [!NOTE]
-    >  Das Feature des eingeschränkten Memberzugriffs ist ein Feature anonym gehosteter dynamischer Methoden. Wenn gewöhnliche dynamische Methoden die JIT-Sichtbarkeitsüberprüfungen überspringen, erfordert der ausgegebene Code volle Vertrauenswürdigkeit.  
+    > Das Feature des eingeschränkten Memberzugriffs ist ein Feature anonym gehosteter dynamischer Methoden. Wenn gewöhnliche dynamische Methoden die JIT-Sichtbarkeitsüberprüfungen überspringen, erfordert der ausgegebene Code volle Vertrauenswürdigkeit.  
   
 2. Erstellen Sie die Anwendungsdomäne, indem Sie die Setupinformationen für die Anwendungsdomäne und den Berechtigungssatz angeben.  
   
@@ -135,7 +135,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      Die <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>-Methode erstellt das Objekt in der Zielanwendungsdomäne und gibt einen Proxy zurück, der zum Aufrufen der Eigenschaften und Methoden des Objekts verwendet werden kann.  
   
     > [!NOTE]
-    >  Wenn Sie diesen Code in Visual Studio verwenden, müssen Sie den Namen der Klasse ändern, sodass der Namespace enthalten ist. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
+    > Wenn Sie diesen Code in Visual Studio verwenden, müssen Sie den Namen der Klasse ändern, sodass der Namespace enthalten ist. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
   
 6. Fügen Sie Code zum Aufrufen der `SimpleEmitDemo`-Methode hinzu. Der Aufruf wird über die Grenze der Anwendungsdomäne hinweg gemarshallt, und der Code wird in der Sandbox-Anwendungsdomäne ausgeführt.  
   
@@ -147,7 +147,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
  Anonym gehostete dynamische Methoden werden einer transparenten Assembly zugeordnet, die vom System bereitgestellt wird. Daher ist der Code, den sie enthalten, transparent. Gewöhnliche dynamische Methoden müssen andererseits einem vorhandenen Modul (das entweder direkt angegeben oder von einem zugeordneten Typ abgeleitet wird) zugeordnet sein und übernehmen ihre Sicherheitsstufe von diesem Modul.  
   
 > [!NOTE]
->  Die einzige Möglichkeit, der Assembly, die anonymes Hosting bereitstellt, eine dynamische Methode zuzuordnen, ist die Verwendung der in den folgenden Verfahren beschriebenen Konstruktoren. Es ist nicht möglich, ein Modul in der anonymen Hostingassembly explizit anzugeben.  
+> Die einzige Möglichkeit, der Assembly, die anonymes Hosting bereitstellt, eine dynamische Methode zuzuordnen, ist die Verwendung der in den folgenden Verfahren beschriebenen Konstruktoren. Es ist nicht möglich, ein Modul in der anonymen Hostingassembly explizit anzugeben.  
   
  Normale dynamische Methoden verfügen über Zugriff auf die internen Member des Moduls, dem sie zugeordnet sind, oder auf die privaten Member des Typs, dem sie zugeordnet sind. Da anonym gehostete dynamische Methoden von anderem Code isoliert sind, verfügen sie über keinen Zugriff auf private Daten. Sie besitzen jedoch die eingeschränkte Fähigkeit, JIT-Sichtbarkeitsprüfungen zu überspringen, um Zugriff auf private Daten zu erhalten. Diese Möglichkeit ist auf Assemblys beschränkt, die die gleiche oder eine geringere Vertrauensebene aufweisen als die Assembly, die den Code ausgibt.  
   
@@ -174,12 +174,12 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      Anonym gehostete dynamische Methoden können diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen nur verwenden, wenn die Hostanwendung <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag erteilt. Diese Berechtigung wird angefordert, wenn die Methode aufgerufen wird.  
   
     > [!NOTE]
-    >  Beim Erstellen der dynamischen Methode werden Aufruflisteninformationen für die ausgebende Assembly einbezogen. Daher bezieht sich die Anforderung auf die Berechtigungen der ausgebenden Assembly und nicht der Assembly, die die Methode aufruft. Somit wird verhindert, dass der ausgegebene Code mit erweiterten Berechtigungen ausgeführt wird.  
+    > Beim Erstellen der dynamischen Methode werden Aufruflisteninformationen für die ausgebende Assembly einbezogen. Daher bezieht sich die Anforderung auf die Berechtigungen der ausgebenden Assembly und nicht der Assembly, die die Methode aufruft. Somit wird verhindert, dass der ausgegebene Code mit erweiterten Berechtigungen ausgeführt wird.  
   
      Das [vollständige Codebeispiel](#Example) am Ende dieser exemplarischen Vorgehensweise veranschaulicht die Verwendung und die Einschränkungen des eingeschränkten Memberzugriffs. Die dort verwendete `Worker`-Klasse beinhaltet eine Methode, die anonym gehostete dynamische Methoden mit oder ohne eingeschränkte Fähigkeit zum Überspringen von Sichtbarkeitsprüfungen erstellen kann. Das Beispiel zeigt das Ergebnis der Ausführung dieser Methode in Anwendungsdomänen mit verschiedenen Vertrauensebenen.  
   
     > [!NOTE]
-    >  Die eingeschränkte Fähigkeit zum Überspringen von Sichtbarkeitsprüfungen ist ein Feature anonym gehosteter dynamischer Methoden. Wenn gewöhnliche dynamische Methoden die JIT-Sichtbarkeitsprüfungen überspringen, muss ihnen volle Vertrauenswürdigkeit gewährt werden.  
+    > Die eingeschränkte Fähigkeit zum Überspringen von Sichtbarkeitsprüfungen ist ein Feature anonym gehosteter dynamischer Methoden. Wenn gewöhnliche dynamische Methoden die JIT-Sichtbarkeitsprüfungen überspringen, muss ihnen volle Vertrauenswürdigkeit gewährt werden.  
   
 <a name="Example"></a>   
 ## <a name="example"></a>Beispiel  

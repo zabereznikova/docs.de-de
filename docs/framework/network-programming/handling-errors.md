@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940066"
 ---
 # <a name="handling-errors"></a>Behandeln von Fehlern
 Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> lösen beide Systemausnahmen (z.B. <xref:System.ArgumentException>) und webspezifische Ausnahmen (bei denen es sich um <xref:System.Net.WebException> handelt, ausgelöst von der <xref:System.Net.WebRequest.GetResponse%2A>-Methode) aus.  
@@ -45,7 +45,7 @@ Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> löse
   
  In der folgenden Tabelle werden die möglichen Rückgabewerte für die **Status**-Eigenschaft beschrieben.  
   
-|Status|Beschreibung|  
+|Status|BESCHREIBUNG|  
 |------------|-----------------|  
 |ConnectFailure|Der Remotedienst konnte auf Transportebene nicht erreicht werden.|  
 |ConnectionClosed|Die Verbindung wurde vorzeitig getrennt.|  
@@ -169,5 +169,5 @@ End Try
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Grundlagen der Ausnahmebehandlung](../../standard/exceptions/exception-handling-fundamentals.md)
 - [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)

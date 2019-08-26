@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301021"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927957"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
@@ -26,13 +26,13 @@ Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen han
  Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen, dass Ihre Assembly explizit auf eine andere Assembly verweist. Beim Verweisen zur Kompilierzeit ruft der Compiler automatisch den öffentlichen Schlüssel der Zielassembly mit starkem Namen ab und platziert ihn in der Assemblyreferenz der Assembly, die aktuell kompiliert wird.  
   
 > [!NOTE]
->  Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden. Andernfalls ist die Sicherheit der Assembly mit starkem Namen beeinträchtigt.  
+> Eine Assembly mit starkem Namen kann nur Typen aus anderen Assemblys mit starkem Namen verwenden. Andernfalls ist die Sicherheit der Assembly mit starkem Namen beeinträchtigt.  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>So verweisen Sie zur Kompilierzeit auf eine Assembly mit starkem Namen  
   
 1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
-     \<*Compilerbefehl*> **/reference:**\<*Assemblyname*>  
+     \<*Compilerbefehl*>  **/reference:** \<*Assemblyname*>  
   
      In diesem Befehl ist der *Compilerbefehl* der Befehl für die Sprache, die Sie verwenden, und *Assemblyname* ist der Name der Assembly mit starkem Namen, auf die verwiesen wird. Sie können auch andere Compileroptionen verwenden, z.B. die Option **/t:library** zum Erstellen einer Bibliothekassembly.  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. Wenn Sie zur Runtime auf eine Assembly mit starkem Namen verweisen (z.B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>-Methode), müssen Sie den Anzeigenamen der referenzierten Assembly mit starkem Namen verwenden. Die Syntax eines Anzeigenamens lautet wie folgt:  
   
-     \<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*öffentliches Schlüsseltoken*>  
+     \<*Assemblyname*> **,** \<*Versionsnummer*> **,** \<*Kultur*> **,** \<*öffentliches Schlüsseltoken*>  
   
      Beispiel:  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053199"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915879"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Durchführen kulturunabhängiger Zeichenfolgenvergleiche
 In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode kulturabhängige Vergleiche sowie Vergleiche unter Berücksichtigung der Groß-/Kleinschreibung aus. Diese Methode schließt auch mehrere Überladungen ein, die einen `culture`-Parameter zur Angabe der zu verwendenden Kultur und einen `comparisonType`-Parameter zur Angabe der zu verwendenden Vergleichsregeln bereitstellen. Durch den Aufruf dieser Methoden statt der Standardüberladung wird jede Mehrdeutigkeit hinsichtlich der in einem bestimmten Methodenaufruf verwendeten Regeln vermieden. Es wird verdeutlicht, ob ein bestimmter Vergleich kulturabhängig oder kulturunabhängig ist.  
   
 > [!NOTE]
->  Beide Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Sie können kulturunabhängige Vergleiche nicht mithilfe dieser Methode ausführen. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zu verwenden.  
+> Beide Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Vergleiche durch, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Sie können kulturunabhängige Vergleiche nicht mithilfe dieser Methode ausführen. Aus Gründen der Übersichtlichkeit des Codes wird empfohlen, stattdessen die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode zu verwenden.  
   
  Geben Sie für kulturabhängige Vorgänge den <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>-Enumerationswert oder den <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>-Enumerationswert als `comparisonType`-Parameter an. Wenn Sie einen kulturabhängigen Vergleich mithilfe einer anderen festgelegten Kultur als der aktuellen Kultur ausführen möchten, geben Sie das <xref:System.Globalization.CultureInfo>-Objekt an, das diese Kultur als `culture`-Parameter darstellt.  
   

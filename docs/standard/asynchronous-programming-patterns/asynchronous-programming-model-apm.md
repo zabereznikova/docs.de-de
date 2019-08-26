@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628931"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950872"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Asynchrones Programmiermodell (APM)
 Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwendet, wird als zwei Methoden namens `BeginOperationName` und `EndOperationName` implementiert, die den asynchronen Vorgang *OperationName* starten bzw. beenden. Die <xref:System.IO.FileStream> -Klasse stellt z. B. die Methoden <xref:System.IO.FileStream.BeginRead%2A> und <xref:System.IO.FileStream.EndRead%2A> zum asynchronen Lesen von Bytes aus einer Datei bereit. Diese Methoden implementieren die asynchrone Version der <xref:System.IO.FileStream.Read%2A> -Methode.  
   
 > [!NOTE]
->  Ab .NET Framework 4 stellt die Task Parallel Library ein neues Modell für die asynchrone und parallele Programmierung bereit. Weitere Informationen finden Sie unter [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+> Ab .NET Framework 4 stellt die Task Parallel Library ein neues Modell für die asynchrone und parallele Programmierung bereit. Weitere Informationen finden Sie unter [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
  Nach dem Aufruf von `BeginOperationName` kann eine Anwendung das Ausführen von Anweisungen für den aufrufenden Thread fortsetzen, während der asynchrone Vorgang in einem anderen Thread ausgeführt wird. Für jeden Aufruf von `BeginOperationName` sollte die Anwendung auch `EndOperationName` aufrufen, um die Ergebnisse des Vorgangs abzurufen.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Starten eines asynchronen Vorgangs  
  Die Methode `BeginOperationName` startet den asynchronen Vorgang *OperationName* und gibt ein Objekt zurück, das die <xref:System.IAsyncResult>-Schnittstelle implementiert. <xref:System.IAsyncResult> -Objekte speichern Informationen zu einem asynchronen Vorgang. In der folgenden Tabelle werden Informationen zu einem asynchronen Vorgang angezeigt.  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Ein <xref:System.Threading.WaitHandle> , mit dem die Ausführung der Anwendung blockiert werden kann, bis der asynchrone Vorgang abgeschlossen ist.|  
@@ -48,10 +48,10 @@ Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwe
  Wenn der durch das <xref:System.IAsyncResult>-Objekt dargestellte asynchrone Vorgang nicht abgeschlossen ist, wenn `EndOperationName` aufgerufen wird, blockiert `EndOperationName` den aufrufenden Thread, bis der asynchrone Vorgang abgeschlossen ist. Vom asynchronen Vorgang ausgelöste Ausnahmen werden von der `EndOperationName`-Methode ausgelöst. Die Auswirkung eines mehrmaligen Aufrufs der `EndOperationName`-Methode mit demselben <xref:System.IAsyncResult> ist nicht definiert. Der Aufruf der `EndOperationName`-Methode mit einem <xref:System.IAsyncResult>, das nicht von der zugehörigen Begin-Methode zurückgegeben wurde, ist ebenfalls nicht definiert.  
   
 > [!NOTE]
->  Für beide nicht definierten Szenarien sollten die für die Implementierung zuständigen Personen das Auslösen von <xref:System.InvalidOperationException>erwägen.  
+> Für beide nicht definierten Szenarien sollten die für die Implementierung zuständigen Personen das Auslösen von <xref:System.InvalidOperationException>erwägen.  
   
 > [!NOTE]
->  Implementierer dieses Entwurfsmusters sollten den Aufrufer benachrichtigen, dass der asynchrone Vorgang abgeschlossen ist, indem <xref:System.IAsyncResult.IsCompleted%2A> auf „True“ festgelegt, die asynchrone Rückrufmethode aufgerufen (sofern diese angegeben wurde) und <xref:System.IAsyncResult.AsyncWaitHandle%2A>signalisiert wird.  
+> Implementierer dieses Entwurfsmusters sollten den Aufrufer benachrichtigen, dass der asynchrone Vorgang abgeschlossen ist, indem <xref:System.IAsyncResult.IsCompleted%2A> auf „True“ festgelegt, die asynchrone Rückrufmethode aufgerufen (sofern diese angegeben wurde) und <xref:System.IAsyncResult.AsyncWaitHandle%2A>signalisiert wird.  
   
  Anwendungsentwickler verfügen über mehrere Entwurfsoptionen für den Zugriff auf die Ergebnisse des asynchronen Vorgangs. Die richtige Wahl hängt davon ab, ob die Anwendung über Anweisungen verfügt, die ausgeführt werden können, während der Vorgang abgeschlossen wird. Wenn eine Anwendung keine zusätzlichen Aufgaben erledigen kann, bis sie die Ergebnisse des asynchronen Vorgangs erhält, muss die Anwendung blockiert werden, bis die Ergebnisse verfügbar sind. Sie können einen der folgenden Ansätze zum Blockieren verwenden, bis der asynchrone Vorgang abgeschlossen ist:  
   

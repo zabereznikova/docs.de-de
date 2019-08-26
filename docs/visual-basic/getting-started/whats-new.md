@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238646"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666865"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -51,7 +51,7 @@ Visual Basic/Visual Studio .NET 2002. Die erste Version von Visual Basic .NET.
 
 **Optimierte Konvertierung von Gleitkommazahlen in ganze Zahlen**
 
-Frühere Visual Basic-Versionen erzielten beim Konvertieren von [doppelten](../language-reference/data-types/double-data-type.md) und [einzelnen](../language-reference/data-types/single-data-type.md) Werten in ganze Zahlen eine relativ schlechte Leistung. Visual Basic 15.8 weist eine deutlich verbesserte Leistung beim Konvertieren von Gleitkomma- in ganze Zahlen auf, wenn Sie den Wert, der durch eine der folgenden Methoden zurückgegeben wird, an eine [intrinsische Visual Basic-Konvertierungsfunktion für ganze Zahlen](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) übergeben, oder wenn der durch eine der folgenden Methoden zurückgegebene Wert implizit in einen integralen Typ umgewandelt wird, wenn [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) auf `Off` festgelegt ist:
+Frühere Visual Basic-Versionen erzielten beim Konvertieren von [doppelten](../language-reference/data-types/double-data-type.md) und [einzelnen](../language-reference/data-types/single-data-type.md) Werten in ganze Zahlen eine relativ schlechte Leistung. Visual Basic 15.8 weist eine deutlich verbesserte Leistung beim Konvertieren von Gleitkomma- in ganze Zahlen auf, wenn Sie den Wert, der durch eine der folgenden Methoden zurückgegeben wird, an eine [intrinsische Visual Basic-Konvertierungsfunktion für ganze Zahlen](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) übergeben, oder wenn der durch eine der folgenden Methoden zurückgegebene Wert implizit in einen integralen Typ umgewandelt wird, wenn [Option Strict](../language-reference/statements/option-strict-statement.md) auf `Off` festgelegt ist:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

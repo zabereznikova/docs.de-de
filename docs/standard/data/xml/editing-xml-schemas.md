@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3d0d67c82e753b044f759b4d1139c5f6b4837b31
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948484"
 ---
 # <a name="editing-xml-schemas"></a>Bearbeiten von XML-Schemata
 Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schemaobjektmodells (SOM). Alle Eigenschaften des SOM vor der Kompilierung des Schemas können zum Ändern der vorhandenen Werte eines XML-Schemas verwendet werden. Das XML-Schema kann dann erneut kompiliert werden, um die Änderungen widerzuspiegeln.  
@@ -93,7 +93,7 @@ Die Bearbeitung von XML-Schemata ist eines der wichtigsten Funktionen des Schema
 8. Durchläuft alle <xref:System.Xml.Schema.XmlSchemaObject> in der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas.  
   
 > [!NOTE]
->  Da das `FirstName`-Element in diesem Schema kein globales Element ist, ist es in der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung oder der <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nicht verfügbar. Im Codebeispiel wird das `FirstName`-Element gefunden, indem zuerst nach dem `Customer`-Element gesucht wird.  
+> Da das `FirstName`-Element in diesem Schema kein globales Element ist, ist es in der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung oder der <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nicht verfügbar. Im Codebeispiel wird das `FirstName`-Element gefunden, indem zuerst nach dem `Customer`-Element gesucht wird.  
 >   
 >  Im ersten Codebeispiel wird das Schema mithilfe der <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas durchlaufen. In diesem Beispiel wird das Schema mithilfe der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas durchlaufen. Während beide Auflistungen den Zugriff auf die globalen Elemente im Schema bereitstellen, ist das Durchlaufen der <xref:System.Xml.Schema.XmlSchema.Items%2A>-Auflistung zeitaufwendiger, da alle globalen Elemente im Schema durchlaufen werden müssen und das Schema keine PSCI-Eigenschaften aufweist. Die PSCI-Auflistungen (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> usw.) bieten direkten Zugriff auf die globalen Elemente, Attribute und Typen mit den PSCI-Eigenschaften.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1cc3708d2d552da3d94bc6b490ebaa2ece657
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b5c6de2bde111ae459dbcfa1c0a7363d406f5f80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586165"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928256"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Vorgehensweise: Definieren und Ausführen von dynamischen Methoden
 Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -38,7 +38,7 @@ Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine 
 3. Erstellen Sie eine <xref:System.Reflection.Emit.DynamicMethod>. In diesem Beispiel trägt die Methode die Bezeichnung `SquareIt`.  
   
     > [!NOTE]
-    >  Es ist nicht nötig, den dynamischen Methoden Namen zu geben. Sie können auch nicht nach Namen aufgerufen werden. Mehrere dynamische Methoden können über denselben Namen verfügen. Jedoch erscheint der Name in Aufruflisten und kann für das Debuggen hilfreich sein.  
+    > Es ist nicht nötig, den dynamischen Methoden Namen zu geben. Sie können auch nicht nach Namen aufgerufen werden. Mehrere dynamische Methoden können über denselben Namen verfügen. Jedoch erscheint der Name in Aufruflisten und kann für das Debuggen hilfreich sein.  
   
      Der Typ des Rückgabewerts ist als `long` angegeben. Die Methode ist dem Modul zugeordnet, das die `Example`-Klasse besitzt, die den Beispielcode enthält. Jedes geladene Modul kann angegeben werden. Die dynamische Methode verhält sich wie eine `static`-Methode auf Modulebene (`Shared` in Visual Basic).  
   
@@ -91,7 +91,7 @@ Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine 
 5. Erstellen Sie eine Instanz des Delegaten (in Schritt 1 deklariert), der die dynamische Methode durch Aufruf der <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>-Methodenüberladung darstellt. Durch die Erstellung des Delegaten wird die Methode abgeschlossen und alle weiteren Versuche, die Methode zu ändern, z.B. durch Hinzufügen weiterer MSIL, werden ignoriert.  
   
     > [!NOTE]
-    >  Sie können die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>-Methode mehrfach aufrufen, um die Delegaten zu erstellen, die an andere Instanzen des Zieltyps gebunden sind.  
+    > Sie können die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>-Methode mehrfach aufrufen, um die Delegaten zu erstellen, die an andere Instanzen des Zieltyps gebunden sind.  
   
      Der folgende Code bindet die Methode an eine neue Instanz der `Example`-Klasse, deren privates Testfeld auf 42 festgelegt ist. Das heißt, dass jedes Mal, wenn der Delegat aufgerufen wird, die Instanz von `Example` an den ersten Parameter der Methode übergeben wird.  
   

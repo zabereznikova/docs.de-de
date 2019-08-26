@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988165"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Verpacken einer .NET Framework-Assembly für COM
 
@@ -33,13 +33,13 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 
   Einige verwalteten Typen sind nicht für COM sichtbar; einige sind sichtbar, aber nicht erstellbar, und andere sind sichtbar und erstellbar. Eine Assembly kann eine beliebige Kombination von nicht sichtbaren, sichtbaren, nicht erstellbaren und erstellbaren Typen umfassen. Aus Gründen der Vollständigkeit identifizieren Sie die Typen in einer Assembly, die für COM verfügbar gemacht werden sollen, insbesondere, wenn diese Typen eine Teilmenge der Typen sind, die für .NET Framework verfügbar gemacht werden sollen.
 
-  Weitere Informationen finden Sie unter [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
+  Weitere Informationen finden Sie unter [Qualifizieren von .NET-Typen für die Interoperation](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Anweisungen der Versionsverwaltung
 
   Verwaltete Klassen, die die Klassenschnittstelle (eine von COM-Interop generierte Schnittstelle) implementieren, unterliegen Einschränkungen der Versionsverwaltung.
 
-  Richtlinien zur Verwendung der Klassenschnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
+  Richtlinien zur Verwendung der Klassenschnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Anweisungen zur Bereitstellung
 
@@ -94,8 +94,8 @@ Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-ser
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
-- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Einführung in die Klassenschnittstelle](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [Qualifizieren von .NET-Typen für die Interoperation](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Einführung in die Klassenschnittstelle](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946702"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  Beim Marshallen von Arrays aus nicht verwaltetem Code an verwalteten Code überprüft der Marshaller das dem Parameter zugeordnete **MarshalAsAttribute**, um die Arraygröße zu bestimmen. Wenn die Größe des Arrays nicht angegeben ist, wird nur ein Element gemarshallt.  
   
 > [!NOTE]
->  Das Attribut **MarshalAsAttribute** wirkt sich nicht auf das Marshallen verwalteter Arrays an nicht verwalteten Code aus. In dieser Richtung wird die Arraygröße durch Prüfung bestimmt. Es besteht keine Möglichkeit, einen Teil eines verwalteten Arrays zu marshallen.  
+> Das Attribut **MarshalAsAttribute** wirkt sich nicht auf das Marshallen verwalteter Arrays an nicht verwalteten Code aus. In dieser Richtung wird die Arraygröße durch Prüfung bestimmt. Es besteht keine Möglichkeit, einen Teil eines verwalteten Arrays zu marshallen.  
   
  Der Interop-Marshaller verwendet die **CoTaskMemAlloc**- und **CoTaskMemFree**-Methoden, um Speicherplatz zu belegen und abzurufen. Diese Methoden müssen auch bei der Speicherbelegung durch nicht verwalteten Code verwendet werden.  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |Verwalteter Arraytyp|Exportiert als|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *Typ* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ wird in der Signatur angegeben. Rang ist immer 1, Untergrenze ist immer 0. Größe ist immer zur Laufzeit bekannt.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *Typ* **>** **\<** *Rang* **>**[**\<** *Grenzen* **>**]|**UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ, Rang und Grenzen sind in der Signatur angegeben. Die Größe ist immer zur Laufzeit bekannt.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> Typ, Rang, Grenzen und Größe sind immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *Typ* **>** **\<** *Rang* **>** [ **\<** *Grenzen* **>** ]|**UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ, Rang und Grenzen sind in der Signatur angegeben. Die Größe ist immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> Typ, Rang, Grenzen und Größe sind immer zur Laufzeit bekannt.|  
   
  In der OLE-Automatisierung, gibt es im Zusammenhang mit Arrays von Strukturen, die LPSTR oder LPWSTR enthalten eine Einschränkung.  Aus diesem Grund müssen **Zeichenfolge**-Felder als **UnmanagedType.BSTR** gemarshallt werden. Andernfalls wird eine Ausnahme ausgelöst.  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  Wenn eine Methode mit einem **ELEMENT_TYPE_SZARRAY**-Parameter (eindimensionales Array) aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Dieselben Konvertierungsregeln gelten für die Arrayelementtypen. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
   
  Obwohl der Marshaller die erforderlichen Längeninformationen zum Marshallen von Arrays hat, wird die Länge des Arrays in der Regel als separates Argument übergeben, um dem Aufgerufenen die Länge mitzuteilen.  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  Wenn eine Methode mit einem **ELEMENT_TYPE_ARRAY**-Parameter aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
@@ -311,7 +311,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  Wenn eine Methode, die einen <xref:System.Array?displayProperty=nameWithType>-Parameter enthält aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in eine **_Array**-Schnittstelle konvertiert. Auf den Inhalt des verwalteten Arrays kann nur über die Methoden und Eigenschaften der **_Array**-Schnittstelle zugegriffen werden. **System.Array** kann auch als **SAFEARRAY**, mithilfe von <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributen gemarshallt werden. Wenn die Arrayelemente als sicheres Array gemarshallt werden, werden sie als Varianten gemarshallt. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956657"
 ---
 # <a name="viewing-type-information"></a>Anzeigen von Typinformationen
 Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflektion wesentlich. Die Common Language Runtime (CLR) erstellt **Type** für einen geladenen Typ, wenn die Reflektion diesen anfordert. Sie können die Methoden, Felder, Eigenschaften und geschachtelten Klassen eines **Type**-Objekts dazu verwenden, alle Informationen zu diesem Typ zu erhalten.  
@@ -26,7 +26,7 @@ Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflekti
  Verwenden Sie <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>, um **Type**-Objekte von Assemblys abzurufen, die nicht geladen wurden, und übergeben Sie den Namen des Typs oder der Typen, die Sie möchten. Verwenden Sie <xref:System.Type.GetType%2A?displayProperty=nameWithType>, um **Type**-Objekte von Assemblys abzurufen, die bereits geladen wurden. Verwenden Sie <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>, um **Type**-Modulobjekte zu erhalten.  
   
 > [!NOTE]
->  Weitere Informationen zum Untersuchen und Bearbeiten generischer Typen und Methoden finden Sie in den Artikeln [Reflection and Generic Types (Reflektion und generische Typen)](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) und [Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+> Weitere Informationen zum Untersuchen und Bearbeiten generischer Typen und Methoden finden Sie in den Artikeln [Reflection and Generic Types (Reflektion und generische Typen)](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) und [Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  In folgendem Beispiel wird die Syntax veranschaulicht, die für das Abrufen des <xref:System.Reflection.Assembly>-Objekts und -Moduls für eine Assembly erforderlich ist.  
   

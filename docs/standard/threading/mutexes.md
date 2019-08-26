@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567918"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910350"
 ---
 # <a name="mutexes"></a>Mutexe
 Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zugriff auf eine Ressource bereitzustellen. Die <xref:System.Threading.Mutex>-Klasse verwendet mehr Systemressourcen als die <xref:System.Threading.Monitor>-Klasse, sie kann jedoch über Anwendungsdomänengrenzen hinweg gemarshallt, mit mehreren Wartevorgängen verwendet sowie zur Synchronisierung von Threads in verschiedenen Prozessen verwendet werden. Ein Vergleich der verwalteten Synchronisierungsmechanismen finden Sie unter [Overview of Synchronization Primitives (Überblick über Synchronisierungsprimitiven)](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -35,7 +35,7 @@ Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zu
  Wenn ein Thread ohne Freigabe eines <xref:System.Threading.Mutex> beendet wird, wird der Mutex als abgebrochener Mutex bezeichnet. Dabei handelt es sich häufig um einen Hinweis auf einen schwerwiegenden Programmierfehler, da die Ressource, die durch den Mutex geschützt wird, in einem inkonsistenten Zustand verbleiben kann. In .NET Framework Version 2.0 wird <xref:System.Threading.AbandonedMutexException> im nächsten Thread ausgelöst, der den Mutex verwendet.  
   
 > [!NOTE]
->  In .NET Framework Version 1.0 und 1.1 wird ein abgebrochener <xref:System.Threading.Mutex> auf den signalisierten Zustand festgelegt, und der Besitz geht auf den nächsten wartenden Thread über. Wenn sich kein Thread im Wartezustand befindet, verbleibt der <xref:System.Threading.Mutex> in einem signalisierten Zustand. Es werden keine Ausnahmen ausgelöst.  
+> In .NET Framework Version 1.0 und 1.1 wird ein abgebrochener <xref:System.Threading.Mutex> auf den signalisierten Zustand festgelegt, und der Besitz geht auf den nächsten wartenden Thread über. Wenn sich kein Thread im Wartezustand befindet, verbleibt der <xref:System.Threading.Mutex> in einem signalisierten Zustand. Es werden keine Ausnahmen ausgelöst.  
   
  Wenn es sich um einen systemweiten Mutex handelt, kann ein abgebrochener Mutex darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z.B. über den Windows Task-Manager).  
   

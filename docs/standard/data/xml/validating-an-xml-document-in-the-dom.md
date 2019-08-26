@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589859"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939410"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validieren eines XML-Dokuments im Dokumentobjektmodell
 Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Dokumentobjektmodell) standardmäßig nicht anhand eines XSD-Schemas (XML Schema Definition Language) oder einer DTD (Document Type Definition). Das XML-Dokument wird nur validiert, damit es wohlgeformt ist.  
@@ -76,7 +76,7 @@ Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Doku
  Validierungsfehler werden vom <xref:System.Xml.Schema.ValidationEventHandler> behandelt. Wenn ein <xref:System.Xml.Schema.ValidationEventHandler> der <xref:System.Xml.XmlReaderSettings>-Instanz zugeordnet oder an die <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse übergeben wurde, behandelt der <xref:System.Xml.Schema.ValidationEventHandler> Schemavalidierungsfehler. Andernfalls wird beim Auftreten eines Schemavalidierungsfehlers eine <xref:System.Xml.Schema.XmlSchemaValidationException> ausgelöst.  
   
 > [!NOTE]
->  Die XML-Daten werden trotz der Schemavalidierungsfehler in das DOM geladen, sofern der <xref:System.Xml.Schema.ValidationEventHandler> keine Ausnahme auslöst, um den Vorgang zu beenden.  
+> Die XML-Daten werden trotz der Schemavalidierungsfehler in das DOM geladen, sofern der <xref:System.Xml.Schema.ValidationEventHandler> keine Ausnahme auslöst, um den Vorgang zu beenden.  
 >   
 >  Schemavalidierungswarnungen werden nicht gemeldet, sofern kein <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings>-Flag für das <xref:System.Xml.XmlReaderSettings>-Objekt angegeben wurde.  
   

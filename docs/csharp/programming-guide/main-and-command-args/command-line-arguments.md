@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923882"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
@@ -20,7 +20,7 @@ Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf e
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Um in der `Main`-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren, müssen Sie die Signatur von `Main` in „program.cs“ manuell ändern. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.  
+> Um in der `Main`-Methode in einer Windows Forms-Anwendung Befehlszeilenargumente zu aktivieren, müssen Sie die Signatur von `Main` in „program.cs“ manuell ändern. Im vom Windows Forms-Designer generierten Code wird ein `Main` ohne einen Eingabeparameter erstellt. Sie können auch <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> oder <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> verwenden, um von einem beliebigen Punkt in einer Konsolen- oder Windows-Anwendung auf die Befehlszeilenargumente zuzugreifen.  
   
  Der Parameter der `Main`-Methode ist ein <xref:System.String>-Array, das die Befehlszeilenargumente darstellt. Normalerweise bestimmen Sie, ob Argumente vorhanden sind, indem Sie z. B. die `Length`-Eigenschaft testen:  
   
@@ -70,15 +70,15 @@ long num = Convert.ToInt64(s);
 5. Durch den Befehl wird die folgende Ausgabe generiert: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
+> Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
   
- Weitere Beispiele zur Verwendung von Befehlszeilenargumenten finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Weitere Beispiele zur Verwendung von Befehlszeilenargumenten finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Main() und Befehlszeilenargumente](./index.md)
+- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](./how-to-display-command-line-arguments.md)
+- [Main()-Rückgabewerte](./main-return-values.md)
+- [Klassen](../classes-and-structs/classes.md)

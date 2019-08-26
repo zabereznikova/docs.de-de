@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392576"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957441"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Kompositionsanalysetool (Mefx)
 Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliotheks- (.dll) und Anwendungsdateien (.exe) mit Teilen des Managed Extensibility Framework (MEF) analysiert. MEFX dient in erster Linie dazu, Entwicklern eine Möglichkeit zur Diagnose von Kompositionsfehlern in MEF-Anwendungen zu bieten, ohne dass der Anwendung selbst unübersichtlicher Ablaufverfolgungscode hinzugefügt werden muss. Darüber hinaus kann das Tool nützlich sein, um Teile einer Bibliothek zu verstehen, die von einem Drittanbieter bereitgestellt wird. In diesem Thema wird beschrieben, wie MEFX verwendet wird, und ein Verweis auf die Syntax wird bereitgestellt.  
@@ -37,7 +37,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ```  
   
 > [!NOTE]
->  Jede DLL- oder EXE-Datei sollte nur einmal geladen werden. Wenn eine Datei mehrmals geladen wird, gibt das Tool möglicherweise falsche Informationen zurück.  
+> Jede DLL- oder EXE-Datei sollte nur einmal geladen werden. Wenn eine Datei mehrmals geladen wird, gibt das Tool möglicherweise falsche Informationen zurück.  
   
  Nach der Liste der Dateien und Verzeichnisse müssen Sie einen Befehl sowie alle Optionen für den Befehl angeben.  
   
@@ -114,7 +114,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  Wenn Sie die `/causes` -Aktion im vorangehenden Beispiel verwenden, werden nur Informationen für `ChainOne`aufgeführt. Der nicht ausgefüllte Import ist in diesem Fall die Ursache für die Ablehnung von `AddIn`. Die `/causes` -Aktion kann bei normalen und `/verbose` -Optionen verwendet werden.  
   
 > [!NOTE]
->  In den meisten Fällen können Sie mithilfe von MEFX die Ursache eines kaskadierenden Fehlers aufspüren. Wenn die Teile einem Container jedoch programmgesteuert hinzugefügt werden, wenn hierarchische Container verwendet werden oder wenn benutzerdefinierte `ExportProvider` -Implementierungen enthalten sind, kann die Ursache nicht mit MEFX ermittelt werden. Die vorstehend beschriebenen Fälle sollten nach Möglichkeit vermieden werden, da hier eine Fehlerdiagnose nur sehr schwer möglich ist.  
+> In den meisten Fällen können Sie mithilfe von MEFX die Ursache eines kaskadierenden Fehlers aufspüren. Wenn die Teile einem Container jedoch programmgesteuert hinzugefügt werden, wenn hierarchische Container verwendet werden oder wenn benutzerdefinierte `ExportProvider` -Implementierungen enthalten sind, kann die Ursache nicht mit MEFX ermittelt werden. Die vorstehend beschriebenen Fälle sollten nach Möglichkeit vermieden werden, da hier eine Fehlerdiagnose nur sehr schwer möglich ist.  
   
 <a name="white_lists"></a>   
 ## <a name="white-lists"></a>Whitelisten  

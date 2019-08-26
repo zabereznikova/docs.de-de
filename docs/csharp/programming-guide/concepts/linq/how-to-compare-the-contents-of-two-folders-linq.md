@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: df71712ca1b59c706ede66488af8b1580677e299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924224"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
@@ -19,7 +19,7 @@ Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:
 - Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
-    >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
+    > Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
   
  Die hier gezeigte `FileComparer`-Klasse veranschaulicht, wie eine benutzerdefinierte Vergleichsklasse zusammen mit den Standardabfrageoperatoren verwendet wird. Die Klasse ist nicht für die Verwendung in realen Szenarios vorgesehen. Sie verwendet nur den Namen und die Länge jeder Datei in Bytes, um zu bestimmen, ob die Inhalte der einzelnen Ordner identisch sind. In einem realen Szenario sollten Sie diese Vergleichsklasse ändern, um eine gründlichere Überprüfung auf Gleichheit durchzuführen.  
   
@@ -130,5 +130,5 @@ namespace QueryCompareTwoDirs
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a16f51408de5ed7b2a0a7d45af81113fe8c7b386
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586150"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928293"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
 Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode mit zwei Typparametern erstellt wird und wie auf die Typparameter Klasseneinschränkungen, Schnittstelleneinschränkungen und besonderen Einschränkungen angewendet werden.  
@@ -26,7 +26,7 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
  Im dritten Verfahren wird das Aufrufen der generischen Methode veranschaulicht.  
   
 > [!IMPORTANT]
->  Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-method"></a>So definieren Sie eine generische Methode  
   
@@ -155,7 +155,7 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
  Bei der Codeausführung wird die dynamische Assembly als DemoGenericMethod1.dll gespeichert. Sie kann mit [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) untersucht werden.  
   
 > [!NOTE]
->  Wenn Sie das Ausgeben von Code erlernen möchten, empfiehlt es sich, ein Visual Basic-, C#- oder Visual C++-Programm zu schreiben, das die Aufgabe ausführt, die Sie ausgeben möchten, und anschließend anhand eines Disassemblers den vom Compiler generierten MSIL-Code zu untersuchen.  
+> Wenn Sie das Ausgeben von Code erlernen möchten, empfiehlt es sich, ein Visual Basic-, C#- oder Visual C++-Programm zu schreiben, das die Aufgabe ausführt, die Sie ausgeben möchten, und anschließend anhand eines Disassemblers den vom Compiler generierten MSIL-Code zu untersuchen.  
   
  Das Codebeispiel enthält Quellcode, der der ausgegebenen Methode entspricht. Die ausgegebene Methode wird spät gebunden anhand eines generischen Delegaten aufgerufen, der im Codebeispiel deklariert ist.  
   

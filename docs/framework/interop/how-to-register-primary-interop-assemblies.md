@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946672"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
 
-Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [COM Callable Wrapper](../../../docs/standard/native-interop/com-callable-wrapper.md).
+Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 
  Obwohl jeder Entwickler, der COM-Typen aus einer .NET Framework-Anwendung verwenden möchte, eine interop-Assembly generieren kann, führt dies zu einem Problem. Jedes Mal, wenn ein Entwickler eine COM-Typbibliothek importiert und signiert, erstellt dieser Entwickler einen Satz eindeutiger Typen, die nicht mit denen kompatibel sind, die ein anderer Entwickler importiert und signiert hat. Die Lösung des Typinkompatibilitätsproblems besteht für jeden Entwickler darin, die vom Anbieter bereitgestellte und signierte primäre Interop-Assembly abzurufen.
 

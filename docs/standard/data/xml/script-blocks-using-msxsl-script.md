@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939589"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Skriptblöcke, die "msxsl:script" verwenden
 Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete Skripts unter Verwendung des `msxsl:script`-Elements. Beim Laden des Stylesheets werden alle definierten Funktionen von CodeDOM (Code Document Object Model) in die Microsoft Intermediate Language (MSIL) kompiliert und zur Laufzeit ausgeführt. Die aus dem eingebetteten Skriptblock generierte Assembly und die für das Stylesheet generierte Assembly sind voneinander verschieden.  
@@ -22,7 +22,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
  Die Unterstützung für eingebettete Skripts ist eine optionale XSLT-Einstellung für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse. Die Skriptunterstützung ist in der Standardeinstellung deaktiviert. Sie können die Skriptunterstützung aktivieren, indem Sie ein <xref:System.Xml.Xsl.XsltSettings>-Objekt erstellen, bei dem die <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A>-Eigenschaft auf `true` festgelegt wurde, und das Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben.  
   
 > [!NOTE]
->  XSLT-Skripts sollten nur aktiviert werden, wenn eine Skriptunterstützung erforderlich ist und Sie mit einer vollständig vertrauenswürdigen Umgebung arbeiten.  
+> XSLT-Skripts sollten nur aktiviert werden, wenn eine Skriptunterstützung erforderlich ist und Sie mit einer vollständig vertrauenswürdigen Umgebung arbeiten.  
   
 ## <a name="msxslscript-element-definition"></a>Elementdefinition von "msxsl:script"  
  Das `msxsl:script`-Element ist eine Microsoft-Erweiterung der XSLT 1.0-Empfehlung und weist folgende Definition auf:  
@@ -38,7 +38,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
  Das `implements-prefix`-Attribut ist erforderlich. Mit diesem Attribut wird ein Namespace deklariert und mit dem Skriptblock verknüpft. Der Wert dieses Attributs ist das Präfix, das den Namespace darstellt. Dieses Präfix kann an einer beliebigen Stelle im Stylesheet definiert werden.  
   
 > [!NOTE]
->  Bei Verwendung des `msxsl:script`-Elements wird dringend empfohlen, das Skript ungeachtet der verwendeten Sprache in einem CDATA-Abschnitt zu platzieren. Da das Skript Operatoren, Bezeichner oder Trennzeichen für eine bestimmte Sprache enthalten kann, wenn es nicht in einem CDATA-Abschnitt enthalten ist, kann es möglicherweise als XML fehlinterpretiert werden. Der folgende XML-Code zeigt eine Vorlage des CDATA-Abschnitts, in dem Code platziert werden kann.  
+> Bei Verwendung des `msxsl:script`-Elements wird dringend empfohlen, das Skript ungeachtet der verwendeten Sprache in einem CDATA-Abschnitt zu platzieren. Da das Skript Operatoren, Bezeichner oder Trennzeichen für eine bestimmte Sprache enthalten kann, wenn es nicht in einem CDATA-Abschnitt enthalten ist, kann es möglicherweise als XML fehlinterpretiert werden. Der folgende XML-Code zeigt eine Vorlage des CDATA-Abschnitts, in dem Code platziert werden kann.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -49,7 +49,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 ```  
   
 ## <a name="script-functions"></a>Skriptfunktionen  
- Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, wird empfohlen, die korrekte Syntax für die verwendete Sprache einzuhalten. Verwenden Sie z. B. in einem Microsoft C#-Skriptblock die Kommentarsyntax von C#.  
+ Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, wird empfohlen, die korrekte Syntax für die verwendete Sprache einzuhalten. Verwenden Sie z. B. in einem Microsoft C#-Skriptblock die Kommentarsyntax von C#.  
   
  Die bereitgestellten Argumente und Rückgabewerte für die Funktion können einen beliebigen Typ aufweisen. Da die XPath-Typen des W3C eine Teilmenge der CLR-Typen (Common Language Runtime) sind, findet die Typkonvertierung für Typen statt, die nicht als XPath-Typen betrachtet werden. In der folgenden Tabelle werden die entsprechenden W3C-Typen und die äquivalenten CLR-Typen aufgelistet.  
   

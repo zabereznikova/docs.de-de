@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946555"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -24,7 +24,7 @@ Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Me
  Dieser Abschnitt befasst sich mit den standardmäßigen Verhaltensmerkmalen des Interop-Marshalling-Diensts. Er enthält detaillierte Informationen zum Marshallen von Arrays, booleschen Typen, Zeichentypen, Delegaten, Klassen, Objekten, Zeichenfolgen und Strukturen.  
   
 > [!NOTE]
->  Das Marshalling von generischen Typen wird nicht unterstützt. Weitere Informationen finden Sie unter [Interoperating Using Generic Types (Interoperation mit generischen Typen)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Das Marshalling von generischen Typen wird nicht unterstützt. Weitere Informationen finden Sie unter [Interoperating Using Generic Types (Interoperation mit generischen Typen)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Speicherverwaltung mit dem Interop-Marshaller  
  Der Interop-Marshaller versucht immer, den von nicht verwaltetem Code belegten Speicher freizugeben. Dieses Verhalten entspricht den COM-Speicherverwaltungsregeln, unterscheidet sich jedoch von den Regeln, die für systemeigenes C++ gelten.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 In diesem Beispiel ist das Ergebnis ein `int`-Typ und ein Zeiger auf einen `int`-Typ, wenn zwei Delegaten als <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> gemarshallt werden. Da Delegattypen gemarshallt werden, stellt `int` hier einen Zeiger auf einen `void*`-Typ dar, der der Adresse des Delegaten im Arbeitsspeicher entspricht. Das Ergebnis bezieht sich also auf 32-Bit-Windows-Systeme, da `int` in diesem Fall die Größe des Funktionszeigers darstellt.
 
 > [!NOTE]
->  Ein Verweis auf den Funktionszeiger auf einen verwalteten Delegaten in nicht verwaltetem Code hindert die Common Language Runtime nicht daran, eine Garbage Collection für das verwaltete Objekt durchzuführen.  
+> Ein Verweis auf den Funktionszeiger auf einen verwalteten Delegaten in nicht verwaltetem Code hindert die Common Language Runtime nicht daran, eine Garbage Collection für das verwaltete Objekt durchzuführen.  
   
  Der folgende Code ist beispielsweise falsch, da der Verweis auf das `cb`-Objekt, der an die `SetChangeHandler`-Methode übergeben wurde, `cb` nicht über die Lebensdauer der `Test`-Methode hinaus gültig hält. Nachdem die Garbage Collection des `cb`-Objekts erfolgt ist, ist der an `SetChangeHandler` übergebene Funktionszeiger nicht mehr gültig.  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  Der Werttyp `Rect` muss mit einem Verweis übergeben werden, da die nicht verwaltete API einen Zeiger auf ein `RECT` erwartet, der an die Funktion übergeben wird. Der Werttyp `Point` wird nach Wert übergeben, da die nicht verwaltete API erwartet, dass `POINT` im Stack übergeben wird. Dieser feine Unterschied ist sehr wichtig. Verweise werden als Zeiger an nicht verwalteten Code übergeben. Werte werden im Stack an nicht verwalteten Code übergeben.  
   
 > [!NOTE]
->  Wenn ein formatierter Typ als Struktur gemarshallt wird, kann nur auf die Felder im Typ zugegriffen werden. Wenn der Typ Methoden, Eigenschaften oder Ereignisse aufweist, kann auf diese vom nicht verwalteten Code nicht zugegriffen werden.  
+> Wenn ein formatierter Typ als Struktur gemarshallt wird, kann nur auf die Felder im Typ zugegriffen werden. Wenn der Typ Methoden, Eigenschaften oder Ereignisse aufweist, kann auf diese vom nicht verwalteten Code nicht zugegriffen werden.  
   
  Klassen können ebenfalls an nicht verwalteten Code als Strukturen im C-Stil gemarshallt werden, vorausgesetzt, sie weisen ein festes Memberlayout auf. Die Memberlayoutinformationen für eine Klasse werden ebenfalls mit dem <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut bereitgestellt. Der Hauptunterschied zwischen Werttypen mit festen Layout und Klassen mit festem Layout ist die Art und Weise, wie diese an nicht verwalteten Code gemarshallt werden. Werttypen werden nach Wert (im Stack) übergeben, und dementsprechend werden Änderungen, die von der aufgerufenen Instanz an Membern dieses Typs vorgenommen werden, dem Aufrufer nicht angezeigt. Verweistypen werden als Verweis übergeben (ein Verweis auf den Typ wird in den Stack übergeben); dementsprechend werden alle Änderungen, die von der aufgerufenen Instanz an blitfähigen Membern des Typs vorgenommen werden, für den Aufrufer angezeigt.  
   
 > [!NOTE]
->  Wenn ein Verweistyp nicht blitfähige Typen als Member enthält, muss die Konvertierung zwei Mal erfolgen: Das erste Mal, wenn ein Argument an die nicht verwaltete Seite übergeben wird, zum zweiten Mal bei der Rückgabe aus dem Aufruf. Aufgrund dieses zusätzlichen Aufwands müssen In/Out-Parameter explizit auf ein Argument angewendet werden, wenn der Aufrufer Änderungen sehen möchte, die von der aufgerufenen Instanz vorgenommen wurden.  
+> Wenn ein Verweistyp nicht blitfähige Typen als Member enthält, muss die Konvertierung zwei Mal erfolgen: Das erste Mal, wenn ein Argument an die nicht verwaltete Seite übergeben wird, zum zweiten Mal bei der Rückgabe aus dem Aufruf. Aufgrund dieses zusätzlichen Aufwands müssen In/Out-Parameter explizit auf ein Argument angewendet werden, wenn der Aufrufer Änderungen sehen möchte, die von der aufgerufenen Instanz vorgenommen wurden.  
   
  Im folgenden Beispiel hat die `SystemTime`-Klasse ein sequenzielles Memberlayout und kann an die **GetSystemTime**-Funktion der Windows-API übergeben werden.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  Die gleichen Regeln, die zum Marshallen von Werten und Verweisen an Plattformaufrufe gelten, gelten auch beim Marshallen über COM-Schnittstellen. Wenn eine Instanz des `Point`-Werttyps von .NET Framework an COM übergeben wird, wird der `Point` nach Wert übergeben. Wenn der `Point`-Werttyp durch Verweis übergeben wird, wird ein Zeiger auf den `Point` in den Stack übergeben. Der Interop-Marshaller unterstützt kein höheres Maß an Dereferenzierung (**Point** \*\*) in beide Richtungen.  
   
 > [!NOTE]
->  Strukturen, bei denen der <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswert auf **Explicit** (Explizit) festgelegt ist, können in COM-Interop nicht verwendet werden, da die exportierte Typbibliothek kein explizites Layout darstellen kann.  
+> Strukturen, bei denen der <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswert auf **Explicit** (Explizit) festgelegt ist, können in COM-Interop nicht verwendet werden, da die exportierte Typbibliothek kein explizites Layout darstellen kann.  
   
 ### <a name="system-value-types"></a>Systemwerttypen  
  Der <xref:System>-Namespace enthält mehrere Werttypen, die für die geschaltete Form von primitiven Datentypen der Laufzeit stehen. Beispielsweise steht die Werttypstruktur <xref:System.Int32?displayProperty=nameWithType> für die geschachtelte Form von **ELEMENT_TYPE_I4**. Anstatt diese Typen als Strukturen zu marshallen, wie dies bei anderen formatierten Typen der Fall ist, marshallen Sie sie in der gleichen Weise wie die primitiven Datentypen, die sie schachteln. **System.Int32** wird daher als **ELEMENT_TYPE_I4** anstatt als eine Struktur gemarshallt, die ein einziges Mitglied vom Typ **long** enthält. Die folgende Tabelle enthält eine Liste der Werttypen im Namespace **System**, bei denen es sich um geschachtelte Darstellungen von primitiven Datentypen handelt.  

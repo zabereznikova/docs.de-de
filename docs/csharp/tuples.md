@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882062"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988411"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  Allerdings können bereits vorhandene Deklarationen nicht mit Deklarationen vermischt werden, die in Klammern stehen. Folgendes ist beispielsweise nicht erlaubt: `(var x, y) = MyMethod();`. Dadurch wird der Fehler CS8184 ausgelöst, da *x* in Klammern und *y* bereits zuvor an einer anderen Stelle deklariert wurden.
+> Allerdings können bereits vorhandene Deklarationen nicht mit Deklarationen vermischt werden, die in Klammern stehen. Folgendes ist beispielsweise nicht erlaubt: `(var x, y) = MyMethod();`. Dadurch wird der Fehler CS8184 ausgelöst, da *x* in Klammern und *y* bereits zuvor an einer anderen Stelle deklariert wurden.
 
 ### <a name="deconstructing-user-defined-types"></a>Dekonstruieren von benutzerdefinierten Typen
 

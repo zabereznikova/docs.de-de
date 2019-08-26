@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342c570bff89d4c03780cdc280199c722b53890a
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: c082e5dbb1f7b2bb8c5236d0c480302a6e387ebe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910993"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 Jede Version von .NET Framework enthält die CLR (Common Language Runtime) sowie die Basisklassenbibliotheken und andere verwaltete Bibliotheken. In diesem Thema werden die Hauptfunktionen von .NET Framework nach Version beschrieben und Informationen zu den zugrunde liegenden CLR-Versionen sowie den zugeordneten Entwicklungsumgebungen bereitgestellt und die vom Windows-Betriebssystem installierten Versionen dargestellt.  
   
 > [!NOTE]
->  Informationen zum Herunterladen und Installieren von .NET Framework finden Sie unter [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).  
+> Informationen zum Herunterladen und Installieren von .NET Framework finden Sie unter [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md).  
   
  Die folgende Tabelle enthält eine Zusammenfassung des .NET Framework-Versionsverlaufs und korreliert die einzelnen Versionen mit Visual Studio, Windows und Windows Server. Beachten Sie, dass Visual Studio die Festlegung von Zielversionen bereitstellt, sodass Sie nicht auf die Version von .NET Framework beschränkt sind, die aufgeführt wird.  
   

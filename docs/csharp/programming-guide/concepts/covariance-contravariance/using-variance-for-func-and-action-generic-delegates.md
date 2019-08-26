@@ -2,17 +2,17 @@
 title: Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540597"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659906"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 Diese Beispiele veranschaulichen, wie Sie Kovarianz und Kontravarianz in den generischen Delegaten `Func` und `Action` verwenden, um die Wiederverwendung von Methoden zu ermöglichen und mehr Flexibilität in Ihrem Code zu bieten.  
   
- Weitere Informationen zu Ko- und Kontravarianz finden Sie unter [Varianz bei Delegaten (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Weitere Informationen zu Ko- und Kontravarianz finden Sie unter [Varianz bei Delegaten (C#)](./variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Verwendung von Delegaten mit kovarianten Typparametern  
  Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in generischen `Func`-Delegaten. Die Methode `FindByTitle` nimmt einen Parameter vom Typ `String` entgegen und gibt ein Objekt vom Typ `Employee` zurück. Allerdings können Sie diese Methode dem Delegaten `Func<String, Person>` zuweisen, da `Employee` `Person` erbt.  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Kovarianz und Kontravarianz (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [Generika](~/docs/standard/generics/index.md)
+- [Kovarianz und Kontravarianz (C#)](./index.md)
+- [Generics](../../../../standard/generics/index.md)

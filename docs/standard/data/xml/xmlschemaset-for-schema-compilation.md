@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615371"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969031"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  In einem <xref:System.Xml.Schema.XmlSchemaSet> befindliche Schemata werden von der <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode des <xref:System.Xml.Schema.XmlSchemaSet> in ein logisches Schema kompiliert.  
   
 > [!NOTE]
->  Im Gegensatz zur veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode nicht kompiliert.  
+> Im Gegensatz zur veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode nicht kompiliert.  
   
  Wenn die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode erfolgreich ausgeführt wird, wird die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet> auf `true` festgelegt.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft wird nicht beeinflusst, wenn Schemata im <xref:System.Xml.Schema.XmlSchemaSet> bearbeitet werden. Updates der einzelnen Schemata im <xref:System.Xml.Schema.XmlSchemaSet> werden nicht nachverfolgt. Folglich kann die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft `true` sein, obwohl eines der im <xref:System.Xml.Schema.XmlSchemaSet> enthaltenen Schemata veraltet ist, wenn keine Schemata aus dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt oder entfernt wurden.  
+> Die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft wird nicht beeinflusst, wenn Schemata im <xref:System.Xml.Schema.XmlSchemaSet> bearbeitet werden. Updates der einzelnen Schemata im <xref:System.Xml.Schema.XmlSchemaSet> werden nicht nachverfolgt. Folglich kann die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft `true` sein, obwohl eines der im <xref:System.Xml.Schema.XmlSchemaSet> enthaltenen Schemata veraltet ist, wenn keine Schemata aus dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt oder entfernt wurden.  
   
  Im folgenden Beispiel wird die `books.xsd`-Datei dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt und anschließend eine <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode aufgerufen.  
   

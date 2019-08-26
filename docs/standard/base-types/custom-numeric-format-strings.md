@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963400"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
@@ -175,7 +175,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Um einen umgekehrten Schrägstrich in eine Ergebniszeichenfolge einzuschließen, müssen Sie diesen mit einem weiteren umgekehrten Schrägstrich versehen, der als Escapezeichen dient (`\\`).  
   
 > [!NOTE]
->  Einige Compiler, z. B. C++- und C#-Compiler, interpretieren möglicherweise auch einen einzelnen umgekehrten Schrägstrich als Escapezeichen. Um sicherzustellen, dass eine Zeichenfolge bei der Formatierung ordnungsgemäß interpretiert wird, können Sie der Zeichenfolge in C# das Literalzeichen für wörtliche Zeichenfolgen (@-Zeichen) voranstellen, oder Sie können jedem umgekehrten Schrägstrich in C# und C++ einen weiteren umgekehrten Schrägstrich voranstellen. Beide Verfahren werden im folgenden C#-Codebeispiel veranschaulicht.  
+> Einige Compiler, z. B. C++- und C#-Compiler, interpretieren möglicherweise auch einen einzelnen umgekehrten Schrägstrich als Escapezeichen. Um sicherzustellen, dass eine Zeichenfolge bei der Formatierung ordnungsgemäß interpretiert wird, können Sie der Zeichenfolge in C# das Literalzeichen für wörtliche Zeichenfolgen (@-Zeichen) voranstellen, oder Sie können jedem umgekehrten Schrägstrich in C# und C++ einen weiteren umgekehrten Schrägstrich voranstellen. Beide Verfahren werden im folgenden C#-Codebeispiel veranschaulicht.  
   
  Im folgenden Beispiel wird das Escapezeichen verwendet, um zu verhindern, dass der Formatierungsvorgang die Zeichen „#“, „0“ und „\\“ als Escapezeichen oder als Formatspezifizierer interpretiert. In den C#-Beispielen wird ein zusätzlicher umgekehrter Schrägstrich verwendet, um sicherzustellen, dass ein umgekehrter Schrägstrich als Literalzeichen interpretiert wird.  
   

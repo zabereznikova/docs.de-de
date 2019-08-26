@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423866"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950694"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -115,7 +115,7 @@ public class AsyncExample
  Wenn Sie die Überladungen mit mehreren Aufrufen verwenden, muss Ihr Code die `userState`-Objekte (Aufgaben-IDs) für ausstehende Aufgaben nachverfolgen. Für jeden Aufruf an `Method1Async(string param, object userState)` generieren Sie in der Regel ein neues eindeutiges `userState`-Objekt und fügen es einer Auflistung hinzu. Wenn die diesem `userState`-Objekt entsprechende Aufgabe das Abschlussereignis auslöst, untersucht Ihre Abschlussmethodenimplementierung <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> und entfernt es aus Ihrer Auflistung. Auf diese Weise verwendet übernimmt der Parameter `userState` die Rolle einer Aufgaben-ID.  
   
 > [!NOTE]
->  Sie müssen darauf achten, einen eindeutigen Wert für `userState` in Ihren Aufrufen an Überladungen mit mehreren Aufrufen bereitzustellen. Nicht eindeutige Aufgaben-IDs führen dazu, dass die asynchrone Klasse eine <xref:System.ArgumentException> auslöst.  
+> Sie müssen darauf achten, einen eindeutigen Wert für `userState` in Ihren Aufrufen an Überladungen mit mehreren Aufrufen bereitzustellen. Nicht eindeutige Aufgaben-IDs führen dazu, dass die asynchrone Klasse eine <xref:System.ArgumentException> auslöst.  
   
 ### <a name="canceling-pending-operations"></a>Abbrechen ausstehender Vorgänge  
  Es ist wichtig, dass asynchrone Vorgänge jederzeit vor Ihrem Abschluss abgebrochen werden können. Klassen, die das ereignisbasierte asynchrone Muster implementieren, verfügen über eine `CancelAsync`-Methode (wenn nur eine asynchrone Methode vorhanden ist) oder eine _MethodName_**AsyncCancel**-Methode (wenn mehrere asynchrone Methoden vorhanden sind).  

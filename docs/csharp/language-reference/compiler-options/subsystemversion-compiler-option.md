@@ -2,19 +2,19 @@
 title: -subsystemversion (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f70389f87bf49ffccded4aef775c27ed0d034e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377904"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922451"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C#-Compileroptionen)
 
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.
 
 > [!NOTE]
->  Verwenden Sie zum Angeben des Subsystems die Compileroption [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).
+> Verwenden Sie zum Angeben des Subsystems die Compileroption [-target](./target-compiler-option.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +28,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 
 Die mindestens erforderliche Version des Subsystems wird in einer Punktschreibweise für Haupt- und Nebenversionen ausgedrückt. Beispielsweise können Sie angeben, dass eine Anwendung nicht unter einem Betriebssystem, das älter als Windows 7 ist, ausgeführt werden kann,wenn Sie den Werte dieser Option auf 6.01 festlegen, wie es in der Tabelle in diesem Thema zu einem späteren Zeitpunkt beschrieben wird. Sie müssen die Werte für `major` und `minor` als ganze Zahl angeben.
 
-Führende Nullen in der Version `minor` ändern die Version nicht, jedoch nachfolgende Nullen. 6.1 und 6.01 verweisen z.B. auf die gleiche Version, aber 6.10 verweist auf eine andere Version. Es wird empfohlen, die Nebenversion in Form von zwei Ziffern auszudrücken, um Verwechslungen zu vermeiden.
+Führende Nullen in der Version `minor` ändern die Version nicht, jedoch nachfolgende Nullen. 6\.1 und 6.01 verweisen z.B. auf die gleiche Version, aber 6.10 verweist auf eine andere Version. Es wird empfohlen, die Nebenversion in Form von zwei Ziffern auszudrücken, um Verwechslungen zu vermeiden.
 
 ## <a name="remarks"></a>Anmerkungen
 
@@ -50,11 +50,11 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 - Der Standardwert ist 6,02, wenn jede Compileroption in der folgenden Liste festgelegt ist:
 
-  - [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)
+  - [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
-  - [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)
+  - [/target:winmdobj](./target-winmdobj-compiler-option.md)
 
-  - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
+  - [-platform:arm](./platform-compiler-option.md)
 
 - Wenn Sie MSBuild verwenden, .NET Framework 4.5 als Ziel festlegen und keine der Compileroptionen verwenden, die weiter oben in der Liste angegeben sind, ist der Standardwert 6.00.
 
@@ -66,4 +66,4 @@ Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft `Subsys
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen](./index.md)

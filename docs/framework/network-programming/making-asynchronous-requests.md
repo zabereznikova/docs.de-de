@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963980"
 ---
 # <a name="making-asynchronous-requests"></a>Vornehmen von asynchronen Anforderungen
 Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für asynchrones Programmieren für den asynchronen Zugriff auf Internetressourcen. Die Methoden <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A> der Klasse <xref:System.Net.WebRequest> starten asynchrone Anforderungen für eine Internetressource und schließen diese ab.  
   
 > [!NOTE]
->  Das Verwenden von synchronen Aufrufen in asynchronen Rückrufmethoden kann zu schwerwiegenden Leistungseinbußen führen. Internet-Anforderungen mit **WebRequest** und den direkt untergeordneten Elementen müssen <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> verwenden, um den von der <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>-Methode zurückgegebenen Datenstrom zu lesen.  
+> Das Verwenden von synchronen Aufrufen in asynchronen Rückrufmethoden kann zu schwerwiegenden Leistungseinbußen führen. Internet-Anforderungen mit **WebRequest** und den direkt untergeordneten Elementen müssen <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> verwenden, um den von der <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>-Methode zurückgegebenen Datenstrom zu lesen.  
   
  Der folgende Beispielcode veranschaulicht, wie asynchrone Aufrufe mit der **WebRequest**-Klasse verwendet werden. Das Beispiel ist ein Konsolenprogramm, das einen URI aus der Befehlszeile verwendet, die Ressource am URI anfordert und dann die Daten auf der Konsole druckt, wenn sie aus dem Internet empfangen werden.  
   
@@ -43,7 +43,7 @@ Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für a
 - Die `ReadCallBack()`-Methode implementiert die asynchrone Rückrufmethode zum Lesen des Antwortdatenstroms. Sie überträgt von der Internetressource empfangene Daten in die **ResponseData**-Eigenschaft der **RequestState**-Instanz und startet dann ein weiteres asynchrones Lesen des Antwortdatenstroms, bis keine Daten mehr zurückgegeben werden. Nachdem alle Daten gelesen wurden, schließt `ReadCallBack()` den Antwortdatenstrom und ruft die `allDone.Set()`-Methode auf, um anzugeben, dass sich die gesamte Antwort in **ResponseData** befindet.  
   
     > [!NOTE]
-    >  Es ist wichtig, dass alle Netzwerkdatenströme geschlossen werden. Wird nicht jede Antwort und jeder Datenstrom geschlossen, verfügt die Anwendung nicht mehr über genügend Verbindungen mit dem Server und kann weitere Anforderungen nicht mehr verarbeiten.  
+    > Es ist wichtig, dass alle Netzwerkdatenströme geschlossen werden. Wird nicht jede Antwort und jeder Datenstrom geschlossen, verfügt die Anwendung nicht mehr über genügend Verbindungen mit dem Server und kann weitere Anforderungen nicht mehr verarbeiten.  
   
 ```csharp  
 using System;  

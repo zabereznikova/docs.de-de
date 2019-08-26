@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935518"
 ---
 # <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  
@@ -28,14 +28,14 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
  Wenn Sie möchten, dass nicht in das Anwendungsprotokoll, sondern in ein anderes Ereignisprotokoll geschrieben werden soll, müssen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft auf `false`festlegen, im Code Ihres Diensts Ihr eigenes Ereignisprotokoll erstellen und den Dienst als eine gültige Quelle für Einträge für dieses Protokoll registrieren. Danach müssen Sie Code schreiben, mit dem jedes Mal dann Einträge im Protokoll festgehalten werden, wenn eine Aktion auftritt, an der Sie interessiert sind.  
   
 > [!NOTE]
->  Wenn Sie ein benutzerdefiniertes Ereignisprotokoll verwenden und Ihren Dienst so konfigurieren, dass er in dieses Protokoll schreibt, dürfen Sie nicht versuchen, auf das Ereignisprotokoll zuzugreifen, bevor die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> -Eigenschaft des Diensts im Code festgelegt wurde. Der Wert dieser Eigenschaft ist für das Ereignisprotokoll erforderlich, damit Ihr Dienst als gültige Quelle für Ereignisse registriert werden kann.  
+> Wenn Sie ein benutzerdefiniertes Ereignisprotokoll verwenden und Ihren Dienst so konfigurieren, dass er in dieses Protokoll schreibt, dürfen Sie nicht versuchen, auf das Ereignisprotokoll zuzugreifen, bevor die <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> -Eigenschaft des Diensts im Code festgelegt wurde. Der Wert dieser Eigenschaft ist für das Ereignisprotokoll erforderlich, damit Ihr Dienst als gültige Quelle für Ereignisse registriert werden kann.  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>So aktivieren Sie die Standardereignisprotokollierung für Ihren Dienst  
   
 - Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft für Ihre Komponente auf `true`fest.  
   
     > [!NOTE]
-    >  Standardmäßig ist diese Eigenschaft auf `true`festgelegt. Sie müssen dies nur dann explizit festlegen, wenn Sie eine komplexere Verarbeitung erstellen, etwa Auswerten einer Bedingung und dann Festlegen der <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft anhand des Ergebnisses dieser Bedingung.  
+    > Standardmäßig ist diese Eigenschaft auf `true`festgelegt. Sie müssen dies nur dann explizit festlegen, wenn Sie eine komplexere Verarbeitung erstellen, etwa Auswerten einer Bedingung und dann Festlegen der <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft anhand des Ergebnisses dieser Bedingung.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>So deaktivieren Sie die Ereignisprotokollierung für Ihren Dienst  
   
@@ -49,7 +49,7 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
 1. Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft auf `false`fest.  
   
     > [!NOTE]
-    >  Sie müssen <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> auf „false“ festlegen, damit ein benutzerdefiniertes Protokoll verwendet werden kann.  
+    > Sie müssen <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> auf „false“ festlegen, damit ein benutzerdefiniertes Protokoll verwendet werden kann.  
   
 2. Richten Sie in Ihrer Windows-Dienst-Anwendung eine Instanz einer <xref:System.Diagnostics.EventLog> -Komponente ein.  
   
@@ -62,7 +62,7 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
      Im folgenden Code wird veranschaulicht, wie Sie Protokollierung in ein benutzerdefiniertes Protokoll einrichten.  
   
     > [!NOTE]
-    >  In diesem Codebeispiel wird eine Instanz einer <xref:System.Diagnostics.EventLog> -Komponente mit `eventLog1` benannt (`EventLog1` in Visual Basic). Wenn Sie in Schritt 2 eine Instanz mit einem anderen Namen erstellt haben, ändern Sie den Code entsprechend.  
+    > In diesem Codebeispiel wird eine Instanz einer <xref:System.Diagnostics.EventLog> -Komponente mit `eventLog1` benannt (`EventLog1` in Visual Basic). Wenn Sie in Schritt 2 eine Instanz mit einem anderen Namen erstellt haben, ändern Sie den Code entsprechend.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

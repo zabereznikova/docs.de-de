@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758624"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960053"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Signalisieren und Warten auf Signale miteinander zu kommunizieren. Ereignis-Wait-Handles (die auch einfach als „Ereignisse“ bezeichnet werden) sind Wait-Handles, die als Signale verwendet werden können, damit ein oder mehrere wartende Threads freigegeben werden. Nachdem ein Ereignis-Wait-Handle als Signal verwendet wurde, wird es entweder manuell oder automatisch zurückgesetzt. Die <xref:System.Threading.EventWaitHandle>-Klasse kann entweder ein lokales Ereignis-Wait-Handle (lokales Ereignis) darstellen oder ein Ereignis-Wait-Handle eines benannten Systems (benanntes Ereignis oder Systemereignis, für alle Prozesse sichtbar).  
   
 > [!NOTE]
->  Ereignis-Wait-Handles sind keine .NET-[Ereignisse](../events/index.md). Es sind keine Delegaten oder Ereignishandler beteiligt. Zur Beschreibung wird das Wort „Ereignis“ verwendet, weil diese Handles traditionell als Betriebssystemereignisse bezeichnet wurden und weil durch Verwenden eines Wait-Handles als Signal wartende Threads darüber informiert werden, dass ein Ereignis aufgetreten ist.  
+> Ereignis-Wait-Handles sind keine .NET-[Ereignisse](../events/index.md). Es sind keine Delegaten oder Ereignishandler beteiligt. Zur Beschreibung wird das Wort „Ereignis“ verwendet, weil diese Handles traditionell als Betriebssystemereignisse bezeichnet wurden und weil durch Verwenden eines Wait-Handles als Signal wartende Threads darüber informiert werden, dass ein Ereignis aufgetreten ist.  
   
  Sowohl lokale als auch benannte Ereignis-Wait-Handles verwenden Synchronisierungsobjekte des Systems, die durch <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>-Wrapper geschützt sind, um sicherzustellen, dass die Ressourcen freigegeben werden. Sie können die <xref:System.Threading.WaitHandle.Dispose%2A>-Methode verwenden, um die Ressourcen sofort freizugeben, nachdem die Verwendung des Objekts beendet wurde.  
   
@@ -31,7 +31,7 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
  Um den exklusiven Zugriff auf eine Ressource für einen einzelnen Thread zu einem bestimmten Zeitpunkt sicherzustellen, werden Ereignisse mit automatischer Rücksetzung verwendet. Ein Thread fordert die Ressource durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode an. Wenn kein anderer Thread das Wait-Handle enthält, gibt die Methode `true` zurück, und der aufrufende Thread erhält die Steuerung über die Ressource.  
   
 > [!IMPORTANT]
->  Wie bei allen Synchronisierungsmechanismen müssen Sie sicherstellen, dass alle Codepfade vor dem Zugriff auf eine geschützte Ressource auf das entsprechende Wait-Handle warten. Die Threadsynchronisierung ist kooperativ.  
+> Wie bei allen Synchronisierungsmechanismen müssen Sie sicherstellen, dass alle Codepfade vor dem Zugriff auf eine geschützte Ressource auf das entsprechende Wait-Handle warten. Die Threadsynchronisierung ist kooperativ.  
   
  Wenn ein Ereignis mit automatischer Rücksetzung als Signal verwendet wird und zu diesem Zeitpunkt keine Threads warten, bleibt es ein Signal, bis ein Thread versucht, darauf zu warten. Das Ereignis gibt den Thread frei und wird sofort zurückgesetzt, sodass nachfolgende Threads blockiert werden.  
   
@@ -53,14 +53,14 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
  Sie können ein <xref:System.Threading.EventWaitHandle>-Objekt erstellen, das ein benanntes Systemereignis darstellt, indem Sie einen der Konstruktoren verwenden, die einen Ereignisnamen angeben.  
   
 > [!NOTE]
->  Da benannte Ereignisse systemweit sichtbar sind, ist es möglich, über mehrere <xref:System.Threading.EventWaitHandle>-Objekte zu verfügen, die dasselbe benannte Ereignis darstellen. Bei jedem Aufruf eines Konstruktors oder der <xref:System.Threading.EventWaitHandle.OpenExisting%2A>-Methode wird ein neues <xref:System.Threading.EventWaitHandle>-Objekt erstellt. Wenn Sie wiederholt denselben Namen angeben, werden mehrere Objekte erstellt, die dasselbe benannte Ereignis darstellen.  
+> Da benannte Ereignisse systemweit sichtbar sind, ist es möglich, über mehrere <xref:System.Threading.EventWaitHandle>-Objekte zu verfügen, die dasselbe benannte Ereignis darstellen. Bei jedem Aufruf eines Konstruktors oder der <xref:System.Threading.EventWaitHandle.OpenExisting%2A>-Methode wird ein neues <xref:System.Threading.EventWaitHandle>-Objekt erstellt. Wenn Sie wiederholt denselben Namen angeben, werden mehrere Objekte erstellt, die dasselbe benannte Ereignis darstellen.  
   
  Bei der Verwendung von benannten Ereignissen ist Vorsicht geboten. Da sie systemweit sichtbar sind, kann ein anderer Prozess, der den gleichen Namen verwendet, Ihre Threads unerwartet blockieren. Böswilliger Code, der auf demselben Computer ausgeführt wird, könnte dies als Grundlage für einen Denial-of-Service-Angriff verwenden.  
   
  Verwenden Sie die Zugriffssteuerungssicherheit zum Schutz eines <xref:System.Threading.EventWaitHandle>-Objekts, das ein benanntes Ereignis darstellt, vorzugsweise durch Verwendung eines Konstruktors, der ein <xref:System.Security.AccessControl.EventWaitHandleSecurity>-Objekt angibt. Sie können die Zugriffssteuerungssicherheit auch mithilfe der <xref:System.Threading.EventWaitHandle.SetAccessControl%2A>-Methode anwenden, allerdings entsteht dann zwischen der Erstellung und dem Schutz des Ereignis-Wait-Handles ein Zeitraum, in dem ein Sicherheitsrisiko besteht. Der Schutz von Ereignissen mit Zugriffssteuerungssicherheit hilft dabei, böswillige Angriffe zu verhindern, das Problem unbeabsichtigter Namenskonflikte wird dadurch aber nicht gelöst.  
   
 > [!NOTE]
->  Im Gegensatz zur <xref:System.Threading.EventWaitHandle>-Klasse können die abgeleiteten Klassen <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent> nur lokale Wait-Handles darstellen. Sie können keine benannten Systemereignisse darstellen.  
+> Im Gegensatz zur <xref:System.Threading.EventWaitHandle>-Klasse können die abgeleiteten Klassen <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent> nur lokale Wait-Handles darstellen. Sie können keine benannten Systemereignisse darstellen.  
   
 ## <a name="see-also"></a>Siehe auch
 

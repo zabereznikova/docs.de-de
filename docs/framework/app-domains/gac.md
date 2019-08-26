@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921586"
 ---
 # <a name="global-assembly-cache"></a>Globaler Assemblycache
 Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
@@ -25,7 +25,7 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
  Geben Sie Assemblys nur dann durch eine Installation im globalen Assemblycache frei, wenn dies unbedingt erforderlich ist. Wenn die Freigabe einer Assembly nicht unbedingt erforderlich ist, empfiehlt es sich, die Assemblyabhängigkeiten privat zu halten und Assemblys im Anwendungsverzeichnis abzulegen. Assemblys müssen außerdem nicht im globalen Assemblycache installiert sein, um für COM-Interop oder nicht verwalteten Code verfügbar zu sein.  
   
 > [!NOTE]
->  Es gibt Szenarios, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit dem **xcopy**-Befehl das Anwendungsverzeichnis kopieren. Sie müssen die Assembly zusätzlich in den globalen Assemblycache verschieben.  
+> Es gibt Szenarios, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit dem **xcopy**-Befehl das Anwendungsverzeichnis kopieren. Sie müssen die Assembly zusätzlich in den globalen Assemblycache verschieben.  
   
  Es gibt zwei Möglichkeiten für die Bereitstellung einer Assembly im globalen Assemblycache:  
   
@@ -34,7 +34,7 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
 - Die Verwendung des Entwicklertools [Global Assembly Cache-Tool („Gacutil.exe“)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) aus dem Windows SDK.  
   
     > [!NOTE]
-    >  Bei Bereitstellungsszenarios sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
+    > Bei Bereitstellungsszenarios sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
   
  Ab .NET Framework 4 lautet der Standardspeicherort des globalen Assemblycaches **%windir%\Microsoft.NET\assembly**. In früheren Versionen von .NET Framework lautet der Standardspeicherort **%windir%\assembly**.  
   

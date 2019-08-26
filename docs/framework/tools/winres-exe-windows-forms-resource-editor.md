@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937922"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Argumente
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`resourceFile`|Die zu lokalisierende Ressourcendatei. Diese Datei muss ein als RESX- oder RESOURCES-Datei durch den Visual Studio-Designer generiertes Windows Forms-Formular sein. "Winres.exe" kann generische RESX- bzw. RESOURCES-Dateien nicht öffnen.|
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
@@ -110,7 +110,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 2. Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
-     - oder - 
+     Oder
 
      Geben Sie die zu öffnende Datei beim Starten von "Winres.exe" in der Befehlszeile an.
 
@@ -146,4 +146,4 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 - <xref:System.Resources.ResourceWriter>
 - [Extras](../../../docs/framework/tools/index.md)
 - [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+- [Globalisierung und Lokalisierung](../../standard/globalization-localization/index.md)

@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912530"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
   
 > [!IMPORTANT]
->  Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>So definieren Sie einen generischen Typ  
   
@@ -84,7 +84,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
      Der Konstruktor, der für dieses Codebeispiel verwendet wird, nimmt eine `IEnumerable<T>`. Beachten Sie, dass dies jedoch nicht die generische Typdefinition der generischen Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> ist. Der Typparameter `T` von `List<T>` muss stattdessen mit dem Typparameter `T` von `IEnumerable<T>` ersetzt werden. (Das klingt zunächst etwas kompliziert, da beide Typen über die Typparameter mit dem Namen `T` verfügen. Darum verwendet dieses Codebeispiel die Namen `TFirst` und `TSecond`.) Um den Typ des Konstruktorarguments zu erhalten, beginnen Sie mit der generischen Typdefinition `IEnumerable<T>`, und rufen Sie <xref:System.Type.MakeGenericType%2A> mit dem ersten generischen Typparameter von `List<T>` ab. Die Liste des Konstruktorarguments muss als Array übergeben werden, wobei in diesem Fall nur ein Argument vorhanden ist.  
   
     > [!NOTE]
-    >  Die generische Typdefinition wird als `IEnumerable<>` ausgedrückt, wenn Sie den `typeof`-Operator in C# verwenden. Alternativ als `IEnumerable(Of )`, wenn Sie den `GetType`-Operator in Visual Basic verwenden.  
+    > Die generische Typdefinition wird als `IEnumerable<>` ausgedrückt, wenn Sie den `typeof`-Operator in C# verwenden. Alternativ als `IEnumerable(Of )`, wenn Sie den `GetType`-Operator in Visual Basic verwenden.  
   
      Es ist nun möglich, den Konstruktor von `List<T>` abzurufen, indem Sie <xref:System.Type.GetConstructor%2A> auf der generischen Typdefinition aufrufen. Um diesen Konstruktor in den entsprechenden Konstruktor von `List<TFirst>` zu konvertieren, übergeben Sie `List<TFirst>` und den Konstruktor von `List<T>` an die statische <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType>-Methode.  
   

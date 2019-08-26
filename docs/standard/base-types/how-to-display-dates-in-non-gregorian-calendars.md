@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588820"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963357"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
 Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den gregorianischen Kalender als Standardkalender. Das bedeutet, dass ein Aufruf der `ToString`-Methode eines Datums- und Uhrzeitwerts die Zeichenfolgendarstellung dieses Datums und dieser Uhrzeit im gregorianischen Kalender anzeigt, selbst wenn dieses Datum und diese Uhrzeit in einem anderen Kalender erstellt wurden. Dies wird im folgenden Beispiel veranschaulicht. Hierbei werden zwei verschiedene Möglichkeiten verwendet, um einen Datums- und Uhrzeitwert mit dem persischen Kalender zu erstellen. Beim Aufruf der <xref:System.DateTime.ToString%2A>-Methode werden diese Datums- und Uhrzeitwerte aber weiterhin im gregorianischen Kalender angezeigt. Dieses Beispiel zeigt zwei häufig verwendete, aber falsche Verfahren zum Anzeigen des Datums in einem bestimmten Kalender.  
@@ -39,7 +39,7 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
 4. Weisen Sie das Kalenderobjekt zu, um die von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A>-Eigenschaft des <xref:System.Globalization.DateTimeFormatInfo>-Objekts festzulegen.  
   
     > [!NOTE]
-    >  Die <xref:System.Globalization.CultureInfo>-Klasse verfügt auch über eine <xref:System.Globalization.CultureInfo.Calendar%2A>-Eigenschaft. Diese ist jedoch schreibgeschützt und konstant. Sie ändert sich nicht, um den neuen, der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zugewiesenen Standardkalender widerzuspiegeln.  
+    > Die <xref:System.Globalization.CultureInfo>-Klasse verfügt auch über eine <xref:System.Globalization.CultureInfo.Calendar%2A>-Eigenschaft. Diese ist jedoch schreibgeschützt und konstant. Sie ändert sich nicht, um den neuen, der <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>-Eigenschaft zugewiesenen Standardkalender widerzuspiegeln.  
   
 5. Rufen Sie entweder die <xref:System.DateTime.ToString%2A>- oder <xref:System.DateTime.ToString%2A>-Methode auf, und übergeben Sie ihr das <xref:System.Globalization.CultureInfo>-Objekt, dessen Standardkalender im vorherigen Schritt geändert wurde.  
   

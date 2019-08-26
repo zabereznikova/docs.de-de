@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b05cd88fcb492ab27e1d311045b72208167508f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183364"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963919"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM- und Kerberos-Authentifizierung
 Die NTLM- und Kerberos-Authentifizierung verwendet standardmäßig die mit der aufrufenden Anwendung verbundenen Benutzeranmeldeinformationen von Microsoft Windows NT, um sich bei einem Server zu authentifizieren. Bei der nicht standardmäßigen NTLM-Authentifizierung wird der Authentifizierungstyp durch die Anwendung auf NTLM festgelegt. Mithilfe des <xref:System.Net.NetworkCredential>-Objekts wird, wie im folgenden Beispiel gezeigt, der Benutzername, das Kennwort und die Domäne an den Host übergeben.  
@@ -60,7 +60,7 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
  Mithilfe des Negotiate-Authentifizierungsmoduls wird bestimmt, ob der Remoteserver die NTLM- oder Kerberos-Authentifizierung verwendet, und es wird die entsprechende Antwort gesendet.  
   
 > [!NOTE]
->  Die NTLM-Authentifizierung funktioniert nicht über einen Proxyserver.  
+> Die NTLM-Authentifizierung funktioniert nicht über einen Proxyserver.  
   
 ## <a name="see-also"></a>Siehe auch
 

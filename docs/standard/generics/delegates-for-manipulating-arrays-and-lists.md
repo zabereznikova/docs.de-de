@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948784"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
 Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.  
@@ -28,7 +28,7 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
  Die generische <xref:System.Collections.Generic.List%601>-Klasse stellt auch eine <xref:System.Collections.Generic.List%601.ForEach%2A>-Methode bereit, die den <xref:System.Action%601>-Delegaten verwendet. Diese Methode ist nicht generisch.  
   
 > [!NOTE]
->  Dies stellt einen interessanten Aspekt generischer Typen und Methoden dar. Die <xref:System.Array.ForEach%2A?displayProperty=nameWithType>-Methode muss statisch (`Shared` in Visual Basic) und generisch sein, weil <xref:System.Array> kein generisches Typ ist. Für <xref:System.Array.ForEach%2A?displayProperty=nameWithType> kann nur deshalb ein zu verarbeitender Typ angegeben werden, weil die Methode ihre eigene Typparameterliste hat. Im Gegensatz dazu gehört die nicht generische <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType>-Methode zur generischen Klasse <xref:System.Collections.Generic.List%601> und verwendet daher einfach die Typparameter ihrer Klasse. Die Klasse ist stark typisiert, daher kann es sich bei der Methode um eine Instanzmethode handeln.  
+> Dies stellt einen interessanten Aspekt generischer Typen und Methoden dar. Die <xref:System.Array.ForEach%2A?displayProperty=nameWithType>-Methode muss statisch (`Shared` in Visual Basic) und generisch sein, weil <xref:System.Array> kein generisches Typ ist. Für <xref:System.Array.ForEach%2A?displayProperty=nameWithType> kann nur deshalb ein zu verarbeitender Typ angegeben werden, weil die Methode ihre eigene Typparameterliste hat. Im Gegensatz dazu gehört die nicht generische <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType>-Methode zur generischen Klasse <xref:System.Collections.Generic.List%601> und verwendet daher einfach die Typparameter ihrer Klasse. Die Klasse ist stark typisiert, daher kann es sich bei der Methode um eine Instanzmethode handeln.  
   
  Der generische <xref:System.Predicate%601>-Delegat stellt eine Methode dar, die bestimmt, ob ein bestimmtes Element von Ihnen definierte Kriterien erfüllt. Sie können ihn mit den folgenden statischen generischen Methoden von <xref:System.Array> dazu verwenden, nach einem Element oder einer Reihe von Elementen zu suchen: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A> und <xref:System.Array.TrueForAll%2A>.  
   
@@ -45,7 +45,7 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Generika](../../../docs/standard/generics/index.md)
+- [Generics](../../../docs/standard/generics/index.md)
 - [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)
 - [Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)
 - [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)

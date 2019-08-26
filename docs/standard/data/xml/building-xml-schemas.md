@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962027"
 ---
 # <a name="building-xml-schemas"></a>Erstellen von XML-Schemata
 Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace werden den Strukturen zugeordnet, die in der XML-Schemaempfehlung des W3C (World Wide Web Consortium) definiert sind, und können zum speicherinternen Erstellen von XML-Schemata verwendet werden.  
@@ -35,14 +35,14 @@ Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace w
  Der Inhalt von Elementen und Attributen wird von den jeweiligen Typen definiert. Zum Erstellen von Elementen und Attributen, deren Typen einem der integrierten Schematypen entsprechen, wird die <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse mithilfe der <xref:System.Xml.XmlQualifiedName>-Klasse mit dem entsprechenden qualifizierten Namen des integrierten Typs festgelegt. Zum Erstellen eines benutzerdefinierten Typs für Elemente und Attribute wird mithilfe der <xref:System.Xml.Schema.XmlSchemaSimpleType>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaComplexType>-Klasse ein neuer einfacher oder komplexer Typ erstellt.  
   
 > [!NOTE]
->  Zum Erstellen unbenannter einfacher oder komplexer Typen, die anonyme untergeordnete Elemente eines Elements oder Attributs sind (für Attribute gelten nur einfache Typen), legen Sie die <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse anstelle der <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse auf den unbenannten einfachen oder komplexen Typ fest.  
+> Zum Erstellen unbenannter einfacher oder komplexer Typen, die anonyme untergeordnete Elemente eines Elements oder Attributs sind (für Attribute gelten nur einfache Typen), legen Sie die <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse anstelle der <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse auf den unbenannten einfachen oder komplexen Typ fest.  
   
- Bei XML-Schemata können durch Einschränkung anonyme und benannte einfache Typen von anderen einfachen Typen (integriert oder benutzerdefiniert) abgeleitet werden. Außerdem können diese als Liste oder Union von anderen einfachen Typen erstellt werden. Mithilfe der <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>-Klasse wird ein einfacher Typ durch Einschränkung des integrierten `xs:string`-Typs erstellt. Sie können auch mit der <xref:System.Xml.Schema.XmlSchemaSimpleTypeList>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion>-Klasse Listentypen oder Uniontypen erstellen. Die <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob es sich um eine Einschränkung, eine Liste oder eine Union von einem einfachen Typ handelt.  
+ Bei XML-Schemata können durch Einschränkung anonyme und benannte einfache Typen von anderen einfachen Typen (integriert oder benutzerdefiniert) abgeleitet werden. Außerdem können diese als Liste oder Union von anderen einfachen Typen erstellt werden. Mithilfe der <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>-Klasse wird ein einfacher Typ durch Einschränkung des integrierten `xs:string`-Typs erstellt. Sie können auch mit der <xref:System.Xml.Schema.XmlSchemaSimpleTypeList>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion>-Klasse Listentypen oder Union-Typen erstellen. Die <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob es sich um eine Einschränkung, eine Liste oder eine Union von einem einfachen Typ handelt.  
   
  Im folgenden Codebeispiel ist der Typ des `FirstName`-Elements der integrierte Typ `xs:string`. Der Typ des `LastName`-Elements ist ein benannter einfacher Typ, der eine Einschränkung des integrierten Typs `xs:string` mit einem Wert des `MaxLength`-Facets von 20 ist. Der Typ des `CustomerId`-Attributs ist der integrierte Typ `xs:positiveInteger`. Das `Customer`-Element ist ein anonymer komplexer Typ, dessen Partikel eine Sequenz des `FirstName`-Elements und des `LastName`-Elements ist und dessen Attribute das `CustomerId`-Attribut enthalten.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Schema.XmlSchemaChoice>-Klasse und die <xref:System.Xml.Schema.XmlSchemaAll>-Klasse können auch als Partikel des komplexen Typs zum Replizieren der `<xs:choice />`-Semantik oder der `<xs:all />`-Semantik verwendet werden.  
+> Die <xref:System.Xml.Schema.XmlSchemaChoice>-Klasse und die <xref:System.Xml.Schema.XmlSchemaAll>-Klasse können auch als Partikel des komplexen Typs zum Replizieren der `<xs:choice />`-Semantik oder der `<xs:all />`-Semantik verwendet werden.  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace w
  Die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType>-Methode validiert das Kundenschema anhand der Regeln für ein XML-Schema und macht Post-Schema-Compilation-Eigenschaften verfügbar.  
   
 > [!NOTE]
->  Alle Post-Schema-Compilation-Eigenschaften in der SOM-API weichen vom Post-Schema-Validation-Infoset ab.  
+> Alle Post-Schema-Compilation-Eigenschaften in der SOM-API weichen vom Post-Schema-Validation-Infoset ab.  
   
  Der dem <xref:System.Xml.Schema.ValidationEventHandler> hinzugefügte <xref:System.Xml.Schema.XmlSchemaSet> ist ein Delegat, der die Rückrufmethode `ValidationCallback` zum Behandeln der Schemavalidierungswarnungen und -fehler aufruft.  
   

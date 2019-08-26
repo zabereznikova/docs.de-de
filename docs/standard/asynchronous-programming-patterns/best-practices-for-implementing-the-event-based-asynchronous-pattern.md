@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950807"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um asynchrones Verhalten in Klassen mit einer vertrauten Ereignis- und Delegatsemantik verfügbar zu machen. Für eine Implementierung des ereignisbasierten asynchronen Musters müssen Sie einige spezielle Verhaltensanforderungen befolgen. In den folgenden Abschnitten sind Anforderungen und Richtlinien beschrieben, die Sie bei der Implementierung einer Klasse berücksichtigen sollten, die dem ereignisbasierten asynchronen Muster folgt.  
@@ -125,7 +125,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  Für einen Statusbericht, inkrementelle Ergebnisse und Abschluss auf dem Client rufen Sie die Methoden <xref:System.ComponentModel.AsyncOperation.Post%2A> und <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> in <xref:System.ComponentModel.AsyncOperation> auf. <xref:System.ComponentModel.AsyncOperation> ist für das Marshalling von Aufrufen an die Ereignishandler des Clients an den richtigen Thread oder Kontext verantwortlich.  
   
 > [!NOTE]
->  Sie können diese Regeln umgehen, wenn Sie explizit gegen die Richtlinie des Anwendungsmodell vorgehen möchten, aber dennoch von den anderen Vorteilen der Verwendung des ereignisbasierten asynchronen Musters profitieren. Möglicherweise möchten Sie zum Beispiel, dass eine in Windows Forms betriebene Klasse eine Freethread-Klasse ist. Sie können eine Freethread-Klasse erstellen, solange Entwickler die implizierten Einschränkungen verstehen. Konsolenanwendungen führen keine Synchronisierung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen durch. Das kann dazu führen, dass `ProgressChanged`-Ereignisse nicht in der richtigen Reihenfolge ausgelöst werden. Wenn Sie eine serialisierte Ausführung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen wünschen, implementieren und installieren Sie eine <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>-Klasse.  
+> Sie können diese Regeln umgehen, wenn Sie explizit gegen die Richtlinie des Anwendungsmodell vorgehen möchten, aber dennoch von den anderen Vorteilen der Verwendung des ereignisbasierten asynchronen Musters profitieren. Möglicherweise möchten Sie zum Beispiel, dass eine in Windows Forms betriebene Klasse eine Freethread-Klasse ist. Sie können eine Freethread-Klasse erstellen, solange Entwickler die implizierten Einschränkungen verstehen. Konsolenanwendungen führen keine Synchronisierung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen durch. Das kann dazu führen, dass `ProgressChanged`-Ereignisse nicht in der richtigen Reihenfolge ausgelöst werden. Wenn Sie eine serialisierte Ausführung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen wünschen, implementieren und installieren Sie eine <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>-Klasse.  
   
  Weitere Informationen zur Verwendung von <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager> zur Aktivierung Ihrer asynchronen Vorgänge finden Sie unter [Vorgehensweise: Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   

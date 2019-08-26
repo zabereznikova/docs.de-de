@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648486"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968519"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Der neue 64-Bit-JIT-Compiler
 Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für die Just-in-Time-Kompilierung. Diese Änderung wirkt sich nicht auf die Kompilierung mit dem 32-Bit-JIT-Compiler aus.  
@@ -22,7 +22,7 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
  In einigen Fällen führt die Kompilierung mit dem neuen 64-Bit-JIT-Compiler zu einer Laufzeitausnahme oder zu Verhalten, das beim Ausführen von mit dem älteren 64-Bit-JIT-Compiler kompiliertem Code nicht zu beobachten ist. Die bekannten Unterschiede umfassen folgende Punkte:  
   
 > [!IMPORTANT]
->  Alle diese bekannten Probleme wurden im neuen 64-Bit-Compiler behoben, der mit .NET Framework 4.6.2 veröffentlicht wurde. Die meisten wurden auch in Service Releases von .NET Framework 4.6 und 4.6.1 behoben, die in Windows Update enthalten sind. Sie können diese Probleme vollständig beseitigen, indem Sie sicherstellen, dass Ihre Windows-Version auf dem aktuellen Stand ist oder ein Upgrade auf .NET Framework 4.6.2 ausführen.  
+> Alle diese bekannten Probleme wurden im neuen 64-Bit-Compiler behoben, der mit .NET Framework 4.6.2 veröffentlicht wurde. Die meisten wurden auch in Service Releases von .NET Framework 4.6 und 4.6.1 behoben, die in Windows Update enthalten sind. Sie können diese Probleme vollständig beseitigen, indem Sie sicherstellen, dass Ihre Windows-Version auf dem aktuellen Stand ist oder ein Upgrade auf .NET Framework 4.6.2 ausführen.  
   
 - Unter bestimmten Umständen kann ein Unboxingvorgang in Releasebuilds mit aktivierter Optimierung eine <xref:System.NullReferenceException>-Ausnahme auslösen.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963579"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Anhalten und Unterbrechen von Threads
 
@@ -41,7 +41,7 @@ Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads beste
  Sie können einen wartenden Thread unterbrechen, indem Sie die <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>-Methode für den blockierten Thread aufrufen, um eine <xref:System.Threading.ThreadInterruptedException> auszulösen, durch die der Thread aus dem blockierenden Aufruf gelöst wird. Der Thread sollte die <xref:System.Threading.ThreadInterruptedException> abfangen und die angemessenen Aktionen zum Fortsetzen der Arbeit ausführen. Wenn der Thread die Ausnahme ignoriert, wird diese von der Laufzeit abgefangen, und der Thread wird beendet.  
   
 > [!NOTE]
->  Wenn der Zielthread beim Aufrufen von <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> nicht blockiert ist, muss er zuerst blockiert werden, bevor er unterbrochen werden kann. Wenn der Thread nie blockiert wird, kann er ohne jegliche Unterbrechung abgeschlossen werden.  
+> Wenn der Zielthread beim Aufrufen von <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> nicht blockiert ist, muss er zuerst blockiert werden, bevor er unterbrochen werden kann. Wenn der Thread nie blockiert wird, kann er ohne jegliche Unterbrechung abgeschlossen werden.  
   
  Wenn sich ein Thread in einem verwalteten Wartezustand befindet, kann er durch <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>  sofort aktiviert werden. Bei einem nicht verwalteten Wartezustand (beispielsweise bei einem Plattformaufruf der Win32-[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)-Funktion) können <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> die Steuerung des Threads erst übernehmen, wenn der Thread zu verwaltetem Code zurückkehrt oder einen Aufruf in verwaltetem Code ausführt. In verwaltetem Code sieht das Verhalten wie folgt aus:  
   

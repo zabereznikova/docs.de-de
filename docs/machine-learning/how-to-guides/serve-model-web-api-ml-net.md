@@ -1,16 +1,16 @@
 ---
 title: Bereitstellen eines Modells in einer ASP.NET Core-Web-API
 description: Bereitstellen eines Machine Learning-Modells zur ML.NET-Standpunktanalyse über das Internet mithilfe der ASP.NET Core-Web-API
-ms.date: 05/03/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: f8b8f74f752aeb243d4a2987929bd28ddc5f7d5a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641081"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666663"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Bereitstellen eines Modells in einer ASP.NET Core-Web-API
 
@@ -189,7 +189,7 @@ Nachdem alles eingerichtet ist, ist es Zeit, die Anwendung zu testen.
 1. Öffnen Sie PowerShell, und geben Sie den folgenden Code ein, wobei PORT der Port ist, auf dem Ihre Anwendung lauscht.
 
     ```powershell
-    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
+    Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
     ```
 
     Bei erfolgreicher Ausführung sollte die Ausgabe dem folgenden Text ähneln:

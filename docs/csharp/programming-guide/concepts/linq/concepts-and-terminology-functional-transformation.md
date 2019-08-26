@@ -2,12 +2,12 @@
 title: Konzepte und Terminologie (funktionale Transformation) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df8abe5b6815e2b9f1a9a1693944ddaa1c7c84cb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921954"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Konzepte und Terminologie (funktionale Transformation) (C#)
 Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mit reinen funktionalen Transformationen verwendet werden. Bei Verwendung der funktionalen Transformation zum Transformieren von Daten erhalten Sie Code, der häufig schneller programmiert werden kann, ausdrucksstärker ist und einfacher von Fehlern bereinigt und verwaltet werden kann als Code, der auf die herkömmliche imperative Methode zurückzuführen ist.  
@@ -22,7 +22,7 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
 - Sie müssen *zustandslos* sein, damit das Ausführen ein und derselben Funktion oder eines bestimmten Satzes von Funktionen bei ein und derselben Eingabe auch immer zur selben Ausgabe führt. Reine Transformationen besitzen keine „Erinnerung“ an ihre vorherige Verwendung.  
   
 > [!IMPORTANT]
->  Im übrigen Teil dieses Lernprogramms wird der Begriff „reine Funktion“ allgemein als Bezeichnung für einen Programmieransatz und nicht als Bezeichnung für eine bestimmte Sprachfunktion verwendet.  
+> Im übrigen Teil dieses Lernprogramms wird der Begriff „reine Funktion“ allgemein als Bezeichnung für einen Programmieransatz und nicht als Bezeichnung für eine bestimmte Sprachfunktion verwendet.  
 >   
 >  Beachten Sie, dass reine Funktionen in C# als Methoden implementiert werden müssen.  
 >   
@@ -33,7 +33,7 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
   
  In der Vergangenheit standen Allzwecksprachen zur funktionalen Programmierung, wie ML, Scheme, Haskell und F#, im Mittelpunkt des wissenschaftlichen Interesses. Es war zwar immer möglich, in C# reine funktionale Transformationen zu schreiben, die damit verbundenen Schwierigkeiten ließen aber die meisten Programmierer davor zurückschrecken. In neueren Versionen von C# stehen jedoch neue Sprachkonstrukte, z.B. Lambdaausdrücke und Typableitung, zur Verfügung, mit denen die funktionale Programmierung wesentlich einfacher und produktiver wurde.  
   
- Weitere Informationen zum funktionalen Programmieren finden Sie unter [Funktionale Programmierung und Imperative Programmierung (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)  
+ Weitere Informationen zum funktionalen Programmieren finden Sie unter [Funktionale Programmierung und Imperative Programmierung (C#)](./functional-programming-vs-imperative-programming.md)  
   
 #### <a name="domain-specific-fp-languages"></a>Domänenspezifische FP-Sprachen  
  Während allgemeine FP-Sprachen keine große Verbreitung gefunden haben, konnten sich bestimmte domänenspezifische FP-Sprachen durchsetzen. So wird z. B. das Aussehen vieler Internetseiten durch Cascading Style Sheets (CSS) gesteuert, während für die Bearbeitung von XML-Daten häufig XSLT-Stylesheets (Extensible Stylesheet Language Transformations) verwendet werden. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](../../../../standard/data/xml/xslt-transformations.md).  
@@ -44,12 +44,12 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Funktion höherer Ordnung (Funktion erster Ordnung)  
  Funktion, die als programmgesteuertes Objekt behandelt werden kann. So kann eine Funktion höherer Ordnung z. B. an andere Funktionen übergeben oder von anderen Funktionen zurückgegeben werden. Zu den Sprachfunktionen in C#, die Funktionen höherer Ordnung unterstützen, gehören Delegate und Lambdaausdrücke. Beim Schreiben einer Funktion höherer Ordnung deklarieren Sie für mindestens ein Argument, das diese Delegate akzeptiert, und beim Aufrufen einer solchen Funktion verwenden Sie häufig Lambdaausdrücke. Viele der Standardabfrageoperatoren sind Funktionen höherer Ordnung.  
   
- Weitere Informationen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Weitere Informationen finden Sie unter [Übersicht über Standardabfrageoperatoren (C#)](./standard-query-operators-overview.md).  
   
  Lambdaausdruck  
  Im Wesentlichen eine anonyme Inlinefunktion, die überall dort verwendet werden kann, wo ein Delegattyp erwartet wird. Dies ist zwar eine vereinfachte Definition für Lambdaausdrücke, im Rahmen dieses Lernprogramms reicht sie aber aus.  
   
- Weitere Informationen dazu finden Sie unter [Lambdaausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Weitere Informationen dazu finden Sie unter [Lambdaausdrücke](../../statements-expressions-operators/lambda-expressions.md).  
   
  Auflistung  
  Strukturierter Satz von Daten, die in der Regel alle denselben Typ haben. Zur Gewährleistung der Kompatibilität mit LINQ muss eine Auflistung die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Linq.IQueryable>-Schnittstelle (oder eines ihrer generischen Gegenstücke, <xref:System.Collections.Generic.IEnumerator%601> bzw. <xref:System.Linq.IQueryable%601>) implementieren.  
@@ -57,21 +57,21 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Tupel (anonyme Typen)  
  Begriff aus der Mathematik, der eine endliche Abfolge von Objekten bezeichnet, die jeweils einen bestimmten Typ haben. Ein Tupel wird auch als geordnete Zusammenstellung bezeichnet. Dieses Konzept ist in Programmiersprachen als anonymer Typ implementiert, der es ermöglicht, einen nicht benannten Klassentyp zu deklarieren und gleichzeitig ein Objekt desselben Typs zu instanziieren.  
   
- Weitere Informationen finden Sie unter [Anonyme Klassentypen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Weitere Informationen finden Sie unter [Anonyme Klassentypen](../../classes-and-structs/anonymous-types.md).  
   
  Typableitung (implizite Typisierung)  
  Fähigkeit eines Compilers, den Typ einer Variablen in Abwesenheit einer expliziten Typdeklaration zu bestimmen.  
   
- Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+ Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
  Verzögerte Ausführung und verzögerte Auswertung  
  Bei der verzögerten Auswertung (Lazy Evaluation) eines Ausdrucks wird mit der Auswertung so lange gewartet, bis der aufgelöste Wert tatsächlich benötigt wird. Die verzögerte Ausführung (Deferred Execution) wird in Auflistungen unterstützt.  
   
- Weitere Informationen finden Sie unter [Einführung in LINQ-Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) und [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Weitere Informationen finden Sie unter [Einführung in LINQ-Abfragen (C#)](./introduction-to-linq-queries.md) und [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Diese Sprachfunktionen werden in Codebeispielen im gesamten Abschnitt verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Funktionale Programmierung und Imperative Programmierung (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](./introduction-to-pure-functional-transformations.md)
+- [Funktionale Programmierung und Imperative Programmierung (C#)](./functional-programming-vs-imperative-programming.md)

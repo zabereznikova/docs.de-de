@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591488"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940036"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
 Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
   
- Das [Common Language Runtime](../../../docs/standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
+ Das [Common Language Runtime](../../standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
   
  [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) enthalten Module, Module enthalten Typen, und Typen enthalten Member. Mit der Reflektion werden Objekte bereitgestellt, die Assemblys, Module und Typen kapseln. Sie können mithilfe von Reflektion dynamisch eine Instanz eines Typen erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen eines vorhandenen Objekts abfragen. Sie können anschließend die Methoden des Typs aufrufen oder auf dessen Felder oder Eigenschaften zugreifen. Typische Verwendungen von Reflektionen umfassen die folgenden:  
   
@@ -71,7 +71,7 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|  
 |[Reflektion und generische Typen](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Erläutert, wie die Reflektion die Typparameter und die Typargumente von generischen Typen und generischen Methoden behandelt.|  

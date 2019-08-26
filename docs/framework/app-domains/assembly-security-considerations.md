@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 53b33bdc70f00d5c824d502043a69f4ee05acc71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423412"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927961"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 <a name="top"></a> Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
@@ -40,7 +40,7 @@ ms.locfileid: "67423412"
 - Sie fordern die vom Code eventuell benötigten Berechtigungen nicht mit Berechtigungsanforderungen an, bereiten jedoch die Behandlung von Sicherheitsausnahmen für den Fall vor, dass keine Berechtigungen erteilt werden.  
   
     > [!NOTE]
-    >  Sicherheit ist ein komplexer Themenbereich, und Sie können aus einer Vielzahl von Optionen auswählen. Weitere Informationen finden Sie unter [Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md).  
+    > Sicherheit ist ein komplexer Themenbereich, und Sie können aus einer Vielzahl von Optionen auswählen. Weitere Informationen finden Sie unter [Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md).  
   
  Zur Ladezeit wird der Beweis der Assembly als Eingabe für die Sicherheitsrichtlinie verwendet. Die Sicherheitsrichtlinie wird durch den Administrator der Organisation und des Computers sowie durch die Benutzerrichtlinieneinstellungen eingerichtet und bestimmt den Satz von Berechtigungen, der sämtlichem verwalteten Code beim Ausführen erteilt wird. Die Sicherheitsrichtlinie kann für den Herausgeber der Assembly eingerichtet werden (dazu ist eine mit dem Signaturtool generierte Signatur erforderlich). Sie kann außerdem für die Website und die Zone (als solche in Internet Explorer bezeichnet), von der die Assembly heruntergeladen wurde, oder für den starken Namen der Assembly eingerichtet werden. Der für einen Computer zuständige Administrator kann z. B. eine Sicherheitsrichtlinie einrichten, über die Code, der von einer Website heruntergeladen und von einer bestimmten Softwarefirma signiert ist, auf die Datenbank auf einem Computer zugreifen kann. Die Sicherheitsrichtlinie lässt es aber nicht zu, dass auf die Festplatte dieses Computers geschrieben wird.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67423412"
  Sie können einer Assembly sowohl einen starken Namen als auch eine mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) erstellte digitale Signatur zuordnen, können diese Optionen jedoch auch einzeln verwenden. Mit den beiden Signaturtools kann immer nur jeweils eine Datei signiert werden. Bei einer Mehrfachdateiassembly signieren Sie die Datei, die das Assemblymanifest enthält. Ein starker Name ist in der Datei mit dem Assemblymanifest gespeichert, eine mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) erstellte Signatur wird jedoch in einem reservierten Slot der PE-Datei (Portable Executable, übertragbare ausführbare Datei) mit dem Assemblymanifest gespeichert. Eine Assembly kann mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) signiert werden (mit oder ohne starken Namen), wenn bereits eine Vertrauenshierarchie auf der Basis von mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) generierten Signaturen vorhanden ist oder die Richtlinie nur den Teil mit dem Schlüssel verwendet und keine Kette von Vertrauensstellungen überprüft.  
   
 > [!NOTE]
->  Wenn für eine Assembly sowohl ein starker Name als auch eine Signaturtool-Signatur erforderlich ist, muss zuerst der starke Name zugeordnet werden.  
+> Wenn für eine Assembly sowohl ein starker Name als auch eine Signaturtool-Signatur erforderlich ist, muss zuerst der starke Name zugeordnet werden.  
   
  Die Common Language Runtime führt darüber hinaus eine Hashüberprüfung durch: Das Assemblymanifest enthält eine Liste aller Dateien, aus denen die Assembly besteht, einschließlich eines Hash für jede Datei, wie sie beim Erstellen des Manifests vorlag. Beim Laden der einzelnen Dateien werden die Inhalte gehasht und mit dem letzten Hashwert verglichen, der im Manifest gespeichert ist. Wenn die zwei Hashs nicht übereinstimmen, wird die Assembly nicht geladen.  
   

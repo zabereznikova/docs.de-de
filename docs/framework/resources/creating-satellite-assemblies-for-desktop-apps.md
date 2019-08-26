@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949408"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch sie kann eine Anwendung Zeichenfolgen, Images und andere Daten in der Sprache und Kultur des Benutzers anzeigen und alternative Daten bereitstellen, wenn keine Ressourcen für die Sprache oder Kultur des Benutzers verfügbar sind. .NET Framework verwendet ein Speichenarchitekturmodell (Hub and Spoke), um lokalisierte Ressourcen zu finden und aufzurufen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, die verwendet wird, wenn keine lokalisierten Ressourcen verfügbar sind. Sie verwenden das <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut, um die Standardkultur der Anwendung festzulegen. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne lokalisierte Kultur aber keinen Code enthält. Da die Satellitenassemblys kein Teil der Hauptassembly sind, können Sie die Ressourcen problemlos entsprechend einer bestimmten Kultur ersetzen oder aktualisieren, ohne die Hauptassembly der App ersetzen zu müssen.  
   
 > [!NOTE]
->  Die Ressourcen der Standardkultur einer Anwendung können auch in einer Satellitenassembly gespeichert werden. Dazu weisen Sie dem <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut eine Wert von <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> zu.  
+> Die Ressourcen der Standardkultur einer Anwendung können auch in einer Satellitenassembly gespeichert werden. Dazu weisen Sie dem <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut eine Wert von <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType> zu.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Name und Speicherort einer Satellitenassembly  
  Das Speichenarchitekturmodell erfordert, dass Sie Ressourcen an bestimmten Speicherorten speichern, damit Sie leicht gefunden und verwendet werden können. Wenn Sie Ressourcen nicht wie erwartet kompilieren und benennen, oder wenn Sie sie nicht am richtigen Speicherort speichern, kann die Common Language Runtime diese nicht finden und verwendet stattdessen die Ressourcen der Standardkultur. Der Ressourcen-Manager von .NET Framework, der vom <xref:System.Resources.ResourceManager>-Objekt dargestellt wird, wird verwendet, um automatisch auf lokalisierte Ressourcen zuzugreifen. Der Ressourcen-Manager hat folgende Anforderungen:  
@@ -46,7 +46,7 @@ Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch 
 - Das Anwendungsverzeichnis muss ein separates Unterverzeichnis für jede lokalisierte Kultur haben, in dem die Kulturressourcen gespeichert sind. Der Name des Unterverzeichnisses muss dem Namen der Kultur entsprechen. Alternativ können Sie Ihre Satellitenassemblys im globalen Assemblycache (GAC) speichern. In diesem Fall muss die Kulturinformationskomponente des starken Namens der Assembly deren Kultur angeben. (Weitere Informationen finden Sie im Abschnitt [Installieren von Satellitenassemblys im globalen Assemblycache](#SN) weiter unten in diesem Thema.)  
   
     > [!NOTE]
-    >  Wenn Ihre Anwendung Ressourcen für Subkulturen enthält, platzieren Sie jede Subkultur in separaten Unterverzeichnisse im Anwendungsverzeichnis. Platzieren Sie Subkulturen nicht in Unterverzeichnis im Hauptkulturverzeichnis.  
+    > Wenn Ihre Anwendung Ressourcen für Subkulturen enthält, platzieren Sie jede Subkultur in separaten Unterverzeichnisse im Anwendungsverzeichnis. Platzieren Sie Subkulturen nicht in Unterverzeichnis im Hauptkulturverzeichnis.  
   
 - Die Satellitenassembly muss den gleichen Namen wie die Anwendung haben und muss das Suffix „.resources.dll“ verwenden. Wenn eine Anwendung z.B. „beispiel.exe“ heißt, sollte der Name jeder Satellitenassembly „beispiel.resources.dll“ sein. Beachten Sie, dass der Name der Satellitenassembly nicht die Kultur seiner Ressourcendatei angibt. Die Satellitenassembly wird aber in einem Verzeichnis angezeigt, das die Kultur angibt.  
   
@@ -75,7 +75,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  In der folgenden Tabelle werden die Optionen von „al.exe“ ausführlicher beschrieben, die in diesen Befehlen verwendet werden.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**-target:** lib|Gibt an, dass Ihre Satellitenassembly in einer Bibliotheksdatei (.dll) kompiliert ist. Da eine Satellitenassembly keinen ausführbaren Code enthält und nicht die Hauptassembly einer Anwendung ist, müssen Sie Satellitenassemblys als DLLs speichern.|  
 |**-embed:** strings.de.resources|Gibt den Namen der einzubettenden Ressourcendatei an, wenn „al.exe“ die Assembly kompiliert. Sie können mehrere RESOURCEN-Dateien in einer Satellitenassembly einbetten. Wenn Sie allerdings das Speichenarchitekturmodell einsetzen, müssen Sie eine Satellitenassembly für jede Kultur kompilieren. Sie können allerdings separate RESOURCES-Dateien für Zeichenfolgen und Objekte erstellen.|  

@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934940"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 <a name="top"></a> .NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Vorgänge das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.  
@@ -87,7 +87,7 @@ ms.locfileid: "66250818"
 ## <a name="specifying-string-comparisons-explicitly"></a>Explizites Angeben von Zeichenfolgenvergleichen  
  Die Methoden zum Bearbeiten von Zeichenfolgen in .NET werden i.d.R. überladen. Während einige Überladungen normalerweise Standardwerte akzeptieren, geben andere Überladungen exakt an, wie Zeichenfolgen verglichen oder bearbeitet werden sollen. Methoden, die keine Standardwerte verwenden, enthalten i. d. R einen Parameter vom Typ <xref:System.StringComparison>. Dabei handelt es sich um eine Enumeration, die explizit Regeln für Zeichenfolgenvergleiche anhand von Kultur und Schreibweise angibt. In der folgenden Tabelle werden die Member der <xref:System.StringComparison> -Enumeration beschrieben.  
   
-|StringComparison-Member|Beschreibung|  
+|StringComparison-Member|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Führt einen Vergleich mit der aktuellen Kultur unter Beachtung der Groß- und Kleinschreibung durch.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Führt einen Vergleich mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung durch.|  
@@ -185,7 +185,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
  Zeichenfolgen in .NET können eingebettete NULL-Zeichen aufweisen. Einer der auffälligsten Unterschiede zwischen einem ordinalen und einem kulturabhängigen Vergleich (einschließlich Vergleichen, die die invariante Kultur verwenden) betrifft die Behandlung von eingebetteten NULL-Zeichen in einer Zeichenfolge. Wenn Sie die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode und die <xref:System.String.Equals%2A?displayProperty=nameWithType> -Methode verwenden, um kulturabhängige Vergleiche (einschließlich Vergleichen, die die invariante Kultur verwenden) durchzuführen, werden diese Zeichen ignoriert. Bei kulturabhängigen Vergleichen können Zeichenfolgen mit eingebetteten NULL-Zeichen daher als gleichwertig mit Zeichenfolgen ohne diese Zeichen angesehen werden.  
   
 > [!IMPORTANT]
->  Auch wenn eingebettete NULL-Zeichen von Zeichenfolgenvergleichsmethoden ignoriert werden, ist dies bei Zeichenfolgensuchmethoden wie <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>und <xref:System.String.StartsWith%2A?displayProperty=nameWithType> nicht der Fall.  
+> Auch wenn eingebettete NULL-Zeichen von Zeichenfolgenvergleichsmethoden ignoriert werden, ist dies bei Zeichenfolgensuchmethoden wie <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>und <xref:System.String.StartsWith%2A?displayProperty=nameWithType> nicht der Fall.  
   
  Im folgenden Beispiel wird ein kulturabhängiger Vergleich der Zeichenfolge "Aa" mit einer ähnlichen Zeichenfolge durchgeführt, die mehrere eingebettete NULL-Zeichen zwischen "A" und "a" enthält, und es wird angezeigt, inwieweit die beiden Zeichenfolgen als gleich betrachtet werden.  
   
@@ -210,7 +210,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
  Diese Vergleiche werden immer noch sehr schnell durchgeführt.  
   
 > [!NOTE]
->  Das Zeichenfolgenverhalten von Dateisystem, Registrierungsschlüsseln und -werten sowie Umgebungsvariablen wird am besten von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>dargestellt.  
+> Das Zeichenfolgenverhalten von Dateisystem, Registrierungsschlüsseln und -werten sowie Umgebungsvariablen wird am besten von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>dargestellt.  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> und <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> verwenden die Binärwerte direkt und eignen sich am besten für Vergleiche. Wenn Sie nicht sicher über die Vergleichseinstellungen sind, verwenden Sie einen dieser beiden Werte. Da hier jedoch ein Vergleich auf Byteebene durchgeführt wird, erfolgt die Sortierung nicht anhand einer linguistischen Sortierreihenfolge (analog zu einem englischen Wörterbuch), sondern anhand einer binären Rangfolge. Die Ergebnisse erscheinen Benutzern möglicherweise in den meisten Kontexten seltsam.  
   
@@ -244,8 +244,8 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
 |----------|--------------|-----------------------------------------------------|  
 |Interne Bezeichner, die die Groß- und Kleinschreibung beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung beachten.<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung beachten.|Ein nicht linguistischer Bezeichner mit exakt übereinstimmenden Bytes.|<xref:System.StringComparison.Ordinal>|  
 |Interne Bezeichner, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Dateipfade.<br /><br /> Registrierungsschlüssel und -werte.<br /><br /> Umgebungsvariablen.<br /><br /> Ressourcenbezeichner (z. B. Handlenamen).<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung nicht beachten.|Ein nicht linguistischer Bezeichner, bei dem die Groß- und Kleinschreibung keine Rolle spielt; insbesondere für Daten, die in den meisten Systemdiensten von Windows gespeichert werden.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> - oder -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> Oder<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> Oder<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Zurück nach oben](#top)  
   
@@ -356,7 +356,7 @@ Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sow
 
 - Bei Zeichenfolgenverkettungen, bei denen [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation)- oder [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md )-Verkettungsoperatoren verwendet werden oder die Methode <xref:System.String.Concat%2A?displayProperty=nameWithType> direkt aufgerufen wird.
 
-- Bei der Methode <xref:System.String.Format%2A?displayProperty=nameWithType>.
+- Die <xref:System.String.Format%2A?displayProperty=nameWithType> -Methode.
 
 - Bei den `ToString`-Methoden der numerischen Typen sowie der Datums- und Uhrzeittypen.
 

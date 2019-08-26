@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946717"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 <a name="top"></a> Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.  
@@ -91,7 +91,7 @@ ms.locfileid: "65469719"
 - Ändern Sie den Hauptthread, indem den Clientthread auf STA oder MTA festlegen. Wenn z. B. Ihr C#-Client viele STA-COM-Komponenten aufruft, können Sie apartmentübergreifendes Marshalling vermeiden, indem Sie den Hauptthread auf STA festlegen.  
   
     > [!NOTE]
-    >  Sobald der Thread eines C#-Clients auf STA festgelegt ist, erfordern Aufrufe von MTA-COM-Komponenten apartmentübergreifendes Marshalling.  
+    > Sobald der Thread eines C#-Clients auf STA festgelegt ist, erfordern Aufrufe von MTA-COM-Komponenten apartmentübergreifendes Marshalling.  
   
  Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [Managed and Unmanaged Threading (Verwaltetes und nicht verwaltetes Threading)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469719"
 - Ein verwalteter Client ruft einen Verweis auf ein verwaltetes Objekt von einem COM-Objekt ab, das diesen Verweis von einem Remotehost abruft. Der Remotingmechanismus ist DCOM.  
   
     > [!NOTE]
-    >  Die exportierte Typbibliothek des verwalteten Servers muss registriert sein.  
+    > Die exportierte Typbibliothek des verwalteten Servers muss registriert sein.  
   
  Die Anzahl der Prozessgrenzen zwischen Aufrufer und Aufgerufenem ist irrelevant. Dieselbe direkte Referenzierung tritt bei prozessinternen und -externen Aufrufen auf.  
   
@@ -138,7 +138,7 @@ Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)|Beschreibt die Regeln, die der Interop-Marshallingdienst für das Marshalling von Daten verwendet.|  
 |[Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)|Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.|  

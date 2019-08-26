@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924498"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
 Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
@@ -56,7 +56,7 @@ protected override void Finalize()
  Dies bedeutet, dass die `Finalize`-Methode für alle Instanzen in der Vererbungskette rekursiv aufgerufen wird, von der am meisten bis zu der am wenigsten abgeleiteten.  
   
 > [!NOTE]
->  Leere Finalizer sollten nicht verwendet werden. Wenn eine Klasse einen Finalizer enthält, wird ein Eintrag in der `Finalize`-Warteschlange erstellt. Wenn der Finalizer aufgerufen wird, wird der Garbage Collector aufgerufen, um die Warteschlange zu verarbeiten. Ein leerer Finalizer führt nur zu einem unnötigen Leistungsverlust.  
+> Leere Finalizer sollten nicht verwendet werden. Wenn eine Klasse einen Finalizer enthält, wird ein Eintrag in der `Finalize`-Warteschlange erstellt. Wenn der Finalizer aufgerufen wird, wird der Garbage Collector aufgerufen, um die Warteschlange zu verarbeiten. Ein leerer Finalizer führt nur zu einem unnötigen Leistungsverlust.  
   
  Der Programmierer hat keine Kontrolle darüber, wann der Finalizer aufgerufen wird, da dies durch den Garbage Collector bestimmt wird. Der Garbage Collector sucht nach Objekten, die von der Anwendung nicht mehr verwendet werden. Wenn er ein Objekt als abschließbar angesehen wird, ruft er den Finalizer auf (sofern vorhanden) und fordert den Arbeitsspeicher, der zum Speichern des Objekts verwendet wurde, zurück. 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [Implementieren einer Dispose-Methode](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)  
+- [Using-Anweisung](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Finalizer. In `Main` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Finalizer der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  
@@ -90,6 +90,6 @@ Weitere Informationen finden Sie im Abschnitt [Destruktoren](~/_csharplang/spec/
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IDisposable>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Konstruktoren](./constructors.md)
 - [Garbage Collection](../../../standard/garbage-collection/index.md)

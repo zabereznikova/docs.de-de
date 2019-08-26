@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963950"
 ---
 # <a name="managing-connections"></a>Verwalten von Verbindungen
 Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  
@@ -36,7 +36,7 @@ Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwen
  Die Anzahl der Verbindungen zwischen einem Client und einem Server kann sich drastisch auf den Anwendungsdurchsatz auswirken. Standardmäßig verwendet eine Anwendung, die die <xref:System.Net.HttpWebRequest>-Klasse verwendet, maximal zwei persistente Verbindungen. Sie können die maximale Anzahl von Verbindungen jedoch je nach Anwendung festlegen.  
   
 > [!NOTE]
->  Die HTTP/1.1-Spezifikation beschränkt die Anzahl der Verbindungen von einer Anwendung auf zwei Verbindungen pro Server.  
+> Die HTTP/1.1-Spezifikation beschränkt die Anzahl der Verbindungen von einer Anwendung auf zwei Verbindungen pro Server.  
   
  Die optimale Anzahl von Verbindungen hängt von den tatsächlichen Bedingungen ab, unter denen die Anwendung ausgeführt wird. Das Erhöhen der Anzahl der verfügbaren Verbindungen für die Anwendung wirkt sich möglicherweise nicht auf die Leistung der Anwendung aus. Um zu ermitteln, wie sich mehr Verbindungen auswirken, führen Sie Leistungstests durch, wobei Sie die Anzahl von Verbindungen variieren. Sie können die Anzahl der Verbindungen ändern, die von einer Anwendung verwendet werden, indem Sie, wie im folgenden Codebeispiel gezeigt, die statische <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>-Eigenschaft für die **ServicePointManager**-Klasse bei der Anwendungsinitialisierung ändern.  
   

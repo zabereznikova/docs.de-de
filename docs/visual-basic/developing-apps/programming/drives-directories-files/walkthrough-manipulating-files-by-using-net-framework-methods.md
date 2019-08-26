@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b9a899a579a1a38cee3be7b742fd9f0dfa197fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966045"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilfe der Klasse <xref:System.IO.StreamReader> öffnet und liest, wie man überprüft, ob auf eine Datei zugegriffen wird, wie man innerhalb einer Datei, die mit einer Instanz der Klasse <xref:System.IO.StreamReader> gelesen wird, nach einer Zeichenfolge sucht und wie man mithilfe der Klasse <xref:System.IO.StreamWriter> in eine Datei schreibt.  
@@ -66,7 +66,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilf
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]  
   
 > [!NOTE]
->  Die Integrated Development Environment (Integrierte Entwicklungsumgebung, IDE) von Visual Studio kehrt zum Code-Editor zurück und platziert die Einfügemarke an der Stelle im Ereignishandler, an der Sie Code hinzufügen sollen.  
+> Die Integrated Development Environment (Integrierte Entwicklungsumgebung, IDE) von Visual Studio kehrt zum Code-Editor zurück und platziert die Einfügemarke an der Stelle im Ereignishandler, an der Sie Code hinzufügen sollen.  
   
 1. Verwenden Sie zum Schreiben in die Datei die Methode <xref:System.IO.StreamWriter.Write%2A> der Klasse <xref:System.IO.StreamWriter>. Fügen Sie direkt hinter `Dim fw As StreamWriter` folgenden Code ein. Sie müssen sich keine Gedanken darüber machen, dass eine Ausnahme ausgelöst wird, wenn die Datei nicht gefunden wird, da diese erstellt wird, wenn sie noch nicht vorhanden ist.  
   

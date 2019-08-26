@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615326"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910491"
 ---
 # <a name="xslt-security-considerations"></a>XSLT-Sicherheitsaspekte
 Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität. Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können. Um die XSLT-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  
@@ -39,7 +39,7 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
 - Beim Ausführen der Transformation wird die <xref:System.Xml.XmlResolver>-Funktion mithilfe des `document()` aufgelöst.  
   
     > [!NOTE]
-    >  Die `document()`-Funktion ist für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse in der Standardeinstellung deaktiviert. Diese Funktion kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben wird.  
+    > Die `document()`-Funktion ist für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse in der Standardeinstellung deaktiviert. Diese Funktion kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben wird.  
   
  Die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode und die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode enthalten Überladungen, die einen <xref:System.Xml.XmlResolver> als eines ihrer Argumente akzeptieren. Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, wird ein Standard-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen verwendet.  
   

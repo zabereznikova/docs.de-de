@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859592"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606145"
 ---
 # <a name="abstract-c-reference"></a>abstract (C#-Referenz)
 Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implementierung fehlt oder dass diese unvollständig ist. Der abstract-Modifizierer kann für Klassen, Methoden, Eigenschaften, Indexer und Ereignisse verwendet werden. Verwenden Sie den `abstract`-Modifizierer in einer Klassendeklaration, um anzugeben, dass die Klasse nur die Basisklasse für andere Klassen sein und nicht selbst instanziiert werden soll. Als abstrakt markierte Member müssen von Klassen, die von nicht abstrakten Klassen abgeleitet wurden, implementiert werden.
@@ -29,7 +29,7 @@ Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implemen
   
 - Eine abstrakte Klasse enthält möglicherweise abstrakte Methode und Accessoren.  
   
-- Eine abstrakte Klasse kann nicht mit dem [sealed](../../../csharp/language-reference/keywords/sealed.md)-Modifizierer geändert werden, da sich die beiden Modifizierer gegenseitig ausschließen. Der `sealed`-Modifizierer verhindert das Vererben einer Klasse, und der `abstract`-Modifizierer erfordert das Vererben einer Klasse.  
+- Eine abstrakte Klasse kann nicht mit dem [sealed](./sealed.md)-Modifizierer geändert werden, da sich die beiden Modifizierer gegenseitig ausschließen. Der `sealed`-Modifizierer verhindert das Vererben einer Klasse, und der `abstract`-Modifizierer erfordert das Vererben einer Klasse.  
   
 - Eine nicht abstrakte Klasse, die von einer abstrakten Klasse abgeleitet wurde, muss Implementierungen aller geerbten abstrakten Methoden und Accessoren enthalten.  
   
@@ -47,17 +47,17 @@ Der `abstract`-Modifizierer gibt an, dass dem modifizierten Objekt eine Implemen
     public abstract void MyMethod();  
     ```  
   
-     Die Implementierung wird von der Methode [override](../../../csharp/language-reference/keywords/override.md) zur Verfügung gestellt, die ein Member einer nicht abstrakten Klasse ist.  
+     Die Implementierung wird von der Methode [override](./override.md) zur Verfügung gestellt, die ein Member einer nicht abstrakten Klasse ist.  
   
-- Es ist unzulässig, die Modifizierer [static](../../../csharp/language-reference/keywords/static.md) oder [virtual](../../../csharp/language-reference/keywords/virtual.md) in einer abstrakten Methodendeklaration zu verwenden.  
+- Es ist unzulässig, die Modifizierer [static](./static.md) oder [virtual](./virtual.md) in einer abstrakten Methodendeklaration zu verwenden.  
   
  Abstrakte Eigenschaften verhalten sich wie abstrakte Methoden – sie unterscheiden sich lediglich in der Deklarations- und Aufrufsyntax.  
   
 - Es ist ein unzulässig, den `abstract`-Modifizierer für eine statische Eigenschaft zu verwenden.  
   
-- Eine abstrakte vererbte Eigenschaft kann in einer abgeleiteten Klasse mithilfe der Eigenschaftendeklaration, die den Modifizierer [override](../../../csharp/language-reference/keywords/override.md) verwendet, außer Kraft gesetzt werden.  
+- Eine abstrakte vererbte Eigenschaft kann in einer abgeleiteten Klasse mithilfe der Eigenschaftendeklaration, die den Modifizierer [override](./override.md) verwendet, außer Kraft gesetzt werden.  
   
- Weitere Informationen über abstrakte Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Weitere Informationen über abstrakte Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Eine abstrakte Klasse muss eine Implementierung für alle Schnittstellenmember bereitstellen.  
   
@@ -83,9 +83,9 @@ Sie erhalten eine Fehlermeldung, dass der Compiler keine Instanz der abstrakten 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [Modifizierer](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [C#-Schlüsselwörter](./index.md)

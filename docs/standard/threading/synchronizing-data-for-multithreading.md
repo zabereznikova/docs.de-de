@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c83e7abbd9f9425fab70325f7a77abb0f672bd15
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968415"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -51,17 +51,17 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
  Visual Basic und C# unterstützen das Markieren von Codeblöcken mit einem bestimmten Sprachschlüsselwort, der `lock`-Anweisung in C# oder der `SyncLock`-Anweisung in Visual Basic. Wenn der Code von einem Thread ausgeführt wird, wird versucht, die Sperre abzurufen. Wenn die Sperre bereits von einem anderen Thread abgerufen wurde, wird der Thread blockiert, bis die Sperre verfügbar ist. Wenn der Thread den synchronisierten Codeblock beendet, wird die Sperre aufgehoben, unabhängig davon, wie der Thread den Block beendet.  
   
 > [!NOTE]
->  Die `lock`- und `SyncLock`-Anweisung werden mit <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>implementiert, sodass andere Methoden von <xref:System.Threading.Monitor> in Verbindung mit ihnen im synchronisierten Bereich verwendet werden können.  
+> Die `lock`- und `SyncLock`-Anweisung werden mit <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>implementiert, sodass andere Methoden von <xref:System.Threading.Monitor> in Verbindung mit ihnen im synchronisierten Bereich verwendet werden können.  
   
  Sie können eine Methode auch mit einem <xref:System.Runtime.CompilerServices.MethodImplAttribute>-Element mit dem Wert <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> versehen. Dies hat die gleiche Auswirkung wie die Verwendung von <xref:System.Threading.Monitor> oder von einem der Compilerschlüsselwörter zum Sperren des gesamten Texts der Methode.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> kann verwendet werden, um einen Thread aus blockierten Vorgängen zu unterbrechen, wie z.B. das Warten auf Zugriff auf einen synchronisierten Codebereich. **Thread.Interrupt** dient außerdem zum Unterbrechen von Threads von Vorgängen wie <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> aus.  
   
 > [!IMPORTANT]
->  Sperren Sie nicht den Typ – d.h. `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic oder `MyType::typeid` in C++ – um die `static`-Methoden zu schützen (`Shared`-Methoden in Visual Basic). Verwenden Sie stattdessen ein privates statisches Objekt. Verwenden Sie auch nicht `this` in C# (`Me` in Visual Basic), um Instanzmethoden zu sperren. Verwenden Sie stattdessen ein privates Objekt. Eine Klasse oder Instanz kann von einem anderen Code als Ihrem eigenen gesperrt werden, was potenziell zu Deadlocks oder Leistungsproblemen führt.  
+> Sperren Sie nicht den Typ – d.h. `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic oder `MyType::typeid` in C++ – um die `static`-Methoden zu schützen (`Shared`-Methoden in Visual Basic). Verwenden Sie stattdessen ein privates statisches Objekt. Verwenden Sie auch nicht `this` in C# (`Me` in Visual Basic), um Instanzmethoden zu sperren. Verwenden Sie stattdessen ein privates Objekt. Eine Klasse oder Instanz kann von einem anderen Code als Ihrem eigenen gesperrt werden, was potenziell zu Deadlocks oder Leistungsproblemen führt.  
   
 ### <a name="compiler-support"></a>Compilerunterstützung  
- Visual Basic und C# unterstützen ein Sprachschlüsselwort, das <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> zum Sperren des Objekts verwendet. Visual Basic unterstützt die [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)-Anweisung und C# unterstützt die [lock](~/docs/csharp/language-reference/keywords/lock-statement.md)-Anweisung.  
+ Visual Basic und C# unterstützen ein Sprachschlüsselwort, das <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> zum Sperren des Objekts verwendet. Visual Basic unterstützt die [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)-Anweisung und C# unterstützt die [lock](../../csharp/language-reference/keywords/lock-statement.md)-Anweisung.  
   
  Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally**-Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally**-Block aus. Wenn eine Ausnahme innerhalb eines **lock**- oder **SyncLock**-Blocks ausgelöst wird, wird der **finally**-Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  
   
@@ -74,5 +74,5 @@ Ausschließlich in .NET Framework- und Xamarin-Anwendungen können Sie das <xref
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
 - [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
-- [SyncLock-Anweisung](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
-- [lock-Anweisung](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [SyncLock-Anweisung](../../visual-basic/language-reference/statements/synclock-statement.md)
+- [lock-Anweisung](../../csharp/language-reference/keywords/lock-statement.md)

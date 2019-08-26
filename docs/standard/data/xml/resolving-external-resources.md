@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664487"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918207"
 ---
 # <a name="resolving-external-resources"></a>Auflösen von externen Ressourcen
 Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument**-Klasse nach Ressourcen, die sich nicht inline in den XML-Daten befinden, z.B. externe Document Type Definitions (DTDs – Dokumenttypdefinitionen), Entitäten und Schemata. Diese Elemente können in einem Netzwerk oder auf einem lokalen Laufwerk gesucht werden und sind durch einen URI (Uniform Resource Identifier) gekennzeichnet. Somit kann **XmlDocument** im Dokument vorhandene **EntityReference**-Knoten auflösen und das Dokument entsprechend der externen DTD oder dem externen Schema validieren.  
@@ -48,7 +48,7 @@ Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument*
  Ds Festlegen des XmlResolver auf die richtigen Anmeldeinformationen ermöglicht den Zugriff auf externe Ressourcen.  
   
 > [!NOTE]
->  Es gibt keine Möglichkeit, die **XmlResolver**-Eigenschaft abzurufen. Dadurch wird verhindert, dass ein Benutzer einen **XmlResolver** wiederverwenden kann, für den Anmeldeinformationen festgelegt wurden. Außerdem gilt Folgendes: Wenn ein **XmlTextReader** oder ein validierender <xref:System.Xml.XmlReader> zum Laden des **XmlDocument** verwendet wird und für **XmlDocument** ein Resolver festgelegt wurde, werden die Resolver dieser Reader nicht nach der **Load**-Phase durch das **XmlDocument** zwischengespeichert, da dies ebenfalls ein Sicherheitsrisiko darstellt.  
+> Es gibt keine Möglichkeit, die **XmlResolver**-Eigenschaft abzurufen. Dadurch wird verhindert, dass ein Benutzer einen **XmlResolver** wiederverwenden kann, für den Anmeldeinformationen festgelegt wurden. Außerdem gilt Folgendes: Wenn ein **XmlTextReader** oder ein validierender <xref:System.Xml.XmlReader> zum Laden des **XmlDocument** verwendet wird und für **XmlDocument** ein Resolver festgelegt wurde, werden die Resolver dieser Reader nicht nach der **Load**-Phase durch das **XmlDocument** zwischengespeichert, da dies ebenfalls ein Sicherheitsrisiko darstellt.  
   
  Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlResolver> Referenzseite.  
   
