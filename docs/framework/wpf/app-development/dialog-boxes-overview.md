@@ -10,15 +10,15 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 8008feb91a72353a74a647cf79bcecbf7023f962
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: bf4617d838ba7f02523d7bbdbb57932c033f4a9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958678"
 ---
-# <a name="dialog-boxes-overview"></a>Übersicht über Dialogfelder
-Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die hauptsächlichen Daten über den die Anwendung ausgeführt wird, und macht die Funktionalität zum Verarbeiten dieser Daten über zeigt [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] -Mechanismen wie Menüleisten, Symbolleisten und Statusleisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
+# <a name="dialog-boxes-overview"></a>Übersicht über Dialog Felder
+Eigenständige Anwendungen verfügen in der Regel über ein Hauptfenster, in dem sowohl die Hauptdaten angezeigt werden, über die die Anwendung ausgeführt wird [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , als auch die Funktionalität zur Verarbeitung dieser Daten über Mechanismen wie Menüleisten, Symbolleisten und Status leisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
   
 - Spezifische Informationen für Benutzer anzeigen.  
   
@@ -26,26 +26,26 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
   
 - Informationen sowohl anzeigen als auch erfassen.  
   
- Diese Fenstertypen werden als bezeichnet *Dialogfelder*, und es gibt zwei Arten: modale und nicht modale.  
+ Diese Windows-Typen werden als *Dialogfelder*bezeichnet, und es gibt zwei Typen: modale und nicht modale Typen.  
   
- Ein *modale* Dialogfeld wird von einer Funktion angezeigt, wenn die Funktion zusätzliche Daten von einem Benutzer, um den Vorgang fortzusetzen. Da die Funktion beim Erfassen der Daten vom modalen Dialogfeld abhängig ist, verhindert das modale Dialogfeld auch, dass der Benutzer andere Fenster in der Anwendung aktiviert, während das Dialogfeld geöffnet bleibt. In den meisten Fällen kann ein modales Dialogfeld einen Benutzer aus, um zu signalisieren, wenn sie mit das modale Dialogfeld abgeschlossen haben, drücken Sie eine eine **OK** oder **Abbrechen** Schaltfläche. Drücken Sie die **OK** Schaltfläche gibt an, dass ein Benutzer Daten eingegeben hat und möchte, die Funktion zum Fortsetzen der Verarbeitung dieser Daten dass. Drücken Sie die **Abbrechen** Schaltfläche gibt an, dass ein Benutzer möchte auf die Funktion die Ausführung komplett abbricht. Die häufigsten Beispiele für modale Dialogfelder sind das Öffnen, Speichern und Drucken von Daten.  
+ Ein *modales* Dialogfeld wird von einer Funktion angezeigt, wenn die Funktion zusätzliche Daten von einem Benutzer benötigt, um den Vorgang fortzusetzen. Da die Funktion beim Erfassen der Daten vom modalen Dialogfeld abhängig ist, verhindert das modale Dialogfeld auch, dass der Benutzer andere Fenster in der Anwendung aktiviert, während das Dialogfeld geöffnet bleibt. In den meisten Fällen ermöglicht ein modales Dialogfeld einem Benutzer, zu signalisieren, wann er das modale Dialogfeld durch Drücken der Schaltfläche **OK** oder **Abbrechen** beendet hat. Wenn Sie auf die Schaltfläche **OK** klicken, wird angegeben, dass ein Benutzerdaten eingegeben hat und die Funktion die Verarbeitung mit diesen Daten fortsetzen soll. Durch Drücken der Schaltfläche **Abbrechen** wird angegeben, dass ein Benutzer die Ausführung der Funktion beenden möchte. Die häufigsten Beispiele für modale Dialogfelder sind das Öffnen, Speichern und Drucken von Daten.  
   
- Ein *nicht modale* im Dialogfeld auf der anderen Seite verhindert nicht, dass einen Benutzer über andere Fenster aktiviert wird, während er geöffnet ist. Wenn ein Benutzer z. B. Vorkommen eines bestimmten Worts in einem Dokument finden möchte, wird in einem Hauptfenster oft ein Dialogfeld geöffnet, um den Benutzer zu fragen, nach welchem Wort er sucht. Da die Suche nach einem Wort einen Benutzer aber nicht an der Bearbeitung des Dokuments hindert, muss das Dialogfeld nicht unbedingt modal sein. Ein nicht modales Dialogfeld enthält mindestens ein **schließen** Schaltfläche, um das Dialogfeld zu schließen, und möglicherweise zusätzliche Schaltflächen, um bestimmte Funktionen auszuführen, z. B. eine **Weitersuchen** Schaltfläche, um die nächste Wort, das entspricht die Suchkriterien einer Wortsuche.  
+ Ein nicht modalem Dialogfeld verhindert hingegen nicht, dass ein Benutzer andere Fenster aktiviert, während er geöffnet ist. Wenn ein Benutzer z. B. Vorkommen eines bestimmten Worts in einem Dokument finden möchte, wird in einem Hauptfenster oft ein Dialogfeld geöffnet, um den Benutzer zu fragen, nach welchem Wort er sucht. Da die Suche nach einem Wort einen Benutzer aber nicht an der Bearbeitung des Dokuments hindert, muss das Dialogfeld nicht unbedingt modal sein. Bei einem nicht modalem Dialogfeld wird mindestens eine Schaltfläche zum **Schließen** des Dialog Felds bereitgestellt, und es können zusätzliche Schaltflächen zum Ausführen bestimmter Funktionen bereitgestellt werden, z. b. eine Schaltfläche " **weiter suchen** ", um das nächste Wort zu suchen, das den Suchkriterien einer Wort Suche entspricht.  
   
- Windows Presentation Foundation (WPF) können Sie mehrere Typen von Dialogfeldern, einschließlich Meldungsfelder, Standarddialogfelder und benutzerdefinierte Dialogfelder erstellen. In diesem Thema wird erläutert, und die [Dialogfeldbeispiel](https://go.microsoft.com/fwlink/?LinkID=159984) stellt entsprechende Beispiele bereit.  
+ Mit Windows Presentation Foundation (WPF) können Sie verschiedene Arten von Dialogfeldern erstellen, einschließlich Meldungs Feldern, allgemeiner Dialogfelder und benutzerdefinierte Dialogfelder. In diesem Thema werden die einzelnen Themen erläutert, und im [Dialog Feld Beispiel](https://go.microsoft.com/fwlink/?LinkID=159984) finden Sie entsprechende Beispiele.  
 
 <a name="Message_Boxes"></a>   
-## <a name="message-boxes"></a>Meldungsfelder  
- Ein *Meldungsfeld* ist ein Dialogfeld mit dem Textinformationen angezeigt und können Benutzer mithilfe von Schaltflächen Entscheidungen treffen werden kann. In der folgenden Abbildung ist ein Meldungsfeld dargestellt, in dem Textinformationen angezeigt werden, eine Frage gestellt wird und der Benutzer mithilfe von drei Schaltflächen die Frage beantworten kann.  
+## <a name="message-boxes"></a>Meldungs Felder  
+ Ein Meldungs *Feld* ist ein Dialogfeld, das verwendet werden kann, um Textinformationen anzuzeigen und Benutzern das Treffen von Entscheidungen mit Schaltflächen zu ermöglichen. In der folgenden Abbildung ist ein Meldungsfeld dargestellt, in dem Textinformationen angezeigt werden, eine Frage gestellt wird und der Benutzer mithilfe von drei Schaltflächen die Frage beantworten kann.  
   
- ![Schließt ein Dialogfeld gefragt, ob die Änderungen auf das Dokument vor der Anwendung gespeichert werden soll.](./media/dialog-boxes-overview/word-processor-dialog.png)  
+ ![Ein Textverarbeitungs Dialogfeld, in dem Sie gefragt werden, ob Sie die Änderungen am Dokument speichern möchten, bevor die Anwendung geschlossen wird.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
- Um ein Meldungsfeld zu erstellen, verwenden Sie die <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox> können Sie Text in Meldungsfeldern, Titel, Symbol und Schaltflächen, die mithilfe von Code wie folgt zu konfigurieren.  
+ Um ein Meldungs Feld zu erstellen, verwenden <xref:System.Windows.MessageBox> Sie die-Klasse. <xref:System.Windows.MessageBox>mithilfe von Code wie dem folgenden können Sie das Meldungs Feld Text, den Titel, das Symbol und die Schaltflächen konfigurieren.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Um ein Meldungsfeld anzuzeigen, rufen Sie die `static` <xref:System.Windows.MessageBox.Show%2A> -Methode, wie im folgenden Code gezeigt.  
+ Um ein Meldungs Feld anzuzeigen, wird die `static` <xref:System.Windows.MessageBox.Show%2A> -Methode aufgerufen, wie im folgenden Code gezeigt.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -55,98 +55,98 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Weitere Informationen zur Verwendung von Meldungsfeldern finden Sie unter <xref:System.Windows.MessageBox>, [MessageBox-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160023), und [Dialogfeldbeispiel](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Weitere Informationen zum Verwenden von Meldungs Feldern finden <xref:System.Windows.MessageBox>Sie unter Beispiel für [MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023)und [Dialog Feld](https://go.microsoft.com/fwlink/?LinkID=159984).  
   
- Obwohl <xref:System.Windows.MessageBox> kann eine einfaches Dialogfeld benutzererfahrung mit Dialogfeldern, bietet den Vorteil bieten <xref:System.Windows.MessageBox> ist, ist die einzige Art von Fenster, das von Anwendungen angezeigt werden kann, die in einer teilweise vertrauenswürdigen Sicherheits-Sandbox ausgeführt (finden Sie unter [Sicherheit](../security-wpf.md)), wie z. B. [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ Obwohl <xref:System.Windows.MessageBox> möglicherweise eine einfache Dialogfeld-Benutzerumgebung bietet, <xref:System.Windows.MessageBox> ist der Vorteil von, dass der einzige Typ von Fenstern ist, der von Anwendungen angezeigt werden kann, die in einer teilweise vertrauenswürdigen Sicherheits Sandbox (siehe [Sicherheit](../security-wpf.md)) ausgeführt werden, wie z .b.[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]  
   
- In den meisten Dialogfeldern werden komplexere Daten angezeigt und gesammelt als im Ergebnis eines Meldungsfelds. Dazu zählen Text, Auswahlmöglichkeiten (Kontrollkästchen), sich gegenseitig ausschließende Auswahlmöglichkeiten (Optionsfelder) und Auswahlmöglichkeiten in einer Liste (Listenfelder, Kombinationsfelder, Dropdown-Listenfelder). Für diese Windows Presentation Foundation (WPF) bietet mehrere häufig verwendete Dialogfelder und ermöglicht Ihnen, eigene Dialogfelder zu erstellen, obwohl die Verwendung beider auf Anwendungen, die mit voller Vertrauenswürdigkeit ausgeführt wird.  
+ In den meisten Dialogfeldern werden komplexere Daten angezeigt und gesammelt als im Ergebnis eines Meldungsfelds. Dazu zählen Text, Auswahlmöglichkeiten (Kontrollkästchen), sich gegenseitig ausschließende Auswahlmöglichkeiten (Optionsfelder) und Auswahlmöglichkeiten in einer Liste (Listenfelder, Kombinationsfelder, Dropdown-Listenfelder). Windows Presentation Foundation (WPF) bietet mehrere allgemeine Dialogfelder und ermöglicht Ihnen das Erstellen eigener Dialogfelder, obwohl die Verwendung von entweder auf Anwendungen beschränkt ist, die mit voller Vertrauenswürdigkeit ausgeführt werden.  
   
 <a name="Common_Dialogs"></a>   
-## <a name="common-dialog-boxes"></a>Häufig verwendete Dialogfelder  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementiert eine Reihe von wiederverwendbaren Dialogfeldern, die für alle Anwendungen gleich sind. Dazu zählen Dialogfelder zum Öffnen und Speichern von Dateien und zum Drucken. Da diese Dialogfelder durch das Betriebssystem implementiert werden, können sie von allen Anwendungen, die unter dem Betriebssystem ausgeführt werden, genutzt werden. Dies trägt zu einer konsistenten Benutzererfahrung bei: Wenn Benutzer mit der Verwendung eines durch das Betriebssystem bereitgestellten Dialogfelds in einer Anwendung vertraut sind, müssen Sie nicht lernen, wie sie dieses Dialogfeld in anderen Anwendungen verwenden. Da diese Dialogfelder allen Anwendungen zur Verfügung stehen, und sie bieten eine konsistente benutzererfahrung zu bieten, werden sie als bezeichnet *Standarddialogfelder*.  
+## <a name="common-dialog-boxes"></a>Allgemeine Dialogfelder  
+ Windows implementiert eine Reihe von wiederverwendbaren Dialogfeldern, die allen Anwendungen gemeinsam sind, einschließlich Dialogfeldern zum Öffnen von Dateien, Speichern von Dateien und drucken. Da diese Dialogfelder durch das Betriebssystem implementiert werden, können sie von allen Anwendungen, die unter dem Betriebssystem ausgeführt werden, genutzt werden. Dies trägt zu einer konsistenten Benutzererfahrung bei: Wenn Benutzer mit der Verwendung eines durch das Betriebssystem bereitgestellten Dialogfelds in einer Anwendung vertraut sind, müssen Sie nicht lernen, wie sie dieses Dialogfeld in anderen Anwendungen verwenden. Da diese Dialogfelder für alle Anwendungen verfügbar sind und Sie bei der Bereitstellung eines konsistenten Benutzer Erlebnisses helfen, werden Sie als *Allgemeine Dialogfelder*bezeichnet.  
   
- Windows Presentation Foundation (WPF) kapselt die geöffnete Datei, speichern Sie die Datei, und Drucken der häufig verwendete Dialogfelder und macht sie als verwaltete Klassen für die Verwendung in eigenständigen Anwendungen verwenden. Dieses Thema enthält eine kurze Übersicht über die einzelnen Dialogfelder.  
+ Windows Presentation Foundation (WPF) kapselt die Dialogfelder "Datei öffnen", "Datei speichern" und "Drucken" ein und macht Sie als verwaltete Klassen verfügbar, die Sie in eigenständigen Anwendungen verwenden können. Dieses Thema enthält eine kurze Übersicht über die einzelnen Dialogfelder.  
   
 <a name="Open_File_Dialog"></a>   
-### <a name="open-file-dialog"></a>Dialogfeld "Datei öffnen"  
+### <a name="open-file-dialog"></a>Dialogfeld Öffnen  
  Das Dialogfeld „Datei öffnen“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Öffnen von Dateien verwendet, um den Namen einer zu öffnenden Datei abzurufen.  
   
- ![Ein Dialogfeld geöffnet, das die Position zum Abrufen der Datei.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
+ ![Ein Dialogfeld öffnen, in dem der Speicherort zum Abrufen der Datei angezeigt wird.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- Das Standarddialogfeld Datei öffnen, wird als implementiert die <xref:Microsoft.Win32.OpenFileDialog> Klasse und befindet sich in der <xref:Microsoft.Win32> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
+ Das allgemeine Dialogfeld Datei öffnen wird als <xref:Microsoft.Win32.OpenFileDialog> -Klasse implementiert und befindet sich <xref:Microsoft.Win32> im-Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- Weitere Informationen zu den im Dialogfeld Datei öffnen, finden Sie unter <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
+ Weitere Informationen zum Dialogfeld Datei öffnen finden <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>Sie unter.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog> dienen zum sicher abrufen, die Namen von Anwendungen, die mit teilweiser Vertrauenswürdigkeit ausgeführt (finden Sie unter [Sicherheit](../security-wpf.md)).  
+> <xref:Microsoft.Win32.OpenFileDialog>kann verwendet werden, um Dateinamen von Anwendungen, die mit teilweiser Vertrauenswürdigkeit ausgeführt werden (siehe [Sicherheit](../security-wpf.md)), sicher abzurufen.  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Datei speichern (Dialogfeld)  
  Das Dialogfeld „Datei speichern“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Speichern von Dateien verwendet, um den Namen einer zu speichernden Datei abzurufen.  
   
- ![Ein Dialogfeld Speichern unter, die den Standort zum Speichern der Datei.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
+ ![Das Dialogfeld Speichern unter zeigt den Speicherort zum Speichern der Datei an.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- Das Standarddialogfeld speichern Datei wird als implementiert die <xref:Microsoft.Win32.SaveFileDialog> Klasse, und befindet sich in der <xref:Microsoft.Win32> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
+ Das Dialogfeld Datei speichern wird als <xref:Microsoft.Win32.SaveFileDialog> -Klasse implementiert und befindet sich <xref:Microsoft.Win32> im-Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
   
- Weitere Informationen zu speichern (Dialogfeld), finden Sie unter <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>.  
+ Weitere Informationen zum Dialogfeld Datei speichern finden <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>Sie unter.  
   
 <a name="Print_Dialog"></a>   
 ### <a name="print-dialog-box"></a>Dialogfeld Drucken
 
 Das Dialogfeld „Drucken“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Drucken verwendet, um den Drucker auszuwählen und zu konfigurieren, auf dem der Benutzer Daten ausgeben möchte.  
   
-![Screenshot, ein Druckdialogfeld zeigt.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
+![Screenshot, der das Dialogfeld "Drucken" anzeigt.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
-Das Standarddialogfeld Drucken wird implementiert, als die <xref:System.Windows.Controls.PrintDialog> Klasse, und befindet sich in der <xref:System.Windows.Controls> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt wird.  
+Das Dialogfeld allgemeiner Druck wird als <xref:System.Windows.Controls.PrintDialog> -Klasse implementiert und befindet sich <xref:System.Windows.Controls> im-Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt wird.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- Klicken Sie im Dialogfeld "Drucken" auf Weitere Informationen finden Sie unter <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>. Ausführliche Informationen über das Drucken in WPF, finden Sie unter [Übersicht über das Drucken](../advanced/printing-overview.md).  
+ Weitere Informationen zum Dialogfeld Drucken finden <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>Sie unter. Ausführliche Erläuterungen zum Drucken in WPF finden Sie unter [Übersicht über das Drucken](../advanced/printing-overview.md).  
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Benutzerdefinierte Dialogfelder
 
-Obwohl Standarddialogfelder hilfreich sind und nach Möglichkeit verwendet werden sollten, unterstützen sie nicht die Anforderungen von domänenspezifischen Dialogfeldern. In diesen Fällen müssen Sie eigene Dialogfelder erstellen. Wie später ersichtlich wird, ist ein Dialogfeld ein Fenster mit besonderen Verhaltensweisen. <xref:System.Windows.Window> implementiert jene Verhaltensweisen und infolgedessen verwenden Sie das <xref:System.Windows.Window> um benutzerdefinierte modale und nicht modale Dialogfelder zu erstellen.  
+Obwohl Standarddialogfelder hilfreich sind und nach Möglichkeit verwendet werden sollten, unterstützen sie nicht die Anforderungen von domänenspezifischen Dialogfeldern. In diesen Fällen müssen Sie eigene Dialogfelder erstellen. Wie später ersichtlich wird, ist ein Dialogfeld ein Fenster mit besonderen Verhaltensweisen. <xref:System.Windows.Window>implementiert diese Verhaltensweisen. Folglich verwenden <xref:System.Windows.Window> Sie, um benutzerdefinierte modale und nicht modale Dialogfelder zu erstellen.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modal-custom-dialog-box"></a>Erstellen einen modalen benutzerdefinierten Dialogfelds
+### <a name="creating-a-modal-custom-dialog-box"></a>Erstellen eines modalen benutzerdefinierten Dialog Felds
 
-In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Window> eine typische modale dialogfeldimplementierung zu erstellen. mit der `Margins` Dialogfeld als Beispiel (finden Sie unter [Dialogfeldbeispiel](https://go.microsoft.com/fwlink/?LinkID=159984)). Die `Margins` Dialogfeld wird in der folgenden Abbildung dargestellt.  
+In diesem Thema wird gezeigt, <xref:System.Windows.Window> wie mithilfe von eine typische modale Dialogfeld Implementierung mithilfe `Margins` des Dialog Felds als Beispiel erstellt wird (siehe Beispiel für ein [Dialogfeld](https://go.microsoft.com/fwlink/?LinkID=159984)). Das `Margins` Dialogfeld wird in der folgenden Abbildung dargestellt.  
   
- ![Ein Dialogfeld Ränder mit Feldern zum linken Rand, Oberer Rand, der rechte Rand und der untere Rand zu definieren.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
+ ![Ein Seitenränder-Dialogfeld mit Feldern zum Definieren des linken und oberen Rands, des rechten Rands und des unteren Rands.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
-#### <a name="configuring-a-modal-dialog-box"></a>Konfigurieren eines modalen Dialogfelds
+#### <a name="configuring-a-modal-dialog-box"></a>Konfigurieren eines modalen Dialog Felds
 
 Die Benutzeroberfläche für ein normales Dialogfeld enthält Folgendes:  
   
 - Die verschiedenen Steuerelemente, die zum Erfassen der gewünschten Daten erforderlich sind.  
   
-- Ein **OK** Schaltfläche, durch die Benutzer klicken, um das Schließen des Dialogfelds, das an die Funktion zurück und setzt die Verarbeitung fort.  
+- Eine Schaltfläche " **OK** ", auf die Benutzer klicken, um das Dialogfeld zu schließen, zur Funktion zurückzukehren und die Verarbeitung fortzusetzen.  
   
-- Ein **Abbrechen** Schaltfläche, die Benutzer klicken, um das Dialogfeld schließen und die Funktion die weitere Verarbeitung zu beenden.  
+- Eine Schaltfläche **Abbrechen** , auf die Benutzer klicken, um das Dialogfeld zu schließen und die Funktion aus der weiteren Verarbeitung zu beenden.  
   
-- Ein **schließen** Schaltfläche in der Titelleiste angezeigt.  
+- Die Schaltfläche **Schließen** in der Titelleiste.  
   
 - Symbol  
   
-- **Minimieren Sie**, **Maximieren**, und **wiederherstellen** Schaltflächen.  
+- Schaltflächen zum **minimieren**, **maximieren**und **Wiederherstellen** .  
   
-- Ein **System** Menü zu minimieren, maximieren, wiederherstellen und das Dialogfeld zu schließen.  
+- Ein **System** Menü zum minimieren, maximieren, wiederherstellen und Schließen des Dialog Felds.  
   
-- Eine Position nach oben und in der Mitte des Fensters, das das Dialogfeld geöffnet.  
+- Eine Position oberhalb und in der Mitte des Fensters, das das Dialogfeld geöffnet hat.  
   
-- Die Fähigkeit, deren Größe geändert werden, wenn möglich, um zu verhindern, dass Sie das Dialogfeld zu klein ist, und klicken Sie auf dem Benutzer eine sinnvolle Standardgröße bereitzustellen. Dies erfordert, dass Sie sowohl die Standard-als auch einen minimalen Abmessungen festlegen.  
+- Die Möglichkeit, nach Möglichkeit die Größe der Größe zu ändern, um zu verhindern, dass das Dialogfeld zu klein ist, und dem Benutzer eine nützliche Standardgröße bereitzustellen. Hierfür müssen Sie sowohl die Standard-als auch die minimal-Dimension festlegen.  
   
-- Die ESC-Taste als Tastenkombination, die bewirkt, dass die **Abbrechen** Schaltfläche gedrückt wird. Diesem Zweck legen die <xref:System.Windows.Controls.Button.IsCancel%2A> Eigenschaft der **Abbrechen** Schaltfläche `true`.  
+- ESC-Taste als Tastenkombination, die bewirkt, dass die Schaltfläche **Abbrechen** gedrückt wird. Dies erreichen Sie, indem Sie <xref:System.Windows.Controls.Button.IsCancel%2A> die-Eigenschaft der Schaltfläche `true` **Abbrechen** auf festlegen.  
   
-- Die EINGABETASTE (oder RÜCKGABE)-Taste als Tastenkombination, die bewirkt, dass die **OK** Schaltfläche gedrückt wird. Sie tun dies durch Festlegen der <xref:System.Windows.Controls.Button.IsDefault%2A> Eigenschaft der **OK** Schaltfläche `true`.  
+- Die EINGABETASTE (oder Rückgabetaste) als Tastenkombination, die bewirkt, dass die Schaltfläche **OK** gedrückt wird. Hierzu legen Sie die <xref:System.Windows.Controls.Button.IsDefault%2A> -Eigenschaft der Schaltfläche `true`OK fest.  
   
 Im folgenden Code wird diese Konfiguration veranschaulicht.  
   
@@ -161,21 +161,21 @@ Die Benutzererfahrung eines Dialogfelds setzt sich auch in der Menüleiste des F
   
 Wenn ein Menüelement eine Funktion ausführt, die ein Dialogfeld anzeigt, das ohne Benutzerinteraktion auskommt, z. B. das Dialogfeld „Info“, werden die Auslassungszeichen nicht benötigt.  
   
-#### <a name="opening-a-modal-dialog-box"></a>Öffnen eines modalen Dialogfelds
+#### <a name="opening-a-modal-dialog-box"></a>Öffnen eines modalen Dialog Felds
 
 Ein Dialogfeld wird üblicherweise als Ergebnis des Vorgangs angezeigt, bei dem ein Benutzer ein Menüelement auswählt, um eine domänenspezifische Funktion auszuführen, z. B. das Festlegen der Ränder eines Dokuments in einem Textverarbeitungsprogramm. Das Anzeigen eines Fensters als Dialogfeld ähnelt dem Anzeigen eines normalen Fensters, benötigt jedoch eine zusätzliche dialogfeldspezifische Konfiguration. Der vollständige Vorgang des Instanziierens, Konfigurierens und Öffnens eines Dialogfelds wird im folgenden Code gezeigt.  
   
 [!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
 [!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
 
-Hier wird im Code Standardinformationen (die aktuellen Ränder), um das Dialogfeld. Außerdem wird die <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> Eigenschaft mit einem Verweis auf das Fenster, das das Dialogfeld angezeigt wird. Im Allgemeinen sollten Sie immer den Besitzer für ein Dialogfeld, Fenster Status Verhalten bereitzustellen, die für alle Dialogfelder gelten festlegen (siehe [Übersicht über WPF-Windows](wpf-windows-overview.md) für Weitere Informationen).
+Hier übergibt der Code Standardinformationen (die aktuellen Ränder) an das Dialogfeld. Außerdem wird die <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> -Eigenschaft mit einem Verweis auf das Fenster, das das Dialogfeld anzeigt, festgelegt. Im Allgemeinen sollten Sie immer den Besitzer für ein Dialogfeld festlegen, um Verhalten im Zusammenhang mit dem Fenster Zustand bereitzustellen, die für alle Dialogfelder gelten (Weitere Informationen finden Sie unter [Übersicht über WPF-Fenster](wpf-windows-overview.md) ).
 
 > [!NOTE]
-> Sie müssen einen Besitzer für die Unterstützung von Benutzer-Benutzeroberfläche (UI)-Automatisierung für Dialogfelder bereitstellen (siehe [UI Automation Overview](../../ui-automation/ui-automation-overview.md)).
+> Sie müssen einen Besitzer angeben, um die Automatisierung der Benutzeroberfläche (UI) für Dialogfelder zu unterstützen (siehe [Übersicht über](../../ui-automation/ui-automation-overview.md)die Benutzeroberflächen Automatisierung).
 
-Nachdem Sie das Dialogfeld konfiguriert ist, wird es modal angezeigt werden, durch den Aufruf der <xref:System.Windows.Window.ShowDialog%2A> Methode.  
+Nachdem das Dialogfeld konfiguriert wurde, wird es modal durch Aufrufen der <xref:System.Windows.Window.ShowDialog%2A> -Methode angezeigt.  
   
-#### <a name="validating-user-provided-data"></a>Überprüfen von vom Benutzer bereitgestellte Daten
+#### <a name="validating-user-provided-data"></a>Überprüfen der vom Benutzer bereitgestellten Daten
 
 Wenn ein Dialogfeld geöffnet wird und der Benutzer die benötigten Daten zur Verfügung stellt, ist ein Dialogfeld aus folgenden Gründen dafür verantwortlich, dass die bereitgestellten Daten gültig sind:  
   
@@ -187,99 +187,99 @@ Wenn ein Dialogfeld geöffnet wird und der Benutzer die benötigten Daten zur Ve
   
 - Unter Leistungsaspekten betrachtet, kann die Datenvalidierung in einer Anwendung mit mehreren Ebenen die Anzahl von Roundtrips zwischen der Client- und der Anwendungsebene vermindern, insbesondere, wenn die Anwendung aus Webdiensten oder serverbasierten Datenbanken besteht.  
 
-Um ein gebundenes Steuerelement in WPF zu überprüfen, müssen Sie eine Validierungsregel definieren und die Bindung zuordnen. Eine Validierungsregel ist eine benutzerdefinierte abgeleitete Klasse <xref:System.Windows.Controls.ValidationRule>. Das folgende Beispiel zeigt eine Validierungsregel `MarginValidationRule`, der überprüft werden, die ein gebundener Wert ist eine <xref:System.Double> und innerhalb eines bestimmten Bereichs ist.  
+Um ein gebundenes Steuerelement in WPF zu validieren, müssen Sie eine Validierungs Regel definieren und der Bindung zuordnen. Eine Validierungs Regel ist eine benutzerdefinierte Klasse, die <xref:System.Windows.Controls.ValidationRule>von abgeleitet wird. Das folgende Beispiel zeigt eine Validierungs Regel `MarginValidationRule`, die überprüft, ob ein gebundener Wert eine <xref:System.Double> ist und innerhalb eines angegebenen Bereichs liegt.  
 
 [!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
 [!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
 
-In diesem Code wird die Validierungslogik einer Validierungsregel durch Überschreiben implementiert die <xref:System.Windows.Controls.ValidationRule.Validate%2A> -Methode, die die Daten überprüft und gibt eine entsprechende <xref:System.Windows.Controls.ValidationResult>.  
+In diesem Code wird die Validierungs Logik einer Validierungs Regel durch Überschreiben der <xref:System.Windows.Controls.ValidationRule.Validate%2A> -Methode implementiert, die die Daten überprüft und ein entsprechendes <xref:System.Windows.Controls.ValidationResult>-Element zurückgibt.  
 
 Um die Validierungsregel dem gebundenen Steuerelement zuzuordnen, wird das folgende Markup verwendet.  
   
 [!code-xaml[Associating a validation rule with a control](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,57-68,111-112)]
 
-Nachdem die Validierungsregel zugeordnet ist, wird dieses durch die WPF automatisch angewendet, wenn Daten in das gebundene Steuerelement eingegeben werden. Wenn ein Steuerelement ungültige Daten enthält, wird WPF einen roten Rahmen um das ungültige Steuerelement angezeigt, wie in der folgenden Abbildung dargestellt.  
+Nachdem die Validierungs Regel zugeordnet wurde, wird Sie von WPF automatisch angewendet, wenn Daten in das gebundene Steuerelement eingegeben werden. Wenn ein Steuerelement ungültige Daten enthält, zeigt WPF einen roten Rahmen um das ungültige Steuerelement an, wie in der folgenden Abbildung dargestellt.  
   
-![Ein Dialogfeld Ränder mit einem roten Rahmen um den Wert Ungültiger Linker Rand.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+![Ein Seitenränder-Dialogfeld mit einem roten Rahmen um den ungültigen Wert für den linken Rand.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
 
-WPF schränkt keinen Benutzer auf das ungültige Steuerelement, bis sie gültige Daten eingegeben haben. Das wird als gutes Verhalten für ein Dialogfeld verstanden: Benutzer sollten in einem Dialogfeld frei durch die Steuerelemente navigieren können, unabhängig davon, ob die Daten gültig sind. Dies bedeutet jedoch ein Benutzer eingeben kann ungültige Daten, und drücken Sie die **OK** Schaltfläche. Aus diesem Grund müssen vom Code auch zum Validieren aller Steuerelemente in einem Dialogfeld Feld, wenn die **OK** gedrückt wird durch Behandeln der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+WPF schränkt einen Benutzer nicht auf das ungültige Steuerelement ein, bis Sie gültige Daten eingegeben haben. Das wird als gutes Verhalten für ein Dialogfeld verstanden: Benutzer sollten in einem Dialogfeld frei durch die Steuerelemente navigieren können, unabhängig davon, ob die Daten gültig sind. Dies bedeutet jedoch, dass ein Benutzer ungültige Daten eingeben und auf die Schaltfläche " **OK** " klicken kann. Aus diesem Grund muss der Code auch alle Steuerelemente in einem Dialogfeld validieren, wenn die Schaltfläche " **OK** " durch <xref:System.Windows.Controls.Primitives.ButtonBase.Click> die Behandlung des-Ereignisses gedrückt wird.  
   
 [!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
 [!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
 
-Dieser Code Listet alle Abhängigkeitsobjekte in einem Fenster und, falls ungültige (wie vom <xref:System.Windows.Controls.Validation.GetHasError%2A>, erhält das ungültige Steuerelement den Fokus erhält, die `IsValid` Methodenrückgabe `false`, und das Fenster wird als ungültig angesehen.  
+Dieser Code listet alle Abhängigkeits Objekte in einem Fenster auf und, wenn eine ungültig ist (wie von <xref:System.Windows.Controls.Validation.GetHasError%2A>zurückgegeben), erhält das ungültige Steuerelement den Fokus, die `IsValid` Methode gibt zurück `false`, und das Fenster wird als ungültig betrachtet.  
   
 Sobald ein Dialogfeld gültig ist, kann es sicher geschlossen und zurückgegeben werden. Als Teil des Rückgabevorgangs muss es ein Ergebnis an die aufrufende Funktion zurückgeben.  
   
-#### <a name="setting-the-modal-dialog-result"></a>Festlegen des modalen Dialogergebnisses
+#### <a name="setting-the-modal-dialog-result"></a>Festlegen des modalen Dialog Ergebnisses
 
-Öffnen eines Dialogfelds mithilfe <xref:System.Windows.Window.ShowDialog%2A> entspricht im Wesentlichen dem Aufrufen einer Methode: der Code, der Öffnen des Dialogfelds mit <xref:System.Windows.Window.ShowDialog%2A> wartet, bis <xref:System.Windows.Window.ShowDialog%2A> zurückgibt. Wenn <xref:System.Windows.Window.ShowDialog%2A> gibt, wird der Code, die diese Anforderungen aufgerufen, zu entscheiden, ob die Verarbeitung fortgesetzt oder abgebrochen wird, basierend auf vom Benutzer gedrückten der **OK** Schaltfläche oder die **Abbrechen** Schaltfläche. Um diese Entscheidung zu erleichtern, muss das Dialogfeld die Auswahl des Benutzers als Zurückgeben einer <xref:System.Boolean> aus zurückgegebene Wert die <xref:System.Windows.Window.ShowDialog%2A> Methode.  
+Das Öffnen eines Dialog Felds <xref:System.Windows.Window.ShowDialog%2A> mit ist im Grunde das Aufrufen einer Methode: der Code, der das Dialog <xref:System.Windows.Window.ShowDialog%2A> Feld mithilfe <xref:System.Windows.Window.ShowDialog%2A> von warte Vorgängen geöffnet hat, wird zurückgegeben. Wenn <xref:System.Windows.Window.ShowDialog%2A> zurückgibt, muss der Code, der ihn aufgerufen hat, entscheiden, ob die Verarbeitung fortgesetzt oder die Verarbeitung beendet werden soll, je nachdem, ob der Benutzer die Schaltfläche **OK** oder die Schaltfläche **Abbrechen** gedrückt hat Um diese Entscheidung zu vereinfachen, muss das Dialogfeld die Auswahl des Benutzers als <xref:System.Boolean> Wert zurückgeben, der von der <xref:System.Windows.Window.ShowDialog%2A> -Methode zurückgegeben wird.  
 
-Wenn die **OK** Schaltfläche geklickt wird, <xref:System.Windows.Window.ShowDialog%2A> sollte zurückgeben `true`. Dies wird erreicht, indem die <xref:System.Windows.Window.DialogResult%2A> Eigenschaft im Dialogfeld im Feld, wenn die **OK** geklickt wird.  
+Wenn auf die Schaltfläche "OK <xref:System.Windows.Window.ShowDialog%2A> " geklickt `true`wird, sollte zurückgeben. Dies wird erreicht, indem die <xref:System.Windows.Window.DialogResult%2A> -Eigenschaft des Dialog Felds festgelegt wird, wenn auf die Schaltfläche **OK** geklickt wird.  
 
 [!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
 [!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
 
-Beachten Sie diese Einstellung die <xref:System.Windows.Window.DialogResult%2A> Eigenschaft bewirkt auch, dass das Fenster automatisch geschlossen, die die explizit nicht aufgerufen werden muss <xref:System.Windows.Window.Close%2A>.  
+Beachten Sie, dass <xref:System.Windows.Window.DialogResult%2A> das Festlegen der-Eigenschaft auch bewirkt, dass das Fenster automatisch geschlossen wird, wodurch die <xref:System.Windows.Window.Close%2A>Notwendigkeit verringert wird, explizit aufzurufen.  
   
-Wenn die **Abbrechen** Schaltfläche geklickt wird, <xref:System.Windows.Window.ShowDialog%2A> sollte zurückgeben `false`, erfordert ebenfalls die Einstellung der <xref:System.Windows.Window.DialogResult%2A> Eigenschaft.  
+Wenn auf die Schaltfläche **Abbrechen** geklickt <xref:System.Windows.Window.ShowDialog%2A> wird, `false`sollte zurückgeben. Dies erfordert <xref:System.Windows.Window.DialogResult%2A> auch das Festlegen der-Eigenschaft.  
   
 [!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
 [!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
 
-Beim Klicken auf einer Schaltfläche des <xref:System.Windows.Controls.Button.IsCancel%2A> -Eigenschaftensatz auf `true` und der Benutzer drückt die **Abbrechen** Schaltfläche oder die ESC-Taste, <xref:System.Windows.Window.DialogResult%2A> wird automatisch festgelegt, um `false`. Das folgende Markup hat dieselbe Wirkung wie der vorhergehende Code, ohne die Notwendigkeit, behandeln die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+Wenn die-Eigenschaft <xref:System.Windows.Controls.Button.IsCancel%2A> einer Schaltfläche auf `true` festgelegt ist und der Benutzer entweder die Schaltfläche **Abbrechen** oder die <xref:System.Windows.Window.DialogResult%2A> ESC-Taste drückt `false`, wird automatisch auf festgelegt. Das folgende Markup hat denselben Effekt wie der vorangehende Code, ohne dass das- <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis behandelt werden muss.  
   
 [!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
 
-Ein Dialogfeld gibt automatisch zurück `false` Wenn ein Benutzer drückt die **schließen** Schaltfläche in der Titelleiste an oder wählt die **schließen** Menüelement der **System** Menü.  
+Ein Dialogfeld wird automatisch `false` zurückgegeben, wenn ein Benutzer die Schaltfläche **Schließen** in der Titelleiste drückt oder das Menü Element **Schließen** im Menü **System** auswählt.  
 
-#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Verarbeiten von Daten, die von einem modalen Dialogfeld zurückgegeben werden.  
+#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Verarbeiten der von einem modalen Dialogfeld zurückgegebenen Daten  
 
-Wenn <xref:System.Windows.Window.DialogResult%2A> festgelegt ist von einem Dialogfeld kann die Funktion, die es geöffnet das Dialogfeldergebnis abrufen, indem Sie überprüfen die <xref:System.Windows.Window.DialogResult%2A> Eigenschaft beim <xref:System.Windows.Window.ShowDialog%2A> zurückgibt.  
+Wenn <xref:System.Windows.Window.DialogResult%2A> von einem Dialogfeld festgelegt wird, kann die Funktion, die es geöffnet hat, das Ergebnis des Dialog Felds <xref:System.Windows.Window.DialogResult%2A> erhalten, <xref:System.Windows.Window.ShowDialog%2A> indem die-Eigenschaft überprüft wird, wenn zurückgibt.  
   
 [!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
 [!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
 
-Wenn das Dialogergebnis `true`, die Funktion verwendet, die als Hinweis zum Abrufen und verarbeiten, die vom Benutzer bereitgestellten Daten.  
+Wenn das Dialog Ergebnis ist `true`, verwendet die Funktion dies als Hinweis, um die vom Benutzer bereitgestellten Daten abzurufen und zu verarbeiten.  
   
 > [!NOTE]
-> Nach dem <xref:System.Windows.Window.ShowDialog%2A> zurückgegeben wurde, wird ein Dialogfeld kann nicht erneut geöffnet werden. Stattdessen müssen Sie eine neue Instanz erstellen.
+> Nachdem <xref:System.Windows.Window.ShowDialog%2A> zurückgegeben wurde, kann ein Dialogfeld nicht erneut geöffnet werden. Stattdessen müssen Sie eine neue Instanz erstellen.
 
-Wenn das Dialogergebnis `false`, sollte die Funktion die Verarbeitung entsprechend beenden.  
+Wenn das Dialog Ergebnis ist `false`, sollte die Funktion die Verarbeitung entsprechend beenden.  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modeless-custom-dialog-box"></a>Erstellen eines nicht modalen benutzerdefinierten Dialogfelds
+### <a name="creating-a-modeless-custom-dialog-box"></a>Erstellen eines nicht modalem benutzerdefinierten Dialog Felds
 
 Ein nicht modales Dialogfeld, z. B. das in der folgenden Abbildung dargestellte Dialogfeld „Suchen“, besitzt dasselbe grundlegende Aussehen wie das modale Dialogfeld.  
 
-![Screenshot mit einem Dialogfeld Suchen.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
+![Screenshot, der das Dialogfeld Suchen anzeigt](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
 
 Allerdings ist das Verhalten etwas anders, wie in den folgenden Abschnitten beschrieben wird.  
   
-#### <a name="opening-a-modeless-dialog-box"></a>Ein nicht modales Dialogfeld Öffnen
+#### <a name="opening-a-modeless-dialog-box"></a>Öffnen eines nicht modalem Dialog Felds
 
-Ein nicht modales Dialogfeld geöffnet wird, durch den Aufruf der <xref:System.Windows.Window.Show%2A> Methode.  
+Ein nicht modalem Dialogfeld wird durch Aufrufen der <xref:System.Windows.Window.Show%2A> -Methode geöffnet.  
 
 [!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
  
 [!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
 [!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
 
-Im Gegensatz zu <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> kehrt sofort zurück. Dementsprechend kann das aufrufende Fenster nicht erkennen, wann das nicht modale Dialogfeld geschlossen wird, und weiß deshalb auch nicht, wann es ein Dialogfeldergebnis überprüfen oder Daten vom Dialogfeld zur weiteren Verarbeitung abrufen soll. Stattdessen muss vom Dialogfeld eine andere Möglichkeit erstellt werden, um Daten an das aufrufende Fenster zur Verarbeitung zurückzugeben.  
+Im <xref:System.Windows.Window.ShowDialog%2A>Gegensatz <xref:System.Windows.Window.Show%2A> zu wird sofort zurückgegeben. Dementsprechend kann das aufrufende Fenster nicht erkennen, wann das nicht modale Dialogfeld geschlossen wird, und weiß deshalb auch nicht, wann es ein Dialogfeldergebnis überprüfen oder Daten vom Dialogfeld zur weiteren Verarbeitung abrufen soll. Stattdessen muss vom Dialogfeld eine andere Möglichkeit erstellt werden, um Daten an das aufrufende Fenster zur Verarbeitung zurückzugeben.  
   
-#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Verarbeiten von Daten, die von einem nicht modalen Dialogfeld zurückgegeben werden.  
+#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Verarbeiten der von einem nicht modalem Dialogfeld zurückgegebenen Daten  
 
-In diesem Beispiel die `FindDialogBox` kann eine oder mehrere Suchergebnisse an das Hauptfenster, je nach dem Suchtext ohne besondere Häufigkeit zurückgeben kann. Wie ein modales Dialogfeld kann auch ein nicht modales Dialogfeld Ergebnisse mithilfe von Eigenschaften zurückgeben. Das Fenster, das Besitzer des Dialogfelds ist, muss jedoch wissen, wann es diese Eigenschaften überprüfen soll. Diese Funktionalität kann z. B. dadurch aktiviert werden, dass das Dialogfeld ein Ereignis implementiert, das jedes Mal ausgelöst wird, wenn Text gefunden wird. `FindDialogBox` implementiert die `TextFoundEvent` zu diesem Zweck der zuerst ein Delegat erforderlich ist.  
+In diesem Beispiel `FindDialogBox` gibt möglicherweise ein oder mehrere Suchergebnisse an das Hauptfenster zurück, abhängig vom gesuchten Text ohne bestimmte Häufigkeit. Wie ein modales Dialogfeld kann auch ein nicht modales Dialogfeld Ergebnisse mithilfe von Eigenschaften zurückgeben. Das Fenster, das Besitzer des Dialogfelds ist, muss jedoch wissen, wann es diese Eigenschaften überprüfen soll. Diese Funktionalität kann z. B. dadurch aktiviert werden, dass das Dialogfeld ein Ereignis implementiert, das jedes Mal ausgelöst wird, wenn Text gefunden wird. `FindDialogBox``TextFoundEvent` implementiert zu diesem Zweck, der zuerst einen Delegaten erfordert.  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
 
-Mithilfe der `TextFoundEventHandler` zu delegieren, `FindDialogBox` implementiert die `TextFoundEvent`.
+Mithilfe des `TextFoundEventHandler` `TextFoundEvent`-Delegaten `FindDialogBox` implementiert.
   
 [!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
 [!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
 
-Folglich `Find` können Auslösen des Ereignisses, wenn ein Suchergebnis gefunden wird.  
+`Find` Folglich kann das-Ereignis durch das Auftreten eines Suchergebnisses erhöhen.  
   
 [!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
 [!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
@@ -289,17 +289,17 @@ Das Besitzerfenster muss anschließend bei diesem Ereignis registriert werden un
 [!code-csharp[Registering and handling the event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,184-195)]
 [!code-vb[Registering and handling the event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,126-132)]  
 
-#### <a name="closing-a-modeless-dialog-box"></a>Ein nicht modales Dialogfeld schließen
+#### <a name="closing-a-modeless-dialog-box"></a>Schließen eines nicht modalem Dialog Felds
 
-Da <xref:System.Windows.Window.DialogResult%2A> muss nicht festgelegt werden kann, ein nicht modales Dialogfeld kann geschlossen werden, mithilfe von System bieten Mechanismen, einschließlich der folgenden:  
+Da <xref:System.Windows.Window.DialogResult%2A> nicht festgelegt werden muss, kann ein nicht modalem Dialogfeld mithilfe von System Bereitstellungs Mechanismen geschlossen werden, einschließlich der folgenden:  
   
-- Klicken auf die **schließen** Schaltfläche in der Titelleiste angezeigt.  
+- Klicken Sie in der Titelleiste auf die Schaltfläche **Schließen** .  
   
 - Drücken von ALT+F4.  
   
-- Auswahl **schließen** aus der **System** Menü.  
+- Wählen Sie im Menü **System** die Option **Schließen** aus.  
   
-Sie können auch Ihren Code Aufrufen <xref:System.Windows.Window.Close%2A> bei der **schließen** geklickt wird.  
+Der Code kann auch aufgerufen <xref:System.Windows.Window.Close%2A> werden, wenn auf die Schaltfläche **Schließen** geklickt wird.  
 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
@@ -307,4 +307,4 @@ Sie können auch Ihren Code Aufrufen <xref:System.Windows.Window.Close%2A> bei d
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Popups](../controls/popup-overview.md)
-- [Beispiel für ein Dialogfeld](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Dialog Feld Beispiel](https://go.microsoft.com/fwlink/?LinkID=159984)
