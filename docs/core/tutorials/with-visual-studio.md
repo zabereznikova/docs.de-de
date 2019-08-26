@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959265"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660445"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit dem .NET Core SDK in Visual Studio 2017
 
@@ -20,7 +20,7 @@ Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Ve
 
 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) mit installierter Arbeitsauslastung für die „plattformübergreifende .NET Core-Entwicklung“. Sie können Ihre Apps entweder mit .NET Core 1.1 oder .NET Core 2.0 entwickeln.
 
-Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../../core/windows-prerequisites.md).
+Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../windows-prerequisites.md).
 
 ## <a name="a-simple-hello-world-application"></a>Eine einfache „Hello World“-Anwendung
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963390"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.  
@@ -31,7 +31,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
  Programmierer bevorzugen meist herkömmliche NFA-Engines, da sie eine umfassendere Kontrolle des Zeichenfolgenabgleichs bieten als DFA- oder POSIX-NFA-Engines. Obwohl sie im ungünstigsten Fall langsam sind, kann durch die Verwendung von Suchmustern, die Mehrdeutigkeiten vermeiden und die Rückverfolgung einschränken, ein lineares oder polynomisches Laufzeitverhalten erreicht werden. Anders ausgedrückt werden bei NFA-Engines zwar Kompromisse bei der Leistung zugunsten von Funktionalität und Flexibilität eingegangen, doch bieten sie meist eine gute bis akzeptable Leistung, wenn ein regulärer Ausdruck gut geschrieben wurde und Fälle vermieden werden, in denen die Rückverfolgung die Leistung exponentiell beeinträchtigt.  
   
 > [!NOTE]
->  Weitere Informationen über die durch eine übermäßige Rückverfolgung verursachten Leistungseinbußen sowie über Methoden, einen regulären Ausdruck zur Umgehung dieses Problems zu erstellen, finden Sie unter [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Weitere Informationen über die durch eine übermäßige Rückverfolgung verursachten Leistungseinbußen sowie über Methoden, einen regulären Ausdruck zur Umgehung dieses Problems zu erstellen, finden Sie unter [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="net-framework-engine-capabilities"></a>Funktionen der .NET Framework-Engine  
  Um die Vorteile eines herkömmlichen NFA-Engine voll ausschöpfen zu können, enthält die .NET Framework-Engine für reguläre Ausdrücke einen vollständigen Satz von Konstrukten, mit deren Hilfe Programmierer die Rückverfolgungs-Engine steuern können. Diese Konstrukte können dazu verwendet werden, Übereinstimmungen schneller zu finden oder spezielle Erweiterungen eines regulären Ausdrucks anderen vorzuziehen.  

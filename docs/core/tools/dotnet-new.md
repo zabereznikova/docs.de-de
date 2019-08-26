@@ -2,12 +2,12 @@
 title: Befehl „dotnet new“
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 05/06/2019
-ms.openlocfilehash: f8bc8cb59ae6e421f4e9bd05925376399939056d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c9e960bab0e28e88b0cc8d431dad3b9f3f00c9c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878312"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660541"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -54,7 +54,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der Befehl `dotnet new` bietet eine praktische Möglichkeit, ein gültiges .NET Core-Projekt zu initialisieren.
 
@@ -774,6 +774,6 @@ Erstellen Sie eine *global.json* im aktuellen Verzeichnis, und legen Sie die SDK
 ## <a name="see-also"></a>Siehe auch
 
 - [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)
-- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](../tutorials/create-custom-template.md)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
 - [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

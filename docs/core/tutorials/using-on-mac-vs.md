@@ -4,12 +4,12 @@ description: Dieses Thema führt Sie durch die Erstellung einer einfachen Konsol
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 7dd8d5e8828c5337a52e9d1ea207aa5ef568556e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870550"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660504"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac
 
@@ -22,7 +22,7 @@ Visual Studio für Mac bietet eine umfassende integrierte Entwicklungsumgebung (
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Weitere Informationen finden Sie unter dem Thema [Voraussetzungen für .NET Core unter Mac](../../core/macos-prerequisites.md).
+Weitere Informationen finden Sie unter dem Thema [Voraussetzungen für .NET Core unter Mac](../macos-prerequisites.md).
 
 Vergewissern Sie sich unter [.NET Core-Unterstützung](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019), dass Sie eine unterstützte Version von .NET Core verwenden.
 
