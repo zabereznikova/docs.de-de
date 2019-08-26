@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: Portieren von WPF-Projekten
           href: core/porting/wpf.md
+    - name: Laden von Abhängigkeiten
+      items:
+        - name: Übersicht
+          href: core/dependency-loading/overview.md
+        - name: Grundlegendes zu AssemblyLoadContext
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: Laden von Details
+          items:
+            - name: Suchen der Standardabhängigkeit
+              href: core/dependency-loading/default-probing.md
+            - name: Laden verwalteter Assemblys
+              href: core/dependency-loading/loading-managed.md
+            - name: Laden von Satellitenassemblys
+              href: core/dependency-loading/loading-resources.md
+            - name: Laden nicht verwalteter Bibliotheken
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: Tutorials
+          items:
+            - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
+              href: standard/assembly/unloadability-howto.md
     - name: Erstellen von .NET Core aus einer Quelle
       href: core/build/index.md
       items:

@@ -39,3 +39,5 @@
       href: resolve-ambiguous-times.md
     - name: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer'
       href: let-users-resolve-ambiguous-times.md
+    - name: Unterstützung von DateTime und DateTimeOffset in System.Text.Json
+      href: system-text-json-support.md
