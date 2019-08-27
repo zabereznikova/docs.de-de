@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988659"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045848"
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
 Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>das. Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt zwischen .NET Framework-Objekten und XML in beide Richtungen. In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, <
 - Diese Funktion bewirkt möglicherweise, dass Serialisierung und Deserialisierung langsamer ausgeführt werden. Obwohl die Daten nicht repliziert werden müssen, müssen in diesem Modus zusätzliche Objektvergleiche angestellt werden.  
   
 > [!CAUTION]
->  Wenn der `preserveObjectReferences` -Modus aktiviert ist, muss der `maxItemsInObjectGraph` -Wert unbedingt auf das richtige Kontingent festgelegt werden. Aufgrund der Art und Weise, wie Arrays in diesem Modus behandelt werden, ist es für Angreifer einfach, eine kleine bösartige Nachricht zu erstellen, die in zu einem hohen Speicherverbrauch führt, der nur durch das `maxItemsInObjectGraph` -Kontingent begrenzt wird.  
+> Wenn der `preserveObjectReferences` -Modus aktiviert ist, muss der `maxItemsInObjectGraph` -Wert unbedingt auf das richtige Kontingent festgelegt werden. Aufgrund der Art und Weise, wie Arrays in diesem Modus behandelt werden, ist es für Angreifer einfach, eine kleine bösartige Nachricht zu erstellen, die in zu einem hohen Speicherverbrauch führt, der nur durch das `maxItemsInObjectGraph` -Kontingent begrenzt wird.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Angeben eines Datenvertrag-Ersatzzeichens  
  Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `dataContractSurrogate` -Parameter, der möglicherweise auf `null`festgelegt ist. Andernfalls können Sie mit diesem Parameter ein *Datenvertrag-Ersatzzeichen*festlegen, d.&#160;h. einen Typ, der die <xref:System.Runtime.Serialization.IDataContractSurrogate> -Schnittstelle implementiert. Sie können dann mithilfe dieser Schnittstelle die Serialisierung und Deserialisierung anpassen. Weitere Informationen finden Sie unter [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  

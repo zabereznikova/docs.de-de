@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987506"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046048"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms
+
 Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren. Ein- *Steuer* Element ist eine Komponente auf einem Formular, mit dem Informationen angezeigt oder Benutzereingaben akzeptiert werden. Weitere Informationen zu-Steuerelementen finden Sie unter Windows Forms-Steuer [Elemente](index.md).
 
 ## <a name="to-draw-a-control-on-a-form"></a>So zeichnen Sie ein Steuerelement in einem Formular
@@ -27,7 +28,7 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
 
 3. Klicken Sie im Formular auf die Stelle, an der sich die obere linke Ecke des Steuer Elements befinden soll, und ziehen Sie an die Stelle, an der die untere rechte Ecke des Steuer Elements platziert werden soll.
 
-     Das-Steuerelement wird dem Formular mit der angegebenen Position und Größe hinzugefügt.
+    Das-Steuerelement wird dem Formular mit der angegebenen Position und Größe hinzugefügt.
 
     > [!NOTE]
     > Für jedes Steuerelement ist eine Standardgröße definiert. Sie können dem Formular ein Steuerelement in der Standardgröße des Steuer Elements hinzufügen, indem Sie es aus der **Toolbox** in das Formular ziehen.
@@ -38,12 +39,12 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
 
 2. Klicken Sie in der **Toolbox**auf das gewünschte Steuerelement, und ziehen Sie es in das Formular.
 
-     Das-Steuerelement wird dem Formular an der angegebenen Position in seiner Standardgröße hinzugefügt.
+    Das-Steuerelement wird dem Formular an der angegebenen Position in seiner Standardgröße hinzugefügt.
 
     > [!NOTE]
     > Sie können auf ein Steuerelement in der **Toolbox** doppelklicken, um es der oberen linken Ecke des Formulars in seiner Standardgröße hinzuzufügen.
 
-     Sie können einem Formular auch zur Laufzeit dynamisch Steuerelemente hinzufügen. Im folgenden Codebeispiel wird dem Formular <xref:System.Windows.Forms.TextBox> ein-Steuerelement hinzugefügt, wenn auf <xref:System.Windows.Forms.Button> ein-Steuerelement geklickt wird.
+    Sie können einem Formular auch zur Laufzeit dynamisch Steuerelemente hinzufügen. Im folgenden Codebeispiel wird dem Formular <xref:System.Windows.Forms.TextBox> ein-Steuerelement hinzugefügt, wenn auf <xref:System.Windows.Forms.Button> ein-Steuerelement geklickt wird.
 
     > [!NOTE]
     > Für das folgende Verfahren ist es erforderlich, dass ein Formular mit einem Schalt `Button1`Flächen-Steuerelement vorhanden ist, das bereits darauf platziert ist.
@@ -84,7 +85,7 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
     > Sie können auch Code hinzufügen, um andere Eigenschaften des Steuer Elements zu initialisieren.
 
     > [!IMPORTANT]
-    >  Sie können den lokalen Computer mit einem Sicherheitsrisiko über das Netzwerk verfügbar machen, indem Sie auf `UserControl`eine böswillige verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
+    > Sie können den lokalen Computer mit einem Sicherheitsrisiko über das Netzwerk verfügbar machen, indem Sie auf `UserControl`eine böswillige verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
 
 ## <a name="see-also"></a>Siehe auch
 

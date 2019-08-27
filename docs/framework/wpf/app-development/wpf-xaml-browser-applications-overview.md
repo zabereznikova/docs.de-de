@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 230a25ad16c91f7812e5d92203ba204ca0abc099
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956047"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037758"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -123,7 +123,7 @@ ms.locfileid: "69956047"
      Die Änderungen werden wirksam, nachdem Sie Internet Explorer neu gestartet haben.  
   
 > [!CAUTION]
->  Aktiven Inhalt in Internet Explorer zu aktivieren, gefährdet möglicherweise den Computer. Wenn Sie Ihre Internet Explorer-Sicherheitseinstellungen nicht ändern möchten, können Sie die HTML-Seite von einem Server aus starten und den Visual Studio-Debugger an den Prozess anfügen.  
+> Aktiven Inhalt in Internet Explorer zu aktivieren, gefährdet möglicherweise den Computer. Wenn Sie Ihre Internet Explorer-Sicherheitseinstellungen nicht ändern möchten, können Sie die HTML-Seite von einem Server aus starten und den Visual Studio-Debugger an den Prozess anfügen.  
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP-Sicherheitsüberlegungen  

@@ -2,15 +2,15 @@
 title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637658"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038114"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
-In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet, das die Funktionen des <xref:System.Net.Mail.SmtpClient> asynchron senden von e-Mails und zum Senden von e-Mails mit der Authentifizierung. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
+In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet die Funktionen <xref:System.Net.Mail.SmtpClient> von, um e-Mail-Nachrichten asynchron zu senden und e-Mails mit Authentifizierung zu senden. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
   
  In der folgenden Tabelle werden die Argumente für die `SendMail`-Aktivität aufgelistet.  
   
@@ -23,15 +23,15 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |Kennwort|Zeichenfolge|Das Kennwort zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Betreff|<xref:System.Activities.InArgument%601>\<string>|Der Betreff der Nachricht.|  
 |Text|<xref:System.Activities.InArgument%601>\<string>|Der Nachrichtentext.|  
-|Anlagen|<xref:System.Activities.InArgument%601>\<string>|Anlagenauflistung, die zum Speichern von Daten, die an diese e-Mail-Nachricht angefügt werden.|  
-|Von|<xref:System.Net.Mail.MailAddress>|Die Absenderadresse für diese e-Mail-Nachricht.|  
-|Beschreibung|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die die Kopie (CC) Empfänger dieser e-Mail-Nachricht enthält.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die adressenauflistung, die die Blindkopie (BCC) Empfänger dieser e-Mail-Nachricht enthält.|  
-|tokens|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
+|Anlagen|<xref:System.Activities.InArgument%601>\<string>|Anlagen Sammlung zum Speichern von Daten, die an diese e-Mail angefügt sind.|  
+|Von|<xref:System.Net.Mail.MailAddress>|Von der Adresse für diese e-Mail-Nachricht.|  
+|Beschreibung|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die CC-Empfänger für diese e-Mail-Nachricht enthält.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die Adress Sammlung, die die Bcc-Empfänger (Blind Carbon Copy) für diese e-Mail-Nachricht enthält.|  
+|tokens|<xref:System.Activities.InArgument%601>< IDictionary\<-Zeichenfolge, Zeichenfolge > >|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
 |BodyTemplateFilePath|Zeichenfolge|Der Pfad einer Vorlage für den Text. Mit der `SendMail`-Aktivität wird der Inhalt dieser Datei in die body-Eigenschaft kopiert.<br /><br /> Die Vorlage kann Token enthalten, die durch den Inhalt der Tokeneigenschaft ersetzt werden.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mail-Nachrichten an die darin angegebene Adresse gesendet.<br /><br /> Diese Eigenschaft ist für das Testen von Workflows vorgesehen. Wenn Sie sicherstellen, dass möchten werden z. B. alle e-Mails gesendet, ohne sie tatsächlich den Empfängern zu senden.|  
-|TestDropPath|Zeichenfolge|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mail-Nachrichten auch in der angegebenen Datei gespeichert.<br /><br /> Diese Eigenschaft soll verwendet werden, wenn Sie testen oder Debuggen von Workflows, um sicherzustellen, dass das Format und Inhalt der ausgehenden e-Mail-Nachrichten geeignet ist.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mails an die darin angegebene Adresse gesendet.<br /><br /> Diese Eigenschaft ist für das Testen von Workflows vorgesehen. Wenn Sie z. b. sicherstellen möchten, dass alle e-Mails gesendet werden, ohne dass Sie an die eigentlichen Empfänger gesendet werden.|  
+|TestDropPath|Zeichenfolge|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mails ebenfalls in der angegebenen Datei gespeichert.<br /><br /> Diese Eigenschaft soll beim Testen oder Debuggen von Workflows verwendet werden, um sicherzustellen, dass das Format und der Inhalt der ausgehenden e-Mails angemessen sind.|  
   
 ## <a name="solution-contents"></a>Inhalt der Projektmappe  
  Die Projektmappe enthält zwei Projekte.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Senden von E-Mails im Testmodus  
- Dieser Codeausschnitt zeigt, wie Sie die beiden Testeigenschaften: durch Festlegen von `TestMailTo` für alle Nachrichten an gesendet `john.doe@contoso.con` (ohne Beachtung der Werte von To, Cc und Bcc). Durch Festlegen von TestDropPath werden alle ausgehenden E-Mail-Nachrichten außerdem unter dem angegebenen Pfad gespeichert. Diese Eigenschaften können unabhängig voneinander festgelegt werden (sie sind nicht verknüpft).  
+ In diesem Code Ausschnitt wird gezeigt, wie die zwei Test Eigenschaften festgelegt werden `TestMailTo` : durch Festlegen von auf alle nach `john.doe@contoso.con` richten, die an gesendet werden (ohne Berücksichtigung der Werte von to, CC, BCC). Durch Festlegen von TestDropPath werden alle ausgehenden E-Mail-Nachrichten außerdem unter dem angegebenen Pfad gespeichert. Diese Eigenschaften können unabhängig voneinander festgelegt werden (sie sind nicht verknüpft).  
   
 ```  
 new SendMail  
@@ -109,33 +109,33 @@ new SendMail
   
 - [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
-- [Konfigurieren des SMTP-Diensts (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [Konfigurieren des SMTP-Dienstanbieter (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
-- [IIS 7.0: Konfigurieren des SMTP-e-Mail](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: Konfigurieren von SMTP-e-Mails](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
-- [Vorgehensweise: Installieren Sie den SMTP-Dienst](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Installieren des SMTP-Dienstanbieter](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  SMTP-Emulatoren können von Drittanbietern heruntergeladen werden.  
   
 ##### <a name="to-run-this-sample"></a>So führen Sie dieses Beispiel aus  
   
-1. Öffnen Sie die Projektmappendatei sendmail.sln mit Visual Studio 2010.  
+1. Öffnen Sie die Projektmappendatei sendmail. sln mithilfe von Visual Studio 2010.  
   
 2. Stellen Sie sicher, dass sie auf einen funktionierenden SMTP-Server zugreifen können. Beachten Sie dazu die Setupanweisungen.  
   
-3. Konfigurieren Sie das Programm, mit der Serveradresse und von und an e-Mail-Adressen.  
+3. Konfigurieren Sie das Programm mit Ihrer Server Adresse und von und an e-Mail-Adressen.  
   
-     Um dieses Beispiel ordnungsgemäß ausführen zu können, müssen Sie den Wert des für e-Mail-Adressen und die Adresse des SMTP-Servers in Program.cs und Sequence.xaml konfigurieren. Die Adressen müssen an beiden Speicherorten geändert werden, da das Programm E-Mail-Nachrichten auf unterschiedliche Weise sendet.  
+     Um dieses Beispiel ordnungsgemäß auszuführen, müssen Sie möglicherweise den Wert von und für e-Mail-Adressen und die Adresse des SMTP-Servers in Program.cs und Sequence. XAML konfigurieren. Die Adressen müssen an beiden Speicherorten geändert werden, da das Programm E-Mail-Nachrichten auf unterschiedliche Weise sendet.  
   
 4. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
 5. Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

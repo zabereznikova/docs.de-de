@@ -2,20 +2,22 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 48ffbbb8ccac34c5eb605edc4aab17d0e2b3499e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a8e93604654d20c210015896e02d76b4b8bd36e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922925"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037900"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
+
 In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Nachverfolgung für einen Workflow Dienst aktiviert und die Überwachungs Ereignisse in der Ereignis Ablauf Verfolgung für Windows (ETW) ausgegeben werden. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.
 
- Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der Eingabedaten der Eingabevariablen zu und gibt den Umkehrwert an den Client zurück. Wenn die Eingabedaten 0 betragen, tritt eine nicht behandelte Ausnahme aufgrund einer Division durch 0 (null) auf, aufgrund der der Workflow abgebrochen wird. Wenn die Nachverfolgung aktiviert ist, wird der Fehlerdatensatz an ETW ausgegeben, sodass der Fehler später behoben werden kann. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Das Überwachungsprofil ist in der Datei "Web.config" definiert und für den ETW-Überwachungsteilnehmer als Konfigurationsparameter bereitgestellt. Der ETW-Überwachungsteilnehmer ist in der Datei "Web.config" des Workflowdiensts konfiguriert und wird auf den Dienst als Dienstverhalten angewendet. In diesem Beispiel zeigen Sie die Überwachungsereignisse im Ereignisprotokoll mithilfe der Ereignisanzeige an.
+Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der Eingabedaten der Eingabevariablen zu und gibt den Umkehrwert an den Client zurück. Wenn die Eingabedaten 0 betragen, tritt eine nicht behandelte Ausnahme aufgrund einer Division durch 0 (null) auf, aufgrund der der Workflow abgebrochen wird. Wenn die Nachverfolgung aktiviert ist, wird der Fehlerdatensatz an ETW ausgegeben, sodass der Fehler später behoben werden kann. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Das Überwachungsprofil ist in der Datei "Web.config" definiert und für den ETW-Überwachungsteilnehmer als Konfigurationsparameter bereitgestellt. Der ETW-Überwachungsteilnehmer ist in der Datei "Web.config" des Workflowdiensts konfiguriert und wird auf den Dienst als Dienstverhalten angewendet. In diesem Beispiel zeigen Sie die Überwachungsereignisse im Ereignisprotokoll mithilfe der Ereignisanzeige an.
 
 ## <a name="workflow-tracking-details"></a>Workflowüberwachungsdetails
- Windows Workflow Foundation stellt eine Überwachungsinfrastruktur bereit, mit der die Ausführung einer Workflow Instanz nachverfolgt werden können. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.
+
+Windows Workflow Foundation stellt eine Überwachungsinfrastruktur bereit, mit der die Ausführung einer Workflow Instanz nachverfolgt werden können. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.
 
 |Komponente|Beschreibung|
 |---------------|-----------------|
@@ -23,7 +25,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Na
 |Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
- In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
+In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
 
 |Überwachungsdatensatz|Beschreibung|
 |---------------------|-----------------|
@@ -35,7 +37,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Na
 |<xref:System.Activities.Tracking.FaultPropagationRecord>|Dieser Datensatz wird ausgegeben, wenn ein Fehler von einer Aktivität weitergegeben wird.|
 |<xref:System.Activities.Tracking.CancelRequestedRecord>|Dieser Datensatz wird ausgegeben, wenn eine Aktivität von einer anderen Aktivität abgebrochen wird.|
 
- Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachungsdatensätze mithilfe von Überwachungsprofilen. Ein Überwachungsprofil enthält Überwachungsabfragen, die das Abonnieren eines bestimmten Typs von Überwachungsdatensätzen ermöglichen. Überwachungsprofile können im Code oder in der Konfiguration angegeben werden.
+Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachungsdatensätze mithilfe von Überwachungsprofilen. Ein Überwachungsprofil enthält Überwachungsabfragen, die das Abonnieren eines bestimmten Typs von Überwachungsdatensätzen ermöglichen. Überwachungsprofile können im Code oder in der Konfiguration angegeben werden.
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
@@ -45,67 +47,67 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Na
 
 3. Drücken Sie F5, um die Projektmappe auszuführen.
 
-     Standardmäßig lauscht der Dienst an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+    Standardmäßig lauscht der Dienst an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
 4. Öffnen Sie im Datei-Explorer den WCF-Test Client.
 
-     Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Ordner "Visual Studio 2010-Installationsordner" > Ordner "\common7\ide\".
+    Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Ordner "Visual Studio 2010-Installationsordner" > Ordner "\common7\ide\".
 
-     Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
+    Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
 
 5. Wählen Sie im WCF-Test Client im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
-     Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist `http://localhost:53797/SampleWorkflowService.xamlx`.
+    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Öffnen Sie die Ereignisanzeige.
 
-     Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das Startmenü, wählen Sie **Ausführen** aus, `eventvwr.exe`und geben Sie ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
+    Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das Startmenü, wählen Sie **Ausführen** aus, `eventvwr.exe`und geben Sie ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
 
 7. Navigieren Sie in der Strukturansicht des Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs-und Dienst Protokolle**und **Microsoft**. Klicken Sie mit der rechten Maustaste auf **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle anzeigen** , um die analytischen und Debugprotokolle
 
-     Stellen Sie sicher, dass die Option **analytische und Debugprotokolle anzeigen** aktiviert ist.
+    Stellen Sie sicher, dass die Option **analytische und Debugprotokolle anzeigen** aktiviert ist.
 
 8. Navigieren Sie in der Strukturansicht in Ereignisanzeige zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll aktivieren** aus, um das **analytische** Protokoll
 
 9. Testen Sie den Dienst mithilfe des WCF-Testclients, indem Sie auf `GetData` doppelklicken.
 
-     Dadurch wird die `GetData`-Methode geöffnet. Die Anforderung akzeptiert einen Parameter und stellt sicher, dass der Wert 0 beträgt, was dem Standard entspricht.
+    Dadurch wird die `GetData`-Methode geöffnet. Die Anforderung akzeptiert einen Parameter und stellt sicher, dass der Wert 0 beträgt, was dem Standard entspricht.
 
      Klicken Sie auf **aufrufen**.
 
 10. Achten Sie auf die vom Workflow ausgegebenen Ereignisse.
 
-     Wechseln Sie zurück zu Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustasteauf **Analyse** , und wählen Sie
+    Wechseln Sie zurück zu Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustasteauf **Analyse** , und wählen Sie
 
-     Die Workflowereignisse werden in der Ereignisanzeige angezeigt. Beachten Sie, dass Workflowausführungsereignisse angezeigt werden und dass es sich bei einem dieser Ereignisse um eine unbehandelte Ausnahme handelt, die dem Fehler im Workflow entspricht. Es wird auch ein Warnungsereignis von der Workflowaktivität ausgegeben, das angibt, dass die Aktivität einen Fehler auslöst.
+    Die Workflowereignisse werden in der Ereignisanzeige angezeigt. Beachten Sie, dass Workflowausführungsereignisse angezeigt werden und dass es sich bei einem dieser Ereignisse um eine unbehandelte Ausnahme handelt, die dem Fehler im Workflow entspricht. Es wird auch ein Warnungsereignis von der Workflowaktivität ausgegeben, das angibt, dass die Aktivität einen Fehler auslöst.
 
 11. Wiederholen Sie Schritt 9 und 10, und geben Sie andere Daten als 0 ein, damit kein Fehler ausgelöst wird.
 
- Mithilfe von Nachverfolgungsprofilen können Sie Ereignisse abonnieren, die von der Laufzeit ausgegeben werden, wenn sich der Zustand eines Workflowinstanz ändert. In Abhängigkeit von Ihren Überwachungsanforderungen können Sie ein Profil erstellen, das sehr grob gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert. Sie können jedoch auch ein sehr präzises Profil erstellen, dessen Ausgabe so umfangreich ist, dass später die Ausführung rekonstruiert werden kann. In dem Beispiel sind die Ereignisse veranschaulicht, die mithilfe des `HealthMonitoring Tracking Profile`, das eine geringe Menge von Ereignissen ausgibt, von der Workflowlaufzeit an ETW ausgegeben werden. Ein anderes Profil, das weitere Workflownachverfolgungsereignisse ausgibt, wird auch in der Datei "Web.config" mit dem Namen `Troubleshooting Tracking Profile` bereitgestellt. Wenn [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] installiert ist, wird ein Standardprofil mit einem leeren Namen in der Datei "Machine.config" konfiguriert. Dieses Profil wird von der ETW-Überwachungsverhaltenskonfiguration verwendet, wenn kein Profilname oder ein leerer Profilname angegeben wird.
+Mithilfe von Nachverfolgungsprofilen können Sie Ereignisse abonnieren, die von der Laufzeit ausgegeben werden, wenn sich der Zustand eines Workflowinstanz ändert. In Abhängigkeit von Ihren Überwachungsanforderungen können Sie ein Profil erstellen, das sehr grob gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert. Sie können jedoch auch ein sehr präzises Profil erstellen, dessen Ausgabe so umfangreich ist, dass später die Ausführung rekonstruiert werden kann. In dem Beispiel sind die Ereignisse veranschaulicht, die mithilfe des `HealthMonitoring Tracking Profile`, das eine geringe Menge von Ereignissen ausgibt, von der Workflowlaufzeit an ETW ausgegeben werden. Ein anderes Profil, das weitere Workflownachverfolgungsereignisse ausgibt, wird auch in der Datei "Web.config" mit dem Namen `Troubleshooting Tracking Profile` bereitgestellt. Wenn [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] installiert ist, wird ein Standardprofil mit einem leeren Namen in der Datei "Machine.config" konfiguriert. Dieses Profil wird von der ETW-Überwachungsverhaltenskonfiguration verwendet, wenn kein Profilname oder ein leerer Profilname angegeben wird.
 
- Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatensätze und Aktivitätsdatensätze für die Fehlerweitergabe aus. Dieses Profil wird erstellt, indem einer Web.config-Konfigurationsdatei das folgende Nachverfolgungsprofil hinzugefügt wird.
+Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatensätze und Aktivitätsdatensätze für die Fehlerweitergabe aus. Dieses Profil wird erstellt, indem einer Web.config-Konfigurationsdatei das folgende Nachverfolgungsprofil hinzugefügt wird.
 
 ```xml
-<<tracking>
-      <profiles>
-        <trackingProfile name="HealthMonitoring Tracking Profile">
-          <workflow activityDefinitionId="*">
-            <workflowInstanceQueries>
-              <workflowInstanceQuery>
-                <states>
-                  <state name="Started"/>
-                  <state name="Completed"/>
-                  <state name="Aborted"/>
-                  <state name="UnhandledException"/>
-                </states>
-            </workflowInstanceQuery>
-           </workflowInstanceQueries>
-            <faultPropagationQueries>
-              <faultPropagationQuery faultSourceActivityName ="*" faultHandlerActivityName="*"/>
-            </faultPropagationQueries>
-          </workflow>
-        </trackingProfile>
-       </profiles>
+<tracking>
+  <profiles>
+    <trackingProfile name="HealthMonitoring Tracking Profile">
+      <workflow activityDefinitionId="*">
+        <workflowInstanceQueries>
+          <workflowInstanceQuery>
+            <states>
+              <state name="Started"/>
+              <state name="Completed"/>
+              <state name="Aborted"/>
+              <state name="UnhandledException"/>
+            </states>
+          </workflowInstanceQuery>
+        </workflowInstanceQueries>
+        <faultPropagationQueries>
+          <faultPropagationQuery faultSourceActivityName ="*" faultHandlerActivityName="*"/>
+        </faultPropagationQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
 </tracking>
 ```
 
@@ -113,12 +115,12 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Na
 
 ```xml
 <behaviors>
-      <serviceBehaviors>
-        <behavior>
-          <etwTracking profileName="HealthMonitoring Tracking Profile"/>
-        </behavior>
-      </serviceBehaviors>
-    </behaviors>
+  <serviceBehaviors>
+    <behavior>
+      <etwTracking profileName="HealthMonitoring Tracking Profile"/>
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
 ```
 
 #### <a name="to-clean-up-optional"></a>So führen Sie eine Bereinigung aus (optional)
@@ -136,19 +138,19 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Na
 > [!NOTE]
 > Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
 >
->  Die Beschreibung für die Ereignis \<-ID-ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
+> Die Beschreibung für die Ereignis \<-ID-ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
 >
->  Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
+> Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
 
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
-  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
+
 ## <a name="see-also"></a>Siehe auch
 
 - [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

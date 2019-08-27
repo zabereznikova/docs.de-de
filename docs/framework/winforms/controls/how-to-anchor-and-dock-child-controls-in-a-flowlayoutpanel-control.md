@@ -7,57 +7,60 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922908"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046065"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement
-Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die Eigenschaften <xref:System.Windows.Forms.Control.Anchor%2A> und <xref:System.Windows.Forms.Control.Dock%2A> in seinen untergeordneten Steuerelementen.  
-  
-### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>So verankern Sie untergeordnete Steuerelemente in einem FlowLayoutPanel-Steuerelement und docken sie an  
-  
-1. Erstellen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement auf dem Formular.  
-  
-2. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> für das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement den Wert **300**fest <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> , <xref:System.Windows.Forms.FlowDirection.TopDown>und legen Sie dessen auf fest.  
-  
-3. Erstellen Sie zwei <xref:System.Windows.Forms.Button>-Steuerelemente, und platzieren Sie diese im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.  
-  
-4. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> die der ersten Schaltfläche auf **200**fest.  
-  
-5. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
-  
+
+Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die Eigenschaften <xref:System.Windows.Forms.Control.Anchor%2A> und <xref:System.Windows.Forms.Control.Dock%2A> in seinen untergeordneten Steuerelementen.
+
+### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>So verankern Sie untergeordnete Steuerelemente in einem FlowLayoutPanel-Steuerelement und docken sie an
+
+1. Erstellen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement auf dem Formular.
+
+2. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> für das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement den Wert **300**fest <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> , <xref:System.Windows.Forms.FlowDirection.TopDown>und legen Sie dessen auf fest.
+
+3. Erstellen Sie zwei <xref:System.Windows.Forms.Button>-Steuerelemente, und platzieren Sie diese im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.
+
+4. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> die der ersten Schaltfläche auf **200**fest.
+
+5. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf <xref:System.Windows.Forms.DockStyle.Fill> fest.
+
     > [!NOTE]
-    > Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements.  
-  
-6. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf `None` fest. Dadurch wird die Schaltfläche auf ihre ursprüngliche Breite zurückgesetzt.  
-  
-7. Legen Sie die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft der zweiten Schaltfläche auf `Left, Right` fest.  
-  
+    > Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements.
+
+6. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf `None` fest. Dadurch wird die Schaltfläche auf ihre ursprüngliche Breite zurückgesetzt.
+
+7. Legen Sie die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft der zweiten Schaltfläche auf `Left, Right` fest.
+
     > [!IMPORTANT]
-    >  Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements. Die allgemeine Regel zum Verankern und Andocken im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement lautet wie folgt: Bei vertikalen Flussrichtungen berechnet das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement die Breite einer impliziten Spalte anhand des breitesten untergeordneten Steuerelements in der Spalte. Alle anderen Steuerelemente in dieser Spalte mit einer <xref:System.Windows.Forms.Control.Anchor%2A>- oder einer <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft werden so ausgerichtet oder gestreckt, dass sie diese implizite Spalte ausfüllen. Bei horizontalen Flussrichtungen ist das Verhalten ähnlich. Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement berechnet die Höhe einer impliziten Zeile anhand des höchsten untergeordneten Steuerelements in der Zeile. Alle angedockten oder verankerten untergeordneten Steuerelemente in dieser Zeile werden dann so ausgerichtet oder vergrößert, dass sie diese implizite Zeile ausfüllen.  
-  
-## <a name="example"></a>Beispiel  
- Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
-  
- ![FlowLayoutPanel-Verankerung](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
-  
- Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.TopDown>.  
-  
- ![FlowLayoutPanel-Verankerung](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
-  
- Das folgende Codebeispiel veranschaulicht verschiedene <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaftswerte für ein <xref:System.Windows.Forms.Button>-Steuerelement in einem <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.  
-  
- [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
- [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
-  
-- Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".  
-  
+    > Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements. Die allgemeine Regel zum Verankern und Andocken im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement lautet wie folgt: Bei vertikalen Flussrichtungen berechnet das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement die Breite einer impliziten Spalte anhand des breitesten untergeordneten Steuerelements in der Spalte. Alle anderen Steuerelemente in dieser Spalte mit einer <xref:System.Windows.Forms.Control.Anchor%2A>- oder einer <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft werden so ausgerichtet oder gestreckt, dass sie diese implizite Spalte ausfüllen. Bei horizontalen Flussrichtungen ist das Verhalten ähnlich. Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement berechnet die Höhe einer impliziten Zeile anhand des höchsten untergeordneten Steuerelements in der Zeile. Alle angedockten oder verankerten untergeordneten Steuerelemente in dieser Zeile werden dann so ausgerichtet oder vergrößert, dass sie diese implizite Zeile ausfüllen.
+
+## <a name="example"></a>Beispiel
+
+Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.LeftToRight>.
+
+![FlowLayoutPanel-Verankerung](./media/net-flpanchorexp.gif "NET_FLPanchorExp")
+
+Die folgende Abbildung zeigt vier Schaltflächen, die relativ zur blauen Schaltfläche in einem <xref:System.Windows.Forms.FlowLayoutPanel> verankert und angedockt sind. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> ist <xref:System.Windows.Forms.FlowDirection.TopDown>.
+
+![FlowLayoutPanel-Verankerung](./media/vs-flpanchor2.gif "VS_FLPanchor2")
+
+Das folgende Codebeispiel veranschaulicht verschiedene <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaftswerte für ein <xref:System.Windows.Forms.Button>-Steuerelement in einem <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.
+
+[!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
+[!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]
+
+## <a name="compiling-the-code"></a>Kompilieren des Codes
+
+Für dieses Beispiel benötigen Sie Folgendes:
+
+- Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
