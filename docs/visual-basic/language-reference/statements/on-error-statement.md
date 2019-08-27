@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963532"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046512"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehler Behandlungs Routine und gibt den Speicherort der Routine innerhalb einer Prozedur an. kann auch verwendet werden, um eine Fehler Behandlungs Routine zu deaktivieren. Die `On Error` -Anweisung wird bei der unstrukturierten Fehlerbehandlung verwendet und kann anstelle der strukturierten Ausnahmebehandlung verwendet werden. Die [strukturierte Ausnahmebehandlung](../../../standard/exceptions/index.md) ist in .NET integriert, ist im Allgemeinen effizienter und wird daher empfohlen, wenn Laufzeitfehler in der Anwendung behandelt werden.
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  System Fehler bei Aufrufen von Windows Dynamic Link Libraries (DLLs) geben keine Ausnahmen aus und können nicht mit Visual Basic fehlerabfang nicht erfasst werden. Wenn Sie DLL-Funktionen aufrufen, sollten Sie jeden Rückgabewert auf Erfolg oder Fehler (gemäß den API-Spezifikationen) überprüfen. Überprüfen Sie im Fall eines Fehlers den Wert in `Err` der- `LastDLLError` Eigenschaft des-Objekts.
+> System Fehler bei Aufrufen von Windows Dynamic Link Libraries (DLLs) geben keine Ausnahmen aus und können nicht mit Visual Basic fehlerabfang nicht erfasst werden. Wenn Sie DLL-Funktionen aufrufen, sollten Sie jeden Rückgabewert auf Erfolg oder Fehler (gemäß den API-Spezifikationen) überprüfen. Überprüfen Sie im Fall eines Fehlers den Wert in `Err` der- `LastDLLError` Eigenschaft des-Objekts.
 
 ## <a name="example"></a>Beispiel
  In diesem Beispiel wird zuerst `On Error GoTo` die-Anweisung verwendet, um den Speicherort einer Fehler Behandlungs Routine innerhalb einer Prozedur anzugeben. Im Beispiel generiert ein Versuch, eine Division durch 0 (null), die Fehlernummer 6. Der Fehler wird in der Fehler Behandlungs Routine behandelt, und die Steuerung wird dann an die Anweisung zurückgegeben, die den Fehler verursacht hat. Mit `On Error GoTo 0` der-Anweisung wird die Fehlerbehebung deaktiviert. Anschließend wird `On Error Resume Next` die-Anweisung verwendet, um das Abfangen von Fehlern zu verzögern, sodass der Kontext für den Fehler, der von der nächsten Anweisung generiert wird, auf bestimmte Weise bekannt ist. Beachten Sie `Err.Clear` , dass verwendet wird, `Err` um die Eigenschaften des Objekts zu löschen, nachdem der Fehler behandelt wurde.

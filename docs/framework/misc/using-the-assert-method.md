@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910720"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041153"
 ---
 # <a name="using-the-assert-method"></a>Verwenden der Assert-Methode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910720"
  <xref:System.Security.CodeAccessPermission.Assert%2A> ist eine Methode, die für Klassen von Codezugriffsberechtigungen und für die <xref:System.Security.PermissionSet>-Klasse aufgerufen werden kann. Sie können **Assert** verwenden, um Ihren Code (und downstreamaufrufer) zum Ausführen von Aktionen zu aktivieren, für die der Code über die Berechtigung verfügt, aber seine Aufrufer nicht über die erforderliche Berechtigung verfügen. Das normale Verfahren, das von der Runtime während einer Sicherheitsüberprüfung ausgeführt wird, wird durch eine Sicherheitserklärung (Sicherheitsassertion) geändert. Wenn Sie eine Berechtigung mit "Assert" erteilen, wird das Sicherheitssystem angewiesen, die Aufrufer Ihres Codes nicht hinsichtlich der erklärten Berechtigung zu überprüfen.  
   
 > [!CAUTION]
->  Verwenden Sie Assertionen mit Bedacht, da sie zu Sicherheitslücken führen und das Verfahren beeinträchtigen können, mit dem die Common Language Runtime Sicherheitsbeschränkungen erzwingt.  
+> Verwenden Sie Assertionen mit Bedacht, da sie zu Sicherheitslücken führen und das Verfahren beeinträchtigen können, mit dem die Common Language Runtime Sicherheitsbeschränkungen erzwingt.  
   
  Assertionen empfehlen sich in Situationen, in denen eine Bibliothek nicht verwalteten Code aufruft oder einen Aufruf vornimmt, für den eine Berechtigung erforderlich ist, die offensichtlich nicht dem eigentlichen Zweck der Bibliothek entspricht. Beispielsweise muss der gesamte verwaltete Code, der nicht verwalteten Code aufruft, über **securityberechtigung** verfügen, und das **UnmanagedCode** -Flag muss angegeben werden. Code, der nicht vom lokalen Computer stammt, etwa Code, der aus dem lokalen Intranet heruntergeladen wurde, wird diese Berechtigung nicht standardmäßig erteilt. Daher muss Code, der aus dem lokalen Intranet heruntergeladen wurde und in der Lage sein soll, eine Bibliothek aufzurufen, die unverwalteten Code verwendet, die durch die Bibliothek mit "Assert" erklärte Berechtigung haben. Darüber hinaus nehmen einige Bibliotheken möglicherweise Aufrufe vor, die für Aufrufer nicht sichtbar und für die besondere Berechtigungen erforderlich sind.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910720"
  Angenommen, Ihre hoch vertrauenswürdige Bibliotheksklasse hat eine Methode, die Dateien löscht. Sie greift auf die jeweilige Datei durch Aufrufen einer nicht verwalteten Win32-Funktion zu. Ein Aufrufer ruft die **Delete** -Methode Ihres Codes auf und übergibt dabei den Namen der zu löschenden Datei (c:\test.txt). Innerhalb der **Delete** -Methode erstellt der Code ein <xref:System.Security.Permissions.FileIOPermission> -Objekt, das den Schreibzugriff auf c:\test.txt darstellt. (Zum Löschen einer Datei ist Schreibzugriff erforderlich.) Der Code ruft dann eine imperative Sicherheitsüberprüfung auf, indem er die " **Demand** "-Methode des Objekts " **fleiopermission** " aufruft. Wenn einer der Aufrufer in der Aufrufliste nicht über diese Berechtigung verfügt, wird eine <xref:System.Security.SecurityException> ausgelöst. Wenn keine Ausnahme ausgelöst wird, wissen Sie, dass alle Aufrufer zum Zugriff auf "C:\Test.txt" berechtigt sind. Da Sie davon ausgehen, dass die meisten Aufrufer nicht über die Berechtigung für den Zugriff auf nicht verwalteten Code verfügen <xref:System.Security.Permissions.SecurityPermission> , erstellt der Code ein-Objekt, das die Berechtigung zum Aufrufen von nicht verwaltetem Code darstellt und die **Assert** -Methode des Objekts aufruft. Schließlich ruft Ihr Code die nicht verwaltete Win32-Funktion auf, um "C:\Test.txt" zu löschen, und gibt die Kontrolle an den Aufrufer zurück.  
   
 > [!CAUTION]
->  Achten Sie unbedingt darauf, dass Iher Code keine Assertionen in Situationen verwendet, in denen anderer Code Ihren Code für den Zugriff auf eine Ressource verwenden kann, die durch die von Ihnen mit "Assert" bereitgestellte Berechtigung geschützt ist. Beispielsweise würden Sie in Code, der in eine Datei schreibt, deren Name vom Aufrufer als Parameter angegeben wird, nicht die Datei " **fleiopermission** " zum Schreiben in Dateien bestätigen, da Ihr Code für den Missbrauch durch einen Drittanbieter offen wäre.  
+> Achten Sie unbedingt darauf, dass Iher Code keine Assertionen in Situationen verwendet, in denen anderer Code Ihren Code für den Zugriff auf eine Ressource verwenden kann, die durch die von Ihnen mit "Assert" bereitgestellte Berechtigung geschützt ist. Beispielsweise würden Sie in Code, der in eine Datei schreibt, deren Name vom Aufrufer als Parameter angegeben wird, nicht die Datei " **fleiopermission** " zum Schreiben in Dateien bestätigen, da Ihr Code für den Missbrauch durch einen Drittanbieter offen wäre.  
   
  Wenn Sie die imperative Sicherheits Syntax verwenden, wird beim Aufrufen der **Assert** -Methode für mehrere Berechtigungen in derselben Methode eine Sicherheits Ausnahme ausgelöst. Stattdessen sollten Sie ein **PermissionSet** -Objekt erstellen, ihm die einzelnen Berechtigungen übergeben, die Sie aufrufen möchten, und dann die **Assert** -Methode für das **PermissionSet** -Objekt aufrufen. Sie können die **Assert** -Methode mehrmals aufzurufen, wenn Sie die deklarative Sicherheits Syntax verwenden.  
   

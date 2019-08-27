@@ -2,12 +2,12 @@
 title: Persistenzdatenbankschema
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962883"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038334"
 ---
 # <a name="persistence-database-schema"></a>Persistenzdatenbankschema
 In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffentlichen Ansichten beschrieben.  
@@ -44,7 +44,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |Revision|BigInt|Die Revisionsnummer der Workflowversion.|  
   
 > [!CAUTION]
->  Die **Instanzen** Ansicht enthält auch einen DELETE-Vorgang. Benutzer mit den entsprechenden Berechtigungen können in dieser Ansicht Löschanweisungen ausführen, mit denen die Entfernung von Workflowinstanzen aus der Datenbank erzwungen wird. Das Löschen direkt über die Ansicht wird jedoch nur empfohlen, wenn keine andere Möglichkeit besteht, da unter der Workflowlaufzeit initialisierte Löschvorgänge zu unbeabsichtigten Ergebnissen führen können. Verwenden Sie stattdessen den Verwaltungsendpunkt der Workflowinstanz, um die Instanz über die Workflowlaufzeit zu beenden. Wenn Sie eine große Anzahl von Instanzen in der Ansicht löschen möchten, stellen Sie sicher, dass keine aktiven Laufzeiten Vorgänge für diese Instanzen ausführen.  
+> Die **Instanzen** Ansicht enthält auch einen DELETE-Vorgang. Benutzer mit den entsprechenden Berechtigungen können in dieser Ansicht Löschanweisungen ausführen, mit denen die Entfernung von Workflowinstanzen aus der Datenbank erzwungen wird. Das Löschen direkt über die Ansicht wird jedoch nur empfohlen, wenn keine andere Möglichkeit besteht, da unter der Workflowlaufzeit initialisierte Löschvorgänge zu unbeabsichtigten Ergebnissen führen können. Verwenden Sie stattdessen den Verwaltungsendpunkt der Workflowinstanz, um die Instanz über die Workflowlaufzeit zu beenden. Wenn Sie eine große Anzahl von Instanzen in der Ansicht löschen möchten, stellen Sie sicher, dass keine aktiven Laufzeiten Vorgänge für diese Instanzen ausführen.  
   
 ## <a name="servicedeployments-view"></a>Ansicht "ServiceDeployments"  
  Die Ansicht " **servicedeployments** " enthält Bereitstellungs Informationen für alle von Web (IIS/was) gehosteten Workflow Dienste. Jede Workflow Instanz, die im Internet gehostet wird, enthält eine **servicedeploymentid** , die auf eine Zeile in dieser Sicht verweist.  

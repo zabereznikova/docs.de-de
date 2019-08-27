@@ -2,12 +2,12 @@
 title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b91ae890a5664b69661c76ffe86154f90ac5e5f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969054"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040106"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
@@ -16,13 +16,13 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
 > In diesem Beispiel wird die Suche in die Konfiguration implementiert. Ein Beispiel, bei dem die Ermittlung im Code implementiert wird, finden Sie unter [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Dienstkonfiguration  
  Die Konfigurationsdatei in diesem Beispiel veranschaulicht zwei Funktionen:  

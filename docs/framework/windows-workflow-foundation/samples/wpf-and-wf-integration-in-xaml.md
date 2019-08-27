@@ -2,12 +2,12 @@
 title: WPF- und WF-Integration in XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: 8b461ee3185aa60e885d7cc107124c37d9ffacef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547049488a1bf97d5f5ef03a71278b8f653293a2
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948965"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045330"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>WPF- und WF-Integration in XAML
 In diesem Beispiel wird veranschaulicht, wie eine Anwendung erstellt wird, die Windows Presentation Foundation Funktionen (WPF) und Windows Workflow Foundation (WF) in einem einzelnen XAML-Dokument verwendet. Um dies zu erreichen, verwendet das Beispiel Windows Workflow Foundation (WF) und XAML-Erweiterbarkeit.
@@ -37,10 +37,10 @@ In diesem Beispiel wird veranschaulicht, wie eine Anwendung erstellt wird, die W
 5. Schließen Sie das Dialogfeld, und die Konsole wiederholt den Namen.
 
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

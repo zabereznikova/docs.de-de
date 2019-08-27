@@ -2,12 +2,12 @@
 title: Verwenden der Pick-Aktivität
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637777"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037882"
 ---
 # <a name="using-the-pick-activity"></a>Verwenden der Pick-Aktivität
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Statements.Pick>-Aktivität verwendet wird.
@@ -22,33 +22,33 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.Activities.Stateme
 ## <a name="discussion"></a>Diskussion
  Das Beispiel umfasst einen Designerworkflow und einen codierten Workflow.
 
- Der Workflow-Designer-Designerversion des Beispiels wird veranschaulicht, wie einen Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
+ Designer-Workflow die Designer-Version des Beispiels veranschaulicht, wie ein Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
 
-- "Program.cs": Enthält die `Main` -Funktion, die den Beispielworkflow ausführt.
+- Program.cs: Schließt die `Main` Funktion ein, die den Beispiel Workflow ausführt.
 
-- ReadString.cs: Eine benutzerdefinierte Aktivität, die eine Eingabe aus der Konsole liest.
+- ReadString.cs: Eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
 
-- Sequence1.xaml: Ein Workflow erstellt mithilfe des Designers, der Pick verwendet.
+- Sequence1. XAML: Ein Workflow, der mit dem Designer erstellt wurde, der Pick verwendet.
 
- Codierter Workflow die codierte Version des Beispiels wird veranschaulicht, wie einen Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
+ Codierter Workflow die codierte Version des Beispiels veranschaulicht, wie ein Workflow im Designer erstellt wird. Die folgenden Dateien sind enthalten:
 
-- "Program.cs": Enthält die `Main` -Funktion, die den Beispielworkflow ausführt.
+- Program.cs: Schließt die `Main` Funktion ein, die den Beispiel Workflow ausführt.
 
-- ReadString.cs: Eine benutzerdefinierte Aktivität, die eine Eingabe aus der Konsole liest.
+- ReadString.cs: Eine benutzerdefinierte Aktivität, die Eingaben aus der Konsole liest.
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1. Öffnen Sie die Projektmappendatei Pick.sln mit Visual Studio 2010.
+1. Öffnen Sie mit Visual Studio 2010 die Projektmappendatei "Pick. sln".
 
 2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
 3. Drücken Sie F5, um die Projektmappe auszuführen.
 
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

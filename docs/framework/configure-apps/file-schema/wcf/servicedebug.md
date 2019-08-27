@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936255"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041269"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Gibt Debugging-und Hilfe Informationsfunktionen für einen Windows Communication Foundation (WCF)-Dienst an.  
@@ -62,7 +62,7 @@ Gibt Debugging-und Hilfe Informationsfunktionen für einen Windows Communication
  Wenn `includeExceptionDetailInFaults` Sie `true` auf festlegen, kann der Dienst jede Ausnahme zurückgeben, die vom Anwendungscode ausgelöst wird, auch wenn die Ausnahme nicht <xref:System.ServiceModel.FaultContractAttribute>mithilfe von deklariert wurde. Diese Einstellung ist in Debuggingfällen hilfreich, in denen der Server eine unerwartete Ausnahme ausgibt. Durch Verwenden dieses Attributs wird ein serialisiertes Format der unbekannten Ausnahme zurückgegeben, und Sie können mehr Details zur Ausnahme überprüfen.  
   
 > [!CAUTION]
->  Verwaltete Ausnahmeinformationen an Clients zurückzugeben kann ein Sicherheitsrisiko darstellen, da Ausnahmedetails Informationen zur internen Dienstimplementierung verfügbar machen, die von nicht autorisierten Clients verwendet werden könnten. Wegen der damit verbundenen Sicherheitsprobleme wird dringend empfohlen, dass Sie diesen Vorgang nur in gesteuerten Debugszenarien ausführen. Beim Bereitstellen der Anwendung sollten Sie `includeExceptionDetailInFaults` auf `false` festlegen.  
+> Verwaltete Ausnahmeinformationen an Clients zurückzugeben kann ein Sicherheitsrisiko darstellen, da Ausnahmedetails Informationen zur internen Dienstimplementierung verfügbar machen, die von nicht autorisierten Clients verwendet werden könnten. Wegen der damit verbundenen Sicherheitsprobleme wird dringend empfohlen, dass Sie diesen Vorgang nur in gesteuerten Debugszenarien ausführen. Beim Bereitstellen der Anwendung sollten Sie `includeExceptionDetailInFaults` auf `false` festlegen.  
   
  Ausführliche Informationen zu den Sicherheitsproblemen im Zusammenhang mit der verwalteten Ausnahme finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Ein Codebeispiel finden Sie unter [Debugverhalten von Diensten](../../../wcf/samples/service-debug-behavior.md).  
   

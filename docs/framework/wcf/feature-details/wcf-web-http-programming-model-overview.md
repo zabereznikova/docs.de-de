@@ -2,12 +2,12 @@
 title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988571"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045231"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die grundlegenden Elemente bereit, die zum Erstellen von Web-http-Diensten mit WCF Die WCF-Web-HTTP-Dienste sind so konzipiert, dass Sie von den verschiedensten möglichen Clients, einschließlich Webbrowsern, zugänglich sind und die folgenden besonderen Anforderungen erfüllen:  
@@ -23,7 +23,7 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
  Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Weitere Informationen zu den standardmäßig unterstützten Typen finden Sie unten im Abschnitt " **UriTemplate-Abfrage Zeichenfolgen-Parameter und-URLs** ". Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  Mit dem WCF-Web-HTTP-Programmiermodell geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können die von WCF bereitgestellten Sicherheitsfunktionen nicht verwendet werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. Weitere Informationen zur WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md) .  
+> Mit dem WCF-Web-HTTP-Programmiermodell geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können die von WCF bereitgestellten Sicherheitsfunktionen nicht verwendet werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. Weitere Informationen zur WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md) .  
   
 > [!WARNING]
 > Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. Weitere Informationen finden Sie unter [IIS und WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/) .  

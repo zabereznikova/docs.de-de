@@ -2,12 +2,12 @@
 title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990287"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039763"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
@@ -70,9 +70,9 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Hinzufügen einer Vorgangsauswahl zu einem Dienst  
- Dienstverteilungs-vorgangsauswahlen sind Erweiterungen der Windows Communication Foundation (WCF)-Verteiler. Für die Auswahl von Methoden auf dem Rückrufkanal von Duplexverträgen stehen auch Clientvorgangsauswahlen zur Verfügung, die ähnlich funktionieren wie die hier erläuterten Verteilungsvorgangsauswahlen, die jedoch nicht explizit in diesem Beispiel behandelt werden.  
+ Diensdispatchselektoren sind Erweiterungen des Windows Communication Foundation (WCF)-Verteilers. Für die Auswahl von Methoden auf dem Rückrufkanal von Duplexverträgen stehen auch Clientvorgangsauswahlen zur Verfügung, die ähnlich funktionieren wie die hier erläuterten Verteilungsvorgangsauswahlen, die jedoch nicht explizit in diesem Beispiel behandelt werden.  
   
- Wie die meisten Dienstmodellerweiterungen werden auch Verteilungsvorgangsauwahlen dem Verteiler mithilfe von Verhaltensweisen hinzugefügt. Ein *Verhalten* ist ein Konfigurationsobjekt, die entweder eine oder mehrere Erweiterungen hinzufügt, an der verteilungslaufzeit (oder der Clientlaufzeit) oder die Einstellungen auf andere Weise ändert.  
+ Wie die meisten Dienstmodellerweiterungen werden auch Verteilungsvorgangsauwahlen dem Verteiler mithilfe von Verhaltensweisen hinzugefügt. Ein *Verhalten* ist ein Konfigurationsobjekt, das entweder mindestens eine Erweiterung zur Dispatchlaufzeit (oder zur Client Laufzeit) hinzufügt oder andernfalls seine Einstellungen ändert.  
   
  Da Vorgangsauswahlen Vertragsbereiche besitzen, ist das entsprechende Verhalten, das hier implementiert wird, <xref:System.ServiceModel.Description.IContractBehavior>. Da die Schnittstelle auf einer von <xref:System.Attribute> abgeleiteten Klasse implementiert wird, wie im folgenden Code dargestellt, kann das Verhalten deklarativ zu jedem Dienstvertrag hinzugefügt werden. Immer wenn ein <xref:System.ServiceModel.ServiceHost> geöffnet und die Verteilungslaufzeit erstellt wird, werden alle Verhalten, die als Attribute auf Verträgen, Vorgängen und Dienstimplementierungen oder als Element in der Dienstkonfiguration gefunden werden, automatisch hinzugefügt und der Reihe nach auf Erweiterungen oder Änderungen der Standardkonfiguration abgefragt.  
   
@@ -120,9 +120,9 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>Implementieren des Diensts  
  Das in diesem Beispiel implementierte Verhalten wirkt sich unmittelbar darauf aus, wie übermittelte Nachrichten interpretiert und verteilt werden. Dies ist eine Funktion des Dienstvertrags. Daher sollte das Verhalten auf Dienstvertragsebene in jeder Dienstimplementierung deklariert werden, die das Verhalten verwendet.  
   
- Der beispielprojektdienst wendet die `DispatchByBodyElementBehaviorAttribute` -Vertragsverhalten auf den `IDispatchedByBody` -Dienstvertrag an und bezeichnet jede der beiden Vorgänge `OperationForBodyA()` und `OperationForBodyB()` mit einem `DispatchBodyElementAttribute` Vorgangsverhalten. Wenn ein Diensthost für einen Dienst, der diesen Vertrag implementiert, geöffnet wird, werden diese Metadaten von dem Verteilungsersteller wie zuvor erläutert ausgewählt.  
+ Der Beispiel Projekt Dienst wendet das `DispatchByBodyElementBehaviorAttribute` Vertrags Verhalten auf den `IDispatchedByBody` Dienstvertrag an und beschriftet jeden der beiden Vorgänge `OperationForBodyA()` und `OperationForBodyB()` mit einem `DispatchBodyElementAttribute` Vorgangs Verhalten. Wenn ein Diensthost für einen Dienst, der diesen Vertrag implementiert, geöffnet wird, werden diese Metadaten von dem Verteilungsersteller wie zuvor erläutert ausgewählt.  
   
- Da die Vorgangsauswahl die Verteilung nur auf der Grundlage des Nachrichtentexts ausführt und die "Aktion" ignoriert, muss der Laufzeit mitgeteilt werden, nicht die Aktionsheader in den zurückgegebenen Antworten zu überprüfen. Weisen Sie dazu der `ReplyAction`-Eigenschaft von <xref:System.ServiceModel.OperationContractAttribute> den Platzhalter "*" zu. Darüber hinaus ist es erforderlich, um ein Standardvorgang vorhanden sein, die die "Action"-Eigenschaft auf den Platzhalter "\*". Der Standardvorgang empfängt alle Nachrichten, die nicht verteilt werden können und kein `DispatchBodyElementAttribute` besitzen:  
+ Da die Vorgangsauswahl die Verteilung nur auf der Grundlage des Nachrichtentexts ausführt und die "Aktion" ignoriert, muss der Laufzeit mitgeteilt werden, nicht die Aktionsheader in den zurückgegebenen Antworten zu überprüfen. Weisen Sie dazu der `ReplyAction`-Eigenschaft von <xref:System.ServiceModel.OperationContractAttribute> den Platzhalter "*" zu. Außerdem ist ein Standard Vorgang erforderlich, bei dem die Eigenschaft "action" auf den Platzhalter "\*" festgelegt ist. Der Standardvorgang empfängt alle Nachrichten, die nicht verteilt werden können und kein `DispatchBodyElementAttribute` besitzen:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -164,17 +164,17 @@ public interface IDispatchedByBody
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
   
-3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

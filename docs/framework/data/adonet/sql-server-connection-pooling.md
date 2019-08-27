@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918141"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041195"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Die Verbindungspoolfunktion erfüllt diese Verbindungsanforderungen, indem Verbindungen erneut zugewiesen werden, sobald sie wieder für den Pool freigegeben werden. Wenn die maximale Poolgröße erreicht ist und keine verwendbare Verbindung verfügbar ist, wird die Anforderung in die Warteschlange gestellt. Der Pooler versucht anschließend, alle Verbindungen wieder anzufordern, bis das Timeout erreicht ist (der Standardwert beträgt 15 Sekunden). Wenn der Pooler die Anforderung nicht erfüllt, bevor das Zeitlimit für die Verbindung überschritten ist, wird eine Ausnahme ausgelöst.  
   
 > [!CAUTION]
->  Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder `Close` die-Methode oder `Dispose` die-Methode des `Connection` -Objekts verwenden oder alle Verbindungen innerhalb einer `using` -Anweisung C#in oder eine `Using` -Anweisung in Visual Basic öffnen. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using](../../../csharp/language-reference/keywords/using-statement.md) -Anweisung [oder Gewusst wie: Löschen Sie eine System Ressource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
+> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder `Close` die-Methode oder `Dispose` die-Methode des `Connection` -Objekts verwenden oder alle Verbindungen innerhalb einer `using` -Anweisung C#in oder eine `Using` -Anweisung in Visual Basic öffnen. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using](../../../csharp/language-reference/keywords/using-statement.md) -Anweisung [oder Gewusst wie: Löschen Sie eine System Ressource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
   
 > [!NOTE]
 > Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  

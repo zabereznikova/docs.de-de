@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940880"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046407"
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
@@ -166,7 +166,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
  Das <xref:System.Windows.DragDrop.QueryContinueDrag>-Ereignis wird fortlaufend ausgelöst, während die Ziehquelle gezogen wird. Sie können dieses Ereignis verarbeiten, um zu bestimmen, welche Aktion den Drag & Drop-Vorgang beendet, basierend auf dem Zustand der Tasten ESC, UMSCHALT, STRG und ALT sowie dem Zustand der Maustasten. Der Standardhandler für dieses Ereignis bricht den Drag & Drop-Vorgang ab, wenn die ESC-Taste gedrückt wird, und legt die Daten ab, wenn die Maustaste freigegeben wird.  
   
 > [!CAUTION]
->  Diese Ereignisse werden während des Drag & Drop-Vorgangs fortlaufend ausgelöst. Daher sollten ressourcenintensive Tasks in den Ereignishandlern vermieden werden.  Verwenden Sie z. B. einen zwischengespeicherten Cursor, statt bei jeder Auslösung des <xref:System.Windows.DragDrop.GiveFeedback>-Ereignisses einen neuen Cursor zu erstellen.  
+> Diese Ereignisse werden während des Drag & Drop-Vorgangs fortlaufend ausgelöst. Daher sollten ressourcenintensive Tasks in den Ereignishandlern vermieden werden.  Verwenden Sie z. B. einen zwischengespeicherten Cursor, statt bei jeder Auslösung des <xref:System.Windows.DragDrop.GiveFeedback>-Ereignisses einen neuen Cursor zu erstellen.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Aktivieren eines Elements als Ablageziel  
  Ein Objekt, das ein Ablageziel darstellt, ist für Folgendes zuständig:  

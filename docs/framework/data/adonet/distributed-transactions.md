@@ -2,12 +2,12 @@
 title: Verteilte Transaktionen
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956759"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041249"
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
 Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Eine *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
@@ -39,7 +39,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgab
 > Nachdem eine Verbindung ausdrücklich in eine Transaktion eingetragen wurde, kann sie solange nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion beendet wurde.  
   
 > [!CAUTION]
->  Die `EnlistTransaction`-Methode löst eine Ausnahme aus, wenn die Verbindung bereits mithilfe ihrer <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode eine Transaktion begonnen hat. Wenn es sich bei der Transaktion jedoch um eine lokale Transaktion handelt, die an der Datenquelle begonnen wurde (z. B. die explizite Ausführung der BEGIN TRANSACTION-ANWEISUNG mithilfe eines <xref:System.Data.SqlClient.SqlCommand>), führt die `EnlistTransaction`-Methode einen Rollback der lokalen Transaktion durch und trägt sich selbst wie angefordert in die vorhandene verteilte Transaktion ein. Sie werden nicht über den Rollback der lokalen Transaktion benachrichtigt und müssen nicht begonnene lokale Transaktionen mithilfe der <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode verwalten. Wenn Sie den .NET Framework-Datenanbieter für SQL Server (`SqlClient`) mit SQL Server verwenden, wird beim Eintragen eine Ausnahme ausgelöst. Alle anderen Fälle bleiben unerkannt.  
+> Die `EnlistTransaction`-Methode löst eine Ausnahme aus, wenn die Verbindung bereits mithilfe ihrer <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode eine Transaktion begonnen hat. Wenn es sich bei der Transaktion jedoch um eine lokale Transaktion handelt, die an der Datenquelle begonnen wurde (z. B. die explizite Ausführung der BEGIN TRANSACTION-ANWEISUNG mithilfe eines <xref:System.Data.SqlClient.SqlCommand>), führt die `EnlistTransaction`-Methode einen Rollback der lokalen Transaktion durch und trägt sich selbst wie angefordert in die vorhandene verteilte Transaktion ein. Sie werden nicht über den Rollback der lokalen Transaktion benachrichtigt und müssen nicht begonnene lokale Transaktionen mithilfe der <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode verwalten. Wenn Sie den .NET Framework-Datenanbieter für SQL Server (`SqlClient`) mit SQL Server verwenden, wird beim Eintragen eine Ausnahme ausgelöst. Alle anderen Fälle bleiben unerkannt.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Heraufstufbare Transaktionen in SQL Server  
  SQL Server unterstützt heraufstufbare Transaktionen, bei denen eine lokale kompakte Transaktion nur bei Bedarf automatisch zu einer verteilten Transaktion heraufgestuft werden kann. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Weitere Informationen und ein Codebeispiel finden Sie unter [System. Transactions-Integration mit SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

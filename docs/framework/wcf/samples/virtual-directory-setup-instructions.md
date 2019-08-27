@@ -2,12 +2,12 @@
 title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6dccc5174e3fb9ab67023310d8c060d598a707c9
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966738"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038644"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein gemeinsames virtuelles Verzeichnis namens "Service Model Samples" freizugeben, das dem Ordner "%SystemDrive%\inetpub\wwwroot\servicemodelsamples" zugeordnet ist.  
@@ -36,10 +36,10 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
 7. Klicken Sie auf **OK**. Die Webanwendung wird für die WCF-Beispiele erstellt.  
   
     > [!NOTE]
-    >  Diese Aufgabe muss nur einmal ausgeführt werden, da für alle WCF-Beispiele dieselbe Webanwendung Service Model Samples verwendet wird.  
+    > Diese Aufgabe muss nur einmal ausgeführt werden, da für alle WCF-Beispiele dieselbe Webanwendung Service Model Samples verwendet wird.  
   
     > [!NOTE]
-    >  In dieser Dokumentation werden die Begriffe `virtual directory` und `Web application` als Synonyme behandelt.  
+    > In dieser Dokumentation werden die Begriffe `virtual directory` und `Web application` als Synonyme behandelt.  
   
      Zusätzlich zum Erstellen des virtuellen Verzeichnisses müssen Sie auch seine Eigenschaften festlegen, um das Ausführen von WCF-Diensten zu ermöglichen. Details finden Sie weiter unten.  
   
@@ -66,7 +66,7 @@ Die Windows Communication Foundation (WCF)-Beispiele sind dafür vorgesehen, ein
 8. Klicken Sie auf **weiter**, und klicken Sie dann auf **Fertig** stellen, um den Assistenten abzuschließen.  
   
     > [!NOTE]
-    >  Diese Aufgabe muss nur einmal ausgeführt werden, da für alle WCF-Beispiele dasselbe virtuelle Verzeichnis Service Model Samples verwendet wird.  
+    > Diese Aufgabe muss nur einmal ausgeführt werden, da für alle WCF-Beispiele dasselbe virtuelle Verzeichnis Service Model Samples verwendet wird.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>So legen Sie zusätzliche Eigenschaften für virtuelle Verzeichnisse in IIS 7,0 oder 7,5 fest  
   

@@ -2,12 +2,12 @@
 title: Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990404"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039864"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver
 In diesem Beispiel wird veranschaulicht, wie die Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie der <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitstellt. In diesem Beispiel wird gezeigt, wie der entsprechende <xref:System.Runtime.Serialization.DataContractResolver> erstellt und dem <xref:System.Runtime.Serialization.DataContractSerializer> hinzugefügt wird.
@@ -57,27 +57,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1. Öffnen Sie die Projektmappendatei dcrsample.sln mit Visual Studio 2012.
+1. Öffnen Sie mit Visual Studio 2012 die Projektmappendatei "DCRSample. sln".
 
-2. Mit der rechten Maustaste in der Projektmappendatei, und wählen Sie **Eigenschaften**.
+2. Klicken Sie mit der rechten Maustaste auf dieProjektmappendatei und wählen Sie
 
-3. In der **Eigenschaftenseiten für Projektmappen** Dialogfeld unter **allgemeine Eigenschaften**, **Startprojekt**Option **mehrere Startprojekte:**.
+3. Wählen Sie im Dialogfeld **Eigenschaften Seiten** für Projekt Mappe unter **Allgemeine Eigenschaften**die Option **Startprojekt**aus, und wählen Sie **mehrere Start Projekte aus:** .
 
-4. Neben der **DCSwithDCR** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.
+4. Wählen Sie neben dem Projekt **dcswithdcr** in der Dropdown Liste **Aktion** die Option **starten** aus.
 
-5. Neben der **NetDCS** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.
+5. Wählen Sie neben dem Projekt **netdcs** in der Dropdown Liste **Aktion** die Option **starten** aus.
 
-6. Klicken Sie auf **OK** um das Dialogfeld zu schließen.
+6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.
 
 7. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
 8. Drücken Sie STRG+F5, um die Projektmappe auszuführen.
 
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
