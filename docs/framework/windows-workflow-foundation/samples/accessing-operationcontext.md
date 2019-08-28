@@ -2,15 +2,15 @@
 title: Zugreifen auf OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: fc3be627c8dfc8d8e49fde01684968a54912f548
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617338"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038412"
 ---
 # <a name="accessing-operationcontext"></a>Zugreifen auf OperationContext
-In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>) mit einer benutzerdefinierten bereichsaktivität verwendet werden können, um den Zugriff auf <xref:System.ServiceModel.OperationContext.Current%2A> und anzufügen oder einen benutzerdefinierten Nachrichtenheader in einer ausgehenden oder eingehenden Nachricht abzurufen.  
+In diesem Beispiel wird veranschaulicht, wie die<xref:System.ServiceModel.Activities.Receive> Messaging <xref:System.ServiceModel.Activities.Send>Aktivitäten (und) mit einer benutzerdefinierten Bereichs Aktivität verwendet <xref:System.ServiceModel.OperationContext.Current%2A> werden können, um auf einen benutzerdefinierten Nachrichten Header in einer ausgehenden oder eingehenden Nachricht zuzugreifen und ihn anzufügen oder abzurufen.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  Messagingaktivitäten, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>  
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:Sy
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Ausführung dieser Beispiel, die richtige URL-ACLs hinzugefügt werden muss (finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen von den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um die entsprechenden ACLs hinzuzufügen. Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
+1. Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Zum Ausführen dieses Beispiels müssen die richtigen URL-ACLs hinzugefügt werden (Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten, um die entsprechenden ACLs hinzuzufügen. Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,17 +30,17 @@ In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:Sy
   
     1. Erstellen Sie die Projektmappe.  
   
-    2. Legen Sie mehrere Startprojekte fest, von der rechten Maustaste auf die Projektmappe, und wählen **Startprojekte**.  
+    2. Legen Sie mehrere Start Projekte fest, indem Sie mit der rechten Maustaste auf die Projekt Mappe Klicken und **Start Projekte festlegen**auswählen.  
   
-    3. Hinzufügen **Service** und **Client** (in dieser Reihenfolge) als mehrere Startprojekte.  
+    3. Fügen Sie den **Dienst** und den **Client** (in dieser Reihenfolge) als mehrere Start Projekte hinzu.  
   
     4. Führen Sie die Anwendung aus. Die Clientkonsole zeigt einen Workflow an, der zweimal ausgeführt wird, und das Dienstfenster zeigt die Instanz-ID dieser Workflows an.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`
