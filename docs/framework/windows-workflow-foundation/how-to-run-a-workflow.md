@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962289"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044349"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
 Dieses Thema ist eine Fortsetzung des Lernprogramms Windows Workflow Foundation "Getting Started" und erläutert, wie Sie einen Workflow Host erstellen und den Workflow ausführen [, der im vorherigen Abschnitt Gewusst wie: Erstellen eines Workflow](how-to-create-a-workflow.md) Themas.
@@ -28,7 +28,7 @@ Dieses Thema ist eine Fortsetzung des Lernprogramms Windows Workflow Foundation 
 2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **WF45GettingStartedTutorial** , zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt**aus.  
   
     > [!TIP]
-    >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
+    > Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
 
 3. Wählen Sie im Knoten **Installiert** die Option **Visual C#** und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.
 
@@ -46,7 +46,7 @@ Dieses Thema ist eine Fortsetzung des Lernprogramms Windows Workflow Foundation 
 1. Doppelklicken Sie im **Projektmappen-Explorer** auf **Program.cs** oder **Module1.vb** , um den Code anzuzeigen.
 
     > [!TIP]
-    >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
+    > Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
 
      Da dieses Projekt mit der Vorlage **Konsolenanwendung für Workflows** erstellt wurde, enthält **Program.cs** oder **Module1.vb** den folgenden grundlegenden Code zum Hosten von Workflows.
 

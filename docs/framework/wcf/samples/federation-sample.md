@@ -2,12 +2,12 @@
 title: Verbundbeispiel
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 10087c4c18a4bc24dd36d814619fc265f9987c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d3a326f08e78edb79908485361f161c1b6da6625
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961423"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044977"
 ---
 # <a name="federation-sample"></a>Verbundbeispiel
 Dieses Beispiel veranschaulicht die Verbundsicherheit.  
@@ -89,7 +89,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
 1. Öffnen Sie das SDK-Befehlsfenster. Führen Sie im Beispielpfad die Datei "Setup.bat" aus. Dadurch werden die erforderlichen virtuellen Verzeichnisse für das Beispiel erstellt und die erforderlichen Zertifikate mit entsprechenden Berechtigungen installiert.  
   
     > [!NOTE]
-    >  Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt. Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0-Verwaltungskompatibilität installiert ist, da das Setup die IIS-Administratorskripts verwendet. Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.  
+    > Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt. Bei [!INCLUDE[wv](../../../../includes/wv-md.md)] müssen Sie sicherstellen, dass IIS 6.0-Verwaltungskompatibilität installiert ist, da das Setup die IIS-Administratorskripts verwendet. Das Ausführen des Setupskripts über [!INCLUDE[wv](../../../../includes/wv-md.md)] erfordert Administratorrechte.  
   
 2. Öffnen Sie in Visual Studio die Datei FederationSample. sln, und wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Dadurch werden die allgemeinen Projektdateien, der Bookstore-Dienst, Bookstore-STS und HomeRealm STS erstellt und in IIS bereitgestellt. Auf diese Weise wird auch die Buchhandlungsclientanwendung erstellt, und die ausführbare Datei "BookStoreClient.exe" wird im Ordner "FederationSample\BookStoreClient\bin\Debug" gespeichert.  
   
@@ -102,17 +102,17 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
      Das Beispiel ist so konfiguriert, dass Benutzern der Kauf von Büchern ermöglicht wird, die $15 oder weniger kosten. Wenn versucht wird, Bücher zu kaufen, die mehr als $15 kosten, erhält der Client vom BookStore-Dienst eine Nachricht vom Typ Zugriff verweigert.  
   
     > [!NOTE]
-    >  Im Beispiel wird der Kreditrahmen des Benutzers nach einem Kauf nicht aktualisiert. Sie können immer wieder Bücher innerhalb des Kreditrahmens (fest) des Benutzers kaufen.  
+    > Im Beispiel wird der Kreditrahmen des Benutzers nach einem Kauf nicht aktualisiert. Sie können immer wieder Bücher innerhalb des Kreditrahmens (fest) des Benutzers kaufen.  
   
 #### <a name="to-clean-up"></a>So führen Sie eine Bereinigung durch  
   
 1. Führen Sie die Datei Cleanup.bat aus. Dadurch werden die virtuellen Verzeichnisse, die beim Setup erstellt wurden, gelöscht, und auch die beim Setup installierten Zertifikate werden entfernt.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

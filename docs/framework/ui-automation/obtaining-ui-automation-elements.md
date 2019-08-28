@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966387"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044145"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Abrufen von Benutzeroberflächenautomatisierungs-Elementen
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966387"
  In diesem Thema werden die verschiedenen Möglichkeiten zum Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten für [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente beschrieben.  
   
 > [!CAUTION]
->  Wenn Ihre Clientanwendung nach Elementen in ihrer eigenen Benutzeroberfläche suchen kann, müssen alle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Aufrufe in einem separaten Thread ausgeführt werden. Weitere Informationen finden Sie unter [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Wenn Ihre Clientanwendung nach Elementen in ihrer eigenen Benutzeroberfläche suchen kann, müssen alle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Aufrufe in einem separaten Thread ausgeführt werden. Weitere Informationen finden Sie unter [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Stammelement  
@@ -28,7 +28,7 @@ ms.locfileid: "69966387"
  Das Stammelement für den Desktop, aus dem alle Elemente abgeleitet werden, wird aus der statischen <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> -Eigenschaft abgerufen.  
   
 > [!CAUTION]
->  Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
+> Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Bedingungen  

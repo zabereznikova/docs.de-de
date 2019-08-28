@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 13ad6c85bbde57cd6ad19848de71dabc23ed8f49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953921"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044091"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "69953921"
 - Verwenden Sie ein Tool wie [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elements zu ermitteln, an dem Sie interessiert sind. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
   
 > [!CAUTION]
->  Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
+> Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  
   
  [!code-csharp[UIAAutomationID_snip#100](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#100)]
  [!code-vb[UIAAutomationID_snip#100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#100)]  

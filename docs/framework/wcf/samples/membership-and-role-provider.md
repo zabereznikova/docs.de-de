@@ -2,12 +2,12 @@
 title: Mitgliedschafts- und Rollenanbieter
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948549"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039436"
 ---
 # <a name="membership-and-role-provider"></a>Mitgliedschafts- und Rollenanbieter
 Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein Dienst mithilfe der ASP.net-Mitgliedschafts-und Rollen Anbieter Clients authentifizieren und autorisieren kann.  
@@ -123,10 +123,10 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
 2. Stellen Sie sicher, dass Sie die [ASP.NET-Anwendungsdienste Datenbank](https://go.microsoft.com/fwlink/?LinkId=94997)konfiguriert haben.  
   
     > [!NOTE]
-    >  Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte bei der Konfiguration der ASP.NET Anwendungsdienste-Datenbank sowie in der Web. config-Verbindungs Zeichenfolge verwendet werden.  
+    > Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte bei der Konfiguration der ASP.NET Anwendungsdienste-Datenbank sowie in der Web. config-Verbindungs Zeichenfolge verwendet werden.  
   
     > [!NOTE]
-    >  Das ASP.NET-Arbeitsprozess Konto muss über Berechtigungen für die Datenbank verfügen, die in diesem Schritt erstellt wird. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
+    > Das ASP.NET-Arbeitsprozess Konto muss über Berechtigungen für die Datenbank verfügen, die in diesem Schritt erstellt wird. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
   
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, befolgen Sie die folgenden Anweisungen.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965618"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040619"
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  Ein Beispiel für das Erstellen eines Dienstanbieter und einen Client, der auf den Dienst [zugreift, finden Sie unter Gewusst wie: Erstellen Sie einen Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) Vertrag [, und Gewusst wie: Greifen Sie mit einem Duplex Vertrag](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)auf Dienste zu. Ein funktionierendes Beispiel finden Sie unter [Duplex](../../../docs/framework/wcf/samples/duplex.md). Weitere Informationen zu Problemen bei der Verwendung von Duplex Verträgen finden Sie unter [Duplex Dienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Wenn ein Dienst eine Duplexmeldung empfängt, überprüft er das `ReplyTo`-Element in dieser eingehenden Meldung, um zu bestimmen, wohin die Antwort gesendet werden soll. Wenn der zum Empfangen der Meldung verwendete Kanal nicht gesichert ist, kann ein nicht vertrauenswürdiger Client eine bösartige Meldung mit dem `ReplyTo`-Element eines Zielcomputers senden, was zu einem Denial Of Service (DOS) auf diesem Zielcomputer führt.  
+> Wenn ein Dienst eine Duplexmeldung empfängt, überprüft er das `ReplyTo`-Element in dieser eingehenden Meldung, um zu bestimmen, wohin die Antwort gesendet werden soll. Wenn der zum Empfangen der Meldung verwendete Kanal nicht gesichert ist, kann ein nicht vertrauenswürdiger Client eine bösartige Meldung mit dem `ReplyTo`-Element eines Zielcomputers senden, was zu einem Denial Of Service (DOS) auf diesem Zielcomputer führt.  
   
 ##### <a name="out-and-ref-parameters"></a>Out-Parameter und Ref-Parameter  
  In den meisten Fällen können Sie Parameter `in` (`ByVal` in Visual Basic) und `out` -und `ref` -para`ByRef` Metern (in Visual Basic) verwenden. Da die `out`- und `ref`-Parameter anzeigen, dass Daten aus einem Vorgang zurückgegeben werden, gibt eine Vorgangssignatur wie die folgende an, dass ein Anforderungs-/Antwortvorgang erforderlich ist, obwohl die Vorgangssignatur `void` zurückgibt.  

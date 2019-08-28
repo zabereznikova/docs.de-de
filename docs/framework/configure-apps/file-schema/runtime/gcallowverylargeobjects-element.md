@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6db26d250de191559fdae0479aca9f41c147502
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663713"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040664"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcallowverylargeobjects-> Element
 Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2 Gigabyte (GB).  
@@ -64,7 +64,7 @@ Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2
 - Die maximale Größe für Zeichenfolgen und andere Nichtarrayobjekte ist unverändert.  
   
 > [!CAUTION]
->  Bevor Sie diese Funktion aktivieren, stellen Sie sicher, dass Ihre Anwendung keinen unsicheren Code enthält, der davon ausgeht, dass alle Arrays weniger als 2 GB groß sind. Beispielsweise könnte unsicherer Code, der Arrays als Puffer verwendet, für Pufferüberläufe anfällig sein, wenn dieser ausgehend davon geschrieben wurde, dass Arrays 2 GB nicht überschreiten.  
+> Bevor Sie diese Funktion aktivieren, stellen Sie sicher, dass Ihre Anwendung keinen unsicheren Code enthält, der davon ausgeht, dass alle Arrays weniger als 2 GB groß sind. Beispielsweise könnte unsicherer Code, der Arrays als Puffer verwendet, für Pufferüberläufe anfällig sein, wenn dieser ausgehend davon geschrieben wurde, dass Arrays 2 GB nicht überschreiten.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie diese Funktion für eine Anwendung aktiviert wird.  

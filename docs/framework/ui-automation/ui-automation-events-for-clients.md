@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911673"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044108"
 ---
 # <a name="ui-automation-events-for-clients"></a>Benutzeroberflächenautomatisierungs-Ereignisse für Clients
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "69911673"
 > Um Ereignisse für Schließen eines Fensters zu verarbeiten, wandeln Sie den Argumenttyp, der dem Ereignishandler übergeben wird, in <xref:System.Windows.Automation.WindowClosedEventArgs> um. Da das [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Element für das Fenster nicht mehr gültig ist, können Sie Informationen nicht mit dem `sender`-Parameter abrufen. Verwenden Sie stattdessen <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>.  
   
 > [!CAUTION]
->  Wenn Ihre Anwendung möglicherweise Ereignisse aus ihrer eigenen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] empfängt, sollten Sie nicht den [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Thread verwenden, um Ereignisse zu abonnieren oder Abonnements von Ereignissen zu kündigen. Eine solche Vorgehensweise kann zu unvorhersehbarem Verhalten führen. Weitere Informationen finden Sie unter [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Wenn Ihre Anwendung möglicherweise Ereignisse aus ihrer eigenen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] empfängt, sollten Sie nicht den [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Thread verwenden, um Ereignisse zu abonnieren oder Abonnements von Ereignissen zu kündigen. Eine solche Vorgehensweise kann zu unvorhersehbarem Verhalten führen. Weitere Informationen finden Sie unter [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  Beim Herunterfahren, oder wenn [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Ereignisse nicht mehr für die Anwendung benötigt werden, sollten ein Benutzeroberflächenautomatisierungs-Client eine der folgenden Methoden aufrufen.  
   

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592406"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046195"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet
 Mit dem folgenden Beispielprogramm wird ein Formular erstellt, das Fibonacci-Zahlen berechnet. Die Berechnung erfolgt in einem separaten (vom Thread der Benutzeroberfläche unabhängigen) Thread, sodass die Benutzeroberfläche während der Berechnung weiterhin ohne Verzögerungen ausgeführt wird.  
   
  Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  
   
- Siehe auch [Exemplarische Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
+ Siehe [auch Exemplarische Vorgehensweise: Implementieren eines Formulars, das einen Hintergrund Vorgang](walkthrough-implementing-a-form-that-uses-a-background-operation.md)verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -43,7 +43,7 @@ Mit dem folgenden Beispielprogramm wird ein Formular erstellt, das Fibonacci-Zah
 ## <a name="robust-programming"></a>Stabile Programmierung  
   
 > [!CAUTION]
->  Wenn Sie Multithreading verwenden, setzen Sie sich möglicherweise sehr ernsten und komplexen Problemen aus. Beachten Sie die Informationen unter [Empfohlene Vorgehensweise für das verwaltete Threading](../../../standard/threading/managed-threading-best-practices.md), bevor Sie eine Projektmappe implementieren, die Multithreading verwendet.  
+> Wenn Sie Multithreading verwenden, setzen Sie sich möglicherweise sehr ernsten und komplexen Problemen aus. Beachten Sie die Informationen unter [Empfohlene Vorgehensweise für das verwaltete Threading](../../../standard/threading/managed-threading-best-practices.md), bevor Sie eine Projektmappe implementieren, die Multithreading verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962346"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044384"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Vorgehensweise: Erstellen eines Zustandsautomatworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. In diesem Thema wird Schritt für Schritt beschrieben, wie Sie einen Workflow erstellen, der sowohl <xref:System.Activities.Statements.StateMachine> integrierte Aktivitäten wie die-Aktivität als auch die [benutzerdefinierten Aktivitäten aus der vorherigen Vorgehensweise verwendet: Erstellen Sie ein](how-to-create-an-activity.md) Aktivitäts Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -52,7 +52,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 9. Klicken Sie auf **Variable erstellen**.  
   
     > [!TIP]
-    >  Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken <xref:System.Activities.Statements.StateMachine> Sie auf der Oberfläche des Workflow-Designers auf die-Aktivität, um Sie auszuwählen.  
+    > Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken <xref:System.Activities.Statements.StateMachine> Sie auf der Oberfläche des Workflow-Designers auf die-Aktivität, um Sie auszuwählen.  
   
 10. Geben `Guess` Sie in das Feld **Name** ein, wählen Sie **Int32** aus der Dropdown Liste **Variablentyp** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern  
   
@@ -67,7 +67,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 1. Klicken Sie auf **state1** , um es auszuwählen. Ändern Sie`Initialize Target`im **Fenster Eigenschaften**den **Display Name** in.  
   
     > [!TIP]
-    >  Wenn das **Fenster Eigenschaften** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Eigenschaften Fenster** aus.  
+    > Wenn das **Fenster Eigenschaften** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Eigenschaften Fenster** aus.  
   
 2. Doppelklicken Sie auf den neu umbenannten Zustand **Ziel initialisieren** im Workflow-Designer, um ihn zu erweitern.  
   
@@ -82,7 +82,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     ```  
   
     > [!TIP]
-    >  Wenn das Fenster **Toolbox** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Toolbox** aus.  
+    > Wenn das Fenster **Toolbox** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Toolbox** aus.  
   
 4. Kehren Sie im Workflow-Designer zur Ansicht Gesamt Zustands Automat zurück, indem Sie in der Breadcrumb-Anzeige am oberen Rand des Workflow-Designers auf **StateMachine** klicken.  
   

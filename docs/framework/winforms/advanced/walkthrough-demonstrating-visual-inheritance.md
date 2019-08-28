@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040322"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046151"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 
@@ -35,19 +35,19 @@ Schließlich wird in dieser exemplarischen Vorgehensweise der Unterschied zwisch
 > [!CAUTION]
 > Nicht alle Steuerelemente unterstützen visuelle Vererbung von einem Basisformular. Die folgenden Steuerelemente unterstützen das in dieser exemplarischen Vorgehensweise beschriebene Szenario nicht:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Diese Steuerelemente im geerbten Formular sind immer schreibgeschützt, unabhängig von den verwendeten Modifizierern (`private`, `protected` oder `public`).
+> Diese Steuerelemente im geerbten Formular sind immer schreibgeschützt, unabhängig von den verwendeten Modifizierern (`private`, `protected` oder `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Erstellen eines Klassen Bibliotheks Projekts, das ein Basis Formular enthält
 
@@ -61,7 +61,7 @@ Schließlich wird in dieser exemplarischen Vorgehensweise der Unterschied zwisch
 
 5. Wählen Sie im Menü **Datei** die Option **Alle speichern** aus, um das Projekt und die Dateien am Standard Speicherort zu speichern.
 
- Mit den nächsten zwei Verfahren werden dem Basisformular Schaltflächen hinzugefügt. Zur Demonstration der visuellen Vererbung weisen Sie den Schaltflächen verschiedene Zugriffsebenen zu, indem Sie ihre `Modifiers`Eigenschaften festlegen.
+Mit den nächsten zwei Verfahren werden dem Basisformular Schaltflächen hinzugefügt. Zur Demonstration der visuellen Vererbung weisen Sie den Schaltflächen verschiedene Zugriffsebenen zu, indem Sie ihre `Modifiers`Eigenschaften festlegen.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Fügen Sie eine Schaltfläche hinzu, die von Vererbung des Basis Formulars geändert werden kann.
 
@@ -135,7 +135,7 @@ Schließlich wird in dieser exemplarischen Vorgehensweise der Unterschied zwisch
 
 5. Öffnen Sie das geerbte Formular (**Form2**) im Designer, indem Sie darauf doppelklicken, wenn es nicht bereits geöffnet ist.
 
-     Im Designer verfügen die geerbten Schaltflächen über ein Symbol (![Screenshot des Visual Basic Vererbungs Symbols](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) in der oberen Ecke, das angibt, dass Sie geerbt werden.
+    Im Designer verfügen die geerbten Schaltflächen über ein Symbol (![Screenshot des Visual Basic Vererbungs Symbols](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) in der oberen Ecke, das angibt, dass Sie geerbt werden.
 
 6. Wählen Sie die Schaltfläche "Hello" ( **Hallo** ) aus, und beobachten Sie die Handles Da diese Schaltfläche geschützt ist, können die Erben sie verschieben, ihre Größe ändern, ihre Beschriftung ändern und andere Änderungen vornehmen.
 

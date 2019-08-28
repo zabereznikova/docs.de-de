@@ -2,15 +2,15 @@
 title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665977"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045436"
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
-Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers aus einem Dienst in eine andere mithilfe von Windows Communication Foundation (WCF) flow Sicherheitsinfrastruktur.  
+Dieses Szenariobeispiel veranschaulicht, wie die Identitätsinformationen des Aufrufers mithilfe Windows Communication Foundation (WCF)-Sicherheitsinfrastruktur von einem Dienst zu einem anderen weitergeleitet werden.  
   
  Ein allgemeines Entwurfsmuster besteht darin, dem öffentlichen Netzwerk die Funktionalität, die von einem Dienst bereitgestellt wird, mithilfe eines Fassadendiensts verfügbar zu machen. Der Fassadendienst befindet sich üblicherweise im Perimeternetzwerk (auch bekannt als DMZ (Demilitarized Zone; deutsch: entmilitarisierte Zone) und geschirmtes Unternetz) und kommuniziert mit einem Back-End-Dienst, der die Geschäftslogik implementiert und Zugriff auf interne Daten hat. Der Kommunikationskanal zwischen dem Fassadendienst und dem Back-End-Dienst führt durch eine Firewall und wird üblicherweise auf einen Zweck begrenzt.  
   
@@ -22,10 +22,10 @@ Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufruf
   
 - Rechner-Back-End-Dienst  
   
- Der Fassadendienst ist für die Überprüfung der Anforderung und die Authentifizierung des Aufrufers verantwortlich. Nach erfolgreicher Authentifizierung und Validierung leitet er die Anforderung an den Back-End-Dienst mithilfe des gesteuerten Kommunikationskanals vom Perimeternetzwerk zum internen Netzwerk weiter. Als Teil der weitergeleiteten Anforderung beinhaltet der Fassadendienst Informationen über die Identität des Aufrufers. So kann der Back-End-Dienst diese Informationen in der Verarbeitung verwenden. Die Identität des Aufrufers wird mit einem `Username` -Sicherheitstoken im Nachrichten- `Security` -Header gesendet. Das Beispiel verwendet die WCF-Sicherheitsinfrastruktur zu übertragen, und extrahieren diese Informationen aus der `Security` Header.  
+ Der Fassadendienst ist für die Überprüfung der Anforderung und die Authentifizierung des Aufrufers verantwortlich. Nach erfolgreicher Authentifizierung und Validierung leitet er die Anforderung an den Back-End-Dienst mithilfe des gesteuerten Kommunikationskanals vom Perimeternetzwerk zum internen Netzwerk weiter. Als Teil der weitergeleiteten Anforderung beinhaltet der Fassadendienst Informationen über die Identität des Aufrufers. So kann der Back-End-Dienst diese Informationen in der Verarbeitung verwenden. Die Identität des Aufrufers wird mit einem `Username` -Sicherheitstoken im Nachrichten- `Security` -Header gesendet. Im Beispiel wird die WCF-Sicherheitsinfrastruktur verwendet, um diese Informationen aus dem `Security` -Header zu übertragen und zu extrahieren.  
   
 > [!IMPORTANT]
->  Der Back-End-Dienst vertraut darauf, dass der Fassadendienst den Aufrufer authentifiziert. Daher authentifiziert der Back-End-Dienst den Aufrufer nicht erneut, sondern nutzt die Identitätsinformationen, die vom Fassadendienst in der weitergeleiteten Anforderung bereitgestellt werden. Aufgrund dieser Vertrauensbeziehung muss der Back-End-Dienst den Fassadendienst authentifizieren, um sicherzustellen, dass die weitergeleitete Nachricht von einer vertrauenswürdigen Quelle stammt, in diesem Fall vom Fassadendienst.  
+> Der Back-End-Dienst vertraut darauf, dass der Fassadendienst den Aufrufer authentifiziert. Daher authentifiziert der Back-End-Dienst den Aufrufer nicht erneut, sondern nutzt die Identitätsinformationen, die vom Fassadendienst in der weitergeleiteten Anforderung bereitgestellt werden. Aufgrund dieser Vertrauensbeziehung muss der Back-End-Dienst den Fassadendienst authentifizieren, um sicherzustellen, dass die weitergeleitete Nachricht von einer vertrauenswürdigen Quelle stammt, in diesem Fall vom Fassadendienst.  
   
 ## <a name="implementation"></a>Implementierung  
  Es gibt zwei Kommunikationspfade in diesem Beispiel. Der erste Kommunikationspfad besteht zwischen dem Client und dem Fassadendienst, der zweite zwischen dem Fassadendienst und dem Back-End-Dienst.  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- Die [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) Bindungselement übernimmt die Übertragung von Benutzernamen und das Extrahieren des ursprünglichen Aufrufers. Die [ \<WindowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) und [ \<TcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) kümmern sich für die Authentifizierung von Fassaden- und Back-End-Dienste sowie den Nachrichtenschutz.  
+ [ Das\<Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) Bindungs Element übernimmt die Übertragung und Extraktion des ersten Benutzernamens des Aufrufers. Die [ \<windowsStreamSecurity->](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) und [ \<TcpTransport->](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) übernehmen die Authentifizierung von Fassaden-und Back-End-Diensten sowie den Nachrichten Schutz.  
   
- Um die Anforderung weiterzuleiten, muss die fassadendienstimplementierung Benutzername des ursprünglichen Aufrufers bereitstellen, damit die WCF-Sicherheit-Infrastruktur, dies in der weitergeleiteten Nachricht platzieren kann. Der Benutzername des ursprünglichen Aufrufers wird in der Fassadendienstimplementierung bereitgestellt, indem er in der `ClientCredentials` -Eigenschaft auf der Clientproxyinstanz festgelegt wird, die der Fassadendienst für die Kommunikation mit dem Back-End-Dienst nutzt.  
+ Um die Anforderung weiterzuleiten, muss die Fassaden Dienst Implementierung den Benutzernamen des ursprünglichen Aufrufers bereitstellen, damit die WCF-Sicherheitsinfrastruktur dies in die weitergeleitete Nachricht versetzen kann. Der Benutzername des ursprünglichen Aufrufers wird in der Fassadendienstimplementierung bereitgestellt, indem er in der `ClientCredentials` -Eigenschaft auf der Clientproxyinstanz festgelegt wird, die der Fassadendienst für die Kommunikation mit dem Back-End-Dienst nutzt.  
   
  Der folgende Code zeigt, wie die `GetCallerIdentity` -Methode auf dem Fassadendienst implementiert wird. Andere Methoden verwenden das gleiche Muster.  
   
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Wie bereits im vorherigen Code gezeigt, ist das Kennwort nicht für die `ClientCredentials` -Eigenschaft festgelegt, sondern nur der Benutzername. WCF-Sicherheitsinfrastruktur erstellt ein Benutzernamen-Sicherheitstoken ohne Kennwort in diesem Fall das ist genau das, was in diesem Szenario erforderlich ist.  
+ Wie bereits im vorherigen Code gezeigt, ist das Kennwort nicht für die `ClientCredentials` -Eigenschaft festgelegt, sondern nur der Benutzername. Die WCF-Sicherheitsinfrastruktur erstellt in diesem Fall ein Benutzernamen-Sicherheits Token ohne Kennwort. Dies ist genau das, was in diesem Szenario erforderlich ist.  
   
- Auf dem Back-End-Dienst müssen die Informationen authentifiziert werden, die im Benutzernamen-Sicherheitstoken enthalten sind. WCF-Sicherheit versucht standardmäßig den Benutzer zu einem Windows-Konto mithilfe des angegebenen Kennworts zuzuordnen. In diesem Fall ist kein Kennwort angegeben, und der Back-End-Dienst muss den Benutzernamen nicht authentifizieren, da die Authentifizierung bereits vom Fassadendienst durchgeführt wurde. Zur Implementierung dieser Funktionalität in WCF einen benutzerdefinierten `UserNamePasswordValidator` wird bereitgestellt, das nur durchsetzt, dass ein Benutzername im Token angegeben ist, und keine zusätzlichen Authentifizierung führt.  
+ Auf dem Back-End-Dienst müssen die Informationen authentifiziert werden, die im Benutzernamen-Sicherheitstoken enthalten sind. Standardmäßig versucht die WCF-Sicherheit, den Benutzer mit dem bereitgestellten Kennwort einem Windows-Konto zuzuordnen. In diesem Fall ist kein Kennwort angegeben, und der Back-End-Dienst muss den Benutzernamen nicht authentifizieren, da die Authentifizierung bereits vom Fassadendienst durchgeführt wurde. Um diese Funktionalität in WCF zu implementieren, wird `UserNamePasswordValidator` ein benutzerdefiniertes bereitgestellt, das nur erzwingt, dass ein Benutzername im Token angegeben ist, und keine zusätzliche Authentifizierung ausführt.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -209,7 +209,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Die Informationen über das Fassadendienstkonto werden mithilfe der `ServiceSecurityContext.Current.WindowsIdentity` -Eigenschaft extrahiert. Um auf die Informationen über den ursprünglichen Aufrufer zuzugreifen, verwendet der Back-End-Dienst die `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -Eigenschaft. Hier wird nach einem `Identity` -Anspruch mit dem Typ `Name`gesucht. Dieser Anspruch wird automatisch generiert, von WCF-Sicherheitsinfrastruktur aus den Informationen in den `Username` -Sicherheitstoken.  
+ Die Informationen über das Fassadendienstkonto werden mithilfe der `ServiceSecurityContext.Current.WindowsIdentity` -Eigenschaft extrahiert. Um auf die Informationen über den ursprünglichen Aufrufer zuzugreifen, verwendet der Back-End-Dienst die `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -Eigenschaft. Hier wird nach einem `Identity` -Anspruch mit dem Typ `Name`gesucht. Dieser Anspruch wird automatisch von der WCF-Sicherheitsinfrastruktur aus den Informationen generiert, `Username` die im-Sicherheits Token enthalten sind.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen. Sie können die EINGABETASTE in den Konsolenfenstern des Fassaden- und Back-End-Diensts drücken, um die Dienste zu schließen.  
@@ -260,7 +260,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
@@ -276,17 +276,17 @@ Press <ENTER> to terminate client.
   
 5. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-6. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

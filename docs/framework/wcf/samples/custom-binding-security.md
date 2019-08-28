@@ -2,28 +2,29 @@
 title: Sicherheit mit benutzerdefinierten Bindungen
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953775"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045614"
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
+
 In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.
 
- Dieses Beispiel besteht aus einem Clientkonsolenprogramm (EXE) und einem Dienstkonsolenprogramm (EXE). Der Dienst implementiert einen Duplexvertrag. Der Vertrag wird von der `ICalculatorDuplex`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Durch die `ICalculatorDuplex`-Schnittstelle kann der Client mathematische Operationen ausführen (Berechnen eines laufenden Ergebnisses über eine Sitzung). Unabhängig davon kann der Dienst Ergebnisse auf der `ICalculatorDuplexCallback`-Schnittstelle zurückgeben. Ein Duplexvertrag erfordert eine Sitzung, da ein Kontext eingerichtet werden muss, um die zwischen dem Client und dem Dienst gesendeten Nachrichten in Beziehung zu setzen. Es wird eine benutzerdefinierte Bindung definiert, die Duplexkommunikation unterstützt und sicher ist.
+Dieses Beispiel besteht aus einem Clientkonsolenprogramm (EXE) und einem Dienstkonsolenprogramm (EXE). Der Dienst implementiert einen Duplexvertrag. Der Vertrag wird von der `ICalculatorDuplex`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Durch die `ICalculatorDuplex`-Schnittstelle kann der Client mathematische Operationen ausführen (Berechnen eines laufenden Ergebnisses über eine Sitzung). Unabhängig davon kann der Dienst Ergebnisse auf der `ICalculatorDuplexCallback`-Schnittstelle zurückgeben. Ein Duplexvertrag erfordert eine Sitzung, da ein Kontext eingerichtet werden muss, um die zwischen dem Client und dem Dienst gesendeten Nachrichten in Beziehung zu setzen. Es wird eine benutzerdefinierte Bindung definiert, die Duplexkommunikation unterstützt und sicher ist.
 
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
 
- Die Dienstkonfiguration definiert eine benutzerdefinierte Bindung, die Folgendes unterstützt:
+Die Dienstkonfiguration definiert eine benutzerdefinierte Bindung, die Folgendes unterstützt:
 
 - TCP-Kommunikation mit Schutz durch Verwendung des TLS/SSL-Protokolls.
 
 - Windows-Nachrichtensicherheit.
 
- Durch die benutzerdefinierte Bindungskonfiguration wird der sichere Transport ermöglicht, da gleichzeitig die Sicherheit auf Nachrichtenebene aktiviert wird. Die Reihenfolge der Bindungs Elemente ist beim Definieren einer benutzerdefinierten Bindung wichtig, da jede eine Ebene im Kanal Stapel darstellt (siehe [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Die benutzerdefinierte Bindung wird in den Dienst- und Clientkonfigurationsdateien definiert, wie in der folgenden Beispielkonfiguration dargestellt.
+Durch die benutzerdefinierte Bindungskonfiguration wird der sichere Transport ermöglicht, da gleichzeitig die Sicherheit auf Nachrichtenebene aktiviert wird. Die Reihenfolge der Bindungs Elemente ist beim Definieren einer benutzerdefinierten Bindung wichtig, da jede eine Ebene im Kanal Stapel darstellt (siehe [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)). Die benutzerdefinierte Bindung wird in den Dienst- und Clientkonfigurationsdateien definiert, wie in der folgenden Beispielkonfiguration dargestellt.
 
 ```xml
 <bindings>
@@ -41,7 +42,7 @@ In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer b
 </bindings>
 ```
 
- Die benutzerdefinierte Bindung verwendet ein Dienstzertifikat zum Authentifizieren des Diensts auf Transportebene und zum Sichern der Nachrichten während der Übertragung zwischen Client und Dienst. Dies wird durch das `sslStreamSecurity`-Bindungselement umgesetzt. Das Zertifikat des Diensts wird mit einem Dienstverhalten konfiguriert, wie in der folgenden Beispielkonfiguration dargestellt.
+Die benutzerdefinierte Bindung verwendet ein Dienstzertifikat zum Authentifizieren des Diensts auf Transportebene und zum Sichern der Nachrichten während der Übertragung zwischen Client und Dienst. Dies wird durch das `sslStreamSecurity`-Bindungselement umgesetzt. Das Zertifikat des Diensts wird mit einem Dienstverhalten konfiguriert, wie in der folgenden Beispielkonfiguration dargestellt.
 
 ```xml
 <behaviors>
@@ -57,9 +58,9 @@ In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer b
 </behaviors>
 ```
 
- Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem Windows-Anmeldeinformationstyp. Dies ist der Standard-Anmeldeinformationstyp. Dies wird durch das `security`-Bindungselement umgesetzt. Sowohl der Client als auch der Dienst werden mithilfe von Sicherheitsfunktionen auf Nachrichtenebene authentifiziert, wenn der Kerberos-Authentifizierungsmechanismus verfügbar ist. Dies geschieht, wenn das Beispiel in der Active Directory-Umgebung ausgeführt wird. Ist der Kerberos-Authentifizierungsmechanismus nicht verfügbar, wird die NTLM-Authentifizierung verwendet. NTLM authentifiziert den Client für den Dienst, authentifiziert aber nicht den Dienst für den Client. Das `security`-Bindungselement ist für die Verwendung von `SecureConversation` `authenticationType` konfiguriert. Daher wird eine Sicherheitssitzung auf dem Client und für den Dienst erstellt. Dies ist erforderlich, damit der Duplexvertrag des Diensts funktioniert.
+Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem Windows-Anmeldeinformationstyp. Dies ist der Standard-Anmeldeinformationstyp. Dies wird durch das `security`-Bindungselement umgesetzt. Sowohl der Client als auch der Dienst werden mithilfe von Sicherheitsfunktionen auf Nachrichtenebene authentifiziert, wenn der Kerberos-Authentifizierungsmechanismus verfügbar ist. Dies geschieht, wenn das Beispiel in der Active Directory-Umgebung ausgeführt wird. Ist der Kerberos-Authentifizierungsmechanismus nicht verfügbar, wird die NTLM-Authentifizierung verwendet. NTLM authentifiziert den Client für den Dienst, authentifiziert aber nicht den Dienst für den Client. Das `security`-Bindungselement ist für die Verwendung von `SecureConversation` `authenticationType` konfiguriert. Daher wird eine Sicherheitssitzung auf dem Client und für den Dienst erstellt. Dies ist erforderlich, damit der Duplexvertrag des Diensts funktioniert.
 
- Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Konsolenfenster des Clients angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
+Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Konsolenfenster des Clients angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
 ```
 Press <ENTER> to terminate client.
@@ -70,38 +71,38 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
- Wenn Sie das Beispiel ausführen, werden die vom Client zurückgegebenen Nachrichten in der vom Dienst gesendeten Rückrufschnittstelle angezeigt. Alle Zwischenergebnisse werden angezeigt, gefolgt von der ganzen Formel nach Abschluss aller Vorgänge. Drücken Sie die EINGABETASTE, um den Client zu schließen.
+Wenn Sie das Beispiel ausführen, werden die vom Client zurückgegebenen Nachrichten in der vom Dienst gesendeten Rückrufschnittstelle angezeigt. Alle Zwischenergebnisse werden angezeigt, gefolgt von der ganzen Formel nach Abschluss aller Vorgänge. Drücken Sie die EINGABETASTE, um den Client zu schließen.
 
- Mit der in diesem Beispiel enthaltenen Datei Setup.bat können Sie Client und Server mit relevanten Dienstzertifikaten zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.
+Mit der in diesem Beispiel enthaltenen Datei Setup.bat können Sie Client und Server mit relevanten Dienstzertifikaten zum Ausführen einer gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.
 
- Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien für dieses Beispiel, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
+Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien für dieses Beispiel, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden:
 
 - Erstellen des Serverzertifikats.
 
-     Mit den folgenden Zeilen aus der Datei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. In dieser Batchdatei ist der Servername standardmäßig auf localhost festgelegt.
+  Mit den folgenden Zeilen aus der Datei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. In dieser Batchdatei ist der Servername standardmäßig auf localhost festgelegt.
 
-     Das Zertifikat wird im Speicher CurrentUser für im Internet gehostete Dienste gespeichert.
+  Das Zertifikat wird im Speicher CurrentUser für im Internet gehostete Dienste gespeichert.
 
-    ```bat
-    echo ************
-    echo Server cert setup starting
-    echo %SERVER_NAME%
-    echo ************
-    echo making server cert
-    echo ************
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
-    ```
+  ```bat
+  echo ************
+  echo Server cert setup starting
+  echo %SERVER_NAME%
+  echo ************
+  echo making server cert
+  echo ************
+  makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+  ```
 
 - Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.
 
-     Mit den folgenden Zeilen in der Datei "Setup.bat" wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
+  Mit den folgenden Zeilen in der Datei "Setup.bat" wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
-    ```
+  ```
+  certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+  ```
 
-    > [!NOTE]
-    >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
+  > [!NOTE]
+  > Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
@@ -116,28 +117,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 1. Öffnen Sie eine Developer-Eingabeaufforderung für das Visual Studio-Fenster mit Administratorrechten, und führen Sie Setup. bat aus dem Beispiel Installationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
-    >  Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie über eine Visual Studio 2012-Eingabeaufforderung ausgeführt wird. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Skript "Setup. bat" erforderlich sind.  
-  
-2. Starten Sie Service.exe aus dem Ordner \service\bin.  
-  
-3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
-  
-4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
-  
-### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
-  
-1. Auf dem Dienstcomputer:  
-  
-    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen servicemodelsamples.  
-  
-    2. Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.  
-  
-    3. Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
-  
-    4. Führen Sie den folgenden Befehl in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit `Setup.bat service`Administratorrechten geöffnet wurde:. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.  
-  
+    > Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie über eine Visual Studio 2012-Eingabeaufforderung ausgeführt wird. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Skript "Setup. bat" erforderlich sind.
+
+2. Starten Sie Service.exe aus dem Ordner \service\bin.
+
+3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.
+
+4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.
+
+### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus
+
+1. Auf dem Dienstcomputer:
+
+    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis mit dem Namen servicemodelsamples.
+
+    2. Kopieren Sie die Dienstprogrammdateien aus \inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Unterverzeichnis \bin kopieren.
+
+    3. Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.
+
+    4. Führen Sie den folgenden Befehl in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit `Setup.bat service`Administratorrechten geöffnet wurde:. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.
+
         > [!NOTE]
-        >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
+        > Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
 
     5. Ändern Sie den [ \<serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) in der Datei "Service. exe. config", um den Antragsteller Namen des im vorherigen Schritt generierten Zertifikats widerzuspiegeln.
 
@@ -163,7 +164,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 
-         Die Schritte c, d und e sind nicht erforderlich, wenn das Zertifikat von einem vertrauenswürdigen Aussteller stammt.
+        Die Schritte c, d und e sind nicht erforderlich, wenn das Zertifikat von einem vertrauenswürdigen Aussteller stammt.
 
     6. Ändern Sie die Datei App.config des Clients wie folgt:
 
@@ -174,7 +175,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
                 binding="customBinding"
                 bindingConfiguration="Binding1"
                 contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex"
-        behaviorConfiguration="CalculatorClientBehavior" />
+                behaviorConfiguration="CalculatorClientBehavior" />
         </client>
         ```
 

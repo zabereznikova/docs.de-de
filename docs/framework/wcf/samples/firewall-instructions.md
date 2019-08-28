@@ -2,12 +2,12 @@
 title: Firewall-Anweisungen
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961407"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044951"
 ---
 # <a name="firewall-instructions"></a>Firewall-Anweisungen
 Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die Windows Communication Foundation (WCF)-Beispiele funktionieren können. In vielen der Beispiele findet die Kommunikation über die Ports im Bereich 8000-8003 und über Port 9000 statt. Die Firewall ist standardmäßig aktiviert und verhindert den Zugriff auf diese Ports. Um die Beispiele mit der Firewall verwenden zu können, haben Sie abhängig von Ihren Anforderungen und Ihrer Sicherheitsumgebung mehrere Möglichkeiten:  
@@ -21,7 +21,7 @@ Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die W
  Wenn Sie nicht sicher sind, verwenden Sie die erste Option. Wenn Sie eine Firewall von einem anderen Anbieter ausführen, müssen Sie möglicherweise ähnliche Änderungen vornehmen.  
   
 > [!IMPORTANT]
->  Die Änderung der Firewallkonfiguration hat Auswirkungen auf die Sicherheit. Es wird empfohlen, sich die vorgenommenen Änderungen zu notieren, sodass Sie sie wieder rückgängig machen können, wenn Sie die Arbeit mit den Beispielen abgeschlossen haben.  
+> Die Änderung der Firewallkonfiguration hat Auswirkungen auf die Sicherheit. Es wird empfohlen, sich die vorgenommenen Änderungen zu notieren, sodass Sie sie wieder rückgängig machen können, wenn Sie die Arbeit mit den Beispielen abgeschlossen haben.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>So aktivieren Sie Beispielprogramme im Voraus  
   
@@ -30,7 +30,7 @@ Sie müssen mehrere Ports oder Programme in der Firewall aktivieren, damit die W
 2. Klicken Sie auf **Start**und dann auf **Ausführen**, und geben `firewall.cpl`Sie ein. Dadurch wird das Applet **Windows-Firewall-Systemsteuerung** geöffnet.  
   
     > [!NOTE]
-    >  Sie müssen über die Berechtigung zum Ändern der Firewalleinstellungen verfügen, um Beispiele auszuführen, für die eine Kommunikation durch die Windows-Firewall erforderlich ist. Wenn einige Firewalleinstellungen nicht verfügbar sind und der Computer eine Verbindung mit einer Domäne hergestellt hat, kann der Systemadministrator diese Einstellungen über Gruppenrichtlinien steuern.  
+    > Sie müssen über die Berechtigung zum Ändern der Firewalleinstellungen verfügen, um Beispiele auszuführen, für die eine Kommunikation durch die Windows-Firewall erforderlich ist. Wenn einige Firewalleinstellungen nicht verfügbar sind und der Computer eine Verbindung mit einer Domäne hergestellt hat, kann der Systemadministrator diese Einstellungen über Gruppenrichtlinien steuern.  
   
 3. Führen Sie eine der folgenden betriebssystemabhängigen Vorgehensweisen aus, um einem Programm den Zugriff durch die Windows-Firewall zu gewähren:  
   

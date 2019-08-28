@@ -2,12 +2,12 @@
 title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933615"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044256"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -91,7 +91,7 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
  Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung zum Datenschutz und zum Schutz von PII vor dem verfügbar machen finden Sie unter [Benutzerdaten Schutz](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  PII wird nicht in falsch formatierten Nachrichten ausgeblendet. Solche Nachrichten werden ohne Änderung protokolliert. Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
+> PII wird nicht in falsch formatierten Nachrichten ausgeblendet. Solche Nachrichten werden ohne Änderung protokolliert. Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
   
 ### <a name="custom-trace-listener"></a>Benutzerdefinierter Ablaufverfolgungslistener  
  Das Hinzufügen eines benutzerdefinierten Ablaufverfolgungslisteners auf eine Ablaufverfolgungsquelle für Nachrichtenprotokollierung ist ein Recht, das dem Administrator vorbehalten sein sollte. Grund hierfür ist, dass bösartige benutzerdefinierte Listener für das remote Senden von Nachrichten konfiguriert werden können, was zur Offenlegung vertraulicher Informationen führt. Darüber hinaus sollten Sie eine angemessene Zugangskontrolle für die Nachrichtenprotokolle auf einem Remotecomputer erstellen, wenn Sie einen benutzerdefinierten Listener für das Senden von Nachrichten beispielsweise zu einer Remotedatenbank konfigurieren.  
