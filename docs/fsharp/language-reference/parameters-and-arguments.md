@@ -2,12 +2,12 @@
 title: Parameter und Argumente
 description: Erfahren Sie F# mehr über die Sprachunterstützung zum Definieren von Parametern und zum Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627314"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106595"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
@@ -163,9 +163,9 @@ In diesem Fall generiert der Compiler eine Warnung und ignoriert beide Attribute
 
 Das übergeben F# eines Werts als Verweis umfasst [ByRefs](byrefs.md), bei denen es sich um verwaltete Zeiger Typen handelt. Der zu verwendende Typ lautet wie folgt:
 
-* Verwenden `inref<'T>` Sie, wenn Sie nur den Zeiger lesen müssen.
-* Verwenden `outref<'T>` Sie, wenn Sie nur in den Zeiger schreiben müssen.
-* Verwenden `byref<'T>` Sie, wenn Sie sowohl Lese-als auch Schreibzugriff auf den Zeiger benötigen.
+- Verwenden `inref<'T>` Sie, wenn Sie nur den Zeiger lesen müssen.
+- Verwenden `outref<'T>` Sie, wenn Sie nur in den Zeiger schreiben müssen.
+- Verwenden `byref<'T>` Sie, wenn Sie sowohl Lese-als auch Schreibzugriff auf den Zeiger benötigen.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

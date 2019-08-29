@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630552"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106699"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -30,39 +30,39 @@ Obwohl ein Datums- und Uhrzeitwert eine universale zeitliche Angabe darstellt, i
 
 Alle Kalender in .net sind von der <xref:System.Globalization.Calendar?displayProperty=nameWithType> -Klasse abgeleitet, die die Basis Kalender Implementierung bereitstellt. Eine der Klassen, die von der <xref:System.Globalization.Calendar>-Klasse erbt, ist die <xref:System.Globalization.EastAsianLunisolarCalendar>-Klasse. Dies ist die Basisklasse für alle Mond-Sonne-Kalender. .NET umfasst die folgenden Kalender Implementierungen:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar> stellt den chinesischen Mond-Sonne-Kalender dar.
+- <xref:System.Globalization.ChineseLunisolarCalendar> stellt den chinesischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.GregorianCalendar> stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
+- <xref:System.Globalization.GregorianCalendar> stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
 
-* <xref:System.Globalization.HebrewCalendar> stellt den hebräischen Kalender dar.
+- <xref:System.Globalization.HebrewCalendar> stellt den hebräischen Kalender dar.
 
-* <xref:System.Globalization.HijriCalendar> stellt den Hijri-Kalender dar.
+- <xref:System.Globalization.HijriCalendar> stellt den Hijri-Kalender dar.
 
-* <xref:System.Globalization.JapaneseCalendar> stellt den japanischen Kalender dar.
+- <xref:System.Globalization.JapaneseCalendar> stellt den japanischen Kalender dar.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar> stellt den japanischen Mond-Sonne-Kalender dar.
+- <xref:System.Globalization.JapaneseLunisolarCalendar> stellt den japanischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.JulianCalendar> stellt den julianischen Kalender dar.
+- <xref:System.Globalization.JulianCalendar> stellt den julianischen Kalender dar.
 
-* <xref:System.Globalization.KoreanCalendar> stellt den koreanischen Kalender dar.
+- <xref:System.Globalization.KoreanCalendar> stellt den koreanischen Kalender dar.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar> stellt den koreanischen Mond-Sonne-Kalender dar.
+- <xref:System.Globalization.KoreanLunisolarCalendar> stellt den koreanischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.PersianCalendar> stellt den persischen Kalender dar.
+- <xref:System.Globalization.PersianCalendar> stellt den persischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanCalendar> stellt den taiwanesischen Kalender dar.
+- <xref:System.Globalization.TaiwanCalendar> stellt den taiwanesischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar> stellt den taiwanesischen Mond-Sonne-Kalender dar.
+- <xref:System.Globalization.TaiwanLunisolarCalendar> stellt den taiwanesischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar> stellt den buddhistischen Kalender Thailands dar.
+- <xref:System.Globalization.ThaiBuddhistCalendar> stellt den buddhistischen Kalender Thailands dar.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, der den Umm al-Qura-Kalender darstellt.
+- <xref:System.Globalization.UmAlQuraCalendar>, der den Umm al-Qura-Kalender darstellt.
 
 Ein Kalender kann auf zwei Arten verwendet werden:
 
-* Als Kalender, der von einer bestimmten Kultur verwendet wird. Jedes <xref:System.Globalization.CultureInfo>-Objekt verfügt über einen aktuellen Kalender. Dies ist der Kalender, den das Objekt gegenwärtig verwendet. Die Zeichenfolgendarstellungen aller Datums- und Uhrzeitwerte entsprechen automatisch der aktuellen Kultur und dem aktuellen Kalender. In der Regel ist als aktueller Kalender der Standardkalender der Kultur angegeben. <xref:System.Globalization.CultureInfo>-Objekte verfügen auch über optionale Kalender, die zusätzliche Kalender enthalten, die von der Kultur verwendet werden können.
+- Als Kalender, der von einer bestimmten Kultur verwendet wird. Jedes <xref:System.Globalization.CultureInfo>-Objekt verfügt über einen aktuellen Kalender. Dies ist der Kalender, den das Objekt gegenwärtig verwendet. Die Zeichenfolgendarstellungen aller Datums- und Uhrzeitwerte entsprechen automatisch der aktuellen Kultur und dem aktuellen Kalender. In der Regel ist als aktueller Kalender der Standardkalender der Kultur angegeben. <xref:System.Globalization.CultureInfo>-Objekte verfügen auch über optionale Kalender, die zusätzliche Kalender enthalten, die von der Kultur verwendet werden können.
 
-* Als eigenständiger Kalender, unabhängig von einer bestimmten Kultur. In diesem Fall werden <xref:System.Globalization.Calendar>-Methoden verwendet, um Datumsangaben in Werten auszudrücken, die dem betreffenden Kalender entsprechen.
+- Als eigenständiger Kalender, unabhängig von einer bestimmten Kultur. In diesem Fall werden <xref:System.Globalization.Calendar>-Methoden verwendet, um Datumsangaben in Werten auszudrücken, die dem betreffenden Kalender entsprechen.
 
 Beachten Sie, dass die folgenden sechs Kalenderklassen nur als eigenständige Kalender verwendet werden können: <xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, <xref:System.Globalization.JulianCalendar>, <xref:System.Globalization.KoreanLunisolarCalendar>, <xref:System.Globalization.PersianCalendar> und <xref:System.Globalization.TaiwanLunisolarCalendar>. Sie werden von keiner Kultur verwendet, weder als Standardkalender noch als optionaler Kalender.
 

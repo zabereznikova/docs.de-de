@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98813bf6685be78d33ebd5cc5e8c07a61a811c25
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026535"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106753"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource
 
-Dieses Thema beschreibt die Vorgehensweise beim Wiederherstellen von Zeitzonen, die in einer Ressourcendatei gespeichert wurden. Weitere Informationen und Anweisungen zum Speichern von Zeitzonen finden Sie unter [Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+In diesem Thema wird beschrieben, wie Zeitzonen wieder hergestellt werden, die in einer Ressourcen Datei gespeichert wurden. Weitere Informationen und Anweisungen zum Speichern von Zeitzonen finden [Sie unter Gewusst wie: Speichert Zeitzonen in einer eingebetteten Ressource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
 
-### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Beim Deserialisieren eines TimeZoneInfo-Objekts aus einer eingebetteten Ressource
+### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>So deserialisieren Sie ein TimeZoneInfo-Objekt aus einer eingebetteten Ressource
 
-1. Wenn die Zeitzone abgerufen werden sollen, keine benutzerdefinierte Zeitzone ist, versuchen Sie es mit instanziiert die <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> Methode.
+1. Wenn die abzurufende Zeitzone keine benutzerdefinierte Zeitzone ist, versuchen Sie, Sie mithilfe der <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> -Methode zu instanziieren.
 
-2. Instanziieren einer <xref:System.Resources.ResourceManager> -Objekts durch Übergeben der vollqualifizierte Name der eingebetteten Ressourcendatei und einem Verweis auf die Assembly, die die Ressourcendatei enthält.
+2. Instanziieren Sie <xref:System.Resources.ResourceManager> ein-Objekt, indem Sie den voll qualifizierten Namen der eingebetteten Ressourcen Datei und einen Verweis auf die Assembly, die die Ressourcen Datei enthält, übergeben.
 
-   Wenn Sie den vollqualifizierten Namen der eingebetteten Ressourcendatei können nicht ermitteln, verwenden die [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Manifest der Assembly zu untersuchen. Ein `.mresource` Eintrag identifiziert die Ressource. Im Beispiel des vollqualifizierten Ressourcennamens ist `SerializeTimeZoneData.SerializedTimeZones`.
+   Wenn Sie den voll qualifizierten Namen der eingebetteten Ressourcen Datei nicht ermitteln können, verwenden Sie den [Ildasm. exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) , um das Assemblymanifest zu überprüfen. Ein `.mresource` Eintrag identifiziert die Ressource. Im Beispiel lautet `SerializeTimeZoneData.SerializedTimeZones`der voll qualifizierte Name der Ressource.
 
-   Wenn die Ressourcendatei in der gleichen Assembly, die den Instanziierungscode Zeitzone enthält eingebettet ist, können Sie einen Verweis darauf abrufen, durch den Aufruf der `static` (`Shared` in Visual Basic) <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> Methode.
+   Wenn die Ressourcen Datei in dieselbe Assembly eingebettet ist, in der der Zeit Zonen-instanzierationscode enthalten ist, können Sie einen Verweis darauf abrufen `static` ,`Shared` indem Sie die <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> -Methode (in Visual Basic) aufrufen.
 
-3. Wenn der Aufruf der <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> -Methode fehlschlägt, oder ist eine benutzerdefinierte Zeitzone instanziiert werden, rufen Sie eine Zeichenfolge, die durch den Aufruf der serialisierten Zeitzone enthält die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> Methode.
+3. Wenn der Aufruf <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> der-Methode fehlschlägt oder eine benutzerdefinierte Zeitzone instanziiert werden soll, rufen Sie eine Zeichenfolge ab, die die serialisierte Zeitzone enthält, indem <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> Sie die-Methode aufrufen.
 
-4. Deserialisiert die Zeitzonendaten durch Aufrufen der <xref:System.TimeZoneInfo.FromSerializedString%2A> Methode.
+4. Deserialisieren Sie die Zeit Zonendaten, indem <xref:System.TimeZoneInfo.FromSerializedString%2A> Sie die-Methode aufrufen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird deserialisiert eine <xref:System.TimeZoneInfo> gespeichert, die in einer eingebetteten Ressourcendatei von .NET XML-Objekt.
+Im folgenden Beispiel wird ein <xref:System.TimeZoneInfo> -Objekt deserialisiert, das in einer eingebetteten .NET-XML-Ressourcen Datei gespeichert ist.
 
 [!code-csharp[TimeZone2.Serialization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#3)]
 [!code-vb[TimeZone2.Serialization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#3)]
 
-Dieser Code veranschaulicht die Behandlung von Ausnahmen, um sicherzustellen, dass eine <xref:System.TimeZoneInfo> von der Anwendung benötigte Objekt vorhanden ist. Zuerst wird versucht, instanziieren Sie ein <xref:System.TimeZoneInfo> Objekt durch Abrufen aus der Registrierung mithilfe der <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> Methode. Wenn die Zeitzone nicht instanziiert werden kann, ruft Sie der Code aus der eingebetteten Ressourcendatei ab.
+Dieser Code veranschaulicht die Ausnahmebehandlung, um sicher <xref:System.TimeZoneInfo> zustellen, dass ein für die Anwendung erforderliches-Objekt vorhanden ist. Zuerst wird versucht, ein <xref:System.TimeZoneInfo> -Objekt zu instanziieren, indem es mithilfe der <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> -Methode aus der Registrierung abgerufen wird. Wenn die Zeitzone nicht instanziiert werden kann, ruft der Code Sie aus der eingebetteten Ressourcen Datei ab.
 
-Da Daten für benutzerdefinierte Zeitzonen (Zeitzonen instanziiert werden mithilfe der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode) werden nicht gespeichert in der Registrierung wird der Code nicht Aufrufen der <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> instanziieren Sie die Zeitzone für Palmer, Antarktis. Stattdessen es sofort überprüft, die eingebettete Ressourcendatei aus, um eine Zeichenfolge abzurufen, das die Zeitzone-Daten enthält, vor dem Aufrufen der <xref:System.TimeZoneInfo.FromSerializedString%2A> Methode.
+Da Daten für benutzerdefinierte Zeitzonen (mit der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> -Methode instanziierte Zeitzonen) nicht in der Registrierung gespeichert werden, <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> ruft der Code nicht auf, um die Zeitzone für Palmer, Antarktis zu instanziieren. Stattdessen sucht es sofort nach der eingebetteten Ressourcen Datei, um eine Zeichenfolge abzurufen, die die Daten der Zeitzone enthält, bevor die <xref:System.TimeZoneInfo.FromSerializedString%2A> -Methode aufgerufen wird.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
 
-* Dass das Projekt ein Verweis auf "System.Windows.Forms.dll" und "System.Core.dll" hinzugefügt werden.
+- Dem Projekt wird ein Verweis auf "System. Windows. Forms. dll" und "System. Core. dll" hinzugefügt.
 
-* Dass die folgenden Namespaces importiert werden:
+- Die folgenden Namespaces werden importiert:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

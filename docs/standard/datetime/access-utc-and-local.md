@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8aa19118ce0837b9ce0eb523f3e086fcbcecb9e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586427"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106562"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte
 
-Die <xref:System.TimeZoneInfo> Klasse enthält zwei Eigenschaften, <xref:System.TimeZoneInfo.Utc%2A> und <xref:System.TimeZoneInfo.Local%2A>, die Ihrem Code den Zugriff auf vordefinierte Zeitzonenobjekte ermöglichen. In diesem Thema wird der Zugriff auf die <xref:System.TimeZoneInfo>-Objekte erläutert, die von diesen Eigenschaften zurückgegeben werden.
+Die <xref:System.TimeZoneInfo> -Klasse stellt zwei Eigenschaften <xref:System.TimeZoneInfo.Utc%2A> , <xref:System.TimeZoneInfo.Local%2A>und, bereit, die Ihrem Code den Zugriff auf vordefinierte Zeit Zonen Objekte ermöglichen. In diesem Thema wird der Zugriff auf die <xref:System.TimeZoneInfo>-Objekte erläutert, die von diesen Eigenschaften zurückgegeben werden.
 
 ### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>So greifen Sie auf das TimeZoneInfo-Objekt für die koordinierte Weltzeit (UTC) zu
 
-1. Verwenden der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eigenschaft, um die koordinierte Weltzeit zugreifen.
+1. Verwenden Sie `static` die`Shared` -Eigenschaft ( <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> in Visual Basic) für den Zugriff auf die koordinierte Weltzeit.
 
-2. Anstatt die Zuweisung der <xref:System.TimeZoneInfo> Objekt einer Objektvariablen, von der Eigenschaft zurückgegebenen weiter, auf die koordinierte Weltzeit zugreifen der <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eigenschaft.
+2. Anstatt das <xref:System.TimeZoneInfo> von der-Eigenschaft zurückgegebene-Objekt einer Objektvariablen zuzuweisen, greifen Sie weiterhin auf die koordinierte Weltzeit über die <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> -Eigenschaft zu.
 
 ### <a name="to-access-the-local-time-zone"></a>So greifen Sie auf die lokale Zeitzone zu
 
-1. Verwenden der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> Eigenschaft, um die Zeitzone des lokalen Systems zugreifen.
+1. Verwenden Sie `static` die`Shared` -Eigenschaft ( <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> in Visual Basic) für den Zugriff auf die lokale Systemzeitzone.
 
-2. Anstatt die Zuweisung der <xref:System.TimeZoneInfo> weiterhin die lokale Zeitzone zugreifen, von der Eigenschaft zurückgegebenen Objekts, einer Objektvariablen, die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> Eigenschaft.
+2. Anstatt das <xref:System.TimeZoneInfo> von der-Eigenschaft zurückgegebene-Objekt einer Objektvariablen zuzuweisen, greifen Sie weiterhin über die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> -Eigenschaft auf die lokale Zeitzone zu.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende code verwendet die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> und <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eigenschaften, die zum Konvertieren einer Uhrzeit aus der US-amerikanischen und kanadischen Eastern Standard Time, sowie den Namen in der Konsole anzeigen.
+Der folgende Code verwendet die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> - <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eigenschaft und die-Eigenschaft, um eine Uhrzeit aus der US-amerikanischen und kanadischen Eastern Normalzeit zu konvertieren, sowie den Namen der Zeitzone auf der Konsole anzuzeigen.
 
 [!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
 [!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-Sie sollten immer die lokale Zeitzone zugreifen der <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> Eigenschaft anstatt der lokalen Zeit zone ein <xref:System.TimeZoneInfo> Objektvariable. Entsprechend sollten Sie immer koordinierte Weltzeit zugreifen der <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> Eigenschaft anstatt die UTC-zone zu einer <xref:System.TimeZoneInfo> Objektvariable. Dies verhindert, dass die <xref:System.TimeZoneInfo> -Objektvariable wird durch einen Aufruf für ungültig erklärt die <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> Methode.
+Sie sollten stets über die <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> -Eigenschaft auf die lokale Zeitzone zugreifen, anstatt die lokale Zeitzone einer <xref:System.TimeZoneInfo> -Objektvariablen zuzuweisen. Ebenso sollten Sie immer über die-Eigenschaft auf die <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> koordinierte Weltzeit zugreifen, anstatt die UTC-Zone einer <xref:System.TimeZoneInfo> -Objektvariablen zuzuweisen. Dadurch wird verhindert <xref:System.TimeZoneInfo> , dass die Objekt Variable durch einen Aufrufder <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> -Methode ungültig gemacht wird.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
 
-* Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
+- Der <xref:System> Namespace, der mit der `using` -Anweisung importiert werden soll C# (erforderlich im Code).
 
 ## <a name="see-also"></a>Siehe auch
 

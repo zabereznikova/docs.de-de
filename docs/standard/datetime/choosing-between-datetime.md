@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988500"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107078"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
 .NET-Anwendungen, die Datums- und Uhrzeitinformationen verwenden, sind sehr vielfältig und können diese Informationen auf verschiedene Weise verwenden. Die häufigeren Verwendungsarten von Datums- und Uhrzeitinformationen sind mindestens eine der folgenden:
 
-* Darstellen eines reinen Datums, damit Zeitinformationen unberücksichtigt bleiben.
+- Darstellen eines reinen Datums, damit Zeitinformationen unberücksichtigt bleiben.
 
-* Darstellen einer reinen Uhrzeit, damit Datumsinformationen unberücksichtigt bleiben.
+- Darstellen einer reinen Uhrzeit, damit Datumsinformationen unberücksichtigt bleiben.
 
-* Darstellen eines abstrakten Datums mit Uhrzeit, die an keine bestimmte Zeit und keinen bestimmten Ort gebunden sind (z. B. öffnen die meisten Geschäfte einer internationalen Kette an Wochentagen um 9:00 Uhr).
+- Darstellen eines abstrakten Datums mit Uhrzeit, die an keine bestimmte Zeit und keinen bestimmten Ort gebunden sind (z. B. öffnen die meisten Geschäfte einer internationalen Kette an Wochentagen um 9:00 Uhr).
 
-* Zum Abrufen von Datums-und Uhrzeit Informationen aus Quellen außerhalb von .net, in der Regel, wo Datums-und Uhrzeit Informationen in einem einfachen Datentyp gespeichert sind.
+- Zum Abrufen von Datums-und Uhrzeit Informationen aus Quellen außerhalb von .net, in der Regel, wo Datums-und Uhrzeit Informationen in einem einfachen Datentyp gespeichert sind.
 
-* Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Einige Anwendungen erfordern, dass ein Datum und eine Uhrzeit eindeutig sind, nur auf dem Hostsystem. Andere erfordern, dass sie über Systeme hinweg eindeutig sind (d. h. ein auf dem einen System serialisiertes Datum kann weltweit auf einem anderen System sinnvoll deserialisiert und verwendet werden).
+- Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Einige Anwendungen erfordern, dass ein Datum und eine Uhrzeit eindeutig sind, nur auf dem Hostsystem. Andere erfordern, dass sie über Systeme hinweg eindeutig sind (d. h. ein auf dem einen System serialisiertes Datum kann weltweit auf einem anderen System sinnvoll deserialisiert und verwendet werden).
 
-* Erhalten mehrerer verwandter Zeiten (z. B. die lokale Zeit des Anforderers und die Empfangszeit des Servers für eine Webanforderung).
+- Erhalten mehrerer verwandter Zeiten (z. B. die lokale Zeit des Anforderers und die Empfangszeit des Servers für eine Webanforderung).
 
-* Durchführen von Datums- und Uhrzeitberechnungen, möglicherweise mit einem Ergebnis, das einen einzigen Zeitpunkt eindeutig identifiziert.
+- Durchführen von Datums- und Uhrzeitberechnungen, möglicherweise mit einem Ergebnis, das einen einzigen Zeitpunkt eindeutig identifiziert.
 
 .NET enthält die <xref:System.DateTime>Typen <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, und <xref:System.TimeZoneInfo> , die alle zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
 
@@ -51,19 +51,19 @@ Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit
 
 Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes können:
 
-* Nur mit Daten arbeiten.
+- Nur mit Daten arbeiten.
 
-* Nur mit Uhrzeiten arbeiten.
+- Nur mit Uhrzeiten arbeiten.
 
-* Mit abstrakten Datums- und Uhrzeitwerten arbeiten.
+- Mit abstrakten Datums- und Uhrzeitwerten arbeiten.
 
-* Mit Datums- und Uhrzeitwerten arbeiten, für die Zeitzoneninformationen fehlen.
+- Mit Datums- und Uhrzeitwerten arbeiten, für die Zeitzoneninformationen fehlen.
 
-* Nur mit UTC-Datums- und Uhrzeitwerten arbeiten.
+- Nur mit UTC-Datums- und Uhrzeitwerten arbeiten.
 
-* Abrufen von Datums-und Uhrzeit Informationen aus Quellen außerhalb von .net (z. b. SQL-Datenbanken). In der Regel speichern diese Quellen Datums- und Uhrzeitinformationen in einem einfachen Format, das mit der <xref:System.DateTime> -Struktur kompatibel ist.
+- Abrufen von Datums-und Uhrzeit Informationen aus Quellen außerhalb von .net (z. b. SQL-Datenbanken). In der Regel speichern diese Quellen Datums- und Uhrzeitinformationen in einem einfachen Format, das mit der <xref:System.DateTime> -Struktur kompatibel ist.
 
-* Arithmetische Operationen mit Datums- und Uhrzeitwerten durchführen, wobei aber allgemeine Ergebnisse von Belang sind. Beispielsweise ist es bei einer Additionsoperation, bei der einem bestimmten Datum und einer Uhrzeit sechs Monate hinzuaddiert werden, oft nicht wichtig, ob das Ergebnis hinsichtlich der Sommerzeit angepasst wird.
+- Arithmetische Operationen mit Datums- und Uhrzeitwerten durchführen, wobei aber allgemeine Ergebnisse von Belang sind. Beispielsweise ist es bei einer Additionsoperation, bei der einem bestimmten Datum und einer Uhrzeit sechs Monate hinzuaddiert werden, oft nicht wichtig, ob das Ergebnis hinsichtlich der Sommerzeit angepasst wird.
 
 Wenn nicht ein bestimmter <xref:System.DateTime> -Wert UTC darstellt, ist dieser Datums- und Uhrzeitwert häufig mehrdeutig oder in seiner Portierbarkeit eingeschränkt. Wenn z. B. ein <xref:System.DateTime> -Wert die lokale Uhrzeit darstellt, ist er innerhalb dieser lokalen Zeitzone portierbar (d. h., wenn der Wert auf einem anderen System in derselben Zeitzone deserialisiert wird, identifiziert dieser Wert immer noch eindeutig einen einzigen Zeitpunkt). Außerhalb der lokalen Zeitzone kann dieser <xref:System.DateTime> -Wert über mehrere Interpretationen verfügen. Wenn die <xref:System.DateTime.Kind%2A> -Eigenschaft des Werts <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>ist, ist er sogar noch weniger portierbar: Er ist jetzt innerhalb derselben Zeitzone mehrdeutig und möglicherweise sogar auf dem selben System, auf dem er erstmalig serialisiert wurde. Nur wenn ein <xref:System.DateTime> -Wert eine UTC-Zeit darstellt, identifiziert dieser Wert eindeutig einen einzigen Zeitpunkt, unabhängig vom System oder der Zeitzone, in der der Wert verwendet wird.
 
@@ -76,11 +76,11 @@ Die <xref:System.DateTimeOffset> -Struktur stellt einen Datums- und Uhrzeitwert 
 
 Der <xref:System.DateTimeOffset> -Typ bietet die gesamte Funktionalität des <xref:System.DateTime> -Typs plus Unterstützung von Zeitzonen. Dies eignet sich für Anwendungen, die Folgendes ausführen:
 
-* Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Der <xref:System.DateTimeOffset> -Typ kann zur eindeutigen Definition der Bedeutung von "jetzt" verwendet werden, um Transaktionszeiten zu protokollieren, die Zeiten von System- oder Anwendungsereignissen zu protokollieren und um die Zeiten der Erstellung und Änderung von Dateien aufzuzeichnen.
+- Eindeutiges und unzweideutiges Identifizieren eines einzigen Zeitpunkts. Der <xref:System.DateTimeOffset> -Typ kann zur eindeutigen Definition der Bedeutung von "jetzt" verwendet werden, um Transaktionszeiten zu protokollieren, die Zeiten von System- oder Anwendungsereignissen zu protokollieren und um die Zeiten der Erstellung und Änderung von Dateien aufzuzeichnen.
 
-* Ausführen von allgemeinen Datums- und Uhrzeitberechnungen
+- Ausführen von allgemeinen Datums- und Uhrzeitberechnungen
 
-* Erhalten mehrerer verwandter Uhrzeiten, solange diese Zeiten als zwei gesonderte Werte oder als zwei Member einer Struktur gespeichert werden.
+- Erhalten mehrerer verwandter Uhrzeiten, solange diese Zeiten als zwei gesonderte Werte oder als zwei Member einer Struktur gespeichert werden.
 
 > [!NOTE]
 > Diese Verwendungsarten für <xref:System.DateTimeOffset> -Werte sind sehr viel häufiger als die für <xref:System.DateTime> -Werte. Demzufolge sollte <xref:System.DateTimeOffset> als Standardtyp für Datum und Uhrzeit für die Anwendungsentwicklung angesehen werden.
@@ -96,9 +96,9 @@ Die Ausgabe zeigt, dass jeder Datums- und Uhrzeitwert in diesem Beispiel zu mind
 
 Die <xref:System.TimeSpan> -Struktur stellt ein Zeitintervall dar. Sein zwei typischen Anwendungsmöglichkeiten sind:
 
-* Darstellen des Zeitintervalls zwischen zwei Datums- und Uhrzeitwerten. Beispielsweise gibt die Subtraktion eines <xref:System.DateTime> -Werts von einem anderen einen <xref:System.TimeSpan> -Wert zurück.
+- Darstellen des Zeitintervalls zwischen zwei Datums- und Uhrzeitwerten. Beispielsweise gibt die Subtraktion eines <xref:System.DateTime> -Werts von einem anderen einen <xref:System.TimeSpan> -Wert zurück.
 
-* Messen der verstrichenen Zeit. Beispielsweise gibt die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> -Eigenschaft einen <xref:System.TimeSpan> Wert zurück, der das Zeitintervall angibt, das seit dem <xref:System.Diagnostics.Stopwatch> Aufruf einer der Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
+- Messen der verstrichenen Zeit. Beispielsweise gibt die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> -Eigenschaft einen <xref:System.TimeSpan> Wert zurück, der das Zeitintervall angibt, das seit dem <xref:System.Diagnostics.Stopwatch> Aufruf einer der Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
 
 Ein <xref:System.TimeSpan> -Wert kann auch als Ersatz für einen <xref:System.DateTime> -Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt der <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> -Eigenschaft und der- <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> Eigenschaft, die <xref:System.TimeSpan> einen Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
 

@@ -2,12 +2,12 @@
 title: Strukturen
 description: Erfahren Sie mehr F# über die Struktur, einen kompakten Objekttyp, der häufig effizienter ist als eine Klasse für Typen mit einer kleinen Datenmenge und einfachem Verhalten.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630771"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106815"
 ---
 # <a name="structures"></a>Strukturen
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für Hochleistungs Programmierung, da Sie mit einer Reihe von starken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Die Regeln lauten wie folgt:
 
-* Sie können als Funktionsparameter, Methoden Parameter, lokale Variablen und Methoden Rückgaben verwendet werden.
-* Sie können keine statischen Member oder Instanzmember einer Klasse oder einer normalen Struktur sein.
-* Sie können nicht von einem Closure-Konstrukt (`async` Methoden oder Lambda-Ausdrücke) aufgezeichnet werden.
-* Sie können nicht als generischer Parameter verwendet werden.
+- Sie können als Funktionsparameter, Methoden Parameter, lokale Variablen und Methoden Rückgaben verwendet werden.
+- Sie können keine statischen Member oder Instanzmember einer Klasse oder einer normalen Struktur sein.
+- Sie können nicht von einem Closure-Konstrukt (`async` Methoden oder Lambda-Ausdrücke) aufgezeichnet werden.
+- Sie können nicht als generischer Parameter verwendet werden.
 
 Wenngleich diese Regeln die Nutzung stark einschränken, wird dies durchgeführt, um die Zusage von Hochleistungs Computing auf sichere Weise zu erfüllen.
 

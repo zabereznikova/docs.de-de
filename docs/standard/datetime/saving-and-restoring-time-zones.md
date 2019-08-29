@@ -19,60 +19,60 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea44b29eaa0273baadbf02093108bc4da912a3e5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026522"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106748"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Speichern und Wiederherstellen von Zeitzonen
 
-Die <xref:System.TimeZoneInfo> Klasse abhängig von der Registrierung zum Abrufen von Daten mit vordefinierten Zeitzone. Die Registrierung ist jedoch eine dynamische Struktur. Darüber hinaus wird die Zeitzone-Informationen, die die Registrierung enthält in erster Linie zum Behandeln von Anpassungen der Uhrzeit und Konvertierungen für das aktuelle Jahr vom Betriebssystem verwendet. Dies hat zwei wichtige Implikationen für Anwendungen, die auf genau Zeitzonendaten basieren:
+Die <xref:System.TimeZoneInfo> -Klasse basiert auf der Registrierung, um vordefinierte Zeit Zonendaten abzurufen. Die Registrierung ist jedoch eine dynamische Struktur. Außerdem werden die Zeitzoneninformationen, die in der Registrierung enthalten sind, vom Betriebssystem in erster Linie verwendet, um Zeit Anpassungen und Konvertierungen für das aktuelle Jahr zu verarbeiten. Dies hat zwei wesentliche Auswirkungen auf Anwendungen, die auf genaue Zeit Zonendaten basieren:
 
-* Eine Zeitzone, die von einer Anwendung erforderlich sind möglicherweise nicht in der Registrierung definiert, oder möglicherweise wurde Sie umbenannt oder aus der Registrierung entfernt werden.
+- Eine Zeitzone, die für eine Anwendung erforderlich ist, ist möglicherweise nicht in der Registrierung definiert, oder Sie wurde möglicherweise umbenannt oder aus der Registrierung entfernt.
 
-* Eine Zeitzone, die in der Registrierung definiert ist, können Informationen zu bestimmten Anpassungsregeln fehlen, die für historische zeitzonenkonvertierungen erforderlich sind.
+- In einer Zeitzone, die in der Registrierung definiert ist, fehlen möglicherweise Informationen zu den speziellen Anpassungsregeln, die für historische Zeit Zonen Konvertierungen erforderlich sind.
 
-Die <xref:System.TimeZoneInfo> Klasse behebt diese Einschränkungen durch die Unterstützung für die Serialisierung (Speichern) und die Deserialisierung (Wiederherstellung) von Zeitzonendaten.
+Die <xref:System.TimeZoneInfo> -Klasse behandelt diese Einschränkungen durch die Unterstützung für die Serialisierung (Speicherung) und die Deserialisierung (Wiederherstellung) von Zeit Zonendaten.
 
-## <a name="time-zone-serialization-and-deserialization"></a>Zeitzonenserialisierung und Deserialisierung
+## <a name="time-zone-serialization-and-deserialization"></a>Zeit Zonen-Serialisierung und-Deserialisierung
 
-Speichern und Wiederherstellen von einer Zeitzone durch Serialisierung und Deserialisierung von Zeitzonendaten umfasst nur zwei Methodenaufrufe auf:
+Das Speichern und Wiederherstellen einer Zeitzone durch serialisieren und Deserialisieren von Zeit Zonendaten umfasst nur zwei Methodenaufrufe:
 
-* Sie können serialisieren eine <xref:System.TimeZoneInfo> -Objekt durch Aufrufen des Objekts <xref:System.TimeZoneInfo.ToSerializedString%2A> Methode. Die Methode nimmt keine Parameter und gibt eine Zeichenfolge, die Zeitzoneninformationen enthält.
+- Sie können ein <xref:System.TimeZoneInfo> -Objekt serialisieren, indem Sie die <xref:System.TimeZoneInfo.ToSerializedString%2A> -Methode des-Objekts aufrufen. Die-Methode nimmt keine Parameter an und gibt eine Zeichenfolge zurück, die Zeitzoneninformationen enthält.
 
-* Sie Deserialisieren können eine <xref:System.TimeZoneInfo> Objekt aus einer serialisierten Zeichenfolge übergeben Sie diese Zeichenfolge in die `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> Methode.
+- Sie können ein <xref:System.TimeZoneInfo> -Objekt aus einer serialisierten Zeichenfolge deserialisieren, indem Sie diese Zeichen`Shared` Folge an die <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> `static` -Methode (in Visual Basic) übergeben.
 
 ## <a name="serialization-and-deserialization-scenarios"></a>Serialisierungs-und deserialisierungsszenarien
 
-Die Möglichkeit zum Speichern (oder serialisieren) eine <xref:System.TimeZoneInfo> Objekt in eine Zeichenfolge und Wiederherstellen (oder Deserialisieren) für die spätere Verwendung erhöht sowohl die Flexibilität, als auch das Hilfsprogramm die <xref:System.TimeZoneInfo> Klasse. In diesem Abschnitt werden einige Situationen, in denen Serialisierung und Deserialisierung am nützlichsten sind.
+Durch die Möglichkeit, ein <xref:System.TimeZoneInfo> -Objekt in einer Zeichenfolge zu speichern (oder zu serialisieren) und es zur späteren Verwendung wiederherzustellen (bzw. zu deserialisieren), werden sowohl das-Hilfsprogramm als auch die Flexibilität der- Klasseerhöht.<xref:System.TimeZoneInfo> In diesem Abschnitt werden einige Situationen erläutert, in denen die Serialisierung und Deserialisierung am nützlichsten sind.
 
-### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serialisierung und Deserialisierung von Zeitzonendaten in einer Anwendung
+### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serialisieren und Deserialisieren von Zeit Zonendaten in einer Anwendung
 
-Eine serialisierte Zeitzone kann aus einer Zeichenfolge wiederhergestellt werden, wenn er benötigt wird. Eine Anwendung Option diese, wenn die Zeitzone, die aus der Registrierung abgerufene korrekt zu einer Datums- und Uhrzeitangabe innerhalb eines bestimmten Zeitraums konvertieren kann. Zeit der Zonendaten in der Registrierung von Windows XP unterstützt beispielsweise eine Anpassungsregel, zwar in der Regel in der Windows Vista-Registrierung definierten Zeitzonen Informationen zwei Regeln zur zeitzonenanpassung berücksichtigt. Dies bedeutet, dass die historischen zeitkonvertierungen möglicherweise ungenau. Serialisierung und Deserialisierung von Zeitzonendaten können diese Einschränkung behandeln.
+Eine serialisierte Zeitzone kann aus einer Zeichenfolge wieder hergestellt werden, wenn Sie benötigt wird. Eine Anwendung kann dies tun, wenn die aus der Registrierung abgerufene Zeitzone nicht in der Lage ist, ein Datum und eine Uhrzeit in einem bestimmten Datumsbereich ordnungsgemäß zu konvertieren. Zeit Zonendaten in der Registrierung von Windows XP unterstützen z. b. eine einzelne Anpassungs Regel, während Zeitzonen, die in der Windows Vista-Registrierung definiert sind, in der Regel Informationen zu zwei Anpassungsregeln bereitstellen. Dies bedeutet, dass Verlaufs Zeit Konvertierungen ungenau sein können. Diese Einschränkung kann durch Serialisierung und Deserialisierung von Zeit Zonendaten bewältigt werden.
 
-Im folgenden Beispiel eine benutzerdefinierte <xref:System.TimeZoneInfo> -Klasse, die ohne Anpassungsregeln wird zur Darstellung der USA definiert. Eastern Standard Time Zone von 1883 zu 1917, vor der Einführung der Sommerzeit in den Vereinigten Staaten. In einer Variablen, die der globale Bereich gilt, wird die benutzerdefinierte Zeitzone serialisiert. Die Zeitzone Konvertierungsmethode, `ConvertUtcTime`, wie oft die Coordinated Universal Time (UTC) konvertiert übergeben wird. Bei Datum und Uhrzeit wird in 1917 oder früher wird die benutzerdefinierte Eastern Standard Time Zone wird wiederhergestellt, aus einer serialisierten Zeichenfolge und ersetzt die Zeitzone, die aus der Registrierung abgerufen.
+Im folgenden Beispiel wird eine benutzerdefinierte <xref:System.TimeZoneInfo> Klasse definiert, die keine Anpassungsregeln enthält, um die USA Eastern normal Zeitzone von 1883 bis 1917, vor der Einführung der Sommerzeit in der USA. Die benutzerdefinierte Zeitzone wird in einer Variablen serialisiert, die über einen globalen Gültigkeitsbereich verfügt. Die Zeit Zonen Konvertierungsmethode `ConvertUtcTime`,, wird für die Konvertierung koordinierte Weltzeit (UTC) überschritten. Wenn das Datum und die Uhrzeit in 1917 oder früher auftreten, wird die benutzerdefinierte Eastern Standard-Zeitzone aus einer serialisierten Zeichenfolge wieder hergestellt und ersetzt die Zeitzone, die aus der Registrierung abgerufen wurde.
 
 [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
 
-### <a name="handling-time-zone-exceptions"></a>Behandeln von Ausnahmen mit Zeitzone
+### <a name="handling-time-zone-exceptions"></a>Behandeln von Zeit Zonen Ausnahmen
 
-Da es sich bei die Registrierung eine dynamische Struktur handelt, unterliegen seinen Inhalt, der versehentlich oder absichtlich geändert. Dies bedeutet, dass eine Zeitzone, die in der Registrierung definiert werden soll, und das ist erforderlich, damit eine Anwendung erfolgreich ausgeführt, möglicherweise fehlt. Ohne Unterstützung für die Zeitzone-Serialisierung und Deserialisierung, haben Sie kaum eine andere Wahl behandelt das resultierende <xref:System.TimeZoneNotFoundException> durch Beenden der Anwendung. Verwenden Sie die Zeitzonenserialisierung und Deserialisierung, Sie können jedoch verarbeiten einen unerwarteten <xref:System.TimeZoneNotFoundException> durch das Wiederherstellen der erforderlichen Zeitzone aus einer serialisierten Zeichenfolge und die Anwendung wird weiterhin ausgeführt.
+Da es sich bei der Registrierung um eine dynamische Struktur handelt, können deren Inhalte versehentlich oder absichtlich geändert werden. Dies bedeutet, dass eine Zeitzone, die in der Registrierung definiert werden soll und die für eine erfolgreiche Ausführung einer Anwendung erforderlich ist, möglicherweise nicht vorhanden ist. Ohne Unterstützung der Zeit Zonen-Serialisierung und-Deserialisierung haben Sie nur wenige Möglichkeiten, das <xref:System.TimeZoneNotFoundException> zu verarbeiten, indem Sie die Anwendung beenden. Mithilfe der Zeit Zonen-Serialisierung und-Deserialisierung können Sie jedoch einen unerwarteten <xref:System.TimeZoneNotFoundException> verarbeiten, indem Sie die erforderliche Zeitzone aus einer serialisierten Zeichenfolge wiederherstellen, und die Anwendung wird weiterhin ausgeführt.
 
-Das folgende Beispiel erstellt und eine benutzerdefinierte Zeitzone Central Standard serialisiert. Anschließend wird versucht, das die Central Standard Time Zone aus der Registrierung abzurufen. Wenn der Abrufvorgang entweder eine <xref:System.TimeZoneNotFoundException> oder <xref:System.InvalidTimeZoneException>, deserialisiert der Zeitzone der Ausnahmehandler.
+Im folgenden Beispiel wird eine benutzerdefinierte zentrale Standard Zeitzone erstellt und serialisiert. Anschließend wird versucht, die zentrale Standard Zeitzone aus der Registrierung abzurufen. Wenn der Abruf Vorgang entweder eine <xref:System.TimeZoneNotFoundException> oder eine <xref:System.InvalidTimeZoneException>auslöst, deserialisiert der Ausnahmehandler die Zeitzone.
 
 [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
 
-### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Eine serialisierte Zeichenfolge speichern und Wiederherstellen bei Bedarf
+### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Speichern einer serialisierten Zeichenfolge und deren Wiederherstellung bei Bedarf
 
-In den vorherigen Beispielen Zeitzoneninformationen eine String-Variable gespeichert und bei Bedarf wiederhergestellt. Eingebettete jedoch die Zeichenfolge, die serialisierten Zeit enthält Informationen zur Zone selbst in einige Speichermedium, z. B. eine externe Datei, eine Ressourcendatei gespeichert werden kann, in der Anwendung oder der Registrierung. (Beachten Sie, dass Informationen über benutzerdefinierte Zeitzonen abgesehen von der Zeitzone-Schlüssel in der Registrierung des Systems gespeichert werden sollen.)
+In den vorherigen Beispielen wurden Zeitzoneninformationen in einer Zeichen folgen Variablen gespeichert und bei Bedarf wieder hergestellt. Allerdings kann die Zeichenfolge, die serialisierte Zeitzoneninformationen enthält, selbst in einem Speichermedium gespeichert werden, z. b. in einer externen Datei, einer in die Anwendung eingebetteten Ressourcen Datei oder in der Registrierung. (Beachten Sie, dass Informationen über benutzerdefinierte Zeitzonen getrennt von den Zeit Zonen Schlüsseln des Systems in der Registrierung gespeichert werden sollten.)
 
-Speichern eine Zeichenfolge serialisiert Zeitzone auf diese Weise trennt, wird auch die Routine zum Erstellen von der Zeitzone von der Anwendung selbst. Beispielsweise kann eine Routine zum Erstellen von Zeitzonen ausführen und eine Datei, die historische Zeitzoneninformationen enthält, mit denen eine Anwendung erstellen. Die Datei kann dann mit der Anwendung installiert werden und kann geöffnet werden und eine oder mehrere der Zeitzonen kann deserialisiert werden, wenn die Anwendung benötigt.
+Durch das Speichern einer serialisierten Zeit Zonen Zeichenfolge auf diese Weise wird auch die Zeit Zonen Erstellungs Routine von der Anwendung selbst getrennt. Beispielsweise kann eine Zeit Zonen Erstellungs Routine ausgeführt werden und eine Datendatei erstellen, die historische Zeitzoneninformationen enthält, die von einer Anwendung verwendet werden können. Die Datendatei kann dann mit der Anwendung installiert werden, und Sie kann geöffnet werden, und eine oder mehrere der zugehörigen Zeitzonen können deserialisiert werden, wenn Sie von der Anwendung benötigt werden.
 
-Ein Beispiel eine eingebettete Ressource verwendet, um serialisierte Zeitzonendaten zu speichern, finden Sie unter [Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) und [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Ein Beispiel, in dem eine eingebettete Ressource zum Speichern von serialisierten Zeit Zonendaten [verwendet wird, finden Sie unter Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) und [Gewusst wie: Stellen Sie Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)wieder her.
 
 ## <a name="see-also"></a>Siehe auch
 

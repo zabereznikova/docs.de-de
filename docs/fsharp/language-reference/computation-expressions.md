@@ -2,41 +2,41 @@
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in F#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 03/15/2019
-ms.openlocfilehash: b352c5541bc31b5c583904b99651de9180c8afb3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152026"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106570"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
-Berechnungsausdrücke in F# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungsausdrucks können sie als eine Möglichkeit, Monaden, Monoids, Monad Transformatoren und applicative Funktionselemente auszudrücken betrachtet werden. Anders als bei anderen Sprachen (z. B. *-Notation* in Haskell), sie sind nicht an eine einzelne Abstraktion gebunden, und verlassen Sie sich nicht in Makros oder anderen Formen der Metaprogrammierung, um eine praktische und kontextbezogene Syntax zu erreichen.
+Berechnungsausdrücke in F# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungs Ausdrucks können Sie sich als Möglichkeit vorstellen, Monads, Monoids, Monad-Transformatoren und Anwendungs Funktoren auszudrücken. Im Gegensatz zu anderen Sprachen (z. b. *do-Notation* in Haskell) sind Sie jedoch nicht an eine einzelne Abstraktion gebunden, und Sie verlassen sich nicht auf Makros oder andere Formen der Metaprogrammierung, um eine bequeme und kontextabhängige Syntax zu erreichen.
 
 ## <a name="overview"></a>Übersicht
 
-Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung ist Singlethread-Ausführung, bei dem ist leicht zu verstehen und zu bearbeiten. Nicht alle Arten von Berechnungen sind jedoch so einfach wie das Singlethread-Ausführung. Beispiele:
+Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung ist die Ausführung mit nur einem Thread, die leicht verständlich und geändert werden kann. Allerdings sind nicht alle Berechnungs Formen so einfach wie die Ausführung mit einem Thread. Beispiele:
 
-* Nicht deterministische Berechnungen
-* Asynchrone Berechnungen
-* Effectful Berechnungen
-* Produktive Berechnungen
+- Nicht deterministische Berechnungen
+- Asynchrone Berechnungen
+- Effektive Berechnungen
+- Generative Berechnungen
 
-Allgemeiner gesagt, es gibt *kontextbezogene* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Schreiben von kontextbezogenen Code kann schwierig sein wie "Speicherverlusten" Berechnungen außerhalb von einem bestimmten Kontext ohne Abstraktionen, um zu verhindern, dass Sie auf diese Weise einfach ist. Diese Abstraktionen sind oft schwierig, selbst zu schreiben, die Grund F# eine verallgemeinerte Vorgehensweise hat sogenannte **Berechnungsausdrücke**.
+Im Allgemeinen gibt es *kontextabhängige* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Das Schreiben von Kontext sensiblem Code kann eine Herausforderung darstellen, da es einfach ist, Berechnungen außerhalb eines bestimmten Kontexts ohne Abstraktionen zu "vermeiden, um dies zu verhindern. Diese Abstraktionen sind oft schwierig, selbst zu schreiben, die Grund F# eine verallgemeinerte Vorgehensweise hat sogenannte **Berechnungsausdrücke**.
 
-Berechnungsausdrücke bieten ein einheitliches Syntax und Abstraktion Modell für die Codierung von kontextbezogener Berechnungen.
+Berechnungs Ausdrücke bieten ein einheitliches Syntax-und Abstraktions Modell zum Codieren kontextbezogener Berechnungen.
 
-Jeder Ausdruck für die Berechnung basiert auf einer *Builder* Typ. Der Generatortyp definiert die Vorgänge, die für den Ausdruck für die Berechnung verfügbar sind. Finden Sie unter [erstellen einen neuen Typ von Ausdruck für die Berechnung](computation-expressions.md#creating-a-new-type-of-computation-expression), erfahren, wie Sie einen Ausdruck für die benutzerdefinierte Berechnung zu erstellen.
+Jeder Berechnungs Ausdruck wird durch einen *Builder* -Typ unterstützt. Der Builder-Typ definiert die Vorgänge, die für den Berechnungs Ausdruck verfügbar sind. Weitere Informationen zum Erstellen eines benutzerdefinierten Berechnungs Ausdrucks finden Sie unter [Erstellen eines neuen Berechnungs Typs](computation-expressions.md#creating-a-new-type-of-computation-expression).
 
-### <a name="syntax-overview"></a>Übersicht über die Syntax
+### <a name="syntax-overview"></a>Syntax Übersicht
 
-Alle Berechnungsausdrücke aufweisen folgende Form:
+Alle Berechnungs Ausdrücke weisen die folgende Form auf:
 
 ```
 builder-expr { cexper }
 ```
 
-in denen `builder-expr` ist der Name eines Builder-Typs, der den Ausdruck für die Berechnung, definiert und `cexper` ist der Ausdruckstext, der den Ausdruck für die Berechnung. Z. B. `async` Ausdruckscode Berechnung kann wie folgt aussehen:
+Dabei ist der Name eines Generator Typs, der den Berechnungs Ausdruck definiert, und `cexper` ist der Ausdrucks Text des Berechnungs Ausdrucks. `builder-expr` Beispielsweise `async` kann der Berechnungs Ausdrucks Code wie folgt aussehen:
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-Es ist eine spezielle, zusätzliche-Syntax in einem Berechnungsausdruck verfügbar, wie im vorherigen Beispiel gezeigt. Die folgenden Ausdruck Formulare sind mit Berechnungsausdrücken möglich:
+Es gibt eine spezielle, zusätzliche Syntax, die in einem Berechnungs Ausdruck verfügbar ist, wie im vorherigen Beispiel gezeigt. Die folgenden Ausdrucksformen sind mit Berechnungs Ausdrücken möglich:
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Jedes dieser Schlüsselwörter und andere Standard F# Schlüsselwörter sind nur in einem Berechnungsausdruck verfügbar, wenn sie in den unterstützenden-Generator-Typ definiert wurden. Die einzige Ausnahme hierbei ist `match!`, dies ist selbst die Syntax-Zuckerguss für die Verwendung von `let!` gefolgt von einer Musterübereinstimmung auf dem Ergebnis.
+Jedes dieser Schlüsselwörter und andere Standard F# Schlüsselwörter sind nur in einem Berechnungs Ausdruck verfügbar, wenn Sie im Unterstützungs Generator-Typ definiert wurden. Die einzige Ausnahme hierbei ist `match!`, bei der es sich selbst um syntaktische Sugar handelt, wenn `let!` eine Muster Übereinstimmung auf das Ergebnis folgt.
 
-Der Generator kann ein Objekt, das spezielle Methoden definiert, die steuern, die Möglichkeit, die die Fragmente des Berechnungsausdrucks kombiniert werden. d. h. seine Methoden Berechnungsausdrucks Verhalten steuern. Eine weitere Möglichkeit zum Beschreiben einer Zeichenfolgengenerator-Klasse ist zu sagen, dass Sie den Vorgang von vielen anpassen können F# erstellt werden, beispielsweise Schleifen und Bindungen.
+Der Builder-Typ ist ein Objekt, das spezielle Methoden definiert, die bestimmen, wie die Fragmente des Berechnungs Ausdrucks kombiniert werden. Das heißt, seine Methoden steuern, wie sich der Berechnungs Ausdruck verhält. Eine andere Möglichkeit, eine Builder-Klasse zu beschreiben, besteht darin zu sagen, dass Sie die Ausführung F# vieler Konstrukte, wie z. b. Schleifen und Bindungen, anpassen können.
 
 ### `let!`
 
-Die `let!` -Schlüsselwort bindet das Ergebnis eines Aufrufs von einem anderen Berechnungsausdruck an einen Namen:
+Das `let!` -Schlüsselwort bindet das Ergebnis eines Aufrufens an einen anderen Berechnungs Ausdruck an einen Namen:
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-Wenn Sie den Aufruf von einem Berechnungsausdruck mit binden `let`, erhalten Sie nicht das Ergebnis des Berechnungsausdrucks. Stattdessen wird gebunden den Wert des der *realisierten* aufrufen, um dieser Ausdruck für die Berechnung. Verwendung `let!` zum Binden an das Ergebnis.
+Wenn Sie den-Ausdruck an einen Berechnungs Ausdruck mit `let`binden, wird das Ergebnis des Berechnungs Ausdrucks nicht angezeigt. Stattdessen haben Sie den Wert des *nicht erkannten* Aufrufes an diesen Berechnungs Ausdruck gebunden. Verwenden `let!` Sie, um eine Bindung an das Ergebnis herzustellen.
 
-`let!` wird definiert, indem die `Bind(x, f)` Member für den Generatortyp.
+`let!`wird vom `Bind(x, f)` -Member für den Builder-Typ definiert.
 
 ### `do!`
 
-Die `do!` -Schlüsselwort ist für einen Ausdruck für die Berechnung aufrufen, gibt eine `unit`-wie (von definiert die `Zero` Member für den Generator):
+Das `do!` Schlüsselwort dient zum Aufrufen eines Berechnungs Ausdrucks, der `unit`einen-ähnlichen Typ zurückgibt ( `Zero` definiert durch den-Member auf dem Generator):
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-Für die [asynchrone Workflows](asynchronous-workflows.md), dieser Typ ist `Async<unit>`. Der Typ ist wahrscheinlich für die anderen Berechnungsausdrücken `CExpType<unit>`.
+Für den [Async-Workflow](asynchronous-workflows.md)ist `Async<unit>`dieser Typ. Bei anderen Berechnungs Ausdrücken ist der Typ wahrscheinlich `CExpType<unit>`.
 
-`do!` wird definiert, indem die `Bind(x, f)` Member für den Generatortyp, in denen `f` erzeugt eine `unit`.
+`do!`wird vom `Bind(x, f)` -Member für den Builder-Typ definiert, `f` wobei eine `unit`erzeugt.
 
 ### `yield`
 
-Die `yield` -Schlüsselwort ist für die Rückgabe eines Werts aus den Berechnungsausdruck, damit es als verwendet werden kann ein <xref:System.Collections.Generic.IEnumerable%601>:
+Das `yield` Schlüsselwort dient zum Zurückgeben eines Werts aus dem Berechnungs Ausdruck, sodass er <xref:System.Collections.Generic.IEnumerable%601>als verwendet werden kann:
 
 ```fsharp
 let squares =
@@ -112,13 +112,13 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Wie bei der [yield-Schlüsselwort in c#](../../csharp/language-reference/keywords/yield.md), jedes Element in den Ausdruck für die Berechnung wird zurückgegeben, zurück, wie sie durchlaufen wird.
+Ebenso wie das [Yield-Schlüssel C#Wort in ](../../csharp/language-reference/keywords/yield.md)wird jedes Element im Berechnungs Ausdruck beim Durchlaufen zurückgegeben.
 
-`yield` wird definiert, indem die `Yield(x)` Member für den Generatortyp, in denen `x` ist das Element, um wieder zu erhalten.
+`yield`wird vom `Yield(x)` -Member für den Builder-Typ definiert, `x` wobei das Element ist, das zurückzugeben ist.
 
 ### `yield!`
 
-Die `yield!` -Schlüsselwort ist für das eine Auflistung von Werten aus einem Berechnungsausdruck reduzieren:
+Das `yield!` Schlüsselwort dient zum Vereinfachen einer Auflistung von Werten aus einem Berechnungs Ausdruck:
 
 ```fsharp
 let squares =
@@ -140,13 +140,13 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-Bei der Auswertung, bezeichnet der Ausdruck für die Berechnung von `yield!` werden haben die Elemente zurückgegeben, die Back-nacheinander, vereinfachen das Ergebnis.
+Bei der Auswertung werden die Elemente des von `yield!` aufgerufenen Berechnungs Ausdrucks nacheinander zurückgegeben und das Ergebnis vereinfacht.
 
-`yield!` wird definiert, indem die `YieldFrom(x)` Member für den Generatortyp, in denen `x` ist eine Auflistung von Werten.
+`yield!`wird vom `YieldFrom(x)` -Member für den Builder-Typ definiert, `x` wobei eine Auflistung von-Werten ist.
 
 ### `return`
 
-Die `return` Schlüsselwort umschließt einen Wert in den Typ, des Berechnungsausdrucks entspricht. Abgesehen von der von Berechnungsausdrücken mit `yield`, er wird verwendet, um "einen Ausdruck für die Berechnung abgeschlossen werden":
+Das `return` -Schlüsselwort umschließt einen Wert in dem Typ, der dem Berechnungs Ausdruck entspricht. Abgesehen von Berechnungs Ausdrücken mit `yield`wird es verwendet, um einen Berechnungs Ausdruck zu vervollständigen:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +159,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` wird definiert, indem die `Return(x)` Member für den Generatortyp, in denen `x` ist das Element zu umschließen.
+`return`wird vom `Return(x)` -Member für den Builder-Typ definiert, `x` wobei das zu Umbruch Ende Element ist.
 
 ### `return!`
 
-Die `return!` Schlüsselwort erkennt, dass den Wert eines Ausdrucks für die Berechnung und dient als Wrapper für das Ergebnis in den Typ, des Berechnungsausdrucks entsprechen:
+Das `return!` Schlüsselwort erkennt den Wert eines Berechnungs Ausdrucks und umschließt das Ergebnis in den Typ, der dem Berechnungs Ausdruck entspricht:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,7 +175,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` wird definiert, indem die `ReturnFrom(x)` Member für den Generatortyp, in denen `x` wird von einem anderen Berechnungsausdruck.
+`return!`wird vom `ReturnFrom(x)` -Member für den Builder-Typ definiert, `x` wobei ein anderer Berechnungs Ausdruck ist.
 
 ### `match!`
 
@@ -190,45 +190,45 @@ let doThingsAsync url =
     }
 ```
 
-Beim Aufrufen von eines Berechnungsausdrucks mit `match!`, sie werden feststellen, das Ergebnis des Aufrufs wie `let!`. Dies wird häufig verwendet, wenn einen Berechnungsausdruck aufrufen, ist das Ergebnis einer [optional](options.md).
+Wenn Sie einen Berechnungs Ausdruck mit `match!`aufrufen, wird das Ergebnis des Aufrufs wie `let!`erkannt. Dies wird häufig beim Aufrufen eines Berechnungs Ausdrucks verwendet, bei dem das Ergebnis [optional](options.md)ist.
 
-## <a name="built-in-computation-expressions"></a>Integrierte Berechnungsausdrücke
+## <a name="built-in-computation-expressions"></a>Integrierte Berechnungs Ausdrücke
 
-Die F# drei integrierte Berechnungsausdrücke definiert: [Sequence Expressions](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [-Abfrageausdrücken](query-expressions.md).
+Die F# Core-Bibliothek definiert drei integrierte Berechnungs Ausdrücke: [Sequenz Ausdrücke](sequences.md), [asynchrone Workflows](asynchronous-workflows.md)und [Abfrage Ausdrücke](query-expressions.md).
 
-## <a name="creating-a-new-type-of-computation-expression"></a>Erstellen eine neue Art von Ausdruck für die Berechnung
+## <a name="creating-a-new-type-of-computation-expression"></a>Erstellen eines neuen Typs des Berechnungs Ausdrucks
 
-Sie können die Merkmale der eigene Berechnungsausdrücke definieren, indem eine Generatorklasse erstellen und definieren bestimmte speziellen Methoden für die Klasse. Die Zeichenfolgengenerator-Klasse kann optional die Methoden definieren, wie in der folgenden Tabelle aufgeführt.
+Sie können die Merkmale ihrer eigenen Berechnungs Ausdrücke definieren, indem Sie eine Builder-Klasse erstellen und bestimmte spezielle Methoden für die Klasse definieren. Die Builder-Klasse kann optional die Methoden wie in der folgenden Tabelle aufgeführt definieren.
 
-Die folgende Tabelle beschreibt die Methoden, die in einer Workflow-Generator-Klasse verwendet werden können.
+In der folgenden Tabelle werden die Methoden beschrieben, die in einer Workflow Generator-Klasse verwendet werden können.
 
-|**Methode**|**Typische Signaturen**|**Beschreibung**|
+|**Methode**|**Typische Signatur (en)**|**Beschreibung**|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Wird aufgerufen, für die `let!` und `do!` im Berechnungsausdrücke.|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|Umschließt einen Ausdruck für die Berechnung als Funktion an.|
-|`Return`|`'T -> M<'T>`|Wird aufgerufen, für die `return` im Berechnungsausdrücke.|
-|`ReturnFrom`|`M<'T> -> M<'T>`|Wird aufgerufen, für die `return!` im Berechnungsausdrücke.|
-|`Run`|`M<'T> -> M<'T>` oder<br /><br />`M<'T> -> 'T`|Führt einen Ausdruck für die Berechnung an.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` oder<br /><br />`M<unit> * M<'T> -> M<'T>`|Wird aufgerufen, für die Sequenzierung im Berechnungsausdrücke.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` oder<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wird aufgerufen, für die `for...do` Ausdrücke im Berechnungsausdrücke.|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Wird aufgerufen, für die `try...finally` Ausdrücke im Berechnungsausdrücke.|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Wird aufgerufen, für die `try...with` Ausdrücke im Berechnungsausdrücke.|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Wird aufgerufen, für die `use` Bindungen in Berechnungsausdrücke.|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Wird aufgerufen, für die `while...do` Ausdrücke im Berechnungsausdrücke.|
-|`Yield`|`'T -> M<'T>`|Wird aufgerufen, für die `yield` Ausdrücke im Berechnungsausdrücke.|
-|`YieldFrom`|`M<'T> -> M<'T>`|Wird aufgerufen, für die `yield!` Ausdrücke im Berechnungsausdrücke.|
-|`Zero`|`unit -> M<'T>`|Wird aufgerufen, für leere `else` branches `if...then` Ausdrücke im Berechnungsausdrücke.|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Gibt an, dass der Ausdruck für die Berechnung zu übergeben, wird die `Run` Element als ein Angebot. Er übersetzt alle Instanzen einer Berechnung in Anführungszeichen.|
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Wird für `let!` und `do!` in Berechnungs Ausdrücken aufgerufen.|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|Umschließt einen Berechnungs Ausdruck als Funktion.|
+|`Return`|`'T -> M<'T>`|Wird für `return` in Berechnungs Ausdrücken aufgerufen.|
+|`ReturnFrom`|`M<'T> -> M<'T>`|Wird für `return!` in Berechnungs Ausdrücken aufgerufen.|
+|`Run`|`M<'T> -> M<'T>` oder<br /><br />`M<'T> -> 'T`|Führt einen Berechnungs Ausdruck aus.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` oder<br /><br />`M<unit> * M<'T> -> M<'T>`|Wird für die Sequenzierung in Berechnungs Ausdrücken aufgerufen.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` oder<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wird für `for...do` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Wird für `try...finally` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Wird für `try...with` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Wird für `use` Bindungen in Berechnungs Ausdrücken aufgerufen.|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Wird für `while...do` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`Yield`|`'T -> M<'T>`|Wird für `yield` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`YieldFrom`|`M<'T> -> M<'T>`|Wird für `yield!` Ausdrücke in Berechnungs Ausdrücken aufgerufen.|
+|`Zero`|`unit -> M<'T>`|Wird für leere `else` Verzweigungen `if...then` von Ausdrücken in Berechnungs Ausdrücken aufgerufen.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Gibt an, dass der Berechnungs Ausdruck als Anführungs `Run` Zeichen an den Member übermittelt wird. Dabei werden alle Instanzen einer Berechnung in ein Anführungszeichen übersetzt.|
 
-Viele der Methoden in einem Zeichenfolgengenerator-Klasse verwenden und Zurückgeben einer `M<'T>` Konstrukt, in der Regel separat definierten Typ, der die Art der Berechnungen, die kombiniert werden, z. B. charakterisiert, `Async<'T>` für asynchrone Workflows und `Seq<'T>` für die Sequenz-Workflows. Die Signaturen der folgenden Methoden ermöglichen ihnen kombiniert und mit untereinander geschachtelt werden sollen, damit der Workflow-Objekt, das von einem Konstrukt zurückgegebene zum nächsten übergeben werden kann. Der Compiler, wenn es sich um einen Ausdruck für die Berechnung, analysiert konvertiert den Ausdruck in eine Reihe von Aufrufe geschachtelter Funktionen mithilfe von Methoden in der obigen Tabelle und der Code in den Ausdruck für die Berechnung.
+Viele der Methoden in einer Generator-Klasse verwenden und geben ein `M<'T>` Konstrukt zurück. Hierbei handelt es sich in der Regel um einen separat definierten Typ, der die Art der zu kombinierenden Berechnungen charakterisiert, `Async<'T>` z. `Seq<'T>` b. für asynchrone Workflows und für Sequenz Workflows. Mit den Signaturen dieser Methoden können Sie kombiniert und miteinander verknüpft werden, sodass das von einem Konstrukt zurückgegebene Workflow Objekt an das nächste weitergegeben werden kann. Wenn der Compiler einen Berechnungs Ausdruck analysiert, konvertiert er den Ausdruck in eine Reihe von geschalbten Funktionsaufrufen, indem er die Methoden in der vorangehenden Tabelle und den Code im Berechnungs Ausdruck verwendet.
 
-Der geschachtelte Ausdruck ist im folgenden Format:
+Der-Ausdruck hat die folgende Form:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie nicht in der Berechnung Ausdrucks-Generator-Klasse definiert sind. Der Text des Berechnungsausdrucks, hier bezeichnet als `{| cexpr |}`, durch die Übersetzungen, die in der folgenden Tabelle beschrieben in Aufrufe, die im Zusammenhang mit den Methoden der Builder-Klasse übersetzt. Der Ausdruck für die Berechnung `{| cexpr |}` wird definierten rekursiv nach diese Übersetzungen, in denen `expr` ist ein F# Ausdruck und `cexpr` ist ein Ausdruck für die Berechnung.
+Im obigen Code werden die Aufrufe von `Run` und ausgelassen, wenn Sie in der Berechnungs Ausdrucks-Generator- `Delay` Klasse nicht definiert sind. Der Text des Berechnungs Ausdrucks, der hier als `{| cexpr |}`bezeichnet wird, wird in Aufrufe mit den Methoden der Builder-Klasse durch die in der folgenden Tabelle beschriebenen Übersetzungen übersetzt. Der Berechnungs Ausdruck `{| cexpr |}` wird rekursiv gemäß diesen Übersetzungen definiert `expr` , wobei F# ein Ausdruck `cexpr` und ein Berechnungs Ausdruck ist.
 
 |Ausdruck|Übersetzung|
 |----------|-----------|
@@ -253,9 +253,9 @@ Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie ni
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-In der vorherigen Tabelle `other-expr` wird beschrieben, einen Ausdruck, der andernfalls nicht in der Tabelle aufgeführt ist. Eine Zeichenfolgengenerator-Klasse muss nicht alle Methoden zu implementieren und unterstützen alle die Übersetzungen, die in der vorherigen Tabelle aufgeführt. Diese Konstrukte, die nicht implementiert werden, sind nicht verfügbar ist, im Berechnungsausdrücke dieses Typs. Angenommen, Sie nicht möchten, zur Unterstützung der `use` -Schlüsselwort in Berechnungsausdrücken, können Sie die Definition der weglassen `Use` in Ihre Zeichenfolgengenerator-Klasse.
+In der vorherigen Tabelle `other-expr` wird ein Ausdruck beschrieben, der in der Tabelle nicht anderweitig aufgeführt ist. Eine Builder-Klasse muss nicht alle Methoden implementieren und alle in der vorherigen Tabelle aufgeführten Übersetzungen unterstützen. Diese Konstrukte, die nicht implementiert werden, sind in Berechnungs Ausdrücken dieses Typs nicht verfügbar. Wenn Sie z. b. das `use` -Schlüsselwort in ihren Berechnungs Ausdrücken nicht unterstützen möchten, können Sie die Definition von `Use` in der Builder-Klasse weglassen.
 
-Das folgende Codebeispiel zeigt einen Ausdruck für die Berechnung, der eine Berechnung kapselt, eine Reihe von Schritten, die sein können nur einem Schritt zu einem Zeitpunkt ausgewertet. Eine Unterscheidungs-union-Typs `OkOrException`, den Fehlerstatus des Ausdrucks codiert, wie bisher ausgewertet. Dieser Code zeigt einige typische Muster, die Sie in Ihrer Berechnungsausdrücken, z. B. Codebausteine Implementierung einiger der-Generator-Methoden verwenden können.
+Das folgende Codebeispiel zeigt einen Berechnungs Ausdruck, der eine Berechnung als eine Reihe von Schritten kapselt, die jeweils nacheinander ausgewertet werden können. Ein Unterscheidungs-Union `OkOrException`-Typ codiert den Fehlerzustand des Ausdrucks, der bisher ausgewertet wurde. In diesem Code werden mehrere typische Muster veranschaulicht, die Sie in ihren Berechnungs Ausdrücken verwenden können, wie z. b. die Implementierung von Code Bausteinen einiger Generator-Methoden.
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,17 +378,17 @@ comp |> step |> step
 comp |> step |> step |> step |> step 
 ```
 
-Ein Ausdruck für die Berechnung hat einen zugrunde liegenden Typ, der der Ausdruck zurückgibt. Der zugrunde liegende Typ kann eine berechnete Ergebnis oder eine verzögerte Berechnung, die ausgeführt werden kann oder darstellen kann es eine Möglichkeit zum iterieren durch eine Art von Auflistung bereitstellen. Im vorherigen Beispiel wurde der zugrunde liegende Typ **schließlich**. Für einen Sequenzausdruck der zugrunde liegenden Typ ist <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bei einem Abfrageausdruck, der zugrunde liegende Typ ist <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Ist ein asynchroner Workflow, der zugrunde liegenden Typ [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Die `Async` Objekt darstellt, die Arbeit ausgeführt werden, um das Ergebnis zu berechnen. Rufen Sie z. B. [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) führen eine Berechnung, und geben das Ergebnis zurück.
+Ein Berechnungs Ausdruck verfügt über einen zugrunde liegenden Typ, der vom Ausdruck zurückgegeben wird. Der zugrunde liegende Typ kann ein berechnetes Ergebnis oder eine verzögerte Berechnung darstellen, die durchgeführt werden kann, oder es kann eine Möglichkeit bieten, einen Auflistungstyp zu durchlaufen. Im vorherigen Beispiel war der zugrunde liegende Typ **schließlich**. Bei einem Sequenz Ausdruck ist <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>der zugrunde liegende Typ. Bei einem Abfrage Ausdruck ist <xref:System.Linq.IQueryable?displayProperty=nameWithType>der zugrunde liegende Typ. Bei einem asynchronen Workflow ist [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)der zugrunde liegende Typ. Das `Async` -Objekt stellt die Arbeit dar, die zum Berechnen des Ergebnisses ausgeführt werden soll. Beispielsweise wird aufgerufen [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) , um eine Berechnung auszuführen und das Ergebnis zurückzugeben.
 
 ## <a name="custom-operations"></a>Benutzerdefinierte Vorgänge
 
-Sie können einen Vorgang auf einen Ausdruck für die Berechnung definieren und verwenden einen Vorgang als einen Operator in einem Ausdruck für die Berechnung. Beispielsweise können Sie einen Abfrageoperator in einem Abfrageausdruck einschließen. Wenn Sie einen Vorgang definieren, müssen Sie die "yield" definieren und für Methoden in den Ausdruck für die Berechnung. Um einen Vorgang zu definieren, fügen Sie ihn in eine Builder-Klasse für den Ausdruck für die Berechnung aus, und wenden Sie dann die [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Dieses Attribut akzeptiert eine Zeichenfolge als Argument, das heißt, die in einem benutzerdefinierten Vorgang verwendet werden. Dieser Name wird in den Bereich am Anfang der öffnenden geschweiften Klammer des Berechnungsausdrucks. Aus diesem Grund sollte nicht Sie Bezeichner mit den gleichen Namen wie einen Vorgang in diesem Block verwendet werden. Vermeiden Sie z. B. wie z. B. die Verwendung von Bezeichnern `all` oder `last` in Abfrageausdrücken.
+Sie können einen benutzerdefinierten Vorgang für einen Berechnungs Ausdruck definieren und einen benutzerdefinierten Vorgang als Operator in einem Berechnungs Ausdruck verwenden. Beispielsweise können Sie einen Abfrage Operator in einen Abfrage Ausdruck einschließen. Wenn Sie einen benutzerdefinierten Vorgang definieren, müssen Sie die Yield-und for-Methoden im Berechnungs Ausdruck definieren. Um einen benutzerdefinierten Vorgang zu definieren, fügen Sie ihn in eine Builder-Klasse für den Berechnungs Ausdruck ein [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19), und wenden Sie dann das an. Dieses Attribut verwendet eine Zeichenfolge als Argument. Dies ist der Name, der in einem benutzerdefinierten Vorgang verwendet werden soll. Dieser Name tritt am Anfang der öffnenden geschweiften Klammer des Berechnungs Ausdrucks auf. Daher sollten Sie keine Bezeichner verwenden, die denselben Namen wie ein benutzerdefinierter Vorgang in diesem Block haben. Vermeiden Sie z. b. die Verwendung von bezeichlern `all` wie `last` oder in Abfrage Ausdrücken.
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a>Erweitern Sie vorhandene Generatoren mit neuen benutzerdefinierten-Vorgänge
+### <a name="extending-existing-builders-with-new-custom-operations"></a>Erweitern vorhandener Generatoren mit neuen benutzerdefinierten Vorgängen
 
-Wenn Sie bereits über ein Zeichenfolgengenerator-Klasse verfügen, können benutzerdefinierte Vorgänge außerhalb dieser Zeichenfolgengenerator-Klasse aus erweitert werden. Erweiterungen müssen in Modulen deklariert werden. Namespaces können nicht enthalten, Erweiterungsmember außer in der gleichen Datei und der gleichen Namespace-Deklaration-Gruppe, in denen der Typ definiert ist.
+Wenn Sie bereits über eine Builder-Klasse verfügen, können die benutzerdefinierten Vorgänge von außerhalb dieser Builder-Klasse erweitert werden. Erweiterungen müssen in Modulen deklariert werden. Namespaces dürfen keine Erweiterungs Elemente enthalten, außer in derselben Datei und derselben Namespace-Deklarations Gruppe, in der der Typ definiert ist.
 
-Das folgende Beispiel zeigt die Erweiterung des bestehenden `Microsoft.FSharp.Linq.QueryBuilder` Klasse.
+Das folgende Beispiel zeigt die Erweiterung der vorhandenen `Microsoft.FSharp.Linq.QueryBuilder` -Klasse.
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with

@@ -12,72 +12,72 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: face995dbd5ba4b0b12e80bcef10a90b46c093ff
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ae739d3c5dd233c2129950666846979edfba370
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586407"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106677"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln
 
-Die genaue Zeitzoneninformationen, die von einer Anwendung erforderlich sind möglicherweise nicht auf einem bestimmten System vorhanden, verschiedene Ursachen haben:
+Die genauen Zeitzoneninformationen, die von einer Anwendung benötigt werden, sind möglicherweise aus verschiedenen Gründen nicht auf einem bestimmten System vorhanden:
 
-* Die Zeitzone wurde nie in der Registrierung des lokalen Systems definiert.
+- Die Zeitzone wurde nie in der Registrierung des lokalen Systems definiert.
 
-* Daten über die Zeitzone wurde geändert oder aus der Registrierung entfernt.
+- Daten über die Zeitzone wurden geändert oder aus der Registrierung entfernt.
 
-* Genaue Informationen zur zeitzonenanpassungen für einen bestimmten Zeitraum für vergangene keinen für die Zeitzone.
+- Die Zeitzone weist keine genauen Informationen zu Zeit Zonen Anpassungen für einen bestimmten historischen Zeitraum auf.
 
-Sie können in diesen Fällen Aufrufen der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode, um die Zeitzone, die von der Anwendung benötigten definieren. Sie können die Überladungen dieser Methode verwenden, um mit oder ohne Anpassungsregeln eine Zeitzone zu erstellen. Wenn die Zeitzone Sommerzeit unterstützt, können Sie Anpassungen mit entweder feste "oder" Gleitkomma Anpassungsregeln definieren. (Für die Definitionen dieser Begriffe finden Sie im Abschnitt "Zeitzonenterminologie" [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md).)
+In diesen Fällen können Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> -Methode zum Definieren der Zeitzone, die für Ihre Anwendung erforderlich ist, aufzurufen. Sie können die über Ladungen dieser Methode verwenden, um eine Zeitzone mit oder ohne Anpassungsregeln zu erstellen. Wenn die Zeitzone die Sommerzeit unterstützt, können Sie Anpassungen mit festgelegten oder Gleit Komma Anpassungsregeln definieren. (Informationen zu Definitionen dieser Begriffe finden Sie im Abschnitt "Zeit Zonen Terminologie" unter [Übersicht über](../../../docs/standard/datetime/time-zone-overview.md)die Zeitzone.)
 
 > [!IMPORTANT]
-> Benutzerdefinierte Zeitzonen durch Aufrufen von erstellt die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode werden nicht in der Registrierung hinzugefügt. Stattdessen können sie nur über das vom Objektverweis zugegriffen werden die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methodenaufruf.
+> Benutzerdefinierte Zeitzonen, die durch den <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Aufruf der-Methode erstellt wurden, werden nicht zur Registrierung hinzugefügt. Stattdessen kann nur über den Objekt Verweis darauf zugegriffen werden, der durch den <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> -Methoden-Befehl zurückgegeben wird.
 
-In diesem Thema veranschaulicht, wie mit Anpassungsregeln eine Zeitzone zu erstellen. Um eine Zeitzone zu erstellen, die keine Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+In diesem Thema wird gezeigt, wie Sie eine Zeitzone mit Anpassungsregeln erstellen. Informationen zum Erstellen einer Zeitzone, die keine Anpassungsregeln für die Sommerzeit unterstützt [, finden Sie unter Gewusst wie: Erstellen Sie Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
-### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>So erstellen eine Zeitzone mit bewegliche Anpassungsregeln
+### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>So erstellen Sie eine Zeitzone mit Gleit Komma Anpassungsregeln
 
-1. Für jede Regulierung (die ist, dass für die Umstellung von und zurück auf Standardzeit in einem bestimmten Zeitintervall), gehen Sie folgendermaßen vor:
+1. Gehen Sie für jede Anpassung (d. h. für jeden Übergang von und zurück zur Standardzeit über ein bestimmtes Zeitintervall) wie folgt vor:
 
-    1. Definieren Sie die Startzeit der Übergang für die Anpassung der Zeitzone.
+    1. Hiermit wird die Anfangs Übergangszeit für die Zeit Zonen Anpassung definiert.
 
-       Rufen Sie die <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> Methode und übergeben sie einen <xref:System.DateTime> Wert, der die Uhrzeit des Übergangs, ein ganzzahliger Wert, der den Monat des Übergangs definiert, ein ganzzahliger Wert, der die Woche definiert, auf dem der Übergang erfolgt, und ein <xref:System.DayOfWeek> Wert, der den Tag der Woche definiert, an dem der Übergang auftritt. Dieser Methodenaufruf instanziiert ein <xref:System.TimeZoneInfo.TransitionTime> Objekt.
+       Sie müssen die <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> -Methode aufruft und ihr einen <xref:System.DateTime> Wert übergeben, der die Zeit des Übergangs definiert, einen ganzzahligen Wert, der den Monat des Übergangs definiert, einen ganzzahligen Wert, der die Woche definiert, in <xref:System.DayOfWeek> der der Übergang erfolgt, und eine der-Wert, der den Wochentag definiert, an dem der Übergang auftritt. Dieser Methoden aufzurufende instanziiert ein <xref:System.TimeZoneInfo.TransitionTime> -Objekt.
 
-    2. Definieren Sie die Endzeit der Übergang für die Anpassung der Zeitzone. Dies erfordert einen anderen Aufruf der <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> Methode. Dieser Methodenaufruf instanziiert ein zweites <xref:System.TimeZoneInfo.TransitionTime> Objekt.
+    2. Hiermit wird die Endzeit für die Endzeit der Zeit Zonen Anpassung definiert. Hierfür ist ein weiterer Rückruf der <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> -Methode erforderlich. Dieser Methoden aufzurufen instanziiert ein <xref:System.TimeZoneInfo.TransitionTime> zweites-Objekt.
 
-    3. Aufrufen der <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> Methode und übergeben sie die effektive Start- und Enddatum der Anpassung, eine <xref:System.TimeSpan> -Objekt, das die Zeitspanne in den Übergang und die beiden definiert <xref:System.TimeZoneInfo.TransitionTime> Objekte, die beim Definieren der Übergänge zu und von Sommerzeit Zeit auftreten. Dieser Methodenaufruf instanziiert ein <xref:System.TimeZoneInfo.AdjustmentRule> Objekt.
+    3. Wenden Sie <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> die-Methode an, und übergeben Sie Ihr das effektive Start-und Enddatum der Anpassung, ein <xref:System.TimeSpan> -Objekt, das die Zeitspanne im Übergang <xref:System.TimeZoneInfo.TransitionTime> definiert, und die beiden-Objekte, die definieren, wann der Übergang zu und von der Sommerzeit stattfindet. die Zeit ist aufgetreten. Dieser Methoden aufzurufende instanziiert ein <xref:System.TimeZoneInfo.AdjustmentRule> -Objekt.
 
-    4. Weisen Sie die <xref:System.TimeZoneInfo.AdjustmentRule> Objekt, das ein Array von <xref:System.TimeZoneInfo.AdjustmentRule> Objekte.
+    4. Weisen Sie <xref:System.TimeZoneInfo.AdjustmentRule> das-Objekt einem Array <xref:System.TimeZoneInfo.AdjustmentRule> von-Objekten zu.
 
-2. Anzeigename der Zeitzone zu definieren. Der Anzeigename folgt ein Standardformat in der der Standardzeit der Zeitzone Offset von Coordinated Universal Time (UTC) wird in Klammern eingeschlossen werden soll, und folgt eine Zeichenfolge, die Zeitzone oder der Städte in der Zeitzone oder eine weitere mindestens die Cou identifiziert Osten oder Regionen, in der Zeitzone.
+2. Hiermit wird der Anzeige Name der Zeitzone definiert. Der Anzeige Name folgt einem Recht standardmäßigen Format, in dem der Offset der Zeitzone von der koordinierten Weltzeit (UTC) in Klammern eingeschlossen wird, gefolgt von einer Zeichenfolge, die die Zeitzone, eine oder mehrere Städte in der Zeitzone oder eine oder mehrere der Orte (cou) identifiziert. ntries oder Regionen in der Zeitzone.
 
-3. Der Name der Standardzeit der Zeitzone zu definieren. Diese Zeichenfolge wird in der Regel auch als Bezeichner für die Zeitzone verwendet.
+3. Hiermit wird der Name der Standardzeit der Zeitzone definiert. In der Regel wird diese Zeichenfolge auch als Bezeichner der Zeitzone verwendet.
 
-4. Definieren Sie den Namen der Sommerzeit der Zeitzone.
+4. Hiermit wird der Name der Sommerzeit der Zeitzone definiert.
 
-5. Wenn Sie einen anderen Bezeichner als standardmäßigen Namen der Zeitzone verwenden möchten, definieren Sie den Zeitzonenbezeichner.
+5. Wenn Sie einen anderen Bezeichner als den Standardnamen der Zeitzone verwenden möchten, definieren Sie den Zeit Zonen Bezeichner.
 
-6. Instanziieren einer <xref:System.TimeSpan> -Objekt, das die Zeitzone Offset von UTC definiert. Zeitzonen mit Uhrzeiten, die später als UTC weisen einen positiven Offset. Zeitzonen mit Uhrzeiten, die älter als UTC sind haben einen negativen Offset.
+6. Instanziieren Sie <xref:System.TimeSpan> ein-Objekt, das den Zeit Zonen Offset von UTC definiert. Zeitzonen mit Uhrzeiten, die später als UTC liegen, haben einen positiven Offset. Zeitzonen mit Zeiten, die älter sind als UTC, haben einen negativen Offset.
 
-7. Rufen Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> Methode, um die neue Zeitzone zu instanziieren.
+7. Ruft die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> -Methode auf, um die neue Zeitzone zu instanziieren.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel definiert eine Central Standard Zeitzone für den Vereinigten Staaten, die Anpassungsregeln für eine Vielzahl von Zeitintervallen von 1918 zur Gegenwart enthält.
+Im folgenden Beispiel wird eine zentrale Standard Zeitzone für die USA definiert, die Anpassungsregeln für eine Vielzahl von Zeitintervallen von 1918 bis zum aktuellen umfasst.
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
 [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
 
-Die Zeitzone, die in diesem Beispiel erstellten verfügt über mehrere Regeln zur zeitzonenanpassung berücksichtigt. Muss darauf geachtet werden, stellen Sie sicher, dass das effektive Start- und Enddatum der Anpassungsregel, die alle mit dem Enddatum der Anpassungsregel für eine andere nicht überschneiden. Wenn eine Überlappung, ein <xref:System.InvalidTimeZoneException> ausgelöst.
+Die in diesem Beispiel erstellte Zeitzone verfügt über mehrere Anpassungsregeln. Es muss darauf geachtet werden, dass sich das effektive Start-und Enddatum einer beliebigen Anpassungs Regel nicht mit den Datumsangaben einer anderen Anpassungs Regel überschneidet. Wenn eine Überlappung vorliegt, wird <xref:System.InvalidTimeZoneException> eine ausgelöst.
 
-Für bewegliche Anpassungsregeln, wird der Wert 5 übergeben die `week` Parameter, der die <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> Methode, um anzugeben, dass die Umstellung auf der letzten Woche eines bestimmten Monats auftritt.
+Für Gleit Komma Anpassungsregeln wird der Wert 5 an den `week` -Parameter <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> der-Methode übergeben, um anzugeben, dass der Übergang in der letzten Woche eines bestimmten Monats erfolgt.
 
-Erstellen Sie das Array von <xref:System.TimeZoneInfo.AdjustmentRule> Objekten die Verwendung in der <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> -Methodenaufruf, der Code konnte initialisieren Sie das Array der Größe, die durch die Anzahl der Anpassungen erforderlich sind, für die Zeitzone erstellt werden soll. Dieses Codebeispiel ruft stattdessen die <xref:System.Collections.Generic.List%601.Add%2A> Methode eine generische jede Anpassungsregel hinzuzufügende <xref:System.Collections.Generic.List%601> Auflistung von <xref:System.TimeZoneInfo.AdjustmentRule> Objekte. Der Code ruft dann die <xref:System.Collections.Generic.List%601.CopyTo%2A> Methode, um die Member dieser Auflistung in das Array zu kopieren.
+Beim Erstellen des Arrays von <xref:System.TimeZoneInfo.AdjustmentRule> -Objekten, die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> im Methodenaufruf verwendet werden sollen, könnte der Code das Array mit der Größe initialisieren, die für die Anzahl der für die Zeitzone zu erstellenden Anpassungen erforderlich ist. Stattdessen wird in diesem Codebeispiel die <xref:System.Collections.Generic.List%601.Add%2A> -Methode aufgerufen, um jede Anpassungs Regel einer <xref:System.Collections.Generic.List%601> generischen <xref:System.TimeZoneInfo.AdjustmentRule> Auflistung von-Objekten hinzuzufügen. Der Code ruft dann die <xref:System.Collections.Generic.List%601.CopyTo%2A> -Methode auf, um die Elemente dieser Auflistung in das Array zu kopieren.
 
-Im Beispiel verwendet auch die <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> Methode, um feste Datumsangaben Anpassungen zu definieren. Dies ist vergleichbar mit einem Aufruf der <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> -Methode, mit dem Unterschied, dass die It nur die Zeit, Monat und Tag des Übergangs-Parameter ist erforderlich.
+Im Beispiel wird auch die <xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> -Methode verwendet, um Anpassungen fester Datumsangaben zu definieren. Dies ähnelt dem Aufrufen der <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> -Methode, mit der Ausnahme, dass Sie nur die Zeit, den Monat und den Tag der Übergangs Parameter erfordert.
 
-Im Beispiel kann mit folgendem Code getestet werden:
+Das Beispiel kann mithilfe von Code wie dem folgenden getestet werden:
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
 [!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]
@@ -86,7 +86,7 @@ Im Beispiel kann mit folgendem Code getestet werden:
 
 Für dieses Beispiel benötigen Sie Folgendes:
 
-* Dass die folgenden Namespaces importiert werden:
+- Die folgenden Namespaces werden importiert:
 
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]

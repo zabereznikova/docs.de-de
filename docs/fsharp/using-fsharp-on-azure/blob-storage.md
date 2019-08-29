@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Blob Storage mit F#
 description: Speichern Sie unstrukturierte Daten in der Cloud mit Azure BLOB Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630508"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107123"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Einstieg in Azure BLOB Storage mit F\#
 
@@ -186,9 +186,9 @@ Weitere Informationen zu den Unterschieden zwischen den drei Typen von BLOBs fin
 
 Sie können **Etags** oder **Leases**verwenden, um den gleichzeitigen Zugriff auf ein BLOB von mehreren Clients oder mehreren Prozess Instanzen zu unterstützen.
 
-* **ETag** : bietet eine Möglichkeit, zu erkennen, ob das BLOB oder der Container von einem anderen Prozess geändert wurde.
+- **ETag** : bietet eine Möglichkeit, zu erkennen, ob das BLOB oder der Container von einem anderen Prozess geändert wurde.
 
-* **Lease** : bietet eine Möglichkeit, exklusiven, erneuerbaren, Schreib-oder Lösch Zugriff auf ein BLOB innerhalb eines bestimmten Zeitraums zu erhalten.
+- **Lease** : bietet eine Möglichkeit, exklusiven, erneuerbaren, Schreib-oder Lösch Zugriff auf ein BLOB innerhalb eines bestimmten Zeitraums zu erhalten.
 
 Weitere Informationen finden Sie unter [Verwalten der Parallelität in Microsoft Azure Storage](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 
