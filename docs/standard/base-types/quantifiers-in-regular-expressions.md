@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633643"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988783"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
   
-|Gieriger Quantifizierer|Träger Quantifizierer|Beschreibung|  
+|Gieriger Quantifizierer|Träger Quantifizierer|BESCHREIBUNG|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Übereinstimmung mit null oder mehr Vorkommen.|  
 |`+`|`+?`|Übereinstimmung mit einem oder mehr Vorkommen.|  
@@ -38,13 +38,13 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  Die Mengen `n` und `m` sind ganzzahlige Konstanten. Gewöhnlich sind Quantifizierer gierig; durch sie gleicht die Engine für reguläre Ausdrücke so viele Vorkommen bestimmter Muster wie möglich ab. Das Anhängen des `?`-Zeichens an einen Quantifizierer macht es träge; es bewirkt, dass die Engine für reguläre Ausdrücke so wenige Vorkommen wie möglich abgleicht. Eine vollständige Beschreibung des Unterschieds zwischen „gierigen“ und „trägen“ Quantifizierern finden Sie weiter unten in diesem Thema im Abschnitt [Gierige und träge Quantifizierer](#Greedy).  
   
 > [!IMPORTANT]
->  Das Schachteln von Quantifizierern (z.B. wie durch das Muster für reguläre Ausdrücke `(a*)*`) kann die Anzahl von Vergleichen, die die Engine für reguläre Ausdrücke ausführen muss, als Exponentialfunktion der Anzahl von Zeichen in der Eingabezeichenfolge erhöhen. Weitere Informationen zu diesem Verhalten und zu Problemumgehungen finden Sie unter [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Das Schachteln von Quantifizierern (z.B. wie durch das Muster für reguläre Ausdrücke `(a*)*`) kann die Anzahl von Vergleichen, die die Engine für reguläre Ausdrücke ausführen muss, als Exponentialfunktion der Anzahl von Zeichen in der Eingabezeichenfolge erhöhen. Weitere Informationen zu diesem Verhalten und zu Problemumgehungen finden Sie unter [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Quantifizierer in regulären Ausdrücken  
  In den folgenden Abschnitten werden die Quantifizierer aufgeführt, die in regulären .NET-Ausdrücken unterstützt werden.  
   
 > [!NOTE]
->  Wenn die Zeichen *, +, ?, { und } im Muster für reguläre Ausdrücke enthalten sind, interpretiert die Engine für reguläre Ausdrücke sie als Quantifizierer oder als Teil von Quantifiziererkonstrukten, sofern sie nicht in einer [Zeichenklasse](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) enthalten sind. Um sie als Literalzeichen außerhalb einer Zeichenklasse zu interpretieren, müssen Sie sie mit Escapezeichen versehen, indem Sie ihnen einen umgekehrten Schrägstrich voranstellen. Die Zeichenfolge `\*` in einem Muster für reguläre Ausdrücke wird z.B. als literales Sternchen („\*“) interpretiert.  
+> Wenn die Zeichen *, +, ?, { und } im Muster für reguläre Ausdrücke enthalten sind, interpretiert die Engine für reguläre Ausdrücke sie als Quantifizierer oder als Teil von Quantifiziererkonstrukten, sofern sie nicht in einer [Zeichenklasse](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) enthalten sind. Um sie als Literalzeichen außerhalb einer Zeichenklasse zu interpretieren, müssen Sie sie mit Escapezeichen versehen, indem Sie ihnen einen umgekehrten Schrägstrich voranstellen. Die Zeichenfolge `\*` in einem Muster für reguläre Ausdrücke wird z.B. als literales Sternchen („\*“) interpretiert.  
   
 ### <a name="match-zero-or-more-times-"></a>Übereinstimmung mit null oder mehr Vorkommen: *  
  Der `*`-Quantifizierer gleicht das vorangehende Element nullmal oder häufiger ab. Dies entspricht dem `{0,}`-Quantifizierer. `*` ist ein gieriger Quantifizierer, dessen träges Äquivalent `*?` lautet.  
@@ -56,7 +56,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`91*`|Übereinstimmung mit „9“, gefolgt von null oder mehr Zeichen „1“.|  
@@ -73,7 +73,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an+`|Übereinstimmung mit „a“, gefolgt von einem oder mehr Zeichen „n“.|  
@@ -90,7 +90,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an?`|Übereinstimmung mit „a“, gefolgt von null oder einem Zeichen „n“.|  
@@ -106,7 +106,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -124,7 +124,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d{2,}`|Übereinstimmung mit mindestens zwei Dezimalziffern.|  
@@ -149,7 +149,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\w*?`|Übereinstimmung mit null oder mehr Wortzeichen, aber so wenigen Zeichen wie möglich.|  
@@ -175,7 +175,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`^`|Übereinstimmung mit dem Beginn des Eingabestreams.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
@@ -185,7 +185,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\(??`|Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Übereinstimmung mit genau n Vorkommen (träger Abgleich): {n}?  
- Der `{`*n*`}?`-Quantifizierer gleicht das vorangehende Element genau `n` Mal ab, wobei *n* für eine beliebige ganze Zahl steht. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`}+`.  
+ Der `{`*n*`}?`-Quantifizierer gleicht das vorangehende Element genau `n` Mal ab, wobei *n* für eine beliebige ganze Zahl steht. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`}`.  
   
  Im folgenden Beispiel wird der reguläre Ausdruck `\b(\w{3,}?\.){2}?\w{3,}?\b` verwendet, um die Adresse einer Website zu identifizieren. Beachten Sie, dass „www.microsoft.com“ und „msdn.microsoft.com“ abgeglichen werden, aber nicht „mywebsite“ oder „mycompany.com“.  
   
@@ -194,7 +194,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(\w{3,}?\.)`|Übereinstimmung mit mindestens 3 Wortzeichen, aber so wenigen Zeichen wie möglich, gefolgt von einem Punktzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -209,19 +209,19 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Übereinstimmung mit n bis m Vorkommen (träger Abgleich): {n,m}?  
  Der `{`*n*`,`*m*`}?`-Quantifizierer gleicht das vorangehende Element `n` bis `m` Mal ab, jedoch so wenige Male wie möglich, wobei *n* und *m* Integerwerte sind. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`,`*m*`}`.  
   
- Im folgenden Beispiel gleicht der reguläre Ausdruck `\b[A-Z](\w*\s+){1,10}?[.!?]` Sätze ab, die zwischen ein und zehn Wörter enthalten. Er gleicht alle Sätze in der Eingabezeichenfolge ab mit Ausnahme eines Satzes, der 18 Wörter enthält.  
+ Im folgenden Beispiel gleicht der reguläre Ausdruck `\b[A-Z](\w*?\s*?){1,10}[.!?]` Sätze ab, die zwischen ein und zehn Wörter enthalten. Er gleicht alle Sätze in der Eingabezeichenfolge ab mit Ausnahme eines Satzes, der 18 Wörter enthält.  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`[A-Z]`|Übereinstimmung mit einem Großbuchstaben von A bis Z.|  
-|`(\w*\s+)`|Übereinstimmung mit null oder mehr Wortzeichen, gefolgt von einem oder mehreren Leerzeichen. Dies ist die erste Erfassungsgruppe.|  
-|`{1,10}?`|Übereinstimmung mit dem vorhergehenden Muster zwischen 1- und 10-mal, jedoch so wenige Male wie möglich.|  
+|`(\w*?\s*?)`|Übereinstimmung mit 0 (null) oder mehr Wortzeichen, gefolgt von einem oder mehreren Leerzeichen, jedoch so wenige wie möglich. Dies ist die erste Erfassungsgruppe.|  
+|`{1,10}`|Übereinstimmung mit dem vorhergehenden Muster zwischen 1- und 10-mal.|  
 |`[.!?]`|Übereinstimmung mit einem der Interpunktionszeichen „.“, „!“ oder „?“.|  
   
 <a name="Greedy"></a>   
@@ -260,7 +260,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Um den praktischen Unterschied zwischen einer Erfassungsgruppe, die eine Mindest- und eine Höchstzahl von Erfassungen definiert, und einer Erfassungsgruppe zu sehen, die eine feste Anzahl von Erfassungen definiert, betrachten Sie die Muster für reguläre Ausdrücke `(a\1|(?(1)\1)){0,2}` und `(a\1|(?(1)\1)){2}`. Beide reguläre Ausdrücke bestehen aus einer einzelnen Erfassungsgruppe, die wie in der folgenden Tabelle gezeigt definiert ist.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`(a\1`|Entweder „a“ zusammen mit dem Wert der ersten Erfassungsgruppe abgleichen...|  
 |<code>&#124;(?(1)</code>|… oder testen, ob die erste Erfassungsgruppe definiert wurde. (Beachten Sie, dass das `(?(1)`-Konstrukt keine Erfassungsgruppe definiert.)|  
