@@ -1,16 +1,16 @@
 ---
 title: Bereitstellen des Modells für Azure Functions
 description: Bereitstellen eines Machine Learning-Modells zur ML.NET-Standpunktanalyse für die Vorhersage über das Internet mit Azure Functions
-ms.date: 06/11/2019
+ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 96b62017994da5b7b209c441b3e7fb760cad5201
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025977"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666669"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Bereitstellen des Modells für Azure Functions
 
@@ -47,7 +47,7 @@ Erfahren Sie, wie Sie ein vorab trainiertes ML.NET-Modell für maschinelles Lern
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach „Microsoft.Extensions.ML“, und wählen Sie das Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
-1. Aktualisieren Sie das **NuGet-Paket Microsoft.NET.Sdk.Functions** auf Version 1.0.28:
+1. Aktualisieren Sie das **NuGet-Paket Microsoft.NET.Sdk.Functions** auf Version 1.0.28 oder höher:
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte „Installiert“ aus, und suchen Sie nach **Microsoft.NET.Sdk.Functions**. Wählen Sie das Paket in der Liste und dann 1.0.28 aus, und klicken Sie anschließend auf die Schaltfläche **Aktualisieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
@@ -155,8 +155,7 @@ Unter dem folgenden Link finden Sie weitere Informationen über die [Abhängigke
     Die Datei *Startup.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *Startup.cs* die folgende using-Anweisung hinzu:
 
     ```csharp
-    using Microsoft.Azure.WebJobs;
-    using Microsoft.Azure.WebJobs.Hosting;
+    using Microsoft.Azure.Functions.Extensions.DependencyInjection;
     using Microsoft.Extensions.ML;
     using SentimentAnalysisFunctionsApp;
     using SentimentAnalysisFunctionsApp.DataModels;
@@ -165,12 +164,12 @@ Unter dem folgenden Link finden Sie weitere Informationen über die [Abhängigke
     Entfernen Sie den vorhandenen Code unterhalb der using-Anweisungen, und fügen Sie den folgenden Code zur Datei *Startup.cs* hinzu:
 
     ```csharp
-    [assembly: WebJobsStartup(typeof(Startup))]
+    [assembly: FunctionsStartup(typeof(Startup))]
     namespace SentimentAnalysisFunctionsApp
     {
-        class Startup : IWebJobsStartup
+        public class Startup : FunctionsStartup
         {
-            public void Configure(IWebJobsBuilder builder)
+            public override void Configure(IFunctionsHostBuilder builder)
             {
                 builder.Services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
                     .FromFile("MLModels/sentiment_model.zip");

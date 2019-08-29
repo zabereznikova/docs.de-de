@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650881"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105388"
 ---
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
@@ -22,28 +22,28 @@ Den Quellcode für .NET CoreCLR finden Sie im Repository [dotnet/coreclr](https:
 
 Der Build hängt derzeit von folgenden Voraussetzungen ab:
 
-* [Git](https://git-scm.com/)
-* [CMake](https://cmake.org/)
-* [Python](https://www.python.org/)
-* ein C++-Compiler.
+- [Git](https://git-scm.com/)
+- [CMake](https://cmake.org/)
+- [Python](https://www.python.org/)
+- ein C++-Compiler.
 
 Nach der Installation dieser Komponenten können Sie die CLR erstellen, indem Sie das Buildskript (`build.cmd` unter Windows oder `build.sh` unter Linux und macOS) an der Basis des Repositorys [dotnet/coreclr](https://github.com/dotnet/coreclr/) aufrufen.
 
 Das Installieren der Komponenten unterscheidet sich je nach Betriebssystem. Weitere Informationen finden Sie in den Buildanweisungen Ihres Betriebssystems:
 
-* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
-* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
-* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
-* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
-* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+- [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+- [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+- [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+- [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+- [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 Es gibt keine betriebssystemübergreifenden Erstellungen (nur für ARM, das in X64 erstellt wurde).  
 Sie müssen sich auf der speziellen Plattform befinden, um diese Plattform zu erstellen.  
 
 Der Build verfügt über zwei Haupt-`buildTypes`:
 
-* Debuggen (Standard): Kompiliert die Runtime mit minimalen Optimierungen und zusätzlichen Überprüfungen der Runtime (Assert-Vorgänge). Diese minimierte Optimierungsstufe und die zusätzlichen Überprüfungen verlangsamen die Runtimeausführung, sind aber wichtig für das Debuggen. Dies ist die empfohlene Einstellung für Entwicklungs- und Testumgebungen.
-* Release: Kompiliert die Runtime mit vollständigen Optimierungen, aber ohne die zusätzlichen Überprüfungen der Runtime. Dies führt zu einer wesentlich schnelleren Leistung der Runtime, die Erstellung des Builds kann jedoch länger dauern, und das Debuggen kann schwieriger sein. Übergeben Sie `release` an das Buildskript, um diesen Buildtyp auszuwählen.
+- Debuggen (Standard): Kompiliert die Runtime mit minimalen Optimierungen und zusätzlichen Überprüfungen der Runtime (Assert-Vorgänge). Diese minimierte Optimierungsstufe und die zusätzlichen Überprüfungen verlangsamen die Runtimeausführung, sind aber wichtig für das Debuggen. Dies ist die empfohlene Einstellung für Entwicklungs- und Testumgebungen.
+- Release: Kompiliert die Runtime mit vollständigen Optimierungen, aber ohne die zusätzlichen Überprüfungen der Runtime. Dies führt zu einer wesentlich schnelleren Leistung der Runtime, die Erstellung des Builds kann jedoch länger dauern, und das Debuggen kann schwieriger sein. Übergeben Sie `release` an das Buildskript, um diesen Buildtyp auszuwählen.
 
 Darüber hinaus erstellt der Build standardmäßig nicht nur ausführbare Dateien für die Runtime, sondern auch alle Tests.
 Es gibt einige Tests, die viel Zeit in Anspruch nehmen, was jedoch nicht nötig ist, wenn Sie nur mit Änderungen experimentieren möchten.
@@ -65,7 +65,7 @@ Sie können mit „build“ weitere Buildoptionen finden, indem Sie den Qualifiz
 
 Der Build platziert alle seine generierten Dateien in das `bin`-Verzeichnis an der Basis des Repository.
 Es gibt ein *bin\Log*-Verzeichnis, das während des Erstellungsvorgangs generierte Protokolldateien enthält (besonders hilfreich, wenn der Buildvorgang scheitert).
-Die tatsächliche Ausgabe befindet sich in einem Verzeichnis *bin\Product\[Plattform].[CPU-Architektur].[Buildtyp]*, z.B. *bin\Product\Windows_NT.x64.Release*.
+Die tatsächliche Ausgabe befindet sich in einem Verzeichnis *bin\Product\[Plattform].[CPU-Architektur].[Buildtyp]* , z.B. *bin\Product\Windows_NT.x64.Release*.
 
 Während die „rohe“ Ausgabe des Builds in einigen Fällen nützlich ist, sind normalerweise nur die NuGet-Paketen für Sie von Interesse, die sich im Unterverzeichnis `.nuget\pkg` des vorherigen Ausgabeverzeichnisses befinden.
 
@@ -86,12 +86,12 @@ Den Quellcode für die .NET Core-CLI finden Sie im Repository [dotnet/cli](https
 
 Um die .NET Core-CLI zu erstellen, müssen Sie Folgendes auf dem Computer installiert haben.
 
-* Windows und Linux:
-  * Git auf dem Pfad
-* macOS:
-  * Git auf dem Pfad
-  * Xcode
-  * OpenSSL
+- Windows und Linux:
+  - Git auf dem Pfad
+- macOS:
+  - Git auf dem Pfad
+  - Xcode
+  - OpenSSL
 
 Führen Sie zum Erstellen `build.cmd` unter Windows oder `build.sh` unter Linux und macOS aus dem Stamm aus. Wenn Sie keine Tests ausführen möchten, führen Sie `build.cmd -t:Compile` oder `./build.sh -t:Compile` aus. Um die CLI unter macOS Sierra zu erstellen, müssen Sie die Umgebungsvariable DOTNET_RUNTIME_ID festlegen, indem Sie `export DOTNET_RUNTIME_ID=osx.10.11-x64` ausführen.
 

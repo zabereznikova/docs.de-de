@@ -3,12 +3,12 @@ title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706532"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105651"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -51,28 +51,28 @@ Die Ausgabe des Programms wird anhand der `WriteLine`-Methode der `Console`-Klas
 
 Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine Übersicht über die Elemente der C#-Sprache. Diese Übersichten bieten grundlegende Informationen zu allen Elementen der Sprache und die erforderlichen Informationen zum tieferen Eintauchen in die Elemente der C#-Sprache:
 
-* [Programmstruktur](program-structure.md)
+- [Programmstruktur](program-structure.md)
   - Lernen Sie die organisatorischen Schlüsselkonzepte in der C#-Sprache kennen: ***Programme***, ***Namespaces***, ***Typen***, ***Member*** und ***Assemblys***.
-* [Typen und Variablen](types-and-variables.md)
+- [Typen und Variablen](types-and-variables.md)
   - Erfahren Sie mehr über ***Werttypen***, ***Verweistypen*** und ***Variablen*** in der C#-Sprache.
-* [Ausdrücke](expressions.md)
+- [Ausdrücke](expressions.md)
   - ***Ausdrücke*** bestehen aus ***Operanden*** und ***Operatoren***. Ausdrücke generieren einen Wert.
-* [Anweisungen](statements.md)
+- [Anweisungen](statements.md)
   - Sie verwenden ***Anweisungen***, um die Aktionen eines Programms auszudrücken.
-* [Klassen und Objekte](classes-and-objects.md)
+- [Klassen und Objekte](classes-and-objects.md)
   - ***Klassen*** sind die grundlegendsten der C#-Typen. ***Objekte*** sind Instanzen einer Klasse. Klassen werden mit ***Membern*** erstellt, die auch in diesem Thema behandelt werden.
-* [Strukturen](structs.md)
+- [Strukturen](structs.md)
   - ***Strukturen*** sind Datenstrukturen, bei denen es sich im Gegensatz zu Klassen um Werttypen handelt.
-* [Arrays](arrays.md)
+- [Arrays](arrays.md)
   - Ein ***Array*** ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird.
-* [Schnittstellen](interfaces.md)
+- [Schnittstellen](interfaces.md)
   - Eine ***Schnittstelle*** definiert einen Vertrag, der von Klassen und Strukturen implementiert werden kann. Eine Schnittstelle kann Methoden, Eigenschaften, Ereignisse und Indexer enthalten. Eine Schnittstelle stellt keine Implementierungen der von ihr definierten Member bereit. Sie gibt lediglich die Member an, die von Klassen oder Strukturen bereitgestellt werden müssen, die die Schnittstelle implementieren.
-* [Enumerationen](enums.md)
+- [Enumerationen](enums.md)
   - Ein ***Enumerationstyp*** ist ein unverwechselbarer Werttyp mit einem Satz benannter Konstanten.
-* [Delegaten](delegates.md)
+- [Delegaten](delegates.md)
   - Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
-* [Attribute](attributes.md)
-  * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
+- [Attribute](attributes.md)
+  - ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
 
 > [!div class="step-by-step"]
 > [Nächste](program-structure.md)

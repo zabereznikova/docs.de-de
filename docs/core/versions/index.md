@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runti
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646864"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104956"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -36,8 +36,8 @@ Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch
 
 HINWEISE:
 
-* Wenn das SDK vor einem Runtimefeatureupdate 10 Featureupdates aufweist, werden die Versionsnummern in die 1000er-Serie mit Nummern wie 2.2.1000 als Featurerelease nach 2.2.900 übernommen. Diese Situation wird nicht erwartet.
-* 99 Patchreleases ohne Featurerelease treten nicht auf. Nähert sich ein Release dieser Version, wird ein Featurerelease erzwungen.
+- Wenn das SDK vor einem Runtimefeatureupdate 10 Featureupdates aufweist, werden die Versionsnummern in die 1000er-Serie mit Nummern wie 2.2.1000 als Featurerelease nach 2.2.900 übernommen. Diese Situation wird nicht erwartet.
+- 99 Patchreleases ohne Featurerelease treten nicht auf. Nähert sich ein Release dieser Version, wird ein Featurerelease erzwungen.
 
 Weitere Details finden Sie im ursprünglichen Vorschlag im Repository [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
@@ -55,24 +55,24 @@ Die optionalen Teile `PRERELEASE` und `BUILDNUMBER` sind nie Bestandteil von unt
 
 `MAJOR` wird inkrementiert, wenn:
 
-* Signifikante Änderungen im Produkt oder eine neue Produktausrichtung auftreten.
-* Aktuelle Änderungen vorgenommen wurden. Die Messlatte zum Akzeptieren von aktuellen Änderungen hoch liegt.
-* eine älter Version nicht mehr unterstützt wird
-* eine neue `MAJOR`-Version einer vorhandenen Abhängigkeit übernommen wird
+- Signifikante Änderungen im Produkt oder eine neue Produktausrichtung auftreten.
+- Aktuelle Änderungen vorgenommen wurden. Die Messlatte zum Akzeptieren von aktuellen Änderungen hoch liegt.
+- eine älter Version nicht mehr unterstützt wird
+- eine neue `MAJOR`-Version einer vorhandenen Abhängigkeit übernommen wird
 
 `MINOR` wird inkrementiert, wenn:
 
-* eine öffentliche API-Oberfläche hinzugefügt wird
-* ein neues Verhalten hinzugefügt wird
-* eine neue `MINOR`-Version einer vorhandenen Abhängigkeit übernommen wird
-* eine neue Abhängigkeit eingeführt wird
+- eine öffentliche API-Oberfläche hinzugefügt wird
+- ein neues Verhalten hinzugefügt wird
+- eine neue `MINOR`-Version einer vorhandenen Abhängigkeit übernommen wird
+- eine neue Abhängigkeit eingeführt wird
 
 `PATCH` wird inkrementiert, wenn:
 
-* Fehlerkorrekturen vorgenommen werden
-* Unterstützung für eine neuere Plattform hinzugefügt wird
-* eine neue `PATCH`-Version einer vorhandenen Abhängigkeit übernommen wird
-* eine andere Änderung vorgenommen wurde, die keinem der zuvor beschriebenen Fälle entspricht
+- Fehlerkorrekturen vorgenommen werden
+- Unterstützung für eine neuere Plattform hinzugefügt wird
+- eine neue `PATCH`-Version einer vorhandenen Abhängigkeit übernommen wird
+- eine andere Änderung vorgenommen wurde, die keinem der zuvor beschriebenen Fälle entspricht
 
 Wenn mehrere Änderungen vorgenommen wurden, wird das höchste Element, was von den einzelnen Änderungen betroffen ist, inkrementierte, und die folgenden werden auf 0 (null) zurückgesetzt. Wenn z.B. `MAJOR` inkrementiert wird, werden `MINOR` und `PATCH` auf 0 (null) zurückgesetzt. Wenn `MINOR` inkrementiert wird, wird `PATCH` auf 0 (null) zurückgesetzt, während `MAJOR` nicht beeinträchtigt wird.
 

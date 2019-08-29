@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924643"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
@@ -145,7 +145,7 @@ Klammern verwenden Sie auch beim Aufrufen eines [Konstruktors](../../programming
 
 ### <a name="other-usages-of-"></a>Andere Verwendungen von „()“
 
-Mit Klammern geben Sie auch die Reihenfolge an, in der Vorgänge in einem Ausdruck ausgewertet werden sollen. Weitere Informationen finden Sie im Abschnitt [Hinzufügen von Klammern](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) des Artikels [Operatoren (C#-Programmierhandbuch)](../../programming-guide/statements-expressions-operators/operators.md). Die Liste der Operatoren ist nach der Rangfolge sortiert, siehe [C#-Operatoren](index.md).
+Mit Klammern passen Sie auch die Reihenfolge an, in der Vorgänge in einem Ausdruck ausgewertet werden sollen. Weitere Informationen finden Sie unter [C#-Operatoren](index.md).
 
 [Cast-Ausdrücke](type-testing-and-cast.md#cast-operator-), die explizite Typkonvertierungen ausführen, verwenden ebenfalls Klammern.
 

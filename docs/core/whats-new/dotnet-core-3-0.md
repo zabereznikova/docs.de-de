@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 07/25/2019
-ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.date: 08/21/2019
+ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922565"
 ---
-# <a name="whats-new-in-net-core-30-preview-7"></a>Neuerungen in .NET Core 3.0 (Preview 7)
+# <a name="whats-new-in-net-core-30-preview-8"></a>Neuerungen in .NET Core 3.0 (Preview 8)
 
-In diesem Artikel werden Neuerungen in .NET Core 3.0 (in Preview 7) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
+In diesem Artikel werden Neuerungen in .NET Core 3.0 (in Preview 8) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
 
 .NET Core 3.0 bietet Unterstützung für C# 8.0. Verwenden Sie unbedingt die [neueste Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview) oder Visual Studio Code mit der OmniSharp-Erweiterung.
 
-[Sie können .NET Core 3.0 Preview 7 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
+[Sie können .NET Core 3.0 Preview 8 jetzt für Windows, macOS oder Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
 
 Weitere Informationen zu den einzelnen Vorschauversionen finden Sie in den folgenden Ankündigungen:
 
+- [Ankündigung von .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Ankündigung von .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [Ankündigung von .NET Core 3.0 Vorschauversion 6](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [Ankündigung von .NET Core 3.0 Vorschauversion 5](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
@@ -34,7 +35,9 @@ Weitere Informationen zu den einzelnen Vorschauversionen finden Sie in den folge
 
 ## <a name="production-supported-preview"></a>Von der Produktion unterstützte Vorschauversion
 
-.NET Core Preview 7 wird von Microsoft als produktionsbereit betrachtet und vollständig unterstützt. Ab Preview 7 liegt der Fokus bei Releases auf der Optimierung von .NET Core 3.0 und nicht auf dem Hinzuzufügen neuer Features. Weitere Informationen zu Änderungen in Preview 7 finden Sie in der [Ankündigung zu .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/).
+.NET Core Preview 8 wird von Microsoft als produktionsbereit betrachtet und vollständig unterstützt. Ab Preview 7 liegt der Fokus bei Releases auf der Optimierung von .NET Core 3.0 und nicht auf dem Hinzuzufügen neuer Features. Weitere Informationen zu Änderungen in Preview 8 finden Sie in der [Ankündigung zu .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/).
+
+Wenn Sie eine vorherige Vorschauversion verwenden, müssen Sie für die weitere Unterstützung von „Go Live“ zu Preview 8 wechseln.
 
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer von .NET Core SDK
 
@@ -52,11 +55,11 @@ Obwohl .NET Core 3.0 **.NET Standard 2.1** unterstützt, generiert die Standardv
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
- 
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
- 
+
 </Project>
 ```
 
@@ -91,7 +94,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ## <a name="net-platform-dependent-intrinsics"></a>Von der .NET-Plattform abhängige systeminterne Funktionen
 
-Mit neuen APIs kann auf bestimmte leistungsorientierte CPU-Anweisungen wie **SIMD** oder **Bit Manipulation Instruction Sets** zugegriffen werden. Diese Anweisungen können in bestimmten Szenarios wie der effizienten parallelen Datenverarbeitung zu deutlichen Leistungssteigerungen führen. 
+Mit neuen APIs kann auf bestimmte leistungsorientierte CPU-Anweisungen wie **SIMD** oder **Bit Manipulation Instruction Sets** zugegriffen werden. Diese Anweisungen können in bestimmten Szenarios wie der effizienten parallelen Datenverarbeitung zu deutlichen Leistungssteigerungen führen.
 
 Wo möglich, haben die .NET-Bibliotheken begonnen, mithilfe dieser Anweisungen die Leistung zu verbessern.
 
@@ -103,8 +106,8 @@ Weitere Informationen finden Sie unter [.NET Platform Dependent Intrinsics](http
 
 Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
 
-* Sie können die ausführbare Datei doppelklicken.
-* Sie können die Anwendung direkt aus einer Eingabeaufforderung starten, z.B. `myapp.exe` unter Windows und `./myapp` unter Linux und MacOS.
+- Sie können die ausführbare Datei doppelklicken.
+- Sie können die Anwendung direkt aus einer Eingabeaufforderung starten, z.B. `myapp.exe` unter Windows und `./myapp` unter Linux und MacOS.
 
 ## <a name="single-file-executables"></a>Ausführbare Einzeldateien
 
@@ -297,11 +300,11 @@ Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft 
 
 Die möglichen `highDpiMode`-Werte, wie durch die <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType>-Enumeration ausgedrückt, sind:
 
-* `DpiUnaware`
-* `SystemAware`
-* `PerMonitor`
-* `PerMonitorV2`
-* `DpiUnawareGdiScaled`
+- `DpiUnaware`
+- `SystemAware`
+- `PerMonitor`
+- `PerMonitorV2`
+- `DpiUnawareGdiScaled`
 
 Weitere Informationen zu hohen DPI-Werten finden Sie unter [Entwicklung von Desktopanwendungen mit hohen DPI-Werten unter Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
@@ -335,7 +338,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -350,31 +353,31 @@ APIs für Gleitkommazahlen werden aktuell der [Revision des Standards IEEE 754-2
 
 Zu den Korrekturen für Analyse und Formatierung zählen:
 
-* Eingaben mit beliebiger Länge werden richtig analysiert und gerundet.
-* Die negative Null wird richtig analysiert und formatiert.
-* `Infinity`- und `NaN`-Werte werden mithilfe einer Überprüfung, bei der nicht zwischen Groß-/Kleinbuchstaben unterschieden wird, richtig analysiert. Außerdem ist, falls erforderlich, optional das vorangestellte `+`-Zeichen zulässig.
+- Eingaben mit beliebiger Länge werden richtig analysiert und gerundet.
+- Die negative Null wird richtig analysiert und formatiert.
+- `Infinity`- und `NaN`-Werte werden mithilfe einer Überprüfung, bei der nicht zwischen Groß-/Kleinbuchstaben unterschieden wird, richtig analysiert. Außerdem ist, falls erforderlich, optional das vorangestellte `+`-Zeichen zulässig.
 
 Zu den neuen <xref:System.Math?displayProperty=nameWithType>-APIs zählen:
 
-* <xref:System.Math.BitIncrement(System.Double)> und <xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)> und <xref:System.Math.BitDecrement(System.Double)>\
 entspricht den IEEE-Operationen `nextUp` und `nextDown`. Diese geben jeweils die kleinste Gleitkommazahl zurück, die größer oder kleiner als der Eingabewert ist. `Math.BitIncrement(0.0)` gibt beispielsweise `double.Epsilon` zurück.
 
-* <xref:System.Math.MaxMagnitude(System.Double,System.Double)> und <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> und <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 entspricht den IEEE-Operationen `maxNumMag` und `minNumMag`. Diese geben für zwei Eingabewerte jeweils den Wert zurück, für den ein größerer oder kleinerer Absolutbetrag ermittelt wird. `Math.MaxMagnitude(2.0, -3.0)` gibt beispielsweise `-3.0` zurück.
 
-* <xref:System.Math.ILogB(System.Double)>\
+- <xref:System.Math.ILogB(System.Double)>\
 Entspricht der IEEE-Operation `logB`, die einen integralen Wert zurückgibt. Der Rückgabewert ist der integrale Wert des Logarithmus zur Basis 2 des Eingabeparameters. Diese Methode entspricht im Wesentlichen `floor(log2(x))`, jedoch ist der Rundungsfehler minimal.
 
-* <xref:System.Math.ScaleB(System.Double,System.Int32)>\
+- <xref:System.Math.ScaleB(System.Double,System.Int32)>\
 Entspricht der IEEE-Operation `scaleB`, der ein integraler Wert übergeben wird. Zurückgegeben wird im Wesentlichen `x * pow(2, n)`, jedoch ist der Rundungsfehler minimal.
 
-* <xref:System.Math.Log2(System.Double)>\
+- <xref:System.Math.Log2(System.Double)>\
 entspricht der IEEE-Operation `log2`, die den Logarithmus zur Basis 2 zurückgibt. Diese Operation minimiert den Rundungsfehler.
 
-* <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
+- <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
 entspricht der IEEE-Operation `fma`, die eine Fused-Multiply-Add-Operation durchführt. Dabei wird `(x * y) + z` als einzelne Operation ausgeführt, wodurch der Rundungsfehler minimiert wird. `FusedMultiplyAdd(1e308, 2.0, -1e308)` gibt beispielsweise `1e308` zurück. Die reguläre Operation `(1e308 * 2.0) - 1e308` gibt `double.PositiveInfinity` zurück.
 
-* <xref:System.Math.CopySign(System.Double,System.Double)>\
+- <xref:System.Math.CopySign(System.Double,System.Double)>\
 entspricht der IEEE-Operation `copySign`. Diese gibt den Wert von `x` mit dem Vorzeichen von `y` zurück.
 
 ## <a name="fast-built-in-json-support"></a>Schneller integrierter JSON-Support
@@ -453,8 +456,8 @@ Oftmals möchten Sie bei der Entwicklung einer Anwendung eine unverschlüsselte 
 
 .NET Core nutzt nun die Unterstützung von [TLS 1.3 in OpenSSL 1.1.1.1](https://www.openssl.org/blog/blog/2018/09/11/release111/), wenn es in einer bestimmten Umgebung verfügbar ist. Mit TLS 1.3:
 
-* Verbindungszeiten werden durch Reduzierung der erforderlichen Roundtrips zwischen Client und Server verbessert.
-* Verbesserte Sicherheit wg. Entfernen verschiedener veralteter und unsicherer kryptografischer Algorithmen.
+- Verbindungszeiten werden durch Reduzierung der erforderlichen Roundtrips zwischen Client und Server verbessert.
+- Verbesserte Sicherheit wg. Entfernen verschiedener veralteter und unsicherer kryptografischer Algorithmen.
 
 Sofern verfügbar, verwendet .NET Core 3.0 **OpenSSL 1.1.1**, **OpenSSL 1.1.0** oder **OpenSSL 1.0.2** auf einem Linuxsystem. Wenn **OpenSSL 1.1.1** verfügbar ist, verwendet sowohl der <xref:System.Net.Security.SslStream?displayProperty=nameWithType>- als auch <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>-Typ **TLS 1.3** (vorausgesetzt, dass Client und Server **TLS 1.3** unterstützen).
 
@@ -479,20 +482,20 @@ Der folgende Code veranschaulicht die Verwendung der `AesGcm`-Verschlüsselung z
 
 Alle Schlüsseltypen wie *RSA*, *DSA*, *ECDsa* und *ECDiffieHellman* unterstützen die folgenden Formate:
 
-* **Öffentlicher Schlüssel**
-  * X.509 SubjectPublicKeyInfo
+- **Öffentlicher Schlüssel**
+  - X.509 SubjectPublicKeyInfo
 
-* **Privater Schlüssel**
-  * PKCS#8 PrivateKeyInfo
-  * PKCS#8 EncryptedPrivateKeyInfo
+- **Privater Schlüssel**
+  - PKCS#8 PrivateKeyInfo
+  - PKCS#8 EncryptedPrivateKeyInfo
 
 RSA-Schlüsseln unterstützen auch:
 
-* **Öffentlicher Schlüssel**
-  * PKCS#1 RSAPublicKey
+- **Öffentlicher Schlüssel**
+  - PKCS#1 RSAPublicKey
 
-* **Privater Schlüssel**
-  * PKCS#1 RSAPrivateKey
+- **Privater Schlüssel**
+  - PKCS#1 RSAPrivateKey
 
 Die Exportmethoden erstellen DER-kodierte Binärdaten, und die Importmethoden erwarten dasselbe. Wenn ein Schlüssel im textfreundlichen PEM-Format gespeichert ist, muss der Anrufer den Inhalt base64-dekodieren, bevor er eine Importmethode aufruft.
 
@@ -502,17 +505,19 @@ Die Exportmethoden erstellen DER-kodierte Binärdaten, und die Importmethoden er
 
 ## <a name="serialport-for-linux"></a>SerialPort für Linux
 
-.NET Core 3.0 unterstützt <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> auf Linux.
+.NET Core 3.0 bietet grundlegende Unterstützung für <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> unter Linux.
 
 Bisher unterstützte .NET Core nur die Verwendung von `SerialPort` auf Windows.
+
+Weitere Informationen zur eingeschränkten Unterstützung für den seriellen Anschluss unter Linux finden Sie unter [GitHub-Issue 33146](https://github.com/dotnet/corefx/issues/33146).
 
 ## <a name="docker-and-cgroup-memory-limits"></a>Arbeitsspeicherlimits bei Docker und Cgroup
 
 Ab Vorschauversion 3 funktioniert die Ausführung von .NET Core 3.0 unter Linux mit Docker besser mit Cgroup-Arbeitsspeicherlimits. Das Ausführen eines Docker-Containers mit Arbeitsspeicherlimits, z.B. mit `docker run -m`, ändert das Verhalten von .NET Core.
 
-* Standardmäßige Heapgröße des Garbage Collectors (GC): maximal 20MB oder 75% des Arbeitsspeicherlimits für den Container.
-* Die explizite Größe kann als absolute Anzahl oder Prozentsatz des Cgroup-Limits festgelegt werden.
-* Die minimale reservierte Segmentgröße pro GC-Heap beträgt 16MB. Diese Größe reduziert die Anzahl der Heaps, die auf Computern erstellt werden.
+- Standardmäßige Heapgröße des Garbage Collectors (GC): maximal 20MB oder 75% des Arbeitsspeicherlimits für den Container.
+- Die explizite Größe kann als absolute Anzahl oder Prozentsatz des Cgroup-Limits festgelegt werden.
+- Die minimale reservierte Segmentgröße pro GC-Heap beträgt 16MB. Diese Größe reduziert die Anzahl der Heaps, die auf Computern erstellt werden.
 
 ## <a name="smaller-garbage-collection-heap-sizes"></a>Kleinere Garbage Collection-Heapgrößen
 
@@ -528,8 +533,8 @@ Der Garbage Collector kann nun mit der Einstellung **GCLargePages** als Aktivier
 
 Über NuGet können nun zwei Pakete für die GPIO-Programmierung bezogen werden:
 
-* [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
-* [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings)
 
 Die GPIO-Pakete enthalten APIs für *GPIO*-, *SPI*-, *I2C*- und *PWM*-Geräte. Das IoT-Bindungenpaket enthält Gerätebindungen. Weitere Informationen finden Sie im [GitHub-Repository zu Geräten](https://github.com/dotnet/iot/blob/master/src/devices/).
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479781"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666277"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitive
 
 .NET bietet eine Reihe von Typen, mit denen Sie den Zugriff auf eine freigegebene Ressource synchronisieren oder die Threadinteraktion koordinieren können.
 
 > [!IMPORTANT]
-> Verwenden Sie die gleiche Synchronisierungsprimitivinstanz, um jeden Zugriff auf eine freigegebene Ressource zu schützen. Mehrere Threads können gleichzeitig auf eine Ressource zugreifen, wenn Sie verschiedene Synchronisierungsprimitivinstanzen verwenden, um den Zugriff auf eine Ressource oder bestimmte Teile des Codes auf eine Ressource direkt zu schützen.
+> Verwenden Sie die gleiche Synchronisierungsprimitivinstanz, um den Zugriff einer freigegebenen Ressource zu schützen. Wenn Sie verschiedene Synchronisierungsprimitivinstanzen verwenden, um dieselbe Ressource zu schützen, umgehen Sie den Schutz, der von einem Synchronisierungsprimitive bereitgestellt wird.
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>WaitHandle-Klasse und einfache Synchronisierungstypen
 

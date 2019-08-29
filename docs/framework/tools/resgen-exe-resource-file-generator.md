@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b018672fbc9e669f6010871a150dd9b060babd88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957992"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können. (Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>Parameter  
   
-|Parameter oder Schalter|Beschreibung|  
+|Parameter oder Schalter|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Ab .NET Framework 4.5 wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
 |`useSourcePath`|Gibt an, dass das aktuelle Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.|  
@@ -90,7 +90,7 @@ resgen filename.extension [outputDirectory]
  Textdateien (".txt" oder ".restext") dürfen ausschließlich Zeichenfolgenressourcen enthalten. Zeichenfolgenressourcen sind nützlich, wenn Sie eine Anwendung schreiben, für die Zeichenfolgen in mehrere Sprachen übersetzt werden müssen. Beispielsweise können Menüzeichenfolgen leicht anhand der entsprechenden Zeichenfolgenressource lokalisiert werden. Resgen.exe liest Textdateien mit Name-Wert-Paaren, wobei es sich beim Namen um eine die Ressource beschreibende Zeichenfolge handelt und der Wert die Ressourcenzeichenfolge selbst darstellt.  
   
 > [!NOTE]
->  Weitere Informationen zum Format von TXT- und RESTEXT-Dateien finden Sie im Abschnitt" Ressourcen in Textdateien" unter [Erstellen einer Ressourcendatei](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+> Weitere Informationen zum Format von TXT- und RESTEXT-Dateien finden Sie im Abschnitt" Ressourcen in Textdateien" unter [Erstellen einer Ressourcendatei](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  Eine Textdatei mit Ressourcen muss in UTF-8- oder Unicode (UTF-16)-Codierung gespeichert werden, es sei denn, sie enthält nur Zeichen aus dem lateinischen Standardalphabet (U+007F). Beim Verarbeiten einer in ANSI-Codierung gespeicherten Textdatei werden erweiterte ANSI-Zeichen von Resgen.exe entfernt.  
   
@@ -220,7 +220,7 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
  Wenn Sie eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App entwickeln, können Sie Ressourcen aus einer vorhandenen Desktop-App verwenden. Von den beiden Anwendungsarten werden jedoch unterschiedliche Dateiformate unterstützt. Bei Desktop-Anwendungen werden Ressourcen in Textdaten (".txt" oder ".restext") oder RESX-Dateien in binäre RESOURCES-Dateien kompiliert. Bei [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps werden RESW-Dateien in binäre Indexdateien der Paketressource (PRI-Dateien) kompiliert. Mithilfe von Resgen.exe können Sie diese Schwierigkeit umgehen, indem Sie Ressourcen aus einer ausführbaren Datei oder einer Satellitenassembly extrahieren und diese in RESW-Dateien schreiben, die beim Entwickeln einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App verwendet werden können.  
   
 > [!IMPORTANT]
->  Sämtliche zum Einbinden von Ressourcen aus einer portablen Bibliothek in eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App erforderliche Konvertierungen werden von Visual Studio automatisch ausgeführt. Die Verwendung von Resgen.exe zum direkten Konvertieren der Ressourcen einer Assembly in das RESW-Dateiformat ist nur für Entwickler von Interesse, die eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App außerhalb von Visual Studio erstellen möchten.  
+> Sämtliche zum Einbinden von Ressourcen aus einer portablen Bibliothek in eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App erforderliche Konvertierungen werden von Visual Studio automatisch ausgeführt. Die Verwendung von Resgen.exe zum direkten Konvertieren der Ressourcen einer Assembly in das RESW-Dateiformat ist nur für Entwickler von Interesse, die eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App außerhalb von Visual Studio erstellen möchten.  
   
  Die Syntax zum Generieren von RESW-Dateien aus einer Assembly lautet:  
   
@@ -302,7 +302,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *classname*  
  Der Name der stark typisierten Ressourcenklasse. Dieser sollte dem Stammnamen der RESOURCES-Datei entsprechen. Wenn von Resgen.exe z. B. eine RESOURCES-Datei mit dem Namen "MyCompany.Libraries.Strings.resources" generiert wird, lautet der Name der Ressourcenklasse mit starker Typisierung "Strings". Wenn der *classname* weggelassen wird, wird die generierte Klasse vom Stammnamen der `outputFilename` abgeleitet. Wenn der `outputFilename` weggelassen wird, wird die generierte Klasse vom Stammnamen der `inputFilename` abgeleitet.  
   
- Ein *classname* darf keine ungültigen Zeichen aufweisen, z.B. eingebettete Leerzeichen. Wenn in *classname* Leerzeichen eingebettet sind oder *classname* standardmäßig aus *inputFilename* generiert wird, und *inputFilename* eingebettete Leerzeichen aufweist, ersetzt „resgen.exe“ alle ungültigen Zeichen durch Unterstriche (_).  
+ Ein *classname* darf keine ungültigen Zeichen aufweisen, z.B. eingebettete Leerzeichen. Wenn *classname* eingebettete Leerzeichen enthält oder *classname* standardmäßig aus *inputFilename* generiert wird und *inputFilename* eingebettete Leerzeichen enthält, ersetzt die Datei „Resgen.exe“ alle ungültigen Zeichen durch Unterstriche (\_).  
   
  *filename*  
  Der Name der Klassendatei.  
@@ -311,7 +311,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  Macht die Ressourcenklasse mit starker Typisierung anstatt `internal` (in C#) oder `Friend` (in Visual Basic) öffentlich. Dies ermöglicht den Zugriff auf die Ressourcen von außerhalb der Assembly, in der sie eingebettet sind.  
   
 > [!IMPORTANT]
->  Beim Erstellen einer Ressourcenklasse mit starker Typisierung muss der Name der RESOURCES-Datei mit dem Namespace- und Klassennamen des generierten Codes übereinstimmen. In Resgen.exe können jedoch Optionen angegeben werden, durch die eine RESOURCES-Datei mit inkompatiblem Namen erstellt wird. Um dieses Verhalten zu umgehen, benennen Sie die Ausgabedatei um, nachdem sie generiert wurde.  
+> Beim Erstellen einer Ressourcenklasse mit starker Typisierung muss der Name der RESOURCES-Datei mit dem Namespace- und Klassennamen des generierten Codes übereinstimmen. In Resgen.exe können jedoch Optionen angegeben werden, durch die eine RESOURCES-Datei mit inkompatiblem Namen erstellt wird. Um dieses Verhalten zu umgehen, benennen Sie die Ausgabedatei um, nachdem sie generiert wurde.  
   
  Die Ressourcenklasse mit starker Typisierung verfügt über die folgenden Member:  
   

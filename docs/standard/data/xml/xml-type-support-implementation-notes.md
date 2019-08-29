@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916037"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Implementierungshinweise zur XML-Typunterstützung
 In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beachten müssen.  
@@ -34,7 +34,7 @@ In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beach
   
  Die <xref:System.TimeSpan>-Klasse unterstützt diese partielle Ordnung nicht. Für ein Jahr und einen Monat wird eine bestimmte Anzahl von Tagen (365 bzw. 30) festgelegt.  
   
- Weitere Informationen zum `xs:duration`-Typ finden Sie auf der W3C-Website [XML-Schema – Teil 2: Datentypempfehlungen](https://www.w3.org/TR/xmlschema-2/) (in englischer Sprache).
+ Weitere Informationen über den `xs:duration`-Typ finden Sie in der W3C-Spezifikation [XML-Schema Teil 2: Empfehlungen zu Datentypen](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>"xs:time", Typen für das gregorianische Datum und "System.DateTime"  
  Wenn einem `xs:time`-Wert ein <xref:System.DateTime>-Objekt zugeordnet wird, wird das <xref:System.DateTime.MinValue>-Feld zur Initialisierung der Datumseigenschaften des <xref:System.DateTime>-Objekts (z. B. <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> oder <xref:System.DateTime.Day%2A>) mit dem kleinsten möglichen <xref:System.DateTime>-Wert verwendet.  
@@ -42,7 +42,7 @@ In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beach
  In gleicher Weise wird den Instanzen von `xs:gMonth`, `xs:gDay`, `xs:gYear`, `xs:gYearMonth` und `xs:gMonthDay` ein <xref:System.DateTime>-Objekt zugeordnet. Nicht verwendete Eigenschaften des <xref:System.DateTime>-Objekts werden mit den Werten von <xref:System.DateTime.MinValue> initialisiert.  
   
 > [!NOTE]
->  Wenn der Inhalt den Typ <xref:System.DateTime.Year%2A?displayProperty=nameWithType> hat, ist der `xs:gMonthDay`-Wert nicht verlässlich. Der <xref:System.DateTime.Year%2A?displayProperty=nameWithType>-Wert wird in diesem Fall immer auf 1904 festgelegt.  
+> Wenn der Inhalt den Typ <xref:System.DateTime.Year%2A?displayProperty=nameWithType> hat, ist der `xs:gMonthDay`-Wert nicht verlässlich. Der <xref:System.DateTime.Year%2A?displayProperty=nameWithType>-Wert wird in diesem Fall immer auf 1904 festgelegt.  
   
 ### <a name="xsanyuri-and-systemuri"></a>"xs:anyURI" und "System.Uri"  
  Wenn einer Instanz von `xs:anyURI`, die einen relativen URI darstellt, ein <xref:System.Uri> zugeordnet wird, hat das <xref:System.Uri>-Objekt keinen Basis-URI.  

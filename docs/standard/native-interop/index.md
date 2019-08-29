@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Verknüpfung mit nativen Komponenten in 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062711"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106801"
 ---
 # <a name="native-interoperability"></a>Native Interoperabilität
 
@@ -17,9 +17,9 @@ Im folgenden Artikel werden mehrere Möglichkeiten zur Umsetzung der nativen Int
 
 Es gibt einige Gründe für das Aufrufen von nativem Code:
 
-* Betriebssysteme enthalten viele APIs, die in den verwalteten Klassenbibliotheken nicht vorhanden sind. Ein gutes Beispiel hierfür ist der Zugriff auf Verwaltungsfunktionen für Hardware oder das Betriebssystem.
-* Die Kommunikation mit anderen Komponenten, die ABIs im C-Stil (native ABIs) enthalten oder erstellen können, z. B. Java-Code, der über [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) oder eine andere verwaltete Sprache verfügbar gemacht wird, die eine native Komponente erstellen kann.
-* Unter Windows werden für den Großteil der installierten Software (z. B. die Microsoft Office-Suite) COM-Komponenten registriert, die für die Programme stehen und Entwicklern deren Automatisierung oder Verwendung ermöglichen. Auch hierfür ist native Interoperabilität erforderlich.
+- Betriebssysteme enthalten viele APIs, die in den verwalteten Klassenbibliotheken nicht vorhanden sind. Ein gutes Beispiel hierfür ist der Zugriff auf Verwaltungsfunktionen für Hardware oder das Betriebssystem.
+- Die Kommunikation mit anderen Komponenten, die ABIs im C-Stil (native ABIs) enthalten oder erstellen können, z. B. Java-Code, der über [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) oder eine andere verwaltete Sprache verfügbar gemacht wird, die eine native Komponente erstellen kann.
+- Unter Windows werden für den Großteil der installierten Software (z. B. die Microsoft Office-Suite) COM-Komponenten registriert, die für die Programme stehen und Entwicklern deren Automatisierung oder Verwendung ermöglichen. Auch hierfür ist native Interoperabilität erforderlich.
 
 Die obige Liste deckt nicht alle möglichen Situationen und Szenarios ab, in denen Entwickler eine Schnittstelle mit nativen Komponenten bevorzugen oder benötigen würden. Die .NET-Klassenbibliothek verwendet zum Beispiel die Unterstützung für native Interoperabilität, um eine große Anzahl ihrer APIs zu implementieren, z.B. die Unterstützung und Bearbeitung der Konsole, Dateisystemzugriff und mehr. Nun wissen Sie jedoch, dass Sie diese Option bei Bedarf verwenden können.
 

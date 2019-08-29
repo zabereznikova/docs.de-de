@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652071"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922393"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -27,54 +27,54 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 In C# ist nur die einfache Vererbung zulässig. Eine Klasse kann also Implementierungen aus nur einer Basisklasse erben. Es kann allerdings mehr als eine Schnittstelle implementiert werden. Die folgende Tabelle zeigt Beispiele für Klassenvererbung und Implementierung der Schnittstelle:
 
 |Vererbung|Beispiel|
 |-----------------|-------------|
-|Keiner|`class ClassA { }`|
+|Keine|`class ClassA { }`|
 |Single|`class DerivedClass: BaseClass { }`|
 |Keine, Implementierung von zwei Schnittstellen|`class ImplClass: IFace1, IFace2 { }`|
 |Single, Implementierung einer Schnittstelle|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Klassen, die Sie direkt innerhalb eines Namespace und nicht in anderen Klassen geschachtelt deklarieren, können entweder [public](../../../csharp/language-reference/keywords/public.md) oder [internal](../../../csharp/language-reference/keywords/internal.md) sein. Klassen sind standardmäßig `internal`.
+Klassen, die Sie direkt innerhalb eines Namespace und nicht in anderen Klassen geschachtelt deklarieren, können entweder [public](./public.md) oder [internal](./internal.md) sein. Klassen sind standardmäßig `internal`.
 
 Klassenmember, einschließlich geschachtelter Klassen, können [öffentlich](public.md), [intern geschützt](protected-internal.md), [geschützt](protected.md), [intern](internal.md), [privat geschützt](private.md) oder [privat](private-protected.md) sein. Member sind standardmäßig `private`.
 
-Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-Sie können generische Klassen deklarieren, die über Typparameter verfügen. Weitere Informationen finden Sie unter [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md).
+Sie können generische Klassen deklarieren, die über Typparameter verfügen. Weitere Informationen finden Sie unter [Generische Klassen](../../programming-guide/generics/generic-classes.md).
 
 Eine Klasse kann Deklarationen der folgenden Member enthalten:
 
-- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md)
 
-- [Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [Konstanten](../../programming-guide/classes-and-structs/constants.md)
 
-- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Felder](../../programming-guide/classes-and-structs/fields.md)
 
-- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Finalizer](../../programming-guide/classes-and-structs/destructors.md)
 
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Methoden](../../programming-guide/classes-and-structs/methods.md)
 
-- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Eigenschaften](../../programming-guide/classes-and-structs/properties.md)
 
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)
+- [Indexer](../../programming-guide/indexers/index.md)
 
-- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Operatoren](../operators/index.md)
 
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)
+- [Ereignisse](../../programming-guide/events/index.md)
 
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [Delegaten](../../programming-guide/delegates/index.md)
 
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Klassen](../../programming-guide/classes-and-structs/classes.md)
 
-- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)
+- [Schnittstellen](../../programming-guide/interfaces/index.md)
 
-- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Strukturen](../../programming-guide/classes-and-structs/structs.md)
 
-- [Enumerationen](../../../csharp/programming-guide/enumeration-types.md)
+- [Enumerationen](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>Beispiel
 
@@ -94,7 +94,7 @@ Zugriff auf private Member der `Child` von `Main` wäre nur möglich, wenn `Main
 
 Typen, die innerhalb einer Klasse ohne Zugriffsmodifizierer deklariert werden, sind standardmäßig `private`, sodass die Datenmember in diesem Beispiel dennoch `private` wären, wenn das Schlüsselwort entfernt worden wäre.
 
-Beachten Sie schließlich, dass für das Objekt, das mit dem Standardkonstruktor (`child3`) erstellt wurde, das Feld `age` standardmäßig auf Null (0) initialisiert wurde.
+Beachten Sie schließlich, dass für das Objekt, das mit dem parameterlosen Konstruktor (`child3`) erstellt wurde, das Feld `age` standardmäßig auf 0 (null) initialisiert wurde.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -102,7 +102,7 @@ Beachten Sie schließlich, dass für das Objekt, das mit dem Standardkonstruktor
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](./index.md)
+- [Verweistypen](./reference-types.md)
