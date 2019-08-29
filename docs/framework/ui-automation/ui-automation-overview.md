@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: af4abf060e9a8606f69a94f27ecd76487a2ff51c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 968660f2fa043ee4028cb144f368d9380729ffef
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914588"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133798"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "69914588"
   
  Benutzeroberflächenautomatisierungs-Clientanwendungen können mit der Gewissheit geschrieben werden, dass sie mit verschiedenen Frameworks funktionieren. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern maskiert alle Unterschiede in den Frameworks, die den verschiedenen Komponenten von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]zugrunde liegen. Beispielsweise sind die `Content` -Eigenschaft einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Schaltfläche, die `Caption` -Eigenschaft einer [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Schaltfläche und die `ALT` -Eigenschaft eines HTML-Bildes alle nur einer einzelnen Eigenschaft, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ansicht zugewiesen.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet volle Funktionalität in [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]und [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)].  
+Die Benutzeroberflächen Automatisierung bietet vollständige Funktionalität für unterstützte Windows-Betriebssysteme, auf denen die .NET Framework ausgeführt wird (siehe [.NET Framework Systemanforderungen](../get-started/system-requirements.md) oder Versionen von .net Core ab .net Core 3,0.  
   
  Benutzeroberflächenautomatisierungs-Anbieter bieten durch einen integrierten Überbrückungs Dienst Unterstützung für Microsoft Active Accessibility-Client Anwendungen.  
   

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422436"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133785"
 ---
 # <a name="ui-automation-security-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit
 
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.
 
 In dieser Übersicht wird das Sicherheitsmodell für [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]beschrieben.
 
@@ -41,7 +41,7 @@ Damit sie für den Datenaustausch mit Anwendungen, die mit höheren Berechtigung
 
 ## <a name="manifest-files"></a>Manifestdateien
 
-Um den Zugriff auf die Benutzeroberfläche des geschützten Systems zu erhalten, müssen durch eine Manifestdatei, die umfasst Anwendungen erstellt werden die `uiAccess` -Attribut in der `requestedExecutionLevel` -Tag wie folgt:
+Für den Zugriff auf die Benutzeroberfläche des geschützten Systems müssen Anwendungen wie folgt mit einer Manifest-Datei erstellt `uiAccess` werden, die `requestedExecutionLevel` das-Attribut im-Tag enthält:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ Um den Zugriff auf die Benutzeroberfläche des geschützten Systems zu erhalten,
 
 Der Wert des `level` -Attributs in diesem Code stellt nur ein Beispiel dar.
 
-`uiAccess` ist standardmäßig "false" d. h. werden, wenn das Attribut weggelassen wird, oder kein Manifest für die Assembly vorhanden ist, die Anwendung nicht für den Zugriff auf geschützte UI können.
-
-Weitere Informationen zu [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] Sicherheit, zum Signieren von Anwendungen und zum Erstellen von Assemblymanifesten finden Sie unter [Developer Best Practices and Guidelines for Applications in a Least Privileged Environment](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10)).
+`uiAccess`ist standardmäßig "false"; Das heißt, wenn das Attribut ausgelassen wird oder kein Manifest für die Assembly vorhanden ist, kann die Anwendung keinen Zugriff auf die geschützte Benutzeroberfläche erhalten.

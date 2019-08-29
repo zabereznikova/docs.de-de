@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817884"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133763"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitstellt, nutzt es auch die Sicherheitsfunktionen der zugrunde liegenden Plattform, die das Betriebssystem, die CLR und Internet Explorer umfasst. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
@@ -33,7 +33,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Betriebssystemsicherheit  
- Für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ist als Betriebssystem mindestens [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] erforderlich. Der Kern von [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] bietet verschiedene Sicherheitsfeatures, die die Sicherheits Grundlage für alle Windows-Anwendungen bilden, einschließlich derjenigen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], die mit erstellt wurden. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] enthält die Sicherheitsfeatures von [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] in erweiterter Form. In diesem Thema wird der Umfang dieser Sicherheitsfeatures behandelt, die für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] wichtig sind. Erläutert wird auch die Integration mit [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], um weitere tiefgreifende Vorbeugungsmaßnahmen bereitzustellen.  
+Der Kern von Windows bietet verschiedene Sicherheitsfeatures, die die Sicherheits Grundlage für alle Windows-Anwendungen bilden, einschließlich derjenigen, die mit WPF erstellt wurden. In diesem Thema wird der Umfang dieser Sicherheitsfeatures erläutert, die für WPF wichtig sind, sowie die Art und Weise, wie WPF in Sie integriert wird, um weitere Schutzmaßnahmen bereitzustellen.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -41,7 +41,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 - /GS-Kompilierung  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
   
 #### <a name="gs-compilation"></a>/GS-Kompilierung  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]bietet Schutz durch das erneute Kompilieren vieler zentraler Systembibliotheken, einschließlich aller [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Abhängigkeiten (z. b. CLR), um Pufferüberläufe zu verringern. Dies wird mit dem /GS-Parameter und dem C/C++-Befehlszeilencompiler erreicht. Obwohl Pufferüberläufe ausdrücklich vermieden werden sollten, ist die Kompilierung mit /GS ein Beispiel für eine tiefgreifende Verteidigungsmaßnahme gegen potenzielle Sicherheitslücken, die versehentlich oder böswillig durch Pufferüberläufe erzeugt werden.  
@@ -57,21 +57,21 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]-Benutzer mit [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] profitieren von zusätzlichen Verbesserungen des Betriebssystems in puncto Sicherheit, z. B. Benutzerkontensteuerung, Integritätsprüfungen für Code und Rechteisolierung.  
+WPF-Benutzer unter Windows Vista profitieren von den zusätzlichen Sicherheitserweiterungen des Betriebssystems, einschließlich "Benutzer Zugriff mit geringsten Rechten", Code Integritätsprüfungen und Berechtigungs Isolation.  
   
 #### <a name="user-account-control-uac"></a>Benutzerkontensteuerung (User Account Control, UAC)  
  Heutzutage werden Windows-Benutzer tendenziell mit Administratorrechten ausgeführt, da Sie von vielen Anwendungen sowohl für die Installation als auch für die Ausführung oder beides benötigt werden. Das Schreiben von Standardanwendungseinstellungen in die Registrierung ist nur ein Beispiel.  
   
  Das Arbeiten mit Administratorrechten bedeutet im Grunde, dass Anwendungen von Prozessen ausgeführt werden, denen Administratorrechte gewährt werden. Das hat Auswirkungen auf die Sicherheit, denn bösartiger Code, der zum Hacken eines mit Administratorrechten ausgeführten Prozesses verwendet wird, übernimmt automatisch dessen Berechtigungen, einschließlich des Zugriffs auf kritische Systemressourcen.  
   
- Anwendungen nur mit den unbedingt erforderlichen Berechtigungen auszuführen, ist eine Möglichkeit, sich vor dieser Sicherheitsbedrohung zu schützen. Dieses sogenannte "Prinzip der geringsten Rechte" ist ein zentrales Feature des Betriebssystems [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]. Diese als Benutzerkontensteuerung bezeichnete Funktion wird von [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] auf zweierlei Weise verwendet:  
+ Anwendungen nur mit den unbedingt erforderlichen Berechtigungen auszuführen, ist eine Möglichkeit, sich vor dieser Sicherheitsbedrohung zu schützen. Dies wird als Prinzip der geringsten Rechte bezeichnet und ist ein zentrales Feature des Windows-Betriebssystems. Diese Funktion wird als Benutzerkontensteuerung (User Account Control, UAC) bezeichnet und wird von Windows UAC auf zwei Arten verwendet:  
   
 - Die meisten Anwendungen werden standardmäßig mit den Rechten der Benutzerkontensteuerung ausgeführt, selbst wenn der Benutzer ein Administrator ist; nur Anwendungen, die Administratorrechte benötigen, werden mit Administratorrechten ausgeführt. Um mit Administratorrechten ausgeführt zu werden, müssen Anwendungen entweder in ihrem Anwendungsmanifest oder als Eintrag in der Sicherheitsrichtlinie besonders gekennzeichnet werden.  
   
 - Bereitstellen von Kompatibilitätslösungen wie die Virtualisierung. Viele Anwendungen versuchen beipielsweise, in eingeschränkte Speicherorte wie "C:\Programme" zu schreiben. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, steht ein alternativer benutzerbezogener Speicherort zur Verfügung, der für Schreibvorgänge keine Administratorrechte erfordert. Für Anwendungen, die über die Benutzerkontensteuerung ausgeführt werden, wird "C:\Programme" virtualisiert. Dadurch wird der Anschein erweckt, dass die Anwendungen in dieses Verzeichnis schreiben, obwohl sie stattdessen in den alternativen, benutzerbezogenen Speicherort schreiben. Dank dieser Art von Kompatibilität kann das Betriebssystem viele Anwendungen ausführen, die zuvor nicht mit der Benutzerkontensteuerung ausgeführt werden konnten.  
   
 #### <a name="code-integrity-checks"></a>Integritätsprüfungen für Code  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] enthält strengere Integritätsprüfungen für Code, um zu verhindern, dass bösartiger Code zur Lade-/Laufzeit in Systemdateien oder den Kernel eingeschleust wird. Dies geht über den Schutz der Systemdateien hinaus.  
+ Windows Vista enthält tiefere Code Integritätsprüfungen, um zu verhindern, dass bösartiger Code zur Lade-/Laufzeit in Systemdateien oder in den Kernel eingefügt wird. Dies geht über den Schutz der Systemdateien hinaus.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Prozess mit eingeschränkten Rechten für im Browser gehostete Anwendungen  

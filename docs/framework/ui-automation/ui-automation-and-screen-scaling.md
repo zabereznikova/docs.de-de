@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 35b46d2030ee887eb98618fbed127097cec1f0c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e0f7bd553096be0674827aa0498a53df5247940e
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044199"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133775"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]ermöglicht Benutzern das Ändern der dpi-Einstellung (dots per inch), sodass [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] die meisten Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
+Ab Windows Vista ermöglicht Windows Benutzern das Ändern der dpi-Einstellung (dots per inch), sodass die meisten Elemente der Benutzeroberfläche (UI) auf dem Bildschirm größer erscheinen. Obwohl dieses Feature seit langem in Windows verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. Ab Windows Vista führt die Desktopfenster-Manager eine Standard Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht verarbeiten. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista  
