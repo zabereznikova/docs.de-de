@@ -2,12 +2,12 @@
 title: Programmierkonzepte (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594998"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168345"
 ---
 # <a name="programming-concepts-c"></a>Programmierkonzepte (C#)
 Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.  
@@ -17,7 +17,7 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.
 |Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Assemblys in .NET](../../../standard/assembly/index.md)|Hier erfahren Sie, wie Sie Assemblys erstellen und verwenden.|  
-|[Asynchrone Programmierung mit „async“ und „await“ (C#)](./async/index.md)|Beschreibt, wie Sie asynchrone Projektmappen mithilfe der Schlüsselwörter [async](../../language-reference/keywords/async.md) und [await](../../language-reference/keywords/await.md) in C# schreiben. Enthält eine exemplarische Vorgehensweise.|  
+|[Asynchrone Programmierung mit „async“ und „await“ (C#)](./async/index.md)|Beschreibt, wie Sie asynchrone Projektmappen mithilfe der Schlüsselwörter [async](../../language-reference/keywords/async.md) und [await](../../language-reference/operators/await.md) in C# schreiben. Enthält eine exemplarische Vorgehensweise.|  
 |[Attribute (C#)](./attributes/index.md)|Beschreibt, wie zusätzliche Informationen über Programmierelemente, wie Typen, Felder, Methoden und Eigenschaften, mit Attributen bereitgestellt werden können.|  
 |[Aufruferinformationen (C#)](./caller-information.md)|Beschreibt, wie Informationen zum Aufrufer einer Methode abgerufen werden. Diese Informationen umfassen den Dateipfad und die Zeilennummer des Quellcodes sowie den Membernamen des Aufrufers.|  
 |[Auflistungen (C#)](./collections.md)|Beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.|  

@@ -94,7 +94,7 @@ public class CardType : Enumeration
 - **Steve Smith. Enum Alternatives in C# (Alternativen zu Enumerationen in C#)**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Die Basisklasse „Enumeration“ in eShopOnContainers)
+- **Enumeration.cs.** Base Enumeration class in eShopOnContainers(Die Basisklasse „Enumeration“ in eShopOnContainers) \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. Beispielklasse für Enumerationen in eShopOnContainers. \
