@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 53dc67d0046ef2f184535f373c5bf19c484c505a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664318"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167694"
 ---
 # <a name="compilers-element"></a>\<Compiler > Element
 Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](compiler-element.md)-Elemente.  
   
- \<configuration>  
-\<system.codedom>  
-\<Compiler > Element  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Compiler >**  
   
 ## <a name="syntax"></a>Syntax  
   

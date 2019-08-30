@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958788"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168993"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elemente der XAML-Syntax zu beschreiben. Diese Begriffe werden im restlichen Teil dieser Dokumentation häufig verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte verwenden, die von der XAML-Sprachunterstützung auf der System. XAML-Ebene aktiviert werden. Dieses Thema erweitert die grundlegende Terminologie, die im Thema [Übersicht über XAML (WPF)](xaml-overview-wpf.md)vorgestellt wurde.  
@@ -62,7 +62,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
 - Das öffnende Tag muss durch eine schließende spitze Klammer (>) abgeschlossen werden. Andere Objekt Elemente, Eigenschaften Elemente oder innerer Text können dem öffnenden Tag folgen. Der Inhalt, der hier enthalten sein kann, wird in der Regel durch das Objektmodell des Elements eingeschränkt. Das entsprechende schließende Tag für das Object-Element muss auch vorhanden sein, in ordnungsgemäßer Schachtelung und in Einklang mit anderen öffnenden und schließenden Tagpaaren.  
   
- XAML, wie von .NET implementiert, verfügt über eine Reihe von Regeln, die Objekt Elemente Typen, Attributen in Eigenschaften oder Ereignissen und XAML-Namespaces in CLR-Namespaces Plus Assembly zuordnen. Für WPF und die .NET Framework werden XAML-Objekt Elemente Typen [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] entsprechend den in referenzierten Assemblys definierten Typen zugeordnet, und die Attribute werden den Membern dieser Typen zugeordnet. Wenn Sie in XAML auf einen CLR-Typ verweisen, haben Sie auch Zugriff auf die geerbten Member dieses Typs.  
+ XAML, wie von .NET implementiert, verfügt über eine Reihe von Regeln, die Objekt Elemente Typen, Attributen in Eigenschaften oder Ereignissen und XAML-Namespaces in CLR-Namespaces Plus Assembly zuordnen. Für WPF und .net werden XAML-Objekt Elemente .NET-Typen entsprechend den in referenzierten Assemblys definierten zugeordnet, und die Attribute werden den Membern dieser Typen zugeordnet. Wenn Sie in XAML auf einen CLR-Typ verweisen, haben Sie auch Zugriff auf die geerbten Member dieses Typs.  
   
  Beispielsweise ist das folgende Beispiel eine Objekt Element Syntax, die eine neue Instanz der <xref:System.Windows.Controls.Button> -Klasse instanziiert und außerdem ein <xref:System.Windows.FrameworkElement.Name%2A> -Attribut und einen Wert für dieses Attribut angibt:  
   

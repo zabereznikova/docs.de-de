@@ -11,25 +11,22 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a651e4ca76fda9e65ea4a5848c19b1f0ebfe91b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659717"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168930"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema für Compiler- und Sprachanbietereinstellungen
 Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemente für verfügbare Sprachanbieter an. Jedes Compilerkonfigurationselement gibt den Typnamen des Codeanbieters, Compilerparameter, unterstützte Sprachnamen und unterstützte Dateierweiterungen an.  
   
- .NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
+.NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
   
- [\<configuration> Element](../configuration-element.md)  
-  
- [\<system.codedom>](system-codedom-element.md)  
-  
- [\<compilers>](compilers-element.md)  
-  
- [\<compiler>](compiler-element.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Compiler >** ](compilers-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Compiler>** ](compiler-element.md)  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  

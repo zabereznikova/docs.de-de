@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937447"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169087"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Vorgehensweise: Implementieren einer PriorityBinding-Klasse
 <xref:System.Windows.Data.PriorityBinding>in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert durch Angeben einer Liste von Bindungen. Die Liste der Bindungen ist von der höchsten Priorität bis zur niedrigsten Priorität geordnet. Wenn die Bindung mit der höchsten Priorität bei der Verarbeitung einen Wert erfolgreich zurückgibt, ist es nicht erforderlich, die anderen Bindungen in der Liste zu verarbeiten. Dies könnte der Fall sein, wenn die Bewertung mit der höchsten Priorität lange ausgewertet werden muss, wenn die nächsthöhere Priorität, die erfolgreich einen Wert zurückgibt, verwendet wird, bis eine Bindung einer höheren Priorität erfolgreich einen Wert zurückgibt.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937447"
  Der Get-Accessor `SlowestDP` von wartet 5 Sekunden, bevor er den Wert `_slowestDP` des Datenmembers zurückgibt.  
   
 > [!NOTE]
-> Das Beispiel dient nur der Veranschaulichung. Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien werden zum Definieren von Eigenschaften empfohlen, die in der Größenordnung langsamer als ein Feld Satz sind. Weitere Informationen finden Sie unter [auswählen zwischen Eigenschaften und Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
+> Das Beispiel dient nur der Veranschaulichung. Die .NET-Richtlinien werden zum Definieren von Eigenschaften empfohlen, die in der Größenordnung langsamer sind als ein Feld Satz. Weitere Informationen finden Sie unter [auswählen zwischen Eigenschaften und Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

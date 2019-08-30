@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944685"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169093"
 ---
 # <a name="binding-sources-overview"></a>Übersicht über Bindungsquellen
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Daten abrufen. In diesem Thema werden die Objekttypen vorgestellt, die als Bindungsquelle verwendet werden können.  
@@ -42,7 +42,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 ### <a name="other-characteristics"></a>Weitere Merkmale  
  In der folgenden Liste finden Sie weitere zu beachtende Punkte:  
   
-- Wenn Sie das Objekt in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]erstellen möchten, muss die Klasse über einen Parameter losen Konstruktor verfügen. In einigen [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] Sprachen, wie z C#. b., kann der Parameter lose Konstruktor für Sie erstellt werden.  
+- Wenn Sie das Objekt in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]erstellen möchten, muss die Klasse über einen Parameter losen Konstruktor verfügen. In einigen .NET-Sprachen, wie C#z. b., kann der Parameter lose Konstruktor für Sie erstellt werden.  
   
 - Die als Bindungsquelleigenschaften für eine Bindung verwendeten Eigenschaften müssen öffentliche Eigenschaften der Klasse sein. Explizit definierte Schnittstelleneigenschaften sowie geschützte, private, interne und virtuelle Eigenschaften können nicht für eine Bindung herangezogen werden.  
   

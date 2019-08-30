@@ -2,12 +2,12 @@
 title: Verwenden von Varianz in Delegaten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787256"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169068"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Verwenden von Varianz in Delegaten (Visual Basic)
 
@@ -48,7 +48,21 @@ End Class
 
 ### <a name="description"></a>Beschreibung
 
-In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter eines Typs verfügen, die Basistypen von den Parametertypen in der Delegatsignatur sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Sie können zum Beispiel einen Ereignishandler erstellen, der einen `EventArgs`-Eingabeparameter annimmt und mit einem `Button.MouseClick`-Ereignis verwendet, das einen Typ `MouseEventArgs` als Parameter sendet. Außerdem können Sie ihn mit einem `TextBox.KeyDown`-Ereignis verwenden, das einen `KeyEventArgs`-Parameter sendet.
+In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter verfügen, deren Typen Basis Typen vom Delegatsignatur-Parametertyp sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Im folgenden Beispiel werden zwei Delegaten verwendet:
+
+- Ein <xref:System.Windows.Forms.KeyEventHandler> Delegat, der die Signatur des [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) -Ereignisses definiert. Die Signatur lautet wie folgt:
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- Ein <xref:System.Windows.Forms.MouseEventHandler> Delegat, der die Signatur des [Button. moukliclick](xref:System.Windows.Forms.Control.MouseDown) -Ereignisses definiert. Die Signatur lautet wie folgt:
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+Das Beispiel definiert einen Ereignishandler mit einem <xref:System.EventArgs> -Parameter und verwendet ihn, um das `Button.KeyDown` - `Button.MouseClick` Ereignis und das-Ereignis zu behandeln. Dies ist möglich, weil <xref:System.EventArgs> der Basistyp sowohl <xref:System.Windows.Forms.KeyEventArgs> von als auch <xref:System.Windows.Forms.MouseEventArgs>von ist.
 
 ### <a name="code"></a>Code
 
