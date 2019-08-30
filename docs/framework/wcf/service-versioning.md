@@ -99,7 +99,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Ähnlich wie bei der Versionsverwaltung für Datenverträge umfasst die Versionsverwaltung für Dienstverträge auch das Hinzufügen, Ändern und Entfernen von Vorgängen.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Angeben von Name, Namespace und Aktion  
- Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standard Namespace ist "http://tempuri.org", und jede Aktion ist "http://tempuri.org/contractname/methodname". Es wird empfohlen, explizit einen Namen und einen Namespace für den Dienstvertrag anzugeben, und eine Aktion für jeden Vorgang, um zu vermeiden http://tempuri.org, dass "" verwendet wird, und um zu verhindern, dass Schnittstellen-und Methodennamen im Dienstvertrag verfügbar gemacht werden.  
+ Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standard Namespace ist "http://tempuri.org", und jede Aktion ist "http://tempuri.org/contractname/methodname". Es wird empfohlen, explizit einen Namen und einen Namespace für den Dienstvertrag anzugeben, und eine Aktion für jeden Vorgang, um zu vermeiden "http://tempuri.org" , dass verwendet wird, und um zu verhindern, dass Schnittstellen-und Methodennamen im Dienstvertrag verfügbar gemacht werden.  
   
 ### <a name="adding-parameters-and-operations"></a>Hinzufügen von Parametern und Vorgängen  
  Beim Hinzufügen von Vorgängen, die vom Dienst verfügbar gemacht werden, handelt es sich um eine nicht unterbrechende Änderung, da die vorhandenen Clients diese neuen Vorgänge nicht berücksichtigen müssen.  

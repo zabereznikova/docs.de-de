@@ -38,7 +38,7 @@ Ein weiteres Handbuch wäre erforderlich, um SOLID ausführlich zu behandeln. Di
 - **SOLID: Fundamental OOP Principles (SOLID: grundlegende OOP-Prinzipien)**  \
   <https://deviq.com/solid/>
 
-- **Inversion of Control Containers and the Dependency Injection pattern** \ (Umkehrung von Steuerelementcontainern und das Abhängigkeitsinjektionsmuster)
+- **Umkehrung von Steuerelementcontainern und das Abhängigkeitsinjektionsmuster** \
   <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. New is glue („New“ hält besser)**  \
