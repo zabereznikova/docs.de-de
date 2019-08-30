@@ -2,14 +2,14 @@
 title: Asynchrone Programmierung in C#
 description: Ein Überblick über die C#-Sprachunterstützung für asynchrone Programmierung mit async, await, Task und Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307125"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167891"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Das aufgabenbasierte asynchrone Programmiermodell in C\#
+# <a name="asynchronous-programming-with-async-and-await"></a>Asynchrone Programmierung mit async und await
 
 Das aufgabenbasierte asynchrone Programmiermodell (TAP) stellt eine Abstraktion asynchronen Codes bereit. Sie können Code in gewohnter Weise als eine Folge von Anweisungen schreiben. Sie können diesen Code so lesen, als ob jede Anweisung abgeschlossen wäre, bevor die nächste Anweisung beginnt. Der Compiler führt eine Reihe von Transformationen durch, da möglicherweise einige dieser Anweisungen gestartet werden und eine <xref:System.Threading.Tasks.Task> zurückgeben, die die derzeit ausgeführte Arbeit darstellt.
 
