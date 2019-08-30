@@ -188,7 +188,7 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 - **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.net Core API Gateway Tutorial Series (ASP.net Core API-Gateway-Tutorial-Reihe))
+- **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.net Core API Gateway Tutorial Series (ASP.net Core API-Gateway-Tutorial-Reihe)) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
