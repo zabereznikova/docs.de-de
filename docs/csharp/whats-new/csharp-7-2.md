@@ -2,12 +2,12 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347413"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105747"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -20,15 +20,15 @@ C# 7.2 verwendet das Konfigurationselement [Sprachversionsauswahl](../language-r
 
 Die neuen Sprachfeatures in diesem Release umfassen:
 
-* [Techniken zum Schreiben von sicherem, effizientem Code](#safe-efficient-code-enhancements)
+- [Techniken zum Schreiben von sicherem, effizientem Code](#safe-efficient-code-enhancements)
   - Eine Kombination aus Verbesserungen der Syntax, die das Arbeiten mit Werttypen mithilfe von Verweissemantik ermöglichen.
-* [Nicht schließende benannte Argumente](#non-trailing-named-arguments)
+- [Nicht schließende benannte Argumente](#non-trailing-named-arguments)
   - Positionelle Argumente können auf benannte Argumente folgen.
-* [Führende Unterstriche in numerischen Literalen](#leading-underscores-in-numeric-literals)
+- [Führende Unterstriche in numerischen Literalen](#leading-underscores-in-numeric-literals)
   - Numerische Literale dürfen jetzt führende Unterstriche vor aufgeführten Stellen aufweisen.
-* [`private protected`-Zugriffsmodifizierer](#private-protected-access-modifier)
+- [`private protected`-Zugriffsmodifizierer](#private-protected-access-modifier)
   - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
-* [Bedingte`ref` Ausdrücke](#conditional-ref-expressions)
+- [Bedingte`ref` Ausdrücke](#conditional-ref-expressions)
   - Das Ergebnis eines bedingten Ausdrucks (`?:`) kann jetzt ein Verweis sein.
 
 Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktionen. Sie werden die Hintergründe jeder einzelnen Funktion erfahren. Sie werden die Syntax erlernen. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
@@ -63,7 +63,7 @@ Beispiel:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>Zugriffsmodifizierer _private protected_
+## <a name="_private-protected_-access-modifier"></a>Zugriffsmodifizierer _private protected_
 
 Ein neuer zusammengesetzter Zugriffsmodifizierer: `private protected` zeigt an, dass auf ein Element durch eine es enthaltende Klasse oder durch innerhalb der gleichen Assembly deklarierte abgeleitete Klassen zugegriffen werden darf. Während `protected internal` den Zugriff durch abgeleitete Klassen oder Klassen, die sich in der gleichen Assembly befinden, erlaubt, schränkt `private protected` den Zugriff auf innerhalb der gleichen Assembly deklarierte abgeleitete Typen ein.
 

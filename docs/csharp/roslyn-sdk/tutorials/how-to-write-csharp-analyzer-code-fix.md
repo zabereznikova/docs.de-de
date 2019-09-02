@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870561"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105756"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -18,8 +18,8 @@ In diesem Tutorial lernen Sie die Erstellung eines **Analysetools** und eines be
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-* [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
 Installieren Sie zunächst das **SDK für die .NET Compiler Platform** über das Installationsprogramm von Visual Studio:
 
@@ -51,9 +51,9 @@ Console.WriteLine(x);
 
 Dies bringt die Analyse mit sich, mit der bestimmt wird, ob eine Variable zu einer Konstanten gemacht werden kann, wozu Syntaxanalyse, Konstantenanalyse des Initialisiererausdrucks und eine Datenflussanalyse erforderlich sind, um sicherzustellen, dass zu keinem Zeitpunkt in die Variable geschrieben wird. Die .NET Compiler Platform stellt APIs zur Verfügung, die das Durchführen dieser Analyse erleichtern. Der erste Schritt ist die Erstellung eines neuen C#-Projekts **Analysetool mit Codefix**.
 
-* Wählen Sie in Visual Studio **Datei > Neu > Projekt...** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen.
-* Wählen Sie unter **Visual C# > Erweiterbarkeit** **Analyzer with code fix (.NET Standard)** (Analysetool mit Codefix (.NET Standard)) aus.
-* Benennen Sie Ihr Projekt "**MakeConst**", und klicken Sie auf „OK“.
+- Wählen Sie in Visual Studio **Datei > Neu > Projekt...** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen.
+- Wählen Sie unter **Visual C# > Erweiterbarkeit** **Analyzer with code fix (.NET Standard)** (Analysetool mit Codefix (.NET Standard)) aus.
+- Benennen Sie Ihr Projekt "**MakeConst**", und klicken Sie auf „OK“.
 
 Die Vorlage für das Analysetool mit Codefix erstellt drei Projekte: Das erste enthält das Analysetool und den Codefix, das zweite ist ein Komponententestprojekt, und das dritte ist das VSIX-Projekt. Das Standardstartprojekt ist das VSIX-Projekt. Drücken Sie **F5**, um das VSIX-Projekt zu starten. Dadurch wird eine zweite Instanz von Visual Studio mit geladenem neuem Analysemodul gestartet.
 
@@ -77,8 +77,8 @@ Sie brauchen keine zweite Instanz von Visual Studio zu starten und neuen Code zu
 
 Die Vorlage erstellt die anfängliche `DiagnosticAnalyzer`-Klasse in der Datei **MakeConstAnalyzer.cs**. Dieses anfängliche Analysetool zeigt zwei wichtige Eigenschaften jedes Analysetools.
 
-* Jedes Diagnoseanalysetool muss ein `[DiagnosticAnalyzer]`-Attribut bereitstellen, das die Sprache beschreibt, in der es arbeitet.
-* Jedes Diagnoseanalysetool muss aus der <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>-Klasse abgeleitet sein.
+- Jedes Diagnoseanalysetool muss ein `[DiagnosticAnalyzer]`-Attribut bereitstellen, das die Sprache beschreibt, in der es arbeitet.
+- Jedes Diagnoseanalysetool muss aus der <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>-Klasse abgeleitet sein.
 
 Die Vorlage zeigt außerdem die grundlegenden Features, die jedes Analysetool auszeichnen:
 
@@ -89,9 +89,9 @@ Sie registrieren Aktionen in Ihrer Überschreibung der <xref:Microsoft.CodeAnaly
 
 Der erste Schritt besteht darin, die Registrierungskonstanten und die `Initialize`-Methode zu aktualisieren, damit diese Konstanten Ihr „Make Const“-Analysetool anzeigen. Die meisten der Zeichenfolgenkonstanten sind in der Zeichenfolgen-Ressourcendatei definiert. Sie sollten sich zwecks einfacherer Lokalisierung auch an diese Praxis halten. Öffnen Sie die **Resources.resx**-Datei für das **MakeConst**-Analysetoolprojekt. Dadurch wird der Ressourcen-Editor angezeigt. Aktualisieren Sie die Zeichenfolgenressourcen wie folgt:
 
-* Ändern Sie `AnalyzerTitle` in „Variable kann als Konstante umdeklariert werden“.
-* Ändern Sie `AnalyzerMessageFormat` in „Kann als Konstante deklariert werden“.
-* Ändern Sie `AnalyzerDescription` in „Als Konstante deklarieren“.
+- Ändern Sie `AnalyzerTitle` in „Variable kann als Konstante umdeklariert werden“.
+- Ändern Sie `AnalyzerMessageFormat` in „Kann als Konstante deklariert werden“.
+- Ändern Sie `AnalyzerDescription` in „Als Konstante deklarieren“.
 
 Ändern Sie außerdem die **Zugriffsmodifizierer**-Dropdownliste in `public`. Das vereinfacht die Verwendung dieser Konstanten in Komponententests. Wenn Sie fertig sind, sollte der Ressourcen-Editor wie in der folgenden Abbildung aussehen:
 
@@ -329,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 Dieser Test wird ebenfalls bestanden. Fügen Sie als Nächstes Konstanten für Bedingungen hinzu, die Sie noch nicht behandelt haben:
 
-* Deklarationen, die bereits `const` sind, da sie bereits Konstanten sind:
+- Deklarationen, die bereits `const` sind, da sie bereits Konstanten sind:
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* Deklarationen, die keinen Initialisierer besitzen, weil es keinen zu verwendenden Wert gibt:
+- Deklarationen, die keinen Initialisierer besitzen, weil es keinen zu verwendenden Wert gibt:
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* Deklarationen, bei denen der Initialisierer keine Konstante ist, da sie zur Kompilierzeit keine Konstanten sein können:
+- Deklarationen, bei denen der Initialisierer keine Konstante ist, da sie zur Kompilierzeit keine Konstanten sein können:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -364,9 +364,9 @@ Führen Sie Ihre Tests erneut aus – Sie werden feststellen, dass bei den neuen
 
 Sie benötigen noch einige Verbesserungen an der `AnalyzeNode`-Methode Ihres Analysetools, um Code herauszufiltern, der den Bedingungen entspricht. Es handelt sich bei allen um verwandte Bedingungen, daher lassen sich auch alle mit ähnlichen Änderungen beheben. Nehmen Sie an `AnalyzeNode` die folgenden Änderungen vor:
 
-* Ihre semantische Analyse hat eine einzelne Variablendeklaration untersucht. Dieser Code muss sich in einer `foreach`-Schleife befinden, die alle innerhalb der gleichen Anweisung deklarierten Variablen untersucht.
-* Jede deklarierte Variable muss über einen Initialisierer verfügen.
-* Der Initialisierer jeder deklarierten Variable muss zur Kompilierzeit eine Konstante sein.
+- Ihre semantische Analyse hat eine einzelne Variablendeklaration untersucht. Dieser Code muss sich in einer `foreach`-Schleife befinden, die alle innerhalb der gleichen Anweisung deklarierten Variablen untersucht.
+- Jede deklarierte Variable muss über einen Initialisierer verfügen.
+- Der Initialisierer jeder deklarierten Variable muss zur Kompilierzeit eine Konstante sein.
 
 Ersetzen Sie in Ihrer `AnalyzeNode`-Methode die ursprüngliche semantische Analyse:
 
@@ -487,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 Sie müssen etwas mehr Code in Ihrem Codefixanbieter schreiben, um das Schlüsselwort „var“ durch den korrekten Typnamen zu ersetzen. Wechseln Sie zu **CodeFixProvider.cs** zurück. Der Code, den Sie hinzufügen, führt die folgenden Schritte aus:
 
-* Überprüft, ob die Deklaration eine `var`-Deklaration ist, und wenn dies zutrifft:
-* Erstellt einen neuen Typ für den abgeleiteten Typ.
-* Vergewissert sich, dass die Typdeklaration kein Alias ist. Ist das der Fall, ist eine Deklaration als `const var` zulässig.
-* Stellt sicher, dass `var` kein Typname in diesem Programm ist. (In dem Fall ist `const var` zulässig).
-* Vereinfacht den vollständigen Typnamen
+- Überprüft, ob die Deklaration eine `var`-Deklaration ist, und wenn dies zutrifft:
+- Erstellt einen neuen Typ für den abgeleiteten Typ.
+- Vergewissert sich, dass die Typdeklaration kein Alias ist. Ist das der Fall, ist eine Deklaration als `const var` zulässig.
+- Stellt sicher, dass `var` kein Typname in diesem Programm ist. (In dem Fall ist `const var` zulässig).
+- Vereinfacht den vollständigen Typnamen
 
 Das hört sich nach ziemlich viel Code an. Ist es aber nicht. Ersetzen Sie die Zeile, in der `newLocal` deklariert und initialisiert wird, durch den folgenden Code. Er gehört direkt hinter die Initialisierung von `newModifiers`:
 
@@ -505,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 Führen Sie Ihre Tests aus – sie sollten alle bestanden werden. Gratulieren Sie sich, indem Sie Ihr fertiges Analysetool ausführen. Drücken Sie STRG+F5, um das Analysetoolprojekt in einer zweiten Instanz von Visual Studio mit geladener Roslyn-Vorschauerweiterung auszuführen.
 
-* Erstellen Sie in der zweiten Visual Studio-Instanz ein neues C#-Konsolenanwendungsprojekt, und fügen Sie `int x = "abc";` zur Methode „Main“ hinzu. Dank der ersten Fehlerbehebung sollte keine Warnung für diese lokale Variablendeklaration gemeldet werden (obwohl es erwartungsgemäß einen Compilerfehler gibt).
-* Fügen Sie als Nächstes `object s = "abc";` zur Methode „Main“ hinzu. Aufgrund der zweiten Fehlerbehebung sollte keine Warnung gemeldet werden.
-* Fügen Sie schließlich eine weitere lokale Variable hinzu, die das Schlüsselwort `var` verwendet. Sie sehen, dass eine Warnung gemeldet und ein Vorschlag links unterhalb der Meldung angezeigt wird.
-* Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie STRG+., um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort „var“ jetzt ordnungsgemäß behandelt wird.
+- Erstellen Sie in der zweiten Visual Studio-Instanz ein neues C#-Konsolenanwendungsprojekt, und fügen Sie `int x = "abc";` zur Methode „Main“ hinzu. Dank der ersten Fehlerbehebung sollte keine Warnung für diese lokale Variablendeklaration gemeldet werden (obwohl es erwartungsgemäß einen Compilerfehler gibt).
+- Fügen Sie als Nächstes `object s = "abc";` zur Methode „Main“ hinzu. Aufgrund der zweiten Fehlerbehebung sollte keine Warnung gemeldet werden.
+- Fügen Sie schließlich eine weitere lokale Variable hinzu, die das Schlüsselwort `var` verwendet. Sie sehen, dass eine Warnung gemeldet und ein Vorschlag links unterhalb der Meldung angezeigt wird.
+- Bewegen Sie den Textcursor des Editors über die Wellenlinien-Unterstreichung, und drücken Sie STRG+., um den vorgeschlagenen Codefix anzuzeigen. Beachten Sie beim Auswählen des Codefixes, dass das Schlüsselwort „var“ jetzt ordnungsgemäß behandelt wird.
 
 Fügen Sie schließlich den folgenden Code hinzu:
 

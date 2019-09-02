@@ -3,12 +3,12 @@ title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweiter
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b142bad9a4058a884d9e511424bc50856152b67e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397832"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105568"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 
@@ -17,9 +17,9 @@ Mit C# 7 wurden einfache Funktionen für den Musterabgleich eingeführt. Diese F
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
-> * Erkennen von Situationen, in denen ein Musterabgleich verwendet werden soll.
-> * Verwenden von Musterabgleichausdrücken, um Verhalten auf Grundlage von Typen und Eigenschaftswerten zu implementieren.
-> * Kombinieren des Musterabgleichs mit anderen Verfahren, um vollständige Algorithmen zu erstellen.
+> - Erkennen von Situationen, in denen ein Musterabgleich verwendet werden soll.
+> - Verwenden von Musterabgleichausdrücken, um Verhalten auf Grundlage von Typen und Eigenschaftswerten zu implementieren.
+> - Kombinieren des Musterabgleichs mit anderen Verfahren, um vollständige Algorithmen zu erstellen.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 

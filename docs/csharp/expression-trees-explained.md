@@ -3,12 +3,12 @@ title: Ausdrucksbaumstrukturen mit Erläuterung
 description: Weitere Informationen zu Ausdrucksbaumstrukturen und ihrer Verwendung für die Übersetzung von Algorithmen für die externe Ausführung und für das Überprüfen von Code vor der Ausführung.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613420"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104797"
 ---
 # <a name="expression-trees-explained"></a>Ausdrucksbaumstrukturen mit Erläuterung
 
@@ -33,11 +33,11 @@ Der Ausdruck ist `1 + 2`. Das ist ein binärer Ausdruck. Genauer gesagt ist es e
 Visuell ist die gesamte Anweisung eine Struktur: Sie können beim Stammknoten beginnen und zu jedem Knoten in der Struktur navigieren, um den Code anzuzeigen, der die Anweisung bildet:
 
 - Variablendeklaration-Anweisung mit der Zuordnung (`var sum = 1 + 2;`)
-  * Implizite Typdeklaration von Variablen (`var sum`)
+  - Implizite Typdeklaration von Variablen (`var sum`)
     - Implizites var-Schlüsselwort (`var`)
     - Namensdeklaration von Variablen (`sum`)
-  * Zuweisungsoperator (`=`)
-  * Binärer Additionsausdruck (`1 + 2`)
+  - Zuweisungsoperator (`=`)
+  - Binärer Additionsausdruck (`1 + 2`)
     - Linker Operand (`1`)
     - Additionsoperator (`+`)
     - Rechter Operand (`2`)

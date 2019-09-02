@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, bene
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585256"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105414"
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
 Da .NET Core auf immer mehr Plattformen verfügbar wird, ist es hilfreich zu erfahren, wie man es verpackt, benennt und mit einer Versionsnummer versieht. Auf diese Weise kann mithilfe von Paketverwaltern eine konsistente Benutzererfahrung sichergestellt werden, unabhängig davon, wo Benutzer .NET ausführen. Dieser Artikel ist für Benutzer hilfreich, die
 
-* versuchen, .NET Core von der Quelle aus zu erstellen.
-* Änderungen an der .NET Core-CLI vornehmen möchten, die sich auf das resultierende Layout oder die erzeugten Pakete auswirken könnten.
+- versuchen, .NET Core von der Quelle aus zu erstellen.
+- Änderungen an der .NET Core-CLI vornehmen möchten, die sich auf das resultierende Layout oder die erzeugten Pakete auswirken könnten.
 
 ## <a name="disk-layout"></a>Datenträgerlayout
 

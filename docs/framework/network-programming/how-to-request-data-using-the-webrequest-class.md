@@ -11,88 +11,90 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 1d8f501e90f3942bbfd95fc06e9fdd79d8f6430e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: eb38a95891afaf4cab98e43a250b67823fa5eb24
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334210"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040874"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse
-Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, wie z.B. einer Webseite oder Datei. Die Ressource muss von einem URI identifiziert werden.  
-  
-## <a name="to-request-data-from-a-host-server"></a>Anfordern von Daten von einem Hostserver  
-  
-1. Erstellen Sie eine <xref:System.Net.WebRequest>-Instanz, indem Sie <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> mit dem URI einer Ressource aufrufen. Beispiel: 
-  
-    ```csharp  
-    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");  
-    ```  
-  
-    ```vb  
-    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")  
-    ```  
-  
+
+Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, wie z.B. einer Webseite oder Datei. Die Ressource muss von einem URI identifiziert werden.
+
+## <a name="to-request-data-from-a-host-server"></a>Anfordern von Daten von einem Hostserver
+
+1. Erstellen Sie eine <xref:System.Net.WebRequest>-Instanz, indem Sie <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> mit dem URI einer Ressource aufrufen. Beispiel:
+
+    ```csharp
+    WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");
+    ```
+
+    ```vb
+    Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/default.html")
+    ```
+
     > [!NOTE]
-    > .NET Framework stellt von den Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> abgeleitete protokollspezifische Klassen für URIs bereit, die mit *http:*, *https:*, *ftp:* und *file:* beginnen.
-    Wenn Sie protokollspezifische Eigenschaften festlegen oder lesen müssen, wandeln Sie Ihr <xref:System.Net.WebRequest>- oder <xref:System.Net.WebResponse>-Objekt in einen protokollspezifischen Objekttyp um. Weitere Informationen finden Sie unter [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md). 
-  
-2. Legen Sie alle Eigenschaftswerte, die Sie benötigen, in Ihrem `WebRequest`-Objekt fest. Legen Sie z.B. zum Aktivieren der Authentifizierung die Eigenschaft <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> auf eine Instanz der <xref:System.Net.NetworkCredential>-Klasse fest:  
-  
-    ```csharp  
-    request.Credentials = CredentialCache.DefaultCredentials;  
-    ```  
-  
-    ```vb  
-    request.Credentials = CredentialCache.DefaultCredentials  
-    ```  
-  
+    > .NET Framework stellt von den Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> abgeleitete protokollspezifische Klassen für URIs bereit, die mit *http:* , *https:* , *ftp:* und *file:* beginnen.
+
+    Wenn Sie protokollspezifische Eigenschaften festlegen oder lesen müssen, wandeln Sie Ihr <xref:System.Net.WebRequest>- oder <xref:System.Net.WebResponse>-Objekt in einen protokollspezifischen Objekttyp um. Weitere Informationen finden Sie unter [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md).
+
+2. Legen Sie alle Eigenschaftswerte, die Sie benötigen, in Ihrem `WebRequest`-Objekt fest. Legen Sie z.B. zum Aktivieren der Authentifizierung die Eigenschaft <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> auf eine Instanz der <xref:System.Net.NetworkCredential>-Klasse fest:
+
+    ```csharp
+    request.Credentials = CredentialCache.DefaultCredentials;
+    ```
+
+    ```vb
+    request.Credentials = CredentialCache.DefaultCredentials
+    ```
+
 3. Senden Sie die Anforderung an den Server durch Aufrufen von <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Diese Methode gibt ein Objekt zurück, das die Antwort des Servers enthält. Der Typ des zurückgegebenen <xref:System.Net.WebResponse>-Objekts wird durch das URI-Schema der Anforderung bestimmt. Beispiel:
-  
-    ```csharp  
-    WebResponse response = request.GetResponse();  
-    ```  
-  
-    ```vb  
-    Dim response As WebResponse = request.GetResponse()  
-    ```  
-  
-4. Sie können die protokollspezifischen Eigenschaften lesen, indem Sie auf die Eigenschaften des `WebResponse`-Objekts zugreifen oder das Objekt in eine protokollspezifische Instanz umwandeln. 
+
+    ```csharp
+    WebResponse response = request.GetResponse();
+    ```
+
+    ```vb
+    Dim response As WebResponse = request.GetResponse()
+    ```
+
+4. Sie können die protokollspezifischen Eigenschaften lesen, indem Sie auf die Eigenschaften des `WebResponse`-Objekts zugreifen oder das Objekt in eine protokollspezifische Instanz umwandeln.
 
     Wandeln Sie z.B. das `WebResponse`-Objekt in einen `HttpWebResponse`-Verweis um, wenn Sie auf die HTTP-spezifischen Eigenschaften von <xref:System.Net.HttpWebResponse> zugreifen möchten. Das folgende Codebeispiel zeigt die Vorgehensweise beim Anzeigen der HTTP-spezifischen Eigenschaft <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType>, die mit einer Antwort gesendet wird:
-  
-    ```csharp  
-    Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
-    ```  
-  
-    ```vb  
-    Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
-    ```  
-  
-5. Zum Abrufen des Datenstroms, der die vom Server gesendeten Antwortdaten enthält, rufen Sie die <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>-Methode auf. Beispiel:  
-  
-    ```csharp  
-    Stream dataStream = response.GetResponseStream();  
-    ```  
-  
-    ```vb  
-    Dim dataStream As Stream = response.GetResponseStream()  
-    ```  
-  
-6. Nachdem Sie die Daten des Antwortobjekts gelesen haben, können Sie entweder das Objekt mit der <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType>-Methode oder den Antwortdatenstrom mit der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>-Methode schließen. Wird weder das Antwortobjekt noch der Datenstrom geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Serververbindungen und kann somit weitere Anforderungen nicht mehr verarbeiten. Da die `WebResponse.Close`-Methode beim Schließen der Antwort `Stream.Close` aufruft, ist das Aufrufen von `Close` für Antwort- und Datenstromobjekt nicht notwendig (aber auch nicht schädlich). Beispiel:
-  
-    ```csharp  
-    response.Close();  
-    ```  
-  
-    ```vb  
-    response.Close()  
-    ```  
-  
-## <a name="example"></a>Beispiel  
 
-Im folgenden Codebeispiel wird die Vorgehensweise beim Erstellen einer Anforderung an einen Webserver und dem Lesen der Daten in der Antwort veranschaulicht:  
-  
+    ```csharp
+    Console.WriteLine (((HttpWebResponse)response).StatusDescription);
+    ```
+
+    ```vb
+    Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)
+    ```
+
+5. Zum Abrufen des Datenstroms, der die vom Server gesendeten Antwortdaten enthält, rufen Sie die <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>-Methode auf. Beispiel:
+
+    ```csharp
+    Stream dataStream = response.GetResponseStream();
+    ```
+
+    ```vb
+    Dim dataStream As Stream = response.GetResponseStream()
+    ```
+
+6. Nachdem Sie die Daten des Antwortobjekts gelesen haben, können Sie entweder das Objekt mit der <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType>-Methode oder den Antwortdatenstrom mit der <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>-Methode schließen. Wird weder das Antwortobjekt noch der Datenstrom geschlossen, verfügt die Anwendung möglicherweise nicht mehr über genügend Serververbindungen und kann somit weitere Anforderungen nicht mehr verarbeiten. Da die `WebResponse.Close`-Methode beim Schließen der Antwort `Stream.Close` aufruft, ist das Aufrufen von `Close` für Antwort- und Datenstromobjekt nicht notwendig (aber auch nicht schädlich). Beispiel:
+
+    ```csharp
+    response.Close();
+    ```
+
+    ```vb
+    response.Close()
+    ```
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Codebeispiel wird die Vorgehensweise beim Erstellen einer Anforderung an einen Webserver und dem Lesen der Daten in der Antwort veranschaulicht:
+
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 

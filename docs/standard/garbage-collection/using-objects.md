@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666480"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106943"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Verwenden von Objekten, die IDisposable implementieren
 
 Der Garbage Collector der Common Language Runtime gibt den Speicher frei, der von verwalteten Objekten verwendet wird. Typen jedoch, die nicht verwaltete Ressourcen verwenden, implementieren die <xref:System.IDisposable>-Schnittstelle, damit der Speicher, der diesen nicht verwalteten Ressourcen zugeordnet ist, freigegeben werden kann. Wenn Sie ein Objekt, das <xref:System.IDisposable> implementiert, nicht mehr verwenden, sollten Sie die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung des Objekts aufrufen. Dazu haben Sie zwei Möglichkeiten:  
   
-* Verwenden der `using`-Anweisung in C# oder der `Using`-Anweisung in Visual Basic.  
+- Verwenden der `using`-Anweisung in C# oder der `Using`-Anweisung in Visual Basic.  
   
-* Implementieren eines `try/finally`-Blocks.  
+- Implementieren eines `try/finally`-Blocks.  
 
 ## <a name="the-using-statement"></a>Die using-Anweisung
 
@@ -49,9 +49,9 @@ Mit der `using`-Anweisung in C# können Sie auch mehrere Ressourcen in einer ein
 
 Anstatt einen `try/finally`-Block in einer `using`-Anweisung zu umschließen, haben Sie die Möglichkeit, den `try/finally`-Block direkt zu implementieren. Dies kann Ihr persönlicher Codierungsstil sein, oder Sie möchten dies eventuell aus einem der folgenden Gründe durchführen:  
   
-* Um einen `catch`-Block einzufügen, um im `try`-Block ausgelöste Ausnahmen zu behandeln. Andernfalls bleiben alle Ausnahmen, die von der `using`-Anweisung ausgelöst werden, unbehandelt, so wie Ausnahmen, die innerhalb des `using`-Blocks ausgelöst werden, wenn kein `try/catch`-Block vorhanden ist.  
+- Um einen `catch`-Block einzufügen, um im `try`-Block ausgelöste Ausnahmen zu behandeln. Andernfalls bleiben alle Ausnahmen, die von der `using`-Anweisung ausgelöst werden, unbehandelt, so wie Ausnahmen, die innerhalb des `using`-Blocks ausgelöst werden, wenn kein `try/catch`-Block vorhanden ist.  
   
-* Um ein Objekt zu instanziieren, das <xref:System.IDisposable> implementiert, dessen Bereich für den Block, in dem es deklariert ist, nicht lokal ist.  
+- Um ein Objekt zu instanziieren, das <xref:System.IDisposable> implementiert, dessen Bereich für den Block, in dem es deklariert ist, nicht lokal ist.  
   
 Das folgende Beispiel ähnelt dem vorhergehenden, es wird jedoch ein `try/catch/finally`-Block verwendet, um ein <xref:System.IO.StreamReader>-Objekt zu instanziieren, zu verwenden und zu verwerfen, und um alle Ausnahmen zu behandeln, die von dem <xref:System.IO.StreamReader>-Konstruktor und dessen <xref:System.IO.StreamReader.ReadToEnd%2A>-Methode ausgelöst werden. Beachten Sie, dass der Code im `finally`-Block überprüft, ob das Objekt, das <xref:System.IDisposable> implementiert, nicht `null` ist, bevor die <xref:System.IDisposable.Dispose%2A>-Methode aufgerufen wird. Wird dies nicht ausgeführt, kann es zu einer <xref:System.NullReferenceException>-Ausnahme zur Laufzeit kommen.  
   

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie native Funktionen über P/Invoke in .Net aufr
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582550"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106800"
 ---
 # <a name="platform-invoke-pinvoke"></a>Plattformaufruf (P/Invoke)
 
@@ -21,9 +21,9 @@ Beginnen wir mit dem gängigsten Beispiel, dem Aufruf nicht verwalteter Funktion
 
 Das obige Beispiel ist recht einfach, zeigt jedoch, was zum Aufrufen nicht verwalteter Funktionen von verwaltetem Code aus erforderlich ist. Gehen wir das Beispiel schrittweise durch:
 
-* Zeile 1 zeigt die using-Anweisung für `System.Runtime.InteropServices`. Dies ist der Namespace, der alle benötigten Elemente enthält.
-* In Zeile 7 wird das `DllImport`-Attribut eingeführt. Dieses Attribut ist äußerst wichtig, da es der Runtime mitteilt, dass die nicht verwaltete DLL geladen werden soll. Die übergebene Zeichenfolge ist die DLL, in der sich unsere Zielfunktion befindet. Zusätzlich gibt sie an, welcher [Zeichensatz](./charset.md) für das Marshallen der Zeichenfolgen verwendet werden soll. Schließlich gibt sie an, dass diese Funktion [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) aufruft und dass die Laufzeit diesen Fehlercode abfangen muss, damit der Benutzer ihn über <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> abrufen kann.
-* Zeile 8 ist der Kern der P/Invoke-Funktion. Sie definiert eine verwaltete Methode, die **genau dieselbe Signatur** aufweist wie die nicht verwaltete Methode. Wie Sie sehen, enthält die Deklaration ein neues Schlüsselwort, `extern`. Dieses teilt der Runtime mit, dass es sich um eine externe Methode handelt und dass die Runtime die Methode bei Aufruf in der im `DllImport`-Attribut angegebenen DLL findet.
+- Zeile 1 zeigt die using-Anweisung für `System.Runtime.InteropServices`. Dies ist der Namespace, der alle benötigten Elemente enthält.
+- In Zeile 7 wird das `DllImport`-Attribut eingeführt. Dieses Attribut ist äußerst wichtig, da es der Runtime mitteilt, dass die nicht verwaltete DLL geladen werden soll. Die übergebene Zeichenfolge ist die DLL, in der sich unsere Zielfunktion befindet. Zusätzlich gibt sie an, welcher [Zeichensatz](./charset.md) für das Marshallen der Zeichenfolgen verwendet werden soll. Schließlich gibt sie an, dass diese Funktion [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) aufruft und dass die Laufzeit diesen Fehlercode abfangen muss, damit der Benutzer ihn über <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> abrufen kann.
+- Zeile 8 ist der Kern der P/Invoke-Funktion. Sie definiert eine verwaltete Methode, die **genau dieselbe Signatur** aufweist wie die nicht verwaltete Methode. Wie Sie sehen, enthält die Deklaration ein neues Schlüsselwort, `extern`. Dieses teilt der Runtime mit, dass es sich um eine externe Methode handelt und dass die Runtime die Methode bei Aufruf in der im `DllImport`-Attribut angegebenen DLL findet.
 
 Der Rest des Beispiels besteht nur aus dem Aufruf der Methode, der wie bei jeder anderen verwalteten Methode erfolgt.
 
@@ -49,10 +49,10 @@ Der erste Parameter ist ein Rückruf. Dieser Rückruf besitzt die folgende Signa
 
 Schauen wir uns jetzt das Beispiel an:
 
-* Zeile 9 im Beispiel definiert einen Delegaten, der der Signatur des Rückrufs von nicht verwaltetem Code aus entspricht. Beachten Sie, wie die Typen LPARAM und HWND über `IntPtr` im verwalteten Code dargestellt werden.
-* In den Zeilen 13 und 14 wird die `EnumWindows`-Funktion über die user32.dll-Bibliothek eingeführt.
-* In den Zeilen 17 bis 20 wird der Delegat implementiert. In diesem einfachen Beispiel möchten wir nur das Handle an die Konsole ausgeben.
-* Abschließend wird in Zeile 24 die externe Methode aufgerufen und an den Delegaten übergeben.
+- Zeile 9 im Beispiel definiert einen Delegaten, der der Signatur des Rückrufs von nicht verwaltetem Code aus entspricht. Beachten Sie, wie die Typen LPARAM und HWND über `IntPtr` im verwalteten Code dargestellt werden.
+- In den Zeilen 13 und 14 wird die `EnumWindows`-Funktion über die user32.dll-Bibliothek eingeführt.
+- In den Zeilen 17 bis 20 wird der Delegat implementiert. In diesem einfachen Beispiel möchten wir nur das Handle an die Konsole ausgeben.
+- Abschließend wird in Zeile 24 die externe Methode aufgerufen und an den Delegaten übergeben.
 
 Die Beispiele für Linux und macOS werden im Folgenden angezeigt. Hierfür verwenden wir die `ftw`-Funktion, die in `libc` zu finden ist, der C-Bibliothek. Anhand dieser Funktion werden die Verzeichnishierarchien durchlaufen. Sie verwendet einen Zeiger auf eine Funktion als einen ihrer Parameter. Diese Funktion besitzt die folgende Signatur: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 

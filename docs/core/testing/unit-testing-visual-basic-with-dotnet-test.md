@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 867b6e3c9c647cd302b0635de1d02573485e89c7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626437"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168259"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und xUnit
 
@@ -22,7 +22,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappe zu erstellen. Diese Übung vereinfacht die Verwaltung des Klassenbibliotheks- und Komponententestprojekts.
 Erstellen Sie im Projektmappenverzeichnis ein *PrimeService*-Verzeichnis. Soweit verfügen Sie über die bisherige Verzeichnis- und Dateistruktur:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -46,7 +46,7 @@ End Namespace
 
 Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
-```
+```console
 /unit-testing-vb-using-dotnet-test
     unit-testing-vb-using-dotnet-test.sln
     /PrimeService
@@ -67,7 +67,7 @@ Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und e
 
 Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt xUnit und xUnit Runner hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als eine andere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -75,7 +75,7 @@ Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/sa
 
 Sie verfügen über das folgende endgültige Ordnerlayout:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService

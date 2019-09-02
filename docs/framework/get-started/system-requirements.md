@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d89f3f4d97fe4cbe3b660b74537f8c8368b492a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: bed0084fd576ba9b9f9eeb51e9e2466938e43490
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052766"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106512"
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
 Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für die folgenden .NET Framework-Versionen:
 
-* .NET Framework 4.5 und dessen Punktversionen (4.5.1 und 4.5.2).
-* .NET Framework 4.6 und dessen Punktversionen (4.6.1 und 4.6.2).
-* .NET Framework 4.7 und dessen Punktversionen (4.7.1 und 4.7.2).
-* .NET Framework 4.8
+- .NET Framework 4.5 und dessen Punktversionen (4.5.1 und 4.5.2).
+- .NET Framework 4.6 und dessen Punktversionen (4.6.1 und 4.6.2).
+- .NET Framework 4.7 und dessen Punktversionen (4.7.1 und 4.7.2).
+- .NET Framework 4.8
 
 Weitere Informationen zu .NET Framework-Versionen vor .NET Framework 4.5 finden Sie unter [.NET Framework-Versionen und-Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
 

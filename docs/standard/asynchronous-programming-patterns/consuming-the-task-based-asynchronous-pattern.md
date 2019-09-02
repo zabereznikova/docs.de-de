@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666554"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169136"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Verwenden des aufgabenbasierten asynchronen Musters
 
 Wenn Sie das aufgabenbasierte asynchrone Muster (TAP) verwenden, um mit asynchronen Vorgängen zu arbeiten, können Sie Rückrufe verwenden, um ein Warten ohne Blockierung zu erreichen.  Bei Tasks erfolgt dies durch Methoden wie <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Sprachbasierte Unterstützung asynchroner Vorgänge verbirgt Rückrufe, indem in der normalen Ablaufsteuerung auf asynchrone Vorgänge gewartet werden darf, und vom Compiler generierter Code bietet dieselbe Unterstützung auf API-Ebene.
 
 ## <a name="suspending-execution-with-await"></a>Anhalten der Ausführung mit „await“
- Ab .NET Framework 4.5 können Sie in C# das Schlüsselwort [await](../../csharp/language-reference/keywords/await.md) und in Visual Basic den [Await-Operator](../../visual-basic/language-reference/operators/await-operator.md) verwenden, um asynchron auf Objekte vom Typ <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> zu warten. Wenn Sie eine <xref:System.Threading.Tasks.Task>-Klasse erwarten, ist der Ausdruck `await` vom Typ `void`. Wenn Sie eine <xref:System.Threading.Tasks.Task%601>-Klasse erwarten, ist der Ausdruck `await` vom Typ `TResult`. Ein `await`-Ausdruck muss im Text einer asynchronen Methode auftreten. Weitere Informationen zur Unterstützung von C# und Visual Basic in .NET Framework 4.5 finden Sie in den Spezifikationen für C# und Visual Basic.
+ Ab .NET Framework 4.5 können Sie in C# das Schlüsselwort [await](../../csharp/language-reference/operators/await.md) und in Visual Basic den [Await-Operator](../../visual-basic/language-reference/operators/await-operator.md) verwenden, um asynchron auf Objekte vom Typ <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> zu warten. Wenn Sie eine <xref:System.Threading.Tasks.Task>-Klasse erwarten, ist der Ausdruck `await` vom Typ `void`. Wenn Sie eine <xref:System.Threading.Tasks.Task%601>-Klasse erwarten, ist der Ausdruck `await` vom Typ `TResult`. Ein `await`-Ausdruck muss im Text einer asynchronen Methode auftreten. Weitere Informationen zur Unterstützung von C# und Visual Basic in .NET Framework 4.5 finden Sie in den Spezifikationen für C# und Visual Basic.
 
  Die await-Funktionalität installiert im Hintergrund einen Rückruf für die Aufgabe, indem sie eine Fortsetzung verwendet.  Dieser Rückruf setzt die asynchrone Methode an dem Unterbrechungspunkt fort. Wenn die asynchrone Methode fortgesetzt wird und der Vorgang, auf den gewartet wurde, erfolgreich abgeschlossen wurde und <xref:System.Threading.Tasks.Task%601> war, wird `TResult` zurückgegeben.  Wenn die erwartete Klasse <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> im Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled> beendet wurde, wird eine <xref:System.OperationCanceledException>-Ausnahme ausgelöst.  Wenn die erwartete Klasse <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> im Zustand <xref:System.Threading.Tasks.TaskStatus.Faulted> beendet wurde, wird die für dessen fehlerhafte Ausführung verantwortliche Ausnahme ausgelöst. Ein `Task`-Objekt kann infolge mehrerer Ausnahmen einen Fehler verursachen, aber nur eine dieser Ausnahmen wird weitergegeben. Allerdings gibt die Eigenschaft <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> eine <xref:System.AggregateException>-Ausnahme zurück, die alle Fehler umfasst.
 

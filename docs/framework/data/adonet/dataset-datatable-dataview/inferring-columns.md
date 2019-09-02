@@ -2,18 +2,18 @@
 title: Ableiten von Spalten
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034280"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203588"
 ---
 # <a name="inferring-columns"></a>Ableiten von Spalten
-Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente als Tabellen für ein <xref:System.Data.DataSet>-Objekt abgeleitet werden sollen, werden die Spalten für diese Tabellen abgeleitet. Neu in ADO.NET 2.0 eingeführt, eine neues Schema Rückschluss-Engine, die einen stark typisierten Datentyp für jede herleitet **SimpleType** Element. In früheren Versionen der Datentyp eines hergeleiteten **SimpleType** Element wurde immer **xsd: String**.  
+Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente als Tabellen für ein <xref:System.Data.DataSet>-Objekt abgeleitet werden sollen, werden die Spalten für diese Tabellen abgeleitet. ADO.NET 2,0 hat eine neue Rückschluss-Engine eingeführt, die einen stark typisierten Datentyp für jedes **simpleType** -Element ableitet. In früheren Versionen war der Datentyp eines abgeleitet **simpleType** -Elements immer " **xsd: String**".  
   
 ## <a name="migration-and-backward-compatibility"></a>Migration und Abwärtskompatibilität  
- Die **ReadXml** Methode akzeptiert ein Argument des Typs **InferSchema**. Mit diesem Argument können Sie das mit vorherigen Versionen kompatible Herleitungsverhalten angeben. Die verfügbaren Werte für die **InferSchema** Enumeration in der folgenden Tabelle dargestellt werden.  
+ Die "read **XML** "-Methode nimmt ein Argument vom Typ " **InferSchema**" an. Mit diesem Argument können Sie das mit vorherigen Versionen kompatible Herleitungsverhalten angeben. In der folgenden Tabelle sind die verfügbaren Werte für die **InferSchema** -Enumeration aufgeführt.  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
  Stellt Abwärtskompatibilität bereit, indem immer ein einfacher Typ als <xref:System.String> hergeleitet wird.  
@@ -25,7 +25,7 @@ Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente 
  Ignoriert alle Inlineschemata und liest Daten in das vorhandene <xref:System.Data.DataSet>-Schema ein.  
   
 ## <a name="attributes"></a>Attribute  
- Gemäß [Herleiten von Tabellen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), wird ein Element mit Attributen als Tabelle hergeleitet werden. Die Attribute dieses Elements werden anschließend als Spalten für die entsprechende Tabelle hergeleitet. Die **ColumnMapping** -Eigenschaft der Spalten auf festgelegt **MappingType.Attribute**, um sicherzustellen, dass die Spaltennamen werden als Attribute geschrieben werden, wenn das Schema in XML zurückgeschrieben wird. Die Werte der Attribute werden in einer Tabellenzeile gespeichert. Betrachten Sie beispielsweise den folgenden XML-Code:  
+ Wie in [ableiten von Tabellen](inferring-tables.md)definiert, wird ein Element mit Attributen als Tabelle abgeleitet. Die Attribute dieses Elements werden anschließend als Spalten für die entsprechende Tabelle hergeleitet. Die **ColumnMapping** -Eigenschaft der Spalten wird auf **MappingType. Attribute**festgelegt, um sicherzustellen, dass die Spaltennamen als Attribute geschrieben werden, wenn das Schema in XML zurückgeschrieben wird. Die Werte der Attribute werden in einer Tabellenzeile gespeichert. Betrachten Sie beispielsweise den folgenden XML-Code:  
   
 ```xml  
 <DocumentElement>  
@@ -33,18 +33,18 @@ Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente 
 </DocumentElement>  
 ```  
   
- Die Herleitung wird einer Tabelle namens **Element1** mit zwei Spalten, **attr1** und **attr2**. Die **ColumnMapping** -Eigenschaft der beiden Spalten wird festgelegt **MappingType.Attribute**.  
+ Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen **Element1** mit zwei Spalten: **attr1** und **attr2**. Die **ColumnMapping** -Eigenschaft der beiden Spalten wird auf **MappingType. Attribute**festgelegt.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
 |value1|value2|  
   
 ## <a name="elements-without-attributes-or-child-elements"></a>Elemente ohne Attribute oder untergeordnete Elemente  
- Ein Element ohne untergeordnete Elemente oder Attribute wird als Spalte hergeleitet. Die **ColumnMapping** -Eigenschaft der Spalte auf festgelegt **MappingType.Element**. Der Text der untergeordneten Elemente wird in einer Tabellenzeile gespeichert. Betrachten Sie beispielsweise den folgenden XML-Code:  
+ Ein Element ohne untergeordnete Elemente oder Attribute wird als Spalte hergeleitet. Die **ColumnMapping** -Eigenschaft der Spalte wird auf **MappingType. Element**festgelegt. Der Text der untergeordneten Elemente wird in einer Tabellenzeile gespeichert. Betrachten Sie beispielsweise den folgenden XML-Code:  
   
 ```xml  
 <DocumentElement>  
@@ -55,11 +55,11 @@ Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente 
 </DocumentElement>  
 ```  
   
- Die Herleitung wird einer Tabelle namens **Element1** mit zwei Spalten, **ChildElement1** und **ChildElement2**. Die **ColumnMapping** -Eigenschaft der beiden Spalten wird festgelegt **MappingType.Element**.  
+ Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen **Element1** mit zwei Spalten: **ChildElement1** und **ChildElement2**. Die **ColumnMapping** -Eigenschaft der beiden Spalten wird auf **MappingType. Element**festgelegt.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
@@ -67,9 +67,9 @@ Nachdem von ADO.NET anhand eines XML-Dokuments ermittelt wurde, welche Elemente 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](inferring-dataset-relational-structure-from-xml.md)
+- [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
+- [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
+- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

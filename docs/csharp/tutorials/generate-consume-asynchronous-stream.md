@@ -3,12 +3,12 @@ title: Generieren und Nutzen asynchroner Datenströme
 description: In diesem fortgeschrittenen Tutorial werden Szenarien dargestellt, in denen das Generieren und Nutzen asynchroner Datenströme eine natürlichere Möglichkeit zur Arbeit mit Datensequenzen bietet, die asynchron generiert werden können.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308548"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105867"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0
 
@@ -17,9 +17,9 @@ In C# 8.0 werden **asynchrone Datenströme** eingeführt. Diese modellieren eine
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
-> * Erstellen einer Datenquelle, die eine Sequenz von Datenelementen asynchron generiert
-> * Asynchrones Nutzen dieser Datenquelle
-> * Erkennen, wenn die neue Schnittstelle und Datenquelle früheren synchronen Datensequenzen vorgezogen werden
+> - Erstellen einer Datenquelle, die eine Sequenz von Datenelementen asynchron generiert
+> - Asynchrones Nutzen dieser Datenquelle
+> - Erkennen, wenn die neue Schnittstelle und Datenquelle früheren synchronen Datensequenzen vorgezogen werden
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 

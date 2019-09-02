@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876935"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104634"
 ---
 # <a name="contributing"></a>Beitragen
 
@@ -15,10 +15,10 @@ Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation 
 
 Das Dokument beschreibt den Prozess bei der Mitwirkung an den Artikeln und Codebeispielen, die auf der Website [.NET-Dokumentation](https://docs.microsoft.com/dotnet) gehostet werden. Die Beiträge können so einfach wie das Korrigieren von Tippfehlern oder so komplex wie das Verfassen neuer Artikel sein.
 
-* [Mitwirkungsprozess](#process-for-contributing)
-* [Die interaktive C#-Umgebung](#the-c-interactive-experience)
-* [Verhaltensregeln](#dos-and-donts)
-* [Lizenzvereinbarung für Mitwirkende](#contributor-license-agreement)
+- [Mitwirkungsprozess](#process-for-contributing)
+- [Die interaktive C#-Umgebung](#the-c-interactive-experience)
+- [Verhaltensregeln](#dos-and-donts)
+- [Lizenzvereinbarung für Mitwirkende](#contributor-license-agreement)
 
 Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die Website „.NET-Dokumentation“ besteht neben diesem Repository aus den folgenden Repositorys:
 
@@ -35,7 +35,7 @@ Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.co
 **Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten (wenn Sie beispielsweise einen Tippfehler korrigieren oder sofort einen Pull Request öffnen, um ein Problem zu beheben, das Sie in der Dokumentation finden). Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
-- oder - 
+Oder
 
 Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Beiträge willkommen sind. Unter [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Projekte für .NET-Community-Mitwirkende) sind viele der Arbeitsaufgaben aufgelistet, die für Community-Mitwirkende verfügbar sind. Je nach Interesse und Engagement können Sie Tickets in den folgenden Kategorien auswählen:
 
@@ -103,7 +103,7 @@ Bei Code, der in unserem Repository vorhanden ist, nehmen wir folgende Untersche
 Der gesamte Code befindet sich im Repository [dotnet/samples](https://github.com/dotnet/samples). Wir arbeiten an einem Modell, bei dem die Ordnerstruktur für die Beispiele der Ordnerstruktur für die Dokumente entspricht. Wir richten uns nach folgenden Standards:
 
 - Der Ordner *snippets* (Codeausschnitte) auf oberster Ebene enthält Codeausschnitte für kleine Beispiele mit Fokus.
-- API-Referenzbeispiele befinden sich in einem Ordner nach folgendem Muster: *snippets/\<Sprache>/api/\<namespace>/\<API-Name>*.
+- API-Referenzbeispiele befinden sich in einem Ordner nach folgendem Muster: *snippets/\<Sprache>/api/\<namespace>/\<API-Name>* .
 - Andere Ordner auf oberster Ebene entsprechen den Ordnern auf oberster Ebene im Repository *docs*. Beispiel: Das Repository „docs“ enthält einen Ordner *machine-learning/tutorials*. Die Beispiele für die Machine Learning-Tutorials befinden sich im Ordner *samples/machine-learning/tutorials*.
 
 Darüber hinaus sollten alle Beispiele in den Ordnern *core* und *standard* auf allen von .NET Core unterstützten Plattformen erstellt und ausgeführt werden können. Das wird durch unser CI-Build-System erzwungen. Der Ordner *Framework* auf oberster Ebene enthält Beispiele, die nur unter Windows erstellt und validiert werden.

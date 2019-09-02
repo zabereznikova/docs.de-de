@@ -2,12 +2,12 @@
 title: Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793626"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205900"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
 
@@ -32,9 +32,9 @@ Wenn die <xref:System.Transactions>-Transaktion zu keinem Zeitpunkt eine Eskalat
 Wenn die <xref:System.Transactions>-Transaktion eskaliert werden muss (beispielsweise, um mehrere RMs zu unterstützen), informiert <xref:System.Transactions> den Ressourcen-Manager durch Aufrufen der <xref:System.Transactions.ITransactionPromoter.Promote%2A>-Methode für die <xref:System.Transactions.ITransactionPromoter>-Schnittstelle, von der die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle abgeleitet wurde. Der Ressourcen-Manager konvertiert die Transaktion dann intern von einer lokalen Transaktion (die keine Protokollierung erfordert) in ein Transaktionsobjekt, das an einer DTC-Transaktion teilnehmen kann, und ordnet es den bereits erledigten Aufgaben zu. Wenn der Commit der Transaktion angefordert wird, sendet der Transaktions-Manager auch in diesem Fall die <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A>-Benachrichtigung an den Ressourcen-Manager, der einen Commit für die verteilte Transaktion ausführt, die er während der Eskalation erstellt hat.
 
 > [!NOTE]
-> Die **TransactionCommitted** -ablaufverfolgungen (die generiert werden, wenn ein Commit für die eskalierte Transaktion aufgerufen wird) enthalten die Aktivitäts-ID der DTC-Transaktion.
+> Die Transaktions-Ablauf Verfolgungen (die generiert werden, wenn ein Commit für die eskalierte Transaktion aufgerufen wird) enthalten die Aktivitäts-ID der DTC-Transaktion.
 
-Weitere Informationen über die verwaltungseskalation finden Sie unter [Eskalation der Transaktionsverwaltung](../../../../docs/framework/data/transactions/transaction-management-escalation.md).
+Weitere Informationen zur Ausweitung der Verwaltung finden Sie unter [Ausweitung der Transaktions Verwaltung](transaction-management-escalation.md).
 
 ## <a name="transaction-management-escalation-scenario"></a>Eskalationsszenario der Transaktionsverwaltung
 
@@ -50,7 +50,7 @@ In diesem Szenario
 
 4. Dann eskaliert CN1 die Transaktion anhand eines Mechanismus, der spezifisch für SQL 2005 und <xref:System.Data> ist.
 
-5. Der Rückgabewert der <xref:System.Transactions.ITransactionPromoter.Promote%2A>-Methode ist ein Bytearray, das ein Weitergabetoken für die Transaktion enthält. <xref:System.Transactions> verwendet dieses Weitergabetoken, um eine DTC-Transaktion zu erstellen, die es in die lokale Transaktion einbinden kann.
+5. Der Rückgabewert der <xref:System.Transactions.ITransactionPromoter.Promote%2A>-Methode ist ein Bytearray, das ein Weitergabetoken für die Transaktion enthält. <xref:System.Transactions>verwendet dieses propagierungs Token, um eine DTC-Transaktion zu erstellen, die in die lokale Transaktion integriert werden kann.
 
 6. Jetzt kann CN2 die Daten, die sie durch den Aufruf einer der Methoden mit <xref:System.Transactions.TransactionInterop> erhalten hat, dazu verwenden, die Transaktion an SQL zu übergeben.
 
@@ -58,7 +58,7 @@ In diesem Szenario
 
 ## <a name="single-phase-commit-optimization"></a>Optimierung des Einphasencommit
 
-Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Um diese Optimierung nutzen zu können, sollten Sie anhand der <xref:System.Transactions.ISinglePhaseNotification>-Schnittstelle für die Ressource einen Ressourcen-Manager implementieren und mithilfe der <xref:System.Transactions.Transaction.EnlistDurable%2A>-Methode oder der <xref:System.Transactions.Transaction.EnlistVolatile%2A>-Methode eine Eintragung in eine Transaktion vornehmen. Insbesondere die *EnlistmentOptions* Parameter sollten gleich <xref:System.Transactions.EnlistmentOptions.None> um sicherzustellen, dass ein Einphasencommit ausgeführt wird.
+Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Um diese Optimierung nutzen zu können, sollten Sie anhand der <xref:System.Transactions.ISinglePhaseNotification>-Schnittstelle für die Ressource einen Ressourcen-Manager implementieren und mithilfe der <xref:System.Transactions.Transaction.EnlistDurable%2A>-Methode oder der <xref:System.Transactions.Transaction.EnlistVolatile%2A>-Methode eine Eintragung in eine Transaktion vornehmen. Insbesondere sollte der *EnlistmentOptions* -Parameter gleich <xref:System.Transactions.EnlistmentOptions.None> sein, um sicherzustellen, dass ein einzelnes Phasen-Commit ausgeführt wird.
 
 Da die <xref:System.Transactions.ISinglePhaseNotification>-Schnittstelle von der <xref:System.Transactions.IEnlistmentNotification>-Schnittstelle abgeleitet ist, kann der Ressourcen-Manager, wenn er für Einphasencommit nicht geeignet ist, trotzdem die Zweiphasencommit-Benachrichtigungen empfangen. Wenn der Ressourcen-Manager eine <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A>-Benachrichtigung vom Transaktions-Manager empfängt, sollte er versuchen, die notwendigen Aufgaben für ein Commit auszuführen, und den TM informieren, ob ein Commit oder ein Rollback für die Transaktion ausgeführt werden soll, indem er die Methode <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A>, <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A> oder <xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A> des <xref:System.Transactions.SinglePhaseEnlistment>-Parameters aufruft. Die Antwort <xref:System.Transactions.Enlistment.Done%2A> auf die Eintragung in dieser Phase impliziert die Semantik ReadOnly. Deshalb sollten Sie nicht zusätzlich zu den anderen Methoden <xref:System.Transactions.Enlistment.Done%2A> antworten.
 
@@ -66,5 +66,5 @@ Wenn es nur eine flüchtige Eintragung und keine dauerhafte Eintragung gibt, emp
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
-- [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+- [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md)
+- [Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion](committing-a-transaction-in-single-phase-and-multi-phase.md)

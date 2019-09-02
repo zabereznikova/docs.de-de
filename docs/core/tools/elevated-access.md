@@ -3,12 +3,12 @@ title: Erhöhte Zugriffsrechte für dotnet-Befehle
 description: Erfahren Sie mehr über die Best Practices für dotnet-Befehle, die erhöhte Zugriffsrechte erfordern.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410628"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105076"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Erhöhte Zugriffsrechte für dotnet-Befehle
 
@@ -33,9 +33,9 @@ Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installat
 
 Wenn der Ordner `%ProgramFiles%\dotnet-tools` bereits vorhanden ist, überprüfen Sie anhand der folgenden Schritte, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern:
 
-* Klicken Sie mit der rechten Maustaste auf den Ordner `%ProgramFiles%\dotnet-tools`, und wählen Sie **Eigenschaften** aus. Das Dialogfeld **Allgemeine Eigenschaften** wird geöffnet. 
-* Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen-oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern. 
-* Wenn die Gruppe „Benutzer“ das Verzeichnis schreiben oder ändern kann, verwenden Sie bei der Installation der Tools einen anderen Verzeichnisnamen als *dotnet-tools*.
+- Klicken Sie mit der rechten Maustaste auf den Ordner `%ProgramFiles%\dotnet-tools`, und wählen Sie **Eigenschaften** aus. Das Dialogfeld **Allgemeine Eigenschaften** wird geöffnet. 
+- Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen-oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern. 
+- Wenn die Gruppe „Benutzer“ das Verzeichnis schreiben oder ändern kann, verwenden Sie bei der Installation der Tools einen anderen Verzeichnisnamen als *dotnet-tools*.
 
 Führen Sie den folgenden Befehl in einer Eingabeaufforderung mit erhöhten Rechten aus, um Tools zu installieren. Damit wird während der Installation der Ordner *dotnet-tools* erstellt.
 
@@ -105,4 +105,4 @@ Während der Entwicklung benötigen Sie möglicherweise erhöhte Zugriffsrechte,
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Übersicht über globale .NET Core-Tools](global-tools.md)
+- [Übersicht über globale .NET Core-Tools](global-tools.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54eb9723f44924919ca1b4631e35e1e4da4af2af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666345"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169036"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Vorgehensweise: Ausführen einer Aktion, wenn ein Datenflussblock Daten empfängt
 *Ausführungsdatenflussblock*-Typen rufen einen vom Benutzer bereitgestellten Delegaten auf, wenn sie Daten empfangen. Die Klassen <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sind Typen von Ausführungsdatenflussblöcken. Sie können das Schlüsselwort `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> oder einen Lambdaausdruck verwenden, wenn Sie eine Arbeitsfunktion für einen Ausführungsdatenflussblock bereitstellen. In diesem Dokument wird beschrieben, wie <xref:System.Func%602> und Lambdaausdrücke verwendet werden, um Aktionen in Ausführungsblöcken auszuführen.  
@@ -34,7 +34,7 @@ ms.locfileid: "69666345"
  Der Abschnitt mit der Übersicht über die Delegattypen im Dokument [Datenfluss](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) fasst die Delegattypen zusammen, die Sie für die Objekte <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> und <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> zur Verfügung stellen können. In der Tabelle wird auch angegeben, ob der Delegattyp synchron oder asynchron arbeitet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Dieses Beispiel enthält einen Delegaten vom Typ <xref:System.Func%602> für das <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>-Objekt, um den Task des Datenflussblocks synchron auszuführen. Damit das asynchrone Verhalten des Datenflussblocks aktiviert wird, stellen Sie einen Delegaten vom Typ <xref:System.Func%601> für den Datenflussblock bereit. Wenn sich ein Datenflussblock asynchron verhält, ist der Task des Datenflussblocks nur dann abgeschlossen, wenn das zurückgegebene <xref:System.Threading.Tasks.Task%601>-Objekt beendet wird. Das folgende Beispiel ändert die `CountBytes`-Methode und verwendet die Operatoren [async](../../csharp/language-reference/keywords/async.md) und [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) und [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic), um die Gesamtzahl der Bytes in der bereitgestellten Datei asynchron zu berechnen, die 0 (null) sind. Die <xref:System.IO.FileStream.ReadAsync%2A>-Methode führt asynchrone Dateilesevorgänge aus.  
+ Dieses Beispiel enthält einen Delegaten vom Typ <xref:System.Func%602> für das <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>-Objekt, um den Task des Datenflussblocks synchron auszuführen. Damit das asynchrone Verhalten des Datenflussblocks aktiviert wird, stellen Sie einen Delegaten vom Typ <xref:System.Func%601> für den Datenflussblock bereit. Wenn sich ein Datenflussblock asynchron verhält, ist der Task des Datenflussblocks nur dann abgeschlossen, wenn das zurückgegebene <xref:System.Threading.Tasks.Task%601>-Objekt beendet wird. Das folgende Beispiel ändert die `CountBytes`-Methode und verwendet die Operatoren [async](../../csharp/language-reference/keywords/async.md) und [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) und [Await](../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic), um die Gesamtzahl der Bytes in der bereitgestellten Datei asynchron zu berechnen, die 0 (null) sind. Die <xref:System.IO.FileStream.ReadAsync%2A>-Methode führt asynchrone Dateilesevorgänge aus.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

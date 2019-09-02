@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 7975e17bd957a822bf3d60d487eb928cee84bd28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607322"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203269"
 ---
 # <a name="nesting-datarelations"></a>Verschachteln von "DataRelations"
-Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen. Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert. Bei der Erstellung einer **DataRelation**, die Beziehungen zwischen über-und untergeordneten Spalten nur über die Beziehung verwaltet werden. 	Die Tabellen und Spalten sind separate Entitäten. Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
+Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen. Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert. Wenn Sie ein **DataRelations**-Element erstellen, werden die Beziehungen zwischen übergeordneten und untergeordneten Elementen nur über die-Beziehung verwaltet. Die Tabellen und Spalten sind separate Entitäten. Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
   
- Um die Schachtelung von untergeordneten Objekten zu erleichtern bei einer **DataSet** mit synchronisiert wird ein <xref:System.Xml.XmlDataDocument> oder als XML-Daten mit geschrieben **WriteXml**, die **DataRelation** Stellt eine **geschachtelte** Eigenschaft. Festlegen der **geschachtelte** Eigenschaft eine **DataRelation** zu **"true"** bewirkt, dass die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte aus, sofern es als XML-Daten geschrieben werden, geschachtelt oder Synchronisierung mit einem **XmlDataDocument**. Die **geschachtelte** Eigenschaft der **DataRelation** ist **"false"**, in der Standardeinstellung.  
+ Um die Schachtelung von untergeordneten Objekten zu vereinfachen, wenn ein **DataSet** mit einem <xref:System.Xml.XmlDataDocument> synchronisiert oder mithilfe von " **Write texml**" als XML-Daten geschrieben wird, macht die **datarelierung** eine geschachtelte Eigenschaft verfügbar. Wenn die **geschachtelte** -Eigenschaft einer **DataRelations** auf **true** festgelegt wird, werden die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte geschachtelt, wenn Sie als XML-Daten geschrieben oder mit einem **XmlDataDocument**synchronisiert werden. Die Eigenschaft " **DataRelations** " ist standardmäßig auf " **false**" fest.  
   
- Betrachten Sie beispielsweise die folgenden **DataSet**.  
+ Sehen Sie sich beispielsweise das folgende **DataSet**an.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Da die **geschachtelte** Eigenschaft der **DataRelation** Objekt ist nicht festgelegt, um **"true"** für diesen **DataSet**, die untergeordneten Objekte werden nicht verschachtelt werden. innerhalb des übergeordneten Elements bei der dies **DataSet** wird als XML-Daten dargestellt. Transformiert die XML-Darstellung einer **DataSet** enthält, die zugehörigen **DataSet**mit nicht geschachtelten datenbeziehungen kann zu Leistungseinbußen führen. Wir empfehlen daher, die Datenbeziehungen zu schachteln. Zu diesem Zweck legen Sie die **geschachtelte** Eigenschaft **"true"**. Schreiben Sie dann Code in die XSLT-Formatvorlage, der hierarchische XPath-Abfrageausdrücke in Top-Down-Form verwendet, um die Daten zu finden und zu transformieren.  
+ Da die geschachtelte-Eigenschaft des **DataRelations** -Objekts für dieses **DataSet**nicht auf **true** festgelegt ist, werden die untergeordneten Objekte nicht innerhalb der übergeordneten Elemente geschachtelt, wenn dieses **DataSet** als XML-Daten dargestellt wird. Das Transformieren der XML-Darstellung eines **DataSets** , das verwandte **DataSets**mit nicht--Daten Beziehungen enthält, kann zu einer langsamen Leistung führen. Wir empfehlen daher, die Datenbeziehungen zu schachteln. Legen Sie dazu die Eigenschaft für die Eigenschaft auf **true**fest. Schreiben Sie dann Code in die XSLT-Formatvorlage, der hierarchische XPath-Abfrageausdrücke in Top-Down-Form verwendet, um die Daten zu finden und zu transformieren.  
   
- Das folgende Codebeispiel zeigt das Ergebnis des Aufrufs **WriteXml** auf die **DataSet**.  
+ Das folgende Codebeispiel zeigt das Ergebnis des Aufrufs von " **Write texml** " für das **DataSet**.  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Beachten Sie, dass die **Kunden** Element und die **Bestellungen** Elemente werden als nebengeordnete Elemente angezeigt. Falls gewünscht die **Bestellungen** Elemente als untergeordnete Elemente von den entsprechenden übergeordneten Elementen angezeigt wird, wird die **geschachtelte** Eigenschaft der **DataRelation** festgelegtwerdenmüssen **"true"** und würden Sie Folgendes hinzufügen:  
+ Beachten Sie, dass das **Customers** -Element und die **Orders** -Elemente als gleich geordnete Elemente angezeigt werden. Wenn Sie möchten, dass die **Orders** -Elemente als untergeordnete Elemente der entsprechenden übergeordneten Elemente angezeigt werden, muss die Eigenschaft für die Eigenschaft " **DataRelations** " auf " **true** " festgelegt werden, und Sie würden Folgendes hinzufügen:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- Der folgende Code zeigt, wie die resultierende Ausgabe aussehen würde mit der **Bestellungen** geschachtelte Elemente in den entsprechenden übergeordneten Elementen.  
+ Der folgende Code zeigt, wie die resultierende Ausgabe aussehen würde, wobei die **Orders** -Elemente innerhalb der entsprechenden übergeordneten Elemente geschachtelt sind.  
   
 ```xml  
 <CustomerOrders>  
@@ -133,7 +133,7 @@ customerOrders.Nested = true;
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Adding DataRelations (Hinzufügen von DataRelations)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
+- [Adding DataRelations (Hinzufügen von DataRelations)](adding-datarelations.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

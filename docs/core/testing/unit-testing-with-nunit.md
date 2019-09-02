@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 927facd271d6590cac2b0ce10790a16c88482020
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 22475fcbd9e971f4c544c020d9198fadee4548b1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733414"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168123"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
@@ -30,7 +30,7 @@ dotnet new sln
  
 Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die bisherige Verzeichnis- und Dateistruktur:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -69,7 +69,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -98,7 +98,7 @@ Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/sa
 
 Die folgende Gliederung zeigt das endgültige Projektmappenlayout:
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService

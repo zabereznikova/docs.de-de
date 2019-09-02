@@ -3,12 +3,12 @@ title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971459"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105630"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -32,42 +32,42 @@ Die Member einer Klasse sind entweder statische Member oder Instanzmember. Stati
 
 Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse enthalten kann.
 
-* Konstanten
+- Konstanten
   - Konstante Werte, die der Klasse zugeordnet sind
-* Felder
+- Felder
   - Variablen der Klasse
-* Methoden
+- Methoden
   - Berechnungen und Aktionen, die von der Klasse ausgeführt werden
-* Eigenschaften
+- Eigenschaften
   - Aktionen im Zusammenhang mit dem Lesen und Schreiben von benannten Eigenschaften der Klasse
-* Indexer
+- Indexer
   - Aktionen im Zusammenhang mit dem Indizieren von Instanzen der Klasse, z.B. einem Array
-* Ereignisse
+- Ereignisse
   - Benachrichtigungen, die von der Klasse generiert werden können
-* Operatoren
+- Operatoren
   - Operatoren für Konvertierungen und Ausdrücke, die von der Klasse unterstützt werden
-* Konstruktoren
+- Konstruktoren
   - Aktionen, die zum Initialisieren von Instanzen der Klasse oder der Klasse selbst benötigt werden
-* Finalizer
+- Finalizer
   - Aktionen, die ausgeführt werden, bevor Instanzen der Klasse dauerhaft verworfen werden
-* Typen
+- Typen
   - Geschachtelte Typen, die von der Klasse deklariert werden
 
 ## <a name="accessibility"></a>Zugriff
 
 Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt sechs mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
 
-* `public`
+- `public`
   - Der Zugriff ist nicht eingeschränkt.
-* `protected`
+- `protected`
   - Der Zugriff ist auf diese Klasse oder auf von dieser Klasse abgeleitete Klassen beschränkt.
-* `internal`
+- `internal`
   - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
-* `protected internal`
+- `protected internal`
   - Der Zugriff ist auf die enthaltende Klasse, auf Klassen, die von der enthaltenden Klasse abgeleitet sind, oder auf Klassen innerhalb der gleichen Assembly beschränkt.
-* `private`
+- `private`
   - Der Zugriff ist auf diese Klasse beschränkt.
-* `private protected`
+- `private protected`
   - Der Zugriff ist auf die enthaltende Klasse oder auf Klassen beschränkt, die vom enthaltenden Typ in der gleichen Assembly abgeleitet werden.
 
 ## <a name="type-parameters"></a>Typparameter

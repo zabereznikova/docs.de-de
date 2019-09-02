@@ -3,12 +3,12 @@ title: Übersetzen von Ausdrucksbaumstrukturen
 description: Hier erfahren Sie, wie Sie auf jeden Knoten in einer Ausdrucksbaumstruktur zugreifen, während eine geänderte Kopie dieser Ausdrucksbaumstruktur erstellt wird.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490072"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202954"
 ---
 # <a name="translating-expression-trees"></a>Übersetzen von Ausdrucksbaumstrukturen
 
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 Es auf demselben Ausdruck auszuführen, ergibt die folgende Ausgabe:
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 Hier ist die Ausgabe von der Untersuchung dieses Ausdrucks:
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1

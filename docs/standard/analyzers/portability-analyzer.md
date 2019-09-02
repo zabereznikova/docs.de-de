@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433951"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107500"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -17,11 +17,11 @@ Sollen Ihre Bibliotheken mehrere Plattformen unterstützen? Möchten Sie wissen,
 
 ## <a name="common-targets"></a>Allgemeine Ziele
 
-* [.NET Core](../../core/index.md): Besitzt einen modularen Aufbau, verwendet die parallele Ausführung und ist auf plattformübergreifende Szenarios ausgerichtet. Die parallele Ausführung ermöglicht Ihnen die Übernahme neuer Versionen von .NET Core, ohne andere Apps zu beeinträchtigen. Wenn Sie Ihre Anwendung auf Plattformen portieren möchten, die .NET Core unterstützen, wird dieses Ziel empfohlen. 
-* .[NET Standard](../../standard/net-standard.md): Enthält die in allen .NET-Implementierungen verfügbaren .NET Standard-APIs. Wenn Sie möchten, dass Ihre Bibliothek auf allen Plattformen ausgeführt werden kann, die .NET unterstützen, wird dieses Ziel empfohlen.  
-* [ASP.NET Core](/aspnet/core): Ein modernes Webframework, das auf .NET Core basiert. Wenn Sie Ihre Webanwendung zur Unterstützung von mehreren Plattformen nach .NET Core portieren möchten, wird dieses Ziel empfohlen.
-* .NET Core-Plattform + [Plattformerweiterungen](../../core/porting/windows-compat-pack.md): Enthält die .NET Core-APIs sowie den Windows Compatibility Pack, der zahlreiche in .NET Framework verfügbare Technologien bereitstellt. Dieses Ziel wird zum Portieren der Anwendung von .NET Framework nach .NET Core unter Windows empfohlen.
-* .NET Standard-Plattform + [Plattformerweiterungen](../../core/porting/windows-compat-pack.md): Enthält die .NET Standard-APIs sowie den Windows Compatibility Pack, der zahlreiche in .NET Framework verfügbare Technologien bereitstellt. Dieses Ziel wird zum Portieren der Bibliothek von .NET Framework nach .NET Core unter Windows empfohlen.
+- [.NET Core](../../core/index.md): Besitzt einen modularen Aufbau, verwendet die parallele Ausführung und ist auf plattformübergreifende Szenarios ausgerichtet. Die parallele Ausführung ermöglicht Ihnen die Übernahme neuer Versionen von .NET Core, ohne andere Apps zu beeinträchtigen. Wenn Sie Ihre Anwendung auf Plattformen portieren möchten, die .NET Core unterstützen, wird dieses Ziel empfohlen. 
+- .[NET Standard](../../standard/net-standard.md): Enthält die in allen .NET-Implementierungen verfügbaren .NET Standard-APIs. Wenn Sie möchten, dass Ihre Bibliothek auf allen Plattformen ausgeführt werden kann, die .NET unterstützen, wird dieses Ziel empfohlen.  
+- [ASP.NET Core](/aspnet/core): Ein modernes Webframework, das auf .NET Core basiert. Wenn Sie Ihre Webanwendung zur Unterstützung von mehreren Plattformen nach .NET Core portieren möchten, wird dieses Ziel empfohlen.
+- .NET Core-Plattform + [Plattformerweiterungen](../../core/porting/windows-compat-pack.md): Enthält die .NET Core-APIs sowie den Windows Compatibility Pack, der zahlreiche in .NET Framework verfügbare Technologien bereitstellt. Dieses Ziel wird zum Portieren der Anwendung von .NET Framework nach .NET Core unter Windows empfohlen.
+- .NET Standard-Plattform + [Plattformerweiterungen](../../core/porting/windows-compat-pack.md): Enthält die .NET Standard-APIs sowie den Windows Compatibility Pack, der zahlreiche in .NET Framework verfügbare Technologien bereitstellt. Dieses Ziel wird zum Portieren der Bibliothek von .NET Framework nach .NET Core unter Windows empfohlen.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Verwenden von .NET Portability Analyzer
 
@@ -38,9 +38,9 @@ Um das gesamte Projekt in Visual Studio zu analysieren, klicken Sie mit der rech
 
 Sie können auch die [ApiPort-Konsolenanwendung](https://aka.ms/apiportdownload) verwenden. 
 
-* Geben Sie den folgenden Befehl an, um das aktuelle Verzeichnis zu analysieren: `ApiPort.exe analyze -f .`
-* Um eine bestimmte Liste von DLL-Dateien zu analysieren, geben Sie den folgenden Befehl ein: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* Ausführen von `ApiPort.exe -?`, um weitere Unterstützung zu erhalten
+- Geben Sie den folgenden Befehl an, um das aktuelle Verzeichnis zu analysieren: `ApiPort.exe analyze -f .`
+- Um eine bestimmte Liste von DLL-Dateien zu analysieren, geben Sie den folgenden Befehl ein: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Ausführen von `ApiPort.exe -?`, um weitere Unterstützung zu erhalten
 
 Es wird empfohlen, alle zugehörigen EXE- und DLL-Dateien, die Sie besitzen und die Sie portieren möchten, einzubeziehen, und die Dateien auszuschließen, von denen Ihre Anwendung abhängt, die Sie jedoch nicht besitzen möchten und die Sie nicht portieren können. Dadurch erhalten Sie einen entsprechend sachdienlichen Portabilitätsbericht.  
 

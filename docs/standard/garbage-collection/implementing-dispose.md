@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666462"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106890"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -26,12 +26,12 @@ Das Muster für das Verwerfen eines Objekts, [Dispose-Muster](../../../docs/stan
   
 Das Dispose-Muster weist zwei Varianten auf:  
   
-* Sie umschließen jede nicht verwaltete Ressource, die ein Typ verwendet, in einem SafeHandle (also in einer von <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> abgeleiteten Klasse). In diesem Fall implementieren Sie die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode. Dies ist die empfohlene Variante und erfordert nicht das Überschreiben der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode.  
+- Sie umschließen jede nicht verwaltete Ressource, die ein Typ verwendet, in einem SafeHandle (also in einer von <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> abgeleiteten Klasse). In diesem Fall implementieren Sie die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode. Dies ist die empfohlene Variante und erfordert nicht das Überschreiben der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode.  
   
   > [!NOTE]
   > Der <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType>-Namespace stellt einen Satz von Klassen bereit, die von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitet werden und im Abschnitt [Verwenden von SafeHandles](#SafeHandles) aufgeführt sind. Wenn Sie keine Klasse finden können, die Ihre nicht verwaltete Ressource freigeben kann, können Sie eine eigene Unterklasse von <xref:System.Runtime.InteropServices.SafeHandle> implementieren.  
   
-* Sie implementieren die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode, und Sie überschreiben auch die <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Sie müssen <xref:System.Object.Finalize%2A> überschreiben, um sicherzustellen, dass nicht verwaltete Ressourcen verworfen werden, wenn die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung nicht von einem Consumer Ihres Typs aufgerufen wird. Wenn Sie das unter dem vorherigen Aufzählungspunkt beschriebene empfohlene Verfahren anwenden, führt die <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>-Klasse dies für Sie durch.  
+- Sie implementieren die <xref:System.IDisposable>-Schnittstelle und eine zusätzliche `Dispose(Boolean)`-Methode, und Sie überschreiben auch die <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Sie müssen <xref:System.Object.Finalize%2A> überschreiben, um sicherzustellen, dass nicht verwaltete Ressourcen verworfen werden, wenn die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung nicht von einem Consumer Ihres Typs aufgerufen wird. Wenn Sie das unter dem vorherigen Aufzählungspunkt beschriebene empfohlene Verfahren anwenden, führt die <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>-Klasse dies für Sie durch.  
   
 Um sicherzustellen, dass Ressourcen immer entsprechend bereinigt werden, sollte eine <xref:System.IDisposable.Dispose%2A>-Methode auch mehrmals aufgerufen werden können, ohne eine Ausnahme auszulösen.  
   
@@ -42,9 +42,9 @@ Das Codebeispiel für die <xref:System.GC.KeepAlive%2A?displayProperty=nameWithT
 
 Die <xref:System.IDisposable>-Schnittstelle erfordert die Implementierung einer einzelnen parameterlosen Methode, <xref:System.IDisposable.Dispose%2A>. Für das Dispose-Muster müssen jedoch zwei `Dispose`-Methoden implementiert werden:  
   
-* Eine öffentliche, nicht virtuelle (`NonInheritable` in Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung, die keine Parameter aufweist.  
+- Eine öffentliche, nicht virtuelle (`NonInheritable` in Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung, die keine Parameter aufweist.  
   
-* Eine geschützte, virtuelle (`Overridable` in Visual Basic) `Dispose`-Methode mit der folgenden Signatur:  
+- Eine geschützte, virtuelle (`Overridable` in Visual Basic) `Dispose`-Methode mit der folgenden Signatur:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ In der zweiten Überladung ist der *disposing*-Parameter ein <xref:System.Boolea
   
 Der Text der Methode besteht aus zwei Codeblöcken:  
   
-* Ein Block, der nicht verwaltete Ressourcen freigibt. Dieser Block wird unabhängig vom Wert des `disposing`-Parameters ausgeführt.  
+- Ein Block, der nicht verwaltete Ressourcen freigibt. Dieser Block wird unabhängig vom Wert des `disposing`-Parameters ausgeführt.  
   
-* Ein bedingter Block, der verwaltete Ressourcen freigibt. Dieser Block wird ausgeführt, wenn der Wert von `disposing` gleich `true` ist. Die verwalteten Ressourcen, die freigegeben werden, können Folgendes umfassen:  
+- Ein bedingter Block, der verwaltete Ressourcen freigibt. Dieser Block wird ausgeführt, wenn der Wert von `disposing` gleich `true` ist. Die verwalteten Ressourcen, die freigegeben werden, können Folgendes umfassen:  
   
   **Verwaltete Objekte, die <xref:System.IDisposable> implementieren.** Der bedingte Block kann verwendet werden, um deren <xref:System.IDisposable.Dispose%2A>-Implementierung aufzurufen. Wenn Sie ein SafeHandle verwendet haben, um die nicht verwaltete Ressource einschließen, sollten Sie die <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>-Implementierung hier aufrufen.  
   
@@ -81,11 +81,11 @@ Wenn Sie das Dispose-Muster für eine Basisklasse implementieren, müssen Sie Fo
 > [!IMPORTANT]
 > Sie sollten dieses Muster für alle Basisklassen implementieren, die <xref:System.IDisposable.Dispose> implementieren und nicht `sealed` (`NotInheritable` in Visual Basic) sind.  
   
-* Eine <xref:System.IDisposable.Dispose%2A>-Implementierung, die die `Dispose(Boolean)`-Methode aufruft.  
+- Eine <xref:System.IDisposable.Dispose%2A>-Implementierung, die die `Dispose(Boolean)`-Methode aufruft.  
   
-* Eine `Dispose(Boolean)`-Methode, die die eigentliche Arbeit des Freigebens von Ressourcen ausführt.  
+- Eine `Dispose(Boolean)`-Methode, die die eigentliche Arbeit des Freigebens von Ressourcen ausführt.  
   
-* Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen.  
+- Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen.  
   
 Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispose-Musters für eine Basisklasse, die ein SafeHandle verwendet.  
   
@@ -107,9 +107,9 @@ Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispo
 
 Eine Klasse, die von einer Klasse abgeleitet ist, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte <xref:System.IDisposable> nicht implementieren, da die Basisklassenimplementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> von den abgeleiteten Klassen geerbt wird. Stattdessen müssen Sie Folgendes bereitstellen, um das Dispose-Muster für eine abgeleitete Klasse zu implementieren:  
   
-* Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihren disposing-Status für das Argument übergeben.  
+- Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihren disposing-Status für das Argument übergeben.  
   
-* Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen. Wenn Sie einen Finalizer bereitstellen, sollte er die `Dispose(Boolean)`-Überladung mit einem *disposing*-Argument mit dem Wert `false` aufrufen.  
+- Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen. Wenn Sie einen Finalizer bereitstellen, sollte er die `Dispose(Boolean)`-Überladung mit einem *disposing*-Argument mit dem Wert `false` aufrufen.  
   
 Im Folgenden finden Sie das allgemeine Muster für das Implementieren des Dispose-Musters für eine abgeleitete Klasse, die ein SafeHandle verwendet:  
   
@@ -134,15 +134,15 @@ Das Schreiben von Code für den Finalizer eines Objekts ist eine komplexe Aufgab
   
 Von der <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>-Klasse abgeleitete Klassen vereinfachen Probleme mit der Objektlebensdauer, indem sie Handles ohne Unterbrechung zuweisen und freigeben. Sie enthalten einen kritischen Finalizer, der auf jeden Fall ausgeführt wird, während eine Anwendungsdomäne entladen wird. Weitere Informationen zu den Vorteilen bei der Verwendung von SafeHandle finden Sie unter <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Die folgenden abgeleiteten Klassen im <xref:Microsoft.Win32.SafeHandles>-Namespace stellen SafeHandles bereit:  
   
-* Die Klasse <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> und <xref:Microsoft.Win32.SafeHandles.SafePipeHandle>, für Dateien, Speicherabbilddateien und Pipes.  
+- Die Klasse <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> und <xref:Microsoft.Win32.SafeHandles.SafePipeHandle>, für Dateien, Speicherabbilddateien und Pipes.  
   
-* Die <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>-Klasse, für Speicheransichten.  
+- Die <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>-Klasse, für Speicheransichten.  
   
-* Die Klassen <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> und <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle>, für Kryptografiekonstrukte.  
+- Die Klassen <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> und <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle>, für Kryptografiekonstrukte.  
   
-* Die <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle>-Klasse, für Registrierungsschlüssel.  
+- Die <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle>-Klasse, für Registrierungsschlüssel.  
   
-* Die <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>-Klasse, für Wait-Handles.  
+- Die <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>-Klasse, für Wait-Handles.  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Verwenden eines SafeHandles zum Implementieren des Dispose-Musters für eine Basisklasse

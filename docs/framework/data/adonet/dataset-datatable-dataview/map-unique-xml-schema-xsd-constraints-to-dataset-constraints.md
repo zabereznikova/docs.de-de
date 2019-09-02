@@ -2,24 +2,24 @@
 title: Zuordnen von eindeutigen XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231f23ccf47f60b902fdd5c66b63fe1a750445f9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785371"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203413"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von eindeutigen XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
-In einem XML-Schema Definition Language (XSD)-Schema der **eindeutige** Element gibt die eindeutigkeitseinschränkung für ein Element oder Attribut an. 	Beim Übersetzen eines XML-Schemas in ein relationales Schema wird die im XML-Schema für ein Element oder Attribut angegebene eindeutige Einschränkung einer eindeutigen Einschränkung in der <xref:System.Data.DataTable> des entsprechenden <xref:System.Data.DataSet> zugeordnet, das erstellt wird.  
+In einem XSD-Schema (XML Schema Definition Language) gibt das **Unique** -Element die Eindeutigkeits Einschränkung für ein Element oder Attribut an. Beim Übersetzen eines XML-Schemas in ein relationales Schema wird die im XML-Schema für ein Element oder Attribut angegebene eindeutige Einschränkung einer eindeutigen Einschränkung in der <xref:System.Data.DataTable> des entsprechenden <xref:System.Data.DataSet> zugeordnet, das erstellt wird.  
   
- Der folgenden Tabelle werden die **Msdata** Attribute, die Sie, in angeben können der **eindeutige** Element.  
+ In der folgenden Tabelle werden die **msdata** -Attribute aufgelistet, die Sie im **Unique** -Element angeben können.  
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** -Attribut stellt den Wert, der den Namen der Einschränkung.|  
-|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` befindet sich in der **eindeutige** -Element, eine unique-Einschränkung wird erstellt, mit der **IsPrimaryKey** -Eigenschaft auf festgelegt **"true"**.|  
+|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls stellt das **Name** -Attribut den Wert des Einschränkungs namens bereit.|  
+|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` im **Unique** -Element vorhanden ist, wird eine Unique-Einschränkung erstellt, bei der die **IsPrimaryKey** -Eigenschaft auf **true**festgelegt ist.|  
   
- Das folgende Beispiel zeigt eine XML-Schema, verwendet der **eindeutige** Element, um eine Unique-Einschränkung anzugeben.  
+ Das folgende Beispiel zeigt ein XML-Schema, das das **Unique** -Element verwendet, um eine Eindeutigkeits Einschränkung anzugeben.  
   
 ```xml  
 <xs:schema id="SampleDataSet"   
@@ -48,13 +48,13 @@ In einem XML-Schema Definition Language (XSD)-Schema der **eindeutige** Element 
 </xs:schema>  
 ```  
   
- Die **eindeutige** Elements im Schema gibt an, dass für alle **Kunden** Elemente in einem Dokument-Instanz, den Wert des der **"CustomerID"** untergeordnetes Element muss eindeutig sein. Bei Erstellung der **DataSet**, der Zuordnungsprozess dieses Schema liest und in der folgende Tabelle generiert:  
+ Das **Unique** -Element im Schema gibt an, dass der Wert des untergeordneten **CustomerID-** Elements für alle **Kunden** Elemente in einer Dokument Instanz eindeutig sein muss. Beim Aufbau des **DataSets**liest der Mapping-Prozess dieses Schema und generiert die folgende Tabelle:  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Außerdem erstellt der Zuordnungsprozess eine unique-Einschränkung auf die **"CustomerID"** Spalte, wie im folgenden gezeigt **DataSet**. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
+ Der Mapping-Prozess erstellt auch eine Unique-Einschränkung für die **CustomerID-** Spalte, wie im folgenden **DataSet**gezeigt. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -68,11 +68,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- In der **DataSet** ist die **IsPrimaryKey** -Eigenschaftensatz auf **"false"** für die unique-Einschränkung. Die **eindeutige** -Eigenschaft in der Spalte gibt an, dass die **"CustomerID"** Spaltenwerte müssen eindeutig sein (aber sie können ein null-Verweis, laut der **AllowDBNull** -Eigenschaft der Spalte).  
+ Im generierten **DataSet** ist die **IsPrimaryKey** -Eigenschaft für die Unique-Einschränkung auf **false** festgelegt. Die **Unique** -Eigenschaft für die Spalte gibt an, dass die Werte der **CustomerID-** Spalte eindeutig sein müssen (Sie können jedoch ein NULL-Verweis sein, wie durch die **AllowDBNull** -Eigenschaft der Spalte angegeben).  
   
- Wenn Sie das Schema ändern, und legen Sie den optionalen **msdata: PrimaryKey** -Attributwert auf **"true"**, die unique-Einschränkung für die Tabelle erstellt wird. Die **AllowDBNull** -Spalteneigenschaft ist auf **"false"**, und die **IsPrimaryKey** -Eigenschaft der Einschränkung ist auf **"true"**, daher machen die **"CustomerID"** Spalte eine Primärschlüsselspalte.  
+ Wenn Sie das Schema ändern und den optionalen Attribut Wert **msdata: PrimaryKey** auf **true**festlegen, wird die Unique-Einschränkung für die Tabelle erstellt. Die **AllowDBNull** -Spalten Eigenschaft ist auf **false**festgelegt, und die **IsPrimaryKey** -Eigenschaft der Einschränkung ist auf **true**festgelegt, sodass die **CustomerID-** Spalte eine Primärschlüssel Spalte ist.  
   
- Sie können eine eindeutige Einschränkung für eine Kombination aus Elementen oder Attributen im XML-Schema angeben. Im folgende Beispiel wird veranschaulicht, wie an, dass eine Kombination von **"CustomerID"** und **CompanyName** Werte müssen für alle eindeutig sein **Kunden** in jeder Instanz von Hinzufügen einer weiteren **xs: field** Elements im Schema.  
+ Sie können eine eindeutige Einschränkung für eine Kombination aus Elementen oder Attributen im XML-Schema angeben. Im folgenden Beispiel wird veranschaulicht, wie angegeben wird, dass eine Kombination der Werte **CustomerID** und **CompanyName** für alle **Kunden** in jeder Instanz eindeutig sein muss, indem ein weiteres **xs: Field** -Element im Schema hinzugefügt wird.  
   
 ```xml  
       <xs:unique     
@@ -84,7 +84,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- Dies ist die Einschränkung, die in der resultierenden erstellt wird **DataSet**.  
+ Dies ist die Einschränkung, die im resultierenden **DataSet**erstellt wird.  
   
 ```  
 ConstraintName: SomeName  
@@ -95,6 +95,6 @@ ConstraintName: SomeName
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

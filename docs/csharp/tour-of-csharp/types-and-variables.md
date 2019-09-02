@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67661067"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105593"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -18,31 +18,31 @@ C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *S
 
 Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
-* [Werttypen][ValueTypes]
+- [Werttypen][ValueTypes]
   - [Einfache Typen][SimpleTypes]
-    * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
-    * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
-    * Unicode-Zeichen: `char`
-    * Binäres Gleitkomma (IEEE): `float`, `double`
-    * Dezimale Gleitkommazahl mit hoher Genauigkeit: `decimal`
-    * Boolesch: `bool`
+    - Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
+    - Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
+    - Unicode-Zeichen: `char`
+    - Binäres Gleitkomma (IEEE): `float`, `double`
+    - Dezimale Gleitkommazahl mit hoher Genauigkeit: `decimal`
+    - Boolesch: `bool`
   - [Enumerationstypen][EnumTypes]
-    * Benutzerdefinierte Typen der Form `enum E {...}`
+    - Benutzerdefinierte Typen der Form `enum E {...}`
   - [Strukturtypen][StructTypes]
-    * Benutzerdefinierte Typen der Form `struct S {...}`
+    - Benutzerdefinierte Typen der Form `struct S {...}`
   - [Auf NULL festlegbare Werttypen][NullableTypes]
-    * Erweiterungen aller anderen Werttypen mit einem `null`-Wert
-* [Verweistypen][ReferenceTypes]
+    - Erweiterungen aller anderen Werttypen mit einem `null`-Wert
+- [Verweistypen][ReferenceTypes]
   - [Klassentypen][ClassTypes]
-    * Ultimative Basisklasse aller anderen Typen:`object`
-    * Unicode-Zeichenfolgen: `string`
-    * Benutzerdefinierte Typen der Form `class C {...}`
+    - Ultimative Basisklasse aller anderen Typen:`object`
+    - Unicode-Zeichenfolgen: `string`
+    - Benutzerdefinierte Typen der Form `class C {...}`
   - [Schnittstellentypen][InterfaceTypes]
-    * Benutzerdefinierte Typen der Form `interface I {...}`
+    - Benutzerdefinierte Typen der Form `interface I {...}`
   - [Array types (Arraytypen)][ArrayTypes]
-    * Ein- und mehrdimensional, z.B. `int[]` und`int[,]`
+    - Ein- und mehrdimensional, z.B. `int[]` und`int[,]`
   - [Delegattypen][DelegateTypes]
-    * Benutzerdefinierte Typen der Form `delegate int D(...)`
+    - Benutzerdefinierte Typen der Form `delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
@@ -89,19 +89,19 @@ Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage
 
 Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayelementen, lokalen Variablen und Parametern. Variablen stellen Speicherorte dar, und jede Variable hat einen Typ, der bestimmt, welche Werte in der Variablen gespeichert werden können, wie unten gezeigt.
 
-* Nicht auf NULL festlegbarer Werttyp
+- Nicht auf NULL festlegbarer Werttyp
   - Ein Wert genau dieses Typs
-* Auf NULL festlegbarer Werttyp
+- Auf NULL festlegbarer Werttyp
   - Ein `null`-Wert oder ein Wert genau dieses Typs
-* object
+- object
   - Ein `null`-Verweis, ein Verweis auf ein Objekt eines beliebigen Verweistyps oder ein Verweis auf einen geschachtelten Wert eines beliebigen Werttyps
-* Klassentyp
+- Klassentyp
   - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Klassentyps oder ein Verweis auf eine Instanz einer Klasse, die von diesem Klassentyp abgeleitet ist
-* Schnittstellentyp
+- Schnittstellentyp
   - Ein `null`-Verweis, ein Verweis auf eine Instanz eines Klassentyps, der diesen Schnittstellentyp implementiert, oder ein Verweis auf einen geschachtelten Wert eines Werttyps, der diesen Schnittstellentyp implementiert
-* Arraytyp
+- Arraytyp
   - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Arraytyps oder ein Verweis auf eine Instanz eines kompatiblen Arraytyps
-* Delegattyp
+- Delegattyp
   - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
 
 > [!div class="step-by-step"]

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d4d3b009e5792685ea39a3bcc2a15e082e1b8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910693"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206095"
 ---
 # <a name="security-and-remoting-considerations"></a>Überlegungen zu Sicherheit und Remoting
 Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendungsdomänen, Prozessen oder Computern. Der Sicherheitsstack für den Codezugriff kann jedoch Prozess- oder Computergrenzen nicht überschreiten (dies gilt zwischen Anwendungsdomänen des gleichen Prozesses).  
   
  Jede remotefähige Klasse (abgeleitet von einer <xref:System.MarshalByRefObject>-Klasse) muss die Verantwortung für die Sicherheit übernehmen. Der Code sollte entweder nur in geschlossenen Umgebungen verwendet werden, in denen der aufrufende Code implizit vertrauenswürdig ist, oder Remoteaufrufe sollten so entworfen werden, dass kein geschützter Code für externe Eingaben in ggf. böswilliger Absicht verwendet werden kann.  
   
- Im Allgemeinen sollten Sie nie Methoden, Eigenschaften oder Ereignisse verfügbar machen, die durch deklarative [LinkDemand](../../../docs/framework/misc/link-demands.md) -und <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> Sicherheitsüberprüfungen geschützt werden. Mit Remoting werden diese Überprüfungen nicht erzwungen. Andere Sicherheitsüberprüfungen, z <xref:System.Security.Permissions.SecurityAction.Demand>. b., [Assert](../../../docs/framework/misc/using-the-assert-method.md)usw., funktionieren zwischen Anwendungs Domänen innerhalb eines Prozesses, funktionieren jedoch nicht in prozessübergreifenden oder Computer übergreifenden Szenarien.  
+ Im Allgemeinen sollten Sie nie Methoden, Eigenschaften oder Ereignisse verfügbar machen, die durch deklarative [LinkDemand](link-demands.md) -und <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> Sicherheitsüberprüfungen geschützt werden. Mit Remoting werden diese Überprüfungen nicht erzwungen. Andere Sicherheitsüberprüfungen, z <xref:System.Security.Permissions.SecurityAction.Demand>. b., [Assert](using-the-assert-method.md)usw., funktionieren zwischen Anwendungs Domänen innerhalb eines Prozesses, funktionieren jedoch nicht in prozessübergreifenden oder Computer übergreifenden Szenarien.  
   
 ## <a name="protected-objects"></a>Geschützte Objekte  
  Einige Objekte enthalten Ihren Sicherheitszustand in sich. Diese Objekte sollten nicht an nicht vertrauenswürdigen Code übergeben werden, der dann eine über seine eigenen Berechtigungen hinausgehende Sicherheitsautorisierung erhalten würde.  

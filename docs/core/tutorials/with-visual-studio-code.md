@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401838"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105106"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -27,22 +27,22 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
 1. Öffnen Sie ein Projekt:
 
-    * Öffnen Sie Visual Studio Code.
-    * Klicken Sie im linken Menü auf das Explorer-Symbol, und klicken Sie dann auf **Ordner öffnen**.
-    * Klicken Sie im Hauptmenü auf **Datei** > **Open Folder** (Ordner öffnen), um den Ordner zu öffnen, in dem Sie Ihr C#-Projekt speichern möchten, und klicken Sie auf **Ordner auswählen**. Für dieses Beispiel wird ein Ordner namens *HelloWorld* für das Projekt erstellt.
+    - Öffnen Sie Visual Studio Code.
+    - Klicken Sie im linken Menü auf das Explorer-Symbol, und klicken Sie dann auf **Ordner öffnen**.
+    - Klicken Sie im Hauptmenü auf **Datei** > **Open Folder** (Ordner öffnen), um den Ordner zu öffnen, in dem Sie Ihr C#-Projekt speichern möchten, und klicken Sie auf **Ordner auswählen**. Für dieses Beispiel wird ein Ordner namens *HelloWorld* für das Projekt erstellt.
 
       ![Visual Studio Code, Ordner öffnen](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Initialisieren Sie ein C#-Projekt:
-    * Öffnen Sie das integrierte Terminal von Visual Studio Code, indem Sie im Hauptmenü auf **Ansicht** > **Integriertes Terminal** klicken.
-    * Geben Sie im Terminalfenster `dotnet new console` ein.
-    * Durch diesen Befehl wird eine `Program.cs`-Datei in Ihrem Ordner erstellt, die ein bereits geschriebenes einfaches „Hallo Welt“-Programm enthält. Zusätzlich wird eine C#-Projektdatei namens `HelloWorld.csproj` erstellt.
+    - Öffnen Sie das integrierte Terminal von Visual Studio Code, indem Sie im Hauptmenü auf **Ansicht** > **Integriertes Terminal** klicken.
+    - Geben Sie im Terminalfenster `dotnet new console` ein.
+    - Durch diesen Befehl wird eine `Program.cs`-Datei in Ihrem Ordner erstellt, die ein bereits geschriebenes einfaches „Hallo Welt“-Programm enthält. Zusätzlich wird eine C#-Projektdatei namens `HelloWorld.csproj` erstellt.
 
       ![Der Befehl „dotnet new“](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Lösen Sie die Buildobjekte auf:
 
-    * Geben Sie für **.NET Core 1.x** den Befehl `dotnet restore` ein. Durch Ausführen von `dotnet restore` erhalten Sie Zugriff auf die erforderlichen .NET Core-Pakete, die Sie zum Erstellen Ihres Projekts benötigen.
+    - Geben Sie für **.NET Core 1.x** den Befehl `dotnet restore` ein. Durch Ausführen von `dotnet restore` erhalten Sie Zugriff auf die erforderlichen .NET Core-Pakete, die Sie zum Erstellen Ihres Projekts benötigen.
 
       ![Der Befehl „dotnet restore“](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -50,7 +50,7 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
 4. Führen Sie das „Hello World“-Programm aus:
 
-    * Geben Sie `dotnet run` ein.
+    - Geben Sie `dotnet run` ein.
 
       ![Der Befehl „dotnet run“](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -79,7 +79,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
     ![Festlegen eines Haltepunkts](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf den grünen Pfeil, um das Debuggen zu starten. Der Debugger hält die Ausführung des Programms an, wenn der Haltepunkt erreicht wird, den Sie im vorherigen Schritt festgelegt haben.
-    * Während des Debuggens können Sie Ihre lokalen Variablen im oberen linken Bereich oder in der Debugkonsole anzeigen.
+    - Während des Debuggens können Sie Ihre lokalen Variablen im oberen linken Bereich oder in der Debugkonsole anzeigen.
 
 7. Wählen Sie im oberen Bereich den blauen Pfeil aus, um das Debuggen fortzusetzen, oder klicken Sie auf das rote Quadrat, um das Debuggen zu beenden.
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
 ms.date: 06/26/2019
-ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 113bc076b9f14a471c631801fe4a7cb1e044a411
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422017"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168056"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -23,7 +23,7 @@ ms.locfileid: "67422017"
 
 ## <a name="synopsis"></a>Übersicht
 
-```
+```console
 dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]

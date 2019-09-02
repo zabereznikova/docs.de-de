@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: b56d2f8cd46f3184f1001c8bd6a70dbfc4968968
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937027"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205143"
 ---
 # <a name="creating-a-datatable"></a>Erstellen einer "DataTable"
 Eine <xref:System.Data.DataTable>, die eine Tabelle mit relationalen Daten im Speicher darstellt, kann erstellt und unabhängig verwendet werden. Oder sie kann von anderen .NET Framework-Objekten, am häufigsten als Member von einem <xref:System.Data.DataSet>, verwendet werden.  
@@ -53,8 +53,8 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataTableCollection>
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataTables](datatables.md)
+- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../populating-a-dataset-from-a-dataadapter.md)
+- [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
+- [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

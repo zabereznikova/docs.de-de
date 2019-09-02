@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623789"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106482"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
@@ -22,9 +22,9 @@ Kompatibilität ist ein wichtiges Ziel jedes .NET-Release. Durch Kompatibilität
 
 Jede App hat eine bestimmte Version von .NET Framework als Ziel, die durch Folgendes angegeben werden kann:
 
-* Definieren eines Zielframeworks in Visual Studio
-* Angeben des Zielframeworks in einer Projektdatei
-* Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
+- Definieren eines Zielframeworks in Visual Studio
+- Angeben des Zielframeworks in einer Projektdatei
+- Anwenden einer <xref:System.Runtime.Versioning.TargetFrameworkAttribute> auf dem Quellcode
 
 Wenn .NET Framework auf einer neueren Version anstatt auf der beabsichtigten ausgeführt wird, wird ein besonderes Verhalten angewendet, um die ältere Zielversion zu imitieren. Anders ausgedrückt: Die App wird auf der neueren Version des Framework ausgeführt, sich aber so verhalten, als würde sie auf der älteren Version ausgeführt werden. Viele Kompatibilitätsprobleme zwischen den .NET Framework-Versionen werden durch dieses besondere Modell minimiert. Die Version von .NET Framework, für die eine Anwendung ausgerichtet ist, wird durch die Zielversion der Einstiegsassembly für die Anwendungsdomäne bestimmt, in der der Code ausgeführt wird. Alle zusätzlichen in dieser Anwendungsdomäne geladenen Assemblys sind für diese Version von .NET Framework ausgelegt. Bei einer ausführbaren Datei ist z.B. der Kompatibilitätsmodus das Zielframework der ausführbaren Datei, unter dem alle Assemblys in der AppDomain ausgeführt werden.
 
@@ -71,8 +71,8 @@ Jedes Problem umfasst die folgenden Informationen:
 ## <a name="usage"></a>Verwendung
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
-* [Neuausrichtungsänderungen](./retargeting/index.md)
-* [Änderungen zur Laufzeit](./runtime/index.md)
+- [Neuausrichtungsänderungen](./retargeting/index.md)
+- [Änderungen zur Laufzeit](./runtime/index.md)
 
 ## <a name="see-also"></a>Siehe auch
 

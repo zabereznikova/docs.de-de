@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a98dc44eda9ebda09235193c58bd831fc52d04d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879826"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205094"
 ---
 # <a name="datarows-and-datarowviews"></a>"DataRows" und "DataRowViews"
-Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. Die **DataRowView** Objekte verfügbar zu machen Werte als Objektarrays, die durch den Namen oder den Ordnungszahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden. Sie erreichen die <xref:System.Data.DataRow> , die von verfügbar gemacht wird der **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.  
+Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. Die **DataRowView** -Objekte machen Werte als Objekt Arrays verfügbar, die entweder durch den Namen oder den Ordinalverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden. Sie können auf das <xref:System.Data.DataRow> zugreifen, das von der **DataRowView** verfügbar gemacht wird <xref:System.Data.DataRowView.Row%2A> , indem Sie die-Eigenschaft der **DataRowView**verwenden.  
   
- Beim Anzeigen von Werten mit einer **DataRowView**, wird die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft der **DataView** bestimmt, welche Zeilenversion der zugrunde liegenden **DataRow** verfügbar gemacht wird. Informationen zum Zugreifen auf verschiedene Zeilenversionen mithilfe einer **DataRow**, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Wenn Sie Werte mithilfe einer **DataRowView**anzeigen, bestimmt die <xref:System.Data.DataView.RowStateFilter%2A> -Eigenschaft der **DataView** , welche Zeilen Version der zugrunde liegenden **DataRow** verfügbar gemacht wird. Informationen zum Zugriff auf verschiedene Zeilen Versionen mithilfe einer **DataRow**finden Sie unter [Zeilen Status und Zeilen Versionen](row-states-and-row-versions.md).  
   
  Im folgenden Codebeispiel werden alle aktuellen und ursprünglichen Werte in einer Tabelle angezeigt.  
   
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](dataviews.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

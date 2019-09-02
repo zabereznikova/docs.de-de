@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: a871c3a3751a93bdf0104c873215b164616f0664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611464"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104825"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -133,11 +133,11 @@ Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und ei
 
 Wenn Ihr Modellleistungswert nicht so gut ist, wie Sie es sich wünschen, haben Sie die folgenden Möglichkeit:
 
-* Längeres Trainieren. Mit mehr Zeit kann die automatisierte Machine Learning-Engine mehrere Algorithmen und Einstellungen auszuprobieren.
+- Längeres Trainieren. Mit mehr Zeit kann die automatisierte Machine Learning-Engine mehrere Algorithmen und Einstellungen auszuprobieren.
 
-* Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren.
+- Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren.
 
-* Ihre Daten ausgleichen. Achten Sie bei Klassifizierungsaufgaben darauf, dass der Trainingssatz über die Kategorien hinweg gleichmäßig verteilt ist. Wenn Sie beispielsweise vier Klassen für 100 Trainingsbeispiele haben und die beiden ersten Klassen (tag1 und tag2) für 90 Datensätze verwendet werden, die anderen beiden (tag3 und tag4) aber nur für die restlichen 10 Datensätze, kann das dazu führen, dass Ihr Modell Schwierigkeiten hat, tag3 oder tag4 korrekt vorherzusagen, da die Daten nicht gleichmäßig verteilt sind.
+- Ihre Daten ausgleichen. Achten Sie bei Klassifizierungsaufgaben darauf, dass der Trainingssatz über die Kategorien hinweg gleichmäßig verteilt ist. Wenn Sie beispielsweise vier Klassen für 100 Trainingsbeispiele haben und die beiden ersten Klassen (tag1 und tag2) für 90 Datensätze verwendet werden, die anderen beiden (tag3 und tag4) aber nur für die restlichen 10 Datensätze, kann das dazu führen, dass Ihr Modell Schwierigkeiten hat, tag3 oder tag4 korrekt vorherzusagen, da die Daten nicht gleichmäßig verteilt sind.
 
 ## <a name="code"></a>Code
 

@@ -4,12 +4,12 @@ description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 29499d28629e483d66e25b8ecdbd5817effba439
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631744"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202589"
 ---
 # <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
 
@@ -63,7 +63,7 @@ dotnet tool install -g <package-name> --version <version-number>
 
 Wenn die Installation erfolgreich abgeschlossen wurde, wird eine Meldung angezeigt, die den Befehl zum Aufrufen des Tools und die installierte Version ähnlich wie im folgenden Beispiel anzeigt:
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```

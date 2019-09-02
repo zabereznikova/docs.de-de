@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922565"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037832"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>Neuerungen in .NET Core 3.0 (Preview 8)
 
@@ -430,7 +430,7 @@ Hier ist ein Beispiel für die Deserialisierung einer JSON-Zeichenfolge in ein O
 
 ### <a name="type-nativelibrary"></a>Typ: NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> bietet eine Kapselung zum Laden einer nativen Bibliothek (mit derselben Lastlogik wie .NET Core P/Invoke) und Bereitstellen der relevanten Hilfsfunktionen wie z.B. `getSymbol`. Ein Codebeispiel finden Sie in der [DLLMap-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> bietet eine Kapselung zum Laden einer nativen Bibliothek (mit derselben Lastlogik wie .NET Core P/Invoke) und Bereitstellen der relevanten Hilfsfunktionen wie z.B. `getSymbol`. Ein Codebeispiel finden Sie in der [DLLMap-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo).
 
 ### <a name="windows-native-interop"></a>Native Windows-Interop-API
 

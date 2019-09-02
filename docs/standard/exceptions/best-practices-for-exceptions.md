@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860154"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107196"
 ---
 # <a name="best-practices-for-exceptions"></a>Best Practices für Ausnahmen
 
@@ -82,11 +82,11 @@ Wenn eine benutzerdefinierte Ausnahme erforderlich ist, benennen Sie diese entsp
 
 Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei gängigen Konstruktoren: den parameterlosen Konstruktor, einen Konstruktor, der eine Zeichenfolgenmeldung entgegennimmt, und einen Konstruktor, der eine Zeichenfolgenmeldung und eine innere Ausnahme entgegennimmt.
 
-* <xref:System.Exception.%23ctor>, der Standardwerte verwendet.
+- <xref:System.Exception.%23ctor>, der Standardwerte verwendet.
 
-* <xref:System.Exception.%23ctor%28System.String%29>, der eine Zeichenfolgenmeldung entgegennimmt.
+- <xref:System.Exception.%23ctor%28System.String%29>, der eine Zeichenfolgenmeldung entgegennimmt.
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, der eine Zeichenfolgenmeldung und eine interne Ausnahme entgegennimmt.
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, der eine Zeichenfolgenmeldung und eine interne Ausnahme entgegennimmt.
 
 Ein Beispiel finden Sie unter [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md).
 

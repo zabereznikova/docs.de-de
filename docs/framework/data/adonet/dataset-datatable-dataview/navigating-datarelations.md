@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7b1717317bb119538497f60bae48ec1da2286c8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607258"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203322"
 ---
 # <a name="navigating-datarelations"></a>Navigieren in "DataRelations"
-Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Dadurch können Sie alle Abrufen der entsprechenden <xref:System.Data.DataRow> Objekte in einem **DataTable** Wenn eine einzelne **DataRow** von einer verknüpften **DataTable**. Z. B. nach dem Einrichten einer **DataRelation** zwischen einer Tabelle möglicher Kunden und eine Tabelle mit Bestellungen, können Sie alle Auftragszeilen für eine bestimmte Kundenzeile mit abrufen **GetChildRows**.  
+Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Auf diese Weise können Sie <xref:System.Data.DataRow> alle verknüpften Objekte in einer **Daten** Tabelle abrufen, wenn Sie eine einzelne **DataRow** aus einer verknüpften **Daten**Tabelle erhalten. Nachdem Sie z. b. eine **DataRelations** zwischen einer Tabelle mit Kunden und einer Tabelle mit Bestellungen eingerichtet haben, können Sie mithilfe von **GetChildRows**alle Auftragszeilen für eine bestimmte Kunden Zeile abrufen.  
   
- Das folgende Codebeispiel erstellt eine **DataRelation** zwischen der **Kunden** Tabelle und die **Bestellungen** Tabelle mit einer **DataSet** und gibt zurück Alle Bestellungen für jeden Kunden.  
+ Im folgenden Codebeispiel wird eine **DataRelations** zwischen der **Customers** -Tabelle und der **Orders** -Tabelle eines **DataSets** erstellt und alle Bestellungen für jeden Kunden zurückgegeben.  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- Das nächste Beispiel baut auf dem vorhergehenden Beispiel auf. Hier werden vier Tabellen miteinander verknüpft, sodass über diese Beziehungen zu den Tabellen navigiert werden kann. Wie im vorherigen Beispiel **"CustomerID"** bezieht sich die **Kunden** Tabelle, auf die **Bestellungen** Tabelle. Für jeden Kunden in den **Kunden** Tabelle, alle untergeordneten Zeilen in der **Bestellungen** Tabelle ermittelt werden, um die Anzahl der Aufträge eines bestimmten Kunden zurückzugeben und ihre **"OrderID"** Werte.  
+ Das nächste Beispiel baut auf dem vorhergehenden Beispiel auf. Hier werden vier Tabellen miteinander verknüpft, sodass über diese Beziehungen zu den Tabellen navigiert werden kann. Wie im vorherigen Beispiel verknüpft **CustomerID** die **Customers** -Tabelle mit der **Orders** -Tabelle. Für jeden Kunden in der **Customers** -Tabelle werden alle untergeordneten Zeilen in der **Orders** -Tabelle bestimmt, um die Anzahl der Bestellungen eines bestimmten Kunden und deren **OrderID** -Werte zurückzugeben.  
   
- Das erweiterte Beispiel gibt auch die Werte aus der **OrderDetails** und **Produkte** Tabellen. Die **Bestellungen** Tabelle bezieht sich auf die **OrderDetails** Tabelle mithilfe von **"OrderID"** um zu bestimmen, für jede kundenbestellung, Produkte und Mengen geordnet wurden. Da die **OrderDetails** Tabelle enthält nur die **"ProductID"** eines bestellten Produkts, **OrderDetails** bezieht sich auf **Produkte** Mithilfe von **"ProductID"** zum Zurückgeben der **ProductName**. Bei dieser Beziehung ist die **Produkte** Tabelle ist das übergeordnete Element und die **Bestelldetails** Tabelle ist das untergeordnete Element. Als Ergebnis beim Durchlaufen der **OrderDetails** Tabelle **GetParentRow** wird aufgerufen, um die zugehörigen abrufen **ProductName** Wert.  
+ Das erweiterte Beispiel gibt auch die Werte aus den Tabellen **Order Details** und **Products** zurück. Die **Orders** -Tabelle bezieht sich auf die **Order Details** -Tabelle mithilfe von **OrderID** , um für jeden Kundenauftrag festzustellen, welche Produkte und Mengen sortiert wurden. Da die **Order Details** -Tabelle nur die **ProductID** eines bestellten Produkts enthält, steht **Order Details** im Zusammenhang mit **Produkten** , die **ProductID** verwenden, um **ProductName**zurückzugeben. In dieser Beziehung ist die Tabelle " **Products** " das übergeordnete Element, und die Tabelle " **Order Details** " ist das untergeordnete Element. Daher wird beim Durchlaufen der **Order Details** -Tabelle **getparameentrow** aufgerufen, um den zugehörigen **ProductName** -Wert abzurufen.  
   
- Beachten Sie, dass bei der **DataRelation** für erstellt wird die **Kunden** und **Bestellungen** Tabellen kein Wert wird angegeben, für die **CreateConstraints**Flag (der Standardwert ist **"true"**). Dies setzt voraus, dass alle Zeilen in der **Bestellungen** Tabelle eine **"CustomerID"** -Wert, der in das übergeordnete Element vorhanden ist **Kunden** Tabelle. Wenn eine **"CustomerID"** vorhanden ist, der **Bestellungen** Tabelle, die in nicht vorhanden ist die **Kunden** Tabelle eine <xref:System.Data.ForeignKeyConstraint> löst eine Ausnahme ausgelöst wird.  
+ Beachten Sie, dass bei der Erstellung der **DataRelations** -Tabelle für die **Customers** -und **Orders** -Tabelle kein Wert für das Flag "" vom Typ " **anateconstraints** " angegeben wird (Standardwert: **true**). Dabei wird davon ausgegangen, dass alle Zeilen in der **Orders** -Tabelle einen **CustomerID-** Wert aufweisen, der in der übergeordneten **Customers** -Tabelle vorhanden ist. Wenn eine **CustomerID** in der **Orders** -Tabelle vorhanden ist, die in der **Customers** -Tabelle nicht <xref:System.Data.ForeignKeyConstraint> vorhanden ist, wird eine Ausnahme ausgelöst.  
   
- Wenn die untergeordnete Spalte Werte enthält, die der übergeordneten Spalte nicht enthalten sind, legen die **CreateConstraints** flag auf **"false"** beim Hinzufügen der **DataRelation**. Im Beispiel die **CreateConstraints** ergebniskennzeichen auf **"false"** für die **DataRelation** zwischen der **Bestellungen** Tabelle und die  **OrderDetails** Tabelle. Dadurch kann die Anwendung alle Datensätze aus Zurückgeben der **OrderDetails** Tabellen- und nur eine Teilmenge der Datensätze aus der **Bestellungen** Tabelle ohne eine Laufzeitausnahme generiert. Im erweiterten Beispiel wird die Ausgabe im folgenden Format generiert:  
+ Wenn die untergeordnete Spalte Werte enthalten kann, die in der übergeordneten Spalte nicht enthalten sind, legen Sie beim Hinzufügen von **DataRelations**das Flag " **kreateconstraints** " auf " **false** " fest. In dem Beispiel wird das Flag " **kreateconstraints** " für " **DataRelations** " zwischen der Tabelle " **Orders** " und der Tabelle " **Order Details** " auf " **false** " festgelegt. Dadurch kann die Anwendung alle Datensätze aus der Tabelle **Order Details** und nur eine Teilmenge der Datensätze aus der Tabelle **Orders** zurückgeben, ohne eine Lauf Zeit Ausnahme zu erzeugen. Im erweiterten Beispiel wird die Ausgabe im folgenden Format generiert:  
   
 ```  
 Customer ID: NORTS  
@@ -44,12 +44,12 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- Im folgenden Codebeispiel wird ein Beispiel für eine erweiterte, in denen die Werte aus der **OrderDetails** und **Produkte** Tabellen zurückgegeben, mit nur einer Teilmenge der Datensätze in der **Bestellungen**Tabelle zurückgegeben wird.  
+ Das folgende Codebeispiel ist ein erweitertes Beispiel, bei dem die Werte aus den Tabellen **Order Details** und **Products** zurückgegeben werden, wobei nur eine Teilmenge der Datensätze in der **Orders** -Tabelle zurückgegeben wird.  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

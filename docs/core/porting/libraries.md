@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NE
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660703"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105290"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -113,11 +113,11 @@ Es ist wahrscheinlich, dass Sie die oben genannten Vorgehensweisen jeweils pro P
 Die beste Möglichkeit, um sicherzustellen, dass alles funktioniert, wenn Sie Ihren Code importiert haben, ist das Testen Ihres Codes beim Portieren auf .NET Core. Zu diesem Zweck müssen Sie ein Test-Framework verwenden, das Tests für .NET Core erstellt und ausführt. Derzeit stehen Ihnen drei Optionen zur Verfügung:
 
 - [xUnit](https://xunit.github.io/)
-  * [Erste Schritte](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [Tool zum Konvertieren eines MSTest-Projekts zu xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Erste Schritte](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [Tool zum Konvertieren eines MSTest-Projekts zu xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [Erste Schritte](https://github.com/nunit/docs/wiki/Installation)
-  * [Blogbeitrag zur Migration von MSTest zu NUnit (in englischer Sprache)](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [Erste Schritte](https://github.com/nunit/docs/wiki/Installation)
+  - [Blogbeitrag zur Migration von MSTest zu NUnit (in englischer Sprache)](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Empfohlener Ansatz zum Portieren

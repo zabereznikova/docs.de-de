@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607565"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203236"
 ---
 # <a name="row-error-information"></a>Zeilenfehlerinformationen
-Um nicht jedes Mal auf einen Zeilenfehler reagieren zu müssen, während Sie Werte in einer <xref:System.Data.DataTable> bearbeiten, können Sie der Zeile die Fehlerinformationen zur späteren Verwendung der Zeile hinzufügen. Das <xref:System.Data.DataRow>-Objekt stellt zu diesem Zweck für jede Zeile eine <xref:System.Data.DataRow.RowError%2A>-Eigenschaft bereit. Hinzufügen von Daten zu der **RowError** Eigenschaft eine **DataRow** legt diese fest der <xref:System.Data.DataRow.HasErrors%2A> Eigenschaft der **DataRow** zu **"true"**. Wenn die **DataRow** ist Teil einer **DataTable**, und **DataRow.HasErrors** ist **"true"**, **DataTable.HasErrors** Eigenschaft ist auch **"true"**. Dies gilt auch für die **DataSet** , der die **DataTable** gehört. Wenn Sie nach Fehlern zu testen, sehen Sie sich die **HasErrors** Eigenschaft, um zu bestimmen, ob die Fehlerinformationen an den Zeilen hinzugefügt wurde. Wenn **HasErrors** ist **"true"**, können Sie die <xref:System.Data.DataTable.GetErrors%2A> Methode der **DataTable** zurück, und untersuchen nur die Zeilen mit Fehlern aus, wie im folgenden Beispiel gezeigt.  
+Um nicht jedes Mal auf einen Zeilenfehler reagieren zu müssen, während Sie Werte in einer <xref:System.Data.DataTable> bearbeiten, können Sie der Zeile die Fehlerinformationen zur späteren Verwendung der Zeile hinzufügen. Das <xref:System.Data.DataRow>-Objekt stellt zu diesem Zweck für jede Zeile eine <xref:System.Data.DataRow.RowError%2A>-Eigenschaft bereit. Durch das Hinzufügen von Daten zur **RowError** -Eigenschaft einer **DataRow** wird die <xref:System.Data.DataRow.HasErrors%2A> -Eigenschaft der **DataRow** auf **true**festgelegt. Wenn die **DataRow** Teil einer **Daten**Tabelle ist und **DataRow. HasErrors** den Wert **true**hat, ist die **Datable. HasErrors** -Eigenschaft ebenfalls **true**. Dies gilt auch für das **DataSet** , zu dem die **Daten** Tabelle gehört. Beim Testen von Fehlern können Sie die **HasErrors** -Eigenschaft überprüfen, um zu ermitteln, ob den Zeilen Fehlerinformationen hinzugefügt wurden. Wenn **HasErrors** den Wert **true**hat, <xref:System.Data.DataTable.GetErrors%2A> können Sie die-Methode der **Daten** Tabelle verwenden, um nur die Zeilen mit Fehlern zurückzugeben und zu überprüfen, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -82,5 +82,5 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

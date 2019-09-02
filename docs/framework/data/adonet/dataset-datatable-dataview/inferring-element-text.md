@@ -2,15 +2,15 @@
 title: Ableiten von Elementtext
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879631"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203529"
 ---
 # <a name="inferring-element-text"></a>Ableiten von Elementtext
-Wenn ein Element Text enthält und keine untergeordneten Elemente hat, die per Rückschluss abgeleitet werden, wie z. B. (Elemente mit Attributen) oder sich wiederholende Elemente eine neue Spalte mit dem Namen Tabellen **TableName_Text** wird die Tabelle, die für das Element hergeleitet wird hinzugefügt. Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert. Die **ColumnMapping** -Eigenschaft der neuen Spalte auf festgelegt **MappingType.SimpleContent**.  
+Wenn ein Element Text enthält und keine untergeordneten Elemente als Tabellen abgeleitet werden sollen (z. b. Elemente mit Attributen oder wiederholten Elementen), wird der Tabelle eine neue Spalte mit dem Namen **TableName_Text** hinzugefügt, die für das Element abgeleitet wird. Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert. Die **ColumnMapping** -Eigenschaft der neuen Spalte wird auf **MappingType. SimpleContent**festgelegt.  
   
  Betrachten Sie beispielsweise den folgenden XML-Code:  
   
@@ -20,11 +20,11 @@ Wenn ein Element Text enthält und keine untergeordneten Elemente hat, die per R
 </DocumentElement>  
 ```  
   
- Die Herleitung wird einer Tabelle namens **Element1** mit zwei Spalten: **attr1** und **Element1_Text**. Die **ColumnMapping** Eigenschaft der **attr1** Spalte festgelegt **MappingType.Attribute**. Die **ColumnMapping** Eigenschaft der **Element1_Text** Spalte festgelegt **MappingType.SimpleContent**.  
+ Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen **Element1** mit zwei Spalten: **attr1** und **Element1_Text**. Die **ColumnMapping** -Eigenschaft der **attr1** -Spalte wird auf **MappingType. Attribute**festgelegt. Die **ColumnMapping** -Eigenschaft der **Element1_Text** -Spalte wird auf **MappingType. SimpleContent**festgelegt.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -40,11 +40,11 @@ Wenn ein Element Text enthält und keine untergeordneten Elemente hat, die per R
 </Element1>  
 ```  
   
- Die Herleitung wird einer Tabelle namens **Element1** mit einer Spalte, die mit dem Namen **ChildElement1**. Der Text für die **ChildElement1** Element wird in einer Zeile in der Tabelle enthalten sein. Der restliche Text wird ignoriert. Die **ColumnMapping** Eigenschaft der **ChildElement1** Spalte festgelegt **MappingType.Element**.  
+ Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen " **Element1** " mit einer Spalte mit dem Namen " **ChildElement1**". Der Text für das **ChildElement1** -Element wird in eine Zeile in der Tabelle eingeschlossen. Der restliche Text wird ignoriert. Die **ColumnMapping** -Eigenschaft der **ChildElement1** -Spalte wird auf **MappingType. Element**festgelegt.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |ChildElement1|  
 |-------------------|  
@@ -52,9 +52,9 @@ Wenn ein Element Text enthält und keine untergeordneten Elemente hat, die per R
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](inferring-dataset-relational-structure-from-xml.md)
+- [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
+- [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
+- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

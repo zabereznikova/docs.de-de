@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666578"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169104"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
@@ -21,8 +21,8 @@ Schreiben von E/A- und CPU-gebundenem asynchronen Code ist mit dem .NET Task-bas
 
 Tasks sind Konstrukte zum Implementieren dessen, was als [Promise-Modell der Parallelität](https://en.wikipedia.org/wiki/Futures_and_promises) bezeichnet wird.  Kurz gesagt: Sie bieten Ihnen eine „Zusage“, dass die Arbeit zu einem späteren Zeitpunkt abgeschlossen wird, sodass Sie die Zusage mit einer sauberen API koordinieren können.
 
-* `Task` stellt einen einzelnen Vorgang dar, der keinen Wert zurückgibt.
-* `Task<T>` stellt einen einzelnen Vorgang dar, der einen Wert des Typs `T` zurückgibt.
+- `Task` stellt einen einzelnen Vorgang dar, der keinen Wert zurückgibt.
+- `Task<T>` stellt einen einzelnen Vorgang dar, der einen Wert des Typs `T` zurückgibt.
 
 Es ist wichtig, Tasks als asynchron stattfindende Abstraktionen von Arbeit zu betrachten, und *nicht* als Abstraktion des Threadings. Tasks werden standardmäßig auf dem aktuellen Thread ausgeführt und delegieren Arbeit nach Bedarf an das Betriebssystem. Optional können Tasks explizit zur Ausführung auf einem separaten Thread über die `Task.Run`-API angefordert werden.
 
@@ -90,9 +90,9 @@ Obwohl das Obige den Eindruck weckt, es sei viel Arbeit zu bewältigen, ist es i
 
 0-1————————————————————————————————————————————————–2-3
 
-* Die zwischen den Punkten `0` und `1` verstrichene Zeit umfasst alles, bis eine Async-Methode die Steuerung an ihren Aufrufer übergibt.
-* Die zwischen den Punkten `1` und `2` verstrichene Zeit ist die für E/A aufgewendete Zeit ohne CPU-Kosten.
-* Schließlich wird die zwischen den Punkten `2` und `3` verstrichene Zeit für die Rückgabe der Steuerung (und möglicherweise eines Werts) an die Async-Methode aufgewendet. An diesem Punkt übernimmt sie wieder die Ausführung.
+- Die zwischen den Punkten `0` und `1` verstrichene Zeit umfasst alles, bis eine Async-Methode die Steuerung an ihren Aufrufer übergibt.
+- Die zwischen den Punkten `1` und `2` verstrichene Zeit ist die für E/A aufgewendete Zeit ohne CPU-Kosten.
+- Schließlich wird die zwischen den Punkten `2` und `3` verstrichene Zeit für die Rückgabe der Steuerung (und möglicherweise eines Werts) an die Async-Methode aufgewendet. An diesem Punkt übernimmt sie wieder die Ausführung.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Was bedeutet dies für ein Serverszenario?
 

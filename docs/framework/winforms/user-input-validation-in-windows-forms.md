@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916298"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206136"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzerdaten in die Anwendung eingeben, sollten Sie überprüfen, ob die Daten gültig sind, bevor Sie von Ihrer Anwendung verwendet werden. Möglicherweise ist es erforderlich, dass bestimmte Textfelder nicht die Länge 0 (null) aufweisen, dass ein Feld als Telefonnummer oder anderer Typ von wohlgeformten Daten formatiert wird, oder dass eine Zeichenfolge keine unsicheren Zeichen enthält, die zum kompromittieren der Sicherheit einer Datenbank verwendet werden können. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen von Eingaben in Ihrer Anwendung.  
@@ -85,7 +85,7 @@ Wenn Benutzerdaten in die Anwendung eingeben, sollten Sie überprüfen, ob die D
   
 - Durch Programm gesteuertes Aufrufen der <xref:System.Windows.Forms.Form.Close%2A> -Methode.  
   
- In einigen Fällen möchten Sie jedoch möglicherweise, dass der Benutzer das Formular schließt, unabhängig davon, ob die Werte in den Steuerelementen gültig sind. Durch Erstellen eines Handlers für das- <xref:System.Windows.Forms.Form.Closing> Ereignis des Formulars können Sie die Überprüfung überschreiben und ein Formular schließen, das noch ungültige Daten enthält. Legen Sie im-Ereignis die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft `false`auf fest. Dadurch muss das Formular geschlossen werden. Weitere Informationen und ein Beispiel finden Sie unter <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ In einigen Fällen möchten Sie jedoch möglicherweise, dass der Benutzer das Formular schließt, unabhängig davon, ob die Werte in den Steuerelementen gültig sind. Durch Erstellen eines Handlers für das- <xref:System.Windows.Forms.Form.FormClosing> Ereignis des Formulars können Sie die Überprüfung überschreiben und ein Formular schließen, das noch ungültige Daten enthält. Legen Sie im-Ereignis die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft `false`auf fest. Dadurch muss das Formular geschlossen werden. Weitere Informationen und ein Beispiel finden Sie unter <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > Wenn Sie erzwingen, dass das Formular auf diese Weise geschlossen wird, gehen alle Daten in den Steuerelementen des Formulars, die noch nicht gespeichert wurden, verloren. Außerdem überprüfen modale Formulare nicht den Inhalt von Steuerelementen, wenn Sie geschlossen werden. Sie können die Steuerelement Validierung weiterhin verwenden, um den Fokus auf ein Steuerelement zu sperren, aber Sie müssen sich nicht um das Verhalten im Zusammenhang mit dem Schließen des Formulars kümmern.  
@@ -93,7 +93,7 @@ Wenn Benutzerdaten in die Anwendung eingeben, sollten Sie überprüfen, ob die D
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox-Steuerelement](./controls/maskedtextbox-control-windows-forms.md)
 - [Beispiele für reguläre Ausdrücke](../../standard/base-types/regular-expression-examples.md)

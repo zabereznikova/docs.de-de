@@ -4,12 +4,12 @@ description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Change
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564223"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104661"
 ---
 # <a name="breaking-changes"></a>Breaking Changes
 
@@ -19,11 +19,11 @@ Es ist wichtig für eine .NET-Bibliothek, ein Gleichgewicht zwischen Stabilität
 
 Wie eine Bibliothek von der .NET-Community verwendet wird, ändert die Auswirkungen von Breaking Changes auf die Endbenutzerentwickler.
 
-* **Bibliotheken auf niedriger und mittlerer Ebene** wie Serialisierungsmodule, HTML-Parser, datenbankobjektrelationale Mapper oder Webframeworks sind am stärksten von Breaking Changes betroffen.
+- **Bibliotheken auf niedriger und mittlerer Ebene** wie Serialisierungsmodule, HTML-Parser, datenbankobjektrelationale Mapper oder Webframeworks sind am stärksten von Breaking Changes betroffen.
 
   Bausteinpakete werden von Endbenutzerentwicklern zum Erstellen von Anwendungen und von anderen Bibliotheken für NuGet-Abhängigkeiten verwendet. Angenommen, Sie erstellen eine Anwendung und verwenden einen Open Source-Client zum Aufrufen eines Webdiensts. Sie können kein wichtiges Update für eine Abhängigkeit korrigieren, die der Client verwendet. Der Open Source-Client muss nämlich geändert werden, und das können Sie nicht steuern. Sie müssen kompatible Bibliotheksversionen finden oder einen Fix an die Clientbibliothek übermitteln und auf eine neue Version warten. Der schlimmste Fall ist, wenn Sie zwei Bibliotheken verwenden wollen, die von gegenseitig inkompatiblen Versionen einer dritten Bibliothek abhängen.
 
-* **Bibliotheken auf hoher Ebene** wie eine Sammlung von Steuerelementen der Benutzeroberfläche sind weniger anfällig für Breaking Changes.
+- **Bibliotheken auf hoher Ebene** wie eine Sammlung von Steuerelementen der Benutzeroberfläche sind weniger anfällig für Breaking Changes.
 
   Bibliotheken auf hoher Ebene werden direkt in einer Endbenutzeranwendung referenziert. Wenn Breaking Changes auftreten, kann der Entwickler ein Update auf die neueste Version ausführen oder seine Anwendung ändern, um die Breaking Changes zu verwenden.
 

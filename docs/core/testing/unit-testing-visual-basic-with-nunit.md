@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7563fe12d1e3637a737c5472dbf8d64d163a3feb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626400"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168216"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -30,7 +30,7 @@ dotnet new sln
 
 Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die bisherige Dateistruktur:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -66,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -95,7 +95,7 @@ Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/sa
 
 Sie verfügen über das folgende endgültige Projektmappenlayout:
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService

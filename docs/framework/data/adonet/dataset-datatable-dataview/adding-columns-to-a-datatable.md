@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 77bf117b8835623d768f8b8b0ec3e4195174cad7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043949"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204057"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Hinzufügen von Spalten zu einer "DataTable"
 Eine <xref:System.Data.DataTable> enthält eine Auflistung von <xref:System.Data.DataColumn> -Objekten, auf die von der **Columns** -Eigenschaft der Tabelle verwiesen wird. Diese Auflistung von Spalten, zusammen mit allen Einschränkungen, definiert das Schema oder die Struktur der Tabelle.  
@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- Beachten Sie im Beispiel, dass die Eigenschaften für die **CustId-** Spalte so festgelegt sind, dass **DBNull** -Werte nicht zulässig sind, und dass die Werte als eindeutig festgelegt werden. Wenn Sie die **CustId-** Spalte jedoch als Primärschlüssel Spalte der Tabelle definieren, wird die **AllowDBNull** -Eigenschaft automatisch auf **false** festgelegt, und die **Unique** -Eigenschaft wird automatisch auf **true**festgelegt. Weitere Informationen finden Sie unter [Definieren von primär Schlüsseln](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ Beachten Sie im Beispiel, dass die Eigenschaften für die **CustId-** Spalte so festgelegt sind, dass **DBNull** -Werte nicht zulässig sind, und dass die Werte als eindeutig festgelegt werden. Wenn Sie die **CustId-** Spalte jedoch als Primärschlüssel Spalte der Tabelle definieren, wird die **AllowDBNull** -Eigenschaft automatisch auf **false** festgelegt, und die **Unique** -Eigenschaft wird automatisch auf **true**festgelegt. Weitere Informationen finden Sie unter [Definieren von primär Schlüsseln](defining-primary-keys.md).  
   
 > [!CAUTION]
 > Wenn für eine Spalte kein Spaltenname angegeben wird, erhält die Spalte einen inkrementellen Standardnamen von Spalte*N,* beginnend mit "Column1", wenn Sie der **datacolenncollection**hinzugefügt wird. Es wird empfohlen, dass Sie die Benennungs Konvention "Column*N*" vermeiden, wenn Sie einen Spaltennamen angeben, da der von Ihnen bereitgestellte Name möglicherweise mit einem vorhandenen Standard Spaltennamen in der **datacolenncollection**in Konflikt steht. Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
@@ -56,6 +56,6 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
-- [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable-Schemadefinition](datatable-schema-definition.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

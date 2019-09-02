@@ -2,12 +2,12 @@
 title: Unterscheidungs-Unions
 description: Erfahren Sie, wie F# diskriminierte Unions verwendet werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106770"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206156"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -87,7 +87,7 @@ Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Na
 In F# Unterscheidungs-Unions werden häufig verwendet in objektorientierten domänenmodellierung für das Umschließen eines einzelnen Typs. Der zugrunde liegende Wert kann auch einfach über den Musterabgleich extrahiert werden. Es ist nicht erforderlich, einen Vergleichs Ausdruck für einen einzelnen Fall zu verwenden:
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 Dies wird im folgenden Beispiel veranschaulicht:

@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616350"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106914"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -61,12 +61,12 @@ Markdown verwendet Sonderzeichen wie z.B. \*, \`, und \# für die Formatierung. 
 
 Dateinamen verwenden die folgenden Regeln:
 
-* Es sollten nur Kleinbuchstaben, Zahlen und Bindestriche enthalten sein.
-* Keine Leer- oder Interpunktionszeichen. Verwenden Sie die Bindestriche zum Trennen von Wörtern und Zahlen im Dateinamen.
-* Verwenden Sie genaue Aktionsverben wie „entwickeln“, „kaufen“, „erstellen“ oder „beheben“. Keine auf „-ing“ endenden Worte dürfen verwendet werden.
-* Keine kurzen Worte wie a, and, the, in, or usw. sind erlaubt.
-* Muss in Markdown geschrieben werden und die Dateierweiterung .md verwenden.
-* Halten Sie Dateinamen einigermaßen kurz. Sie sind Teil der URL für Ihre Artikel.
+- Es sollten nur Kleinbuchstaben, Zahlen und Bindestriche enthalten sein.
+- Keine Leer- oder Interpunktionszeichen. Verwenden Sie die Bindestriche zum Trennen von Wörtern und Zahlen im Dateinamen.
+- Verwenden Sie genaue Aktionsverben wie „entwickeln“, „kaufen“, „erstellen“ oder „beheben“. Keine auf „-ing“ endenden Worte dürfen verwendet werden.
+- Keine kurzen Worte wie a, and, the, in, or usw. sind erlaubt.
+- Muss in Markdown geschrieben werden und die Dateierweiterung .md verwenden.
+- Halten Sie Dateinamen einigermaßen kurz. Sie sind Teil der URL für Ihre Artikel.
 
 ## <a name="headings"></a>Kopfzeilen
 
@@ -244,22 +244,22 @@ Sie können den Code mithilfe folgender Syntax einschließen:
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` (*optional*, aber *empfohlen*)
-  * Programmiersprache des Codeausschnitts, auf den verwiesen wird. Eine Liste mit unterstützten Werten finden Sie unter [Unterstützte Sprachen](#supported-languages).
+- `-<language>` (*optional*, aber *empfohlen*)
+  - Programmiersprache des Codeausschnitts, auf den verwiesen wird. Eine Liste mit unterstützten Werten finden Sie unter [Unterstützte Sprachen](#supported-languages).
 
-* `<name>` (*optional*)
-  * Name für den Codeausschnitt. Dieser hat keinen Einfluss auf die HTML-Ausgabe, aber er ermöglicht eine bessere Lesbarkeit Ihrer Markdownquelle.
+- `<name>` (*optional*)
+  - Name für den Codeausschnitt. Dieser hat keinen Einfluss auf die HTML-Ausgabe, aber er ermöglicht eine bessere Lesbarkeit Ihrer Markdownquelle.
 
-* `<pathToFile>` (*erforderlich*)
-  * Der relative Pfad im Dateisystem, der die Codeausschnittdatei angibt, auf die verwiesen werden soll.
+- `<pathToFile>` (*erforderlich*)
+  - Der relative Pfad im Dateisystem, der die Codeausschnittdatei angibt, auf die verwiesen werden soll.
 
-* `<queryoption>` und `<queryoptionvalue>` (*optional*)
-  * Zusammen verwendet, um festzulegen, wie der Code aus der Datei abgerufen werden soll:
-    * `#`:  `#L{startlinenumber}-L{endlinenumber}` (Zeilenbereich) *oder* `#{tagname}` (Tagname).
+- `<queryoption>` und `<queryoptionvalue>` (*optional*)
+  - Zusammen verwendet, um festzulegen, wie der Code aus der Datei abgerufen werden soll:
+    - `#`:  `#L{startlinenumber}-L{endlinenumber}` (Zeilenbereich) *oder* `#{tagname}` (Tagname).
     Von der Verwendung von Zeilennummern wird abgeraten, da diese sehr anfällig sind. Der Tagname ist die bevorzugte Methode zum Verweisen auf Codeausschnitte.
-    * `range`: `?range=1,3-5` Ein Bereich von Zeilen. Dieses Beispiel umfasst die Zeilen 1, 3, 4 und 5.
-    * `dedent`: `?dedent=8` Rückt die Zeilen um eine Anzahl von Leerzeichen ein – in diesem Fall 8. Diese Methode kann mit `range` und anderen Abfrageoptionen kombiniert werden, die eine Teilmenge der Zeilen einer Datei auswählen.
-    * `outdent`: `?outdent=8` Kehrt den Einzug der Zeilen um eine Anzahl von Leerzeichen um – in diesem Fall 8. Diese Methode kann mit `range` und anderen Abfrageoptionen kombiniert werden, die eine Teilmenge der Zeilen einer Datei auswählen.
+    - `range`: `?range=1,3-5` Ein Bereich von Zeilen. Dieses Beispiel umfasst die Zeilen 1, 3, 4 und 5.
+    - `dedent`: `?dedent=8` Rückt die Zeilen um eine Anzahl von Leerzeichen ein – in diesem Fall 8. Diese Methode kann mit `range` und anderen Abfrageoptionen kombiniert werden, die eine Teilmenge der Zeilen einer Datei auswählen.
+    - `outdent`: `?outdent=8` Kehrt den Einzug der Zeilen um eine Anzahl von Leerzeichen um – in diesem Fall 8. Diese Methode kann mit `range` und anderen Abfrageoptionen kombiniert werden, die eine Teilmenge der Zeilen einer Datei auswählen.
 
 Es wird empfohlen, nach Möglichkeit die Option „Tagname“ zu verwenden. Der Tagname ist der Name eines Bereichs oder eines Codekommentars im Format von `Snippettagname`, der im Quellcode vorhanden ist. Im folgenden Beispiel wird gezeigt, wie auf den Tagnamen `1` verwiesen wird:
 
@@ -448,11 +448,11 @@ Sie können den Markdownteil einer Datei über eine Includeanweisung in eine and
 Für Listen ist eine benutzerdefinierte Formatvorlage vorhanden. Sie können Listen mit grünen Häkchen darstellen.
 
 > [!div class="checklist"]
-> * Erstellen einer .NET Core-App
-> * Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
-> * Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
-> * Hinzufügen von „XmlSerializer“ und einer Klasse
-> * Erstellen und Ausführen der Anwendung
+> - Erstellen einer .NET Core-App
+> - Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
+> - Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
+> - Hinzufügen von „XmlSerializer“ und einer Klasse
+> - Erstellen und Ausführen der Anwendung
 
 Ein Beispiel für eine Häkchenliste in Aktion finden Sie in diesem [.NET Core-Dokument](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator).
 

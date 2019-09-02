@@ -3,35 +3,35 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347455"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105714"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
 C# 7.0 bietet eine Reihe von neuen Features für die C#-Programmiersprache:
-* [`out`Variablen](#out-variables)
+- [`out`Variablen](#out-variables)
   - Sie können `out`-Werte als Inlineargumente für die Methode deklarieren, wenn sie verwendet werden.
-* [Tupel](#tuples)
+- [Tupel](#tuples)
   - Sie können einfache, unbenannte Typen erstellen, die mehrere öffentliche Felder enthalten. Compiler und IDE-Tools kennen die Semantik dieser Typen.
-* [Verwerfen](#discards)
+- [Verwerfen](#discards)
   - Ausschussvariablen (discards) sind temporäre, lesegeschützte Variablen, die in Zuweisungen verwendet werden, wenn der zugewiesene Wert nicht weiter interessiert. Sie eignen sich besonders zum Dekonstruieren von Tupeln und benutzerdefinierten Typen sowie beim Aufrufen von Methoden mit `out`-Parametern.
-* [Mustervergleich](#pattern-matching)
+- [Mustervergleich](#pattern-matching)
   - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
-* [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
+- [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
   - Lokale Variablen und Rückgabewerte von Methoden können Verweise auf andere Speicher sein.
-* [Lokale Funktionen](#local-functions)
+- [Lokale Funktionen](#local-functions)
   - Sie können Funktionen innerhalb von anderen Funktionen verschachteln, um deren Bereich und Sichtbarkeit zu beschränken.
-* [Mehr Ausdruckskörpermember](#more-expression-bodied-members)
+- [Mehr Ausdruckskörpermember](#more-expression-bodied-members)
   - Die Liste der Member, die mithilfe von Ausdrücken erstellt werden können, ist länger geworden.
-* [`throw`-Ausdrücke](#throw-expressions)
+- [`throw`-Ausdrücke](#throw-expressions)
   - Sie können Ausnahmen in Codekonstrukten auslösen, die vorher nicht zulässig waren, da `throw` eine Anweisung war.
-* [Generalisierte asynchrone Rückgabetypen](#generalized-async-return-types)
+- [Generalisierte asynchrone Rückgabetypen](#generalized-async-return-types)
   - Methoden, die mit dem `async`-Modifizierer deklariert werden, können zusätzlich zu `Task` und `Task<T>` andere Typen zurückgeben.
-* [Verbesserung der numerischen literalen Syntax](#numeric-literal-syntax-improvements)
+- [Verbesserung der numerischen literalen Syntax](#numeric-literal-syntax-improvements)
   - Neue Token verbessern die Lesbarkeit für numerische Konstanten.
 
 Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktionen. Sie werden die Hintergründe jeder einzelnen Funktion erfahren. Sie werden die Syntax erlernen. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
@@ -51,9 +51,9 @@ Möglicherweise möchten Sie den Typ der `out`-Variablen aus Gründen der Übers
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Der Code ist einfacher zu lesen.
+- Der Code ist einfacher zu lesen.
   - Sie deklarieren die out-Variable, wenn Sie sie verwenden, nicht in einer anderen Zeile weiter oben.
-* Sie müssen keinen Anfangswert zuweisen.
+- Sie müssen keinen Anfangswert zuweisen.
   - Durch das Deklarieren der `out`-Variable, wenn sie in einem Methodenaufruf verwendet wird, können Sie diese nicht versehentlich verwenden, bevor sie zugewiesen wurde.
 
 ## <a name="tuples"></a>Tupel
@@ -95,10 +95,10 @@ Beim Dekonstruieren eines Tupels oder dem Aufrufen einer Methode mit `out`-Param
 
 Ausschussvariablen werden in den folgenden Szenarien unterstützt:
 
-* Beim Dekonstruieren von Tupeln oder benutzerdefinierten Typen.
-* Beim Aufrufen von Methoden mit [out](../language-reference/keywords/out-parameter-modifier.md)-Parametern.
-* In einem Musterabgleichsvorgang mit den Anweisungen [is](../language-reference/keywords/is.md) und [switch](../language-reference/keywords/switch.md).
-* Als eigenständiger Bezeichner, wenn Sie den Wert einer Zuweisung explizit als Ausschuss kennzeichnen möchten.
+- Beim Dekonstruieren von Tupeln oder benutzerdefinierten Typen.
+- Beim Aufrufen von Methoden mit [out](../language-reference/keywords/out-parameter-modifier.md)-Parametern.
+- In einem Musterabgleichsvorgang mit den Anweisungen [is](../language-reference/keywords/is.md) und [switch](../language-reference/keywords/switch.md).
+- Als eigenständiger Bezeichner, wenn Sie den Wert einer Zuweisung explizit als Ausschuss kennzeichnen möchten.
 
 Das folgende Beispiel definiert eine `QueryCityDataForYears`-Methode, die ein 6-Tupel zurückgibt, das ein Datum für eine Stadt für zwei verschiedene Jahre enthält. Der Methodenaufruf im Beispiel befasst sich nur mit den zwei Bevölkerungswerten, die von der Methode zurückgegeben werden und behandelt so die verbleibenden Werte im Tupel beim Dekonstruieren des Tupels als Ausschuss.
 
@@ -180,15 +180,15 @@ Sie können den Rückgabewert als `ref` deklarieren und diesen Wert wie im folge
 
 Die C#-Sprache verfügt über mehrere Regeln, die Sie vor einer falschen Verwendung der lokalen `ref`-Variablen und Rückgabetypen schützen:
 
-* Sie müssen der Methodensignatur und allen `return`-Anweisungen einer Methode das `ref`-Schlüsselwort hinzufügen.
+- Sie müssen der Methodensignatur und allen `return`-Anweisungen einer Methode das `ref`-Schlüsselwort hinzufügen.
   - Dadurch wird deutlich, dass Rückgaben in der gesamten Methode als Verweis erfolgen.
-* Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
+- Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
   - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
-* Sie können einer lokalen `ref`-Variablen keinen Rückgabewert einer Standardmethode zuweisen.
+- Sie können einer lokalen `ref`-Variablen keinen Rückgabewert einer Standardmethode zuweisen.
   - Dadurch werden Aussagen wie `ref int i = sequence.Count();` nicht zugelassen.
-* Sie können `ref` nicht an eine Variable zurückgeben, deren Lebensdauer nicht über die Ausführung der Methode hinausgeht.
+- Sie können `ref` nicht an eine Variable zurückgeben, deren Lebensdauer nicht über die Ausführung der Methode hinausgeht.
   - Das bedeutet, dass Sie keinen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
-* Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
+- Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
   - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
 
 Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert oder dereferenzierende Vorgänge nicht mehrmals ausgeführt werden.

@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910711"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206079"
 ---
 # <a name="security-transparent-code-level-1"></a>Sicherheits transparenter Code, Ebene 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)verwenden. Transparenz der Ebene 1 wurde jedoch beibehalten, sodass Sie Legacy Code identifizieren können, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
+ Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](security-transparent-code-level-2.md)verwenden. Transparenz der Ebene 1 wurde jedoch beibehalten, sodass Sie Legacy Code identifizieren können, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
   
 > [!IMPORTANT]
 > Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wurde, immer Transparenz der Ebene 2.  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheits transparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)
+- [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)
+- [Sicherheitsänderungen](../security/security-changes.md)

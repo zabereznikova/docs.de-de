@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8100add17b61424624f27de705728935f3a1160b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ae4ddd4df902cf8c3d50e50614b12af8dc0aebed
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038026"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168164"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Komponententests für C# mit MSTest und .NET Core
 
@@ -20,7 +20,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-mstest*, um darin die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen. Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die Verzeichnis- und Dateistruktur:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -49,7 +49,7 @@ namespace Prime.Services
 
 Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService
@@ -70,7 +70,7 @@ Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und e
 
 Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest-SDK, MSTest-Testframework und MSTest-Runner hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -78,7 +78,7 @@ Die ganze Datei finden Sie im [Beispielerepository](https://github.com/dotnet/sa
 
 Die folgende Gliederung zeigt das endgültige Projektmappenlayout:
 
-```
+```console
 /unit-testing-using-mstest
     unit-testing-using-mstest.sln
     /PrimeService

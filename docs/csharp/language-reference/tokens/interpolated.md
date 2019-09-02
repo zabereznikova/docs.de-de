@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250998"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202956"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -34,13 +34,13 @@ Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möch
 
 Die Struktur eines Elements mit einem Interpolationsausdruck sieht wie folgt aus:
 
-```
+```csharp
 {<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes Element beschrieben:
 
-|Element|Beschreibung|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |`interpolationExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung des `null`-Ergebnisses ist <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des Interpolationsausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|

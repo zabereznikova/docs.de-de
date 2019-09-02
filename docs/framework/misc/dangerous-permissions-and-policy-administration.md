@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ffe4f3e000c80610d5a105dddef90f9cfd51f0dc
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910932"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205588"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Problematische Berechtigungen und Richtlinienverwaltung
 Verschiedene der geschützten Operationen, für die von .NET Framework Berechtigungen bereitgestellt werden, ermöglichen unter Umständen die Umgehung des Sicherheitssystems. Diese problematischen Berechtigungen sollten nur bei Bedarf für vertrauenswürdigen Code erteilt werden. Es gibt in der Regel keinen Schutz vor bösartigem Code, wenn dem Code diese Berechtigungen gewährt werden.  
   
 > [!NOTE]
-> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).  
   
  Die problematischen Berechtigungen werden in der folgenden Tabelle erläutert.  
   
@@ -32,7 +32,7 @@ Verschiedene der geschützten Operationen, für die von .NET Framework Berechtig
 |<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Ohne eine Überprüfung kann der Code beliebige Aktionen ausführen.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|Als ungültig erklärte Beweise können die Sicherheitsrichtlinien umgehen.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Durch die Möglichkeit der Änderung von Sicherheitsrichtlinien kann die Sicherheit deaktiviert werden.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Durch die Serialisierung können Zugriffsmechanismen umgangen werden. Weitere Informationen finden Sie unter [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md).|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Durch die Serialisierung können Zugriffsmechanismen umgangen werden. Weitere Informationen finden Sie unter [Sicherheit und Serialisierung](security-and-serialization.md).|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Durch die Fähigkeit zum Festlegen des aktuellen Prinzipals kann die rollenbasierte Sicherheit umgangen werden.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|Die Änderung von Threads ist aufgrund des mit Threads verbundenen Sicherheitszustands riskant.|  
 |<xref:System.Security.Permissions.ReflectionPermission>||  

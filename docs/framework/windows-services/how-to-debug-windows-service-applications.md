@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988529"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044447"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Vorgehensweise: Debuggen von Windows-Dienstanwendungen
 Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden. Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio. Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird. Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  
   
 > [!CAUTION]
->  Das Anhängen darf nur bei bekannten Prozessen durchgeführt werden. Außerdem müssen die Konsequenzen bekannt sein, wenn an den Prozess angehängt wird und dieser u. U. abgebrochen wird. Wenn z. B. an den WinLogon-Prozess angehängt und anschließend das Debuggen beendet wird, hält das System an, weil es ohne WinLogon nicht lauffähig ist.  
+> Das Anhängen darf nur bei bekannten Prozessen durchgeführt werden. Außerdem müssen die Konsequenzen bekannt sein, wenn an den Prozess angehängt wird und dieser u. U. abgebrochen wird. Wenn z. B. an den WinLogon-Prozess angehängt und anschließend das Debuggen beendet wird, hält das System an, weil es ohne WinLogon nicht lauffähig ist.  
   
  Ein Debugger kann nur an einen Dienst angehängt werden, der ausgeführt wird. Durch den Vorgang des Anhängens wird die aktuelle Funktion des Diensts unterbrochen. Die Verarbeitung des Diensts wird nicht tatsächlich beendet oder angehalten. Das bedeutet: Wenn mit dem Debuggen eines Diensts begonnen wird, während er ausgeführt wird, befindet er sich während des Debuggens technisch gesehen weiterhin im Status Gestartet. Die Verarbeitung ist jedoch unterbrochen worden.  
   
@@ -55,7 +55,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
 8. Wählen Sie im Abschnitt **Verfügbare Prozesse** den Prozess für den Dienst aus, und klicken Sie anschließend auf **Anfügen**.  
   
     > [!TIP]
-    >  Der Prozess weist den gleichen Namen wie die ausführbare Datei für den Dienst auf.  
+    > Der Prozess weist den gleichen Namen wie die ausführbare Datei für den Dienst auf.  
   
      Das Dialogfeld **An den Prozess anhängen** wird angezeigt.  
   

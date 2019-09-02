@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 892fb5cc9fba3434b0884c88b97f784d58093303
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063349"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107373"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -23,7 +23,7 @@ Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibilit
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* Visual Studio 2017 und höhere Versionen oder Visual Studio für Mac (alle Versionen).
+- Visual Studio 2017 und höhere Versionen oder Visual Studio für Mac (alle Versionen).
 
 ## <a name="discovering-deprecated-apis"></a>Ermittlung von veralteten APIs
 
@@ -50,8 +50,8 @@ Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten In
 
 Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf das markierte Element klicken und die Option **\<Diagnose-ID> unterdrücken** wählen. Es gibt zwei Möglichkeiten, Warnungen zu unterdrücken: 
 
-* [lokal (in der Quelle)](#suppressing-warnings-locally)
-* [global (in einer Unterdrückungsdatei)](#suppressing-warnings-globally) – empfohlen
+- [lokal (in der Quelle)](#suppressing-warnings-locally)
+- [global (in einer Unterdrückungsdatei)](#suppressing-warnings-globally) – empfohlen
 
 ### <a name="suppressing-warnings-locally"></a>Lokales Unterdrücken von Warnungen
 
@@ -95,11 +95,11 @@ Sie können auch bedingt pro Zielframework/-betriebssystem kompilieren, dies ist
 
 Zurzeit verarbeitet das Analysetool die folgenden Fälle:
 
-* Nutzung einer .NET Standard-API, die die Ausnahme <xref:System.PlatformNotSupportedException> (PC001) auslöst.
-* Nutzung einer .NET Standard-API, die im .NET Framework 4.6.1 (PC002) nicht verfügbar ist.
-* Nutzung einer nativen API, die nicht in UWP (PC003) vorhanden ist.
-* Die Verwendung von Delegate.BeginInvoke und EndInvoke-APIs (PC004).
-* Nutzung einer API, die als veraltet (DEXXXX) gekennzeichnet ist.
+- Nutzung einer .NET Standard-API, die die Ausnahme <xref:System.PlatformNotSupportedException> (PC001) auslöst.
+- Nutzung einer .NET Standard-API, die im .NET Framework 4.6.1 (PC002) nicht verfügbar ist.
+- Nutzung einer nativen API, die nicht in UWP (PC003) vorhanden ist.
+- Die Verwendung von Delegate.BeginInvoke und EndInvoke-APIs (PC004).
+- Nutzung einer API, die als veraltet (DEXXXX) gekennzeichnet ist.
 
 ## <a name="ci-machine"></a>CI-Computer
 

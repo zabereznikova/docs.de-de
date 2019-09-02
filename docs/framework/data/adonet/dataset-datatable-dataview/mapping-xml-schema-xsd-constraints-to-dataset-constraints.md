@@ -2,46 +2,46 @@
 title: Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: cdbfba96c4cfe52cfbd58246be60842540a84754
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b0082b534b8df10ac5277cf2f5aa5b2d2e40c11b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603999"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204624"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
-Die XSD-Sprache (XML Schema Definition Language) ermöglicht Einschränkungen, die Sie für die Elemente und Attribute angeben können, die durch XSD definiert werden. Beim Zuordnen von XML-Schema zu relationalen Schema in ein <xref:System.Data.DataSet>, entsprechenden relationalen Einschränkungen in den Tabellen und Spalten in XML-schemaeinschränkungen zugeordnet sind die **DataSet**.  
+Die XSD-Sprache (XML Schema Definition Language) ermöglicht Einschränkungen, die Sie für die Elemente und Attribute angeben können, die durch XSD definiert werden. Beim Zuordnen eines XML-Schemas zu einem relationalen Schema in einem <xref:System.Data.DataSet>werden XML-Schema Einschränkungen den entsprechenden relationalen Einschränkungen für die Tabellen und Spalten im **DataSet**zugeordnet.  
   
  In diesem Abschnitt wird die Zuordnung der folgenden XML-Schemaeinschränkungen behandelt:  
   
-- Die Unique-Einschränkung angegeben wird, mit der **eindeutige** Element.  
+- Die Eindeutigkeits Einschränkung, die mit dem **Unique** -Element angegeben wird.  
   
-- Die Key-Einschränkung angegeben wird, mit der **Schlüssel** Element.  
+- Die Schlüssel Einschränkung, die mit dem **Key** -Element angegeben wird.  
   
-- Die Keyref-Einschränkung angegeben wird, mit der **Keyref** Element.  
+- Die keyref-Einschränkung, die mit dem **keyref** -Element angegeben wird.  
   
- Mit einer Einschränkung für ein Element oder Attribut geben Sie bestimmte Beschränkungen für den Wert des Elements in einer beliebigen Instanz des Dokuments an. Z. B. eine schlüsseleinschränkung für ein **"CustomerID"** untergeordnetes Element des eine **Kunden** Elements im Schema gibt an, dass die Werte der **"CustomerID"** untergeordnetes Element muss in jeder Dokumentinstanz eindeutig und, dass null-Werte nicht zulässig sind.  
+ Mit einer Einschränkung für ein Element oder Attribut geben Sie bestimmte Beschränkungen für den Wert des Elements in einer beliebigen Instanz des Dokuments an. Eine Schlüssel Einschränkung für ein untergeordnetes **CustomerID-** Element eines **Customer** -Elements im Schema gibt beispielsweise an, dass die Werte des untergeordneten **CustomerID-** Elements in jeder Dokument Instanz eindeutig sein müssen und dass NULL-Werte nicht zulässig sind.  
   
  Einschränkungen können auch zwischen Elementen und Attributen in einem Dokument angegeben werden, um eine Beziehung innerhalb des Dokuments zu erstellen. Die key-Einschränkung und die keyref-Einschränkung werden im Schema verwendet, um Einschränkungen innerhalb des Dokuments anzugeben, die zu einer Beziehung zwischen Dokumentelementen und Attributen führen.  
   
- Der Zuordnungsprozess konvertiert diese schemaeinschränkungen in die entsprechenden Einschränkungen für die Tabellen erstellt, die innerhalb der **DataSet**.  
+ Der Zuordnungsprozess konvertiert diese Schema Einschränkungen in entsprechende Einschränkungen für die Tabellen, die innerhalb des **DataSets**erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Zuordnen von eindeutigen XML Schema-Einschränkungen (XSD)zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML-Schema-Elemente, die zum Erstellen von unique-Einschränkungen in einer **DataSet**.  
+ [Zuordnen von eindeutigen XML Schema-Einschränkungen (XSD)zu DataSet-Einschränkungen](map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Beschreibt die XML-Schema Elemente, die verwendet werden, um UNIQUE-Einschränkungen in einem **DataSet**zu erstellen.  
   
- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML-Schema-Elemente, die zum Erstellen von Key-Einschränkungen (unique-Einschränkungen, in denen null-Werte sind nicht zulässig) in einem **DataSet**.  
+ [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Beschreibt die XML-Schema Elemente, mit denen Schlüssel Einschränkungen (Unique-Einschränkungen, bei denen NULL-Werte nicht zulässig sind) in einem **DataSet**erstellt werden.  
   
- [Zuordnen von keyref-XML Schema-Einschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML-Schema-Elemente, die zum Erstellen von Keyref-Einschränkungen (Fremdschlüssel) in einem **DataSet**.  
+ [Zuordnen von keyref-XML Schema-Einschränkungen (XSD) zu DataSet-Einschränkungen](map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Beschreibt die XML-Schema Elemente, die verwendet werden, um keyref-Einschränkungen (Foreign Key) in einem **DataSet**zu erstellen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Beschreibt die relationale Struktur bzw. das Schema, der eine **DataSet** , die aus XSD-Schema erstellt wird.  
+ [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ Beschreibt die relationale Struktur bzw. das Schema eines **DataSets** , das aus einem XSD-Schema erstellt wird.  
   
- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Beschreibt die XML-Schema-Elemente, die zum Erstellen von Beziehungen zwischen Tabellenspalten in einer **DataSet**.  
+ [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
+ Beschreibt die XML-Schema Elemente, die verwendet werden, um Beziehungen zwischen Tabellen Spalten in einem **DataSet**zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595509"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168354"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
 
@@ -237,7 +237,7 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
 
 2. `GetResponseAsync` gibt einen Wert vom Typ <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.
 
-     Wenden Sie analog zur Darstellung im folgenden Code zum Abrufen des `WebResponse`-Werts aus der Aufgabe einen [await](../../../language-reference/keywords/await.md)-Operator für den Aufruf von `GetResponseAsync` an.
+     Wenden Sie analog zur Darstellung im folgenden Code zum Abrufen des `WebResponse`-Werts aus der Aufgabe einen [await](../../../language-reference/operators/await.md)-Operator für den Aufruf von `GetResponseAsync` an.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [Async Sample: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)
 - [Asynchrone Rückgabetypen (C#)](./async-return-types.md)
 - [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://www.microsoft.com/download/details.aspx?id=19957)

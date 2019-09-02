@@ -2,15 +2,15 @@
 title: Ableiten von Tabellen
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 174d305688c7090c163df60a11e233aea24b8f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84cee828f2d3c918a12e449da5b01a3d72d86333
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587360"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203515"
 ---
 # <a name="inferring-tables"></a>Ableiten von Tabellen
-Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-Dokument wird in ADO.NET zunächst bestimmt, welche XML-Elemente Tabellen darstellen. Führen Sie die folgenden XML-Strukturen in einer Tabelle für die **DataSet** Schema:  
+Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-Dokument wird in ADO.NET zunächst bestimmt, welche XML-Elemente Tabellen darstellen. Die folgenden XML-Strukturen führen zu einer Tabelle für das **DataSet** -Schema:  
   
 - Elemente mit Attributen  
   
@@ -30,9 +30,9 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
   
  Beim Herleiten ergibt sich eine Tabelle mit dem Namen "Element1".  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -52,15 +52,15 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
   
  Beim Herleiten ergibt sich eine Tabelle mit dem Namen "Element1".  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text1|  
   
- Das Dokument- oder Stammelement ergibt eine hergeleitete Tabelle, wenn es Attribute oder untergeordnete Elemente besitzt, die als Spalten hergeleitet werden. Wenn das Dokumentelement verfügt über keine Attribute und keine untergeordneten Elemente, die als Spalten hergeleitet werden, wird das Element als abgeleitet eine **DataSet**. Betrachten Sie beispielsweise den folgenden XML-Code:  
+ Das Dokument- oder Stammelement ergibt eine hergeleitete Tabelle, wenn es Attribute oder untergeordnete Elemente besitzt, die als Spalten hergeleitet werden. Wenn das Document-Element keine Attribute und keine untergeordneten Elemente aufweist, die als Spalten abgeleitet werden, wird das Element als **DataSet**abgeleitet. Betrachten Sie beispielsweise den folgenden XML-Code:  
   
 ```xml  
 <DocumentElement>  
@@ -71,9 +71,9 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
   
  Beim Herleiten ergibt sich eine Tabelle mit dem Namen "DocumentElement".  
   
- **DataSet:** NewDataSet  
+ **DataSet** NewDataSet  
   
- **Tabelle:** DocumentElement  
+ **Glaub** DocumentElement  
   
 |Element1|Element2|  
 |--------------|--------------|  
@@ -87,11 +87,11 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
 </DocumentElement>  
 ```  
   
- Beim Herleiten ergibt eine **DataSet** mit dem Namen "DocumentElement", die eine Tabelle mit dem Namen "Element1".  
+ Der Rückschluss Prozess erzeugt ein **DataSet** mit dem Namen "DocumentElement", das eine Tabelle mit dem Namen "Element1" enthält.  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
@@ -109,9 +109,9 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
   
  Beim Herleiten ergibt sich eine Tabelle mit dem Namen "Element1".  
   
- **DataSet:** DocumentElement  
+ **DataSet** DocumentElement  
   
- **Tabelle:** Element1  
+ **Glaub** Element1  
   
 |Element1_Text|  
 |--------------------|  
@@ -120,9 +120,9 @@ Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-D
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](inferring-dataset-relational-structure-from-xml.md)
+- [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
+- [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
+- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

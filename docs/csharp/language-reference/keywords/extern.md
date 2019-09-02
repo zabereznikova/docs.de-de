@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755892"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203016"
 ---
 # <a name="extern-c-reference"></a>extern (C#-Referenz)
 
@@ -80,7 +80,7 @@ Dieses Beispiel veranschaulicht ein C#-Programm, das eine C-Bibliothek aufruft (
 
 5. Führen Sie aus `cm.exe`. Die `SampleMethod`-Methode übergibt den Wert 5 an die DLL-Datei, die den mit 10 multiplizierten Wert zurückgibt.  Das Programm erzeugt die folgende Ausgabe:
 
-    ```
+    ```output
     SampleMethod() returns 50.
     ```
 

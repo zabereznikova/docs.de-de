@@ -3,12 +3,12 @@ title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557188"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105785"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
@@ -17,9 +17,9 @@ Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
-> * Verwenden Sie die Syntax für Bereiche in einer Sequenz.
-> * Lernen Sie die Entwurfsentscheidungen für Start und Ende jeder Sequenz kennen.
-> * Lernen Sie Szenarien für die Typen <xref:System.Index> und <xref:System.Range> kennen.
+> - Verwenden Sie die Syntax für Bereiche in einer Sequenz.
+> - Lernen Sie die Entwurfsentscheidungen für Start und Ende jeder Sequenz kennen.
+> - Lernen Sie Szenarien für die Typen <xref:System.Index> und <xref:System.Range> kennen.
 
 ## <a name="language-support-for-indices-and-ranges"></a>Sprachunterstützung für Indizes und Bereiche
 

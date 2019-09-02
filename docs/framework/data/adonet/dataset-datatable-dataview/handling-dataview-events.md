@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a1077bff9bf457b4aef0b05357d4a9260f8973
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880034"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204825"
 ---
 # <a name="handling-dataview-events"></a>Behandeln von DataView-Ereignissen
-Sie können das <xref:System.Data.DataView.ListChanged>-Ereignis von <xref:System.Data.DataView> verwenden, um festzustellen, ob eine Ansicht aktualisiert wurde. Zu den Updatevorgängen, die das Ereignis auslösen, zählen das Hinzufügen, Löschen oder Ändern einer Zeile in einer zugrundeliegenden Tabelle, das Hinzufügen oder Löschen einer Spalte im Schema der zugrundeliegenden Tabelle und das Ausführen von Änderungen an einer über- oder untergeordneten Beziehung. Die **ListChanged** Ereignis ebenfalls eine Benachrichtigung, wenn die Liste der angezeigten Zeilen aufgrund einer neuen Sortierreihenfolge oder ein Filter erheblich geändert hat.  
+Sie können das <xref:System.Data.DataView.ListChanged>-Ereignis von <xref:System.Data.DataView> verwenden, um festzustellen, ob eine Ansicht aktualisiert wurde. Zu den Updatevorgängen, die das Ereignis auslösen, zählen das Hinzufügen, Löschen oder Ändern einer Zeile in einer zugrundeliegenden Tabelle, das Hinzufügen oder Löschen einer Spalte im Schema der zugrundeliegenden Tabelle und das Ausführen von Änderungen an einer über- oder untergeordneten Beziehung. Das **ListChanged** -Ereignis benachrichtigt Sie auch, wenn sich die Liste der Zeilen, die Sie anzeigen, aufgrund der Anwendung einer neuen Sortierreihenfolge oder eines Filters erheblich geändert hat.  
   
- Die **ListChanged** Ereignis implementiert die **ListChangedEventHandler** -Delegaten des der <xref:System.ComponentModel> Namespaces und akzeptiert als Eingabe eine <xref:System.ComponentModel.ListChangedEventArgs> Objekt. Können Sie bestimmen, welche Art von Änderung aufgetreten ist, mit der <xref:System.ComponentModel.ListChangedType> Enumerationswert in der **ListChangedType** Eigenschaft der **ListChangedEventArgs** Objekt. Änderungen, bei denen hinzufügen, löschen oder Verschieben von Zeilen, den neuen Index der hinzugefügten oder verschobenen Zeile und den vorherigen Index der gelöschten Zeile zugegriffen werden kann mithilfe der **NewIndex** Eigenschaft der **ListChangedEventArgs** Objekt. Im Fall von einer verschobenen Zeile der vorherige Index der verschobenen Zeile erfolgen kann mithilfe der **OldIndex** Eigenschaft der **ListChangedEventArgs** Objekt.  
+ Das **ListChanged** -Ereignis implementiert den **listchangedebug-thandler** -Delegaten des <xref:System.ComponentModel> -Namespace und übernimmt als Eingabe ein <xref:System.ComponentModel.ListChangedEventArgs> -Objekt. Sie können mit dem <xref:System.ComponentModel.ListChangedType> -Enumerationswert in der **ListChangedType** -Eigenschaft des **ListChangedEventArgs** -Objekts ermitteln, welche Art von Änderung aufgetreten ist. Bei Änderungen, die das Hinzufügen, löschen oder Verschieben von Zeilen einschließen, kann auf den neuen Index der hinzugefügten oder verschobenen Zeile und den vorherigen Index der gelöschten Zeile mithilfe der Eigenschaft " **netwindex** " des **ListChangedEventArgs** -Objekts zugegriffen werden. Im Fall einer verschobene Zeile kann auf den vorherigen Index der verschobene Zeile mithilfe der **OldIndex** -Eigenschaft des **ListChangedEventArgs** -Objekts zugegriffen werden.  
   
- Der **DataViewManager** macht auch eine **ListChanged** Ereignis, um Sie zu benachrichtigen, wenn eine Tabelle hinzugefügt oder entfernt wurden oder auf eine Änderung vorgenommen wurde der **Beziehungen** Auflistung von der zugrunde liegende **DataSet**.  
+ Der **DataViewManager** macht auch ein **ListChanged** -Ereignis verfügbar, um Sie zu benachrichtigen, wenn eine Tabelle hinzugefügt oder entfernt wurde, oder wenn eine Änderung an der **Beziehungs** Auflistung des zugrunde liegenden **DataSets**vorgenommen wurde.  
   
- Das folgende Codebeispiel veranschaulicht das Hinzufügen einer **ListChanged** -Ereignishandler.  
+ Im folgenden Codebeispiel wird gezeigt, wie ein **ListChanged** -Ereignishandler hinzugefügt wird.  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -55,5 +55,5 @@ protected static void OnListChanged(object sender,
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](dataviews.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

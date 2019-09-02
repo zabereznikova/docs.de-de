@@ -2,12 +2,12 @@
 title: Das aufgabenbasierte asynchrone Programmiermodell (TAP) mit Async und Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595602"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167901"
 ---
 # <a name="task-asynchronous-programming-model"></a>Aufgabenbasiertes asynchrones Programmiermodell
 
@@ -38,7 +38,7 @@ Durch den auf Asynchronie basierenden Ansatz wird eine Entsprechung für die aut
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Asynchrone Methoden sind einfacher zu schreiben
 
-Die Schlüsselwörter [async](../../../language-reference/keywords/async.md) und [await](../../../language-reference/keywords/await.md) in C# sind das Kernstück der asynchronen Programmierung. Wenn Sie diese beiden Schlüsselwörter verwenden, können Sie eine asynchrone Methode mithilfe von Ressourcen in .NET Framework, .NET Core oder Windows-Runtime fast genauso einfach erstellen wie eine synchrone Methode. Asynchrone Methoden, die Sie unter Verwendung des Schlüsselworts `async` definieren, werden als *async-Methoden* bezeichnet.
+Die Schlüsselwörter [async](../../../language-reference/keywords/async.md) und [await](../../../language-reference/operators/await.md) in C# sind das Kernstück der asynchronen Programmierung. Wenn Sie diese beiden Schlüsselwörter verwenden, können Sie eine asynchrone Methode mithilfe von Ressourcen in .NET Framework, .NET Core oder Windows-Runtime fast genauso einfach erstellen wie eine synchrone Methode. Asynchrone Methoden, die Sie unter Verwendung des Schlüsselworts `async` definieren, werden als *async-Methoden* bezeichnet.
 
 Das folgende Beispiel zeigt eine Async-Methode. Fast der gesamte Code sollte Ihnen bekannt vorkommen.
 
@@ -156,7 +156,7 @@ Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhand
 
 Wenn Sie angeben, dass eine Methode eine asynchrone Methode ist, indem Sie den [async](../../../language-reference/keywords/async.md)-Modifizierer verwenden, aktivieren Sie die folgenden zwei Funktionen.
 
-- Die markierte async-Methode kann [await](../../../language-reference/keywords/await.md) verwenden, um Unterbrechungspunkte festzulegen. Der `await`-Operator informiert den Compiler, dass die Async-Methode erst über diesen Punkt hinaus fortgesetzt werden kann, wenn der abgewartete asynchrone Prozess abgeschlossen ist. In der Zwischenzeit kehrt die Steuerung zum Aufrufer der Async-Methode zurück.
+- Die markierte async-Methode kann [await](../../../language-reference/operators/await.md) verwenden, um Unterbrechungspunkte festzulegen. Der `await`-Operator informiert den Compiler, dass die Async-Methode erst über diesen Punkt hinaus fortgesetzt werden kann, wenn der abgewartete asynchrone Prozess abgeschlossen ist. In der Zwischenzeit kehrt die Steuerung zum Aufrufer der Async-Methode zurück.
 
      Die Unterbrechung einer async-Methode an einem `await`-Ausdruck stellt keine Beendigung der Methode dar, und `finally`-Blöcke werden nicht ausgeführt.
 
@@ -168,7 +168,7 @@ Eine async-Methode enthält in der Regel eine oder mehrere Vorkommen eines `awai
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Rückgabetypen und Parameter
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>Siehe auch
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Asynchrone Programmierung](../../../async.md)
 - [Async (Übersicht)](../../../../standard/async.md)
+ 

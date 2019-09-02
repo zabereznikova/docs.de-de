@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie die Vervollständigung mit 
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203336"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202503"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Aktivieren der Vervollständigung mit der TAB-TASTE für .NET Core-CLI
 
@@ -19,7 +19,7 @@ Ab .NET Core 2.0 SDK unterstützt die .NET Core-CLI die Vervollständigung mit d
 
 Nach dem Einrichten wird die Vervollständigung mit der TAB-TASTE für die .NET Core-CLI durch Eingeben eines `dotnet`-Befehls in der Shell und anschließendes Drücken der TAB-Taste ausgelöst. Die aktuelle Befehlszeile wird an den Befehl `dotnet complete` gesendet, und die Ergebnisse werden von der Shell verarbeitet. Sie können die Ergebnisse ohne Aktivierung der Vervollständigung mit der TAB-TASTE testen, indem Sie etwas direkt an den Befehl `dotnet complete` senden. Beispiel:
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean

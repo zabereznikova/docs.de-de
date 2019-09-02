@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46109ee1781b8b509df87b4203c51a55b9f596ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915814"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205109"
 ---
 # <a name="datarow-deletion"></a>"DataRow"-Löschung
 Es gibt zwei Methoden zum <xref:System.Data.DataRow> Löschen eines-Objekts aus einem <xref:System.Data.DataTable> -Objekt: <xref:System.Data.DataRowCollection> die **Remove** -Methode des-Objekts und die <xref:System.Data.DataRow.Delete%2A> -Methode des **DataRow** -Objekts. Während die <xref:System.Data.DataRowCollection.Remove%2A> -Methode eine **DataRow** aus der **DataRowCollection**löscht, <xref:System.Data.DataRow.Delete%2A> markiert die Methode nur die Zeile zum Löschen. Das eigentliche Entfernen tritt auf, wenn die Anwendung die Methode " **akzeptchanges** " aufruft. Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen. Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.  
@@ -49,5 +49,5 @@ workRow.Delete();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

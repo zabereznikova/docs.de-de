@@ -3,12 +3,12 @@ title: Interpretieren von Ausdrücken
 description: Weitere Informationen zum Schreiben von Code, um die Struktur einer Ausdrucksbaumstruktur zu untersuchen.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211243"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202970"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -34,7 +34,7 @@ Console.WriteLine($"The value of the constant value is {constant.Value}");
 
 Dadurch wird Folgendes zurückgegeben:
 
-```
+```output
 This is an Constant expression type
 The type of the constant value is System.Int32
 The value of the constant value is 24
@@ -80,7 +80,7 @@ Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name
 
 Dieses Beispiel gibt die folgende Ausgabe zurück:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -218,7 +218,7 @@ Dieser Algorithmus ist die Grundlage für einen Algorithmus, der jeden beliebige
 
 Beim Ausführen dieser Besucher auf dem oben gezeigten Additionsausdruck erhalten Sie die folgende Ausgabe:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -271,7 +271,7 @@ Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 
 Erstellen Sie einen Besucher für diese Summe, und führen Sie den Besucher aus, für den Sie diese Ausgabe sehen:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -309,7 +309,7 @@ Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 
 Dies ist die Ausgabe vom Besucher:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 
 Und die Ausgabe für die Ausdrucksbaumstruktur wäre:
 
-```
+```output
 This expression is a/an Lambda expression type
 The name of the lambda is <null>
 The return type is System.Int32

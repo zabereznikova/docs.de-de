@@ -2,12 +2,12 @@
 title: Beispiel für das Verketten von Abfragen (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 90c2ba1c9125114f9e26f4afeb3ff6373ff01d9c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594824"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205413"
 ---
 # <a name="chaining-queries-example-c"></a>Beispiel für das Verketten von Abfragen (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel auf und zeigt, was passiert, wenn Sie zwei Abfragen miteinander verketten, die beide mit verzögerter Ausführung und verzögerter Auswertung arbeiten.  
@@ -64,7 +64,7 @@ class Program
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 ToUpper: source >abc<  
 AppendString: source >ABC<  
 Main: str >ABC!!!<  

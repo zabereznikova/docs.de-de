@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927996"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040735"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  Wenn dieser Wert auf 1 gesetzt ist, zwingt das COMPLUS_LoaderOptimizations-Umgebungsflag den Laufzeithost, alle Assemblys auf nicht domänenneutrale Weise zu laden, die als SingleDomain bezeichnet wird. SingleDomain lädt keine Assemblys als domänenneutral, mit Ausnahme von Mscorlib, die immer domänenneutral geladen wird. Diese Einstellung wird als Einzeldomäne bezeichnet, da sie häufig verwendet wird, wenn der Host nur eine Anwendung im Prozess ausführt.  
   
 > [!CAUTION]
->  Das COMPLUS_LoaderOptimizations-Umgebungsflag wurde für die Verwendung bei Diagnosen und Testszenarien entworfen. Eine Aktivierung des Flags kann zu erheblichem Leistungsabfall führen und die Speicherauslastung erhöhen.  
+> Das COMPLUS_LoaderOptimizations-Umgebungsflag wurde für die Verwendung bei Diagnosen und Testszenarien entworfen. Eine Aktivierung des Flags kann zu erheblichem Leistungsabfall führen und die Speicherauslastung erhöhen.  
   
 ### <a name="code-example"></a>Codebeispiel
 

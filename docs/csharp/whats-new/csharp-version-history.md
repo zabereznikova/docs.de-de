@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363876"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105683"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -19,11 +19,11 @@ Dieser Artikel erläutert den Verlauf jeder Hauptversion der Sprache C#. Das C#-
 
 Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachversion. Zwischen den Hauptversionen kann es Nebenversionen geben, die in anderen Artikeln in diesem Abschnitt erläutert werden. Sie müssen [die Sprachversion des Compilers konfigurieren](../language-reference/configure-language-version.md) und die Version auswählen, um die neuesten Features in einer Punktversion zu verwenden. Seit C# 7.0 gab es drei Nebenversionen:
 
-* [C# 7.3](csharp-7-3.md):
+- [C# 7.3](csharp-7-3.md):
   - C# 7.3 steht ab [Visual Studio 2017 Version 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) zur Verfügung.
-* [C# 7.2](csharp-7-2.md):
+- [C# 7.2](csharp-7-2.md):
   - C# 7.2 steht ab [Visual Studio 2017 Version 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) zur Verfügung.
-* [C# 7.1](csharp-7-1.md):
+- [C# 7.1](csharp-7-1.md):
   - C# 7.1 steht ab [Visual Studio 2017 Version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) zur Verfügung.
 
 ## <a name="c-version-10"></a>C# Version 1.0
@@ -124,7 +124,7 @@ C# Version 5.0 war eine fokussierte Version der Sprache. Nahezu die gesamte Arbe
 
 ### <a name="see-also"></a>Siehe auch
 
-* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Aufruferinformationsattribute in C# 5.0)
+- [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Aufruferinformationsattribute in C# 5.0)
 
 Mit dem Attribut „CallerInfo“ können Sie leicht Informationen über den Kontext erhalten, in dem Sie ausführen, ohne auf Dutzende Reflektionscodebausteine zurückzugreifen. Es gibt viele Verwendungsmöglichkeiten für Diagnose- und Protokollierungsaufgaben.
 

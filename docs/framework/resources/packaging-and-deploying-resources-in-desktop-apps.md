@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135660"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105913"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -141,7 +141,7 @@ Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das
 Der .NET Core-Ressourcenfallbackprozess besteht aus folgenden Schritten:
 
 1. Die Runtime versucht, eine Satellitenassembly für die angeforderte Kultur zu laden.
-     * Die Runtime prüft das Verzeichnis der aktuell ausgeführten Assembly auf ein Unterverzeichnis, das der angeforderten Kultur entspricht. Wenn sie das Unterverzeichnis findet, durchsucht sie es nach einer gültigen Satellitenassembly für die angeforderte Kultur und lädt sie.
+     - Die Runtime prüft das Verzeichnis der aktuell ausgeführten Assembly auf ein Unterverzeichnis, das der angeforderten Kultur entspricht. Wenn sie das Unterverzeichnis findet, durchsucht sie es nach einer gültigen Satellitenassembly für die angeforderte Kultur und lädt sie.
 
        > [!NOTE]
        > Bei Betriebssystemen mit Groß-/Kleinschreibung berücksichtigenden Dateisystemen (d.h. Linux und macOS) wird bei der Suche nach dem Kulturnamen-Unterverzeichnis die Groß-/Kleinschreibung beachtet. Der Name des Unterverzeichnisses muss der Groß-/Kleinschreibung von <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> genau entsprechen (z. B. `es` oder `es-MX`).
@@ -149,8 +149,8 @@ Der .NET Core-Ressourcenfallbackprozess besteht aus folgenden Schritten:
        > [!NOTE]
        > Wenn der Programmierer einen benutzerdefinierten Assemblyladekontext aus <xref:System.Runtime.Loader.AssemblyLoadContext> abgeleitet hat, ist die Situation kompliziert. Wenn die ausführende Assembly in den benutzerdefinierten Kontext geladen wurde, lädt die Runtime die Satellitenassembly in den benutzerdefinierten Kontext. Die Details sind nicht Gegenstand dieses Dokuments. Siehe <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-     * Wenn keine Satellitenassembly gefunden wurde, löst <xref:System.Runtime.Loader.AssemblyLoadContext> das Ereignis <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> aus, um anzugeben, dass die Satellitenassembly nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly laden und zurückgeben.
-     * Wenn immer noch keine Satellitenassembly gefunden wurde, bewirkt AssemblyLoadContext, dass die AppDomain ein <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis auslöst, um anzugeben, dass die Satellitenassembly nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly laden und zurückgeben.
+     - Wenn keine Satellitenassembly gefunden wurde, löst <xref:System.Runtime.Loader.AssemblyLoadContext> das Ereignis <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> aus, um anzugeben, dass die Satellitenassembly nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly laden und zurückgeben.
+     - Wenn immer noch keine Satellitenassembly gefunden wurde, bewirkt AssemblyLoadContext, dass die AppDomain ein <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>-Ereignis auslöst, um anzugeben, dass die Satellitenassembly nicht gefunden werden kann. Wenn Sie das Ereignis behandeln möchten, kann Ihr Ereignishandler einen Verweis auf die Satellitenassembly laden und zurückgeben.
 
 2. Wenn eine Satellitenassembly gefunden wurde, durchsucht die Runtime die Satellitenassembly nach der angeforderten Ressource. Wenn sie die Ressource in der Assembly findet, verwendet sie diese. Wenn sie die Ressource nicht findet, fährt sie mit der Suche fort.
 

@@ -3,12 +3,12 @@ title: Arbeiten mit dem Semantikmodell für .NET Compiler Platform SDK
 description: In dieser Übersicht werden die Typen vorgestellt, die Sie zum Verstehen und Bearbeiten von Semantikmodellen Ihres Codes verwenden.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357487"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105667"
 ---
 # <a name="work-with-semantics"></a>Arbeiten mit der Semantik
 
@@ -51,8 +51,8 @@ Symbole haben ein ähnliches Konzept wie CLR-Typsysteme, die von der <xref:Syste
 
 In einem Semantikmodell werden alle semantischen Informationen einer einzelnen Quelldatei dargestellt. Sie können es verwenden, um Folgendes zu ermitteln: 
 
-* Die Symbole, auf die an einer bestimmten Stelle in der Quelle verwiesen wird.
-* Der resultierende Typ eines beliebigen Ausdrucks.
-* Alle Diagnosen, bei denen es sich um Fehler oder Warnungen handelt.
-* Die Art und Weise, wie Variablen in bestimmte Bereiche der Quelle hinein und wieder aus ihnen heraus fließen.
-* Antworten auf Fragen mit spekulativem Charakter.
+- Die Symbole, auf die an einer bestimmten Stelle in der Quelle verwiesen wird.
+- Der resultierende Typ eines beliebigen Ausdrucks.
+- Alle Diagnosen, bei denen es sich um Fehler oder Warnungen handelt.
+- Die Art und Weise, wie Variablen in bestimmte Bereiche der Quelle hinein und wieder aus ihnen heraus fließen.
+- Antworten auf Fragen mit spekulativem Charakter.

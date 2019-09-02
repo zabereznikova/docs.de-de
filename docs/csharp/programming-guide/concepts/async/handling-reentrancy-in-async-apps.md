@@ -2,12 +2,12 @@
 title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595643"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204299"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
@@ -36,7 +36,7 @@ Im Beispiel in diesem Thema entscheiden sich Benutzer für eine Schaltfläche **
 
 Im folgenden Beispiel wird die erwartete Ausgabe bei einmaliger Betätigung der Schaltfläche **Start** dargestellt. Eine Liste der heruntergeladenen Websites wird mit der Größe, in Bytes für jede Site, angezeigt. Die Gesamtanzahl von Bytes wird am Ende angezeigt.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -51,7 +51,7 @@ TOTAL bytes returned:  890591
 
 Wenn der Benutzer die Schaltfläche allerdings mehrmals auswählt, wird der Ereignishandler wiederholt aufgerufen, und der Downloadvorgang beginnt jedes Mal erneut. Daher werden mehrere asynchrone Vorgänge gleichzeitig ausgeführt, die Ausgabe überlappt mit den Ergebnissen, und die Gesamtzahl der Bytes ist verwirrend.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -270,7 +270,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 
 Wenn Sie die Schaltfläche **Start** mehrmals anklicken, während diese App ausgeführt wird, sollten Ergebnisse erzeugt werden, die der folgenden Ausgabe ähneln.
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -308,7 +308,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
 
 Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -328,7 +328,7 @@ TOTAL bytes returned:  918876
 
 Wenn der Benutzer die Schaltfläche **Start** dreimal anklickt, erzeugt die App eine Ausgabe, die den folgenden Zeilen ähnelt. Die Informationszeilen, die mit einem Nummernzeichen (#) beginnen, verfolgen den Status der Anwendung.
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -499,7 +499,7 @@ Die Ausgabe zeigt die folgenden Muster an.
 
 - Eine Gruppe kann gestartet werden, während die Ausgabe einer vorherigen Gruppe angezeigt wird. Doch die Anzeige der Ausgabe der vorherigen Gruppe wird nicht unterbrochen.
 
-    ```
+    ```output
     #Starting group A.
     #Task assigned for group A. Download tasks are active.
 
@@ -537,7 +537,7 @@ Die Ausgabe zeigt die folgenden Muster an.
 
 - Die folgenden zwei Zeilen werden immer zusammen in der Ausgabe angezeigt. Der Code wird zwischen dem Starten des Vorgangs einer Gruppe in `StartButton_Click` und dem Zuweisen eines Tasks für die Gruppe zu `pendingWork` nie unterbrochen.
 
-    ```
+    ```output
     #Starting group B.
     #Task assigned for group B. Download tasks are active.
     ```

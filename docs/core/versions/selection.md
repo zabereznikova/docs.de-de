@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.custom: seodec18
-ms.openlocfilehash: 7ec22acf33884a5da0062b6e7aaded5dd4a0c665
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: db42ba4916aad739bd2c9d8b547f16022fce44bd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539303"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104948"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -32,8 +32,8 @@ Im Folgenden erläutert dieses Dokument diese vier Szenarios.
 
 Zu den SDK-Befehlen zählen `dotnet new` oder `dotnet run`. Die .NET Core-CLI muss für jeden `dotnet`-Befehl eine SDK-Version auswählen. Die CLI verwendet standardmäßig das neueste SDK, das auf dem Computer installiert ist, auch wenn Folgendes zutrifft:
 
-* Das Projekt ist auf eine frühere Version der .NET Core-Runtime ausgelegt.
-* Die neueste Version des .NET Core SDK ist eine Vorschauversion.
+- Das Projekt ist auf eine frühere Version der .NET Core-Runtime ausgelegt.
+- Die neueste Version des .NET Core SDK ist eine Vorschauversion.
 
 Sie können die Vorteile der neuesten SDK-Funktionen und -Verbesserungen nutzen, während Sie frühere .NET Core-Laufzeitversionen als Ziel festlegen. Sie können mehrere Laufzeitversionen für verschiedene Projekte festlegen, indem Sie die gleichen SDK-Tools für alle Projekte verwenden.
 

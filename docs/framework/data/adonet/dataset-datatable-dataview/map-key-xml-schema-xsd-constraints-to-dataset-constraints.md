@@ -2,28 +2,28 @@
 title: Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034228"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203467"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
-In einem Schema können Sie angeben eine schlüsseleinschränkung für ein Element oder-Attribut mit dem **Schlüssel** Element. Das Element oder Attribut, für das Sie eine Schlüsseleinschränkung angeben, muss eindeutige Werte in jeder Schemainstanz aufweisen und darf keine NULL-Werte enthalten.  
+In einem Schema können Sie eine Schlüssel Einschränkung für ein Element oder Attribut mit dem **Schlüssel** Element angeben. Das Element oder Attribut, für das Sie eine Schlüsseleinschränkung angeben, muss eindeutige Werte in jeder Schemainstanz aufweisen und darf keine NULL-Werte enthalten.  
   
  Die Schlüsseleinschränkung ist der unique-Einschränkung ähnlich, außer dass die Spalte, für die eine Schlüsseleinschränkung definiert wird, keine NULL-Werte enthalten darf.  
   
- Der folgenden Tabelle werden die **Msdata** Attribute, die Sie, in angeben können der **Schlüssel** Element.  
+ In der folgenden Tabelle werden die **msdata** -Attribute aufgelistet, die Sie im **Key** -Element angeben können.  
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls die **Namen** -Attribut stellt den Wert, der den Namen der Einschränkung.|  
-|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, die **IsPrimaryKey** -Einschränkungseigenschaft nastaven NA hodnotu **"true"**, wodurch es einen Primärschlüssel. Die **AllowDBNull** -Spalteneigenschaft ist auf **"false"**, da Primärschlüssel keine null-Werte enthalten darf nicht.|  
+|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls stellt das **Name** -Attribut den Wert des Einschränkungs namens bereit.|  
+|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` vorhanden ist, wird die **IsPrimaryKey** -Einschränkungs Eigenschaft auf **true**festgelegt und somit als Primärschlüssel festgelegt. Die **AllowDBNull** -Spalten Eigenschaft ist auf **false**festgelegt, da Primärschlüssel keine NULL-Werte aufweisen können.|  
   
- Beim Konvertieren eines Schemas, in denen eine schlüsseleinschränkung angegeben wird, erstellt der Zuordnungsprozess eine unique-Einschränkung in der Tabelle mit den **AllowDBNull** Spalteneigenschaft, die auf **"false"** für jede Spalte in der Einschränkung. Die **IsPrimaryKey** der unique-Einschränkung auch-Eigenschaftensatz auf **"false"** , wenn Sie angegeben haben `msdata:PrimaryKey="true"` auf die **Schlüssel** Element. Dies ist mit einer unique-Einschränkung im Schema mit `PrimaryKey="true"` identisch.  
+ Beim Umrechnen eines Schemas, in dem eine Schlüssel Einschränkung angegeben ist, erstellt der Zustellungs Prozess eine Unique-Einschränkung für die Tabelle, bei der die **AllowDBNull** -Spalten Eigenschaft für jede Spalte in der Einschränkung auf **false** festgelegt ist. Die **IsPrimaryKey** -Eigenschaft der Unique-Einschränkung ist auch auf **false** festgelegt, es `msdata:PrimaryKey="true"` sei denn, Sie haben für das **Key** -Element angegeben. Dies ist mit einer unique-Einschränkung im Schema mit `PrimaryKey="true"` identisch.  
   
- Im folgenden Schemabeispiel die **Schlüssel** Element gibt die Key-Einschränkung für die **"CustomerID"** Element.  
+ Im folgenden Schema Beispiel gibt das **Key** -Element die Schlüssel Einschränkung für das **CustomerID-** Element an.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ In einem Schema können Sie angeben eine schlüsseleinschränkung für ein Eleme
 </xs:schema>   
 ```  
   
- Die **Schlüssel** Element gibt an, dass die Werte von der **"CustomerID"** untergeordnetes Element von der **Kunden** Element muss eindeutige Werte aufweisen und darf nicht null-Werte aufweisen. Beim Übertragen des XSD-Schemas (XML Schema Definition Language) wird vom Zuordnungsprozess die folgende Tabelle erstellt:  
+ Das **Key** -Element gibt an, dass die Werte des untergeordneten **CustomerID-** Elements des **Customers** -Elements eindeutige Werte aufweisen müssen und keine NULL-Werte aufweisen dürfen. Beim Übertragen des XSD-Schemas (XML Schema Definition Language) wird vom Zuordnungsprozess die folgende Tabelle erstellt:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Die XML-schemazuordnung erstellt außerdem eine **UniqueConstraint** auf die **"CustomerID"** Spalte, wie im folgenden gezeigt <xref:System.Data.DataSet>. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
+ Die XML-Schema Zuordnung erstellt auch ein **UniqueConstraint** -Element für die **CustomerID-** Spalte, wie <xref:System.Data.DataSet>im folgenden gezeigt. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,12 +74,12 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- In der **DataSet** ist die **IsPrimaryKey** Eigenschaft der **UniqueConstraint** nastaven NA hodnotu **"true"** da das Schema Gibt an, `msdata:PrimaryKey="true"` in die **Schlüssel** Element.  
+ Im generierten **DataSet** ist die **IsPrimaryKey** -Eigenschaft von **UniqueConstraint** auf **true** festgelegt, da das Schema im **Key** - `msdata:PrimaryKey="true"` Element angibt.  
   
- Der Wert des der **ConstraintName** Eigenschaft der **UniqueConstraint** in die **DataSet** ist der Wert des der **ConstraintName** angegebene Attribut der **Schlüssel** Elements im Schema.  
+ Der Wert der Eigenschaft **"Einschränkungs Name** " der **UniqueConstraint** im **DataSet** ist der Wert des Attributs " **msdata: Einschränkungs Name** ", das im **Key** -Element im Schema angegeben ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

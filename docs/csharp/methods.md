@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025096"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168515"
 ---
 # <a name="methods"></a>Methoden
 
@@ -257,7 +257,7 @@ Weitere Informationen finden Sie unter [Erweiterungsmethoden](programming-guide/
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](language-reference/keywords/await.md) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](language-reference/operators/await.md) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.

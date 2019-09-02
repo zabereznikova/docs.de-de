@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034511"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203981"
 ---
 # <a name="adding-datarelations"></a>Hinzufügen von "DataRelations"
 In einem <xref:System.Data.DataSet> mit mehreren <xref:System.Data.DataTable>-Objekten können Sie mithilfe von <xref:System.Data.DataRelation>-Objekten eine Beziehung zwischen zwei Tabellen herstellen, um durch die Tabellen navigieren und untergeordnete oder übergeordnete Zeilen aus einer verknüpften Tabelle zurückgeben zu können.  
   
- Die Argumente, die zum Erstellen einer **DataRelation** sind ein Name für die **DataRelation** erstellt wird und ein Array von einem oder mehreren <xref:System.Data.DataColumn> Verweise auf die Spalten, die als den übergeordneten und untergeordneten dienen die Spalten in der Beziehung. Nach der Erstellung einer **DataRelation**, können Sie sie zwischen den Tabellen navigieren und die Werte abzurufen.  
+ Die Argumente, die zum Erstellen einer **DataRelations** erforderlich sind, sind ein Name für die zu erstellende **DataRelations** und ein <xref:System.Data.DataColumn> Array mit einem oder mehreren verweisen auf die Spalten, die als übergeordnete und untergeordnete Spalten in der Beziehung fungieren. Nachdem Sie eine **DataRelations**erstellt haben, können Sie Sie zum Navigieren zwischen den Tabellen und zum Abrufen von Werten verwenden.  
   
- Hinzufügen einer **DataRelation** auf eine <xref:System.Data.DataSet> hinzugefügt wird, wird standardmäßig ein <xref:System.Data.UniqueConstraint> mit der übergeordneten Tabelle und eine <xref:System.Data.ForeignKeyConstraint> zur untergeordneten Tabelle. Weitere Informationen zu diesen standardeinschränkungen finden Sie unter [DataTable-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Beim Hinzufügen einer **DataRelations** zu einer <xref:System.Data.DataSet> wird der übergeordneten <xref:System.Data.UniqueConstraint> Tabelle <xref:System.Data.ForeignKeyConstraint> standardmäßig ein hinzugefügt. Weitere Informationen zu diesen Standard Einschränkungen finden Sie unter [databel-Einschränkungen](datatable-constraints.md).  
   
- Das folgende Codebeispiel erstellt eine **DataRelation** unter Verwendung zweier <xref:System.Data.DataTable> Objekte in einer <xref:System.Data.DataSet>. Jede <xref:System.Data.DataTable> enthält eine Spalte mit dem Namen **CustID**, der als einen Link zwischen den beiden dient <xref:System.Data.DataTable> Objekte. Im Beispiel wird eine einzelne **DataRelation** auf die **Beziehungen** Auflistung von der <xref:System.Data.DataSet>. Das erste Argument im Beispiel gibt den Namen des der **DataRelation** erstellt wird. Das zweite Argument legt die übergeordnete **DataColumn** und das dritte Argument legt fest, das untergeordnete Element **DataColumn**.  
+ Im folgenden Codebeispiel wird eine **DataRelations** mithilfe von <xref:System.Data.DataTable> zwei-Objekten <xref:System.Data.DataSet>in einem erstellt. Jede <xref:System.Data.DataTable> enthält eine Spalte mit dem Namen " **CustId**", die als Link zwischen <xref:System.Data.DataTable> den beiden Objekten dient. Im Beispiel wird der **Beziehungs** Auflistung von <xref:System.Data.DataSet>eine einzelne **DataRelations** hinzugefügt. Das erste Argument im Beispiel gibt den Namen der zu erstellenden **DataRelations** an. Mit dem zweiten Argument wird die übergeordnete **datacolumschlag** festgelegt, und das dritte Argument legt die untergeordnete **datacolumschlag**fest.  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -33,9 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- Ein **DataRelation** verfügt auch über eine **geschachtelte** Eigenschaft, die bei Festlegung auf **"true"**, werden die Zeilen der untergeordneten Tabelle, in die entsprechenden Zeilen aus der übergeordneten Tabelle geschachtelt werden. Beim Schreiben als XML-Elemente mit <xref:System.Data.DataSet.WriteXml%2A> . Weitere Informationen finden Sie unter [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ Eine **DataRelations** verfügt auch über eine geschachtelte Eigenschaft, die bei Festlegung auf **true**bewirkt, dass die Zeilen aus der untergeordneten Tabelle in der zugeordneten Zeile aus der übergeordneten Tabelle geschachtelt <xref:System.Data.DataSet.WriteXml%2A> werden, wenn Sie mithilfe von als XML-Elemente geschrieben werden. Weitere Informationen finden Sie unter [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

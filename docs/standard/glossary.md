@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674509"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106920"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -85,9 +85,9 @@ Der Begriff „.NET-Umgebung“ unterscheidet sich von ähnlichen Begriffen wie 
 Allgemein handelt es sich dabei um eine umfassende Sammlung von APIs, die die Entwicklung und Bereitstellung von Anwendungen erleichtert, die auf einer bestimmten Technologie basieren. Allgemein sind ASP.NET Core und Windows Forms Beispiele für Anwendungsframeworks. Siehe auch [Bibliotheken](#library).
 
 Das Wort „Framework“ hat in den folgenden Begriffen eine spezifischere technische Bedeutung:
-* [.NET Framework](#net-framework)
-* [Zielframework](#target-framework)
-* [TFM (Zielframeworkmoniker)](#tfm)
+- [.NET Framework](#net-framework)
+- [Zielframework](#target-framework)
+- [TFM (Zielframeworkmoniker)](#tfm)
 
 In der bestehenden Dokumentation bezieht sich „Framework“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). In einem Artikel kann .NET Core beispielsweise als Framework bezeichnet werden. Diese verwirrende Verwendung soll aus der Dokumentation beseitigt werden.
 

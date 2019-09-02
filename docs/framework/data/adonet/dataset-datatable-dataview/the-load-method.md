@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607231"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203171"
 ---
 # <a name="the-load-method"></a>Load-Methode
-Mithilfe der <xref:System.Data.DataTable.Load%2A>-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden. Dies ist eine überladene Methode, die in ihrer einfachsten Form einen einzelnen Parameter akzeptiert eine **DataReader**. Bei dieser Form lädt sie einfach die **DataTable** mit Zeilen. Optional können Sie angeben der **LoadOption** Parameter, um zu steuern, wie Daten hinzugefügt werden die **DataTable**.  
+Mithilfe der <xref:System.Data.DataTable.Load%2A>-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden. Dabei handelt es sich um eine überladene Methode, die in ihrer einfachsten Form einen einzelnen Parameter ( **DataReader**) akzeptiert. In diesem Formular wird die **Daten** Tabelle einfach mit Zeilen geladen. Optional können Sie den **LoadOption** -Parameter angeben, um zu steuern, wie Daten derDatentabelle hinzugefügt werden.  
   
- Die **LoadOption** Parameter ist besonders nützlich in Fällen, in denen die **DataTable** bereits Datenzeilen enthält, da es wird beschrieben, wie die eingehenden Daten aus der Datenquelle wird mit den Daten kombiniert werden bereits in der Tabelle. Z. B. **PreserveCurrentValues** (Standard) gibt an, dass in Fällen, in dem eine Zeile als markiert ist **Added** in die **DataTable**, **ursprünglichen** Wert oder jede Spalte ist auf den Inhalt der entsprechenden Zeile aus der Datenquelle festgelegt. Die **aktuelle** -Wert behält die Werte zugewiesen, wenn die Zeile hinzugefügt wurde, und die **RowState** der Zeile festgelegt **Changed**.  
+ Der **LoadOption** -Parameter ist besonders nützlich in Fällen, in denen die Datentabelle bereits Daten Zeilen enthält, da Sie beschreibt, wie die eingehenden Daten aus der Datenquelle mit den bereits in der Tabelle enthaltenen Daten kombiniert werden. Beispielsweise gibt " **Konservierungs-ecurrentvalues** " (Standardwert) an, dass in Fällen, in denen eine Zeilein der Datentabelle als **hinzugefügt** gekennzeichnet ist, der **ursprüngliche** Wert oder jede Spalte auf den Inhalt der übereinstimmenden Zeile aus der Datenquelle festgelegt wird. Der **aktuelle** Wert behält die Werte bei, die beim Hinzufügen der Zeile zugewiesen wurden, und der **RowState** der Zeile wird auf " **geändert**" festgelegt.  
   
  Die folgende Tabelle enthält eine kurze Beschreibung der <xref:System.Data.LoadOption>-Enumerationswerte.  
   
 |Der LoadOption-Wert|Beschreibung|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert als eine Zeile, die bereits in der **DataTable**, **ursprünglichen** und **aktuelle** Werte der einzelnen mit den Werten in der eingehenden Zeile, Spalte ersetzt werden und die **RowState** -Eigenschaftensatz auf **Unchanged**.<br /><br /> Zeilen aus der Datenquelle, die in noch nicht vorhanden sind die **DataTable** werden hinzugefügt, mit einer **RowState** Wert **Unchanged**.<br /><br /> Diese Option wirksam aktualisiert den Inhalt der **DataTable** so, dass sie den Inhalt der Datenquelle übereinstimmt.|  
-|**PreserveCurrentValues (Standard)**|Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert als eine Zeile, die bereits in der **DataTable**, **ursprünglichen** Wert wird festgelegt, auf den Inhalt der hinzukommenden Zeile, und die **Aktuelle** Wert wird nicht geändert.<br /><br /> Wenn die **RowState** ist **Added** oder **"geändert"**, festgelegt ist **"geändert"**.<br /><br /> Wenn die **RowState** wurde **gelöschte**, bleibt er **gelöschte**.<br /><br /> Zeilen aus der Datenquelle, die nicht bereits vorhanden sind in der **DataTable** hinzugefügt werden, und die **RowState** nastaven NA hodnotu **Unchanged**.|  
-|**UpdateCurrentValues**|Wenn hinzukommende Zeilen die gleiche haben **PrimaryKey** Wert wie die Zeile, die bereits in der **DataTable**, **aktuelle** Wert wird in kopiert die **ursprünglichen**Wert und die **aktuelle** Wert wird auf den Inhalt der hinzukommenden Zeile festgelegt.<br /><br /> Wenn die **RowState** in die **DataTable** wurde **Added**, **RowState** bleibt **Added**. Für Zeilen mit der Markierung **"geändert"** oder **gelöschte**, **RowState** ist **"geändert"**.<br /><br /> Zeilen aus der Datenquelle, die in noch nicht vorhanden sind die **DataTable** hinzugefügt werden, und die **RowState** nastaven NA hodnotu **Added**.|  
+|**OverwriteRow**|Wenn eingehende Zeilen denselben **PrimaryKey** -Wert wie eine bereits in der **Daten**Tabelle geltende Zeile aufweisen, werden die **ursprünglichen** und **aktuellen** Werte jeder Spalte durch die Werte in der eingehenden Zeile ersetzt, und die **RowState** -Eigenschaft wird auf festgelegt. **Unverändert**.<br /><br /> Zeilen aus der Datenquelle, die nicht bereits in der Daten Tabelle vorhanden sind, werden mit dem **RowState** -Wert **unverändert**hinzugefügt.<br /><br /> Mit dieser Option wird der Inhalt der Datentabelle aktualisiert , sodass Sie mit dem Inhalt der Datenquelle übereinstimmt.|  
+|**Konserviecurrentvalues (Standard)**|Wenn eingehende Zeilen denselben **PrimaryKey** -Wert wie eine bereits in der **Daten**Tabelle geltende Zeile aufweisen, wird der **ursprüngliche** Wert auf den Inhalt der eingehenden Zeile festgelegt, und der **aktuelle** Wert wird nicht geändert.<br /><br /> Wenn der **RowState** **hinzugefügt** oder **geändert**wird, wird er auf **modified**festgelegt.<br /><br /> Wenn der **RowState** **gelöscht**wurde, bleibt er **gelöscht**.<br /><br /> Zeilen aus der Datenquelle, die nicht bereits in der Daten Tabelle vorhanden sind, werden hinzugefügt, und der **RowState** wird auf " **unverändert**" festgelegt.|  
+|**UpdateCurrentValues**|Wenn eingehende Zeilen denselben **PrimaryKey** -Wert wie die bereits in der **Daten**Tabelle geltende Zeile aufweisen, wird der **aktuelle** Wert in den **ursprünglichen** Wert kopiert, und der **aktuelle** Wert wird dann auf den Inhalt der eingehenden Zeile festgelegt.<br /><br /> Wenn der **RowState** in der **Daten** Tabelle **hinzugefügt**wurde, wird der **RowState** weiterhin **hinzugefügt**. Für Zeilen, die als **geändert** oder **gelöscht**markiert sind, wird der **RowState** **geändert**.<br /><br /> Zeilen aus der Datenquelle, die nicht bereits in der Daten Tabelle vorhanden sind, werden hinzugefügt, und der **RowState** wird auf **Added**festgelegt.|  
   
- Das folgende Beispiel verwendet die **Load** Methode, um eine Liste der Geburtstage für Mitarbeiter im Anzeigen der **Northwind** Datenbank.  
+ Im folgenden Beispiel wird die **Load** -Methode verwendet, um eine Liste der Geburtstage für die Mitarbeiter in der **Northwind** -Datenbank anzuzeigen.  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -70,5 +70,5 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

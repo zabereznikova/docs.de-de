@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607929"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203360"
 ---
 # <a name="merging-dataset-contents"></a>Zusammenführen von DataSet-Inhalten
 
@@ -35,7 +35,7 @@ Wenn die Tabelle, die neue Daten aus einer Zusammenführung empfängt, keinen Pr
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Wenn Sie ein `DataSet`-, ein `DataTable`- oder ein `DataRow`-Array an die `Merge`-Methode übergeben, können Sie mit optionalen Parametern angeben, ob Änderungen im vorhandenen `DataSet` beibehalten werden sollen und wie die neuen Schemaelemente in den empfangenen Daten zu behandeln sind. Der erste dieser Parameter nach den empfangenen Daten ist ein Boolean-Flag, <xref:System.Data.LoadOption.PreserveChanges>, das angibt, ob die Änderungen im vorhandenen `DataSet` beibehalten werden sollen. Wenn das `PreserveChanges`-Flag auf `true` festgelegt ist, werden vorhandene Werte in der `Current`-Zeilenversion der vorhandenen Zeile nicht durch die empfangenen Werte überschrieben. Wenn das `PreserveChanges`-Flag auf `false` festgelegt ist, werden die vorhandenen Werte in der `Current`-Zeilenversion der vorhandenen Zeile mit den empfangenen Werten überschrieben. Wenn für das `PreserveChanges`-Flag nichts angegeben wird, wird es standardmäßig auf `false` festgelegt. Weitere Informationen zu Zeilenversionen finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Wenn Sie ein `DataSet`-, ein `DataTable`- oder ein `DataRow`-Array an die `Merge`-Methode übergeben, können Sie mit optionalen Parametern angeben, ob Änderungen im vorhandenen `DataSet` beibehalten werden sollen und wie die neuen Schemaelemente in den empfangenen Daten zu behandeln sind. Der erste dieser Parameter nach den empfangenen Daten ist ein Boolean-Flag, <xref:System.Data.LoadOption.PreserveChanges>, das angibt, ob die Änderungen im vorhandenen `DataSet` beibehalten werden sollen. Wenn das `PreserveChanges`-Flag auf `true` festgelegt ist, werden vorhandene Werte in der `Current`-Zeilenversion der vorhandenen Zeile nicht durch die empfangenen Werte überschrieben. Wenn das `PreserveChanges`-Flag auf `false` festgelegt ist, werden die vorhandenen Werte in der `Current`-Zeilenversion der vorhandenen Zeile mit den empfangenen Werten überschrieben. Wenn für das `PreserveChanges`-Flag nichts angegeben wird, wird es standardmäßig auf `false` festgelegt. Weitere Informationen zu Zeilen Versionen finden Sie unter [Zeilen Status und Zeilen Versionen](row-states-and-row-versions.md).
 
 Wenn das `PreserveChanges`-Flag auf `true` festgelegt ist, werden die Daten der vorhandenen Zeile in der <xref:System.Data.DataRowVersion.Current>-Zeilenversion der vorhandenen Zeile beibehalten, während die Daten aus der <xref:System.Data.DataRowVersion.Original>-Zeilenversion der vorhandenen Zeile durch die Daten aus der `Original`-Zeilenversion der empfangenen Zeile überschrieben werden. Der <xref:System.Data.DataRow.RowState%2A> der vorhandenen Zeile wird auf <xref:System.Data.DataRowState.Modified> festgelegt. Beachten Sie folgende Ausnahmen:
 
@@ -69,9 +69,9 @@ Bei der `Merge`-Methode werden Einschränkungen erst überprüft, wenn dem vorha
 Nehmen wir einmal an, eine vorhandene Zeile in einem `DataSet` ist eine Zeile mit dem `Unchanged`-Zeilenstatus und dem Primärschlüsselwert 1. Beim Zusammenführen mit einer empfangenen Zeile mit dem `Modified`-Zeilenstatus und dem `Original`-Primärschlüsselwert 2 sowie dem `Current`-Primärschlüsselwert 1 werden die vorhandene Zeile und die empfangene Zeile als nicht übereinstimmend betrachtet, weil die `Original`-Primärschlüsselwerte unterschiedlich sind. Wenn die Zusammenführung abgeschlossen ist und die Einschränkungen überprüft werden, wird allerdings eine Ausnahme ausgelöst, weil die `Current`-Primärschlüsselwerte die &lt;legacyBold&gt;Unique&lt;/legacyBold&gt;-Einschränkung für die Primärschlüsselspalte verletzen.
 
 > [!NOTE]
-> Beim Einfügen von Zeilen in Datenbanktabellen mit automatisch inkrementierenden Spalten, z. B. Identitätsspalten, ist es möglich, dass der von der Einfügung zurückgegebene Wert für die Identitätsspalte nicht mit dem Wert im `DataSet` übereinstimmt, sodass die zurückgegebenen Zeilen nicht zusammengeführt, sondern angefügt werden. Weitere Informationen finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Beim Einfügen von Zeilen in Datenbanktabellen mit automatisch inkrementierenden Spalten, z. B. Identitätsspalten, ist es möglich, dass der von der Einfügung zurückgegebene Wert für die Identitätsspalte nicht mit dem Wert im `DataSet` übereinstimmt, sodass die zurückgegebenen Zeilen nicht zusammengeführt, sondern angefügt werden. Weitere Informationen finden Sie unter [Abrufen von Identitäts-oder](../retrieving-identity-or-autonumber-values.md)Auto Sequenz Werten.
 
-Das folgende Codebeispiel führt zwei `DataSet` Objekte mit unterschiedlichen Schemas in einer `DataSet` mit den kombinierten Schemas der beiden empfangenen `DataSet` Objekte.
+Im folgenden Codebeispiel werden zwei `DataSet` -Objekte mit unterschiedlichen Schemas `DataSet` in einem zusammen mit den kombinierten Schemas der `DataSet` beiden eingehenden-Objekte zusammengeführt.
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ Im folgenden Codebeispiel gibt es ein vorhandenes `DataSet` mit Updates, die an 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [DataSets, DataTables und DataViews](index.md)
+- [Zeilenstatus und Zeilenversionen](row-states-and-row-versions.md)
+- [DataAdapters und DataReaders](../dataadapters-and-datareaders.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../retrieving-and-modifying-data.md)
+- [Abrufen von Identity- oder Autonumber-Werten](../retrieving-identity-or-autonumber-values.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendu
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238373"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107168"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Standpunktanalyse für Websitekommentare mit binärer Klassifikation in ML.NET
 
@@ -17,21 +17,21 @@ Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendung erstellen,
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> * Erstellen einer Konsolenanwendung
-> * Vorbereiten von Daten
-> * Laden der Daten
-> * Erstellen und Trainieren des Modells
-> * Evaluieren des Modells
-> * Verwenden des Modells für Vorhersagen
-> * Anzeigen der Ergebnisse
+> - Erstellen einer Konsolenanwendung
+> - Vorbereiten von Daten
+> - Laden der Daten
+> - Erstellen und Trainieren des Modells
+> - Evaluieren des Modells
+> - Verwenden des Modells für Vorhersagen
+> - Anzeigen der Ergebnisse
 
 Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“
+- [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“
 
-* [Dataset „UCI Sentiment Labeled Sentences“](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP-Datei)
+- [Dataset „UCI Sentiment Labeled Sentences“](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP-Datei)
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -62,8 +62,8 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 2. Erstellen Sie zwei globale Felder zum Speichern des gerade heruntergeladenen Datasetdateipfads und des gespeicherten Modelldateipfads:
 
-    * `_dataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
-    * `_modelPath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
+    - `_dataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
+    - `_modelPath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
 
 3. Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
 
@@ -125,9 +125,9 @@ Sie bereiten die App vor und laden anschließend die Daten:
 
     Die `LoadData()`-Methode führt die folgenden Aufgaben aus:
 
-    * Laden der Daten.
-    * Teilt das geladene Dataset in Trainings- und Testdatasets auf.
-    * Gibt die aufgeteilten Trainings- und Testdatasets zurück.
+    - Laden der Daten.
+    - Teilt das geladene Dataset in Trainings- und Testdatasets auf.
+    - Gibt die aufgeteilten Trainings- und Testdatasets zurück.
 
 4. Fügen Sie den folgenden Code am Ende der ersten Zeile der `LoadData()`-Methode hinzu.
 
@@ -157,10 +157,10 @@ Wenn Sie ein Modell vorbereiten, verwenden Sie einen Teil des Datasets, um es zu
 
     Die `BuildAndTrainModel()`-Methode führt die folgenden Aufgaben aus:
 
-    * Extrahieren und Transformieren der Daten.
-    * Trainieren des Modells.
-    * Vorhersagen des Standpunkts anhand der Testdaten.
-    * Zurückgeben des Modells.
+    - Extrahieren und Transformieren der Daten.
+    - Trainieren des Modells.
+    - Vorhersagen des Standpunkts anhand der Testdaten.
+    - Zurückgeben des Modells.
 
 2. Erstellen Sie die `BuildAndTrainModel()`-Methode mit dem folgenden Code direkt nach der `Main()`-Methode:
 
@@ -225,10 +225,10 @@ Verwenden Sie nach dem Training Ihres Modells Ihre Testdaten, um die Leistung Ih
 
     Die `Evaluate()`-Methode führt die folgenden Aufgaben aus:
 
-    * Laden des Testdatasets.
-    * Erstellen des Auswerters der binären Klassifizierung.
-    * Evaluieren des Modells und Erstellen von Metriken.
-    * Anzeigen der Metriken.
+    - Laden des Testdatasets.
+    - Erstellen des Auswerters der binären Klassifizierung.
+    - Evaluieren des Modells und Erstellen von Metriken.
+    - Anzeigen der Metriken.
 
 2. Fügen Sie einen Aufruf der neuen Methode aus der `Main()`-Methode mit dem folgenden Code direkt unter dem `BuildAndTrainModel()`-Methodenaufruf hinzu:
 
@@ -252,11 +252,11 @@ Zeigen Sie die Metriken mithilfe des folgenden Codes an:
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* Die `Accuracy`-Metrik ermittelt die Genauigkeit eines Modells, d.h. den Anteil der korrekten Vorhersagen im Testsatz.
+- Die `Accuracy`-Metrik ermittelt die Genauigkeit eines Modells, d.h. den Anteil der korrekten Vorhersagen im Testsatz.
 
-* Die `AreaUnderRocCurve`-Metrik gibt an, wie sicher das Modell die positiven und negativen Klassen korrekt klassifiziert. Sie möchten, dass der `AreaUnderRocCurve` so nah wie möglich bei 1 liegt.
+- Die `AreaUnderRocCurve`-Metrik gibt an, wie sicher das Modell die positiven und negativen Klassen korrekt klassifiziert. Sie möchten, dass der `AreaUnderRocCurve` so nah wie möglich bei 1 liegt.
 
-* Die `F1Score`-Metrik ermittelt den F1-Score des Modells, der ein Maß für das Gleichgewicht zwischen [Genauigkeit](../resources/glossary.md#precision) und [Wiederkennung](../resources/glossary.md#recall) ist.  Sie möchten, dass der `F1Score` so nah wie möglich bei 1 liegt.
+- Die `F1Score`-Metrik ermittelt den F1-Score des Modells, der ein Maß für das Gleichgewicht zwischen [Genauigkeit](../resources/glossary.md#precision) und [Wiederkennung](../resources/glossary.md#recall) ist.  Sie möchten, dass der `F1Score` so nah wie möglich bei 1 liegt.
 
 ### <a name="predict-the-test-data-outcome"></a>Vorhersagen der Testdatenergebnisse
 
@@ -271,10 +271,10 @@ Zeigen Sie die Metriken mithilfe des folgenden Codes an:
 
     Die `UseModelWithSingleItem()`-Methode führt die folgenden Aufgaben aus:
 
-    * Erstellen eines einzelnen Kommentars aus Testdaten.
-    * Vorhersagen des Standpunkts anhand der Testdaten.
-    * Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
-    * Anzeigen der vorhergesagten Ergebnisse.
+    - Erstellen eines einzelnen Kommentars aus Testdaten.
+    - Vorhersagen des Standpunkts anhand der Testdaten.
+    - Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
+    - Anzeigen der vorhergesagten Ergebnisse.
 
 2. Fügen Sie einen Aufruf der neuen Methode aus der `Main()`-Methode mit dem folgenden Code direkt unter dem `Evaluate()`-Methodenaufruf hinzu:
 
@@ -315,10 +315,10 @@ Zeigen Sie die Metriken mithilfe des folgenden Codes an:
 
     Die `UseModelWithBatchItems()`-Methode führt die folgenden Aufgaben aus:
 
-    * Erstellen von Batchtestdaten.
-    * Vorhersagen des Standpunkts anhand der Testdaten.
-    * Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
-    * Anzeigen der vorhergesagten Ergebnisse.
+    - Erstellen von Batchtestdaten.
+    - Vorhersagen des Standpunkts anhand der Testdaten.
+    - Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
+    - Anzeigen der vorhergesagten Ergebnisse.
 
 2. Fügen Sie einen Aufruf der neuen Methode aus der `Main`-Methode mit dem folgenden Code direkt unter dem `UseModelWithSingleItem()`-Methodenaufruf hinzu:
 
@@ -383,13 +383,13 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> * Erstellen einer Konsolenanwendung
-> * Vorbereiten von Daten
-> * Laden der Daten
-> * Erstellen und Trainieren des Modells
-> * Evaluieren des Modells
-> * Verwenden des Modells für Vorhersagen
-> * Anzeigen der Ergebnisse
+> - Erstellen einer Konsolenanwendung
+> - Vorbereiten von Daten
+> - Laden der Daten
+> - Erstellen und Trainieren des Modells
+> - Evaluieren des Modells
+> - Verwenden des Modells für Vorhersagen
+> - Anzeigen der Ergebnisse
 
 Wechseln Sie zum nächsten Tutorial, um mehr zu erfahren.
 > [!div class="nextstepaction"]

@@ -2,17 +2,17 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934466"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203775"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen wird für jedes `complexType` untergeordnete Element eines Schema Elements eine Tabelle `DataSet`in generiert. Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden in `DataSet` für Elemente der obersten Ebene im Schema erstellt. Allerdings wird eine Tabelle nur für ein Element der obersten Ebene `complexType` erstellt, wenn `complexType` das `complexType` Element in einem anderen `complexType` Element geschachtelt ist. in diesem Fall wird das geschachtelte `DataTable` Element einem `DataSet`in der zugeordnet.  
   
- Weitere Informationen zu XSD finden Sie in der World Wide Web Consortium (W3C) [XML Schema Part 0: Empfehlung](https://www.w3.org/TR/xmlschema-0/)für das [XML-Schema Teil 1: Struktur Empfehlung](https://www.w3.org/TR/xmlschema-1/)und das [XML-Schema Teil 2: Datatypes-](https://www.w3.org/TR/xmlschema-2/)Empfehlung.  
+ Weitere Informationen zu XSD finden Sie in der World Wide Web Consortium (W3C) [XML Schema Part 0: Empfehlung](https://www.w3.org/TR/xmlschema-0/)für das [XML-Schema Teil 1: Struktur Empfehlung](https://www.w3.org/TR/xmlschema-1/)und das [XML-Schema Teil 2: Empfehlungen zu Datentypen](https://www.w3.org/TR/xmlschema-2/).  
   
  Im folgenden Beispiel wird ein XML-Schema `customers` veranschaulicht, wobei das untergeordnete `MyDataSet` Element des-Elements ist, bei dem es sich um ein **DataSet** -Element handelt.  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Beschreibt die XML-Schema Elemente, die zum Erstellen von Unique-und Foreign `DataSet`Key-Einschränkungen in einer verwendet werden.  
   
- [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Beschreibt die XML-Schema Elemente, die zum Erstellen von Beziehungen zwischen Tabellen `DataSet`Spalten in einem verwendet werden.  
   
- [XML-Schemaeinschränkungen und -beziehungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [XML-Schemaeinschränkungen und -beziehungen](xml-schema-constraints-and-relationships.md)  
  Beschreibt, wie Beziehungen implizit erstellt werden, wenn XML-Schema Elemente zum Erstellen von `DataSet`Einschränkungen in verwendet werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)  
  Beschreibt, wie die relationale Struktur und die Daten in `DataSet` als XML-Daten geladen und persistent gespeichert werden.  
   
 ## <a name="see-also"></a>Siehe auch

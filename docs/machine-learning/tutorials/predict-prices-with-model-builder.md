@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611446"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107143"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
@@ -21,12 +21,12 @@ Die Preisvorhersagevorlage des Modell-Generators kann für jedes Szenario verwen
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> * Vorbereiten und Verstehen der Daten
-> * Auswählen eines Szenarios
-> * Laden der Daten
-> * Trainieren des Modells
-> * Evaluieren des Modells
-> * Verwenden des Modells für Vorhersagen
+> - Vorbereiten und Verstehen der Daten
+> - Auswählen eines Szenarios
+> - Laden der Daten
+> - Trainieren des Modells
+> - Evaluieren des Modells
+> - Verwenden des Modells für Vorhersagen
 
 > [!NOTE]
 > Der Modell-Generator befindet sich derzeit in der Vorschauphase.
@@ -59,13 +59,13 @@ Jede Zeile im Dataset `taxi-fare-train.csv` enthält Details zu den Fahrten eine
 
     Das angegebene Dataset enthält die folgenden Spalten:
 
-    * **vendor_id:** Die ID des Taxiunternehmers ist ein Feature.
-    * **rate_code:** Der Tariftyp der Taxifahrt ist ein Feature.
-    * **passenger_count:** Die Anzahl der Fahrgäste bei einer Fahrt ist ein Feature.
-    * **trip_time_in_secs:** Die Dauer der Fahrt.
-    * **trip_distance:** Die Fahrtstrecke ist ein Feature.
-    * **payment_type:** Die Zahlungsmethode (Bargeld oder Kreditkarte) ist ein Feature.
-    * **fare_amount:** Der gesamte gezahlte Taxifahrtpreis ist die Bezeichnung.
+    - **vendor_id:** Die ID des Taxiunternehmers ist ein Feature.
+    - **rate_code:** Der Tariftyp der Taxifahrt ist ein Feature.
+    - **passenger_count:** Die Anzahl der Fahrgäste bei einer Fahrt ist ein Feature.
+    - **trip_time_in_secs:** Die Dauer der Fahrt.
+    - **trip_distance:** Die Fahrtstrecke ist ein Feature.
+    - **payment_type:** Die Zahlungsmethode (Bargeld oder Kreditkarte) ist ein Feature.
+    - **fare_amount:** Der gesamte gezahlte Taxifahrtpreis ist die Bezeichnung.
 
 `label` ist die Spalte, die vorhergesagt werden soll. Das Ziel bei der Durchführung einer Regressionsaufgabe ist die Vorhersage eines numerischen Werts. In diesem Preisvorhersageszenario werden die Kosten für eine Taxifahrt vorhergesagt. Daher lautet die Bezeichnung **fare_amount**. Die identifizierten `features` sind die Eingaben, die Sie für das Modell zum Vorhersagen von `label` bereitstellen. In diesem Fall werden die restlichen Spalten als Features oder Eingaben verwendet, um den Fahrpreis vorherzusagen.
 
@@ -190,12 +190,12 @@ Wenn Sie zu einem späteren Zeitpunkt innerhalb einer anderen Projektmappe auf d
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> * Vorbereiten und Verstehen der Daten
-> * Auswählen eines Szenarios
-> * Laden der Daten
-> * Trainieren des Modells
-> * Evaluieren des Modells
-> * Verwenden des Modells für Vorhersagen
+> - Vorbereiten und Verstehen der Daten
+> - Auswählen eines Szenarios
+> - Laden der Daten
+> - Trainieren des Modells
+> - Evaluieren des Modells
+> - Verwenden des Modells für Vorhersagen
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487846"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206058"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 
@@ -23,15 +23,15 @@ ms.locfileid: "66487846"
 Sicherheit schließt drei interagierende Elemente ein: Sandkasten, Berechtigungen und Erzwingung. Unter einem Sandkasten versteht man das Erstellen isolierter Domänen, in denen bestimmter Code als vollständig vertrauenswürdig und sonstiger Code auf die Berechtigungen im Berechtigungssatz für den Sandkasten beschränkt ist. Der Anwendungscode, der innerhalb des Berechtigungssatzes des Sandkastens ausgeführt wird, wird als transparent betrachtet, das heißt, es können keine Vorgänge ausgeführt werden, die sich auf die Sicherheit auswirken können. Der Berechtigungssatz für den Sandkasten wird durch Beweis bestimmt (<xref:System.Security.Policy.Evidence>-Klasse). Beweise geben Aufschluss darüber, welche bestimmten Berechtigungen von Sandkästen benötigt werden, und welche Arten von Sandkästen erstellt werden. Erzwingung bedeutet, dass transparenter Code nur innerhalb seines Berechtigungssatzes ausgeführt werden darf.
 
 > [!IMPORTANT]
-> Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Ab .NET Framework 4, ist die Sicherheitsrichtlinie veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Weitere Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Code Access Security Policy Kompatibilität und Migration von](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Ab .NET Framework 4 ist die Sicherheitsrichtlinie veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Kompatibilität und Migration von Richtlinien für die Code Zugriffssicherheit](code-access-security-policy-compatibility-and-migration.md).
 
 In diesem Thema wird das Transparenzmodell genauer beschrieben. Es enthält die folgenden Abschnitte:
 
-- [Zweck des Transparenzmodells](#purpose)
+- [Zweck des Transparenz Modells](#purpose)
 
-- [Angeben der Transparenzebene](#level)
+- [Angeben der Transparenz Ebene](#level)
 
-- [Transparenzerzwingung](#enforcement)
+- [Transparenz Erzwingung](#enforcement)
 
 <a name="purpose"></a>
 
@@ -59,18 +59,18 @@ Das <xref:System.Security.SecurityRulesAttribute>-Attribut auf Assemblyebene wä
 
 Die Ebenen lauten folgendermaßen:
 
-- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die .NET Framework 4-Transparenzregeln.
+- Ebene 2 (<xref:System.Security.SecurityRuleSet.Level2>) – die Transparenzregeln für .NET Framework 4.
 
 - Ebene 1 (<xref:System.Security.SecurityRuleSet.Level1>) – die .NET Framework 2.0-Transparenzregeln.
 
 Der primäre Unterschied zwischen den zwei Transparenzebenen besteht darin, dass auf Ebene 1 keine Transparenzregeln für Aufrufe von außerhalb der Assembly erzwungen werden und dass diese Ebene nur für Kompatibilität vorgesehen ist.
 
 > [!IMPORTANT]
-> Geben Sie Transparenz der Ebene 1 nur für Kompatibilität an, das heißt, geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den das <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wird, immer Transparenz der Ebene 2 an.
+> Geben Sie Transparenz der Ebene 1 nur für Kompatibilität an, das heißt, geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den das <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wurde, immer Transparenz der Ebene 2.
 
 ### <a name="level-2-transparency"></a>Transparenz der Ebene 2
 
-Transparenz der Ebene 2 wurde in .NET Framework 4 eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
+Transparenz der Ebene 2 wurde in der .NET Framework 4 eingeführt. Die drei Grundsätze dieses Modells sind transparenter Code, sicherheitsgeschützter Code und sicherheitskritischer Code.
 
 - Transparenter Code kann unabhängig von den Berechtigungen, die er erhält (einschließlich vollständiger Vertrauenswürdigkeit), nur anderen transparenten Code oder sicherheitsgeschützten Code aufrufen. Wenn der Code teilweise vertrauenswürdig ist, können nur Aktionen ausgeführt werden, die gemäß dem Berechtigungssatz der Domäne zulässig sind. Transparenter Code ist nicht für die folgenden Vorgänge vorgesehen:
 
@@ -114,9 +114,9 @@ Für das Transparenzmodell der Ebene 1 gelten die folgenden Einschränkungen:
 
 ## <a name="transparency-enforcement"></a>Transparenzerzwingung
 
-Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. In .NET Framework 4 tritt ein, auf Assemblyebene transparenzberechnung schneller als in .NET Framework 2.0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.
+Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. Im .NET Framework 4 erfolgt die Berechnung der Transparenz auf Assemblyebene früher als in der .NET Framework 2,0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitstransparenter Code, Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Sicherheits transparenter Code, Ebene 1](security-transparent-code-level-1.md)
+- [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)

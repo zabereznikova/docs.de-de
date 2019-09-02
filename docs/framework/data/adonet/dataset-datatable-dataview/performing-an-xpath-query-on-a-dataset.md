@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607896"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204537"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
-Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> können Sie zum Verwenden von XML-Dienste, z. B. der Abfrage XML Path Language (XPath), die Zugriff auf die **XmlDataDocument** und bestimmte Funktionen ausführen können einfacher als der Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** -Methode der ein <xref:System.Data.DataTable> Navigieren in Beziehungen zu anderen Tabellen im eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf eine **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelte <xref:System.Xml.XmlElement> Knoten, klicken Sie dann an übergeben werden kann die **GetRowFromElement** -Methode der der **XmlDataDocument**, um übereinstimmende zurückzugeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle im synchronisierten **DataSet**.  
+Die Beziehung zwischen einem <xref:System.Data.DataSet> synchronisierten <xref:System.Xml.XmlDataDocument> und ermöglicht Ihnen die Verwendung von XML-Diensten, z. b. der XPath-Abfrage (XML Path Language), die auf das **xmldatadocumschlag** zugreifen und eine bestimmte Funktionalität leichter ausführen können als Direktes Zugreifen auf das **DataSet** . Anstatt z. b. die **Select** - <xref:System.Data.DataTable> Methode von zu verwenden, um Beziehungen zu anderen Tabellen in einem **DataSet**zu navigieren, können Sie eine XPath-Abfrage für ein **xmldatadocreent** ausführen, das mit dem **DataSet**synchronisiert wird, um Folgendes zu erhalten: die Liste der XML-Elemente in Form einer <xref:System.Xml.XmlNodeList>. Die Knoten in der **xmlnodelta ist**, die als <xref:System.Xml.XmlElement> Knoten umgewandelt werden, können dann an die **getrowfromelements** -Methode von **XmlDataDocument**übergeben werden, um <xref:System.Data.DataRow> übereinstimmende Verweise auf die Zeilen der Tabelle in der Synchronisierung **zurückzugeben. DataSet**.  
   
- Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** mit drei Tabellen gefüllt: **Kunden**, **Bestellungen**, und **OrderDetails**. In diesem Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Bestellungen** Tabellen, und zwischen den **Bestellungen** und **OrderDetails** Tabellen. Wird zum Zurückgeben eine XPath-Abfrage ausgeführt ein **XmlNodeList** von **Kunden** Knoten bei einem "Enkel" **OrderDetails** Knoten verfügt über eine **"ProductID"** Knoten mit dem Wert 43. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die die **"ProductID"** 43.  
+ Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Das **DataSet** ist mit drei Tabellen gefüllt: **Customers**, **Orders**und **Order Details**. Im Beispiel wird zuerst zwischen den Tabellen **Customers** und **Orders** und zwischen den Tabellen **Orders** und **Order Details** eine Beziehung zwischen über-und untergeordneten Elementen erstellt. Anschließend wird eine XPath-Abfrage ausgeführt, um eine **xmlnoschist** von **Customers** -Knoten zurückzugeben, bei denen ein zweiter untergeordneter **Order Details** -Knoten über einen **ProductID-** Knoten mit dem Wert 43 verfügt. Im Wesentlichen verwendet das Beispiel die XPath-Abfrage, um zu bestimmen, welche Kunden das Produkt mit der **ProductID** 43 bestellt haben.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,5 +103,5 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataSet- und XmlDataDocument-Synchronisierung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [DataSet- und XmlDataDocument-Synchronisierung](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

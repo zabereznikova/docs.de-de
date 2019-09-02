@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910751"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206103"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910751"
 ## <a name="link-demands-and-wrappers"></a>Verknüpfungsaufrufe und Wrapper  
  In der Sicherheitsinfrastruktur wurde ein besonderer Schutzmechanismus mit Verknüpfungsaufrufen verstärkt. Dies stellt jedoch noch immer eine Quelle für potenzielle Schwachstellen in Ihrem Code dar.  
   
- Wenn voll vertrauenswürdiger Code eine Eigenschaft, ein Ereignis oder eine Methode aufruft, die durch [LinkDemand](../../../docs/framework/misc/link-demands.md)geschützt ist, wird der Aufruf erfolgreich ausgeführt, wenn die **LinkDemand** -Berechtigungsüberprüfung für den Aufrufer erfüllt ist. Wenn der vollständig vertrauenswürdige Code eine Klasse verfügbar macht, die den Namen einer Eigenschaft annimmt und deren **Get** -Zugriffsmethode mithilfe von Reflektion aufruft, ist der Aufruf des **Get** -Accessors auch dann erfolgreich, wenn der Benutzercode nicht über das Recht für den Zugriff auf diese Eigenschaft verfügt. Dies liegt daran, dass **LinkDemand** nur den unmittelbaren Aufrufer prüft, der voll vertrauenswürdiger Code ist. Im Wesentlichen nimmt der vollständig vertrauenswürdige Code einen privilegierten Aufruf im Auftrag von Benutzercode vor, ohne sicherzustellen, dass der Code über die Berechtigung zum Ausführen dieses Aufrufs verfügt.  
+ Wenn voll vertrauenswürdiger Code eine Eigenschaft, ein Ereignis oder eine Methode aufruft, die durch [LinkDemand](link-demands.md)geschützt ist, wird der Aufruf erfolgreich ausgeführt, wenn die **LinkDemand** -Berechtigungsüberprüfung für den Aufrufer erfüllt ist. Wenn der vollständig vertrauenswürdige Code eine Klasse verfügbar macht, die den Namen einer Eigenschaft annimmt und deren **Get** -Zugriffsmethode mithilfe von Reflektion aufruft, ist der Aufruf des **Get** -Accessors auch dann erfolgreich, wenn der Benutzercode nicht über das Recht für den Zugriff auf diese Eigenschaft verfügt. Dies liegt daran, dass **LinkDemand** nur den unmittelbaren Aufrufer prüft, der voll vertrauenswürdiger Code ist. Im Wesentlichen nimmt der vollständig vertrauenswürdige Code einen privilegierten Aufruf im Auftrag von Benutzercode vor, ohne sicherzustellen, dass der Code über die Berechtigung zum Ausführen dieses Aufrufs verfügt.  
   
  Um derartige Sicherheitslücken zu vermeiden, erweitert das Common Language Runtime die Überprüfung auf einen vollständigen Stapel Abruf bei jedem indirekten Aufruf einer Methode, eines Konstruktors, einer Eigenschaft oder eines Ereignisses, das durch einen **LinkDemand**geschützt wird. Dieser Schutz geht zu Lasten der Leistung und ändert die Semantik der Sicherheitsüberprüfung. Für die vollständige Stapelforderung kann ein Fehler auftreten, der bei der schnelleren Überprüfung einer Ebene nicht auftreten würde.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910751"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. Die **Nachfrage** erfolgt bei jedem Aufruf, da der Stapel möglicherweise unterschiedliche Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. Die **Nachfrage** ist ein guter Schutz vor Lock Angriffen. nicht autorisierter Code, der versucht, ihn zu durchlaufen, wird erkannt.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zum Zeitpunkt der JIT-Kompilierung (Just-in-Time) und überprüft nur den unmittelbaren Aufrufer. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**kann jeder Code, der den Test übergibt und auf den Code verweist, die Sicherheit beeinträchtigen, da bösartiger Code mithilfe des autorisierten Codes aufgerufen werden kann. Verwenden Sie daher nicht **LinkDemand** , es sei denn, alle möglichen Schwächen können gründlich vermieden werden.  
+- [LinkDemand](link-demands.md) erfolgt zum Zeitpunkt der JIT-Kompilierung (Just-in-Time) und überprüft nur den unmittelbaren Aufrufer. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**kann jeder Code, der den Test übergibt und auf den Code verweist, die Sicherheit beeinträchtigen, da bösartiger Code mithilfe des autorisierten Codes aufgerufen werden kann. Verwenden Sie daher nicht **LinkDemand** , es sei denn, alle möglichen Schwächen können gründlich vermieden werden.  
   
     > [!NOTE]
-    > In den .NET Framework 4 wurden Link Aufrufe durch das <xref:System.Security.SecurityCriticalAttribute> -Attribut in <xref:System.Security.SecurityRuleSet.Level2> Assemblys ersetzt. <xref:System.Security.SecurityCriticalAttribute> Entspricht einem Link Aufruf für volle Vertrauenswürdigkeit, wirkt sich aber auch auf Vererbungs Regeln aus. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheits transparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > In den .NET Framework 4 wurden Link Aufrufe durch das <xref:System.Security.SecurityCriticalAttribute> -Attribut in <xref:System.Security.SecurityRuleSet.Level2> Assemblys ersetzt. <xref:System.Security.SecurityCriticalAttribute> Entspricht einem Link Aufruf für volle Vertrauenswürdigkeit, wirkt sich aber auch auf Vererbungs Regeln aus. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md).  
   
  Die zusätzlichen Vorkehrungen, die bei der Verwendung von **LinkDemand** erforderlich sind, müssen einzeln programmiert werden. das Sicherheitssystem kann bei der Erzwingung helfen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
   

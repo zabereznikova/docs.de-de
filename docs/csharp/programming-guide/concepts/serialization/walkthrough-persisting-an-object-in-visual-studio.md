@@ -1,12 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975822"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105925"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C\#
 
@@ -22,14 +22,14 @@ In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objek
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* Installieren Sie zum Erstellen und Ausführen von Builds das [.NET Core SDK](https://www.microsoft.com/net/core).
+- Installieren Sie zum Erstellen und Ausführen von Builds das [.NET Core SDK](https://www.microsoft.com/net/core).
 
-* Installieren Sie Ihren bevorzugten Code-Editor, wenn Sie dies nicht bereits erledigt haben.
+- Installieren Sie Ihren bevorzugten Code-Editor, wenn Sie dies nicht bereits erledigt haben.
 
 > [!TIP]
 > Benötigen Sie einen Code-Editor? Testen Sie [Visual Studio](https://visualstudio.com/downloads).
 
-* Dieses Beispiel erfordert C# 7.3. Siehe [Auswählen der C#-Sprachversion](../../../language-reference/configure-language-version.md). 
+- Dieses Beispiel erfordert C# 7.3. Siehe [Auswählen der C#-Sprachversion](../../../language-reference/configure-language-version.md). 
 
 Sie können den Beispielcode online im [GitHub-Repository für .NET-Beispiele](https://github.com/dotnet/samples/tree/master/csharp/serialization) untersuchen.
 

@@ -3,12 +3,12 @@ title: Dokumentieren von Code mit XML-Kommentaren
 description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationskommentaren und zum Erstellen einer XML-Dokumentationsdatei zum Zeitpunkt der Kompilierung.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633737"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104772"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -212,12 +212,12 @@ Benutzerdefinierte oder interne Dokumentationsgenerierungstools können auch mit
 
 Das Dokumentieren von Code wird aus vielen Gründen empfohlen. Es folgen einige bewährte Methoden, allgemeine Anwendungsfallszenarios und Dinge, die Sie wissen sollten, wenn Sie XML-Dokumentationstags in Ihrem C#-Code verwenden.
 
-* Aus Gründen der Konsistenz sollten alle öffentlich sichtbaren Typen und deren Member dokumentiert werden. Tun Sie dies wenn nötig vollständig.
-* Private Member können auch mithilfe von XML-Kommentaren dokumentiert werden. Dadurch wird jedoch das (potenziell vertrauliche) Innenleben Ihrer Bibliothek verfügbar gemacht.
-* Als absolutes Minimum sollten Typen und deren Member über ein `<summary>`-Tag verfügen, da dessen Inhalt für IntelliSense erforderlich ist.
-* Dokumentationstext sollte in vollständigen Sätze geschrieben werden, die mit Punkten enden.
-* Partielle Klassen werden vollständig unterstützt, und Dokumentationsinformationen werden zu einem einzigen Eintrag für diesen Typ verkettet.
-* Der Compiler überprüft die Syntax der Tags `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` und `<typeparam>`.
+- Aus Gründen der Konsistenz sollten alle öffentlich sichtbaren Typen und deren Member dokumentiert werden. Tun Sie dies wenn nötig vollständig.
+- Private Member können auch mithilfe von XML-Kommentaren dokumentiert werden. Dadurch wird jedoch das (potenziell vertrauliche) Innenleben Ihrer Bibliothek verfügbar gemacht.
+- Als absolutes Minimum sollten Typen und deren Member über ein `<summary>`-Tag verfügen, da dessen Inhalt für IntelliSense erforderlich ist.
+- Dokumentationstext sollte in vollständigen Sätze geschrieben werden, die mit Punkten enden.
+- Partielle Klassen werden vollständig unterstützt, und Dokumentationsinformationen werden zu einem einzigen Eintrag für diesen Typ verkettet.
+- Der Compiler überprüft die Syntax der Tags `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` und `<typeparam>`.
 - Der Compiler überprüft die Parameter, die Dateipfade und Verweise auf andere Teile des Codes enthalten.
 
 ## <a name="see-also"></a>Siehe auch

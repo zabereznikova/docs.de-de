@@ -2,24 +2,24 @@
 title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd32d024acca393dcc8241f047a305e763682866
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621083"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204859"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
-In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in ein Schema für XML Schema Definition Language (XSD):  
+In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten, eine **datasetbeziehung** innerhalb eines XSD-Schemas (XML Schema Definition Language) darzustellen:  
   
 - Geben Sie geschachtelte komplexe Typen an.  
   
-- Verwenden der **msdata: Relationship** Anmerkung.  
+- Verwenden Sie die **msdata: Relationship** -Anmerkung.  
   
-- Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.  
+- Geben Sie einen **xs: keyref** ohne die " **msdata: einschränintonly** "-Anmerkung an.  
   
 ## <a name="nested-complex-types"></a>Geschachtelte komplexe Typen  
- Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an. Das folgende XML-Schema-Fragment zeigt, dass **OrderDetail** ist ein untergeordnetes Element von der **Reihenfolge** Element.  
+ Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an. Das folgende XML-Schema Fragment zeigt, dass **OrderDetail** ein untergeordnetes Element des **Order** -Elements ist.  
   
 ```xml  
 <xs:element name="Order">  
@@ -33,10 +33,10 @@ In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei 
 </xs:element>  
 ```  
   
- Die XML-Schemazuordnungsprozess erstellt Tabellen in der **DataSet** , die den geschachtelten komplexen Typen im Schema entsprechen. Er erstellt ebenfalls zusätzliche Spalten, die als übergeordnetes Element verwendet werden**-** untergeordnete Spalten für die generierten Tabellen. Beachten Sie, die diese übergeordneten**-** untergeordneten Spalten Beziehungen, das ist nicht derselbe, als wenn primary Key/foreign Key-Einschränkungen angegeben.  
+ Der Prozess für die XML-Schema Zuordnung erstellt Tabellen im **DataSet** , die den im Schema erstellten komplexen Typen entsprechen. Außerdem werden zusätzliche Spalten erstellt, die als übergeordnete **-** untergeordnete Spalten für die generierten Tabellen verwendet werden. Beachten Sie, dass **-** diese übergeordneten untergeordneten Spalten Beziehungen angeben. Dies entspricht nicht der Angabe von PRIMARY KEY/FOREIGN KEY-Einschränkungen.  
   
 ## <a name="msdatarelationship-annotation"></a>Die "msdata:Relationship"-Anmerkung  
- Die **msdata: Relationship** -Anmerkung können Sie explizit die über-/ unterordnungsbeziehung zwischen den Elementen im Schema angeben, die nicht geschachtelt sind. Das folgende Beispiel zeigt die Struktur der **Beziehung** Element.  
+ Mithilfe der **msdata: Relationship** -Anmerkung können Sie explizit Beziehungen zwischen übergeordneten und untergeordneten Elementen zwischen Elementen im Schema angeben, die nicht schzistet sind. Das folgende Beispiel zeigt die Struktur des **Relationship** -Elements.  
   
 ```xml  
 <msdata:Relationship name="CustOrderRelationship"    
@@ -46,9 +46,9 @@ msdata:parentkey=""
 msdata:childkey="" />  
 ```  
   
- Die Attribute der **msdata: Relationship** Anmerkung zu identifizieren, die Elemente für die über-/ unterordnungsbeziehung ist, werden auch als die **Parentkey** und **Childkey** Elemente und Attribute der Beziehung beteiligt. Der Zuordnungsprozess verwendet diese Informationen zum Generieren von Tabellen in der **DataSet** und die primary Key/Fremdschlüssel-Beziehung zwischen diesen Tabellen zu erstellen.  
+ Die Attribute der **msdata: Relationship** -Anmerkung identifizieren die Elemente, die an der Beziehung zwischen übergeordneten und untergeordneten Elementen beteiligt sind, sowie die Elemente und Attribute von "arkey" und " **childkey** ", die an der Beziehung beteiligt sind. Der Mapping-Prozess verwendet diese Informationen zum Generieren von Tabellen im **DataSet** und zum Erstellen der Primärschlüssel-/Fremdschlüssel Beziehung zwischen diesen Tabellen.  
   
- Das folgende Schemafragment gibt z. B. **Reihenfolge** und **OrderDetail** Elemente auf derselben Ebene (nicht geschachtelt). Das Schema gibt ein **msdata: Relationship** Anmerkung, die angibt, die über-/ unterordnungsbeziehung zwischen diesen beiden Elementen. In diesem Fall eine explizite Beziehung angegeben werden mithilfe der **msdata: Relationship** Anmerkung.  
+ Das folgende Schema Fragment gibt z. b. **Order** -und **Order Detail** -Elemente auf derselben Ebene an (nicht schsted). Das Schema gibt eine **msdata: Relationship** -Anmerkung an, die die über-/Unterordnungsbeziehung zwischen diesen beiden Elementen angibt. In diesem Fall muss mithilfe der **msdata: Relationship** -Anmerkung eine explizite Beziehung angegeben werden.  
   
 ```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -78,24 +78,24 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- Der Zuordnungsprozess verwendet die **Beziehung** Element zum Erstellen einer über-/ unterordnungsbeziehung zwischen den **OrderNumber** -Spalte in der **Reihenfolge** Tabelle und die **OrderNo** -Spalte in der **OrderDetail** -Tabelle in der **DataSet**. Der Zuordnungsprozess gibt nur die Beziehung an. Einschränkungen für die Werte in diesen Spalten werden nicht wie bei den Primärschlüssel- und Fremdschlüsseleinschränkungen in relationalen Datenbanken automatisch angegeben.  
+ Der Mapping-Prozess verwendet das **Relationship** -Element, um eine über-/Unterordnungsbeziehung zwischen der **OrderNumber** -Spalte in der **Order** -Tabelle und der **OrderNo** -Spalte in der **Order Detail** -Tabelle des **DataSets**zu erstellen. Der Zuordnungsprozess gibt nur die Beziehung an. Einschränkungen für die Werte in diesen Spalten werden nicht wie bei den Primärschlüssel- und Fremdschlüsseleinschränkungen in relationalen Datenbanken automatisch angegeben.  
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- Beschreibt die Einschränkungen und Beziehungen, die implizit in erstellt werden ein **DataSet** Wenn geschachtelte Elemente im XML-Schema gefunden werden.  
+ [Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen](map-implicit-relations-between-nested-schema-elements.md)  
+ Beschreibt die Einschränkungen und Beziehungen, die implizit in einem **DataSet** erstellt werden, wenn in einem XML-Schema schsted Elemente gefunden werden.  
   
- [Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Beschreibt, wie Sie das explizite Festlegen von Beziehungen einem **DataSet** für geschachtelte Elemente im XML-Schema.  
+ [Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind](map-relations-specified-for-nested-elements.md)  
+ Beschreibt, wie Beziehungen in einem **DataSet** für in einem XML-Schema eingested Elemente explizit festgelegt werden.  
   
- [Angeben von Beziehungen zwischen Elementen ohne Schachtelung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- Beschreibt das Erstellen von Beziehungen in einem **DataSet** zwischen XML-Schema-Elemente, die nicht geschachtelt sind.  
+ [Angeben von Beziehungen zwischen Elementen ohne Schachtelung](specify-relations-between-elements-with-no-nesting.md)  
+ Beschreibt, wie Beziehungen in einem **DataSet** zwischen XML-Schema Elementen erstellt werden, die nicht scht sind.  
   
 ### <a name="related-sections"></a>Verwandte Abschnitte  
- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Beschreibt die relationale Struktur bzw. das Schema, der eine **DataSet** , die vom Schema der XML Schema Definition Language (XSD) erstellt wird.  
+ [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ Beschreibt die relationale Struktur bzw. das Schema eines **DataSets** , das aus einem XSD-Schema (XML Schema Definition Language) erstellt wird.  
   
- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML-Schema-Elemente, die zum Erstellen von Unique- und foreign Key-Einschränkungen in einer **DataSet**.  
+ [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Beschreibt die XML-Schema Elemente, die zum Erstellen von Unique-und FOREIGN KEY-Einschränkungen in einem **DataSet**verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
