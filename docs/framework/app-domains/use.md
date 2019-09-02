@@ -9,11 +9,11 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742470"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "61674888"
 ---
 # <a name="using-application-domains"></a>Verwenden von Anwendungsdomänen
 Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runtime (CLR) bereit. Sie werden in einem Prozess erstellt und dort ausgeführt. Anwendungsdomänen werden normalerweise von einem Runtimehost erstellt. Dabei handelt es sich um eine Anwendung, die dafür verantwortlich ist, die Runtime in einen Prozess zu laden und Benutzercode innerhalb einer Anwendungsdomäne auszuführen. Der Runtimehost erstellt einen Prozess und eine Standardanwendungsdomäne und führt darin verwalteten Code aus. Runtimehosts sind z.B. ASP.NET, Microsoft Internet Explorer und Windows-Shell.  
@@ -21,13 +21,13 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  Für die meisten Anwendungen müssen Sie nicht Ihre eigene Anwendungsdomäne erstellen. Der Runtimehost erstellt alle erforderlichen Anwendungsdomänen für Sie. Sie können aber zusätzliche Anwendungsdomänen erstellen und konfigurieren, wenn Ihre Anwendung Code isolieren oder DLLs verwenden und entladen muss.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Erstellen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ [Vorgehensweise: Erstellen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  Erläutert, wie Sie eine Anwendungsdomäne programmgesteuert erstellen  
   
- [Gewusst wie: Entladen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ [Vorgehensweise: Entladen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
  Erläutert, wie Sie eine Anwendungsdomäne programmgesteuert entladen  
   
- [Gewusst wie: Konfigurieren einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ [Vorgehensweise: Konfigurieren einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
  Führt Sie in die Konfiguration einer Anwendungsdomäne ein  
   
  [Abrufen von Setupinformationen aus einer Anwendungsdomäne](../../../docs/framework/app-domains/retrieve-setup-information.md)  
@@ -36,13 +36,13 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Erläutert wie Sie eine Assembly in eine Anwendungsdomäne laden können  
   
- [Gewusst wie: Abrufen von Typ- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [Vorgehensweise: Abrufen von Typ- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  Erläutert, wie Sie Informationen zu einer Assembly abrufen können  
   
  [Erstellen von Schattenkopien von Assemblys](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
  Erläutert, wie Sie Assemblys mit Schattenkopien aktualisieren können, während diese gerade verwendet werden, und wie Sie Schattenkopien konfigurieren können  
   
- [Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ [Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Erläutert, wie Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme abrufen können, bevor die CLR mit dem Suchen nach Ausnahmehandlern beginnt.  
   
  [Auflösen beim Laden von Assemblys](../../../docs/framework/app-domains/resolve-assembly-loads.md)  

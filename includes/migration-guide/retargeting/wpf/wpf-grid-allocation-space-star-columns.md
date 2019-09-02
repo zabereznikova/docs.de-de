@@ -6,7 +6,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68235533"
 ---
-### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>Platzvergabe im Raster für *-Spalten
+### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>Platzvergabe im Raster für -Spalten
 
 |   |   |
 |---|---|
