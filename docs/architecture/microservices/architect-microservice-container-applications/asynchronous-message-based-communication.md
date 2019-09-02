@@ -101,7 +101,7 @@ Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Ide
 - **Letztliche Konsistenz** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)
+- **Jimmy Bogard. Refactoring für die Dienstbeständigkeit Eine Beurteilung der Kopplung** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

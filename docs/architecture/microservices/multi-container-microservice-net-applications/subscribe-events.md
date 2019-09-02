@@ -328,7 +328,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 - **Event Driven Messaging (Ereignisgesteuertes Messaging)**  \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)
+- **Jimmy Bogard. Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Publish-Subscribe channel (Kanal zum Veröffentlichen/Abonnieren)**  \

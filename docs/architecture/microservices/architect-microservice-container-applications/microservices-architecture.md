@@ -55,7 +55,7 @@ In diesem Leitfaden werden nur die ersten drei abgedeckt oder eingeführt. Die l
 - **Jimmy Nilsson. Chunk Cloud Computing (Einteilen von Cloud Computing)**  \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre. Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Microsoft-Tools)** (E-Book zum Download)
+- **Cesar de la Torre. Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Microsoft-Tools)** (E-Book zum Download) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
