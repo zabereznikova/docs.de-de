@@ -2,12 +2,12 @@
 title: DataTable-Schemadefinition
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d2609801da3bc336c54d32068246027cfd6d3aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952361"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204995"
 ---
 # <a name="datatable-schema-definition"></a>DataTable-Schemadefinition
 Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkungen dargestellt. Das Schema einer <xref:System.Data.DataTable> wird mit <xref:System.Data.DataColumn>-Objekten sowie <xref:System.Data.ForeignKeyConstraint>-Objekten und <xref:System.Data.UniqueConstraint>-Objekten definiert. Die Spalten einer Tabelle können Spalten in einer Datenquelle zugeordnet sein, berechnete Werte aus Ausdrücken enthalten, Werte automatisch erhöhen oder primäre Schlüsselwerte enthalten.  
@@ -20,22 +20,22 @@ Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkung
 > Die <xref:System.Data.DataTable.CaseSensitive%2A> -Eigenschaft der **Daten** Tabelle wirkt sich nicht auf dieses Verhalten aus. Die **CaseSensitive** -Eigenschaft gilt für die Daten in einer Tabelle und wirkt sich auf das Sortieren, suchen, Filtern, Erzwingen von Einschränkungen und so weiter aus, aber nicht auf Verweise auf Spalten, Beziehungen und Einschränkungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Hinzufügen von Spalten zu einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Hinzufügen von Spalten zu einer DataTable](adding-columns-to-a-datatable.md)  
  Beschreibt, wie die Spalten einer Tabelle mithilfe von **datacolumschlag** -Objekten definiert werden.  
   
- [Erstellen von Ausdrucksspalten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ [Erstellen von Ausdrucksspalten](creating-expression-columns.md)  
  Erläutert, wie die **Expression** -Eigenschaft einer Spalte verwendet werden kann, um Werte auf der Grundlage der Werte aus anderen Spalten in der Zeile zu berechnen.  
   
- [Erstellen von AutoIncrement-Spalten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ [Erstellen von AutoIncrement-Spalten](creating-autoincrement-columns.md)  
  Beschreibt, wie eine Spalte so festgelegt werden kann, dass die numerischen Werte automatisch erhöht werden, um sicherzustellen, dass die Werte in einer Spalte eindeutig sind.  
   
- [Definieren von Primärschlüsseln](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ [Definieren von Primärschlüsseln](defining-primary-keys.md)  
  Beschreibt, wie der Primärschlüssel einer Tabelle aus einem oder mehreren **datacolumschlag** -Objekten angegeben wird.  
   
- [DataTable-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [DataTable-Einschränkungen](datatable-constraints.md)  
  Beschreibt, wie Fremdschlüsseleinschränkungen und eindeutige Einschränkungen für Spalten in einer Tabelle definiert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTables](datatables.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

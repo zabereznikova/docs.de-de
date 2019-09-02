@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910984"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205637"
 ---
 # <a name="code-access-security-basics"></a>Grundlagen der Codezugriffssicherheit
 
@@ -32,13 +32,13 @@ Sie müssen mit den folgenden Konzepten der Codezugriffssicherheit vertraut sein
 
 - **Sichere Klassenbibliotheken**: Eine sichere Klassenbibliothek verwendet Sicherheitsanforderungen, um sicherzustellen, dass die Aufrufer der Bibliothek über die Berechtigung verfügen, auf die von der Bibliothek verfügbar gemachten Ressourcen zuzugreifen. Eine sichere Klassenbibliothek kann z. B. eine Methode zum Erstellen von Dateien haben, in der gefordert wird, dass ihre Aufrufer Berechtigungen zum Erstellen von Dateien haben. .NET Framework besteht aus sicheren Klassenbibliotheken. Sie müssen die Berechtigungen berücksichtigen, die für Zugriffe auf jede Bibliothek erforderlich sind, die in Ihrem Code verwendet wird. Weitere Informationen finden Sie im Abschnitt [Verwenden von sicheren Klassenbibliotheken](#secure_library) weiter unten in diesem Thema.
 
-- **Transparenter Code**: Beginnend mit dem .NET Framework 4 müssen Sie zusätzlich zum Identifizieren bestimmter Berechtigungen auch bestimmen, ob der Code als Sicherheits transparent ausgeführt werden soll. Aus sicherheitstransparentem Code können weder Typen oder Member aufgerufen werden, die als sicherheitskritisch gekennzeichnet sind. Diese Regel gilt sowohl für voll vertrauenswürdige Anwendungen als auch für teilweise vertrauenswürdige Anwendungen. Weitere Informationen finden Sie unter [Sicherheits transparenter Code](../../../docs/framework/misc/security-transparent-code.md).
+- **Transparenter Code**: Beginnend mit dem .NET Framework 4 müssen Sie zusätzlich zum Identifizieren bestimmter Berechtigungen auch bestimmen, ob der Code als Sicherheits transparent ausgeführt werden soll. Aus sicherheitstransparentem Code können weder Typen oder Member aufgerufen werden, die als sicherheitskritisch gekennzeichnet sind. Diese Regel gilt sowohl für voll vertrauenswürdige Anwendungen als auch für teilweise vertrauenswürdige Anwendungen. Weitere Informationen finden Sie unter [Sicherheits transparenter Code](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>Schreiben von überprüfbar typsicherem Code
 
-Bei der Just-in-Time-Kompilierung (JIT) wird ein Überprüfungsverfahren angewendet, in dem Code untersucht und versucht wird, zu ermitteln, ob der Code typsicher ist. Code, der sich während der Überprüfung als typsicher bewährt hat, wird als überprüfbar *typsicherer Code*bezeichnet. Wegen der Beschränkungen des Überprüfungsverfahrens oder des Compilers kann Code typsicher, jedoch möglicherweise nicht überprüfbar typsicher sein. Nicht alle Sprachen sind typsicher, und einige Sprachcompiler, z. B. Microsoft Visual C++, können keinen überprüfbar typsicheren verwalteten Code generieren. Um festzustellen, ob der von Ihnen verwendete Sprachcompiler überprüfbar typsicheren Code generiert, lesen Sie die entsprechenden Informationen in der Dokumentation des Compilers. Wenn Sie einen sprach Compiler verwenden, der überprüfbar typsicheren Code nur dann generiert, wenn Sie bestimmte Sprachkonstrukte vermeiden, können Sie das [Tool "Peer Verify](../../../docs/framework/tools/peverify-exe-peverify-tool.md) " verwenden, um zu bestimmen, ob der Code überprüfbar typsicher ist.
+Bei der Just-in-Time-Kompilierung (JIT) wird ein Überprüfungsverfahren angewendet, in dem Code untersucht und versucht wird, zu ermitteln, ob der Code typsicher ist. Code, der sich während der Überprüfung als typsicher bewährt hat, wird als überprüfbar *typsicherer Code*bezeichnet. Wegen der Beschränkungen des Überprüfungsverfahrens oder des Compilers kann Code typsicher, jedoch möglicherweise nicht überprüfbar typsicher sein. Nicht alle Sprachen sind typsicher, und einige Sprachcompiler, z. B. Microsoft Visual C++, können keinen überprüfbar typsicheren verwalteten Code generieren. Um festzustellen, ob der von Ihnen verwendete Sprachcompiler überprüfbar typsicheren Code generiert, lesen Sie die entsprechenden Informationen in der Dokumentation des Compilers. Wenn Sie einen sprach Compiler verwenden, der überprüfbar typsicheren Code nur dann generiert, wenn Sie bestimmte Sprachkonstrukte vermeiden, können Sie das [Tool "Peer Verify](../tools/peverify-exe-peverify-tool.md) " verwenden, um zu bestimmen, ob der Code überprüfbar typsicher ist.
 
 Code, der nicht überprüfbar typsicher ist, kann versuchen, ausgeführt zu werden, wenn die Sicherheitsrichtlinie zulässt, dass der Code die Überprüfung umgeht. Da Typsicherheit aber ein wesentlicher Bestandteil des Runtime-Mechanismus zur Isolation von Assemblys ist, kann Sicherheit nicht zuverlässig erzwungen werden, wenn die Regeln für die Typsicherheit durch Code verletzt werden. In der Standardeinstellung kann Code, der nicht typsicher ist, nur ausgeführt werden, wenn er vom lokalen Computer stammt. Aus diesem Grund sollte mobiler Code typsicher sein.
 
@@ -55,7 +55,7 @@ Codezugriffssicherheit verhindert nicht, dass Sie möglicherweise fehlerhaften C
 Deklarative Sicherheits Syntax verwendet [Attribute](../../standard/attributes/index.md) , um Sicherheitsinformationen in die [Metadaten](../../standard/metadata-and-self-describing-components.md) Ihres Codes zu platzieren. Attribute können auf Assembly-, Klassen- oder Memberebene platziert werden, um den Typ der Anforderung, Forderung oder Überschreibung zu kennzeichnen, die Sie verwenden möchten. Anforderungen werden in Anwendungen für die Common Language Runtime verwendet, um das Runtime-Sicherheitssystem über die Berechtigungen zu informieren, die Ihre Anwendung benötigt bzw. nicht wünscht. Forderungen und Überschreibungen werden in Bibliotheken verwendet, um Ressourcen vor Aufrufern zu schützen oder Standardsicherheitsverhalten zu überschreiben.
 
 > [!NOTE]
-> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).
+> In .NET Framework 4 gab es wichtige Änderungen am .NET Framework Sicherheitsmodell und der Terminologie. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).
 
 Damit Sie Aufrufe für deklarative Sicherheit verwenden können, müssen Sie die Zustandsdaten des Berechtigungsobjekts so initialisieren, dass sie der bestimmten Form von Berechtigung entsprechen, die Sie benötigen. Jede integrierte Berechtigung hat ein Attribut, das als eine <xref:System.Security.Permissions.SecurityAction>-Enumeration übergeben wird, um den Typ des Sicherheitsvorgangs zu beschreiben, den Sie ausführen möchten. Berechtigungen akzeptieren auch ihre eigenen Parameter, die ihnen exklusiv zugewiesen sind.
 
@@ -105,7 +105,7 @@ Imperative Sicherheitssyntax gibt einen Sicherheitsaufruf aus, indem eine neuen 
 
 Bevor Sie den Sicherheitsaufruf vornehmen, müssen Sie die Zustandsdaten des Berechtigungsobjekts so initialisieren, dass sie der bestimmten Form von Berechtigung entsprechen, die Sie benötigen. Wenn Sie z. b. <xref:System.Security.Permissions.FileIOPermission> ein-Objekt erstellen, können Sie den-Konstruktor verwenden, um das **FileIOPermission** -Objekt zu initialisieren, sodass es entweder den uneingeschränkten Zugriff auf alle Dateien oder keinen Zugriff auf Dateien darstellt. Oder Sie können ein anderes **FileIOPermission** -Objekt verwenden und Parameter übergeben, die den Zugriffstyp angeben, den das Objekt darstellen soll (d. h. lesen, anfügen oder schreiben) und welche Dateien das Objekt schützen soll.
 
-Imperative Sicherheitssyntax kann nicht nur zum Aufrufen eines einzelnen Sicherheitsobjekts verwendet werden, sondern auch dazu, eine Gruppe von Berechtigungen in einem Berechtigungssatz zu initialisieren. Diese Technik ist beispielsweise die einzige Möglichkeit, [Assert](../../../docs/framework/misc/using-the-assert-method.md) -Aufrufe für mehrere Berechtigungen in einer Methode zuverlässig auszuführen. Verwenden Sie die Klassen <xref:System.Security.PermissionSet> und <xref:System.Security.NamedPermissionSet>, um eine Gruppe von Berechtigungen zu erstellen, und rufen Sie anschließend die entsprechende Methode auf, um den gewünschten Sicherheitsaufruf auszuführen.
+Imperative Sicherheitssyntax kann nicht nur zum Aufrufen eines einzelnen Sicherheitsobjekts verwendet werden, sondern auch dazu, eine Gruppe von Berechtigungen in einem Berechtigungssatz zu initialisieren. Diese Technik ist beispielsweise die einzige Möglichkeit, [Assert](using-the-assert-method.md) -Aufrufe für mehrere Berechtigungen in einer Methode zuverlässig auszuführen. Verwenden Sie die Klassen <xref:System.Security.PermissionSet> und <xref:System.Security.NamedPermissionSet>, um eine Gruppe von Berechtigungen zu erstellen, und rufen Sie anschließend die entsprechende Methode auf, um den gewünschten Sicherheitsaufruf auszuführen.
 
 Über imperative Syntax können Sie Forderungen und Überschreibungen, aber keine Anforderungen ausführen. Sie können imperative Syntax für Forderungen und Überschreibungen anstelle von deklarativer Syntax verwenden, wenn die Informationen, die Sie benötigen, um den Berechtigungsstatus initialisieren, nur zur Laufzeit bekannt sind. Wenn Sie beispielsweise sicherstellen möchten, dass Aufrufer die Berechtigung zum Lesen einer bestimmten Datei haben, der Name dieser Datei aber erst zur Laufzeit bekannt ist, verwenden Sie eine imperative Forderung. Sie können auch imperative Überprüfungen anstelle von deklarativen Überprüfungen verwenden, wenn Sie zur Laufzeit bestimmen müssen, ob eine Bedingung zutrifft, und dann basierend auf dem Ergebnis des Tests eine Sicherheitsforderung stellen (oder nicht).
 
@@ -164,8 +164,8 @@ Soll Ihre Anwendung einen Vorgang ausführen, der Zugriff auf nicht verwalteten 
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Assert](../../../docs/framework/misc/using-the-assert-method.md)
-- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)
-- [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md)
+- [Assert](using-the-assert-method.md)
+- [Codezugriffssicherheit](code-access-security.md)
+- [Grundlagen der Codezugriffssicherheit](code-access-security-basics.md)
 - [Attribute](../../standard/attributes/index.md)
 - [Metadaten und selbstbeschreibende Komponenten](../../standard/metadata-and-self-describing-components.md)

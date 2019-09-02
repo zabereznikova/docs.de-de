@@ -2,12 +2,12 @@
 title: Verarbeiten von Transaktionen
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793665"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205911"
 ---
 # <a name="transaction-processing"></a>Verarbeiten von Transaktionen
 Wenn Sie ein Buch in einem Online-Buchladen kaufen, geben Sie Geld (in Form eines Guthabens) im Tausch für ein Buch. Wenn Sie über ein ausreichendes Guthaben verfügen, wird durch eine Reihe verbundener Vorgänge sichergestellt, dass Sie Ihr Buch erhalten und dem Buchladen der Betrag gutgeschrieben wird. Wenn aber während des Austauschs ein einzelner Vorgang in der Reihe fehlschlägt, schlägt der gesamte Austausch fehl. Sie erhalten das Buch nicht, und die Buchhandlung bekommt kein Geld.  
@@ -19,10 +19,10 @@ Wenn Sie ein Buch in einem Online-Buchladen kaufen, geben Sie Geld (in Form eine
  In diesem Abschnitt erhalten Sie sowohl allgemeine Informationen über die Transaktionsverarbeitung als auch spezifische Informationen darüber, wie Transaktionsanwendungen und Ressourcen-Manager mit Microsoft .NET Framework erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [Transaktionsgrundlagen](transaction-fundamentals.md)  
  Bietet eine Einführung in grundlegende Transaktionsverarbeitungsbegriffe und -vorgänge.  
   
- [Von System.Transactions bereitgestellte Funktionen](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ [Von System.Transactions bereitgestellte Funktionen](features-provided-by-system-transactions.md)  
  Erläutert, wie Sie Funktionen in System.Transactions verwenden können, um eine eigene Transaktionsanwendung zu erstellen.  
   
 ## <a name="reference"></a>Referenz  

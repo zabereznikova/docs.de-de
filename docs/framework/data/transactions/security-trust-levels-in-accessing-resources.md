@@ -2,12 +2,12 @@
 title: Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948720"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205867"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
 In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen eingeschränkt wird, die <xref:System.Transactions> verfügbar macht.  
@@ -38,7 +38,7 @@ In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen ei
   
  Um die Wiederherstellung zu ermöglichen, ist dieser Anwendungstyp in der Lage, Systemressourcen permanent zu belegen. Das liegt daran, dass sich der wiederherstellungsfähige Transaktions-Manager Transaktionen, für die ein Commit ausgeführt wurde, so lange merken muss, bis er bestätigen kann, dass alle Ressourcen-Manager, die an der Transaktion teilnehmen, Kenntnis über das Ergebnis erhalten haben. Daher benötigt dieser Anwendungstyp volle Vertrauenswürdigkeit und sollte erst nach Erteilung dieser Vertrauensebene ausgeführt werden.  
   
- Weitere Informationen zu dauerhaften Eintragung und Wiederherstellung finden Sie in den Themen eintragen von [Ressourcen als Teilnehmer in einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) und [Durchführen von Wiederherstellungs](../../../../docs/framework/data/transactions/performing-recovery.md) Themen.  
+ Weitere Informationen zu dauerhaften Eintragung und Wiederherstellung finden Sie in den Themen eintragen von [Ressourcen als Teilnehmer in einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md) und [Durchführen von Wiederherstellungs](performing-recovery.md) Themen.  
   
  Anwendungen, die Legacy-Interop-Aufgaben mit COM+ ausführen, benötigen ebenfalls die volle Vertrauenswürdigkeit.  
   

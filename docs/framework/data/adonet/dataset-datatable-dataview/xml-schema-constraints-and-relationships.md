@@ -2,22 +2,22 @@
 title: XML-Schemaeinschränkungen und -beziehungen
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606982"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202987"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML-Schemaeinschränkungen und -beziehungen
-In eine XML-Schema (XSD Schema Definition Language), können Sie Einschränkungen festlegen (eindeutig, Schlüssel und die Keyref-Einschränkungen) und Beziehungen (mithilfe der **msdata: Relationship** Anmerkung). In diesem Thema wird erklärt, wie die in einem XML-Schema angegebenen Einschränkungen und Beziehungen zum Generieren des <xref:System.Data.DataSet> interpretiert werden.  
+In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkungen (Unique-, Key-und keyref-Einschränkungen) und Beziehungen (mithilfe der **msdata: Relationship** -Anmerkung) angeben. In diesem Thema wird erklärt, wie die in einem XML-Schema angegebenen Einschränkungen und Beziehungen zum Generieren des <xref:System.Data.DataSet> interpretiert werden.  
   
- Im Allgemeinen in eine XML-Schema, geben Sie die **msdata: Relationship** Anmerkung, wenn Sie nur Beziehungen im generieren möchten die **DataSet**. Weitere Informationen finden Sie unter [Generieren von DataSet-Beziehungen aus XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Angeben von Einschränkungen (eindeutige, Schlüssel- und Keyref), wenn Sie Einschränkungen in generieren möchten die **DataSet**. Beachten Sie, dass die Schlüsseleinschränkung und die keyref-Einschränkung auch zum Generieren von Beziehungen verwendet werden. Informationen hierzu erhalten Sie weiter unten in diesem Thema.  
+ Im Allgemeinen geben Sie in einem XML-Schema die **msdata: Relationship** -Anmerkung an, wenn Sie nur Beziehungen im **DataSet**generieren möchten. Weitere Informationen finden Sie unter [Erstellen von DataSet-Beziehungen aus dem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Sie geben Einschränkungen (Unique, Key und keyref) an, wenn Sie Einschränkungen im **DataSet**generieren möchten. Beachten Sie, dass die Schlüsseleinschränkung und die keyref-Einschränkung auch zum Generieren von Beziehungen verwendet werden. Informationen hierzu erhalten Sie weiter unten in diesem Thema.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Generieren einer Beziehung aus Schlüsseleinschränkungen und "keyref"-Einschränkungen  
- Anstatt die **msdata: Relationship** Anmerkung, können Sie angeben, Schlüssel- und Keyref-Einschränkungen, die während des XML-Schemazuordnungsprozesses verwendet werden, um nicht nur die Einschränkungen, sondern auch die Beziehung in der zugenerieren. **DataSet**. Allerdings bei Angabe von `msdata:ConstraintOnly="true"` in die **Keyref** -Element, die **DataSet** enthält nur die Einschränkungen und nicht die Beziehung enthält.  
+ Anstatt die **msdata: Relationship** -Anmerkung anzugeben, können Sie Schlüssel-und keyref-Einschränkungen angeben, die während der XML-Schema Zuordnung verwendet werden, um nicht nur die Einschränkungen, sondern auch die Beziehung im **DataSet**zu generieren. Wenn Sie jedoch im `msdata:ConstraintOnly="true"` **keyref** -Element angeben, enthält das **DataSet** nur die Einschränkungen und schließt die Beziehung nicht ein.  
   
- Das folgende Beispiel zeigt ein XML-Schema, das enthält **Reihenfolge** und **OrderDetail** Elemente, die nicht geschachtelt sind. In dem Schema sind auch die Schlüsseleinschränkung und die keyref-Einschränkung angegeben.  
+ Im folgenden Beispiel wird ein XML-Schema dargestellt, das die Elemente **Order** und **OrderDetail** enthält, die nicht in einem scht sind. In dem Schema sind auch die Schlüsseleinschränkung und die keyref-Einschränkung angegeben.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -59,7 +59,7 @@ In eine XML-Schema (XSD Schema Definition Language), können Sie Einschränkunge
 </xs:schema>  
 ```  
   
- Die **DataSet** generiert, die während des XML-Schemazuordnungsprozess enthält die **Reihenfolge** und **OrderDetail** Tabellen. Darüber hinaus die **DataSet** enthält Beziehungen und Einschränkungen. Im folgenden Beispiel werden diese Beziehungen und Einschränkungen dargestellt. Beachten Sie, die nicht vom Schema angegeben ist die **msdata: Relationship** Anmerkung; stattdessen werden die schlüsseleinschränkung und die Keyref-Einschränkungen zum Generieren der Beziehung verwendet.  
+ Das **DataSet** , das während der XML-Schema Zuordnung generiert wird, umfasst die Tabellen **Order** und **Order Detail** . Außerdem enthält das **DataSet** Beziehungen und Einschränkungen. Im folgenden Beispiel werden diese Beziehungen und Einschränkungen dargestellt. Beachten Sie, dass das Schema die **msdata: Relationship** -Anmerkung nicht angibt. Stattdessen werden die Schlüssel-und keyref-Einschränkungen verwendet, um die Beziehung zu generieren.  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +85,7 @@ In eine XML-Schema (XSD Schema Definition Language), können Sie Einschränkunge
 ..Nested: False  
 ```  
   
- In der vorherigen Schemabeispiel sind das **Reihenfolge** und **OrderDetail** Elemente nicht geschachtelt sind. Im folgenden Schemabeispiel sind diese Elemente geschachtelt. Allerdings keine **msdata: Relationship** -Anmerkung; aus diesem Grund wird eine implizite Beziehung ausgegangen. Weitere Informationen finden Sie unter [Zuordnung impliziten Beziehungen zwischen geschachtelten Schemaelementen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). In dem Schema sind auch die Schlüsseleinschränkung und die keyref-Einschränkung angegeben.  
+ Im vorherigen Schema Beispiel sind das **Order** -Element und das **Order Detail** -Element nicht scht. Im folgenden Schemabeispiel sind diese Elemente geschachtelt. Es ist jedoch keine **msdata: Relationship** -Anmerkung angegeben. Daher wird von einer impliziten Beziehung ausgegangen. Weitere Informationen finden Sie unterzuordnen [von impliziten Beziehungen zwischen schsted Schema-Elementen](map-implicit-relations-between-nested-schema-elements.md). In dem Schema sind auch die Schlüsseleinschränkung und die keyref-Einschränkung angegeben.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -129,14 +129,14 @@ In eine XML-Schema (XSD Schema Definition Language), können Sie Einschränkunge
 </xs:schema>  
 ```  
   
- Die **DataSet** aus der XML-Schemazuordnungsprozess resultierende enthält zwei Tabellen:  
+ Das **DataSet** , das sich aus dem XML-Schema Mapping-Prozess ergibt, umfasst zwei Tabellen:  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- Die **DataSet** enthält auch die beiden Beziehungen (einer basierend auf den **msdata: Relationship** -Anmerkung und die andere basierend auf den Schlüssel und die Keyref-Einschränkungen) sowie verschiedene Einschränkungen. Im folgenden Beispiel werden die Beziehungen und Einschränkungen dargestellt.  
+ Das **DataSet** enthält auch die beiden Beziehungen (eines basierend auf der **msdata: Relationship** -Anmerkung und das andere auf der Grundlage der Schlüssel-und keyref-Einschränkungen) und verschiedene Einschränkungen. Im folgenden Beispiel werden die Beziehungen und Einschränkungen dargestellt.  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -184,9 +184,9 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Wenn eine Keyref-Einschränkung verweist auf eine geschachtelte Tabelle enthält die **msdata: IsNested = "true"** Anmerkung, die **DataSet** erstellt eine einzelne geschachtelte Beziehung, die basierend auf der Keyref-Einschränkung und die im Zusammenhang mit eindeutigen/Key-Einschränkung.  
+ Wenn eine Keyref-Einschränkung, die auf eine in einer Tabelle basierende Tabelle verweist, die Anmerkung **msdata: isnetsted = "true"** enthält, erstellt das **DataSet** eine einzelne, auf der Keyref-Einschränkung basierende Beziehung, die auf der Keyref-Einschränkung und der zugehörigen Unique/Key-Einschränkung basiert.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

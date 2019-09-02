@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a970ebda76f5bb6bdea704dabef2ee305436c613
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879839"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205012"
 ---
 # <a name="datatable-edits"></a>Bearbeitungen von "DataTable"
-Wenn Sie Änderungen der Spaltenwerte in einer <xref:System.Data.DataRow> vornehmen, werden die Änderungen sofort im aktuellen Zustand der Zeile platziert. Die <xref:System.Data.DataRowState> legen Sie dann auf **"geändert"**, und die Änderungen werden akzeptiert oder abgelehnt wird, mit der <xref:System.Data.DataRow.AcceptChanges%2A> oder <xref:System.Data.DataRow.RejectChanges%2A> Methoden der **DataRow**. Die **DataRow** stellt auch drei Methoden, mit denen Sie den Zustand der Zeile angehalten, während Sie es bearbeiten. Diese Methoden sind <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> und <xref:System.Data.DataRow.CancelEdit%2A>.  
+Wenn Sie Änderungen der Spaltenwerte in einer <xref:System.Data.DataRow> vornehmen, werden die Änderungen sofort im aktuellen Zustand der Zeile platziert. <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A>Wird dann auf Modified festgelegt, und die Änderungen werden mithilfe der-Methode oder der-Methode der DataRow akzeptiert oder abgelehnt. <xref:System.Data.DataRowState> Die **DataRow** bietet auch drei Methoden, die Sie verwenden können, um den Zustand der Zeile während der Bearbeitung anzuhalten. Diese Methoden sind <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> und <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Beim Ändern von Spaltenwerten in einer **DataRow** direkt die **DataRow** verwaltet die Spaltenwerte mithilfe der **aktuelle**, **Standard**, und **Ursprünglichen** Zeilenversionen. Zusätzlich zu diesen Zeilenversionen die **BeginEdit**, **EndEdit**, und **CancelEdit** Methoden verwenden eine vierte Zeilenversion: **Vorgeschlagene**. Weitere Informationen zu Zeilenversionen finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Wenn Sie Spaltenwerte in einer **DataRow** direkt ändern, verwaltet die **DataRow** die Spaltenwerte mithilfe der **aktuellen**, der **Standard**-und der **Original** Zeilen Version. Zusätzlich zu diesen Zeilen Versionen verwenden die Methoden **BeginEdit**, **EndEdit**und **CancelEdit** eine vierte Zeilen Version: **Vorgeschlagen**. Weitere Informationen zu Zeilen Versionen finden Sie unter [Zeilen Status und Zeilen Versionen](row-states-and-row-versions.md).  
   
- Die **vorgeschlagen** Zeilenversion vorhanden ist, während eines Bearbeitungsvorgangs an, die durch den Aufruf beginnt **BeginEdit** und endet entweder mit **EndEdit** oder **CancelEdit**  oder durch Aufrufen von **AcceptChanges** oder **RejectChanges**.  
+ Die **vorgeschlagene** Zeilen Version ist während eines Bearbeitungsvorgangs vorhanden, der beginnt, indem **BeginEdit** aufgerufen wird, das entweder mithilfe von **EndEdit** oder **CancelEdit** oder durch Aufrufen von ' **Accept Changes** ' oder ' **RejectChanges**' endet.  
   
- Während des Bearbeitungsvorgangs, können Sie Validierungslogik auf einzelne Spalten anwenden, durch die Auswertung der **ProposedValue** in die **ColumnChanged** Ereignis die **DataTable**. Die **ColumnChanged** Ereignis enthält **DataColumnChangeEventArgs** , die einen Verweis auf die Spalte, die geändert wird und zum Beibehalten der **ProposedValue**. Nachdem der vorgeschlagene Wert ausgewertet wurde, kann dieser Wert geändert oder die Bearbeitung abgebrochen werden. Wenn die Bearbeitung abgeschlossen ist, wird die Zeile von verschiebt die **vorgeschlagen** Zustand.  
+ Während des Bearbeitungsvorgangs können Sie Validierungs Logik auf einzelne Spalten anwenden, indem Sie den **ProposedValue** im **ColumnChanged** -Ereignis der **Daten**Tabelle auswerten. Das **ColumnChanged** -Ereignis enthält **DataColumnChangeEventArgs** , die einen Verweis auf die geänderte Spalte und den Wert " **ProposedValue**" beibehalten. Nachdem der vorgeschlagene Wert ausgewertet wurde, kann dieser Wert geändert oder die Bearbeitung abgebrochen werden. Wenn die Bearbeitung beendet ist, wird die Zeile in den Status " **vorgeschlagen** " versetzt.  
   
- Bestätigen von Bearbeitungen können durch Aufrufen von **EndEdit**, oder Sie können diese durch Aufrufen von Abbrechen **CancelEdit**. Beachten Sie, dass **EndEdit** die Bearbeitungen, bestätigt die **DataSet** akzeptiert, wenn die Änderungen erst **AcceptChanges** aufgerufen wird. Beachten Sie außerdem, wenn Sie aufrufen **AcceptChanges** , bevor Sie die Bearbeitung mit beendet haben **EndEdit** oder **CancelEdit**, die Bearbeitung abgeschlossen und die **vorgeschlagen** Zeilenwerte werden für beide akzeptiert die **aktuelle** und **ursprünglichen** Zeilenversionen. Die gleiche Weise aufrufen **RejectChanges** beendet die Bearbeitung und verwirft die **aktuelle** und **vorgeschlagen** Zeilenversionen. Aufrufen von **EndEdit** oder **CancelEdit** nach dem Aufruf **AcceptChanges** oder **RejectChanges** hat keine Auswirkungen, da die Bearbeitung bereits besitzt. wurde beendet.  
+ Sie können Änderungen überprüfen, indem Sie **EndEdit**aufrufen, oder Sie können Sie durch Aufrufen von **CancelEdit**abbrechen. Beachten Sie, dass **EndEdit** Ihre Bearbeitungen bestätigt, dass das **DataSet** die Änderungen erst akzeptiert, wenn " **Accept Changes** " aufgerufen wird. Beachten Sie auch Folgendes: Wenn Sie " **akzeptchanges** " vor dem Beenden der Bearbeitung mit **EndEdit** oder **CancelEdit**aufgerufen haben, wird die Bearbeitung beendet, und die **vorgeschlagenen** Zeilen Werte werden sowohl für die **aktuelle** als auch die **ursprüngliche** Zeilen Version akzeptiert. Auf dieselbe Weise beendet der Aufruf von **RejectChanges** die Bearbeitung und verwirft die **aktuelle** und **vorgeschlagene** Zeilen Version. Der Aufruf von **EndEdit** oder **CancelEdit** nach dem Aufruf von " **Accept Changes** " oder " **RejectChanges** " hat keine Auswirkungen, da die Bearbeitung bereits beendet wurde.  
   
- Im folgenden Beispiel wird veranschaulicht, wie **BeginEdit** mit **EndEdit** und **CancelEdit**. Im Beispiel wird außerdem überprüft der **ProposedValue** in die **ColumnChanged** Ereignis und entscheidet, ob die Bearbeitung abgebrochen.  
+ Im folgenden Beispiel wird die Verwendung von **BeginEdit** mit **EndEdit** und **CancelEdit**veranschaulicht. Im Beispiel wird auch der **ProposedValue** im **ColumnChanged** -Ereignis überprüft und entschieden, ob der Bearbeitungsvorgang abgebrochen werden soll.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -91,6 +91,6 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [Behandeln von DataTable-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
+- [Behandeln von DataTable-Ereignissen](handling-datatable-events.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

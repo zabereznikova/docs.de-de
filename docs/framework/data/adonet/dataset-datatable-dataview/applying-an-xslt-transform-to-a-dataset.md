@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937045"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203966"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Anwenden einer XSLT-Transformation auf ein DataSet
 Mit der **beschreitexml** -Methode <xref:System.Data.DataSet> von können Sie den Inhalt eines **DataSets** als XML-Daten schreiben. Häufig werden diese XML-Daten anschließend mit XSL-Transformationen (XSLT) in ein anderes Format transformiert. Wenn Sie jedoch ein **DataSet** <xref:System.Xml.XmlDataDocument> mit einem synchronisieren, können Sie ein XSLT-Stylesheet auf den Inhalt eines **DataSets** anwenden, ohne zuerst den Inhalt des **DataSets** als XML-Daten mit "Write **texml**" schreiben zu müssen.  
@@ -59,7 +59,7 @@ Mit der **beschreitexml** -Methode <xref:System.Data.DataSet> von können Sie de
  Der folgende Code füllt das **DataSet** auf und wendet das XSLT-Stylesheet an.  
   
 > [!NOTE]
-> Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen Sie eine optimale Leistung, wenn Sie die- <xref:System.Data.DataRelation> Eigenschaft des-Objekts auf **true** für jede schsted-Beziehung festlegen. Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind. Weitere Informationen zu geschachtelten Beziehungen finden Sie unter Schachteln von [DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)-Elementen.  
+> Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen Sie eine optimale Leistung, wenn Sie die- <xref:System.Data.DataRelation> Eigenschaft des-Objekts auf **true** für jede schsted-Beziehung festlegen. Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind. Weitere Informationen zu geschachtelten Beziehungen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataSet- und XmlDataDocument-Synchronisierung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [DataSet- und XmlDataDocument-Synchronisierung](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

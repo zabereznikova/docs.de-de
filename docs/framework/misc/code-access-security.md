@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f089a4482173fd9697738c1643c33c05da4212
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910959"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205658"
 ---
 # <a name="code-access-security"></a>Codezugriffssicherheit
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,11 +34,11 @@ ms.locfileid: "69910959"
  .NET Framework bietet einen Sicherheitsmechanismus namens Codezugriffssicherheit, der Computersysteme vor bösartigem, mobilem Code schützt, die geschützte Ausführung von Code unbekannter Herkunft ermöglicht und die absichtliche oder unabsichtliche Verletzung der Sicherheit durch vertrauenswürdigen Code verhindert. Mithilfe der Codezugriffssicherheit können für Code aufgrund des Ursprungs und weiterer Identitätsaspekte verschiedene Vertrauensebenen festgelegt werden. Die Codezugriffssicherheit erzwingt auch die verschiedenen Vertrauensebenen für Code, wodurch die Menge an Code, für dessen Ausführung vollständige Vertrauenswürdigkeit erforderlich ist, minimiert wird. Durch die Codezugriffssicherheit kann die Wahrscheinlichkeit verringert werden, dass Ihr Code durch bösartigen oder fehlerhaften Code missbraucht wird. Außerdem kann dadurch Ihre Haftung verringert werden, weil Sie die Vorgänge angeben können, die vom Code ausgeführt werden dürfen. Die Codezugriffssicherheit kann auch den Schaden begrenzen, der durch Sicherheitsschwachstellen im Code entstehen kann.  
   
 > [!NOTE]
-> Wichtige Änderungen an der Code Zugriffssicherheit in der .NET Framework 4 wurden vorgenommen. Die wichtigste Änderung ist die [Sicherheits Transparenz](../../../docs/framework/misc/security-transparent-code.md), aber es gibt auch andere bedeutende Änderungen, die die Code Zugriffssicherheit beeinträchtigen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+> Wichtige Änderungen an der Code Zugriffssicherheit in der .NET Framework 4 wurden vorgenommen. Die wichtigste Änderung ist die [Sicherheits Transparenz](security-transparent-code.md), aber es gibt auch andere bedeutende Änderungen, die die Code Zugriffssicherheit beeinträchtigen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).  
   
- Die Codezugriffssicherheit wirkt sich in erster Linie auf Bibliothekscode und teilweise vertrauenswürdige Anwendungen aus. Entwickler von Bibliotheken müssen ihren Code vor nicht autorisiertem Zugriff von teilweise vertrauenswürdigen Anwendungen schützen. Teilweise vertrauenswürdige Anwendungen sind Anwendungen, die aus externen Quellen (wie z. B. dem Internet) geladen werden. Auf dem Desktop oder im lokalen Intranet installierte Anwendungen werden mit vollständiger Vertrauenswürdigkeit ausgeführt. Anwendungen mit vollständiger Vertrauenswürdigkeit sind nicht von der Code Zugriffssicherheit betroffen, es sei denn, Sie sind als [Sicherheits transparent](../../../docs/framework/misc/security-transparent-code.md)gekennzeichnet, weil Sie voll vertrauenswürdig sind. Die einzige Einschränkung für Anwendungen mit vollständiger Vertrauenswürdigkeit ist, dass mit dem <xref:System.Security.SecurityTransparentAttribute>-Attribut markierte Anwendungen keinen Code aufrufen können, der mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert ist. Teilweise vertrauenswürdige Anwendungen müssen in einem Sandkasten (z. B. in Internet Explorer) ausgeführt werden, damit die Codezugriffssicherheit angewendet werden kann. Wenn Sie eine Anwendung aus dem Internet herunterladen und versuchen, Sie auf Ihrem Desktop auszuführen, erhalten Sie eine <xref:System.NotSupportedException> mit der folgenden Meldung: "Es wurde versucht, eine Assembly von einem Netzwerk Speicherort zu laden, was dazu geführt hätte, dass die Assembly in früheren Versionen der .NET Framework in einen Sandkasten umgewandelt wurde. In dieser Version von .NET Framework wird die CAS-Richtlinie standardmäßig nicht aktiviert, dieser Ladevorgang kann daher gefährlich sein." Wenn Sie sicher sind, dass die Anwendung vertrauenswürdig ist, können Sie Sie mit dem [ \<>-Element loadFromRemoteSources](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)als voll vertrauenswürdig ausführen. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden [Sie unter Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.  
+ Die Codezugriffssicherheit wirkt sich in erster Linie auf Bibliothekscode und teilweise vertrauenswürdige Anwendungen aus. Entwickler von Bibliotheken müssen ihren Code vor nicht autorisiertem Zugriff von teilweise vertrauenswürdigen Anwendungen schützen. Teilweise vertrauenswürdige Anwendungen sind Anwendungen, die aus externen Quellen (wie z. B. dem Internet) geladen werden. Auf dem Desktop oder im lokalen Intranet installierte Anwendungen werden mit vollständiger Vertrauenswürdigkeit ausgeführt. Anwendungen mit vollständiger Vertrauenswürdigkeit sind nicht von der Code Zugriffssicherheit betroffen, es sei denn, Sie sind als [Sicherheits transparent](security-transparent-code.md)gekennzeichnet, weil Sie voll vertrauenswürdig sind. Die einzige Einschränkung für Anwendungen mit vollständiger Vertrauenswürdigkeit ist, dass mit dem <xref:System.Security.SecurityTransparentAttribute>-Attribut markierte Anwendungen keinen Code aufrufen können, der mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert ist. Teilweise vertrauenswürdige Anwendungen müssen in einem Sandkasten (z. B. in Internet Explorer) ausgeführt werden, damit die Codezugriffssicherheit angewendet werden kann. Wenn Sie eine Anwendung aus dem Internet herunterladen und versuchen, Sie auf Ihrem Desktop auszuführen, erhalten Sie eine <xref:System.NotSupportedException> mit der folgenden Meldung: "Es wurde versucht, eine Assembly von einem Netzwerk Speicherort zu laden, was dazu geführt hätte, dass die Assembly in früheren Versionen der .NET Framework in einen Sandkasten umgewandelt wurde. In dieser Version von .NET Framework wird die CAS-Richtlinie standardmäßig nicht aktiviert, dieser Ladevorgang kann daher gefährlich sein." Wenn Sie sicher sind, dass die Anwendung vertrauenswürdig ist, können Sie Sie mit dem [ \<>-Element loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)als voll vertrauenswürdig ausführen. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden [Sie unter Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.  
   
- Die Vorteile der Codezugriffssicherheit gelten für den gesamten verwalteten Code, der für die Common Language Runtime geschrieben wird, auch wenn dieser Code die Codezugriffssicherheit nicht aufruft. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md).  
+ Die Vorteile der Codezugriffssicherheit gelten für den gesamten verwalteten Code, der für die Common Language Runtime geschrieben wird, auch wenn dieser Code die Codezugriffssicherheit nicht aufruft. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](code-access-security-basics.md).  
   
 <a name="key_functions"></a>   
 ## <a name="key-functions-of-code-access-security"></a>Hauptfunktionen der Codezugriffssicherheit  
@@ -58,7 +58,7 @@ ms.locfileid: "69910959"
   
  In der folgenden Abbildung ist der Stackwalk dargestellt, der entsteht, wenn eine Methode in Assembly A4 fordert, dass ihre Aufrufer über Berechtigung P verfügen.  
   
- ![Code Zugriffssicherheit](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
+ ![Code Zugriffssicherheit](media/slide-10a.gif "slide_10a")  
 Sicherheits-Stackwalk  
   
 <a name="related_topics"></a>   
@@ -66,9 +66,9 @@ Sicherheits-Stackwalk
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Grundlagen der Codezugriffssicherheit](../../../docs/framework/misc/code-access-security-basics.md)|Beschreibt die Codezugriffssicherheit und die häufigsten Anwendungsbereiche.|  
-|[Sicherheits transparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Beschreibt das Sicherheits Transparenz Modell in der .NET Framework 4.|  
-|[Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Beschreibt das Aktivieren von Bibliotheken zur Verwendung mit nicht verwaltetem Code und das Verwenden von Bibliotheken aus nicht verwaltetem Code.|  
+|[Grundlagen der Codezugriffssicherheit](code-access-security-basics.md)|Beschreibt die Codezugriffssicherheit und die häufigsten Anwendungsbereiche.|  
+|[Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)|Beschreibt das Sicherheits Transparenz Modell in der .NET Framework 4.|  
+|[Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](using-libraries-from-partially-trusted-code.md)|Beschreibt das Aktivieren von Bibliotheken zur Verwendung mit nicht verwaltetem Code und das Verwenden von Bibliotheken aus nicht verwaltetem Code.|  
 |[Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md)|Bietet eine Übersicht über viele Schlüsselbegriffe und -konzepte, die im Sicherheitssystem von .NET Framework verwendet werden.|  
 |[Rollenbasierte Sicherheit](../../standard/security/role-based-security.md)|Beschreibt die Integration von Sicherheit basierend auf Rollen.|  
 |[Cryptographic Services](../../standard/security/cryptographic-services.md)|Beschreibt die Integration von Kryptografie in Anwendungen.|

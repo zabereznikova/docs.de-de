@@ -7,26 +7,26 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 9563dae9ba5d144300549e7f33f5f5a9feb1d410
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690283"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205634"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Die Richtlinie Teil der Codezugriffssicherheit (CAS) wurde in .NET Framework 4 veraltet vorgenommen. Daher treten ggf. compilerwarnungen und Runtime-Ausnahmen, wenn Sie die veralteten Richtlinientypen und Elemente aufrufen [explizit](#explicit_use) oder [implizit](#implicit_use) (über andere Typen und Member).
+Der Richtlinien Teil der Code Zugriffssicherheit (Code Access Security, CAS) wurde in der .NET Framework 4 als veraltet eingestuft. Daher können Kompilierungs Warnungen und Lauf Zeit Ausnahmen auftreten, wenn Sie die veralteten Richtlinien Typen und Member [explizit](#explicit_use) oder [implizit](#implicit_use) (über andere Typen und Member) aufzurufen.
 
 Sie können die Warnungen und Fehler folgendermaßen vermeiden:
 
-- [Migrieren von](#migration) , die .NET Framework 4-Ersetzungen für die veralteten Aufrufe.
+- [Migrieren](#migration) zu den .NET Framework 4-Ersetzungen für die veralteten Aufrufe.
 
    \- oder –
 
-- Mithilfe der [ \<NetFx40_LegacySecurityPolicy > Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) in die legacy-CAS-Richtlinienverhalten deaktivieren.
+- Verwenden des [ \<NetFx40_LegacySecurityPolicy >-Konfigurations Elements](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) , um das Legacy-CAS-Richtlinien Verhalten zu abonnieren.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -36,9 +36,9 @@ Dieses Thema enthält folgende Abschnitte:
 
 - [Fehler und Warnungen](#errors_and_warnings)
 
-- [Migration: Ersatz für veraltete Aufrufe](#migration)
+- [Migration Ersetzung bei veralteten aufrufen](#migration)
 
-- [Kompatibilität: Verwenden der CAS-Legacyrichtlinienoption](#compatibility)
+- [Glichkeits Verwenden der CAS-Richtlinie Legacy-Option](#compatibility)
 
 <a name="explicit_use"></a>
 
@@ -110,11 +110,11 @@ Laufzeitausnahme:
 
 <a name="migration"></a>
 
-## <a name="migration-replacement-for-obsolete-calls"></a>Migration: Ersatz für veraltete Aufrufe
+## <a name="migration-replacement-for-obsolete-calls"></a>Migration Ersetzung bei veralteten aufrufen
 
 ### <a name="determining-an-assemblys-trust-level"></a>Bestimmen der Vertrauensebene einer Assembly
 
-Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assembly oder Anwendungsdomäne oder die Vertrauensebene zu bestimmen. .NET Framework 4 stellt die folgenden nützlichen Eigenschaften, die keine Sicherheitsrichtlinie auflösen müssen:
+Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assembly oder Anwendungsdomäne oder die Vertrauensebene zu bestimmen. Der .NET Framework 4 macht die folgenden nützlichen Eigenschaften verfügbar, die nicht zum Auflösen von Sicherheitsrichtlinien erforderlich sind:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,23 +126,23 @@ Die CAS-Richtlinie wird häufig verwendet, um den Berechtigungssatz einer Assemb
 
 ### <a name="application-domain-sandboxing"></a>Sandkasten für Anwendungsdomänen
 
-Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. .NET Framework 4 verfügbar macht, Elemente, die keine verwenden <xref:System.Security.Policy.PolicyLevel> für diesen Zweck. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
+Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. Der .NET Framework 4 macht Mitglieder verfügbar, die für diesen Zweck <xref:System.Security.Policy.PolicyLevel> nicht verwendet werden müssen. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Bestimmen eines sicheren oder geeigneten Berechtigungssatzes für teilweise vertrauenswürdigen Code
 
-Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Vor .NET Framework 4 bereitgestellt CAS-Richtlinie eine Möglichkeit dazu mit der <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> Methode. Als Ersatz, .NET Framework 4 enthält die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode, die einen sicheren Standardberechtigungssatz für die bereitgestellten Beweisinformationen zurückgibt.
+Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Vor der .NET Framework 4 bot die CAS-Richtlinie eine Möglichkeit, dies mit <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> der-Methode durchzuführen. Als Ersatz stellt .NET Framework 4 die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode bereit, die einen sicheren Standard Berechtigungs Satz für den bereitgestellten Beweis zurückgibt.
 
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Szenarien ohne Sandkasten: Überladungen für Laden von Assemblys
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Nicht-Sandkasten Szenarien: Über Ladungen für assemblyladungen
 
-Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Ab .NET Framework 4, Laden der Assembly Überladungen, die keine erfordern eine <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> -Objekt als Parameter, z. B. <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, dieses Szenario ermöglichen.
+Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Beginnend mit dem .NET Framework 4 werden bei assemblylastenüberladungen, <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> die kein-Objekt als Parameter benötigen, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>z. b., dieses Szenario aktiviert.
 
 Wenn Sie einen Sandkasten für eine Assembly verwenden möchten, verwenden Sie die <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>-Überladung.
 
 <a name="compatibility"></a>
 
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Kompatibilität: Verwenden der CAS-Legacyrichtlinienoption
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Glichkeits Verwenden der CAS-Richtlinie Legacy-Option
 
-Die [ \<NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek mit CAS-legacyrichtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.
+Mit dem [ \<Konfigurationselement NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek eine Legacy-CAS-Richtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.
 
 > [!NOTE]
 > Das CAS-Richtlinienverhalten wird auf der Grundlage einer Laufzeitversion angegeben. Das Ändern der CAS-Richtlinie für eine Laufzeitversion besitzt daher keine Auswirkungen auf die CAS-Richtlinie einer anderen Version.
@@ -157,5 +157,5 @@ Die [ \<NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/fram
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)
