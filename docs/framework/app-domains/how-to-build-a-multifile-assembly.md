@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a964e73cc41cebad33a3edc34b89ef240fbc62c8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187797"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040857"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Vorgehensweise: Erstellen einer Mehrfachdateiassembly
+
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
 
 > [!NOTE]
@@ -69,23 +70,19 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
     >[!NOTE]
     >Die C#- und Visual Basic-Compiler unterstützen das direkte Erstellen von Mehrfachdateiassemblys unter Verwendung der beiden folgenden unterschiedlichen Syntaxformen.
     >
-    >- Zwei Kompilierungen erzeugen eine aus zwei Dateien bestehende Assembly:
+    >- Zwei Kompilierungen erzeugen eine aus zwei Dateien bestehende Assembly: [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
     >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#5)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#5)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#5)]
-    >
-    >- Eine Kompilierung erzeugt eine aus zwei Dateien bestehende Assembly:
-    >
-    >    [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
-    >    [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
-    >    [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
+    >- Eine Kompilierung erzeugt eine aus zwei Dateien bestehende Assembly: [!code-cpp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.multifile/cpp/client.cpp#6)]
+    >  [!code-csharp[Conceptual.Assembly.Multifile#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.multifile/cs/client.cs#6)]
+    >  [!code-vb[Conceptual.Assembly.Multifile#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.multifile/vb/client.vb#6)]
 
 03. Erstellen Sie mit dem [Assembly Linker-Tool (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) eine Ausgabedatei, die das Assemblymanifest enthält. In dieser Datei sind Referenzinformationen zu allen zur Assembly gehörenden Modulen und Ressourcen enthalten.
 
     Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-    **al** \<*modulname*> \<*modulname*> … **/main:**\<*Methodenname*> **/out:**\<*Dateiname*> **/target:**\<*Assemblydateityp*>
+    **al** \<*modulname*> \<*modulname*> … **/main:** \<*Methodenname*>  **/out:** \<*Dateiname*>  **/target:** \<*Assemblydateityp*>
 
     In diesem Befehl bezeichnen die *Modulname*-Argumente die Namen aller Module, die in der Assembly enthalten sein sollen. Die Option **/main:** gibt den Methodennamen an, der den Einstiegspunkt der Assembly darstellt. Die Option **/out:** gibt den Namen der Ausgabedatei an, die Assemblymetadaten enthält. Die Option **/target:** gibt an, dass die Assembly eine ausführbare Datei für eine Konsolenanwendung (.exe), eine ausführbare Windows-Datei (.win) oder eine Bibliothek ist (.lib).
 

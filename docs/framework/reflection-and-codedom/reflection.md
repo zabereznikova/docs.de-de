@@ -1,8 +1,8 @@
 ---
-title: Reflektion in .NET Framework
+title: Reflektion in .NET
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940036"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133743"
 ---
-# <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
+# <a name="reflection-in-net"></a>Reflektion in .NET
 Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
   
  Das [Common Language Runtime](../../standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
@@ -64,7 +64,7 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 ## <a name="runtime-types-in-reflection"></a>Laufzeittypen in Reflektion  
  Reflektion stellt Klassen wie <xref:System.Type> und <xref:System.Reflection.MethodInfo> bereit, um Typen, Member, Parameter und andere Codeentitäten darzustellen. Wenn Sie jedoch Reflektion verwenden, arbeiten Sie nicht direkt mit diesen Klassen, von denen die meisten abstrakt sind (`MustInherit` in Visual Basic). Stattdessen arbeiten Sie mit Typen, die von der CLR (Common Language Runtime) bereitgestellt werden.  
   
- Wenn Sie beispielsweise den C#-Operator `typeof` (`GetType` in Visual Basic) verwenden, um ein <xref:System.Type>-Objekt abzurufen, handelt es sich in Wirklichkeit um ein `RuntimeType`-Objekt. `RuntimeType` wird von <xref:System.Type> abgeleitet und stellt Implementierungen aller abstrakten Methoden bereit.  
+ Wenn Sie beispielsweise den C#-Operator `typeof` (`GetType` in Visual Basic) verwenden, um ein <xref:System.Type>-Objekt abzurufen, handelt es sich in Wirklichkeit um ein `RuntimeType`-Objekt. `RuntimeType` ist von <xref:System.Type> abgeleitet und stellt Implementierungen aller abstrakten Methoden bereit.  
   
  Diese Laufzeitklassen sind `internal` (`Friend` in Visual Basic). Sie werden nicht getrennt von den Basisklassen dokumentiert, da ihr Verhalten in der Dokumentation der Basisklasse beschrieben wird.  
   

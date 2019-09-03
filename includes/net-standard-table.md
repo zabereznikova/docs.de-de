@@ -1,25 +1,27 @@
 ---
-ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 31e0ef6d1eaf06caf7f258a38e8a9a79c0d50a07
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65672424"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202650"
 ---
-| .NET-Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
-|----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
-| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
-| .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  |
-| Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 |
-| Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               |
-| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 |
-| Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 |
-| Universelle Windows-Plattform | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          |
-| Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              |
+| .NET-Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] <br /> Vorschau |
+|----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
+| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
+| .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | Nicht zutreffend<sup>3</sup> |
+| Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
+| Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
+| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 | 5.16 |
+| Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 | 10.0 |
+| Universelle Windows-Plattform | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | Wird nachgeliefert. |
+| Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              | Wird nachgeliefert. |
 
 <sup>1 Die für .NET Frameworks aufgeführten Versionen gelten für das .NET Core 2.0 SDK und höhere Versionen des Tools. Ältere Versionen haben eine andere Zuordnung für .NET Standard 1.5 und höher verwendet. Sie können [Tools für .NET Core-Tools für Visual Studio 2015 herunterladen](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md), falls Sie kein Upgrade auf Visual Studio 2017 durchführen können.</sup>
 
 <sup>2 Die hier aufgelisteten Versionen stellen die Regeln dar, die von NuGet verwendet werden, um zu bestimmen, ob eine vorhandene .NET Standard-Bibliothek anwendbar ist. Zwar sieht NuGet die .NET-Standards 1.5 bis 2.0 als durch .NET Framework 4.6.1 unterstützt an, jedoch treten verschiedene Probleme mit der Nutzung von .NET Standard-Bibliotheken auf, die für diese Versionen aus .NET Framework 4.6.1-Projekten erstellt wurden. Für .NET Framework-Projekte, die auf diese Bibliotheken angewiesen sind, empfehlen wir, ein Upgrade des Projekts auf die Zielplattform .NET Framework 4.7.2 oder höher durchzuführen.</sup>
+
+<sup>3 .NET Framework unterstützt .NET Standard 2.1 oder spätere Versionen nicht. Weitere Informationen finden Sie in der [Ankündigung zu .NET Standard 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/).</sup>
 
 - Die Spalten stellen die .NET Standard-Versionen dar. Jede Zelle enthält einen Link zu einem Dokument, im dem die APIs angegeben sind, die in dieser Version von .NET Standard hinzugefügt wurden.
 - Die Zeilen stellen die verschiedenen .NET-Implementierungen dar.
@@ -34,3 +36,4 @@ ms.locfileid: "65672424"
 [1.5]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.5.md
 [1.6]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.6.md
 [2.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md
+[2.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md

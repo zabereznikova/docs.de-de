@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327164"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105216"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Vorgehensweise: Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
@@ -18,7 +18,7 @@ Dieser Artikel beschreibt, wie Sie Ihre Desktop-App auf Windows Forms-Basis von 
 
 In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migration verwendeten Dateitypen verwendet. Weil Ihre Dateien anders benannt werden, wenn Sie Ihr Projekt migrieren, gleichen Sie sie mit den unten aufgeführten Versionen ab:
 
-| Datei | Beschreibung |
+| Datei | BESCHREIBUNG |
 | ---- | ----------- |
 | **MyApps.sln** | Der Name der Projektmappendatei. |
 | **MyForms.csproj** | Der Name des zu portierenden .NET Framework Windows Forms-Projekts. |
@@ -54,7 +54,7 @@ Wenn Sie eine .NET Framework Windows Forms-Anwendung portieren, müssen Sie ein 
 
 01. Das [Windows Compatibility Pack][compat-pack] könnte Ihnen bei der Migration helfen.
 
-    Einige APIs, die in .NET Framework verfügbar sind, sind nicht in .NET Core 3.0 verfügbar. Das [Windows Compatibility Pack][compat-pack] fügt viele dieser APIs hinzu und könnte die Kompatibilität Ihrer Windows Forms-App mit .NET Core ermöglichen.
+    Einige APIs, die in .NET Framework verfügbar sind, sind nicht in .NET Core 3.0 verfügbar. Das [Windows Compatibility Pack][compat-pack] fügt viele dieser APIs hinzu und könnte zur Kompatibilität Ihrer Windows Forms-App mit .NET Core beitragen.
 
 01. Aktualisieren Sie die NuGet-Pakete, die von Ihrem Projekt verwendet werden.
 
@@ -189,7 +189,7 @@ Wenn Sie ein Windows Forms-Steuerelemente-Bibliotheksprojekt portieren müssen, 
 
 Erweitern Sie mithilfe des vorherigen Schrittbeispiels, mit welchen Projekten und Dateien wir arbeiten.
 
-| Datei | Beschreibung |
+| Datei | BESCHREIBUNG |
 | ---- | ----------- |
 | **MyApps.sln** | Der Name der Projektmappendatei. |
 | **MyControls.csproj** | Der Name des zu portierenden .NET Framework Windows Forms-Steuerelemente-Projekts. |
@@ -278,7 +278,7 @@ Der vorherige Befehl fügt dem **MyFormsCore.csproj**-Projekt Folgendes hinzu:
 
 ## <a name="problems-compiling"></a>Probleme beim Kompilieren
 
-Wenn beim Kompilieren Ihrer Projekte Probleme auftreten, verwenden Sie möglicherweise einige nur für Windows geeignete APIs, die in .NET Framework, aber nicht in .NET Core verfügbar sind. Sie können versuchen, das [Windows Compatibility Pack][ compat-pack] NuGet-Paket Ihrem Projekt hinzuzufügen. Dieses Paket kann nur auf Windows ausgeführt werden und fügt .NET Core- und .NET Standard-Projekten ungefähr 20.000 Windows-APIs hinzu.
+Wenn beim Kompilieren Ihrer Projekte Probleme auftreten, verwenden Sie möglicherweise einige nur für Windows geeignete APIs, die in .NET Framework, aber nicht in .NET Core verfügbar sind. Sie können versuchen, das [Windows Compatibility Pack][compat-pack] NuGet-Paket Ihrem Projekt hinzuzufügen. Dieses Paket kann nur auf Windows ausgeführt werden und fügt .NET Core- und .NET Standard-Projekten ungefähr 20.000 Windows-APIs hinzu.
 
 ```cli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compatibility
@@ -300,7 +300,7 @@ Sobald Visual Studio 2019 den Windows Forms-Designer unterstützt, können Sie d
  
 ## <a name="next-steps"></a>Nächste Schritte
 
-* Lesen Sie mehr über das [Windows Compatibility Pack][compat-pack].
-* Sehen Sie sich ein [Video zum Portieren](https://www.youtube.com/watch?v=upVQEUc_KwU) Ihres .NET Framework-Windows Forms-Projekts zu .NET Core an.
+- Lesen Sie mehr über das [Windows Compatibility Pack][compat-pack].
+- Sehen Sie sich ein [Video zum Portieren](https://www.youtube.com/watch?v=upVQEUc_KwU) Ihres .NET Framework-Windows Forms-Projekts zu .NET Core an.
 
 [compat-pack]: windows-compat-pack.md

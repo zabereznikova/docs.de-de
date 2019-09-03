@@ -19,17 +19,17 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634748"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046470"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anchor in regulären Ausdrücken
 <a name="top"></a> Anchor, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anchor verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anchor aufgeführt.  
   
-|Anchor|Beschreibung|  
+|Anchor|BESCHREIBUNG|  
 |------------|-----------------|  
 |`^`|Die Übereinstimmung muss standardmäßig zu Beginn der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie zu Beginn der Zeile erfolgen. Weitere Informationen finden Sie unter [Anfang der Zeichenfolge oder Zeile](#Start).|  
 |`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen. Weitere Informationen finden Sie unter [Ende der Zeichenfolge oder Zeile](#End).|  
@@ -55,10 +55,10 @@ ms.locfileid: "64634748"
   
  Das Muster für reguläre Ausdrücke `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`^`|Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option aufgerufen wird).|  
-|`((\w+(\s?)){2,}`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das genau zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Dieser Ausdruck definiert auch eine zweite und dritte Erfassungsgruppe: Die zweite Gruppe enthält erfasste Wörter und die dritte erfasste Leerzeichen.|  
+|`^`|Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> -Option aufgerufen wird).|  
+|`((\w+(\s?)){2,}`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das mindestens zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Dieser Ausdruck definiert auch eine zweite und dritte Erfassungsgruppe: Die zweite Gruppe enthält erfasste Wörter und die dritte erfasste Leerzeichen.|  
 |`,\s`|Suchen Sie nach einer Übereinstimmung mit einem Komma gefolgt von einem Leerzeichen.|  
 |`(\w+\s\w+)`|Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von mindestens einem Wortzeichen. Dies ist die vierte Erfassungsgruppe.|  
 |`,`|Entsprechung für ein Komma finden.|  
@@ -128,7 +128,7 @@ ms.locfileid: "64634748"
   
  Der reguläre Ausdruck `\G(\w+\s?\w*),?` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\G`|Beginnt die Übereinstimmung am Ende der vorherigen.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -150,7 +150,7 @@ ms.locfileid: "64634748"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`are`|Übereinstimmung mit der Teilzeichenfolge "are".|  
@@ -170,7 +170,7 @@ ms.locfileid: "64634748"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`\B`|Übereinstimmung beginnt nicht an einer Wortgrenze.|  
 |`qu`|Übereinstimmung mit der Teilzeichenfolge "qu".|  

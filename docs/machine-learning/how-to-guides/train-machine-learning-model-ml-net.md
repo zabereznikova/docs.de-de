@@ -1,16 +1,16 @@
 ---
 title: Trainieren und Auswerten eines Modells
 description: Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken erfassen und die Leistung messen können. Ein Machine Learning-Modell identifiziert Muster innerhalb von Trainingsdaten, um anhand von neuen Daten Vorhersagen zu treffen.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397643"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169045"
 ---
 # <a name="train-and-evaluate-a-model"></a>Trainieren und Auswerten eines Modells
 
@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken er
 
 Mit einem Machine Learning-Modell sollen Muster innerhalb von Trainingsdaten erkannt werden. Diese Muster werden zum Treffen von Vorhersagen mit neuen Daten verwendet.
 
-Betrachten Sie das folgende Datenmodell:
+Die Daten können durch eine Klasse wie `HousingData` modelliert werden.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Laden Sie die Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView):
+Dafür müssen die folgenden Daten vorhanden sein, die in eine [`IDataView`](xref:Microsoft.ML.IDataView) geladen werden.
 
 ```csharp
 HousingData[] housingData = new HousingData[]
