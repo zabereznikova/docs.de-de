@@ -33,7 +33,7 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 - **Hinzufügen von Resilienz und Optimieren der Leistung**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
-- **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
+- **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie.\
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **Entwerfen von robusten Anwendungen für Azure**\
