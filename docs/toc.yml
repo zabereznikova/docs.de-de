@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: Erstellen einer „Hallo Welt“-App in Visual Basic mit .NET Core in Visual Studio 2017
           href: core/tutorials/vb-with-visual-studio.md
-        - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
           href: core/tutorials/libraries.md
+        - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: Entwickeln von ASP.NET Core-Anwendungen
           href: core/tutorials/aspnet-core.md
         - name: Hosten von .NET Core aus nativem Code
