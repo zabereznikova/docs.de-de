@@ -4,63 +4,63 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663425"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252275"
 ---
-# <a name="thread_useallcpugroups-element"></a><span data-ttu-id="7694d-102">\<Thread_UseAllCpuGroups >-Element</span><span class="sxs-lookup"><span data-stu-id="7694d-102">\<Thread_UseAllCpuGroups> Element</span></span>
+# <a name="thread_useallcpugroups-element"></a><span data-ttu-id="879ac-102">\<Thread_UseAllCpuGroups >-Element</span><span class="sxs-lookup"><span data-stu-id="879ac-102">\<Thread_UseAllCpuGroups> Element</span></span>
 
-<span data-ttu-id="7694d-103">Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="7694d-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>
+<span data-ttu-id="879ac-103">Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="879ac-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>
 
-<span data-ttu-id="7694d-104">\<Konfigurations > </span><span class="sxs-lookup"><span data-stu-id="7694d-104">\<configuration></span></span>\
-<span data-ttu-id="7694d-105">\<Lauf Zeit > </span><span class="sxs-lookup"><span data-stu-id="7694d-105">\<runtime></span></span>\
-<span data-ttu-id="7694d-106">\<Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="7694d-106">\<Thread_UseAllCpuGroups></span></span>
+<span data-ttu-id="879ac-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="879ac-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="879ac-105">&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="879ac-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
+<span data-ttu-id="879ac-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**</span><span class="sxs-lookup"><span data-stu-id="879ac-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<Thread_UseAllCpuGroups>**</span></span>  
 
-## <a name="syntax"></a><span data-ttu-id="7694d-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="7694d-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="879ac-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="879ac-107">Syntax</span></span>
 
 ```xml
 <Thread_UseAllCpuGroups
    enabled="true|false"/>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="7694d-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="7694d-108">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="879ac-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="879ac-108">Attributes and Elements</span></span>
 
-<span data-ttu-id="7694d-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="7694d-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="879ac-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="879ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="7694d-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="7694d-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="879ac-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="879ac-110">Attributes</span></span>
 
-|<span data-ttu-id="7694d-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="7694d-111">Attribute</span></span>|<span data-ttu-id="7694d-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7694d-112">Description</span></span>|
+|<span data-ttu-id="879ac-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="879ac-111">Attribute</span></span>|<span data-ttu-id="879ac-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="879ac-112">Description</span></span>|
 |---------------|-----------------|
-|`enabled`|<span data-ttu-id="7694d-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="7694d-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="7694d-114">Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="7694d-114">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|
+|`enabled`|<span data-ttu-id="879ac-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="879ac-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="879ac-114">Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.</span><span class="sxs-lookup"><span data-stu-id="879ac-114">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|
 
-## <a name="enabled-attribute"></a><span data-ttu-id="7694d-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="7694d-115">enabled Attribute</span></span>
+## <a name="enabled-attribute"></a><span data-ttu-id="879ac-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="879ac-115">enabled Attribute</span></span>
 
-|<span data-ttu-id="7694d-116">Wert</span><span class="sxs-lookup"><span data-stu-id="7694d-116">Value</span></span>|<span data-ttu-id="7694d-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7694d-117">Description</span></span>|
+|<span data-ttu-id="879ac-116">Wert</span><span class="sxs-lookup"><span data-stu-id="879ac-116">Value</span></span>|<span data-ttu-id="879ac-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="879ac-117">Description</span></span>|
 |-----------|-----------------|
-|`false`|<span data-ttu-id="7694d-118">Verwaltete Threads werden von der Laufzeit nicht auf mehrere CPU-Gruppen verteilt.</span><span class="sxs-lookup"><span data-stu-id="7694d-118">The runtime does not distribute managed threads across multiple CPU groups.</span></span> <span data-ttu-id="7694d-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="7694d-119">This is the default.</span></span>|
-|`true`|<span data-ttu-id="7694d-120">Die Laufzeit verteilt verwaltete Threads auf mehrere CPU-Gruppen, wenn der Computer über mehrere CPU-Gruppen verfügt und das [ \<gccpugroup->](gccpugroup-element.md) Element aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="7694d-120">The runtime distributes managed threads across multiple CPU groups, if the computer has multiple CPU groups and the [\<GCCpuGroup>](gccpugroup-element.md) element is enabled.</span></span>|
+|`false`|<span data-ttu-id="879ac-118">Verwaltete Threads werden von der Laufzeit nicht auf mehrere CPU-Gruppen verteilt.</span><span class="sxs-lookup"><span data-stu-id="879ac-118">The runtime does not distribute managed threads across multiple CPU groups.</span></span> <span data-ttu-id="879ac-119">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="879ac-119">This is the default.</span></span>|
+|`true`|<span data-ttu-id="879ac-120">Die Laufzeit verteilt verwaltete Threads auf mehrere CPU-Gruppen, wenn der Computer über mehrere CPU-Gruppen verfügt und das [ \<gccpugroup->](gccpugroup-element.md) Element aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="879ac-120">The runtime distributes managed threads across multiple CPU groups, if the computer has multiple CPU groups and the [\<GCCpuGroup>](gccpugroup-element.md) element is enabled.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="7694d-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="7694d-121">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="879ac-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="879ac-121">Child Elements</span></span>
 
-<span data-ttu-id="7694d-122">Keine</span><span class="sxs-lookup"><span data-stu-id="7694d-122">None.</span></span>
+<span data-ttu-id="879ac-122">Keine</span><span class="sxs-lookup"><span data-stu-id="879ac-122">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="7694d-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="7694d-123">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="879ac-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="879ac-123">Parent Elements</span></span>
 
-|<span data-ttu-id="7694d-124">Element</span><span class="sxs-lookup"><span data-stu-id="7694d-124">Element</span></span>|<span data-ttu-id="7694d-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7694d-125">Description</span></span>|
+|<span data-ttu-id="879ac-124">Element</span><span class="sxs-lookup"><span data-stu-id="879ac-124">Element</span></span>|<span data-ttu-id="879ac-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="879ac-125">Description</span></span>|
 |-------------|-----------------|
-|`configuration`|<span data-ttu-id="7694d-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="7694d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
-|`runtime`|<span data-ttu-id="7694d-127">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="7694d-127">Contains information about assembly binding and garbage collection.</span></span>|
+|`configuration`|<span data-ttu-id="879ac-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="879ac-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`runtime`|<span data-ttu-id="879ac-127">Enthält Informationen über die Assemblybindung und die Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="879ac-127">Contains information about assembly binding and garbage collection.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="7694d-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7694d-128">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="879ac-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="879ac-128">Remarks</span></span>
 
-<span data-ttu-id="7694d-129">Wenn ein Computer über mehrere CPU-Gruppen verfügt, wird durch Aktivieren dieses Elements die Laufzeit angewiesen, verwaltete Threads auf alle CPU-Gruppen zu verteilen.</span><span class="sxs-lookup"><span data-stu-id="7694d-129">When a computer has multiple CPU groups, enabling this element causes the runtime to distribute managed threads across all CPU groups.</span></span> <span data-ttu-id="7694d-130">Um dieses Feature verwenden zu können, müssen Sie auch das [ \<> Element gccpugroup](gccpugroup-element.md) aktivieren, das Garbage Collection auf alle CPU-Gruppen erweitert und beim Erstellen und Ausgleichen von Heaps alle Kerne berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="7694d-130">To use this feature, you must also enable the [\<GCCpuGroup>](gccpugroup-element.md) element, which extends garbage collection to all CPU groups and takes all cores into account when creating and balancing heaps.</span></span> <span data-ttu-id="7694d-131">Zum Aktivieren des [ \<gccpugroup->](gccpugroup-element.md) Elements muss das [ \<gcserver->](gcserver-element.md) Element aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="7694d-131">Enabling the [\<GCCpuGroup>](gccpugroup-element.md) element requires enabling the [\<gcServer>](gcserver-element.md) element.</span></span> <span data-ttu-id="7694d-132">Wenn diese Elemente nicht aktiviert sind, hat das Aktivieren des Elements `<Thread_UseAllCpuGroups>` keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="7694d-132">If these elements are not enabled, enabling the `<Thread_UseAllCpuGroups>` element has no effect.</span></span>
+<span data-ttu-id="879ac-129">Wenn ein Computer über mehrere CPU-Gruppen verfügt, wird durch Aktivieren dieses Elements die Laufzeit angewiesen, verwaltete Threads auf alle CPU-Gruppen zu verteilen.</span><span class="sxs-lookup"><span data-stu-id="879ac-129">When a computer has multiple CPU groups, enabling this element causes the runtime to distribute managed threads across all CPU groups.</span></span> <span data-ttu-id="879ac-130">Um dieses Feature verwenden zu können, müssen Sie auch das [ \<> Element gccpugroup](gccpugroup-element.md) aktivieren, das Garbage Collection auf alle CPU-Gruppen erweitert und beim Erstellen und Ausgleichen von Heaps alle Kerne berücksichtigt.</span><span class="sxs-lookup"><span data-stu-id="879ac-130">To use this feature, you must also enable the [\<GCCpuGroup>](gccpugroup-element.md) element, which extends garbage collection to all CPU groups and takes all cores into account when creating and balancing heaps.</span></span> <span data-ttu-id="879ac-131">Zum Aktivieren des [ \<gccpugroup->](gccpugroup-element.md) Elements muss das [ \<gcserver->](gcserver-element.md) Element aktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="879ac-131">Enabling the [\<GCCpuGroup>](gccpugroup-element.md) element requires enabling the [\<gcServer>](gcserver-element.md) element.</span></span> <span data-ttu-id="879ac-132">Wenn diese Elemente nicht aktiviert sind, hat das Aktivieren des Elements `<Thread_UseAllCpuGroups>` keine Auswirkungen.</span><span class="sxs-lookup"><span data-stu-id="879ac-132">If these elements are not enabled, enabling the `<Thread_UseAllCpuGroups>` element has no effect.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7694d-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7694d-133">Example</span></span>
+## <a name="example"></a><span data-ttu-id="879ac-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="879ac-133">Example</span></span>
 
-<span data-ttu-id="7694d-134">Im folgenden Beispiel wird dargestellt, wie Unterstützung für mehrere CPU-Gruppen aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="7694d-134">The following example shows how to enable support for multiple CPU groups.</span></span>
+<span data-ttu-id="879ac-134">Im folgenden Beispiel wird dargestellt, wie Unterstützung für mehrere CPU-Gruppen aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="879ac-134">The following example shows how to enable support for multiple CPU groups.</span></span>
 
 ```xml
 <configuration>
@@ -72,8 +72,8 @@ ms.locfileid: "69663425"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7694d-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7694d-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="879ac-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="879ac-135">See also</span></span>
 
-- [<span data-ttu-id="7694d-136">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="7694d-136">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="7694d-137">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="7694d-137">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="7694d-138">\<Gccpugroup-> Element</span><span class="sxs-lookup"><span data-stu-id="7694d-138">\<GCCpuGroup> Element</span></span>](gccpugroup-element.md)
+- [<span data-ttu-id="879ac-136">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="879ac-136">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="879ac-137">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="879ac-137">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="879ac-138">\<Gccpugroup-> Element</span><span class="sxs-lookup"><span data-stu-id="879ac-138">\<GCCpuGroup> Element</span></span>](gccpugroup-element.md)
