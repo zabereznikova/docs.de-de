@@ -2,20 +2,20 @@
 title: Aggregieren kanonischer Funktionen
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 2738d649190b088c34272de5b3e8732d87811a59
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489510"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251355"
 ---
 # <a name="aggregate-canonical-functions"></a>Aggregieren kanonischer Funktionen
 
 Aggregate sind Ausdrücke, die eine Folge von Eingabewerten beispielsweise auf einen einzigen Wert reduzieren. Aggregate werden normalerweise zusammen mit der GROUP BY-Klausel des SELECT-Ausdrucks verwendet, und für ihre Verwendung gelten Einschränkungen.
 
-## <a name="aggregate-entity-sql-canonical-functions"></a>Aggregieren kanonischer Funktionen von Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Entity SQL kanonische Funktionen aggregieren
 
-Im folgenden werden die kanonischen Entity SQL-Aggregatfunktionen.
+Im folgenden finden Sie die aggregierten Entity SQL kanonischen Funktionen.
 
 ### <a name="avgexpression"></a>Avg (Ausdruck)
 
@@ -23,11 +23,11 @@ Gibt den Durchschnitt der von NULL verschiedenen Werte zurück.
 
 **Argumente**
 
-Ein `Int32`, `Int64`, `Double`, und `Decimal`.
+`Int32`, ,`Int64` Und`Decimal`. `Double`
 
 **Rückgabewert**
 
-Der Typ des `expression`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Der Typ von `expression`oder `null` , wenn alle Eingabewerte Werte `null` sind.
 
 **Beispiel**
 
@@ -78,7 +78,7 @@ Gibt den Höchstwert der von null verschiedenen Werte zurück.
 
 **Rückgabewert**
 
-Der Typ des `expression`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Der Typ von `expression`oder `null` , wenn alle Eingabewerte Werte `null` sind.
 
 **Beispiel**
 
@@ -95,7 +95,7 @@ Gibt den geringsten Wert der von NULL verschiedenen Werte zurück.
 
 **Rückgabewert**
 
-Der Typ des `expression`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Der Typ von `expression`oder `null` , wenn alle Eingabewerte Werte `null` sind.
 
 **Beispiel**
 
@@ -129,7 +129,7 @@ Gibt die Standardabweichung zum Ausfüllen aller Werte zurück.
 
 **Rückgabewert**
 
-Ein `Double`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Ein `Double` `null` oder `null` , wenn alle Eingabewerte Werte sind.
 
 **Beispiel**
 
@@ -146,7 +146,7 @@ Gibt die Summe der von null verschiedenen Werte zurück.
 
 **Rückgabewert**
 
-Ein `Double`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Ein `Double` `null` oder `null` , wenn alle Eingabewerte Werte sind.
 
 **Beispiel**
 
@@ -163,7 +163,7 @@ Gibt die Varianz aller Werte zurück, die keine Null-Werte sind.
 
 **Rückgabewert**
 
-Ein `Double`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Ein `Double` `null` oder `null` , wenn alle Eingabewerte Werte sind.
 
 **Beispiel**
 
@@ -180,18 +180,18 @@ Gibt die Varianz für die Auffüllung aller Werte zurück, die keine Null-Werte 
 
 **Rückgabewert**
 
-Ein `Double`, oder `null` Wenn alle Eingabewerte `null` Werte.
+Ein `Double` `null` oder `null` , wenn alle Eingabewerte Werte sind.
 
 **Beispiel**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
 [!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-Entsprechende Funktionen sind für den verwalteten Anbieter des Microsoft SQL-Clients verfügbar. Weitere Informationen finden Sie unter [SqlClient für Entity Framework-Funktionen](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
+Entsprechende Funktionen sind für den verwalteten Anbieter des Microsoft SQL-Clients verfügbar. Weitere Informationen finden Sie unter [SqlClient für Entity Framework Funktionen](../sqlclient-for-ef-functions.md).
 
-## <a name="collection-based-aggregates"></a>Auflistungsbasierte Aggregate
+## <a name="collection-based-aggregates"></a>Sammlungs basierte Aggregate
 
-Auflistungsbasierte Aggregate (Auflistungsfunktionen) verarbeiten Auflistungen und geben einen Wert zurück. Zum Beispiel wenn ORDERS ist eine Auflistung aller Bestellungen, können Sie das früheste Lieferdatum mit dem folgenden Ausdruck berechnen:
+Auflistungsbasierte Aggregate (Auflistungsfunktionen) verarbeiten Auflistungen und geben einen Wert zurück. Wenn z. b. Orders eine Sammlung aller Bestellungen ist, können Sie das früheste Lieferdatum mit dem folgenden Ausdruck berechnen:
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -210,7 +210,7 @@ select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-Es ist möglich, eine Gruppenbasierte Aggregate ohne explizite Group by-Klausel im SELECT-Ausdruck haben. In diesem Fall werden alle Elemente als eine einzelne Gruppe behandelt. Dies entspricht der Angabe einer Gruppe auf Grundlage einer Konstante. Betrachten Sie beispielsweise folgenden Ausdruck:
+Es ist möglich, ein Gruppen basiertes Aggregat ohne eine explizite Group By-Klausel im SELECT-Ausdruck zu haben. In diesem Fall werden alle Elemente als eine einzelne Gruppe behandelt. Dies entspricht der Angabe einer Gruppierung auf der Grundlage einer Konstante. Betrachten Sie beispielsweise folgenden Ausdruck:
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -224,8 +224,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Ausdrücke in gruppenbasierten Aggregaten werden innerhalb des Namensauflösungsbereichs ausgewertet, der für den WHERE-Klauselausdruck sichtbar wäre.
 
-Wie in Transact-SQL, Gruppenbasierte Aggregate können auch angeben, alles oder DISTINCT-Modifizierer. Wenn der DISTINCT-Modifizierer angegeben ist, werden Duplikate vor der Berechnung des Aggregats aus der Aggregateingabeauflistung gelöscht. Wenn der ALL-Modifizierer oder kein Modifizierer angegeben wird, werden Duplikate nicht gelöscht.
+Wie bei Transact-SQL können auch Gruppenbasierte Aggregate einen all-oder einen eindeutigen Modifizierer angeben. Wenn der DISTINCT-Modifizierer angegeben ist, werden Duplikate vor der Berechnung des Aggregats aus der Aggregateingabeauflistung gelöscht. Wenn der ALL-Modifizierer oder kein Modifizierer angegeben wird, werden Duplikate nicht gelöscht.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Canonical Functions (Kanonische Funktionen)](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Canonical Functions (Kanonische Funktionen)](canonical-functions.md)

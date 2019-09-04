@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f90abf9f6c2bc0aed2cf01558b2c0cca4e967e81
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927420"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252635"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforcemepspolicy > Element
 Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass kryptografische Algorithmen den Federal Information Processing Standards (FIPS) entsprechen müssen.  
   
- \<Configuration >-Element  
-\<Runtime-> Element  
-\<enforcemepspolicy > Element  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy>**  
   
 ## <a name="syntax"></a>Syntax  
   

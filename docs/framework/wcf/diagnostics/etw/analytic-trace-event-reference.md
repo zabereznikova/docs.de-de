@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae792a0b55b0559b13c2394bd27d85f224d1aea0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753035"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70243973"
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
-In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten, die mit den WCF-analytische Ablaufverfolgung.  
+In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten definiert, die der WCF-Analyse Ablauf Verfolgung zugeordnet sind.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
@@ -109,7 +109,6 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[1431 - ConcurrentCallsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1431-concurrentcallsratio.md)|Ausführlich|Verhältnis gleichzeitige Sitzungen: %1/%2|Kontingent|  
 |[1432 - ConcurrentSessionsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1432-concurrentsessionsratio.md)|Ausführlich|Verhältnis gleichzeitige Sitzungen: %1/%2|Kontingent|  
 |[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|Ausführlich|Verhältnis ausgehende Verbindungen/Endpunkte: %1/%2|Kontingent|  
-|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|Ausführlich|Verhältnis ausgehende Verbindungen/Endpunkte: %1/%2|Kontingent|  
 |[1436 - PendingMessagesPerChannelRatio](../../../../../docs/framework/wcf/diagnostics/etw/1436-pendingmessagesperchannelratio.md)|Ausführlich|Verhältnis ausstehende Nachrichten pro Kanal: %1/%2|Kontingent|  
 |[1438 - ConcurrentInstancesRatio](../../../../../docs/framework/wcf/diagnostics/etw/1438-concurrentinstancesratio.md)|Ausführlich|Verhältnis gleichzeitige Instanzen: %1%2|Kontingent|  
 |[1439 - PendingAcceptsAtZero](../../../../../docs/framework/wcf/diagnostics/etw/1439-pendingacceptsatzero.md)|Information|Null ausstehende Annahmevorgänge übrig|Kontingent|  
@@ -119,10 +118,10 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[1445 - ReadPoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/1445-readpoolmiss.md)|Ausführlich|"%1" neu erstellt|Kontingent|  
 |[1446 - WritePoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/1446-writepoolmiss.md)|Ausführlich|"%1" neu erstellt|Kontingent|  
 |[1451 - MaxRetryCyclesExceeded](../../../../../docs/framework/wcf/diagnostics/etw/1451-maxretrycyclesexceeded.md)|Fehler|1%|Kontingent|  
-|[3300 - ReceiveContextCompleteFailed](../../../../../docs/framework/wcf/diagnostics/etw/3300-receivecontextcompletefailed.md)|Warnung|%1 konnte nicht abgeschlossen werden.|Kanal|  
-|[3301 - ReceiveContextAbandonFailed](../../../../../docs/framework/wcf/diagnostics/etw/3301-receivecontextabandonfailed.md)|Warnung|%1 konnte nicht aufgegeben werden.|Kanal|  
+|[3300 - ReceiveContextCompleteFailed](../../../../../docs/framework/wcf/diagnostics/etw/3300-receivecontextcompletefailed.md)|Warnung|%1 konnte nicht abgeschlossen werden.|Channel|  
+|[3301 - ReceiveContextAbandonFailed](../../../../../docs/framework/wcf/diagnostics/etw/3301-receivecontextabandonfailed.md)|Warnung|%1 konnte nicht aufgegeben werden.|Channel|  
 |[3303 - ReceiveContextAbandonWithException](../../../../../docs/framework/wcf/diagnostics/etw/3303-receivecontextabandonwithexception.md)|Warnung|Der Empfangskontext ist fehlerhaft.|ServiceModel|  
-|[3303 - ReceiveContextAbandonWithException](../../../../../docs/framework/wcf/diagnostics/etw/3303-receivecontextabandonwithexception.md)|Information|%1 wurde mit der Ausnahme %2 aufgegeben.|Kanal|  
+|[3303 - ReceiveContextAbandonWithException](../../../../../docs/framework/wcf/diagnostics/etw/3303-receivecontextabandonwithexception.md)|Information|%1 wurde mit der Ausnahme %2 aufgegeben.|Channel|  
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|Information|Anzahl der zwischengespeicherten Kanalfactorys: "%1".  Maximal können "%2" Kanalfactorys zwischengespeichert werden.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|Information|Eine Kanalfactory wurde aufgrund des Alters aus dem Cache entfernt, da der Cache die Einschränkung von "%1" erreicht hat.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|Information|Es wurde eine übereinstimmende Kanalfactory aus dem Cache verwendet.|ServiceModel|  
@@ -130,12 +129,12 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|Information|Abfragekomposition mit "%1" wurde für den Anforderungs-URI "%2" ausgeführt.|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Fehler|Der Vorgang "%1" wurde mit Fehlern verteilt.|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|Information|Der Vorgang "%1" wurde erfolgreich verteilt.|ServiceModel|  
-|[3312 - MessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes gelesen.|Kanal|  
-|[3312 - MessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes geschrieben.|Kanal|  
+|[3312 - MessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes gelesen.|Channel|  
+|[3312 - MessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes geschrieben.|Channel|  
 |[3314 - SessionIdleTimeout](../../../../../docs/framework/wcf/diagnostics/etw/3314-sessionidletimeout.md)|Fehler|Sitzungsabbruch für im Leerlauf befindlichen Kanal zum URI: "%1".|ServiceModel|  
 |[3319 - SocketAcceptEnqueued](../../../../../docs/framework/wcf/diagnostics/etw/3319-socketacceptenqueued.md)|Ausführlich|Die Verbindungsannahme wurde gestartet.|TCP|  
 |[3320 - SocketAccepted](../../../../../docs/framework/wcf/diagnostics/etw/3320-socketaccepted.md)|Ausführlich|ListenerId: hat folgende SocketId akzeptiert: %2|TCP|  
-|[3321 - ConnectionPoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/3321-connectionpoolmiss.md)|Ausführlich|Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.|Kanal|  
+|[3321 - ConnectionPoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/3321-connectionpoolmiss.md)|Ausführlich|Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.|Channel|  
 |[3322 - DispatchFormatterDeserializeRequestStart](../../../../../docs/framework/wcf/diagnostics/etw/3322-dispatchformatterdeserializerequeststart.md)|Ausführlich|Die Deserialisierung der Anforderungsnachricht wurde vom Verteiler gestartet.|ServiceModel|  
 |[3323 - DispatchFormatterDeserializeRequestStop](../../../../../docs/framework/wcf/diagnostics/etw/3323-dispatchformatterdeserializerequeststop.md)|Ausführlich|Die Deserialisierung der Anforderungsnachricht wurde vom Verteiler abgeschlossen.|ServiceModel|  
 |[3324 - DispatchFormatterSerializeReplyStart](../../../../../docs/framework/wcf/diagnostics/etw/3324-dispatchformatterserializereplystart.md)|Ausführlich|Die Serialisierung der Antwortnachricht wurde vom Verteiler gestartet.|ServiceModel|  
@@ -151,19 +150,19 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[3334 - IncomingMessageVerified](../../../../../docs/framework/wcf/diagnostics/etw/3334-incomingmessageverified.md)|Ausführlich|Die eingehende Nachricht wurde überprüft.|Sicherheits-ServiceModel|  
 |[3335 - GetServiceInstanceStart](../../../../../docs/framework/wcf/diagnostics/etw/3335-getserviceinstancestart.md)|Ausführlich|Das Abrufen der Dienstinstanz wurde gestartet.|ServiceModel|  
 |[3336 - GetServiceInstanceStop](../../../../../docs/framework/wcf/diagnostics/etw/3336-getserviceinstancestop.md)|Ausführlich|Die Dienstinstanz wurde abgerufen.|ServiceModel|  
-|[3337 - ChannelReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3337-channelreceivestart.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde gestartet.|Kanal|  
-|[3338 - ChannelReceiveStop](../../../../../docs/framework/wcf/diagnostics/etw/3338-channelreceivestop.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde angehalten.|Kanal|  
+|[3337 - ChannelReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3337-channelreceivestart.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde gestartet.|Channel|  
+|[3338 - ChannelReceiveStop](../../../../../docs/framework/wcf/diagnostics/etw/3338-channelreceivestop.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde angehalten.|Channel|  
 |[3339 - ChannelFactoryCreated](../../../../../docs/framework/wcf/diagnostics/etw/3339-channelfactorycreated.md)|Ausführlich|Die ChannelFactory wurde erstellt.|ServiceModel|  
-|[3340 - PipeConnectionAcceptStart](../../../../../docs/framework/wcf/diagnostics/etw/3340-pipeconnectionacceptstart.md)|Ausführlich|Die Pipeverbindungsannahme für "%1" wurde gestartet.|Kanal|  
-|[3341 - PipeConnectionAcceptStop](../../../../../docs/framework/wcf/diagnostics/etw/3341-pipeconnectionacceptstop.md)|Ausführlich|Die Pipeverbindung wurde akzeptiert.|Kanal|  
-|[3342 - EstablishConnectionStart](../../../../../docs/framework/wcf/diagnostics/etw/3342-establishconnectionstart.md)|Ausführlich|Die Verbindungseinrichtung für "%1" wurde gestartet.|Kanal|  
-|[3343 - EstablishConnectionStop](../../../../../docs/framework/wcf/diagnostics/etw/3343-establishconnectionstop.md)|Ausführlich|Die Verbindung wurde eingerichtet.|Kanal|  
-|[3345 - SessionPreambleUnderstood](../../../../../docs/framework/wcf/diagnostics/etw/3345-sessionpreambleunderstood.md)|Ausführlich|Die Sitzungspräambel für "%1" wurde verstanden.|Kanal|  
-|[3346 - ConnectionReaderSendFault](../../../../../docs/framework/wcf/diagnostics/etw/3346-connectionreadersendfault.md)|Fehler|Der Verbindungsleser sendet Fehler "%1".|Kanal|  
+|[3340 - PipeConnectionAcceptStart](../../../../../docs/framework/wcf/diagnostics/etw/3340-pipeconnectionacceptstart.md)|Ausführlich|Die Pipeverbindungsannahme für "%1" wurde gestartet.|Channel|  
+|[3341 - PipeConnectionAcceptStop](../../../../../docs/framework/wcf/diagnostics/etw/3341-pipeconnectionacceptstop.md)|Ausführlich|Die Pipeverbindung wurde akzeptiert.|Channel|  
+|[3342 - EstablishConnectionStart](../../../../../docs/framework/wcf/diagnostics/etw/3342-establishconnectionstart.md)|Ausführlich|Die Verbindungseinrichtung für "%1" wurde gestartet.|Channel|  
+|[3343 - EstablishConnectionStop](../../../../../docs/framework/wcf/diagnostics/etw/3343-establishconnectionstop.md)|Ausführlich|Die Verbindung wurde eingerichtet.|Channel|  
+|[3345 - SessionPreambleUnderstood](../../../../../docs/framework/wcf/diagnostics/etw/3345-sessionpreambleunderstood.md)|Ausführlich|Die Sitzungspräambel für "%1" wurde verstanden.|Channel|  
+|[3346 - ConnectionReaderSendFault](../../../../../docs/framework/wcf/diagnostics/etw/3346-connectionreadersendfault.md)|Fehler|Der Verbindungsleser sendet Fehler "%1".|Channel|  
 |[3347 - SocketAcceptClosed](../../../../../docs/framework/wcf/diagnostics/etw/3347-socketacceptclosed.md)|Ausführlich|Die Socketannahme wurde geschlossen.|TCP|  
 |[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|Kritisch|Fehler beim Diensthost.|TCP|  
-|[3349 - ListenerOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/3349-listeneropenstart.md)|Ausführlich|Der Listener für "%1" wird geöffnet.|Kanal|  
-|[3350 - ListenerOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/3350-listeneropenstop.md)|Ausführlich|Öffnen des Listeners wurde abgeschlossen.|Kanal|  
+|[3349 - ListenerOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/3349-listeneropenstart.md)|Ausführlich|Der Listener für "%1" wird geöffnet.|Channel|  
+|[3350 - ListenerOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/3350-listeneropenstop.md)|Ausführlich|Öffnen des Listeners wurde abgeschlossen.|Channel|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](../../../../../docs/framework/wcf/diagnostics/etw/3351-servermaxpooledconnectionsquotareached.md)|Ausführlich|Das Kontingent für die maximale Anzahl von Verbindungen im Serverpool wurde erreicht.|Kontingent|  
 |[3352 - TcpConnectionTimedOut](../../../../../docs/framework/wcf/diagnostics/etw/3352-tcpconnectiontimedout.md)|Fehler|Zeitüberschreitung für SocketId:%1 für Remoteadresse %2.|TCP|  
 |[3353 - TcpConnectionResetError](../../../../../docs/framework/wcf/diagnostics/etw/3353-tcpconnectionreseterror.md)|Warnung|Fehler beim Zurücksetzen der Verbindung für SocketId:%1 für Remoteadresse %2.|TCP|  
@@ -180,38 +179,38 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[3364 - SharedListenerProxyRegisterStart](../../../../../docs/framework/wcf/diagnostics/etw/3364-sharedlistenerproxyregisterstart.md)|Ausführlich|Die SharedListenerProxy-Registrierung für URI "%1" wurde gestartet.|ActivationServices|  
 |[3365 - SharedListenerProxyRegisterStop](../../../../../docs/framework/wcf/diagnostics/etw/3365-sharedlistenerproxyregisterstop.md)|Ausführlich|SharedListenerProxy-Registrierung anhalten.|ActivationServices|  
 |[3366 - SharedListenerProxyRegisterFailed](../../../../../docs/framework/wcf/diagnostics/etw/3366-sharedlistenerproxyregisterfailed.md)|Fehler|Fehler beim Registrieren von SharedListenerProxy mit Status "%1".|ActivationServices|  
-|[3367 - ConnectionPoolPreambleFailed](../../../../../docs/framework/wcf/diagnostics/etw/3367-connectionpoolpreamblefailed.md)|Fehler|ConnectionPoolPreambleFailed.|Kanal|  
+|[3367 - ConnectionPoolPreambleFailed](../../../../../docs/framework/wcf/diagnostics/etw/3367-connectionpoolpreamblefailed.md)|Fehler|ConnectionPoolPreambleFailed.|Channel|  
 |[3368 - SslOnInitiateUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3368-ssloninitiateupgrade.md)|Ausführlich|SslOnAcceptUpgradeStart|Sicherheit|  
 |[3369 - SslOnAcceptUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3369-sslonacceptupgrade.md)|Ausführlich|SslOnAcceptUpgradeStop|Sicherheit|  
-|[3370 - BinaryMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3370-binarymessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Kanal|  
-|[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von MtomMessageEncoder gestartet.|Kanal|  
-|[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von TextMessageEncoder gestartet.|Kanal|  
-|[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Kanal|  
-|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Ausführlich|Der MtomMessageEncoder hat das Decodieren der Nachricht gestartet.|Kanal|  
-|[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von TextMessageEncoder gestartet.|Kanal|  
+|[3370 - BinaryMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3370-binarymessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Channel|  
+|[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von MtomMessageEncoder gestartet.|Channel|  
+|[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von TextMessageEncoder gestartet.|Channel|  
+|[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Channel|  
+|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|Ausführlich|Der MtomMessageEncoder hat das Decodieren der Nachricht gestartet.|Channel|  
+|[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von TextMessageEncoder gestartet.|Channel|  
 |[3376 - HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|Information|HTTP-Transport hat mit dem Empfang einer Nachricht begonnen.|HTTP|  
 |[3377 - SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|Ausführlich|SocketId:%1 hat '%2' Bytes aus '%3' gelesen.|TCP|  
 |[3378 - SocketAsyncReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3378-socketasyncreadstop.md)|Ausführlich|SocketId:%1 hat '%2' Bytes aus '%3' gelesen.|TCP|  
 |[3379 - SocketWriteStart](../../../../../docs/framework/wcf/diagnostics/etw/3379-socketwritestart.md)|Ausführlich|SocketId:%1 schreibt %2 Bytes in "%3".|TCP|  
 |[3380 - SocketAsyncWriteStart](../../../../../docs/framework/wcf/diagnostics/etw/3380-socketasyncwritestart.md)|Ausführlich|SocketId:%1 schreibt %2 Bytes in "%3".|TCP|  
-|[3381 - SequenceAcknowledgementSent](../../../../../docs/framework/wcf/diagnostics/etw/3381-sequenceacknowledgementsent.md)|Ausführlich|Bestätigung für SessionId: %1 wurde gesendet.|Kanal|  
-|[3382 - ClientReliableSessionReconnect](../../../../../docs/framework/wcf/diagnostics/etw/3382-clientreliablesessionreconnect.md)|Information|Verbindung für SessionId:%1 wird wiederhergestellt.|Kanal|  
-|[3383 - ReliableSessionChannelFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3383-reliablesessionchannelfaulted.md)|Information|Fehler bei SessionId:%1.|Kanal|  
+|[3381 - SequenceAcknowledgementSent](../../../../../docs/framework/wcf/diagnostics/etw/3381-sequenceacknowledgementsent.md)|Ausführlich|Bestätigung für SessionId: %1 wurde gesendet.|Channel|  
+|[3382 - ClientReliableSessionReconnect](../../../../../docs/framework/wcf/diagnostics/etw/3382-clientreliablesessionreconnect.md)|Information|Verbindung für SessionId:%1 wird wiederhergestellt.|Channel|  
+|[3383 - ReliableSessionChannelFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3383-reliablesessionchannelfaulted.md)|Information|Fehler bei SessionId:%1.|Channel|  
 |[3384 - WindowsStreamSecurityOnInitiateUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3384-windowsstreamsecurityoninitiateupgrade.md)|Ausführlich|WindowsStreamSecurity initiiert Sicherheitsupgrade.|Sicherheit|  
 |[3385 - WindowsStreamSecurityOnAcceptUpgrade](../../../../../docs/framework/wcf/diagnostics/etw/3385-windowsstreamsecurityonacceptupgrade.md)|Ausführlich|Windows-Streamingsicherheit akzeptiert Upgrade.|Sicherheit|  
 |[3386 - SocketConnectionAbort](../../../../../docs/framework/wcf/diagnostics/etw/3386-socketconnectionabort.md)|Warnung|SocketId:%1 wird abgebrochen.|TCP|  
 |[3388 - HttpGetContextStart](../../../../../docs/framework/wcf/diagnostics/etw/3388-httpgetcontextstart.md)|Ausführlich|HttpGetContext starten.|HTTP|  
-|[3389 - ClientSendPreambleStart](../../../../../docs/framework/wcf/diagnostics/etw/3389-clientsendpreamblestart.md)|Ausführlich|Senden der Präambel durch den Client beginnt.|Kanal|  
-|[3390 - ClientSendPreambleStop](../../../../../docs/framework/wcf/diagnostics/etw/3390-clientsendpreamblestop.md)|Ausführlich|Senden der Präambel durch den Client wird beendet.|Kanal|  
+|[3389 - ClientSendPreambleStart](../../../../../docs/framework/wcf/diagnostics/etw/3389-clientsendpreamblestart.md)|Ausführlich|Senden der Präambel durch den Client beginnt.|Channel|  
+|[3390 - ClientSendPreambleStop](../../../../../docs/framework/wcf/diagnostics/etw/3390-clientsendpreamblestop.md)|Ausführlich|Senden der Präambel durch den Client wird beendet.|Channel|  
 |[3391 - HttpMessageReceiveFailed](../../../../../docs/framework/wcf/diagnostics/etw/3391-httpmessagereceivefailed.md)|Warnung|Fehler beim Empfang der HTTP-Nachricht.|HTTP|  
 |[3392 - TransactionScopeCreate](../../../../../docs/framework/wcf/diagnostics/etw/3392-transactionscopecreate.md)|Information|TransactionScope wird mit LocalIdentifier:'%1' und DistributedIdentifier:'%2' erstellt.|ServiceModel|  
-|[3393 - StreamedMessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3393-streamedmessagereadbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht gelesen.|Kanal|  
-|[3394 - StreamedMessageWrittenByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3394-streamedmessagewrittenbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht geschrieben.|Kanal|  
-|[3395 - MessageWrittenAsynchronouslyByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3395-messagewrittenasynchronouslybyencoder.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Kanal|  
-|[3396 - BufferedAsyncWriteStart](../../../../../docs/framework/wcf/diagnostics/etw/3396-bufferedasyncwritestart.md)|Information|BufferId:%1 hat das Schreiben von '%2' Bytes in den zugrunde liegenden Datenstrom abgeschlossen.|Kanal|  
-|[3397 - BufferedAsyncWriteStop](../../../../../docs/framework/wcf/diagnostics/etw/3397-bufferedasyncwritestop.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Kanal|  
-|[3398 - PipeSharedMemoryCreated](../../../../../docs/framework/wcf/diagnostics/etw/3398-pipesharedmemorycreated.md)|Ausführlich|Gemeinsam genutzter Speicher für Pipe wurde erstellt bei "%1".|Kanal|  
-|[3399 - NamedPipeCreated](../../../../../docs/framework/wcf/diagnostics/etw/3399-namedpipecreated.md)|Ausführlich|NamedPipe "%1" wurde erstellt.|Kanal|  
+|[3393 - StreamedMessageReadByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3393-streamedmessagereadbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht gelesen.|Channel|  
+|[3394 - StreamedMessageWrittenByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3394-streamedmessagewrittenbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht geschrieben.|Channel|  
+|[3395 - MessageWrittenAsynchronouslyByEncoder](../../../../../docs/framework/wcf/diagnostics/etw/3395-messagewrittenasynchronouslybyencoder.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Channel|  
+|[3396 - BufferedAsyncWriteStart](../../../../../docs/framework/wcf/diagnostics/etw/3396-bufferedasyncwritestart.md)|Information|BufferId:%1 hat das Schreiben von '%2' Bytes in den zugrunde liegenden Datenstrom abgeschlossen.|Channel|  
+|[3397 - BufferedAsyncWriteStop](../../../../../docs/framework/wcf/diagnostics/etw/3397-bufferedasyncwritestop.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Channel|  
+|[3398 - PipeSharedMemoryCreated](../../../../../docs/framework/wcf/diagnostics/etw/3398-pipesharedmemorycreated.md)|Ausführlich|Gemeinsam genutzter Speicher für Pipe wurde erstellt bei "%1".|Channel|  
+|[3399 - NamedPipeCreated](../../../../../docs/framework/wcf/diagnostics/etw/3399-namedpipecreated.md)|Ausführlich|NamedPipe "%1" wurde erstellt.|Channel|  
 |[3401 - SignatureVerificationStart](../../../../../docs/framework/wcf/diagnostics/etw/3401-signatureverificationstart.md)|Ausführlich|Signaturüberprüfung gestartet.|Sicherheit|  
 |[3402 - SignatureVerificationSuccess](../../../../../docs/framework/wcf/diagnostics/etw/3402-signatureverificationsuccess.md)|Ausführlich|Signaturüberprüfung erfolgreich.|Sicherheit|  
 |[3403 - WrappedKeyDecryptionStart](../../../../../docs/framework/wcf/diagnostics/etw/3403-wrappedkeydecryptionstart.md)|Ausführlich|Entschlüsselung des Wrapperschlüssels gestartet.|Sicherheit|  
@@ -344,8 +343,8 @@ In der folgende Tabelle definiert die Ereignisebenen, Bezeichner und Nachrichten
 |[5015 - DCJsonGenWriterStop](../../../../../docs/framework/wcf/diagnostics/etw/5015-dcjsongenwriterstop.md)|Ausführlich|Json-Generierung von Writer anhalten.|Serialisierung|  
 |[5016 - GenXmlSerializableStart](../../../../../docs/framework/wcf/diagnostics/etw/5016-genxmlserializablestart.md)|Ausführlich|Generierung von serialisierbarem XML-Element für "%1" starten.|Serialisierung|  
 |[5017 - GenXmlSerializableStop](../../../../../docs/framework/wcf/diagnostics/etw/5017-genxmlserializablestop.md)|Ausführlich|Generierung von serialisierbarem XML-Element anhalten.|Serialisierung|  
-|[5203 - JsonMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/5203-jsonmessagedecodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Dekodieren der Nachricht begonnen.|Kanal|  
-|[5204 - JsonMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/5204-jsonmessageencodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Codieren der Nachricht begonnen.|Kanal|  
+|[5203 - JsonMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/5203-jsonmessagedecodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Dekodieren der Nachricht begonnen.|Channel|  
+|[5204 - JsonMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/5204-jsonmessageencodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Codieren der Nachricht begonnen.|Channel|  
 |[5402 - TokenValidationStarted](../../../../../docs/framework/wcf/diagnostics/etw/5402-tokenvalidationstarted.md)|Ausführlich|Überprüfung des SecurityToken (Typ "%1" und ID "%2") gestartet.|Sicherheit|  
 |[5403 - TokenValidationSuccess](../../../../../docs/framework/wcf/diagnostics/etw/5403-tokenvalidationsuccess.md)|Ausführlich|SecurityToken (Typ "%1" und ID "%2") erfolgreich überprüft.|Sicherheit|  
 |[5404 - TokenValidationFailure](../../../../../docs/framework/wcf/diagnostics/etw/5404-tokenvalidationfailure.md)|Fehler|Fehler bei der Überprüfung des SecurityToken (Typ "%1" und ID "%2"). %3|Sicherheit|  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250975"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Ausdrücke in LINQ to Entities-Abfragen
 Ein Ausdruck ist ein Codefragment, das als einzelner Wert, einzelnes Objekt, einzelne Methode oder einzelner Namespace ausgewertet werden kann. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen einfachen Namen enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein. Ausdrücke können Operatoren verwenden, die wiederum andere Ausdrücke als Parameter oder Methodenaufrufe verwenden können, deren Parameter wiederum andere Methodenaufrufe darstellen. Die Bandbreite der möglichen Ausdrücke reicht daher von einfach bis sehr komplex.  
@@ -26,16 +26,16 @@ Ein Ausdruck ist ein Codefragment, das als einzelner Wert, einzelnes Objekt, ein
 > Bestimmte Sprachkonstrukte, wie C# `unchecked`z. b., haben keine Bedeutung in LINQ to Entities.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Constant Expressions (Konstante Ausdrücke)](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [Constant Expressions (Konstante Ausdrücke)](constant-expressions.md)  
   
- [Vergleichsausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [Vergleichsausdrücke](comparison-expressions.md)  
   
- [NULL-Vergleiche](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [NULL-Vergleiche](null-comparisons.md)  
   
- [Initialisierungsausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [Initialisierungsausdrücke](initialization-expressions.md)  
   
  [Beziehungen, Navigations Eigenschaften und Fremdschlüssel](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET Entity Framework](../index.md)

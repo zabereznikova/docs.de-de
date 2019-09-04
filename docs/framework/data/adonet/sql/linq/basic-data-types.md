@@ -2,12 +2,12 @@
 title: Grundlegende Datentypen
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964065"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248023"
 ---
 # <a name="basic-data-types"></a>Grundlegende Datentypen
 Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Transact-SQL übersetzt werden, unterstützt LINQ to SQL einen Großteil der integrierten Funktionen, die SQL Server für grundlegende Datentypen bereitstellt.  
@@ -24,5 +24,5 @@ Da LINQ to SQL-Abfragen vor ihrer Ausführung auf dem Microsoft SQL Server in Tr
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR-Typenzuordnung](sql-clr-type-mapping.md)
+- [Datentypen und Funktionen](data-types-and-functions.md)

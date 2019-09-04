@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920823"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252633"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<Enableampmparameseadjustment-> Element
 Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regeln zum Analysieren von Datums Zeichenfolgen verwenden, die einen Tag, einen Monat, eine Stunde und einen am/pm-Kenn Zeichner enthalten.  
   
- \<configuration>  
- \<Lauf Zeit >  
-\<EnableAmPmParseAdjustment>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Enableampmparameseanpassungs->**  
   
 ## <a name="syntax"></a>Syntax  
   

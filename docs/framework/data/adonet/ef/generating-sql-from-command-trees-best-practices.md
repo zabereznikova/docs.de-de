@@ -2,12 +2,12 @@
 title: Generieren von SQL aus Befehlsstrukturen – Best Practices
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606666"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251577"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 
@@ -125,7 +125,7 @@ Beachten Sie das erste Beispiel in diesem Thema. Bei der naiven Übersetzung tri
 
 ## <a name="join-alias-flattening"></a>Joinaliasvereinfachung
 
-Im Gegensatz zu anderen relationalen Ausdrücken einer Ausgabebefehlsstruktur gibt „DbJoinExpression“ einen Ergebnistyp aus, bei dem es sich um eine Zeile mit zwei Spalten handelt, die jeweils einer der Eingaben entsprechen. Wenn ein DbPropertyExpression erstellt wird, Zugriff auf eine skalare Eigenschaft aus einem Join stammt, ist es über eine weitere DbPropertyExpression.
+Im Gegensatz zu anderen relationalen Ausdrücken einer Ausgabebefehlsstruktur gibt „DbJoinExpression“ einen Ergebnistyp aus, bei dem es sich um eine Zeile mit zwei Spalten handelt, die jeweils einer der Eingaben entsprechen. Wenn ein DbPropertyExpression erstellt wird, um auf eine skalare Eigenschaft zuzugreifen, die von einem Join stammt, wird er über einem anderen DbPropertyExpression.
 
 Beachten Sie z. B. "a.b.y" in Beispiel 2 und "b.c.y" in Beispiel 3. In den entsprechenden SQL-Anweisungen werden diese jedoch als "b.y" bezeichnet. Dieses erneute Aliasing wird als Joinaliasvereinfachung bezeichnet.
 
@@ -137,7 +137,7 @@ Auch beim Vereinfachen von Joins verfügen die beteiligten Tabellen (oder Untera
 
 ## <a name="avoid-select-"></a>Vermeiden von SELECT *
 
-Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] -Anwendung beinhaltet möglicherweise nur eine Teilmenge der Spalten, die in der Tabelle der Datenbank befinden. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.
+Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell in einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung darf nur eine Teilmenge der Spalten enthalten, die in der Datenbanktabelle enthalten sind. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.
 
 ## <a name="reuse-of-expressions"></a>Wiederverwendung von Ausdrücken
 
@@ -145,8 +145,8 @@ Ausdrücke werden möglicherweise in der von [!INCLUDE[adonet_ef](../../../../..
 
 ## <a name="mapping-primitive-types"></a>Zuordnen von primitiven Typen
 
-Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die für viele Vorgänge, wie BLOB-Typen verwendet werden kann (z. B. `ntext` in SQL Server).
+Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die nicht für viele Vorgänge verwendet werden können, wie z. b. `ntext` BLOB-Typen (z. b. in SQL Server).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL-Generierung](sql-generation.md)

@@ -2,17 +2,17 @@
 title: Erste Schritte (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 4735a220-3301-4ec4-8833-7209abb7208f
-ms.openlocfilehash: d13b6357022a134c0c1a52c5bb2c309d1e57d8a0
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68dbd3457a8ae578e52a10e4eeb4222c91af16b1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878721"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251565"
 ---
 # <a name="getting-started-entity-framework"></a>Erste Schritte (Entity Framework)
-ADO.NET [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenorientierte Anwendungen und Dienste, und bietet eine Plattform zum Programmieren für Daten, die die Abstraktionsebene von der logischen relationalen Ebene auf die konzeptionelle Ebene ausgelöst. Da Entwickler nun auf einer höheren Abstraktionsebene mit Daten arbeiten können, unterstützt das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeicher-Engines oder relationalen Schemas unabhängig ist. Weitere Informationen finden Sie unter [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md).  
+Der ADO.net [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt datenzentrierte Anwendungen und Dienste und stellt eine Plattform für das Programmieren anhand von Daten bereit, die die Abstraktions Ebene von der logischen relationalen Ebene auf die konzeptionelle Ebene erhöht. Da Entwickler nun auf einer höheren Abstraktionsebene mit Daten arbeiten können, unterstützt das [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Code, der von Datenspeicher-Engines oder relationalen Schemas unabhängig ist. Weitere Informationen finden Sie unter [Entity Framework Übersicht](overview.md).  
   
- Um schnell zu starten, mit der neuesten Version von Entity Framework, finden Sie unter [erste Schritte](https://go.microsoft.com/fwlink/?LinkId=235280)  
+ Informationen zum schnellen Einstieg in die neueste Version der [Entity Framework finden Sie](https://go.microsoft.com/fwlink/?LinkId=235280) unter Erste Schritte.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,22 +2,22 @@
 title: Attributbasiertes Zuordnen
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964094"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248065"
 ---
 # <a name="attribute-based-mapping"></a>Attributbasiertes Zuordnen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ordnet einem- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell eine SQL Server Datenbank zu, indem entweder Attribute angewendet werden oder eine externe Zuordnungs Datei verwendet wird. Dieser Abschnitt befasst sich mit dem attributbasierten Ansatz.  
   
- In der einfachsten Form weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Datenbank einem <xref:System.Data.Linq.DataContext>, eine Tabelle einer Klasse und Spalten/Beziehungen den Eigenschaften dieser Klassen zu. Sie können auch Attribute verwenden, um im Objektmodell eine Vererbungshierarchie zuzuordnen. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren Sie das Objektmodell in Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)oder.  
+ In der einfachsten Form weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Datenbank einem <xref:System.Data.Linq.DataContext>, eine Tabelle einer Klasse und Spalten/Beziehungen den Eigenschaften dieser Klassen zu. Sie können auch Attribute verwenden, um im Objektmodell eine Vererbungshierarchie zuzuordnen. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren Sie das Objektmodell in Visual Basic C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)oder.  
   
- Entwickler, die Visual Studio verwenden, führen in der Regel eine Attribut basierte Zuordnung mithilfe der-objektrelationaler Designer aus. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren Sie das Objektmodell in Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)oder.  
+ Entwickler, die Visual Studio verwenden, führen in der Regel eine Attribut basierte Zuordnung mithilfe der-objektrelationaler Designer aus. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren Sie das Objektmodell in Visual Basic C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)oder.  
   
 > [!NOTE]
-> Sie können die Zuordnung auch mit einer externen XML-Datei vornehmen. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Sie können die Zuordnung auch mit einer externen XML-Datei vornehmen. Weitere Informationen finden Sie unter [externe Zuordnung](external-mapping.md).  
   
  In den folgenden Abschnitten wird die attributbasierte Zuordnung ausführlich beschrieben. Weitere Informationen finden Sie unter den Ausführungen zum <xref:System.Data.Linq.Mapping>-Namespace.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69964094"
 > Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen, auch für solche, bei denen die Groß-/Kleinschreibung nicht beachtet wird, einschließlich Visual Basic. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute-Attribut  
- Mit diesem Attribut legen Sie eine Eigenschaft für die Darstellung der Zuordnung in einer Datenbank dar, z. B. die Beziehung zwischen einem Fremdschlüssel und einem Primärschlüssel. Weitere Informationen zu Beziehungen finden [Sie unter Gewusst wie: Zuordnen von Datenbankbeziehungen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Mit diesem Attribut legen Sie eine Eigenschaft für die Darstellung der Zuordnung in einer Datenbank dar, z. B. die Beziehung zwischen einem Fremdschlüssel und einem Primärschlüssel. Weitere Informationen zu Beziehungen finden [Sie unter Gewusst wie: Zuordnen von Datenbankbeziehungen](how-to-map-database-relationships.md).  
   
  In der folgenden Tabelle werden Eigenschaften dieses Attributs beschrieben.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "69964094"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Verweis](reference.md)

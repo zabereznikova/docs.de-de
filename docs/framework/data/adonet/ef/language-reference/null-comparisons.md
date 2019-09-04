@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539736"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249838"
 ---
 # <a name="null-comparisons"></a>NULL-Vergleiche
-Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. In LINQ to Entities-Abfragen können Sie null-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen ausgeführt werden, die ungültig oder nicht Null ist, Daten enthalten. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. D. h. ein Vergleich mit einem null-Wert nicht als `true` oder `false`, ist er `unknown`. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
+Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. In LINQ to Entities-Abfragen können Sie nach NULL-Werten suchen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten oder nicht-NULL-Daten ausgeführt werden. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. Dies bedeutet, dass ein Vergleich mit einem NULL-Wert nicht zu `true` oder `false`ausgewertet wird, sondern `unknown`als ausgewertet wird. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
   
- Standardmäßig gibt der NULL-gleich-NULL-Vergleich in SQL Server einen NULL-Wert zurück. Im folgenden Beispiel, die Zeilen, in denen `ShipDate` ist Null, werden aus dem Resultset ausgeschlossen und die Transact-SQL-Anweisung 0 Zeilen zurückgegeben.  
+ Standardmäßig gibt der NULL-gleich-NULL-Vergleich in SQL Server einen NULL-Wert zurück. Im folgenden Beispiel werden die Zeilen, in `ShipDate` denen NULL ist, aus dem Resultset ausgeschlossen, und die Transact-SQL-Anweisung würde 0 Zeilen zurückgeben.  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -33,7 +33,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#JoinOnNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#joinonnull)]  
   
 ## <a name="key-selectors"></a>Schlüsselauswahlfunktionen  
- Ein *Schlüsselauswahlfunktion* ist eine Funktion, die in der Standardabfrageoperatoren zum Extrahieren eines Schlüssels aus einem Element verwendet. In der Schlüsselauswahlfunktion kann ein Ausdruck mit einer Konstante verglichen werden. Die NULL-Semantik der CLR wird angewendet, wenn ein Ausdruck mit einer NULL-Konstante oder zwei NULL-Konstanten miteinander verglichen werden. Die NULL-Semantik des Speichers gilt, wenn zwei Spalten mit NULL-Werten in der Datenquelle verglichen werden. Schlüsselauswahlfunktionen sind in vielen der Standardabfrageoperatoren zum Gruppieren und Sortieren zu finden, wie beispielsweise in <xref:System.Linq.Queryable.GroupBy%2A>. Sie werden verwendet, um Schlüssel auszuwählen, nach denen die Abfrageergebnisse sortiert oder gruppiert werden sollen.  
+ Ein *Schlüsselselektor* ist eine Funktion, die in den Standard Abfrage Operatoren zum Extrahieren eines Schlüssels aus einem Element verwendet wird. In der Schlüsselauswahlfunktion kann ein Ausdruck mit einer Konstante verglichen werden. Die NULL-Semantik der CLR wird angewendet, wenn ein Ausdruck mit einer NULL-Konstante oder zwei NULL-Konstanten miteinander verglichen werden. Die NULL-Semantik des Speichers gilt, wenn zwei Spalten mit NULL-Werten in der Datenquelle verglichen werden. Schlüsselauswahlfunktionen sind in vielen der Standardabfrageoperatoren zum Gruppieren und Sortieren zu finden, wie beispielsweise in <xref:System.Linq.Queryable.GroupBy%2A>. Sie werden verwendet, um Schlüssel auszuwählen, nach denen die Abfrageergebnisse sortiert oder gruppiert werden sollen.  
   
 ## <a name="null-property-on-a-null-object"></a>NULL-Eigenschaft eines NULL-Objekts  
  In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind die Eigenschaften eines NULL-Objekts gleich NULL. Wenn Sie versuchen, in der CLR auf eine Eigenschaft eines NULL-Objekts zu verweisen, erhalten Sie eine <xref:System.NullReferenceException>. Wenn eine LINQ-Abfrage eine Eigenschaft eines NULL-Objekts einschließt, kann dies zu inkonsistentem Verhalten führen.  
@@ -44,8 +44,8 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Übergeben von NULL-Auflistungen an Aggregatfunktionen  
- In LINQ to Entities, wenn Sie eine Sammlung übergeben, die unterstützt `IQueryable` für eine Aggregatfunktion, aggregierte Operationen in der Datenbank ausgeführt werden. Möglicherweise gibt es Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde und eine Abfrage, die in der Datenbank ausgeführt wurde. Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage mit einer in-Memory-Abfrage 0 (null) zurück. Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück. Wenn eine `null` Wert an eine LINQ-Aggregatfunktion übergeben wird, wird eine Ausnahme ausgelöst. Mögliche akzeptieren `null` Werte umgewandelt, die Typen und die Eigenschaften der Typen, die Abfrageergebnisse in NULL-Werte zu erhalten.  
+ Wenn Sie in LINQ to Entities eine Auflistung, die von unter `IQueryable` stützt wird, an eine Aggregatfunktion übergeben, werden Aggregat Vorgänge in der Datenbank ausgeführt. Möglicherweise gibt es Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde, und einer Abfrage, die in der Datenbank ausgeführt wurde. Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage NULL zurück, wenn keine Übereinstimmungen vorhanden sind. Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück. Wenn ein `null` Wert an eine LINQ-Aggregatfunktion übermittelt wird, wird eine Ausnahme ausgelöst. Um mögliche `null` Werte zu akzeptieren, wandeln Sie die Typen und die Eigenschaften der Typen, die Abfrageergebnisse empfangen, in Typen um, die NULL-Werte zulassen.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ausdrücke in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [Ausdrücke in LINQ to Entities-Abfragen](expressions-in-linq-to-entities-queries.md)

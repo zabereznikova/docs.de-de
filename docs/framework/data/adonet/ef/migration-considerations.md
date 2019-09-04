@@ -2,15 +2,15 @@
 title: Migrationsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 8370156d2bd0f3858d7fa0936fa967a658e6e910
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3554f530acf0e3ca3e66dddf74f63e7ede03708e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929310"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248555"
 ---
 # <a name="migration-considerations-entity-framework"></a>Migrationsüberlegungen (Entity Framework)
-Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhandene Anwendung. Einer der wichtigsten dieser Vorteile ist die Möglichkeit, mithilfe eines konzeptionellen Modells von der Anwendung verwendete Datenstrukturen vom Schema in der Datenquelle zu trennen. Damit können Änderungen am Speichermodell oder an der Datenquelle selbst vorgenommen werden, ohne dass entsprechende Änderungen an der Anwendung notwendig werden. Weitere Informationen zu den Vorteilen der Verwendung von finden [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]Sie unter [Entity Framework Übersicht](../../../../../docs/framework/data/adonet/ef/overview.md) und [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
+Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhandene Anwendung. Einer der wichtigsten dieser Vorteile ist die Möglichkeit, mithilfe eines konzeptionellen Modells von der Anwendung verwendete Datenstrukturen vom Schema in der Datenquelle zu trennen. Damit können Änderungen am Speichermodell oder an der Datenquelle selbst vorgenommen werden, ohne dass entsprechende Änderungen an der Anwendung notwendig werden. Weitere Informationen zu den Vorteilen der Verwendung von finden [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]Sie unter [Entity Framework Übersicht](overview.md) und [Entity Data Model](../entity-data-model.md).  
   
  Um von den Vorteilen von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]profitieren zu können, können Sie eine vorhandene Anwendung [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]zu migrieren. Einige Aufgaben müssen für alle migrierten Anwendungen durchgeführt werden. Zu diesen allgemeinen Aufgaben gehört das Upgrade der Anwendung für die Verwendung des .NET Framework ab Version 3,5 Service Pack 1 (SP1), das Definieren von Modellen und Mapping sowie das Konfigurieren der Entity Framework. Beim Migrieren einer Anwendung zu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sind weitere Überlegungen erforderlich. Diese Überlegungen sind vom Typ der migrierten Anwendung sowie von deren spezifischer Funktion abhängig. In diesem Thema werden Informationen zur Auswahl der besten Methode zur Aktualisierung einer vorhandenen Anwendung bereitgestellt.  
   
@@ -23,7 +23,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 - Bei einer großen oder komplexen Anwendung, ist es nicht erforderlich, die gesamte Anwendung gleichzeitig zu Entity Framework zu migrieren. Jedoch muss jede Komponente der Anwendung, die das Entity Framework nicht verwendet, geändert werden, wenn sich die Datenquelle ändert.  
   
-- Die vom Entity Framework verwendete Datenanbieter Verbindung kann für andere Teile der Anwendung freigegeben werden, da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET-Datenanbieter für den Zugriff auf die Datenquelle verwendet. Beispielsweise wird der SqlClient-Anbieter vom Entity Framework für den Zugriff auf eine SQL Server-Datenbank verwendet. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Die vom Entity Framework verwendete Datenanbieter Verbindung kann für andere Teile der Anwendung freigegeben werden, da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET-Datenanbieter für den Zugriff auf die Datenquelle verwendet. Beispielsweise wird der SqlClient-Anbieter vom Entity Framework für den Zugriff auf eine SQL Server-Datenbank verwendet. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="common-migration-tasks"></a>Allgemeine Migrationsaufgaben  
  Der Pfad zum Migrieren einer bestehenden Anwendung zu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist sowohl vom Typ der Anwendung, als auch von der bestehenden Datenzugriffsstrategie abhängig. Sie müssen jedoch immer die folgenden Aufgaben ausführen, wenn Sie eine vorhandene Anwendung zum [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] migrieren.  
@@ -46,7 +46,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 3. Definieren der Verbindungszeichenfolge.  
   
-     Beim Ausführen von Abfragen für ein konzeptionelles Modell verwendet [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eine speziell formatierte Verbindungszeichenfolge. Diese Verbindungszeichenfolge kapselt Informationen über die Modell- und Zuordnungsdateien und die Verbindung zur Datenquelle. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie die Verbindungs](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)Zeichenfolge.  
+     Beim Ausführen von Abfragen für ein konzeptionelles Modell verwendet [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] eine speziell formatierte Verbindungszeichenfolge. Diese Verbindungszeichenfolge kapselt Informationen über die Modell- und Zuordnungsdateien und die Verbindung zur Datenquelle. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie die Verbindungs](how-to-define-the-connection-string.md)Zeichenfolge.  
   
 4. Konfigurieren Sie das Visual Studio-Projekt.  
   
@@ -60,13 +60,13 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 - Anzeigen von Tabellendaten mit einem Datenleser.  
 
-  Sie können eine [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfrage mit dem EntityClient-Anbieter ausführen und das zurückgegebene <xref:System.Data.EntityClient.EntityDataReader> Objekt auflisten. Dies ist nur erforderlich, wenn Ihre Anwendung Tabellen mithilfe eines Datenlesers anzeigt und nicht die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bereitgestellten Funktionen für die Materialisierung von Daten in Objekte, die Nachverfolgung von Änderungen und die Durchführung von Aktualisierungen benötigt. Sie können den vorhandenen Datenzugriffscode, der die Datenquelle aktualisiert, weiterhin verwenden. Sie können jedoch auch die vorhandene Verbindung verwenden, auf die über die <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A>-Eigenschaft der <xref:System.Data.EntityClient.EntityConnection> zugegriffen wird. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+  Sie können eine [!INCLUDE[esql](../../../../../includes/esql-md.md)] Abfrage mit dem EntityClient-Anbieter ausführen und das zurückgegebene <xref:System.Data.EntityClient.EntityDataReader> Objekt auflisten. Dies ist nur erforderlich, wenn Ihre Anwendung Tabellen mithilfe eines Datenlesers anzeigt und nicht die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bereitgestellten Funktionen für die Materialisierung von Daten in Objekte, die Nachverfolgung von Änderungen und die Durchführung von Aktualisierungen benötigt. Sie können den vorhandenen Datenzugriffscode, der die Datenquelle aktualisiert, weiterhin verwenden. Sie können jedoch auch die vorhandene Verbindung verwenden, auf die über die <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A>-Eigenschaft der <xref:System.Data.EntityClient.EntityConnection> zugegriffen wird. Weitere Informationen finden Sie unter [EntityClient-Anbieter für die Entity Framework](entityclient-provider-for-the-entity-framework.md).  
   
 - Arbeiten mit DataSets.  
 
-  Stellt [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] viele der Funktionen bereit, die von DataSet bereitgestellt werden, einschließlich in-Memory-Persistenz, Änderungs Nachverfolgung, Datenbindung und Serialisieren von Objekten als XML-Daten. Weitere Informationen finden Sie unter [Arbeiten mit Objekten](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+  Stellt [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] viele der Funktionen bereit, die von DataSet bereitgestellt werden, einschließlich in-Memory-Persistenz, Änderungs Nachverfolgung, Datenbindung und Serialisieren von Objekten als XML-Daten. Weitere Informationen finden Sie unter [Arbeiten mit Objekten](working-with-objects.md).  
   
-  Wenn die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] von der Anwendung benötigte Funktionalität des Datasets nicht bereitstellt, können Sie die Vorteile von LINQ-Abfragen mithilfe von LINQ to DataSet weiterhin nutzen. Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+  Wenn die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] von der Anwendung benötigte Funktionalität des Datasets nicht bereitstellt, können Sie die Vorteile von LINQ-Abfragen mithilfe von LINQ to DataSet weiterhin nutzen. Weitere Informationen finden Sie unter [LINQ to DataSet](../linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Überlegungen für Anwendungen, die Daten an Steuerelemente binden  
  Mit der .NET Framework können Sie Daten in einer Datenquelle Kapseln, z. b. ein DataSet oder ein ASP.NET-Datenquellen-Steuerelement, und dann Benutzeroberflächen Elemente an diese Daten Steuerelemente binden. Die folgende Liste enthält Überlegungen zu Bindungssteuerelementen für Entity Framework-Daten.  
@@ -92,7 +92,7 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 - Anwendungen, die XML-Daten verwenden.  
 
-  Die Objektserialisierung ermöglicht die Erstellung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Datendiensten. Diese Dienste stellen Daten für Anwendungen bereit, die XML-Daten verwenden, z. B. AJAX-basierte Internetanwendungen. Erwägen Sie in diesen Fällen die Verwendung von [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Diese Datendienste basieren auf dem Entity Data Model und bieten dynamischen Zugriff auf Entitäts Daten mithilfe von standardmäßigen Representational State Transfer (Rest) http-Aktionen wie Get, Put und Post. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../../../../../docs/framework/data/wcf/index.md).  
+  Die Objektserialisierung ermöglicht die Erstellung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Datendiensten. Diese Dienste stellen Daten für Anwendungen bereit, die XML-Daten verwenden, z. B. AJAX-basierte Internetanwendungen. Erwägen Sie in diesen Fällen die Verwendung von [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Diese Datendienste basieren auf dem Entity Data Model und bieten dynamischen Zugriff auf Entitäts Daten mithilfe von standardmäßigen Representational State Transfer (Rest) http-Aktionen wie Get, Put und Post. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../../wcf/index.md).  
   
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt keinen systemeigenen XML-Datentyp. Das bedeutet, dass beim Mapping einer Entität zu einer Tabelle mit einer XML-Spalte die entsprechende Entitätseigenschaft für die XML-Spalte eine Zeichenfolge ist. Objekte können getrennt und als XML serialisiert werden. Weitere Informationen finden Sie unter [Serialisieren von Objekten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
@@ -104,5 +104,5 @@ Die ADO.NET-Entity Framework bietet eine Reihe von Vorteilen für eine vorhanden
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Entity Framework-Terminologie](../../../../../docs/framework/data/adonet/ef/terminology.md)
+- [Überlegungen zur Bereitstellung](deployment-considerations.md)
+- [Entity Framework-Terminologie](terminology.md)

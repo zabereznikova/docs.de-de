@@ -8,23 +8,23 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: cd7b06030e0fb2bba74590ee80c07c34047c5b47
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4bad8158925fea8af529f70f92aad74e2a6bbec0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950611"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254110"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Vorgehensweise: Aufrufen eines Druckdialogfelds
 Um die Möglichkeit zum Drucken von Ihrer Anwendung bereitzustellen, können Sie einfach ein <xref:System.Windows.Controls.PrintDialog> -Objekt erstellen und öffnen.  
   
 ## <a name="example"></a>Beispiel  
- Das <xref:System.Windows.Controls.PrintDialog>-Steuerelement stellt einen einheitlichen Einstiegspunkt für [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], Konfiguration und [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Auftragsübermittlung bereit. Das-Steuerelement ist einfach zu verwenden und kann mithilfe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] von Markup oder Code instanziiert werden. Im folgenden Beispiel wird veranschaulicht, wie das-Steuerelement im Code instanziiert und geöffnet wird und wie daraus gedruckt wird. Außerdem wird gezeigt, wie sichergestellt wird, dass im Dialogfeld der Benutzer die Möglichkeit erhält, einen bestimmten Seitenbereich festzulegen. Im Beispielcode wird davon ausgegangen, dass sich die Datei "FixedDocumentSequence. XPS" im Stammverzeichnis des Laufwerks C: befindet.  
+ Das <xref:System.Windows.Controls.PrintDialog> -Steuerelement stellt einen einzelnen Einstiegs [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]Punkt für die-,-Konfigurations-und XPS-Auftrags Übermittlung bereit. Das-Steuerelement ist einfach zu verwenden und kann mithilfe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] von Markup oder Code instanziiert werden. Im folgenden Beispiel wird veranschaulicht, wie das-Steuerelement im Code instanziiert und geöffnet wird und wie daraus gedruckt wird. Außerdem wird gezeigt, wie sichergestellt wird, dass im Dialogfeld der Benutzer die Möglichkeit erhält, einen bestimmten Seitenbereich festzulegen. Im Beispielcode wird davon ausgegangen, dass sich die Datei "FixedDocumentSequence. XPS" im Stammverzeichnis des Laufwerks C: befindet.  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- Wenn das Dialogfeld geöffnet ist, können Benutzer aus den Druckern auswählen, die auf Ihrem Computer installiert sind. Sie haben auch die Möglichkeit, den [Microsoft XPS-Dokument-Writer](https://go.microsoft.com/fwlink/?LinkId=147319) auszuwählen, um [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] eine Datei zu erstellen, anstatt Sie zu drucken.  
+ Wenn das Dialogfeld geöffnet ist, können Benutzer aus den Druckern auswählen, die auf Ihrem Computer installiert sind. Sie haben auch die Möglichkeit, den [Microsoft XPS-Dokument-Writer](https://go.microsoft.com/fwlink/?LinkId=147319) auszuwählen, um eine XPS-Datei (XML Paper Specification) zu erstellen, anstatt Sie zu drucken.  
   
 > [!NOTE]
 > Das <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Steuerelement [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]von, das in diesem Thema erläutert wird, sollte nicht mit der <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Komponente von Windows Forms verwechselt werden.  

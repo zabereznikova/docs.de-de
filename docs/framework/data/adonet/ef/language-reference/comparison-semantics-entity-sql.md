@@ -2,12 +2,12 @@
 title: Vergleichssemantik (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 2ca91861d4830321168e96fb200c4889dc33b04b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631715"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251180"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Vergleichssemantik (Entity SQL)
 Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operationen werden Typinstanzen verglichen:  
@@ -66,17 +66,17 @@ Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-
 ## <a name="supported-combinations"></a>Unterstützte Kombinationen  
  In der folgenden Tabelle werden alle unterstützten Kombinationen von Vergleichsoperatoren für jede Art von Typ angezeigt:  
   
-|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IST NICHT NULL**|  
+|**Typ**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IST NULL**<br /><br /> **IST NICHT NULL**|  
 |-|-|-|-|-|-|-|-|  
-|Entitätstyp|Ref<sup>1</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Ref<sup>1</sup>|  
-|Komplexer Typ|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|  
-|Zeile|Alle Eigenschaften<sup>4</sup>|Alle Eigenschaften<sup>4</sup>|Alle Eigenschaften<sup>4</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Alle Eigenschaften<sup>4</sup>|Löst<sup>3</sup>|  
+|Entitätstyp|Ref<sup>1</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
+|Komplexer Typ|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|Zeile|Alle Eigenschaften<sup>4</sup>|Alle Eigenschaften<sup>4</sup>|Alle Eigenschaften<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Alle Eigenschaften<sup>4</sup>|Throw<sup>3</sup>|  
 |Primitiver Typ|Anbieterspezifisch|Anbieterspezifisch|Anbieterspezifisch|Anbieterspezifisch|Anbieterspezifisch|Anbieterspezifisch|Anbieterspezifisch|  
-|Multiset|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|  
+|Multiset|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
 |Ref|Ja<sup>5</sup>|Ja<sup>5</sup>|Ja<sup>5</sup>|Ja<sup>5</sup>|Throw|Throw|Ja<sup>5</sup>|  
-|Zuordnung<br /><br /> Typ|Löst<sup>3</sup>|Throw|Throw|Throw|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|  
+|Zuordnung<br /><br /> Typ|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
   
- <sup>1</sup>die Verweise der angegebenen Entitätstypinstanzen werden implizit verglichen, wie im folgenden Beispiel gezeigt:  
+ <sup>1</sup> Die Verweise der angegebenen Entitätstyp Instanzen werden implizit verglichen, wie im folgenden Beispiel gezeigt:  
   
 ```  
 SELECT p1, p2   
@@ -94,14 +94,14 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup>Eigenschaften komplexer Typen werden bevor Sie an den Speicher gesendet werden, sodass sie vergleichbar werden (sofern alle ihre Eigenschaften vergleichbar sind) vereinfacht. Siehe auch <sup>4.</sup>  
+ <sup>2</sup> Eigenschaften komplexer Typen werden vereinfacht, bevor Sie an den Speicher gesendet werden, sodass Sie vergleichbar sind (solange alle Eigenschaften vergleichbar sind). Siehe auch <sup>4.</sup>  
   
- <sup>3</sup>Entity Framework-Laufzeit erkennt den nicht unterstützten Fall und löst eine angemessene Ausnahme aus, ohne dass der Anbieter/Speicher.  
+ <sup>3</sup> Die Entity Framework-Laufzeit erkennt den nicht unterstützten Fall und löst eine sinnvolle Ausnahme aus, ohne den Anbieter bzw. den Speicher einzubinden.  
   
- <sup>4</sup>es wird versucht, alle Eigenschaften verglichen werden soll. Wenn eine Eigenschaft einen nicht vergleichbaren Typ hat, wie beispielsweise text, ntext oder image, kann eine Serverausnahme ausgelöst werden.  
+ <sup>4</sup> Es wurde versucht, alle Eigenschaften zu vergleichen. Wenn eine Eigenschaft einen nicht vergleichbaren Typ hat, wie beispielsweise text, ntext oder image, kann eine Serverausnahme ausgelöst werden.  
   
- <sup>5</sup>alle Einzelelemente der Verweise werden verglichen (Dies schließt den Namen der Entitätenmenge und aller Schlüsseleigenschaften des Entitätstyps).  
+ <sup>5</sup> Alle einzelnen Elemente der Verweise werden verglichen (Dies schließt den Namen der Entitätenmenge und alle Schlüsseleigenschaften des Entitäts Typs ein).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Übersicht über Entity SQL](entity-sql-overview.md)

@@ -2,12 +2,12 @@
 title: USING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: e14b7857a65898683939647c872c48d0b3fe458a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9495e5daf88326c5a682172d835c3349fe79e571
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034093"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248759"
 ---
 # <a name="using-entity-sql"></a>USING (Entity SQL)
 Legt in einem Abfrageausdruck verwendete Namespaces fest.  
@@ -28,7 +28,7 @@ USING [ alias = ] namespace
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage legt mithilfe des USING-Operators Namespaces fest, die in einem Abfrageausdruck verwendet werden. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse](../how-to-execute-a-query-that-returns-primitivetype-results.md)zurückgibt.  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   
@@ -38,5 +38,5 @@ using SqlServer; RAND()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Namespaces](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Namespaces](namespaces-entity-sql.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)

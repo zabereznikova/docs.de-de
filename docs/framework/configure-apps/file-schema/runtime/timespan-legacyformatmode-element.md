@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 64bf667c5c9bc20db14f08f18fa6f4f84fa12a24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920689"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252248"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode >-Element
 
 Bestimmt, ob die Laufzeit Legacy Verhalten bei Formatierungs Vorgängen mit <xref:System.TimeSpan?displayProperty=nameWithType> Werten beibehält.
 
-\<Konfigurations > \
-\<Lauf Zeit > \
-\<TimeSpan_LegacyFormatMode>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
 
 ## <a name="syntax"></a>Syntax
 

@@ -2,16 +2,16 @@
 title: Zuordnen von CLR-Methoden zu kanonischen Funktionen
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605716"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251224"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Zuordnen von CLR-Methoden zu kanonischen Funktionen
 
-Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine auf vielen Datenbanksystemen verbreitete Funktionalität implementieren, z. B. Zeichenfolgenbearbeitung und mathematische Funktionen. Dadurch können Entwickler für einen großen Bereich von Datenbanksystemen entwickeln. Beim Aufrufen aus einer Abfragetechnologie wie LINQ to Entities werden diese kanonischen Funktionen in die entsprechenden Speicherfunktionen des verwendeten Anbieters übersetzt. Dadurch können Funktionsaufrufe für verschiedene Datenquellen in einer allgemeinen Form ausgedrückt werden, und es werden konsistente datenquellenübergreifende Abfragemöglichkeiten bereitgestellt. Weiterhin werden die bitweisen Operatoren AND, OR, NOT und XOR kanonischen Funktionen zugeordnet, wenn der Operand ein numerischer Typ ist. Bei booleschen Operanden werden durch die bitweisen Operatoren AND, OR, NOT und XOR die logischen Operationen AND, OR, NOT und XOR ihrer Operanden berechnet. Weitere Informationen finden Sie unter [kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).
+Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine auf vielen Datenbanksystemen verbreitete Funktionalität implementieren, z. B. Zeichenfolgenbearbeitung und mathematische Funktionen. Dadurch können Entwickler für einen großen Bereich von Datenbanksystemen entwickeln. Beim Aufrufen aus einer Abfragetechnologie wie LINQ to Entities werden diese kanonischen Funktionen in die entsprechenden Speicherfunktionen des verwendeten Anbieters übersetzt. Dadurch können Funktionsaufrufe für verschiedene Datenquellen in einer allgemeinen Form ausgedrückt werden, und es werden konsistente datenquellenübergreifende Abfragemöglichkeiten bereitgestellt. Weiterhin werden die bitweisen Operatoren AND, OR, NOT und XOR kanonischen Funktionen zugeordnet, wenn der Operand ein numerischer Typ ist. Bei booleschen Operanden werden durch die bitweisen Operatoren AND, OR, NOT und XOR die logischen Operationen AND, OR, NOT und XOR ihrer Operanden berechnet. Weitere Informationen finden Sie unter [kanonische Funktionen](canonical-functions.md).
 
 In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-Methoden den Methoden für die zugrunde liegende Datenquelle mithilfe kanonischer Funktionen zugeordnet werden. Bei allen Methodenaufrufen in einer LINQ to Entities-Abfrage, die nicht explizit einer kanonischen Funktion zugeordnet sind, wird eine <xref:System.NotSupportedException>-Laufzeitausnahme ausgelöst.
 
@@ -40,17 +40,17 @@ In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-M
 
 |System.String-Methode (Instanz)|Kanonische Funktion|Hinweise|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Wenn `value` nicht ist eine Konstante ist, wird dies zu: IndexOf zugeordnet (`this`, `value`) > 0|
-|Boolean EndsWith(String `value`)|`this` WIE `'` % `value`"|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: Right(`this`, length(`value`)) = `value`.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Wenn `value` keine Konstante ist, wird dies IndexOf (`this`, `value`) > 0 zugeordnet.|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` '% `value`|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: IndexOf(`this`, `value`) = 1.|
 |Länge|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (Teilzeichenfolge (`this`, "1" `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, Länge (`this`) – (`startIndex` + `count`)))|Remove(`startIndex`, `count`) wird nur unterstützt, wenn `count` eine ganze Zahl größer oder gleich 0 (null) ist.|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|`this`Concat (Teil Zeichenfolge (, 1,`startIndex` `count`  + `count`  +  `startIndex`), Teil`this`Zeichenfolge (, `startIndex` +`this`1, Länge ()-()))|Remove(`startIndex`, `count`) wird nur unterstützt, wenn `count` eine ganze Zahl größer oder gleich 0 (null) ist.|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Teil Zeichenfolge `startIndex` (`this`, + `length`1,)||
 |System.String ToLower()|ToLower(`this`)||
 |System.String ToUpper()|ToUpper(`this`)||
 |System.String Trim()|Trim(`this`)||
@@ -69,9 +69,9 @@ In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-M
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|>-Operator||
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> =-Operator||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!=-Operator||
-|Boolesche Op_LessThan ("DateTime" `t1`, "DateTime" `t2`)|<-Operator||
+|Boolean Op_LessThan (DateTime `t1`, DateTime `t2`)|<-Operator||
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< =-Operator||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` As DateTime, \_<br /><br /> Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = VbSunday, \_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear VbFirstJan1 = \_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` als DateInterval,\_<br /><br /> ByVal `DateValue` als DateTime,\_<br /><br /> Optionales ByVal `FirstDayOfWeekValue` als FirstDayOfWeek = vbSunday,\_<br /><br /> Optionales ByVal `FirstWeekOfYearValue` als firstweekof Year = vbFirstJan1\_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -90,7 +90,7 @@ In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-M
 |Millisecond|Millisecond(`this`)|
 |Minute|Minute(`this`)|
 |Monat|Month(`this`)|
-|Second|Second(`this`)|
+|Zweimal|Second(`this`)|
 |Jahr|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>System.DateTimeOffset Method (Instance)-Zuordnung
@@ -104,7 +104,7 @@ Die für die `get`-Methoden in den aufgeführten Eigenschaften gezeigte Zuordnun
 |Millisecond|Millisecond(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Minute|Minute(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Monat|Month(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
-|Second|Second(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
+|Zweimal|Second(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Jahr|Year(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 
 > [!NOTE]
@@ -125,7 +125,7 @@ Die für die `get`-Methoden in den aufgeführten Eigenschaften gezeigte Zuordnun
 |System.TimeSpan-Methode (Instanz)|Kanonische Funktion|Hinweise|
 |-----------------------------------------|------------------------|-----------|
 |Stunden|Hour(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
-|Milliseconds|Millisecond(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
+|Millisekunden|Millisecond(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Minuten|Minute(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Seconds|Second(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 
@@ -203,4 +203,4 @@ Die `DatePart`-Funktion wird, in Abhängigkeit vom Wert von `Interval`, einer vo
 
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

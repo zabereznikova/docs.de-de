@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879761"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248973"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -21,7 +21,7 @@ Der SELECT-Klausel kann hinter dem optionalen ALL/DISTINCT-Modifizierer eine TOP
 
 ## <a name="arguments"></a>Argumente
 
-`n` Der numerische Ausdruck, der die Anzahl der zurückzugebenden Zeilen angibt. `n` könnte ein einzelnes numerisches Literal oder ein einzelner Parameter sein.
+`n`Der numerische Ausdruck, der die Anzahl der zurück zugegenden Zeilen angibt. `n` könnte ein einzelnes numerisches Literal oder ein einzelner Parameter sein.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -33,19 +33,19 @@ Im Folgenden finden Sie ein Beispiel für einen konstanten TOP-Ausdruck:
 select distinct top(10) c.a1, c.a2 from T as a
 ```
 
-Im folgenden finden ein Beispiel für parametrisierten TOP-Ausdruck:
+Im folgenden finden Sie ein Beispiel für einen parametrisierten Top-Ausdruck:
 
 ```sql
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-Wenn die Abfrage nicht sortiert ist, ist TOP nicht deterministisch. Wenn ein deterministisches Ergebnis benötigt wird, sollte die [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) -Unterklausel und die [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) -Unterklausel in der [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) -Klausel verwendet werden. TOP und SKIP/LIMIT schließen sich gegenseitig aus.
+Wenn die Abfrage nicht sortiert ist, ist TOP nicht deterministisch. Wenn ein deterministisches Ergebnis benötigt wird, sollte die [SKIP](skip-entity-sql.md) -Unterklausel und die [LIMIT](limit-entity-sql.md) -Unterklausel in der [ORDER BY](order-by-entity-sql.md) -Klausel verwendet werden. TOP und SKIP/LIMIT schließen sich gegenseitig aus.
 
 ## <a name="example"></a>Beispiel
 
 Die folgende [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage verwendet TOP, um die oberste Zeile, die vom Abfrageergebnis zurückgegeben werden soll, anzugeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:
 
-1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.
 
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:
 
@@ -53,8 +53,8 @@ Die folgende [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage ve
 
 ## <a name="see-also"></a>Siehe auch
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)

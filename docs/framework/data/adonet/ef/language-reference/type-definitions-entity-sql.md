@@ -2,18 +2,18 @@
 title: Typdefinitionen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641397"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248951"
 ---
 # <a name="type-definitions-entity-sql"></a>Typdefinitionen (Entity SQL)
 Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Inlinefunktion verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
- Die deklarationsanweisung für eine Inlinefunktion besteht aus den [Funktion](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) Schlüsselwort, gefolgt von der Bezeichner, die den Funktionsnamen (z. B. "MyAvg"), gefolgt von der Parameterdefinitionsliste in Klammern (für darstellt. beispielsweise "gebührenauflistung (Decimal).  
+ Die Deklarations Anweisung für eine Inline Funktion besteht aus dem [Function](function-entity-sql.md) -Schlüsselwort, gefolgt von dem Bezeichner, der den Funktionsnamen darstellt (z. b. "myavg"), gefolgt von einer Parameter Definitionsliste in Klammern (z. b. "Dues Collection" ( Decimal) ").  
   
  Die Parameterdefinitionsliste besteht aus 0 (null) oder mehreren Parameterdefinitionen. Jede Parameterdefinition besteht aus einem von einer Typdefinition (z. B. "Auflistung (Decimal)") gefolgten Bezeichner (der Name des Parameters der Funktion, z. B. "Gebühren").  
   
@@ -23,7 +23,7 @@ Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../..
   
 - Das `COLLECTION`-Schlüsselwort, das von einer anderen Typdefinition in Klammern gefolgt wird (z. B. "Collection(AdventureWorks.Order)").  
   
-- Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschaftendefinitionen besitzen Formate wie z. B. "`identifier type_definition`, `identifier type_definition`,...".  
+- Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschafts Definitionen haben ein Format wie z`identifier type_definition`. `identifier type_definition`b. ",,...".  
   
 - Das vom Typ des Bezeichners in Klammern (z. B. "Ref(AdventureWorks.Order)") gefolgte REF-Schlüsselwort. Der REF-Typdefinitionsoperator erfordert einen Entitätstyp als Argument. Sie können keinen primitiven Typ als Argument angeben.  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Übersicht über Entity SQL](entity-sql-overview.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)

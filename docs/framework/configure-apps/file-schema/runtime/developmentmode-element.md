@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663807"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252698"
 ---
 # <a name="developmentmode-element"></a>\<DevelopmentMode-> Element
 Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
   
- \<configuration>  
-\<Lauf Zeit >  
-\<DevelopmentMode->  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<DevelopmentMode->**  
   
 ## <a name="syntax"></a>Syntax  
   

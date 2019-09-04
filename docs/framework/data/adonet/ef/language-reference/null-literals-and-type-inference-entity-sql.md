@@ -2,15 +2,15 @@
 title: NULL-Literale und Typrückschluss (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641814"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249827"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>NULL-Literale und Typrückschluss (Entity SQL)
-NULL-Literale sind mit allen Typen im [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Typsystem kompatibel. Für den Typ der null-Literal korrekt geschlossen werden jedoch [!INCLUDE[esql](../../../../../../includes/esql-md.md)] gelten bestimmte Einschränkungen auf, in dem ein null-Literal verwendet werden kann.  
+NULL-Literale sind mit allen Typen im [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Typsystem kompatibel. Damit der Typ eines NULL-Literals ordnungsgemäß abgeleitet wird, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] erzwingt jedoch bestimmte Einschränkungen für die Verwendung eines NULL-Literals.  
   
 ## <a name="typed-nulls"></a>Typisierte Nullen  
  Typisierte Nullen können stets verwendet werden. Typrückschluss ist für typisierte Nullen nicht erforderlich, da der Typ bekannt ist. Beispielsweise kann mit dem folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Konstrukt eine NULL vom Typ Int16 erstellt werden:  
@@ -42,4 +42,4 @@ NULL-Literale sind mit allen Typen im [!INCLUDE[esql](../../../../../../includes
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Übersicht über Entity SQL](entity-sql-overview.md)

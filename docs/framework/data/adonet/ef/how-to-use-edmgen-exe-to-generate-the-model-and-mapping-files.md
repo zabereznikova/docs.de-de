@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958455"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251424"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“
 In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) verwendet wird, um die folgenden Dateien auf der Grundlage der Datenbank "School" zu generieren:  
@@ -22,7 +22,7 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
   
 - Ansichtsdateien.  
   
- Wenn das Tool EdmGen.exe mit dem Befehl /mode:FullGeneration aufgerufen wird, werden die oben aufgeführten Dateien generiert. Weitere Informationen zu "EdmGen. exe"-Befehlen finden Sie unter [EDM Generator (EdmGen. exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
+ Wenn das Tool EdmGen.exe mit dem Befehl /mode:FullGeneration aufgerufen wird, werden die oben aufgeführten Dateien generiert. Weitere Informationen zu "EdmGen. exe"-Befehlen finden Sie unter [EDM Generator (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
  Wenn Sie "EdmGen. exe" verwenden, um die Modell-und Zuordnungsdateien zu generieren, müssen Sie das Visual Studio [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Projekt für die Verwendung von konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Projekts.  
   
@@ -55,8 +55,8 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Modellieren und Zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [Modellieren und Zuordnen](modeling-and-mapping.md)
 - [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Vorgehensweise: Vorab Generieren von Sichten, um die Abfrageleistung zu verbessern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [ADO.NET-Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Vorgehensweise: Verwenden von EdmGen. exe zum Überprüfen von Modell-und Zuordnungsdateien](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Vorgehensweise: Verwenden von EdmGen. exe zum Überprüfen von Modell-und Zuordnungsdateien](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

@@ -2,12 +2,12 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248588"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -23,9 +23,9 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  Das Anbietermanifest muss zur Entwurfszeit von Tools geladen werden können, ohne eine Verbindung mit dem Datenspeicher öffnen zu müssen.  
   
- Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] trifft sensibler, aber möglicherweise nicht der zugrunde liegenden Datenspeicher. Wenn EDM-Artefakte (z. B. Bezeichner und Typnamen) im Manifest definiert und verwendet werden, muss auf die Groß- und Kleinschreibung in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] geachtet werden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
+ Bei [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] wird die Groß-/Kleinschreibung beachtet, aber der zugrunde liegende Datenspeicher ist nicht. Wenn EDM-Artefakte (z. B. Bezeichner und Typnamen) im Manifest definiert und verwendet werden, muss auf die Groß- und Kleinschreibung in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] geachtet werden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erfordert für alle Datenanbieter ein Anbietermanifest. Wenn Sie versuchen, einen Anbieter zu verwenden, die nicht über kein Anbietermanifest mit der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], Sie erhalten eine Fehlermeldung.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erfordert für alle Datenanbieter ein Anbietermanifest. Wenn Sie versuchen, einen Anbieter zu verwenden, der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]nicht über ein Anbieter Manifest mit verfügt, wird eine Fehlermeldung angezeigt.  
   
  In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] auslöst, wenn durch Anbieterinteraktion Ausnahmen auftreten:  
   
@@ -39,7 +39,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Ein Anbieter sollte die folgenden Szenarien unterstützen:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Schreiben eines Anbieters mit symmetrischer Typzuordnung  
- Sie können einen Anbieter für Schreiben der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , in denen eine EDM-Typ, unabhängig von der zuordnungsrichtung jeder Speichertyp zugeordnet. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
+ Sie können einen Anbieter für den [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] schreiben, wobei jeder Speichertyp unabhängig von der Zuordnungs Richtung einem einzelnen EDM-Typ zugeordnet wird. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
   
  Sie können die Einfachheit der Domäne nutzen und ein statisches deklaratives Anbietermanifest erstellen.  
   
@@ -54,21 +54,21 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
-- Eine Liste von Anbietertypen in EDM-Begriffen ausgedrückt, und definieren die Zuordnung für beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
+- Eine Liste von Anbieter Typen, ausgedrückt in EDM-Begriffen und Definieren der Zuordnung für beide Richtungen: EDM-zu-Anbieter und Anbieter-zu-EDM.  
   
 - Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ## <a name="provider-manifest-discoverability"></a>Ermittelbarkeit des Anbietermanifests  
  Das Manifest wird indirekt von mehreren Komponententypen der Entitätsdienste (z. B. Tools oder Abfrage) verwendet. Die direktere Nutzung erfolgt jedoch für die Metadaten mithilfe des Metadaten-Ladeprogramms des Datenspeichers.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Anbieter können jedoch unterschiedliche Speicher oder unterschiedliche Versionen des gleichen Speichers unterstützen. Daher muss ein Anbieter für jeden unterstützten Datenspeicher ein anderes Manifest melden.  
   
 ### <a name="provider-manifest-token"></a>Anbietermanifesttoken  
  Beim Öffnen einer Datenspeicherverbindung kann der Anbieter Informationen abfragen, um das richtige Manifest zurückzugeben. Dies kann in Offlineszenarien unmöglich sein, in denen entweder die Verbindungsinformationen nicht zur Verfügung stehen oder keine Verbindung mit dem Datenspeicher hergestellt werden kann. Identifizieren Sie das Manifest mit dem `ProviderManifestToken`-Attribut des `Schema`-Elements in der SSDL-Datei. Es gibt kein erforderliches Format für dieses Attribut. Der Anbieter wählt die Mindestinformationen aus, die erforderlich sind, um ein Manifest zu identifizieren, ohne eine Verbindung mit dem Speicher zu öffnen.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -77,13 +77,13 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ## <a name="provider-manifest-programming-model"></a>Programmiermodell für das Anbietermanifest  
  Anbieter werden von <xref:System.Data.Common.DbXmlEnabledProviderManifest> abgeleitet, sodass die Manifeste deklarativ angegeben werden können. In der folgenden Abbildung wird die Klassenhierarchie eines Anbieters dargestellt:  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![Keine](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Ermittelbarkeits-API  
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
   
 #### <a name="using-a-data-store-connection"></a>Verwenden einer Datenspeicherverbindung  
- Wenn die datenspeicherverbindung verfügbar ist, rufen Sie <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> um das Token zurückzugeben, die an der <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> Methode, die zurückgibt <xref:System.Data.Common.DbProviderManifest>. Diese Methode delegiert zur Implementierung des Anbieters `GetDbProviderManifestToken`.  
+ Wenn die Datenspeicher Verbindung verfügbar ist, wird <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> aufgerufen, um das an die <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> -Methode übergebenen Token zurückzugeben <xref:System.Data.Common.DbProviderManifest>, das zurückgibt. Diese Methode delegiert an die-Implementierung des Anbieters `GetDbProviderManifestToken`von.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Verwenden eines Anbietermanifesttokens  
- Für das Offlineszenario wird das Token der SSDL-Darstellung ausgewählt. SSDL ermöglicht das Festlegen eines ProviderManifestToken (finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) Informationen). Wenn beispielsweise eine Verbindung nicht geöffnet werden kann, verfügt SSDL über ein Anbietermanifesttoken, das Informationen über das Manifest angibt.  
+ Für das Offlineszenario wird das Token der SSDL-Darstellung ausgewählt. Die SSDL ermöglicht Ihnen das Angeben eines ProviderManifestToken (Weitere Informationen finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ). Wenn beispielsweise eine Verbindung nicht geöffnet werden kann, verfügt SSDL über ein Anbietermanifesttoken, das Informationen über das Manifest angibt.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -256,17 +256,17 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ###### <a name="function-node"></a>Funktionsknoten  
  Jede Funktion definiert eine einzelne, über den Anbieter verfügbare Funktion.  
   
-|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Name|Zeichenfolge|Ja|n/v|Bezeichner/Name der Funktion|  
 |ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
 |Aggregat|Boolesch|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
 |BuiltIn|Boolesch|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
-|StoreFunctionName|Zeichenfolge|Nein|\<Name>|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
+|StoreFunctionName|Zeichenfolge|Nein|\<Name >|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
 |NiladicFunction|Boolesch|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
-|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Umwandeln|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Umwandeln|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -Exactmatchonly<br />-"-Zuordnung"<br />-"-Zugebemplicitconversion"|  
   
- **Parameterknoten**  
+ **Parameter Knoten**  
   
  Jede Funktion verfügt über eine Auflistung von einem oder mehreren Parameterknoten.  
   
@@ -274,11 +274,11 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
 |Typ|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  
-|Modus|Parameter<br /><br /> Richtung|Ja|n/v|Richtung des Parameters:<br /><br /> -in<br />-out<br />-inout|  
+|Modus|Parameter<br /><br /> Richtung|Ja|n/v|Richtung des Parameters:<br /><br /> -in<br />-Out<br />-INOUT|  
   
 ##### <a name="namespace-attribute"></a>Namespace-Attribut  
- Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SqlServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
+ Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SQLServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Schreiben eines Entity Framework-Datenanbieters](writing-an-ef-data-provider.md)

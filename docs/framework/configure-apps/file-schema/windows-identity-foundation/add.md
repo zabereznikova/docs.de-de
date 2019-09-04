@@ -3,20 +3,21 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 932e8452542ace66824fba1262694c220ce88676
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941995"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252187"
 ---
 # <a name="add"></a>\<add>
 Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securitytokenhandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -74,7 +75,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 > [!IMPORTANT]
 > Die tokenhandlerauflistung kann nur einen einzelnen Handler eines beliebigen Typs enthalten. Dies bedeutet beispielsweise Folgendes: Wenn Sie einen von der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> -Klasse abgeleiteten Handler zur-Auflistung hinzufügen möchten, müssen Sie zuerst den <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, der standardmäßig vorhanden ist, aus der-Auflistung entfernen. Sie können das [ \<remove >](remove.md) -Element verwenden, um einen einzelnen Handler aus der Auflistung zu entfernen, oder das [ \<Clear >](clear.md) -Element verwenden, um alle Handler aus der Auflistung zu entfernen.  
   
- Die Einstellungen, die für einen Handler angegeben werden, überschreiben die entsprechenden Einstellungen, die für die tokenhandlerauflistung unter dem [ \<securitytokenhandlerconfiguration->](securitytokenhandlerconfiguration.md) -Element angegeben sind, und die auf Dienst Ebene unter [ \< identityconfiguration >](identityconfiguration.md) Element.  
+ Die Einstellungen, die für einen Handler angegeben werden, überschreiben die entsprechenden Einstellungen, die für die [ \<tokenhandlerauflistung unter dem securitytokenhandlerconfiguration->](securitytokenhandlerconfiguration.md) -Element angegeben sind, und die auf Dienst Ebene unter [ \< identityconfiguration >](identityconfiguration.md) Element.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende XML `<add>` -Code zeigt die Verwendung des `<remove>` -Elements und des-Elements, um den standardsitzungstokenhandler durch einen benutzerdefinierten Sitzungs Token-Handler Der XML-Code stammt aus `ClaimsAwareWebFarm` dem Beispiel.  

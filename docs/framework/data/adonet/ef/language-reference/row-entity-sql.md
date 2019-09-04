@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641446"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249254"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Erstellt anonyme, strukturell typisierte Datensätze aus einem oder mehreren Werten.  
@@ -35,7 +35,7 @@ ROW ( expression [ AS alias ] [,...] )
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- Wenn für einen Ausdruck in einem Zeilenkonstruktor kein Alias angegeben ist, wird vom Entity Framework ein Alias generiert. Weitere Informationen finden Sie im Abschnitt "Regeln für das Aliasing" im Thema [Bezeichner](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) .  
+ Wenn für einen Ausdruck in einem Zeilenkonstruktor kein Alias angegeben ist, wird vom Entity Framework ein Alias generiert. Weitere Informationen finden Sie im Abschnitt "Regeln für das Aliasing" im Thema [Bezeichner](identifiers-entity-sql.md) .  
   
  Die folgenden Regeln gelten für Ausdrucksaliasing in einem Zeilenkonstruktor:  
   
@@ -43,12 +43,12 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 - Zwei Ausdrücke im gleichen Zeilenkonstruktor können nicht über den gleichen Alias verfügen.  
   
- Weitere Informationen zu Abfragekonstruktoren finden Sie unter [Typen erstellen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Weitere Informationen zu Abfragekonstruktoren finden Sie unter [Konstruieren von Typen](constructing-types-entity-sql.md).  
   
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der ROW-Operator zur Erstellung anonymer, strukturell typisierter Datensätze verwendet. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
@@ -56,6 +56,6 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konstruktionstypen](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Typdefinitionen](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [Konstruktionstypen](constructing-types-entity-sql.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)
+- [Typdefinitionen](type-definitions-entity-sql.md)

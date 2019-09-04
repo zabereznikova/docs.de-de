@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539911"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251155"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Kompilierte Abfragen (LINQ to Entities)
 Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen ausführt, kann in vielen Fällen die Leistung gesteigert werden, indem die Abfrage einmal kompiliert und anschließend mehrmals mit verschiedenen Parametern ausgeführt wird. So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird. Für derartige Aufgaben unterstützt LINQ to Entities die Verwendung kompilierter Abfragen.  
   
  Ab .NET Framework 4.5 werden LINQ-Abfragen automatisch zwischengespeichert. Sie können jedoch weiterhin kompilierte LINQ-Abfragen verwenden, um diesen Aufwand in späteren Ausführungen zu reduzieren. Kompilierte Abfragen können effizienter als LINQ-Abfragen sein, die automatisch zwischengespeichert werden. Beachten Sie, dass LINQ to Entities-Abfragen, die den `Enumerable.Contains`-Operator auf Auflistungen im Arbeitsspeicher anwenden, nicht automatisch zwischengespeichert werden. Darüber hinaus ist das Parametrisieren von Auflistungen im Arbeitsspeicher in kompilierten LINQ-Abfragen nicht zulässig.  
   
- Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung. Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen. Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen. Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz). Die Abfrage wird nur einmal während der ersten Ausführung kompiliert. Die für die Abfrage zur Kompilierungszeit festgelegten Mergeoptionen können später nicht geändert werden. Nachdem die Abfrage kompiliert ist, können Sie nur Parameter mit einem primitiven Typ angeben. Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern. Weitere Informationen finden Sie unter [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung. Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen. Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen. Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz). Die Abfrage wird nur einmal während der ersten Ausführung kompiliert. Die für die Abfrage zur Kompilierungszeit festgelegten Mergeoptionen können später nicht geändert werden. Nachdem die Abfrage kompiliert ist, können Sie nur Parameter mit einem primitiven Typ angeben. Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern. Weitere Informationen finden Sie unter [Entity Framework mergeoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591) .  
   
- Die LINQ to Entities-Abfrageausdruck, der die <xref:System.Data.Objects.CompiledQuery>des `Compile` Methode kompiliert wird durch einen der generischen dargestellt `Func` Delegaten, z. B. <xref:System.Func%605>. Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln. Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen. Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
+ Der LINQ to Entities Abfrage Ausdruck, der <xref:System.Data.Objects.CompiledQuery>von `Compile` der-Methode der-Methode kompiliert wird, wird `Func` durch einen der <xref:System.Func%605>generischen Delegaten wie dargestellt. Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln. Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen. Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen <xref:System.Decimal>-Eingabeparameter akzeptiert und eine Auftragssequenz zurückgibt, in der der fällige Gesamtbetrag 200,00 US-Dollar oder mehr beträgt:  
@@ -40,7 +40,7 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird kompiliert und ruft dann eine Abfrage, die akzeptiert eine <xref:System.String> -Eingabeparameter übergeben wird und gibt eine `Contact` , deren e-Mail-Adresse mit der angegebenen Zeichenfolge beginnt:  
+ Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen <xref:System.String> Eingabeparameter akzeptiert. Anschließend wird `Contact` ein-Wert zurückgegeben, dessen e-Mail-Adresse mit der angegebenen Zeichenfolge beginnt:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
@@ -70,6 +70,6 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [ADO.NET Entity Framework](../index.md)
+- [LINQ to Entities](linq-to-entities.md)
+- [Entity Framework mergeoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)

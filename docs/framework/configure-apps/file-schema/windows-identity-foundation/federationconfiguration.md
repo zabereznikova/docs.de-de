@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988326"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252000"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguriert den <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) und den <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam), wenn die Verbund Authentifizierung über das WS-Verbund Protokoll verwendet wird. Konfiguriert den <xref:System.Security.Claims.ClaimsAuthorizationManager> , wenn die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Klasse oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> die-Klasse zum Bereitstellen der Anspruchs basierten Zugriffs Steuerung verwendet wird.  
   
- \<system.identityModel.services>  
-\<federationConfiguration>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel. Services->** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationconfiguration->**  
   
 ## <a name="syntax"></a>Syntax  
   

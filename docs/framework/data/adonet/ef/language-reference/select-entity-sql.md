@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489891"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249212"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Gibt die von einer Abfrage zurückgegebenen Elemente an.  
@@ -34,18 +34,18 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `topSubclause`  
  Jeder gültige Ausdruck von der Form `top(expr)`, der die Anzahl der von der Abfrage zurückzugebenden Ergebnisse angibt.  
   
- Die LIMIT-Parameter, der die [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) -Operators können ebenfalls die ersten n Elemente im Resultset zu wählen.  
+ Mit dem Limit-Parameter des [Order by](order-by-entity-sql.md) -Operators können Sie auch die ersten n Elemente des Resultsets auswählen.  
   
  `aliasedExpr`  
  Ein Ausdruck der Form:  
   
- `expr` as `identifier` &#124; `expr`  
+ `expr`as `identifier` &#124;`expr`  
   
  `expr`  
  Ein Literal oder ein Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Die SELECT-Klausel wird ausgewertet, nachdem die [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), und [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) Klauseln ausgewertet wurden. Die SELECT-Klausel kann sich nur auf aktuell im Bereich (der FROM-Klausel oder äußerer Bereiche) befindliche Elemente beziehen. Wenn eine GROUP BY-Klausel angegeben wurde, darf die SELECT-Klausel nur auf die Aliase der GROUP BY-Schlüssel verweisen. Verweise auf Elemente der FROM-Klausel sind nur in Aggregatfunktionen zulässig.  
+ Die [SELECT-Klausel](having-entity-sql.md) wird ausgewertet, nachdem die [from](from-entity-sql.md)-, [Group by](group-by-entity-sql.md)-und have-Klauseln ausgewertet wurden. Die SELECT-Klausel kann sich nur auf aktuell im Bereich (der FROM-Klausel oder äußerer Bereiche) befindliche Elemente beziehen. Wenn eine GROUP BY-Klausel angegeben wurde, darf die SELECT-Klausel nur auf die Aliase der GROUP BY-Schlüssel verweisen. Verweise auf Elemente der FROM-Klausel sind nur in Aggregatfunktionen zulässig.  
   
  Die Liste von einem oder mehreren auf das SELECT-Schlüsselwort folgenden Abfrageausdrücken wird als Auswahlliste oder Projektion bezeichnet. Die allgemeinste Form der Projektion ist ein einzelner Abfrageausdruck. Durch Auswahl eines Members `member1` aus einer Auflistung `collection1`wird eine neue Auflistung aller Werte `member1` für jedes Objekt in `collection1`erstellt. Dies wird im folgenden Beispiel dargestellt.  
   
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- Der vorherigen Transact-SQL-Abfrageausdruck, ausgedrückt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] auf folgende Weise.  
+ Der vorherige Transact-SQL-Abfrage Ausdruck wird in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wie folgt ausgedrückt.  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der SELECT-Operator verwendet, um die von einer Abfrage zurückzugebenden Elemente anzugeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfrageausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [Abfrageausdrücke](query-expressions-entity-sql.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)
+- [TOP](top-entity-sql.md)

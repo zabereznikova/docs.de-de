@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 63f4cb3cbb90afc37629b336972b5e09d20346b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963293"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247530"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Anpassen von Operationen durch Verwendung von gespeicherten Prozeduren
 Gespeicherte Prozeduren stellen einen allgemeinen Ansatz zum Überschreiben des Standardverhaltens dar. Die Beispiele in diesem Absatz zeigen, wie Sie erzeugte Methoden für gespeicherte Prozeduren verwenden und wie Sie gespeicherte Prozeduren direkt aufrufen können.  
@@ -18,7 +18,7 @@ Gespeicherte Prozeduren stellen einen allgemeinen Ansatz zum Überschreiben des 
  Wenn Sie Visual Studio verwenden, können Sie mit dem objektrelationaler Designer gespeicherte Prozeduren zuweisen, um Einfügungen, Updates und Löschungen auszuführen.  
   
 > [!NOTE]
-> Um datenbankgenerierte Werte einzulesen, verwenden Sie Ausgabeparameter in den gespeicherten Prozeduren. Wenn Sie keine Ausgabeparameter verwenden können, schreiben Sie eine partielle Methoden Implementierung, anstatt sich auf außer Kraft setzungen zu verlassen, die vom objektrelationaler Designer generiert werden. Member, die datenbankgenerierten Werten zugeordnet sind, müssen auf die entsprechenden Werte festgelegt werden, nach dem die `INSERT`-Operation oder die `UPDATE`-Operation erfolgreich abgeschlossen wurde. Weitere Informationen finden Sie unter [Zuständigkeiten des Entwicklers beim Überschreiben des Standard Verhaltens](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+> Um datenbankgenerierte Werte einzulesen, verwenden Sie Ausgabeparameter in den gespeicherten Prozeduren. Wenn Sie keine Ausgabeparameter verwenden können, schreiben Sie eine partielle Methoden Implementierung, anstatt sich auf außer Kraft setzungen zu verlassen, die vom objektrelationaler Designer generiert werden. Member, die datenbankgenerierten Werten zugeordnet sind, müssen auf die entsprechenden Werte festgelegt werden, nach dem die `INSERT`-Operation oder die `UPDATE`-Operation erfolgreich abgeschlossen wurde. Weitere Informationen finden Sie unter [Zuständigkeiten des Entwicklers beim Überschreiben des Standard Verhaltens](responsibilities-of-the-developer-in-overriding-default-behavior.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -49,4 +49,4 @@ Gespeicherte Prozeduren stellen einen allgemeinen Ansatz zum Überschreiben des 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Aufgaben der Entwickler beim Überschreiben von Standardverhalten](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Aufgaben der Entwickler beim Überschreiben von Standardverhalten](responsibilities-of-the-developer-in-overriding-default-behavior.md)

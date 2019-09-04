@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015608"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254176"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
 Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierungs Einstellungen, die von WPF-Anwendungen verwendet werden.  
@@ -19,7 +19,7 @@ Dieses Thema enthält eine Übersicht über die Microsoft ClearType-Registrierun
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Anwendungen, die Text auf einem Anzeigegerät darstellen, verwenden ClearType-Funktionen, um ein verbessertes Leseverhalten bereitzustellen. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType funktioniert, indem auf die einzelnen vertikalen Farbstreifen Elemente in jedem Pixel eines LCD-Bildschirms zugegriffen wird. Weitere Informationen zu ClearType finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
- Text, der mit ClearType gerendert wird, kann bei Anzeige auf verschiedenen Anzeigegeräten erheblich anders erscheinen. Beispielsweise implementiert eine kleine Anzahl von Monitoren die Farbstreifen Elemente in der blauen, grünen und roten Reihenfolge anstelle der gängigeren roten, grünen und blauen Reihen [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]Folge ().  
+ Text, der mit ClearType gerendert wird, kann bei Anzeige auf verschiedenen Anzeigegeräten erheblich anders erscheinen. Eine kleine Anzahl von Monitoren implementiert beispielsweise die Farbstreifen Elemente in der blauen, grünen und roten Reihenfolge anstelle der gängigeren roten, grünen und blauen Reihenfolge (RGB).  
   
  Text, der mit ClearType gerendert wird, kann sich auch erheblich unterscheiden, wenn er von Einzelpersonen mit unterschiedlichen Farb Sensitivität angezeigt wird. Manche Benutzer erkennen leichte Farbunterschiede besser als andere.  
   

@@ -2,12 +2,12 @@
 title: Form der Befehlsstrukturen
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763983"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248223"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Form der Befehlsstrukturen
 
@@ -25,7 +25,7 @@ Abfragebefehlsstrukturen unterstützen eine umfangreichere Semantik als SQL:1999
 
 Die „DBQueryCommandTree.Query“-Eigenschaft ist der Stamm der Ausdrucksbaumstruktur, die die Abfragelogik beschreibt. Die "DBQueryCommandTree.Parameters"-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter. Die Ausdrucksstruktur besteht aus "DbExpression"-Objekten.
 
-Ein "DbExpression"-Objekt stellt eine Berechnung dar. Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join. Alle "DbExpression"-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt. Dieser Typ wird als "TypeUsage" ausgedrückt.
+Ein "DbExpression"-Objekt stellt eine Berechnung dar. Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join. Jedes DbExpression-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt. Dieser Typ wird als "TypeUsage" ausgedrückt.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formen der Ausgabeabfrage-Befehlsstruktur
 
@@ -75,9 +75,9 @@ Die folgenden Funktionstypen können übergeben werden:
 
 - Benutzerdefinierte Funktionen.
 
-Kanonische Funktionen (finden Sie unter [kanonische Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) für Weitere Informationen) angegeben sind, als Teil der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], und die Anbieter sollten die Implementierungen für kanonische Funktionen, die anhand dieser Angaben bereitstellen. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.
+Kanonische Funktionen (Weitere Informationen finden Sie unter [kanonische Funktionen](./language-reference/canonical-functions.md) ) werden als Teil [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]von angegeben, und Anbieter sollten auf der Grundlage dieser Spezifikationen Implementierungen für kanonische Funktionen bereitstellen. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.
 
-Zudem verfügen Funktionen mit dem "NiladicFunction"-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  Das heißt,  *\<FunctionName >* anstelle von  *\<FunctionName > ()*.
+Zudem verfügen Funktionen mit dem "NiladicFunction"-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  Das heißt,  *\<dass FunctionName >* anstelle von  *\<FunctionName > ()* ist.
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -87,7 +87,7 @@ Zudem verfügen Funktionen mit dem "NiladicFunction"-Attribut nicht über Argume
 
   - Der Ergebnistyp muss ein Zeilentyp sein.
 
-  - Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt. In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf. In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt. Ein Ausdruck, der einer skalaren Unterabfrage entspricht, wird eine Ausdrucksbaumstruktur, die eine Unterabfrage darstellt, die genau eine Zeile und eine Spalte eines primitiven Typs mit einer DbElementExpression-Objektstamm zurückgibt
+  - Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt. In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf. In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt. Ein Ausdruck, der eine skalare Unterabfrage darstellt, ist eine Ausdrucks Baumstruktur, die eine Unterabfrage darstellt, die genau eine Zeile und eine Spalte eines primitiven Typs mit einem "DbElementExpression"-Objekt Stamm zurückgibt.
 
 - Mit einem Auflistungsrückgabetyp. In diesem Fall wird eine neue Auflistung der als Argumente bereitgestellten Ausdrücke definiert.
 
@@ -105,11 +105,11 @@ Bei der "Limit"-Eigenschaft kann es sich nur um einen "DbConstantExpression" ode
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-Bei Verwendung in ausgabebefehlsstrukturen entspricht "DbScanExpression" effektiv einen Scan über eine Tabelle, eine Sicht oder einer Speicherabfrage, die durch EntitySetBase::Target dargestellt wird.
+Bei Verwendung in Ausgabe Befehlsstrukturen stellt DbScanExpression einen Scan über eine Tabelle, eine Sicht oder eine Speicher Abfrage dar, die durch EntitySetBase:: Target dargestellt wird.
 
-Wenn die Metadateneigenschaft "Defining Query" des Ziels nicht Null ist, ist, und es sich um eine Abfrage darstellt, wird der Text der Abfrage für die in dieser Metadateneigenschaft in der jeweiligen anbietersprache (oder -Dialekt) wie in der Speicherschemadefinition angegeben bereitgestellt.
+Wenn die Metadateneigenschaft "definierende Abfrage" des Ziels nicht NULL ist, stellt Sie eine Abfrage dar. der Abfragetext, für den in der Metadateneigenschaft in der spezifischen Sprache des Anbieters (oder im Dialekt) bereitgestellt wird, wie in der Speicher Schema Definition angegeben.
 
-Andernfalls entspricht das Ziel einer Tabelle oder Sicht. Das Schemapräfix befindet sich entweder in die Metadateneigenschaft "Schema", wenn nicht null ist, andernfalls des Namens des Entitätscontainers.  Namen der Tabelle oder Sicht ist entweder die Metadateneigenschaft "Table", wenn nicht Null ist, andernfalls der Name-Eigenschaft der Entität Basis festgelegt.
+Andernfalls entspricht das Ziel einer Tabelle oder Sicht. Das Schema Präfix ist entweder in der Metadateneigenschaft "Schema", wenn nicht NULL, andernfalls der Name des Entitätencontainers.  Der Tabellen-oder Sichtname ist entweder die Metadateneigenschaft "Table", wenn Sie nicht NULL ist, andernfalls die Name-Eigenschaft der Entitätenmenge.
 
 All diese Eigenschaften beruhen auf der Definition des entsprechenden "EntitySet" in der Speicherschema-Definitionsdatei (SSDL).
 
@@ -119,4 +119,4 @@ Wenn in Ausgabebefehlsstrukturen auf primitive Typen verwiesen wird, erfolgt der
 
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL-Generierung](sql-generation.md)

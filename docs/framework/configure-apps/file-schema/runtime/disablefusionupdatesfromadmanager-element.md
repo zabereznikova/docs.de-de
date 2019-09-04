@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b65711ad8c404d1c4f54a6197faf598e2215226f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663767"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252652"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disablefusionupdatesfromadmanager-> Element
 Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.  
   
- \<Configuration >-Element  
-\<Runtime-> Element  
-\<disableFusionUpdatesFromADManager>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableFusionUpdatesFromADManager>**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -3,17 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943661"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251813"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 Konfigurations Abschnitt für die Authentifizierung mit dem WS-Federation-Protokoll.  
   
- \<system.identityModel.services>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System. IdentityModel. Services->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +44,7 @@ Konfigurations Abschnitt für die Authentifizierung mit dem WS-Federation-Protok
  Fügen Sie `<system.identityModel.services>` der Konfigurationsdatei Ihrer Anwendung einen Abschnitt hinzu, um die Einstellungen für Sam und wsfam bereitzustellen.  
   
 > [!IMPORTANT]
-> Wenn Sie die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Klasse <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> oder die-Klasse verwenden, um eine `<identityConfiguration>` Anspruchs basierte Zugriffs Steuerung in Ihrem Code bereitzustellen<xref:System.Security.Claims.ClaimsAuthorizationManager>, werden der anspruchsautorisierungs-Manager () und die Richtlinie, die für Autorisierungs Entscheidungen verwendet wird, über Element, das implizit oder explizit von einem `<federationConfiguration>` -Element in diesem Abschnitt referenziert wird. Weitere Informationen finden Sie in den Hinweisen unter dem [ \<Element federationconfiguration >](federationconfiguration.md) .  
+> Wenn Sie die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -Klasse <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> oder die-Klasse verwenden, um eine `<identityConfiguration>` Anspruchs basierte Zugriffs Steuerung in Ihrem Code bereitzustellen<xref:System.Security.Claims.ClaimsAuthorizationManager>, werden der anspruchsautorisierungs-Manager () und die Richtlinie, die für Autorisierungs Entscheidungen verwendet wird, über Element, das implizit oder explizit von einem `<federationConfiguration>` -Element in diesem Abschnitt referenziert wird. Weitere Informationen finden **Sie in den** Hinweisen unter dem [ \<Element federationconfiguration >](federationconfiguration.md) .  
   
  Der `<system.identityModel.services>` -Abschnitt wird durch die <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> -Klasse dargestellt. Die Auflistung der `<federationConfiguration>` untergeordneten Elemente, die im-Abschnitt konfiguriert wurden <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> , wird durch die-Klasse dargestellt.  
   

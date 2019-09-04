@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 83b7533f66c68dd25f21906394a40c956c9b88b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 787ead2c52f874af2ca1a02bf009da40cee875ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935998"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250773"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden
-In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt oder als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Eine *Modell definierte Funktion* ist eine Funktion, die im konzeptionellen Modell definiert ist. Die folgenden Prozeduren beschreiben, wie diese Funktionen direkt aufgerufen werden, anstatt sie von LINQ to Entities-Abfragen aufzurufen. Weitere Informationen zum Aufrufen Modell definierter Funktionen in LINQ to Entities Abfragen finden [Sie unter Gewusst wie: Ruft Modell definierte Funktionen in Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)auf.  
+In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt oder als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Eine *Modell definierte Funktion* ist eine Funktion, die im konzeptionellen Modell definiert ist. Die folgenden Prozeduren beschreiben, wie diese Funktionen direkt aufgerufen werden, anstatt sie von LINQ to Entities-Abfragen aufzurufen. Weitere Informationen zum Aufrufen Modell definierter Funktionen in LINQ to Entities Abfragen finden [Sie unter Gewusst wie: Ruft Modell definierte Funktionen in Abfragen](how-to-call-model-defined-functions-in-queries.md)auf.  
   
  Egal, ob Sie eine modelldefinierte Funktion als <xref:System.Data.Objects.ObjectContext>-Methode oder statische Methode für eine benutzerdefinierte Klasse aufrufen: Zuerst muss die Methode der modelldefinierten Funktion mit einem <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> zugeordnet werden. Wenn Sie jedoch für die <xref:System.Data.Objects.ObjectContext>-Klasse eine Methode definieren, müssen Sie den LINQ-Anbieter mithilfe der <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>-Eigenschaft bereitstellen. Wenn Sie jedoch für eine benutzerdefinierte Klasse eine statische Methode definieren, müssen Sie den LINQ-Anbieter mithilfe der <xref:System.Linq.IQueryable.Provider%2A>-Eigenschaft bereitstellen. Weitere Informationen finden Sie in den Beispielen im Anschluss an die folgenden Prozeduren.  
   
@@ -108,5 +108,5 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Aufrufen von Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
+- [Abfragen in LINQ to Entities](queries-in-linq-to-entities.md)
+- [Aufrufen von Funktionen in LINQ to Entities-Abfragen](calling-functions-in-linq-to-entities-queries.md)

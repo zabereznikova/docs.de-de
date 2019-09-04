@@ -2,85 +2,85 @@
 title: Hintergrundinformationen
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: c64b720f893c907b0570e886f0a4d81bb19d09a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878707"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248094"
 ---
 # <a name="background-information"></a>Hintergrundinformationen
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
   
  Führen Sie diese Schritte aus, um weitere Beispiele für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Code und -Anwendungen zu erhalten:  
   
-- Microsoft-Docs nach speziellen Themen suchen.  
+- Suchen Sie Microsoft-Dokumentation nach bestimmten Problemen.  
   
-- Teilnahme an der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren.  
+- Nehmen Sie am [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488)Teil, in dem Sie komplexere Themen ausführlich mit Experten erörtern können.  
   
-- Untersuchen Sie im Whitepaper, das details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Lesen Sie das Whitepaper mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Details zur Technologie, die mit C# Visual Basic und Codebeispielen vervollständigt werden. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [ADO.NET und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- Beschreibt die Beziehung von ADO.NET und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ [ADO.NET und LINQ to SQL](ado-net-and-linq-to-sql.md)  
+ Beschreibt die Beziehung zwischen ADO.net und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Analysieren von LINQ to SQL-Quellcode](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ [Analysieren von LINQ to SQL-Quellcode](analyzing-linq-to-sql-source-code.md)  
  Beschreibt, wie eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Zuordnung analysiert wird, indem Quellcode aus der Beispieldatenbank Northwind erzeugt und angezeigt wird.  
   
- [Anpassen von Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Anpassen von Insert-, Update- und Delete-Operationen](customizing-insert-update-and-delete-operations.md)  
  Beschreibt, wie Validierungscode und andere Anpassungen hinzugefügt werden.  
   
- [Datenbindung](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
- Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet <xref:System.ComponentModel.IListSource> Datenbindung unterstützt.  
+ [Datenbindung](data-binding.md)  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] BeschreibtdieVerwendungvonzurunter<xref:System.ComponentModel.IListSource> Stützung der Datenbindung.  
   
- [Unterstützung von Vererbung](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
+ [Unterstützung von Vererbung](inheritance-support.md)  
  Beschreibt die Rolle der Vererbung im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodell und die Verwendung von zugehörigen Operatoren in Ihren Abfragen.  
   
- [Lokale Methodenaufrufe](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
+ [Lokale Methodenaufrufe](local-method-calls.md)  
  Beschreibt die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung für Aufrufe von lokalen Methoden.  
   
- [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)  
  Stellt ausführliche Informationen für Anwendungen mit mehreren Ebenen bereit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden.  
   
- [Objektidentität](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [Objektidentität](object-identity.md)  
  Beschreibt die Objektidentität im [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodell und erläutert, wie sich diese Funktion von der Objektidentität in einer Datenbank unterscheidet.  
   
- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [Das LINQ to SQL-Objektmodell](the-linq-to-sql-object-model.md)  
  Beschreibt das Objektmodell und seine Beziehung zum relationalen Datenmodell.  
   
- [Objektzustände und Änderungsverfolgung](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
+ [Objektzustände und Änderungsverfolgung](object-states-and-change-tracking.md)  
  Stellt ausführliche Informationen darüber bereit, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Änderungen verfolgt.  
   
- [Optimistische Parallelität: Übersicht](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Optimistische Parallelität: Übersicht](optimistic-concurrency-overview.md)  
  Beschreibt vollständige Parallelität und definiert Begriffe.  
   
- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [Abfragekonzepte](query-concepts.md)  
  Beschreibt Aspekte von Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die sich von Abfragen in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] unterscheiden.  
   
- [Abrufen von Objekten aus dem Identitätscache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)  
+ [Abrufen von Objekten aus dem Identitätscache](retrieving-objects-from-the-identity-cache.md)  
  Beschreibt die Typen von Abfragen, die Objekte aus dem Identitäts-Cache abrufen.  
   
- [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)  
+ [Sicherheit in LINQ to SQL](security-in-linq-to-sql.md)  
  Beschreibt den richtigen Ansatz für die Sicherheit bei Datenbankverbindungen.  
   
- [Serialisierung](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)  
+ [Serialisierung](serialization.md)  
  Beschreibt den Serialisierungsprozess in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen.  
   
- [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [Gespeicherte Prozeduren](stored-procedures.md)  
  Beschreibt, wie gespeicherte Prozeduren zur Entwurfszeit zugeordnet und wie sie von der Anwendung aufgerufen werden.  
   
- [Transaktionsunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)  
+ [Transaktionsunterstützung](transaction-support.md)  
  Gliedert die drei Transaktionsmodelle, die von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt werden.  
   
- [SQL-CLR-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
+ [SQL-CLR-Typenkonflikte](sql-clr-type-mismatches.md)  
  Beschreibt die Herausforderungen bei der Vermischung unterschiedlicher Typsysteme.  
   
- [Benutzerdefinierte SQL-CLR-Typenzuordnungen](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)  
+ [Benutzerdefinierte SQL-CLR-Typenzuordnungen](sql-clr-custom-type-mappings.md)  
  Stellt Anleitungen zum Anpassen von Typzuordnungen bereit.  
   
- [Benutzerdefinierte Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)  
+ [Benutzerdefinierte Funktionen](user-defined-functions.md)  
  Beschreibt, wie benutzerdefinierte Prozeduren zur Entwurfszeit zugeordnet und wie sie von der Anwendung aufgerufen werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Programmierhandbuch](programming-guide.md)  
  Umfasst Links zu Abschnitten, die verschiedene Aspekte von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erläutern.

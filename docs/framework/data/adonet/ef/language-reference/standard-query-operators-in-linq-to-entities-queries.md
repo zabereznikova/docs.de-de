@@ -2,24 +2,24 @@
 title: Standardabfrageoperatoren in LINQ to Entities-Abfragen
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539446"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249150"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardabfrageoperatoren in LINQ to Entities-Abfragen
-In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. LINQ stellt eine Reihe von Standardabfragemethoden für die Verwendung in einer Abfrage bereit. Die meisten dieser Methoden bearbeiten Sequenzen; In diesem Kontext ist eine Sequenz ein Objekt, dessen Typ implementiert, die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung, Gruppierung, Paging und mehr bereit. Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax, sodass sie mithilfe von Abfrageausdruckssyntax aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen methodenbasierter Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt. Eine Liste von Standardabfrageoperatoren, die über äquivalente Abfrageausdrucksklauseln verfügen, finden Sie unter [Standard Query Operators Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
+In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgerufen werden sollen. In der Abfrage kann auch angegeben werden, wie die Abfrageergebnisse sortiert, gruppiert und formatiert werden sollen, bevor sie zurückgegeben werden. LINQ stellt eine Reihe von Standardabfragemethoden für die Verwendung in einer Abfrage bereit. Die meisten dieser Methoden arbeiten mit Sequenzen. in diesem Kontext ist eine Sequenz ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601> -Schnittstelle oder die <xref:System.Linq.IQueryable%601> -Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung, Gruppierung, Paging und mehr bereit. Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax, sodass sie mithilfe von Abfrageausdruckssyntax aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen methodenbasierter Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt. Eine Liste der Standard Abfrage Operatoren, die über äquivalente Abfrage Ausdrucks Klauseln verfügen, finden Sie unter [Übersicht über Standard Abfrage Operatoren](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
- Nicht alle Standardabfrageoperatoren werden in LINQ to Entities-Abfragen unterstützt. Weitere Informationen finden Sie unter [unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Dieses Thema enthält Informationen über die standardmäßigen Abfrageoperatoren, speziell für LINQ to Entities ist. Weitere Informationen zu bekannten Problemen in LINQ to Entities-Abfragen finden Sie unter [bekannte Probleme und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Nicht alle Standard Abfrage Operatoren werden in LINQ to Entities Abfragen unterstützt. Weitere Informationen finden Sie [unter Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md). Dieses Thema enthält Informationen zu den-Standard Abfrage Operatoren, die für LINQ to Entities spezifisch sind. Weitere Informationen zu bekannten Problemen in LINQ to Entities Abfragen finden Sie unter [bekannte Probleme und Überlegungen in LINQ to Entities](known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Projektions- und Filtermethoden  
- *Projektion* bezieht sich auf die Elemente eines Resultsets in eine gewünschte Form transformieren. Beispielsweise kann eine Teilmenge der benötigten Eigenschaften der einzelnen Objekte im Resultset projiziert werden, es kann eine Eigenschaft projiziert werden, um eine mathematische Berechnung damit auszuführen, oder es kann das ganze Objekt aus dem Resultset projiziert werden. Zur Projektion werden die `Select`-Methode und die `SelectMany`-Methode verwendet.  
+ *Projektion* bezieht sich auf das Transformieren der Elemente eines Resultsets in eine gewünschte Form. Beispielsweise kann eine Teilmenge der benötigten Eigenschaften der einzelnen Objekte im Resultset projiziert werden, es kann eine Eigenschaft projiziert werden, um eine mathematische Berechnung damit auszuführen, oder es kann das ganze Objekt aus dem Resultset projiziert werden. Zur Projektion werden die `Select`-Methode und die `SelectMany`-Methode verwendet.  
   
- *Filtern von* bezieht sich auf den Betrieb der Einschränkung des Resultsets, die nur die Elemente enthält, die eine bestimmte Bedingung erfüllen. Zum Filtern wird die `Where`-Methode verwendet.  
+ *Filterung* bezieht sich auf den Vorgang, bei dem das Resultset auf die Elemente beschränkt wird, die einer bestimmten Bedingung entsprechen. Zum Filtern wird die `Where`-Methode verwendet.  
   
- Die meisten Überladungen der der Projektions- und Filtermethoden sind davon ausgenommen sind die, die ein Positionsargument akzeptieren, in LINQ to Entities unterstützt.  
+ Die meisten über Ladungen der Projektions-und Filter Methoden werden in LINQ to Entities unterstützt, mit Ausnahme derjenigen, die ein Positions Argument akzeptieren.  
   
 ## <a name="join-methods"></a>Methoden zur Verknüpfung  
  Das Verknüpfen ist eine wichtige Operation bei Abfragen von Daten aus Datenquellen, die nicht über navigierbare Beziehungen verfügen. Eine Verknüpfung zweier Datenquellen ist die Zuordnung von Objekten der einen Datenquelle zu Objekten in der anderen Datenquelle, die über ein gemeinsames Attribut oder eine gemeinsame Eigenschaft verfügen. Zur Verknüpfung werden die `Join`-Methode und die `GroupJoin`-Methode verwendet.  
@@ -29,7 +29,7 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
 ## <a name="set-methods"></a>Methoden für Mengen  
  Mengenoperationen in LINQ sind Abfrageoperationen, deren Resultsets auf der Gegenwart oder Abwesenheit äquivalenter Elemente in derselben oder in einer anderen Auflistung (oder Menge) basieren. Für Mengen werden die Methoden `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` und `Union` verwendet.  
   
- Die meisten Überladungen der die Set-Methoden werden in LINQ to Entities unterstützt, aber es einige Unterschiede im Verhalten im Vergleich zu LINQ to Objects gibt. Legen Sie jedoch, Methoden, mit denen ein <xref:System.Collections.Generic.IEqualityComparer%601> werden nicht unterstützt werden, da der Vergleich für die Datenquelle übersetzt werden kann.  
+ Die meisten über Ladungen der Set-Methoden werden in LINQ to Entities unterstützt, es gibt jedoch einige Unterschiede im Verhalten im Vergleich zu LINQ to Objects. Set-Methoden, die einen <xref:System.Collections.Generic.IEqualityComparer%601> verwenden, werden jedoch nicht unterstützt, da der Vergleich nicht in die Datenquelle übersetzt werden kann.  
   
 ## <a name="ordering-methods"></a>Sortiermethoden  
  Mit Sortierung wird das auf einem oder mehreren Attributen basierende Sortieren von Elementen eines Resultsets bezeichnet. Durch die Angabe eines oder mehrerer Sortierkriterien können Verbindungen innerhalb einer Gruppe aufgelöst werden.  
@@ -67,16 +67,16 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
 |`Sum`|Gibt NULL zurück.|Gibt NULL zurück.|Gibt die Summe der von NULL verschiedenen Werte in einer Sequenz zurück.|Berechnet die Summe einer Sequenz von numerischen Werten.|  
   
 ## <a name="type-methods"></a>Typmethoden  
- Die beiden LINQ-Methoden, die typkonvertierung und das Testen verarbeiten, werden sowohl im Kontext von Entity Framework unterstützt. Dies bedeutet, dass die einzigen unterstützten Typen werden, die in den entsprechenden Entity Framework-Typ zugeordnet. Eine Liste dieser Typen finden Sie [konzeptionelle Modelltypen (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Als Typmethoden werden `Convert` und `OfType` verwendet.  
+ Beide LINQ-Methoden, die mit Typkonvertierung und-Tests zu tun haben, werden im Kontext der Entity Framework unterstützt. Dies bedeutet, dass es sich bei den einzigen unterstützten Typen um Typen handelt, die dem entsprechenden Entity Framework Typ zugeordnet werden. Eine Liste dieser Typen finden Sie unter [konzeptionelle Modelltypen (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Als Typmethoden werden `Convert` und `OfType` verwendet.  
   
  `OfType` wird für Entitätstypen unterstützt. `Convert` wird für primitive Typen in einem konzeptionellen Modell unterstützt.  Die C#-Methoden `is` und `as` werden ebenfalls unterstützt.  
   
 ## <a name="paging-methods"></a>Pagingmethoden  
- Pagingvorgänge geben ein einzelnes Element oder mehrere Elemente aus einer Sequenz zurück. Sind die unterstützten Pagingmethoden `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, und `Take`.  
+ Paging-Vorgänge geben ein einzelnes Element oder mehrere Elemente aus einer Sequenz zurück. Die unterstützten Paging- `First`Methoden `FirstOrDefault`sind `Single`, `SingleOrDefault`, `Skip`,, `Take`und.  
   
- Eine Anzahl von Pagingmethoden werden nicht unterstützt, da entweder die Unfähigkeit, Funktionen mit der Datenquelle oder keine implizite Sortierung der Mengen in der Datenquelle zugeordnet werden. Methoden, die einen Standardwert zurückgeben, sind auf primitive Typen in einem konzeptionellen Modell und Referenztypen mit dem Standardwert NULL beschränkt. Pagingmethoden, die für eine leere Sequenz ausgeführt werden, geben NULL zurück.  
+ Eine Reihe von Pagingmethoden werden nicht unterstützt, da Funktionen nicht der Datenquelle zugeordnet werden können oder nicht die implizite Reihenfolge von Sätzen in der Datenquelle. Methoden, die einen Standardwert zurückgeben, sind auf primitive Typen in einem konzeptionellen Modell und Referenztypen mit dem Standardwert NULL beschränkt. Pagingmethoden, die für eine leere Sequenz ausgeführt werden, geben NULL zurück.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+- [Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [Übersicht über Standardabfrageoperatoren](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

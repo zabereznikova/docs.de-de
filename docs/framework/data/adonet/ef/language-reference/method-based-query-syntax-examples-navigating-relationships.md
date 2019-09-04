@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 56ae913da3ca06a08b5bacc5ce225597980467a6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539462"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250150"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Beispiele für die methodenbasierte Abfragesyntax: Navigieren in Beziehungen
-Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind Verknüpfungseigenschaften für die Suche nach Entitäten an den Enden einer Zuordnung. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für in der methodenbasierten Abfragesyntax zum Navigieren in Beziehungen mithilfe von Navigationseigenschaften in LINQ to Entities-Abfragen.  
+Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind Verknüpfungseigenschaften für die Suche nach Entitäten an den Enden einer Zuordnung. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für die Methoden basierte Abfrage Syntax zum Navigieren von Beziehungen mithilfe von Navigations Eigenschaften in LINQ to Entities Abfragen.  
   
  Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
- In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
+ In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -54,5 +54,5 @@ Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Beziehungen, Navigationseigenschaften und Fremdschlüssel](/ef/ef6/fundamentals/relationships)
-- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Beziehungen, Navigations Eigenschaften und Fremdschlüssel](/ef/ef6/fundamentals/relationships)
+- [Abfragen in LINQ to Entities](queries-in-linq-to-entities.md)

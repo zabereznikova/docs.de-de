@@ -3,19 +3,20 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a4454042e1d97fb3cc2d6f2735104dadda6e7b5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944298"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251770"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 Aktiviert die Erkennung von tokenwiedergabe und gibt die Ablaufzeit für Token an.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<tokenReplayDetection>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenreplayerkennungs->**  
   
 ## <a name="syntax"></a>Syntax  
   

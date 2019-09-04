@@ -2,12 +2,12 @@
 title: COLLECTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-ms.openlocfilehash: 8cd440571726796ee3d2c91e0d2f6b50571e8e27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e611add4ce3f20e42bb01b0bf0392bbe81ec548
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785326"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251199"
 ---
 # <a name="collection-entity-sql"></a>COLLECTION (Entity SQL)
 Das COLLECTION-Schlüsselwort wird nur in der Definition einer Inlinefunktion verwendet. Auflistungsfunktionen sind Funktionen, die sich auf eine Reihe von Werten auswirken und eine Skalarausgabe erzeugen.  
@@ -23,7 +23,7 @@ COLLECTION(type_definition)
  Ein Ausdruck, der eine Auflistung von unterstützten Typen, Zeilen oder Verweisen zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zum COLLECTION-Schlüsselwort finden Sie unter [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md).  
+ Weitere Informationen zum COLLECTION-Schlüsselwort finden Sie unter [Type Definitions](type-definitions-entity-sql.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie mit dem COLLECTION-Schlüsselwort eine Auflistung von Dezimalziffern als Argument für eine Inlineabfragefunktion deklariert wird.  
@@ -32,4 +32,4 @@ COLLECTION(type_definition)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL-Referenz](entity-sql-reference.md)

@@ -3,22 +3,23 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 47366c5bb2bd9228268fce3ae6e1fb5ad457dab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4bf8ad2f70499edfc72dd9fcd9a5d8a0aafbbc66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251940"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
 Legt den Anspruchstyp fest, der <xref:System.Security.Principal.IIdentity.Name%2A> die Eigenschaft angibt. Der Anspruchstyp wird verwendet, um <xref:System.Security.Claims.Claim> in der Auflistung von <xref:System.Security.Claims.ClaimsIdentity> -Objekten zu suchen, die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> von der-Methode dieses tokenhandlers zurückgegeben werden. Der Wert des übereinstimmenden Anspruchs wird dann als Name <xref:System.Security.Principal.IIdentity> der von diesem Tokenhandler generierten festgelegt.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
-\<samlSecurityTokenRequirement>  
-\<nameClaimType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securitytokenhandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Hinzufügen**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<samlsecuritytokenrequirements->** ](samlsecuritytokenrequirement.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameclaimtype->**  
   
 ## <a name="syntax"></a>Syntax  
   

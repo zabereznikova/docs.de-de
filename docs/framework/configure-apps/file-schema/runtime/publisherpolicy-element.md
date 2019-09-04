@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663513"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252380"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy-> Element
 Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.  
   
- \<configuration>  
-\<Lauf Zeit >  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly->** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherPolicy->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,13 +51,16 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
 |`no`|Die Herausgeber Richtlinie wird nicht angewendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+
+Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
+|`assemblyBinding`|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|`dependentAssembly`|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie `<dependentAssembly>` ein-Element für jede Assembly.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -65,7 +68,7 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
   
  Die Standardeinstellung für das **Apply** -Attribut ist " **Yes**". Wenn Sie das **Apply** -Attribut auf **No** festlegen, werden alle vorherigen **Yes** -Einstellungen für eine Assembly überschrieben.  
   
- Die Berechtigung ist erforderlich, damit eine Anwendung die Herausgeber Richtlinie mithilfe des [ \<publisherPolicy Apply = "No"/>-](publisherpolicy-element.md) Elements in der Anwendungs Konfigurationsdatei explizit ignoriert. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> -Flag <xref:System.Security.Permissions.SecurityPermission>auf festgelegt wird. Weitere Informationen finden Sie unter [Sicherheits Berechtigung](../../assembly-binding-redirection-security-permission.md)für die assemblybindungsumleitung.  
+ Die Berechtigung ist erforderlich, damit eine Anwendung die Herausgeber Richtlinie mithilfe des [ \<publisherPolicy Apply = "No"/>-](publisherpolicy-element.md) Elements in der Anwendungs Konfigurationsdatei explizit ignoriert. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> -Flag <xref:System.Security.Permissions.SecurityPermission>auf festgelegt wird. Weitere Informationen finden Sie unter [Sicherheits Berechtigung für die assemblybindungsumleitung](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Herausgeber Richtlinie für die `myAssembly`Assembly deaktiviert.  

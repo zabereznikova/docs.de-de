@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 78bafcad0a0f34c74ea58f107621ad145c1b405b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631532"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250681"
 ---
 # <a name="initialization-expressions"></a>Initialisierungsausdrücke
 Ein Initialisierungsausdruck initialisiert ein neues Objekt. Die meisten Initialisierungsausdrücke werden unterstützt, einschließlich der meisten neuen C# 3.0- und Visual Basic 9.0-Initialisierungsausdrücke. Die folgenden Typen können von einer LINQ to Entities-Abfrage initialisiert und zurückgegeben werden:  
@@ -48,4 +48,4 @@ Ein Initialisierungsausdruck initialisiert ein neues Objekt. Die meisten Initial
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ausdrücke in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+- [Ausdrücke in LINQ to Entities-Abfragen](expressions-in-linq-to-entities-queries.md)

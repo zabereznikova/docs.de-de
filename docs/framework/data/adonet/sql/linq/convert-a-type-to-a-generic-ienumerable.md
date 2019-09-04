@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c92f65c22fe4b4128a171c757bb9e9c0ccbc3fee
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032707"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247733"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Konvertieren eines Typs in eine generische "IEnumerable"
 Verwenden Sie <xref:System.Linq.Enumerable.AsEnumerable%2A>, um das als generische `IEnumerable` eingegebene Argument zurückzugeben.  
@@ -25,4 +25,4 @@ Verwenden Sie <xref:System.Linq.Enumerable.AsEnumerable%2A>, um das als generisc
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Abfragebeispiele](query-examples.md)
