@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988417"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252976"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -107,7 +107,7 @@ Weitere Informationen zum Formatieren von .NET-Typen finden Sie unter [Formatier
 ## <a name="null-strings-and-empty-strings"></a>NULL-Zeichenfolgen und leere Zeichenfolgen  
  Eine leere Zeichenfolge ist eine Instanz eines <xref:System.String?displayProperty=nameWithType>-Objekts, dass 0 Zeichen enthält. Leere Zeichenfolgen werden häufig in verschiedenen Programmierszenarios verwendet, um ein leeres Textfeld darzustellen. Sie können Methoden für leere Zeichenfolgen aufrufen, da sie gültige <xref:System.String?displayProperty=nameWithType>-Objekte sind. Leere Zeichenfolgen werden wie folgt initialisiert:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   
