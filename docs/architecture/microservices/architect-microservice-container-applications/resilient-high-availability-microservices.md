@@ -74,7 +74,7 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 - Die offizielle Website von **Splunk**. \
   <https://www.splunk.com/>
 
-- **EventSource-Klasse** API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))
+- **EventSource-Klasse** API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW) \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
