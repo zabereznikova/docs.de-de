@@ -119,7 +119,7 @@ Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfi
 - **Erstellen von Docker-Images für .NET Core-Anwendungen** \
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
-- **Build your own image (Entwickeln eines eigenen Images)** . In der offiziellen Docker-Dokumentation
+- **Build your own image (Entwickeln eines eigenen Images)** . In der offiziellen Docker-Dokumentation.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **Staying up-to-date with .NET Container Images (Immer auf dem neuesten Stand mit .NET-Containerimages)**  \
