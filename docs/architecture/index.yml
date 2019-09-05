@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Leitfaden zur .NET-Anwendungsarchitektur
+metadata:
+  document_id: na
+  title: Leitfaden zur .NET-Anwendungsarchitektur
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: 'Erfahren Sie, wie Sie produktionsbereite .NET-Apps mit einer kostenlosen Anleitung für die Anwendungsarchitektur erstellen.'
+sections:
+  - title: Verfügbare E-Books
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools</a></p>
+      - html: '<p>Dieses Handbuch enthält eine Einführung zu den empfohlenen End-to-End-Lebenszyklusprozessen, anhand derer Sie mit Visual Studio und Microsoft Azure in Containern befindliche Docker-Anwendungen entwickeln, überprüfen und bereitstellen können.</p></li></ul>'
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern</a></p>
+      - html: '<p>Dieses Handbuch enthält eine Einführung zu den Strategien, die zum Migrieren vorhandener Webanwendungen in die Azure-Cloud und zu Windows-Containern erforderlich sind. Sie erfahren mehr über Codestrategien, Datenmigrationen, Orchestratoren und CI/CD-Prozesse.</p></li></ul>'
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure</a></p>
+      - html: '<p>Dieses Handbuch enthält eine Einführung zur empfohlenen Architektur, zum Entwurf und zu Bereitstellungsprozessen, mit denen Sie ASP.NET- und ASP.NET Core-Anwendungen erstellen und in Azure hosten können.</p></li></ul>'
+      - html: <ul><li><p><a href="microservices/index">Architecting Container and Microservice Based Applications (Architekturcontainer und auf Microservice basierende Anwendungen)</a></p>
+      - html: <p>Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.</p></li></ul>
+      - html: '<ul><li><p><a href="serverless/index">Serverlose Apps: Architektur, Muster und Azure-Implementierung</a></p>'
+      - html: '<p>Dies ist eine Anleitung zum Erstellen von serverlosen Anwendungen anhand von Beispielen mithilfe von Azure. Hier werden verschiedene Architektur- und Entwurfsansätze, die Vorteile und Herausforderungen serverloser Anwendungen sowie Szenarios und Anwendungsfälle erläutert.</p></li></ul>'
