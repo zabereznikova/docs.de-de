@@ -2,12 +2,12 @@
 title: Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578123"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373934"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 
@@ -41,9 +41,9 @@ In der folgenden Liste werden die wichtigsten Grundsätze oder Methoden für clo
 
 In Abbildung 4-2 werden die wesentlichen optionalen Säulen einer cloudoptimierten Anwendung veranschaulicht. Die weiteren von Ihnen implementierten Säulen, der readier, den Ihre Anwendung bei der Erfüllung der Erwartungen ihrer Kunden unterstützen wird.
 
-> ![Hauptpfeiler einer cloudoptimierten Anwendung](./media/image2.png)
->
-> **Abbildung 4-2**. Hauptpfeiler einer cloudoptimierten Anwendung
+![Hauptpfeiler einer cloudoptimierten Anwendung](./media/image2.png)
+
+**Abbildung 4-2**. Hauptpfeiler einer cloudoptimierten Anwendung
 
 Zusammenfassend gesagt: eine cloudoptimierte Anwendung ist ein Ansatz zum entwickeln und Verwalten von Anwendungen, die das Cloud Computing Modell nutzen, während eine Kombination aus Containern, verwalteten cloudinfrastruktur, robusten Anwendungstechniken verwendet wird. überwachen, Continuous Delivery und devops, ohne dass Sie Ihre vorhandenen Anwendungen neu entwerfen und wiederherstellen müssen.
 

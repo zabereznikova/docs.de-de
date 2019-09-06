@@ -2,12 +2,12 @@
 title: Erstellen Sie robuste Dienste, die für die Cloud bereit sind. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen Sie robuste Dienste, die für die Cloud bereit sind. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578353"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373972"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 
@@ -29,7 +29,7 @@ Eine robuste Anwendung, wie die in Abbildung 4-9 gezeigt, sollte Verfahren wie "
 
 ![Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden](./media/image9.png)
 
-> **Abbildung 4-9.** Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden
+**Abbildung 4-9.** Teil Fehler, die von Wiederholungen mit exponentiellem Backoff behandelt werden
 
 Sie können diese Techniken sowohl in http-Ressourcen als auch in Datenbankressourcen verwenden. In Abbildung 4-9 basiert die Anwendung auf einer 3-Ebenen-Architektur, sodass Sie diese Techniken auf der Dienst Ebene (http) und auf Ebene der Datenebene (TCP) benötigen. In einer monolithischen Anwendung, die zusätzlich zur-Datenbank nur eine einzelne APP-Ebene verwendet (keine zusätzlichen Dienste oder-Dienste), kann das behandeln vorübergehender Fehler auf der Daten bankverbindungs Ebene ausreichen. In diesem Szenario ist nur eine bestimmte Konfiguration der Datenbankverbindung erforderlich.
 

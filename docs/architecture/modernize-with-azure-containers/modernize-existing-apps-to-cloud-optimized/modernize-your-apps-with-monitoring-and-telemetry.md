@@ -2,12 +2,12 @@
 title: Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578173"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373955"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 
@@ -21,7 +21,7 @@ In Abbildung 4-10 wird ein Beispiel für die Art und Weise veranschaulicht, wie 
 
 ![Dashboard für die Application Insights Überwachung](./media/image10.png)
 
-> **Abbildung 4-10.** Dashboard für die Application Insights Überwachung
+**Abbildung 4-10.** Dashboard für die Application Insights Überwachung
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Überwachen der Docker-Infrastruktur mit log Analytics und der zugehörigen Container Überwachungslösung
 
@@ -45,7 +45,7 @@ Abbildung 4-11 zeigt die Beziehungen zwischen verschiedenen Container Hosts und 
 
 ![Log Analytics Container Überwachungslösung](./media/image11.png)
 
-> **Abbildung 4-11.** Log Analytics Container Überwachungslösung
+**Abbildung 4-11.** Log Analytics Container Überwachungslösung
 
 Mit der Log Analytics-Container Überwachungslösung können Sie folgende Aktionen ausführen:
 

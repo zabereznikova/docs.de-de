@@ -2,18 +2,18 @@
 title: Migrieren und Verschieben vorhandener .net-apps in Azure IaaS (cloudinfrastruktur-bereit)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660740"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373988"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrieren und Verschieben vorhandener .net-apps in Azure IaaS (cloudinfrastruktur-bereit)
 
 > Vision: Als ersten Schritt sollten Sie Ihre vorhandenen Anwendungen einfach in der Cloud neu hosten, um Ihre lokalen Investitionen und die Gesamtkosten für die Hardware-und Netzwerk Wartung zu verringern.
 
-Bevor Sie sich mit der Migration vorhandener Anwendungen zur Azure Infrastructure as a Service (IaaS)-Plattform befassen, *sollten* Sie die Gründe für die direkte Migration zu IaaS in Azure analysieren. Das Szenario auf dieser Modernisierungs Reife liegt im Wesentlichen darin, VMS in der Cloud zu verwenden, anstatt weiterhin Ihre aktuelle lokale Infrastruktur zu verwenden.
+Bevor Sie sich *mit der* Migration vorhandener Anwendungen zur Azure Infrastructure as a Service (IaaS)-Plattform befassen, *sollten* Sie die Gründe für die direkte Migration zu IaaS in Azure analysieren. Das Szenario auf dieser Modernisierungs Reife liegt im Wesentlichen darin, VMS in der Cloud zu verwenden, anstatt weiterhin Ihre aktuelle lokale Infrastruktur zu verwenden.
 
 Ein weiterer Punkt, der analysiert werden kann, ist der *Grund, warum* Sie zu einer reinen IaaS-Cloud migrieren möchten, anstatt einfach erweiterte verwaltete Dienste in Azure hinzuzufügen. Legen Sie fest, für welche Fälle zuerst IaaS erforderlich sind.
 
@@ -21,7 +21,7 @@ In Abbildung 2-1 werden cloudinfrastrukturfähige Anwendungen in den Modernisier
 
 ![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-1.png)
 
-> **Abbildung 2-1.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2-1.** Positionieren von cloudinfrastrukturfähigen Anwendungen
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Gründe für die Migration vorhandener .NET-Webanwendungen zu Azure IaaS
 
@@ -65,7 +65,7 @@ In Abbildung 2-2 wird die integrierte Abhängigkeits Zuordnung für alle Server-
 
 ![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-2.png)
 
-> **Abbildung 2–2.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2–2.** Positionieren von cloudinfrastrukturfähigen Anwendungen
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Verwenden von Azure Site Recovery zum Migrieren Ihrer vorhandenen VMS zu Azure-VMS
 
@@ -77,7 +77,7 @@ In Abbildung 2-3 wird die Ausführung mehrerer VM-Migrationen mithilfe Azure Sit
 
 ![Positionieren von cloudinfrastrukturfähigen Anwendungen](./media/image2-3.png)
 
-> **Abbildung 2-3.** Positionieren von cloudinfrastrukturfähigen Anwendungen
+**Abbildung 2-3.** Positionieren von cloudinfrastrukturfähigen Anwendungen
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

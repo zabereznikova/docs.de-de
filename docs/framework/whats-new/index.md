@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987245"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374452"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -174,7 +174,7 @@ Der Integritätsstatus des Diensts kann entweder in HTML durch Angeben einer Abf
 
 **Verbesserungen bei hohen DPI-Werten**
 
-In .NET Framework 4.8 bietet WPF Kompatibilität mit monitorspezifischen DPI-Werten (V2) und Unterstützung der DPI-Skalierung im gemischten Modus. Weitere Informationen zur Entwicklung mit hohen DPI-Werten finden Sie im Artikel zur [Entwicklung von Desktopanwendungen mit hohen DPI-Werten unter Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
+In .NET Framework 4.8 bietet WPF Kompatibilität mit monitorspezifischen DPI-Werten (V2) und Unterstützung der DPI-Skalierung im gemischten Modus. Weitere Informationen zur Entwicklung mit hohen DPI-Werten finden Sie im Artikel zur [Entwicklung von Desktopanwendungen mit hohen DPI-Werten unter Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows).
 
 .NET Framework 4.8 bietet eine verbesserte Unterstützung für gehostete HWNDs und die Interoperabilität von Windows Forms in WPF-Anwendungen mit hohen DPI-Werten auf Plattformen, die die DPI-Skalierung im gemischten Modus unterstützen (ab Windows 10-Update vom April 2018). Wenn gehostete HWNDs oder Windows Forms-Steuerelemente als Fenster mit DPI-Skalierung im gemischten Modus durch Aufrufen von [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) und [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext) erstellt werden, können sie in einer WPF-Anwendung mit monitorspezifischen DPI-Werten (V2) gehostet werden und sind entsprechend dimensioniert und skaliert. Solche gehosteten Inhalte werden nicht mit der nativen DPI-Einstellung gerendert, sondern das Betriebssystem skaliert die gehosteten Inhalte auf die geeignete Größe. Die Unterstützung für den mit monitorspezifischen DPI-Werten kompatiblen Modus (V2) ermöglicht das Hosten von WPF-Steuerelementen in einem nativen Fenster in einer Anwendung mit hohen DPI-Werten.
 

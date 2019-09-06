@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642411"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398523"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
@@ -139,5 +139,4 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
 - [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../docs/framework/network-programming/tls.md)
 - [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [HttpClient Sample (HttpClient-Beispiel)](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [HttpClient Sample (HttpClient-Beispiel)](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -2,12 +2,12 @@
 title: Was gilt für cloudnative Anwendungen?
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Wie sieht es mit cloudbasierten Anwendungen aus?
 ms.date: 04/28/2018
-ms.openlocfilehash: 26adb87c426442ebf0e88165e521819e3a49d175
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578013"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373922"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
@@ -17,7 +17,7 @@ In Abbildung 4-3 werden Native Cloud-apps in den Fälligkeits Stufen der Anwendu
 
 ![Positionieren von Cloud-native Anwendungen](./media/image3.png)
 
-> **Abbildung 4-3.** Positionieren von Cloud-native Anwendungen
+**Abbildung 4-3.** Positionieren von Cloud-native Anwendungen
 
 Die Cloud-Native Modernisierung der Modernisierung erfordert in der Regel neue Entwicklungsinvestitionen. Die Umstellung auf die cloudbasierte Ebene wird in der Regel von geschäftlichen Anforderungen gesteuert, um Anwendungen so weit wie möglich zu modernisieren und die Skalierung in großen Anwendungen drastisch zu verbessern, indem autonome Subsysteme (microservices) erstellt werden, die unabhängig bereitgestellt und skaliert werden können aus anderen Bereichen der Anwendung, während die Kosten langfristig gesenkt werden und die Flexibilität der Teile der autonomen App erhöht wird, die bedeutende Wettbewerbsvorteile bieten.
 
@@ -25,9 +25,9 @@ Die Hauptpfeiler der cloudbasierten Anwendungen basieren auf microservices-Archi
 
 Abbildung 4-4 zeigt die Hauptmerkmale des cloudbasierten Modells.
 
-> ![Native Cloud-Merkmale sind mikrodienste, Container, cloudrobust, orchestratoren und Server lose](./media/image4.png)
->
-> **Abbildung 4-4.** In der Cloud Native Merkmale
+![Native Cloud-Merkmale sind mikrodienste, Container, cloudrobust, orchestratoren und Server lose](./media/image4.png)
+
+**Abbildung 4-4.** In der Cloud Native Merkmale
 
 Außerdem können Sie grundlegende moderne Web-Apps und Native Cloud-apps erweitern, indem Sie weitere Dienste wie künstliche Intelligenz (KI), Machine Learning (ml) und IOT hinzufügen. Sie können einen dieser Dienste verwenden, um die möglichen cloudoptimierten Ansätze zu erweitern.
 
@@ -41,7 +41,7 @@ Die [zwölfstufige App](https://12factor.net/) (eine Sammlung von Mustern, die e
 
 Die [Cloud Native Computing Foundation (cncf)](https://www.cncf.io/) ist ein primärer Förderer der cloudbasierten Prinzipien. Microsoft ist [Mitglied von cncf](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Eine Beispiel Definition und weitere Informationen zu den Merkmalen von cloudbasierten Anwendungen finden Sie im Gartner [-Artikel entwerfen und Entwerfen von cloudbasierten Anwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Spezifische Anleitungen von Microsoft zur Implementierung einer cloudbasierten Anwendung finden [Sie unter .NET-Funktionen: Architektur für .NET-Container Anwendungen](https://aka.ms/microservicesebook).
+Eine Beispiel Definition und weitere Informationen zu den Merkmalen von cloudbasierten Anwendungen finden Sie im Gartner [-Artikel entwerfen und Entwerfen von cloudbasierten Anwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Spezifische Anleitungen von Microsoft zur Implementierung einer cloudbasierten Anwendung finden [Sie unter .NET-Funktionen: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
 
 Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudbasierten Modell zu berücksichtigen ist, besteht darin, dass Sie eine Architektur in einer auf microservices basierenden Architektur entwickeln müssen. Dies erfordert aufgrund des großen Umgestaltungs Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeits Stufen und langfristige Agilität benötigen. Aber Sie könnten mit der Umstellung auf die Cloud-Native beginnen, indem Sie für ein paar neue Szenarios die folgenden Funktionen hinzufügen und die Anwendung dann vollständig als "mikroservices" umgestalten. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option ist.
 
@@ -55,7 +55,7 @@ Allerdings sind die-mikrodienste für keine neue oder moderne Anwendung obligato
 
 Die microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf microservices basierenden Architektur wird eine Anwendung als eine Sammlung von Diensten erstellt, die unabhängig entwickelt, getestet, versioniert, bereitgestellt und skaliert werden können. Dies kann jede zugehörige, autonome Datenbank pro mikroservice einschließen.
 
-Einen detaillierten Einblick in eine microservicearchitektur, die Sie mithilfe von .net Core implementieren können, finden Sie in der herunterladbaren [PDF-e-book .net-microservices: Architektur für .NET-Container Anwendungen](https://aka.ms/microservicesebook). Das Handbuch ist auch [Online](../../microservices/index.md)verfügbar.
+Einen detaillierten Einblick in eine microservicearchitektur, die Sie mithilfe von .net Core implementieren können, finden Sie in der herunterladbaren [PDF-e-book .net-microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch ist auch [Online](../../microservices/index.md)verfügbar.
 
 Aber auch in Szenarios, in denen die Funktionen von Mikro Diensten eine leistungsstarke, unabhängige Bereitstellung, starke subsystemgrenzen und Technologie Vielfalt bieten, sind auch viele neue Herausforderungen zu meistern. Die Herausforderungen beziehen sich auf die Entwicklung verteilter Anwendungen, wie z. b. fragmentierte und unabhängige Datenmodelle. erreichen robuster Kommunikation zwischen den-und-Diensten der Bedarf an letztlicher Konsistenz; und betriebliche Komplexität. Im Vergleich zu herkömmlichen monolithischen Anwendungen führt der-Dienst zu einem höheren Komplexitäts Grad.
 

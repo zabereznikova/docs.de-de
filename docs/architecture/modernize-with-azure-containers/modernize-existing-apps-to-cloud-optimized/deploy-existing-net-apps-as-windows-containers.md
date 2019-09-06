@@ -2,18 +2,18 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .net-apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578313"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374021"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
 Bereit Stellungen, die auf Windows-Containern basieren, gelten für cloudanwendungen und Native Cloud-Anwendungen.
 
-In dieser Anleitung und vor allem in den folgenden Abschnitten konzentriert sie sich jedoch hauptsächlich auf die Verwendung von Windows-Containern für cloudanwendungen, in denen Sie Ihre Anwendung nicht neu entwerfen müssen.
+In dieser Anleitung und vor allem in den folgenden Abschnitten konzentriert sie sich jedoch hauptsächlich auf die *Verwendung von Windows-Containern für* cloudanwendungen, in denen Sie Ihre Anwendung nicht neu entwerfen müssen.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Was sind Container? (Linux oder Windows)
 
@@ -51,13 +51,13 @@ Bedeutende Verbesserungen bei Agilität, Portabilität und Kontrolle führen let
 
 [Docker](https://www.docker.com/) ist ein [Open Source-Projekt](https://github.com/docker/docker) , das die Bereitstellung von Anwendungen als Portier Bare, eigenständige Container, die in der Cloud oder lokal ausgeführt werden können, automatisiert. Docker ist außerdem ein [Unternehmen](https://www.docker.com/), das diese Technologie weiterentwickelt. Das Unternehmen arbeitet in Zusammenarbeit mit Cloud-, Linux-und Windows-Anbietern, einschließlich Microsoft.
 
-![](./media/image6.png)
+![Docker stellt Container auf allen Ebenen der hybriden Cloud bereit](./media/image6.png)
 
-> **Abbildung 4-6.** Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
+**Abbildung 4-6.** Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
 Für eine Person, die mit virtuellen Computern vertraut ist, scheinen Container möglicherweise sehr ähnlich zu sein. Ein Container führt ein Betriebssystem aus, verfügt über ein Dateisystem und kann über ein Netzwerk wie ein physisches oder virtuelles Computersystem aufgerufen werden. Die Technologie und die Konzepte hinter Containern unterscheiden sich jedoch erheblich von virtuellen Computern. Aus Sicht des Entwicklers muss ein Container eher wie ein einzelner Prozess behandelt werden. Tatsächlich verfügt ein Container über einen einzigen Einstiegspunkt für einen Prozess.
 
-Docker-Container (aus Gründender Einfachheit) können nativ unter Linux und Windows ausgeführt werden. Wenn Sie reguläre Container ausführen, können Windows-Container nur auf Windows-Hosts (einem Host Server oder einer VM) ausgeführt werden, und Linux-Container können nur auf Linux-Hosts ausgeführt werden. In neueren Versionen von Windows Server und Hyper-v-Containern kann ein Linux-Container jedoch auch System intern unter Windows Server ausgeführt werden, indem die Hyper-V-Isolations Technologie verwendet wird, die derzeit nur in Windows Server-Containern verfügbar ist.
+Docker-Container (aus Gründen der *Einfachheit) können*nativ unter Linux und Windows ausgeführt werden. Wenn Sie reguläre Container ausführen, können Windows-Container nur auf Windows-Hosts (einem Host Server oder einer VM) ausgeführt werden, und Linux-Container können nur auf Linux-Hosts ausgeführt werden. In neueren Versionen von Windows Server und Hyper-v-Containern kann ein Linux-Container jedoch auch System intern unter Windows Server ausgeführt werden, indem die Hyper-V-Isolations Technologie verwendet wird, die derzeit nur in Windows Server-Containern verfügbar ist.
 
 In naher Zukunft sind gemischte Umgebungen, die sowohl Linux-als auch Windows-Container haben, möglich und sogar üblich.
 
@@ -83,9 +83,9 @@ Für Linux sind mehrere Distributionen (z.B. Debian) verfügbar und werden in of
 
 In Abbildung 4-7 werden Betriebssystemversionen angezeigt, die Sie als Ziel für die App-Version der .NET Framework ausrichten können.
 
-![](./media/image7.png)
+![Zu zielende Betriebssysteme basierend auf .NET Framework Version](./media/image7.png)
 
-> **Abbildung 4-7.** Zu zielende Betriebssysteme basierend auf .NET Framework Version
+**Abbildung 4-7.** Zu zielende Betriebssysteme basierend auf .NET Framework Version
 
 In Migrationsszenarien für vorhandene oder Legacy Anwendungen, die auf .NET Framework Anwendungen basieren, sind die Haupt Abhängigkeiten unter Windows und IIS. Ihre einzige Option ist die Verwendung von Docker-Images, die auf Windows Server Core und den .NET Framework basieren.
 
@@ -138,9 +138,9 @@ Das Ausführen eines Containers unter Windows mit oder ohne Hyper-V-Isolation is
 In den vorherigen Abschnitten wurde erläutert, was die Vorteile von Docker-Containern und Details zu den spezifischen Container Images für .NET-Anwendungen sind. Alle allgemeinen Informationen sind grundlegend, um eine Anwendung zu entwickeln oder in Container zu packen.
 Wenn Sie sich jedoch über die Produktions Bereitstellungs Umgebung oder sogar über QA-und Entwicklungs-/Testumgebungen Gedanken machen, bietet Microsoft Azure eine offene und große Vielfalt von Optionen, ein vollständiges containerökosystem in der Cloud (siehe Abbildung unten). Abhängig von den Anforderungen ihrer jeweiligen Anwendung sollten Sie ein oder ein anderes Azure-Produkt auswählen.
 
-![](./media/image7.5.png)
+![Das containerökosystem in Azure](./media/image7.5.png)
 
-> **Abbildung 4-7.5.** Das containerökosystem in Azure
+**Abbildung 4-7.5.** Das containerökosystem in Azure
 
 Über das containerökosystem in Azure unterstützen die folgenden Produkte Container, die als Infrastruktur angesehen werden:
 - **Azure Container Instances (ACI)**

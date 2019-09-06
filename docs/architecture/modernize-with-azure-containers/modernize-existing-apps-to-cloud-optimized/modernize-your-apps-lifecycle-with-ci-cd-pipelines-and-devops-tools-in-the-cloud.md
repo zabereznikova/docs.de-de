@@ -2,12 +2,12 @@
 title: Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Modernisieren Sie den Lebenszyklus Ihrer APP mit CI/CD-Pipelines und devops-Tools in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 62b6c541780ed3bf82c55e576fa485f811b55b17
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578163"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374141"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 
@@ -29,7 +29,7 @@ In Abbildung 4-12 wird eine Continuous Deployment Pipeline gezeigt, die in Azure
 
 ![Azure DevOps Services Continuous Deployment Pipeline, Bereitstellung in einem Kubernetes-Cluster](./media/image12.png)
 
-> **Abbildung 4-12.** Azure DevOps Services Continuous Deployment Pipeline, Bereitstellung in einem Kubernetes-Cluster
+**Abbildung 4-12.** Azure DevOps Services Continuous Deployment Pipeline, Bereitstellung in einem Kubernetes-Cluster
 
 >[!div class="step-by-step"]
 >[Zurück](modernize-your-apps-with-monitoring-and-telemetry.md)

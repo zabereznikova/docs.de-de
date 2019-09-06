@@ -2,12 +2,12 @@
 title: Migrieren zu Hybridcloudszenarios
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migration zu Hybrid Cloud Szenarios
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578213"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373944"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
@@ -15,7 +15,7 @@ Einige Organisationen und Unternehmen können einige Ihrer Anwendungen aufgrund 
 
 Microsoft bietet die beste Hybrid Cloud Lösung, bei der Sie Ihre vorhandenen Ressourcen lokal und im Public Cloud optimieren können, während Sie die Konsistenz in einem Azure-Hybrid Cloud gewährleisten. Dank Azure Stack (lokal) und Azure (Public Cloud) können Sie vorhandene Fähigkeiten maximieren und einen flexiblen, einheitlichen Ansatz zum Entwickeln von Apps nutzen, die in der Cloud oder lokal ausgeführt werden können.
 
-Wenn es um die Sicherheit geht, können Sie die Verwaltung und Sicherheit über ihre Hybrid Cloud hinweg zentralisieren. Durch Bereitstellen von einmaligem Anmelden für lokale und Cloud-Apps können Sie die Kontrolle über alle Assets von Ihrem Rechenzentrum in die Cloud erhalten. Dies erreichen Sie, indem Sie Active Directory auf eine Hybrid Cloud erweitern und die Identitätsverwaltung verwenden.
+Wenn es um die Sicherheit geht, können Sie die Verwaltung und Sicherheit über ihre Hybrid Cloud hinweg zentralisieren. Sie können die Kontrolle über alle Assets von Ihrem Rechenzentrum in die Cloud erhalten, indem Sie Single Sign-on für lokale und Cloud-apps bereitstellen. Dies erreichen Sie, indem Sie Active Directory auf eine Hybrid Cloud erweitern und die Identitätsverwaltung verwenden.
 
 Schließlich können Sie Daten nahtlos verteilen und analysieren, die gleichen Abfrage Sprachen für Cloud-und lokale Ressourcen verwenden und Analysen und Deep Learning in Azure anwenden, um Ihre Daten unabhängig von ihrer Quelle zu erweitern.
 
@@ -27,7 +27,7 @@ Abbildung 4-13 zeigt eine Übersicht über die echte Hybrid Cloud Plattform, die
 
 ![Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure](./media/image13.jpg)
 
-> **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
+**Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
 
 Azure Stack wird in zwei Bereitstellungs Optionen angeboten, die Ihren Anforderungen entsprechen:
 
