@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015736"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373688"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Exemplarische Vorgehensweise: Serialisieren von Auflistungen von Standardtypen
 
@@ -27,7 +27,7 @@ Die benutzerdefinierten Steuerelemente machen manchmal eine Auflistung als Eigen
 
 Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Serialisieren Sie Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
@@ -86,12 +86,12 @@ Um das Serialisierungsverhalten Ihres Steuer Elements zu testen, platzieren Sie 
 
 3. Platzieren Sie `SerializationDemoControl` einen auf dem Formular.
 
-4. Suchen Sie `Strings` die-Eigenschaft im **Eigenschaften** Fenster. Klicken Sie `Strings` auf die-Eigenschaft, und klicken Sie![dann auf die Auslassungs Punkte (die Schaltfläche mit den Auslassungs Punkten (](./media/visual-studio-ellipsis-button.png)...) inder Eigenschaftenfenster von Visual Studio.
+4. Suchen Sie `Strings` die-Eigenschaft im **Eigenschaften** Fenster. Klicken Sie `Strings` auf die-Eigenschaft, und klicken Sie![dann auf die Auslassungs Punkte (die Schaltfläche mit den Auslassungs Punkten (](./media/visual-studio-ellipsis-button.png)...) in der Eigenschaftenfenster von Visual **Studio.**
 
 5. Geben Sie im Zeichen folgen- **Sammlungs-Editor mehrere Zeichen**folgen ein. Trennen Sie diese durch Drücken der **Eingabe** Taste am Ende jeder Zeichenfolge. Klicken Sie auf **OK** , wenn die Eingabe von Zeichen folgen abgeschlossen ist.
 
-> [!NOTE]
-> Die Zeichen folgen, die Sie eingegeben <xref:System.Windows.Forms.TextBox> haben, `SerializationDemoControl`werden in der von angezeigt.
+    > [!NOTE]
+    > Die Zeichen folgen, die Sie eingegeben <xref:System.Windows.Forms.TextBox> haben, `SerializationDemoControl`werden in der von angezeigt.
 
 6. Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**.
 

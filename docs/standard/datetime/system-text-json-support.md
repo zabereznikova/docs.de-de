@@ -1,5 +1,5 @@
 ---
-title: DateTime-und DateTimeOffset-Unterstützung in System. Text. JSON
+title: Unterstützung von DateTime und DateTimeOffset in System.Text.Json
 description: Eine Übersicht über die Unterstützung von DateTime-und DateTimeOffset-Typen in der System. Text. JSON-Bibliothek.
 ms.technology: dotnet-standard
 author: layomia
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 182694a3d2df02d5e2c709e33a02bd9fa7d20383
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5bff01b10b2bdea4fdcfee86e348c47f44d50103
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69973214"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374475"
 ---
-# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>DateTime-und DateTimeOffset-Unterstützung in System. Text. JSON
+# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Unterstützung von DateTime und DateTimeOffset in System.Text.Json
 
 Die System. Text. JSON-Bibliothek analysiert und schreibt <xref:System.DateTime> <xref:System.DateTimeOffset> Werte gemäß dem erweiterten ISO 8601:-2019-Profil.
 [Konverter](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) bieten benutzerdefinierte Unterstützung für das Serialisieren und Deserialisieren mit <xref:System.Text.Json.JsonSerializer>.

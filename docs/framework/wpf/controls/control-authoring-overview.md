@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401546"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374524"
 ---
 # <a name="control-authoring-overview"></a>Übersicht über das Erstellen von Steuerelementen
 
@@ -197,7 +197,7 @@ Stellen Sie sicher, dass `get` CLR `set` und Accessoren wie zuvor beschrieben in
 
 Angefügte Eigenschaften für benutzerdefinierte Steuerelemente sind unter Einhaltung der folgenden Richtlinien zu implementieren:
 
-- Verwenden Sie `public` eine `static` `readonly` <xref:System.Windows.DependencyProperty.RegisterAttached%2A>derForm PropertyName,`Property` die mithilfe der-Methode erstellt wurde.  <xref:System.Windows.DependencyProperty> Der an übergebenen Eigenschaften Name muss <xref:System.Windows.DependencyProperty.RegisterAttached%2A> mit *propertyName*identisch sein.
+- Verwenden Sie `public` eine `static` `readonly` <xref:System.Windows.DependencyProperty.RegisterAttached%2A>derForm PropertyName,`Property` die mithilfe der-Methode erstellt wurde. <xref:System.Windows.DependencyProperty> Der an übergebenen Eigenschaften Name muss <xref:System.Windows.DependencyProperty.RegisterAttached%2A> mit *propertyName*identisch sein.
 
 - Implementieren Sie die `public` `static` CLR-Methoden mit den Namen `Set` *PropertyName* und `Get` *PropertyName*. Beide Methoden sollten eine von <xref:System.Windows.DependencyProperty> abgeleitete Klasse als das erste Argument akzeptieren. Die `Set`*PropertyName*-Methode akzeptiert auch ein Argument, dessen Typ mit dem registrierten Datentyp der Eigenschaft übereinstimmt. Die `Get`*PropertyName*-Methode sollte einen Wert zurückgeben, der den gleichen Typ aufweist. Falls die `Set`*PropertyName*-Methode fehlt, wird die Eigenschaft als schreibgeschützt gekennzeichnet.
 
@@ -264,7 +264,7 @@ Designspezifische Ressourcen werden in einem Ressourcenverzeichnis mit dem entsp
 
 Sie müssen nicht für jedes Design eine Ressource definieren. Wenn eine Ressource nicht für ein bestimmtes Design definiert ist, durchsucht das Steuerelement `Classic.xaml` nach der Ressource. Falls die Ressource weder in der Datei, die dem aktuellen Design entspricht, noch in `Classic.xaml` definiert ist, verwendet das Steuerelement die generische Ressource, die sich im Ressourcenverzeichnis mit dem Namen `generic.xaml` befindet.  Die `generic.xaml`-Datei befindet sich im gleichen Ordner mit den designspezifischen Ressourcenverzeichnisdateien. Obwohl `generic.xaml` keinem bestimmten Windows-Design entspricht, ist es dennoch ein Ressourcenverzeichnis auf der Designebene.
 
-[Beispiel für benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Designs und Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=160025) enthält zwei Ressourcenverzeichnisse für das `NumericUpDown`-Steuerelement: jeweils in den Dateien generic.xaml und Luna.NormalColor.xaml.  Um den Unterschied zwischen den beiden Steuerelementvorlagen zu sehen, starten Sie die Anwendung, und wechseln Sie zwischen dem silbernen Design für Windows XP und einem anderen Design. (Unter Windows Vista können Sie die Datei Luna.NormalColor.xaml in Aero.NormalColor.xaml umbenennen und zwischen zwei Designs, z.B. Windows - klassisch und Standarddesign für Windows Vista, wechseln.)
+Das [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) benutzerdefinierte Steuerelement oder [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown-Steuerelement mit Design-und Benutzeroberflächenautomatisierungs `NumericUpDown` -Unterstützung enthält zwei Ressourcen Wörterbücher für das-Steuerelement: eines in Generic. XAML und das andere in Luna. NormalColor. XAML. 
 
 Wenn Sie <xref:System.Windows.Controls.ControlTemplate> in einer der Design spezifischen Ressourcenverzeichnis Dateien platzieren, müssen Sie für das Steuerelement einen statischen Konstruktor erstellen und die <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> -Methode für den <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>aufzurufen, wie im folgenden Beispiel gezeigt.
 

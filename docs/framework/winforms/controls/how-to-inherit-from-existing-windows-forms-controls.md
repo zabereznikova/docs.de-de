@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015870"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373235"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen
 
@@ -26,22 +26,22 @@ Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten
 
 1. Erstellen Sie in Visual Studio ein neues **Windows Forms-Anwendungs** Projekt.
 
-2. Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.
+1. Wählen Sie im Menü **Projekt** die Option **Neues Element hinzufügen** aus.
 
-     Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
+    Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
 
-3. Doppelklicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Benutzerdefiniertes Steuerelement**.
+1. Doppelklicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Benutzerdefiniertes Steuerelement**.
 
-     Ein neues benutzerdefiniertes Steuerelement wird zu Ihrem Projekt hinzugefügt.
+    Ein neues benutzerdefiniertes Steuerelement wird zu Ihrem Projekt hinzugefügt.
 
-4. Wenn Sie Folgendes verwenden:
+1. Wenn Sie Folgendes verwenden:
 
-   - Klicken Sie Visual Basic oben in **Projektmappen-Explorer**auf **alle Dateien anzeigen**. Erweitern Sie „CustomControl1.vb“ und öffnen Sie „CustomControl1.Designer.vb“ im Code-Editor.
-   - C#Öffnen Sie CustomControl1.cs im Code-Editor.
+    - Klicken Sie Visual Basic oben in **Projektmappen-Explorer**auf **alle Dateien anzeigen**. Erweitern Sie „CustomControl1.vb“ und öffnen Sie „CustomControl1.Designer.vb“ im Code-Editor.
+    - C#Öffnen Sie CustomControl1.cs im Code-Editor.
 
-6. Suchen Sie nach der Klassen Deklaration, die <xref:System.Windows.Forms.Control>von erbt.
+1. Suchen Sie nach der Klassen Deklaration, die <xref:System.Windows.Forms.Control>von erbt.
 
-7. Ändern Sie die Basisklasse in das Steuerelement, von dem Sie erben möchten.
+1. Ändern Sie die Basisklasse in das Steuerelement, von dem Sie erben möchten.
 
      Wenn Sie z. b. von <xref:System.Windows.Forms.Button>erben möchten, ändern Sie die Klassen Deklaration wie folgt:
 
@@ -54,11 +54,11 @@ Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Wenn Sie Visual Basic verwenden, speichern und schließen Sie „CustomControl1.Designer.vb“. Öffnen Sie „CustomControl1.vb“ im Code-Editor.
+1. Wenn Sie Visual Basic verwenden, speichern und schließen Sie „CustomControl1.Designer.vb“. Öffnen Sie „CustomControl1.vb“ im Code-Editor.
 
-9. Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden sollen.
+1. Implementieren Sie alle benutzerdefinierten Methoden oder Eigenschaften, die in das Steuerelement eingebunden werden sollen.
 
-10. Wenn Sie die grafische Darstellung des Steuer Elements ändern möchten, überschreiben Sie <xref:System.Windows.Forms.Control.OnPaint%2A> die-Methode.
+1. Wenn Sie die grafische Darstellung des Steuer Elements ändern möchten, überschreiben Sie <xref:System.Windows.Forms.Control.OnPaint%2A> die-Methode.
 
     > [!NOTE]
     > <xref:System.Windows.Forms.Control.OnPaint%2A> Wenn Sie überschreiben, können Sie die Darstellung aller Steuerelemente nicht ändern. Diese Steuerelemente, die alle Zeichnungen von Windows (z <xref:System.Windows.Forms.TextBox>. b.) erledigen, werden nie Ihre <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode aufruft und verwenden daher niemals den benutzerdefinierten Code. Informationen zur Verfügbarkeit der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode finden Sie in der Hilfe Dokumentation für das jeweilige Steuerelement, das Sie ändern möchten. Eine Liste aller Windows Form-Steuerelemente finden Sie unter [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md). Wenn ein Steuerelement nicht <xref:System.Windows.Forms.Control.OnPaint%2A> als Element Methode aufgeführt ist, können Sie seine Darstellung nicht ändern, indem Sie diese Methode überschreiben. Weitere Informationen über benutzerdefinierte Darstellung finden Sie unter [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md).
@@ -83,7 +83,7 @@ Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten
     }
     ```
 
-11. Speichern und testen Sie das Steuerelement.
+1. Speichern und testen Sie das Steuerelement.
 
 ## <a name="see-also"></a>Siehe auch
 
