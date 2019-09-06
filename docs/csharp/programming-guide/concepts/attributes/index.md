@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668613"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374369"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -57,7 +57,7 @@ Der erste Parameter, der DLL-Name, ist positional und kommt immer an erster Stel
 
 ### <a name="attribute-targets"></a>Attributziele
 
-Das *Ziel* eines Attributs ist die Entität, auf die das Attribut angewendet wird. Ein Attribut kann beispielsweise auf eine Klasse, eine bestimmte Methode oder eine ganze Assembly angewendet werden. Standardmäßig wird ein Attribut auf das voranstehende Element angewendet. Sie können allerdings auch explizit festlegen, dass ein Attribut beispielsweise auf eine Methode, ihren Parameter oder ihren Rückgabewert angewendet wird.
+Das *Ziel* eines Attributs ist die Entität, auf die das Attribut angewendet wird. Ein Attribut kann beispielsweise auf eine Klasse, eine bestimmte Methode oder eine ganze Assembly angewendet werden. Standardmäßig wird ein Attribut auf das darauffolgende Element angewendet. Sie können allerdings auch explizit festlegen, dass ein Attribut beispielsweise auf eine Methode, ihren Parameter oder ihren Rückgabewert angewendet wird.
 
 Verwenden Sie die folgende Syntax, um ein Attributziel explizit zu kennzeichnen:
 
