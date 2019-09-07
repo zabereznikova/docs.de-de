@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
-ms.openlocfilehash: 5736828a629368a5b9abea9e63f7df2d2de3ca8d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ddd352fe3bf731c2d436937616d21c0a7257acdc
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249522"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398467"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>Beispiele für die Abfrageausdruckssyntax: Elementoperatoren
-In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.First%2A> die-Methode verwendet wird, um das [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrage Ausdruckssyntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.First%2A> die-Methode verwendet wird, um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe der Abfrage Ausdruckssyntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
  In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
   

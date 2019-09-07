@@ -2,21 +2,22 @@
 title: <security> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a895df027bee7430e51e76c480136a49b6b2a0be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5969da6a2d7cb59c057fd5bb909add6b6398a4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936573"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399787"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<Sicherheits > von \<WS2007HttpBinding >
 Stellt die Sicherheitseinstellungen dar, die mit dem [ \<WS2007HttpBinding->](ws2007httpbinding.md) Element verwendet werden.  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
   
 ## <a name="syntax"></a>Syntax  
   

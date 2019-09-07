@@ -2,21 +2,22 @@
 title: <security> von <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88aa2898472c20c9e52cfd5830c0e41e8ea9ba21
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399818"
 ---
 # <a name="security-of-netpeerbinding"></a>\<Sicherheits > von \<netperbinding >
 Definiert die Sicherheitseinstellungen des [ \<netpeer ertcpbinding->](netpeertcpbinding.md), einschließlich des verwendeten Authentifizierungs Typs und der für den Nachrichten Transport verwendeten Sicherheit.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netpertcpbinding->** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,12 +2,12 @@
 title: <behavior> von <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 8c847368934cc4cd8ccaab017ede00b7b8963897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17fac5c519f41588ef90383f024e645b809b49b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926407"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400604"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<Verhaltens > von \<ServiceBehavior >
 Das `behavior`-Element enthält eine Auflistung der Einstellungen für das Verhalten eines Diensts. Jedes Verhalten wird durch seinen `name` indiziert. Dienste können mithilfe des-Attributs `behaviorConfiguration` [ \<des Endpunkt >](endpoint-element.md) -Elements über diesen Namen mit den einzelnen Verhalten verknüpft werden. Dies ermöglicht es Endpunkten, allgemeine Verhaltenskonfigurationen gemeinsam zu verwenden, ohne dass die Einstellungen neu definiert werden müssen. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und zu den namenlosen Bindungen und Verhalten finden Sie unter [vereinfachte Konfiguration](../../../wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -15,10 +15,11 @@ Das `behavior`-Element enthält eine Auflistung der Einstellungen für das Verha
 > [!NOTE]
 > Verhaltenselemente, die für Windows Workflow-Aktivitäten spezifisch sind, z. b. das [ \<SendMessageChannelCache->](../windows-workflow-foundation/sendmessagechannelcache.md) -Element, werden auf der [ \<Seite Verhalten > der \<Service Behavior >](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) beschrieben.  
   
- \<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceverhaltens>** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Verhaltens >**  
   
 ## <a name="syntax"></a>Syntax  
   

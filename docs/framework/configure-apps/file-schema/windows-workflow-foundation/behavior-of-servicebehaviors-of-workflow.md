@@ -3,20 +3,21 @@ title: <behavior>des <serviceBehaviors> Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 91883c42aa7bc0aa8fa0c63c3c45184ba69225d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65bde45ffdd4af166d5b44308162c23257659802
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946076"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398893"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<Verhaltens > von \<Service Verhaltens> des Workflows
 Das **Behavior** -Element enthält eine Sammlung von Einstellungen für das Verhalten eines Dienstanbieter. Jedes Verhalten wird anhand seines **namens**indiziert. Dienste können mit dem Behavior- **Configuration** -Attribut des [ \<Endpoint >](../wcf/endpoint-element.md) -Elements über diesen Namen mit den einzelnen Verhalten verknüpft werden. Dies ermöglicht es Endpunkten, allgemeine Verhaltenskonfigurationen gemeinsam zu verwenden, ohne dass die Einstellungen neu definiert werden müssen.  
   
-\<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Anlage. Service Model->** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceverhaltens>** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Verhaltens >**  
   
 ## <a name="syntax"></a>Syntax  
   

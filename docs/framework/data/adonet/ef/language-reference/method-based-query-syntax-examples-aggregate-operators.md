@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0e306067-5720-4782-9719-2286570a7e47
-ms.openlocfilehash: d9007e4d650c79a636f908a638bb382457f6b29b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 17d3a5e221fc5f917e9e266b3af4fb844c6fd85e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250267"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397498"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators"></a>Beispiele für die methodenbasierte Abfragesyntax: Aggregatoperatoren
-In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.Aggregate%2A>die Methoden <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>,, <xref:System.Linq.Enumerable.Sum%2A> und verwendet werden <xref:System.Linq.Enumerable.Average%2A>, um das [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe von abzufragen. Methoden basierte Abfrage Syntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.Aggregate%2A>die Methoden <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.LongCount%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>,, <xref:System.Linq.Enumerable.Sum%2A> und verwendet werden <xref:System.Linq.Enumerable.Average%2A>, um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe von abzufragen. Methoden basierte Abfrage Syntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
  In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
   

@@ -3,15 +3,18 @@ title: < System. Service Model-> des Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947369"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398598"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<System. Service Model-> des Workflows
 Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<Anlage. Service Model->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -108,4 +111,4 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|\<configuration>|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|
+|[\<configuration>](../configuration-element.md)|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|

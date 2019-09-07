@@ -2,23 +2,24 @@
 title: <transport> von <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95cfa076f62f767af431ff5a0bcc2ca31b824e30
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399240"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<Transport > von \<WSHttpBinding >
 
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 
-\<System. Service Model > \
-\<Bindungen > \
-\<wsHttpBinding>\
-\<Bindungs > \
-\<Sicherheits > \
-\<transport>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSHttpBinding->** ](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Transport >**  
 
 ## <a name="syntax"></a>Syntax
 

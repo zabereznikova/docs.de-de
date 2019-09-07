@@ -2,21 +2,22 @@
 title: <security> von <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: bed7f4ce325e0d5e387e310ca15a3b72ac93f18e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6a1c952b1ae65c8fb6f17237b5c15f3a8d4844a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399752"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<Sicherheits > von \<WSDualHttpBinding >
 Definiert die Sicherheitsfunktionen der [ \<WSDualHttpBinding->](wsdualhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsDualHttpBinding>  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSDualHttpBinding->** ](wsdualhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
   
 ## <a name="syntax"></a>Syntax  
   

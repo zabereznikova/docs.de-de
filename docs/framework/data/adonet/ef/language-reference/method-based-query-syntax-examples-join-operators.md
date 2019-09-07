@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2f26f937901debd27cb936d1f642e0a5149b167a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c7dafae846a30424f008cce5f597efbdefa4bdf8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250134"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397357"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren
-In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.Join%2A> die <xref:System.Linq.Enumerable.GroupJoin%2A> -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In den Beispielen in diesem Thema wird gezeigt, wie <xref:System.Linq.Enumerable.Join%2A> die <xref:System.Linq.Enumerable.GroupJoin%2A> -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
  In den Beispielen in diesem Thema werden die `using` folgenden / `Imports` -Anweisungen verwendet:  
   

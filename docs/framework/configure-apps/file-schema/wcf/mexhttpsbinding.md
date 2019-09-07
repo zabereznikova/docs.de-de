@@ -2,19 +2,20 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 30d1aa27ce29b6aa4091c3e7be05746ad462102a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d32db2180e06cba6662ed853ab1a259805680ea1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931271"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397821"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über HTTPS verwendet wird.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexHttpsBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexhttpsbinding->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +53,7 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 |[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung, die mit Zertifikaten Sicherheit auf Transportebene unterstützt. Weitere Informationen zum Konfigurieren und Verwenden eines solchen Metadatenendpunkts finden [Sie unter Gewusst wie: Konfigurieren einer benutzerdefinierten WS-Metadatenaustausch [-Bindung](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md), Vorgehensweise: Rufen Sie Metadaten über eine nicht-MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)-Bindung und den [benutzerdefinierten Beispiel Endpunkt für sichere Metadaten](../../../wcf/samples/custom-secure-metadata-endpoint.md)ab.  
+ Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung, die mit Zertifikaten Sicherheit auf Transportebene unterstützt. Weitere Informationen zum Konfigurieren und Verwenden eines solchen Metadatenendpunkts finden [Sie unter Gewusst wie: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange](../../../wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)Bindung [, Vorgehensweise: Rufen Sie Metadaten über eine nicht-MEX](../../../wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)-Bindung und den [benutzerdefinierten Beispiel Endpunkt für sichere Metadaten](../../../wcf/samples/custom-secure-metadata-endpoint.md)ab.  
   
 ## <a name="see-also"></a>Siehe auch
 

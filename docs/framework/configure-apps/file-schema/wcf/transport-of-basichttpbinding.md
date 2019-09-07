@@ -2,22 +2,23 @@
 title: <transport> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: af5852c3c7850f91686d50294c8846f85574e909
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2cf69c48a51ce2c687ebcfe9f87f7c22f5f86084
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918639"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399388"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<Transport > von \<BasicHttpBinding >
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
-\<binding>  
-\<security>  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding->** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Transport >**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,21 +2,22 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758105"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399566"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)-Diensts fest.  
   
- \<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<serviceThrottling>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceverhaltens>** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicedrosselungs >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +45,7 @@ Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Mit der Einschränkung wird die Anzahl gleichzeitiger Aufrufe, Instanzen oder Sitzungen begrenzt, um eine übermäßige Ressourcenbeanspruchung zu verhindern.  
@@ -52,7 +53,7 @@ Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)
  Eine Ablaufverfolgung wird jedes Mal geschrieben, wenn der Wert von Attributen erreicht wird. Die erste Ablaufverfolgung wird als Warnung geschrieben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Konfigurationsbeispiel beschränkt der Dienst die maximale Anzahl gleichzeitiger Aufrufe auf 2 und die maximale Anzahl gleichzeitiger Instanzen auf 10. Ein ausführliches Beispiel zum Ausführen dieses Beispiels finden Sie unter [Drosselung](../../../../../docs/framework/wcf/samples/throttling.md).  
+ Im folgenden Konfigurationsbeispiel beschränkt der Dienst die maximale Anzahl gleichzeitiger Aufrufe auf 2 und die maximale Anzahl gleichzeitiger Instanzen auf 10. Ein ausführliches Beispiel für die Ausführung dieses Beispiels finden Sie unter [Drosselung](../../../wcf/samples/throttling.md).  
   
 ```xml  
 <behaviors>
@@ -72,4 +73,4 @@ Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

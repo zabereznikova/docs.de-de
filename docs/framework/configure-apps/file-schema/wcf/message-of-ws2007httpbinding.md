@@ -2,22 +2,23 @@
 title: <message> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 59449ec5f8f048e27313d088be0ca951915ef5e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 987c51f65f5c36a70724fd62fecaf737943c2d9a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931504"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398033"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<Message > von \<WS2007HttpBinding >
 Definiert die Einstellungen für die [ \<](ws2007httpbinding.md) Sicherheit auf Nachrichten Ebene des WS2007HttpBinding-> Elements.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<binding>  
-\<security>  
-\<Message >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Message >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +49,7 @@ Definiert die Einstellungen für die [ \<](ws2007httpbinding.md) Sicherheit auf 
 |`algorithmSuite`|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist Basic256.|  
 |`clientCredentialType`|Optional. Gibt den Typ der Anmeldeinformationen an, die bei der Clientauthentifizierung im `Message`-Sicherheitsmodus oder im `TransportWithMessageCredentials`-Sicherheitsmodus verwendet werden. In der folgenden Tabelle sind die Enumerationswerte aufgeführt. Der Standardwert ist Windows.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageCredentialType>.|  
 |`establishSecurityContext`|Ein Wert, der bestimmt, ob der Sicherheitskanal eine sichere Sitzung aufbaut. In einer sicheren Sitzung wird vor dem Austausch der Anwendungsnachrichten ein Sicherheitskontexttoken erstellt. Wenn das Sicherheitskontexttoken erstellt wurde, stellt der Sicherheitskanal eine <xref:System.ServiceModel.Channels.ISession>-Schnittstelle für die oberen Kanäle bereit. Weitere Informationen zur Verwendung von sicheren Sitzungen finden [Sie unter Gewusst wie: Erstellen Sie eine sichere](../../../wcf/feature-details/how-to-create-a-secure-session.md)Sitzung.<br /><br /> Der Standardwert ist `true`.|  
-|`negotiateServiceCredential`|Optional. Ein Wert, der angibt, ob die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt oder vom Dienst für den Client über einen Aushandlungsvorgang abgerufen werden. Eine solche Verhandlung ist Vorläufer zum üblichen Nachrichtenaustausch.<br /><br /> Wenn das `clientCredentialType` Attribut auf None, username oder Certificate festgelegt ist, bedeutet das Festlegen `false` dieses Attributs auf, dass das Dienst Zertifikat auf dem Client Out-of-Band verfügbar ist und dass der Client das Dienst Zertifikat angeben muss (mit dem [ \<serviceCertificate >](servicecertificate-of-servicecredentials.md)) im servicecreden-> Dienst Verhalten. [ \<](servicecredentials.md) Dieser Modus ist mit SOAP-Stapeln interoperabel, die WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn das `ClientCredentialType`-Attribut `Windows` lautet, wird durch Festlegen dieses Attributs auf `false` die Kerberos-basierte Authentifizierung angegeben. Dies bedeutet, dass Client und Dienst Teil der gleichen Kerberos-Domäne sein müssen. Dieser Modus ist mit SOAP-Stapeln interoperabel, die das Kerberos-Tokenprofil (gemäß der Definition in OASIS WSS TC) sowie WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn dieses Attribut `true` lautet, wird eine .NET SOAP-Aushandlung verursacht, die den <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A>-Austausch über SOAP-Nachrichten tunnelt.<br /><br /> Die Standardeinstellung ist `true`.|  
+|`negotiateServiceCredential`|Optional. Ein Wert, der angibt, ob die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt oder vom Dienst für den Client über einen Aushandlungsvorgang abgerufen werden. Eine solche Verhandlung ist Vorläufer zum üblichen Nachrichtenaustausch.<br /><br /> Wenn das `clientCredentialType` Attribut auf None, username oder Certificate festgelegt ist, bedeutet das Festlegen `false` dieses Attributs auf, dass das Dienst Zertifikat auf dem Client Out-of-Band verfügbar ist und dass der Client das Dienst Zertifikat angeben muss (mit dem [ \<serviceCertificate >](servicecertificate-of-servicecredentials.md)) im [ servicecreden->DienstVerhalten.\<](servicecredentials.md) Dieser Modus ist mit SOAP-Stapeln interoperabel, die WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn das `ClientCredentialType`-Attribut `Windows` lautet, wird durch Festlegen dieses Attributs auf `false` die Kerberos-basierte Authentifizierung angegeben. Dies bedeutet, dass Client und Dienst Teil der gleichen Kerberos-Domäne sein müssen. Dieser Modus ist mit SOAP-Stapeln interoperabel, die das Kerberos-Tokenprofil (gemäß der Definition in OASIS WSS TC) sowie WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn dieses Attribut `true` lautet, wird eine .NET SOAP-Aushandlung verursacht, die den <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A>-Austausch über SOAP-Nachrichten tunnelt.<br /><br /> Die Standardeinstellung ist `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite-Attribut  
   

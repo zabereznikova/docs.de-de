@@ -2,22 +2,23 @@
 title: <message>Element von<wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 4730d7e573eefdfcd5704621d0a7ccaa15f76d3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e26e1f94fb38e0654fd0bc9f06c6096a488bccfe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931576"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400284"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<Message >-Element \<von WSFederationHttpBinding >
 Definiert die Einstellungen für die Sicherheit auf Nachrichten Ebene für die [ \<WSFederationHttpBinding->](wsfederationhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<wsFederatedBinding>  
-\<binding>  
-\<security>  
-\<Message >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WSFederationHttpBinding->** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Message >**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,22 +2,23 @@
 title: <transport> von <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: 837d01540fa63579877ab4085bd8034c78f2fbe0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08be5d752f8422ebe6442b295195f21b16a274c0
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399305"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<Transport > von \<netpeer ertcpbinding >
 Gibt Einstellungen für die Sicherheit auf Transport Ebene an, wenn die [ \<NetPeerTcpBinding->](netpeertcpbinding.md)verwendet wird.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<binding>  
-\<security>  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netpertcpbinding->** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Transport >**  
   
 ## <a name="syntax"></a>Syntax  
   

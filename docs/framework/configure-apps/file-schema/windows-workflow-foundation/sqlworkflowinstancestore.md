@@ -3,21 +3,22 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 7a6f9fb5b2b98d2951343b5a529507b3fcd88dc8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 581da860a490c95d5d621194c7f6643fc15118fe
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398683"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
-Ein Dienst Verhalten, mit dem Sie die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Funktion konfigurieren können, die das Beibehalten von Zustandsinformationen für Workflow Dienst Instanzen in eine SQL Server 2005-oder SQL Server 2008-Datenbank unterstützt. Weitere Informationen zu diesem Feature finden Sie unter [SQL](../../../windows-workflow-foundation/sql-workflow-instance-store.md)-workflowinstanzspeicher.  
+Ein Dienst Verhalten, mit dem Sie die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Funktion konfigurieren können, die das Beibehalten von Zustandsinformationen für Workflow Dienst Instanzen in eine SQL Server 2005-oder SQL Server 2008-Datenbank unterstützt. Weitere Informationen zu diesem Feature finden Sie unter [SQL-workflowinstanzspeicher](../../../windows-workflow-foundation/sql-workflow-instance-store.md).  
   
-\<system.ServiceModel>  
-\<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<sqlWorkflowInstanceStore>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Anlage. Service Model->** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceverhaltens>** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<SqlWorkflowInstanceStore >**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: e0eb29b750c474c277ef54c343726b338fbf5dbe
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8bc8f46a1afa6afad0b1893dfd0f09878be0e7a2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250227"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397469"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Beispiele für die methodenbasierte Abfragesyntax: Filtern
-In den Beispielen in diesem Thema wird gezeigt, wie `Where` die `Where…Contains` -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Hinweis: Where...`Contains` kann nicht als Teil einer [kompilierten Abfrage](compiled-queries-linq-to-entities.md)verwendet werden.  
+In den Beispielen in diesem Thema wird gezeigt, wie `Where` die `Where…Contains` -Methode und die-Methode verwendet werden, um das [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) mithilfe von Methoden basierter Abfrage Syntax abzufragen. Hinweis: Where...`Contains` kann nicht als Teil einer [kompilierten Abfrage](compiled-queries-linq-to-entities.md)verwendet werden.  
   
  Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
   

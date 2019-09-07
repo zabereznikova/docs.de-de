@@ -2,22 +2,23 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918674"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399411"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
 Gibt an, ob Transaktionsbatching für Empfangsvorgänge unterstützt wird.
 
-\<system.ServiceModel>\
-\<Verhalten > \
-\<endpointverhaltensweisen > \
-\<Verhalten > \
-\<transactedBatching>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointverhaltens->** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transactedbatching->**  
 
 ## <a name="syntax"></a>Syntax
 

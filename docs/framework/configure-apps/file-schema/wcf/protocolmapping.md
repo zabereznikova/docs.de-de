@@ -2,18 +2,19 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785488"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400020"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
-Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von standardprotokollzuordnungen zwischen transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen dar. Beim Erstellen von Standardendpunkten zur Laufzeit wird Windows Communication Foundation (WCF) untersucht die konfigurierten Zuordnungen und entscheidet, auf die Bindung für die Verwendung für eine bestimmte Adresse basiert.  
+Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Standardprotokoll Zuordnungen zwischen Transportprotokoll Schemas (z. b. http, net. TCP, net. Pipe usw.) und WCF-Bindungen dar. Beim Erstellen von Standard Endpunkten zur Laufzeit untersucht Windows Communication Foundation (WCF) die konfigurierten Zuordnungen und entscheidet, welche Bindung für eine bestimmte basierte Adresse verwendet werden soll.  
   
-[**\<system.serviceModel>**](system-servicemodel.md)  
-&nbsp;&nbsp;**\<protocolMapping>**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolmapping->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +36,7 @@ Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von standardpro
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|Enthält eine standardprotokollzuordnung zwischen einem transportprotokollschema (z. B. http, net.tcp, net.pipe usw.) und einer WCF-Bindung.|  
+|[\<filters>](filters-of-routing.md)|Enthält eine Standardprotokoll Zuordnung zwischen einem Transportprotokoll Schema (z. b. http, net. TCP, net. Pipe usw.) und einer WCF-Bindung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

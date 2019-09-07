@@ -2,22 +2,23 @@
 title: <security> von <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 890cee3271c410a921b3a88f78d0705ba8718252
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670561"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399846"
 ---
-# <a name="security-of-nethttpbinding"></a>\<security> of \<netHttpBinding>
+# <a name="security-of-nethttpbinding"></a>\<Sicherheits > von \<"netthttpbinding" >
 
-Definiert die Sicherheitsfunktionen von der [ \<BasicHttpBinding >](basichttpbinding.md).
+Definiert die Sicherheitsfunktionen des [ \<> "netthttpbinding](nethttpbinding.md)".
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netHttpBinding>\
-\<binding>\
-\<security>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> "netthttpbinding"** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,17 +40,17 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|Modus|Dies ist optional. Gibt den verwendeten Sicherheitstyp an. Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|
+|Modus|Optional. Gibt den verwendeten Sicherheitstyp an. Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|
 
 ## <a name="mode-attribute"></a>Mode-Attribut
 
-|Wert|Beschreibung|
+|Wert|Description|
 |-----------|-----------------|
-|Keiner|-Nachrichten werden während der Übertragung nicht gesichert.|
+|None|-Nachrichten werden während der Übertragung nicht gesichert.|
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Die SOAP-Nachrichten werden über HTTPS gesichert. Der Dienst wird über das X.509-Zertifikat beim Client authentifiziert. Der Client wird über ClientCredentialType authentifiziert.|
 |Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der Text verschlüsselt und signiert. Bei dieser Bindung erfordert das System, dass das Serverzertifikat dem Client out-of-band zur Verfügung gestellt wird. Der einzig gültige `ClientCredentialType` für diese Bindung lautet `Certificate`.|
 |TransportWithMessageCredential|Integrität, Vertraulichkeit und Serverauthentifizierung werden über die Transportsicherheit bereitgestellt. Die Clientauthentifizierung wird über die SOAP-Nachrichtensicherheit bereitgestellt. Dieser Modus ist relevant, wenn sich der Benutzer mit Benutzername/Kennwort authentifiziert und eine vorhandene HTTP-Bereitstellung für die Absicherung der Nachrichtenübertragung vorhanden ist.|
-|TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit. Er bietet dagegen HTTP-basierte Clientauthentifizierung. Dieser Modus sollte mit Vorsicht angewendet werden. Es sollte verwendet werden in Umgebungen, in denen die transportsicherheit durch andere Mittel (z. B. IPSec) bereitgestellt wird und nur die Clientauthentifizierung wird durch die WCF-Infrastruktur bereitgestellt.|
+|TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit. Er bietet dagegen HTTP-basierte Clientauthentifizierung. Dieser Modus sollte mit Vorsicht angewendet werden. Er sollte in Umgebungen verwendet werden, in denen die Transportsicherheit auf andere Weise (z. b. IPSec) bereitgestellt wird und nur die Client Authentifizierung von der WCF-Infrastruktur bereitgestellt wird.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -62,7 +63,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|Bindung|Das Bindungselement, das von der [ \<BasicHttpBinding >](basichttpbinding.md).|
+|Bindung|Das Bindungs Element des [ \<BasicHttpBinding->](basichttpbinding.md).|
 
 ## <a name="remarks"></a>Hinweise
 

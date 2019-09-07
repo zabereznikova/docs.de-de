@@ -2,19 +2,20 @@
 title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: bb9e1fc0b3ec62c824864a74efb64c34d2076e66
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6ff5b2cfee1d55b9399b97f3b3397e6bbf8eca2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400242"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über HTTP verwendet wird.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<mexHttpBinding->**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,22 +2,23 @@
 title: <message> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 320aca16bde9fc27aa35cad27286d402745e4710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bce80d96b1bcec0d580f2de3fe88d5fd6ad0a3b5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931573"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400261"
 ---
 # <a name="message-of-basichttpbinding"></a>\<Nachrichten > von \<BasicHttpBinding >
 Definiert die Einstellungen für die [ \<Sicherheit auf Nachrichten Ebene des BasicHttpBinding->](basichttpbinding.md).  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<basicHttpBinding>  
-\<binding>  
-\<security>  
-\<Message >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BasicHttpBinding->** ](basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Sicherheits >** ](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Message >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +41,7 @@ Definiert die Einstellungen für die [ \<Sicherheit auf Nachrichten Ebene des Ba
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|UserName|: Erfordert, dass der Client mit Benutzernamen-Anmelde Informationen auf dem Server authentifiziert wird. Diese [ \<Anmelde](clientcredentials.md)Informationen müssen mithilfe des clientCredential-> angegeben werden.<br />-WCF unterstützt nicht das Senden eines Kenn Wort Hashwerts oder das Ableiten von Schlüsseln mit Kenn Wörtern und die Verwendung solcher Schlüssel für die Nachrichten Sicherheit. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen Anmelde Informationen verwendet werden. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
+|UserName|: Erfordert, dass der Client mit Benutzernamen-Anmelde Informationen auf dem Server authentifiziert wird. Diese Anmelde Informationen müssen mithilfe des [ \<clientCredential->](clientcredentials.md)angegeben werden.<br />-WCF unterstützt nicht das Senden eines Kenn Wort Hashwerts oder das Ableiten von Schlüsseln mit Kenn Wörtern und die Verwendung solcher Schlüssel für die Nachrichten Sicherheit. Daher erzwingt WCF, dass der Transport geschützt wird, wenn Benutzernamen Anmelde Informationen verwendet werden. Bei `basicHttpBinding` erfordert dies die Einrichtung eines SSL-Kanals.|  
 |Zertifikat|Erfordert, dass der Client über ein Zertifikat beim Server authentifiziert wird. Die Client [ \<Anmelde](clientcredentials.md) Informationen müssen in diesem Fall mithilfe der clientCredential-> und des [ \<ClientCertificate->](clientcertificate-of-servicecredentials.md)angegeben werden. Außerdem muss für den Fall, dass der Nachrichtensicherheitsmodus verwendet wird, dem Client das Dienstzertifikat bereitgestellt werden. Die Dienst Anmelde Informationen müssen in diesem Fall mithilfe <xref:System.ServiceModel.Description.ClientCredentials> der-Klasse oder `ClientCredentials` dem Behavior-Element angegeben werden und das Dienst Zertifikat mithilfe des [ \<serviceCertificate->](servicecertificate-of-servicecredentials.md)angegeben werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  

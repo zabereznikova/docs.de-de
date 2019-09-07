@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: fc1930889235805d68d88aa8080f8f9fb3235612
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48d7e10eddbf3ed2e2bfe3d04566d37ead5a1e04
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933040"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400147"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<netPeerTcpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netpertcpbinding->**  
   
 ## <a name="syntax"></a>Syntax  
   

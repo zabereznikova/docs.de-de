@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400735"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 
@@ -85,9 +85,6 @@ In diesem grundlegenden Beispiel für eine Ladepfad-XAML-Knotenschleife werden X
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>Zugreifen auf XAML außerhalb des Knotenschleifenkonzepts
 
 Es gibt andere Möglichkeiten als eine XAML-Knotenschleife, um mit einer XAML-Darstellung zu arbeiten. Es könnte z. B. ein XAML-Reader vorhanden sein, der einen indizierten Knoten lesen kann oder insbesondere direkt über `x:Name`, über `x:Uid`oder über andere Bezeichner auf Knoten zugreift. .NET Framework-XAML-Dienste bieten keine vollständige Implementierung, sondern stellen ein vorgeschlagenes Muster über Dienste und Unterstützungstypen bereit. Weitere Informationen finden Sie unter <xref:System.Xaml.IXamlIndexingReader> und <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Microsoft bietet auch eine Out-of-Band-Version an, die als Microsoft XAML Toolkit bezeichnet wird. Diese Out-of-Band-Version befindet sich noch in den Vorabveröffentlichungsphasen. Wenn Sie jedoch bereit sind, mit Vorabveröffentlichungskomponenten zu arbeiten, finden Sie im Microsoft XAML Toolkit mehrere interessante Ressourcen für XAML-Tools und die statische Analyse von XAML. Das Microsoft XAML Toolkit bietet eine XAML-DOM-API, Unterstützung für die FxCop-Analyse und einen XAML-Schemakontext für Silverlight. Weitere Informationen finden Sie unter [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).
 
 <a name="working_with_the_current_node"></a>
 

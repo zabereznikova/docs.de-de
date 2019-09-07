@@ -2,12 +2,12 @@
 title: <add> von <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920116"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398336"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<> von \<issuerchannelverhaltensweisen hinzufügen >
 
@@ -16,13 +16,15 @@ Fügt ein zu verwendendes Endpunktverhalten bei der Kommunikation mit einem STS 
 > [!NOTE]
 > Wenn ein Endpunkt Verhalten ein [ \<Clientanmelde->](clientcredentials.md) Element enthält, wird eine Ausnahme ausgelöst.
 
-\<system.ServiceModel>\
-\<Verhalten > \
-Verhalten des endpointBehavior-Abschnitts \<> \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerchannelverhaltensweisen > Element \
-\<add>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointverhaltens->** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Verhaltens >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Client Anmelde Informationen >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IssuedToken->** ](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<issuerchannelverhaltens>** ](issuerchannelbehaviors-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
 
 ## <a name="syntax"></a>Syntax
 

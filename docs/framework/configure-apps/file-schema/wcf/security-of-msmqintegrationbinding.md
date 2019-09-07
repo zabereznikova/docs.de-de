@@ -2,21 +2,22 @@
 title: <security> von <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 5b74c95ef2933fcf7e8d49aed89d95acbd288b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4f10ab994429c6cbb690caef38114b8340e6839
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936700"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399868"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<security> of \<msmqIntegrationBinding>
 Definiert die Transportsicherheitseinstellungen für den Message Queuing (MSMQ)-Integrationskanal.  
   
- \<system.ServiceModel>  
-\<bindings>  
-msmqIntegrationBinding  
-\<binding>  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Bindungen >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<MsmqIntegrationBinding->** ](msmqintegrationbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Bindungs >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sicherheits >**  
   
 ## <a name="syntax"></a>Syntax  
   

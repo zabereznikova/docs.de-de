@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106520"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400711"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else-Anweisung (Visual Basic)
 
@@ -34,7 +34,7 @@ Führt bedingt eine Gruppe von Anweisungen aus, abhängig vom Wert eines Ausdruc
 
 ## <a name="syntax"></a>Syntax
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ Dieser Artikel enthält einige Beispiele, in denen die `If`Verwendung von verans
 `condition` \
 Erforderlich. Begriff. Muss zu `True` oder `False`oder zu einem Datentyp ausgewertet werden, der implizit in `Boolean`konvertierbar ist.
 
-Wenn der Ausdruck eine Variable ist, die [null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` `False` -Werte zulässt, die als " [Nothing](../../../visual-basic/language-reference/nothing.md)" ausgewertet wird, wird die Bedingung so behandelt, als ob der Ausdruck und der `Else` -Block ausgeführt wird.
+Wenn der Ausdruck eine Variable ist, die [NULL-Werte](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` zulässt, die als " [Nothing](../../../visual-basic/language-reference/nothing.md)" ausgewertet wird, wird `False`die Bedingung so `ElseIf` behandelt, als wäre der Ausdruck, und die `Else` Blöcke werden ausgewertet, wenn Sie vorhanden sind, oder der Block ist wird ausgeführt, wenn es vorhanden ist.
 
 `Then` \
 Erforderlich in der einzeiligen Syntax; optional in der mehrzeiligen Syntax.
