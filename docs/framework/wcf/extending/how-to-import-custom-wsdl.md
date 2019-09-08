@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: d9a4609f08a95bbecca81aa6667102a0e4a73c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 930cb92d8193ba3ffc1f62191f2012e104091190
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767077"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796990"
 ---
 # <a name="how-to-import-custom-wsdl"></a>Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen
 In diesem Thema wird beschrieben, wie Sie benutzerdefinierte WSDL importieren. Zum Behandeln der benutzerdefinierten WSDL müssen Sie die <xref:System.ServiceModel.Description.IWsdlImportExtension>-Schnittstelle implementieren.  
@@ -79,6 +79,6 @@ In diesem Thema wird beschrieben, wie Sie benutzerdefinierte WSDL importieren. Z
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
-- [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Metadaten](../feature-details/metadata.md)
+- [Exportieren und Importieren von Metadaten](../feature-details/exporting-and-importing-metadata.md)
+- [Benutzerdefinierte WSDL-Veröffentlichung](../samples/custom-wsdl-publication.md)

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: ec1acc009e58408fc41c60134538340486f19f75
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eed8a1edaae5fab03ad9e78d29803676debd1b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949678"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796915"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes zur Authentifizierung
-In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurations Code verwendet beispielsweise das [ \<WSHttpBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) -Element und legt `clientCredentialType` das-Attribut auf Windows fest.  
+In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurations Code verwendet beispielsweise das [ \<WSHttpBinding->](../../configure-apps/file-schema/wcf/wshttpbinding.md) -Element und legt `clientCredentialType` das-Attribut auf Windows fest.  
 
  Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst als selbstgeh osteter Dienst unter einem bestimmten Benutzerkonto (username@contoso.com) ausgeführt. Daher enthält die Benutzer Prinzipal Namen-Identität (User Principal Name, UPN) den Kontonamen. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
 
- Eine Beispielanwendung, die die Identitäts Einstellung veranschaulicht, finden Sie unter [Beispiel für Dienst Identität](../../../../docs/framework/wcf/samples/service-identity-sample.md). Weitere Informationen zur Dienst Identität finden Sie unter [Dienst Identität und-Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Eine Beispielanwendung, die die Identitäts Einstellung veranschaulicht, finden Sie unter [Beispiel für Dienst Identität](../samples/service-identity-sample.md). Weitere Informationen zur Dienst Identität finden Sie unter [Dienst Identität und-Authentifizierung](../feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos-Authentifizierung und Identität  
- Wenn ein Dienst für die Verwendung von Windows-Anmelde Informationen konfiguriert ist, wird standardmäßig ein [ \<Identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element verwendet, das eine [ \<userPrincipalName->](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) oder [ \<ein servicePrincipalName->](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element enthält. wird in der WSDL-Datei generiert. Wenn der `LocalSystem`Dienst unter dem Konto, `NetworkService` `LocalService`oder ausgeführt wird, `host/` \<wird standardmäßig ein Dienst Prinzipal Name (Service Principal Name, SPN) in der Form *Hostname*> generiert, da diese Konten Zugriff auf haben. die SPN-Daten des Computers. Wenn der Dienst unter einem anderen Konto ausgeführt wird, generiert Windows Communication Foundation (WCF) \<einen UPN in der Form *Benutzername*>@<*Domain Name*`>`. Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
+ Wenn ein Dienst für die Verwendung von Windows-Anmelde Informationen konfiguriert ist, wird standardmäßig ein [ \<Identity >](../../configure-apps/file-schema/wcf/identity.md) -Element verwendet, das eine [ \<userPrincipalName->](../../configure-apps/file-schema/wcf/userprincipalname.md) oder [ \<ein servicePrincipalName->](../../configure-apps/file-schema/wcf/serviceprincipalname.md) Element enthält. wird in der WSDL-Datei generiert. Wenn der `LocalSystem`Dienst unter dem Konto, `NetworkService` `LocalService`oder ausgeführt wird, `host/` \<wird standardmäßig ein Dienst Prinzipal Name (Service Principal Name, SPN) in der Form *Hostname*> generiert, da diese Konten Zugriff auf haben. die SPN-Daten des Computers. Wenn der Dienst unter einem anderen Konto ausgeführt wird, generiert Windows Communication Foundation (WCF) \<einen UPN in der Form *Benutzername*>@<*Domain Name*`>`. Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
   
  Sie können auch das Tool Setspn.exe zur Registrierung eines zusätzlichen SPN beim Konto eines Dienstes in einer Domäne verwenden. Sie können dann den SPN als die Identität des Dienstes verwenden. Informationen zum Herunterladen des Tools [finden Sie unter Windows 2000 Resource Kit-Tool: Setspn. exe](https://go.microsoft.com/fwlink/?LinkId=91752). Weitere Informationen zum Tool finden Sie unter [setspn Overview (Übersicht über Setspn](https://go.microsoft.com/fwlink/?LinkId=61374)).  
   
@@ -59,5 +59,5 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen einer benutzerdefinierten Client Identitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Vorgehensweise: Erstellen einer benutzerdefinierten Client Identitätsüberprüfung](how-to-create-a-custom-client-identity-verifier.md)
+- [Dienstidentität und Authentifizierung](../feature-details/service-identity-and-authentication.md)

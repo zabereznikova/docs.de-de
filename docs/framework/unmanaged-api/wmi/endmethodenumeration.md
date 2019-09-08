@@ -1,6 +1,6 @@
 ---
-title: EndMethodEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: EndMethodEnumeration-Funktion beendet wird, eine Methode Enumerationsfolge.
+title: Endmethodenumeration-Funktion (Referenz zur nicht verwalteten API)
+description: Die endmethodenumeration-Funktion beendet eine enumerationssequenz der Methode.
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746834"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799344"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration-Funktion
-Beendet eine Enumerationsfolge gestartet, die durch einen Aufruf der [BeginMethodEnumeration-Funktion](beginmethodenumeration.md).  
+Beendet eine enumerationssequenz, die mit einem Aufrufen der [beginmethodenumeration-Funktion](beginmethodenumeration.md)gestartet wurde.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,28 +40,28 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Interner Fehler. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) Methode.
+Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: endmethodenumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) -Methode.
 
-Der Aufrufer startet die Enumeration Sequenz mit [BeginMethodEnumeration-Funktion](beginmethodenumeration.md), und ruft dann die [NextMethod Funktion](nextmethod.md )bis die Methode zurückgibt `WBEM_S_NO_MORE_DATA`. Der Aufrufer wird optional die Sequenz beendet, indem Aufrufen `EndMethodEnumeration`. Der Aufrufer kann die Enumeration beenden, in der frühen durch Aufrufen von `EndMethodEnumeration` zu einem beliebigen Zeitpunkt.
+Der Aufrufer startet die enumerationssequenz mithilfe der [beginmethodenumeration-Funktion](beginmethodenumeration.md)und ruft dann die [nextmethod](nextmethod.md )- `WBEM_S_NO_MORE_DATA`Funktion auf, bis die Methode zurückgibt. Der Aufrufer schließt die Sequenz optional `EndMethodEnumeration`durch Aufrufen von ab. Der Aufrufer kann die Enumeration frühzeitig `EndMethodEnumeration` beenden, indem er jederzeit aufruft.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

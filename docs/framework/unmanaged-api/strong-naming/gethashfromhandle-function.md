@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771904"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799185"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle-Funktion
 Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihandle unter Verwendung des angegebenen Hashalgorithmus.  
   
- Diese Funktion wurde als veraltet markiert. Verwenden der [ICLRStrongName:: GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) Methode stattdessen.  
+ Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>Parameter  
  `hFile`  
- [in] Das Handle der Datei, der Hashwert berechnet werden soll.  
+ in Das Handle der Datei, für die der Hashwert verwendet werden soll.  
   
  `piHashAlg`  
- [in, out] Eine Konstante, die den Hashalgorithmus angibt. Verwenden Sie 0 (null), für den Standardalgorithmus.  
+ [in, out] Eine-Konstante, die den Hash Algorithmus angibt. Verwenden Sie 0 (null) für den Standard Algorithmus.  
   
  `pbHash`  
- [out] Der zurückgegebene Hashpuffer.  
+ vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- [in] Die angeforderte maximale Größe des `pbHash`.  
+ in Die angeforderte maximale Größe `pbHash`von.  
   
  `pchHash`  
- [out] Die Größe in Bytes, des zurückgegebenen `pbHash`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** StrongName.h  
+ **Header:** StrongName. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [GetHashFromHandle-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromHandle-Methode](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName-Schnittstelle](../hosting/iclrstrongname-interface.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878223"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783258"
 ---
 # <a name="performing-catalog-operations"></a>Ausführen von Katalogoperationen
-Erstellen Sie zum Ausführen eines Befehls zum Ändern einer Datenbank oder der Katalog, z. B. der CREATE TABLE- oder CREATE PROCEDURE-Anweisung, eine **Befehl** -Objekt unter Verwendung der entsprechenden SQL-Anweisungen und ein **Verbindung** Objekt. Führen Sie den Befehl mit der **ExecuteNonQuery** Methode der **Befehl** Objekt.  
+Zum Ausführen eines Befehls zum Ändern einer Datenbank oder eines Katalogs, wie z. b. der CREATE TABLE oder der CREATE PROCEDURE-Anweisung, erstellen Sie ein **Command** -Objekt mit den entsprechenden SQL-Anweisungen und einem **Verbindungs** Objekt. Führen Sie den Befehl mit der **ExecuteNonQuery** -Methode des **Command** -Objekts aus.  
   
  Im folgenden Codebeispiel wird eine gespeicherte Prozedur in einer Microsoft SQL Server-Datenbank erstellt.  
   
@@ -47,6 +47,6 @@ command.ExecuteNonQuery();
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Befehlen zum Ändern von Daten](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verwenden von Befehlen zum Ändern von Daten](using-commands-to-modify-data.md)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

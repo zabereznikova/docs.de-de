@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: ffdfe41db05eb5f2dd55a233f8ed646401777d0f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040300"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797106"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst
 
@@ -58,17 +58,17 @@ Die Registrierung des benutzerdefinierten Autorisierungs-Managers für einen Die
 
 1. Öffnen Sie die Konfigurationsdatei für den Dienst.
 
-2. Fügen Sie [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) [dem Verhalten\<>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)einen Service Authorization-> hinzu.
+2. Fügen Sie [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) [dem Verhalten\<>](../../configure-apps/file-schema/wcf/behaviors.md)einen Service Authorization-> hinzu.
 
-    Fügen Sie dem [ \<Service Authorization->](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)ein `serviceAuthorizationManagerType` -Attribut hinzu, und legen Sie dessen Wert auf den Typ fest, der den benutzerdefinierten Autorisierungs-Manager darstellt.
+    Fügen Sie dem [ \<Service Authorization->](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)ein `serviceAuthorizationManagerType` -Attribut hinzu, und legen Sie dessen Wert auf den Typ fest, der den benutzerdefinierten Autorisierungs-Manager darstellt.
 
 3. Fügen Sie eine Bindung hinzu, durch die die Kommunikation zwischen Client und Dienst gesichert wird.
 
-    Die für diese Kommunikation gewählte Bindung bestimmt die Ansprüche, die zum <xref:System.IdentityModel.Policy.AuthorizationContext> hinzugefügt werden, der vom benutzerdefinierten Autorisierungs-Manager verwendet wird, um Autorisierungsentscheidungen zu treffen. Weitere Informationen zu den vom System bereitgestellten Bindungen finden Sie unter vom [System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).
+    Die für diese Kommunikation gewählte Bindung bestimmt die Ansprüche, die zum <xref:System.IdentityModel.Policy.AuthorizationContext> hinzugefügt werden, der vom benutzerdefinierten Autorisierungs-Manager verwendet wird, um Autorisierungsentscheidungen zu treffen. Weitere Informationen zu den vom System bereitgestellten Bindungen finden Sie unter vom [System bereitgestellte Bindungen](../system-provided-bindings.md).
 
-4. Ordnen Sie das Verhalten einem Dienst Endpunkt zu, indem Sie ein [ \<Dienst >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) -Element hinzufügen und `behaviorConfiguration` den Wert des-Attributs auf den Wert des Name-Attributs für das [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element festlegen.
+4. Ordnen Sie das Verhalten einem Dienst Endpunkt zu, indem Sie ein [ \<Dienst >](../../configure-apps/file-schema/wcf/service.md) -Element hinzufügen und `behaviorConfiguration` den Wert des-Attributs auf den Wert des Name-Attributs für das [ \<Verhalten >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element festlegen.
 
-    Weitere Informationen zum Konfigurieren eines Dienst Endpunkts finden [Sie unter Gewusst wie: Erstellen Sie einen Dienst Endpunkt in](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)der Konfiguration.
+    Weitere Informationen zum Konfigurieren eines Dienst Endpunkts finden [Sie unter Gewusst wie: Erstellen Sie einen Dienst Endpunkt in](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)der Konfiguration.
 
     Im folgenden Codebeispiel wird der benutzerdefinierte Autorisierungs-Manager `Samples.MyServiceAuthorizationManager` registriert.
 
@@ -114,7 +114,7 @@ Die Registrierung des benutzerdefinierten Autorisierungs-Managers für einen Die
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel zeigt eine grundlegende Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse, bei der auch die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode außer Kraft gesetzt (überschrieben) wird. Im Beispielcode wird der <xref:System.IdentityModel.Policy.AuthorizationContext> auf einen benutzerspezifischen Anspruch hin überprüft und `true` zurückgegeben, wenn die Ressource für diesen benutzerspezifischen Anspruch zum Aktionswert aus dem <xref:System.ServiceModel.OperationContext> passt. Eine umfassendere Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager> -Klasse finden Sie unter [Autorisierungs Richtlinien](../../../../docs/framework/wcf/samples/authorization-policy.md).
+Das folgende Codebeispiel zeigt eine grundlegende Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse, bei der auch die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode außer Kraft gesetzt (überschrieben) wird. Im Beispielcode wird der <xref:System.IdentityModel.Policy.AuthorizationContext> auf einen benutzerspezifischen Anspruch hin überprüft und `true` zurückgegeben, wenn die Ressource für diesen benutzerspezifischen Anspruch zum Aktionswert aus dem <xref:System.ServiceModel.OperationContext> passt. Eine umfassendere Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager> -Klasse finden Sie unter [Autorisierungs Richtlinien](../samples/authorization-policy.md).
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
@@ -122,4 +122,4 @@ Das folgende Codebeispiel zeigt eine grundlegende Implementierung einer <xref:Sy
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Autorisierungsrichtlinie](../samples/authorization-policy.md)

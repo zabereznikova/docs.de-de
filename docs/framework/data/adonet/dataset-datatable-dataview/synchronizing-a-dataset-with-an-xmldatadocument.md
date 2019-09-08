@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204423"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784269"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronisieren eines "DataSet "mit einem "XmlDataDocument"
 In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit einem <xref:System.Data.DataSet> mit strikter Typbindung beschrieben, das mit einem <xref:System.Xml.XmlDataDocument> synchronisiert wird. In den folgenden Beispielen wird ein **DataSet** mit einem minimierten Schema erstellt, das nur einem Teil des XML-Quelldokuments entspricht. In den Beispielen wird ein **xmldatadocenent** verwendet, um die Genauigkeit des XML-Quelldokuments beizubehalten, sodass das **DataSet** verwendet werden kann, um eine Teilmenge des XML-Dokuments verfügbar zu machen.  
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>Siehe auch
 
 - [DataSet- und XmlDataDocument-Synchronisierung](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

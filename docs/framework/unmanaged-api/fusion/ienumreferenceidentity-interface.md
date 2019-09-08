@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697250"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796434"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity-Schnittstelle
-Dient als Enumerator für eine Auflistung von `IReferenceIdentity` Objekte.  
+Dient als Enumerator für eine Auflistung von `IReferenceIdentity` -Objekten.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Ruft einen Schnittstellenzeiger zu einem neuen `IEnumReferenceIdentity` , enthält das dieselben Member wie diese `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Next`|Ruft die angegebene Anzahl von `IReferenceIdentity` Objekten, beginnend an der aktuellen Position.|  
-|`IEnumReferenceIdentity::Reset`|Verschiebt den Anweisungszeiger an den Anfang `IEnumReferenceIdentity`.|  
-|`IEnumReferenceIdentity::Skip`|Verschiebt den Anweisungszeiger vorwärts durch die angegebene Anzahl von Elementen, die an der aktuellen Position ab.|  
+|`IEnumReferenceIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumReferenceIdentity` ab, der dieselben Member wie dieses `IEnumReferenceIdentity`enthält.|  
+|`IEnumReferenceIdentity::Next`|Ruft die angegebene Anzahl von `IReferenceIdentity` -Objekten ab der aktuellen Position ab.|  
+|`IEnumReferenceIdentity::Reset`|Verschiebt den Anweisungs Zeiger an den Anfang dieses `IEnumReferenceIdentity`.|  
+|`IEnumReferenceIdentity::Skip`|Verschiebt den Anweisungs Zeiger um die angegebene Anzahl von Elementen, beginnend an der aktuellen Position.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Isolation.h  
+ **Header:** Isolation. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IReferenceIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)
+- [IReferenceIdentity-Schnittstelle](ireferenceidentity-interface.md)

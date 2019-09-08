@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b92382b4a37168c33f9e97077ad292d27ea5bc3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797022"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung
-Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellten Bindungen, mit die Sie einige der Eigenschaften von zugrundeliegenden Bindungselementen, aber nicht alle Eigenschaften konfigurieren können. In diesem Thema wird veranschaulicht, wie Sie Eigenschaften für die Bindungselemente festlegen, um eine benutzerdefinierte Bindung zu erstellen.  
+Windows Communication Foundation (WCF) umfasst mehrere vom System bereitgestellte Bindungen, mit denen Sie einige der Eigenschaften der zugrunde liegenden Bindungs Elemente, aber nicht alle Eigenschaften konfigurieren können. In diesem Thema wird veranschaulicht, wie Sie Eigenschaften für die Bindungselemente festlegen, um eine benutzerdefinierte Bindung zu erstellen.  
   
- Weitere Informationen dazu, wie Sie direkt erstellen und konfigurieren Bindungselemente, ohne die vom System bereitgestellten Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Weitere Informationen zum direkten erstellen und Konfigurieren von Bindungs Elementen ohne die vom System bereitgestellten Bindungen finden Sie unter [benutzerdefinierte Bindungen](custom-bindings.md).  
   
- Weitere Informationen zum Erstellen und Erweiterung benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Weitere Informationen zum Erstellen und Erweitern von benutzerdefinierten Bindungen finden Sie unter [Erweitern von Bindungen](extending-bindings.md).  
   
- In WCF Alle Bindungen bestehen *Bindungselemente*. Jedes Bindungselement wird von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet. Systemseitig bereitgestellte Bindungen wie <xref:System.ServiceModel.BasicHttpBinding> erstellen und konfigurieren ihre eigenen Bindungselemente. In diesem Thema wird gezeigt, wie Sie auf die Eigenschaften dieser Bindungselemente zugreifen und sie ändern können. Die Elemente sind nicht direkt über die Bindung verfügbar. Dies trifft insbesondere auf die <xref:System.ServiceModel.BasicHttpBinding>-Klasse zu.  
+ In WCF bestehen alle Bindungen aus *Bindungs Elementen*. Jedes Bindungselement wird von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet. Systemseitig bereitgestellte Bindungen wie <xref:System.ServiceModel.BasicHttpBinding> erstellen und konfigurieren ihre eigenen Bindungselemente. In diesem Thema wird gezeigt, wie Sie auf die Eigenschaften dieser Bindungselemente zugreifen und sie ändern können. Die Elemente sind nicht direkt über die Bindung verfügbar. Dies trifft insbesondere auf die <xref:System.ServiceModel.BasicHttpBinding>-Klasse zu.  
   
- Die einzelnen Bindungselemente sind in einer Auflistung durch dargestellt enthalten die <xref:System.ServiceModel.Channels.BindingElementCollection> Klasse und werden in dieser Reihenfolge hinzugefügt: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, unidirektional, Stream Security, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind. Auch benutzerdefinierte Bindungselemente können in dieser Auflistung enthalten sein und müssen in der gerade beschriebenen Reihenfolge angezeigt werden. Zum Beispiel muss ein benutzerdefinierter Transport das letzte Element der Bindungselementeauflistung sein.  
+ Die einzelnen Bindungs Elemente sind in einer Auflistung enthalten, die durch <xref:System.ServiceModel.Channels.BindingElementCollection> die-Klasse dargestellt wird, und werden in dieser Reihenfolge hinzugefügt: Transaktions Fluss, zuverlässige Sitzung, Sicherheit, zusammengesetzter Duplex, unidirektional, Streamsicherheit, Nachrichten Codierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind. Auch benutzerdefinierte Bindungselemente können in dieser Auflistung enthalten sein und müssen in der gerade beschriebenen Reihenfolge angezeigt werden. Zum Beispiel muss ein benutzerdefinierter Transport das letzte Element der Bindungselementeauflistung sein.  
   
  Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse enthält drei Bindungselemente:  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
   
 3. Ein erforderliches Transportbindungselement, entweder <xref:System.ServiceModel.Channels.HttpTransportBindingElement> oder <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
- Wir in diesem Beispiel erstellen Sie eine Instanz der Bindung, generieren eine *benutzerdefinierte Bindung* , überprüfen Sie die Bindungselemente der benutzerdefinierten Bindung, und wenn wir das HTTP-Bindungselement gefunden haben, wir legen Sie dessen `KeepAliveEnabled` Eigenschaft `false`. Die `KeepAliveEnabled`-Eigenschaft steht nicht direkt über die `BasicHttpBinding` zur Verfügung, sodass eine benutzerdefinierte Bindung erstellt werden muss, um zum Bindungselement zu navigieren und dessen Eigenschaft festzulegen.  
+ In diesem Beispiel erstellen wir eine Instanz der Bindung, generieren eine *benutzerdefinierte Bindung* daraus, untersuchen die Bindungs Elemente in der benutzerdefinierten Bindung, und wenn wir das http-Bindungs Element finden, legen `KeepAliveEnabled` wir dessen `false`-Eigenschaft auf fest. Die `KeepAliveEnabled`-Eigenschaft steht nicht direkt über die `BasicHttpBinding` zur Verfügung, sodass eine benutzerdefinierte Bindung erstellt werden muss, um zum Bindungselement zu navigieren und dessen Eigenschaft festzulegen.  
   
 ### <a name="to-modify-a-system-provided-binding"></a>So ändern Sie eine vom System bereitgestellte Bindung  
   
@@ -55,4 +55,4 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Benutzerdefinierte Bindungen](custom-bindings.md)

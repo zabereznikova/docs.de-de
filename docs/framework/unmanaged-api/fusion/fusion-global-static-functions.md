@@ -8,70 +8,70 @@ helpviewer_keywords:
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697718"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795313"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion – Globale statistische Funktionen
-In diesem Abschnitt wird beschrieben, die nicht verwalteten globalen statischen Funktionen, die die Fusion-API verwendet wird.  
+In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von der Fusion-API verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [ClearDownloadCache-Funktion](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
- Löscht den globalen Assemblycache des heruntergeladenen Assemblys.  
+ [ClearDownloadCache-Funktion](cleardownloadcache-function.md)  
+ Löscht den globalen Assemblycache der heruntergeladenen Assemblys.  
   
- [CompareAssemblyIdentity-Funktion](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- Vergleicht zwei Assemblyidentitäten aus, um festzustellen, ob sie gleich sind.  
+ [CompareAssemblyIdentity-Funktion](compareassemblyidentity-function.md)  
+ Vergleicht zwei Assemblyidentitäten, um zu bestimmen, ob Sie äquivalent sind.  
   
- [CreateApplicationContext-Funktion](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- Nur intern. (Diese Funktion unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.)  
+ [CreateApplicationContext-Funktion](createapplicationcontext-function.md)  
+ Nur intern. (Diese Funktion unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.)  
   
- [CreateAssemblyCache-Funktion](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
- Ruft einen Zeiger auf ein neues [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) Instanz, die im globalen Assemblycache darstellt.  
+ [CreateAssemblyCache-Funktion](createassemblycache-function.md)  
+ Ruft einen Zeiger auf eine neue [IAssemblyCache](iassemblycache-interface.md) -Instanz ab, die den globalen Assemblycache darstellt.  
   
- [CreateAssemblyEnum-Funktion](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
- Ruft einen Zeiger auf ein [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) Instanz, die eine Liste von Objekten darstellt, die in der angegebenen Assembly vorhanden sind.  
+ [CreateAssemblyEnum-Funktion](createassemblyenum-function.md)  
+ Ruft einen Zeiger auf eine [IAssemblyEnum](iassemblyenum-interface.md) -Instanz ab, die eine Liste von-Objekten darstellt, die in der angegebenen Assembly vorhanden sind.  
   
- [CreateAssemblyNameObject-Funktion](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- Ruft einen Zeiger auf ein [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) -Instanz, die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
+ [CreateAssemblyNameObject-Funktion](createassemblynameobject-function.md)  
+ Ruft einen Zeiger auf eine [IAssemblyName](iassemblyname-interface.md) -Instanz ab, die die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
   
- [CreateHistoryReader-Funktion](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- Erstellt einen Verlauf Leser für die angegebene Datei.  
+ [CreateHistoryReader-Funktion](createhistoryreader-function.md)  
+ Erstellt einen Verlaufs Leser für die angegebene Datei.  
   
- [CreateInstallReferenceEnum-Funktion](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- Ruft einen Zeiger auf ein [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) -Instanz, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
+ [CreateInstallReferenceEnum-Funktion](createinstallreferenceenum-function.md)  
+ Ruft einen Zeiger auf eine [IInstallReferenceEnum](iinstallreferenceenum-interface.md) -Instanz ab, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
   
- [GetAppIdAuthority-Funktion](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- Ruft einen Zeiger auf ein [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) -Instanz, die Schlüssel für Anwendungsidentitäten und Verweise verwaltet.  
+ [GetAppIdAuthority-Funktion](getappidauthority-function.md)  
+ Ruft einen Zeiger auf eine [IAppIdAuthority](iappidauthority-interface.md) -Instanz ab, die Schlüssel für Anwendungs Identitäten und-Verweise verwaltet.  
   
- [GetAssemblyIdentityFromFile-Funktion](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- Ruft einen Zeiger auf ein `IUnknown` Objekt mit dem angegebenen `IID` in der Assembly im angegebenen Dateipfad.  
+ [GetAssemblyIdentityFromFile-Funktion](getassemblyidentityfromfile-function.md)  
+ Ruft einen Zeiger auf ein `IUnknown` -Objekt mit dem `IID` angegebenen in der Assembly am angegebenen Dateipfad ab.  
   
- [GetCachePath-Funktion](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- Ruft den Pfad auf der zwischengespeicherte Assembly, die mit den angegebenen Flags.  
+ [GetCachePath-Funktion](getcachepath-function.md)  
+ Ruft den Pfad zur zwischengespeicherten Assembly unter Verwendung der angegebenen Flags ab.  
   
- [GetHistoryFileDirectory-Funktion](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
- Ruft den Pfad des Anwendungsverzeichnisses Verlauf.  
+ [GetHistoryFileDirectory-Funktion](gethistoryfiledirectory-function.md)  
+ Ruft den Pfad des Verzeichnisses für den Anwendungs Verlauf ab.  
   
- [GetIdentityAuthority-Funktion](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
- Ruft einen Zeiger auf ein [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) -Instanz, die Schlüssel für die Codeobjekte verwaltet.  
+ [GetIdentityAuthority-Funktion](getidentityauthority-function.md)  
+ Ruft einen Zeiger auf eine [IIdentityAuthority](iidentityauthority-interface.md) -Instanz ab, die Schlüssel für Code Objekte verwaltet.  
   
- [IsFrameworkAssembly-Funktion](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
- Ruft einen Wert, der angibt, ob die angegebene Assembly verwaltet wird.  
+ [IsFrameworkAssembly-Funktion](isframeworkassembly-function.md)  
+ Ruft einen Wert ab, der angibt, ob die angegebene Assembly verwaltet wird.  
   
- [NukeDownloadedCache-Funktion](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
- Löscht den Downloadcache der common Language Runtime an.  
+ [NukeDownloadedCache-Funktion](nukedownloadedcache-function.md)  
+ Löscht den Common Language Runtime Download Cache.  
   
- [PreBindAssemblyEx-Funktion](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.  
+ [PreBindAssemblyEx-Funktion](prebindassemblyex-function.md)  
+ Ruft den anzeigen Amen für eine Assembly nach der Richtlinie ab.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion-Schnittstellen](fusion-interfaces.md)  
   
- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [Fusion-Enumerationen](fusion-enumerations.md)  
   
- [Fusion-Strukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
+ [Fusion-Strukturen](fusion-structures.md)  
   
- [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)
+ [Globaler Assemblycache](../../app-domains/gac.md)

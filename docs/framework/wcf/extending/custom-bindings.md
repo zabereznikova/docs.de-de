@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663878"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797227"
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 
-Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Arbeitsbeispiele finden Sie unter [Beispiele für die benutzerdefinierte Bindung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden Sie unter [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Funktionierende Beispiele finden Sie unter Beispiele für [benutzerdefinierte Bindungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden [ \<Sie unter CustomBinding->](../../configure-apps/file-schema/wcf/custombinding.md).
 
 ## <a name="construction-of-a-custom-binding"></a>Aufbau einer benutzerdefinierten Bindung
 
@@ -44,7 +44,7 @@ Eine benutzerdefinierte Bindung wird unter Verwendung des <xref:System.ServiceMo
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eigenen Transport oder eines der folgenden transportbindungselemente, die Windows Communication Foundation (WCF) bietet:
+Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eigenen Transport oder eines der folgenden Transport Bindungs Elemente verwenden, Windows Communication Foundation (WCF) Folgendes bietet:
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -64,7 +64,7 @@ Am Ende befindet sich ein erforderliches Transportelement. Sie können Ihren eig
 
 In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.
 
-|Ebene|Optionen|Erforderlich|
+|Ebene|Optionen|Required|
 |-----------|-------------|--------------|
 |Transaktionen|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nein|
 |Zuverlässigkeit|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nein|
@@ -76,9 +76,9 @@ Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwisc
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Benutzerdefinierte Bindung](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [Übersicht über die Endpunkterstellung](../endpoint-creation-overview.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../using-bindings-to-configure-services-and-clients.md)
+- [Vom System bereitgestellte Bindungen](../system-provided-bindings.md)
+- [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [Benutzerdefinierte Bindung](../samples/custom-binding.md)

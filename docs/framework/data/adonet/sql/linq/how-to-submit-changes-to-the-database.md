@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902693"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793110"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Vorgehensweise: Übergeben von Änderungen an die Datenbank
 Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änderungen nur an den Replikaten im Arbeitsspeicher. Sie haben die eigentlichen Daten in der Datenbank nicht verändert. Ihre Änderungen werden erst dann zum Server gesendet, wenn Sie explizit <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> aufrufen.  
   
- Bei diesem Aufruf versucht der <xref:System.Data.Linq.DataContext>, die Änderungen in entsprechende SQL-Befehle zu übersetzen. Sie können Ihre eigene Logik verwenden, um diese Aktionen zu überschreiben. allerdings wird die Reihenfolge der Übergabe durch einen Dienst des orchestriert die <xref:System.Data.Linq.DataContext> bekannt als die *Änderungsprozessor*. Die Ereignisse finden in der folgenden Reihenfolge statt:  
+ Bei diesem Aufruf versucht der <xref:System.Data.Linq.DataContext>, die Änderungen in entsprechende SQL-Befehle zu übersetzen. Sie können Ihre eigene benutzerdefinierte Logik verwenden, um diese Aktionen außer Kraft zu setzen, aber die Reihenfolge der Übermittlung wird <xref:System.Data.Linq.DataContext> von einem Dienst des, der als *Änderungs Prozessor*bezeichnet wird, orchestriert. Die Ereignisse finden in der folgenden Reihenfolge statt:  
   
 1. Wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen, prüft [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] den Satz unbekannter Objekte, um zu ermitteln, ob diesen neue Instanzen hinzugefügt wurden. Ist dies der Fall, werden diese Instanzen dem Satz verfolgter Objekte hinzugefügt.  
   
@@ -35,7 +35,7 @@ Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änd
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erkennen und Auflösen von Übergabekonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Vorgehensweise: Erkennen und Auflösen von in Konflikt stehenden Einreichungen](how-to-detect-and-resolve-conflicting-submissions.md)
+- [Vorgehensweise: Verwalten von Änderungs Konflikten](how-to-manage-change-conflicts.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](downloading-sample-databases.md)
+- [Vornehmen und Übergeben von Datenänderungen](making-and-submitting-data-changes.md)

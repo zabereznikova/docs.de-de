@@ -2,12 +2,12 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204801"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785321"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema
 Die relationale Struktur bzw. das Schema eines <xref:System.Data.DataSet> besteht aus Tabellen, Spalten, Einschränkungen und Beziehungen. Beim Laden eines <xref:System.Data.DataSet> aus XML kann das Schema vordefiniert sein oder explizit bzw. durch Rückschluss aus dem geladenen XML erstellt werden. Weitere Informationen zum Laden des Schemas und Inhalts eines <xref:System.Data.DataSet> aus XML finden Sie unter [Laden eines Datasets aus](loading-a-dataset-from-xml.md) XML und [Laden von DataSet-Schema Informationen aus XML](loading-dataset-schema-information-from-xml.md).  
@@ -49,4 +49,4 @@ Die relationale Struktur bzw. das Schema eines <xref:System.Data.DataSet> besteh
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

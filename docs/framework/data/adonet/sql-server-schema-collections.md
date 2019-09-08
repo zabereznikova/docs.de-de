@@ -2,22 +2,22 @@
 title: SQL Server-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878461"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794332"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server-Schemaauflistungen
-Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten schemaauflistungen zu ermitteln, rufen Sie die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
+Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten Schema Auflistungen zu ermitteln, müssen Sie die **GetSchema** -Methode ohne Argumente oder mit dem Schema Auflistungs Namen "MetaDataCollections" aufrufen. Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
   
 ## <a name="databases"></a>Databases  
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |database_name|Zeichenfolge|Name der Datenbank.|  
-|dbid|Int16|Datenbank-ID.|  
+|DBID|Int16|Datenbank-ID.|  
 |create_date|DateTime|Erstellungsdatum der Datenbank.|  
   
 ## <a name="foreign-keys"></a>Fremdschlüssel  
@@ -44,14 +44,14 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |table_catalog|Zeichenfolge|Tabellenname, dem der Index zugeordnet ist.|  
 |table_schema|Zeichenfolge|Schema, das die Tabelle enthält, der der Index zugeordnet ist.|  
 |table_name|Zeichenfolge|Tabellenname.|  
-|index_name|Zeichenfolge|Name des Indexes.|  
+|index_name|Zeichenfolge|Der Indexname.|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  Ab .NET Framework, Version 3.5 SP1, und SQL Server 2008 wurden der Indexes-Schemaauflistung die folgenden Spalten hinzugefügt, um neue räumliche Typen, Dateistream und Sparsespalten unterstützen zu können. Diese Spalten werden in früheren Versionen von .NET Framework und von SQL Server nicht unterstützt.  
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
-|type_desc|Zeichenfolge|Der Index weist einen der folgenden Typen auf:<br /><br /> -HEAP<br />-CLUSTER<br />-NICHT GRUPPIERTE<br />-   XML<br />-RÄUMLICHE|  
+|type_desc|Zeichenfolge|Der Index weist einen der folgenden Typen auf:<br /><br /> -HEAP<br />-GRUPPIERT<br />-NONCLUSTERED<br />-XML<br />-RÄUMLICH|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -66,7 +66,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |column_name|Zeichenfolge|Spaltenname, dem der Index zugeordnet ist.|  
 |ordinal_position|Int32|Ordnungsposition der Spalte.|  
 |KeyType|Byte|Der Objekttyp.|  
-|index_name|Zeichenfolge|Name des Indexes.|  
+|index_name|Zeichenfolge|Der Indexname.|  
   
 ## <a name="procedures"></a>Verfahren  
   
@@ -244,12 +244,12 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |----------------|--------------|-----------------|  
 |assembly_name|Zeichenfolge|Der Name der Datei für die Assembly.|  
 |udt_name|Zeichenfolge|Der Klassenname für die Assembly.|  
-|version_major|Object|Nummer der Hauptversion.|  
-|version_minor|Object|Nummer der Nebenversion.|  
-|version_build|Object|Buildnummer.|  
-|version_revision|Object|Revisionsnummer.|  
-|culture_info|Object|Die diesem UDT zugeordneten Kulturinformationen.|  
-|public_key|Object|Der von dieser Assembly verwendete öffentliche Schlüssel.|  
+|version_major|Objekt|Nummer der Hauptversion.|  
+|version_minor|Objekt|Nummer der Nebenversion.|  
+|version_build|Objekt|Buildnummer.|  
+|version_revision|Objekt|Revisionsnummer.|  
+|culture_info|Objekt|Die diesem UDT zugeordneten Kulturinformationen.|  
+|public_key|Objekt|Der von dieser Assembly verwendete öffentliche Schlüssel.|  
 |is_fixed_length|Boolesch|Gibt an, ob die Länge des Typs immer mit max_length übereinstimmt.|  
 |max_length|Int16|Maximale Länge des Typs in Byte.|  
 |Create_Date|DateTime|Datum, an dem die Assembly erstellt/registriert wurde.|  
@@ -257,5 +257,5 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Abrufen von Datenbankschemainformationen](retrieving-database-schema-information.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

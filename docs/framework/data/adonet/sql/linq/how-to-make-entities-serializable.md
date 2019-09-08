@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: fd687ba5dce16baee063f1d3bb9521c6664988b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40a0b4d5a49f88af1bedcbefdd117f6c000b791d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743278"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793566"
 ---
 # <a name="how-to-make-entities-serializable"></a>Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten
 Sie können die Serialisierbarkeit von Entitäten aktivieren, wenn Sie den Code generieren. Entitätsklassen werden mit dem <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und Spalten mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut ergänzt.  
   
- Der Object Relational Designer können sich Entwickler, die mithilfe von Visual Studio für diesen Zweck.  
+ Entwickler, die Visual Studio verwenden, können die objektrelationaler Designer zu diesem Zweck verwenden.  
   
- Wenn Sie das SQLMetal-Befehlszeilentool verwenden, verwenden Sie die **/serialization** -Option mit der `unidirectional` Argument. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Wenn Sie das SQLMetal-Befehlszeilen Tool verwenden, verwenden Sie die **/Serialization** -Option mit `unidirectional` dem-Argument. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden SQLMetal-Befehlszeilen erzeugen Dateien, die serialisierbare Entitäten aufweisen.  
@@ -29,5 +29,5 @@ sqlmetal /code:nwserializable.cs /language:csharp "c:\northwnd.mdf" /sprocs /fun
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Serialisierung](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)
-- [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Serialisierung](serialization.md)
+- [Erstellen des Objektmodells](creating-the-object-model.md)

@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697432"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796672"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum-Schnittstelle
-Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.  
+Stellt einen Enumerator für ein Array von `IAssemblyName` -Objekten dar.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Erstellt eine flache Kopie dieses `IAssemblyEnum` Objekt.|  
-|[GetNextAssembly-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Ruft einen Zeiger auf der nächste `IAssemblyName` enthalten `IAssemblyEnum` Objekt.|  
-|[Reset-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Dies setzt `IAssemblyEnum` Objekt, das die Position des ersten.|  
+|[Clone-Methode](iassemblyenum-clone-method.md)|Erstellt eine flache Kopie des `IAssemblyEnum` -Objekts.|  
+|[GetNextAssembly-Methode](iassemblyenum-getnextassembly-method.md)|Ruft einen Zeiger auf den nächsten `IAssemblyName` in diesem `IAssemblyEnum` -Objekt ab.|  
+|[Reset-Methode](iassemblyenum-reset-method.md)|Setzt dieses `IAssemblyEnum` -Objekt auf seine Anfangsposition zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

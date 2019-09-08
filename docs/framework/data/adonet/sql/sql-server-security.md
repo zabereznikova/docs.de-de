@@ -2,12 +2,12 @@
 title: SQL Server-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927600"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791623"
 ---
 # <a name="sql-server-security"></a>SQL Server-Sicherheit
 SQL Server besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwendungen unterstützen.  
@@ -23,23 +23,23 @@ SQL Server besitzt viele Funktionen, die das Erstellen sicherer Datenbankanwend
  In den Themen in diesem Abschnitt werden die für Entwickler relevanten Sicherheitsfunktionen in SQL Server kurz umrissen. Außerdem finden Sie hier Links zu entsprechenden Themen in der SQL Server-Onlinedokumentation und in anderen Ressourcen mit ausführlicheren Informationen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)  
  Beschreibt die Architektur und Sicherheitsfunktionen in SQL Server.  
   
- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)  
  Enthält Themen, in denen verschiedene Anwendungssicherheitsszenarios für ADO.NET- und SQL Server-Anwendungen erläutert werden.  
   
- [SQL Server Express-Sicherheit](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- Beschreibt sicherheitsüberlegungen für SQL Server Express.  
+ [SQL Server Express-Sicherheit](sql-server-express-security.md)  
+ Beschreibt Sicherheitsüberlegungen für SQL Server Express.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-Beschreibt sicherheitsüberlegungen für SQL Server und Azure SQL-Datenbank.
+Beschreibt Sicherheitsüberlegungen für SQL Server und Azure SQL-Datenbank.
 
-[Sicherheitsüberlegungen für SQL Server-Installationen](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-Beschreibt die Sicherheitsrisiken Sie berücksichtigen, bevor die Installation von SQL Server.
+[Sicherheitsüberlegungen für eine SQL Server Installation](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+Beschreibt Sicherheitsbedenken, die vor der Installation von SQL Server zu berücksichtigen sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [SQL Server und ADO.NET](index.md)

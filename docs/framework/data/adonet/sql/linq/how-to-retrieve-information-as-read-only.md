@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928710"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793319"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Vorgehensweise: Abrufen von Informationen als schreibgeschützt
 Wenn Sie nicht beabsichtigen, die Daten zu ändern, können Sie die Abfrageleistung steigern, indem Sie schreibgeschützte Ergebnisse verwenden.  
@@ -28,6 +28,6 @@ Wenn Sie nicht beabsichtigen, die Daten zu ändern, können Sie die Abfrageleist
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
-- [Verzögertes im Vergleich zu unmittelbarem Laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)
+- [Abfragekonzepte](query-concepts.md)
+- [Abfragen der Datenbank](querying-the-database.md)
+- [Verzögertes im Vergleich zu unmittelbarem Laden](deferred-versus-immediate-loading.md)

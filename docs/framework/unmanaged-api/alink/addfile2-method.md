@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742354"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777522"
 ---
 # <a name="addfile2-method"></a>AddFile2-Methode
-Dateien hinzugefügt der Assembly. Kann auch zum Erstellen von ungebundener Modules verwendet werden.  
+Fügt der Assembly Dateien hinzu. Kann auch verwendet werden, um ungebundene Module zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,28 +41,28 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID für die Assembly, die die Datei hinzugefügt wird.  
+ ID für die Assembly, der die Datei hinzugefügt wird.  
   
  `pszFilename`  
- Der Name der Datei, die hinzugefügt werden.  
+ Der Name der hinzu zufügenden Datei.  
   
  `dwFlags`  
- COM+ `FileDef` flags, z. B. `ffContainsNoMetaData` und `ffWriteable`. `dwFlags` wird zum übergeben [DefineFile-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Com+ `FileDef` `ffContainsNoMetaData` -Flags, wie `ffWriteable`z. b. und. `dwFlags`wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
   
  `pEmitter`  
- Schnittstelle zum [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) Schnittstelle.  
+ Schnittstelle zur [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) -Schnittstelle.  
   
  `pFileToken`  
- Empfängt die ID für die Datei hinzugefügt wird.  
+ Empfängt die ID für die Datei, die hinzugefügt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [Alink-API](index.md)

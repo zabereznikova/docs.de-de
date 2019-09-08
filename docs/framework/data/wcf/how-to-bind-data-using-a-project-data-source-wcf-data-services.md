@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)'
+title: 'Vorgehensweise: Binden von Daten mit einer Projektdaten Quelle (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 69a0ec657f0a8cec34048776a4767cec23d091d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645638"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780163"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdaten Quelle (WCF Data Services)
 
-Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in einer WCF Data Services-Clientanwendung basieren. Wenn Sie einen Verweis auf einen Datendienst hinzufügen, indem Sie mit der **Hinzufügen eines Dienstverweises** Dialogfeld eine Projektdatenquelle wird zusammen mit den generierten clientdatenklassen erstellt. Eine Datenquelle wird für jede Entitätenmenge erstellt, die der Datendienst verfügbar macht. Sie können Formulare erstellen, die Daten des Diensts anzuzeigen, ziehen diese Datenquellenelemente aus dem **Datenquellen** Fenster in den Designer. Diese Elemente werden zu Steuerelementen, die an die Datenquelle gebunden sind. Während der Ausführung dieser Datenquelle gebunden ist, mit einer Instanz von der <xref:System.Data.Services.Client.DataServiceCollection%601> -Klasse, die mit Objekten gefüllt ist, die von einer Abfrage an den Datendienst zurückgegeben werden. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in einer WCF Data Services Client Anwendung basieren. Wenn Sie mithilfe des Dialog Felds **Dienstverweis hinzufügen** einen Verweis auf einen Datendienst hinzufügen, wird eine Projektdaten Quelle zusammen mit den generierten Client Daten Klassen erstellt. Eine Datenquelle wird für jede Entitätenmenge erstellt, die der Datendienst verfügbar macht. Sie können Formulare erstellen, die Daten aus dem Dienst anzeigen, indem Sie diese Datenquellen Elemente aus dem **Datenquellen** Fenster auf den Designer ziehen. Diese Elemente werden zu Steuerelementen, die an die Datenquelle gebunden sind. Während der Ausführung wird diese Datenquelle an eine Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601> -Klasse gebunden, die mit Objekten gefüllt wird, die von einer Abfrage an den Datendienst zurückgegeben werden. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](binding-data-to-controls-wcf-data-services.md).
 
- In den Beispielen in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Clientdatendienstklassen verwendet. Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+ In den Beispielen in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Clientdatendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.
 
-## <a name="use-a-project-data-source-in-a-wpf-window"></a>Verwenden Sie eine Projektdatenquelle in einem WPF-Fenster
+## <a name="use-a-project-data-source-in-a-wpf-window"></a>Verwenden einer Projektdaten Quelle in einem WPF-Fenster
 
-1. Fügen Sie einen Verweis auf die Northwind-Datendienst in Visual Studio in einem WPF-Projekt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. Fügen Sie in Visual Studio in einem WPF-Projekt einen Verweis auf den Northwind-Datendienst hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie einen Datendienst](how-to-add-a-data-service-reference-wcf-data-services.md)Verweis hinzu.
 
-2. In der **Datenquellen** Fenster, erweitern Sie die `Customers` Knoten in der **NorthwindEntities** Projektdatenquelle.
+2. Erweitern Sie im Fenster **Datenquellen** den `Customers` Knoten in der Projektdaten Quelle **NorthwindEntities** .
 
-3. Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
+3. Klicken Sie auf das Element **CustomerID** , wählen Sie **ComboBox** aus der Liste aus, und ziehen Sie das Element **CustomerID** aus dem Knoten **Customers** auf den Designer.
 
      Die folgenden Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
@@ -37,7 +37,7 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     - Ein <xref:System.Windows.Controls.Label>.
 
-4. Ziehen Sie die **Bestellungen** Navigationseigenschaft in den Designer.
+4. Ziehen Sie die **Orders** -Navigations Eigenschaft in den Designer.
 
      Die folgenden zusätzlichen Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
@@ -45,7 +45,7 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     - Ein datengebundenes <xref:System.Windows.Controls.DataGrid>-Steuerelement mit dem Namen `ordersDataGrid`.
 
-5. (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
+5. Optionale Ziehen Sie zusätzliche Elemente aus dem Knoten **Customers** auf den Designer.
 
 6. Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
 
@@ -59,11 +59,11 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 8. Wählen Sie im Designer das Fenster aus.
 
     > [!NOTE]
-    > Stellen Sie sicher, dass Sie das Fenster selbst und nicht Inhalt auszuwählen, der sich innerhalb des Fensters befindet. Wenn das Fenster ausgewählt ist, die **Namen** Textfeld am oberen Rand der **Eigenschaften** Fenster sollte der Name des Fensters enthalten.
+    > Stellen Sie sicher, dass Sie das Fenster selbst und nicht Inhalt auszuwählen, der sich innerhalb des Fensters befindet. Wenn das Fenster ausgewählt ist, sollte das Textfeld **Name** im oberen Bereich des Fensters **Eigenschaften** den Namen des Fensters enthalten.
 
-9. In der **Eigenschaften** wählen Sie im Fenster der **Ereignisse** Schaltfläche.
+9. Wählen Sie im Fenster **Eigenschaften** die Schaltfläche **Ereignisse** aus.
 
-10. Suchen der **Loaded** Ereignis, und doppelklicken Sie auf die Dropdownliste neben diesem Ereignis.
+10. Suchen Sie nach dem **geladenen** Ereignis, und doppelklicken Sie dann auf die Dropdown Liste neben diesem Ereignis.
 
      Visual Studio öffnet die Code-Behind-Datei für das Fenster und generiert einen <xref:System.Windows.FrameworkElement.Loaded>-Ereignishandler.
 
@@ -74,11 +74,11 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
 12. Dieser Code erstellt eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> für den `Customers`-Typ basierend auf der Ausführung einer LINQ-Abfrage, die zusammen mit verknüpften <xref:System.Collections.Generic.IEnumerable%601>-Objekten aus dem Northwind-Datendienst eine `Customers` von `Orders` zurückgibt und an die `customersViewSource` bindet.
 
-## <a name="use-a-project-data-source-in-a-windows-form"></a>Verwenden Sie eine Projektdatenquelle in einem Windows-Formular
+## <a name="use-a-project-data-source-in-a-windows-form"></a>Verwenden einer Projektdaten Quelle in einem Windows Form
 
-1. In der **Datenquellen** Fenster, erweitern Sie die **Kunden** Knoten in der **NorthwindEntities** Projektdatenquelle.
+1. Erweitern Sie im Fenster **Datenquellen** den Knoten **Customers** in der Projektdaten Quelle **NorthwindEntities** .
 
-2. Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
+2. Klicken Sie auf das Element **CustomerID** , wählen Sie **ComboBox** aus der Liste aus, und ziehen Sie das Element **CustomerID** aus dem Knoten **Customers** auf den Designer.
 
      Dadurch werden die folgenden Steuerelemente im Formular erstellt:
 
@@ -90,11 +90,11 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     - Ein <xref:System.Windows.Forms.Label>.
 
-3. Ziehen Sie die **Bestellungen** -Navigationseigenschaft auf das Formular.
+3. Ziehen Sie die **Orders** -Navigations Eigenschaft auf das Formular.
 
 4. Hirdurch wird das `ordersBindingSource`-Steuerelement mit der <xref:System.Windows.Forms.BindingSource.DataSource%2A>-Eigenschaft `customersBindingSource` und der <xref:System.Windows.Forms.BindingSource.DataMember%2A>-Eigenschaft `Customers` erstellt. Es wird auch das datengebundene `ordersDataGridView`-Steuerelement mit einem entsprechend bezeichneten Label-Steuerelement auf dem Formular erstellt.
 
-5. (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
+5. Optionale Ziehen Sie zusätzliche Elemente aus dem Knoten **Customers** auf den Designer.
 
 6. Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
 
@@ -119,5 +119,5 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Vorgehensweise: Binden von Daten an Windows Presentation Foundation-Elemente](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
+- [Vorgehensweise: Binden von Daten an Windows Presentation Foundation Elemente](bind-data-to-wpf-elements-wcf-data-services.md)

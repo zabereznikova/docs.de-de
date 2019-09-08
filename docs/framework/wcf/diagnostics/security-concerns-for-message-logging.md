@@ -2,12 +2,12 @@
 title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044256"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795946"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -107,9 +107,9 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
   
 - Log known PII nicht zulässig: Dieses Ereignis wird ausgegeben, wenn das Protokollieren bekannter PII nicht zulässig ist. Dies geschieht, wenn `logKnownPii` das-Attribut `source` des-Elements in der Datei "App. config" oder "Web. `true`config" auf `enableLoggingKnownPii` festgelegt ist `machineSettings` , aber das-Attribut im-Element der Datei "Machine. config" auf `false`festgelegtist. Es werden keine Ausnahmen ausgelöst.  
   
- Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Nachrichtenprotokollierung](message-logging.md)
+- [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](./tracing/security-concerns-and-useful-tips-for-tracing.md)

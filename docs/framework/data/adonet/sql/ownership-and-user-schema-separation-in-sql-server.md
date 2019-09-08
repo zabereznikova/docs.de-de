@@ -2,12 +2,12 @@
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f0aa0a67bfbc64124fe2510915d0945341aeb49e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961113"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791936"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
@@ -59,9 +59,9 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Server- und Datenbankrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Autorisierung und Berechtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Authentifizierung in SQL Server](authentication-in-sql-server.md)
+- [Server- und Datenbankrollen in SQL Server](server-and-database-roles-in-sql-server.md)
+- [Autorisierung und Berechtigungen in SQL Server](authorization-and-permissions-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

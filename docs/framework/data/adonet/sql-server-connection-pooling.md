@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041195"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794316"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  Nachdem eine Anwendungsrolle von SQL Server durch Aufrufen der im System gespeicherten Prozedur `sp_setapprole` aktiviert wurde, kann der Sicherheitskontext dieser Verbindung nicht zurückgesetzt werden. Wenn jedoch das Verbindungspooling aktiviert ist, wird die Verbindung an den Verbindungspool zurückgegeben. Bei der erneuten Verwendung der an den Pool zurückgegebenen Verbindung wird dann ein Fehler ausgelöst. Weitere Informationen finden Sie im Knowledge Base-Artikel "[SQL-Anwendungs Rollen Fehler mit OLE DB Ressourcen Pooling](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Alternativen zu Anwendungsrollen  
- Es wird empfohlen, die Sicherheitsmechanismen zu nutzen, die anstelle der Anwendungsrollen verwendet werden können. Weitere Informationen finden Sie unter [Erstellen von Anwendungs Rollen in SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Es wird empfohlen, die Sicherheitsmechanismen zu nutzen, die anstelle der Anwendungsrollen verwendet werden können. Weitere Informationen finden Sie unter [Erstellen von Anwendungs Rollen in SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Leistungsindikatoren](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verbindungspooling](connection-pooling.md)
+- [SQL Server und ADO.NET](./sql/index.md)
+- [Leistungsindikatoren](performance-counters.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

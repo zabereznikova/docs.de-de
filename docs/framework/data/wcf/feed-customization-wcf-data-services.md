@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: baa97bb32f8af4e034a78b44f9776be42c204b80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4ea05b0112af4c1dcb6308a08ab3b31c586fbe8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918731"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790863"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verwendet, um Daten als-Feed verfügbar zu machen. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Wenn Sie einen Atom-Feed verwenden [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , stellt eine Standardmethode zum Serialisieren von Daten (z. b. Entitäten und Beziehungen) in ein XML-Format bereit, das in den Text der HTTP-Nachricht aufgenommen werden kann. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definiert eine standardmäßige Entitäts Eigenschafts Zuordnung zwischen den Daten, die in Entitäten und Atom-Elementen enthalten sind. Weitere Informationen finden [Sie unter odata: Atom-](https://go.microsoft.com/fwlink/?LinkID=185794)Format.  
@@ -28,7 +28,7 @@ ms.locfileid: "69918731"
  Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie eine alternative Entitätseigenschaftszuordnung für eine Atom-Nutzlast definieren, indem Sie Attribute manuell auf Entitätstypen im Datenmodell anwenden. Der Datenquellenanbieter des Datendiensts bestimmt, wie diese Attribute angewendet werden.  
   
 > [!IMPORTANT]
-> Wenn Sie benutzerdefinierte Feeds definieren, müssen Sie gewährleisten, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Abfrage Projektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
+> Wenn Sie benutzerdefinierte Feeds definieren, müssen Sie gewährleisten, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Abfrage Projektionen](query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Anpassen von Feeds mit dem Entity Framework-Anbieter  
  Das mit dem [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-Anbieter verwendete Datenmodell wird in der EDMX-Datei als XML dargestellt. In diesem Fall werden dem `EntityType`-Element und dem `Property`-Element, die Entitätstypen und Eigenschaften im Datenmodell darstellen, die Attribute hinzugefügt, die benutzerdefinierte Feeds definieren. Diese Feed-Anpassungs Attribute sind nicht in [ \[MC-CSDL\]definiert: Format](https://go.microsoft.com/fwlink/?LinkId=159072)der konzeptionellen Schema Definitionsdatei. Dies ist das Format, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] das der Anbieter zum Definieren des Datenmodells verwendet. Daher müssen Sie Feedanpassungsattribute in einem bestimmten Schemanamespace deklarieren, der als `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"` definiert wird. Das folgende XML-Fragment zeigt auf die `Property`-Elemente des `Products`-Entitätstyps angewendete Feedanpassungsattribute, die die Eigenschaften `ProductName`, `ReorderLevel` und `UnitsInStock` definieren.  
@@ -39,7 +39,7 @@ ms.locfileid: "69918731"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)-Anbieter.  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem Entity Framework](how-to-customize-feeds-with-ef-provider-wcf-data-services.md)-Anbieter.  
   
 > [!NOTE]
 > Da Erweiterungen des Datenmodells nicht vom Entity Designer unterstützt werden, müssen Sie die XML-Datei, die das Datenmodell enthält, manuell ändern. Weitere Informationen über die EDMX-Datei, die von den Entity Data Model Tools generiert wird, finden Sie unter Übersicht über die [EDMX-Datei (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
@@ -63,7 +63,7 @@ ms.locfileid: "69918731"
  Zum Anpassen von Feeds für ein mit dem Reflektionsanbieter implementiertes Datenmodell fügen Sie den Klassen, die Entitätstypen im Datenmodell darstellen, eine oder mehrere Instanzen des <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>-Attributs hinzu. Die Eigenschaften der <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>-Klasse entsprechen den Feedanpassungsattributen, die im vorherigen Abschnitt beschrieben werden. Nachfolgend ein Beispiel für die Deklaration des `Order`-Typs, wobei die benutzerdefinierte Feedzuordnung für beide Eigenschaften definiert ist.  
   
 > [!NOTE]
-> Das Datenmodell für dieses Beispiel wird im Thema [Gewusst wie: Erstellen Sie einen Datendienst mithilfe des reflektionsanbieters](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+> Das Datenmodell für dieses Beispiel wird im Thema [Gewusst wie: Erstellen Sie einen Datendienst mithilfe des reflektionsanbieters](create-a-data-service-using-rp-wcf-data-services.md).  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,13 +72,13 @@ ms.locfileid: "69918731"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem reflektionsanbieter](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem reflektionsanbieter](how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Anpassen von Feeds mithilfe eines benutzerdefinierten Datendienstanbieters  
- Die Feedanpassung für ein Datenmodell, das durch die Verwendung eines benutzerdefinierten Datendienstanbieters definiert ist, wird für einen Ressourcentyp definiert, indem das <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> auf dem <xref:System.Data.Services.Providers.ResourceType> aufgerufen wird, der einen Entitätstyp im Datenmodell darstellt. Weitere Informationen finden Sie unter [benutzerdefinierte Daten Dienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
+ Die Feedanpassung für ein Datenmodell, das durch die Verwendung eines benutzerdefinierten Datendienstanbieters definiert ist, wird für einen Ressourcentyp definiert, indem das <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> auf dem <xref:System.Data.Services.Providers.ResourceType> aufgerufen wird, der einen Entitätstyp im Datenmodell darstellt. Weitere Informationen finden Sie unter [benutzerdefinierte Daten Dienstanbieter](custom-data-service-providers-wcf-data-services.md).  
   
 ## <a name="consuming-custom-feeds"></a>Verwenden von benutzerdefinierten Feeds  
- Wenn die Anwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed direkt verwendet, muss Sie alle angepassten Elemente und Attribute im zurückgegebenen Feed verarbeiten können. Wenn Sie benutzerdefinierte Feeds im Datenmodell unabhängig vom Datendienstanbieter implementiert haben, gibt der `$metadata`-Endpunkt benutzerdefinierte Feedinformationen als benutzerdefinierte Feedattribute in der vom Datendienst zurückgegebenen CSDL zurück. Wenn Sie das Dialogfeld **Dienstverweis hinzufügen** oder das Tool [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) zum Generieren von Client Datendienst Klassen verwenden, werden die angepassten Feed-Attribute verwendet, um sicherzustellen, dass Anforderungen und Antworten an den Datendienst ordnungsgemäß verarbeitet werden.  
+ Wenn die Anwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed direkt verwendet, muss Sie alle angepassten Elemente und Attribute im zurückgegebenen Feed verarbeiten können. Wenn Sie benutzerdefinierte Feeds im Datenmodell unabhängig vom Datendienstanbieter implementiert haben, gibt der `$metadata`-Endpunkt benutzerdefinierte Feedinformationen als benutzerdefinierte Feedattribute in der vom Datendienst zurückgegebenen CSDL zurück. Wenn Sie das Dialogfeld **Dienstverweis hinzufügen** oder das Tool [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) zum Generieren von Client Datendienst Klassen verwenden, werden die angepassten Feed-Attribute verwendet, um sicherzustellen, dass Anforderungen und Antworten an den Datendienst ordnungsgemäß verarbeitet werden.  
   
 ## <a name="feed-customization-considerations"></a>Überlegungen zur Feedanpassung  
  Beim Definieren von benutzerdefinierten Feedzuordnungen sollten Sie Folgendes betrachten.  
@@ -90,9 +90,9 @@ ms.locfileid: "69918731"
   
 - Die Feedanpassung erfordert, dass der Client und der Datendienst Version 2.0 des [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Protokolls und höhere Versionen unterstützt.  
   
- Weitere Informationen finden Sie unter [Data Service Versioning](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Entity Framework-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [Reflektionsanbieter](reflection-provider-wcf-data-services.md)
+- [Entity Framework-Anbieter](entity-framework-provider-wcf-data-services.md)

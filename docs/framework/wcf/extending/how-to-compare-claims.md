@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970768"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797096"
 ---
 # <a name="how-to-compare-claims"></a>Vorgehensweise: Vergleichen von Ansprüchen
 
-Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) wird verwendet, um die Autorisierungs Überprüfung durchzuführen. Eine gängige Aufgabe besteht darin, die Ansprüche im Autorisierungskontext mit den Ansprüchen zu vergleichen, die erforderlich sind, um die angeforderte Aktion auszuführen oder auf die angeforderte Ressource zuzugreifen. In diesem Thema wird beschrieben, wie Ansprüche verglichen werden, einschließlich integrierter und benutzerdefinierter Anspruchstypen. Weitere Informationen zur Identitäts Modell Infrastruktur finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitäts Modell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) wird verwendet, um die Autorisierungs Überprüfung durchzuführen. Eine gängige Aufgabe besteht darin, die Ansprüche im Autorisierungskontext mit den Ansprüchen zu vergleichen, die erforderlich sind, um die angeforderte Aktion auszuführen oder auf die angeforderte Ressource zuzugreifen. In diesem Thema wird beschrieben, wie Ansprüche verglichen werden, einschließlich integrierter und benutzerdefinierter Anspruchstypen. Weitere Informationen zur Identitäts Modell Infrastruktur finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitäts Modell](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 Der Vergleich von Ansprüchen umfasst das Vergleichen der drei Bestandteile des Anspruchs (Typ, Recht und Ressource) mit den entsprechenden Teilen eines anderen Anspruchs, um festzustellen, ob sie identisch sind. Weitere Informationen finden Sie im folgenden Beispiel.
 
@@ -74,5 +74,5 @@ Das folgende Beispiel zeigt einen Vergleich von benutzerdefinierten Ansprüchen,
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](how-to-create-a-custom-claim.md)

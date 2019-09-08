@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: b7b1717317bb119538497f60bae48ec1da2286c8
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203322"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784361"
 ---
 # <a name="navigating-datarelations"></a>Navigieren in "DataRelations"
 Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Auf diese Weise können Sie <xref:System.Data.DataRow> alle verknüpften Objekte in einer **Daten** Tabelle abrufen, wenn Sie eine einzelne **DataRow** aus einer verknüpften **Daten**Tabelle erhalten. Nachdem Sie z. b. eine **DataRelations** zwischen einer Tabelle mit Kunden und einer Tabelle mit Bestellungen eingerichtet haben, können Sie mithilfe von **GetChildRows**alle Auftragszeilen für eine bestimmte Kunden Zeile abrufen.  
@@ -52,4 +52,4 @@ Customer ID: NORTS
 ## <a name="see-also"></a>Siehe auch
 
 - [DataSets, DataTables und DataViews](index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

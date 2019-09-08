@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da77d2eb848419c35e57ffacc8bf3d4580106fa5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764326"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795394"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum-Funktion
-Ruft einen Zeiger auf ein [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) -Instanz, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
+Ruft einen Zeiger auf eine [IInstallReferenceEnum](iinstallreferenceenum-interface.md) -Instanz ab, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,28 +41,28 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>Parameter  
  `ppRefEnum`  
- [out] Das zurückgegebene `IInstallReferenceEnum` Zeiger.  
+ vorgenommen Der zurück `IInstallReferenceEnum` gegebene Zeiger.  
   
  `pName`  
- [in] Die [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) , identifiziert die Assembly, für die Verweise aufgelistet werden sollen.  
+ in Der [IAssemblyName](iassemblyname-interface.md) , der die Assembly identifiziert, für die Verweise aufgelistet werden sollen.  
   
  `dwFlags`  
- [in] Flags, die das Verhalten des Enumerators zu beeinflussen.  
+ in Flags, die das Verhalten des Enumerators beeinflussen.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Fusion.dll und "Mscorwks.dll". Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.  
+ **Fern** "Fusion. dll" und "mscorwert. dll". Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IInstallReferenceEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IInstallReferenceEnum-Schnittstelle](iinstallreferenceenum-interface.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

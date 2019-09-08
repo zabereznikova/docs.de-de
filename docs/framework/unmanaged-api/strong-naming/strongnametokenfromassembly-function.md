@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 484dacd4d9803139edf3fd5bad22c164d50de3dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 71058a1ff82335b2a341904805d06738e662c296
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757237"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798870"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly-Funktion
 Erstellt ein Token mit starkem Namen aus der angegebenen Assemblydatei.  
   
- Diese Funktion wurde als veraltet markiert. Verwenden der [ICLRStrongName:: StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md) Methode stattdessen.  
+ Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: StrongNameTokenFromAssembly](../hosting/iclrstrongname-strongnametokenfromassembly-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,35 +40,35 @@ BOOLEAN StrongNameTokenFromAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `wszFilePath`  
- [in] Der Pfad zu der PE (portable Executable)-Datei für die Assembly.  
+ in Der Pfad zur PE-Datei (portable ausführbare Datei) für die Assembly.  
   
  `ppbStrongNameToken`  
- [out] Das zurückgegebene strong Name-Token.  
+ vorgenommen Das zurückgegebene Token für den starken Namen.  
   
  `pcbStrongNameToken`  
- [out] Die Größe in Bytes, der das Token mit starkem Namen.  
+ vorgenommen Die Größe (in Bytes) des Tokens für einen starken Namen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true`nach erfolgreichem Abschluss: `false`andernfalls.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein starker Name-Token ist die Kurzform für einen öffentlichen Schlüssel. Das Token ist ein 64-Bit-Hash, der aus dem öffentlichen Schlüssel zum Signieren der Assembly erstellt wird. Das Token ist ein Bestandteil des starken Namens für die Assembly, und Sie können aus den Metadaten der Assembly gelesen werden.  
+ Ein Token mit starkem Namen ist die verkürzte Form eines öffentlichen Schlüssels. Das Token ist ein 64-Bit-Hash, der aus dem öffentlichen Schlüssel, der zum Signieren der Assembly verwendet wird, erstellt wird. Das Token ist Teil des starken Namens für die Assembly und kann aus den Assemblymetadaten gelesen werden.  
   
- Nachdem das Token erstellt wurde, sollten Sie rufen die [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) Funktion, um den belegten Arbeitsspeicher freizugeben.  
+ Nachdem das Token erstellt wurde, sollten Sie die [strongnamefrebuffer](strongnamefreebuffer-function.md) -Funktion zum Freigeben des zugewiesenen Speichers aufzurufen.  
   
- Wenn die `StrongNameTokenFromAssembly` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
+ Wenn die `StrongNameTokenFromAssembly` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** StrongName.h  
+ **Header:** StrongName. h  
   
- **Bibliothek:** Als Ressource in mscoree.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [StrongNameTokenFromAssembly-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [StrongNameTokenFromAssemblyEx-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameTokenFromAssembly-Methode](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [StrongNameTokenFromAssemblyEx-Methode](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [ICLRStrongName-Schnittstelle](../hosting/iclrstrongname-interface.md)

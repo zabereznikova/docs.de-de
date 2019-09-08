@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec188e0345140297062d0a10dfbbc4a294bbb7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903980"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781609"
 ---
 # <a name="how-to-return-rowsets"></a>Vorgehensweise: Rückgabe von Rowsets
 In diesem Beispiel wird ein Rowset von der Datenbank zurückgegeben. Er enthält einen Eingabeparameter, um das Ergebnis zu filtern.  
   
- Wenn Sie eine gespeicherte Prozedur, die ein Rowset zurückgibt ausführen, verwenden Sie eine *Ergebnis* -Klasse, die die Rückgabe aus der gespeicherten Prozedur speichert. Weitere Informationen finden Sie unter [Analysieren von LINQ to SQL-Quellcode](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
+ Wenn Sie eine gespeicherte Prozedur ausführen, die ein Rowset zurückgibt, verwenden Sie eine *Ergebnis* Klasse, in der die Rückgabe von der gespeicherten Prozedur gespeichert wird. Weitere Informationen finden Sie unter [analysieren LINQ to SQL Quellcodes](analyzing-linq-to-sql-source-code.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine gespeicherte Prozedur dargestellt, die Zeilen mit Kunden zurückgibt und anhand eines Eingabeparameters nur die Zeilen zurückgibt, die „London“ als Ort für den Kunden enthalten. Dieses Beispiel setzt eine zählbare `CustomersByCityResult`-Klasse voraus.  
@@ -38,5 +38,5 @@ END
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Gespeicherte Prozeduren](stored-procedures.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](downloading-sample-databases.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: 156d661fd5602333fae8066f3062b442a1df19af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2407c293de7f11b90586f5a55bd759a4ea734aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951710"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795680"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatsvalidierungssteuerelement verwendet
 In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement implementieren und wie Sie Anmeldeinformationen für Clients oder Dienste konfigurieren, um die standardmäßige Zertifikatüberprüfungslogik durch das benutzerdefinierte Zertifikats-Validierungssteuerelement zu ersetzen.  
@@ -35,15 +35,15 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>So geben Sie bei der Dienstkonfiguration ein benutzerdefiniertes Zertifikats-Validierungssteuerelement an  
   
-1. Fügen Sie dem [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) [System. Service Model-> Element ein Verhalten > Element und ein Service Verhaltens> hinzu. \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Fügen Sie [ \<](../../configure-apps/file-schema/wcf/behaviors.md) [dem System.ServiceModel->ElementeinVerhalten>ElementundeinServiceVerhaltens>hinzu.\<](../../configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md)  
   
-2. Fügen Sie ein [ \<> Verhalten](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) hinzu, `name` und legen Sie das-Attribut auf einen geeigneten Wert fest.  
+2. Fügen Sie ein [ \<> Verhalten](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) hinzu, `name` und legen Sie das-Attribut auf einen geeigneten Wert fest.  
   
-3. Fügen Sie dem`<behavior>` -Element eine [ \<servicecreden->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) hinzu.  
+3. Fügen Sie dem`<behavior>` -Element eine [ \<servicecreden->](../../configure-apps/file-schema/wcf/servicecredentials.md) hinzu.  
   
 4. Fügen Sie dem `<clientCertificate>`-Element ein `<serviceCredentials>`-Element hinzu.  
   
-5. Fügen Sie dem`<clientCertificate>` -Element einen [ \<Authentifizierungs >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) hinzu.  
+5. Fügen Sie dem`<clientCertificate>` -Element einen [ \<Authentifizierungs >](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) hinzu.  
   
 6. Legen Sie das `customCertificateValidatorType`-Attribut auf den Validierungssteuerelementtyp fest. Im folgenden Beispiel wird das Attribut auf den Namespace und den Namen des Typs festgelegt.  
   
@@ -69,17 +69,17 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>So geben Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement an, indem Sie die Konfiguration auf dem Client verwenden  
   
-1. Fügen Sie dem [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) [System. Service Model-> Element ein Verhalten > Element und ein Service Verhaltens> hinzu. \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. Fügen Sie [ \<](../../configure-apps/file-schema/wcf/behaviors.md) [dem System.ServiceModel->ElementeinVerhalten>ElementundeinServiceVerhaltens>hinzu.\<](../../configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md)  
   
-2. Fügen Sie ein [ \<endpointverhaltensweisen->](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) Element hinzu.  
+2. Fügen Sie ein [ \<endpointverhaltensweisen->](../../configure-apps/file-schema/wcf/endpointbehaviors.md) Element hinzu.  
   
 3. Fügen Sie ein `<behavior>`name-Element hinzu, und legen Sie das`name`-Attribut auf einen passenden Wert fest.  
   
-4. Fügen Sie ein [ \<Clientanmelde](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Informationen-> Element hinzu.  
+4. Fügen Sie ein [ \<Clientanmelde](../../configure-apps/file-schema/wcf/clientcredentials.md) Informationen-> Element hinzu.  
   
-5. Fügen Sie ein [ \<serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)hinzu.  
+5. Fügen Sie ein [ \<serviceCertificate->](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)hinzu.  
   
-6. Fügen Sie wie im folgenden Beispiel gezeigt einen [ \<Authentifizierungs >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) hinzu.  
+6. Fügen Sie wie im folgenden Beispiel gezeigt einen [ \<Authentifizierungs >](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) hinzu.  
   
 7. Legen Sie das `customCertificateValidatorType`-Attribut auf den Validierungssteuerelementtyp fest.  
   
@@ -116,7 +116,7 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>So geben Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement an, indem Sie Code auf der Clientseite verwenden  
   
-1. Geben Sie das benutzerdefinierte Zertifikats-Validierungssteuerelement über die <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>-Eigenschaft an. Sie können auf die Clientanmeldeinformationen mit der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft zugreifen. (Die vom [Service Model Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generierte Client Klasse wird immer von der <xref:System.ServiceModel.ClientBase%601> -Klasse abgeleitet.)  
+1. Geben Sie das benutzerdefinierte Zertifikats-Validierungssteuerelement über die <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>-Eigenschaft an. Sie können auf die Clientanmeldeinformationen mit der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft zugreifen. (Die vom [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) generierte Client Klasse wird immer von der <xref:System.ServiceModel.ClientBase%601> -Klasse abgeleitet.)  
   
 2. Legen Sie die <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> -Eigenschaft auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>fest.  
   

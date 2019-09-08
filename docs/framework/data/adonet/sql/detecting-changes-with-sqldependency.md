@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877668"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782423"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Ermitteln von Änderungen mit "SqlDependency"
 
@@ -18,7 +18,7 @@ Ein <xref:System.Data.SqlClient.SqlDependency>-Objekt kann mit einem <xref:Syste
 
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen
 
-Die Abhängigkeitsinfrastruktur verwendet eine <xref:System.Data.SqlClient.SqlConnection>, die geöffnet wird, wenn <xref:System.Data.SqlClient.SqlDependency.Start%2A> aufgerufen wird, damit Benachrichtigungen über die Änderung der zugrunde liegenden Daten für einen bestimmten Befehl empfangen werden können. Ob ein Client den Aufruf von `SqlDependency.Start` initiieren kann, wird mit der <xref:System.Data.SqlClient.SqlClientPermission> und Sicherheitsattributen für den Codezugriff gesteuert. Weitere Informationen finden Sie unter [Aktivieren von Abfragebenachrichtigungen](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) und [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).
+Die Abhängigkeitsinfrastruktur verwendet eine <xref:System.Data.SqlClient.SqlConnection>, die geöffnet wird, wenn <xref:System.Data.SqlClient.SqlDependency.Start%2A> aufgerufen wird, damit Benachrichtigungen über die Änderung der zugrunde liegenden Daten für einen bestimmten Befehl empfangen werden können. Ob ein Client den Aufruf von `SqlDependency.Start` initiieren kann, wird mit der <xref:System.Data.SqlClient.SqlClientPermission> und Sicherheitsattributen für den Codezugriff gesteuert. Weitere Informationen finden Sie unter [Aktivieren von Abfrage Benachrichtigungen](enabling-query-notifications.md) und [Code Zugriffssicherheit und ADO.net](../code-access-security.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Abfragebenachrichtigungen in SQL Server](query-notifications-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

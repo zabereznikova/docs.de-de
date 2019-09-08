@@ -2,17 +2,17 @@
 title: "\"DataViews\""
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8a06accb11631f2dce6b0d39587d7274223c0e68
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203812"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786349"
 ---
 # <a name="dataviews"></a>"DataViews"
 Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in einer <xref:System.Data.DataTable> gespeicherten Daten erstellen. Diese Funktion wird oft in Datenbindungsanwendungen verwendet. Mithilfe einer **DataView**können Sie die Daten in einer Tabelle mit unterschiedlichen Sortier Reihenfolgen verfügbar machen, und Sie können die Daten nach Zeilen Status oder basierend auf einem Filter Ausdruck filtern.  
   
- Eine **DataView** stellt eine dynamische Ansicht der Daten in der zugrundeliegenden Datentabelle bereit: der Inhalt, die Reihenfolge und die Mitgliedschaft reflektieren Änderungen, sobald sie auftreten. Dieses Verhalten unterscheidet sich von der **Select** -Methode der **Daten**Tabelle, die <xref:System.Data.DataRow> ein Array aus einer Tabelle basierend auf einem bestimmten Filter und/oder einer bestimmten Sortierreihenfolge zurückgibt: dieser Inhalt spiegelt die Änderungen an der zugrunde liegenden Tabelle wider, aber seine Mitgliedschaft und die Reihenfolge bleibt statisch. Die dynamischen Funktionen von **DataView** machen es ideal für Daten Bindungs Anwendungen.  
+ Eine **DataView** stellt eine dynamische Ansicht der Daten in **der zugrunde liegenden Datentabelle**bereit: der Inhalt, die Reihenfolge und die Mitgliedschaft reflektieren Änderungen, sobald sie auftreten. Dieses Verhalten unterscheidet sich von der **Select** -Methode der **Daten**Tabelle, die <xref:System.Data.DataRow> ein Array aus einer Tabelle basierend auf einem bestimmten Filter und/oder einer bestimmten Sortierreihenfolge zurückgibt: dieser Inhalt spiegelt die Änderungen an der zugrunde liegenden Tabelle wider, aber seine Mitgliedschaft und die Reihenfolge bleibt statisch. Die dynamischen Funktionen von **DataView** machen es ideal für Daten Bindungs Anwendungen.  
   
  Eine **DataView** stellt eine dynamische Ansicht eines einzelnen Datensatzes bereit, ähnlich wie eine Daten Bank Sicht, auf die Sie andere Sortier-und Filterkriterien anwenden können. Anders als bei einer Daten Bank Sicht kann eine **DataView** jedoch nicht als Tabelle behandelt werden und kann keine Ansicht von verbundenen Tabellen bereitstellen. Außerdem können Sie keine Spalten ausschließen, die in der Quelltabelle vorhanden sind, und auch keine Spalten (z. B. berechnete Spalten) anhängen, die nicht in der Quelltabelle vorliegen.  
   
@@ -35,7 +35,7 @@ Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in 
  Beschreibt, wie Sichten von Daten aus einer Beziehung zwischen übergeordneten und untergeordneten Elementen mithilfe von **DataView**erstellt werden.  
   
  [Ändern von DataViews](modifying-dataviews.md)  
- Beschreibt, wie die Daten in der zugrunde liegenden Datentabelle über die **DataView**geändert werden, einschließlich der Aktivierung oder Deaktivierung von Updates.  
+ Beschreibt, wie die Daten in **der zugrunde liegenden Datentabelle** über die **DataView**geändert werden, einschließlich der Aktivierung oder Deaktivierung von Updates.  
   
  [Behandeln von DataView-Ereignissen](handling-dataview-events.md)  
  Beschreibt die Verwendung des **ListChanged** -Ereignisses, um eine Benachrichtigung zu erhalten, wenn der Inhalt oder die Reihenfolge einer **DataView** aktualisiert wird.  
@@ -61,4 +61,4 @@ Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

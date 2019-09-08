@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959394"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794240"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen der SQL Server 2008-Datenbank-Engine. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
@@ -77,7 +77,7 @@ Sie können den Datentyp <xref:System.Data.SqlClient.SqlParameter> eines mit ein
 |SQL Server-Datentyp|.NET Framework-Typ|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
 |date|System.DateTime|date|date|  
-|Uhrzeit|System.TimeSpan|Uhrzeit|Uhrzeit|  
+|time|System.TimeSpan|Uhrzeit|Uhrzeit|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |DATETIME|System.DateTime|DateTime|DateTime|  
@@ -88,7 +88,7 @@ Sie können den Datentyp <xref:System.Data.SqlClient.SqlParameter> eines mit ein
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu NULL-Werten bei Datenbanken finden Sie unter [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu NULL-Werten bei Datenbanken finden Sie unter [Handling Null Values](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Legt die maximale Anzahl von Ziffern fest, die zur Darstellung des Werts verwendet werden, oder ruft diese ab. Diese Einstellung wird für Datums- und Uhrzeitdatentypen ignoriert.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Ruft die Anzahl der Dezimalstellen ab, in die der Uhrzeit Teil des Werts für `Time`, `DateTime2`und `DateTimeOffset`aufgelöst wird, oder legt Sie fest. Der Standardwert ist 0, d. h., dass die tatsächliche Skalierung aus dem Wert hergeleitet und an den Server gesendet wird.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Dies wird für Datums- und Uhrzeitdatentypen ignoriert.|  
@@ -101,7 +101,7 @@ Sie können den Datentyp <xref:System.Data.SqlClient.SqlParameter> eines mit ein
 ### <a name="creating-parameters"></a>Erstellen von Parametern  
  Sie können ein <xref:System.Data.SqlClient.SqlParameter>-Objekt erstellen, indem Sie dessen Konstruktor verwenden, oder Sie fügen es zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzu, indem Sie die `Add`-Methode der <xref:System.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
   
- Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele für das Arbeiten mit Parametern finden Sie unter [Konfigurieren von Parametern und Parameter](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) Datentypen und [DataAdapter-Parametern](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele für das Arbeiten mit Parametern finden Sie unter [Konfigurieren von Parametern und Parameter Datentypen](../configuring-parameters-and-parameter-data-types.md) und [DataAdapter-Parametern](../dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Datumsbeispiel  
  Das folgende Codefragment zeigt, wie ein `date`-Parameter festgelegt wird.  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server-Datentypzuordnungen](../sql-server-data-type-mappings.md)
+- [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](sql-server-data-types.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

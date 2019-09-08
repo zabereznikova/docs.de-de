@@ -2,18 +2,18 @@
 title: Konfiguration und Metadatenunterstützung
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16c386f8479778c7d2f17fbdfdb95dee558baf52
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587730"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795836"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguration und Metadatenunterstützung
 In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützung für Bindungen und Bindungselemente aktiviert wird.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>Überblick über Konfiguration und Metadaten  
- In diesem Thema wird erläutert, die folgenden Aufgaben, die optionalen Elemente 1, 2 und 4 sind in der [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md) Aufgabenliste.  
+ In diesem Thema werden die folgenden Aufgaben erläutert, bei denen es sich um optionale Elemente 1, 2 und 4 in der Aufgabenliste zum [entwickeln von Kanälen](developing-channels.md) handelt.  
   
 - Aktivierung von Unterstützung der Konfigurationsdatei für ein Bindungselement.  
   
@@ -23,15 +23,15 @@ In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützun
   
 - Identifizierung von WSDL und Richtlinienassertionen für das Einsetzen und Konfigurieren der Bindung oder des Bindungselements.  
   
- Informationen zum Erstellen von benutzerdefinierten Bindungen und Bindungselementen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) und [Erstellen eines BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)bzw.  
+ Weitere Informationen zum Erstellen von benutzerdefinierten Bindungen und Bindungs Elementen finden Sie unter [Erstellen benutzerdefinierter Bindungen](creating-user-defined-bindings.md) und [Erstellen eines BindingElement](creating-a-bindingelement.md).  
   
 ## <a name="adding-configuration-support"></a>Hinzufügen von Konfigurationsunterstützung  
  Zum Aktivieren der Konfigurationsdateiunterstützung für einen Kanal müssen Sie zwei Konfigurationsabschnitte implementieren, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, wodurch die Konfigurationsunterstützung für Bindungselemente aktiviert wird, und das <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> sowie das <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType> implementieren, wodurch die Konfigurationsunterstützung für Bindungen aktiviert wird.  
   
- Eine einfachere Möglichkeit hierzu ist die Verwendung der [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) -Beispieltools zur von Konfigurationscode für Ihre Bindungen und Bindungselemente zu generieren.  
+ Eine einfachere Möglichkeit hierfür ist die Verwendung des [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) -Beispiel Tools, um Konfigurations Code für Ihre Bindungen und Bindungs Elemente zu generieren.  
   
 ### <a name="extending-bindingelementextensionelement"></a>Erweitern von BindingElementExtensionElement  
- Der folgende Beispielcode stammt aus dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. `UdpTransportElement` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das `UdpTransportBindingElement` für das Konfigurationssystem verfügbar macht. Mit wenigen grundlegenden Überschreibungen definiert das Beispiel den Konfigurationsabschnittsnamen, den Typ des Bindungselements und wie das Bindungselement erstellt wird. Benutzer können dann wie folgt den Erweiterungsabschnitt in einer Konfigurationsdatei registrieren.  
+ Der folgende Beispielcode stammt aus dem [-Transport: UDP](../samples/transport-udp.md) -Beispiel. `UdpTransportElement` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das `UdpTransportBindingElement` für das Konfigurationssystem verfügbar macht. Mit wenigen grundlegenden Überschreibungen definiert das Beispiel den Konfigurationsabschnittsnamen, den Typ des Bindungselements und wie das Bindungselement erstellt wird. Benutzer können dann wie folgt den Erweiterungsabschnitt in einer Konfigurationsdatei registrieren.  
   
 ```xml  
 <configuration>  
@@ -62,7 +62,7 @@ In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützun
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>Hinzufügen einer Konfiguration für eine Bindung  
- Der Abschnitt `SampleProfileUdpBindingCollectionElement` ist ein <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, das die `SampleProfileUdpBinding` für das Konfigurationssystem verfügbar macht. Dem `SampleProfileUdpBindingConfigurationElement`, das sich von <xref:System.ServiceModel.Configuration.StandardBindingElement> herleitet, wird der Großteil der Implementierung übertragen. Die `SampleProfileUdpBindingConfigurationElement` verfügt über Eigenschaften, die die Eigenschaften auf entsprechen `SampleProfileUdpBinding`, und Funktionen für die Zuordnung der `ConfigurationElement` Bindung. Schließlich wird die `OnApplyConfiguration`-Methode in der `SampleProfileUdpBinding` überschrieben. Dies wird im folgenden Beispielcode veranschaulicht.  
+ Der Abschnitt `SampleProfileUdpBindingCollectionElement` ist ein <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, das die `SampleProfileUdpBinding` für das Konfigurationssystem verfügbar macht. Dem `SampleProfileUdpBindingConfigurationElement`, das sich von <xref:System.ServiceModel.Configuration.StandardBindingElement> herleitet, wird der Großteil der Implementierung übertragen. Der `SampleProfileUdpBindingConfigurationElement` verfügt über Eigenschaften, die den Eigenschaften für `SampleProfileUdpBinding`entsprechen, und Funktionen, die `ConfigurationElement` der Bindung zugeordnet werden sollen. Schließlich wird die `OnApplyConfiguration`-Methode in der `SampleProfileUdpBinding` überschrieben. Dies wird im folgenden Beispielcode veranschaulicht.  
   
 ```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
@@ -101,7 +101,7 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- Sie können dann aus verwiesen werden die [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Konfigurationsabschnitt.  
+ Anschließend kann im [ \<Abschnitt System. Service Model >](../../configure-apps/file-schema/wcf/system-servicemodel.md) Configuration auf Sie verwiesen werden.  
   
 ```xml  
 <configuration>  
@@ -119,13 +119,13 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>Hinzufügen von Metadatenunterstützung für ein Bindungselement  
- Um einen Kanal in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dies ermöglicht es Tools wie z. B. [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Clients des Bindungselements zu generieren.  
+ Um einen Kanal in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dadurch können Tools wie z. b. das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) Clients des Bindungs Elements generieren.  
   
 ### <a name="adding-wsdl-support"></a>Hinzufügen von WSDL-Unterstützung  
- Das Transportbindungselement in einer Bindung ist für den Export und Import von Adressierungsinformationen in/zu Metadaten verantwortlich. Bei der Nutzung einer SOAP-Bindung sollte das Transportbindungselement ebenfalls einen korrekten Transport-URI in die Metadaten exportieren. Der folgende Beispielcode stammt aus dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+ Das Transportbindungselement in einer Bindung ist für den Export und Import von Adressierungsinformationen in/zu Metadaten verantwortlich. Bei der Nutzung einer SOAP-Bindung sollte das Transportbindungselement ebenfalls einen korrekten Transport-URI in die Metadaten exportieren. Der folgende Beispielcode stammt aus dem [-Transport: UDP](../samples/transport-udp.md) -Beispiel.  
   
 #### <a name="wsdl-export"></a>WSDL-Export  
- Um Adressierungsinformationen zu exportieren die `UdpTransportBindingElement` implementiert die <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> Schnittstelle. Die <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType>-Methode fügt dem WSDL-Port die richtigen Adressierungsinformationen hinzu.  
+ Um Adressierungs Informationen zu exportieren `UdpTransportBindingElement` , implementiert <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> das die-Schnittstelle. Die <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType>-Methode fügt dem WSDL-Port die richtigen Adressierungsinformationen hinzu.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -163,7 +163,7 @@ if (soapBinding != null)
   
  Bei der Ausführung von "Svcutil.exe" gibt es zwei Optionen, um "Svcutil.exe" dazu zu bewegen, die WSDL-Importerweiterungen zu laden:  
   
-1. Verweisen Sie Svcutil.exe in der Konfigurationsdatei, die mithilfe der/svcutilconfig:\<Datei >.  
+1. Verweisen Sie Svcutil. exe mit der Datei >/SvcutilConfig:\<auf die Konfigurationsdatei.  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
@@ -179,10 +179,10 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Hinzufügen von Richtlinienunterstützung  
- Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken. Der folgende Beispielcode stammt aus dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+ Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken. Der folgende Beispielcode stammt aus dem [-Transport: UDP](../samples/transport-udp.md) -Beispiel.  
   
 #### <a name="policy-export"></a>Richtlinienexport  
- Die `UdpTransportBindingElement` -Typ implementiert <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>`UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
+ Der `UdpTransportBindingElement` Typ implementiert <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> , um Unterstützung für das Exportieren von Richtlinien hinzuzufügen Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>`UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
   
  Fügen Sie in <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> eine Assertion für UDP und eine weitere Assertion ein, wenn der Kanal sich im Multicastmodus befindet. Grund hierfür ist, dass der Multicastmodus Einfluss auf die Art und Weise hat, in der der Kommunikationsstapel erstellt wird, weshalb eine Koordinierung zwischen beiden Seiten stattfinden muss.  
   
@@ -223,14 +223,14 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Dann implementieren Sie <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> aus der registrierten Klasse (`UdpBindingElementImporter`). Prüfen Sie in <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> die Assertionen im entsprechenden Namespace, verarbeiten Sie sie für die Generierung des Transports, und prüfen Sie, ob Multicast vorliegt. Entfernen Sie darüber hinaus die Assertionen, die das Importprogramm handhabt, aus der Liste der Bindungsassertionen. Erneut stehen bei der Ausführung von "Svcutil.exe" zwei Optionen für die Integration zur Verfügung:  
   
-1. Verweisen Sie Svcutil.exe Konfigurationsdatei mithilfe der/svcutilconfig:\<Datei >.  
+1. Zeigen Sie Svcutil. exe mit der Datei >/SvcutilConfig:\<auf unsere Konfigurationsdatei.  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Hinzufügen eines benutzerdefinierten Standardbindungsimportprogramms  
  Svcutil.exe und der <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>-Typ erkennen und importieren vom System bereitgestellte Bindungen standardmäßig. Andernfalls wird die Bindung als <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>-Instanz importiert. Zur Aktivierung des Imports der <xref:System.ServiceModel.Description.WsdlImporter> für „Svcutil.exe“ und den `SampleProfileUdpBinding`, fungiert der `UdpBindingElementImporter` auch als benutzerdefiniertes Importprogramm für Standardbindungen.  
   
- Ein benutzerdefiniertes standardbindungsimportprogramm implementiert die `ImportEndpoint` Methode für die <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> Schnittstelle zum Überprüfen der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> Instanz importiert aus den Metadaten, um festzustellen, ob sie von einer spezifischen standardbindung hätte generiert werden kann.  
+ Ein benutzerdefiniertes standardbindungs `ImportEndpoint` -Import Programm <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> implementiert die-Methode <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> für die-Schnittstelle, um zu prüfen, ob die aus den Metadaten importierte-Instanz von einer bestimmten Standard Bindung generiert werden könnte.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  

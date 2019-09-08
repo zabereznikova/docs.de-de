@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfcc2db3f1f0d8646f903fedb1eb06b39928d00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742120"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777441"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute-Methode
-Der Aufruf zum Festlegen der benutzerdefinierten Attribute auf Assemblyebene.  
+Aufgerufen, um benutzerdefinierte Attribute auf Assemblyebene festzulegen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,31 +46,31 @@ HRESULT EmitAssemblyCustomAttribute(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei, die das Attribut definiert. Kann NULL sein, wenn `AssemblyID` gibt nicht an eine nicht gebundene NETMODULE-Datei.  
+ Die Datei, die das Attribut deaktiviert. Kann NULL sein, `AssemblyID` wenn kein ungebundenes NetModule angibt.  
   
  `tkType`  
  Der Typ des benutzerdefinierten Attributs.  
   
  `pCustomValue`  
- Benutzerdefinierte-Wert-Daten.  
+ Benutzerdefinierte Wertdaten.  
   
  `cbCustomValue`  
- Länge der Daten mit benutzerdefinierten Werten.  
+ Länge von benutzerdefinierten Wertdaten.  
   
  `bSecurity`  
- TRUE, wenn das benutzerdefinierte Attribut zum Signieren der Assembly verknüpft ist.  
+ TRUE, wenn das benutzerdefinierte Attribut mit der Assemblysignatur verknüpft ist.  
   
  `bAllowMulti`  
- True, wenn mehrere Attribute, die ausgegeben werden.  
+ TRUE, wenn mehrere Attribute ausgegeben werden sollen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

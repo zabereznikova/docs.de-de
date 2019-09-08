@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043896"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779631"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Arbeiten mit Binärdaten (WCF-Datendienste)
 
@@ -23,7 +23,7 @@ Mithilfe [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] der-Client 
 
 - Als separater binärer Ressourcenstream. Dies ist die empfohlene Methode für den Zugriff auf BLOB-Daten (Binary Large Object), die ein Foto, Video oder einen beliebigen anderen Typ binär codierter Daten darstellen, und das Ändern dieser Daten.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementiert das Streaming von Binärdaten mithilfe von http gemäß der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Definition in. In diesem Mechanismus werden Binärdaten als Medien Ressource behandelt, die von einer Entität getrennt ist, aber mit dieser verknüpft ist. Dies wird als Medien Link Eintrag bezeichnet. Weitere Informationen finden Sie unter [streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementiert das Streaming von Binärdaten mithilfe von http gemäß der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Definition in. In diesem Mechanismus werden Binärdaten als Medien Ressource behandelt, die von einer Entität getrennt ist, aber mit dieser verknüpft ist. Dies wird als Medien Link Eintrag bezeichnet. Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Ein Schritt-für-Schritt-Beispiel zum Erstellen einer WPF-Client Anwendung (Windows Presentation Foundation), mit der binäre Bilddateien von einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Dienst heruntergeladen werden, der Fotos [speichert, finden Sie im Beitrag Data Services Streaming Provider Series-Part. 1: Zugreifen auf einen medienressourcenstream vom](https://go.microsoft.com/fwlink/?LinkId=201637)Client. Den Beispielcode für den Stream Photo Data Service, der im Blogbeitrag vorgestellt wird, finden Sie im [Beispiel Streaming Photo Data Service (Streaming Photo Data Service](https://go.microsoft.com/fwlink/?LinkId=198988) ) in der MSDN Code Gallery.
@@ -74,5 +74,5 @@ In diesem Beispiel wird die <xref:System.Data.Services.Client.DataServiceContext
 
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
+- [Binden von Daten an Steuerelemente](binding-data-to-controls-wcf-data-services.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6584d31674670bcd005161a846b74df71a27a5f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a1c950e9a6e53e04cc0f2e52a140612562b32ff1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741648"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776985"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2-Methode
-Assemblys und ungebundenen Modulen importiert. Diese Methode entspricht [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), aber Sie funktioniert auch, wenn die zu importierende Datei auf dem Datenträger nicht vorhanden ist.  
+Importiert Assemblys und ungebundene Module. Diese Methode verhält sich wie die [ImportFile-Methode](importfile-method.md), funktioniert aber auch dann, wenn die zu importierende Datei nicht auf dem Datenträger vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,37 +43,37 @@ HRESULT ImportFileEx2(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Name des zu importierenden Datei.  
+ Der Name der zu importierenden Datei.  
   
  `pszTargetName`  
  Optionaler Name der Zieldatei.  
   
  `pAssemblyScopeIn`  
- Optionale importierte Bereich [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) Schnittstelle.  
+ Optionaler Import Bereich [IMetaDataAssemblyImport Schnittstellen](../metadata/imetadataassemblyimport-interface.md) Schnittstelle.  
   
  `fSmartImport`  
- True gibt an, ImportTypes wird verwendet, andernfalls importieren muss manuell durchgeführt werden.  
+ TRUE gibt an, dass ImportTypes verwendet wird. andernfalls muss der Import manuell ausgeführt werden.  
   
  `dwOpenFlags`  
- Flags, die zu übergebende [OpenScope-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Flags, die an die [OpenScope-Methode](../metadata/imetadatadispenser-openscope-method.md)weitergegeben werden sollen.  
   
  `pImportToken`  
- Empfängt die eindeutige ID für die Assembly oder Datei.  
+ Empfängt eine eindeutige ID für die Assembly oder Datei.  
   
  `ppAssemblyScope`  
- Import Assemblybereich empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) Schnittstelle. NULL kann sein, wenn die Datei keine Assembly ist.  
+ Empfängt assemblyimportierungsbereich [IMetaDataAssemblyImport Schnittstellen](../metadata/imetadataassemblyimport-interface.md) Schnittstelle. Kann NULL sein, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Empfängt die Anzahl der Dateien bzw. Bereiche nicht importiert.  
+ Empfängt die Anzahl der importierten Dateien und/oder Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [Alink-API](index.md)

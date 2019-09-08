@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Geben Sie die Anmeldeinformationen des Clients für einen Datendienst (WCF Data Services) anfordern'
+title: 'Vorgehensweise: Angeben von Client Anmelde Informationen für eine Datendienst Anforderung (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: ed32cb7d1c9da8a98333bc7eddd3e5707e4664ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660867"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790323"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Vorgehensweise: Geben Sie die Anmeldeinformationen des Clients für einen Datendienst (WCF Data Services) anfordern
-In der Standardeinstellung werden von der Clientbibliothek keine Anmeldeinformationen bereitgestellt, wenn eine Anforderung an einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Dienst gesendet wird. Sie können jedoch angeben, dass Anmeldeinformationen zum Authentifizieren von Anforderungen an den Datendienst gesendet werden, indem Sie <xref:System.Net.NetworkCredential> für die <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext> angeben. Weitere Informationen finden Sie unter [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Das Beispiel in diesem Thema veranschaulicht das explizite Angeben von Anmeldeinformationen, die beim Anfordern von Daten vom Datendienst vom [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client verwendet werden.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Vorgehensweise: Angeben von Client Anmelde Informationen für eine Datendienst Anforderung (WCF Data Services)
+In der Standardeinstellung werden von der Clientbibliothek keine Anmeldeinformationen bereitgestellt, wenn eine Anforderung an einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Dienst gesendet wird. Sie können jedoch angeben, dass Anmeldeinformationen zum Authentifizieren von Anforderungen an den Datendienst gesendet werden, indem Sie <xref:System.Net.NetworkCredential> für die <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext> angeben. Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md). Das Beispiel in diesem Thema veranschaulicht das explizite Angeben von Anmeldeinformationen, die beim Anfordern von Daten vom Datendienst vom [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client verwendet werden.  
   
- Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Können Sie auch die [Northwind-beispieldatendienst](https://go.microsoft.com/fwlink/?LinkId=187426) auf veröffentlichte die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Website, diese Beispieldaten Dienst ist schreibgeschützt, und um Änderungen zu speichern versuchen, einen Fehler zurück. Die beispieldatendienste auf der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Website lassen die anonyme Authentifizierung.  
+ Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen. Sie können auch den [Northwind-Beispiel Datendienst](https://go.microsoft.com/fwlink/?LinkId=187426) verwenden, der auf der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Website veröffentlicht wird. dieser Beispiel Datendienst ist schreibgeschützt, und der Versuch, Änderungen zu speichern, gibt einen Fehler zurück. Die Beispiel Datendienste auf der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Website ermöglichen die anonyme Authentifizierung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird aus der CodeBehind-Seite für eine Extensible Application Markup Language (XAML)-Datei, die der Hauptseite der Windows Presentation Framework-Anwendung ist. In diesem Beispiel werden mit einer `LoginWindow`-Instanz Anmeldeinformationen für die Authentifizierung vom Benutzer gesammelt, die dann beim Senden einer Anforderung an den Datendienst verwendet werden.  
+ Das folgende Beispiel ist von der Code-Behind-Seite für eine Extensible Application Markup Language-Datei (XAML), die die Hauptseite der Windows Presentation Framework-Anwendung ist. In diesem Beispiel werden mit einer `LoginWindow`-Instanz Anmeldeinformationen für die Authentifizierung vom Benutzer gesammelt, die dann beim Senden einer Anforderung an den Datendienst verwendet werden.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
@@ -50,9 +50,9 @@ In der Standardeinstellung werden von der Clientbibliothek keine Anmeldeinformat
   
 - Mittels Standard- und Hashwertauthentifizierung gesendete Daten sind nicht verschlüsselt und daher für Angreifer sichtbar. Anmeldeinformationen für die Standardauthentifizierung (Benutzername und Kennwort) werden zudem in Klartext gesendet und können abgefangen werden.  
   
- Weitere Informationen finden Sie unter [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Sichern von WCF Data Services](securing-wcf-data-services.md)
+- [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)

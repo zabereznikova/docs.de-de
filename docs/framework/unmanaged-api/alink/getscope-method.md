@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777207"
 ---
 # <a name="getscope-method"></a>GetScope-Methode
-Ruft eine Importgültigkeitsbereich ab.  
+Ruft einen Import Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Eindeutige ID der Assembly zu importieren.  
+ Eindeutige ID der Assembly, in die importiert werden soll.  
   
  `FileToken`  
- Eindeutige ID der Datei zum Importieren aus.  
+ Eindeutige ID der Datei, aus der importiert werden soll.  
   
  `dwScope`  
- Nullbasierte Bereich importiert.  
+ NULL basierter Gültigkeitsbereich, der importiert werden soll.  
   
  `ppImportScope`  
- Empfängt [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) Schnittstelle für den Bereich.  
+ Empfängt die [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) -Schnittstelle für den Bereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

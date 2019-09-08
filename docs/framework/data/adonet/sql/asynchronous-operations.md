@@ -2,12 +2,12 @@
 title: Asynchrone Vorgänge
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: c104176d92667d7c8e2dc83c33bf3eb566437d7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 55cb9472c23f09b3f0f248a795dbad62af8ff37f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918129"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782602"
 ---
 # <a name="asynchronous-operations"></a>Asynchrone Vorgänge
 Einige Datenbankoperationen wie das Ausführen von Befehlen können einige Zeit bis zur Beendigung in Anspruch nehmen. In diesem Fall müssen Singlethread-Anwendungen andere Operationen blockieren und auf die Beendigung des Befehls warten, bevor sie mit eigenen Operationen fortfahren können. Es ist jedoch auch möglich, dass der Vordergrundthread während der Operation aktiv bleibt, wenn der länger dauernde Vorgang einem Hintergrundthread zugewiesen werden kann. In einer Windows-Anwendung bleibt beispielsweise der Benutzeroberflächenthread beim Ausführen des Vorgangs reaktionsfähig, wenn die länger dauernde Operation an einen Hintergrundthread delegiert wird.  
@@ -20,17 +20,17 @@ Einige Datenbankoperationen wie das Ausführen von Befehlen können einige Zeit 
  Auch wenn durch die Verwendung asynchroner Techniken mit ADO.NET-Funktionen keine neuen Aspekte hinzugefügt werden, ist es wahrscheinlicher, dass Entwickler asynchrone Funktionen in ADO.NET verwenden als in anderen Bereichen von .NET Framework. Es ist wichtig, mit den Vorteilen und potenziellen Fehlerquellen beim Erstellen von Multithread-Anwendungen vertraut zu sein. Die in diesem Abschnitt folgenden Beispiele verdeutlichen mehrere wichtige Aspekte, die Entwickler beim Erstellen von Anwendungen mit Multithreadfunktionalität berücksichtigen sollten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden von Rückrufen in Windows-Anwendungen](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ [Verwenden von Rückrufen in Windows-Anwendungen](windows-applications-using-callbacks.md)  
  Enthält ein Beispiel, das die sichere Ausführung eines asynchronen Befehls veranschaulicht. Dabei wird die Interaktion mit einem Formular und seinem Inhalt von einem anderen Thread aus ordnungsgemäß behandelt.  
   
- [ASP.NET-Anwendungen mit Wait-Handles](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
+ [ASP.NET-Anwendungen mit Wait-Handles](aspnet-apps-using-wait-handles.md)  
  Enthält ein Beispiel, das die gleichzeitige Ausführung mehrerer Befehle von einer ASP.NET-Seite aus veranschaulicht. Dabei werden Wait-Handles zum Verwalten der Operation bei Beendigung aller Befehle verwendet.  
   
- [Abrufen in Konsolenanwendungen](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Abrufen in Konsolenanwendungen](polling-in-console-applications.md)  
  Enthält ein Beispiel, das die Verwendung von Abfragen veranschaulicht, mit denen von einer Konsolenanwendung auf die Beendigung der Ausführung eines asynchronen Befehls gewartet wird. Diese Technik kann auch in einer Klassenbibliothek oder anderen Anwendungen ohne Benutzeroberfläche verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server und ADO.NET](index.md)
 - [Asynchrones Aufrufen von synchronen Methoden](../../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958015"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791739"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server und ADO.NET](index.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)
 - [Handbuch zu Transaktions Sperren und Zeilen Versionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

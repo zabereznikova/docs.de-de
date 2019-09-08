@@ -2,17 +2,17 @@
 title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 0ac2c62388e554dad31beb54966fa2a4d5ffea2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945027"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792524"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
   
- Um Daten zwischen dem Objektmodell und der Datenbank zu übersetzen, muss eine *Typzuordnung* definiert werden. Mithilfe des Typmappings stellt LINQ to SQL eine Zuordnung zwischen jedem Typ der CLR (Common Language Runtime) und einem bestimmten SQL Server-Typ her. Die Typmappings und andere Mappinginformationen, wie Datenbankstrukturen und Tabellenbeziehungen, können im Objektmodell mithilfe von attributbasiertem Mapping definiert werden. Alternativ dazu können die Mappinginformationen außerhalb des Objektmodells mit einer externen Mappingdatei festgelegt werden. Weitere Informationen finden Sie unter [Attribut basierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Um Daten zwischen dem Objektmodell und der Datenbank zu übersetzen, muss eine *Typzuordnung* definiert werden. Mithilfe des Typmappings stellt LINQ to SQL eine Zuordnung zwischen jedem Typ der CLR (Common Language Runtime) und einem bestimmten SQL Server-Typ her. Die Typmappings und andere Mappinginformationen, wie Datenbankstrukturen und Tabellenbeziehungen, können im Objektmodell mithilfe von attributbasiertem Mapping definiert werden. Alternativ dazu können die Mappinginformationen außerhalb des Objektmodells mit einer externen Mappingdatei festgelegt werden. Weitere Informationen finden Sie unter [Attribut basierte Zuordnung](attribute-based-mapping.md) und [externe Zuordnung](external-mapping.md).  
   
  In diesem Thema werden folgende Punkte erläutert:  
   
@@ -36,9 +36,9 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Standardtypmapping  
- Das Objektmodell oder die externe Mappingdatei kann mithilfe des objektrelationalen Designers (O/R-Designer) oder mit dem Befehlszeilentool SQLMetal automatisch erstellt werden. Durch Standardtypmappings für diese Tools wird festgelegt, welche CLR-Typen bestimmten Spalten in der SQL Server-Datenbank zugeordnet werden sollen. Weitere Informationen zur Verwendung dieser Tools finden Sie unter [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
+ Das Objektmodell oder die externe Mappingdatei kann mithilfe des objektrelationalen Designers (O/R-Designer) oder mit dem Befehlszeilentool SQLMetal automatisch erstellt werden. Durch Standardtypmappings für diese Tools wird festgelegt, welche CLR-Typen bestimmten Spalten in der SQL Server-Datenbank zugeordnet werden sollen. Weitere Informationen zur Verwendung dieser Tools finden Sie unter [Erstellen des Objektmodells](creating-the-object-model.md).  
   
- Mithilfe der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode kann weiterhin eine SQL Server-Datenbank auf Grundlage der Mappinginformationen des Objektmodells oder der externen Mappingdatei erstellt werden. Mit den Standardtypmappings für die <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode wird festgelegt, welche Typen von SQL Server-Spalten für das Mapping der CLR-Typen im Objektmodell erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Dynamisches Erstellen einer Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Mithilfe der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode kann weiterhin eine SQL Server-Datenbank auf Grundlage der Mappinginformationen des Objektmodells oder der externen Mappingdatei erstellt werden. Mit den Standardtypmappings für die <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode wird festgelegt, welche Typen von SQL Server-Spalten für das Mapping der CLR-Typen im Objektmodell erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Dynamisches Erstellen einer Datenbank](how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Laufzeitverhaltens-Matrix des Typmappings  
@@ -50,7 +50,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 > Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen.  
   
 ### <a name="custom-type-mapping"></a>Benutzerdefinierte Typmappings  
- Mit LINQ to SQL sind die Standardtypmappings nicht auf diejenigen beschränkt, die von O/R-Designer, SQLMetal und der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode verwendet werden. Sie können benutzerdefinierte Typmappings erstellen, indem Sie sie explizit in einer DBML-Datei angeben. Mit dieser DBML-Datei können Sie danach den Objektmodellcode und die Mappingdatei erstellen. Weitere Informationen finden Sie unter [benutzerdefinierte SQL-CLR-](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)Typzuordnungen.  
+ Mit LINQ to SQL sind die Standardtypmappings nicht auf diejenigen beschränkt, die von O/R-Designer, SQLMetal und der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode verwendet werden. Sie können benutzerdefinierte Typmappings erstellen, indem Sie sie explizit in einer DBML-Datei angeben. Mit dieser DBML-Datei können Sie danach den Objektmodellcode und die Mappingdatei erstellen. Weitere Informationen finden Sie unter [benutzerdefinierte SQL-CLR-Typzuordnungen](sql-clr-custom-type-mappings.md).  
   
 <a name="BehaviorDiffs"></a>   
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>Verhaltensunterschiede zwischen CLR- und SQL-Ausführung  
@@ -79,9 +79,9 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 > [!NOTE]
 > Beim Mapping von SQL-Texttypen zu einer CLR-<xref:System.Enum?displayProperty=nameWithType> sollten nur die Namen der <xref:System.Enum>-Member in der zugeordneten SQL-Spalte enthalten sein. Andere Werte werden in der der <xref:System.Enum> zugeordneten SQL-Spalte nicht unterstützt.  
   
- Mit dem O/R-Designer und dem SQLMetal-Befehlszeilentool kann ein SQL-Typ nicht automatisch einer CLR-<xref:System.Enum>-Klasse zugeordnet werden. Sie müssen diese Zuordnung explizit konfigurieren, indem Sie eine DBML-Datei zur Verwendung mit dem O/R-Designer und SQLMetal anpassen. Weitere Informationen zur benutzerdefinierten Typzuordnung finden Sie unter [benutzerdefinierte SQL-CLR-](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)Typzuordnungen.  
+ Mit dem O/R-Designer und dem SQLMetal-Befehlszeilentool kann ein SQL-Typ nicht automatisch einer CLR-<xref:System.Enum>-Klasse zugeordnet werden. Sie müssen diese Zuordnung explizit konfigurieren, indem Sie eine DBML-Datei zur Verwendung mit dem O/R-Designer und SQLMetal anpassen. Weitere Informationen zur benutzerdefinierten Typzuordnung finden Sie unter [benutzerdefinierte SQL-CLR-Typzuordnungen](sql-clr-custom-type-mappings.md).  
   
- Da eine SQL-Spalte, die für die Enumeration vorgesehen ist, vom gleichen Typ wie andere numerische Spalten und Textspalten ist. Diese Tools erkennen ihre Absicht und die Standard Zuordnung nicht, wie in den folgenden Abschnitten zu den folgenden [numerischen Mapping](#NumericMapping) -und [Text-und XML-Mapping](#TextMapping) -Abschnitten beschrieben wird. Weitere Informationen zum Generieren von Code mit der DBML-Datei finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Da eine SQL-Spalte, die für die Enumeration vorgesehen ist, vom gleichen Typ wie andere numerische Spalten und Textspalten ist. Diese Tools erkennen ihre Absicht und die Standard Zuordnung nicht, wie in den folgenden Abschnitten zu den folgenden [numerischen Mapping](#NumericMapping) -und [Text-und XML-Mapping](#TextMapping) -Abschnitten beschrieben wird. Weitere Informationen zum Generieren von Code mit der DBML-Datei finden Sie unter [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md).  
   
  Die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode erstellt eine SQL-Spalte eines numerischen Typs zum Mapping eines CLR-<xref:System.Enum?displayProperty=nameWithType>-Typs.  
   
@@ -199,10 +199,10 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 ### <a name="systemdatetime"></a>System.DateTime  
  Der Bereich und die Genauigkeit des CLR-Typs <xref:System.DateTime?displayProperty=nameWithType> sind größer als der Bereich und die Genauigkeit des SQL Server-Typs `DATETIME`. Diese beiden Typen werden mit dem Standardtypmapping der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode einander zugeordnet. Um Ausnahmen im Zusammenhang mit außerhalb des Bereichs von `DATETIME` liegenden Datumswerten zu vermeiden, sollte der seit Microsoft SQL Server 2008 verfügbare `DATETIME2`-Typ verwendet werden. `DATETIME2`kann den Bereich und die Genauigkeit der CLR <xref:System.DateTime?displayProperty=nameWithType>vergleichen.  
   
- SQL Server-Datumswerte unterstützen keine <xref:System.TimeZone>, eine Funktion, die in der CLR große Bedeutung hat. <xref:System.TimeZone>-Werte werden ohne <xref:System.TimeZone>-Umwandlung in der Datenbank gespeichert, unabhängig von den ursprünglichen <xref:System.DateTimeKind>-Informationen. Werden <xref:System.DateTime>-Werte aus der Datenbank abgerufen, werden diese wie in <xref:System.DateTime> mit einer <xref:System.DateTimeKind> von <xref:System.DateTimeKind.Unspecified> geladen. Weitere Informationen zu unterstützten <xref:System.DateTime?displayProperty=nameWithType> Methoden finden Sie unter [System. DateTime-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ SQL Server-Datumswerte unterstützen keine <xref:System.TimeZone>, eine Funktion, die in der CLR große Bedeutung hat. <xref:System.TimeZone>-Werte werden ohne <xref:System.TimeZone>-Umwandlung in der Datenbank gespeichert, unabhängig von den ursprünglichen <xref:System.DateTimeKind>-Informationen. Werden <xref:System.DateTime>-Werte aus der Datenbank abgerufen, werden diese wie in <xref:System.DateTime> mit einer <xref:System.DateTimeKind> von <xref:System.DateTimeKind.Unspecified> geladen. Weitere Informationen zu unterstützten <xref:System.DateTime?displayProperty=nameWithType> Methoden finden Sie unter [System. DateTime-Methoden](system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
- Mit Microsoft SQL Server 2008 und .NET Framework 3.5 SP1 kann der CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> dem SQL Server-Typ `TIME` zugeordnet werden. Es gibt jedoch große Unterschiede im von dem CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> und dem SQL Server-Typ `TIME` unterstützten Bereich. Das Mapping von Stundenwerten kleiner als 0 oder größer als 23:59:59.9999999 zum SQL-Typ `TIME` hat Überlaufausnahmen zur Folge. Weitere Informationen finden Sie unter [System. TimeSpan-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
+ Mit Microsoft SQL Server 2008 und .NET Framework 3.5 SP1 kann der CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> dem SQL Server-Typ `TIME` zugeordnet werden. Es gibt jedoch große Unterschiede im von dem CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> und dem SQL Server-Typ `TIME` unterstützten Bereich. Das Mapping von Stundenwerten kleiner als 0 oder größer als 23:59:59.9999999 zum SQL-Typ `TIME` hat Überlaufausnahmen zur Folge. Weitere Informationen finden Sie unter [System. TimeSpan-Methoden](system-timespan-methods.md).  
   
  In Microsoft SQL Server 2000 und SQL Server 2005 können <xref:System.TimeSpan> keine Datenbankfelder zugeordnet werden. Dennoch werden Operationen für <xref:System.TimeSpan> unterstützt, da <xref:System.TimeSpan>-Werte von <xref:System.DateTime>-Subtraktionen zurückgegeben oder als Literal oder gebundene Variable in einen Ausdruck integriert werden können.  
   
@@ -258,7 +258,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-- [SQL-CLR-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Attributbasierte Zuordnung](attribute-based-mapping.md)
+- [External Mapping (Externe Zuordnung)](external-mapping.md)
+- [Datentypen und Funktionen](data-types-and-functions.md)
+- [SQL-CLR-Typenkonflikte](sql-clr-type-mismatches.md)

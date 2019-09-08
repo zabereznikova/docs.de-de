@@ -2,23 +2,23 @@
 title: 'Entity Data Model: primitive Datentypen'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dd688a06a47f4c44c27ddee2120b9de6980672fc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959284"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795157"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: primitive Datentypen
-Der Entity Data Model (EDM) unterstützt einen Satz abstrakter primitiver Datentypen (z. b. String, Boolean, Int32 usw.), die verwendet werden, um [Eigenschaften](../../../../docs/framework/data/adonet/property.md) in einem konzeptionellen Modell zu definieren. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen dazu, wie die Entity Framework primitive Typen im EDM SQL Server Datentypen zuordnet, finden Sie unter [SqlClient für Entity frameworktypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+Der Entity Data Model (EDM) unterstützt einen Satz abstrakter primitiver Datentypen (z. b. String, Boolean, Int32 usw.), die verwendet werden, um [Eigenschaften](property.md) in einem konzeptionellen Modell zu definieren. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen dazu, wie die Entity Framework primitive Typen im EDM SQL Server Datentypen zuordnet, finden Sie unter [SqlClient für Entity frameworktypes](./ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
 > Das EDM unterstützt keine Auflistungen primitiver Datentypen.  
   
- Informationen zu strukturierten Datentypen im EDM finden Sie unter [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) und [komplexer Typ](../../../../docs/framework/data/adonet/complex-type.md).  
+ Informationen zu strukturierten Datentypen im EDM finden Sie unter [Entitätstyp](entity-type.md) und [komplexer Typ](complex-type.md).  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Im Entity Data Model unterstützte primitive Datentypen  
- In der nachfolgenden Tabelle werden die vom EDM unterstützten primitiven Datentypen aufgeführt. In der Tabelle werden auch die [Facetten](../../../../docs/framework/data/adonet/facet.md) aufgelistet, die auf jeden primitiven Datentyp angewendet werden können.  
+ In der nachfolgenden Tabelle werden die vom EDM unterstützten primitiven Datentypen aufgeführt. In der Tabelle werden auch die [Facetten](facet.md) aufgelistet, die auf jeden primitiven Datentyp angewendet werden können.  
   
 |Primitiver Datentyp|Beschreibung|Anwendbare Facets|  
 |-------------------------|-----------------|-----------------------|  
@@ -40,5 +40,5 @@ Der Entity Data Model (EDM) unterstützt einen Satz abstrakter primitiver Datent
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Schlüsselkonzepte im Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

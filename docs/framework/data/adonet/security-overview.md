@@ -1,13 +1,13 @@
 ---
-title: Im Überblick2
+title: Sicherheit Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4aac564e55b24b2499f861938082a32f30247f91
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649604"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794339"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozess. Es wird niemals die Situation eintreten, dass ein Entwickler dafür garantieren kann, dass eine Anwendung vor allen Angriffen sicher ist, weil unmöglich vorhergesagt werden kann, welche Arten von Angriffen durch neue Technologien hervorgebracht werden. Umgekehrt kann nicht behauptet werden, dass Sicherheitsmängel nicht vorhanden sind oder nicht vorhanden sein können, nur weil diese noch nicht in einem System entdeckt (oder veröffentlicht) wurden. Sie müssen die Sicherheit bereits in der Entwurfsphase des Projekts planen, und Sie müssen planen, wie die Sicherheit über die gesamte Lebensdauer der Anwendung hinweg gewährleistet werden soll.  
@@ -18,7 +18,7 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
  Wenn Sicherheit erst kurz vor Schluss implementiert wird, führt dies zu noch mehr Fehlern, weil die Software unter den neuen Einschränkungen abbricht oder umgeschrieben werden muss, um bisher nicht vorgesehene Funktionen noch unterzubringen. Jede Zeile überarbeiteten Codes birgt die Möglichkeit, dass sich dort ein neuer Bug einschleicht. Aus diesem Grund sollten Sie Sicherheitsaspekte schon in einem frühen Entwicklungsstadium bedenken, sodass diese gemeinsam mit den neuen Funktionen entwickelt werden.  
   
 ### <a name="threat-modeling"></a>Erstellen von Gefahrenmodellen  
- Sie können ein System nur vor Angriffen schützen, wenn Ihnen alle potenziellen Angriffe bekannt sind, denen es ausgesetzt sein kann. Bezeichnet der Prozess der Sicherheitsrisiken *bedrohungsmodellierung*, ist erforderlich, um die Wahrscheinlichkeit und Auswirkungen von sicherheitsverletzungen in Ihrer ADO.NET-Anwendung zu ermitteln.  
+ Sie können ein System nur vor Angriffen schützen, wenn Ihnen alle potenziellen Angriffe bekannt sind, denen es ausgesetzt sein kann. Der Prozess der Auswertung von Sicherheitsbedrohungen, die als *Bedrohungsmodellierung*bezeichnet werden, ist erforderlich, um die Wahrscheinlichkeit und die Auswirkungen von Sicherheitsverletzungen in Ihrer ADO.NET-Anwendung zu ermitteln.  
   
  Das Erstellen von Gefahrenmodellen besteht ganz allgemein aus den folgenden drei Schritten: Begreifen der Sichtweise der Gegenseite, Charakterisieren der Sicherheit des Systems und Bestimmen der Gefahren.  
   
@@ -28,7 +28,7 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|Die [Threat Modeling](https://go.microsoft.com/fwlink/?LinkId=98353) -Website auf der MSDN Security Developer Center|Die Ressourcen auf dieser Seite helfen Ihnen, den Prozess der Erstellung von Gefahrenmodellen besser zu verstehen und Gefahrenmodelle zu entwickeln, die Sie zum Absichern Ihrer eigenen Anwendungen verwenden können.|  
+|Website zur [Bedrohungsmodellierung](https://go.microsoft.com/fwlink/?LinkId=98353) im MSDN Security Developer Center|Die Ressourcen auf dieser Seite helfen Ihnen, den Prozess der Erstellung von Gefahrenmodellen besser zu verstehen und Gefahrenmodelle zu entwickeln, die Sie zum Absichern Ihrer eigenen Anwendungen verwenden können.|  
   
 ## <a name="the-principle-of-least-privilege"></a>Das Prinzip der minimalen Rechtegewährung  
  Beim Entwickeln, Erstellen und Bereitstellen Ihrer Anwendung muss davon ausgegangen werden, dass Ihre Anwendung angegriffen werden wird. Häufig gehen solche Angriffe von bösartigem Code aus, der mit den Berechtigungen des Benutzers ausgeführt wird, der die Codeausführung gestartet hat. Ein Angriff kann aber auch über eigentlich nicht bösartigen Code ausgeführt werden, der vom Angreifer per Exploit ausgenutzt wird. Gehen Sie beim Planen der Sicherheit immer vom schlimmsten Fall aus.  
@@ -66,8 +66,8 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Codezugriffssicherheit und ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Beschreibt die Interaktionen zwischen der Codezugriffssicherheit, der rollenbasierten Sicherheit und teilweise vertrauenswürdigen Umgebungen aus der Sicht einer ADO.NET-Anwendung.|  
-|[Codezugriffssicherheit](../../../../docs/framework/misc/code-access-security.md)|Enthält Links zu weiteren Themen mit Erläuterungen zu CAS in .NET Framework.|  
+|[Codezugriffssicherheit und ADO.NET](code-access-security.md)|Beschreibt die Interaktionen zwischen der Codezugriffssicherheit, der rollenbasierten Sicherheit und teilweise vertrauenswürdigen Umgebungen aus der Sicht einer ADO.NET-Anwendung.|  
+|[Codezugriffssicherheit](../../misc/code-access-security.md)|Enthält Links zu weiteren Themen mit Erläuterungen zu CAS in .NET Framework.|  
   
 ## <a name="database-security"></a>Datenbanksicherheit  
  Das Prinzip der minimalen Rechtegewährung gilt auch für Ihre Datenquelle. Bei der Datenbanksicherheit gilt es folgende allgemeine Richtlinien zu beachten:  
@@ -88,8 +88,8 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|  
-|[Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
+|[SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|  
+|[Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
   
 ## <a name="security-policy-and-administration"></a>Sicherheitsrichtlinie und Verwaltung  
  Eine unsachgemäße Verwaltung der CAS-Richtlinie kann potenziell die Sicherheit schwächen. Nach dem Bereitstellen einer Anwendung sollten Verfahren zum Überwachen der Sicherheit eingesetzt und regelmäßige Risikobewertungen vorgenommen werden.  
@@ -98,12 +98,12 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Serversicherheits-richtlinienverwaltung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|  
-|[Sicherheitsempfehlungen für Gruppenrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|  
+|[Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Enthält Informationen zum Erstellen und Verwalten einer Sicherheitsrichtlinie.|  
+|[Bewährte Methoden für Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [Sicherheit in .NET](../../../standard/security/index.md)
-- [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

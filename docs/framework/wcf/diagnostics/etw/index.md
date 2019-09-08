@@ -6,30 +6,30 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd745730ca186b9489c547f790c546e95bf96372
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962044"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798090"
 ---
 # <a name="analytic-tracing-with-etw"></a>Analytische Ablaufverfolgung per ETW
-Analytische Ablaufverfolgung von Windows Communication Foundation (WCF) bietet eine Möglichkeit zum Erfassen von Diagnoseinformationen während der Ausführung eines WCF-Diensts. Analytische Ablaufverfolgung von WCF-Ereignisse werden an wichtigen Punkten im WCF-Stapel zum ermöglichen der Behebung von WCF-Dienste in einer produktionsumgebung ausgegeben. Analytische Ablaufverfolgung für WCF-Dienste hat nur minimale Auswirkungen auf die Leistung eines produktservers, der als Host [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF-Dienste wie diese Ereignisse sehr effizient in eine Sitzung für Event Tracing for Windows (ETW) ausgegeben werden.  
+Die analytische Ablauf Verfolgung von Windows Communication Foundation (WCF) bietet eine Möglichkeit zum Erfassen von Diagnoseinformationen während der Ausführung eines WCF-Dienstanbieter. WCF-analytische Ablauf Verfolgungs Ereignisse werden an wichtigen Punkten im WCF-Stapel ausgegeben, um die Problembehandlung von WCF-Diensten in einer Produktionsumgebung zu ermöglichen. Die analytische Ablauf Verfolgung für WCF-Dienste wirkt sich nur minimal auf die Leistung eines Produkt [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Servers aus, der WCF-Dienste hostet, da diese Ereignisse sehr effizient an eine Ereignis Ablauf Verfolgung für Windows (ETW)-Sitzung ausgegeben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die analytische Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- Erläutert, wie die analytische Ablaufverfolgung von WCF in funktioniert [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
+ [Übersicht über die analytische Ablaufverfolgung](analytic-tracing-overview.md)  
+ Erläutert, wie die analytische WCF- [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Ablauf Verfolgung in funktioniert.  
   
- [Dynamisches Aktivieren der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
+ [Dynamisches Aktivieren der analytischen Ablaufverfolgung](dynamically-enabling-analytic-tracing.md)  
  Erläutert, wie Sie die Ablaufverfolgung per ETW dynamisch aktivieren und deaktivieren.  
   
- [Konfigurieren der Ablaufverfolgung des Nachrichtenflusses](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
+ [Konfigurieren der Ablaufverfolgung des Nachrichtenflusses](configuring-message-flow-tracing.md)  
  Beschreibt, wie die Ablaufverfolgung des Nachrichtenflusses konfiguriert wird.  
   
- [Ereignisreferenz der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
+ [Ereignisreferenz der analytischen Ablaufverfolgung](analytic-trace-event-reference.md)  
  Zeigt eine Tabelle von Ereignis-IDs mit den dazugehörigen Ereignisebenen, Ereignisnachrichten und Schlüsselwörtern an.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
-- [Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)
+- [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../samples/wcf-services-and-event-tracing-for-windows.md)
+- [Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows](../../../windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

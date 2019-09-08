@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946779"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792114"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)
 
@@ -21,11 +21,11 @@ Diese exemplarische Vorgehensweise ist codeorientiert, um [!INCLUDE[vbtecdlinq](
 
 Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.
 
-- Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest.
+- Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest.
 
 ## <a name="overview"></a>Übersicht
 
@@ -144,7 +144,7 @@ In diesem Schritt führen Sie die Abfrage aus. Die in den vorherigen Schritten e
 2. Drücken Sie F5, um die Anwendung zu debuggen.
 
     > [!NOTE]
-    > Wenn Ihre Anwendung einen Laufzeitfehler generiert, lesen Sie den Abschnitt zur Problembehandlung in [Learning by](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
+    > Wenn Ihre Anwendung einen Laufzeitfehler generiert, lesen Sie den Abschnitt zur Problembehandlung in [Learning by](learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
 
      Das Meldungsfeld zeigt eine Liste von sechs Kunden an. Das Konsolenfenster zeigt den generierten SQL-Code an.
 
@@ -158,10 +158,10 @@ In diesem Schritt führen Sie die Abfrage aus. Die in den vorherigen Schritten e
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die [Exemplarische Vorgehensweise: Das Thema Beziehungen zwischen Beziehungen (Visual Basic](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) ) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise zum Abfragen von Beziehungen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veranschaulicht, wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
+Die [Exemplarische Vorgehensweise: Das Thema Beziehungen zwischen Beziehungen (Visual Basic](walkthrough-querying-across-relationships-visual-basic.md) ) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise zum Abfragen von Beziehungen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veranschaulicht, wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
 
 Wenn Sie die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen absolvieren möchten, stellen Sie sicher, dass Sie die gerade erstellte Lösung speichern, da diese benötigt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Lernen durch exemplarische Vorgehensweisen](learning-by-walkthroughs.md)

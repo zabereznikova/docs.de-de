@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871ad81cd83c40d7299f39ede404e274b95b2ac0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795418"
 ---
-# <a name="createasmnameobjflags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS-Enumeration
-Gibt die Attribute einer [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) -Objekt nach der Erstellung durch die [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) Funktion.  
+# <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS-Enumeration
+Gibt die Attribute eines [IAssemblyName-Schnittstellen](iassemblyname-interface.md) Objekts an, wenn es von der Funktion " [kreateassemblynameobject](createassemblynameobject-function.md) " erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,20 +44,20 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|Gibt an, dass der übergebene Parameter eine Text Identität ist.|  
-|`CANOF_SET_DEFAULT_VALUES`|Einige Standardwerte festgelegt.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Überprüft die Friend-Assembly-Regel (nur Name und öffentlicher Schlüssel). Dieser Member ist nur zur internen Verwendung.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Eine Kombination aus den `CANOF_PARSE_DISPLAY_NAME` und `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` Flags. Dieser Member ist nur zur internen Verwendung.|  
+|`CANOF_PARSE_DISPLAY_NAME`|Gibt an, dass der übergebenen Parameter eine Text Identität ist.|  
+|`CANOF_SET_DEFAULT_VALUES`|Legt einige Standardwerte fest.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Überprüft die Friend-Assemblyregel (nur Name und öffentlicher Schlüssel). Dieser Member ist nur für die interne Verwendung vorgesehen.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Eine Kombination der `CANOF_PARSE_DISPLAY_NAME` - `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` und-Flags. Dieser Member ist nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [CreateAssemblyNameObject-Funktion](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
+- [CreateAssemblyNameObject-Funktion](createassemblynameobject-function.md)
+- [Fusion-Enumerationen](fusion-enumerations.md)

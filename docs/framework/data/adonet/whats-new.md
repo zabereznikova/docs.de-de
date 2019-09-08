@@ -2,34 +2,34 @@
 title: Neues in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 0a02ca3885524c5fcf8def603acdce33a972d283
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379984"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791256"
 ---
 # <a name="whats-new-in-adonet"></a>Neues in ADO.NET
 
-Die folgenden Features sind neu in ADO.NET in .NET Framework 4.5.
+Die folgenden Features sind neu in ADO.net im .NET Framework 4,5.
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-Die folgenden Features sind neu in der .NET Framework-Datenanbieter für SQL Server in .NET Framework 4.5:
+Die folgenden Features sind neu in den .NET Framework Datenanbieter für SQL Server in .NET Framework 4,5:
 
 - Mit den Verbindungszeichenfolgen von ConnectRetryCount und ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) können Sie die resiliente Verbindungsfunktion im Leerlauf steuern.
 
-- Unterstützung des Streamings von SQL Server zu einer Anwendung unterstützt Szenarien, in denen Daten auf dem Server unstrukturiert ist.  Finden Sie unter [SqlClient-Streamingunterstützung](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) für Weitere Informationen.
+- Die Streamingunterstützung von SQL Server zu einer Anwendung unterstützt Szenarien, in denen Daten auf dem Server nicht strukturiert sind.  Weitere Informationen finden Sie [unter SqlClient-Streamingunterstützung](sqlclient-streaming-support.md) .
 
-- Es wurde Unterstützung für asynchrone Programmierung hinzugefügt.  Finden Sie unter [der asynchronen Programmierung](../../../../docs/framework/data/adonet/asynchronous-programming.md) für Weitere Informationen.
+- Es wurde Unterstützung für asynchrone Programmierung hinzugefügt.  Weitere Informationen finden Sie unter [asynchrone Programmierung](asynchronous-programming.md) .
 
-- Verbindungsfehler werden jetzt im Protokoll für erweiterte Ereignisse protokolliert. Weitere Informationen finden Sie unter [Datenablaufverfolgung in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).
+- Verbindungsfehler werden jetzt im Protokoll für erweiterte Ereignisse protokolliert. Weitere Informationen finden Sie unter [Datenablaufverfolgung in ADO.NET](data-tracing.md).
 
-- SqlClient verfügt jetzt über Unterstützung für SQL Server hohe Verfügbarkeit, Notfallwiederherstellungsfunktion voraussetzt, AlwaysOn. Weitere Informationen finden Sie unter [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+- SqlClient bietet jetzt Unterstützung für die Hochverfügbarkeit, die Notfall Wiederherstellung (AlwaysOn) SQL Server. Weitere Informationen finden Sie [unter SqlClient-Unterstützung für hohe Verfügbarkeit, Notfall Wiederherstellung](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Ein Kennwort übergeben werden kann, als eine <xref:System.Security.SecureString> bei Verwendung von SQL Server-Authentifizierung. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlCredential>.
+- Ein Kennwort kann als <xref:System.Security.SecureString> bei Verwendung der SQL Server Authentifizierung als angegeben werden. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlCredential>.
 
-- Wenn `TrustServerCertificate` ist "false" und `Encrypt` "true", den Servernamen (oder die IP-Adresse) in einem SQL Server-SSL-Zertifikat muss genau übereinstimmen, die Server Name (oder IP-Adresse) in der Verbindungszeichenfolge angegeben ist. Andernfalls schlägt die Verbindung fehl. Weitere Informationen finden Sie in der Beschreibung der `Encrypt`-Verbindungsoption in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Wenn `TrustServerCertificate` false ist und `Encrypt` true ist, muss der Servername (oder die IP-Adresse) in einem SQL Server SSL-Zertifikat genau mit dem Servernamen (oder der IP-Adresse) übereinstimmen, der in der Verbindungs Zeichenfolge angegeben ist. Andernfalls schlägt die Verbindung fehl. Weitere Informationen finden Sie in der Beschreibung der `Encrypt`-Verbindungsoption in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
   Wenn diese Änderung dazu führt, dass eine vorhandene Anwendung keine Verbindung mehr herstellen kann, können Sie das Problem mithilfe eines der folgenden Verfahren beheben:
 
@@ -39,24 +39,23 @@ Die folgenden Features sind neu in der .NET Framework-Datenanbieter für SQL Ser
 
   - Verwenden Sie den vollqualifizierten Domänennamen in der Verbindungszeichenfolge.
 
-- SqlClient unterstützt den erweiterten Schutz. Weitere Informationen zu erweitertem Schutz finden Sie unter [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe eines erweiterten Schutzes](https://go.microsoft.com/fwlink/?LinkId=219978).
+- SqlClient unterstützt den erweiterten Schutz. Weitere Informationen zum erweiterten Schutz finden Sie unter [Herstellen einer Verbindung mit dem Datenbank-Engine mit erweitertem Schutz](https://go.microsoft.com/fwlink/?LinkId=219978).
 
-- SqlClient unterstützt Verbindungen mit LocalDB-Datenbanken. Weitere Informationen finden Sie unter [SqlClient-Unterstützung für LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).
+- SqlClient unterstützt Verbindungen mit LocalDB-Datenbanken. Weitere Informationen finden Sie [unter SqlClient-Unterstützung für localdb](./sql/sqlclient-support-for-localdb.md).
 
 - `Type System Version=SQL Server 2012;` ist der neue Wert, der an die `Type System Version`-Verbindungseigenschaft übergeben wird. Der `Type System Version=Latest;`-Wert ist jetzt veraltet und wurde `Type System Version=SQL Server 2008;` angeglichen. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Gibt an, ob eine Spalte eine sparsespalte ist (siehe [SQL Server-Schemaauflistungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Informationen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von Sparsespalten](https://go.microsoft.com/fwlink/?LinkId=224244).
+- SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>Gibt an, ob eine Spalte eine sparsespalte ist (Weitere Informationen finden Sie unter [SQL Server Schema](sql-server-schema-collections.md) Auflistungen). Weitere Informationen zu sparsespalten finden [Sie unter Verwenden von sparsespalten](https://go.microsoft.com/fwlink/?LinkId=224244).
 
-- Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=224367).
+- Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [Breaking Changes to Datenbank-Engine Features](https://go.microsoft.com/fwlink/?LinkId=224367).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-.NET Framework 4.5 hinzugefügt APIs, die beim Arbeiten mit Entity Framework 5.0 neue Szenarios zu ermöglichen. Weitere Informationen zu Verbesserungen und Funktionen, die Entity Framework 5.0 hinzugefügt wurden, finden Sie unter den folgenden Themen: [Neues](https://go.microsoft.com/fwlink/?LinkID=251106) und [Entity Framework-Versionen und Versionsverwaltung](https://go.microsoft.com/fwlink/?LinkId=234899).
+Der .NET Framework 4,5 fügt APIs hinzu, die bei der Arbeit mit Entity Framework 5,0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Features, die dem Entity Framework 5,0 hinzugefügt wurden, finden Sie in den folgenden Themen: [Neuerungen](https://go.microsoft.com/fwlink/?LinkID=251106) und [Entity Framework Releases und Versions](https://go.microsoft.com/fwlink/?LinkId=234899)Verwaltung.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Neues in WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET](index.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)
+- [SQL Server und ADO.NET](./sql/index.md)
+- [Neues in WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

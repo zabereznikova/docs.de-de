@@ -1,6 +1,6 @@
 ---
-title: BeginEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: BeginEnumeration-Funktion setzt einen Enumerator zurück, auf den Anfang der enumeration
+title: Beginenumeration-Funktion (Referenz zur nicht verwalteten API)
+description: Die beginenumeration-Funktion setzt einen Enumerator auf den Anfang der Enumeration zurück.
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761801"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798794"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
-Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.  
+Setzt einen Enumerator auf den Anfang der-Enumeration zurück.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,64 +41,64 @@ HRESULT BeginEnumeration (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`\
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`\
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lEnumFlags`\
-[in] Eine bitweise Kombination der Flags oder Werte, die in beschriebenen der ["Hinweise"](#remarks) Abschnitt, der steuert, in der Enumeration enthaltenen Eigenschaften.
+in Eine bitweise Kombination der Flags oder Werte, die im Abschnitt " [Hinweise](#remarks) " beschrieben werden, die die in der-Enumeration enthaltenen Eigenschaften steuert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Die Kombination von Flags in `lEnumFlags` ist ungültig oder ein ungültiges Argument wurde angegeben. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Einen zweiten Aufruf von `BeginEnumeration` wurde ohne einen zwischenzeitlichen Aufruf versucht [ `EndEnumeration` ](endenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zur Verfügung, um eine neue Enumeration beginnen. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Die Kombination von Flags `lEnumFlags` in ist ungültig, oder es wurde ein ungültiges Argument angegeben. |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Es `BeginEnumeration` wurde ein zweiter-Rückruf ohne einen dazwischen liegenden- [`EndEnumeration`](endenumeration.md)Rückruf durchgeführt. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Methode.
+Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: beginenumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Methode.
 
-Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert werden, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code.  Sie können einen Flag aus jeder Gruppe mit einem Flag aus einer anderen Gruppe kombinieren. Allerdings sind Flags aus der gleichen Gruppe sich gegenseitig ausschließende. 
+Die Flags, die als `lEnumFlags` Argument übermittelt werden können, werden in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren.  Sie können ein Flag aus jeder Gruppe mit einem beliebigen Flag aus einer beliebigen anderen Gruppe kombinieren. Flags aus derselben Gruppe schließen sich jedoch gegenseitig aus. 
 
 **Gruppe 1**
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Enthalten Sie die Eigenschaften, die nur den Schlüssel zu bilden. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Enthalten Sie die Eigenschaften, die nur die Objektverweise sind. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Schließt Eigenschaften ein, die nur den Schlüssel bilden. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Schließt Eigenschaften ein, die nur Objekt Verweise sind. |
 
 **Gruppe 2**
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Die Enumeration, die nur die Systemeigenschaften zu beschränken. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Lokale und verteilte Eigenschaften enthalten, aber Ausschließen von Eigenschaften aus der Enumeration. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Beschränken Sie die Enumeration auf Systemeigenschaften. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Schließt lokale und weitergeleitete Eigenschaften ein, aber schließt Systemeigenschaften aus der-Enumeration aus. |
 
 Für Klassen:
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Beschränken Sie die Enumeration, die Eigenschaften, die in der Definition der Klasse überschrieben. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Beschränken Sie die Enumeration, die den Eigenschaften, die in der Definition der aktuellen Klasse überschrieben und den neuen Eigenschaften, die in der Klasse definiert. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Ein zu maskieren (anstatt ein Flag) vor dem Anwenden einer `lEnumFlags` Wert entweder überprüft, ob `WBEM_FLAG_CLASS_OVERRIDES_ONLY` oder `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` festgelegt ist. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die definiert, oder in der Klasse selbst geändert werden. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Klassen geerbt werden. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Beschränken Sie die Enumeration auf Eigenschaften, die in der Klassendefinition überschrieben werden. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Beschränken Sie die-Enumeration auf Eigenschaften, die in der aktuellen Klassendefinition und auf neue in der-Klasse definierte Eigenschaften überschrieben werden. |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Eine Maske (anstelle eines Flags), die auf einen `lEnumFlags` Wert angewendet werden soll, um zu überprüfen, ob entweder `WBEM_FLAG_CLASS_OVERRIDES_ONLY` oder `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` festgelegt ist. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die in der Klasse selbst definiert oder geändert werden. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Basisklassen geerbt werden. |
 
-Für Instanzen:
+Für-Instanzen:
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die definiert, oder in der Klasse selbst geändert werden. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Klassen geerbt werden. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die in der Klasse selbst definiert oder geändert werden. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Basisklassen geerbt werden. |
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

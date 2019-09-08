@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778674"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796718"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit-Methode
-Führt einen Commit für die zwischengespeicherte Assembly-Verweis auf Speicher.  
+Führt einen Commit für den zwischengespeicherten Assemblyverweis zum  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Commit (
   
 ## <a name="parameters"></a>Parameter  
  `dwFlags`  
- [in] Flags, die in Fusion.idl definiert sind.  
+ in In Fusion. idl definierte Flags.  
   
  `pulDisposition`  
- [Out, optional] Ein Wert, der das Ergebnis des Vorgangs angibt.  
+ [out, optional] Ein-Wert, der das Ergebnis des Vorgangs angibt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyCacheItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem-Schnittstelle](iassemblycacheitem-interface.md)

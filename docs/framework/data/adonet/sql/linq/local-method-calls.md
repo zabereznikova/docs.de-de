@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033513"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781423"
 ---
 # <a name="local-method-calls"></a>Lokale Methodenaufrufe
-Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. Ein Remotemethodenaufruf wird von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL übersetzt und zur Ausführung an die Datenbank-Engine übergeben. Lokale Methodenaufrufe sind erforderlich, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht den Aufruf in SQL übersetzt werden. Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst.  
+Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. Ein Remotemethodenaufruf wird von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL übersetzt und zur Ausführung an die Datenbank-Engine übergeben. Lokale Methodenaufrufe sind erforderlich, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wenn den Aufruf nicht in SQL übersetzen kann. Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst.  
   
 ## <a name="example-1"></a>Beispiel 1  
  Im folgenden Beispiel wird veranschaulicht, wie eine `Order`-Klasse der Tabelle Bestellungen in der Datenbank Northwind zugewiesen wird. Eine lokale Instanzmethode wurde der Klasse hinzugefügt.  
@@ -28,4 +28,4 @@ Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. E
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Hintergrundinformationen](background-information.md)

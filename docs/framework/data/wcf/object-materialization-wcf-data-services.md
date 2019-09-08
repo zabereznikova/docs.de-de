@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043532"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790388"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Objektmaterialisierung (WCF Data Services)
 
-Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " verwenden [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , um einen-Feed in einer .NET Framework basierten Client Anwendung zu nutzen, werden für jeden Entitätstyp im Datenmodell, das vom Feed verfügbar gemacht wird, äquivalente Daten Klassen generiert. Weitere Informationen finden Sie unter [Erstellen der Datendienst-Client Bibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Entitätsdaten, die von einer Abfrage zurückgegeben werden, werden in eine Instanz einer dieser generierten Client-Datendienstklassen materialisiert. Informationen zu mergeoptionen und zur Identitäts Auflösung für nach verfolgte Objekte finden Sie unter [Verwalten des Datendienst Kontexts](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " verwenden [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , um einen-Feed in einer .NET Framework basierten Client Anwendung zu nutzen, werden für jeden Entitätstyp im Datenmodell, das vom Feed verfügbar gemacht wird, äquivalente Daten Klassen generiert. Weitere Informationen finden Sie unter [Erstellen der Datendienst-Client Bibliothek](generating-the-data-service-client-library-wcf-data-services.md). Entitätsdaten, die von einer Abfrage zurückgegeben werden, werden in eine Instanz einer dieser generierten Client-Datendienstklassen materialisiert. Informationen zu mergeoptionen und zur Identitäts Auflösung für nach verfolgte Objekte finden Sie unter [Verwalten des Datendienst Kontexts](managing-the-data-service-context-wcf-data-services.md).
 
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie auch eigene Client-Datendienstklassen definieren, anstatt die von Tools generierten Datenklassen zu verwenden. Dies ermöglicht es Ihnen, eigene Datenklassen zu verwenden, die auch als POCO (plain-old CLR object)-Datenklassen bezeichnet werden. Wenn Sie diese Typen von benutzerdefinierten Daten Klassen verwenden, sollten Sie die Datenklasse entweder <xref:System.Data.Services.Common.DataServiceKeyAttribute> mit <xref:System.Data.Services.Common.DataServiceEntityAttribute> oder versehen und sicherstellen, dass Typnamen auf dem Client Typnamen im Datenmodell des Daten Dienstanbieter entsprechen.
 
@@ -38,10 +38,10 @@ Nachdem die Bibliothek die Abfrage Antwortnachricht empfangen hat, materialisier
 
     - Komplexe Eigenschaften werden auf eine neue komplexe Typinstanz festgelegt, die mit den Eigenschaften des komplexen Typs von der Antwort festgelegt wird.
 
-    - Navigationseigenschaften, die eine Sammlung von verknüpften Entitäten zurückgeben, werden auf eine neue oder vorhandene Instanz von <xref:System.Collections.Generic.ICollection%601> festgelegt, wobei `T` der Typ der verknüpften Entität ist. Diese Sammlung ist leer, sofern die verknüpften Objekte nicht in den <xref:System.Data.Services.Client.DataServiceContext>-Kontext geladen wurden. Weitere Informationen finden Sie unter [Laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)von verzögertem Inhalt.
+    - Navigationseigenschaften, die eine Sammlung von verknüpften Entitäten zurückgeben, werden auf eine neue oder vorhandene Instanz von <xref:System.Collections.Generic.ICollection%601> festgelegt, wobei `T` der Typ der verknüpften Entität ist. Diese Sammlung ist leer, sofern die verknüpften Objekte nicht in den <xref:System.Data.Services.Client.DataServiceContext>-Kontext geladen wurden. Weitere Informationen finden Sie unter [Laden von verzögertem Inhalt](loading-deferred-content-wcf-data-services.md).
 
       > [!NOTE]
-      > Wenn die generierten Clientdatenklassen die Datenbindung unterstützen, geben Navigationseigenschaften stattdessen Instanzen der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse zurück. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+      > Wenn die generierten Clientdatenklassen die Datenbindung unterstützen, geben Navigationseigenschaften stattdessen Instanzen der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse zurück. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](binding-data-to-controls-wcf-data-services.md).
 
 4. Das <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>-Ereignis wird ausgelöst.
 
@@ -49,5 +49,5 @@ Nachdem die Bibliothek die Abfrage Antwortnachricht empfangen hat, materialisier
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)
+- [Abfrageprojektionen](query-projections-wcf-data-services.md)

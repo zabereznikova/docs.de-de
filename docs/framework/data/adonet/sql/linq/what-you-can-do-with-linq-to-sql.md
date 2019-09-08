@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf361ba66ba33927121ae20edcc6c12964c21c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792091"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Möglichkeiten von LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt alle wichtigen Funktionen, die Sie als SQL-Entwickler erwarten würden. Sie können Informationen abfragen und Informationen in Tabellen einfügen, aktualisieren und löschen.  
   
 ## <a name="selecting"></a>Auswählen  
- Die Auswahl (*Projektion*) wird erreicht, indem eine [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] -Abfrage in einer beliebigen Programmiersprache verfasst und zum Abrufen der Ergebnisse ausgeführt wird. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Operationen in die entsprechenden SQL-Operationen, die bekannt sind. Weitere Informationen finden Sie unter [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Die Auswahl (*Projektion*) wird erreicht, indem eine [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] -Abfrage in einer beliebigen Programmiersprache verfasst und zum Abrufen der Ergebnisse ausgeführt wird. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Operationen in die entsprechenden SQL-Operationen, die bekannt sind. Weitere Informationen finden Sie unter [LINQ to SQL](index.md).  
   
  Im folgenden Beispiel werden die Firmennamen von Kunden aus London abgerufen und im Konsolenfenster dargestellt.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69946624"
  Wenn Sie ein Element löschen möchten ( `Delete` ), entfernen Sie dieses aus der entsprechenden Auflistung, und rufen Sie dann <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Änderung zu bestätigen.  
   
 > [!NOTE]
-> Kaskadierte Löschvorgänge werden von[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, finden Sie [Weitere Informationen unter Vorgehensweise: Löschen von Zeilen aus der](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)Datenbank.  
+> Kaskadierte Löschvorgänge werden von[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, finden Sie [Weitere Informationen unter Vorgehensweise: Löschen von Zeilen aus der](how-to-delete-rows-from-the-database.md)Datenbank.  
   
  Im folgenden Beispiel wird der Kunde mit der `CustomerID` `98128` aus der Datenbank abgerufen. Nach dem Bestätigen des Abrufs wird <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> aufgerufen, um das Objekt aus der Auflistung zu entfernen. Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Löschung an die Datenbank weiterzuleiten.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "69946624"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Programmierhandbuch](programming-guide.md)
+- [Das LINQ to SQL-Objektmodell](the-linq-to-sql-object-model.md)
+- [Erste Schritte](getting-started.md)

@@ -1,6 +1,6 @@
 ---
 title: DeleteMethod-Funktion (Referenz zur nicht verwalteten API)
-description: DeleteMethod-Funktion löscht die angegebene Methode aus der Definition einer CIM-Klasse.
+description: Die DeleteMethod-Funktion löscht die angegebene Methode aus einer CIM-Klassendefinition.
 ms.date: 11/06/2017
 api_name:
 - DeleteMethod
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291d5d0461da8d130d41f9a0eca67ea3be42b4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746820"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798658"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod-Funktion
-Löscht die angegebene Methode aus der Definition einer CIM-Klasse.
+Löscht die angegebene Methode aus einer CIM-Klassendefinition.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,32 +41,32 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`  
-[in] Der Name der Methode, die aus der Tabelle zu entfernen. `wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.
+in Der Name der Methode, die aus der Klassen Tabelle entfernt werden soll. `wszName`muss ein Zeiger auf einen gültigen `LPCWSTR`sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Methode ist nicht vorhanden. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs. |
-| `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen. |
+| `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) Methode.
+Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject::D eletemethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) -Methode.
 
-Löschen der Methode wird nicht unterstützt, für die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.
+Das Löschen von Methoden wird für [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Zeiger, die auf CIM-Instanzen verweisen, nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

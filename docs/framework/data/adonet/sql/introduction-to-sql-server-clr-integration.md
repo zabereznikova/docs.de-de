@@ -2,12 +2,12 @@
 title: Einführung in die CLR-Integration in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fb812a8e524148c507d26ea32e0b4263a4998153
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650607"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782263"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Einführung in die CLR-Integration in SQL Server
 Die CLR-Komponente (Common Language Runtime) bildet das Kernstück von Microsoft .NET Framework und stellt die Ausführungsumgebung für den gesamten Code in .NET Framework bereit. In der CLR ausgeführter Code wird als verwalteter Code bezeichnet. Die CLR stellt verschiedene Funktionen und Dienste bereit, die für die Programmausführung erforderlich sind. Hierzu zählen z. B. JIT-Kompilierung (Just-In-Time), Zuordnung und Verwaltung des Arbeitsspeichers, Erzwingen von Typsicherheit, Ausnahmebehandlung, Threadverwaltung und Sicherheit.  
@@ -20,7 +20,7 @@ Die CLR-Komponente (Common Language Runtime) bildet das Kernstück von Microsoft
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-- [Übersicht über Common Language Runtime (CLR)-Integration](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [Übersicht über die CLR-Integration (Common Language Runtime)](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>Aktivieren der CLR-Integration  
  Die Funktion zur Integration der Common Language Runtime (CLR) ist in Microsoft SQL-Server in der Standardeinstellung deaktiviert und muss aktiviert werden, damit die mithilfe der CLR-Integration implementierten Objekte verwendet werden können. Um die CLR-Integration mit Transact-SQL zu aktivieren, verwenden Sie Option `clr enabled` der gespeicherten Prozedur `sp_configure` wie folgt:  
@@ -38,14 +38,14 @@ GO
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-- [Aktivieren der Clrintegration](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [Aktivieren der CLR-Integration](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Bereitstellen einer CLR-Assembly  
  Sobald die CLR-Methoden auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Das Bereitstellungsskript kann manuell oder mit SQL Server Management Studio generiert werden. Weitere ausführliche Informationen finden Sie in der Onlinedokumentation zu SQL Server für die von Ihnen verwendete Version von SQL Server.  
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1. [Bereitstellen von CLR-Datenbankobjekten](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Stellen von CLR-Datenbankobjekten](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Sicherheit bei der CLR-Integration  
  Das Sicherheitsmodell der Microsoft SQL Server-Integration in der Common Language Runtime (CLR) von Microsoft .NET Framework verwaltet und sichert den Zugriff zwischen verschiedenen Typen von CLR-Objekten und Nicht-CLR-Objekten, die in SQL Server ausgeführt werden. Diese Objekte können durch eine Transact-SQL-Anweisung oder durch ein anderes, auf dem Server ausgeführtes CLR-Objekt aufgerufen werden.  
@@ -63,9 +63,9 @@ GO
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-- [Debuggen von CLR-Datenbankobjekten](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [Debugging von CLR-Datenbankobjekten](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Codezugriffssicherheit und ADO.NET](../code-access-security.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

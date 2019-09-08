@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf73adff89ca5cad3a71239421ac826105a387cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203100"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785222"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Schreiben von DataSet-Inhalten als XML-Daten
 Sie können in ADO.NET die XML-Darstellung eines <xref:System.Data.DataSet> mit oder ohne dessen Schema schreiben. Wenn das XML-Dokument Inlineschemainformationen enthält, werden diese mit XSD (XML Schema Definition Language) geschrieben. Das Schema enthält die Tabellendefinitionen des <xref:System.Data.DataSet> sowie die Beziehungs- und Einschränkungsdefinitionen.  
@@ -39,7 +39,7 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|Schreibt den aktuellen Inhalt des <xref:System.Data.DataSet> als XML-Daten mit der relationalen Struktur als XML-Inlineschema.|  
 |**DiffGram**|Schreibt das gesamte <xref:System.Data.DataSet> als DiffGram, einschließlich der ursprünglichen und aktuellen Werte. Weitere Informationen finden Sie unter [DiffGrams](diffgrams.md).|  
   
- Beim Schreiben einer XML-Darstellung eines <xref:System.Data.DataSet> -Objekts, das **DataRelations** -Objekte enthält, möchten Sie wahrscheinlich, dass der resultierende XML-Code die untergeordneten Zeilen jeder Beziehung innerhalb der zugehörigen übergeordneten Elemente geschachtelt hat. Um dies zu erreichen, legen Sie die-Eigenschaft der Eigenschaft " **DataRelations** " auf " **true** " fest, wenn Sie die <xref:System.Data.DataSet> **DataRelations** -Eigenschaft hinzufügen. Weitere Informationen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.  
+ Beim Schreiben einer XML-Darstellung eines <xref:System.Data.DataSet> -Objekts, das **DataRelations** -Objekte enthält, möchten Sie wahrscheinlich, dass der resultierende XML-Code die untergeordneten Zeilen jeder Beziehung innerhalb der zugehörigen übergeordneten Elemente geschachtelt hat. Um dies zu erreichen, legen Sie die **-Eigenschaft der** Eigenschaft " **DataRelations** " auf " **true** " fest, wenn Sie die <xref:System.Data.DataSet> **DataRelations** -Eigenschaft hinzufügen. Weitere Informationen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.  
   
  Im Folgenden sind zwei Beispiele aufgeführt, die zeigen, wie die XML-Darstellung eines <xref:System.Data.DataSet> in eine Datei geschrieben wird. Im ersten Beispiel wird der Dateiname für den resultierenden XML-Code als Zeichenfolge an " **Write texml**" weitergeleitet. Im zweiten Beispiel wird ein **System. IO. StreamWriter** -Objekt weitergeleitet.  
   
@@ -80,4 +80,4 @@ xmlSW.Close();
 - [Schachteln von DataRelations](nesting-datarelations.md)
 - [Schreiben von DataSet-Schemainformationen als XSD](writing-dataset-schema-information-as-xsd.md)
 - [DataSets, DataTables und DataViews](index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

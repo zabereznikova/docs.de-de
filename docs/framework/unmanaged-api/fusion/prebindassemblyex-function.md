@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773857"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796329"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx-Funktion
-Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.  
+Ruft den anzeigen Amen für eine Assembly nach der Richtlinie ab.  
   
- Diese Funktion unterstützt die .NET Framework-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden soll.  
+ Diese Funktion unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Parameter  
  `pAppCtx`  
- [in] Gibt den Anwendungskontext.  
+ in Identifiziert den Anwendungskontext.  
   
  `pName`  
- [in] Bezeichnet den Assemblynamen an.  
+ in Identifiziert den Assemblynamen.  
   
  `pAsmParent`  
- [in] Identifiziert die übergeordnete Assembly. Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.  
+ in Identifiziert die übergeordnete Assembly. Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.  
   
  `pwzRuntimeVersion`  
- [in] Identifiziert die Runtimeversion der Common Language.  
+ in Identifiziert die Laufzeitversion.  
   
  `ppNamePostPolicy`  
- [out] Enthält den Anzeigenamen nach der Richtlinie an.  
+ vorgenommen Enthält den anzeigen Amen nach der Richtlinie.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ppNamePostPolicy` Output-Parameter wird nur festgelegt, wenn die Funktion HRESULT FUSION_E_REF_DEF_MISMATCH zurückgibt. Es ist, andernfalls null.  
+ Der `ppNamePostPolicy` Output-Parameter wird nur festgelegt, wenn die Funktion HRESULT FUSION_E_REF_DEF_MISMATCH zurückgibt. Andernfalls ist der Wert NULL.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

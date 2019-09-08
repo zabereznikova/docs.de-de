@@ -2,12 +2,12 @@
 title: Transaktionen und Parallelität
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791314"
 ---
 # <a name="transactions-and-concurrency"></a>Transaktionen und Parallelität
 Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehlen, die als Paket ausgeführt werden. Mit Transaktionen können Sie mehrere Operationen in einem Arbeitsschritt zusammenfassen. Wenn an einer Stelle in der Transaktion ein Fehler auftritt, kann für alle Updates ein Rollback zum Zustand vor der Transaktion ausgeführt werden.  
@@ -22,23 +22,23 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  Transaktionen, die verschiedene Ressourcen-Manager betreffen, wie z. b. eine Transaktion zwischen SQL Server und Oracle, erfordern eine verteilte Transaktion.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Lokale Transaktionen](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [Lokale Transaktionen](local-transactions.md)  
  Zeigt, wie Transaktionen für eine Datenbank ausgeführt werden können.  
   
- [Verteilte Transaktionen](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [Verteilte Transaktionen](distributed-transactions.md)  
  Beschreibt die Ausführung von verteilten Transaktionen in ADO.NET.  
   
- [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [System.Transactions-Integration in SQL Server](system-transactions-integration-with-sql-server.md)  
  Beschreibt <xref:System.Transactions> die Integration in SQL Server zum Arbeiten mit verteilten Transaktionen.  
   
- [Vollständige Parallelität](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [Vollständige Parallelität](optimistic-concurrency.md)  
  Beschreibt die vollständige und die eingeschränkte Parallelität und wie Sie auf Parallelitätsverletzungen testen können.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Transaktionsgrundlagen](../transactions/transaction-fundamentals.md)
+- [Aufbauen der Verbindung zu einer Datenquelle](connecting-to-a-data-source.md)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: aaa9ac0514f3e79f101bbcd9cbab60929f91d4fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cbd3d52c0e751097a937fa8781171c8c2a0058f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959127"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795042"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Zusätzlich zu den Funktionen <xref:System.Data.DataView> für die Zeichen folgen basierte Filterung bietet auch die Möglichkeit, Ausdrücke für die Filterkriterien zu verwenden. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filter Vorgänge als die Zeichen folgen basierte Filterung.  
@@ -59,7 +59,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>Verwenden der "RowFilter"-Eigenschaft  
- Die vorhandene Zeichen folgen basierte Filter Funktionalität von <xref:System.Data.DataView> funktioniert weiterhin im LINQ to DataSet Kontext. Weitere Informationen zur Zeichen folgen basierten <xref:System.Data.DataView.RowFilter%2A> Filterung finden Sie unter [Sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Die vorhandene Zeichen folgen basierte Filter Funktionalität von <xref:System.Data.DataView> funktioniert weiterhin im LINQ to DataSet Kontext. Weitere Informationen zur Zeichen folgen basierten <xref:System.Data.DataView.RowFilter%2A> Filterung finden Sie unter [Sortieren und Filtern von Daten](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der &lt;legacyBold&gt;Contact&lt;/legacyBold&gt;-Tabelle erstellt und dann die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft so eingerichtet, dass alle Zeilen zurückgegeben werden, bei denen der Nachname des Kontakts "Zhu" lautet:  
   
@@ -71,7 +71,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- Wenn Sie die Ergebnisse einer bestimmten Abfrage von Daten zurückgeben möchten, anstatt eine dynamische Ansicht einer Teilmenge von Daten zu erhalten, können Sie die Methode <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> der <xref:System.Data.DataView> verwenden, statt die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft einzurichten. Die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft wird am besten in einer datengebundenen Anwendung verwendet, in der ein gebundenes Steuerelement gefilterte Ergebnisse anzeigt. Wenn Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft festlegen, wird der Index für die Daten neu erstellt, wodurch zusätzlicher Verwaltungsmehraufwand für die Anwendung entsteht und die Arbeitsgeschwindigkeit verringert wird. Die Methoden <xref:System.Data.DataView.Find%2A> und <xref:System.Data.DataView.FindRows%2A> nutzen den aktuellen Index, ohne dass der Index neu erstellt werden muss. Wenn Sie <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> nur einmal aufrufen werden, sollten Sie die vorhandene <xref:System.Data.DataView> verwenden. Wird <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> dagegen mehrmals aufgerufen, empfiehlt sich die Erstellung einer neuen <xref:System.Data.DataView>, um den Index auf der Basis der zu durchsuchenden Spalte neu zu erstellen, und dann die Methode <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> aufzurufen. Weitere Informationen zu den Methoden <xref:System.Data.DataView.Find%2A> und <xref:System.Data.DataView.FindRows%2A> finden Sie untersuchen von [Zeilen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) und [DataView-Leistung](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Wenn Sie die Ergebnisse einer bestimmten Abfrage von Daten zurückgeben möchten, anstatt eine dynamische Ansicht einer Teilmenge von Daten zu erhalten, können Sie die Methode <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> der <xref:System.Data.DataView> verwenden, statt die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft einzurichten. Die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft wird am besten in einer datengebundenen Anwendung verwendet, in der ein gebundenes Steuerelement gefilterte Ergebnisse anzeigt. Wenn Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft festlegen, wird der Index für die Daten neu erstellt, wodurch zusätzlicher Verwaltungsmehraufwand für die Anwendung entsteht und die Arbeitsgeschwindigkeit verringert wird. Die Methoden <xref:System.Data.DataView.Find%2A> und <xref:System.Data.DataView.FindRows%2A> nutzen den aktuellen Index, ohne dass der Index neu erstellt werden muss. Wenn Sie <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> nur einmal aufrufen werden, sollten Sie die vorhandene <xref:System.Data.DataView> verwenden. Wird <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> dagegen mehrmals aufgerufen, empfiehlt sich die Erstellung einer neuen <xref:System.Data.DataView>, um den Index auf der Basis der zu durchsuchenden Spalte neu zu erstellen, und dann die Methode <xref:System.Data.DataView.Find%2A> oder <xref:System.Data.DataView.FindRows%2A> aufzurufen. Weitere Informationen zu den Methoden <xref:System.Data.DataView.Find%2A> und <xref:System.Data.DataView.FindRows%2A> finden Sie untersuchen von [Zeilen](./dataset-datatable-dataview/finding-rows.md) und [DataView-Leistung](dataview-performance.md).  
   
 ## <a name="clearing-the-filter"></a>Löschen des Filters  
  Der Filter für eine <xref:System.Data.DataView> kann gelöscht werden, nachdem die Filterung mit der <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eingerichtet wurde. Das Löschen des Filters für eine <xref:System.Data.DataView> kann auf zweierlei Art und Weise erfolgen:  
@@ -94,5 +94,5 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Datenbindung und LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Sortieren mit DataView](sorting-with-dataview-linq-to-dataset.md)

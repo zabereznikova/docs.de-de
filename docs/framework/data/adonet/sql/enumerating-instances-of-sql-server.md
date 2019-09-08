@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938175"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782387"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Aufzählen von SQL Server-Instanzen (ADO.NET)
 SQL Server ermöglicht es Anwendungen, SQL Server Instanzen im aktuellen Netzwerk zu finden. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der im Netzwerk verfügbaren Server Instanzen, die der Liste entspricht, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, und erweitert die Dropdown Liste, die alle verfügbaren Server in den **Verbindungs Eigenschaften enthält.** (Dialogfeld). Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server und ADO.NET](index.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: Die QualifierSet_EndEnumeration-Funktion wird eine Enumeration beendet.
+description: Die QualifierSet_EndEnumeration-Funktion beendet eine Enumeration.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782595"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798319"
 ---
-# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration-Funktion
-Beendet die Enumeration, die mit einem Aufruf gestartet wurde die [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration-Funktion
+Beendet die Enumeration, die mit einem aufrufsbefehl der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) -Funktion gestartet wurde.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,28 +40,28 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`   
-[in] Ein Zeiger auf ein [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) Instanz.
+in Ein Zeiger auf eine [iwbemqualifierset](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) -Instanz.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der folgende Wert zurückgegeben, die von dieser Funktion wird definiert, der *WbemCli.h* Header-Datei, oder Sie können ihn definieren als Konstante in Ihrem Code:
+Der folgende Wert, der von dieser Funktion zurückgegeben wird, ist in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstante im Code definieren:
 
 |Konstante  |Wert  |Description  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) Methode.
+Diese Funktion umschließt einen aufzurufenden Befehl der [iwbemqualifierset:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) -Methode.
 
-Dieser Aufruf wird empfohlen, aber nicht erforderlich. Es gibt sofort die Enumeration zugeordnete Ressourcen frei.
+Dieser Befehl wird empfohlen, ist jedoch nicht erforderlich. Es werden sofort die der-Enumeration zugeordneten Ressourcen freigegeben.
 
 ## <a name="requirements"></a>Anforderungen  
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
 **Header:** WMINet_Utils.idl  
   

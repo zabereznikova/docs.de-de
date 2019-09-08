@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784375"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
 Die Beziehung zwischen einem <xref:System.Data.DataSet> synchronisierten <xref:System.Xml.XmlDataDocument> und ermöglicht Ihnen die Verwendung von XML-Diensten, z. b. der XPath-Abfrage (XML Path Language), die auf das **xmldatadocumschlag** zugreifen und eine bestimmte Funktionalität leichter ausführen können als Direktes Zugreifen auf das **DataSet** . Anstatt z. b. die **Select** - <xref:System.Data.DataTable> Methode von zu verwenden, um Beziehungen zu anderen Tabellen in einem **DataSet**zu navigieren, können Sie eine XPath-Abfrage für ein **xmldatadocreent** ausführen, das mit dem **DataSet**synchronisiert wird, um Folgendes zu erhalten: die Liste der XML-Elemente in Form einer <xref:System.Xml.XmlNodeList>. Die Knoten in der **xmlnodelta ist**, die als <xref:System.Xml.XmlElement> Knoten umgewandelt werden, können dann an die **getrowfromelements** -Methode von **XmlDataDocument**übergeben werden, um <xref:System.Data.DataRow> übereinstimmende Verweise auf die Zeilen der Tabelle in der Synchronisierung **zurückzugeben. DataSet**.  
@@ -104,4 +104,4 @@ foreach (XmlNode xmlNode in nodeList)
 ## <a name="see-also"></a>Siehe auch
 
 - [DataSet- und XmlDataDocument-Synchronisierung](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

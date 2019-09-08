@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742266"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777482"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions-Enumeration
-Listet die Assemblyoptionen.  
+Listet die Assemblyoptionen auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,32 +58,32 @@ typedef enum _AssemblyOptions {
   
 |Feld|Beschreibung|  
 |-----------|-----------------|  
-|optAssemTitle|Zeichenfolge – den Assemblytitel darstellt.|  
-|optAssemDescription|Zeichenfolge – die Beschreibung der Assembly enthält.|  
-|optAssemConfig|Zeichenfolge – enthält die Assemblykonfiguration.|  
-|optAssemOS|-Codierte Zeichenfolge: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemTitle|String: stellt den Assemblytitel dar.|  
+|optAssemDescription|String: enthält die Beschreibung der Assembly.|  
+|optAssemConfig|String: enthält die Assemblykonfiguration.|  
+|optAssemOS|Zeichenfolge codiert als: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|Zeichenfolge – das Gebietsschema der Assembly enthält.|  
-|optAssemVersion|Zeichenfolge – gibt an, codiert als: "Major.Minor.Build.Revision".|  
-|optAssemCompany|Zeichenfolge – das Unternehmen enthält.|  
-|optAssemProduct|Zeichenfolge – der Name des Produkts enthält.|  
-|optAssemProductVersion|Zeichenfolge (auch bekannt als InformationalVersion bezeichnet).|  
-|optAssemCopyright|Zeichenfolge – die copyright-Informationen enthält.|  
-|optAssemTrademark|Zeichenfolge – die Markeninformationen enthält.|  
+|optAssemLocale|String: enthält das assemblygebiets Schema.|  
+|optAssemVersion|Zeichen folgen codiert als: "Hauptversion. neben Version. Build. Revision".|  
+|optAssemCompany|String: enthält das Unternehmen.|  
+|optAssemProduct|String: enthält den Produktnamen.|  
+|optAssemProductVersion|String (auch als InformationalVersion bezeichnet).|  
+|optAssemCopyright|String: enthält Informationen zum Copyright.|  
+|optAssemTrademark|String: enthält die Markeninformationen.|  
 |optAssemKeyFile|Zeichenfolge (Dateiname).|  
-|optAssemKeyName|Zeichenfolge (wichtigsten Name).|  
+|optAssemKeyName|Zeichenfolge (der Schlüssel Name).|  
 |optAssemAlgID|ULONG|  
-|optAssemFlags|ULONG|  
-|optAssemHalfSign|"Bool" (auch als DelaySign bezeichnet).|  
-|optAssemFileVersion|Zeichenfolge – als "Hauptversion.Nebenversion.Build.Revision"--identisch mit ProductVersion codiert.|  
-|optAssemSatelliteVer|Zeichenfolge – als "Hauptversion.Nebenversion.Build.Revision" codiert.|  
-|optLastAssemOption|Ein Zähler, der die Anzahl der Elemente.|  
+|optassemflags|ULONG|  
+|optAssemHalfSign|Bool (auch als "Delta Sign" bezeichnet).|  
+|optAssemFileVersion|Zeichen folgen codiert als "Major. Minor. Build. Revision"-identisch mit ProductVersion.|  
+|optAssemSatelliteVer|Zeichen folgen codiert als "Major. Minor. Build. Revision".|  
+|optLastAssemOption|Ein-Wert für die Anzahl der Elemente.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** alink.h  
+ **Header:** Alink. h  
   
- **Bibliothek**: alink.dll  
+ **Bibliothek**: Alink. dll  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Laden von verbundenen Entitäten (WCF Data Services)'
+title: 'Vorgehensweise: Zugehörige Entitäten laden (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b0ba988c96c270610208a4f944083bb333eac5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936494"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780029"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Vorgehensweise: Laden von verbundenen Entitäten (WCF Data Services)
-Wenn Sie zugeordnete Entitäten in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] laden müssen, können Sie die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Klasse verwenden. Sie können auch die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Methode für die <xref:System.Data.Services.Client.DataServiceQuery%601> anfordern, dass die verknüpfte Entitäten vorzeitig in die gleiche Abfrageantwort geladen werden.  
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Vorgehensweise: Zugehörige Entitäten laden (WCF Data Services)
+Wenn Sie zugeordnete Entitäten in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] laden müssen, können Sie die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Klasse verwenden. Sie können auch die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> -Methode für die <xref:System.Data.Services.Client.DataServiceQuery%601> verwenden, um zu verlangen, dass verknüpfte Entitäten in derselben Abfrage Antwort eifrig geladen werden.  
   
- Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie der `Customer`, der sich auf jede zurückgegebene `Orders`-Instanz bezieht, explizit geladen wird.  
@@ -34,4 +34,4 @@ Wenn Sie zugeordnete Entitäten in [!INCLUDE[ssAstoria](../../../../includes/ssa
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)

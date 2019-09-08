@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773834"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796315"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly-Funktion
-Ruft einen Wert, der angibt, ob die angegebene Assembly verwaltet wird.  
+Ruft einen Wert ab, der angibt, ob die angegebene Assembly verwaltet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,27 +39,27 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `pwzAssemblyReference`  
- [in] Der Name des zu überprüfenden Assembly.  
+ in Der Name der zu Überprüfung enden Assembly.  
   
  `pbIsFrameworkAssembly`  
- [out] Ein boolescher Wert, der angibt, ob die Assembly verwaltet wird.  
+ vorgenommen Ein boolescher Wert, der angibt, ob die Assembly verwaltet wird.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Eine uncanonicalized-Zeichenfolge, die eindeutige Identität der Assembly enthält.  
+ in Eine nicht kanonische Zeichenfolge, die die eindeutige Identität der Assembly enthält.  
   
  `pccSize`  
  [in] Die Größe des `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `pwzAssemblyReference` Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
+ Der `pwzAssemblyReference` -Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
   
- Wenn diese Assembly Bestandteil von .NET Framework ist die `pbIsFrameworkAssembly` Parameter enthält einen booleschen Wert der `true`.  
+ Wenn diese Assembly Teil des .NET Framework ist, enthält der `pbIsFrameworkAssembly` -Parameter den booleschen `true`Wert.  
   
- Wenn die benannte Assembly nicht als Teil von .NET Framework ist oder wenn die `pwzAssemblyReference` Parameter gibt nicht an eine Assembly `pbIsFrameworkAssembly` enthält einen booleschen Wert der `false`.  
+ Wenn die benannte Assembly nicht Teil der .NET Framework ist, oder wenn der `pwzAssemblyReference` -Parameter keine Assembly benannt hat, `pbIsFrameworkAssembly` enthält einen booleschen Wert von `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

@@ -2,18 +2,18 @@
 title: SqlClient-Streamingunterstützung
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489782"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791411"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient-Streamingunterstützung
 
-Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in .NET Framework 4.5) unterstützt unstrukturierte Daten, auf dem Server (Dokumente, Bilder und Medien-Dateien). SQL Server-Datenbank kann binary large Object (BLOBs) speichern, aber beim Abrufen von BLOBS kann viel Arbeitsspeicher verwenden.
+Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in .NET Framework 4,5) unterstützt unstrukturierte Daten auf dem Server (Dokumente, Bilder und Mediendateien). Eine SQL Server Datenbank kann BLOB-BLOB (Binary Large Objects) speichern, aber das Abrufen von BLOB-Datenbanken kann viel Arbeitsspeicher verbrauchen.
 
-Streaming-Unterstützung in und aus SQL Server vereinfacht das Schreiben von Anwendungen, Übertragen von Daten, ohne die Daten vollständig in den Arbeitsspeicher, was zu weniger Ausnahmefehlern aufgrund arbeitsspeicherüberlaufs laden zu müssen.
+Die Streamingunterstützung zu und von SQL Server vereinfacht das Schreiben von Anwendungen, die Daten streamen, ohne dass die Daten vollständig in den Arbeitsspeicher geladen werden müssen. Dies führt zu weniger Speicher Überlauf Ausnahmen.
 
 Die Streamingunterstützung ermöglicht auch Anwendungen der mittleren Ebene eine bessere Skalierung, insbesondere in Szenarien, in denen Geschäftsobjekte eine Verbindung mit SQL Azure herstellen, um große BLOBs zu senden, abzurufen und zu bearbeiten.
 
@@ -22,11 +22,11 @@ Die Streamingunterstützung ermöglicht auch Anwendungen der mittleren Ebene ein
 >
 > Die zur Unterstützung des Streamings hinzugefügten Member werden verwendet, um Daten aus Abfragen abzurufen und um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben. Die Streamingfunktion ist für grundlegende OLTP- und Datenmigrationsszenarien konzipiert und eignet sich für lokale und externe Datenmigrationsumgebungen.
 
-## <a name="streaming-support-from-sql-server"></a>Unterstützung des Streamings von SQLServer
+## <a name="streaming-support-from-sql-server"></a>Streamingunterstützung von SQL Server
 
-Unterstützung des Streamings von SQL Server verfügt über neue Funktionen in der <xref:System.Data.Common.DbDataReader> und klicken Sie in der <xref:System.Data.SqlClient.SqlDataReader> Klassen um erhalten <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, und <xref:System.IO.TextReader> Objekte und darauf reagieren. Diese Klassen werden verwendet, um Daten aus Abfragen abzurufen. Daher wird Streaming-Unterstützung von SQL Server OLTP-Szenarien und gilt für lokale und nicht lokale Umgebungen.
+Durch die Streamingunterstützung von SQL Server werden neue <xref:System.Data.Common.DbDataReader> Funktionen in und <xref:System.Data.SqlClient.SqlDataReader> in den-Klassen eingeführt, <xref:System.Xml.XmlReader>um- <xref:System.IO.TextReader> ,-und-Objekte zu erhalten <xref:System.IO.Stream>und darauf zu reagieren. Diese Klassen werden verwendet, um Daten aus Abfragen abzurufen. Folglich ist die Streamingunterstützung von SQL Server OLTP-Szenarien und gilt für lokale und externe Umgebungen.
 
-Die folgenden Elemente wurden hinzugefügt, um <xref:System.Data.SqlClient.SqlDataReader> Unterstützung des Streamings von SQL Server zu aktivieren:
+Die folgenden Elemente wurden hinzugefügt <xref:System.Data.SqlClient.SqlDataReader> , um die Streamingunterstützung von SQL Server zu aktivieren:
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ Die folgenden Elemente wurden hinzugefügt, um <xref:System.Data.SqlClient.SqlDa
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-Die folgenden Elemente wurden hinzugefügt, um <xref:System.Data.Common.DbDataReader> Unterstützung des Streamings von SQL Server zu aktivieren:
+Die folgenden Elemente wurden hinzugefügt <xref:System.Data.Common.DbDataReader> , um die Streamingunterstützung von SQL Server zu aktivieren:
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,9 +48,9 @@ Die folgenden Elemente wurden hinzugefügt, um <xref:System.Data.Common.DbDataRe
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a>Unterstützung des Streamings an SQLServer
+## <a name="streaming-support-to-sql-server"></a>Streaming-Unterstützung für SQL Server
 
-Unterstützung des Streamings an SQL Server verfügt über neue Funktionen in der <xref:System.Data.SqlClient.SqlParameter> -Klasse akzeptieren und darauf reagieren <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, und <xref:System.IO.TextReader> Objekte. <xref:System.Data.SqlClient.SqlParameter> wird verwendet, um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben.
+Durch Streaming-Unterstützung für SQL Server werden neue <xref:System.Data.SqlClient.SqlParameter> Funktionen in der-Klasse eingeführt, sodass <xref:System.Xml.XmlReader>Sie <xref:System.IO.Stream>-, <xref:System.IO.TextReader> -und-Objekte akzeptieren und darauf reagieren können. <xref:System.Data.SqlClient.SqlParameter> wird verwendet, um Parameter an Abfragen und gespeicherte Prozeduren zu übergeben.
 
 Durch das Verwerfen eines <xref:System.Data.SqlClient.SqlCommand>-Objekts oder das Aufrufen von <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> muss jeglicher Streamingvorgang abgebrochen werden. Wenn eine Anwendung <xref:System.Threading.CancellationToken> sendet, wird der Abbruch nicht sichergestellt.
 
@@ -70,15 +70,15 @@ Die folgenden <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>-Typen akzep
 
 - **XML**
 
-Die **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> -Typ akzeptiert eine <xref:System.Data.SqlClient.SqlParameter.Value%2A> von <xref:System.Xml.XmlReader>.
+Der **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> -Typ akzeptiert einen <xref:System.Data.SqlClient.SqlParameter.Value%2A> von <xref:System.Xml.XmlReader>.
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> kann Werte des Typs <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> und <xref:System.IO.Stream> akzeptieren.
 
 Das <xref:System.Xml.XmlReader>-, <xref:System.IO.TextReader>- und <xref:System.IO.Stream>-Objekt wird bis zu dem von <xref:System.Data.SqlClient.SqlParameter.Size%2A> definierten Wert übertragen.
 
-## <a name="sample----streaming-from-sql-server"></a>Beispiel: Streamen von SQLServer
+## <a name="sample----streaming-from-sql-server"></a>Beispiel: Streaming von SQL Server
 
-Verwenden Sie die folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
+Verwenden Sie das folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
 
 ```sql
 CREATE DATABASE [Demo]
@@ -101,13 +101,13 @@ Das Beispiel erläutert die folgenden Aufgaben:
 
 - Vermeiden, dass ein Benutzeroberflächenthread blockiert wird, indem eine asynchrone Methode zum Abrufen großer Dateien bereitgestellt wird.
 
-- Übertragen einer großen Textdatei von SQL Server in .NET Framework 4.5.
+- Übertragen Sie eine große Textdatei aus SQL Server in .NET Framework 4,5.
 
-- Übertragen einer großen XML-Datei von SQL Server in .NET Framework 4.5.
+- Übertragen Sie eine große XML-Datei aus SQL Server in .NET Framework 4,5.
 
-- Abrufen von Daten aus SQL Server.
+- Rufen Sie Daten aus SQL Server ab.
 
-- Übertragen Sie große Dateien (BLOBs) aus einer SQL Server-Datenbank, ohne Arbeitsspeicher zur Neige geht.
+- Übertragen von großen Dateien (blobspeicher) aus einer SQL Server Datenbank in eine andere, ohne dass nicht genügend Arbeitsspeicher verfügbar ist.
 
 ```csharp
 using System;
@@ -298,9 +298,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a>Beispiel: Streamen an SQLServer
+## <a name="sample----streaming-to-sql-server"></a>Beispiel: Streaming an SQL Server
 
-Verwenden Sie die folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
+Verwenden Sie das folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -323,9 +323,9 @@ GO
 
 Das Beispiel erläutert die folgenden Aufgaben:
 
-- Übertragen eines großen BLOBs und SQL Server in .NET Framework 4.5.
+- Übertragen eines großen BLOBs auf SQL Server in .NET Framework 4,5.
 
-- Übertragen einer großen Textdatei in SQL Server im .NET Framework 4.5.
+- Übertragen einer großen Textdatei in SQL Server in .NET Framework 4,5.
 
 - Verwenden der neuen asynchronen Funktion zur Übertragung eines großen BLOBs.
 
@@ -333,7 +333,7 @@ Das Beispiel erläutert die folgenden Aufgaben:
 
 - Abbrechen der Übertragung eines großen BLOBs.
 
-- Streaming von einem SQL Server in eine andere mithilfe der neuen asynchronen Funktion.
+- Streaming von einem SQL Server zu einem anderen mithilfe der neuen asynchronen Funktion.
 
 ```csharp
 using System;
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Beispiel: Streamen von einem SQLServer auf einen anderen SQLServer
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Beispiel: Streaming von einem SQL Server zu einem anderen SQL Server
 
-Dieses Beispiel veranschaulicht, wie ein großes BLOB von einem SQL Server auf einen anderen abbruchunterstützung asynchron zu streamen.
+In diesem Beispiel wird veranschaulicht, wie ein großes BLOB asynchron von einem SQL Server zu einem anderen, mit Unterstützung für den Abbruch, gestreamt werden kann.
 
 ```csharp
 using System;
@@ -524,4 +524,4 @@ namespace StreamingFromServerToAnother {
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)

@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c13f0b802b2714a17ea4014625a65ebd1b0011f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204389"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785851"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Anzeigen von Daten in einer "DataTable"
 
-Sie können <xref:System.Data.DataTable> auf den Inhalt eines-Objekts zugreifen, indem Sie die **Zeilen** -und **Spalten** Auflistungen der **Daten**Tabelle verwenden. Sie können auch die <xref:System.Data.DataTable.Select%2A> -Methode verwenden, um Teilmengen der Daten in einer Datentabelle nach Kriterien, einschließlich Suchkriterien, Sortierreihenfolge und Zeilen Status, zurückzugeben. Darüber hinaus können Sie die <xref:System.Data.DataRowCollection.Find%2A> -Methode der **DataRowCollection** verwenden, wenn Sie mithilfe eines Primärschlüssel Werts eine bestimmte Zeile suchen.
+Sie können <xref:System.Data.DataTable> auf den Inhalt eines-Objekts zugreifen, indem Sie die **Zeilen** -und **Spalten** Auflistungen der **Daten**Tabelle verwenden. Sie können auch die <xref:System.Data.DataTable.Select%2A> -Methode verwenden, um Teilmengen der Daten in einer **Daten** Tabelle nach Kriterien, einschließlich Suchkriterien, Sortierreihenfolge und Zeilen Status, zurückzugeben. Darüber hinaus können Sie die <xref:System.Data.DataRowCollection.Find%2A> -Methode der **DataRowCollection** verwenden, wenn Sie mithilfe eines Primärschlüssel Werts eine bestimmte Zeile suchen.
 
 Die **Select** -Methode des **Daten** Tabelle-Objekts gibt eine Gruppe <xref:System.Data.DataRow> von-Objekten zurück, die den angegebenen Kriterien entsprechen. **Select** führt optionale Argumente eines Filter Ausdrucks, eines Sortierungs Ausdrucks und von **DataViewRowState**aus. Der Filter Ausdruck identifiziert, welche Zeilen basierend auf **datacolenumn** -Werten zurückgegeben werden `LastName = 'Smith'`, z. b. Der Sortierausdruck folgt den Standard-SQL-Konventionen für die Anordnung von Spalten, z. B. `LastName ASC, FirstName ASC`. Regeln zum Schreiben von Ausdrücken finden Sie unter <xref:System.Data.DataColumn.Expression%2A> der-Eigenschaft der **datacolenumn** -Klasse.
 
@@ -115,4 +115,4 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataViewRowState>
 - [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
 - [Zeilenstatus und Zeilenversionen](row-states-and-row-versions.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

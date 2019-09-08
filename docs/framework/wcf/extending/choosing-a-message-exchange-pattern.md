@@ -2,15 +2,15 @@
 title: Auswählen eines Nachrichtenaustauschmusters
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951863"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797290"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
-Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht darin, zu entscheiden, welche *Nachrichtenaustausch Muster* (oder die einzelnen Kollegen) für den von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste für die Kanalentwicklung, die unter [entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md)beschrieben wird.  
+Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht darin, zu entscheiden, welche *Nachrichtenaustausch Muster* (oder die einzelnen Kollegen) für den von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste für die Kanalentwicklung, die unter [entwickeln von Kanälen](developing-channels.md)beschrieben wird.  
   
 ## <a name="six-message-exchange-patterns"></a>Sechs Nachrichtenaustauschmuster  
  Es stehen drei Nachrichtenaustauschmuster zur Auswahl:  
@@ -27,7 +27,7 @@ Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht da
   
      Das Duplex-Nachrichtenaustauschmuster ermöglicht, dass eine willkürliche Anzahl von Nachrichten von einem Client gesendet und in beliebiger Reihenfolge empfangen wird. Das Duplex-Nachrichtenaustauschmuster ist mit einem Telefongespräch vergleichbar, bei dem jedes gesprochene Wort einer Nachricht entspricht. Da beide Teilnehmer in diesem Nachrichtenaustauschmuster senden und empfangen können, ist die vom Client und von den Dienstkanälen implementierte Schnittstelle <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Auswählen eines Nachrichtenaustausch Musters](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Auswählen eines Nachrichtenaustausch Musters](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm, Anforderung-Antwort und Duplex.  
   
  Alle diese Abgeordneten können auch *Sitzungen*unterstützen. Eine Sitzung (und Implementierung von <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> des Typs <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) korreliert alle in einem Kanal gesendeten und empfangenen Nachrichten. Das Anforderung-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderung-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderung/Antwort-Paare in diesem Kanal miteinander korreliert werden. Daher stehen insgesamt sechs Nachrichtenaustauschmuster zur Auswahl:  
@@ -52,7 +52,7 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
   
  Im Kanalobjektmodell manifestiert sich jede logische Sitzung als Instanz eines sitzungsbasierten Kanals. Daher entspricht jede neue vom Client erstellte und vom Dienst akzeptierte Sitzung einem neuen sitzungsbasierten Kanal auf jeder Seite. Das folgende Diagramm zeigt oben die Struktur nicht sitzungsbasierter Kanäle und unten die Struktur sitzungsbasierter Kanäle.  
   
- ![Auswählen eines Nachrichtenaustausch Musters](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Auswählen eines Nachrichtenaustausch Musters](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  Ein Client erstellt einen neuen sitzungsbasierten Kanal und sendet eine Nachricht. Auf der Dienstseite empfängt der Kanallistener diese Nachricht und erkennt, dass sie zu einer neuen Sitzung gehört. Daraufhin erstellt er einen neuen sitzungsbasierten Kanal und übergibt diesen an die Anwendung (als Antwort auf den AcceptChannel-Aufruf der Anwendung im Kanallistener). Die Anwendung empfängt dann diese Nachricht sowie alle nachfolgenden Nachrichten, die in derselben Sitzung über denselben sitzungsbasierten Kanal gesendet werden.  
   
@@ -94,4 +94,4 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [Übersicht über das Kanalmodell](channel-model-overview.md)

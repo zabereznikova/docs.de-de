@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778437"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795357"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject-Funktion
-Ruft einen Schnittstellenzeiger auf ein [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) -Instanz, die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
+Ruft einen Schnittstellen Zeiger auf eine [IAssemblyName](iassemblyname-interface.md) -Instanz ab, die die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,27 +41,27 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Parameter  
  `ppAssemblyNameObj`  
- [out] Das zurückgegebene `IAssemblyName`.  
+ vorgenommen Der zurück `IAssemblyName`gegebene.  
   
  `szAssemblyName`  
- [in] Der Name der Assembly, für die zum Erstellen des neuen `IAssemblyName` Instanz.  
+ in Der Name der Assembly, für die die neue `IAssemblyName` Instanz erstellt werden soll.  
   
  `dwFlags`  
- [in] Flags, die an den Objektkonstruktor übergeben.  
+ in Flags, die an den Objektkonstruktor übergeben werden sollen.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

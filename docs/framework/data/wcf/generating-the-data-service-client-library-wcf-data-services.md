@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 14ea550715c1b224945137f123eed3b53e56cead
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d53f2d209d6fb0a6f3cadb96245338060ece87db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918644"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780287"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generieren der Datendienst-Clientbibliothek (WCF Data Services)
 Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, kann ein dienstmetadatendokument zurückgeben, das das Datenmodell beschreibt, das [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vom Feed verfügbar gemacht wird. Weitere Informationen finden [Sie unter odata: Dienstmetadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070). Sie können das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio verwenden, um einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst einen Verweis hinzuzufügen. Wenn Sie dieses Tool verwenden, um einen Verweis auf die von einem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed in einem Client Projekt zurückgegebenen Metadaten hinzuzufügen, führt es die folgenden Aktionen aus:  
@@ -27,9 +27,9 @@ Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.
   
 - Fügt dem Projekt einen Verweis auf die `System.Data.Services.Client`-Assembly hinzu.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie einen Datendienst](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)Verweis hinzu.  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie einen Datendienst](how-to-add-a-data-service-reference-wcf-data-services.md)Verweis hinzu.  
   
- Die Client Datendienst Klassen können auch mit dem Tool [DataSvcUtil. exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) an der Eingabeaufforderung generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Client Daten](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)Dienst Klassen.  
+ Die Client Datendienst Klassen können auch mit dem Tool [DataSvcUtil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) an der Eingabeaufforderung generiert werden. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Client Daten](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)Dienst Klassen.  
   
 ## <a name="client-data-type-mapping"></a>Zuordnung von Clientdatentypen  
  Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio `DataSvcUtil.exe` oder das Tool verwenden, um Client Daten Klassen zu generieren [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , die auf einem-Feed basieren, werden die .NET Framework-Datentypen wie folgt den primitiven Typen aus dem Datenmodell zugeordnet:  
@@ -54,5 +54,5 @@ Ein Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
+- [Schnellstart](quickstart-wcf-data-services.md)

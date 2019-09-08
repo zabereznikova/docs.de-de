@@ -2,12 +2,12 @@
 title: Gewähren zeilenspezifischer Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033903"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782352"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Gewähren zeilenspezifischer Berechtigungen in SQL Server
 
@@ -64,9 +64,9 @@ Das folgende Beispiel beschreibt, wie die zeilenbasierte Filterung auf der Grund
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheit auf Zeilenebene](/sql/relational-databases/security/row-level-security)
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)
+- [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Schreiben von sicherem dynamischen SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

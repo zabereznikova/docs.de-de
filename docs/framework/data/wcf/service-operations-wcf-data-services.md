@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916642"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779771"
 ---
 # <a name="service-operations-wcf-data-services"></a>Dienstvorgänge (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Z. B. die folgenden Dienstvorgang-URI (basierend auf der [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendiensts) übergibt den Wert `London` auf die `city` Parameter:
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Beispielsweise übergibt der folgende Dienst Vorgangs-URI (basierend auf dem [Schnellstart](quickstart-wcf-data-services.md) -Datendienst) den `London` Wert an `city` den-Parameter:
 
 ```
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,9 +28,9 @@ Die Definition für diesen Dienstvorgang lautet wie folgt:
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie einen Dienst](how-to-define-a-service-operation-wcf-data-services.md)Vorgang.
 
-Informationen zum Aufrufen eines Dienstvorgangs aus einer .NET Framework-Clientanwendung finden Sie unter [Aufrufen von Dienstvorgängen](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).
+Informationen zum Aufrufen eines Dienst Vorgangs aus einer .NET Framework Client Anwendung finden Sie unter Aufrufen von [Dienst Vorgängen](calling-service-operations-wcf-data-services.md).
 
 ## <a name="service-operation-requirements"></a>Anforderungen für Dienstvorgänge
 
@@ -80,7 +80,7 @@ Nachfolgend sind gültige Rückgabetypen für einen Dienstvorgang aufgeführt:
 
 |Gültige Rückgabetypen|URI-Regeln|
 |------------------------|---------------|
-|`void` (`Nothing` in Visual Basic)<br /><br /> - oder - <br /><br /> Entitätstypen<br /><br /> - oder - <br /><br /> Primitive Typen|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Abfrageoptionen sind nicht zulässig.|
+|`void` (`Nothing` in Visual Basic)<br /><br /> -oder-<br /><br /> Entitätstypen<br /><br /> -oder-<br /><br /> Primitive Typen|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Abfrageoptionen sind nicht zulässig.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Der URI muss ein einzelnes Pfadsegment sein, das den Namen des Dienstvorgangs trägt. Da der Ergebnistyp kein <xref:System.Linq.IQueryable%601>-Typ ist, sind keine Abfrageoptionen zulässig.|
 |<xref:System.Linq.IQueryable%601>|Abfragepfadsegmente zusätzlich zum Pfad, der der Name des Dienstvorgangs ist, sind zulässig. Abfrageoptionen sind ebenfalls zulässig.|
 
@@ -100,7 +100,7 @@ Dienstweite Sichtbarkeit der Dienstvorgänge wird durch die <xref:System.Data.Se
 > [!NOTE]
 > Wenn ein Dienstvorgang einen Rückgabetyp aufweist, der durch das Beschränken des Zugriff auf die zugrunde liegenden Entitätenmengen ausgeblendet wurde, dann steht der Dienstvorgang Clientanwendungen nicht zur Verfügung.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Definieren Sie einen Dienst](how-to-define-a-service-operation-wcf-data-services.md)Vorgang.
 
 ## <a name="raising-exceptions"></a>Auslösen von Ausnahmen
 
@@ -111,4 +111,4 @@ Es empfiehlt sich, dass Sie die <xref:System.Data.Services.DataServiceException>
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+- [Interceptors](interceptors-wcf-data-services.md)

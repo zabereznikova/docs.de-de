@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 263dc0f9d686440aaa23e359c26db1b4d3d09b1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7421e0d0e1a1f0e1a5fbe0d0eb7d5a0ab2a48b9a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609099"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796424"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority-Schnittstelle
 
-Verwaltet die Identitätsschlüssel für Codeobjekte.
+Verwaltet Identitätsschlüssel für Code Objekte.
 
 ## <a name="methods"></a>Methoden
 
 |Methode|Beschreibung|
 |------------|-----------------|
-|`IIdentityAuthority::AreDefinitionsEqual`|Ruft einen Wert, der angibt, ob die beiden angegebenen [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) -Instanzen gleich sind.|
-|`IIdentityAuthority::AreReferencesEqual`|Ruft einen Wert, der angibt, ob die beiden angegebenen [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) -Instanzen gleich sind.|
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|Ruft einen Wert, der angibt, ob zwei angegebene Definition Identity zeichenfolgendarstellungen, die gleich sind.|
-|`IIdentityAuthority::AreTextualReferencesEqual`|Ruft einen Wert, der angibt, ob zwei angegebene Verweis Identität zeichenfolgendarstellungen, die gleich sind.|
-|`IIdentityAuthority::CreateDefinition`|Ruft einen Zeiger auf ein neues `IDefinitionIdentity` Instanz, die Codeobjekt im aktuellen Bereich darstellt.|
-|`IIdentityAuthority::CreateReference`|Ruft einen Zeiger auf ein neues `IReferenceIdentity` Instanz, die Codeobjekt im aktuellen Bereich darstellt.|
-|`IIdentityAuthority::DefinitionToText`|Ruft eine formatierte Zeichenfolge-Version des angegebenen `IDefinitionIdentity`.|
-|`IIdentityAuthority::DefinitionToTextBuffer`|Füllt den angegebenen Breitzeichen-Puffer mit eine Zeichenfolgenversion des angegebenen `IDefinitionIdentity`.|
-|`IIdentityAuthority::DoesDefinitionMatchReference`|Ruft einen Wert, der angibt, ob das angegebene `IDefinitionIdentity` und `IReferenceIdentity` Instanzen auf demselben Codeobjekt verweisen.|
-|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Ruft einen Wert, der angibt, ob die angegebenen Zeichenfolgen auf dasselbe Codeobjekt verweisen.|
-|`IIdentityAuthority::GenerateDefinitionKey`|Ruft einen Zeiger auf eine neu erstellte Zeichenfolge-Schlüssel für das angegebene `IDefinitionIdentity`.|
-|`IIdentityAuthority::GenerateReferenceKey`|Ruft einen Zeiger auf eine neu erstellte Zeichenfolge-Schlüssel für das angegebene `IReferenceIdentity`.|
-|`IIdentityAuthority::HashDefinition`|Ruft einen Hashwert für den angegebenen `IDefinitionIdentity`.|
-|`IIdentityAuthority::HashReference`|Ruft einen Hashwert für den angegebenen `IReferenceIdentity`.|
-|`IIdentityAuthority::ReferenceToText`|Ruft eine formatierte Zeichenfolge-Version des angegebenen `IReferenceIdentity`.|
-|`IIdentityAuthority::ReferenceToTextBuffer`|Füllt den angegebenen Breitzeichen-Puffer mit eine Zeichenfolgenversion des angegebenen `IReferenceIdentity`.|
-|`IIdentityAuthority::TextToDefinition`|Ruft einen Schnittstellenzeiger auf ein `IDefinitionIdentity` -Instanz, aus dem angegebenen generiert formatierte Zeichenfolge.|
-|`IIdentityAuthority::TextToReference`|Ruft einen Schnittstellenzeiger auf ein `IReferenceIdentity` -Instanz, aus dem angegebenen generiert formatierte Zeichenfolge.|
+|`IIdentityAuthority::AreDefinitionsEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen [IDefinitionIdentity](idefinitionidentity-interface.md) -Instanzen gleich sind.|
+|`IIdentityAuthority::AreReferencesEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen [IReferenceIdentity](ireferenceidentity-interface.md) -Instanzen gleich sind.|
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|Ruft einen Wert ab, der angibt, ob die zwei angegebenen Identitäts Darstellungen der Zeichen folgen Definitionen gleich sind.|
+|`IIdentityAuthority::AreTextualReferencesEqual`|Ruft einen Wert ab, der angibt, ob die zwei angegebenen Zeichen folgen Verweis-Identitäts Darstellungen gleich sind.|
+|`IIdentityAuthority::CreateDefinition`|Ruft einen Zeiger auf eine neue `IDefinitionIdentity` -Instanz ab, die das Code Objekt im aktuellen Bereich darstellt.|
+|`IIdentityAuthority::CreateReference`|Ruft einen Zeiger auf eine neue `IReferenceIdentity` -Instanz ab, die das Code Objekt im aktuellen Bereich darstellt.|
+|`IIdentityAuthority::DefinitionToText`|Ruft eine formatierte Zeichen folgen Version des `IDefinitionIdentity`angegebenen ab.|
+|`IIdentityAuthority::DefinitionToTextBuffer`|Füllt den angegebenen breit Zeichen Puffer mit einer Zeichen folgen Version des angegebenen `IDefinitionIdentity`aus.|
+|`IIdentityAuthority::DoesDefinitionMatchReference`|Ruft einen Wert ab, der angibt, `IDefinitionIdentity` ob `IReferenceIdentity` die angegebene-Instanz und die-Instanz auf dasselbe Code Objekt verweisen.|
+|`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Ruft einen Wert ab, der angibt, ob die angegebenen Zeichen folgen auf dasselbe Code Objekt verweisen.|
+|`IIdentityAuthority::GenerateDefinitionKey`|Ruft einen Zeiger auf einen neu erstellten Zeichen folgen Schlüssel für den `IDefinitionIdentity`angegebenen ab.|
+|`IIdentityAuthority::GenerateReferenceKey`|Ruft einen Zeiger auf einen neu erstellten Zeichen folgen Schlüssel für den `IReferenceIdentity`angegebenen ab.|
+|`IIdentityAuthority::HashDefinition`|Ruft einen Hashwert für den angegebenen `IDefinitionIdentity`ab.|
+|`IIdentityAuthority::HashReference`|Ruft einen Hashwert für den angegebenen `IReferenceIdentity`ab.|
+|`IIdentityAuthority::ReferenceToText`|Ruft eine formatierte Zeichen folgen Version des `IReferenceIdentity`angegebenen ab.|
+|`IIdentityAuthority::ReferenceToTextBuffer`|Füllt den angegebenen breit Zeichen Puffer mit einer Zeichen folgen Version des angegebenen `IReferenceIdentity`aus.|
+|`IIdentityAuthority::TextToDefinition`|Ruft einen Schnittstellen Zeiger auf eine `IDefinitionIdentity` Instanz ab, die aus der angegebenen formatierten Zeichenfolge generiert wurde.|
+|`IIdentityAuthority::TextToReference`|Ruft einen Schnittstellen Zeiger auf eine `IReferenceIdentity` Instanz ab, die aus der angegebenen formatierten Zeichenfolge generiert wurde.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** Isolation.h
+**Header:** Isolation. h
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)

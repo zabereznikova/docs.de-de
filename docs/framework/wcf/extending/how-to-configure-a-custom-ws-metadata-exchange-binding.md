@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3582ba3c434bb763889faebcc27407f67af7b1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991223"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795656"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange-Bindung
-In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaustausch-Bindung konfigurieren. Windows Communication Foundation (WCF) enthält vier vom System definierte metadatenbindungen, aber Sie können Metadaten mit jeder gewünschten Bindung veröffentlichen. In diesem Thema wird beschrieben, wie Metadaten mit der `wsHttpBinding` veröffentlicht werden. Diese Bindung ermöglicht es Ihnen, Metadaten auf eine sichere Weise verfügbar zu machen. Der Code in diesem Artikel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaustausch-Bindung konfigurieren. Windows Communication Foundation (WCF) umfasst vier vom System definierte Metadatenbindungen, Sie können jedoch Metadaten mit jeder gewünschten Bindung veröffentlichen. In diesem Thema wird beschrieben, wie Metadaten mit der `wsHttpBinding` veröffentlicht werden. Diese Bindung ermöglicht es Ihnen, Metadaten auf eine sichere Weise verfügbar zu machen. Der Code in diesem Artikel basiert [auf den ersten](../samples/getting-started-sample.md)Schritten.  
   
 ### <a name="using-a-configuration-file"></a>Verwenden einer Konfigurationsdatei  
   
@@ -115,8 +115,8 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
-- [Metadaten abrufen](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
-- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [Veröffentlichen von Metadatenendpunkten](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+- [Metadatenveröffentlichungsverhalten](../samples/metadata-publishing-behavior.md)
+- [Metadaten abrufen](../samples/retrieve-metadata.md)
+- [Metadaten](../feature-details/metadata.md)
+- [Veröffentlichen von Metadaten](../feature-details/publishing-metadata.md)
+- [Veröffentlichen von Metadatenendpunkten](../publishing-metadata-endpoints.md)

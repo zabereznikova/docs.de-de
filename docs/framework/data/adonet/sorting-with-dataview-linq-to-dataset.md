@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918192"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782723"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortieren mit DataView (LINQ to DataSet)
 Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Zusätzlich zu den Zeichen folgen basierten Sortierfunktionen <xref:System.Data.DataView> ermöglicht Ihnen auch die Verwendung [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] von Ausdrücken für die Sortierkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortiervorgänge als die Zeichen folgen basierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
@@ -20,7 +20,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
   
  Die ausdrucksbasierte Sortierung bietet leistungsfähigere und komplexere Sortierfunktionen als die einfachere zeichenfolgenbasierten Sortierung. Beachten Sie, dass sich die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung gegenseitig ausschließen. Wenn mit <xref:System.Data.DataView.Sort%2A> die zeichenfolgenbasierte Sortierung festgelegt wird, nachdem eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt wurde, wird der ausdrucksbasierte Filter gelöscht, der aus der Abfrage abgeleitet wurde. Er kann dann nicht wiederhergestellt werden.  
   
- Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Sie erzielen die beste Leistung, indem Sie Sortierkriterien in der LINQ to DataSet Abfrage angeben <xref:System.Data.DataView> , aus der der erstellt wurde, und die Sortier Informationen später nicht ändern. Weitere Informationen finden Sie unter [DataView Performance](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Sie erzielen die beste Leistung, indem Sie Sortierkriterien in der LINQ to DataSet Abfrage angeben <xref:System.Data.DataView> , aus der der erstellt wurde, und die Sortier Informationen später nicht ändern. Weitere Informationen finden Sie unter [DataView Performance](dataview-performance.md).  
   
 > [!NOTE]
 > In den meisten Fällen dürften die für die Sortierung verwendeten Ausdrücke keine Nebenwirkungen haben. Sie müssen deterministisch sein. Die Ausdrücke dürfen darüber hinaus keine Logik enthalten, die auf einer festgelegten Anzahl von Ausführungen beruht, da die Sortieroperationen unbegrenzt oft ausgeführt werden können sollen.  
@@ -48,7 +48,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
   
  Die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung schließen sich gegenseitig aus. Durch die Einrichtung der <xref:System.Data.DataView.Sort%2A>-Eigenschaft wird die ausdrucksbasierte Sortierung gelöscht, die von der Abfrage geerbt wurde, auf der die <xref:System.Data.DataView> basiert.  
   
- Weitere Informationen zur Zeichen folgen basierten <xref:System.Data.DataView.Sort%2A> Filterung finden Sie unter [Sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Weitere Informationen zur Zeichen folgen basierten <xref:System.Data.DataView.Sort%2A> Filterung finden Sie unter [Sortieren und Filtern von Daten](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird auf der Grundlage der &lt;legacyBold&gt;Contact&lt;/legacyBold&gt;-Tabelle eine <xref:System.Data.DataView> erstellt. Anschließend werden die Zeilen nach dem Nachnamen in absteigender und dann nach dem Vornamen in aufsteigender Richtung sortiert:  
@@ -83,6 +83,6 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Datenbindung und LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [Filtern mit DataView](filtering-with-dataview-linq-to-dataset.md)
 - [Sortieren von Daten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

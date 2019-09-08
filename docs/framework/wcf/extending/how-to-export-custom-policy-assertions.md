@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 992133ff9922e36b00683f4f48db88e1c2b91c1d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767168"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795667"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Vorgehensweise: Exportieren von benutzerdefinierten Richtlinienassertionen
-Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts. Dienstanwendungen können benutzerdefinierte Richtlinienassertionen in Dienstmetadaten verwenden, um Endpunkt-, Bindungs- oder Vertragsanpassungsinformationen an die Clientanwendung zu übermitteln. Sie können die Windows Communication Foundation (WCF) verwenden, zum Exportieren von Assertionen in WSDL-Bindungen auf den Endpunkt, Vorgang oder Nachrichtenbetreffs, abhängig von den Funktionen oder Anforderungen, die Sie kommunizieren angefügt.  
+Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts. Dienstanwendungen können benutzerdefinierte Richtlinienassertionen in Dienstmetadaten verwenden, um Endpunkt-, Bindungs- oder Vertragsanpassungsinformationen an die Clientanwendung zu übermitteln. Sie können Windows Communication Foundation (WCF) verwenden, um Assertionen in Richtlinien Ausdrücken zu exportieren, die in WSDL-Bindungen an den Endpunkt-, Vorgangs-oder Nachrichten Subjekten angefügt sind, abhängig von den Funktionen oder Anforderungen, die Sie miteinander kommunizieren.  
   
  Exportieren Sie benutzerdefinierte Richtlinienassertionen, indem Sie die <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>-Schnittstelle für <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> implementieren und das Bindungselement entweder direkt in die Bindung des Dienstendpunkts einfügen oder das Bindungselement in der Anwendungskonfigurationsdatei registrieren. Bei der Implementierung des Richtlinienexports sollte die benutzerdefinierte Richtlinienassertion der entsprechenden <xref:System.Xml.XmlElement?displayProperty=nameWithType> zum <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType>, der in der <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType>-Methode übergeben wird, als <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>-Instanz hinzugefügt werden.  
   
  Außerdem müssen Sie die <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A>-Eigenschaft der <xref:System.ServiceModel.Description.WsdlExporter>-Klasse überprüfen und geschachtelte Richtlinienausdrücke und Attribute des Richtlinienframework anhand der angegebenen Richtlinienversion in den richtigen Namespace exportieren.  
   
- Zum Importieren von benutzerdefinierten Richtlinienassertionen finden Sie unter <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> und [Vorgehensweise: Benutzerdefinierte Richtlinienassertionen importiert](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).  
+ Informationen zum Importieren von benutzerdefinierten Richtlinien <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> Assertionen finden Sie unter und [Vorgehensweise: Importieren Sie benutzerdefinierte](how-to-import-custom-policy-assertions.md)Richtlinien Assertionen.  
   
 ### <a name="to-export-custom-policy-assertions"></a>So exportieren Sie benutzerdefinierte Richtlinienassertionen  
   
@@ -34,7 +34,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 1. Implementieren Sie <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> für das Bindungselement der benutzerdefinierten Richtlinienassertion.  
   
-2. Fügen Sie die bindungselementerweiterung, der mithilfe der [ \<BindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) Element.  
+2. Fügen Sie die Bindungs Element Erweiterung mithilfe des [ \<bindingElementExtensions->](../../configure-apps/file-schema/wcf/bindingelementextensions.md) Elements zur Konfigurationsdatei hinzu.  
   
 3. Erstellen Sie mit <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> eine benutzerdefinierte Bindung.  
   
@@ -53,4 +53,4 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Vorgehensweise: Importieren von benutzerdefinierten Richtlinien Assertionen](how-to-import-custom-policy-assertions.md)

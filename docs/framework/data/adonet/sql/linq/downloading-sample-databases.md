@@ -1,69 +1,69 @@
 ---
-title: Rufen Sie die SQL Server-Beispieldatenbanken für ADO.NET-Codebeispiele
-description: Laden Sie die SQL Server-Beispieldatenbanken, die in den Codebeispielen in der Dokumentation zu ADO.NET sowie SQL Server und Verwaltungstools verwendet
+title: Holen Sie sich die Beispiel SQL Server Datenbanken für ADO.NET-Codebeispiele.
+description: Herunterladen der Beispiel SQL Server-Datenbanken, die in den Codebeispielen in der ADO.NET-Dokumentation verwendet werden, sowie SQL Server und Verwaltungs Tools
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 5580f06f3d28ed6d70f75b619498ac8de7bc3326
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60566041ff4f99e96c9aee052dbcc17b5e5da9e5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037933"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794029"
 ---
-# <a name="get-the-sample-databases-for-adonet-code-samples"></a>Rufen Sie die Beispieldatenbanken für ADO.NET-Codebeispiele
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>Holen Sie sich die Beispiel Datenbanken für ADO.NET-Codebeispiele.
 
-Eine Reihe von Beispielen und exemplarischen Vorgehensweisen in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation Beispieldatenbanken für SQL Server und SQL Server Express zu verwenden. Sie können diese Produkte kostenlos von Microsoft herunterladen.
+In einer Reihe von Beispielen und exemplarischen Vorgehens [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] weisen in der-Dokumentation werden Beispiel SQL Server Datenbanken und SQL Server Express verwendet. Sie können diese Produkte kostenlos von Microsoft herunterladen.
 
-## <a name="get-the-northwind-sample-database-for-sql-server"></a>Abrufen der Northwind-Beispieldatenbank für SQL Server
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>Holen Sie sich die Beispieldatenbank Northwind für SQL Server
 
-Das Skript herunterladen `instnwnd.sql` aus den folgenden GitHub-Repository zum Erstellen und laden die Beispieldatenbank Northwind für SQL Server:
+Laden Sie das `instnwnd.sql` Skript aus dem folgenden GitHub-Repository herunter, um die Beispieldatenbank Northwind für SQL Server zu erstellen und zu laden:
 
-[Northwind und Pubs-Beispieldatenbanken für Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
+[Beispiel Datenbanken Northwind und Pubs für Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-Bevor Sie die Northwind-Datenbank verwenden können, müssen Sie führen Sie die heruntergeladene `instnwnd.sql` Skriptdatei, mit die Datenbank auf einer Instanz von SQL Server neu zu erstellen [SQL Server Management Studio](#get_ssms) oder ein ähnliches Tool. Folgen Sie den Anweisungen der Readme-Datei im Repository aus.
+Bevor Sie die Northwind-Datenbank verwenden können, müssen Sie die heruntergeladene `instnwnd.sql` Skriptdatei ausführen, um die Datenbank auf einer Instanz von SQL Server mit [SQL Server Management Studio](#get_ssms) oder einem ähnlichen Tool neu zu erstellen. Befolgen Sie die Anweisungen in der Infodatei im Repository.
 
 > [!TIP]
-> Wenn Sie für die Datenbank Northwind für Microsoft Access suchen, finden Sie unter [installieren die Beispieldatenbank Northwind für Microsoft Access](#northwind_access).
+> Wenn Sie die Northwind-Datenbank für Microsoft Access suchen, finden Sie weitere Informationen unter [Installieren der Beispieldatenbank Northwind für Microsoft Access](#northwind_access).
 
-## <a name="northwind_access"></a> Abrufen der Northwind-Beispieldatenbank für Microsoft Access
+## <a name="northwind_access"></a>Abrufen der Beispieldatenbank Northwind für Microsoft Access
 
-Die Northwind-Beispieldatenbank für Microsoft Access ist nicht im Microsoft Download Center verfügbar. Um Northwind direkt von innerhalb von Access zu installieren, gehen Sie folgendermaßen vor:
+Die Beispieldatenbank Northwind für Microsoft Access ist im Microsoft Download Center nicht verfügbar. Gehen Sie folgendermaßen vor, um Northwind direkt innerhalb des Zugriffs zu installieren:
 
 1. Öffnen Sie den Zugriff.
 
-1. Geben Sie **Northwind** in die **Onlinevorlagen suchen** Feld, und wählen Sie dann **EINGABETASTE**.
+1. Geben Sie **Northwind** in das Feld **nach Online Vorlagen suchen** ein, und **drücken**Sie dann die EINGABETASTE.
 
-1. Wählen Sie auf dem Bildschirm "Ergebnisse" **Northwind**. Es wird ein neues Fenster mit einer Beschreibung der Northwind-Datenbank.
+1. Wählen Sie auf dem Bildschirm Ergebnisse die Option **Northwind**aus. Ein neues Fenster mit einer Beschreibung der Northwind-Datenbank wird geöffnet.
 
-1. Im neuen Fenster in der **Dateiname** Text geben einen Dateinamen für Ihre Kopie der Northwind-Datenbank.
+1. Geben Sie im neuen Fenster im Textfeld **Dateiname** einen Dateinamen für die Kopie der Northwind-Datenbank an.
 
-1. Wählen Sie **Erstellen** aus. Der Zugriff die Northwind-Datenbank-downloads und bereitet Sie vor.
+1. Wählen Sie **Erstellen** aus. Access lädt die Northwind-Datenbank herunter und bereitet die Datei vor.
 
-1. Wenn dieser Prozess abgeschlossen ist, öffnet sich die Datenbank mit der eine Willkommensseite angezeigt.
+1. Wenn dieser Vorgang vollständig ist, wird die Datenbank mit einem Willkommensbildschirm geöffnet.
 
-## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>Abrufen der AdventureWorks-Beispieldatenbank für SQL Server
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>Holen Sie sich die AdventureWorks-Beispieldatenbank für SQL Server
 
 Laden Sie die AdventureWorks-Beispieldatenbank für SQL Server aus dem folgenden GitHub-Repository herunter:
 
-[AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+[AdventureWorks-Beispiel Datenbanken](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-Nachdem Sie eine der Sicherungskopie der Datenbank herunterladen (\*. bak) Dateien wiederherstellen die Sicherung mit einer Instanz von SQL Server mithilfe von SQL Server Management Studio (SSMS). Finden Sie unter [erhalten SQL Server Management Studio](#get_ssms).
+Nachdem Sie eine der Daten Bank Sicherungsdateien (\*BAK-Dateien) heruntergeladen haben, stellen Sie die Sicherung in einer Instanz von SQL Server mithilfe von SQL Server Management Studio (SSMS) wieder her. Siehe [Get SQL Server Management Studio](#get_ssms).
 
-## <a name="get_ssms"></a> Get SQL Server Management Studio
-Wenn Sie möchten anzeigen oder Ändern einer Datenbank, die Sie heruntergeladen haben, können Sie SQL Server Management Studio (SSMS). Herunterladen von SSMS auf der folgenden Seite:
+## <a name="get_ssms"></a>Get-SQL Server Management Studio
+Wenn Sie eine Datenbank anzeigen oder ändern möchten, die Sie heruntergeladen haben, können Sie SQL Server Management Studio (SSMS) verwenden. Laden Sie SSMS von der folgenden Seite herunter:
 
-[SQL Server Management Studio (SSMS) herunterladen](/sql/ssms/download-sql-server-management-studio-ssms) 
+[Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
 
-Sie können auch anzeigen und Verwalten von Datenbanken in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), Verbinden mit der Datenbank aus **Objekt-Explorer von SQL Server**, oder erstellen Sie eine Datenverbindung mit der Datenbank in **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche aus der **Ansicht** Menü.
+Sie können auch Datenbanken in der integrierten Entwicklungsumgebung (IDE) von Visual Studio anzeigen und verwalten. Stellen Sie in [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)von **SQL Server-Objekt-Explorer**aus eine Verbindung mit der-Datenbank her, oder erstellen Sie eine Datenverbindung mit der-Datenbank in **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche über das Menü **Ansicht** .
 
-## <a name="get_sql"></a> Erwerben von SQLServer Express
+## <a name="get_sql"></a>Get-SQL Server Express
 
-SQL Server Express ist eine kostenlose, professionelles Edition von SQL Server, die Sie mit Anwendungen verteilen können. SQL Server Express auf der folgenden Seite herunterladen:
+SQL Server Express ist eine kostenlose Edition von SQL Server auf Einstiegsebene, die Sie mit Anwendungen neu verteilen können. Laden Sie SQL Server Express von der folgenden Seite herunter:
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Bei Verwendung von [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB ist in der kostenlosen communityedition von Visual Studio als auch die Editionen Professional und höheren enthalten.  
+Wenn Sie [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)verwenden, ist SQL Server Express localdb in der kostenlosen Community Edition von Visual Studio sowie in den Editionen Professional und höher enthalten.  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Erste Schritte](getting-started.md)

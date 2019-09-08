@@ -8,26 +8,26 @@ helpviewer_keywords:
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753659"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787283"
 ---
 # <a name="ialink3-interface"></a>IALink3-Schnittstelle
-Stellt eine einzelne Methode, `SetManifestFile`, können Sie angeben oder Zurücksetzen der Manifestdatei, die der Linker verwendet, wenn es sich um eine Assembly erstellt.  
+Stellt eine einzelne Methode `SetManifestFile`() bereit, mit der Sie die Manifest-Datei angeben oder zurücksetzen können, die der Linker beim Erstellen einer Assembly verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SetManifestFile-Methode](../../../../docs/framework/unmanaged-api/alink/setmanifestfile-method.md)  
- Können Sie angeben oder Zurücksetzen der Manifestdatei, die der Linker verwendet werden, wenn es sich um die Assembly erstellt.  
+ [SetManifestFile-Methode](setmanifestfile-method.md)  
+ Ermöglicht es Ihnen, die Manifest-Datei anzugeben oder zurückzusetzen, die der Linker beim Erstellen der Assembly verwendet.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
+ [Alink-API](index.md)  
  Unterstützt das Erstellen von .NET Framework-Assemblys und ungebundenen Modulen.  
   
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- Unterstützt beim Erstellen von .NET Framework-Assemblys.  
+ [IALink-Schnittstelle](ialink-interface.md)  
+ Unterstützt das Erstellen von .NET Framework Assemblys.  
   
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)  
- Generiert eine Datei mit einer Assembly aus einer oder mehreren Dateien, bei denen entweder Module oder Ressourcendateien manifest.
+ [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)  
+ Generiert eine Datei mit einem Assemblymanifest aus einer oder mehreren Dateien, bei denen es sich entweder um Module oder Ressourcen Dateien handelt.

@@ -2,12 +2,12 @@
 title: Grundlegendes zu Zustandsänderungen
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796938"
 ---
 # <a name="understanding-state-changes"></a>Grundlegendes zu Zustandsänderungen
 In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum Strukturieren von Kanalzuständen und deren Implementierung erläutert.  
@@ -28,12 +28,12 @@ In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum 
   
  Jedes <xref:System.ServiceModel.ICommunicationObject> beginnt im Created-Zustand. In diesem Zustand kann eine Anwendung das Objekt konfigurieren, indem dessen Eigenschaften festgelegt werden. Sobald sich ein Objekt in einen anderen Zustand als Created befindet, gilt es als unveränderlich.  
   
- ![Kanal Zustandsübergang](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "Channelstatetranitionshighleveldiagram")  
+ ![Kanal Zustandsübergang](./media/channelstatetranitionshighleveldiagram.gif "Channelstatetranitionshighleveldiagram")  
 Abbildung 1. Der ICommunicationObject-Zustandsautomat.  
   
  Windows Communication Foundation (WCF) stellt eine abstrakte Basisklasse mit <xref:System.ServiceModel.Channels.CommunicationObject> dem Namen <xref:System.ServiceModel.ICommunicationObject> bereit, die und den Kanal Zustands Automat implementiert. In der folgenden Grafik wird ein Diagramm mit Zustandsänderungen dargestellt, das sich auf <xref:System.ServiceModel.Channels.CommunicationObject> bezieht. Neben dem <xref:System.ServiceModel.ICommunicationObject>-Zustandsautomaten zeigt es die zeitliche Steuerung, nach der weitere <xref:System.ServiceModel.Channels.CommunicationObject>-Methoden aufgerufen werden.  
   
- ![Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Statusänderungen](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zustandsautomats, einschließlich Aufrufe von Ereignissen und geschützte Methoden.  
   
 ### <a name="icommunicationobject-events"></a>ICommunicationObject-Ereignisse  
@@ -90,7 +90,7 @@ Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zu
   
  Anschließend legt sie den Zustand auf Opening fest und ruft OnOpening() (wodurch das Opening-Ereignis ausgelöst wird), OnOpen() und OnOpened() in dieser Reihenfolge auf. OnOpened() legt den Zustand auf Opened fest und löst das Opened-Ereignis aus. Wenn währenddessen eine Ausnahme ausgelöst wird, ruft Open() Fault() auf und übergibt die Ausnahme. Das folgende Diagramm zeigt den Open-Prozess im Detail.  
   
- ![Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Statusänderungen](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Überschreiben Sie die OnOpen-Methode, und implementieren Sie eine benutzerdefinierte Open-Logik, z.&#160;B. das Öffnen eines inneren Kommunikationsobjekts.  
   
  Close-Methode  
@@ -101,7 +101,7 @@ Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zu
   
  Die Close()-Methode kann bei jedem Zustand aufgerufen werden. Sie versucht, das Objekt ordnungsgemäß zu schließen. Bei einem Fehler beendet sie das Objekt. Die Methode bewirkt nichts, wenn der aktuelle Zustand Closing oder Closed lautet. Andernfalls legt sie den Zustand auf Closing fest. Wenn der ursprüngliche Zustand Created, Opening oder Faulted lautete, ruft sie Abort() auf (siehe folgendes Diagramm). Wenn der ursprüngliche Zustand Opened lautete, ruft sie OnClosing (wodurch das Opening-Ereignis ausgelöst wird), OnOpen() und OnOpened() in dieser Reihenfolge auf. Wenn währenddessen eine Ausnahme ausgelöst wird, ruft Close() Abort() auf und übergibt die Ausnahme. OnClosed() legt den Zustand auf Closed fest und löst das Closed-Ereignis aus. Das folgende Diagramm zeigt den Close-Prozess im Detail.  
   
- ![Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-closeflowchartc")  
+ ![Statusänderungen](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-closeflowchartc")  
 Überschreiben Sie die OnClose-Methode und implementieren Sie eine benutzerdefinierte Close-Logik, z.&#160;B. das Schließen eines inneren Kommunikationsobjekts. Jede ordnungsgemäß schließende Logik, die eine längere Blockierung mit sich bringt (z.&#160;B. das Warten auf eine Antwort) sollte in OnClose() implementiert werden, da diese Methode einen Timeoutparameter akzeptiert und nicht als Teil von Abort() aufgerufen wird.  
   
  Abbrechen  
@@ -111,7 +111,7 @@ Nach Bedingung: Der Status ist "geschlossen". Möglicherweise wird eine Ausnahme
   
  Die Abort()-Methode bewirkt nichts, wenn der aktuelle Zustand Closed lautet oder wenn das Objekt zuvor beendet worden ist (z.&#160;B. indem Abort() für einen anderen Thread ausgeführt wird). Andernfalls legt sie den Zustand auf Closing fest und ruft OnClosing() (wodurch das Closing-Ereignis ausgelöst wird), OnAbort() und OnClosed() in dieser Reihenfolge auf. (OnClose wird nicht aufgerufen, da das Objekt beendet, nicht geschlossen wird.) OnClosed() legt den Zustand auf Closed fest und löst das Closed-Ereignis aus. Wenn währenddessen eine Ausnahme ausgelöst wird, wird sie erneut für den Aufrufer von Abort ausgelöst. Implementierungen von OnClosing(), OnClosed() und OnAbort() sollten keine Blockierung hervorrufen (z.&#160;B. bei Ein-/Ausgaben). Das folgende Diagramm zeigt den Abort-Prozess im Detail.  
   
- ![Statusänderungen](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-abortflowchartc")  
+ ![Statusänderungen](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-abortflowchartc")  
 Überschreiben Sie die OnAbort-Methode, und implementieren Sie eine benutzerdefinierte Terminate-Logik, z.&#160;B. das Beenden eines inneren Kommunikationsobjekts.  
   
  Fault  

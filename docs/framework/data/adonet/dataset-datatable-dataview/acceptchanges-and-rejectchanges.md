@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: a8589b157bc2579a03d856b73802abc9a4b42855
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204076"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785572"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>"AcceptChanges" und "RejectChanges"
 Nachdem Sie die Richtigkeit der Änderungen an den Daten in einem <xref:System.Data.DataTable>überprüft haben, können Sie die Änderungen mithilfe <xref:System.Data.DataRow.AcceptChanges%2A> der-Methode <xref:System.Data.DataRow>von <xref:System.Data.DataTable>, oder <xref:System.Data.DataSet>übernehmen, die die **aktuellen** Zeilen Werte **als Ursprüngliche** Werte und legen die **RowState** -Eigenschaft auf " **unverändert**" fest. Durch das akzeptieren oder ablehnen von Änderungen werden alle **RowError** -Informationen gelöscht, und die **HasErrors** -Eigenschaft wird auf **false**festgelegt. Das Übernehmen oder Zurückweisen von Änderungen kann sich auch auf das Update von Daten in der Datenquelle auswirken. Weitere Informationen finden Sie unter [Aktualisieren von Datenquellen mit DataAdapters](../updating-data-sources-with-dataadapters.md).  
@@ -62,4 +62,4 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)
