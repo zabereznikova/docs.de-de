@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 0b2bfd1b0490572e78c8ce365491a8d48db87684
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e811410ea9fdd4be0cbd84b895483f69f58b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204570"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786052"
 ---
 # <a name="modifying-dataviews"></a>Ändern von "DataViews"
 Mit <xref:System.Data.DataView> können Datenzeilen in der zugrunde liegenden Tabelle hinzugefügt, gelöscht oder bearbeitet werden. Die Möglichkeit, die **DataView** zum Ändern von Daten in der zugrunde liegenden Tabelle zu verwenden, wird gesteuert, indem eine der drei booleschen Eigenschaften der **DataView**-Eigenschaft festgelegt wird. Bei diesen Eigenschaften handelt es sich um <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> und <xref:System.Data.DataView.AllowDelete%2A>. Sie werden standardmäßig auf **true** festgelegt.  
@@ -57,4 +57,4 @@ newDRV.EndEdit();
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataViews](dataviews.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

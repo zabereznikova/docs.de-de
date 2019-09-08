@@ -1,6 +1,6 @@
 ---
-title: ResetSecurity-Funktion (Referenz zur nicht verwalteten API)
-description: Die ResetSecurity-Funktion weist ein Identitätswechseltoken für den aktuellen Thread.
+title: Resetsecurity-Funktion (Referenz zur nicht verwalteten API)
+description: Die resetsecurity-Funktion weist dem aktuellen Thread ein Identitätswechsel Token zu.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783129"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798252"
 ---
-# <a name="resetsecurity-function"></a>ResetSecurity-Funktion
+# <a name="resetsecurity-function"></a>Resetsecurity-Funktion
 Weist das angegebene Identitätswechseltoken dem aktuellen Thread zu.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,16 +39,16 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parameter
 
 `token`  
-[in] Token für den Identitätswechsel des aktuellen Threads zugeordnet werden soll. Ihr Wert kann `null` sein. 
+in Das Identitätswechsel Token, das dem aktuellen Thread zugeordnet werden soll. Ihr Wert kann `null` sein. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `S_OK` (0).
+Wenn die Funktion erfolgreich ausgeführt wird, ist `S_OK` der Rückgabewert (0).
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein NULL-Fehlercode. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null). Um erweiterte Fehlerinformationen abzurufen, wenden Sie die [GetErrorInfo](geterrorinfo.md) -Funktion an.
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

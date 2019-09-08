@@ -6,26 +6,26 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e9502176e0cc2f36d67ee3dc8e8d0739a009b2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583645"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790195"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service-Clienthilfsprogramm ("DataSvcUtil.exe")
 
-DataSvcUtil.exe ist ein Befehlszeilentool, das bereitgestellt, die von WCF Data Services, die benötigt eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed verwendet und generiert die Client-Datendienstklassen, die auf einen Datendienst aus einer .NET Framework-Clientanwendung benötigt werden. Dieses Hilfsprogramm kann Datenklassen mit den folgenden Metadaten-Quellen generieren:
+DataSvcUtil. exe ist ein Befehlszeilen Tool, das von WCF Data Services bereitgestellt wird [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , das einen-Feed verwendet und die Client Datendienst Klassen generiert, die für den Zugriff auf einen Datendienst aus einer .NET Framework Client Anwendung benötigt werden. Dieses Hilfsprogramm kann Datenklassen mit den folgenden Metadaten-Quellen generieren:
 
-- Der Stamm-URI eines Datendiensts. Das Dienstprogramm fordert das Dienstmetadatendokument an, in dem das vom Datendienst verfügbar gemachte Datenmodell beschrieben wird. Weitere Informationen finden Sie unter [OData: Service Metadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070).
+- Der Stamm-URI eines Datendiensts. Das Dienstprogramm fordert das Dienstmetadatendokument an, in dem das vom Datendienst verfügbar gemachte Datenmodell beschrieben wird. Weitere Informationen finden [Sie unter odata: Dienstmetadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070).
 
-- Einer Datenmodelldatei (.csdl), mit der konzeptionellen Schemadefinitionssprache (CSDL) definiert werden, gemäß der [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkID=159072) Spezifikation.
+- Eine Datenmodell Datei (CSDL), die mithilfe der CSDL (konzeptionelle Schema Definitions Sprache) definiert wird, wie in der [ \["MC-CSDL\]" definiert: Format](https://go.microsoft.com/fwlink/?LinkID=159072) Spezifikation der konzeptionellen Schema Definitionsdatei.
 
-- Eine mit den Entity Data Model-Tools erstellte EDMX-Datei, die mit Entity Framework bereitgestellt werden. Weitere Informationen finden Sie unter den [ \[MC-EDMX\]: Entity Data Model für Data Services Packaging Format](https://go.microsoft.com/fwlink/?LinkID=178833) Spezifikation.
+- Eine mit den Entity Data Model-Tools erstellte EDMX-Datei, die mit Entity Framework bereitgestellt werden. Weitere Informationen finden Sie unter [ \[MC-edmx\]: Entity Data Model für die Spezifikation des](https://go.microsoft.com/fwlink/?LinkID=178833) Data Services Packungs Formats.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Generieren von Client Daten](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)Dienst Klassen.
 
-Das Tool DataSvcUtil.exe wird im .NET Framework-Verzeichnis installiert. In vielen Fällen befindet sich diese *c:\WINDOWS\Microsoft.net\framework\v4.0"*. Für 64-Bit-Systemen befindet sich diese *C:\Windows\Microsoft.NET\Framework64\v4.0*. Sie können auch das Tool DataSvcUtil.exe von der Developer-Eingabeaufforderung für Visual Studio zugreifen.
+Das Tool DataSvcUtil. exe wird im .NET Framework Verzeichnis installiert. In vielen Fällen befindet sich diese Datei unter " *c:\WINDOWS\Microsoft.Net\Framework\v4.0*". Bei 64-Bit-Systemen befindet sich diese Datei unter " *c:\WINDOWS\Microsoft.net\framework64\v4.0*". Sie können auch über Developer-Eingabeaufforderung für Visual Studio auf das Tool DataSvcUtil. exe zugreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +38,15 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |Option|Beschreibung|
 |------------|-----------------|
 |`/dataservicecollection`|Gibt an, dass der zum Binden von Objekten an Steuerelemente erforderliche Code auch generiert wird.|
-|`/help`<br /><br /> - oder - <br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
+|`/help`<br /><br /> -oder-<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
 |`/in:` *\<file>*|Gibt die CSDL- oder EDMX-Datei oder ein Verzeichnis an, in dem sich die Datei befindet.|
 |`/language:`[VB&#124;CSharp]|Gibt die Sprache für die erstellten Quellcodedateien an. Die Standardsprache ist C#.|
 |`/nologo`|Unterdrückt die Anzeige der Copyrightmeldung.|
 |`/out:` *\<file>*|Gibt den Namen der Quellcodedatei an, die die generierten Clientdatendienstklassen enthält.|
-|`/uri:` *\<string>*|Der URI des OData-Feed.|
-|`/version:`[1.0&#124;2.0]|Gibt die höchste akzeptierte Version von OData. Die Version wird ermittelt, auf der Grundlage der `DataServiceVersion` -Attribut des Elements "DataService" in den Metadaten zurückgegebenen Daten. Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md). Bei Angabe der `/dataservicecollection` -Parameter müssen Sie auch angeben `/version:2.0` um die Datenbindung zu aktivieren.|
+|`/uri:` *\<string>*|Der URI des odata-Feeds.|
+|`/version:`[1.0&#124;2.0]|Gibt die höchste akzeptierte Version von odata an. Die Version wird auf der Grundlage des `DataServiceVersion` -Attributs des DataService-Elements in den zurückgegebenen Datendienst Metadaten bestimmt. Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md). Wenn Sie den- `/dataservicecollection` Parameter angeben, müssen Sie auch `/version:2.0` angeben, um die Datenbindung zu aktivieren.|
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [Vorgehensweise: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Generieren der Datendienst-Clientbibliothek](generating-the-data-service-client-library-wcf-data-services.md)
+- [Vorgehensweise: Hinzufügen eines Datendienst Verweises](how-to-add-a-data-service-reference-wcf-data-services.md)

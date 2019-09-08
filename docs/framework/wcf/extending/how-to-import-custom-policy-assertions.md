@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363856"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795617"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen
 Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts.  Clientanwendungen können Richtlinienassertionen in Dienstmetadaten nutzen, um die Clientbindung zu konfigurieren oder den Dienstvertrag für einen Dienstendpunkt anzupassen.  
@@ -25,7 +25,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 3. Verwenden einer Konfigurationsdatei. Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
-4. Verwenden einer Konfigurationsdatei mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Anweisungen hierzu finden Sie in den folgenden Verfahren.  
+4. Verwenden einer Konfigurationsdatei mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
 5. Programmgesteuertes Einfügen des Richtlinienimportprogramms. Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
@@ -44,7 +44,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mit einer Konfigurationsdatei ins Metadatensystem ein  
   
-1. Fügen Sie den Importertyp `<extensions>` zum-Element innerhalb der [ \<policyimporteurs->](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Client Konfigurationsdatei hinzu.  
+1. Fügen Sie den Importertyp `<extensions>` zum-Element innerhalb der [ \<policyimporteurs->](../../configure-apps/file-schema/wcf/policyimporters.md) Element in der Client Konfigurationsdatei hinzu.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mithilfe der Datei Svcutil.exe ins Metadatensystem ein  
   
-1. Fügen Sie dem- `<extensions>` Element in [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) der Konfigurationsdatei "Svcutil. exe. config" den Importertyp hinzu. Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
+1. Fügen Sie dem- `<extensions>` Element in [ \<>](../../configure-apps/file-schema/wcf/policyimporters.md) der Konfigurationsdatei "Svcutil. exe. config" den Importertyp hinzu. Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
   
-2. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Metadaten zu importieren, und das Import Programm wird automatisch aufgerufen.  
+2. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Metadaten zu importieren, und das Import Programm wird automatisch aufgerufen.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm programmgesteuert ins Metadatensystem ein  
   
@@ -68,4 +68,4 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Erweitern des Metadatensystems](extending-the-metadata-system.md)

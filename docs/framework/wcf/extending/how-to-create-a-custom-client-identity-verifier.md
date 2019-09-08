@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86e7869efdba50d72cc61a1aebb767cf43927546
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767259"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795633"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung
-Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht es einem Client im voraus die erwartete Identität des Diensts angeben. Bei jeder Authentifizierung eines Servers beim Client wird die Identität mit der erwarteten Identität verglichen. (Eine Erläuterung der Identität und wie es funktioniert, finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
+Mit der *Identity* -Funktion von Windows Communication Foundation (WCF) kann ein Client im Voraus die erwartete Identität des Dienstanbieter angeben. Bei jeder Authentifizierung eines Servers beim Client wird die Identität mit der erwarteten Identität verglichen. (Eine Erläuterung der Identität und ihrer Funktionsweise finden Sie unter [Dienst Identität und-Authentifizierung](../feature-details/service-identity-and-authentication.md).)  
   
- Sofern erforderlich, kann die Überprüfung mit einer benutzerdefinierten Identitätsüberprüfung angepasst werden. Zum Beispiel können Sie zusätzliche Dienstidentitätsüberprüfungen durchführen. In diesem Beispiel überprüft die benutzerdefinierte Identitätsprüfung zusätzliche Ansprüche in dem X.509-Zertifikat, das vom Server zurückgegeben wird. Eine beispielanwendung finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
+ Sofern erforderlich, kann die Überprüfung mit einer benutzerdefinierten Identitätsüberprüfung angepasst werden. Zum Beispiel können Sie zusätzliche Dienstidentitätsüberprüfungen durchführen. In diesem Beispiel überprüft die benutzerdefinierte Identitätsprüfung zusätzliche Ansprüche in dem X.509-Zertifikat, das vom Server zurückgegeben wird. Eine Beispielanwendung finden Sie unter [Beispiel für Dienst Identität](../samples/service-identity-sample.md).  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>So erweitern Sie die EndpointIdentity-Klasse:  
   
@@ -44,7 +44,7 @@ Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht 
   
 ### <a name="to-implement-the-trygetidentity-method"></a>So implementieren Sie die TryGetIdentity-Methode:  
   
-1. Implementieren Sie die <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>-Methode, mit der bestimmt wird, ob vom Client eine Instanz der <xref:System.ServiceModel.EndpointIdentity>-Klasse zurückgegeben werden kann. Ruft die WCF-Infrastruktur die Implementierung der `TryGetIdentity` Methode, um die Identität des Diensts aus der Nachricht abzurufen. Anschließend ruft die Infrastruktur die `CheckAccess`-Implementierung mit der zurückgegebenen `EndpointIdentity` und dem zurückgegebenen <xref:System.IdentityModel.Policy.AuthorizationContext> auf.  
+1. Implementieren Sie die <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>-Methode, mit der bestimmt wird, ob vom Client eine Instanz der <xref:System.ServiceModel.EndpointIdentity>-Klasse zurückgegeben werden kann. Die WCF-Infrastruktur Ruft die-Implementierung `TryGetIdentity` der-Methode zuerst auf, um die Identität des dienstanders aus der Nachricht abzurufen. Anschließend ruft die Infrastruktur die `CheckAccess`-Implementierung mit der zurückgegebenen `EndpointIdentity` und dem zurückgegebenen <xref:System.IdentityModel.Policy.AuthorizationContext> auf.  
   
 2. Fügen Sie in die `TryGetIdentity`-Methode folgenden Code ein:  
   
@@ -86,5 +86,5 @@ Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Dienstidentitätsbeispiel](../samples/service-identity-sample.md)
+- [Autorisierungsrichtlinie](../samples/authorization-policy.md)

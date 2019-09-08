@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778721"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796788"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo-Methode
-Ruft die angeforderten Daten über die angegebene Assembly ab.  
+Ruft die angeforderten Daten zur angegebenen Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="parameters"></a>Parameter  
  `dwFlags`  
- [in] Flags, die in Fusion.idl definiert sind. Die folgenden Werte werden unterstützt:  
+ in In Fusion. idl definierte Flags. Die folgenden Werte werden unterstützt:  
   
 - QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
 - QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] Der Name der Assembly für die Daten abgerufen werden.  
+ in Der Name der Assembly, für die Daten abgerufen werden.  
   
  `pAsmInfo`  
- [in, out] Ein [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) Struktur, die Daten über die Assembly enthält.  
+ [in, out] Eine [ASSEMBLY_INFO](assembly-info-structure.md) -Struktur, die Daten über die Assembly enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache-Schnittstelle](iassemblycache-interface.md)

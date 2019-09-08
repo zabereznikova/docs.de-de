@@ -2,12 +2,12 @@
 title: Datenschutz und -sicherheit
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988717"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783225"
 ---
 # <a name="privacy-and-data-security"></a>Datenschutz und -sicherheit
 Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informationen in ADO.NET-Anwendungen hängt von den Produkten und Technologien ab, mit denen die jeweilige Anwendung erstellt wird. ADO.NET selbst stellt keine direkten Dienste zum Sichern oder Verschlüsseln von Daten bereit.  
@@ -18,7 +18,7 @@ Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informati
  Anders als bei der Kryptografie, die das Verschlüsseln und anschließende Entschlüsseln von Daten ermöglicht, ist das Erstellen von Hashwerten von Daten (Hashing) ein unidirektionaler Vorgang. Das Hashing von Daten empfiehlt sich, wenn Sie unbefugte Manipulationen Ihrer Daten verhindern möchten, indem Sie überprüfen, dass die Daten nicht geändert wurden: Bei identischen Eingabezeichenfolgen produzieren Hashalgorithmen immer identische kurze Ausgabewerte, die leicht miteinander verglichen werden können. [Durch die Sicherstellung der Datenintegrität mit Hashcodes](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) wird beschrieben, wie Sie Hashwerte generieren und überprüfen können.  
   
 ## <a name="encrypting-configuration-files"></a>Verschlüsseln von Konfigurationsdateien  
- Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. In Konfigurationsdateien gespeicherte Verbindungszeichenfolgen werden in Standard-XML-Dateien gespeichert, für die .NET Framework einen gemeinsamen Satz von Elementen definiert hat. Die geschützte Konfiguration ermöglicht es Ihnen, sicherheitsrelevante Informationen in einer Konfigurationsdatei zu verschlüsseln. Sie wurde zwar primär für ASP.NET-Anwendungen entwickelt, kann aber auch zum Verschlüsseln von Konfigurationsdateiabschnitten in Windows-Anwendungen verwendet werden. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. In Konfigurationsdateien gespeicherte Verbindungszeichenfolgen werden in Standard-XML-Dateien gespeichert, für die .NET Framework einen gemeinsamen Satz von Elementen definiert hat. Die geschützte Konfiguration ermöglicht es Ihnen, sicherheitsrelevante Informationen in einer Konfigurationsdatei zu verschlüsseln. Sie wurde zwar primär für ASP.NET-Anwendungen entwickelt, kann aber auch zum Verschlüsseln von Konfigurationsdateiabschnitten in Windows-Anwendungen verwendet werden. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](protecting-connection-information.md).  
   
 ## <a name="securing-string-values-in-memory"></a>Sichern von Zeichenfolgenwerten im Arbeitsspeicher  
  Wenn ein <xref:System.String>-Objekt sicherheitsrelevante Informationen enthält (z. B. Kennwörter, Kreditkartennummern oder persönliche Daten), besteht das Risiko, dass diese Informationen nach ihrer Verwendung in die falschen Hände gelangen, weil die Anwendung die Daten nicht aus dem Arbeitsspeicher des Computers löschen kann.  
@@ -29,6 +29,6 @@ Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informati
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
+- [SQL Server Security (SQL Server-Sicherheit)](./sql/sql-server-security.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

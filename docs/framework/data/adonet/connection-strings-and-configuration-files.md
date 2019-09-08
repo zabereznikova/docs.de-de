@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949452"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785677"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
-Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
+Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
   
 ## <a name="working-with-application-configuration-files"></a>Arbeiten mit Anwendungskonfigurationsdateien  
  Anwendungskonfigurationsdateien enthalten anwendungsspezifische Einstellungen. Eine ASP.NET-Anwendung kann beispielsweise mindestens eine **web.config**-Datei enthalten, und eine Windows-Anwendung kann eine optionale **app.config**-Datei enthalten. Konfigurationsdateien haben etliche Elemente gemein, auch wenn sich der Name und der Speicherort der Konfigurationsdateien abhängig vom jeweiligen Host der Anwendung ändert.  
@@ -36,7 +36,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 ```  
   
 > [!NOTE]
-> Sie können einen Teil der Verbindungszeichenfolge in einer Konfigurationsdatei speichern und zur Vervollständigung zur Laufzeit die <xref:System.Data.Common.DbConnectionStringBuilder>-Klasse verwenden. Diese Vorgehensweise empfiehlt sich in Szenarien, in denen Ihnen die Elemente der Verbindungszeichenfolge vorab nicht bekannt sind oder wenn Sie sicherheitsrelevante Informationen nicht in einer Konfigurationsdatei speichern möchten. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Sie können einen Teil der Verbindungszeichenfolge in einer Konfigurationsdatei speichern und zur Vervollständigung zur Laufzeit die <xref:System.Data.Common.DbConnectionStringBuilder>-Klasse verwenden. Diese Vorgehensweise empfiehlt sich in Szenarien, in denen Ihnen die Elemente der Verbindungszeichenfolge vorab nicht bekannt sind oder wenn Sie sicherheitsrelevante Informationen nicht in einer Konfigurationsdatei speichern möchten. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Verwenden externer Konfigurationsdateien  
  Externe Konfigurationsdateien sind separate Dateien, die ein aus einem einzigen Abschnitt bestehendes Fragment einer Konfigurationsdatei enthalten. Auf die externe Konfigurationsdatei wird dann von der Hauptkonfigurationsdatei verwiesen. Das Speichern des Abschnitts **connectionStrings** in einer separaten Datei empfiehlt sich, wenn die Verbindungszeichenfolgen auch nach der Bereitstellung der Anwendung noch geändert werden können. ASP.NET verhält sich z. B. standardmäßig so, dass nach Änderungen an Konfigurationsdateien eine Anwendung neu gestartet wird, wodurch Statusinformationen verloren gehen. Änderungen an einer externen Konfigurationsdatei hingegen führen nicht zum Neustart der Anwendung. Externe Konfigurationsdateien sind nicht auf ASP.NET beschränkt und können auch von Windows-Anwendungen verwendet werden. Außerdem kann der Zugriff auf externe Konfigurationsdateien auch durch Dateizugriffssicherheit und Berechtigungen eingeschränkt werden. Der Einsatz externer Konfigurationsdateien zur Laufzeit ist transparent und erfordert keine besondere Codierung.  
@@ -171,9 +171,9 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Verbindungszeichenfolgengeneratoren](connection-string-builders.md)
+- [Protecting Connection Information (Schützen von Verbindungsinformationen)](protecting-connection-information.md)
 - [Verwenden der Konfigurationsklassen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Konfigurieren von Apps](../../../../docs/framework/configure-apps/index.md)
+- [Konfigurieren von Apps](../../configure-apps/index.md)
 - [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)

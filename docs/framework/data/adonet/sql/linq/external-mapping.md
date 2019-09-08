@@ -2,12 +2,12 @@
 title: Externe Zuordnung
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950330"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793988"
 ---
 # <a name="external-mapping"></a>Externe Zuordnung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt *externe Zuordnung*, einen Prozess, mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell anzugeben. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
@@ -23,7 +23,7 @@ ms.locfileid: "69950330"
   
 - Die Zuordnungsdatei muss eine XML-Datei sein.  
   
-- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
+- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Validieren von DBML-und](how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
 - Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950330"
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  
   
- Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "linqdesqlmapping. xsd". Informationen dazu, wie Sie diese Datei ordnungsgemäß für die Validierung einer externen [Datei verwenden, finden Sie unter Gewusst wie: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
+> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "linqdesqlmapping. xsd". Informationen dazu, wie Sie diese Datei ordnungsgemäß für die Validierung einer externen [Datei verwenden, finden Sie unter Gewusst wie: Validieren von DBML-und](how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Vorgehensweise: Generieren des Objektmodells als externe Datei](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md)
+- [Verweis](reference.md)
+- [Vorgehensweise: Generieren des Objektmodells als externe Datei](how-to-generate-the-object-model-as-an-external-file.md)

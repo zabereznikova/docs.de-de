@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49ea7fbe9f491028a85fae543d126fd9d4f2d940
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741907"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777194"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash-Methode
-Ruft einen Hash-Blob für eine bestimmte Assembly ab.  
+Ruft ein hashblob für eine angegebene Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +38,22 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parameter  
  `FileToken`  
- ID der Assembly, der der Hash bezeichnet werden.  
+ Die ID der Assembly, auf die der Hash verweist.  
   
  `ppvHash`  
- Erhält die resultierende Hash-Blob.  
+ Empfängt das resultierende hashblob.  
   
  `pcbHash`  
- Größe, wird der Hash-Blob in Bytes empfängt.  
+ Empfängt die Größe des hashblobs in Byte.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

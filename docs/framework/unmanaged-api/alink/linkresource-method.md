@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 763b7a776007c2ce8dac42c6a5f7f00f6eb58a10
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741593"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776947"
 ---
 # <a name="linkresource-method"></a>LinkResource-Methode
-Links in einer Ressource.  
+Verknüpfungen in einer Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,22 +46,22 @@ HRESULT LinkResource(
  Der Name der Datei.  
   
  `pszNewLocation`  
- Neuer Dateiname optional. Wenn ungleich NULL, `pszFileName` PszNewLocation kopiert wird.  
+ Optionaler neuer Dateiname. Wenn der Wert ungleich NULL `pszFileName` ist, wird in pszNewLocation kopiert.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwFlags`  
- Barrierefreiheit flags, z. B. `mrPublic` und `mrPrivate`. Dieser Parameter kann übergeben werden, um [DefineManifestResource-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Dieser Parameter kann an die [DefineManifestResource-Methode](../metadata/imetadataassemblyemit-definemanifestresource-method.md)übergeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

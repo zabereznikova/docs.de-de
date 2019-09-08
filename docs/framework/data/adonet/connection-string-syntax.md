@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen-Syntax
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949472"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784919"
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -30,7 +30,7 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Windows-Authentifizierung  
  Wir empfehlen die Verwendung der Windows-Authentifizierung (auch als *integrierte Sicherheit*bezeichnet) zum Herstellen einer Verbindung mit Datenquellen, die diese unterstützen. Die in der Verbindungszeichenfolge zu verwendende Syntax richtet sich nach dem Datenanbieter. In der folgenden Tabelle wird die Syntax der Windows-Authentifizierung dargestellt, die bei .NET Framework-Datenanbietern verwendet wird.  
@@ -90,7 +90,7 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Herstellen einer Verbindung mit und Anfügen an SQL Server Express-Benutzerinstanzen  
  Benutzerinstanzen sind eine Funktion in SQL Server Express. Mit ihrer Hilfe können Benutzer, die mit einem lokalen Windows-Konto der untersten Berechtigungsebene (LUA) arbeiten, eine SQL Server-Datenbank anfügen und ausführen, ohne dass dafür Administratorrechte erforderlich sind. Eine Benutzerinstanz wird mit den Windows-Anmeldeinformationen des Benutzers und nicht als Dienst ausgeführt.  
   
- Weitere Informationen zum Arbeiten mit Benutzer Instanzen finden Sie unter [SQL Server Express Benutzer Instanzen](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Weitere Informationen zum Arbeiten mit Benutzer Instanzen finden Sie unter [SQL Server Express Benutzer Instanzen](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Verwenden von "TrustServerCertificate"  
  Das `TrustServerCertificate` Schlüsselwort ist nur gültig, wenn eine Verbindung mit einer SQL Server Instanz mit einem gültigen Zertifikat hergestellt wird. Wenn `TrustServerCertificate` auf `true` gesetzt wird, verwendet die Transportschicht zum Verschlüsseln des Kanals SSL und umgeht beim Validieren der Vertrauenswürdigkeit die Zertifikatkette.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verbindungszeichenfolgen](connection-strings.md)
+- [Aufbauen der Verbindung zu einer Datenquelle](connecting-to-a-data-source.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Angeben eines benutzerdefinierten Kryptografiealgorithmus
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf4b3da82087a6daade9d6b939f3e1aac628cb01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796886"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Angeben eines benutzerdefinierten Kryptografiealgorithmus
 WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben. Dazu führen Sie die folgenden Schritte aus:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- Im Abschnitt unter der <`cryptoClasses`>-Element wird die Zuordnung zwischen der SHA256CryptoServiceProvider und dem Alias "SHA256CSP" erstellt. Die <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ Der Abschnitt unter dem <`cryptoClasses`>-Element erstellt die Zuordnung zwischen SHA256CryptoServiceProvider und dem Alias "SHA256CSP". Das <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ().  
   
  Verwenden Sie zum Registrieren des benutzerdefinierten Algorithmus im Code die <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>-Methode. Diese Methode erstellt beide Zuordnungen. Das folgende Beispiel zeigt, wie diese Methode aufgerufen wird:  
   
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- Eine vollständige Codebeispiel finden Sie unter den [kryptografische Flexibilität in WCF-Sicherheit](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) Beispiel.  
+ Ein umfassendes Codebeispiel finden Sie im Beispiel [kryptografische Agilität in WCF-Sicherheit](../samples/cryptographic-agility-in-wcf-security.md) .  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
-- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Sichern von Diensten und Clients](../feature-details/securing-services-and-clients.md)
+- [Sichern von Diensten](../securing-services.md)
+- [Übersicht über die Sicherheit](../feature-details/security-overview.md)
+- [Begriffe der Sicherheit](../feature-details/security-concepts.md)

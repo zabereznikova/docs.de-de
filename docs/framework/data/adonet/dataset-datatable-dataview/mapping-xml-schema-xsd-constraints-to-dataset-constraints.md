@@ -2,12 +2,12 @@
 title: Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: b0082b534b8df10ac5277cf2f5aa5b2d2e40c11b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b44c3193e1b9e2e52e086111eab0ab0b0cae5c97
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204624"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786077"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen
 Die XSD-Sprache (XML Schema Definition Language) ermöglicht Einschränkungen, die Sie für die Elemente und Attribute angeben können, die durch XSD definiert werden. Beim Zuordnen eines XML-Schemas zu einem relationalen Schema in einem <xref:System.Data.DataSet>werden XML-Schema Einschränkungen den entsprechenden relationalen Einschränkungen für die Tabellen und Spalten im **DataSet**zugeordnet.  
@@ -45,4 +45,4 @@ Die XSD-Sprache (XML Schema Definition Language) ermöglicht Einschränkungen, d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

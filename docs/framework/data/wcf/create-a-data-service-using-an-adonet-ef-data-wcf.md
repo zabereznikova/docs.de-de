@@ -1,80 +1,80 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Datendiensts mit einer ADO.NET-Entity Framework-Datenquelle (WCF Data Services)'
+title: 'Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer ADO.NET-Entity Framework Datenquelle (WCF Data Services)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307144"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791075"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Vorgehensweise: Erstellen eines Datendiensts mit einer ADO.NET-Entity Framework-Datenquelle (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer ADO.NET-Entity Framework Datenquelle (WCF Data Services)
 
-WCF Data Services macht Entitätsdaten als Datendienst verfügbar. Diese Entitätsdaten werden bereitgestellt, durch das ADO.NET[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Wenn die Datenquelle eine relationale Datenbank ist. In diesem Thema erfahren Sie, wie zum Erstellen einer [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]--basiertes Datenmodell in einer Visual Studio Web-Anwendung, die auf einer vorhandenen Datenbank basiert dieses Datenmodell zu verwenden, um einen neuen Datendienst zu erstellen.
+WCF Data Services macht Entitäts Daten als Datendienst verfügbar. Diese Entitäts Daten werden von ADO.net[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bereitgestellt, wenn die Datenquelle eine relationale Datenbank ist. In diesem Thema wird gezeigt, wie Sie [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]ein-basiertes Datenmodell in einer Visual Studio-Webanwendung erstellen, die auf einer vorhandenen Datenbank basiert, und dieses Datenmodell zum Erstellen eines neuen Daten Diensts verwenden.
 
-Die [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] bietet auch ein Befehlszeilentool, das Generieren einer [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Modell außerhalb eines Visual Studio-Projekts. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie zum Generieren von Modell- und Zuordnungsdateien EdmGen.exe](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+Bietet auch ein Befehlszeilen Tool, das ein [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Modell außerhalb eines Visual Studio-Projekts generieren kann. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie EdmGen. exe, um die Modell-und](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)Zuordnungsdateien zu generieren.
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>So fügen Sie einer vorhandenen Webanwendung ein Entity Framework-Modell hinzu, das auf einer vorhandenen Datenbank basiert
 
-1. Auf der **Projekt** Menü klicken Sie auf **hinzufügen** > **neues Element**.
+1. Klicken Sie im Menü **Projekt** auf**Neues Element** **Hinzufügen** > .
 
-2. In der **Vorlagen** Bereich, klicken Sie auf die **Daten** Kategorie, und wählen Sie dann **ADO.NET Entity Data Model**.
+2. Klicken Sie im Bereich **Vorlagen** auf die Kategorie **Daten** , und wählen Sie dann **ADO.NET Entity Data Model**aus.
 
-3. Geben Sie den Modellnamen ein, und klicken Sie dann auf **hinzufügen**.
+3. Geben Sie den Modellnamen ein, und klicken Sie auf **Hinzufügen**.
 
      Die erste Seite des Entity Data Model-Assistenten wird angezeigt.
 
-4. In der **auswählen des Modellinhalts** wählen Sie im Dialogfeld **aus Datenbank generieren**. Klicken Sie dann auf **Weiter**.
+4. Wählen Sie im Dialogfeld **Modell Inhalte auswählen** die Option **aus Datenbank generieren aus**. Klicken Sie dann auf **Weiter**.
 
-5. Klicken Sie auf die **neue Verbindung** Schaltfläche.
+5. Klicken Sie auf die Schaltfläche **neue Verbindung** .
 
-6. In der **Verbindungseigenschaften** im Dialogfeld Geben Sie Ihren Server ein, wählen Sie die Authentifizierungsmethode aus, geben Sie den Datenbanknamen, und klicken Sie dann auf **OK**.
+6. Geben Sie im Dialogfeld **Verbindungs Eigenschaften** den Servernamen ein, wählen Sie die Authentifizierungsmethode aus, geben Sie den Datenbanknamen ein, und klicken Sie dann auf **OK**.
 
-     Die **wählen Sie Ihre Datenverbindung** im Dialogfeld mit der Datenbank-Verbindungseinstellungen aktualisiert.
+     Das Dialogfeld **Wählen Sie Ihre Datenverbindung** aus wird mit den Einstellungen für die Datenbankverbindung aktualisiert.
 
-7. Sicherstellen, dass die **Entitätsverbindungseinstellungen in App.Config speichern als:** aktiviert ist. Klicken Sie dann auf **Weiter**.
+7. Stellen Sie sicher, dass das Kontrollkästchen **Entitäts Verbindungseinstellungen in app. config speichern unter:** aktiviert ist. Klicken Sie dann auf **Weiter**.
 
-8. In der **Datenbankobjekte auswählen** im Dialogfeld auf alle Datenbankobjekte aus, dass im Datendienst verfügbar gemacht werden sollen.
+8. Wählen Sie im Dialogfeld **Wählen Sie Ihre Datenbankobjekte** aus alle Datenbankobjekte aus, die im Datendienst verfügbar gemacht werden sollen.
 
     > [!NOTE]
-    > Im Datenmodell enthaltene Objekte werden nicht automatisch vom Datendienst verfügbar gemacht. Sie müssen explizit vom Dienst selbst verfügbar gemacht werden. Weitere Informationen finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+    > Im Datenmodell enthaltene Objekte werden nicht automatisch vom Datendienst verfügbar gemacht. Sie müssen explizit vom Dienst selbst verfügbar gemacht werden. Weitere Informationen finden Sie unter [Konfigurieren des Daten Dienstanbieter](configuring-the-data-service-wcf-data-services.md).
 
-9. Klicken Sie auf **Fertig stellen** um den Assistenten abzuschließen.
+9. Klicken Sie auf **Fertig** stellen, um den Assistenten abzuschließen.
 
-     Dadurch wird ein Standarddatenmodell auf Grundlage der bestimmten Datenbank erstellt. Das [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ermöglicht das Anpassen des Datenmodells. Weitere Informationen finden Sie unter [Entity Data Model-Tools Tasks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Dadurch wird ein Standarddatenmodell auf Grundlage der bestimmten Datenbank erstellt. Das [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] ermöglicht das Anpassen des Datenmodells. Weitere Informationen finden Sie unter [Entity Data Model Tools Tasks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>So erstellen Sie den Datendienst mit dem neuen Datenmodell
 
 1. Öffnen Sie in Visual Studio die EDMX-Datei, die das Datenmodell darstellt.
 
-2. In der **Modellbrowser**mit der rechten Maustaste auf das Modell, klicken Sie auf **Eigenschaften**, und notieren Sie den Namen des Entitätscontainers handelt.
+2. Klicken Sie im **Modell Browser**mit der rechten Maustaste auf das Modell, klicken Sie auf **Eigenschaften**, und notieren Sie dann den Namen des Entitätencontainers.
 
-3. In **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des ASP.NET-Projekts,, und klicken Sie dann auf **hinzufügen** > **neues Element**.
+3. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen Ihres ASP.NET-Projekts, und klicken Sie dann auf**Neues Element** **Hinzufügen** > .
 
-4. In der **neues Element hinzufügen** wählen Sie im Dialogfeld die **WCF Data Service** Vorlage in der **Web** Kategorie.
+4. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Vorlage **WCF Data Service** in der Kategorie **Web** aus.
 
-   ![WCF Data Service-Elementvorlage in Visual Studio 2015](media/wcf-data-service-item-template.png)
+   ![WCF Data Service-Element Vorlage in Visual Studio 2015](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > Die **WCF Data Service** Vorlage ist in Visual Studio 2015, aber nicht in Visual Studio 2017 verfügbar.
+   > Die **WCF Data Service** -Vorlage ist in Visual Studio 2015 verfügbar, aber nicht in Visual Studio 2017.
 
-5. Geben Sie einen Namen für den Dienst, und klicken Sie dann auf **OK**.
+5. Geben Sie einen Namen für den Dienst an, und klicken Sie dann auf **OK**.
 
      Visual Studio erstellt das XML-Markup und die Codedateien für den neuen Dienst. In der Standardeinstellung wird das Fenster des Code-Editors geöffnet.
 
 6. Ersetzen Sie im Code für den Datendienst den Kommentar `/* TODO: put your data source class name here */` in der Definition der Klasse, die den Datendienst definiert, durch den Typ, der von der <xref:System.Data.Objects.ObjectContext>-Klasse erbt und der Entitätscontainer des Datenmodells ist, der in Schritt 2 notiert wurde.
 
-7. Ermöglichen Sie im Code für den Datendienst berechtigten Clients, auf die Entitätenmengen zuzugreifen, die der Datendienst verfügbar macht. Weitere Informationen finden Sie unter [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+7. Ermöglichen Sie im Code für den Datendienst berechtigten Clients, auf die Entitätenmengen zuzugreifen, die der Datendienst verfügbar macht. Weitere Informationen finden Sie unter [Erstellen des Daten Dienstanbieter](creating-the-data-service.md).
 
-8. Führen Sie die Anweisungen im Thema, um den Northwind.svc-Datendienst mit einem Webbrowser zu testen, [Zugriff auf den Dienst über einen Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
+8. Befolgen Sie die Anweisungen im Thema [zugreifen auf den Dienst über einen Webbrowser](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md), um den Datendienst Northwind. svc mithilfe eines Webbrowsers zu testen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Vorgehensweise: Erstellen eines Datendiensts mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [Vorgehensweise: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)
+- [Datendienstanbieter](data-services-providers-wcf-data-services.md)
+- [Vorgehensweise: Erstellen eines Daten Dienes mithilfe des reflektionsanbieters](create-a-data-service-using-rp-wcf-data-services.md)
+- [Vorgehensweise: Erstellen eines Daten Dienstanbieter mit einer LINQ to SQL Datenquelle](create-a-data-service-using-linq-to-sql-wcf.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb8fba433c5f7ef9701caf61971841672f46b425
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742035"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787475"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder-Methode
-Fügt eine typweiterleitung für einen geschachtelten Typ der Typtabelle der angegebenen Assembly hinzu.  
+Fügt der Typtabelle der angegebenen Assembly eine Typweiterleitung für einen geblierten Typ hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,10 +42,10 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly zum Exportieren aus.  
+ Die ID der Assembly, aus der exportiert werden soll.  
   
  `FileToken`  
- Datei-Token "oder" Assembly-ID der Datei, die den Typ definiert.  
+ Dateitoken oder Assembly-ID der Datei, die den Typ definiert.  
   
  `TypeToken`  
  Token für den Typ.  
@@ -54,22 +54,22 @@ HRESULT ExportNestedTypeForwarder(
  Token des übergeordneten Typs.  
   
  `pszTypename`  
- Vollqualifizierten Typnamen zu exportieren.  
+ Der voll qualifizierte Typname, der exportiert werden soll.  
   
  `dwFlags`  
- `ComType` Flags, z. B. `tdPublic` oder `tdNested`.  
+ `ComType`Flags wie `tdPublic` oder `tdNested`.  
   
  `pType`  
- Empfängt die Token des Exporttyps. Dies ist nur für die Ausgabe von geschachtelter Typen erforderlich.  
+ Empfängt das Token des Export Typs. Dies ist nur für das Ausgeben von Untertypen erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

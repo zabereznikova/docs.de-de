@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6c2e741df594e265fdef51a602a9a4927733b7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2bfb43002b79fd3e499272b87756bdc3ab0b589
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741863"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787339"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope-Methode
-Ruft den Bereich des angegebenen Typs ab.  
+Ruft den Bereich eines angegebenen Typs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,22 +42,22 @@ HRESULT GetResolutionScope(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei, die ein Verweis erforderlich ist.  
+ Die Datei, die einen Verweis benötigt.  
   
  `TargetFile`  
- Token der Datei dieses Typs ist definiert in "," in der Regel mit abgerufen [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+ Token der Datei, in der der Typ definiert ist, wird normalerweise mit der [ImportFile-Methode](importfile-method.md)abgerufen.  
   
  `pScope`  
- Erhält die Assembly oder den Modulverweis.  
+ Empfängt die Assembly oder den Modul Verweis.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

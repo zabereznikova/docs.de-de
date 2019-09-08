@@ -2,12 +2,12 @@
 title: "\"DataTables\""
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204959"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784700"
 ---
 # <a name="datatables"></a>"DataTables"
 Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Beziehungen und Einschränkungen. In ADO.net <xref:System.Data.DataTable> werden-Objekte verwendet, um die Tabellen in einem **DataSet**darzustellen. Eine **Daten** Tabelle stellt eine Tabelle mit relationalen Daten im Arbeitsspeicher dar. die Daten sind in der lokal. Eine netzwerkbasierte Anwendung, in der Sie sich befindet, aber aus einer Datenquelle wie Microsoft SQL Server mit einem **DataAdapter** aufgefüllt werden kann, um weitere Informationen zu erhalten, finden Sie unter Auffüllen [eines Datasets von einem DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
@@ -18,7 +18,7 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
   
  Zusätzlich zu einem Schema muss eine Datentabelle auch Zeilen enthalten, um Daten zu **Speichern** und zu sortieren. Die <xref:System.Data.DataRow>-Klasse stellt die tatsächlich in einer Tabelle enthaltenen Daten dar. Verwenden Sie die **DataRow** und die zugehörigen Eigenschaften und Methoden, um die Daten in einer Tabelle abzurufen, auszuwerten und zu bearbeiten. Wenn Sie auf die Daten innerhalb einer Zeile zugreifen und diese ändern, behält das **DataRow** -Objekt sowohl den aktuellen als auch den ursprünglichen Zustand bei.  
   
- Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über- und untergeordnete Tabellen in Beziehung zueinander setzen. Sie erstellen mithilfe eines <xref:System.Data.DataRelation>eine Beziehung zwischen datentierbaren Objekten. **DataRelations** -Objekte können dann verwendet werden, um die zugehörigen untergeordneten oder übergeordneten Zeilen einer bestimmten Zeile zurückzugeben. Weitere Informationen finden Sie unter [Hinzufügen von DataRelations](adding-datarelations.md).  
+ Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über- und untergeordnete Tabellen in Beziehung zueinander setzen. Sie erstellen mithilfe eines <xref:System.Data.DataRelation>eine Beziehung zwischen **datentierbaren** Objekten. **DataRelations** -Objekte können dann verwendet werden, um die zugehörigen untergeordneten oder übergeordneten Zeilen einer bestimmten Zeile zurückzugeben. Weitere Informationen finden Sie unter [Hinzufügen von DataRelations](adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer DataTable](creating-a-datatable.md)  
@@ -28,7 +28,7 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  Enthält Informationen zum Erstellen und Verwenden von **datacolumschlag** -Objekten und-Einschränkungen.  
   
  [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)  
- Erläutert, wie Daten in einer Tabelle hinzugefügt, bearbeitet oder gelöscht werden. Erläutert, wie Daten Tabellen Ereignisse verwendet werden, um Änderungen an Daten in der Tabelle zu untersuchen.  
+ Erläutert, wie Daten in einer Tabelle hinzugefügt, bearbeitet oder gelöscht werden. Erläutert, **wie Datentabellen Ereignisse verwendet** werden, um Änderungen an Daten in der Tabelle zu untersuchen.  
   
  [Behandeln von DataTable-Ereignissen](handling-datatable-events.md)  
  Stellt Informationen zu den Ereignissen bereit, die für die Verwendung mit einer **Daten**Tabelle verfügbar sind, einschließlich Ereignissen, wenn Spaltenwerte geändert werden und Zeilen hinzugefügt oder gelöscht werden.  
@@ -41,7 +41,7 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  Stellt Informationen zum ADO.net- **DataSet** bereit, einschließlich der Erstellung von Beziehungen zwischen Tabellen.  
   
  <xref:System.Data.Constraint>  
- Stellt Referenzinformationen zum Einschränkungs Objekt bereit.  
+ Stellt Referenz **Informationen zum Einschränkungs Objekt bereit** .  
   
  <xref:System.Data.DataColumn>  
  Stellt Referenzinformationen zum **datacolenn** -Objekt bereit.  
@@ -57,4 +57,4 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

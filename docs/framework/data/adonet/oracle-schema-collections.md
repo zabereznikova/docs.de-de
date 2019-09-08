@@ -2,12 +2,12 @@
 title: Oracle-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb91a90ae7323283556954caa401646a2063a37e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878474"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783298"
 ---
 # <a name="oracle-schema-collections"></a>Oracle-Schemaauflistungen
 
@@ -102,21 +102,21 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |LAST_ANALYZED|DateTime|Datum, an dem dieser Index zuletzt analysiert wurde.|
 |DEGREE|Zeichenfolge|Anzahl von Threads pro Instanz zum Durchsuchen des Indexes.|
 |INSTANCES|Zeichenfolge|Anzahl von Instanzen, in den die Indizes durchsucht werden sollen.|
-|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert ist (Ja &#124; Nein).|
+|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert &#124; ist (Yes No).|
 |TEMPORARY|Zeichenfolge|Gibt an, ob sich der Index in einer temporären Tabelle befindet.|
-|GENERATED|Zeichenfolge|Gibt an, ob der Name des Indexes vom System generiert wird (Y&#124;N).|
-|SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y&#124;N).|
+|GENERATED|Zeichenfolge|Gibt an, ob der Name des Indexes vom System generiert&#124;wurde (Y N).|
+|SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt ist, das von der ODCIIndexCreate-Methode&#124;der Oracle9i Data Cartridge (Y N) erstellt wurde.|
 |BUFFER_POOL|Zeichenfolge|Name des Standardpufferpools, der für die Indexblöcke verwendet wird.|
 |USER_STATS|Zeichenfolge|Gibt an, ob die Statistik direkt vom Benutzer eingegeben wurde.|
-|DURATION|Zeichenfolge|Gibt an, wie lange eine temporäre Tabelle vorhanden ist: (1) SYS$ SESSION: die Zeilen bleiben für die Dauer der Sitzung, (2) SYS$ TRANSACTION: die Zeilen werden nach dem COMMIT (3) Null für eine dauerhafte Tabelle gelöscht.|
-|PCT_DIRECT_ACCESS|Decimal|Der prozentuale Anteil von Reihen mit dem geschätzten Wert VALID bei einem sekundären Index in einer nach dem Index sortierten Tabelle |
+|DURATION|Zeichenfolge|Gibt an, wie lange eine temporäre Tabelle vorhanden ist: 1) sys $ Session: die Zeilen werden für die Dauer der Sitzung beibehalten, 2) sys $ Transaction: die Zeilen werden nach dem Commit gelöscht, 3) NULL für eine permanente Tabelle.|
+|PCT_DIRECT_ACCESS|Decimal|Der prozentuale Anteil von Reihen mit dem geschätzten Wert VALID bei einem sekundären Index in einer nach dem Index sortierten Tabelle|
 |ITYP_OWNER|Zeichenfolge|Der Besitzer des Indextyps eines Domänenindexes.|
 |ITYP_NAME|Zeichenfolge|Der Name des Indextyps eines Domänenindexes.|
 |PARAMETERS|Zeichenfolge|Die Parameterzeichenfolge eines Domänenindexes.|
 |GLOBAL_STATS|Zeichenfolge|Gibt bei partitionierten Indizes an, ob Statistiken durch eine Analyse des gesamten Indexes erstellt wurden (YES) oder ob sie anhand von Statistiken zugrunde liegender Indexpartitionen und Unterpartitionen geschätzt wurden (NO).|
 |DOMIDX_STATUS|Zeichenfolge|Gibt den Status des Domänenindexes an. NULL: Bei dem angegebenen Index handelt es sich nicht um einen Domänenindex. VALID: Bei dem Index handelt es sich um einen gültigen Domänenindex. IDXTYP_INVLD: Der Indextyp dieses Domänenindexes ist ungültig.|
 |DOMIDX_OPSTATUS|Zeichenfolge|Gibt den Status eines Vorgangs an, der für einen Domänenindex durchgeführt wurde. NULL: Bei dem angegebenen Index handelt es sich nicht um einen Domänenindex. VALID: Der Vorgang wurde fehlerfrei durchgeführt. FAILED: Bei diesem Vorgang ist ein Fehler aufgetreten.|
-|FUNCIDX_STATUS|Zeichenfolge|Gibt den Status eines funktionsbasierten Indexes an. NULL: Dies ist kein funktionsbasierter index, ENABLED: der funktionsbasierte Index ist aktiviert, deaktiviert: der funktionsbasierte Index ist deaktiviert.|
+|FUNCIDX_STATUS|Zeichenfolge|Gibt den Status eines funktionsbasierten Indexes an. NULL: Dies ist kein Funktions basierter Index, aktiviert: der Funktions basierte Index ist aktiviert, deaktiviert: der Funktions basierte Index ist deaktiviert.|
 |JOIN_INDEX|Zeichenfolge|Gibt an, ob es sich hierbei um einen Joinindex handelt oder nicht.|
 
 ## <a name="indexcolumns"></a>IndexColumns
@@ -147,7 +147,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|
+|SECONDARY|Zeichenfolge|Gibt an, ob dies ein sekundäres Objekt ist, das von der ODCIIndexCreate-Methode &#124; der Oracle9i Data Cartridge (Y N) erstellt wurde.|
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|
 
 ## <a name="sequences"></a>Sequenzen
@@ -222,7 +222,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|
+|SECONDARY|Zeichenfolge|Gibt an, ob dies ein sekundäres Objekt ist, das von der ODCIIndexCreate-Methode &#124; der Oracle9i Data Cartridge (Y N) erstellt wurde.|
 
 ## <a name="packages"></a>Pakete
 
@@ -238,7 +238,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|
+|SECONDARY|Zeichenfolge|Gibt an, ob dies ein sekundäres Objekt ist, das von der ODCIIndexCreate-Methode &#124; der Oracle9i Data Cartridge (Y N) erstellt wurde.|
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|
 
 ## <a name="packagebodies"></a>PackageBodies
@@ -255,7 +255,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|
+|SECONDARY|Zeichenfolge|Gibt an, ob dies ein sekundäres Objekt ist, das von der ODCIIndexCreate-Methode &#124; der Oracle9i Data Cartridge (Y N) erstellt wurde.|
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|
 
 ## <a name="arguments"></a>Argumente
@@ -382,4 +382,4 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)

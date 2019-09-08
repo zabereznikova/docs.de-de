@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a56785d84a07122080efda22d41ec43721474789
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778564"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795264"
 ---
-# <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS-Enumeration
-Gibt an, die Version, Build, Kultur, Signatur und So weiter, der zwei Assemblys, die durch verglichen werden die [IAssemblyName:: IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) Methode.  
+# <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS-Enumeration
+Gibt die Version, den Build, die Kultur, die Signatur usw. von zwei Assemblys an, die mit der [IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) -Methode verglichen werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,15 +68,15 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
+- [Fusion-Enumerationen](fusion-enumerations.md)

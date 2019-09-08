@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abfangen von Datendienstnachrichten (WCF Data Services)'
+title: 'Vorgehensweise: Abfangen von Datendienst Nachrichten (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cecfdd74779e3ab1c908957afac3c9fccf79f383
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936512"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780039"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Vorgehensweise: Abfangen von Datendienstnachrichten (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anforderungsnachrichten abfangen, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Zum Abfangen einer Nachricht, verwenden Sie besonders attributierte Methoden im Datendienst. Weitere Informationen finden Sie unter [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Vorgehensweise: Abfangen von Datendienst Nachrichten (WCF Data Services)
+Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anforderungsnachrichten abfangen, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Zum Abfangen einer Nachricht verwenden Sie speziell attributierte Methoden im Datendienst. Weitere Informationen finden Sie unter [Interceptors](interceptors-wcf-data-services.md).  
   
- In dem Beispiel in diesem Thema wird der Northwind-Beispieldatendienst verwendet. Dieser Dienst wird erstellt, Sie nach Beendigung der [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ In dem Beispiel in diesem Thema wird der Northwind-Beispieldatendienst verwendet. Dieser Dienst wird erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>So definieren Sie einen Abfrage-Interceptor für die "Orders"-Entitätenmenge  
   
@@ -57,5 +57,5 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anfo
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Vorgehensweise: Definieren eines Dienst Vorgangs](how-to-define-a-service-operation-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938710"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793075"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die Parameter annehmen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet Verweisparametern Ausgabeparameter zu, und für Werttypen wird der Parameter als auf NULL festlegbar deklariert.  
   
- Ein Beispiel für die Verwendung eines Eingabe Parameters in einer Abfrage, die ein Rowset zurückgibt, finden [Sie unter Gewusst wie: Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)zurückgeben.  
+ Ein Beispiel für die Verwendung eines Eingabe Parameters in einer Abfrage, die ein Rowset zurückgibt, finden [Sie unter Gewusst wie: Rowsets](how-to-return-rowsets.md)zurückgeben.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein einzelner Eingabeparameter (die Kunden-ID) angenommen, und es wird ein Ausgabeparameter (der Gesamtumsatz mit diesem Kunden) zurückgegeben.  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Gespeicherte Prozeduren](stored-procedures.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](downloading-sample-databases.md)
 - [Verwenden von Typen mit Nullwert](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Auf NULL festlegbare Werttypen](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

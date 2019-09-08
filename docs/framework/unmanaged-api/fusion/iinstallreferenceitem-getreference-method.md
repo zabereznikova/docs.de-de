@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773948"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796395"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference-Methode
-Ruft einen Zeiger auf die [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) dargestellt durch diese Struktur [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) Objekt.  
+Ruft einen Zeiger auf die [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) -Struktur ab, die durch dieses [IInstallReferenceItem](iinstallreferenceitem-interface.md) -Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>Parameter  
  `ppRefData`  
- [out] Das zurückgegebene `FUSION_INSTALL_REFERENCE` Zeiger.  
+ vorgenommen Der zurück `FUSION_INSTALL_REFERENCE` gegebene Zeiger.  
   
  `dwFlags`  
- [in] Für zukünftige Erweiterungen reserviert. `dwFlags` 0 (null) muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `dwFlags`muss 0 (null) sein.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IInstallReferenceItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [FUSION_INSTALL_REFERENCE-Struktur](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [IInstallReferenceItem-Schnittstelle](iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE-Struktur](fusion-install-reference-structure.md)
