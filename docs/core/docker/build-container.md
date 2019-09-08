@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie eine .NET Core-Anwendung m
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331040"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253953"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerisieren einer .NET Core-App
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 Ihre Ordnerstruktur sollte wie folgt aussehen:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ Der Befehl `FROM` weist Docker an, das mit **2.2** gekennzeichnete Image aus dem
 
 Speichern Sie das *Dockerfile*. Die Verzeichnisstruktur des Arbeitsordners sollte wie folgt aussehen. Einige Dateien und Ordner, die sich auf tieferen Ebenen befinden, sind in diesem Beispiel nicht enthalten, um Platz zu sparen:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker bietet den Befehl `docker run`, um den Container als einen einzigen Befehl zu erstellen und auszuführen. Dieser Befehl erübrigt die Ausführung von `docker create` und dann `docker start`. Sie können diesen Befehl auch so einstellen, dass der Container beim Beenden des Containers automatisch gelöscht wird. Verwenden Sie beispielsweise `docker run -it --rm`, um zwei Dinge zu tun: 1) um sich automatisch über das aktuelle Terminal mit dem Container zu verbinden, und 2) wenn der Container fertig ist, um ihn zu entfernen:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 Bei `docker run -it` beendet der Befehl <kbd>STRG + C</kbd> den Prozess, der im Container ausgeführt wird, was wiederum den Container beendet. Da der Parameter `--rm` angegeben wurde, wird der Container beim Anhalten des Prozesses automatisch gelöscht. Stellen Sie sicher, dass Folgendes nicht beendet wird:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```

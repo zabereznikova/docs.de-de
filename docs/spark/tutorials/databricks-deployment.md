@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107351"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254045"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
@@ -119,7 +119,7 @@ Sie können `set JAR` oder `spark-submit` verwenden, um Ihren Auftrag an Databri
 3. Legen Sie die entsprechenden Parameter fest.
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
@@ -163,7 +163,7 @@ Mit dem Befehl [spark-submit](https://spark.apache.org/docs/latest/submitting-ap
 2. Konfigurieren Sie `spark-submit` mit den folgenden Parametern:
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
 3. Navigieren Sie zu Ihrem Databricks-Cluster in Ihrem Databricks-Arbeitsbereich. Klicken Sie unter **Aufträge** auf Ihren Auftrag und anschließend auf **Jetzt ausführen**, um Ihren Auftrag auszuführen.

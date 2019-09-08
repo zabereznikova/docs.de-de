@@ -5,16 +5,18 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d402d6a8e4d9285f7107d0cacaea9f00e1e9344b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626463"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374180"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und MSTest
 
 Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-mstest/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts
 
@@ -41,7 +43,7 @@ module MyMath =
 
 Erstellen Sie als Nächstes das Verzeichnis *MathService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
-```
+```console
 /unit-testing-with-fsharp
     unit-testing-with-fsharp.sln
     /MathService
@@ -62,7 +64,7 @@ Machen Sie das *MathService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und er
 
 Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest und MSTest Runner hinzugefügt. Fügen Sie jetzt die `MathService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
