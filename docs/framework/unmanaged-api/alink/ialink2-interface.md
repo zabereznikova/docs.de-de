@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789765"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777170"
 ---
-# <a name="ialink2-interface"></a><span data-ttu-id="1a3f9-102">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1a3f9-102">IALink2 Interface</span></span>
-<span data-ttu-id="1a3f9-103">Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) durch das Deklarieren von Methoden, die in neueren Metadatenschnittstellen, wie z. B. arbeiten [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md).</span><span class="sxs-lookup"><span data-stu-id="1a3f9-103">Complements the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md).</span></span> <span data-ttu-id="1a3f9-104">IALink2 deklariert darüber hinaus Methoden, die zusätzliche Nutzung über die ursprüngliche IALink Schnittstellen flexibler zu sein.</span><span class="sxs-lookup"><span data-stu-id="1a3f9-104">Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.</span></span>  
+# <a name="ialink2-interface"></a><span data-ttu-id="36743-102">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="36743-102">IALink2 Interface</span></span>
+<span data-ttu-id="36743-103">Ergänzt die [IALink-Schnittstelle](ialink-interface.md) durch Deklarieren von Methoden, die auf neueren Metadatenschnittstellen wie der [IMetaDataEmit2-Schnittstelle](../metadata/imetadataemit2-interface.md)funktionieren.</span><span class="sxs-lookup"><span data-stu-id="36743-103">Complements the [IALink Interface](ialink-interface.md) by declaring methods that operate on newer metadata interfaces such as [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md).</span></span> <span data-ttu-id="36743-104">Außerdem deklariert IALink2 Methoden, die zusätzliche Verwendungs Flexibilität über die ursprünglichen IALink-Schnittstellen bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="36743-104">Additionally, IALink2 declares methods that provide additional usage flexibility over the original IALink interfaces.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1a3f9-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1a3f9-105">In This Section</span></span>  
- [<span data-ttu-id="1a3f9-106">AddFile2-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-106">AddFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+## <a name="in-this-section"></a><span data-ttu-id="36743-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="36743-105">In This Section</span></span>  
+ [<span data-ttu-id="36743-106">AddFile2-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-106">AddFile2 Method</span></span>](addfile2-method.md)  
   
- [<span data-ttu-id="1a3f9-107">EmitAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-107">EmitAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [<span data-ttu-id="36743-107">EmitAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-107">EmitAssembly Method</span></span>](emitassembly-method.md)  
   
- [<span data-ttu-id="1a3f9-108">EmitInternalExportedTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-108">EmitInternalExportedTypes Method</span></span>](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [<span data-ttu-id="36743-108">EmitInternalExportedTypes-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-108">EmitInternalExportedTypes Method</span></span>](emitinternalexportedtypes-method.md)  
   
- [<span data-ttu-id="1a3f9-109">GetFileDef-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-109">GetFileDef Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [<span data-ttu-id="36743-109">GetFileDef-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-109">GetFileDef Method</span></span>](getfiledef-method.md)  
   
- <span data-ttu-id="1a3f9-110">GetPublicKeyToken-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-110">GetPublicKeyToken Method</span></span>  
+ <span data-ttu-id="36743-110">GetPublicKeyToken-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-110">GetPublicKeyToken Method</span></span>  
   
- [<span data-ttu-id="1a3f9-111">GetScope2-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-111">GetScope2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [<span data-ttu-id="36743-111">GetScope2-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-111">GetScope2 Method</span></span>](getscope2-method.md)  
   
- [<span data-ttu-id="1a3f9-112">ImportFileEx-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-112">ImportFileEx Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [<span data-ttu-id="36743-112">ImportFileEx-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-112">ImportFileEx Method</span></span>](importfileex-method.md)  
   
- [<span data-ttu-id="1a3f9-113">ImportFileEx2-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-113">ImportFileEx2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [<span data-ttu-id="36743-113">ImportFileEx2-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-113">ImportFileEx2 Method</span></span>](importfileex2-method.md)  
   
- [<span data-ttu-id="1a3f9-114">ImportTypes2-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-114">ImportTypes2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [<span data-ttu-id="36743-114">ImportTypes2-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-114">ImportTypes2 Method</span></span>](importtypes2-method.md)  
   
- [<span data-ttu-id="1a3f9-115">SetAssemblyFile2-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-115">SetAssemblyFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [<span data-ttu-id="36743-115">SetAssemblyFile2-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-115">SetAssemblyFile2 Method</span></span>](setassemblyfile2-method.md)  
   
- [<span data-ttu-id="1a3f9-116">SetPEKind-Methode</span><span class="sxs-lookup"><span data-stu-id="1a3f9-116">SetPEKind Method</span></span>](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [<span data-ttu-id="36743-116">SetPEKind-Methode</span><span class="sxs-lookup"><span data-stu-id="36743-116">SetPEKind Method</span></span>](setpekind-method.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1a3f9-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1a3f9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36743-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36743-117">See also</span></span>
 
-- [<span data-ttu-id="1a3f9-118">Alink-API</span><span class="sxs-lookup"><span data-stu-id="1a3f9-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [<span data-ttu-id="1a3f9-119">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1a3f9-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="1a3f9-120">Al.exe (Assembly Linker-Tool)</span><span class="sxs-lookup"><span data-stu-id="1a3f9-120">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="36743-118">Alink-API</span><span class="sxs-lookup"><span data-stu-id="36743-118">ALink API</span></span>](index.md)
+- [<span data-ttu-id="36743-119">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="36743-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="36743-120">Al.exe (Assembly Linker-Tool)</span><span class="sxs-lookup"><span data-stu-id="36743-120">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)

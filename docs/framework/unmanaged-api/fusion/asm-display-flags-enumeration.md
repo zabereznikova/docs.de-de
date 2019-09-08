@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70b40095ffcfea37414b7de2a678ad8555423b12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8befdb454a564ec834532653dd44cf230fa43d79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778546"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795219"
 ---
-# <a name="asmdisplayflags-enumeration"></a><span data-ttu-id="4783e-102">ASM_DISPLAY_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="4783e-102">ASM_DISPLAY_FLAGS Enumeration</span></span>
-<span data-ttu-id="4783e-103">Gibt an, die Version, Build, Kultur, Signatur und So weiter, der die Assembly, deren Anzeigename abgerufen werden soll, indem, die [IAssemblyName:: GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="4783e-103">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) method.</span></span>  
+# <a name="asm_display_flags-enumeration"></a><span data-ttu-id="d8def-102">ASM_DISPLAY_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="d8def-102">ASM_DISPLAY_FLAGS Enumeration</span></span>
+<span data-ttu-id="d8def-103">Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Anzeige Name von der [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) -Methode abgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="d8def-103">Indicates the version, build, culture, signature, and so on, of the assembly whose display name will be retrieved by the [IAssemblyName::GetDisplayName](iassemblyname-getdisplayname-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4783e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4783e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8def-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d8def-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -51,19 +51,19 @@ typedef enum {
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="4783e-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4783e-105">Remarks</span></span>  
- <span data-ttu-id="4783e-106">`ASM_DISPLAYF_FULL` Gibt alle Änderungen, die auf die Version von der [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="4783e-106">`ASM_DISPLAYF_FULL` reflects any changes made to the version of the [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span> <span data-ttu-id="4783e-107">Führen Sie Sie nicht davon gehen Sie aus, dass der zurückgegebene Wert unveränderlich ist.</span><span class="sxs-lookup"><span data-stu-id="4783e-107">Do not assume that the returned value is immutable.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8def-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d8def-105">Remarks</span></span>  
+ <span data-ttu-id="d8def-106">`ASM_DISPLAYF_FULL`spiegelt alle Änderungen wider, die an der Version des [IAssemblyName](iassemblyname-interface.md) -Objekts vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="d8def-106">`ASM_DISPLAYF_FULL` reflects any changes made to the version of the [IAssemblyName](iassemblyname-interface.md) object.</span></span> <span data-ttu-id="d8def-107">Gehen Sie nicht davon aus, dass der zurückgegebene Wert unveränderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d8def-107">Do not assume that the returned value is immutable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4783e-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4783e-108">Requirements</span></span>  
- <span data-ttu-id="4783e-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4783e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8def-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d8def-108">Requirements</span></span>  
+ <span data-ttu-id="d8def-109">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8def-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4783e-110">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4783e-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="d8def-110">**Header:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="d8def-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="4783e-111">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="4783e-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d8def-111">**Fern** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d8def-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4783e-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4783e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d8def-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8def-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4783e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4783e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8def-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d8def-113">See also</span></span>
 
-- [<span data-ttu-id="4783e-114">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4783e-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="4783e-115">Fusion-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="4783e-115">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="d8def-114">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d8def-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="d8def-115">Fusion-Enumerationen</span><span class="sxs-lookup"><span data-stu-id="d8def-115">Fusion Enumerations</span></span>](fusion-enumerations.md)

@@ -2,15 +2,15 @@
 title: System.Math-Methoden
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: 5200f31bd319bad49651c3096e1c1364a8003377
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b113cefa6be040924134f9d2d0cb0c9d334feef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613775"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792391"
 ---
-# <a name="systemmath-methods"></a><span data-ttu-id="d6939-102">System.Math-Methoden</span><span class="sxs-lookup"><span data-stu-id="d6939-102">System.Math Methods</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="d6939-103">unterstützt die folgenden <xref:System.Math>-Methoden nicht.</span><span class="sxs-lookup"><span data-stu-id="d6939-103">does not support the following <xref:System.Math> methods.</span></span>  
+# <a name="systemmath-methods"></a><span data-ttu-id="d530e-102">System.Math-Methoden</span><span class="sxs-lookup"><span data-stu-id="d530e-102">System.Math Methods</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="d530e-103">unterstützt die folgenden <xref:System.Math>-Methoden nicht.</span><span class="sxs-lookup"><span data-stu-id="d530e-103">does not support the following <xref:System.Math> methods.</span></span>  
   
 - <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -18,13 +18,13 @@ ms.locfileid: "64613775"
   
 - <xref:System.Math.IEEERemainder%28System.Double%2CSystem.Double%29?displayProperty=nameWithType>  
   
-## <a name="differences-from-net"></a><span data-ttu-id="d6939-104">Unterschiede zu .NET</span><span class="sxs-lookup"><span data-stu-id="d6939-104">Differences from .NET</span></span>  
- <span data-ttu-id="d6939-105">.NET Framework weist gegenüber SQL Server eine andere Rundungssemantik auf.</span><span class="sxs-lookup"><span data-stu-id="d6939-105">The .NET Framework has different rounding semantics from SQL Server.</span></span> <span data-ttu-id="d6939-106">Die <xref:System.Math.Round%2A> -Methode in der .NET Framework führt *Banker rounding*, bei dem Runden von Zahlen, die auf, 5 enden auf die nächste ungerade Ziffer statt auf die nächsthöhere Ziffer gerundet.</span><span class="sxs-lookup"><span data-stu-id="d6939-106">The <xref:System.Math.Round%2A> method in the .NET Framework performs *Banker's rounding*, where numbers that ends in .5 round to the nearest even digit instead of to the next higher digit.</span></span> <span data-ttu-id="d6939-107">2,5 wird zu 2 abgerundet, während 3,5 zu 4 aufgerundet wird.</span><span class="sxs-lookup"><span data-stu-id="d6939-107">For example, 2.5 rounds to 2, while 3.5 rounds to 4.</span></span> <span data-ttu-id="d6939-108">(Mit dieser Technik können bei großen Datentransaktionen systematische Abweichungen gegenüber höheren Werten vermieden werden.)</span><span class="sxs-lookup"><span data-stu-id="d6939-108">(This technique helps avoid systematic bias toward higher values in large data transactions.)</span></span>  
+## <a name="differences-from-net"></a><span data-ttu-id="d530e-104">Unterschiede zu .NET</span><span class="sxs-lookup"><span data-stu-id="d530e-104">Differences from .NET</span></span>  
+ <span data-ttu-id="d530e-105">.NET Framework weist gegenüber SQL Server eine andere Rundungssemantik auf.</span><span class="sxs-lookup"><span data-stu-id="d530e-105">The .NET Framework has different rounding semantics from SQL Server.</span></span> <span data-ttu-id="d530e-106">Die <xref:System.Math.Round%2A> -Methode im-.NET Framework führt die *Rundung des Bankers*aus, bei der Zahlen, die in 0,5 enden, auf die nächste gerade Ziffer und nicht auf die nächste höhere Ziffer gerundet werden.</span><span class="sxs-lookup"><span data-stu-id="d530e-106">The <xref:System.Math.Round%2A> method in the .NET Framework performs *Banker's rounding*, where numbers that ends in .5 round to the nearest even digit instead of to the next higher digit.</span></span> <span data-ttu-id="d530e-107">2,5 wird zu 2 abgerundet, während 3,5 zu 4 aufgerundet wird.</span><span class="sxs-lookup"><span data-stu-id="d530e-107">For example, 2.5 rounds to 2, while 3.5 rounds to 4.</span></span> <span data-ttu-id="d530e-108">(Mit dieser Technik können bei großen Datentransaktionen systematische Abweichungen gegenüber höheren Werten vermieden werden.)</span><span class="sxs-lookup"><span data-stu-id="d530e-108">(This technique helps avoid systematic bias toward higher values in large data transactions.)</span></span>  
   
- <span data-ttu-id="d6939-109">In SQL rundet die `ROUND`-Funktion stattdessen immer weg von 0.</span><span class="sxs-lookup"><span data-stu-id="d6939-109">In SQL, the `ROUND` function instead always rounds away from 0.</span></span> <span data-ttu-id="d6939-110">2,5 wird daher auf 3 gerundet (im Gegensatz zur Rundung auf 2 in .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="d6939-110">Therefore 2.5 rounds to 3, contrasted with its rounding to 2 in the .NET Framework.</span></span>  
+ <span data-ttu-id="d530e-109">In SQL rundet die `ROUND`-Funktion stattdessen immer weg von 0.</span><span class="sxs-lookup"><span data-stu-id="d530e-109">In SQL, the `ROUND` function instead always rounds away from 0.</span></span> <span data-ttu-id="d530e-110">2,5 wird daher auf 3 gerundet (im Gegensatz zur Rundung auf 2 in .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="d530e-110">Therefore 2.5 rounds to 3, contrasted with its rounding to 2 in the .NET Framework.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="d6939-111">leitet an die SQL-`ROUND`-Semantik weiter und versucht nicht, eine unverzerrte Rundung (Banker's Rounding) zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="d6939-111">passes through to the SQL `ROUND` semantics and does not try to implement Banker's rounding.</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="d530e-111">leitet an die SQL-`ROUND`-Semantik weiter und versucht nicht, eine unverzerrte Rundung (Banker's Rounding) zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="d530e-111">passes through to the SQL `ROUND` semantics and does not try to implement Banker's rounding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6939-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6939-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d530e-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d530e-112">See also</span></span>
 
-- [<span data-ttu-id="d6939-113">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="d6939-113">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [<span data-ttu-id="d530e-113">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="d530e-113">Data Types and Functions</span></span>](data-types-and-functions.md)

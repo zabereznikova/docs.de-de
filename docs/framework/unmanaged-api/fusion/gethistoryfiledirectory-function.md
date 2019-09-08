@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778657"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796853"
 ---
-# <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="46475-102">GetHistoryFileDirectory-Funktion</span><span class="sxs-lookup"><span data-stu-id="46475-102">GetHistoryFileDirectory Function</span></span>
-<span data-ttu-id="46475-103">Ruft den Pfad des Anwendungsverzeichnisses Verlauf.</span><span class="sxs-lookup"><span data-stu-id="46475-103">Retrieves the path of the application history directory.</span></span>  
+# <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="3a763-102">GetHistoryFileDirectory-Funktion</span><span class="sxs-lookup"><span data-stu-id="3a763-102">GetHistoryFileDirectory Function</span></span>
+<span data-ttu-id="3a763-103">Ruft den Pfad des Verzeichnisses für den Anwendungs Verlauf ab.</span><span class="sxs-lookup"><span data-stu-id="3a763-103">Retrieves the path of the application history directory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46475-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="46475-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a763-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3a763-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetHistoryFileDirectory (  
@@ -35,35 +35,35 @@ HRESULT GetHistoryFileDirectory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46475-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="46475-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a763-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3a763-105">Parameters</span></span>  
  `wzDir`  
- <span data-ttu-id="46475-106">[out] Ein Puffer, die den Pfad zum Anwendungsverzeichnis Verlauf enthalten soll.</span><span class="sxs-lookup"><span data-stu-id="46475-106">[out] A buffer to hold the path to the application history directory.</span></span>  
+ <span data-ttu-id="3a763-106">vorgenommen Ein Puffer, der den Pfad zum Anwendungs Verlaufs Verzeichnis enthalten soll.</span><span class="sxs-lookup"><span data-stu-id="3a763-106">[out] A buffer to hold the path to the application history directory.</span></span>  
   
  `pdwSize`  
- <span data-ttu-id="46475-107">[in, out] Die Länge des Puffers.</span><span class="sxs-lookup"><span data-stu-id="46475-107">[in, out] The length of the buffer.</span></span>  
+ <span data-ttu-id="3a763-107">[in, out] Die Länge des Puffers.</span><span class="sxs-lookup"><span data-stu-id="3a763-107">[in, out] The length of the buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="46475-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="46475-108">Return Value</span></span>  
- <span data-ttu-id="46475-109">Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in der Datei "Winerror.h", zusätzlich zu den folgenden Werten definiert.</span><span class="sxs-lookup"><span data-stu-id="46475-109">This method returns standard COM error codes, as defined in the WinError.h file in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a763-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="3a763-108">Return Value</span></span>  
+ <span data-ttu-id="3a763-109">Diese Methode gibt Standard-COM-Fehlercodes zurück, die in der Datei "Winerror. h" zusätzlich zu den folgenden Werten definiert sind.</span><span class="sxs-lookup"><span data-stu-id="3a763-109">This method returns standard COM error codes, as defined in the WinError.h file in addition to the following values.</span></span>  
   
-|<span data-ttu-id="46475-110">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="46475-110">Return code</span></span>|<span data-ttu-id="46475-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="46475-111">Description</span></span>|  
+|<span data-ttu-id="3a763-110">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="3a763-110">Return code</span></span>|<span data-ttu-id="3a763-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3a763-111">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="46475-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="46475-112">S_OK</span></span>|<span data-ttu-id="46475-113">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="46475-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="46475-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="46475-114">E_INVALIDARG</span></span>|<span data-ttu-id="46475-115">`wzDir` oder `pdwSize` ist Null, oder die Version Zeichenfolge ist falsch.</span><span class="sxs-lookup"><span data-stu-id="46475-115">`wzDir` or `pdwSize` is null, or the version string is incorrect.</span></span>|  
+|<span data-ttu-id="3a763-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="3a763-112">S_OK</span></span>|<span data-ttu-id="3a763-113">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="3a763-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="3a763-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="3a763-114">E_INVALIDARG</span></span>|<span data-ttu-id="3a763-115">`wzDir`oder `pdwSize` ist NULL, oder die Versions Zeichenfolge ist falsch.</span><span class="sxs-lookup"><span data-stu-id="3a763-115">`wzDir` or `pdwSize` is null, or the version string is incorrect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="46475-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="46475-116">Remarks</span></span>  
- <span data-ttu-id="46475-117">Bei erfolgreichem Abschluss der `pdwSize` Argument auf die Länge der Zeichenfolge für den Pfad festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="46475-117">On successful completion, the `pdwSize` argument is set to the length of the path string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a763-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3a763-116">Remarks</span></span>  
+ <span data-ttu-id="3a763-117">Nach erfolgreichem Abschluss wird `pdwSize` das-Argument auf die Länge der Pfad Zeichenfolge festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3a763-117">On successful completion, the `pdwSize` argument is set to the length of the path string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46475-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="46475-118">Requirements</span></span>  
- <span data-ttu-id="46475-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46475-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a763-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3a763-118">Requirements</span></span>  
+ <span data-ttu-id="3a763-119">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a763-119">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46475-120">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="46475-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="3a763-120">**Header:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="3a763-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="46475-121">**Bibliothek:** Fusion.dll und "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="46475-121">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="46475-122">Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.</span><span class="sxs-lookup"><span data-stu-id="46475-122">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="3a763-121">**Fern** "Fusion. dll" und "mscorwert. dll".</span><span class="sxs-lookup"><span data-stu-id="3a763-121">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="3a763-122">Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.</span><span class="sxs-lookup"><span data-stu-id="3a763-122">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="46475-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46475-123">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="3a763-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a763-123">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46475-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="46475-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a763-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3a763-124">See also</span></span>
 
-- [<span data-ttu-id="46475-125">CreateHistoryReader-Funktion</span><span class="sxs-lookup"><span data-stu-id="46475-125">CreateHistoryReader Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [<span data-ttu-id="46475-126">NukeDownloadedCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="46475-126">NukeDownloadedCache Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [<span data-ttu-id="46475-127">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="46475-127">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="3a763-125">CreateHistoryReader-Funktion</span><span class="sxs-lookup"><span data-stu-id="3a763-125">CreateHistoryReader Function</span></span>](createhistoryreader-function.md)
+- [<span data-ttu-id="3a763-126">NukeDownloadedCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="3a763-126">NukeDownloadedCache Function</span></span>](nukedownloadedcache-function.md)
+- [<span data-ttu-id="3a763-127">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="3a763-127">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)

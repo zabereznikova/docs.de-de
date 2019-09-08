@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793755"
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="0b16b-102">Vorgehensweise: Anzeigen von generiertem SQL</span><span class="sxs-lookup"><span data-stu-id="0b16b-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="0b16b-103">Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft anzeigen.</span><span class="sxs-lookup"><span data-stu-id="0b16b-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="0b16b-104">Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionalität und zum Debugging spezifischer Probleme beitragen.</span><span class="sxs-lookup"><span data-stu-id="0b16b-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="60c98-102">Vorgehensweise: Anzeigen von generiertem SQL</span><span class="sxs-lookup"><span data-stu-id="60c98-102">How to: Display Generated SQL</span></span>
+<span data-ttu-id="60c98-103">Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft anzeigen.</span><span class="sxs-lookup"><span data-stu-id="60c98-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="60c98-104">Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionalität und zum Debugging spezifischer Probleme beitragen.</span><span class="sxs-lookup"><span data-stu-id="60c98-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0b16b-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0b16b-105">Example</span></span>  
- <span data-ttu-id="0b16b-106">Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft verwendet, um SQL-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0b16b-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="0b16b-107">Sie können diese Eigenschaft mit den Abfrage-, Einfüge-, Update- und Löschbefehlen verwenden.</span><span class="sxs-lookup"><span data-stu-id="0b16b-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="60c98-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="60c98-105">Example</span></span>  
+ <span data-ttu-id="60c98-106">Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft verwendet, um SQL-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="60c98-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="60c98-107">Sie können diese Eigenschaft mit den Abfrage-, Einfüge-, Update- und Löschbefehlen verwenden.</span><span class="sxs-lookup"><span data-stu-id="60c98-107">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="0b16b-108">Die Zeilen im Konsolenfenster entsprechen der Ausgabe beim Ausführen von Visual Basic oder C# folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="0b16b-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
+ <span data-ttu-id="60c98-108">Die Zeilen aus dem Konsolenfenster werden angezeigt, wenn Sie die Visual Basic oder C# den folgenden Code ausführen.</span><span class="sxs-lookup"><span data-stu-id="60c98-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,6 +42,6 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="0b16b-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b16b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60c98-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="60c98-109">See also</span></span>
 
-- [<span data-ttu-id="0b16b-110">Debugunterstützung</span><span class="sxs-lookup"><span data-stu-id="0b16b-110">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [<span data-ttu-id="60c98-110">Debugunterstützung</span><span class="sxs-lookup"><span data-stu-id="60c98-110">Debugging Support</span></span>](debugging-support.md)

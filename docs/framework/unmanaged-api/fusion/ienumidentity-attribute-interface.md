@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb3ac150ebfe9fe3698427d8bb2bfb3e3347c07
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697341"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796465"
 ---
-# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="d3884-102">IEnumIDENTITY_ATTRIBUTE-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d3884-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
-<span data-ttu-id="d3884-103">Dient als ein Enumerator für die Attribute des Codeobjekts im aktuellen Bereich.</span><span class="sxs-lookup"><span data-stu-id="d3884-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
+# <a name="ienumidentity_attribute-interface"></a><span data-ttu-id="16eaa-102">IEnumIDENTITY_ATTRIBUTE-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="16eaa-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
+<span data-ttu-id="16eaa-103">Dient als Enumerator für die Attribute des Code-Objekts im aktuellen Gültigkeitsbereich.</span><span class="sxs-lookup"><span data-stu-id="16eaa-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d3884-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="d3884-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="16eaa-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="16eaa-104">Methods</span></span>  
   
-|<span data-ttu-id="d3884-105">Methode</span><span class="sxs-lookup"><span data-stu-id="d3884-105">Method</span></span>|<span data-ttu-id="d3884-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3884-106">Description</span></span>|  
+|<span data-ttu-id="16eaa-105">Methode</span><span class="sxs-lookup"><span data-stu-id="16eaa-105">Method</span></span>|<span data-ttu-id="16eaa-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="16eaa-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="d3884-107">Ruft einen Schnittstellenzeiger zu einem neuen `IEnumIDENTITY_ATTRIBUTE` , enthält das dieselben Member wie diese `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="d3884-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="d3884-108">Schreibt die Daten in die Elemente dieser `IEnumIDENTITY_ATTRIBUTE` auf dem angegebenen Datenpuffer.</span><span class="sxs-lookup"><span data-stu-id="d3884-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="d3884-109">Ruft die angegebene Anzahl von Attributen, beginnend mit der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="d3884-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="d3884-110">Verschiebt den Anweisungszeiger an den Anfang `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="d3884-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="d3884-111">Verschiebt den Anweisungszeiger vorwärts durch die angegebene Anzahl von Elementen, die an der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="d3884-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="16eaa-107">Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumIDENTITY_ATTRIBUTE` ab, der dieselben Member wie dieses `IEnumIDENTITY_ATTRIBUTE`enthält.</span><span class="sxs-lookup"><span data-stu-id="16eaa-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="16eaa-108">Schreibt die Daten, die in den Elementen dieses `IEnumIDENTITY_ATTRIBUTE` enthalten sind, in den angegebenen Datenpuffer.</span><span class="sxs-lookup"><span data-stu-id="16eaa-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="16eaa-109">Ruft die angegebene Anzahl von Attributen ab der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="16eaa-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="16eaa-110">Verschiebt den Anweisungs Zeiger an den Anfang dieses `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="16eaa-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="16eaa-111">Verschiebt den Anweisungs Zeiger um die angegebene Anzahl von Elementen, beginnend an der aktuellen Position.</span><span class="sxs-lookup"><span data-stu-id="16eaa-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3884-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d3884-112">Requirements</span></span>  
- <span data-ttu-id="d3884-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3884-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16eaa-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16eaa-112">Requirements</span></span>  
+ <span data-ttu-id="16eaa-113">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16eaa-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3884-114">**Header:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="d3884-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="16eaa-114">**Header:** Isolation. h</span><span class="sxs-lookup"><span data-stu-id="16eaa-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="d3884-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3884-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="16eaa-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16eaa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3884-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3884-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16eaa-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16eaa-116">See also</span></span>
 
-- [<span data-ttu-id="d3884-117">Fusion-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d3884-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="16eaa-117">Fusion-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="16eaa-117">Fusion Interfaces</span></span>](fusion-interfaces.md)

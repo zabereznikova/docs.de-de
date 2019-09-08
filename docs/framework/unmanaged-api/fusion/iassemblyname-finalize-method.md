@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c5ea24594f5c7547dc75e6be9d53dd632513ff8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f2f7ba822507a30fe8cd5303f53406d34661833
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754010"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796617"
 ---
-# <a name="iassemblynamefinalize-method"></a><span data-ttu-id="26757-102">IAssemblyName::Finalize-Methode</span><span class="sxs-lookup"><span data-stu-id="26757-102">IAssemblyName::Finalize Method</span></span>
-<span data-ttu-id="26757-103">Dadurch können [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) Objekt, das Freigeben von Ressourcen und andere Bereinigungen durchzuführen, bevor der Destruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="26757-103">Allows this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  
+# <a name="iassemblynamefinalize-method"></a><span data-ttu-id="89c03-102">IAssemblyName::Finalize-Methode</span><span class="sxs-lookup"><span data-stu-id="89c03-102">IAssemblyName::Finalize Method</span></span>
+<span data-ttu-id="89c03-103">Ermöglicht diesem [IAssemblyName](iassemblyname-interface.md) -Objekt, Ressourcen freizugeben und andere Bereinigungs Vorgänge durchzuführen, bevor der Dekonstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="89c03-103">Allows this [IAssemblyName](iassemblyname-interface.md) object to release resources and perform other cleanup operations before its destructor is called.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26757-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="26757-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89c03-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="89c03-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Finalize ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="26757-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="26757-105">Requirements</span></span>  
- <span data-ttu-id="26757-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26757-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89c03-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="89c03-105">Requirements</span></span>  
+ <span data-ttu-id="89c03-106">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89c03-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26757-107">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="26757-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="89c03-107">**Header:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="89c03-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="26757-108">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26757-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="89c03-108">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89c03-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26757-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="26757-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="89c03-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89c03-109">See also</span></span>
 
-- [<span data-ttu-id="26757-110">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="26757-110">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="89c03-110">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="89c03-110">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
