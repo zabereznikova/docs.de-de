@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205182"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786585"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="c13de-102">"ChildViews" und Beziehungen</span><span class="sxs-lookup"><span data-stu-id="c13de-102">ChildViews and Relations</span></span>
-<span data-ttu-id="c13de-103">Wenn zwischen Tabellen in einem <xref:System.Data.DataSet> Beziehungen vorhanden sind, können Sie eine <xref:System.Data.DataView> mit Zeilen aus der verwandten untergeordneten Tabelle erstellen, indem Sie die <xref:System.Data.DataRowView.CreateChildView%2A>-Methode der <xref:System.Data.DataRowView> für die Zeilen in der übergeordneten Tabelle verwenden.</span><span class="sxs-lookup"><span data-stu-id="c13de-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="c13de-104">Der folgende Code zeigt z. b. **Kategorien** und ihre zugehörigen **Produkte** in alphabetischer Reihenfolge nach " **CategoryName** " und " **ProductName**" sortiert an.</span><span class="sxs-lookup"><span data-stu-id="c13de-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="a0561-102">"ChildViews" und Beziehungen</span><span class="sxs-lookup"><span data-stu-id="a0561-102">ChildViews and Relations</span></span>
+<span data-ttu-id="a0561-103">Wenn zwischen Tabellen in einem <xref:System.Data.DataSet> Beziehungen vorhanden sind, können Sie eine <xref:System.Data.DataView> mit Zeilen aus der verwandten untergeordneten Tabelle erstellen, indem Sie die <xref:System.Data.DataRowView.CreateChildView%2A>-Methode der <xref:System.Data.DataRowView> für die Zeilen in der übergeordneten Tabelle verwenden.</span><span class="sxs-lookup"><span data-stu-id="a0561-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="a0561-104">Der folgende Code zeigt z. b. **Kategorien** und ihre zugehörigen **Produkte** in alphabetischer Reihenfolge nach " **CategoryName** " und " **ProductName**" sortiert an.</span><span class="sxs-lookup"><span data-stu-id="a0561-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c13de-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c13de-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0561-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a0561-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="c13de-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="c13de-106">DataViews</span></span>](dataviews.md)
-- [<span data-ttu-id="c13de-107">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="c13de-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="a0561-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="a0561-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="a0561-107">Übersicht über ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a0561-107">ADO.NET Overview</span></span>](../ado-net-overview.md)
