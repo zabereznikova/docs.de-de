@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 6518e4edeccdd533487f717122ba6832f13436a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b73904e2347c501b21b2c5933d0b43c7abafeb7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947067"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792312"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Das LINQ to SQL-Objektmodell
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird ein Objektmodell, das in der Programmiersprache des Entwicklers ausgedrückt wird, dem Datenmodell einer relationalen Datenbank zugeordnet. Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.  
@@ -40,7 +40,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird ein O
   
  Nur als Tabelle deklarierte Klasseninstanzen (Entitätsklassen) können in der Datenbank gespeichert werden.  
   
- Weitere Informationen finden Sie im Abschnitt Tabellen Attribut der [Attribut basierten Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Weitere Informationen finden Sie im Abschnitt Tabellen Attribut der [Attribut basierten Zuordnung](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-class-members-and-database-columns"></a>LINQ to SQL-Klassenmember und Datenbankspalten  
  Neben der Zuordnung von Klassen zu Tabellen legen Sie Felder oder Eigenschaften fest, um Datenbankspalten darzustellen. Zu diesem Zweck definiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut wie im folgenden Beispiel:  
@@ -51,7 +51,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird ein O
   
  Nur Felder und Eigenschaften, die Spalten zugeordnet werden, bleiben in der Datenbank erhalten oder werden aus dieser abgerufen. Alle übrigen Elemente gelten als Übergangsteile Ihrer Anwendungslogik.  
   
- Das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut weist eine Reihe von Eigenschaften auf, mit denen Sie die Member, die Spalten darstellen, anpassen können (sie können z. B. ein Member für die Darstellung einer Primärschlüsselspalte festlegen). Weitere Informationen finden Sie im Abschnitt Column Attribute der [Attribut basierten Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ Das <xref:System.Data.Linq.Mapping.ColumnAttribute>-Attribut weist eine Reihe von Eigenschaften auf, mit denen Sie die Member, die Spalten darstellen, anpassen können (sie können z. B. ein Member für die Darstellung einer Primärschlüsselspalte festlegen). Weitere Informationen finden Sie im Abschnitt Column Attribute der [Attribut basierten Zuordnung](attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a>LINQ to SQL-Zuordnungen und Datenbank-Fremdschlüsselbeziehungen  
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]stellen Sie Daten Bank Zuordnungen (z. b. Fremdschlüssel zu Primärschlüssel Beziehungen) durch Anwenden <xref:System.Data.Linq.Mapping.AssociationAttribute> des-Attributs dar. Im folgenden Codesegment enthält die `Order` -Klasse eine `Customer` -Eigenschaft, die über ein <xref:System.Data.Linq.Mapping.AssociationAttribute> -Attribut verfügt. Diese Eigenschaft und ihr Attribut stellen die `Order`-Klasse mit einer Beziehung zur `Customer`-Klasse bereit.  
@@ -62,7 +62,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird ein O
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Weitere Informationen finden Sie im Abschnitt Association Attribute ( [Attribut basierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)).  
+ Weitere Informationen finden Sie im Abschnitt Association Attribute ( [Attribut basierte Zuordnung](attribute-based-mapping.md)).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL-Methoden und in der Datenbank gespeicherte Prozeduren  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt gespeicherte Prozeduren und benutzerdefinierte Funktionen. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ordnen Sie diese Daten Bank definierten Abstraktionen Client Objekten zu, sodass Sie auf eine stark typisierte Weise aus dem Client Code darauf zugreifen können. Die Methodensignaturen entsprechen so weit wie möglich den Signaturen der Prozeduren und Funktionen in der Datenbank. Sie können IntelliSense verwenden, um diese Methoden zu ermitteln.  
@@ -78,9 +78,9 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird ein O
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Weitere Informationen finden Sie in den Abschnitten Funktions Attribut, Attribut für gespeicherte Prozeduren und Parameter Attribute der [Attribut basierten Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [gespeicherter Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ Weitere Informationen finden Sie in den Abschnitten Funktions Attribut, Attribut für gespeicherte Prozeduren und Parameter Attribute der [Attribut basierten Zuordnung](attribute-based-mapping.md) und [gespeicherter Prozeduren](stored-procedures.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Attributbasierte Zuordnung](attribute-based-mapping.md)
+- [Hintergrundinformationen](background-information.md)

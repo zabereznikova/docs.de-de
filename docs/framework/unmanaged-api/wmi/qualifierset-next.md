@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Next-Funktion (Referenz zur nicht verwalteten API)
-description: Die QualifierSet_Next-Funktion ruft den nächsten Qualifizierer in einer Enumeration ab.
+description: Die QualifierSet_Next-Funktion Ruft den nächsten Qualifizierer in einer Enumeration ab.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Next
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ac5cc8633881749bdc167e1b3925a83f7adf3b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f97a19f236b87a7f4c5b2014aca6ee4abd338c63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760299"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798283"
 ---
-# <a name="qualifiersetnext-function"></a>QualifierSet_Next-Funktion
+# <a name="qualifierset_next-function"></a>QualifierSet_Next-Funktion
 Ruft den nächsten Qualifizierer in einer Enumeration ab, die durch einen Aufruf der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)-Funktion gestartet wurde.   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,45 +44,45 @@ HRESULT QualifierSet_Next (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`   
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`   
-[in] Ein Zeiger auf ein [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) Instanz.
+in Ein Zeiger auf eine [iwbemqualifierset](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) -Instanz.
 
 `lFlags`   
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pstrName`   
-[out] Der Name des Qualifizierers. Wenn `null`, dieser Parameter wird ignoriert, andernfalls `pstrName` sollten verweist nicht auf einen gültigen `BSTR` oder ein Speicherverlust auftritt. Wenn nicht null ist, die Funktion immer eine neue zuordnet `BSTR` Wenn gibt `WBEM_S_NO_ERROR`.
+vorgenommen Der Name des Qualifizierers. Wenn `null`der Wert ist, wird dieser Parameter ignoriert `pstrName` ; andernfalls sollte nicht auf einen `BSTR` gültigen oder ein Speicherfehler hindeuten. Wenn der Wert nicht NULL ist, ordnet die Funktion immer `BSTR` einen neuen zu `WBEM_S_NO_ERROR`, wenn Sie zurückgegeben wird.
 
 `pVal`   
-[out] Bei erfolgreicher Ausführung der Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.
+vorgenommen Bei Erfolg der Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, `VARIANT` wird die, `pVal` auf die von verwiesen wird, nicht geändert. Wenn dieser Parameter ist `null`, wird der-Parameter ignoriert.
 
 `plFlavor`   
-[out] Ein Zeiger auf einen Long-Wert, der die Qualifizierertyp empfängt. Dieser Parameter kann sein, wenn der Typ-Informationen nicht gewünscht ist, `null`. 
+vorgenommen Ein Zeiger auf einen Long-Wert, der die qualifiziererkonfiguration empfängt. Wenn keine Informationen zur Konfiguration erwünscht sind, kann dieser Parameter `null`sein. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Der Aufrufer nicht aufrufen [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zur Verfügung, um eine neue Enumeration beginnen. |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Keine weitere Qualifizierer bleiben in der Enumeration. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Der Aufrufer hat [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)nicht aufgerufen. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um eine neue Enumeration zu beginnen. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | In der-Enumeration verbleiben keine weiteren Qualifizierer. |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) Methode.
+Diese Funktion umschließt einen aufzurufenden Befehl der [iwbemqualifierset:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) -Methode.
 
-Rufen Sie die `QualifierSet_Next` Funktion mehrmals, um alle Qualifizierer erst die Funktionsrückgabe aufzählen `WBEM_S_NO_MORE_DATA`. Um die Enumeration zu einem frühen Zeitpunkt zu beenden, rufen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) Funktion.
+Sie müssen die `QualifierSet_Next` Funktion wiederholt aufzählen, um alle Qualifizierer aufzulisten `WBEM_S_NO_MORE_DATA`, bis die Funktion zurückgibt. Um die Enumeration frühzeitig zu beenden, nennen Sie die [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) -Funktion.
 
-Die Reihenfolge der Qualifizierer, die zurückgegeben werden, während der Enumeration ist nicht definiert.
+Die Reihenfolge der während der-Enumeration zurückgegebenen Qualifizierer ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

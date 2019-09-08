@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 26eafb9a6ea1a0b416d205e94b0e420b0f4059d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9808856543e20b8904be812b15b32154eab56e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941074"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782106"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Vorgehensweise: Inline-Aufrufen von benutzerdefinierten Funktionen
 Obwohl Sie benutzerdefinierte Funktionen inline aufrufen können, werden in einer Abfrage enthaltene Funktionen, deren Ausführung umgeleitet wird, bis zur Ausführung der Abfrage verzögert. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -40,4 +40,4 @@ FROM [Customers] AS [t0]
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Benutzerdefinierte Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Benutzerdefinierte Funktionen](user-defined-functions.md)

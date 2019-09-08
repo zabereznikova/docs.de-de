@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: dd70c8d238ba47744eec6ab4a4c6bc1e80a3d0b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204878"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784657"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von Datenelementen angibt. <xref:System.Data.DataSet> verwendet das DiffGram-Format, um seinen Inhalt zu laden und beizubehalten und um seinen Inhalt für die Übertragung über eine Netzwerkverbindung zu serialisieren. Wenn eine <xref:System.Data.DataSet> als DiffGram geschrieben wird, füllt Sie das DiffGram mit allen erforderlichen Informationen <xref:System.Data.DataSet>aus, um den Inhalt, aber nicht das Schema, ordnungsgemäß neu zu erstellen, einschließlich der Spaltenwerte aus dem **ursprünglichen** und **dem Aktuelle** Zeilen Versionen, Zeilen Fehlerinformationen und Zeilen Reihenfolge.  
@@ -137,4 +137,4 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
 - [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
 - [Schreiben von DataSet-Inhalten als XML-Daten](writing-dataset-contents-as-xml-data.md)
 - [DataSets, DataTables und DataViews](index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

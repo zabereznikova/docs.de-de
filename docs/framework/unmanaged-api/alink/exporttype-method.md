@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd1ec9caa70dd7016253ae4385b16dbfb982f956
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 455f71c5b576d1b57db591dab2a3e59f8a5eed67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742020"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777285"
 ---
 # <a name="exporttype-method"></a>ExportType-Methode
-Gibt an, dass ein Typ exportiert werden kann.  
+Gibt an, dass ein Typ exportierbar ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,31 +41,31 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly zum Exportieren aus.  
+ Die ID der Assembly, aus der exportiert werden soll.  
   
  `FileToken`  
- Datei-Token "oder" Assembly-ID der Datei, die den exportierbaren Typ definiert.  
+ Dateitoken oder Assembly-ID der Datei, die den exportierbaren Typ definiert.  
   
  `TypeToken`  
- Token des Typs als exportierbar festgelegt werden.  
+ Das Token vom Typ, das als exportierbar erstellt werden soll.  
   
  `pszTypename`  
- Voll gekennzeichneten Typnamen als exportierbar festgelegt werden.  
+ Der voll qualifizierte Typname, der als exportierbar erstellt werden soll.  
   
  `dwFlags`  
- `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Parameter kann übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`Flags wie `tdPublic` oder `tdNested`. Dieser Parameter kann an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übergeben werden.  
   
  `pType`  
- Empfängt die Token für den exportierten Typ.  
+ Empfängt das Token für den exportierten Typ.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

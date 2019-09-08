@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793755"
 ---
 # <a name="how-to-display-generated-sql"></a>Vorgehensweise: Anzeigen von generiertem SQL
 Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mithilfe der <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft anzeigen. Dieser Ansatz kann zum Verständnis der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionalität und zum Debugging spezifischer Probleme beitragen.  
@@ -18,7 +18,7 @@ Sie können den für Abfragen und Änderungsverarbeitung erzeugten SQL-Code mith
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die <xref:System.Data.Linq.DataContext.Log%2A>-Eigenschaft verwendet, um SQL-Code im Konsolenfenster anzuzeigen, bevor der Code ausgeführt wird.  Sie können diese Eigenschaft mit den Abfrage-, Einfüge-, Update- und Löschbefehlen verwenden.  
   
- Die Zeilen im Konsolenfenster entsprechen der Ausgabe beim Ausführen von Visual Basic oder C# folgenden Code.  
+ Die Zeilen aus dem Konsolenfenster werden angezeigt, wenn Sie die Visual Basic oder C# den folgenden Code ausführen.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Debugunterstützung](debugging-support.md)

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697978"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796704"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem-Schnittstelle
-Stellt eine einzelne Assembly im globalen Assemblycache.  
+Stellt eine einzelne Assembly im globalen Assemblycache dar.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[AbortItem-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Können Sie die Assembly im globalen Assemblycache Bereinigungsvorgänge ausgeführt werden, bevor er freigegeben wird.|  
-|[Commit-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Führt einen Commit für die zwischengespeicherte Assembly-Verweis auf Speicher.|  
-|[CreateStream-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Erstellt einen Datenstrom mit dem angegebenen Namen und Format.|  
+|[AbortItem-Methode](iassemblycacheitem-abortitem-method.md)|Ermöglicht es der Assembly im globalen Assemblycache, Cleanupvorgänge auszuführen, bevor Sie freigegeben wird.|  
+|[Commit-Methode](iassemblycacheitem-commit-method.md)|Führt einen Commit für den zwischengespeicherten Assemblyverweis zum|  
+|[CreateStream-Methode](iassemblycacheitem-createstream-method.md)|Erstellt einen Stream mit dem angegebenen Namen und Format.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)
+- [Globaler Assemblycache](../../app-domains/gac.md)
+- [IAssemblyCache-Schnittstelle](iassemblycache-interface.md)

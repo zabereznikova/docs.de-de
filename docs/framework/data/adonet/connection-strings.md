@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363747"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784902"
 ---
 # <a name="connection-strings-in-adonet"></a>Verbindungszeichenfolgen in ADO.NET
 
@@ -53,27 +53,27 @@ Keyword=a=b=c
 
 Da jeder Wert bis zum nächsten Semikolon oder Ende der Zeichenfolge gelesen wird, ist `a=b=c`der Wert im letzteren Beispiel, und das abschließende Semikolon ist optional.
 
-Alle Verbindungs Zeichenfolgen haben dieselbe grundlegende Syntax, die oben beschrieben wird. Der Satz der erkannten Schlüsselwörter hängt jedoch vom Anbieter ab und hat sich über die Jahre von früheren APIs wie *ODBC*entwickelt. Der *.NET Framework* -Datenanbieter  für SQL Server`SqlClient`() unterstützt viele Schlüsselwörter aus älteren APIs, ist jedoch im Allgemeinen flexibler und akzeptiert Synonyme für viele der allgemeinen Schlüsselwörter der Verbindungs Zeichenfolge.
+Alle Verbindungs Zeichenfolgen haben dieselbe grundlegende Syntax, die oben beschrieben wird. Der Satz der erkannten Schlüsselwörter hängt jedoch vom Anbieter ab und hat sich über die Jahre von früheren APIs wie *ODBC*entwickelt. Der *.NET Framework* -Datenanbieter für SQL Server`SqlClient`() unterstützt viele Schlüsselwörter aus älteren APIs, ist jedoch im Allgemeinen flexibler und akzeptiert Synonyme für viele der allgemeinen Schlüsselwörter der Verbindungs Zeichenfolge.
 
 Das Eingeben von Fehlern kann zu Fehlern führen. Beispielsweise `Integrated Security=true` ist gültig `IntegratedSecurity=true` , verursacht jedoch einen Fehler.
 
-Verbindungs Zeichenfolgen, die zur Laufzeit von nicht validierten Benutzereingaben manuell erstellt werden, sind anfällig für Angriffe durch Zeichen folgen Injektion und gefährden die Sicherheit in der Datenquelle. Um diese Probleme zu beheben, wurden von *ADO.net* 2,0 [Verbindungs](../../../../docs/framework/data/adonet/connection-string-builders.md) Zeichenfolgen-Generatoren für jeden *.NET Framework* -Datenanbieter eingeführt. Diese Verbindungs Zeichenfolgen-Generatoren machen Parameter als stark typisierte Eigenschaften verfügbar und ermöglichen es, die Verbindungs Zeichenfolge zu validieren, bevor Sie an die Datenquelle gesendet wird.
+Verbindungs Zeichenfolgen, die zur Laufzeit von nicht validierten Benutzereingaben manuell erstellt werden, sind anfällig für Angriffe durch Zeichen folgen Injektion und gefährden die Sicherheit in der Datenquelle. Um diese Probleme zu beheben, wurden von *ADO.net* 2,0 [Verbindungs Zeichenfolgen](connection-string-builders.md) -Generatoren für jeden *.NET Framework* -Datenanbieter eingeführt. Diese Verbindungs Zeichenfolgen-Generatoren machen Parameter als stark typisierte Eigenschaften verfügbar und ermöglichen es, die Verbindungs Zeichenfolge zu validieren, bevor Sie an die Datenquelle gesendet wird.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Verbindungs Zeichen folgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Verbindungs Zeichen folgen-Generatoren](connection-string-builders.md)\
 Zeigt, wie mit den `ConnectionStringBuilder`-Klassen gültige Verbindungszeichenfolgen zur Laufzeit erstellt werden können.
 
-[Verbindungs Zeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Verbindungs Zeichenfolgen und Konfigurationsdateien](connection-strings-and-configuration-files.md)\
 Zeigt, wie Verbindungszeichenfolgen in Konfigurationsdateien gespeichert und abgerufen werden können.
 
-[Verbindungs Zeichen folgen Syntax](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Verbindungs Zeichen folgen Syntax](connection-string-syntax.md)\
 Beschreibt das Konfigurieren anbieterspezifischer Verbindungszeichenfolgen für `SqlClient`, `OracleClient`, `OleDb` und `Odbc`.
 
-[Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Schützen von Verbindungsinformationen](protecting-connection-information.md)\
 Demonstriert Verfahren zum Schützen von Informationen, die beim Herstellen von Verbindungen mit einer Datenquelle verwendet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Aufbauen der Verbindung zu einer Datenquelle](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)

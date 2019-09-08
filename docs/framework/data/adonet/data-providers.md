@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949813"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785647"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen verwendet. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. .NET Framework Datenanbieter sind einfach, und Sie erstellen eine minimale Ebene zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne die Funktionalität zu beeinträchtigen.  
@@ -54,12 +54,12 @@ Ein .NET Framework Datenanbieter wird zum Herstellen einer Verbindung mit einer 
 > [!NOTE]
 > Der .NET Framework Datenanbieter für ODBC verfügt über eine ähnliche Architektur wie der .NET Framework Datenanbieter für OLE DB. Beispielsweise wird eine ODBC-Dienst Komponente aufgerufen.  
   
- ![Datenanbieter](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Datenanbieter](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Vergleich des .NET Framework-Datenanbieters für SQL Server und des .NET Framework-Datenanbieters für OLE DB  
   
  Die .NET Framework Datenanbieter für SQL Server-Klassen befinden sich im <xref:System.Data.SqlClient> -Namespace.  
   
- Der .NET Framework Datenanbieter für SQL Server unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für SQL Server standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten oder <xref:System.Transactions>ab. Weitere Informationen finden Sie unter [Transaktionen und](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)Parallelität.  
+ Der .NET Framework Datenanbieter für SQL Server unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für SQL Server standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten oder <xref:System.Transactions>ab. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.SqlClient` -Namespace in Anwendungen einbinden können.  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework-Datenanbieter für OLE DB  
- Der .NET Framework Datenanbieter für OLE DB (OleDb) verwendet Native OLE DB durch COM-Interop, um den Datenzugriff zu ermöglichen. Der .NET Framework Datenanbieter für OLE DB unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für OLE DB standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten ab. Weitere Informationen finden Sie unter [Transaktionen und](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)Parallelität.  
+ Der .NET Framework Datenanbieter für OLE DB (OleDb) verwendet Native OLE DB durch COM-Interop, um den Datenzugriff zu ermöglichen. Der .NET Framework Datenanbieter für OLE DB unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt die .NET Framework Datenanbieter für OLE DB standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponenten Diensten ab. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  In der folgenden Tabelle sind die Anbieter aufgeführt, die mit ADO.net getestet wurden.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework-Datenanbieter für ODBC  
- Der .NET Framework Datenanbieter für ODBC (ODBC) verwendet den systemeigenen ODBC-Treiber-Manager (DM), um den Datenzugriff zu ermöglichen. Der ODBC-Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt sich der ODBC-Datenanbieter standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponentendiensten ab. Weitere Informationen finden Sie unter [Transaktionen und](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)Parallelität.  
+ Der .NET Framework Datenanbieter für ODBC (ODBC) verwendet den systemeigenen ODBC-Treiber-Manager (DM), um den Datenzugriff zu ermöglichen. Der ODBC-Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Bei verteilten Transaktionen trägt sich der ODBC-Datenanbieter standardmäßig automatisch in eine Transaktion ein und ruft Transaktionsdetails von den Windows-Komponentendiensten ab. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  In der folgenden Tabelle sind die ODBC-Treiber aufgeführt, die mit ADO.net getestet wurden.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > Die .NET Framework Datenanbieter für ODBC erfordert MDAC 2,6 oder höher, und MDAC 2,8 SP1 wird empfohlen. Sie können MDAC 2.8 SP1 aus dem [Developer Center für Datenzugriff und -speicherung](https://go.microsoft.com/fwlink/?linkid=4173)herunterladen.  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework-Datenanbieter für Oracle  
- Der .NET Framework Datenanbieter für Oracle (OracleClient) ermöglicht den Datenzugriff auf Oracle-Datenquellen über Oracle-Clientkonnektivitätssoftware. Der Datenanbieter unterstützt Oracle-Clientsoftware Version 8.1.7 oder höher. Der Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Weitere Informationen finden Sie unter [Transaktionen und](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)Parallelität.  
+ Der .NET Framework Datenanbieter für Oracle (OracleClient) ermöglicht den Datenzugriff auf Oracle-Datenquellen über Oracle-Clientkonnektivitätssoftware. Der Datenanbieter unterstützt Oracle-Clientsoftware Version 8.1.7 oder höher. Der Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Weitere Informationen finden Sie unter [Transaktionen und](transactions-and-concurrency.md)Parallelität.  
   
  Die .NET Framework Datenanbieter für Oracle erfordert eine Oracle-Client Software (Version 8.1.7 oder eine höhere Version) im System, bevor Sie eine Verbindung mit einer Oracle-Datenquelle herstellen können.  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)
+- [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)

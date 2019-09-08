@@ -2,12 +2,12 @@
 title: System.TimeSpan-Methoden
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781042"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan-Methoden
 Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithType> ist stark abhängig von den verwendeten Versionen von .NET Framework und Microsoft SQL Server.  
@@ -34,11 +34,11 @@ Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithTyp
 > Zum Zuordnen von <xref:System.TimeSpan?displayProperty=nameWithType>-Elementen zu einer SQL `TIME`-Spalte mit LINQ to SQL ist .NET Framework 3.5 SP1 oder höher erforderlich. Der SQL-`TIME`-Datentyp ist nur in Microsoft SQL Server 2008 und höher verfügbar.  
   
 ### <a name="addition-and-subtraction"></a>Addition und Subtraktion  
- Vom CLR-<xref:System.TimeSpan?displayProperty=nameWithType>-Typ werden Additionen und Subtraktionen unterstützt, vom SQL-`TIME`-Typ jedoch nicht. Ihre LINQ to SQL-Abfragen werden bei Additionen und Subtraktionen daher Fehler verursachen, wenn sie dem SQL-`TIME`-Typ zugeordnet sind. Weitere Überlegungen zum Arbeiten mit SQL-Datums-und Uhrzeittypen finden Sie unter [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ Vom CLR-<xref:System.TimeSpan?displayProperty=nameWithType>-Typ werden Additionen und Subtraktionen unterstützt, vom SQL-`TIME`-Typ jedoch nicht. Ihre LINQ to SQL-Abfragen werden bei Additionen und Subtraktionen daher Fehler verursachen, wenn sie dem SQL-`TIME`-Typ zugeordnet sind. Weitere Überlegungen zum Arbeiten mit SQL-Datums-und Uhrzeittypen finden Sie unter [SQL-CLR-Typzuordnung](sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Abfragekonzepte](query-concepts.md)
+- [Erstellen des Objektmodells](creating-the-object-model.md)
+- [SQL-CLR-Typenzuordnung](sql-clr-type-mapping.md)
+- [Datentypen und Funktionen](data-types-and-functions.md)

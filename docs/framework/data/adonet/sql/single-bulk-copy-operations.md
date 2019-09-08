@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 07c705b9daeeb043ef36f1e3272a3bf259a3c23e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05e3cf25352e731d320061001f08a835cd520b15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043877"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780932"
 ---
 # <a name="single-bulk-copy-operations"></a>Einzelne Massenkopiervorgänge
 
@@ -19,7 +19,7 @@ Ein SQL Server-Massenkopiervorgang wird am einfachsten durchgeführt, indem ein
 > [!NOTE]
 > Wenn Sie beim Auftreten eines Fehler einen Rollback der gesamten Massenkopie oder eines Teils davon ausführen müssen, können Sie eine von <xref:System.Data.SqlClient.SqlBulkCopy> verwaltete Transaktion verwenden oder den Massenkopiervorgang innerhalb einer bestehenden Transaktion durchführen. **SqlBulkCopy** funktioniert auch mit <xref:System.Transactions> , wenn die Verbindung (implizit oder explizit) in eine **System. Transactions** -Transaktion eingetragen ist.
 >
-> Weitere Informationen finden Sie unter [Transaktionen und Massen Kopiervorgänge](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).
+> Weitere Informationen finden Sie unter [Transaktionen und Massen Kopiervorgänge](transaction-and-bulk-copy-operations.md).
 
 Im Allgemeinen müssen für einen Massenkopiervorgang folgende Schritte ausgeführt werden:
 
@@ -45,7 +45,7 @@ Im Allgemeinen müssen für einen Massenkopiervorgang folgende Schritte ausgefü
 In der folgenden Konsolenanwendung wird veranschaulicht, wie Daten mithilfe der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse geladen werden. In diesem Beispiel wird ein <xref:System.Data.SqlClient.SqlDataReader> zum Kopieren von Daten aus der **Production. Product** -Tabelle in der SQL Server **AdventureWorks** -Datenbank in eine ähnliche Tabelle in derselben Datenbank verwendet.
 
 > [!IMPORTANT]
-> Dieses Beispiel wird nur dann ausgeführt, wenn Sie die Arbeits Tabellen erstellt haben, wie unter [Beispiel für Massen Kopier](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)Vorgänge beschrieben. Dieser Code wird bereitgestellt, um die Syntax nur für die Verwendung von **SqlBulkCopy** zu veranschaulichen. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.
+> Dieses Beispiel wird nur dann ausgeführt, wenn Sie die Arbeits Tabellen erstellt haben, wie unter [Beispiel für Massen Kopier](bulk-copy-example-setup.md)Vorgänge beschrieben. Dieser Code wird bereitgestellt, um die Syntax nur für die Verwendung von **SqlBulkCopy** zu veranschaulichen. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.
 
 [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
 [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]
@@ -84,5 +84,5 @@ command.ExecuteNonQuery();
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Massenkopiervorgänge in SQL Server](bulk-copy-operations-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

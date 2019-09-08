@@ -2,12 +2,12 @@
 title: System.String-Methoden
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613761"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792493"
 ---
 # <a name="systemstring-methods"></a>System.String-Methoden
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die folgenden <xref:System.String>-Methoden nicht.  
@@ -15,7 +15,7 @@ ms.locfileid: "64613761"
 ## <a name="unsupported-systemstring-methods-in-general"></a>Nicht unterstützte System.String-Methoden im Allgemeinen  
  Nicht unterstützte <xref:System.String>-Methoden im Allgemeinen:  
   
-- Kulturbewusste Überladungen (Methoden, die eine `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Kultur bewusste über Ladungen (Methoden, `CultureInfo`die ein  /  `StringComparison`  /  `IFormatProvider`-Element annehmen).  
   
 - Methoden, die ein `char`-Array verwenden oder erzeugen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64613761"
   
 - Abfragen berücksichtigen keine SQL Server-Zusammenstellungen, die möglicherweise auf dem Server aktiv sind. Aus diesem Grund werden standardmäßig kulturbewusste Vergleiche mit Berücksichtigung der Schreibweise erstellt. Dieses Verhalten unterscheidet sich von der standardmäßigen Semantik mit Groß-/Kleinschreibung von .NET Framework.  
   
-- Wenn `LastIndexOf` 0 zurückgibt, entweder die Zeichenfolge `NULL` oder die gefundene Position ist 0.  
+- Wenn `LastIndexOf` 0 zurückgibt, ist entweder die `NULL` Zeichenfolge, oder die gefundene Position ist 0.  
   
 - Die Verkettung oder andere Operationen mit Zeichenfolgen fester Länge (`CHAR`, `NCHAR`) kann zu unerwarteten Ergebnissen führen, da diese Typen in der Datenbank automatisches Padding verwenden.  
   
@@ -57,4 +57,4 @@ ms.locfileid: "64613761"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Datentypen und Funktionen](data-types-and-functions.md)

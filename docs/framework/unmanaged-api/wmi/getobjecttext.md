@@ -1,6 +1,6 @@
 ---
-title: GetObjectText-Funktion (Referenz zur nicht verwalteten API)
-description: Die GetObjectText-Funktion gibt ein Text-Rendering eines Objekts in MOF-Syntax.
+title: Getobjecttext-Funktion (Referenz zur nicht verwalteten API)
+description: Die getobjecttext-Funktion gibt ein Text Rendering eines Objekts in der MOF-Syntax zurück.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746496"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798507"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText-Funktion
-Gibt eine Textrendering des Objekts in der Managed Object Format (MOF)-Syntax zurück.
+Gibt ein Text Rendering des-Objekts in der MOF-Syntax (Managed Object Format) zurück.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,43 +42,43 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lFlags`  
-[in] Normalerweise 0. Wenn `WBEM_FLAG_NO_FLAVORS` (oder 0 x 1) angegeben wird, Qualifizierer werden ohne Weitergabe oder Art Informationen enthalten.
+in Normalerweise 0. Wenn `WBEM_FLAG_NO_FLAVORS` (oder 0x1) angegeben ist, werden Qualifizierer ohne Weitergabeinformationen oder Informationen zur Konfiguration eingeschlossen.
 
 `pstrObjectText`   
-[out] Ein Zeiger auf eine `null` auf Eintrag. Bei der Rückgabe eine neu zugeordnete `BSTR` , der eine MOF-Syntax die Darstellung des Objekts enthält.  
+vorgenommen Ein Zeiger auf einen `null` bei Eintrag. Bei Rückgabe ein neu zugeordneter `BSTR` , das ein MOF-Syntax Rendering des-Objekts enthält.  
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_FAILED` | 0x80041001 | Es ist ein allgemeiner Fehler aufgetreten. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) Methode.
+Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: getobjecttext](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) -Methode.
 
-Der MOF-Text zurückgegeben, enthält nicht alle Informationen über das Objekt, aber nur genügend Informationen für die MOF-Compiler, um das ursprüngliche Objekt neu erstellen zu können. Beispielsweise sind keine weitergegebenen Qualifizierer oder die Eigenschaften der übergeordneten Klasse enthalten.
+Der zurückgegebene MOF-Text enthält nicht alle Informationen über das Objekt, sondern nur genügend Informationen, damit der MOF-Compiler das ursprüngliche Objekt neu erstellen kann. Beispielsweise sind keine propagierten Qualifizierer oder Eigenschaften der übergeordneten Klasse enthalten.
 
 Der folgende Algorithmus wird verwendet, um den Text der Parameter einer Methode zu rekonstruieren:
 
-1. Parameter werden in der Reihenfolge ihrer Bezeichnerwerte resequenced.
-1. Parameter, die als angegeben sind `[in]` und `[out]` werden in einem einzigen Parameter kombiniert.
+1. Parameter werden in der Reihenfolge ihrer Bezeichnerwerte neu sequenziert.
+1. Parameter, die als `[in]` und `[out]` angegeben werden, werden in einem einzelnen Parameter kombiniert.
  
-`pstrObjectText` muss ein Zeiger auf eine `null` , wenn die Funktion aufgerufen wird; es muss auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger nicht freigegeben wird, nicht zu verweisen.
+`pstrObjectText`muss ein Zeiger auf einen `null` sein, wenn die-Funktion aufgerufen wird. Sie darf nicht auf eine Zeichenfolge verweisen, die vor dem Methodenaufruf gültig ist, da die Zuordnung des Zeigers nicht aufgehoben wird.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

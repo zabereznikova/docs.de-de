@@ -16,44 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724ee01e91f1e9f4e34d2262610152a977ed4f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91ab2f71e7fb74f8e0e517b566d46d61c316ebe2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697575"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796838"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority-Schnittstelle
-Stellt Methoden, die zum Generieren und Vergleichen von Schlüsseln für Anwendungsidentitäten und Verweise bereit.  
+Stellt Methoden bereit, die Schlüssel für Anwendungs Identitäten und-Verweise generieren und vergleichen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|Ruft einen Wert, der angibt, ob die beiden angegebenen [IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md) -Instanzen gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION übergeben, damit ihre jeweiligen Versionsinformationen ignorieren übergeben.|  
-|`IAppIdAuthority::AreReferencesEqual`|Ruft einen Wert, der angibt, ob die beiden angegebenen [IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md) -Instanzen gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION übergeben, damit ihre jeweiligen Versionsinformationen ignorieren übergeben.|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|Ruft einen Wert, der angibt, ob die beiden Definitionen für die angegebene Zeichenfolge gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION übergeben, damit ihre jeweiligen Versionsinformationen ignorieren übergeben.|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|Ruft einen Wert, der angibt, ob die beiden Verweise für die angegebene Zeichenfolge gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION übergeben, damit ihre jeweiligen Versionsinformationen ignorieren übergeben.|  
-|`IAppIdAuthority::CreateDefinition`|Ruft einen Schnittstellenzeiger auf einem neu generierten `IDefinitionAppId` -Instanz, die die Assembly im aktuellen Bereich darstellt.|  
-|`IAppIdAuthority::CreateReference`|Ruft einen Schnittstellenzeiger zu einer neu erstellten `IReferenceAppId` , die die Assembly im aktuellen Bereich darstellt.|  
-|`IAppIdAuthority::DefinitionToText`|Ruft eine Zeichenfolgenversion des angegebenen `IDefinitionAppId`, mit den Werten des angegebenen Flags.|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|Ruft einen Wert, der angibt, ob das angegebene `IDefinitionAppId` und `IReferenceAppId` dieselbe Assembly darstellen.|  
-|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Ruft einen Wert, der angibt, ob die angegebenen parameterdefinitions-Zeichenfolge und die Verweiszeichenfolge wird die gleiche Assembly darstellen.|  
-|`IAppIdAuthority::GenerateDefinitionKey`|Ruft einen Zeichenfolgenschlüssel, der dem angegebenen darstellt `IDefinitionAppId` Instanz.|  
-|`IAppIdAuthority::GenerateReferenceKey`|Ruft einen Zeichenfolgenschlüssel, der dem angegebenen darstellt `IReferenceAppId` Instanz.|  
-|`IAppIdAuthority::HashDefinition`|Ruft einen Hash-Schlüssel für den angegebenen `IDefinitionAppId` Instanz.|  
-|`IAppIdAuthority::HashReference`|Ruft einen Hash-Schlüssel für den angegebenen `IReferenceAppId` Instanz.|  
-|`IAppIdAuthority::ReferenceToText`|Ruft eine Zeichenfolgenversion des angegebenen `IReferenceAppId`, mit den Werten des angegebenen Flags.|  
-|`IAppIdAuthority::TextToDefinition`|Ruft einen Schnittstellenzeiger auf ein `IDefinitionAppId` -Instanz, die die Assembly verwiesen wird, durch den Schlüssel für die angegebene Zeichenfolge darstellt.|  
-|`IAppIdAuthority::TextToReference`|Ruft einen Schnittstellenzeiger auf ein `IReferenceAppId` -Instanz, die die Assembly verwiesen wird, durch den Schlüssel für die angegebene Zeichenfolge darstellt.|  
+|`IAppIdAuthority::AreDefinitionsEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen [IDefinitionAppId](idefinitionappid-interface.md) -Instanzen gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION übergeben, um die jeweiligen Versionsinformationen zu ignorieren.|  
+|`IAppIdAuthority::AreReferencesEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen [IReferenceAppId](ireferenceappid-interface.md) -Instanzen gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION übergeben, um die jeweiligen Versionsinformationen zu ignorieren.|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen Zeichen folgen Definitionen gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION übergeben, um die jeweiligen Versionsinformationen zu ignorieren.|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|Ruft einen Wert ab, der angibt, ob die beiden angegebenen Zeichen folgen Verweise gleich sind. Sie können den Flagwert IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION übergeben, um die jeweiligen Versionsinformationen zu ignorieren.|  
+|`IAppIdAuthority::CreateDefinition`|Ruft einen Schnittstellen Zeiger auf eine neu generierte `IDefinitionAppId` -Instanz ab, die die Assembly im aktuellen Bereich darstellt.|  
+|`IAppIdAuthority::CreateReference`|Ruft einen Schnittstellen Zeiger auf eine neu erstellte `IReferenceAppId` ab, die die Assembly im aktuellen Bereich darstellt.|  
+|`IAppIdAuthority::DefinitionToText`|Ruft mithilfe der angegebenen Flagwerte eine `IDefinitionAppId`Zeichen folgen Version des angegebenen ab.|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|Ruft einen Wert ab, der angibt, `IDefinitionAppId` ob `IReferenceAppId` der angegebene und die gleiche Assembly darstellen.|  
+|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Ruft einen Wert ab, der angibt, ob die angegebene Definitions Zeichenfolge und die Verweis Zeichenfolge dieselbe Assembly darstellen.|  
+|`IAppIdAuthority::GenerateDefinitionKey`|Ruft einen Zeichen folgen Schlüssel ab, der `IDefinitionAppId` die angegebene-Instanz darstellt.|  
+|`IAppIdAuthority::GenerateReferenceKey`|Ruft einen Zeichen folgen Schlüssel ab, der `IReferenceAppId` die angegebene-Instanz darstellt.|  
+|`IAppIdAuthority::HashDefinition`|Ruft einen Hashwert für die angegebene `IDefinitionAppId` -Instanz ab.|  
+|`IAppIdAuthority::HashReference`|Ruft einen Hashwert für die angegebene `IReferenceAppId` -Instanz ab.|  
+|`IAppIdAuthority::ReferenceToText`|Ruft mithilfe der angegebenen Flagwerte eine `IReferenceAppId`Zeichen folgen Version des angegebenen ab.|  
+|`IAppIdAuthority::TextToDefinition`|Ruft einen Schnittstellen Zeiger auf eine `IDefinitionAppId` -Instanz ab, die die Assembly darstellt, auf die vom angegebenen Zeichen folgen Schlüssel verwiesen wird.|  
+|`IAppIdAuthority::TextToReference`|Ruft einen Schnittstellen Zeiger auf eine `IReferenceAppId` -Instanz ab, die die Assembly darstellt, auf die vom angegebenen Zeichen folgen Schlüssel verwiesen wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Isolation.h  
+ **Header:** Isolation. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)

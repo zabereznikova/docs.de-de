@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946922"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792134"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)
 
@@ -23,7 +23,7 @@ Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseins
 
 - Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest5") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.
 
-- Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest5.
+- Für dieses Beispiel wird die Beispieldatenbank Northwind benötigt. Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei in den Ordner c:\linqtest5.
 
 ## <a name="overview"></a>Übersicht
 
@@ -140,7 +140,7 @@ In diesem Schritt führen Sie die Abfrage aus. Die in den vorherigen Schritten e
 2. Drücken Sie F5, um die Anwendung zu debuggen.
 
     > [!NOTE]
-    > Wenn Ihre Anwendung einen Laufzeitfehler generiert, lesen Sie den Abschnitt zur Problembehandlung in [Learning by](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
+    > Wenn Ihre Anwendung einen Laufzeitfehler generiert, lesen Sie den Abschnitt zur Problembehandlung in [Learning by](learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
 
      Die Abfrageergebnisse im Konsolenfenster werden wie folgt angezeigt:
 
@@ -160,10 +160,10 @@ In diesem Schritt führen Sie die Abfrage aus. Die in den vorherigen Schritten e
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die [Exemplarische Vorgehensweise: Das Thema Beziehungs übergreifende AbfragenC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) ) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise für Beziehungen zwischen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Beziehungen veranschaulicht, wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
+Die [Exemplarische Vorgehensweise: Das Thema Beziehungs übergreifende AbfragenC#(](walkthrough-querying-across-relationships-csharp.md) ) wird fortgesetzt, wo diese exemplarische Vorgehensweise endet. Die exemplarische Vorgehensweise für Beziehungen zwischen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Beziehungen veranschaulicht, wie Tabellen übergreifend abgefragt werden können, ähnlich wie *Joins* in einer relationalen Datenbank.
 
 Wenn Sie die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen absolvieren möchten, stellen Sie sicher, dass Sie die gerade erstellte Lösung speichern, da diese benötigt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Lernen durch exemplarische Vorgehensweisen](learning-by-walkthroughs.md)

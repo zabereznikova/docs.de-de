@@ -8,48 +8,48 @@ helpviewer_keywords:
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944611"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786955"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Konstanten (nicht verwalteter API-Verweis)
-Dieses Thema beschreibt die Sprachtyps Compilerhersteller und Dokument-Typ-Konstanten, die in CorSym.idl definiert werden.  
+In diesem Thema werden der Sprachtyp, der sprach Hersteller und die Dokumenttyp Konstanten beschrieben, die in corsym. idl definiert sind.  
   
-## <a name="language-type-constants"></a>-Typ-Konstanten  
- Die folgende Tabelle zeigt die Sprache Typkonstanten, die GUIDs darstellen, die Programmiersprachen zu identifizieren.  
-  
-|Symbol|Beschreibung|  
-|------------|-----------------|  
-|CorSym_LanguageType_C|Gibt die Programmiersprache C.|  
-|CorSym_LanguageType_CPlusPlus|Gibt an, die Programmiersprache C++.|  
-|CorSym_LanguageType_CSharp|Gibt an, die C# Sprache.|  
-|CorSym_LanguageType_Basic|Gibt die Basic-Sprache.|  
-|CorSym_LanguageType_Java|Gibt an, die Java-Sprache.|  
-|CorSym_LanguageType_Cobol|Gibt die COBOL-Sprache.|  
-|CorSym_LanguageType_Pascal|Gibt die Pascal-Sprache.|  
-|CorSym_LanguageType_ILAssembly|Gibt an, die Microsoft intermediate Language (MSIL)-Assemblycode.|  
-|CorSym_LanguageType_JScript|Gibt die Programmiersprache JScript an.|  
-|CorSym_LanguageType_SMC|Gibt die SMC-Sprache.|  
-|CorSym_LanguageType_MCPlusPlus|Gibt die C++-Sprache, die für .NET Framework aktiviert.|  
-  
-## <a name="language-vendor-constants"></a>Language-Anbieter-Konstanten  
- Die folgende Tabelle zeigt die Sprache Hersteller-Konstanten, die GUIDs darstellen, die Programmierung Compilerhersteller zu identifizieren.  
+## <a name="language-type-constants"></a>Sprachtyp Konstanten  
+ In der folgenden Tabelle sind die Sprachtyp Konstanten aufgeführt, die GUIDs darstellen, die Programmiersprachen identifizieren.  
   
 |Symbol|Beschreibung|  
 |------------|-----------------|  
-|CorSym_LanguageVendor_Microsoft|Indicates Microsoft.|  
+|CorSym_LanguageType_C|Gibt die Programmiersprache C an.|  
+|CorSym_LanguageType_CPlusPlus|Gibt die C++ Sprache an.|  
+|CorSym_LanguageType_CSharp|Gibt die C# Sprache an.|  
+|CorSym_LanguageType_Basic|Gibt die grundlegende Sprache an.|  
+|CorSym_LanguageType_Java|Gibt die Java-Sprache an.|  
+|CorSym_LanguageType_Cobol|Gibt die COBOL-Sprache an.|  
+|CorSym_LanguageType_Pascal|Gibt die Pascal-Sprache an.|  
+|CorSym_LanguageType_ILAssembly|Gibt den MSIL-Assemblycode (Microsoft Intermediate Language) an.|  
+|CorSym_LanguageType_JScript|Gibt die JScript-Sprache an.|  
+|CorSym_LanguageType_SMC|Gibt die SMC-Sprache an.|  
+|CorSym_LanguageType_MCPlusPlus|Gibt die C++ für den .NET Framework aktivierte Sprache an.|  
   
-## <a name="document-type-constants"></a>Dokument-Typ-Konstanten  
- Die folgende Tabelle zeigt Dokument Typkonstanten, die GUIDs darstellen, die Typen von Dokumenten zu identifizieren.  
+## <a name="language-vendor-constants"></a>Sprachanbieter Konstanten  
+ In der folgenden Tabelle werden die-Sprachanbieter Konstanten angezeigt, die GUIDs darstellen, die Anbieter von Programmiersprachen identifizieren.  
   
 |Symbol|Beschreibung|  
 |------------|-----------------|  
-|CorSym_DocumentType_Text|Gibt an, ein Textdokument.|  
-|CorSym_DocumentType_MC|Gibt ein nicht-Text-Dokument an.|  
+|CorSym_LanguageVendor_Microsoft|Gibt Microsoft an.|  
+  
+## <a name="document-type-constants"></a>Dokumenttyp Konstanten  
+ In der folgenden Tabelle werden Dokumenttyp Konstanten angezeigt, die GUIDs darstellen, die Dokumenttypen identifizieren.  
+  
+|Symbol|Beschreibung|  
+|------------|-----------------|  
+|CorSym_DocumentType_Text|Gibt ein Textdokument an.|  
+|CorSym_DocumentType_MC|Gibt ein nicht-Textdokument an.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz zur nicht verwalteten API](../../../docs/framework/unmanaged-api/index.md)
+- [Referenz zur nicht verwalteten API](index.md)

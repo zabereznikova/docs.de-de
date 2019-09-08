@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb43d21546a0e98e87aab23db9213309b62320b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772072"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794749"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Abrufen eines einzelnen Werts aus einer Datenbank
-Es kann vorkommen, dass Sie lediglich einzelne Werte anstelle von Tabellen oder Datenstreams aus einer Datenbank zurückgeben möchten. Sie möchten z. B. das Ergebnis einer Aggregatfunktion wie z. B. Anzahl zurückgeben (\*), SUM(Price) oder AVG(Quantity). Die **Befehl** Objekt bietet die Möglichkeit zum Zurückgeben von einzelner Werten, die mit der **"ExecuteScalar"** Methode. Die **"ExecuteScalar"** Methode wird als Skalarwert, der Wert der ersten Spalte der ersten Zeile des Resultsets.  
+Es kann vorkommen, dass Sie lediglich einzelne Werte anstelle von Tabellen oder Datenstreams aus einer Datenbank zurückgeben möchten. Beispielsweise können Sie das Ergebnis einer Aggregatfunktion wie count (\*), Sum (Price) oder AVG (Menge) zurückgeben. Das **Command** -Objekt bietet die Möglichkeit, einzelne Werte mithilfe der **ExecuteScalar** -Methode zurückzugeben. Die **ExecuteScalar** -Methode gibt den Wert der ersten Spalte der ersten Zeile des Resultsets als Skalarwert zurück.  
   
  Im folgenden Codebeispiel wird mit einem <xref:System.Data.SqlClient.SqlCommand> ein neuer Wert in der Datenbank eingefügt. Mit der <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A>-Methode wird der Wert der Identitätsspalte für den eingefügten Datensatz zurückgegeben.  
   
@@ -22,7 +22,7 @@ Es kann vorkommen, dass Sie lediglich einzelne Werte anstelle von Tabellen oder 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Ausführen eines Befehls](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [Ausführen eines Befehls](executing-a-command.md)
+- [DbConnection, DbCommand und DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044285"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798161"
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 
@@ -47,7 +47,7 @@ Das folgende Beispiel zeigt, wie die Protokollierung aktiviert und zusätzliche 
 </system.serviceModel>
 ```
 
-Weitere Informationen zu den Einstellungen für die Nachrichten Protokollierung finden Sie unter [Empfohlene Einstellungen für Ablauf Verfolgung und Nachrichten Protokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).
+Weitere Informationen zu den Einstellungen für die Nachrichten Protokollierung finden Sie unter [Empfohlene Einstellungen für Ablauf Verfolgung und Nachrichten Protokollierung](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Mit `add` können Sie den Namen und den Typ des Listeners angeben, den Sie verwenden möchten. In der Beispielkonfiguration wird der Listener "messages" genannt, und der standardmäßige .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) wird als zu verwendender Typ hinzugefügt. Wenn Sie `System.Diagnostics.XmlWriterTraceListener` verwenden, müssen Sie den Speicherort und den Namen der Ausgabedatei in der Konfigurationsdatei angeben. Legen Sie dafür `initializeData` auf den Namen der Protokolldatei fest. Andernfalls löst das System eine Ausnahme aus. Sie können auch einen benutzerdefinierten Listener implementieren, der Protokolle in einer Standarddatei ausgibt.
 
@@ -62,7 +62,7 @@ Das `switchValue`-Attribut von `source` ist nur für die Ablaufverfolgung gülti
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Configuration Editor-Tool (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Configuration Editor-Tool (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Protokollieren von Ebenen und Optionen
 
@@ -101,7 +101,7 @@ Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Option
 
 Wenn in der Konfigurationsdatei kein Ablaufverfolgungslistener definiert ist, wird unabhängig von der angegebenen Protokollierungsebene keine Protokollierungsausgabe generiert.
 
-Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentation (WMI) geändert werden. Dies kann durchzugreifen auf die [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) -Instanz erfolgen, die diese booleschen Eigenschaften verfügbar `LogMessagesAtServiceLevel`macht `LogMessagesAtTransportLevel`:, `LogMalformedMessages`und. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentation (WMI) geändert werden. Dies kann durchzugreifen auf die [AppDomainInfo](./wmi/appdomaininfo.md) -Instanz erfolgen, die diese booleschen Eigenschaften verfügbar `LogMessagesAtServiceLevel`macht `LogMessagesAtTransportLevel`:, `LogMalformedMessages`und. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](./wmi/index.md).
 
 Das `source`-Feld in einem Nachrichtenprotokoll gibt an, in welchem Kontext die Nachricht protokolliert wird: beim Senden/Empfangen einer Anforderungsnachricht, für eine Anforderungsantwort oder eine unidirektionale Anforderung, auf der Dienstmodell- oder Transportschicht oder im Falle einer falsch formatierten Nachricht.
 
@@ -174,6 +174,6 @@ Das `type`-Attribut sollte auf einen vollqualifizierten Assemblynamen festgelegt
 
 ## <a name="see-also"></a>Siehe auch
 
-- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [Nachrichtenprotokollierung](message-logging.md)
+- [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](./tracing/recommended-settings-for-tracing-and-message-logging.md)

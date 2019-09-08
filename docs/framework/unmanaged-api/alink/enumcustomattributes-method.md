@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742058"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777347"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes-Methode
-Ruft benutzerdefinierte Attribute auf Assemblyebene.  
+Ruft benutzerdefinierte Attribute auf Assemblyebene ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,25 +44,25 @@ HRESULT EnumCustomAttributes(
  Handle des Enumerators.  
   
  `tkType`  
- Typ der Attribute aufgelistet werden sollen. Verwendung `mdTokenNill` für alle Attribute.  
+ Typ der aufzuzählenden Attribute. Verwenden `mdTokenNill` Sie für alle Attribute.  
   
  `rCustomValues`  
- Benutzerdefinierte Attribute-Token erhält.  
+ Empfängt benutzerdefinierte Attribut Token.  
   
  `cMax`  
- Gibt die Größe des `rCustomValues` Array.  
+ Gibt die Größe `rCustomValues` des Arrays an.  
   
  `pcCustomValues`  
- Empfängt optional die Anzahl von Tokenwerten.  
+ Empfängt optional die Anzahl der Tokenwerte.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

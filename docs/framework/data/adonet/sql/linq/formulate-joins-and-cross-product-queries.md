@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002a644ff5d48b25351228dcd74330707491d6c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032603"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782095"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Gewusst wie: Formulieren von Joins und produktübergreifenden Abfragen
 In den folgenden Beispielen wird gezeigt, wie Ergebnisse aus mehreren Tabellen kombiniert werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From` -Klausel in Visual Basic (`from` -Klausel in C#), die alle Bestellungen für Kunden aus London auszuwählen.  
+ Im folgenden Beispiel wird die Fremdschlüssel Navigation in `From` der-Klausel in`from` Visual Basic ( C#-Klausel in) verwendet, um alle Bestellungen für Kunden in London auszuwählen.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Where` -Klausel in Visual Basic (`where` -Klausel in C#) zum Filtern nach von Fehlmengen `Products` , deren `Supplier` befindet sich in den Vereinigten Staaten.  
+ Im folgenden Beispiel wird die Fremdschlüssel Navigation in `Where` der-Klausel in`where` Visual Basic ( C#-Klausel in) verwendet, um nach außen `Products` zu `Supplier` filtern, dessen im USA ist.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `From` -Klausel in Visual Basic (`from` -Klausel in C#) zum Filtern nach Mitarbeiter in Seattle und deren Gebiete anzuzeigen.  
+ Im folgenden Beispiel wird die Fremdschlüssel Navigation in `From` der-Klausel in`from` Visual Basic ( C#-Klausel in) zum Filtern von Mitarbeitern in Seattle und zum Auflisten ihrer Gebiete verwendet.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet Fremdschlüsselnavigation in der `Select` -Klausel in Visual Basic (`select` -Klausel in C#) um mitarbeiterpaare zu filtern, in dem ein Mitarbeiter dem anderen untersteht und, in denen beide Mitarbeiter aus der gleichen werden `City`.  
+ Im folgenden Beispiel wird die Fremdschlüssel Navigation in `Select` der-Klausel in`select` Visual Basic ( C#-Klausel in) verwendet, um nach Paaren von Mitarbeitern zu filtern, bei denen ein Mitarbeiter den anderen meldet und `City`in dem beide Mitarbeiter vom gleichen sind.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Visual Basic-Beispiel sucht nach allen Kunden und Bestellungen, stellt sicher, dass die Bestellungen den Kunden zugeordnet werden und stellt sicher, dass für jeden Kunden in der Liste, ein Kontaktname angegeben wird.  
+ Im folgenden Visual Basic Beispiel wird nach allen Kunden und Bestellungen gesucht, es wird sichergestellt, dass die Bestellungen mit Kunden abgeglichen werden, und es wird sichergestellt, dass für jeden Kunden in dieser Liste ein Kontakt Name angegeben wird.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -81,4 +81,4 @@ In den folgenden Beispielen wird gezeigt, wie Ergebnisse aus mehreren Tabellen k
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Abfragebeispiele](query-examples.md)

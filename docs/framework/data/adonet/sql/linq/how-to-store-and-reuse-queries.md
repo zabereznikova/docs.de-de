@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938744"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781638"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Vorgehensweise: Speichern und Wiederverwenden von Abfragen
 Wenn eine Anwendung häufig strukturell ähnliche Abfragen ausführt, können Sie häufig die Leistung steigern, indem Sie die Abfrage einmal kompilieren und dann mehrmals mit verschiedenen Parametern ausführen. So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt die Verwendung von *kompilierten Abfragen* zu diesem Zweck.  
@@ -36,5 +36,5 @@ Wenn eine Anwendung häufig strukturell ähnliche Abfragen ausführt, können Si
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Abfragekonzepte](query-concepts.md)
+- [Abfragen der Datenbank](querying-the-database.md)

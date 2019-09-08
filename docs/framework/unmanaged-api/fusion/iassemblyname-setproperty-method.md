@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761851"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796536"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty-Methode
-Legt den Wert der Eigenschaft durch den Bezeichner für die angegebene Eigenschaft verwiesen wird.  
+Legt den Wert der Eigenschaft fest, auf die durch den angegebenen Eigenschaften Bezeichner verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>Parameter  
  `PropertyId`  
- [in] Der eindeutige Bezeichner der Eigenschaft, deren Wert festgelegt wird.  
+ in Der eindeutige Bezeichner der Eigenschaft, deren Wert festgelegt wird.  
   
  `pvProperty`  
- [in] Der Wert, der zum Festlegen der Eigenschaft, verweist `PropertyId`.  
+ in Der Wert, auf den die Eigenschaft festgelegt werden `PropertyId`soll, auf die verweist.  
   
  `cbProperty`  
- [in] Die Größe in Bytes, des `pvProperty`.  
+ in Die Größe von `pvProperty`in Bytes.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

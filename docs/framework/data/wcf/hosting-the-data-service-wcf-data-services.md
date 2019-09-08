@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881278"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780269"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
-Sie können mithilfe von WCF Data Services, einen Dienst, der macht Daten als Erstellen einer [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität erforderlich, um Anforderungsnachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwortnachrichten zu generieren, als OData erforderlich. Allerdings kann kein Datendienst zu binden und netzwerksockets für eingehende HTTP-Anforderungen lauschen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
+Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch keine Bindung an einen Netzwerk Socket für eingehende HTTP-Anforderungen herstellen und diesen überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
 
  Der Datendiensthost führt die folgenden Aufgaben im Namen des Datendiensts aus:
 
@@ -28,7 +28,7 @@ Sie können mithilfe von WCF Data Services, einen Dienst, der macht Daten als Er
 
 - Sendet die Antwort im Namen des Datendiensts.
 
- WCF Data Services dient zum Hosten eines Datendiensts zu vereinfachen, mit der Windows Communication Foundation (WCF) integriert. Der Datendienst stellt eine WCF-Standardimplementierung, die als in einer ASP.NET-Anwendung Datendiensthost fungiert. Daher können Sie einen Datendienst in einer der folgenden Methoden hosten:
+ Um das Hosting eines Daten Diensts zu vereinfachen, ist WCF Data Services für die Integration in Windows Communication Foundation (WCF) konzipiert. Der Datendienst bietet eine WCF-Standard Implementierung, die in einer ASP.NET-Anwendung als Datendienst Host fungiert. Daher können Sie einen Datendienst in einer der folgenden Methoden hosten:
 
 - In einer ASP.NET-Anwendung.
 
@@ -38,7 +38,7 @@ Sie können mithilfe von WCF Data Services, einen Dienst, der macht Daten als Er
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosten eines Datendiensts in einer ASP.NET-Anwendung
 
-Bei Verwendung der **neues Element hinzufügen** Dialogfeld in Visual Studio 2015 zum Definieren eines Datendiensts in einer ASP.NET-Anwendung, das Tool generiert zwei neue Dateien im Projekt. Die erste Datei verfügt über die `.svc`-Erweiterung und weist die WCF-Laufzeit an, wie der Datendienst instanziiert werden soll. Folgendes ist ein Beispiel für diese Datei für den Northwind-beispieldatendienst erstellt, wenn Sie die [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md):
+Wenn Sie das Dialogfeld **Neues Element hinzufügen** in Visual Studio 2015 verwenden, um einen Datendienst in einer ASP.NET-Anwendung zu definieren, generiert das Tool zwei neue Dateien im Projekt. Die erste Datei verfügt über die `.svc`-Erweiterung und weist die WCF-Laufzeit an, wie der Datendienst instanziiert werden soll. Im folgenden finden Sie ein Beispiel für diese Datei für den Northwind-Beispiel Datendienst, der erstellt wird, wenn Sie den [Schnellstart](quickstart-wcf-data-services.md)ausführen:
 
 ```
 <%@ ServiceHost Language="C#"
@@ -55,12 +55,12 @@ Bei Verwendung der **neues Element hinzufügen** Dialogfeld in Visual Studio 201
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- Da ein Datendienst wie ein WCF-Dienst verhält, wird der Datendienst integriert und folgt das WCF-Webprogrammiermodell. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) und [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+ Da sich ein Datendienst wie ein WCF-Dienst verhält, wird der Datendienst in ASP.NET integriert und folgt dem WCF-webprogrammier Modell. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](../../wcf/feature-details/wcf-services-and-aspnet.md) und [WCF-Web-HTTP-Programmiermodell](../../wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Selbst gehostete WCF-Dienste
- Da es eine WCF-Implementierung enthält, unterstützt WCF Data Services selbst Hosten eines Datendiensts als WCF-Dienst. Ein Dienst kann in jeder .NET Framework-Anwendung, z. B. einer Konsolenanwendung selbst gehostet werden. Die <xref:System.Data.Services.DataServiceHost>-Klasse, die von <xref:System.ServiceModel.Web.WebServiceHost> erbt, wird verwendet, um den Datendienst bei einer bestimmten Adresse zu instanziieren.
+ Da Sie eine WCF-Implementierung beinhaltet, wird WCF Data Services das Self-Hosting eines Daten Diensts als WCF-Dienst unterstützen. Ein Dienst kann in jeder .NET Framework Anwendung, z. b. einer Konsolenanwendung, selbstgeh ostet werden. Die <xref:System.Data.Services.DataServiceHost>-Klasse, die von <xref:System.ServiceModel.Web.WebServiceHost> erbt, wird verwendet, um den Datendienst bei einer bestimmten Adresse zu instanziieren.
 
- Selbsthosting kann für die Entwicklung und für Tests verwendet werden, da die Bereitstellung und Problembehandlung vereinfacht wird. Diese Art von hosting bietet jedoch keine erweiterten hosten und Verwaltungsfunktionen, die von ASP.NET oder von Internet Information Services (IIS) bereitgestellt werden. Weitere Informationen finden Sie unter [Hosten in einer verwalteten Anwendung](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+ Selbsthosting kann für die Entwicklung und für Tests verwendet werden, da die Bereitstellung und Problembehandlung vereinfacht wird. Diese Art von Hosting stellt jedoch nicht die erweiterten Hosting-und Verwaltungsfunktionen bereit, die von ASP.net oder Internetinformationsdienste (IIS) bereitgestellt werden. Weitere Informationen finden Sie unter [Hosting in einer verwalteten Anwendung](../../wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Definieren eines benutzerdefinierten Datendiensthosts
  Wenn die WCF-Hostimplementierung zu restriktiv ist, können Sie für einen Datendienst auch einen benutzerdefinierten Host definieren. Alle Klassen, die eine <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren, können für einen Datendienst als Netzwerkhost verwendet werden. Ein benutzerdefinierter Host muss die <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren und in der Lage sein, die folgenden grundlegenden Aufgaben des Datendiensthosts zu übernehmen:
@@ -75,6 +75,6 @@ Bei Verwendung der **neues Element hinzufügen** Dialogfeld in Visual Studio 201
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Verfügbarmachen der Daten als Dienst](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
-- [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)
+- [Verfügbarmachen der Daten als Dienst](exposing-your-data-as-a-service-wcf-data-services.md)
+- [Konfigurieren des Datendiensts](configuring-the-data-service-wcf-data-services.md)

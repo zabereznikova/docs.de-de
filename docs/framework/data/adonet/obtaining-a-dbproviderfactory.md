@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934403"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783545"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Abrufen einer "DbProviderFactory"
 Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinhaltet die Übergabe von Informationen zu einem Datenanbieter an die <xref:System.Data.Common.DbProviderFactories>-Klasse. Auf der Grundlage dieser Informationen erstellt die <xref:System.Data.Common.DbProviderFactories.GetFactory%2A>-Methode eine stark typisierte Anbieterfactory. So können Sie z. B. zum Erstellen einer <xref:System.Data.SqlClient.SqlClientFactory>`GetFactory` eine Zeichenfolge übergeben, in der als Anbietername "System.Data.SqlClient" angegeben ist. Die andere Überladung von `GetFactory` verwendet eine <xref:System.Data.DataRow>. Nach dem Erstellen der Anbieterfactory können Sie deren Methoden zum Erstellen zusätzlicher Objekte verwenden. Zu den Methoden einer `SqlClientFactory` gehören u. a. <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> und <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -19,7 +19,7 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
 > Die .NET Framework-Klassen <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> und <xref:System.Data.OleDb.OleDbFactory> bieten die gleiche Funktionalität.  
   
 ## <a name="registering-dbproviderfactories"></a>Registrieren von "DbProviderFactories"  
- Jeder .NET Framework Datenanbieter, der eine factorybasierte Klasse unterstützt, registriert Konfigurationsinformationen im Abschnitt dbproviderfactorfactorys der Datei **Machine. config** auf dem lokalen Computer. Das folgende Konfigurationsdateifragment zeigt die Syntax und das Format für <xref:System.Data.SqlClient>.  
+ Jeder .NET Framework Datenanbieter, der eine factorybasierte Klasse unterstützt, registriert Konfigurationsinformationen im Abschnitt **dbproviderfactorfactorys** der Datei **Machine. config** auf dem lokalen Computer. Das folgende Konfigurationsdateifragment zeigt die Syntax und das Format für <xref:System.Data.SqlClient>.  
   
 ```xml  
 <system.data>  
@@ -79,7 +79,7 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Abrufen einer Verbindungszeichenfolge nach Anbietername  
- Zum Erstellen einer Anbieterfactory müssen Sie sowohl eine Verbindungszeichenfolge als auch den Anbieternamen bereitstellen. In diesem Beispiel wird veranschaulicht, wie eine Verbindungs Zeichenfolge aus einer Anwendungs Konfigurationsdatei abgerufen wird, indem der Anbieter Name im invarianten Format "*System. Data. ProviderName*" übergeben wird. Der Code durchläuft die <xref:System.Configuration.ConnectionStringSettingsCollection>. Im Erfolgsfall gibt er den <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> zurück, anderenfalls `null` (`Nothing` in Visual Basic). Wenn es für einen Anbieter mehrere Einträge gibt, wird der erste gefundene Eintrag zurückgegeben. Weitere Informationen und Beispiele zum Abrufen von Verbindungs Zeichenfolgen aus Konfigurationsdateien finden Sie unter Verbindungs Zeichenfolgen [und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Zum Erstellen einer Anbieterfactory müssen Sie sowohl eine Verbindungszeichenfolge als auch den Anbieternamen bereitstellen. In diesem Beispiel wird veranschaulicht, wie eine Verbindungs Zeichenfolge aus einer Anwendungs Konfigurationsdatei abgerufen wird, indem der Anbieter Name im invarianten Format "*System. Data. ProviderName*" übergeben wird. Der Code durchläuft die <xref:System.Configuration.ConnectionStringSettingsCollection>. Im Erfolgsfall gibt er den <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> zurück, anderenfalls `null` (`Nothing` in Visual Basic). Wenn es für einen Anbieter mehrere Einträge gibt, wird der erste gefundene Eintrag zurückgegeben. Weitere Informationen und Beispiele zum Abrufen von Verbindungs Zeichenfolgen aus Konfigurationsdateien finden Sie unter Verbindungs Zeichenfolgen [und Konfigurationsdateien](connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 > Zum Ausführen des Codes ist ein Verweis auf `System.Configuration.dll` erforderlich.  
@@ -97,7 +97,7 @@ Der Prozess des Abrufens einer <xref:System.Data.Common.DbProviderFactory> beinh
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Verbindungszeichenfolgen](connection-strings.md)
 - [Verwenden der Konfigurationsklassen](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [Übersicht über ADO.NET](ado-net-overview.md)

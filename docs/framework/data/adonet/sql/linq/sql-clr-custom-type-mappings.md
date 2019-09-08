@@ -2,17 +2,17 @@
 title: Benutzerdefinierte SQL-CLR-Typenzuordnungen
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8901998533ec14e733ea072dd1a69b465e596328
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945048"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781083"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Benutzerdefinierte SQL-CLR-Typenzuordnungen
 Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird bei der Verwendung des SQLMetal-Befehlszeilentools oder des Object Relational Designer (O/R-Designer) automatisch festgelegt.  
   
- Wenn keine angepasste Zuordnung durchgeführt wird, weisen diese Tools standardmäßige Typzuordnungen zu, wie in [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)beschrieben. Wenn Sie von den Standardeinstellungen abweichende Typmappings benötigen, müssen die Typmappings angepasst werden.  
+ Wenn keine angepasste Zuordnung durchgeführt wird, weisen diese Tools standardmäßige Typzuordnungen zu, wie in [SQL-CLR-Typzuordnung](sql-clr-type-mapping.md)beschrieben. Wenn Sie von den Standardeinstellungen abweichende Typmappings benötigen, müssen die Typmappings angepasst werden.  
   
  Beim Anpassen der Typmappings wird empfohlen, die Änderungen in einer vorübergehend verwendeten DBML-Datei vorzunehmen. Anschließend sollte die benutzerdefinierte DBML-Datei beim Erstellen des Codes und der Mappingdateien mit SQLMetal oder O/R-Designer verwendet werden.  
   
@@ -24,7 +24,7 @@ Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird be
  Um Typmappings mit SQLMetal oder O/R-Designer anzupassen, muss zunächst eine DBML-Datei erstellt werden. Anschließend (und noch vor dem Erstellen der Code- oder Mappingdatei) muss die DBML-Datei bearbeitet werden, um die gewünschten Typmappings festzulegen. In SQLMetal müssen die Attribute `Type` und `DbType` in der DBML-Datei manuell geändert werden, um die Anpassungen am Typmapping vorzunehmen. In O/R-Designer können Sie die Änderungen im Designer vornehmen. Weitere Informationen zur Verwendung des O/R-Designers finden Sie unter [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
-> Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Überprüfen Sie sorgfältig die Lauf Zeit Verhaltens-Matrix für die Typzuordnung in der [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) , bevor Sie Anpassungen vornehmen.  
+> Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Überprüfen Sie sorgfältig die Lauf Zeit Verhaltens-Matrix für die Typzuordnung in der [SQL-CLR-Typzuordnung](sql-clr-type-mapping.md) , bevor Sie Anpassungen vornehmen.  
   
  Damit Ihre Anpassungen der Typmappings in SQLMetal oder O/R-Designer erkannt werden, muss sichergestellt werden, dass diese Tools über den Pfad zu Ihrer benutzerdefinierten DBML-Datei verfügen, wenn Sie Ihre Code- oder externe Mappingdatei erstellen. Obwohl dies für die Anpassung des Typmappings nicht erforderlich ist, wird empfohlen, die Typmappinginformationen stets von der Codedatei zu trennen und eine zusätzliche externe Typmappingdatei zu erstellen. Dadurch erhalten Sie eine gewisse Flexibilität, da die Codedatei nicht erneut kompiliert werden muss.  
   
@@ -33,5 +33,5 @@ Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird be
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [SQL-CLR-Typenzuordnung](sql-clr-type-mapping.md)
+- [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7cc8ff5391fca7c3315dda433785a182f476bca7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878786"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783880"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generieren von Befehlen mit CommandBuilder-Objekten
 Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. B. mit einem Abfragetool, in dem der Benutzer einen Textbefehl eingibt, sind Sie zur Entwurfszeit u. U. nicht in der Lage, den entsprechenden `InsertCommand`, `UpdateCommand` oder `DeleteCommand` anzugeben. Wenn Ihre <xref:System.Data.DataTable> einer einzelnen Datenbanktabelle zugeordnet ist oder aus einer solchen generiert wurde, können Sie mithilfe des <xref:System.Data.Common.DbCommandBuilder>-Objekts automatisch den `DeleteCommand`, den `InsertCommand` und den `UpdateCommand` des <xref:System.Data.Common.DbDataAdapter> generieren.  
@@ -23,9 +23,9 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
   
  Bei einer Zuordnung zu einem `DataAdapter` generiert der <xref:System.Data.Common.DbCommandBuilder> automatisch die Eigenschaften `InsertCommand`, `UpdateCommand` und `DeleteCommand` des `DataAdapter`, sofern es sich um NULL-Verweise handelt. Wenn für eine Eigenschaft bereits ein `Command` vorhanden ist, wird der vorhandene `Command` verwendet.  
   
- Datenbankansichten, die durch das Verknüpfen von zwei oder mehr Datenbanken erstellt wurden, werden nicht als eine einzelne Datenbanktabelle betrachtet. In dieser Instanz können Sie den <xref:System.Data.Common.DbCommandBuilder> nicht zum automatischen Generieren von Befehlen verwenden; Sie müssen die Befehle explizit angeben. Informationen zum expliziten Festlegen von Befehlen zum Aktualisieren einer `DataSet` zurück an die Datenquelle finden Sie unter [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+ Datenbankansichten, die durch das Verknüpfen von zwei oder mehr Datenbanken erstellt wurden, werden nicht als eine einzelne Datenbanktabelle betrachtet. In dieser Instanz können Sie den <xref:System.Data.Common.DbCommandBuilder> nicht zum automatischen Generieren von Befehlen verwenden; Sie müssen die Befehle explizit angeben. Weitere Informationen zum expliziten Festlegen von Befehlen zum Auflösen von `DataSet` Aktualisierungen für eine wieder in die Datenquelle finden Sie unter [Aktualisieren von Datenquellen mit DataAdapters](updating-data-sources-with-dataadapters.md).  
   
- Unter Umständen möchten Sie der aktualisierten Zeile eines `DataSet` erneut Ausgabeparameter zuordnen. Eine allgemeine Aufgabe wäre das Abrufen des Werts eines automatisch generierten Identitätsfelds oder Timestamps aus der Datenquelle. Standardmäßig werden den Spalten in einer aktualisierten Zeile vom <xref:System.Data.Common.DbCommandBuilder> keine Ausgabeparameter zugeordnet. In diesem Fall müssen Sie den Befehl explizit angeben. Ein Beispiel für die Zuordnung eines automatisch generierten Identitätsfelds zu einer Spalte einer eingefügten Zeile, finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ Unter Umständen möchten Sie der aktualisierten Zeile eines `DataSet` erneut Ausgabeparameter zuordnen. Eine allgemeine Aufgabe wäre das Abrufen des Werts eines automatisch generierten Identitätsfelds oder Timestamps aus der Datenquelle. Standardmäßig werden den Spalten in einer aktualisierten Zeile vom <xref:System.Data.Common.DbCommandBuilder> keine Ausgabeparameter zugeordnet. In diesem Fall müssen Sie den Befehl explizit angeben. Ein Beispiel für die Zuordnung eines automatisch generierten Identitäts Felds zu einer Spalte einer eingefügten Zeile finden Sie unter [Abrufen von Identitäts-oder](retrieving-identity-or-autonumber-values.md)Auto Sequenz Werten.  
   
 ## <a name="rules-for-automatically-generated-commands"></a>Regeln für automatisch generierte Befehle  
  Die folgende Tabelle enthält die Regeln für das Generieren von automatisch generierten Befehlen.  
@@ -37,7 +37,7 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
 |`DeleteCommand`|Löscht Zeilen in der Datenquelle für alle Zeilen in der Tabelle, die den `RowState`-Wert <xref:System.Data.DataRowState.Deleted> aufweisen. Löscht alle Zeilen, deren Spaltenwerte den Primärschlüssel-Spaltenwerten der Zeile entsprechen und bei denen die übrigen Spalten in der Datenquelle den ursprünglichen Werten der Zeile entsprechen. Weitere Informationen finden Sie unter "Vollständiges Parallelitätsmodell für Updates und Löschvorgänge" weiter unten in diesem Thema.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Vollständiges Parallelitätsmodell für Updates und Löschvorgänge  
- Die Logik für das Generieren von Befehlen für Update- und DELETE-Anweisungen automatisch basiert auf *optimistische Parallelität*–, also die Datensätze werden nicht für die Bearbeitung gesperrt und kann von anderen Benutzern oder Prozessen jederzeit geändert werden. Da ein Datensatz nach der Rückgabe aus der SELECT-Anweisung und vor der Ausführung der UPDATE- oder DELETE-Anweisung ggf. geändert wurde, enthält die automatisch generierte UPDATE- oder DELETE-Anweisung eine WHERE-Klausel, die angibt, dass eine Zeile nur dann aktualisiert wird, wenn sie alle ursprünglichen Werte enthält und nicht aus der Datenquelle gelöscht wurde. Hierdurch wird vermieden, dass neue Daten überschrieben werden. In Fällen, in denen ein automatisch generierter Updatebefehl versucht, eine Zeile zu aktualisieren, die gelöscht wurde oder nicht die ursprünglichen Werte im <xref:System.Data.DataSet> enthält, hat der Befehl keine Auswirkungen auf Datensätze, und es wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
+ Die Logik zum automatischen Erstellen von Befehlen für Update-und *Delete-Anweisungen*basiert auf der vollständigen Parallelität, d. h., Datensätze sind nicht für die Bearbeitung gesperrt und können jederzeit von anderen Benutzern oder Prozessen geändert werden. Da ein Datensatz nach der Rückgabe aus der SELECT-Anweisung und vor der Ausführung der UPDATE- oder DELETE-Anweisung ggf. geändert wurde, enthält die automatisch generierte UPDATE- oder DELETE-Anweisung eine WHERE-Klausel, die angibt, dass eine Zeile nur dann aktualisiert wird, wenn sie alle ursprünglichen Werte enthält und nicht aus der Datenquelle gelöscht wurde. Hierdurch wird vermieden, dass neue Daten überschrieben werden. In Fällen, in denen ein automatisch generierter Updatebefehl versucht, eine Zeile zu aktualisieren, die gelöscht wurde oder nicht die ursprünglichen Werte im <xref:System.Data.DataSet> enthält, hat der Befehl keine Auswirkungen auf Datensätze, und es wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
   
  Wenn UPDATE oder DELETE unabhängig von den ursprünglichen Werten ausgeführt werden sollen, muss der `UpdateCommand` für den `DataAdapter` explizit festgelegt und die automatische Befehlsgenerierung damit außer Kraft gesetzt werden.  
   
@@ -48,7 +48,7 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
  Die Logik für die automatische Generierung von Befehlen generiert INSERT-, UPDATE- oder DELETE-Befehle für eigenständige Tabellen, wobei Verknüpfungen mit anderen Tabellen in der Datenquelle unberücksichtigt bleiben. Daher kann ein Fehler auftreten, wenn Sie `Update` aufrufen, um Änderungen an einer Spalte zu übermitteln, die in der Datenbank Fremdschlüsseleinschränkungen unterworfen ist. Sie können diese Ausnahme vermeiden, indem Sie zum Aktualisieren von Spalten, die einer Einschränkung eines Fremdschlüssels unterworfen sind, nicht den <xref:System.Data.Common.DbCommandBuilder> verwenden, sondern die Anweisungen zur Durchführung der Operation explizit angeben.  
   
 ### <a name="table-and-column-names"></a>Tabellennamen und Spaltennamen  
- Die Logik für die automatische Befehlsgenerierung kann fehlschlagen, wenn Spalten- oder Tabellennamen Sonderzeichen wie Leerzeichen, Punkte, Anführungszeichen oder andere nicht alphanumerische Zeichen enthalten, selbst wenn diese durch Klammern getrennt sind. Leerzeichen können je nach Anbieter von der Generierungslogik durch Festlegen des QuotePrefix-Parameters und QuoteSuffix-Parameters möglicherweise verarbeitet werden, Sonderzeichen können jedoch nicht mit Escapezeichen versehen werden. Vollqualifizierte Tabellennamen in Form von *catalog.schema.table* werden unterstützt.  
+ Die Logik für die automatische Befehlsgenerierung kann fehlschlagen, wenn Spalten- oder Tabellennamen Sonderzeichen wie Leerzeichen, Punkte, Anführungszeichen oder andere nicht alphanumerische Zeichen enthalten, selbst wenn diese durch Klammern getrennt sind. Leerzeichen können je nach Anbieter von der Generierungslogik durch Festlegen des QuotePrefix-Parameters und QuoteSuffix-Parameters möglicherweise verarbeitet werden, Sonderzeichen können jedoch nicht mit Escapezeichen versehen werden. Voll qualifizierte Tabellennamen in Form von *catalog. Schema. Table* werden unterstützt.  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>Verwenden des CommandBuilder-Objekts zum automatischen Generieren einer SQL-Anweisung  
  Legen Sie zum automatischen Generieren von SQL-Anweisungen für einen `DataAdapter` zuerst die `SelectCommand`-Eigenschaft des `DataAdapter` fest. Erstellen Sie dann ein `CommandBuilder`-Objekt, und geben Sie als Argument den `DataAdapter` an, für den der `CommandBuilder` automatisch SQL-Anweisungen generieren soll.  
@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- Das folgende Beispiel erstellt die `Customers`-Tabelle im `custDS`-Dataset neu. Die **RefreshSchema** Methode wird aufgerufen, um die automatisch generierten Befehle mit den neuen Spalteninformationen zu aktualisieren.  
+ Das folgende Beispiel erstellt die `Customers`-Tabelle im `custDS`-Dataset neu. Die Refresh **Schema** -Methode wird aufgerufen, um die automatisch generierten Befehle mit diesen neuen Spalten Informationen zu aktualisieren.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -114,7 +114,7 @@ adapter.Fill(custDS, "Customers");
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Ausführen eines Befehls](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [Ausführen eines Befehls](executing-a-command.md)
+- [DbConnection, DbCommand und DbException](dbconnection-dbcommand-and-dbexception.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

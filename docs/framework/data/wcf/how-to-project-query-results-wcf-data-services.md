@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952226"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780009"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Vorgehensweise: Projekt Abfrageergebnisse (WCF Data Services)
-Die Projektion stellt einen Mechanismus bereit, mit dem sich die von einer Abfrage zurückgegebene Datenmenge reduzieren lässt, indem angegeben wird, dass nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden sollen. Sie können [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Projektionen der Ergebnisse einer Abfrage entweder mithilfe der `$select` -Abfrage Option oder mithilfe der [Select](../../../csharp/language-reference/keywords/select-clause.md) -Klausel ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in einer LINQ-Abfrage ausführen. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Die Projektion stellt einen Mechanismus bereit, mit dem sich die von einer Abfrage zurückgegebene Datenmenge reduzieren lässt, indem angegeben wird, dass nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden sollen. Sie können [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Projektionen der Ergebnisse einer Abfrage entweder mithilfe der `$select` -Abfrage Option oder mithilfe der [Select](../../../csharp/language-reference/keywords/select-clause.md) -Klausel ([Select](../../../visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in einer LINQ-Abfrage ausführen. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
- Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)ausführen.  
+ Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die Client Daten Klassen werden erstellt, wenn Sie den [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)ausführen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine LINQ-Abfrage gezeigt, die Customers-Entitäten in den neuen CustomerAddress-Typ projiziert, der nur adressenspezifische Eigenschaften und die IDENTITY-Eigenschaft enthält. Diese `CustomerAddress`-Klasse wird auf dem Client definiert und so zugeordnet, dass die Clientbibliothek ihn als Entitätstyp erkennen kann.  

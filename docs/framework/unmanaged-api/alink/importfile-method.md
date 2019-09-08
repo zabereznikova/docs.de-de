@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d76e9b4e18b46d0b546d6c66fa572c35cb9fcefe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7fee7a91de99e2db69609cbc7c73e22d85d045f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741772"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777069"
 ---
 # <a name="importfile-method"></a>ImportFile-Methode
-Assemblys und ungebundenen Modulen importiert.  
+Importiert Assemblys und ungebundene Module.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,31 +41,31 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Voll gekennzeichnete Name des zu importierenden Datei.  
+ Der voll qualifizierte Name der zu importierenden Datei.  
   
  `pszTargetName`  
- Optionale Ausgabedateinamen, die verwendet werden kann, um die Datei umzubenennen, da sie in der Assembly verknüpft ist.  
+ Optionaler Name der Ausgabedatei, die verwendet werden kann, um die Datei umzubenennen, wenn Sie mit der Assembly verknüpft ist.  
   
  `fSmartImport`  
- True gibt an, ImportTypes wird verwendet, andernfalls importieren muss manuell durchgeführt werden.  
+ TRUE gibt an, dass ImportTypes verwendet wird. andernfalls muss der Import manuell ausgeführt werden.  
   
  `pImportToken`  
- Zeiger auf das token, wo eine eindeutige Datei-ID gespeichert werden sollen. Die Datei kann es sich um eine Assembly oder eine Datei sein.  
+ Zeiger auf das Token, in dem eine eindeutige Datei-ID gespeichert wird. Bei der Datei kann es sich um eine Assembly oder eine Datei handeln.  
   
  `ppAssemblyScope`  
- Zeiger auf empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). NULL kann sein, wenn die Datei keine Assembly ist.  
+ Empfängt einen Zeiger auf die [IMetaDataAssemblyImport-Schnittstelle](../metadata/imetadataassemblyimport-interface.md). Kann NULL sein, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Zeiger auf die Anzahl der Dateien bzw. Bereiche, die importiert wurden.  
+ Zeiger auf die Anzahl der importierten Dateien und/oder Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

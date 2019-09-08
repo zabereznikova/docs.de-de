@@ -2,12 +2,12 @@
 title: Sichere Clientanwendungen
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 1312ddc079bdf8f08aebe8eb27e4bab9bf914fa8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 15d2b2199344644392be0e9a530c046a77db8523
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963155"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794387"
 ---
 # <a name="secure-client-applications"></a>Sichere Clientanwendungen
 Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werden müssen, dass keine Daten verloren gehen oder das System nicht anderweitig gefährdet wird. Durch das Erstellen sicherer Benutzeroberflächen lassen sich viele Probleme vermeiden, weil Angreifer damit bereits blockiert werden, bevor sie überhaupt auf Daten oder Systemressourcen zugreifen können.  
@@ -24,7 +24,7 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
  [Validieren von Benutzereingaben in ASP.net Web Pages](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Enthält eine Übersicht über das Validieren der Benutzereingabe mit ASP.NET-Validierungssteuerelementen.  
   
- [Benutzereingaben in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Benutzereingaben in Windows Forms](../../winforms/user-input-in-windows-forms.md)  
  Enthält Links und Informationen zum Validieren von Eingaben mit Maus und Tastatur in einer Windows Forms-Anwendung.  
   
  [Reguläre Ausdrücke von .NET Framework](../../../standard/base-types/regular-expressions.md)  
@@ -33,10 +33,10 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
 ## <a name="windows-applications"></a>Windows-Anwendungen  
  In der Vergangenheit wurden Windows-Anwendungen i. d. R. mit vollständigen Berechtigungen ausgeführt. .NET Framework stellt mit der Codezugriffssicherheit (Code Access Security, CAS) die Infrastruktur bereit, die erforderlich ist, um die Ausführung von Code in Windows-Anwendungen zu beschränken. CAS allein reicht aber zum Schutz Ihrer Anwendung nicht aus.  
   
- [Sicherheit in Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Sicherheit in Windows Forms](../../winforms/windows-forms-security.md)  
  Erläutert das Sichern von Windows Forms-Anwendungen und stellt Links zu verwandten Themen bereit.  
   
- [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms und nicht verwaltete Anwendungen](../../winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Beschreibt die Interaktion mit nicht verwalteten Anwendungen in einer Windows Forms-Anwendung.  
   
  [ClickOnce-Bereitstellung für Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -63,12 +63,12 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
 |--------------|-----------------|  
 |[Konfiguration von Remote Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Erläutert, wie Sie Remoting-Anwendungen so konfigurieren können, dass allgemeine Probleme vermieden werden.|  
 |[Sicherheit bei Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Beschreibt die Authentifizierung und Verschlüsselung und enthält darüber hinaus weitere Sicherheitsthemen im Zusammenhang mit Remoting.|  
-|[Überlegungen zu Sicherheit und Remoting](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
+|[Überlegungen zu Sicherheit und Remoting](../../misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Sichern von Anwendungen](/visualstudio/ide/securing-applications)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Protecting Connection Information (Schützen von Verbindungsinformationen)](protecting-connection-information.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

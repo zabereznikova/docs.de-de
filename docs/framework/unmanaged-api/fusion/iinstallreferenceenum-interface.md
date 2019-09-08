@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5781254b508887f2e76f6ca0eca6a2830ada172b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774019"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796404"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum-Schnittstelle
-Stellt einen Enumerator für die referenzierten Assemblys im globalen Assemblycache installiert.  
+Stellt einen Enumerator für die Assemblys dar, auf die im globalen Assemblycache installiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +42,16 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem-Methode](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Ruft einen Zeiger auf der nächste `IInstallReferenceItem` enthalten `IInstallReferenceEnum`.|  
+|[GetNextInstallReferenceItem-Methode](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Ruft einen Zeiger auf den nächsten `IInstallReferenceItem` in diesem `IInstallReferenceEnum`ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IInstallReferenceItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)
+- [IInstallReferenceItem-Schnittstelle](iinstallreferenceitem-interface.md)

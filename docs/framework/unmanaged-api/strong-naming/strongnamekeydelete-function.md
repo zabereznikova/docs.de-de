@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 17d35193f69966e02ac5e483924fcb3ee2e06758
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636743"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799021"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete-Funktion
 
 Löscht den angegebenen Schlüsselcontainer.
 
-Diese Funktion wurde als veraltet markiert. Verwenden der [ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) Methode stattdessen.
+Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md) -Methode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,25 +40,25 @@ BOOLEAN StrongNameKeyDelete (
 ## <a name="parameters"></a>Parameter
 
 `wszKeyContainer`\
-[in] Der Name des Containers mit dem Schlüssel zu löschen.
+in Der Name des zu löschenden Schlüssel Containers.
 
 ## <a name="return-value"></a>Rückgabewert
 
-`true` Bei erfolgreichem Abschluss; andernfalls `false`.
+`true`nach erfolgreichem Abschluss: `false`andernfalls.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden der [StrongNameKeyInstall](strongnamekeyinstall-function.md) Funktion, um ein öffentliches/privates Schlüsselpaar in einem Container zu importieren.
+Verwenden Sie die [StrongNameKeyInstall](strongnamekeyinstall-function.md) -Funktion, um ein öffentliches/privates Schlüsselpaar in einen Container zu importieren.
 
-Wenn die `StrongNameKeyDelete` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.
+Wenn die `StrongNameKeyDelete` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** StrongName.h
+**Header:** StrongName. h
 
-**Bibliothek:** Als Ressource in MsCorEE.dll enthalten
+**Fern** Als Ressource in Mscoree. dll enthalten
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

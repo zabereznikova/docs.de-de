@@ -2,12 +2,12 @@
 title: Authentifizierung in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957496"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794292"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
@@ -69,7 +69,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
  SQL Server bietet Windows-Kenn Wort Richtlinien Mechanismen für SQL Server Anmeldungen, wenn es unter [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] oder höheren Versionen ausgeführt wird. Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. SQL Server können die gleichen Komplexitäts-und Ablauf Richtlinien anwenden [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] , die in SQL Server verwendet werden.  
   
 > [!IMPORTANT]
-> Das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann zu einer Anfälligkeit für Angriffe durch Einschleusung von Verbindungszeichenfolgen führen. Verwenden Sie zum Erstellen syntaktisch gültiger Verbindungszeichenfolgen zur Laufzeit den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann zu einer Anfälligkeit für Angriffe durch Einschleusung von Verbindungszeichenfolgen führen. Verwenden Sie zum Erstellen syntaktisch gültiger Verbindungszeichenfolgen zur Laufzeit den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
@@ -80,8 +80,8 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Aufbauen der Verbindung zu einer Datenquelle](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Aufbauen der Verbindung zu einer Datenquelle](../connecting-to-a-data-source.md)
+- [Verbindungszeichenfolgen](../connection-strings.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

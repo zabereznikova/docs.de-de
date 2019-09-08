@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 2548ad9382b406978dac0a3d366207626278f501
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5e4a36829107480a44980c7210b39c21231c67f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205133"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786456"
 ---
 # <a name="creating-autoincrement-columns"></a>Erstellen von AutoIncrement-Spalten
 Um sicherzustellen, dass die Werte in einer Spalte eindeutig sind, können Sie festlegen, dass die Spaltenwerte automatisch erhöht werden, wenn der Tabelle neue Zeilen hinzugefügt werden. Um eine automatische Inkrementierung <xref:System.Data.DataColumn>zu erstellen, legen Sie die <xref:System.Data.DataColumn.AutoIncrement%2A> -Eigenschaft der Spalte auf **true**fest. Der <xref:System.Data.DataColumn> beginnt dann mit dem Wert, der in <xref:System.Data.DataColumn.AutoIncrementSeed%2A> der-Eigenschaft definiert ist, und mit jeder hinzugefügten Zeile wird der Wert der **AutoIncrement** -Spalte <xref:System.Data.DataColumn.AutoIncrementStep%2A> um den in der-Eigenschaft der Spalte definierten Wert vergrößert.  
@@ -40,4 +40,4 @@ workColumn.AutoIncrementStep = 3;
 - <xref:System.Data.DataColumn>
 - [DataTable-Schemadefinition](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

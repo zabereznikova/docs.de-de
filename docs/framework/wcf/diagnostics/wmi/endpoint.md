@@ -2,12 +2,12 @@
 title: Endpunkt
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03c401358839671d750985b95b1aada599931aad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963604"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795908"
 ---
 # <a name="endpoint"></a>Endpunkt
 Endpunkt  
@@ -37,7 +37,7 @@ class Endpoint
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Ruft den Instanznamen des Vorgangsleistungsindikators ab.|  
+|[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|Ruft den Instanznamen des Vorgangsleistungsindikators ab.|  
   
 ## <a name="properties"></a>Eigenschaften  
  Die Endpoint-Klasse verfügt über die folgenden Eigenschaften:  
@@ -71,7 +71,7 @@ class Endpoint
  Die Anwendungsdomänen-ID der Anwendungsdomäne, von der der Endpunkt gehostet wird.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-array  
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   

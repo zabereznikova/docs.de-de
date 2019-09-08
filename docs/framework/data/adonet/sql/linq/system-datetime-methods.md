@@ -2,12 +2,12 @@
 title: System.DateTime-Methoden
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876771"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792417"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime-Methoden
 Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften sind für LINQ to SQL-Abfragen verfügbar. Wenn eine Methode, ein Operator oder eine Eigenschaft nicht unterstützt wird, kann der Member von LINQ to SQL nicht für die Ausführung auf dem SQL Server übersetzt werden. Diese Member können trotzdem im Code verwendet werden. Sie müssen jedoch ausgewertet werden, bevor die Abfrage in Transact-SQL übersetzt wird oder nachdem die Ergebnisse aus der Datenbank abgerufen wurden.  
@@ -66,7 +66,7 @@ Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Abfragekonzepte](query-concepts.md)
+- [Erstellen des Objektmodells](creating-the-object-model.md)
+- [SQL-CLR-Typenzuordnung](sql-clr-type-mapping.md)
+- [Datentypen und Funktionen](data-types-and-functions.md)

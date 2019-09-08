@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742082"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777339"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest-Methode
-Gibt das endgültige Manifest an. Rufen Sie diese Methode auf, nachdem alle anderen Dateien importiert, und alle Optionen festgelegt. Rufen Sie diese Methode nicht für die ungebundenen Modulen.  
+Gibt das endgültige Manifest aus. Ruft diese Methode auf, nachdem alle anderen Dateien importiert und alle Optionen festgelegt wurden. Diese Methode darf nicht für ungebundene Module aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,19 +42,19 @@ HRESULT EmitManifest(
  Die ID der Assembly.  
   
  `pdwReserveSize`  
- Empfängt die Größe, die in der Assemblydatei Reservieren von abgerufen [StrongNameSignatureSize-Funktion](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ Empfängt die von der [StrongNameSignatureSize-Funktion](../strong-naming/strongnamesignaturesize-function.md)abgerufene Größe in der Assemblydatei.  
   
  `ptkManifest`  
- Empfängt optional das Assemblymanifesttoken.  
+ Empfängt optional das assemblymanifestoken.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

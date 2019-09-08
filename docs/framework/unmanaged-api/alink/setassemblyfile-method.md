@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741538"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777001"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile-Methode
-Weist den Namen der Assembly, die erstellt werden. Nicht für die Verwendung bei der Produktion ungebundener Modules.  
+Weist den Namen der Assembly zu, die erstellt werden soll. Nicht für die Verwendung beim Erstellen von ungebundenen Modulen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +39,13 @@ HRESULT SetAssemblyFile(
   
 ## <a name="parameters"></a>Parameter  
  `pszFilename`  
- Voll gekennzeichnete Name der Manifestdatei.  
+ Der voll qualifizierte Name der Manifest-Datei.  
   
  `pEmitter`  
- Zeiger auf [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) Schnittstelle.  
+ Zeiger auf die [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) -Schnittstelle.  
   
  `afFlags`  
- Flags gemäß [AssemblyFlags-Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ Flags, wie in [AssemblyFlags-Enumeration](../metadata/assemblyflags-enumeration.md)definiert.  
   
  `pAssemblyID`  
  Zeiger auf die ID der resultierenden Assembly.  
@@ -54,10 +54,10 @@ HRESULT SetAssemblyFile(
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

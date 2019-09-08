@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742149"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777460"
 ---
 # <a name="embedresource-method"></a>EmbedResource-Methode
-Deklariert eine eingebettete Ressource. Diese Methode können Sie die Ressource nicht tatsächlich einbetten.  
+Deklariert eine eingebettete Ressource. Diese Methode bettet die Ressource nicht ein.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,25 +44,25 @@ HRESULT EmbedResource(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei-Token "oder" Assembly-ID der Datei, die die Ressource enthält.  
+ Dateitoken oder Assembly-ID der Datei, die die Ressource enthält.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwOffset`  
- Der Offset der Ressource von RVA.  
+ Offset der Ressource von RVA.  
   
  `dwFlags`  
- Barrierefreiheit flags, z. B. `mrPublic` und `mrPrivate`. Diese Flags können übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Diese Flags können an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

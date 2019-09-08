@@ -2,12 +2,12 @@
 title: SQL Server und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: c58c6da7a6028c9167c73af820e922f59b528f15
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938096"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782330"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server und ADO.NET
 In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  
@@ -18,22 +18,22 @@ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für
 > Damit eine Anwendung den .NET Framework-Datenanbieter für SQL Server verwenden kann, muss sie wie folgt auf den <xref:System.Data.SqlClient>-Namespace verweisen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SQL Server Security (SQL Server-Sicherheit)](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server Security (SQL Server-Sicherheit)](sql-server-security.md)  
  Bietet eine Übersicht über die SQL Server-Sicherheitsfunktionen und Anwendungsszenarien zum Erstellen sicherer ADO.NET-Anwendungen, die auf SQL Server zugreifen.  
   
- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](sql-server-data-types.md)  
  Beschreibt, wie mit SQL Server-Datentypen gearbeitet wird und wie die Interaktion mit .NET Framework-Datentypen aussieht.  
   
- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](sql-server-binary-and-large-value-data.md)  
  Beschreibt das Arbeiten mit Daten für große Werte in SQL Server.  
   
- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](sql-server-data-operations.md)  
  Beschreibt das Arbeiten mit Daten in SQL Server. Enthält Abschnitte zu Massenkopiervorgängen, MARS, asynchronen Vorgängen und Tabellenwertparametern.  
   
- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](sql-server-features-and-adonet.md)  
  Beschreibt nützliche SQL Server-Funktionen für ADO.NET-Anwendungsentwickler.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](./linq/index.md)  
  Beschreibt die erforderlichen Grundbausteine, Prozesse und Techniken für das Erstellen von LINQ to SQL-Anwendungen.  
   
  Eine vollständige Dokumentation zur SQL Server-Datenbank-Engine finden Sie in der SQL Server-Onlinedokumentation für die von Ihnen verwendete SQL Server-Version.  
@@ -42,8 +42,8 @@ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Datentypzuordnungen in ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Datentypzuordnungen in ADO.NET](../data-type-mappings-in-ado-net.md)
+- [DataSets, DataTables und DataViews](../dataset-datatable-dataview/index.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../retrieving-and-modifying-data.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

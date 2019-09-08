@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751528"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796473"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity-Schnittstelle
-Dient als Enumerator für eine Auflistung von `IDefinitionIdentity` Objekte.  
+Dient als Enumerator für eine Auflistung von `IDefinitionIdentity` -Objekten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,19 +55,19 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Ruft einen Schnittstellenzeiger zu einem neuen `IEnumDefinitionIdentity` -Objekt, das dieselben Member wie diese enthält `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Ruft die angegebene Anzahl von `IDefinitionIdentity` Objekten, beginnend an der aktuellen Position.|  
-|`IEnumDefinitionIdentity::Reset`|Verschiebt den Anweisungszeiger an den Anfang `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Skip`|Verschiebt den Anweisungszeiger vorwärts durch die angegebene Anzahl von Elementen, die an der aktuellen Position ab.|  
+|`IEnumDefinitionIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf ein neues `IEnumDefinitionIdentity` -Objekt ab, das dieselben Member wie `IEnumDefinitionIdentity`dieses enthält.|  
+|`IEnumDefinitionIdentity::Next`|Ruft die angegebene Anzahl von `IDefinitionIdentity` -Objekten ab der aktuellen Position ab.|  
+|`IEnumDefinitionIdentity::Reset`|Verschiebt den Anweisungs Zeiger an den Anfang dieses `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Skip`|Verschiebt den Anweisungs Zeiger um die angegebene Anzahl von Elementen, beginnend an der aktuellen Position.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Isolation.h  
+ **Header:** Isolation. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [Fusion-Schnittstellen](fusion-interfaces.md)
+- [IDefinitionIdentity-Schnittstelle](idefinitionidentity-interface.md)

@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 52e11bd983a8c9155d90659834df03dea6449a8e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782474"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Verwenden von EXECUTE AS mit REVERT  
  Mit der Transact-SQL-REVERT-Anweisung  können Sie zum ursprünglichen Ausführungskontext zurückkehren.  
   
- Mit der optionalen-Klausel ohne Revert Cookie = @variableNamekann der Ausführungs Kontext zurück zum Aufrufer gewechselt werden, wenn @variableName die Variable den korrekten Wert enthält. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert von @variableName nur dem Aufrufer der EXECUTE AS-Anweisung bekannt ist, kann der Aufrufer sicherstellen, dass der Ausführungs Kontext vom Endbenutzer, der die Anwendung aufruft, nicht geändert werden kann. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungspooling in ADO.net finden Sie unter [SQL Server Verbindungspooling (ADO.net)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Mit der optionalen-Klausel ohne Revert Cookie = @variableNamekann der Ausführungs Kontext zurück zum Aufrufer gewechselt werden, wenn @variableName die Variable den korrekten Wert enthält. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert von @variableName nur dem Aufrufer der EXECUTE AS-Anweisung bekannt ist, kann der Aufrufer sicherstellen, dass der Ausführungs Kontext vom Endbenutzer, der die Anwendung aufruft, nicht geändert werden kann. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungspooling in ADO.net finden Sie unter [SQL Server Verbindungspooling (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Angeben des Ausführungskontexts  
  Neben dem Angeben eines Benutzers können Sie EXECUTE AS auch zusammen mit den folgenden Schlüsselwörtern verwenden.  
@@ -67,11 +67,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Ändern von Daten mit gespeicherten Prozeduren](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)
+- [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Schreiben von sicherem dynamischen SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Signieren von gespeicherten Prozeduren in SQL Server](signing-stored-procedures-in-sql-server.md)
+- [Ändern von Daten mit gespeicherten Prozeduren](../modifying-data-with-stored-procedures.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

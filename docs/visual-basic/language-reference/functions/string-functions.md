@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930849"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799325"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
-In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
+
+In der folgenden Tabelle sind die Funktionen aufgelistet, die Visual Basic <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> in der-Klasse zur Suche und Bearbeitung von Zeichen folgen bereitstellt. Sie können als Visual Basic intrinsische Funktionen angesehen werden. Das heißt, Sie müssen Sie nicht als explizite Member einer Klasse aufzurufen, wie in den Beispielen gezeigt. Zusätzliche Methoden und in einigen Fällen auch ergänzende Methoden sind in der <xref:System.String?displayProperty=nameWithType> -Klasse verfügbar. 
   
 |.NET Framework-Methode|Beschreibung|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
   
  Mithilfe der [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) -Anweisung können Sie festlegen, ob Zeichen folgen mithilfe einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung`Text`verglichen werden, die durch das Gebiets Schema des Systems (`Binary`) oder durch die internen binären Darstellungen der Zeichen () bestimmt wird. Die Standardmethode zum Textvergleich ist `Binary`.  
   
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
+## <a name="example-ucase"></a>Beispiel: UCase
+
+In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>Beispiel: LTrim
+
+In diesem Beispiel werden mit der `LTrim`-Funktion führende Leerzeichen und mit der `RTrim`-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt. Mit der `Trim`-Funktion werden beide Typen von Leerzeichen entfernt.  
   
-## <a name="example"></a>Beispiel  
- In diesem Beispiel werden mit der `LTrim`-Funktion führende Leerzeichen und mit der `RTrim`-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt. Mit der `Trim`-Funktion werden beide Typen von Leerzeichen entfernt.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>Beispiel: Mid
+
+In diesem Beispiel wird die `Mid`-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>Beispiel: Len
+
+In diesem Beispiel wird mit der `Len`-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.  
   
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `Mid`-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>Beispiel: InStr
+
+In diesem Beispiel wird die `InStr`-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.  
   
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird mit der `Len`-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>Beispiel  
- In diesem Beispiel wird die `InStr`-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten. Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes. Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
+## <a name="example-format"></a>Beispiel: Format
+
+Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten. Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes. Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
   
 > [!NOTE]
 > Für Gebietsschemas, die das 24-Stunden-Format verwenden, zeigen die AM/PM-Indikatoren (`t` und `tt`) nichts an.  
@@ -86,3 +92,4 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [System. String-Klassen Methoden]<xref:System.String#methods?displayProperty=nameWithType>

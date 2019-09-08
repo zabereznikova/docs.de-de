@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205050"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785403"
 ---
 # <a name="datatable-constraints"></a>DataTable-Einschränkungen
 Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTable> enthaltenen Daten einschränken, um die Datenintegrität zu erhalten. Eine Einschränkung ist eine automatische Regel, die auf eine Spalte oder zugehörige Spalten angewendet wird und die die Vorgehensweise beim Ändern des Werts einer Spalte festlegt. Einschränkungen werden erzwungen, wenn `System.Data.DataSet.EnforceConstraints` die-Eigenschaft <xref:System.Data.DataSet> von den Wert **true**hat. Ein Codebeispiel, in dem das Festlegen der `EnforceConstraints`-Eigenschaft veranschaulicht wird, finden Sie im <xref:System.Data.DataSet.EnforceConstraints%2A>-Referenzthema.  
   
- Es gibt zwei Arten von Einschränkungen in ADO.NET: die <xref:System.Data.ForeignKeyConstraint> und die <xref:System.Data.UniqueConstraint>. Standardmäßig werden beide Einschränkungen automatisch erstellt, wenn Sie eine Beziehung zwischen zwei oder mehr Tabellen erstellen, indem Sie <xref:System.Data.DataRelation> dem **DataSet**eine hinzufügen. Sie können dieses Verhalten jedoch deaktivieren, indem Sie = beim Erstellen der Beziehung die Angabe von "beim Erstellen von" "" "beim Erstellen von"  
+ Es gibt zwei Arten von Einschränkungen in ADO.NET: die <xref:System.Data.ForeignKeyConstraint> und die <xref:System.Data.UniqueConstraint>. Standardmäßig werden beide Einschränkungen automatisch erstellt, wenn Sie eine Beziehung zwischen zwei oder mehr Tabellen erstellen, indem Sie <xref:System.Data.DataRelation> dem **DataSet**eine hinzufügen. Sie können dieses Verhalten jedoch deaktivieren, indem**Sie beim Erstellen** der Beziehung **die Angabe** = von "beim Erstellen von" "" "beim Erstellen von"  
   
 ## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
  Eine fremd **Schlüssel Einschränkung** erzwingt Regeln für die Weitergabe von Updates und Löschungen in verknüpften Tabellen. Wenn z. b. ein Wert in einer Zeile einer Tabelle aktualisiert oder gelöscht wird und derselbe Wert auch in einer oder mehreren verknüpften Tabellen verwendet wird, bestimmt eine fremd **Schlüssel Einschränkung** , was in den verknüpften Tabellen passiert.  
@@ -31,7 +31,7 @@ Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTab
   
  Eine fremd **Schlüssel Einschränkung** kann die Änderungen an verknüpften Spalten einschränken und übertragen. Abhängig von den Eigenschaften, die für die fremd **Schlüssel Einschränkung** einer Spalte festgelegt sind, führt die Ausführung bestimmter Vorgänge in der übergeordneten Zeile zu einer Ausnahme, wenn die **EnforceConstraints** -Eigenschaft des **DataSets** auf **true**festgelegt ist. Wenn z. b. die **DeleteRule** -Eigenschaft der fremd **Schlüssel Einschränkung** **None**ist, kann eine übergeordnete Zeile nicht gelöscht werden, wenn Sie über untergeordnete Zeilen verfügt.  
   
- Sie können eine FOREIGN KEY-Einschränkung zwischen einzelnen Spalten oder zwischen einem Spalten Array erstellen, indem Sie den Foreign **nkeyeinschränkung** -Konstruktor verwenden. Übergeben Sie das resultierende **fremdkeyeinschränkungs** -Objekt an die **Add** -Methode der Einschränkungs Eigenschaft der Tabelle, bei der es sich um eine **Einschränkungs**Auflistung handelt. Sie können auch Konstruktorargumente an mehrere über Ladungen der **Add** -Methode einer Einschränkungs Auflistung übergeben, um eine fremd **Schlüssel Einschränkung**zu erstellen.  
+ Sie können eine FOREIGN KEY-Einschränkung zwischen einzelnen Spalten oder zwischen einem Spalten Array erstellen, indem Sie den Foreign **nkeyeinschränkung** -Konstruktor verwenden. Übergeben Sie das resultierende **fremdkeyeinschränkungs** -Objekt an die **Add** **-Methode** der Einschränkungs Eigenschaft der Tabelle, bei der es sich um eine **Einschränkungs**Auflistung handelt. Sie können auch Konstruktorargumente an mehrere über Ladungen der **Add** -Methode einer **Einschränkungs** Auflistung übergeben, um eine fremd **Schlüssel Einschränkung**zu erstellen.  
   
  Wenn Sie eine fremd **Schlüssel Einschränkung**erstellen, können Sie die Werte **DeleteRule** und **UpdateRule** als Argumente an den Konstruktor übergeben, oder Sie können Sie als Eigenschaften festlegen, wie im folgenden Beispiel dargestellt (wobei der **DeleteRule** -Wert auf **festgelegt ist. Keine**).  
   
@@ -70,7 +70,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
 ## <a name="uniqueconstraint"></a>UniqueConstraint  
- Das **UniqueConstraint** -Objekt, das entweder einer einzelnen Spalte oder einem Array von Spalten in einer **Daten**Tabelle zugewiesen werden kann, stellt sicher, dass alle Daten in den angegebenen Spalten pro Zeile eindeutig sind. Sie können eine Unique-Einschränkung für eine Spalte oder ein Array von Spalten erstellen, indem Sie den **UniqueConstraint** -Konstruktor verwenden. Übergeben Sie das sich ergebende **UniqueConstraint** -Objekt an die **Add** - Methode der Einschränkungs Eigenschaft der Tabelle, bei der es sich um eine **Einschränkungs**Auflistung handelt. Sie können auch Konstruktorargumente an mehrere über Ladungen der **Add** -Methode einer Einschränkungs Auflistung übergeben, um **UniqueConstraint**zu erstellen. Beim Erstellen eines **UniqueConstraint** für eine Spalte oder Spalten können Sie optional angeben, ob es sich bei der Spalte oder den Spalten um einen Primärschlüssel handelt.  
+ Das **UniqueConstraint** -Objekt, das entweder einer einzelnen Spalte oder einem Array von Spalten in einer **Daten**Tabelle zugewiesen werden kann, stellt sicher, dass alle Daten in den angegebenen Spalten pro Zeile eindeutig sind. Sie können eine Unique-Einschränkung für eine Spalte oder ein Array von Spalten erstellen, indem Sie den **UniqueConstraint** -Konstruktor verwenden. Übergeben Sie das **sich ergebende** **UniqueConstraint** -Objekt an die **Add** -Methode der Einschränkungs Eigenschaft der Tabelle, bei der es sich um eine **Einschränkungs**Auflistung handelt. Sie können auch Konstruktorargumente an mehrere über Ladungen der **Add** -Methode einer **Einschränkungs** Auflistung übergeben, um **UniqueConstraint**zu erstellen. Beim Erstellen eines **UniqueConstraint** für eine Spalte oder Spalten können Sie optional angeben, ob es sich bei der Spalte oder den Spalten um einen Primärschlüssel handelt.  
   
  Sie können auch eine Unique-Einschränkung für eine Spalte erstellen, indem Sie die **Unique** -Eigenschaft der Spalte auf **true**festlegen. Wenn Sie die **Unique** -Eigenschaft einer einzelnen Spalte auf **false** festlegen, werden alle ggf. vorhandenen eindeutigen Einschränkungen entfernt. Durch das Definieren einer oder mehrerer Spalten als Primärschlüssel für eine Tabelle wird automatisch eine eindeutige Einschränkung für die angegebene(n) Spalte(n) erstellt. Wenn Sie eine Spalte aus der **PrimaryKey** -Eigenschaft einer **Daten**Tabelle entfernen, wird **UniqueConstraint** entfernt.  
   
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [DataTable-Schemadefinition](datatable-schema-definition.md)
 - [DataSets, DataTables und DataViews](index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

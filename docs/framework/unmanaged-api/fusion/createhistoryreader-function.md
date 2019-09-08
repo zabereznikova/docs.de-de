@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778418"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795364"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader-Funktion
-Erstellt einen Verlauf Leser für die angegebene Datei.  
+Erstellt einen Verlaufs Leser für die angegebene Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>Parameter  
  `wzFilePath`  
- [in] Der Dateipfad.  
+ in Der Dateipfad.  
   
  `ppHistoryReader`  
- [out] Bei erfolgreichem Abschluss können Sie einen Zeiger auf den Verlaufsreader enthält.  
+ vorgenommen Nach erfolgreichem Abschluss enthält einen Zeiger auf den Verlaufs Leser.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt die standard-COM-Fehlercodes zurück, wie definiert in "Winerror.h", zusätzlich zu den Werten in der folgenden Tabelle beschrieben.  
+ Diese Methode gibt zusätzlich zu den in der folgenden Tabelle beschriebenen Werten com-Standard Fehlercodes zurück, die in WinError. h definiert sind.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
-|S_OK|Gibt an, dass die Methode erfolgreich abgeschlossen.|  
-|E_INVALIDARG|Gibt an, dass `wzFilePath` oder `ppHistoryReader` auf einen null-Verweis festgelegt sind.|  
+|S_OK|Gibt an, dass die Methode erfolgreich abgeschlossen wurde.|  
+|E_INVALIDARG|Gibt an `wzFilePath` , `ppHistoryReader` dass oder auf einen NULL-Verweis festgelegt ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Bibliothek:** Fusion.dll  
+ **Fern** Fusion. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038258"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798539"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 
@@ -79,7 +79,7 @@ Handles können für Eigenschaften aller anderen Datentypen als `CIM_OBJECT` und
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** WMINet_Utils.idl
 

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 42e7a715c8137574bff617715c1f174314080131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6b1eba063c9ec72ae14c12028dd0950b2ad95f5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943615"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793523"
 ---
 # <a name="how-to-map-database-relationships"></a>Vorgehensweise: Zuordnen von Datenbankbeziehungen
 Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverweise codieren, die stets gleich bleiben. Da Kunden in der Beispieldatenbank Northwind typischerweise Bestellungen übermitteln, besteht im Modell stets eine Beziehung zwischen Kunden und deren Bestellungen.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]definiert ein <xref:System.Data.Linq.Mapping.AssociationAttribute> Attribut, das die Darstellung solcher Beziehungen unterstützt. Dieses Attribut wird zusammen mit dem <xref:System.Data.Linq.EntitySet%601>-Typ und dem <xref:System.Data.Linq.EntityRef%601>-Typ verwendet, um eine Fremdschlüsselbeziehung in einer Datenbank darzustellen. Weitere Informationen finden Sie im Abschnitt Association Attribute ( [Attribut basierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]definiert ein <xref:System.Data.Linq.Mapping.AssociationAttribute> Attribut, das die Darstellung solcher Beziehungen unterstützt. Dieses Attribut wird zusammen mit dem <xref:System.Data.Linq.EntitySet%601>-Typ und dem <xref:System.Data.Linq.EntityRef%601>-Typ verwendet, um eine Fremdschlüsselbeziehung in einer Datenbank darzustellen. Weitere Informationen finden Sie im Abschnitt Association Attribute ( [Attribut basierte Zuordnung](attribute-based-mapping.md)).  
   
 > [!NOTE]
 > Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen, auch für solche, bei denen die Groß-/Kleinschreibung nicht beachtet wird, einschließlich Visual Basic. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
@@ -26,12 +26,12 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
   
      Angenommen `Customer` , eine - `Customer` Beziehung wird erstellt, sodass der Sicherheitscode des Kunden nicht in der Tabelle gefunden wird und nur autorisierte Personen darauf zugreifen können. `SecurityCode`  
   
-- M:n-Zahl: Bei m:n-Beziehungen wird der Primärschlüssel der Verknüpfungs Tabelle (auch als Verknüpfungs Tabelle bezeichnet) häufig durch eine zusammengesetzte der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
+- M:n-Zahl: Bei m:n-Beziehungen wird der Primärschlüssel der Verknüpfungs Tabelle (auch als Verknüpfungs *Tabelle bezeichnet* ) häufig durch eine zusammengesetzte der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
   
      Stellen Sie sich z. `Employee` b. eine m:n-Beziehung vor, die `EmployeeProject` - `Project` mit Link Table erstellt wurde. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung unter Verwendung von drei Klassen modelliert wird: `Employee`, `Project` und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
   
     > [!NOTE]
-    > Beziehungen in relationalen Datenbanken werden typischerweise als Fremdschlüsselwerte modelliert, die sich auf Fremdschlüssel in anderen Dateien beziehen. Um zwischen Ihnen zu navigieren, ordnen Sie die beiden Tabellen explizit zu, indem Sie einen relationalen Joinvorgang verwenden.  
+    > Beziehungen in relationalen Datenbanken werden typischerweise als Fremdschlüsselwerte modelliert, die sich auf Fremdschlüssel in anderen Dateien beziehen. Um zwischen Ihnen zu navigieren, ordnen Sie die beiden Tabellen explizit zu, indem Sie *einen relationalen* Joinvorgang verwenden.  
     >   
     >  Objekte in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]hingegen verweisen einander mithilfe von Eigenschafts verweisen oder Auflistungen von verweisen, die Sie mithilfe der *Punkt* Notation navigieren.  
   
@@ -48,12 +48,12 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
  Sie können die Situation auch umkehren. Anstelle der Verwendung der `Customer`-Klasse zur Beschreibung der Zuordnung von Kunden und Bestellungen können Sie die `Order`-Klasse verwenden. Die `Order`-Klasse verwendet den <xref:System.Data.Linq.EntityRef%601>-Typ, um die Beziehung zurück zum Kunden zu beschreiben. Siehe hierzu das folgende Codebeispiel.  
   
 > [!NOTE]
-> Die <xref:System.Data.Linq.EntityRef%601> -Klasse unterstützt verzögertes *Laden*. Weitere Informationen *finden* Sie unter Verzögertes im [Vergleich zu unmittelbarem laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+> Die <xref:System.Data.Linq.EntityRef%601> -Klasse unterstützt *Verzögertes Laden*. Weitere Informationen *finden* Sie unter [Verzögertes im Vergleich zu unmittelbarem laden](deferred-versus-immediate-loading.md).  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Anpassen von Entitäts Klassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Vorgehensweise: Anpassen von Entitäts Klassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Das LINQ to SQL-Objektmodell](the-linq-to-sql-object-model.md)

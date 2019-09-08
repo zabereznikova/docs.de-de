@@ -2,20 +2,20 @@
 title: Erstellen eines BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b760f9373e64e153bd5a21469eb7a503283d35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587346"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795826"
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
-Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) der Ort, in dem das Anwendungsmodell Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist, sind. Ohne Bindungen erfordern benutzerdefinierte Kanäle Programmierung auf Kanalebene wie beschrieben in [Programmieren auf Kanalebene von Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Client Kanals auf Serverebene Programmierung](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderungen für die Aktivierung Ihres Kanals in die Entwicklung von WCF ein <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal und Verwendung von der Anwendung, wie in Schritt 4 beschrieben aktivieren [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Bindungen und Bindungs Elemente (Objekte, die <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> bzw <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. erweitern, sind die Stelle, an der das Windows Communication Foundation (WCF)-Anwendungsmodell Kanalfactorys und Kanallistener zugeordnet ist. Ohne Bindungen erfordert die Verwendung von benutzerdefinierten Kanälen die Programmierung auf Kanal Ebene, wie in Program [mieren auf Dienst Kanälen](service-channel-level-programming.md) und auf [Client Kanälen auf Kanal](client-channel-level-programming.md)Ebene beschrieben. In diesem Thema werden die Mindestanforderungen für die Aktivierung der Verwendung Ihres Kanals in WCF, die Entwicklung <xref:System.ServiceModel.Channels.BindingElement> eines für Ihren Kanal und die Verwendung von der Anwendung, wie in Schritt 4 der [Entwicklung von Kanälen](developing-channels.md)beschrieben, erläutert.  
   
 ## <a name="overview"></a>Übersicht  
- Erstellen einer <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal Entwickler ihn in eine WCF-Anwendung verwenden kann. <xref:System.ServiceModel.Channels.BindingElement> Objekte können verwendet werden, aus der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> Klasse, um einen WCF-Anwendung mit Ihrem Kanal eine Verbindung herstellen, ohne dem genauen Informationstyp Ihres Kanals.  
+ Wenn Sie <xref:System.ServiceModel.Channels.BindingElement> einen für Ihren Kanal erstellen, können Entwickler ihn in einer WCF-Anwendung verwenden. <xref:System.ServiceModel.Channels.BindingElement>-Objekte können von der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> -Klasse verwendet werden, um eine WCF-Anwendung mit Ihrem Channel zu verbinden, ohne die genauen Typinformationen Ihres Kanals zu benötigen.  
   
- Nach einem <xref:System.ServiceModel.Channels.BindingElement> wurde erstellt, Sie können mehr Funktionalität, die abhängig von Ihren Anforderungen durch die verbleibenden kanalentwicklungsschritte ausführen, die in beschriebenen folgenden [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
+ Nachdem ein <xref:System.ServiceModel.Channels.BindingElement> erstellt wurde, können Sie je nach Ihren Anforderungen weitere Funktionen aktivieren, indem Sie die verbleibenden Schritte für die Kanalentwicklung befolgen, die unter [entwickeln von Kanälen](developing-channels.md)beschrieben werden.  
   
 ## <a name="adding-a-binding-element"></a>Hinzufügen eines Bindungselements  
  Um ein benutzerdefiniertes <xref:System.ServiceModel.Channels.BindingElement> zu implementieren, schreiben Sie eine Klasse, die von <xref:System.ServiceModel.Channels.BindingElement> erbt. Wenn Sie beispielsweise einen `ChunkingChannel` entwickelt haben, der große Nachrichten segmentieren und sie am anderen Ende wieder zusammensetzen kann, können Sie diesen Kanal in jeder Bindung verwenden, indem Sie ein <xref:System.ServiceModel.Channels.BindingElement> implementieren und die Bindung für die entsprechende Verwendung konfigurieren. In diesem Thema wird der `ChunkingChannel` als Beispiel zur Demonstration der Implementierungsanforderungen eines Bindungselements verwendet.  
@@ -26,7 +26,7 @@ Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> hat zum Erstellen von `ChunkingChannelListener` und zur Übergabe an den inneren Kanallistener eine ähnliche Implementierung.  
   
- Ein weiteres Beispiel: einen Transportkanal der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel bietet die folgenden außer Kraft setzen.  
+ Ein weiteres Beispiel für die Verwendung eines Transport Kanals [ist der Transport: Das](../samples/transport-udp.md) UDP-Beispiel bietet die folgende außer Kraft Setzung.  
   
  Im Beispiel ist das Bindungselement `UdpTransportBindingElement`, das von <xref:System.ServiceModel.Channels.TransportBindingElement> abgeleitet wird. Es überschreibt die folgenden Methoden zum Erstellen der dem Kanal zugeordneten Factorys.  
   
@@ -45,7 +45,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Es enthält auch Member zum Klonen des `BindingElement` und Zurückgeben unseres Schemas (soap.udp).  
   
 #### <a name="protocol-binding-elements"></a>Protokollbindungselemente  
- Neue Bindungselemente können einbezogene Bindungselemente ersetzen oder erweitern sowie neue Transporte, Codierungen oder Protokolle auf höherer Ebene hinzufügen. Um ein neues Protokollbindungselement zu erstellen, erweitern Sie zunächst die <xref:System.ServiceModel.Channels.BindingElement>-Klasse. Zumindest müssen anschließend implementieren Sie die <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> und Implementieren der `ChannelProtectionRequirements` mit <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. Dadurch werden die <xref:System.ServiceModel.Security.ChannelProtectionRequirements> für dieses Bindungselement zurückgegeben.  Weitere Informationen finden Sie unter <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
+ Neue Bindungselemente können einbezogene Bindungselemente ersetzen oder erweitern sowie neue Transporte, Codierungen oder Protokolle auf höherer Ebene hinzufügen. Um ein neues Protokollbindungselement zu erstellen, erweitern Sie zunächst die <xref:System.ServiceModel.Channels.BindingElement>-Klasse. Sie müssen mindestens die <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> implementieren und `ChannelProtectionRequirements` mithilfe <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>von implementieren. Dadurch werden die <xref:System.ServiceModel.Security.ChannelProtectionRequirements> für dieses Bindungselement zurückgegeben.  Weitere Informationen finden Sie unter <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> sollte eine neue Kopie dieses Bindungselements zurückgeben. Es wird empfohlen, dass Autoren von Bindungselementen <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
   
@@ -54,25 +54,25 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Sollte eine neue Kopie dieses Bindungselements zurückgeben.  Es wird empfohlen, dass Autoren von Bindungselementen einen Klon implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – Die <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> get-Eigenschaft gibt das URI-Schema für das Transportprotokoll zurück, das vom Bindungselement dargestellt wird. Z. B. die <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> Zurückgeben von "http" und "net.tcp" von ihren jeweiligen <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Eigenschaften.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – Die <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> get-Eigenschaft gibt das URI-Schema für das Transportprotokoll zurück, das vom Bindungselement dargestellt wird. Beispielsweise <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> geben und "http" und "net. TCP" aus ihren jeweiligen <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Eigenschaften zurück.  
   
 #### <a name="encoding-binding-elements"></a>Codierungsbindungselemente  
  Um neue Codierungsbindungselemente zu erstellen, erweitern Sie zunächst die <xref:System.ServiceModel.Channels.BindingElement>-Klasse und implementieren die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>-Klasse. Anschließend müssen Sie mindestens die <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>-Methode, die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType>-Methode und die <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>-Eigenschaft implementieren.  
   
-- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Gibt eine neue Kopie dieses Bindungselements zurück. Es wird empfohlen, dass Autoren von Bindungselementen <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> Gibt eine neue Kopie dieses Bindungselements zurück. Es wird empfohlen, dass Autoren von Bindungselementen <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> implementieren, indem sie einen Kopierkonstruktor verwenden, der den Basisklassen-Kopierkonstruktor aufruft, und anschließend zusätzliche Felder in dieser Klasse klonen.  
   
-- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Gibt <xref:System.ServiceModel.Channels.MessageEncoderFactory> zurück, die ein Handle für eine tatsächliche Klasse bereitstellt, die den neuen Encoder implementiert und <xref:System.ServiceModel.Channels.MessageEncoder> erweitern sollte. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncoderFactory> und <xref:System.ServiceModel.Channels.MessageEncoder>.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> Gibt <xref:System.ServiceModel.Channels.MessageEncoderFactory> zurück, die ein Handle für eine tatsächliche Klasse bereitstellt, die den neuen Encoder implementiert und <xref:System.ServiceModel.Channels.MessageEncoder> erweitern sollte. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncoderFactory> und <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
-- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Gibt die in dieser Codierung verwendete <xref:System.ServiceModel.Channels.MessageVersion> zurück, die die verwendeten Versionen von SOAP und WS-Adressierung darstellt.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A> Gibt die in dieser Codierung verwendete <xref:System.ServiceModel.Channels.MessageVersion> zurück, die die verwendeten Versionen von SOAP und WS-Adressierung darstellt.  
   
  Eine vollständige Liste optionaler Methoden und Eigenschaften zu benutzerdefinierten Codierungsbindungselementen finden Sie unter <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
- Weitere Informationen zum Erstellen eines neuen Bindungselements finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Weitere Informationen zum Erstellen eines neuen Bindungs Elements finden Sie unter [Erstellen benutzerdefinierter Bindungen](creating-user-defined-bindings.md).  
   
- Nachdem Sie ein Bindungselement für den Kanal erstellt haben, zurück zu den [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md) Thema finden, ob Sie Unterstützung der Konfigurationsdatei zu Ihrem Bindungselement hinzufügen möchten wenn "und" Gewusst wie: Hinzufügen von metadatenunterstützung für Veröffentlichung, und ob und wie eine benutzerdefinierte Bindung erstellen, die Ihr Bindungselement verwendet.  
+ Nachdem Sie ein Bindungs Element für Ihren Kanal erstellt haben, kehren Sie zum Thema [entwickeln von Kanälen](developing-channels.md) zurück, um zu sehen, ob Sie dem Bindungs Element Konfigurationsdatei Unterstützung hinzufügen möchten, ob und wie Sie Unterstützung für metadatenveröffentlichungen hinzufügen und ob und wie Erstellen Sie eine benutzerdefinierte Bindung, die das Bindungs Element verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Channels.BindingElement>
-- [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md)
-- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [Entwickeln von Kanälen](developing-channels.md)
+- [Personen UDP](../samples/transport-udp.md)

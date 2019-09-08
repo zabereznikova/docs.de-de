@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587506"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797200"
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
-Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
+Das Datenvertrag- *Ersatz* Zeichen ist eine erweiterte Funktion, die auf dem Daten Vertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
   
  Serialisierung und Deserialisierung werden mit dem Datenvertrag-Ersatzzeichen erreicht, wenn <xref:System.Runtime.Serialization.DataContractSerializer> zum Konvertieren aus .NET Framework in ein geeignetes Format, wie z. B. XML, verwendet wird. Das Datenvertrag-Ersatzzeichen kann auch verwendet werden, um die für Typen exportierten Metadaten zu ändern, wenn Metadatendarstellungen, wie z. B. XML Schema Documents (XSD), erstellt werden. Beim Importieren wird der Code aus den Metadaten erstellt, und das Ersatzzeichen kann in diesem Fall verwendet werden, um auch den generierten Code anzupassen.  
   
@@ -33,7 +33,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode ordnet einen Typ einem anderen zu. Diese Methode ist für Serialisierung, Deserialisierung, Import und Export erforderlich.  
   
- Die erste Aufgabe definiert, welche Typen anderen Typen zugeordnet werden. Zum Beispiel:  
+ Die erste Aufgabe definiert, welche Typen anderen Typen zugeordnet werden. Beispiel:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -54,15 +54,15 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize-Methode  
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode konvertiert die Instanz des ursprünglichen Typs in die Instanz des Ersatzzeichentyps. Die Methode ist für die Serialisierung erforderlich.  
   
- Der nächste Schritt besteht darin zu definieren, wie die physikalischen Daten von der ursprünglichen Instanz zur Ersatzzeicheninstanz erfolgen soll, indem die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode implementiert wird. Zum Beispiel:  
+ Der nächste Schritt besteht darin zu definieren, wie die physikalischen Daten von der ursprünglichen Instanz zur Ersatzzeicheninstanz erfolgen soll, indem die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode implementiert wird. Beispiel:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>-Methode wird aufgerufen, wenn ein Objekt serialisiert wird. Diese Methode überträgt Daten vom ursprünglichen Typ auf die Felder des Ersatzzeichentyps. Die Felder können den Ersatzzeichenfeldern direkt zugeordnet werden, oder in dem Ersatzzeichen können Bearbeitungen der ursprünglichen Daten gespeichert werden. Zu den Verwendungsmöglichkeiten zählen: direktes Zuordnen der Felder, Durchführen von Vorgängen an den Daten, die in den Ersatzzeichenfeldern gespeichert werden sollen, oder Speichern der XML des ursprünglichen Typs in dem Ersatzzeichenfeld.  
   
- Der `targetType`-Parameter verweist auf den deklarierten Typ des Members. Dieser Parameter ist der Ersatzzeichentyp, der durch die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode zurückgegeben wird. Vom Serialisierungsprogramm wird nicht erzwungen, dass das zurückgegebene Objekt diesem Typ zugeordnet werden kann. Die `obj` -Parameter ist der zu serialisierende Objekt, und wird in sein Ersatzzeichen konvertiert werden, bei Bedarf. Diese Methode muss den Eingabeobjekttyp zurückgeben, wenn das Ersatzzeichen das Objekt nicht behandelt. Andernfalls wird das neue Ersatzzeichenobjekt zurückgegeben. Das Ersatzzeichen wird nicht aufgerufen, wenn das Objekt NULL ist. Innerhalb dieser Methode werden möglicherweise zahlreiche Ersatzzeichenzuordnungen für verschiedene Instanzen definiert.  
+ Der `targetType`-Parameter verweist auf den deklarierten Typ des Members. Dieser Parameter ist der Ersatzzeichentyp, der durch die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>-Methode zurückgegeben wird. Vom Serialisierungsprogramm wird nicht erzwungen, dass das zurückgegebene Objekt diesem Typ zugeordnet werden kann. Der `obj` -Parameter ist das zu serialisierende Objekt und wird bei Bedarf in seinen Ersatz Zeichen konvertiert. Diese Methode muss den Eingabeobjekttyp zurückgeben, wenn das Ersatzzeichen das Objekt nicht behandelt. Andernfalls wird das neue Ersatzzeichenobjekt zurückgegeben. Das Ersatzzeichen wird nicht aufgerufen, wenn das Objekt NULL ist. Innerhalb dieser Methode werden möglicherweise zahlreiche Ersatzzeichenzuordnungen für verschiedene Instanzen definiert.  
   
- Wenn Sie ein <xref:System.Runtime.Serialization.DataContractSerializer> erstellen, können Sie es anweisen, Objektverweise beizubehalten. (Weitere Informationen finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Dazu wird der `preserveObjectReferences`-Parameter in seinem Konstruktor auf `true` festlegt. In diesem Fall wird das Ersatzzeichen für ein Objekt nur ein einziges Mal aufgerufen, weil alle nachfolgenden Serialisierungen lediglich den Verweis in den Stream schreiben. Wenn `preserveObjectReferences` auf `false` festgelegt wird, dann wird das Ersatzzeichen jedes Mal aufgerufen, wenn eine Instanz gefunden wird.  
+ Wenn Sie ein <xref:System.Runtime.Serialization.DataContractSerializer> erstellen, können Sie es anweisen, Objektverweise beizubehalten. (Weitere Informationen finden Sie unter [Serialisierung und Deserialisierung](../feature-details/serialization-and-deserialization.md).) Dazu wird der `preserveObjectReferences`-Parameter in seinem Konstruktor auf `true` festlegt. In diesem Fall wird das Ersatzzeichen für ein Objekt nur ein einziges Mal aufgerufen, weil alle nachfolgenden Serialisierungen lediglich den Verweis in den Stream schreiben. Wenn `preserveObjectReferences` auf `false` festgelegt wird, dann wird das Ersatzzeichen jedes Mal aufgerufen, wenn eine Instanz gefunden wird.  
   
  Wenn der Typ der serialisierten Instanz vom deklarierten Typ abweicht, werden Typinformationen in den Stream geschrieben, z. B. `xsi:type`, um die Deserialisierung der Instanz am anderen Ende zu ermöglichen. Dieser Prozess tritt unabhängig davon auf, ob das Objekt ersetzt wurde oder nicht.  
   
@@ -71,20 +71,20 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject-Methode  
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A>-Methode konvertiert die Ersatzzeichentypinstanz in die Instanz des ursprünglichen Typs. Sie ist für die Deserialisierung erforderlich.  
   
- Die nächste Aufgabe besteht darin zu definieren, wie die physikalischen Daten von der Ersatzzeicheninstanz zur ursprünglichen Instanz zugeordnet werden sollen. Zum Beispiel:  
+ Die nächste Aufgabe besteht darin zu definieren, wie die physikalischen Daten von der Ersatzzeicheninstanz zur ursprünglichen Instanz zugeordnet werden sollen. Beispiel:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
  Diese Methode wird nur während der Deserialisierung eines Objekts aufgerufen. Sie sorgt für die umgekehrte Datenzuordnung für die Deserialisierung vom Ersatzzeichentyp zum ursprünglichen Typ. Wie bei der `GetObjectToSerialize`-Methode gehören zu den Anwendungsmöglichkeiten das direkte Austauschen von Felddaten, das Durchführen von Vorgängen an den Daten und das Speichern der XML-Daten. Aufgrund von Änderungen während der Datenkonvertierung ergibt die Deserialisierung möglicherweise nicht immer die exakten Datenwerte aus dem Original.  
   
- Der `targetType`-Parameter verweist auf den deklarierten Typ des Members. Dieser Parameter ist der Ersatzzeichentyp, der durch die `GetDataContractType`-Methode zurückgegeben wird. Die `obj` Parameter verweist auf das Objekt, das deserialisiert wurde. Das Objekt kann zurück in seinen ursprünglichen Typ konvertiert werden, wenn es ersetzt wurde. Diese Methode gibt den Eingabeobjekttyp zurück, wenn das Ersatzzeichen das Objekt nicht behandelt. Andernfalls wird das deserialisierte Objekt zurückgegeben, sobald seine Konvertierung abgeschlossen ist. Wenn verschiedene Ersatzzeichentypen existieren, können Sie für jeden dieser Typen die Datenkonvertierung vom Ersatzzeichentyp in den Primärtyp bewirken, indem Sie jeden Typ und dessen Konvertierung angeben.  
+ Der `targetType`-Parameter verweist auf den deklarierten Typ des Members. Dieser Parameter ist der Ersatzzeichentyp, der durch die `GetDataContractType`-Methode zurückgegeben wird. Der `obj` -Parameter verweist auf das Objekt, das deserialisiert wurde. Das Objekt kann zurück in seinen ursprünglichen Typ konvertiert werden, wenn es ersetzt wurde. Diese Methode gibt den Eingabeobjekttyp zurück, wenn das Ersatzzeichen das Objekt nicht behandelt. Andernfalls wird das deserialisierte Objekt zurückgegeben, sobald seine Konvertierung abgeschlossen ist. Wenn verschiedene Ersatzzeichentypen existieren, können Sie für jeden dieser Typen die Datenkonvertierung vom Ersatzzeichentyp in den Primärtyp bewirken, indem Sie jeden Typ und dessen Konvertierung angeben.  
   
  Beim Zurückgeben eines Objekts werden die internen Objekttabellen mit dem von diesem Ersatzzeichen zurückgegebenen Objekt aktualisiert. Alle nachfolgenden Verweise auf eine Instanz rufen die Ersatzzeicheninstanz aus den Objekttabellen ab.  
   
  Im vorherigen Beispiel werden Objekte des Typs `InventorySurrogated` zurück in den ursprünglichen Typ `Inventory` konvertiert. In diesem Fall werden die Daten direkt von `InventorySurrogated` auf seine entsprechenden Felder in `Inventory` zurückübertragen. Da es keine Datenänderungen gibt, enthält jedes der Memberfelder dieselben Werte wie vor der Serialisierung.  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport-Methode  
- Beim Exportieren eines Schemas ist die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>-Methode optional. Sie wird verwendet, um zusätzliche Daten oder Hinweise in das exportierte Schema einzufügen. Zusätzliche Daten können auf Memberebene oder auf Typebene eingefügt werden. Zum Beispiel:  
+ Beim Exportieren eines Schemas ist die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>-Methode optional. Sie wird verwendet, um zusätzliche Daten oder Hinweise in das exportierte Schema einzufügen. Zusätzliche Daten können auf Memberebene oder auf Typebene eingefügt werden. Beispiel:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 ### <a name="processimportedtype-method"></a>ProcessImportedType-Methode  
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A>-Methode passt jeden aus dem Schemaimport erstellten Typ an. Diese Methode ist optional.  
   
- Beim Importieren eines Schemas ermöglicht diese Methode die Anpassung jeder importierten Typ- und Kompilierungsinformation. Zum Beispiel:  
+ Beim Importieren eines Schemas ermöglicht diese Methode die Anpassung jeder importierten Typ- und Kompilierungsinformation. Beispiel:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -131,17 +131,17 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes-Methode  
  Diese Methode gewinnt aus dem Schema definierte benutzerdefinierte Datentypen. Die Methode ist für den Import von Schemas optional.  
   
- Die Methode wird zu Beginn des Schemaexports und -imports aufgerufen. Die Methode gibt die benutzerdefinierten Datentypen zurück, die im exportierten oder importierten Schema verwendet werden. An die Methode wird ein <xref:System.Collections.ObjectModel.Collection%601> übergeben (der `customDataTypes`), wobei es sich um eine Sammlung von Typen handelt. Die Methode sollte dieser Sammlung zusätzliche bekannte Typen hinzufügen. Die bekannten benutzerdefinierten Datentypen werden benötigt, um die Serialisierung und Deserialisierung von benutzerdefinierten Daten mit dem <xref:System.Runtime.Serialization.DataContractSerializer> zu ermöglichen. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Die Methode wird zu Beginn des Schemaexports und -imports aufgerufen. Die Methode gibt die benutzerdefinierten Datentypen zurück, die im exportierten oder importierten Schema verwendet werden. An die Methode wird ein <xref:System.Collections.ObjectModel.Collection%601> übergeben (der `customDataTypes`), wobei es sich um eine Sammlung von Typen handelt. Die Methode sollte dieser Sammlung zusätzliche bekannte Typen hinzufügen. Die bekannten benutzerdefinierten Datentypen werden benötigt, um die Serialisierung und Deserialisierung von benutzerdefinierten Daten mit dem <xref:System.Runtime.Serialization.DataContractSerializer> zu ermöglichen. Weitere Informationen finden Sie unter [Data Contract Known Types](../feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementieren eines Ersatzzeichens  
- Um das Datenvertrag-Ersatzzeichen in WCF zu verwenden, müssen Sie einige besondere Prozeduren folgen.  
+ Um das Datenvertrag-Ersatz Zeichen innerhalb von WCF zu verwenden, müssen Sie einige besondere Prozeduren befolgen.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>So verwenden Sie ein Ersatzzeichen für die Serialisierung und Deserialisierung  
  Verwenden Sie das <xref:System.Runtime.Serialization.DataContractSerializer>, um die Serialisierung und die Deserialisierung von Daten mit dem Ersatzzeichen durchzuführen. Das <xref:System.Runtime.Serialization.DataContractSerializer> wird durch das <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> erstellt. Das Ersatzzeichen muss ebenfalls angegeben werden.  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>So implementieren Sie die Serialisierung und die Deserialisierung  
   
-1. Erstellen Sie eine Instanz des <xref:System.ServiceModel.ServiceHost> für Ihren Dienst. Vollständige Anweisungen dazu finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Erstellen Sie eine Instanz des <xref:System.ServiceModel.ServiceHost> für Ihren Dienst. Umfassende Anweisungen finden Sie unter [grundlegende WCF-Programmierung](../basic-wcf-programming.md).  
   
 2. Suchen Sie für jeden <xref:System.ServiceModel.Description.ServiceEndpoint> des angegebenen Diensthosts seine <xref:System.ServiceModel.Description.OperationDescription>.  
   
@@ -175,7 +175,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>So verwenden Sie ein Ersatzzeichen für den Metadatenexport  
- Standardmäßig wird beim Exportieren von Metadaten von WCF für einen Dienst muss sowohl WSDL und XSD-Schema generiert werden. Das Ersatzzeichen muss der Komponente <xref:System.Runtime.Serialization.XsdDataContractExporter> hinzugefügt werden, die für das Generieren des XSD-Schemas für Datenvertragstypen verantwortlich ist. Dazu verwenden Sie entweder ein Verhalten, das <xref:System.ServiceModel.Description.IWsdlExportExtension> implementiert, um das <xref:System.ServiceModel.Description.WsdlExporter> zu ändern, oder ändern Sie das zum Exportieren von Metadaten verwendete <xref:System.ServiceModel.Description.WsdlExporter> direkt.  
+ Beim Exportieren von Metadaten aus WCF für einen Dienst müssen standardmäßig sowohl das WSDL-als auch das XSD-Schema generiert werden. Das Ersatzzeichen muss der Komponente <xref:System.Runtime.Serialization.XsdDataContractExporter> hinzugefügt werden, die für das Generieren des XSD-Schemas für Datenvertragstypen verantwortlich ist. Dazu verwenden Sie entweder ein Verhalten, das <xref:System.ServiceModel.Description.IWsdlExportExtension> implementiert, um das <xref:System.ServiceModel.Description.WsdlExporter> zu ändern, oder ändern Sie das zum Exportieren von Metadaten verwendete <xref:System.ServiceModel.Description.WsdlExporter> direkt.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>So verwenden Sie ein Ersatzzeichen für den Metadatenexport  
   
@@ -198,4 +198,4 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Verwenden von Datenverträgen](../feature-details/using-data-contracts.md)

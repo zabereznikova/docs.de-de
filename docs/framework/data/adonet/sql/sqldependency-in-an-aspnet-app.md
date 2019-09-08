@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938455"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780719"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
 Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  
   
 > [!NOTE]
-> Im Beispielcode wird davon ausgegangen, dass Sie Abfrage Benachrichtigungen aktiviert haben, indem Sie die Skripts unter [Aktivieren von Abfrage Benachrichtigungen](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)ausführen.  
+> Im Beispielcode wird davon ausgegangen, dass Sie Abfrage Benachrichtigungen aktiviert haben, indem Sie die Skripts unter [Aktivieren von Abfrage Benachrichtigungen](enabling-query-notifications.md)ausführen.  
   
 ## <a name="about-the-sample-application"></a>Die Beispielanwendung  
  In der Beispielanwendung wird eine einzelne ASP.NET-Webseite verwendet, um Produktinformationen aus der **AdventureWorks** -SQL Server <xref:System.Web.UI.WebControls.GridView> -Datenbank in einem-Steuerelement anzuzeigen. Beim Laden der Seite schreibt der Code die aktuelle Zeit in ein <xref:System.Web.UI.WebControls.Label>-Steuerelement. Anschließend wird ein <xref:System.Web.Caching.SqlCacheDependency>-Objekt definiert, und es werden Eigenschaften für das <xref:System.Web.Caching.Cache>-Objekt festgelegt, um die Daten für bis zu drei Minuten zwischenzuspeichern. Der Code stellt dann eine Verbindung mit der Datenbank her und ruft die Daten ab. Wenn die Seite geladen ist und die Anwendung ausgeführt wird, ruft ASP.NET Daten aus dem Cache ab, die Sie anhand dessen verifizieren können, dass sich die Zeit auf der Seite nicht ändert. Wenn sich die überwachten Daten ändern, macht ASP.NET den Cache ungültig und füllt das `GridView`-Steuerelement mit frischen Daten auf. Dabei wird die im `Label`-Steuerelement angezeigte Zeit aktualisiert.  
@@ -59,5 +59,5 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Abfragebenachrichtigungen in SQL Server](query-notifications-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

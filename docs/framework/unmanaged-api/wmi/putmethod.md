@@ -1,6 +1,6 @@
 ---
-title: PutMethod-Funktion (Referenz zur nicht verwalteten API)
-description: Die PutMethod-Funktion erstellt eine Methode an.
+title: Putmethod-Funktion (Referenz zur nicht verwalteten API)
+description: Die Putmethod-Funktion erstellt eine-Methode.
 ms.date: 11/06/2017
 api_name:
 - PutMethod
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2b41cbbade9da5c2095309b9039b8ce2758f6f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758692"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798362"
 ---
-# <a name="putmethod-function"></a>PutMethod-Funktion
+# <a name="putmethod-function"></a>Putmethod-Funktion
 Erstellt eine Methode.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -44,57 +44,57 @@ HRESULT PutMethod (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`  
-[in] Der Name der Methode zu erstellen. 
+in Der Name der zu erstellenden Methode. 
 
 `lFlags`  
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pSignatureIn`  
-[in] Ein Zeiger auf eine Kopie der [__Parameters Systemklasse](/windows/desktop/WmiSdk/--parameters) , enthält die `in` Parameter für die Methode. Dieser Parameter wird ignoriert, wenn auf festgelegt `null`.  
+in Ein Zeiger auf eine Kopie der [__Parameters-System Klasse](/windows/desktop/WmiSdk/--parameters) , die die `in` Parameter für die Methode enthält. Dieser Parameter wird ignoriert, wenn auf `null`festgelegt.  
 
 `pSignatureOut`  
-[in]  Ein Zeiger auf eine Kopie der [__Parameters Systemklasse](/windows/desktop/WmiSdk/--parameters) , enthält die `out` Parameter für die Methode. Dieser Parameter wird ignoriert, wenn auf festgelegt `null`.
+in  Ein Zeiger auf eine Kopie der [__Parameters-System Klasse](/windows/desktop/WmiSdk/--parameters) , die die `out` Parameter für die Methode enthält. Dieser Parameter wird ignoriert, wenn auf `null`festgelegt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein oder mehrere Parameter sind ungültig. |
-| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Die `[in, out]` Methodenparameter angegeben wird, sowohl die *pInSignature* und *pOutSignature* Objekte verfügen über unterschiedliche Qualifizierer.
-| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Parameter der Methode fehlt die Angabe der **ID** Qualifizierer. |
-| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Die ID-Reihe, die die Parameter der Methode zugewiesen ist, nicht aufeinander folgende oder beginnt nicht bei 0. |
-| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Der Rückgabewert für eine Methode hat eine **ID** Qualifizierer. |
-| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Es wurde versucht, einen vorhandenen Methodennamen einer übergeordneten Klasse wiederverwendet, und die Signaturen stimmten nicht überein. |
-| `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Mindestens ein Parameter ist ungültig. |
+| `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Der `[in, out]` in den *pinsignature* -und *poutsignature* -Objekten angegebene Methoden Parameter verfügt über unterschiedliche Qualifizierer.
+| `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Bei einem Methoden Parameter fehlt die Spezifikation des **ID** -Qualifizierers. |
+| `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Die ID-Reihe, die den Methoden Parametern zugewiesen ist, ist nicht aufeinander folgt oder beginnt nicht bei 0. |
+| `WBEM_E_PARAMETER_ID_ON_RETVAL` | 0x80041039 | Der Rückgabewert einer Methode hat einen **ID** -Qualifizierer. |
+| `WBEM_E_PROPAGATED_METHOD` | 0x80041034 | Es wurde versucht, einen vorhandenen Methodennamen aus einer übergeordneten Klasse wiederzuverwenden, und die Signaturen stimmen nicht ab. |
+| `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich. |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) Methode.
+Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject::P utmethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) -Methode.
 
-Dieser Methodenaufruf wird nur unterstützt, wenn `ptr` ist die Definition einer CIM-Klasse. Bearbeitung der Methode ist nicht verfügbar [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.
+Dieser Methoden Aufrufwert wird nur `ptr` unterstützt, wenn eine CIM-Klassendefinition ist. Die Methoden Bearbeitung ist nicht in [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Zeigern verfügbar, die auf CIM-Instanzen verweisen.
 
-Benutzer können keine Methoden mit Namen erstellen, die mit einem Unterstrich beginnen oder enden. Dies ist für die Systemklassen und Eigenschaften reserviert.
+Benutzer können keine Methoden erstellen, deren Namen mit einem Unterstrich beginnen oder enden. Dies ist für System Klassen und-Eigenschaften reserviert.
 
-Für eine Methode die `in` und `out` Parameter werden als Eigenschaften in beschrieben [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Objekte.
+Für eine-Methode werden `in` die `out` Parameter und als Eigenschaften in [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Objekten beschrieben.
 
-Ein `[in/out]` Parameter definiert werden, indem Sie die gleiche Eigenschaft hinzufügen, auf beide Objekte verweist die `pInSignature` und `pOutSignature` Parameter. In diesem Fall die Eigenschaften verwenden dieselbe **ID** Wert des Qualifizierers.
+Ein `[in/out]` -Parameter kann definiert werden, indem die gleiche-Eigenschaft zu beiden-Objekten hinzu `pInSignature` gefügt `pOutSignature` wird, auf die die-und-Parameter zeigen In diesem Fall haben die Eigenschaften denselben **ID** -qualifiziererwert.
 
-Jede Eigenschaft im eine [__Parameters](/windows/desktop/WmiSdk/--parameters) Objekt außer Klasse `ReturnValue` benötigen eine **ID** Qualifizierer, eine nullbasierte numerischer Wert, der die Reihenfolge angibt, in der die Parameter angezeigt werden. Keine zwei Parameter haben den gleichen **ID** Wert und keine **ID** Wert übersprungen werden kann. Wenn eine der Bedingungen auftritt, die `PutMethod` -Funktion zurückgegeben `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`.
+Jede Eigenschaft in einem anderen [__Parameters](/windows/desktop/WmiSdk/--parameters) -Klassenobjekt `ReturnValue` als muss über einen **ID** -Qualifizierer verfügen, einem NULL basierten numerischen Wert, der die Reihenfolge angibt, in der die Parameter angezeigt werden. Zwei Parameter können nicht denselben **ID** -Wert haben, und es kann kein **ID** -Wert übersprungen werden. Wenn eine Bedingung auftritt, gibt `PutMethod` die Funktion `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS`zurück.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel finden Sie unter den [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) Methode.
+Ein Beispiel finden Sie unter der [IWbemClassObject::P utmethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) -Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

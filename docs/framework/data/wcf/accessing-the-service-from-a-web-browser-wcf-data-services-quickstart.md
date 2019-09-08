@@ -2,30 +2,30 @@
 title: Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780541"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 
-Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufgabe starten den WCF Data Services in Visual Studio und deaktivieren optional feedlesen im Webbrowser. Sie klicken Sie dann rufen den Dienst als auch Zugriff auf datendienstressourcen von HTTP GET-Anforderungen über einen Webbrowser an die verfügbar gemachten Ressourcen senden.
+Dies ist die zweite Aufgabe des WCF Data Services Schnellstarts. In dieser Aufgabe starten Sie den WCF Data Services aus Visual Studio und deaktivieren optional das Lesen von Feeds im Webbrowser. Anschließend rufen Sie das Dienst Definitions Dokument ab und greifen auf Datendienst Ressourcen zu, indem Sie HTTP GET-Anforderungen über einen Webbrowser an die verfügbar gemachten Ressourcen senden.
 
 > [!NOTE]
-> Standardmäßig weist Visual Studio dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. Weitere Informationen zum Festlegen eine bestimmten Portnummer in Visual Studio-Projekts finden Sie unter [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+> Standardmäßig weist Visual Studio dem `localhost`-URI auf dem Computer automatisch eine Portnummer zu. Für diese Aufgabe wird in den URI-Beispielen die Portnummer `12345` verwendet. Weitere Informationen zum Festlegen einer bestimmten Portnummer in Ihrem Visual Studio-Projekt finden Sie unter [Erstellen des Daten Dienstanbieter](creating-the-data-service.md).
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>So fordern Sie das Standarddienstdokument mithilfe von Internet Explorer an
 
-1. In Internet Explorer aus der **Tools** , wählen Sie im Menü **Internetoptionen**, klicken Sie auf die **Content** auf **Einstellungen**, und Deaktivieren von  **Die Feedleseanzeige einschalten**.
+1. Wählen Sie in Internet Explorer im **Menü Extras** die **Option Internet Optionen**aus, klicken Sie auf die Registerkarte **Inhalt** , klicken Sie auf **Einstellungen**, und deaktivieren Sie **Feed-Anzeige**aktivieren.
 
      Dadurch wird sichergestellt, dass das Lesen von Feeds deaktiviert ist. Wenn Sie diese Funktionalität nicht deaktivieren, behandelt der Webbrowser das zurückgegebene AtomPub-codierte Dokument als XML-Feed, statt die unformatierten XML-Daten anzuzeigen.
 
     > [!NOTE]
     > Wenn der Browser den Feed nicht als unformatierte XML-Daten anzeigen kann, sollten es dennoch möglich sein, den Feed als Quellcode der Seite anzuzeigen.
 
-2. Drücken Sie in Visual Studio die **F5** Schlüssel zum Starten des Debuggings der Anwendungs.
+2. Drücken Sie in Visual Studio die Taste **F5** , um mit dem Debuggen der Anwendung zu beginnen.
 
 3. Öffnen Sie auf dem lokalen Computer einen Webbrowser. Geben Sie in der Adressleiste den folgenden URI ein:
 
@@ -71,11 +71,11 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie haben erfolgreich die WCF Data Services über einen Webbrowser, mit der Browser HTTP GET-Anforderungen ausgegeben an angegebene Ressourcen zugegriffen hat. Mithilfe eines Webbrowsers können Sie leicht mit der Adressierungssyntax von Anforderungen experimentieren und die Ergebnisse anzeigen. Auf einen Produktionsdatendienst wird jedoch im Allgemeinen nicht mit dieser Methode zugegriffen. Normalerweise interagieren Anwendungen mit dem Datendienst über Anwendungscode oder Skriptsprachen. Als Nächstes erstellen Sie eine Clientanwendung, die Clientbibliotheken verwendet, um auf Datendienstressourcen zuzugreifen, als ob sie Common Language Runtime (CLR)-Objekte wären:
+Sie haben erfolgreich auf die WCF Data Services über einen Webbrowser zugegriffen, wobei der Browser HTTP GET-Anforderungen an angegebene Ressourcen ausgegeben hat. Mithilfe eines Webbrowsers können Sie leicht mit der Adressierungssyntax von Anforderungen experimentieren und die Ergebnisse anzeigen. Auf einen Produktionsdatendienst wird jedoch im Allgemeinen nicht mit dieser Methode zugegriffen. Normalerweise interagieren Anwendungen mit dem Datendienst über Anwendungscode oder Skriptsprachen. Als Nächstes erstellen Sie eine Clientanwendung, die Clientbibliotheken verwendet, um auf Datendienstressourcen zuzugreifen, als ob sie Common Language Runtime (CLR)-Objekte wären:
 
 > [!div class="nextstepaction"]
-> [Erstellen der .NET Framework-Clientanwendung](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+> [Erstellen der .NET Framework-Clientanwendung](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Zugreifen auf Datendienstressourcen](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Zugreifen auf Datendienstressourcen](accessing-data-service-resources-wcf-data-services.md)

@@ -2,22 +2,22 @@
 title: 'Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946945"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780988"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)
-Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Verwendung von Zuordnungen, um Fremdschlüssel Beziehungen in der Datenbank darzustellen.  
+Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Verwendung von *Zuordnungen* , um Fremdschlüssel Beziehungen in der Datenbank darzustellen.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseinstellungen geschrieben.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Sie müssen die exemplarische Vorgehensweise abgeschlossen [haben: Einfaches Objektmodell und Abfrage (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Diese exemplarische Vorgehensweise basiert auf jener und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest5.  
+ Sie müssen die exemplarische Vorgehensweise abgeschlossen [haben: Einfaches Objektmodell und Abfrage (C#)](walkthrough-simple-object-model-and-query-csharp.md). Diese exemplarische Vorgehensweise basiert auf jener und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest5.  
   
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst drei Hauptaufgaben:  
@@ -86,8 +86,8 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
 4. Drücken Sie die EINGABETASTE im Konsolenfenster, um das Debuggen zu stoppen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die nächste exemplarische Vorgehens[Weise (Exemplarische Vorgehensweise: Bearbeiten von DatenC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) veranschaulicht, wie Daten geändert werden. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
+ Die nächste exemplarische Vorgehens[Weise (Exemplarische Vorgehensweise: Bearbeiten von DatenC#(](walkthrough-manipulating-data-csharp.md))) veranschaulicht, wie Daten geändert werden. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Lernen durch exemplarische Vorgehensweisen](learning-by-walkthroughs.md)

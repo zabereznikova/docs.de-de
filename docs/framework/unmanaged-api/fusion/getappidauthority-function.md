@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 536f3249593333234f7f09921007b483fb80cf79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8471610008bee02c7cc4e7654b21d6aca5dcf53a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796285"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority-Funktion
-Ruft einen Zeiger auf ein [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) -Instanz, die Schlüssel für Anwendungsidentitäten und Verweise verwaltet.  
+Ruft einen Zeiger auf eine [IAppIdAuthority](iappidauthority-interface.md) -Instanz ab, die Schlüssel für Anwendungs Identitäten und-Verweise verwaltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT GetAppIdAuthority (
   
 ## <a name="parameters"></a>Parameter  
  `ppIAppIdAuthority`  
- [out] Das zurückgegebene `IAppIdAuthority` Zeiger.  
+ vorgenommen Der zurück `IAppIdAuthority` gegebene Zeiger.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Isolation.h  
+ **Header:** Isolation. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAppIdAuthority-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAppIdAuthority-Schnittstelle](iappidauthority-interface.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

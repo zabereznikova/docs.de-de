@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: af000d104a3b0821e69f11c1bce1392f04fe8f5e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5ede6e2cd52ad55f8c35a42d137044dd1ceea400
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203236"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785953"
 ---
 # <a name="row-error-information"></a>Zeilenfehlerinformationen
 Um nicht jedes Mal auf einen Zeilenfehler reagieren zu müssen, während Sie Werte in einer <xref:System.Data.DataTable> bearbeiten, können Sie der Zeile die Fehlerinformationen zur späteren Verwendung der Zeile hinzufügen. Das <xref:System.Data.DataRow>-Objekt stellt zu diesem Zweck für jede Zeile eine <xref:System.Data.DataRow.RowError%2A>-Eigenschaft bereit. Durch das Hinzufügen von Daten zur **RowError** -Eigenschaft einer **DataRow** wird die <xref:System.Data.DataRow.HasErrors%2A> -Eigenschaft der **DataRow** auf **true**festgelegt. Wenn die **DataRow** Teil einer **Daten**Tabelle ist und **DataRow. HasErrors** den Wert **true**hat, ist die **Datable. HasErrors** -Eigenschaft ebenfalls **true**. Dies gilt auch für das **DataSet** , zu dem die **Daten** Tabelle gehört. Beim Testen von Fehlern können Sie die **HasErrors** -Eigenschaft überprüfen, um zu ermitteln, ob den Zeilen Fehlerinformationen hinzugefügt wurden. Wenn **HasErrors** den Wert **true**hat, <xref:System.Data.DataTable.GetErrors%2A> können Sie die-Methode der **Daten** Tabelle verwenden, um nur die Zeilen mit Fehlern zurückzugeben und zu überprüfen, wie im folgenden Beispiel gezeigt.  
@@ -83,4 +83,4 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

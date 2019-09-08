@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c56b0168df6e4aee69b5d3e5fbbe027ca2c8974a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778443"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795384"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum-Funktion
-Ruft einen Zeiger auf ein [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) -Instanz, die die Objekte in der Assembly mit dem angegebenen auflisten kann [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
+Ruft einen Zeiger auf eine [IAssemblyEnum](iassemblyenum-interface.md) -Instanz ab, die die Objekte in der Assembly mit dem angegebenen [IAssemblyName](iassemblyname-interface.md)auflisten kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,34 +42,34 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>Parameter  
  `pEnum`  
- [out] Zeiger auf einen Speicherbereich, der den angeforderten enthält `IAssemblyEnum` Zeiger.  
+ vorgenommen Ein Zeiger auf einen Speicherort, der den `IAssemblyEnum` angeforderten Zeiger enthält.  
   
  `pUnkReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pUnkReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pUnkReserved`muss ein NULL-Verweis sein.  
   
  `pName`  
- [in] Die `IAssemblyName` der angeforderten Assembly. Dieser Name wird verwendet, um die Enumeration zu filtern. Es kann null, um alle Assemblys im globalen Assemblycache aufgelistet sein.  
+ in Der `IAssemblyName` der angeforderten Assembly. Dieser Name wird verwendet, um die-Enumeration zu filtern. Es kann NULL sein, um alle Assemblys im globalen Assemblycache aufzuzählen.  
   
  `dwFlags`  
- [in] Flags für das Verhalten des Enumerators geändert. Dieser Parameter enthält genau ein Bit aus dem [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) Enumeration.  
+ in Flags zum Ändern des Verhaltens des Enumerators. Dieser Parameter enthält genau ein Bit aus der [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) -Enumeration.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `dwFlags` Parameter enthält genau ein Bit aus dem `ASM_CACHE_FLAGS` Enumeration.  
+ Der `dwFlags` -Parameter enthält genau ein Bit aus `ASM_CACHE_FLAGS` der-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyEnum-Schnittstelle](iassemblyenum-interface.md)
+- [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
+- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)

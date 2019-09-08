@@ -2,15 +2,15 @@
 title: ODBC-Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: 51090ede73710afedf74e1d2b8b5363337426279
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6611ca35ab5e5b44fa9adacfe25593bb4a5b9c44
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584535"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783511"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC-Datentypzuordnungen
-Die folgende Tabelle zeigt die hergeleiteten .NET Framework-Typ für Datentypen von der .NET Framework-Datenanbieter für ODBC (<xref:System.Data.Odbc>). Die typisierten Accessormethoden für den <xref:System.Data.Odbc.OdbcDataReader> sind ebenfalls aufgeführt.  
+In der folgenden Tabelle wird der .NET Framework Typ abgeleitet für Datentypen aus der .NET Framework Datenanbieter für ODBC (<xref:System.Data.Odbc>) dargestellt. Die typisierten Accessormethoden für <xref:System.Data.Odbc.OdbcDataReader> werden ebenfalls aufgelistet.  
   
 |ODBC-Typ|.NET Framework-Typ|Typisierter .NET Framework-Accessor|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
@@ -37,5 +37,5 @@ Die folgende Tabelle zeigt die hergeleiteten .NET Framework-Typ für Datentypen 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

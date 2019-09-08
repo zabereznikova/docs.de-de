@@ -2,12 +2,12 @@
 title: XML-Schemaeinschränkungen und -beziehungen
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202987"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784184"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML-Schemaeinschränkungen und -beziehungen
 In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkungen (Unique-, Key-und keyref-Einschränkungen) und Beziehungen (mithilfe der **msdata: Relationship** -Anmerkung) angeben. In diesem Thema wird erklärt, wie die in einem XML-Schema angegebenen Einschränkungen und Beziehungen zum Generieren des <xref:System.Data.DataSet> interpretiert werden.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>Siehe auch
 
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

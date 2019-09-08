@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741786"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777368"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob-Methode
-Ruft die Win32-Ressourcen-Blob ab. Rufen Sie diese Methode nach dem Festlegen von Assemblyoptionen für die an.  
+Ruft das Win32-ressourcenblob ab. Diese Methode nach dem Festlegen der Assemblyoptionen aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,16 +44,16 @@ HRESULT GetWin32ResBlob(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei-Token verwendet, um den Namen der Datei, die beim Erstellen der Versionsressource der Win32-verwendet werden  
+ Datei Token, das zum Abrufen des Datei namens verwendet wird, der beim Erstellen der Win32-Versions Ressource verwendet wird.  
   
  `fDll`  
- TRUE, wenn die Datei eine DLL, eine EXE-Datei "false" ist.  
+ TRUE, wenn die Datei eine dll ist, false für eine exe-Datei.  
   
  `pszIconFile`  
- Symbol "optional" zum Einfügen in das Ressourcen-Blob.  
+ Optionales Symbol, das in das ressourcenblob eingefügt werden soll.  
   
  `ppResBlob`  
- Empfängt die Ressourcen-Blob.  
+ Empfängt das ressourcenblob.  
   
  `pcbResBlob`  
  Empfängt die Größe des BLOBs.  
@@ -62,10 +62,10 @@ HRESULT GetWin32ResBlob(
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

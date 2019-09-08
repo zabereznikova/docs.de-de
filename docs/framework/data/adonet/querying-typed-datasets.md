@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651739"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782967"
 ---
-# <a name="query-typed-datasets"></a>Abfragen von typisierten "DataSets"
+# <a name="query-typed-datasets"></a>Abfragen von typisierten Datasets
 
-Wenn das Schema der <xref:System.Data.DataSet> heißt Zeitpunkt der Anwendungskonzeptionierung, es wird empfohlen, dass Sie eine typisierte verwenden <xref:System.Data.DataSet> bei der Verwendung von LINQ to DataSet. Eine typisierte <xref:System.Data.DataSet> ist eine abgeleitete Klasse eine <xref:System.Data.DataSet>. Damit erbt sie alle Methoden, Ereignisse und Eigenschaften eines <xref:System.Data.DataSet>. Darüber hinaus eine typisierte <xref:System.Data.DataSet> stellt stark typisierte Methoden, Ereignisse und Eigenschaften bereit. Das heißt, dass Sie auf Tabellen und Spalten anhand ihres Namens zugreifen können und keine auflistungsbasierten Methoden verwenden müssen. Dadurch werden Abfragen einfacher und lesbarer. Weitere Informationen finden Sie unter [typisierter DataSets](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+Wenn das Schema <xref:System.Data.DataSet> der zum Zeitpunkt der Anwendungs Entwurfszeit bekannt ist, empfiehlt es sich, bei Verwendung <xref:System.Data.DataSet> von LINQ to DataSet eine typisierte zu verwenden. Ein typisierter <xref:System.Data.DataSet> ist eine Klasse, die von <xref:System.Data.DataSet>einem abgeleitet ist. Damit erbt sie alle Methoden, Ereignisse und Eigenschaften eines <xref:System.Data.DataSet>. Darüber hinaus stellt ein <xref:System.Data.DataSet> typisiertes stark typisierte Methoden, Ereignisse und Eigenschaften bereit. Das heißt, dass Sie auf Tabellen und Spalten anhand ihres Namens zugreifen können und keine auflistungsbasierten Methoden verwenden müssen. Dadurch werden Abfragen einfacher und lesbarer. Weitere Informationen finden Sie unter [typisierte Datasets](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ to DataSet ebenfalls unterstützt Abfragen von Daten in einem typisierten <xref:System.Data.DataSet>. Mit einer typisierten <xref:System.Data.DataSet>, Sie müssen nicht die generischen <xref:System.Data.DataRowExtensions.Field%2A> Methode oder <xref:System.Data.DataRowExtensions.SetField%2A> Methode, um Spaltendaten zugreifen zu können. Eigenschaftennamen sind zum Zeitpunkt der Kompilierung verfügbar, da die Typinformationen, in enthalten ist der <xref:System.Data.DataSet>. LINQ to DataSet bietet Zugriff auf Spaltenwerte als korrektem Typ, ein, sodass Typkonflikte abgefangen werden, wenn der Code statt zur Laufzeit kompiliert wird.
+LINQ to DataSet unterstützt auch das Abfragen über ein <xref:System.Data.DataSet>typisiertes. Bei einem typisierten <xref:System.Data.DataSet>müssen Sie die generische <xref:System.Data.DataRowExtensions.Field%2A> Methode oder <xref:System.Data.DataRowExtensions.SetField%2A> Methode nicht verwenden, um auf Spaltendaten zuzugreifen. Eigenschaftsnamen sind zum Zeitpunkt der Kompilierung verfügbar, da die Typinformationen <xref:System.Data.DataSet>in enthalten sind. LINQ to DataSet bietet Zugriff auf Spaltenwerte als korrekten Typ, sodass Typen Konflikt Fehler abgefangen werden, wenn der Code statt zur Laufzeit kompiliert wird.
 
-Bevor Sie beginnen können, eine typisierte Abfrage <xref:System.Data.DataSet>, müssen Sie die Klasse generieren, mit der **DataSet-Designer** in Visual Studio. Weitere Informationen finden Sie unter [erstellen und Konfigurieren von DataSets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Bevor Sie mit dem Abfragen eines typisierten <xref:System.Data.DataSet>beginnen können, müssen Sie die-Klasse mithilfe des **DataSet-Designers** in Visual Studio generieren. Weitere Informationen finden Sie unter [Erstellen und Konfigurieren von Datasets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
 
 ## <a name="example"></a>Beispiel
 
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Tabellenübergreifende Abfragen](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Abfragen für einzelne Tabellen](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [Abfragen von DataSets](querying-datasets-linq-to-dataset.md)
+- [Tabellenübergreifende Abfragen](cross-table-queries-linq-to-dataset.md)
+- [Abfragen für einzelne Tabellen](single-table-queries-linq-to-dataset.md)

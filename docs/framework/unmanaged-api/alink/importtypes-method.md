@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777095"
 ---
 # <a name="importtypes-method"></a>ImportTypes-Methode
-Initiiert das Importieren von Typen aus jedem Bereich über importiert [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Initiiert den Import von Typen aus jedem Bereich, der über die [ImportFile-Methode](importfile-method.md)importiert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der Assembly zu importieren.  
+ Die ID der Assembly, in die importiert werden soll.  
   
  `FileToken`  
- Die ID der Datei zum Importieren aus.  
+ Die ID der Datei, aus der importiert werden soll.  
   
  `dwScope`  
- Nullbasierte Bereich importiert.  
+ NULL basierter Gültigkeitsbereich, der importiert werden soll.  
   
  `phEnum`  
- Enumeratorhandle für die Typen empfängt in diesem Bereich.  
+ Empfängt das Enumeratorhandle für die Typen in diesem Bereich.  
   
  `ppImportScope`  
- Empfängt optional [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) Schnittstelle.  
+ Empfängt optional die [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) -Schnittstelle.  
   
  `pdwCountOfTypes`  
- Empfängt optional die Anzahl der Typen im angegebenen Bereich.  
+ Empfängt optional die Anzahl der Typen im aufgeführten Bereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

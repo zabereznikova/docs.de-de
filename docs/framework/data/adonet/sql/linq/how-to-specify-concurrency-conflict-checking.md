@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
-ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd3db5eb5dc9b74d8ea33af56dd522cf2f3fecdb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033682"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781587"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>Vorgehensweise: Angeben von Parallelitätskonfliktüberprüfungen
-Sie können festlegen, welche Datenbankspalten auf Parallelitätskonflikte geprüft werden, wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
+Sie können festlegen, welche Datenbankspalten auf Parallelitätskonflikte geprüft werden, wenn Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen. Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie an, welche Member auf Parallelitäts](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)Konflikte getestet werden.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code gibt an, dass der `HomePage`-Member nie während der Updateprüfungen getestet werden sollte. Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  
@@ -23,5 +23,5 @@ Sie können festlegen, welche Datenbankspalten auf Parallelitätskonflikte gepr�
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Das LINQ to SQL-Objektmodell](the-linq-to-sql-object-model.md)
+- [Vorgehensweise: Anpassen von Entitäts Klassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)

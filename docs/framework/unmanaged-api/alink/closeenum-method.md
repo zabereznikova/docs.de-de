@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b6c839cc664105149f26b0d21d7ba7fb91b3e29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d9529022eb04c81152dced5c63f255c510851a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742199"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777471"
 ---
 # <a name="closeenum-method"></a>CloseEnum-Methode
-Schließt die angegebene Enumeration und die zugeordneten Ressourcen freigegeben.  
+Schließt die angegeben Enumeration und gibt zugeordnete Ressourcen frei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT CloseEnum(
   
 ## <a name="parameters"></a>Parameter  
  `hEnum`  
- Handle der Enumeration, die geschlossen werden.  
+ Handle der Enumeration, die geschlossen werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

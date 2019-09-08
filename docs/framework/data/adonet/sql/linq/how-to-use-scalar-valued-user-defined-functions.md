@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-ms.openlocfilehash: 0d757e3c37f347014eb2ef90b4e61ddd205dd012
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: da4e5e8fe4682191a0c8e2b0ce6a7b945fe63deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938664"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781475"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Vorgehensweise: Verwenden von benutzerdefinierten Skalarwertfunktionen
 Sie können eine Clientmethode für eine Klasse einer benutzerdefinierten Funktion zuweisen. Verwenden Sie hierfür das <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut. Beachten Sie, dass der Hauptteil der Methode einen Ausdruck erstellt, der die Absicht des Methodenaufrufs erfasst und diesen Ausdruck zur Übersetzung und Ausführung an den <xref:System.Data.Linq.DataContext> weiterleitet.  
   
 > [!NOTE]
-> Die direkte Ausführung tritt nur auf, wenn die Funktion außerhalb einer Abfrage aufgerufen wird. Weitere Informationen finden Sie unter [Vorgehensweise: Inline](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)Aufrufe von benutzerdefinierten Funktionen.  
+> Die direkte Ausführung tritt nur auf, wenn die Funktion außerhalb einer Abfrage aufgerufen wird. Weitere Informationen finden Sie unter [Vorgehensweise: Inline](how-to-call-user-defined-functions-inline.md)Aufrufe von benutzerdefinierten Funktionen.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende SQL-Code zeigt eine benutzerdefinierte Skalarwertfunktion: `ReverseCustName()`.  
@@ -39,4 +39,4 @@ END
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Benutzerdefinierte Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Benutzerdefinierte Funktionen](user-defined-functions.md)

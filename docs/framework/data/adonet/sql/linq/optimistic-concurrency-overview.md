@@ -2,12 +2,12 @@
 title: 'Optimistische Nebenläufigkeit: Übersicht'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792927"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optimistische Nebenläufigkeit: Übersicht
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung der vollständigen Parallelität. In der folgenden Tabelle werden die Begriffe beschrieben, die für optimistische Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der-Dokumentation gelten  
@@ -44,26 +44,26 @@ ms.locfileid: "69938633"
 |User1|Alfred||Marketing|  
 |User2||Mary|Dienst|  
   
- Sie können Konflikte wie diesen auf verschiedene Weise lösen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungs](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)Konflikten.  
+ Sie können Konflikte wie diesen auf verschiedene Weise lösen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungs](how-to-manage-change-conflicts.md)Konflikten.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Checkliste für Konflikterkennung und -behebung  
  Sie können Konflikte auf jeder Detailebene erkennen und beheben. Einerseits können Sie alle Konflikte auf eine von drei Arten beheben (siehe <xref:System.Data.Linq.RefreshMode>). Hierbei müssen keine weiteren Aspekte berücksichtigt werden. Andererseits können Sie für jeden Konflikttyp bei jedem Member eine bestimmte Aktion zuweisen.  
   
 - Definieren oder überarbeiten Sie die <xref:System.Data.Linq.Mapping.UpdateCheck>-Optionen in Ihrem Objektmodell.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie an, welche Member auf Parallelitäts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)Konflikte getestet werden.  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie an, welche Member auf Parallelitäts](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)Konflikte getestet werden.  
   
 - Im Try/Catch-Block Ihres Aufrufs für <xref:System.Data.Linq.DataContext.SubmitChanges%2A> können Sie angeben, zu welchem Zeitpunkt die Ausnahmen ausgelöst werden sollen.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie an, wann Parallelitäts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)Ausnahmen ausgelöst werden.  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie an, wann Parallelitäts](how-to-specify-when-concurrency-exceptions-are-thrown.md)Ausnahmen ausgelöst werden.  
   
 - Ermitteln Sie, wie viele Konfliktdetails Sie abrufen möchten, und gestalten Sie den Try/Catch-Block entsprechend.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Entitäts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) Konflikt [Informationen und Gewusst wie: Abrufen von Element Konflikt](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)Informationen.  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Entitäts](how-to-retrieve-entity-conflict-information.md) Konflikt [Informationen und Gewusst wie: Abrufen von Element Konflikt](how-to-retrieve-member-conflict-information.md)Informationen.  
   
 - Fügen Sie in `try` Ihren / `catch` Code ein, wie Sie die verschiedenen Konflikte lösen möchten, die Sie entdecken.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Auflösen von Konflikten durch Beibehalten von](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)Daten [bankwerten, Vorgehensweise: Auflösen von Konflikten durch Überschreiben von](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)Daten bankwerten und [Gewusst wie: Auflösen von Konflikten durch Zusammenführen von](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)Daten bankwerten.  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Auflösen von Konflikten durch Beibehalten von](how-to-resolve-conflicts-by-retaining-database-values.md)Daten [bankwerten, Vorgehensweise: Auflösen von Konflikten durch Überschreiben von](how-to-resolve-conflicts-by-overwriting-database-values.md)Daten bankwerten und [Gewusst wie: Auflösen von Konflikten durch Zusammenführen von](how-to-resolve-conflicts-by-merging-with-database-values.md)Daten bankwerten.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ to SQL-Typen, die Konfliktermittlung und -behebung unterstützen  
  Zu den Klassen und Funktionen, die die Behebung von Konflikten bei der vollständigen Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen, zählen:  
@@ -90,4 +90,4 @@ ms.locfileid: "69938633"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Verwalten von Änderungs Konflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Vorgehensweise: Verwalten von Änderungs Konflikten](how-to-manage-change-conflicts.md)

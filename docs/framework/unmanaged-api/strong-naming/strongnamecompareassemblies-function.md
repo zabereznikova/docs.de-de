@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778735"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799153"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies-Funktion
 Bestimmt, ob sich zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.  
   
- Diese Funktion wurde als veraltet markiert. Verwenden der [ICLRStrongName:: StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) Methode stattdessen.  
+ Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: strongnamecompareassemblymethode](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Parameter  
  `wszAssembly1`  
- [in] Der Pfad zu die erste Assembly.  
+ in Der Pfad zur ersten Assembly.  
   
  `wszAssembly2`  
- [in] Der Pfad für die zweite Assembly.  
+ in Der Pfad zur zweiten Assembly.  
   
  `pdwResult`  
- [out] Eine der folgenden Werte:  
+ vorgenommen Einer der folgenden Werte:  
   
-- `SN_CMP_DIFFERENT` (0): Gibt an, dass die Assemblys mit unterschiedliche Daten enthalten.  
+- `SN_CMP_DIFFERENT`(0): gibt an, dass die Assemblys unterschiedliche Daten enthalten.  
   
-- `SN_CMP_IDENTICAL` (1) – gibt an, dass die Assemblys identisch, einschließlich ihrer Signaturen und die Prüfsumme sind.  
+- `SN_CMP_IDENTICAL`(1): gibt an, dass die Assemblys exakt identisch sind, einschließlich ihrer Signaturen und Prüfsumme.  
   
-- `SN_CMP_SIGONLY` (2): Gibt an, dass die Assemblys nur durch die Signatur und der Prüfsumme unterscheiden.  
+- `SN_CMP_SIGONLY`(2): gibt an, dass sich die Assemblys nur durch Signatur und Prüfsumme unterscheiden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
+ `true`nach erfolgreichem Abschluss: `false`andernfalls.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** StrongName.h  
+ **Header:** StrongName. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Hinweise  
- Die Signatur einer Assembly mit starkem Namen bestehen Textnamen, Version, Kultur und öffentliches Schlüsseltoken der Assembly ab.  
+ Die starke namens Signatur einer Assembly besteht aus dem Textnamen, der Version, der Kultur und dem öffentlichen Schlüssel Token der Assembly.  
   
- Wenn die `StrongNameCompareAssemblies` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
+ Wenn die `StrongNameCompareAssemblies` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [StrongNameCompareAssemblies-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies-Methode](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName-Schnittstelle](../hosting/iclrstrongname-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 570e48788a11045882ef546bf6bc22315c2a02b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742046"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777275"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
-Gibt geschachtelte Typen als "Exportierbar" markieren. Die [ExportType-Methode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) kann auch geschachtelte Typen exportieren, aber diese Methode ist schneller.  
+Gibt die zu exportierenden Typen als exportierbar an. Die [ExportType-Methode](exporttype-method.md) kann auch die in die Liste eingefügten Typen exportieren, diese Methode ist jedoch schneller.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,34 +43,34 @@ HRESULT ExportNestedType(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID der Assembly zum Exportieren aus.  
+ Die ID der zu exportierenden Assembly.  
   
  `FileToken`  
- Datei-Token oder übergeordnete Assembly der Datei, definiert den Typ als exportierbar festgelegt werden.  
+ Dateitoken oder Assemblydatei, die den Typ definiert, der exportierbar gemacht werden soll.  
   
  `TypeToken`  
- Geben Sie ein Token des Typs als exportierbar festgelegt werden.  
+ Typtoken vom Typ, das als exportierbar erstellt werden soll.  
   
  `ParentType`  
  Token des übergeordneten Typs.  
   
  `pszTypename`  
- Vollqualifizierten Typnamen zu exportieren.  
+ Der voll qualifizierte Typname, der exportiert werden soll.  
   
  `dwFlags`  
- `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Wert kann übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`Flags wie `tdPublic` oder `tdNested`. Dieser Wert kann an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
   
  `pType`  
- Empfängt die Token für den exportierten Typ.  
+ Empfängt das Token für den exportierten Typ.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

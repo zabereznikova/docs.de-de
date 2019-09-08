@@ -2,15 +2,15 @@
 title: Bearbeiten von Daten in einer "DataTable"
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203495"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786152"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Bearbeiten von Daten in einer "DataTable"
-Nach dem Erstellen einer <xref:System.Data.DataTable> in einem <xref:System.Data.DataSet> können Sie die gleichen Aktionen ausführen, die Sie auch bei der Verwendung einer Tabelle in einer Datenbank ausführen würden. Sie können Daten in der Tabelle hinzufügen, anzeigen, bearbeiten und löschen, Fehler und Ereignisse überwachen und die Abfragen über die Daten in der Tabelle ausführen. Wenn Sie Daten in einerDatentabelle ändern, können Sie auch überprüfen, ob die Änderungen korrekt sind, und feststellen, ob die Änderungen Programm gesteuert akzeptiert oder abgelehnt werden.  
+Nach dem Erstellen einer <xref:System.Data.DataTable> in einem <xref:System.Data.DataSet> können Sie die gleichen Aktionen ausführen, die Sie auch bei der Verwendung einer Tabelle in einer Datenbank ausführen würden. Sie können Daten in der Tabelle hinzufügen, anzeigen, bearbeiten und löschen, Fehler und Ereignisse überwachen und die Abfragen über die Daten in der Tabelle ausführen. Wenn Sie Daten in einer Datentabelle ändern, können Sie auch über **prüfen, ob**die Änderungen korrekt sind, und feststellen, ob die Änderungen Programm gesteuert akzeptiert oder abgelehnt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Hinzufügen von Daten zu einer DataTable](adding-data-to-a-datatable.md)  
@@ -41,4 +41,4 @@ Nach dem Erstellen einer <xref:System.Data.DataTable> in einem <xref:System.Data
 
 - [DataTables](datatables.md)
 - [Behandeln von DataTable-Ereignissen](handling-datatable-events.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

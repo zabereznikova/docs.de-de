@@ -2,12 +2,12 @@
 title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791611"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 In diesem Thema wird die SqlClient-Unterstützung (in .NET Framework 4,5) für hohe Verfügbarkeit, Notfall Wiederherstellung (AlwaysOn-Verfügbarkeitsgruppen) erläutert.  AlwaysOn-Verfügbarkeitsgruppen Funktion wurde SQL Server 2012 hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie unter SQL Server-Onlinedokumentation.  
@@ -98,5 +98,5 @@ In diesem Thema wird die SqlClient-Unterstützung (in .NET Framework 4,5) für h
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](sql-server-features-and-adonet.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

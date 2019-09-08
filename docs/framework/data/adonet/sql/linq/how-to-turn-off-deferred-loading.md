@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: f68db5a5a0092fc4cf37746f2a4dc81e40ee4a9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6559392527bb02afe9cea61e704f1f371c6d5470
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938673"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781654"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>Vorgehensweise: Deaktivieren des verzögerten Ladens
-Sie können verzögertes Laden ausschalten, indem Sie <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> auf `false` festlegen. Weitere Informationen finden Sie unter Verzögertes im [Vergleich zu unmittelbarem laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+Sie können verzögertes Laden ausschalten, indem Sie <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> auf `false` festlegen. Weitere Informationen finden Sie unter [Verzögertes im Vergleich zu unmittelbarem laden](deferred-versus-immediate-loading.md).  
   
 > [!NOTE]
-> Verzögertes Laden wird ausgeschaltet, wenn die Objektverfolgung ausgeschaltet wird. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Informationen als](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)schreibgeschützt.  
+> Verzögertes Laden wird ausgeschaltet, wenn die Objektverfolgung ausgeschaltet wird. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Informationen als](how-to-retrieve-information-as-read-only.md)schreibgeschützt.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie verzögertes Laden durch Festlegen von <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> auf `false` ausgeschaltet wird.  
@@ -26,5 +26,5 @@ Sie können verzögertes Laden ausschalten, indem Sie <xref:System.Data.Linq.Dat
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Abfragekonzepte](query-concepts.md)
+- [Abfragen der Datenbank](querying-the-database.md)

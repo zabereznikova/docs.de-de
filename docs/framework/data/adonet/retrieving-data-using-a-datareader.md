@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963188"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794407"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Abrufen von Daten mit einem DataReader
 Erstellen Sie zum Abrufen von Daten mithilfe eines **DataReader**-Objekts eine Instanz des **Befehls** Objekts, und erstellen Sie dann einen **DataReader** , indem Sie **Command. ExecuteReader** aufrufen, um Zeilen aus einer Datenquelle abzurufen. Das **DataReader** -Objekt stellt einen nicht gepufferten Datenstrom bereit, der prozeduralen Logik die effiziente Verarbeitung von Ergebnissen aus einer Datenquelle in sequenziell ermöglicht. Der **DataReader** ist eine gute Wahl, wenn Sie große Datenmengen abrufen, da die Daten nicht im Arbeitsspeicher zwischengespeichert werden.
@@ -40,7 +40,7 @@ Verwenden Sie die **DataReader. Read** -Methode, um eine Zeile aus den Abfrage E
  Während ein **DataReader** geöffnet ist, wird die **Verbindung** exklusiv von diesem **DataReader**verwendet. Sie können keine Befehle für die **Verbindung**ausführen, einschließlich der Erstellung eines anderen **DataReader**, bis der ursprüngliche **DataReader** geschlossen wird.  
   
 > [!NOTE]
-> Führen Sie in der **Finalize** -Methode der Klasse nicht **Close** oder verwerfen für eine **Verbindung**, einen **DataReader**oder ein anderes verwaltetes Objekt aus. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn Ihre Klasse keine nicht verwalteten Ressourcen besitzt, schließen Sie keine **Finalize** -Methode in die Klassendefinition ein. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
+> Führen Sie in der **Finalize** -Methode der Klasse nicht **Close** oder verwerfen für eine **Verbindung**, einen **DataReader** **oder ein** anderes verwaltetes Objekt aus. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn Ihre Klasse keine nicht verwalteten Ressourcen besitzt, schließen Sie keine **Finalize** -Methode in die Klassendefinition ein. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Abrufen mehrerer Resultsets mithilfe von NextResult  
  Wenn das **DataReader** -Objekt mehrere Resultsets zurückgibt, wird die **NextResult** -Methode aufgerufen, um die Resultsets sequenziell zu durchlaufen. Im folgenden Beispiel werden die Ergebnisse von zwei SELECT-Anweisungen mit der <xref:System.Data.SqlClient.SqlDataReader>-Methode von <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> verarbeitet.  
@@ -57,7 +57,7 @@ Verwenden Sie die **DataReader. Read** -Methode, um eine Zeile aus den Abfrage E
 ## <a name="working-with-ole-db-chapters"></a>Arbeiten mit OLE DB Kapiteln  
  Hierarchische Rowsets oder Kapitel (OLE DB Type **DBTYPE_HCHAPTER**, ADO Type **adChapter**) können mithilfe von <xref:System.Data.OleDb.OleDbDataReader>abgerufen werden. Wenn eine Abfrage, die ein Kapitel enthält, als **DataReader**zurückgegeben wird, wird das Kapitel als Spalte in diesem **DataReader** zurückgegeben und als **DataReader** -Objekt verfügbar gemacht.  
   
- Das ADO.net- **DataSet** kann auch verwendet werden, um hierarchische Rowsets mithilfe von über-und untergeordneten Beziehungen zwischen Tabellen darzustellen. Weitere Informationen finden Sie unter [Datasets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ Das ADO.net- **DataSet** kann auch verwendet werden, um hierarchische Rowsets mithilfe von über-und untergeordneten Beziehungen zwischen Tabellen darzustellen. Weitere Informationen finden Sie unter [Datasets, DataTables und DataViews](./dataset-datatable-dataview/index.md).  
   
  Im folgenden Codebeispiel wird mit dem MSDataShape-Anbieter eine Kapitelspalte mit Bestellungen für jeden Kunden in einer Kundenliste generiert.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Um eine **OverflowException**zu vermeiden, empfiehlt es sich, jede beliebige Konvertierung vom Oracle-Nummertyp in einen gültigen .NET Framework Typ zu verarbeiten, bevor der <xref:System.Data.DataRow>Wert in einer gespeichert wird. Sie können das <xref:System.Data.Common.DataAdapter.FillError> -Ereignis verwenden, um zu bestimmen, ob eine **OverflowException** aufgetreten ist. Weitere Informationen <xref:System.Data.Common.DataAdapter.FillError> zum-Ereignis finden Sie unter [Handling DataAdapter-Ereignisse](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Um eine **OverflowException**zu vermeiden, empfiehlt es sich, jede beliebige Konvertierung vom Oracle-Nummertyp in einen gültigen .NET Framework Typ zu verarbeiten, bevor der <xref:System.Data.DataRow>Wert in einer gespeichert wird. Sie können das <xref:System.Data.Common.DataAdapter.FillError> -Ereignis verwenden, um zu bestimmen, ob eine **OverflowException** aufgetreten ist. Weitere Informationen <xref:System.Data.Common.DataAdapter.FillError> zum-Ereignis finden Sie unter [Handling DataAdapter-Ereignisse](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [Abrufen von Datenbankschemainformationen](retrieving-database-schema-information.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

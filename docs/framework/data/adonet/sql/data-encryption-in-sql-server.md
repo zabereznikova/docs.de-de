@@ -2,12 +2,12 @@
 title: Datenverschlüsselung in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d185dd121336b62bd66a11bf0cc4253b45ae47e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877876"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794249"
 ---
 # <a name="data-encryption-in-sql-server"></a>Datenverschlüsselung in SQL Server
 Mit den SQL Server-Funktionen können Sie Daten mithilfe eines Zertifikats, eines asymmetrischen Schlüssels oder eines symmetrischen Schlüssels verschlüsseln und entschlüsseln. Die Verwaltung der Zertifikate bzw. Schlüssel erfolgt in einem internen Zertifikatspeicher. Der Speicher verwendet eine Verschlüsselungshierarchie, die Zertifikate und Schlüssel auf einer Ebene zusammen mit der nächsthöheren Ebene in der Hierarchie sichert. Dieser Funktionsbereich von SQL Server wird als "Speicherung geheimer Schlüssel" bezeichnet.  
@@ -19,22 +19,22 @@ Mit den SQL Server-Funktionen können Sie Daten mithilfe eines Zertifikats, ein
   
  Innerhalb des Bereichs einer Datenbankverbindung kann SQL Server mehrere geöffnete symmetrische Schlüssel verwalten. Ein geöffneter Schlüssel wird vom Speicher abgerufen und steht zum Entschlüsseln von Daten zur Verfügung. Zum Entschlüsseln von Daten muss der zu verwendende symmetrische Schlüssel nicht angegeben werden. Jeder verschlüsselte Wert enthält die Schlüssel-ID (Haupt-GUID) des Schlüssels, mit dem er verschlüsselt wurde. Die Engine ordnet den verschlüsselten Datenstream einem geöffneten symmetrischen Schlüssel zu, wenn der richtige Schlüssel entschlüsselt wurde und geöffnet ist. Dieser Schlüssel wird dann zur Entschlüsselung und zur Rückgabe der Daten verwendet. Wenn der richtige Schlüssel nicht geöffnet ist, wird NULL zurückgegeben.  
   
- Ein Beispiel, wie Sie in einer Datenbank mit verschlüsselten Daten arbeiten, finden Sie unter [Verschlüsseln einer Datenspalte](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
+ Ein Beispiel für das Arbeiten mit verschlüsselten Daten in einer-Datenbank finden Sie unter [Verschlüsseln einer Datenspalte](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen zur Datenverschlüsselung finden Sie in den folgenden Ressourcen:  
   
 |Ressource|Beschreibung|  
 |-|-|  
-|[SQL Server-Verschlüsselung](/sql/relational-databases/security/encryption/sql-server-encryption)|Bietet eine Übersicht über die Verschlüsselung in SQL Server. Dieses Thema enthält Links zu weiteren Artikeln.|  
-|[Verschlüsselungshierarchie](/sql/relational-databases/security/encryption/encryption-hierarchy)|Bietet eine Übersicht über die Verschlüsselung in SQL Server. Dieses Thema enthält Links zu weiteren Artikeln.|  
+|[SQL Server Verschlüsselung](/sql/relational-databases/security/encryption/sql-server-encryption)|Bietet eine Übersicht über die Verschlüsselung in SQL Server. Dieses Thema enthält Links zu weiteren Artikeln.|  
+|[Verschlüsselungs Hierarchie](/sql/relational-databases/security/encryption/encryption-hierarchy)|Bietet eine Übersicht über die Verschlüsselung in SQL Server. Dieses Thema enthält Links zu weiteren Artikeln.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Server- und Datenbankrollen in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Autorisierung und Berechtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
+- [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)
+- [Authentifizierung in SQL Server](authentication-in-sql-server.md)
+- [Server- und Datenbankrollen in SQL Server](server-and-database-roles-in-sql-server.md)
+- [Objektbesitz und Trennung von Benutzer und Schema in SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
+- [Autorisierung und Berechtigungen in SQL Server](authorization-and-permissions-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

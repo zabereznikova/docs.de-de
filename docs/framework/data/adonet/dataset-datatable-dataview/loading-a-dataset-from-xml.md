@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c8b26651a1f4050145b6d43e03f9d4cc3d68202
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204717"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785263"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Laden eines "DataSets" aus XML
 Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream oder einem XML-Dokument erstellt werden. Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
@@ -32,7 +32,7 @@ Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream od
 > Wenn Sie einen **XmlReader** an **ReadXml** übergeben, der Teil der Art und Weise in ein XML-Dokument positioniert ist, liest **ReadXml** den nächsten Elementknoten und behandelt dies als Stamm Element, wobei nur bis zum Ende des Element Knotens gelesen wird. Dies trifft nicht zu, wenn Sie **xmllesemode. Fragment**angeben.  
   
 ## <a name="dtd-entities"></a>DTD-Entitäten  
- Wenn Ihr XML Entitäten enthält, die in einem DTD-Schema (Document Type Definition) definiert sind, wird eine Ausnahme ausgelöst, wenn <xref:System.Data.DataSet> Sie versuchen, ein zu laden, indem Sie einen Dateinamen, einen Stream oder einen nicht validierenden **XmlReader** an die Datei "infoxml" übergeben. Stattdessen müssen Sie einen **XmlValidatingReader**erstellen, bei dem **EntityHandling** auf **EntityHandling. ExpandEntities**festgelegt ist, und **XmlValidatingReader** an die Datei "read **XML**" übergeben. Der **XmlValidatingReader** erweitert die Entitäten, bevor Sie von <xref:System.Data.DataSet>gelesen werden.  
+ Wenn Ihr XML Entitäten enthält, die in einem DTD-Schema (Document Type Definition) definiert sind, wird eine Ausnahme ausgelöst, wenn <xref:System.Data.DataSet> Sie versuchen, ein zu laden, indem Sie einen Dateinamen, einen Stream oder einen nicht validierenden **XmlReader** an die Datei " **infoxml**" übergeben. Stattdessen müssen Sie einen **XmlValidatingReader**erstellen, bei dem **EntityHandling** auf **EntityHandling. ExpandEntities**festgelegt ist, und **XmlValidatingReader** an die Datei "read **XML**" übergeben. Der **XmlValidatingReader** erweitert die Entitäten, bevor Sie von <xref:System.Data.DataSet>gelesen werden.  
   
  In den folgenden Codebeispielen wird dargestellt, wie ein <xref:System.Data.DataSet> aus einem XML-Stream geladen wird. Das erste Beispiel zeigt, wie ein Dateiname an die Methode "read **XML** " übermittelt wird. Im zweiten Beispiel wird eine Zeichenfolge mit XML-Daten mithilfe eines <xref:System.IO.StringReader> geladen.  
   
@@ -73,7 +73,7 @@ dataSet.ReadXml(xmlSR, XmlReadMode.IgnoreSchema);
 ```  
   
 > [!NOTE]
-> Wenn Sie " **infoxml** " zum Laden einer sehr großen Datei aufzurufen, kann die Leistung beeinträchtigt werden. Um die beste Leistung für"infoxml" zu gewährleisten, müssen Sie <xref:System.Data.DataTable.BeginLoadData%2A> die-Methode für jede Tabelle <xref:System.Data.DataSet>in der abrufen unddann "infoxml" aufzurufen. Rufen Sie zum Schluss <xref:System.Data.DataTable.EndLoadData%2A> für jede Tabelle im <xref:System.Data.DataSet> auf. Dies wird im folgenden Beispiel dargestellt.  
+> Wenn Sie " **infoxml** " zum Laden einer sehr großen Datei aufzurufen, kann die Leistung beeinträchtigt werden. Um die beste Leistung für " **infoxml**" zu gewährleisten, müssen Sie <xref:System.Data.DataTable.BeginLoadData%2A> die-Methode für jede Tabelle <xref:System.Data.DataSet>in der abrufen und dann " **infoxml**" aufzurufen. Rufen Sie zum Schluss <xref:System.Data.DataTable.EndLoadData%2A> für jede Tabelle im <xref:System.Data.DataSet> auf. Dies wird im folgenden Beispiel dargestellt.  
   
 ```vb  
 Dim dataTable As DataTable  
@@ -113,7 +113,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>Zusammenführen von Daten aus XML-Dokumenten  
- Wenn das <xref:System.Data.DataSet> bereits Daten enthält, werden die neuen Daten aus der XML-Quelle den im <xref:System.Data.DataSet> bereits vorhandenen Daten hinzugefügt. "Read **XML** " wird nicht aus dem XML- <xref:System.Data.DataSet> Code in die Zeilen Informationen mit übereinstimmenden primär Schlüsseln zusammengeführt. Um vorhandene Zeilen Informationen mit neuen Informationen aus XML zu überschreiben , verwenden Sie "infoxml <xref:System.Data.DataSet>", um <xref:System.Data.DataSet.Merge%2A> eine neue zu erstellen, <xref:System.Data.DataSet>und dann die neue <xref:System.Data.DataSet> in die vorhandene. Beachten Sie, dass beim Laden eines DiffGram mithilfe von "read **XML** " mit dem **xmllesemode** " **DiffGram** " Zeilen zusammengeführt werden, die denselben eindeutigen Bezeichner aufweisen.  
+ Wenn das <xref:System.Data.DataSet> bereits Daten enthält, werden die neuen Daten aus der XML-Quelle den im <xref:System.Data.DataSet> bereits vorhandenen Daten hinzugefügt. "Read **XML** " wird nicht aus dem XML- <xref:System.Data.DataSet> Code in die Zeilen Informationen mit übereinstimmenden primär Schlüsseln zusammengeführt. Um vorhandene Zeilen Informationen mit neuen Informationen aus XML zu überschreiben, verwenden Sie " **infoxml** ", um eine neue <xref:System.Data.DataSet>zu erstellen, <xref:System.Data.DataSet>und dann <xref:System.Data.DataSet.Merge%2A> die neue <xref:System.Data.DataSet> in die vorhandene. Beachten Sie, dass beim Laden eines DiffGram mithilfe von "read **XML** " mit dem **xmllesemode** " **DiffGram** " Zeilen zusammengeführt werden, die denselben eindeutigen Bezeichner aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -124,4 +124,4 @@ foreach (DataTable dataTable in dataSet.Tables)
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](inferring-dataset-relational-structure-from-xml.md)
 - [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
 - [DataSets, DataTables und DataViews](index.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

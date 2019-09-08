@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: dff5642b2490cd3935dba3b3d04cd62082249c32
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915718"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792939"
 ---
 # <a name="object-identity"></a>Objektidentität
 Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz. Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  
@@ -21,7 +21,7 @@ Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, di
   
  Von Objekten erwarten Sie etwas ganz anderes. Sie gehen davon aus, dass Sie bei wiederholtem Abrufen der gleichen Informationen aus dem <xref:System.Data.Linq.DataContext> tatsächlich die gleiche Objektinstanz erhalten. Sie erwarten dieses Verhalten, da Objekte für Ihre Anwendung von besonderer Bedeutung sind und weil Sie von einem objektgemäßen Verhalten ausgehen. Sie haben sie als Hierarchien oder Graphen entworfen. Sie möchten diese Objekte als solche abrufen und keine mehrfach replizierten Instanzen erhalten, nur weil Sie die gleichen Informationen mehrfach abrufen.  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwaltet der <xref:System.Data.Linq.DataContext> die Objektidentität. Wenn Sie eine neue Zeile aus der Datenbank abrufen, wird diese mit ihrem Primärschlüssel in einer Identitätstabelle protokolliert, und es wird ein neues Objekt erstellt. Jedes Mal, wenn Sie die gleiche Zeile abrufen, wird die ursprüngliche Objektinstanz an die Anwendung zurückgegeben. Auf diese Weise übersetzt der <xref:System.Data.Linq.DataContext> das Identitätskonzept aus Sicht der Datenbank (Primärschlüssel) in das Identitätskonzept aus Sicht der Sprache (Instanzen). Die Anwendung sieht nur das Objekt in dem Zustand, in dem es zuerst abgerufen wurde. Die neuen Daten werden (sofern sie abweichen) verworfen. Weitere Informationen finden Sie unter [Abrufen von Objekten aus dem Identitäts Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwaltet der <xref:System.Data.Linq.DataContext> die Objektidentität. Wenn Sie eine neue Zeile aus der Datenbank abrufen, wird diese mit ihrem Primärschlüssel in einer Identitätstabelle protokolliert, und es wird ein neues Objekt erstellt. Jedes Mal, wenn Sie die gleiche Zeile abrufen, wird die ursprüngliche Objektinstanz an die Anwendung zurückgegeben. Auf diese Weise übersetzt der <xref:System.Data.Linq.DataContext> das Identitätskonzept aus Sicht der Datenbank (Primärschlüssel) in das Identitätskonzept aus Sicht der Sprache (Instanzen). Die Anwendung sieht nur das Objekt in dem Zustand, in dem es zuerst abgerufen wurde. Die neuen Daten werden (sofern sie abweichen) verworfen. Weitere Informationen finden Sie unter [Abrufen von Objekten aus dem Identitäts Cache](retrieving-objects-from-the-identity-cache.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]verwendet diesen Ansatz, um die Integrität lokaler Objekte zu verwalten, um optimistische Updates zu unterstützen. Da die einzigen Änderungen, die nach dem ersten Erstellen des Objekts auftreten, von der Anwendung vorgenommen werden, ist die Absicht der Anwendung klar. Sind zwischenzeitlich Änderungen durch eine externe Partei erfolgt, werden diese zum Zeitpunkt des Aufrufs von `SubmitChanges()` identifiziert.  
   
@@ -44,4 +44,4 @@ Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, di
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Hintergrundinformationen](background-information.md)

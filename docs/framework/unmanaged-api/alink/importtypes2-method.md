@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7fddfffed499537f5746998a94a3ef32d035685
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741602"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787256"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2-Methode
-Startet den Import von Typen. Rufen Sie diese Methode zum Importieren von Typen aus jedem Bereich über importiert [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Initiiert den Import von-Typen. Mit dieser Methode können Sie beginnen, Typen aus jedem Bereich zu importieren, der über die [ImportFile-Methode](importfile-method.md)importiert wird  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,19 +41,19 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID der Assembly in die importiert werden soll.  
+ Die ID der Assembly, in die importiert werden soll.  
   
  `FileToken`  
- Die ID der Datei, aus denen importiert.  
+ Die ID der Datei, aus der importiert werden soll.  
   
  `dwScope`  
- Nullbasierte Bereich aus der importiert werden.  
+ NULL basierter Bereich, aus dem importiert werden soll.  
   
  `phEnum`  
- Empfängt Enumeratorhandle für die Typen im angegebenen Bereich.  
+ Empfängt das Enumeratorhandle für die Typen im angegebenen Bereich.  
   
  `ppImportScope`  
- Empfängt optional [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) Schnittstelle.  
+ Empfängt optional die [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) -Schnittstelle.  
   
  `pdwCountOfTypes`  
  Empfängt optional die Anzahl der Typen im angegebenen Bereich.  
@@ -62,10 +62,10 @@ HRESULT ImportTypes2(
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [Alink-API](index.md)

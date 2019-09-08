@@ -2,12 +2,12 @@
 title: ODBC-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0240e99d2420b0956d3c144f837b39e094bb78a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772046"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794718"
 ---
 # <a name="odbc-schema-collections"></a>ODBC-Schemaauflistungen
 
@@ -15,7 +15,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 
 ## <a name="microsoft-sql-server-odbc-driver"></a>Microsoft SQL Server-ODBC-Treiber
 
-Der Microsoft SQL Server-ODBC-Treiber unterstützt neben den allgemeinen schemaauflistungen die folgenden spezifischen schemaauflistungen:
+Der Microsoft SQL Server ODBC-Treiber unterstützt neben den allgemeinen Schema Auflistungen auch die folgenden spezifischen Schema Auflistungen:
 
 - Tabellen
 
@@ -156,7 +156,7 @@ Der Microsoft SQL Server-ODBC-Treiber unterstützt neben den allgemeinen schemaa
 
 ## <a name="microsoft-oracle-odbc-driver"></a>Microsoft Oracle ODBC-Treiber
 
-Der Microsoft SQL Server Oracle ODBC-Treiber unterstützt neben den allgemeinen schemaauflistungen die folgenden spezifischen schemaauflistungen:
+Der Microsoft SQL Server Oracle ODBC-Treiber unterstützt neben den allgemeinen Schema Auflistungen auch die folgenden spezifischen Schema Auflistungen:
 
 - Tabellen
 
@@ -338,4 +338,4 @@ Der Microsoft Jet ODBC-Treiber unterstützt neben den allgemeinen Schemaauflis
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)

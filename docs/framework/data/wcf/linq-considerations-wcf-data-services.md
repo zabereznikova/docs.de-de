@@ -9,28 +9,28 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952254"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779886"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
-Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zum Verfassen und Ausführen von Abfragen für einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst finden Sie unter [Abfragen des Daten Dienstanbieter](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zum Verfassen und Ausführen von Abfragen für einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Verfassen von LINQ-Abfragen  
  LINQ ermöglicht es Ihnen, Abfragen für eine Auflistung von Objekten zu verfassen, die <xref:System.Collections.Generic.IEnumerable%601> implementiert. Sowohl das Dialogfeld **Dienstverweis hinzufügen** in Visual Studio als auch das Tool DataSvcUtil. exe werden verwendet, um eine Darstellung eines [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Dienstanbieter als Entitäts Container Klasse zu generieren <xref:System.Data.Services.Client.DataServiceContext>, die von erbt, sowie von Objekten, die die in Feeds zurückgegebenen Entitäten. Diese Tools generieren auch Eigenschaften der Entitätscontainerklasse für die Auflistungen, die als Feeds vom Dienst verfügbar gemacht werden. Jede Eigenschaft der Klasse, die den Datendienst kapselt, gibt eine <xref:System.Data.Services.Client.DataServiceQuery%601> zurück. Da die <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse die von LINQ definierte <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert, können Sie eine LINQ-Abfrage für vom Datendienst verfügbar gemachte Feeds verfassen. Diese Abfrage wird von der Clientbibliothek in einen Abfrageanforderungs-URI übersetzt, der bei der Ausführung an den Datendienst gesendet wird.  
   
 > [!IMPORTANT]
-> In der LINQ-Syntax können mehr Abfragen ausgedrückt werden als in der von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensten verwendeten URI-Syntax. Wenn die Abfrage keinem URI im Zieldatendienst zugeordnet werden kann, wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst. Weitere Informationen finden Sie unter den [nicht unterstützten LINQ-Methoden](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) in diesem Thema.  
+> In der LINQ-Syntax können mehr Abfragen ausgedrückt werden als in der von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensten verwendeten URI-Syntax. Wenn die Abfrage keinem URI im Zieldatendienst zugeordnet werden kann, wird eine Ausnahme vom Typ <xref:System.NotSupportedException> ausgelöst. Weitere Informationen finden Sie unter den [nicht unterstützten LINQ-Methoden](linq-considerations-wcf-data-services.md#unsupportedMethods) in diesem Thema.  
   
  Das folgende Beispiel zeigt eine LINQ-Abfrage, die `Orders` mit Frachtkosten über $30 zurückgibt und die Ergebnisse nach dem Lieferdatum sortiert (beginnend mit dem aktuellsten Lieferdatum):  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Diese LINQ-Abfrage wird in den folgenden Abfrage-URI übersetzt, der für den auf Northwind basierenden [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) -Datendienst ausgeführt wird:  
+ Diese LINQ-Abfrage wird in den folgenden Abfrage-URI übersetzt, der für den auf Northwind basierenden [Schnellstart](quickstart-wcf-data-services.md) -Datendienst ausgeführt wird:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Client kann beide Abfragearten in einen Abfrage-URI übersetzen, und Sie können eine LINQ-Abfrage erweitern, indem Sie Abfragemethoden an einen Abfrageausdruck anfügen. Wenn Sie LINQ-Abfragen verfassen, indem Sie Methodensyntax an einen Abfrageausdruck oder eine <xref:System.Data.Services.Client.DataServiceQuery%601> anfügen, werden die Vorgänge dem Abfrage-URI in der Reihenfolge hinzugefügt, in der Methoden aufgerufen werden. Dies hat die gleiche Funktion wie das Aufrufen der <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode zum Hinzufügen der einzelnen Abfrageoptionen zum Abfrage-URI.  
   
 ## <a name="executing-linq-queries"></a>Ausführen von LINQ-Abfragen  
- Wenn bestimmte LINQ-Abfragemethoden wie <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> oder <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> an die Abfrage angefügt werden, führt dies dazu, dass die Abfrage ausgeführt wird. Eine Abfrage wird auch ausgeführt, wenn Ergebnisse implizit aufgezählt werden, z. B. während einer `foreach`-Schleife oder wenn die Abfrage einer `List`-Auflistung zugewiesen wird. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Wenn bestimmte LINQ-Abfragemethoden wie <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> oder <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> an die Abfrage angefügt werden, führt dies dazu, dass die Abfrage ausgeführt wird. Eine Abfrage wird auch ausgeführt, wenn Ergebnisse implizit aufgezählt werden, z. B. während einer `foreach`-Schleife oder wenn die Abfrage einer `List`-Auflistung zugewiesen wird. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
- Der Client führt eine LINQ-Abfrage in zwei Teilen aus. Nach Möglichkeit werden LINQ-Ausdrücke in einer Abfrage zuerst auf dem Client ausgewertet, und anschließend wird eine URI-basierte Abfrage generiert und zur Auswertung anhand der Daten im Dienst an den Datendienst gesendet. Weitere Informationen finden Sie im Abschnitt [Client im Vergleich zur Server Ausführung](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) unter [Abfragen des Daten Dienstanbieter](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Der Client führt eine LINQ-Abfrage in zwei Teilen aus. Nach Möglichkeit werden LINQ-Ausdrücke in einer Abfrage zuerst auf dem Client ausgewertet, und anschließend wird eine URI-basierte Abfrage generiert und zur Auswertung anhand der Daten im Dienst an den Datendienst gesendet. Weitere Informationen finden Sie im Abschnitt [Client im Vergleich zur Server Ausführung](querying-the-data-service-wcf-data-services.md#executingQueries) unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
- Wenn eine LINQ-Abfrage nicht in einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-kompatiblen Abfrage-URI übersetzt werden kann, wird beim Ausführen der Abfrage eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Wenn eine LINQ-Abfrage nicht in einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-kompatiblen Abfrage-URI übersetzt werden kann, wird beim Ausführen der Abfrage eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>LINQ-Abfragebeispiele  
  Die Beispiele in den folgenden Abschnitten veranschaulichen die Arten von LINQ-Abfragen, die für einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Dienst ausgeführt werden können.  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expand  
- Beim Abfragen eines [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensts können Sie anfordern, dass mit der Zielentität der Abfrage verknüpfte Entitäten in den zurückgegebenen Feed eingeschlossen werden. Die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode wird in der <xref:System.Data.Services.Client.DataServiceQuery%601> für die in der LINQ-Abfrage angegebene Entität aufgerufen, und der Name der verknüpften Entitätenmenge wird als `path`-Parameter angegeben. Weitere Informationen finden Sie unter [Laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)von verzögertem Inhalt.  
+ Beim Abfragen eines [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensts können Sie anfordern, dass mit der Zielentität der Abfrage verknüpfte Entitäten in den zurückgegebenen Feed eingeschlossen werden. Die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode wird in der <xref:System.Data.Services.Client.DataServiceQuery%601> für die in der LINQ-Abfrage angegebene Entität aufgerufen, und der Name der verknüpften Entitätenmenge wird als `path`-Parameter angegeben. Weitere Informationen finden Sie unter [Laden von verzögertem Inhalt](loading-deferred-content-wcf-data-services.md).  
   
  Die folgenden Beispiele zeigen funktional gleichwertige Möglichkeiten zur Verwendung der <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode in einer Abfrage:  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Objektmaterialisierung](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)
+- [Abfrageprojektionen](query-projections-wcf-data-services.md)
+- [Objektmaterialisierung](object-materialization-wcf-data-services.md)
 - [OData URI-Konventionen](https://go.microsoft.com/fwlink/?LinkID=185564)

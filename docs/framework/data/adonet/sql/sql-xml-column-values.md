@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 29e9ac5b95b62ef2a4467bf41484c3740d550abd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 03b09d3a53c725bb0e84ba6b5d98944267bc564c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964948"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780801"
 ---
 # <a name="sql-xml-column-values"></a>SQL-XML-Spaltenwerte
 SQL Server unterstützt `xml` den-Datentyp, und Entwickler können Resultsets, einschließlich dieses Typs, mithilfe <xref:System.Data.SqlClient.SqlCommand> des Standard Verhaltens der-Klasse abrufen. Eine `xml`-Spalte kann auf die gleiche Weise abgerufen werden wie jede andere Spalte auch (z. B. in einem <xref:System.Data.SqlClient.SqlDataReader>). Wenn Sie jedoch mit dem Inhalt der Spalte in Form von XML-Daten arbeiten möchten, müssen Sie einen <xref:System.Xml.XmlReader> verwenden.  
@@ -27,5 +27,5 @@ SQL Server unterstützt `xml` den-Datentyp, und Entwickler können Resultsets, e
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [XML-Daten in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML-Daten in SQL Server](xml-data-in-sql-server.md)
+- [Übersicht über ADO.NET](../ado-net-overview.md)

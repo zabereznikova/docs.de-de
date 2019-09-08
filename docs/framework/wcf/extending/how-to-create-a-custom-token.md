@@ -10,15 +10,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 917278ef990842f2ce821474ffd1c6cd619ed289
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3bd44d197a655b67253ff363ef15937d4c021e08
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797041"
 ---
 # <a name="how-to-create-a-custom-token"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Tokens
-In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tokens.SecurityToken>-Klasse ein benutzerdefiniertes Sicherheitstoken erstellen und in einen benutzerdefinierten Sicherheitstokenanbieter und -authentifizierer integrieren. Ein umfassendes Codebeispiel finden Sie unter Beispiel für [benutzerdefiniertes Token](../../../../docs/framework/wcf/samples/custom-token.md) .  
+In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tokens.SecurityToken>-Klasse ein benutzerdefiniertes Sicherheitstoken erstellen und in einen benutzerdefinierten Sicherheitstokenanbieter und -authentifizierer integrieren. Ein umfassendes Codebeispiel finden Sie unter Beispiel für [benutzerdefiniertes Token](../samples/custom-token.md) .  
   
  Ein *Sicherheits Token* ist im Grunde ein XML-Element, das vom Windows Communication Foundation (WCF)-Sicherheits Framework verwendet wird, um Ansprüche über einen Absender innerhalb der SOAP-Nachricht darzustellen. WCF-Sicherheit stellt verschiedene Token für die vom System bereitgestellten Authentifizierungs Modi bereit. Dazu gehören u.&#160;a. ein Sicherheitstoken für ein X.509-Zertifikat, dargestellt durch die <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse, oder ein Sicherheitstoken für den Benutzernamen, dargestellt durch die <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Klasse.  
   
@@ -26,7 +26,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
   
  In den folgenden Verfahren wird gezeigt, wie Sie ein benutzerdefiniertes Sicherheits Token erstellen und es in die WCF-Sicherheitsinfrastruktur integrieren. In diesem Thema wird ein Kreditkartentoken erstellt, mit dem Informationen über die Kreditkarte des Kunden an den Server übermittelt werden.  
   
- Weitere Informationen über benutzerdefinierte Anmelde Informationen und den Sicherheits Token- [Manager finden Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
+ Weitere Informationen über benutzerdefinierte Anmelde Informationen und den Sicherheits Token- [Manager finden Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
   
  Weitere Klassen, die Sicherheitstoken darstellen, finden Sie im <xref:System.IdentityModel.Tokens>-Namespace.  
   
@@ -102,14 +102,14 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>So integrieren Sie das benutzerdefinierte Sicherheitstoken in einen Sicherheitstokenanbieter  
   
-1. Der Sicherheitstokenanbieter erstellt das Token, ändert es gegebenenfalls und gibt eine Instanz des Tokens zurück. Um einen benutzerdefinierten Anbieter für das benutzerdefinierte Sicherheitstoken zu erstellen, erstellen Sie eine Klasse, die von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse erbt. Im folgenden Beispiel wird die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>-Methode überschrieben, um eine Instanz von `CreditCardToken` zurückzugeben. Weitere Informationen zu benutzerdefinierten Sicherheitstokenanbietern [finden Sie unter Gewusst wie: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+1. Der Sicherheitstokenanbieter erstellt das Token, ändert es gegebenenfalls und gibt eine Instanz des Tokens zurück. Um einen benutzerdefinierten Anbieter für das benutzerdefinierte Sicherheitstoken zu erstellen, erstellen Sie eine Klasse, die von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse erbt. Im folgenden Beispiel wird die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>-Methode überschrieben, um eine Instanz von `CreditCardToken` zurückzugeben. Weitere Informationen zu benutzerdefinierten Sicherheitstokenanbietern [finden Sie unter Gewusst wie: Erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter](how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>So integrieren Sie das benutzerdefinierte Sicherheitstoken in einen Sicherheitstokenauthentifizierer  
   
-1. Der Sicherheitstokenauthentifizierer überprüft den Inhalt des Sicherheitstokens beim Extrahieren aus der Nachricht. Um einen benutzerdefinierten Authentifizierer für das benutzerdefinierte Sicherheitstoken zu erstellen, erstellen Sie eine Klasse, die von der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Klasse erbt. Im folgenden Beispiel wird die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode überschrieben. Weitere Informationen zu benutzerdefinierten Sicherheitstokenauthentifizierern finden [Sie unter Gewusst wie: Erstellen Sie einen benutzerdefinierten Sicherheitstokenauthentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+1. Der Sicherheitstokenauthentifizierer überprüft den Inhalt des Sicherheitstokens beim Extrahieren aus der Nachricht. Um einen benutzerdefinierten Authentifizierer für das benutzerdefinierte Sicherheitstoken zu erstellen, erstellen Sie eine Klasse, die von der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Klasse erbt. Im folgenden Beispiel wird die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode überschrieben. Weitere Informationen zu benutzerdefinierten Sicherheitstokenauthentifizierern finden [Sie unter Gewusst wie: Erstellen Sie einen benutzerdefinierten Sicherheitstokenauthentifikator](how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +119,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>So integrieren Sie das benutzerdefinierte Sicherheitstoken in einen Sicherheitstoken-Manager  
   
-1. Der Sicherheitstoken-Manager erstellt die entsprechenden Instanzen für den Anbieter, den Sicherheitsauthentifizierer und das Serialisierungsprogramm für das Token. Zum Erstellen eines Managers für das benutzerdefinierte Token erstellen Sie eine Klasse, die von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse erbt. Die primären Methoden der Klasse erstellen den entsprechenden Anbieter und den entsprechenden Client oder die entsprechenden Anmeldeinformationen für den Dienst mit einer <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. Weitere Informationen zu benutzerdefinierten Sicherheits Token-Managern finden [Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
+1. Der Sicherheitstoken-Manager erstellt die entsprechenden Instanzen für den Anbieter, den Sicherheitsauthentifizierer und das Serialisierungsprogramm für das Token. Zum Erstellen eines Managers für das benutzerdefinierte Token erstellen Sie eine Klasse, die von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse erbt. Die primären Methoden der Klasse erstellen den entsprechenden Anbieter und den entsprechenden Client oder die entsprechenden Anmeldeinformationen für den Dienst mit einer <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. Weitere Informationen zu benutzerdefinierten Sicherheits Token-Managern finden [Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +129,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>So integrieren Sie das benutzerdefinierte Sicherheitstoken in den benutzerdefinierten Client und die benutzerdefinierten Anmeldeinformationen des Diensts  
   
-1. Der benutzerdefinierte Client und die benutzerdefinierten Anmeldeinformationen für den Dienst müssen hinzugefügt werden, damit eine API für die Anwendung Informationen zum benutzerdefinierten Token angeben kann, die von der zuvor erstellten Infrastruktur für das benutzerdefinierte Sicherheitstoken zur Bereitstellung und Authentifizierung von Inhalten für das benutzerdefinierte Sicherheitstoken verwendet werden können. Die folgenden Beispiele veranschaulichen diese Vorgehensweise. Weitere Informationen zu benutzerdefinierten Client-und Dienst Anmelde Informationen [finden Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
+1. Der benutzerdefinierte Client und die benutzerdefinierten Anmeldeinformationen für den Dienst müssen hinzugefügt werden, damit eine API für die Anwendung Informationen zum benutzerdefinierten Token angeben kann, die von der zuvor erstellten Infrastruktur für das benutzerdefinierte Sicherheitstoken zur Bereitstellung und Authentifizierung von Inhalten für das benutzerdefinierte Sicherheitstoken verwendet werden können. Die folgenden Beispiele veranschaulichen diese Vorgehensweise. Weitere Informationen zu benutzerdefinierten Client-und Dienst Anmelde Informationen [finden Sie unter Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-](walkthrough-creating-custom-client-and-service-credentials.md)und Dienst Anmelde Informationen.  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -146,7 +146,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  
   
- In diesem Thema werden die verschiedenen Codeteile behandelt, die zur Implementierung und Verwendung benutzerdefinierter Token erforderlich sind. Ein vollständiges Beispiel dafür, wie diese Codeteile zusammenpassen, finden Sie unter [benutzerdefiniertes Token](../../../../docs/framework/wcf/samples/custom-token.md).  
+ In diesem Thema werden die verschiedenen Codeteile behandelt, die zur Implementierung und Verwendung benutzerdefinierter Token erforderlich sind. Ein vollständiges Beispiel dafür, wie diese Codeteile zusammenpassen, finden Sie unter [benutzerdefiniertes Token](../samples/custom-token.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -161,6 +161,6 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-und Dienst Anmelde Informationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client-und Dienst Anmelde Informationen](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](how-to-create-a-custom-security-token-authenticator.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](how-to-create-a-custom-security-token-provider.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931170"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779821"
 ---
 # <a name="query-projections-wcf-data-services"></a>Abfrageprojektionen (WCF Data Services)
 
@@ -102,7 +102,7 @@ Im folgenden werden die Verhaltensweisen beim Projizieren von Ergebnissen in Ent
 
 Beim Definieren einer Abfrageprojektion sind außerdem die folgenden Punkte zu berücksichtigen.
 
-- Wenn Sie benutzerdefinierte Feeds für das Atom-Format definieren, müssen Sie sicherstellen, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Feed-Anpassung](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Wenn Sie benutzerdefinierte Feeds für das Atom-Format definieren, müssen Sie sicherstellen, dass alle Entitätseigenschaften, für die benutzerdefinierte Zuordnungen definiert wurden, in der Projektion enthalten sind. Wenn eine zugeordnete Entitätseigenschaft nicht in der Projektion enthalten ist, könnten Datenverluste auftreten. Weitere Informationen finden Sie unter [Feed-Anpassung](feed-customization-wcf-data-services.md).
 
 - Wenn Entitäten in einen projizierten Typ eingefügt werden, der nicht alle Eigenschaften der Entität im Datenmodell des Datendiensts umfasst, werden die in der Projektion in den Client nicht enthaltenen Eigenschaften auf ihre Standardwerte festgelegt.
 
@@ -112,10 +112,10 @@ Beim Definieren einer Abfrageprojektion sind außerdem die folgenden Punkte zu b
 
 - Wenn eine Projektion eine Navigationseigenschaft umfasst, werden die verknüpften Objekte implizit geladen, ohne dass die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode aufgerufen werden muss. Die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode kann in projizierten Abfragen nicht verwendet werden.
 
-- Abfragen mit Abfrageprojektionen für den Client werden übersetzt, sodass die `$select`-Abfrageoption im Anforderungs-URI verwendet wird. Wenn eine Abfrage mit Projektion für eine frühere Version von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ausgeführt wird, welche die `$select`-Abfrageoption nicht unterstützt, wird ein Fehler zurückgegeben. Dies kann auch geschehen, wenn die <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>-Eigenschaft des <xref:System.Data.Services.DataServiceBehavior>-Objekts für den Datendienst auf den Wert <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> festgelegt wird. Weitere Informationen finden Sie unter [Data Service Versioning](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- Abfragen mit Abfrageprojektionen für den Client werden übersetzt, sodass die `$select`-Abfrageoption im Anforderungs-URI verwendet wird. Wenn eine Abfrage mit Projektion für eine frühere Version von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ausgeführt wird, welche die `$select`-Abfrageoption nicht unterstützt, wird ein Fehler zurückgegeben. Dies kann auch geschehen, wenn die <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>-Eigenschaft des <xref:System.Data.Services.DataServiceBehavior>-Objekts für den Datendienst auf den Wert <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> festgelegt wird. Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md).
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Projekt Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Projekt Abfrageergebnisse](how-to-project-query-results-wcf-data-services.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Abfragen des Datendiensts](querying-the-data-service-wcf-data-services.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778507"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796266"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult-Enumeration
-Gibt die Gleichwertigkeit von zwei Assemblyidentitäten, bestimmt durch die [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) Funktion.  
+Gibt die Äquivalenz zweier Assemblyidentitäten an, die durch die [CompareAssemblyIdentity](compareassemblyidentity-function.md) -Funktion bestimmt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,29 +49,29 @@ typedef enum _tagAssemblyComparisonResult {
   
 |Membername|Beschreibung|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|Gibt an, dass alle im Vergleich übereinstimmen Assemblyfelder.|  
-|`ACR_EquivalentFXUnified`|Gibt an, dass Assemblys als gleichwertig basierend auf der common Language Runtime-Version (CLR) Vereinheitlichung von Assemblyversionsnummern in .NET Framework, Version 2.0 angesehen werden.|  
-|`ACR_EquivalentPartialFXUnified`|Gibt eine teilweise Übereinstimmung der basierend auf der CLR-Vereinheitlichung der Assembly-Versionsnummern in .NET Framework 2.0-Assemblys an.|  
-|`ACR_EquivalentPartialMatch`|Gibt eine teilweise Übereinstimmung der Assemblys an.|  
-|`ACR_EquivalentPartialUnified`|Gibt eine teilweise Übereinstimmung der älteren aufgrund der Vereinheitlichung der Versionsnummern in Assemblys an.|  
-|`ACR_EquivalentPartialWeakNamed`|Gibt eine teilweise Übereinstimmung von Assemblys mit einfachen Namen an.|  
-|`ACR_EquivalentUnified`|Gibt an, dass Assemblys als gleichwertig basierend auf der CLR-Vereinheitlichung der Versionsnummern in älteren Versionen von .NET Framework angesehen werden.|  
-|`ACR_EquivalentWeakNamed`|Gibt eine Übereinstimmung zwischen zwei Assemblys, die eine Verbindung, deren Versionsnummern ignoriert wurden, mit einfachen Namen an.|  
-|`ACR_NonEquivalent`|Gibt an, dass keine Übereinstimmung zwischen den beiden Assemblys aufgetreten ist.|  
-|`ACR_NonEquivalentPartialVersion`|Gibt an, dass die beiden Assemblys ihre Versionsnummern übereinstimmen, die nur teilweise übereinstimmen.|  
-|`ACR_NonEquivalentVersion`|Gibt an, dass die beiden Assemblys ihre Versionsnummern übereinstimmen, die nicht übereinstimmen.|  
-|`ACR_Unknown`|Gibt an, dass der Grund für nicht vorhandene Äquivalenz nicht bekannt ist.|  
+|`ACR_EquivalentFullMatch`|Gibt an, dass alle Assemblyfelder im Vergleich stimmen.|  
+|`ACR_EquivalentFXUnified`|Gibt an, dass Assemblys basierend auf der CLR-Vereinheitlichung (Common Language Runtime Version) der Assemblyversionsnummern in der .NET Framework Version 2,0 als äquivalent betrachtet werden|  
+|`ACR_EquivalentPartialFXUnified`|Gibt eine Teil Übereinstimmung der Assemblys basierend auf der CLR-Vereinheitlichung der Assemblyversionsnummern im .NET Framework 2,0 an.|  
+|`ACR_EquivalentPartialMatch`|Gibt eine Teil Übereinstimmung der Assemblys an.|  
+|`ACR_EquivalentPartialUnified`|Gibt eine Teil Übereinstimmung der Assemblys basierend auf der Legacy-Vereinheitlichung von Versionsnummern an.|  
+|`ACR_EquivalentPartialWeakNamed`|Gibt eine Teil Übereinstimmung von einfach benannten Assemblys an.|  
+|`ACR_EquivalentUnified`|Gibt an, dass Assemblys basierend auf der CLR-Vereinheitlichung der Versionsnummern in älteren Versionen der .NET Framework als gleichwertig betrachtet werden.|  
+|`ACR_EquivalentWeakNamed`|Gibt eine Entsprechung zwischen zwei einfach benannten Assemblys an, deren Versionsnummern ignoriert wurden.|  
+|`ACR_NonEquivalent`|Gibt an, dass zwischen den beiden Assemblys keine Entsprechung vorliegt.|  
+|`ACR_NonEquivalentPartialVersion`|Gibt an, dass die beiden Assemblys mit Ausnahme ihrer Versionsnummern stimmen, die nur teilweise abgeglichen werden.|  
+|`ACR_NonEquivalentVersion`|Gibt an, dass die beiden Assemblys mit Ausnahme ihrer Versionsnummern stimmen, die nicht mit identisch sind.|  
+|`ACR_Unknown`|Gibt an, dass der Grund für die nicht Äquivalenz nicht bekannt ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CompareAssemblyIdentity-Funktion](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
-- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [CompareAssemblyIdentity-Funktion](compareassemblyidentity-function.md)
+- [Fusion-Enumerationen](fusion-enumerations.md)

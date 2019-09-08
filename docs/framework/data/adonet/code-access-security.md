@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948266"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786872"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -47,15 +47,15 @@ ms.locfileid: "69948266"
   
  Die CLR verwendet Berechtigungen zum Implementieren ihres Mechanismus zur Durchsetzung von Beschränkungen für verwalteten Code. Rollenbasierte Sicherheitsberechtigungen bieten die Möglichkeit aufzudecken, ob ein Benutzer (oder der Agent, der im Auftrag des Benutzers agiert) eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Weitere Informationen finden Sie unter [Sicherheits Berechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Sicherheit](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblys  
- Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programming with](../../../../docs/framework/app-domains/programming-with-assemblies.md)Assemblys.  
+ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programming with](../../app-domains/programming-with-assemblies.md)Assemblys.  
   
 ### <a name="strong-naming-assemblies"></a>Assemblys mit starkem Namen  
  Ein starker Name (oder eine digitale Signatur) setzt sich aus der Identität der Assembly mit einfachem Textnamen, Versionsnummer und (sofern vorhanden) Kulturinformationen sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Die digitale Signatur wird mit dem entsprechenden privaten Schlüssel aus einer Assemblydatei generiert. Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.  
   
- Wenn eine Assembly mit einem starken Namen versehen wird, erhalten Anwendungen oder Komponenten eine eindeutige Identität, über die andere Software explizit auf die Assembly verweisen können. Ein starker Name schützt Assemblys vor Angriffen durch andere Assemblys, die bösartigen Code enthalten. Außerdem wird durch starke Namen die Versionskonsistenz zwischen verschiedenen Versionen einer Komponente gewährleistet. Assemblys, die im globalen Assemblycache (GAC) bereitgestellt werden sollen, müssen einen starken Namen erhalten. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Wenn eine Assembly mit einem starken Namen versehen wird, erhalten Anwendungen oder Komponenten eine eindeutige Identität, über die andere Software explizit auf die Assembly verweisen können. Ein starker Name schützt Assemblys vor Angriffen durch andere Assemblys, die bösartigen Code enthalten. Außerdem wird durch starke Namen die Versionskonsistenz zwischen verschiedenen Versionen einer Komponente gewährleistet. Assemblys, die im globalen Assemblycache (GAC) bereitgestellt werden sollen, müssen einen starken Namen erhalten. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Teilweise Vertrauenswürdigkeit in ADO.NET 2.0  
  In ADO.NET 2.0 können der .NET Framework-Datenanbieter für SQL Server, der .NET Framework-Datenanbieter für OLE DB, der .NET Framework-Datenanbieter für ODBC und der .NET Framework-Datenanbieter für Oracle jetzt alle in teilweise vertrauenswürdigen Umgebungen ausgeführt werden. In früheren Releases von .NET Framework wurde nur <xref:System.Data.SqlClient> in nicht vollständig vertrauenswürdigen Umgebungen unterstützt.  
@@ -78,7 +78,7 @@ ms.locfileid: "69948266"
 |`Unrestricted`|Gibt an, ob für die Ressource uneingeschränkte Berechtigungen deklariert wurden. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
   
 #### <a name="connectionstring-syntax"></a>Syntax von "ConnectionString"  
- Das folgende Beispiel zeigt, wie mithilfe des Elements `connectionStrings` einer Konfigurationsdatei nur eine bestimmte Verbindungszeichenfolge für die Verwendung zugelassen werden kann. Weitere Informationen zum Speichern und Abrufen von Verbindungs Zeichenfolgen aus Konfigurationsdateien finden Sie unter [Verbindungs](../../../../docs/framework/data/adonet/connection-strings.md) Zeichenfolgen.  
+ Das folgende Beispiel zeigt, wie mithilfe des Elements `connectionStrings` einer Konfigurationsdatei nur eine bestimmte Verbindungszeichenfolge für die Verwendung zugelassen werden kann. Weitere Informationen zum Speichern und Abrufen von Verbindungs Zeichenfolgen aus Konfigurationsdateien finden Sie unter [Verbindungs](connection-strings.md) Zeichenfolgen.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948266"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Aktivieren einer teilweisen Vertrauenswürdigkeit mit einem benutzerdefinierten Berechtigungssatz  
- Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Um z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einem <xref:System.Security.Policy.Zone> von `LocalIntranet`einzuschließen, könnte ein Systemadministrator den Berechtigungs Satz `LocalIntranet`für kopieren, ihn in "CustomLocalIntranet" Umbenennen <xref:System.Data.SqlClient> , die Berechtigungen hinzufügen, importieren der CustomLocalIntranet-Berechtigungs Satz mit [Caspol. exe (Code Access Security Policy-Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md), und legt den Berechtigungs Satz von `LocalIntranet_Zone` auf CustomLocalIntranet fest.  
+ Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Um z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einem <xref:System.Security.Policy.Zone> von `LocalIntranet`einzuschließen, könnte ein Systemadministrator den Berechtigungs Satz `LocalIntranet`für kopieren, ihn in "CustomLocalIntranet" Umbenennen <xref:System.Data.SqlClient> , die Berechtigungen hinzufügen, importieren der CustomLocalIntranet-Berechtigungs Satz mit [Caspol. exe (Code Access Security Policy-Tool)](../../tools/caspol-exe-code-access-security-policy-tool.md), und legt den Berechtigungs Satz von `LocalIntranet_Zone` auf CustomLocalIntranet fest.  
   
 ### <a name="sample-permission-set"></a>Beispielberechtigungssatz  
  Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Weitere Informationen zum Erstellen von benutzerdefinierten Berechtigungs Sätzen finden [Sie unter Konfigurieren von Berechtigungs Sätzen mit Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
- Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
+ Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../interop/index.md).  
   
  .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Advanced COM Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [Sicherheit in nativem und .NET Framework Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rollenbasierte Sicherheit](../../../standard/security/role-based-security.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Übersicht über ADO.NET](ado-net-overview.md)

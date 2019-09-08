@@ -1,6 +1,6 @@
 ---
 title: SetSecurity-Funktion (Referenz zur nicht verwalteten API)
-description: Die SetSecurity-Funktion ruft Identitätswechseltoken für den aktuellen Thread ab.
+description: Die SetSecurity-Funktion Ruft das Identitätswechsel Token des aktuellen Threads ab.
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783115"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798241"
 ---
 # <a name="setsecurity-function"></a>SetSecurity-Funktion
 
@@ -41,20 +41,20 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parameter
 
 `pNeedToReset`\
-[out] Wenn die Funktion zurückgibt, enthält einen Zeiger auf eine `boolean` , der angibt, ob das Token soll, durch den Aufruf zurückgesetzt werden der [ResetSecurity](resetsecurity.md) Funktion.
+vorgenommen Wenn die Funktion zurückgibt, enthält einen Zeiger auf `boolean` einen, der angibt, ob das Token durch Aufrufen der [resetsecurity](resetsecurity.md) -Funktion zurückgesetzt werden soll.
 
 `token`\
-[out] Wenn die Funktion zurückgibt, enthält einen Zeiger auf das Handle des Token für den Identitätswechsel des aktuellen Threads zugeordnet. Die Werte sind möglich `null` liegt kein Token, das den aktuellen Thread zugeordnet. 
+vorgenommen Wenn die Funktion zurückgegeben wird, enthält Sie einen Zeiger auf das Handle des Identitätswechsel Tokens, das mit dem aktuellen Thread verknüpft ist. Der Wert kann sein `null` , wenn kein Token mit dem aktuellen Thread verknüpft ist. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `S_OK` (0).
+Wenn die Funktion erfolgreich ausgeführt wird, ist `S_OK` der Rückgabewert (0).
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein NULL-Fehlercode. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null). Um erweiterte Fehlerinformationen abzurufen, wenden Sie die [GetErrorInfo](geterrorinfo.md) -Funktion an.
 
 ## <a name="requirements"></a>Anforderungen
 
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
  **Header:** WMINet_Utils.idl
 

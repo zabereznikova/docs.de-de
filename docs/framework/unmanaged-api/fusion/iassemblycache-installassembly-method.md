@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95c65e73c118b5358ac0a92dd0a1ca5545558e73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778740"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796802"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly-Methode
-Wird die angegebene Assembly im globalen Assemblycache installiert.  
+Installiert die angegebene Assembly im globalen Assemblycache.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT InstallAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `dwFlags`  
- [in] Flags, die in Fusion.idl definiert sind. Die folgenden Werte werden unterstützt:  
+ in In Fusion. idl definierte Flags. Die folgenden Werte werden unterstützt:  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
- [in] Der Pfad des Manifests für zu installierenden Assembly.  
+ in Der Pfad zum Manifest für die zu installier-Assembly.  
   
  `pRefData`  
- [in] Ein [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) Struktur, die Daten für die Installation enthält.  
+ in Eine [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) -Struktur, die Daten für die Installation enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion.h  
+ **Header:** Fusion. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache-Schnittstelle](iassemblycache-interface.md)

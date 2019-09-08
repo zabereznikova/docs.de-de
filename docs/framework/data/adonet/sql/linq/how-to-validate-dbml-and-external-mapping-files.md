@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 212d65dfe998b825dd40e564756083ed685dff6f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041134"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793041"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien
 
@@ -31,9 +31,9 @@ Externe Zuordnungsdateien und von Ihnen geänderte .dbml-Dateien müssen hinsich
 
 5. Beachten Sie die entsprechende Schemadefinition für den Zweck.
 
-    - DbmlSchema.xsd ist die Schemadefinition zum Validieren einer .dbml-Datei. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - DbmlSchema.xsd ist die Schemadefinition zum Validieren einer .dbml-Datei. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - LinqToSqlMapping.xsd ist die Schemadefinition zum Überprüfen einer externen XML-Zuordnungsdatei. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - LinqToSqlMapping.xsd ist die Schemadefinition zum Überprüfen einer externen XML-Zuordnungsdatei. Weitere Informationen finden Sie unter [externe Zuordnung](external-mapping.md).
 
 6. Klicken Sie in der Spalte **verwenden** der Zeile gewünschte Schema Definition auf, um das Dropdown Feld zu öffnen, und klicken Sie dann auf **dieses Schema verwenden**.
 
@@ -53,9 +53,9 @@ Wenn die entsprechende XSD-Datei aus irgendeinem Grund nicht im Dialogfeld **XML
 
 1. Suchen Sie das Hilfethema, das die Schemadefinition enthält (siehe weiter oben in diesem Abschnitt).
 
-    - Informationen zu DBML-Dateien finden Sie unter [Code Generierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).
+    - Informationen zu DBML-Dateien finden Sie unter [Code Generierung in LINQ to SQL](code-generation-in-linq-to-sql.md).
 
-    - Informationen zu externen Mapping-Dateien finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).
+    - Informationen zu externen Mapping-Dateien finden Sie unter [externe Zuordnung](external-mapping.md).
 
 2. Klicken Sie auf **Code kopieren** , um die Codedatei in die Zwischenablage zu kopieren.
 
@@ -74,4 +74,4 @@ Wenn die entsprechende XSD-Datei aus irgendeinem Grund nicht im Dialogfeld **XML
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Verweis](reference.md)

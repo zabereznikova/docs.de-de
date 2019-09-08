@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934120"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780614"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualisieren von Daten in einer Datenquelle
-SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Zum Ausführen von Befehlen, die keine Zeilen zurückgeben, erstellen Sie eine **Befehl** Objekt mit den entsprechenden SQL-Befehl und einem **Verbindung**, einschließlich der erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery** Methode der **Befehl** Objekt.  
+SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Zum Ausführen von Befehlen, die keine Zeilen zurückgeben, erstellen Sie ein **Command** -Objekt mit dem entsprechenden SQL-Befehl und einer **Verbindung**, einschließlich aller erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery** -Methode des **Command** -Objekts aus.  
   
- Die **ExecuteNonQuery** Methode gibt eine ganze Zahl, die die Anzahl der Zeilen betroffen sind, durch die Anweisung oder gespeicherte Prozedur, die ausgeführt wurde. Wenn mehrere Anweisungen ausgeführt werden, entspricht der zurückgegebene Wert der Summe der Datensätze, die von allen ausgeführten Anweisungen betroffen sind.  
+ Die **ExecuteNonQuery** -Methode gibt eine ganze Zahl zurück, die die Anzahl der von der ausgeführten-Anweisung oder gespeicherten Prozedur betroffenen Zeilen darstellt. Wenn mehrere Anweisungen ausgeführt werden, entspricht der zurückgegebene Wert der Summe der Datensätze, die von allen ausgeführten Anweisungen betroffen sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel führt eine INSERT-Anweisung zum Einfügen eines Datensatzes in einer Datenbank mit **ExecuteNonQuery**.  
+ Im folgenden Codebeispiel wird eine INSERT-Anweisung ausgeführt, um einen Datensatz mithilfe von **ExecuteNonQuery**in eine Datenbank einzufügen.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Das folgende Codebeispiel führt die gespeicherte Prozedur erstellt, durch den Beispielcode in [Ausführen von Katalogoperationen](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Keine Zeilen zurückgegeben werden, von der gespeicherten Prozedur, sodass die **ExecuteNonQuery** Methode wird verwendet, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt ein Output-Parameter und einen Rückgabewert zurück.  
+ Im folgenden Codebeispiel wird die gespeicherte Prozedur ausgeführt, die vom Beispielcode bei der [Ausführung von Katalog Vorgängen](performing-catalog-operations.md)erstellt wurde. Von der gespeicherten Prozedur werden keine Zeilen zurückgegeben, sodass die **ExecuteNonQuery** -Methode verwendet wird, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt einen Output-Parameter und einen Rückgabewert zurück.  
   
- Für die <xref:System.Data.OleDb.OleDbCommand> -Objekt, das **ReturnValue** muss Parameter hinzugefügt werden der **Parameter** Auflistung erste.  
+ Für das <xref:System.Data.OleDb.OleDbCommand> -Objekt muss der **ReturnValue** -Parameter zuerst der **Parameter** Auflistung hinzugefügt werden.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Befehlen zum Ändern von Daten](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verwenden von Befehlen zum Ändern von Daten](using-commands-to-modify-data.md)
+- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](updating-data-sources-with-dataadapters.md)
+- [Befehle und Parameter](commands-and-parameters.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

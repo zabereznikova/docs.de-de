@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b293c30060107d18c6b609efc82c4128a73cc1c7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741470"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787210"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile-Methode
-Können Sie angeben oder Zurücksetzen der Manifestdatei, die der Linker beim Erstellen der Assembly verwendet.  
+Ermöglicht es Ihnen, die Manifest-Datei anzugeben oder zurückzusetzen, die der Linker beim Erstellen der Assembly verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT SetManifestFile(
 ## <a name="parameters"></a>Parameter  
  `pszFile`  
   
- Der Name der Manifestdatei, deren Inhalt in der Win32-Ressourcen-Blob abgelegt werden.  
+ Der Name der Manifest-Datei, deren Inhalt in das Win32-Ressourcen-BLOB eingefügt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie diese, bevor Sie die Win32ResBlob aufgefordert. Der Wert des der `pszFile` Parameter ist der Name der Manifestdatei, deren Inhalt werden gelesen und in die Win32-Ressourcen mit der ID von RT_MANIFEST. Wenn mit einem NULL-Parameter aufgerufen, wird zuvor gelesenen Manifest gelöscht. Dies ermöglicht Ihnen, den Status des Linkers der Initialisierungszeit zurückzusetzen.  
+ Nennen Sie dies, bevor Sie die Win32ResBlob anfordern. Der Wert des `pszFile` -Parameters ist der Name der Manifest-Datei, deren Inhalt in den Win32-Ressourcen mit der ID RT_MANIFEST gelesen und abgelegt wird. Wenn Sie mit einem Parameter von NULL aufgerufen wird, werden alle zuvor gelesenen Manifeste gelöscht. Dadurch kann der Zustand des Linker auf den Zeitpunkt der Initialisierung zurückgesetzt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert aLink.h  
+ Erfordert "Alink. h"  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink3-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [IALink3-Schnittstelle](ialink3-interface.md)
+- [Alink-API](index.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)

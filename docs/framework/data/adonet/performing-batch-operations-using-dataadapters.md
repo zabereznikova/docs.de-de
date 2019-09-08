@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878290"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794510"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Ausführen von Batchvorgängen mit "DataAdapters"
 Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdapter> die Operationen INSERT, UPDATE und DELETE aus einem <xref:System.Data.DataSet> oder einer <xref:System.Data.DataTable> an einen Server zusammenfassen, anstatt nur jeweils eine Operation senden zu können. Durch das Reduzieren der Anzahl von Roundtrips zum Server kann im Allgemeinen die Leistung beträchtlich gesteigert werden. Batchupdates werden für die .NET-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) und Oracle (<xref:System.Data.OracleClient>) unterstützt.  
@@ -24,7 +24,7 @@ Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdap
 ## <a name="using-the-updatebatchsize-property"></a>Verwenden der "UpdateBatchSize"-Eigenschaft  
  Wenn Batchupdates aktiviert sind, sollte der <xref:System.Data.IDbCommand.UpdatedRowSource%2A>-Eigenschaftswert von `UpdateCommand`, `InsertCommand` und `DeleteCommand` des DataAdapter auf <xref:System.Data.UpdateRowSource.None> oder <xref:System.Data.UpdateRowSource.OutputParameters> festgelegt werden. Beim Update eines Batches sind der <xref:System.Data.IDbCommand.UpdatedRowSource%2A>-Wert und der <xref:System.Data.UpdateRowSource.FirstReturnedRecord>-Wert der <xref:System.Data.UpdateRowSource.Both>-Eigenschaft des Befehls ungültig.  
   
- In der folgenden Prozedur wird die Verwendung der `UpdateBatchSize`-Eigenschaft veranschaulicht. Die Prozedur akzeptiert zwei Argumente: ein <xref:System.Data.DataSet> -Objekt, das Spalten der **ProductCategoryID** und **Namen** Felder in der **Production.ProductCategory**Tabelle und eine ganze Zahl, die die Batchgröße (die Anzahl der Zeilen im Batch) darstellt. Der Code erstellt ein neues <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt und legt dessen Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> fest. Der Code geht davon aus, dass das <xref:System.Data.DataSet>-Objekt geänderte Zeilen aufweist. Er legt einen Wert für die `UpdateBatchSize`-Eigenschaft fest und führt das Update aus.  
+ In der folgenden Prozedur wird die Verwendung der `UpdateBatchSize`-Eigenschaft veranschaulicht. Die Prozedur verwendet zwei Argumente: ein <xref:System.Data.DataSet> -Objekt, das Spalten enthält, die die Felder " **ProductCategoryID** " und " **Name** " in der Tabelle " **Production. ProductCategory** " darstellen, und eine ganze Zahl, die die Batch Größe (die Anzahl der Zeilen im Batch). Der Code erstellt ein neues <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt und legt dessen Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> fest. Der Code geht davon aus, dass das <xref:System.Data.DataSet>-Objekt geänderte Zeilen aufweist. Er legt einen Wert für die `UpdateBatchSize`-Eigenschaft fest und führt das Update aus.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Behandeln von Ereignissen und Fehlern im Zusammenhang mit dem Batchupdate  
- Die **DataAdapter** verfügt über zwei updaterelevante Ereignisse: **RowUpdating** und **RowUpdated**. In älteren Versionen von ADO.NET werden diese Ereignisse jeweils einmal für jede verarbeitete Zeile generiert, wenn die Batchverarbeitung deaktiviert wurde. **RowUpdating** wird generiert, bevor das Update auftritt, und **RowUpdated** wird generiert, nachdem das Datenbankupdate abgeschlossen wurde.  
+ Der **DataAdapter** verfügt über zwei Update bezogene Ereignisse: **Rowupdate** und **rowupdate**. In älteren Versionen von ADO.NET werden diese Ereignisse jeweils einmal für jede verarbeitete Zeile generiert, wenn die Batchverarbeitung deaktiviert wurde. Das **rowupdate** wird vor dem Update generiert, und nach Abschluss des Datenbankupdates wird **rowupdate** generiert.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Änderungen im Ereignisverhalten durch Batchupdates  
  Bei aktivierter Batchverarbeitung werden mehrere Zeilen in einer einzigen Datenbankoperation aktualisiert. Deshalb findet pro Batch nur ein `RowUpdated`-Ereignis statt, wohingegen das `RowUpdating`-Ereignis für jede verarbeitete Zeile auftritt. Bei deaktivierter Batchverarbeitung werden die beiden Ereignisse mit Einzelverschachtelung ausgelöst, wobei für jede Zeile zunächst ein `RowUpdating`-Ereignis und dann ein `RowUpdated`-Ereignis ausgelöst wird. Diese Abfolge der Auslösung von `RowUpdating`-Ereignissen und `RowUpdated`-Ereignissen setzt sich so lange fort, bis alle Zeilen verarbeitet wurden.  
@@ -143,7 +143,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
+- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](updating-data-sources-with-dataadapters.md)
+- [Behandeln von DataAdapter-Ereignissen](handling-dataadapter-events.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

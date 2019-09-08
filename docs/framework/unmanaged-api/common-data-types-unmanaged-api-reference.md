@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892076"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776462"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Allgemeine Datentypen (Referenz zur nicht verwalteten API)
 In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
@@ -38,9 +38,9 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Der Bezeichner eines verwalteten Prozesses.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Der Bezeichner einer mit JIT kompilierten Funktion.|  
 |SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym. h|Ein Zeiger auf eine 64-Bit-Speicheradresse.|
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner einer [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Instanz.|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner einer [ICLRTask](./hosting/iclrtask-interface.md) -Instanz.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Der Bezeichner eines verwalteten Threads.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz zur nicht verwalteten API](../../../docs/framework/unmanaged-api/index.md)
+- [Referenz zur nicht verwalteten API](index.md)

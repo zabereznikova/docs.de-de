@@ -2,12 +2,12 @@
 title: Oracle-Sequenzen
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632344"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794595"
 ---
 # <a name="oracle-sequences"></a>Oracle-Sequenzen
 Der .NET Framework-Datenanbieter für Oracle bietet Unterstützung für das Abrufen der vom Server generierten Oracle-Sequenz-Schlüsselwerte, nachdem mit <xref:System.Data.OracleClient.OracleDataAdapter> Einfügevorgänge ausgeführt wurden.  
@@ -20,7 +20,7 @@ Der .NET Framework-Datenanbieter für Oracle bietet Unterstützung für das Abru
   
  Wenn Sie in einer Oracle-Datenbank eine Sequenz erstellen, können Sie deren Erstwert und den Inkrementwert definieren. Sie können die Sequenz auch nach neuen Werten abfragen, bevor Sie neue Zeilen senden. Das bedeutet, Ihr Code kann die Schlüsselwerte für neue Zeilen erkennen, bevor Sie sie in die Datenbank einfügen.  
   
- Weitere Informationen zum Erstellen von automatisch inkrementierte Spalten mithilfe von SQL Server und ADO.NET finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) und [Erstellen von AutoIncrement-Spalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Weitere Informationen zum Erstellen von Spalten mit automatischer Inkrement mithilfe von SQL Server und ADO.net finden Sie unter [Abrufen von Identitäts-oder](retrieving-identity-or-autonumber-values.md) Auto Sequenz Werten und Erstellen von [AutoIncrement-Spalten](./dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden C#-Beispiel wird gezeigt, wie Sie neue Sequenzwerte aus einer Oracle-Datenbank abrufen können. Im Beispiel wird auf die Sequenz in der INSERT INTO-Abfrage verwiesen, mit der die neuen Zeilen eingefügt werden. Daraufhin wird der Sequenzwert zurückgegeben, der mit der in Oracle10g eingeführten RETURNING-Klausel generiert wird. Das Beispiel fügt einer <xref:System.Data.DataTable> eine Reihe anstehender neuer Zeilen hinzu. Dabei kommt die ADO.NET-&lt;legacyBold&gt;AutoIncrement&lt;/legacyBold&gt;-Funktionalität zum Einsatz, mit der "Platzhalter"-Primärschlüsselwerte generiert werden. Beachten Sie, dass der von ADO.NET generierte Inkrementwert für die neue Zeile lediglich ein "Platzhalter" ist. Die Datenbank generiert u. U. andere Werte als ADO.NET.  
@@ -100,5 +100,5 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle und ADO.NET](oracle-and-adonet.md)
+- [Übersicht über ADO.NET](ado-net-overview.md)

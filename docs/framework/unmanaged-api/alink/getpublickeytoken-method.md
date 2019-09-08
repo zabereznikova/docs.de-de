@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741882"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777226"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken-Methode
-Ruft das Token des öffentlichen Schlüssels für eine angegebene Schlüsseldatei oder Schlüsselcontainer ab.  
+Ruft das Token des öffentlichen Schlüssels für eine angegebene keyfile oder einen Schlüssel Container ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,22 +42,22 @@ HRESULT GetPublicKeyToken(
  Der Dateiname des Schlüssels.  
   
  `pszKeyContainer`  
- Der Name des Schlüsselcontainers.  
+ Der Name des Schlüssel Containers.  
   
  `pvPublicKeyToken`  
- Die Adresse, in dem Token des Schlüssels ist, gespeichert werden.  
+ Adresse, an der das Schlüssel Token gespeichert werden soll.  
   
  `pcbPublicKeyToken`  
- Gibt die Größe in Byte des Puffers erkennbar `pvPublicKeyToken`. Enthält bei der Rückgabe die tatsächliche Anzahl von Bytes verwendet.  
+ Gibt die Größe (in Bytes) des Puffers an, `pvPublicKeyToken`der durch angegeben wird. Enthält bei der Rückgabe die tatsächliche Anzahl der verwendeten Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h an.  
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [IALink-Schnittstelle](ialink-interface.md)
+- [Alink-API](index.md)
