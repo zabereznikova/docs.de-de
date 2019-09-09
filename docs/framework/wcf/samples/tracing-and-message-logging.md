@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 55fdb31310c62c5d0ac7e5d963309cb1b3fe2da4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a58541b7d50d83d1e39d7c9dd9c58be4111ec494
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617530"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038739"
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
-In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierenden ablaufverfolgungen und Nachrichtenprotokolle werden angezeigt mit der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierenden Ablauf Verfolgungen und Nachrichten Protokolle werden mit dem [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)angezeigt. Dieses Beispiel basiert [auf den ersten](../../../../docs/framework/wcf/samples/getting-started-sample.md)Schritten.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
- Windows Communication Foundation (WCF) verwendet, die definierten Ablaufverfolgungsmechanismus der <xref:System.Diagnostics> Namespace. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In WCF, dies ist möglich durch den folgenden Code in der die Dienst- oder Client Konfigurationsdatei hinzufügen, durch Festlegen der Dienstmodell-Ablaufverfolgungsquelle `switchValue`:  
+ Windows Communication Foundation (WCF) verwendet den im <xref:System.Diagnostics> -Namespace definierten Ablauf Verfolgungs Mechanismus. In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In WCF kann dies erreicht werden, indem der folgende Code entweder der Konfigurationsdatei des dienstanders oder des Clients hinzugefügt wird, indem die Ablauf `switchValue`Verfolgungs Quelle für das Dienstmodell festgelegt wird:  
   
 ```xml  
 <system.diagnostics>  
@@ -43,12 +43,12 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 </system.diagnostics>  
 ```  
   
- Weitere Informationen zu Ablaufverfolgungsquellen finden Sie im Abschnitt "Ablaufverfolgungsquelle" in der [Konfigurieren der Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) Thema.  
+ Weitere Informationen zu Ablauf Verfolgungs Quellen finden Sie im Abschnitt "Ablauf Verfolgungs Quelle" im Thema Konfigurieren der Ablauf [Verfolgung](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) .  
   
 ## <a name="activity-tracing-and-propagation"></a>Aktivitätsablaufverfolgung und Weitergabe  
- Mit `ActivityTracing` aktiviert und `propagateActivity` festgelegt `true` in die `system.ServiceModel` Ablaufverfolgungsquellen für die Client- und Korrelation von ablaufverfolgungen in logischen Verarbeitungseinheiten (Aktivitäten), geben Sie zwischen Aktivitäten innerhalb von Endpunkten ( durch aktivitätsübertragungen) und über Aktivitäten über mehrere Endpunkte (durch Weitergabe der Aktivitäts-ID).  
+ Wenn `ActivityTracing` in den Ablauf Verfolgungs `true` Quellen für den Client und den Dienst aktiviert ist und `propagateActivity` auf festgelegt ist, stellen Sie die `system.ServiceModel` Korrelation von Ablauf Verfolgungen innerhalb logischer Verarbeitungseinheiten (Aktivitäten) zwischen Aktivitäten innerhalb von Endpunkten bereit ( über Aktivitäts Übertragungen) und über Aktivitäten, die mehrere Endpunkte umfassen (über propagierungs Aktivität).  
   
- Mithilfe dieser drei Mechanismen (Aktivitäten, Übertragungen und Weitergabe) können Sie die Grundursache eines Fehlers schneller mit dem Tool Service Trace Viewer ermitteln. Weitere Informationen finden Sie unter [mithilfe von Service Trace Viewer für korreliert Ablaufverfolgungen anzeigen und Problembehandlung](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Mithilfe dieser drei Mechanismen (Aktivitäten, Übertragungen und Weitergabe) können Sie die Grundursache eines Fehlers schneller mit dem Tool Service Trace Viewer ermitteln. Weitere Informationen finden Sie unter [Verwenden von Service Trace Viewer zum Anzeigen korrelierter Ablauf Verfolgungen und Problem](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)Behandlung.  
   
  Durch das Erstellen von benutzerdefinierten Aktivitätsablaufverfolgungen kann die von ServiceModel bereitgestellte Ablaufverfolgung erweitert werden. Durch die benutzerdefinierte Aktivitätsablaufverfolgung kann der Benutzer Ablaufverfolgungsaktivitäten für folgenden Aktionen erstellen:  
   
@@ -56,12 +56,12 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
   
 - Korrelieren von Aktivitäten durch Übertragungen und Weitergabe.  
   
-- Die Leistungskosten der WCF-Ablaufverfolgung (z. B. der benötigte Speicherplatz für eine Protokolldatei).  
+- Verringern der Leistungskosten der WCF-Ablauf Verfolgung (z. b. der Speicherplatz Kosten einer Protokolldatei).  
   
- Weitere Informationen zur benutzerdefinierten aktivitätsablaufverfolgung finden Sie unter den [erweitern Ablaufverfolgung](../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel.  
+ Weitere Informationen zur benutzerdefinierten Aktivitäts Ablauf Verfolgung finden Sie im Beispiel zum [erweitern](../../../../docs/framework/wcf/samples/extending-tracing.md) der Ablauf Verfolgung.  
   
 ## <a name="message-logging"></a>Nachrichtenprotokollierung  
- Die nachrichtenprotokollierung kann sowohl auf dem Client und Dienst des WCF-Anwendungen aktiviert werden. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie dem Client oder dem Dienst den folgenden Code hinzufügen:  
+ Die Nachrichten Protokollierung kann sowohl auf dem Client als auch auf dem Dienst einer beliebigen WCF-Anwendung aktiviert werden. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie dem Client oder dem Dienst den folgenden Code hinzufügen:  
   
 ```xml  
 <configuration>  
@@ -109,30 +109,30 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
  Nachrichten werden im XML-Format in dem in der Konfigurationsdatei angegebenen Zielverzeichnis protokolliert.  
   
 > [!NOTE]
->  Ablaufverfolgungsdateien werden nur erstellt, wenn zuerst das Protokollverzeichnis erstellt wurde. Stellen Sie sicher, dass das Verzeichnis C:\logs\ vorhanden ist, oder geben Sie ein anderes Protokollierungsverzeichnis in der Listenerkonfiguration an. Weitere Informationen finden Sie in den Anweisungen zum ersten Einrichten am Ende dieses Dokuments.  
+> Ablaufverfolgungsdateien werden nur erstellt, wenn zuerst das Protokollverzeichnis erstellt wurde. Stellen Sie sicher, dass das Verzeichnis C:\logs\ vorhanden ist, oder geben Sie ein anderes Protokollierungsverzeichnis in der Listenerkonfiguration an. Weitere Informationen finden Sie in den Anweisungen zum ersten Einrichten am Ende dieses Dokuments.  
   
- Weitere Informationen zur nachrichtenprotokollierung finden Sie unter den [Konfigurieren der Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) Thema.  
+ Weitere Informationen zur Nachrichten Protokollierung finden Sie im Thema [Konfigurieren der Nachrichten Protokollierung](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) .  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 2. Bevor Sie das Beispiel zur Ablaufverfolgung und Nachrichtenprotokollierung ausführen, erstellen Sie das Verzeichnis C:\logs\, in das der Dienst die SVCLOG-Dateien schreiben kann. Der Name dieses Verzeichnisses wird in der Konfigurationsdatei als Pfad für die zu protokollierenden Ablaufverfolgungen und Nachrichten definiert und kann geändert werden. Weisen Sie dem Benutzer Network Service Schreibzugriff für das Protokollverzeichnis zu.  
   
-3. Um die C#-, C++ oder Visual Basic .NET .NET-Edition der Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Befolgen Sie zum C#erstellen C++der-,-oder-Visual Basic .NET-Edition der Projekt Mappe die Anweisungen unter [Erstellen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

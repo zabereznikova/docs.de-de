@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955771"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>ETW-Ereignisse in der Task Parallel Library und PLINQ
 
-Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablaufverfolgung für Windows (ETW), die Sie zur Profilerstellung und Problembehebung für Anwendungen verwenden können, indem Sie Tools wie den Windows Performance Analyzer verwenden. Allerdings in den meisten Fällen die beste Möglichkeit, Profile für parallelen Anwendungscode ist die Verwendung der [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer) in Visual Studio.
+Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablaufverfolgung für Windows (ETW), die Sie zur Profilerstellung und Problembehebung für Anwendungen verwenden können, indem Sie Tools wie den Windows Performance Analyzer verwenden. In den meisten Szenarien ist es jedoch am besten, den parallelen Anwendungscode zu erstellen, indem die Parallelitäts schnell [Ansicht in Visual](/visualstudio/profiling/concurrency-visualizer) Studio verwendet wird.
 
 ## <a name="task-parallel-library-etw-events"></a>Task Parallel Library-ETW-Ereignisse
 
@@ -33,7 +33,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -49,7 +49,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -63,7 +63,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -79,7 +79,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -99,7 +99,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -112,7 +112,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>Benutzerdaten
 
-|**Name**|**Type**|**Beschreibung**|
+|**Name**|**Typ**|**Beschreibung**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|Die ID des TaskScheduler, der die Schleife gestartet hat.|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|Die ID der Aufgabe, die die Schleife gestartet hat.|
@@ -121,5 +121,5 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="see-also"></a>Siehe auch
 
 - [ETW Events in the .NET Framework (ETW-Ereignisse in .NET Framework)](../../../docs/framework/performance/etw-events.md)
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../standard/parallel-programming/parallel-linq-plinq.md)

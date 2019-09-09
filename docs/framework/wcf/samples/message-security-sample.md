@@ -2,18 +2,18 @@
 title: Beispiel für Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 1da6c73c8cb0e5bf7837e2445eae72c906472d07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e57e82dc9394f34ab97da751a5d11c6099d353c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664863"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044862"
 ---
 # <a name="message-security-sample"></a>Beispiel für Nachrichtensicherheit
-In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die `basicHttpBinding` und Nachrichtensicherheit verwendet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  
+In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die `basicHttpBinding` und Nachrichtensicherheit verwendet. Dieses Beispiel basiert auf den ersten [Schritten, mit](../../../../docs/framework/wcf/samples/getting-started-sample.md) denen ein Rechner Dienst implementiert wird.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Der Sicherheitsmodus von `basicHttpBinding` kann auf die folgenden Werte festgelegt werden: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` und `None`. In der folgenden Datei "App.config" des Beispieldiensts gibt die Endpunktdefinition die `basicHttpBinding` an und verweist auf die Bindungskonfiguration `Binding1` (wie in folgender Beispielkonfiguration gezeigt).  
   
@@ -34,7 +34,7 @@ In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, 
 </system.serviceModel>  
 ```  
   
- Die Bindungskonfiguration legt die `mode` Attribut des der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) zu `Message` und legt sie fest der `clientCredentialType` Attribut der [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)zu `Certificate` wie in der folgenden Beispielkonfiguration dargestellt:  
+ In der Bindungs Konfiguration wird `mode` das-Attribut [ \<der Sicherheits >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) `Message` `clientCredentialType` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) auf festgelegt und das-Attribut der Nachricht `Certificate` > auf festgelegt, wie im folgenden gezeigt. Beispielkonfiguration:  
   
 ```xml  
 <bindings>  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
@@ -121,13 +121,13 @@ Press <ENTER> to terminate client.
 1. Führen Sie "Setup.bat" im Beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
   
     > [!NOTE]
-    >  Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt.  
+    > Die Batchdatei "Setup.bat" ist dafür ausgelegt, von einer Windows SDK-Eingabeaufforderung ausgeführt zu werden. Die MSSDK-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable wird automatisch innerhalb einer Windows SDK-Eingabeaufforderung festgelegt.  
   
 2. Führen Sie die Dienstanwendung in "\service\bin" aus.  
   
 3. Führen Sie die Clientanwendung in "\client\bin" aus. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 5. Wenn Sie mit dem Beispiel fertig sind, führen Sie die Datei Cleanup.bat aus, um die Zertifikate zu entfernen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
   
@@ -141,40 +141,40 @@ Press <ENTER> to terminate client.
   
 4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-5. Führen Sie auf dem Server `setup.bat service` aus. Ausführung `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in die Datei Service.cer exportiert.  
+5. Führen Sie auf dem Server `setup.bat service` aus. Wenn `setup.bat` Sie mit `service` dem-Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
-6. Bearbeiten Sie Service.exe.config so, dass Sie den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Element) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers. Ändern Sie auch den Wert der Basisadresse, um anstelle von "localhost" einen vollqualifizierten Computernamen anzugeben`.`  
+6. Bearbeiten Sie die Datei "Service. exe. config" so, dass Sie `findValue` den neuen Zertifikat Namen (im-Attribut [ \<im serviceCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) -Element) anzeigt, der mit dem voll qualifizierten Domänen Namen des Computers identisch ist. Ändern Sie auch den Wert der Basisadresse, um anstelle von "localhost" einen vollqualifizierten Computernamen anzugeben`.`  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
 8. Führen Sie auf dem Client `setup.bat client` aus. Durch Ausführen von `setup.bat` mit dem Argument `client` wird ein Clientzertifikat mit dem Namen client.com erstellt und in die Datei Client.cer exportiert.  
   
-9. Ändern Sie in der Datei "Client.exe.config" auf dem Clientcomputer den Wert für die Adresse des Endpunkts so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers. Auch ändern, die `findValue` Attribut der [ \<DefaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) auf den neuen dientzertifikatnamen, die den vollqualifizierten Domänennamen des Servers ist.  
+9. Ändern Sie in der Datei "Client.exe.config" auf dem Clientcomputer den Wert für die Adresse des Endpunkts so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie dazu localhost durch den vollqualifizierten Domänennamen des Servers. Ändern Sie auch `findValue` das-Attribut [ \<des defaultCertificate->](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) in den neuen Dienst Zertifikat Namen, der den voll qualifizierten Domänen Namen des Servers ist.  
   
 10. Kopieren Sie die Datei Client.cer aus dem Clientverzeichnis in das Dienstverzeichnis auf dem Server.  
   
 11. Führen Sie auf dem Client "ImportServiceCert.bat" aus. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
   
-12. Führen Sie auf dem Server "ImportClientCert.bat" aus. Dadurch wird das Clientzertifikat von der Datei "Client.cer" in den LocalMachine &amp;#8211; TrustedPeople-Speicher importiert.  
+12. Führen Sie auf dem Server "ImportClientCert.bat" aus. Dadurch wird das Clientzertifikat von der Datei "Client.cer" in den LocalMachine &#8211; TrustedPeople-Speicher importiert.  
   
 13. Führen Sie auf dem Dienstcomputer die Datei "Service.exe" über eine Eingabeaufforderung aus.  
   
 14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
   
-    1. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 - Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
     > [!NOTE]
-    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    > Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, stellen Sie sicher, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie hierzu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Zum Beispiel:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  

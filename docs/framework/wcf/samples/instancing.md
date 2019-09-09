@@ -5,28 +5,28 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 37ffbe36b231737ca10b2dc864ad6e5b304b94bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e755a28ff4ce6450db4189783fa688002ebe8eb
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648314"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045558"
 ---
 # <a name="instancing"></a>Instanziierung
-Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten veranschaulicht, die steuert, wie Instanzen einer Dienstklasse als Reaktion auf Clientanforderungen erstellt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), implementiert die `ICalculator` Dienstvertrag. In diesem Beispiel wird ein neuer Vertrag (`ICalculatorInstance`) definiert, der von `ICalculator` erbt. Der von `ICalculatorInstance` angegebene Vertrag stellt drei zusätzliche Vorgänge zum Überprüfen des Zustands der Dienstinstanz bereit. Indem Sie die Einstellung für die Instanziierung ändern, können Sie Änderungen im Verhalten beobachten, wenn Sie den Client ausführen.  
+Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten veranschaulicht, die steuert, wie Instanzen einer Dienstklasse als Reaktion auf Clientanforderungen erstellt werden. Das Beispiel basiert auf den ersten [Schritten, die](../../../../docs/framework/wcf/samples/getting-started-sample.md)den `ICalculator` Dienstvertrag implementieren. In diesem Beispiel wird ein neuer Vertrag (`ICalculatorInstance`) definiert, der von `ICalculator` erbt. Der von `ICalculatorInstance` angegebene Vertrag stellt drei zusätzliche Vorgänge zum Überprüfen des Zustands der Dienstinstanz bereit. Indem Sie die Einstellung für die Instanziierung ändern, können Sie Änderungen im Verhalten beobachten, wenn Sie den Client ausführen.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Eine neue Dienstinstanz wird für jede Clientanforderung erstellt.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Für jede Client Anforderung wird eine neue Dienst Instanz erstellt.  
   
-- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Eine neue Instanz wird für jede neue Clientsitzung erstellt und verwaltet werden, für die Lebensdauer der Sitzung (erfordert eine Bindung, die Sitzung unterstützt).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Für jede neue Client Sitzung wird eine neue-Instanz erstellt und für die Lebensdauer dieser Sitzung beibehalten (erfordert eine Bindung, die Sitzung unterstützt).  
   
-- <xref:System.ServiceModel.InstanceContextMode.Single>: Eine einzelne Instanz der Dienstklasse verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Eine einzelne Instanz der Dienstklasse verarbeitet alle Client Anforderungen für die Lebensdauer der Anwendung.  
   
  Die Dienstklasse gibt das Instanziierungsverhalten mit dem `[ServiceBehavior(InstanceContextMode=<setting>)]`-Attribut an, wie im folgenden Beispielcode dargestellt. Indem Sie unterschiedliche Zeilen auskommentieren, können Sie das Verhalten der einzelnen Instanzmodi beobachten. Denken Sie daran, den Dienst nach dem Ändern des Instanziierungsmodus neu zu erstellen. Es gibt keine Einstellungen in Bezug auf die Instanziierung, die auf dem Client angegeben werden.  
   
@@ -124,17 +124,17 @@ static void Main()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  

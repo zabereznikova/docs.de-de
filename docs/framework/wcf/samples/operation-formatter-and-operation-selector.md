@@ -2,17 +2,17 @@
 title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 06f6d3e79844f719efc33788b6ea3bd5326e736b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 5853a791a92535c970f8010dd08d42e10292ffa8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424982"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039028"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
-Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format wie erwartet, WCF dass zu ermöglichen. Standardmäßig erwarten die WCF-Formatierer Methodenparameter unter aufgenommen werden die `soap:body` Element. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
+In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF)-Erweiterbarkeits Punkte verwendet werden können, um Nachrichten Daten in einem anderen Format als in WCF zuzulassen. Standardmäßig erwarten WCF-Formatierer, dass Methoden Parameter unter dem `soap:body` -Element enthalten sind. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
   
- Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), implementiert die `ICalculator` Dienstvertrag. Es zeigt, wie Add-, Subtract-, Multiply- und Divide-Nachrichten so geändert werden können, dass für Client-an-Server-Anforderungen HTTP GET und für Server-zu-Client-Antworten HTTP POST mit POX-Nachrichten verwendet werden.  
+ Das Beispiel basiert auf den ersten [Schritten, die](../../../../docs/framework/wcf/samples/getting-started-sample.md)den `ICalculator` Dienstvertrag implementieren. Es zeigt, wie Add-, Subtract-, Multiply- und Divide-Nachrichten so geändert werden können, dass für Client-an-Server-Anforderungen HTTP GET und für Server-zu-Client-Antworten HTTP POST mit POX-Nachrichten verwendet werden.  
   
  Zu diesem Zweck enthält das Beispiel Folgendes:  
   
@@ -27,10 +27,10 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
 - In diesem Beispiel sind sowohl der Client als auch der Dienst Konsolenanwendungen (.exe).  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="key-concepts"></a>Grundbegriffe  
- `QueryStringFormatter` -Der vorgangsformatierer ist die Komponente in WCF, die für die Konvertierung einer Nachricht in ein Array von Parameterobjekten und ein Array von Parameterobjekten in eine Nachricht verantwortlich ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
+ `QueryStringFormatter`-Der Vorgangs Formatierer ist die Komponente in WCF, die für das umrechnen einer Nachricht in ein Array von Parameter Objekten und ein Array von Parameter Objekten in eine Nachricht zuständig ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
   
  In diesem Beispiel implementiert `QueryStringFormatter` beide Schnittstellen und wird sowohl auf dem Client als auch auf dem Server implementiert.  
   
@@ -60,10 +60,10 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
   
  Der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> wird auf die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierung festgelegt.  
   
- WCF verwendet standardmäßig einen Adressfilter für genaue Übereinstimmung. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Er verwendet den WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> für diesen Zweck.  
+ Standardmäßig verwendet WCF einen exakten Adress Filter. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Hierfür wird WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> verwendet.  
   
 ### <a name="installing-operation-formatters"></a>Installieren von Vorgangsformatierern  
- Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines ersatzverhaltens muss die Implementierung suchen Sie nach bestimmten Formatierers Verhalten, die von den WCF-typladeprogramm standardmäßig und entweder installiert werden, die sie ersetzen oder fügen ein kompatibles Verhalten nach dem Standardverhalten ausgeführt.  
+ Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines Ersetzungs Verhaltens muss die-Implementierung nach bestimmten Formatiererverhalten suchen, die vom WCF-typlader standardmäßig installiert werden, und entweder ersetzen oder ein kompatibles Verhalten hinzufügen, das nach dem Standardverhalten ausgeführt wird.  
   
  Diese Vorgangsformatiererverhalten können programmgesteuert vor dem Aufruf von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> eingerichtet werden, oder indem man ein Vorgangsverhalten angibt, das nach dem Standardverhalten ausgeführt wird. Es kann jedoch nicht einfach wie ein Endpunktverhalten (und damit per Konfiguration) eingerichtet werden, da das Verhaltensmodell das Ersetzen eines Verhaltens durch ein anderes oder sonstiges Ändern der Beschreibungsstruktur nicht zulässt.  
   
@@ -162,18 +162,18 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Alle vier Vorgänge (Add, Subtract, Multiply und Divide) müssen erfolgreich sein.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
-2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
   
-3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  

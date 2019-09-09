@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630986"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106954"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)
 
@@ -22,17 +22,17 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie Folgendes 
 Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 
 > [!div class="checklist"]
-> * [Erstellen einer WPF-Anwendung](#create-a-wpf-application)
-> * [Entwerfen eines einfachen WPF-MainWindow](#design-a-simple-wpf-mainwindow)
-> * [Verweis hinzufügen](#add-a-reference)
-> * [Erforderliche Imports-Anweisungen hinzufügen](#add-necessary-imports-statements)
-> * [Erstellen einer synchronen Anwendung](#create-a-synchronous-application)
-> * [Testen der synchronen Lösung](#test-the-synchronous-solution)
-> * [Konvertieren von "geturlcontents" in eine asynchrone Methode](#convert-geturlcontents-to-an-asynchronous-method)
-> * [Sumpagesizes in eine asynchrone Methode konvertieren](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [Konvertieren von startButton_Click in eine asynchrone Methode](#convert-startbutton_click-to-an-asynchronous-method)
-> * [Testen der asynchronen Lösung](#test-the-asynchronous-solution)
-> * [Ersetzen der geturlcontentsasync-Methode durch eine .NET Framework-Methode](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [Erstellen einer WPF-Anwendung](#create-a-wpf-application)
+> - [Entwerfen eines einfachen WPF-MainWindow](#design-a-simple-wpf-mainwindow)
+> - [Verweis hinzufügen](#add-a-reference)
+> - [Erforderliche Imports-Anweisungen hinzufügen](#add-necessary-imports-statements)
+> - [Erstellen einer synchronen Anwendung](#create-a-synchronous-application)
+> - [Testen der synchronen Lösung](#test-the-synchronous-solution)
+> - [Konvertieren von "geturlcontents" in eine asynchrone Methode](#convert-geturlcontents-to-an-asynchronous-method)
+> - [Sumpagesizes in eine asynchrone Methode konvertieren](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [Konvertieren von startButton_Click in eine asynchrone Methode](#convert-startbutton_click-to-an-asynchronous-method)
+> - [Testen der asynchronen Lösung](#test-the-asynchronous-solution)
+> - [Ersetzen der geturlcontentsasync-Methode durch eine .NET Framework-Methode](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 Das komplette asynchrone Beispiel finden Sie im [Beispiel](#example) Abschnitt.
 
@@ -355,7 +355,7 @@ Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere I
 
     Die Konvertierung von `SumPageSizes` zu `SumPageSizesAsync` ist abgeschlossen.
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>Konvertieren von „startButton_Click“ in eine asynchrone Methode
+## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>Konvertieren von „startButton_Click“ in eine asynchrone Methode
 
 1. Ändern Sie im Ereignishandler den Namen der aufgerufenen Methode von `SumPageSizes` zu `SumPageSizesAsync`, sofern Sie dies nicht bereits vorgenommen haben.
 

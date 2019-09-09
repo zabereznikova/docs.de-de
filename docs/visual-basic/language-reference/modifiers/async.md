@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 6a3d9c8eb8e5929796683bd0bb50159ca0c69f1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434058"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959869"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 Der `Async` -Modifizierer gibt an, dass die von ihm modifizierte Methode oder der [Lambda-Ausdruck](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) asynchron ist. Solche Methoden werden als *Async-Methoden*bezeichnet.  
@@ -20,7 +20,7 @@ Der `Async` -Modifizierer gibt an, dass die von ihm modifizierte Methode oder de
  Mit einer Async-Methode können Aufgaben mit potenziell langer Laufzeit auf einfache Weise ausgeführt werden, ohne den Thread des Aufrufers zu blockieren. Der Aufrufer einer Async-Methode kann seine Arbeit fortsetzen, ohne auf die Fertigstellung der Async-Methode zu warten.  
   
 > [!NOTE]
->  Die Schlüsselwörter `Async` und `Await` wurden in Visual Studio 2012 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> Die Schlüsselwörter `Async` und `Await` wurden in Visual Studio 2012 eingeführt. Eine Einführung in die asynchrone Programmierung finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Im folgenden Beispiel wird die Struktur einer asynchronen Methode veranschaulicht. Laut Konvention enden die Namen von asynchrone Methoden mit "Async."  
   
@@ -42,7 +42,7 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- In der Regel enthält eine durch das `Async` -Schlüsselwort geänderte Methode mindestens einen [Erwartungs Ausdruck oder](../../../visual-basic/language-reference/modifiers/async.md) eine-Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await`-Ausdruck oder keine Await-Anweisung enthält, wird die Methode nicht angehalten und wie eine synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter [Compilerfehler](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ In der Regel enthält eine durch das `Async` -Schlüsselwort geänderte Methode mindestens einen [Erwartungs Ausdruck oder eine-](../../../visual-basic/language-reference/modifiers/async.md) Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await`-Ausdruck oder keine Await-Anweisung enthält, wird die Methode nicht angehalten und wie eine synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter [Compilerfehler](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
  Das Schlüsselwort `Async` ist ein nicht reserviertes Schlüsselwort. Es ist ein Schlüsselwort, wenn eine Methode oder ein Lambdaausdruck geändert wird. In allen anderen Kontexten wird es als Bezeichner interpretiert.  
   

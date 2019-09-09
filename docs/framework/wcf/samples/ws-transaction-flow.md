@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 8c021e3b3de1dbe000ab328f7a09d79a4bc966fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 955522630af7eab458545e3b4e9631e6fbea31eb
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592218"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038462"
 ---
 # <a name="ws-transaction-flow"></a>WS-Transaktionsfluss
-In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Client- und Serveroptionen für den Transaktionsfluss unter Verwendung des WS-Atomic-Transaktionsprotokolls oder des OleTransactions-Protokolls erläutert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert, aber die Vorgänge zum Veranschaulichen der Verwendung von attributiert sind die `TransactionFlowAttribute` mit der **TransactionFlowOption** Enumeration, um zu bestimmen, in welchem Umfang der Transaktionsfluss aktiviert ist. Innerhalb des Bereichs des Transaktionsflusses wird ein Protokoll der angeforderten Vorgänge in eine Datenbank geschrieben. Dieses bleibt dort erhalten, bis die clientkoordinierte Transaktion fertiggestellt wurde. Wenn die Clienttransaktion nicht fertiggestellt wird, stellt die Webdiensttransaktion sicher, dass die entsprechenden Aktualisierungen der Datenbank nicht ausgeführt werden.  
+In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Client- und Serveroptionen für den Transaktionsfluss unter Verwendung des WS-Atomic-Transaktionsprotokolls oder des OleTransactions-Protokolls erläutert. Dieses Beispiel basiert auf den ersten [Schritten,](../../../../docs/framework/wcf/samples/getting-started-sample.md) `TransactionFlowAttribute` mit denen ein Rechner Dienst implementiert wird. die Vorgänge werden jedoch mit der Verwendung von mit der **transaktionflowoption** -Enumeration veranschaulicht, um zu bestimmen, zu welchem Grad der Transaktions Fluss ist aktiviert. Innerhalb des Bereichs des Transaktionsflusses wird ein Protokoll der angeforderten Vorgänge in eine Datenbank geschrieben. Dieses bleibt dort erhalten, bis die clientkoordinierte Transaktion fertiggestellt wurde. Wenn die Clienttransaktion nicht fertiggestellt wird, stellt die Webdiensttransaktion sicher, dass die entsprechenden Aktualisierungen der Datenbank nicht ausgeführt werden.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
  Nach der Initiierung einer Verbindung zu dem Dienst und einer Transaktion greift der Client auf mehrere Dienstvorgänge zu. Der Vertrag für den Dienst ist folgendermaßen definiert, dabei veranschaulicht jeder der Vorgänge eine andere Einstellung für die `TransactionFlowOption`.  
 
@@ -47,7 +47,7 @@ public interface ICalculator
   
 - Eine `Divide`-Vorgangsanforderung darf keinen Transaktionsfluss durch die Auslassung eines `TransactionFlow`-Attributs beinhalten.  
   
- Zum Aktivieren des Transaktionsflusses, Bindungen, bei denen die [ \<TransactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft aktiviert ist, muss zusätzlich zu den entsprechenden Vorgangsattributen verwendet werden. In diesem Beispiel macht die Dienstkonfiguration zusätzlich zu einem Metadatenaustausch-Endpunkt einen TCP-Endpunkt und einen HTTP-Endpunkt verfügbar. Der TCP-Endpunkt und den HTTP-Endpunkt verwenden Sie die folgenden Bindungen, die jeweils die [ \<TransactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft aktiviert ist.  
+ Um den Transaktions Fluss zu aktivieren, müssen Bindungen mit [ \<aktivierter transaktionflow->](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft zusätzlich zu den entsprechenden Vorgangs Attributen verwendet werden. In diesem Beispiel macht die Dienstkonfiguration zusätzlich zu einem Metadatenaustausch-Endpunkt einen TCP-Endpunkt und einen HTTP-Endpunkt verfügbar. Der TCP-Endpunkt und der HTTP-Endpunkt verwenden die folgenden Bindungen, für die die [ \<transaktionflow->](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) -Eigenschaft aktiviert ist.  
   
 ```xml  
 <bindings>  
@@ -64,12 +64,12 @@ public interface ICalculator
 ```  
   
 > [!NOTE]
->  Die vom System bereitgestellte netTcpBinding ermöglicht die Festlegung des transactionProtocol, während die vom System bereitgestellte wsHttpBinding nur das interoperablere WSAtomicTransactionOctober2004-Protokoll verwendet. Die OleTransactions, die Protokoll nur zur Verfügung steht, verwenden von Windows Communication Foundation (WCF)-Clients.  
+> Die vom System bereitgestellte netTcpBinding ermöglicht die Festlegung des transactionProtocol, während die vom System bereitgestellte wsHttpBinding nur das interoperablere WSAtomicTransactionOctober2004-Protokoll verwendet. Das OleTransactions-Protokoll ist nur für die Verwendung durch Windows Communication Foundation (WCF)-Clients verfügbar.  
   
  Für die Klasse, die die `ICalculator`-Schnittstelle implementiert, werden alle Methoden mit auf <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> festgelegter `true`-Eigenschaft attributiert. Diese Einstellung deklariert, dass alle innerhalb der Methode ausgeführten Aktionen innerhalb des Bereichs einer Transaktion auftreten. In diesem Fall beinhalten die ausgeführten Aktionen auch Aufzeichnung in der Protokolldatenbank. Wenn die Vorgangsanforderung einen Transaktionsfluss beinhaltet, treten die Aktionen innerhalb des Bereichs der eingehenden Transaktion auf, oder es wird automatisch ein neuer Transaktionsbereich erstellt.  
   
 > [!NOTE]
->  Die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft definiert das Verhalten lokal in Bezug auf die Implementierungen der Dienstmethode und definiert nicht die Fähigkeit des Clients für oder die Anforderung eines Transaktionsflusses.  
+> Die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft definiert das Verhalten lokal in Bezug auf die Implementierungen der Dienstmethode und definiert nicht die Fähigkeit des Clients für oder die Anforderung eines Transaktionsflusses.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -117,7 +117,7 @@ CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");
 ```
 
 > [!NOTE]
->  Das beobachtete Verhalten dieses Beispiels ist das gleiche, unabhängig davon, welches Protokoll oder welcher Transport ausgewählt wird.  
+> Das beobachtete Verhalten dieses Beispiels ist das gleiche, unabhängig davon, welches Protokoll oder welcher Transport ausgewählt wird.  
   
  Nach der Initiierung der Verbindung zu dem Dienst erstellt der Client einen neuen `TransactionScope` um die Aufrufe der Dienstvorgänge.  
 
@@ -223,68 +223,68 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Um die C#- oder Visual Basic .NET Version der Lösung zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. Befolgen Sie die C# Anweisungen unter [Erstellen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md) , um das oder Visual Basic .NET-Version der Projekt Mappe zu erstellen.  
   
 2. Vergewissern Sie sich, dass SQL Server Express Edition oder SQL Server installiert ist. Stellen Sie außerdem sicher, dass die Verbindungszeichenfolge in der Anwendungskonfigurationsdatei des Diensts ordnungsgemäß festgelegt ist. Wenn Sie das Beispiel ohne eine Datenbank ausführen möchten, legen Sie den `usingSql`-Wert in der Anwendungskonfigurationsdatei des Diensts auf `false` fest.  
   
-3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Finden Sie unter [WS-AtomicTransaction-Unterstützung konfigurieren](https://go.microsoft.com/fwlink/?LinkId=190370) Informationen zum Einrichten von WsatConfig.exe festlegen.  
+    > Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Weitere Informationen zum Einrichten von "WsatConfig. exe" finden Sie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](https://go.microsoft.com/fwlink/?LinkId=190370) .  
   
- Ob Sie das Beispiel auf demselben Computer oder auf anderen Computern ausführen, müssen Sie der Microsoft Distributed Transaction Coordinator (MSDTC) zum Aktivieren der Netzwerk-Transaktionsfluss und verwenden das Tool WsatConfig.exe die Netzwerkunterstützung von WCF-Transaktionen aktivieren konfigurieren.  
+ Unabhängig davon, ob Sie das Beispiel auf demselben Computer oder auf unterschiedlichen Computern ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das Tool wsatConfig. exe verwenden, um die Netzwerkunterstützung für WCF-Transaktionen zu aktivieren.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>So konfigurieren Sie Microsoft Distributed Transaction Coordinator (MSDTC) zum Ausführen des Beispiels  
   
 1. Konfigurieren Sie MSDTC auf einem Dienstcomputer unter Windows Server 2003 oder Windows XP entsprechend den folgenden Anweisungen so, dass eingehende Netzwerktransaktionen zugelassen werden.  
   
-    1. Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Navigieren Sie im **Startmenü** zu " **Systemsteuerung**", und klicken Sie dann auf " **Verwaltung**" und dann auf " **Komponenten Dienste**".  
   
-    2. Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner.  
+    2. Erweitern Sie **Komponenten Dienste**. Öffnen Sie den Ordner **Computer** .  
   
-    3. Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
+    3. Klicken Sie mit der rechten Maustaste **Arbeitsplatz** und wählen Sie **Eigenschaften**.  
   
-    4. Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
+    4. Klicken Sie auf der Registerkarte **MSDTC** auf **Sicherheitskonfiguration**.  
   
-    5. Überprüfen Sie **DTC-Netzwerkzugriff** und **zulassen eingehender**.  
+    5. Überprüfen Sie den **DTC-Netzwerk Zugriff** und **Eingehende zulassen**.  
   
-    6. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    6. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     7. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 2. Konfigurieren Sie MSDTC auf einem Dienstcomputer unter Windows Server 2008 oder Windows Vista entsprechend den folgenden Anweisungen so, dass eingehende Netzwerktransaktionen zugelassen werden.  
   
-    1. Von der **starten** Menü navigieren Sie zu **Systemsteuerung**, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Navigieren Sie im **Startmenü** zu " **Systemsteuerung**", und klicken Sie dann auf " **Verwaltung**" und dann auf " **Komponenten Dienste**".  
   
-    2. Erweitern Sie **Komponentendienste**. Öffnen der **Computer** Ordner. Wählen Sie **Distributed Transaction Coordinator**.  
+    2. Erweitern Sie **Komponenten Dienste**. Öffnen Sie den Ordner **Computer** . Wählen Sie **Distributed Transaction Coordinator**aus.  
   
-    3. Mit der rechten Maustaste **Distributed Transaction Coordinator** , und wählen Sie **Eigenschaften**.  
+    3. Klicken Sie mit der rechten Maustaste auf **DTC Coordinator** , und wählen Sie **Eigenschaften**  
   
-    4. Auf der **Sicherheit** Registerkarte **DTC-Netzwerkzugriff** und **Allow Inbound**.  
+    4. Aktivieren Sie auf der Registerkarte **Sicherheit** die Option **DTC-Netzwerk Zugriff** und **Eingehende zulassen**.  
   
-    5. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 3. Konfigurieren Sie auf dem Clientcomputer MSDTC zum Zulassen von ausgehenden Netzwerktransaktionen:  
   
-    1. Von der **starten** Menü navigieren Sie zu `Control Panel`, klicken Sie dann **Verwaltung**, und klicken Sie dann **Komponentendienste**.  
+    1. Navigieren Sie im **Startmenü** zu, `Control Panel`und klicken Sie dann auf " **Verwaltung**" und dann auf " **Komponenten Dienste**".  
   
-    2. Mit der rechten Maustaste **Arbeitsplatz** , und wählen Sie **Eigenschaften**.  
+    2. Klicken Sie mit der rechten Maustaste **Arbeitsplatz** und wählen Sie **Eigenschaften**.  
   
-    3. Auf der **MSDTC** auf **Sicherheitskonfiguration**.  
+    3. Klicken Sie auf der Registerkarte **MSDTC** auf **Sicherheitskonfiguration**.  
   
-    4. Überprüfen Sie **DTC-Netzwerkzugriff** und **ausgehende zulassen**.  
+    4. Überprüfen Sie den **DTC-Netzwerk Zugriff** , und **lassen Sie Ausgeh**Ende  
   
-    5. Klicken Sie auf **OK**, klicken Sie dann auf **Ja** den MSDTC-Dienst neu starten.  
+    5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`
