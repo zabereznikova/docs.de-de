@@ -2,20 +2,20 @@
 title: 'Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 71d9d0e9ba1f63d8badb1f10ab7ede1dbb30a19f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 74105ff9d08479a4fc702b02e6929130272b237b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592186"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253223"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="7f789-102">Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (C#)</span><span class="sxs-lookup"><span data-stu-id="7f789-102">How to: Write a LINQ to XML Axis Method (C#)</span></span>
-<span data-ttu-id="7f789-103">Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen.</span><span class="sxs-lookup"><span data-stu-id="7f789-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="7f789-104">Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7f789-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="7f789-105">Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="7f789-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="f1132-102">Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (C#)</span><span class="sxs-lookup"><span data-stu-id="f1132-102">How to: Write a LINQ to XML Axis Method (C#)</span></span>
+<span data-ttu-id="f1132-103">Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen.</span><span class="sxs-lookup"><span data-stu-id="f1132-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="f1132-104">Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="f1132-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="f1132-105">Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.</span><span class="sxs-lookup"><span data-stu-id="f1132-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f789-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7f789-106">Example</span></span>  
- <span data-ttu-id="7f789-107">Im folgenden Beispiel werden zwei Erweiterungsmethoden verwendet:</span><span class="sxs-lookup"><span data-stu-id="7f789-107">The following example uses two extension methods.</span></span> <span data-ttu-id="7f789-108">Die erste Erweiterungsmethode, `GetXPath`, bedient sich eines <xref:System.Xml.Linq.XObject> und gibt einen XPath-Ausdruck zurück, der beim Auswerten den Knoten oder das Attribut zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7f789-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="7f789-109">Die zweite Erweiterungsmethode, `Find`, bedient sich eines <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="7f789-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="7f789-110">Sie gibt eine Auflistung von <xref:System.Xml.Linq.XAttribute>-Objekten und <xref:System.Xml.Linq.XElement>-Objekten zurück, die bestimmten angegebenen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="7f789-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
+## <a name="example"></a><span data-ttu-id="f1132-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f1132-106">Example</span></span>  
+ <span data-ttu-id="f1132-107">Im folgenden Beispiel werden zwei Erweiterungsmethoden verwendet:</span><span class="sxs-lookup"><span data-stu-id="f1132-107">The following example uses two extension methods.</span></span> <span data-ttu-id="f1132-108">Die erste Erweiterungsmethode, `GetXPath`, bedient sich eines <xref:System.Xml.Linq.XObject> und gibt einen XPath-Ausdruck zurück, der beim Auswerten den Knoten oder das Attribut zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="f1132-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="f1132-109">Die zweite Erweiterungsmethode, `Find`, bedient sich eines <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="f1132-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="f1132-110">Sie gibt eine Auflistung von <xref:System.Xml.Linq.XAttribute>-Objekten und <xref:System.Xml.Linq.XElement>-Objekten zurück, die bestimmten angegebenen Text enthalten.</span><span class="sxs-lookup"><span data-stu-id="f1132-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- <span data-ttu-id="7f789-111">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7f789-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f1132-111">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f1132-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 public static class MyExtensions  
@@ -278,9 +278,9 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="7f789-112">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="7f789-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="f1132-112">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="f1132-112">This code produces the following output:</span></span>  
   
-```  
+```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -290,4 +290,3 @@ class Program
 /PurchaseOrders/PurchaseOrder[3]/@OrderDate  
 1999-10-22  
 ```  
-  
