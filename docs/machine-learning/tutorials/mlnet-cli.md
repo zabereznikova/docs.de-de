@@ -1,19 +1,19 @@
 ---
-title: Automatisches Generieren eines binären Klassifizierers mit der ML.NET-CLI
+title: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 description: Automatisches Generieren eines ML-Modells und des zugehörigen C#-Codes aus einem Beispieldataset
 author: cesardl
 ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7b740f2c93096c971da009e8abf6865ac1b8e966
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107276"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254161"
 ---
-# <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Automatisches Generieren eines binären Klassifizierers mit der CLI
+# <a name="analyze-sentiment-using-the-mlnet-cli"></a>Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 
 Erfahren Sie, wie Sie mit der ML.NET-CLI automatisch ein ML.NET-Modell und den zugrunde liegenden C#-Code generieren. Sie stellen Ihr Dataset und die Machine Learning-Aufgabe bereit, die Sie implementieren möchten, und die CLI verwendet die AutoML-Engine, um Quellcode für die Modellgenerierung und Bereitstellung sowie das Binärmodell zu erstellen.
 

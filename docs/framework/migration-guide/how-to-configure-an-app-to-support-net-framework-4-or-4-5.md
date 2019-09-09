@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186297c050d81eca130b751c46303083ff025f22
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636108"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779485"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher
 
@@ -22,7 +22,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
 - Konfigurationsdatei.
 
-     Wenn die Anwendungskonfigurationsdatei [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge enthält, die mindestens eine .NET Framework-Version angeben, und eine dieser Versionen auf dem Computer des Benutzers vorhanden ist, wird die Anwendung in dieser Version ausgeführt. Die Konfigurationsdatei liest [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge in der Reihenfolge, in der sie aufgelistet werden, und verwendet die erste aufgeführte .NET Framework-Version, die auf dem Computer des Benutzers vorhanden ist. (Verwenden Sie das [\<requiredRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) für Version 1.0.)
+     Wenn die Anwendungskonfigurationsdatei [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge enthält, die mindestens eine .NET Framework-Version angeben, und eine dieser Versionen auf dem Computer des Benutzers vorhanden ist, wird die Anwendung in dieser Version ausgeführt. Die Konfigurationsdatei liest [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Einträge in der Reihenfolge, in der sie aufgelistet werden, und verwendet die erste aufgeführte .NET Framework-Version, die auf dem Computer des Benutzers vorhanden ist. (Verwenden Sie das [\<requiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) für Version 1.0.)
 
 - Kompilierte Version.
 
@@ -30,7 +30,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
 - Neueste installierte Version.
 
-     Wenn die .NET Framework-Version, für die die App erstellt wurde, nicht vorhanden ist, und die Version nicht im [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei angegeben ist, wird die App in der neuesten .NET Framework-Version ausgeführt, die auf dem Computer des Benutzers installiert ist.
+     Wenn die .NET Framework-Version, für die die App erstellt wurde, nicht vorhanden ist, und die Version nicht im [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei angegeben ist, wird die App in der neuesten .NET Framework-Version ausgeführt, die auf dem Computer des Benutzers installiert ist.
 
      Allerdings werden .NET Framework 1.0-, 1.1-, 2.0-, 3.0- und 3.5-Apps nicht automatisch in .NET Framework 4 oder höher ausgeführt, und in einigen Fällen kann der Benutzer eine Fehlermeldung erhalten und aufgefordert werden, .NET Framework 3.5 zu installieren. Das Aktivierungsverhalten kann auch je nach Betriebssystem des Benutzers unterschiedlich sein, da verschiedene Versionen des Windows-Systems unterschiedliche Versionen von .NET Framework enthalten. Wenn Ihre App .NET Framework 3.5 und 4 oder höher unterstützt, wird empfohlen, dies mit mehreren Einträgen in der Konfigurationsdatei kenntlich zu machen, um .NET Framework-Initialisierungsfehler zu vermeiden. Weitere Informationen finden Sie unter [Versionen und Abhängigkeiten](versions-and-dependencies.md).
 
@@ -47,7 +47,7 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
      Um eine Konfigurationsdatei über die Visual Studio-Menüleiste hinzuzufügen, wählen Sie **Projekt**, **Neues Element hinzufügen** aus. Wählen Sie im linken Bereich **Allgemein**, und wählen Sie dann **Konfigurationsdatei** aus. Benennen Sie die Konfigurationsdatei „*appName*.exe.config“. Diese Menüelemente sind nicht für Windows Store-App- oder Windows Phone-App-Projekte verfügbar, da die Aktivierungsrichtlinie auf diesen Plattformen nicht geändert werden kann.
 
-2. Fügen Sie das [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Anwendungskonfigurationsdatei wie folgt hinzu:
+2. Fügen Sie das [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Anwendungskonfigurationsdatei wie folgt hinzu:
 
     ```xml
     <configuration>
@@ -67,19 +67,19 @@ Alle Apps, die die Common Language Runtime (CLR) hosten, müssen die CLR starten
 
     - .NET Framework 4 und höhere Versionen: „v4.0“
 
-     Sie können mehrere [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Elemente nach Priorität aufgelistet hinzufügen, um Unterstützung für mehrere Versionen von .NET Framework anzugeben.
+     Sie können mehrere [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Elemente nach Priorität aufgelistet hinzufügen, um Unterstützung für mehrere Versionen von .NET Framework anzugeben.
 
  Die folgende Tabelle zeigt, wie mit den Einstellungen der Anwendungskonfigurationsdatei und den auf einem Computer installierten .NET Framework-Versionen die Version ermittelt wird, in der eine .NET Framework 3.5-App ausgeführt wird. Die Beispiele beziehen sich konkret auf eine .NET Framework 3.5-Anwendung, allerdings folgen Zielanwendungen, die mit früheren .NET Framework-Versionen erstellt werden, der gleichen Logik. Beachten Sie, dass die .NET Framework 2.0-Versionsnummer (v2.0.50727) verwendet wird, um .NET Framework 3.5 in der Anwendungskonfigurationsdatei anzugeben.
 
 |App.config-Dateieinstellung|Auf Computer mit installierter Version 3.5|Auf Computer mit installierter Version 3.5, 4 oder höher|Auf Computer mit installierter Version 4 oder höher|
 |-|-|-|-|
-|Keiner|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|
+|Keine|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|
 |`<supportedRuntime version="v2.0.50727"/>`|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|Wird unter 3.5 ausgeführt|Wird unter 3.5 ausgeführt|Kann auf Version 4 oder höher ausgeführt werden|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Wird unter 3.5 ausgeführt|Kann auf Version 4 oder höher ausgeführt werden|Kann auf Version 4 oder höher ausgeführt werden|
 |`<supportedRuntime version="v4.0"/>`|Zeigt eine Fehlermeldung an, in der der Benutzer aufgefordert wird, die richtige Version zu installieren.*|Kann auf Version 4 oder höher ausgeführt werden|Kann auf Version 4 oder höher ausgeführt werden|
 
- \* Weitere Informationen zu dieser Fehlermeldung und Möglichkeiten zu ihrer Vermeidung finden Sie unter [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).
+ \* Weitere Informationen zu dieser Fehlermeldung und Möglichkeiten zu ihrer Vermeidung finden Sie unter [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../deployment/initialization-errors-managing-the-user-experience.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,12 +3,12 @@ title: Erste Schritte mit der semantischen Analyse
 description: Dieses Tutorial bietet einen Überblick über die Arbeit mit semantischen Analysen mithilfe des .NET Compiler SDK.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252938"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Erste Schritte mit der semantischen Analyse
 
@@ -40,7 +40,7 @@ Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Re
 Erstellen Sie ein neues **Stand-Alone Code Analysis Tool**-Projekt für C#:
 
 * Wählen Sie in Visual Studio **Datei** > **Neu** > **Projekt** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen.
-* Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus.
+* Wählen Sie unter **Visual C#**  > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus.
 * Nennen Sie Ihr Projekt **SemanticQuickStart**, und klicken Sie auf „OK“.
 
 Sie werden das einfache Hello World!- Programm analysieren, das weiter oben in diesem Artikel gezeigt wurde.
@@ -78,7 +78,7 @@ Aus dem <xref:Microsoft.CodeAnalysis.SymbolInfo>-Objekt können Sie mithilfe der
 
 Führen Sie das Programm aus. Folgende Ausgabe sollte angezeigt werden:
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -135,7 +135,7 @@ Sie können auch mithilfe der LINQ-Abfragesyntax die vollständige Abfrage erste
 
 Kompilieren Sie das Programm, und führen Sie es aus. Die folgende Ausgabe wird angezeigt:
 
-```
+```output
 Join
 Substring
 Trim

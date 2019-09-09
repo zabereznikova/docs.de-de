@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833520"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779476"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrieren von .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] und neuere Versionen des Windows-Betriebssystems unterstützen .NET Framework 1.1 nicht. Folglich können Anwendungen, die auf .NET Framework 1.1 ausgerichtet sind, unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Betriebssystemversionen nicht ohne Änderung ausgeführt werden. In diesem Thema werden die Schritte zum Ausführen einer Anwendung erläutert, die auf .NET Framework 1.1 unter [!INCLUDE[win7](../../../includes/win7-md.md)] und neueren Versionen des Windows-Betriebssystems ausgerichtet ist. Weitere Informationen zu .NET Framework 1.1 und [!INCLUDE[win8](../../../includes/win8-md.md)] finden Sie unter [Ausführen von auf .NET Framework 1.1 basierenden Apps unter Windows 8 und höher](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] und neuere Versionen des Windows-Betriebssystems unterstützen .NET Framework 1.1 nicht. Folglich können Anwendungen, die auf .NET Framework 1.1 ausgerichtet sind, unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Betriebssystemversionen nicht ohne Änderung ausgeführt werden. In diesem Thema werden die Schritte zum Ausführen einer Anwendung erläutert, die auf .NET Framework 1.1 unter [!INCLUDE[win7](../../../includes/win7-md.md)] und neueren Versionen des Windows-Betriebssystems ausgerichtet ist. Weitere Informationen zu .NET Framework 1.1 und [!INCLUDE[win8](../../../includes/win8-md.md)] finden Sie unter [Ausführen von auf .NET Framework 1.1 basierenden Apps unter Windows 8 und höher](../install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Zuweisen einer neuen Zielversion oder Neukompilieren
 
 Es gibt zwei Möglichkeiten, eine mit .NET Framework 1.1 kompilierte Anwendung unter [!INCLUDE[win7](../../../includes/win7-md.md)] oder neueren Versionen des Windows-Betriebssystems auszuführen:
 
-- Sie können die Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen neu ausrichten. Für Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und späteren Versionen ermöglicht, ein [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
+- Sie können die Anwendung für die Ausführung unter .NET Framework 4 und späteren Versionen neu ausrichten. Für Neuausrichtung müssen Sie der Konfigurationsdatei der Anwendung, die das Ausführen unter .NET Framework 4 und späteren Versionen ermöglicht, ein [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element hinzufügen. Diese Konfigurationsdatei besitzt das folgende Format:
 
     ```xml
     <configuration>
@@ -44,7 +44,7 @@ Unabhängig davon, ob Sie eine Neukompilierung oder eine neue Zielversion für d
 
 ## <a name="breaking-changes"></a>Die Lauffähigkeit der Anwendung beeinträchtigende Änderungen
 
-Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z.B. die in .NET Framework 1.1 verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.
+Bei einer Änderung, die die Lauffähigkeit der Anwendung beeinträchtigt, ist ggf. eine Problemumgehung sowohl für Anwendungen mit neuer Zielversion als auch für neu kompilierte Anwendungen verfügbar. In einigen Fällen können Sie dem [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Element der Konfigurationsdatei der Anwendung ein untergeordnetes Element hinzufügen, um das vorherige Verhalten wiederherzustellen. Die folgende Konfigurationsdatei stellt z.B. die in .NET Framework 1.1 verwendete Zeichenfolgensortierung und das Vergleichsverhalten wieder her und kann bei neu zugewiesener Zielversion oder einer neu kompilierten Anwendung verwendet werden.
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ In einigen Fällen müssen Sie jedoch möglicherweise den Quellcode ändern und 
 
 - Unter [Änderungen in .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) werden Änderungen zwischen .NET Framework 3.5 und .NET Framework 3.5 SP1 dokumentiert.
 
-- Unter[Migrationsprobleme in .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) werden Änderungen zwischen .NET Framework 3.5 SP1 und .NET Framework 4 dokumentiert.
+- Unter[Migrationsprobleme in .NET Framework 4](net-framework-4-migration-issues.md) werden Änderungen zwischen .NET Framework 3.5 SP1 und .NET Framework 4 dokumentiert.
 
 ## <a name="obsolete-types-and-members"></a>Veraltete Typen und Member
 
-Die Auswirkungen veralteter Typen und Member unterscheiden sich geringfügig bei Anwendungen mit neu zugewiesener Zielversion und neu kompilierten Anwendungen. Die Verwendung veralteter Typen und Member wirkt sich nicht auf eine Anwendung mit neuer Zielversion aus, sofern der veraltete Typ oder Member nicht physisch aus seiner Assembly entfernt wurde. Das Neukompilieren eine Anwendung, die veraltete Typen oder Member verwendet, erzeugt in der Regel eher eine Compilerwarnung als einen Compilerfehler. In einigen Fällen wird jedoch ein Compilerfehler verursacht, und Code, in dem der veraltete Typ oder Member verwendet wird, kann nicht erfolgreich kompiliert werden. Sie müssen dann den Quellcode neu schreiben, der den veralteten Typ oder Member aufruft, bevor Sie die Anwendung neu kompilieren. Weitere Informationen zu veralteten Typen und Membern finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md).
+Die Auswirkungen veralteter Typen und Member unterscheiden sich geringfügig bei Anwendungen mit neu zugewiesener Zielversion und neu kompilierten Anwendungen. Die Verwendung veralteter Typen und Member wirkt sich nicht auf eine Anwendung mit neuer Zielversion aus, sofern der veraltete Typ oder Member nicht physisch aus seiner Assembly entfernt wurde. Das Neukompilieren eine Anwendung, die veraltete Typen oder Member verwendet, erzeugt in der Regel eher eine Compilerwarnung als einen Compilerfehler. In einigen Fällen wird jedoch ein Compilerfehler verursacht, und Code, in dem der veraltete Typ oder Member verwendet wird, kann nicht erfolgreich kompiliert werden. Sie müssen dann den Quellcode neu schreiben, der den veralteten Typ oder Member aufruft, bevor Sie die Anwendung neu kompilieren. Weitere Informationen zu veralteten Typen und Membern finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md).
 
-Nähere Informationen zur Bewertung der Auswirkungen von Typen und Membern, die seit dem Release von .NET Framework 2.0 SP1 veraltet sind, finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md). Überprüfen Sie die Listen der veralteten Typen und Member für .NET Framework 2.0 SP1, .NET Framework 3.5 und .NET Framework 4.
+Nähere Informationen zur Bewertung der Auswirkungen von Typen und Membern, die seit dem Release von .NET Framework 2.0 SP1 veraltet sind, finden Sie unter [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md). Überprüfen Sie die Listen der veralteten Typen und Member für .NET Framework 2.0 SP1, .NET Framework 3.5 und .NET Framework 4.

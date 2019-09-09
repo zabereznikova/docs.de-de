@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593640"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253787"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

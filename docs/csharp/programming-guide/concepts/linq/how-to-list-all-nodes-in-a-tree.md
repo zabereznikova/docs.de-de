@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486680"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253566"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)
 Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten. Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt. Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.  
@@ -39,7 +39,7 @@ Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten
   
  Es folgt die Liste der in der oben erwähnten XML-Struktur vorhandenen Knoten, ausgedrückt als XPath-Ausdrücke:  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

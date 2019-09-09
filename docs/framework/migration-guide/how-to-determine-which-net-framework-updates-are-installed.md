@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604183"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790065"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes
 
@@ -37,7 +37,7 @@ Die auf einem Computer installierten Sicherheitsupdates und Hotfixes für jede V
 
      Die installierten Updates werden unter Unterschlüsseln aufgeführt, die die für sie geltende .NET Framework-Version identifizieren. Jedes Update wird durch eine Knowledge Base (KB)-Nummer identifiziert.
 
-Im Registrierungs-Editor werden die .NET Framework-Versionen und die installierten Updates für jede Version in verschiedenen Unterschlüsseln gespeichert. Informationen zum Ermitteln der installierten Versionsnummern finden Sie unter [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Im Registrierungs-Editor werden die .NET Framework-Versionen und die installierten Updates für jede Version in verschiedenen Unterschlüsseln gespeichert. Informationen zum Ermitteln der installierten Versionsnummern finden Sie unter [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>So ermitteln Sie mithilfe einer Registrierungsabfrage im Code die installierten Updates
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
-- [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)
-- [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md)
+- [Installieren von .NET Framework für Entwickler](../install/guide-for-developers.md)
+- [Versionen und Abhängigkeiten](versions-and-dependencies.md)

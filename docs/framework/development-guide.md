@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebbf0b28da04e2e70dd2d0a9689b80fcdbeee4be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950299"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779536"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
@@ -20,49 +20,49 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  [Grundlagen der Anwendung](../standard/application-essentials.md)  
  Bietet Informationen über grundlegende App-Entwicklungsaufgaben, wie z. B. Programmieren mit App-Domänen und Assemblys, Verwenden von Attributen, Formatieren und Analysieren von Basistypen, Verwenden von Auflistungen, Behandeln von Ereignissen und Ausnahmen, Verwenden von Dateien und Datenstreams und Verwenden von Generics.  
   
- [Daten und Modellierung](../../docs/framework/data/index.md)  
+ [Daten und Modellierung](./data/index.md)  
  Enthält Informationen zum Zugreifen auf Daten mit ADO.NET, Language Integrated Query (LINQ), WCF-Datendienste und XML.  
   
- [Clientanwendungen](../../docs/framework/develop-client-apps.md)  
+ [Clientanwendungen](develop-client-apps.md)  
  Erläutert das Erstellen von Windows-basierten Apps mit Windows Presentation Foundation (WPF) oder mit Windows Forms.  
   
- [Webanwendungen mit ASP.NET](../../docs/framework/develop-web-apps-with-aspnet.md)  
+ [Webanwendungen mit ASP.NET](develop-web-apps-with-aspnet.md)  
  Enthält Links zu Informationen über die Verwendung von ASP.NET zum Erstellen von Web Apps für Unternehmen mit minimalem Programmieraufwand.  
   
- [Dienstorientierte Anwendungen mit WCF](../../docs/framework/wcf/index.md)  
+ [Dienstorientierte Anwendungen mit WCF](./wcf/index.md)  
  Erläutert die Verwendung von Windows Communication Foundation (WCF) zum Erstellen dienstorientierter Apps, die sicher und zuverlässig sind.  
   
  [Erstellen von Workflows mit Windows Workflow Foundation](windows-workflow-foundation/index.md)     
  Enthält Informationen zum Programmiermodell, zu Beispielen und Tools für die Verwendung von Windows Workflow Foundation (WF).  
 
- [Windows-Dienstanwendungen](../../docs/framework/windows-services/index.md)  
+ [Windows-Dienstanwendungen](./windows-services/index.md)  
  Erläutert die Verwendung von Visual Studio und .NET Framework zum Erstellen einer App, die als Dienst installiert wird, und zum Starten, Beenden und Steuern ihres Verhaltens.  
   
  [Parallel Processing, Concurrency, and Async Programming in .NET (Parallelverarbeitung, Parallelität und asynchrone Programmierung in .NET)](../standard/parallel-processing-and-concurrency.md)  
  Enthält Informationen über verwaltetes Threading, parallele Programmierung und Entwurfsmuster für die asynchrone Programmierung.  
   
- [Netzwerkprogrammierung in .NET Framework](../../docs/framework/network-programming/index.md)  
+ [Netzwerkprogrammierung in .NET Framework](./network-programming/index.md)  
  Beschreibt die erweiterbare und verwaltete Implementierung mit mehreren Ebenen für Internetdienste, die schnell und auf einfache Weise in Apps integriert werden können.  
   
  [Konfigurieren von .NET Framework-Apps](configure-apps/index.md)    
  Erläutert die Verwendung von Konfigurationsdateien zum Ändern von Einstellungen, ohne die .NET Framework-Apps neu kompilieren zu müssen.  
   
- [Kompilieren von Apps mit .NET Native](../../docs/framework/net-native/index.md)  
+ [Kompilieren von Apps mit .NET Native](./net-native/index.md)  
  Erläutert, wie Sie die .NET Native-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. .NET Native kompiliert Apps zu nativem Code, die in verwaltetem Code (C#) für .NET Framework geschrieben wurden.  
   
  [Sicherheit](../standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste in .NET Framework, die die sichere Appentwicklung erleichtern.  
   
- [Debuggen, Ablaufverfolgung und Profilerstellung](../../docs/framework/debug-trace-profile/index.md)  
+ [Debuggen, Ablaufverfolgung und Profilerstellung](./debug-trace-profile/index.md)  
  Erläutert, wie .NET Framework-Apps und die Appumgebung getestet und optimiert und wie Profile davon erstellt werden. Dieser Abschnitt enthält Informationen für Administratoren und Entwickler.  
   
  [Entwickeln für mehrere Plattformen](../standard/cross-platform/index.md)  
  Bietet Informationen zur Verwendung von .NET Framework zum Erstellen von Assemblys, die über mehrere Plattformen auf mehreren Geräten wie Telefone, Desktopcomputer und über das Internet freigegeben werden können.  
   
- [Bereitstellung](../../docs/framework/deployment/index.md)  
+ [Bereitstellung](./deployment/index.md)  
  Erläutert das Verpacken und Verteilen von .NET Framework-Apps und enthält Bereitstellungshandbücher für Entwickler und für Administratoren.  
   
- [Leistung](../../docs/framework/performance/index.md)  
+ [Leistung](./performance/index.md)  
  Enthält Informationen über die Zwischenspeicherung, die verzögerte Initialisierung, Zuverlässigkeit und ETW-Ereignisse.  
  
 ## <a name="reference"></a>Referenz  
@@ -70,13 +70,13 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Stellt Syntax, Codebeispiele und Informationen zur Verwendung zu den einzelnen Klassen zur Verfügung, die in den .NET Framework-Namespaces enthalten sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Erste Schritte](../../docs/framework/get-started/index.md)  
+ [Erste Schritte](./get-started/index.md)  
  Stellt eine umfassende Übersicht über .NET Framework und Links zu zusätzlichen Ressourcen bereit.  
   
- [Neuigkeiten](../../docs/framework/whats-new/index.md)  
+ [Neuigkeiten](./whats-new/index.md)  
  Beschreibt wichtige Funktionen und Änderungen in der neuesten Version von .NET Framework. Enthält Listen von neuen und veralteten Typen und Membern sowie eine Anleitung für das Migrieren der Apps aus der früheren Version von .NET Framework.  
   
- [Extras](../../docs/framework/tools/index.md)  
+ [Extras](./tools/index.md)  
  Beschreibt die Tools, die Sie beim Entwickeln, Konfigurieren und Bereitstellen von Apps mithilfe der .NET Framework-Technologien unterstützen.  
   
  [Beispiele und Tutorials](../samples-and-tutorials/index.md)  

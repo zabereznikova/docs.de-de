@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Merk
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: f4fe18d7361f7d67c29fb7dab53132237f709280
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672907"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374088"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -24,9 +24,9 @@ ASP.NET Core ist für moderne Webanwendungen und cloudbasierte Hostingszenarios 
 
 Der Leitfaden enthält auch eine Referenzanwendung, _eShopOnWeb_, die einige der Prinzipien und Empfehlungen demonstriert. Bei der Anwendung handelt es sich um einen einfachen Onlineshop, in dem man einen Katalog nach Shirts, Kaffeebechern und anderen Marketingartikeln durchsuchen kann. Die Referenzanwendung ist bewusst einfach gehalten, damit sie leicht verstanden werden kann.
 
-**Abbildung 2-1.** eShopOnWeb
+![eShopOnWeb](./media/image2-1.png)
 
-![](./media/image2-1.png)
+**Abbildung 2-1.** eShopOnWeb
 
 > ### <a name="reference-application"></a>Referenzanwendung
 >

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041229"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782145"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.
 
-Bei der [Problem](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)Behandlung werden weitere Probleme behandelt.
+Bei der [Problem](troubleshooting.md)Behandlung werden weitere Probleme behandelt.
 
 ## <a name="cannot-connect"></a>Es kann keine Verbindung hergestellt werden
 
 F. Es kann keine Verbindung mit meiner Datenbank hergestellt werden.
 
-A. Stellen Sie sicher, dass Ihre Verbindungs Zeichenfolge richtig ist und dass die SQL Server Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
+A. Stellen Sie sicher, dass Ihre Verbindungs Zeichenfolge richtig ist und dass die SQL Server Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch](learning-by-walkthroughs.md)Exemplarische Vorgehensweisen.
 
 ## <a name="changes-to-database-lost"></a>Änderungen an der Datenbank sind nicht vorhanden
 
@@ -40,7 +40,7 @@ Die genauen Details der Verbindungsnutzung hängen von folgenden Faktoren ab:
 
 - Verbindungsstatus, wenn <xref:System.Data.Linq.DataContext> mit einem Verbindungsobjekt erstellt wird.
 
-- Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).
+- Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../multiple-active-result-sets-mars.md).
 
 ## <a name="updating-without-querying"></a>Ausführen von Updates ohne Abfrage
 
@@ -56,7 +56,7 @@ A. Obwohl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ke
 
 F. Meine Abfrage gibt unerwartete Ergebnisse zurück. Wie kann der Fehler festgestellt werden?
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt mehrere Tools zum Überprüfen des generierten SQL-Codes bereit. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie [unter Debuggingunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).
+A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt mehrere Tools zum Überprüfen des generierten SQL-Codes bereit. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie [unter Debuggingunterstützung](debugging-support.md).
 
 ## <a name="unexpected-stored-procedure-results"></a>Gespeicherte Prozedur gibt unerwartete Ergebnisse zurück
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-Weitere Informationen finden Sie unter [Anpassen von Vorgängen mithilfe von gespeicherten Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).
+Weitere Informationen finden Sie unter [Anpassen von Vorgängen mithilfe von gespeicherten Prozeduren](customizing-operations-by-using-stored-procedures.md).
 
 ## <a name="serialization-errors"></a>Serialisierungsfehler
 
 F. Beim Versuch, die Serialisierung auszuführen, wird der folgende Fehler angezeigt: "Typ ' System. Data. Linq. ChangeTracker + standardchangetracker '... ist nicht als serialisierbar gekennzeichnet. "
 
-A. Die Codegenerierung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet Unterstützung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Serialisierung. <xref:System.Xml.Serialization.XmlSerializer> oder <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird nicht unterstützt. Weitere Informationen finden Sie unter [Serialization (Serialisierung)](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).
+A. Die Codegenerierung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet Unterstützung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Serialisierung. <xref:System.Xml.Serialization.XmlSerializer> oder <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird nicht unterstützt. Weitere Informationen finden Sie unter [Serialization (Serialisierung)](serialization.md).
 
 ## <a name="multiple-dbml-files"></a>Mehrere DBML-Dateien
 
@@ -210,13 +210,13 @@ F. Gibt es ein Konstrukt, das das <xref:System.Data.Linq.DataContext>-Pooling un
 
 A. Sie sollten nicht versuchen, Instanzen von <xref:System.Data.Linq.DataContext> wiederzuverwenden. Jeder <xref:System.Data.Linq.DataContext> behält den Zustand (einschließlich eines Identitätscaches) für eine bestimmte Bearbeitungs-/Abfragesitzung bei. Um neue Instanzen auf Grundlage des aktuellen Zustands der Datenbank zu erhalten, verwenden Sie einen neuen <xref:System.Data.Linq.DataContext>.
 
-Sie können weiterhin das zugrunde liegende ADO.net-Verbindungspooling verwenden. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+Sie können weiterhin das zugrunde liegende ADO.net-Verbindungspooling verwenden. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../sql-server-connection-pooling.md).
 
 ## <a name="second-datacontext-is-not-updated"></a>Zweiter DataContext wird nicht aktualisiert
 
 F. Zum Speichern von Werten in der Datenbank wurde eine Instanz von <xref:System.Data.Linq.DataContext> verwendet. Die aktualisierten Werte werden aber von einem zweiten <xref:System.Data.Linq.DataContext> in derselben Datenbank nicht angezeigt. Die zweite <xref:System.Data.Linq.DataContext>-Instanz scheint zwischengespeicherte Werte zurückzugeben.
 
-A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungs](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)Konflikten.
+A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungs](how-to-manage-change-conflicts.md)Konflikten.
 
 Sie können auch <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> auf false festlegen, wodurch das Zwischenspeichern und Nachverfolgen von Änderungen deaktiviert wird. Anschließend können Sie bei jeder Abfrage die neuesten Werte abrufen.
 
@@ -228,6 +228,6 @@ A. Im schreibgeschützten Modus ist der Kontext nicht mehr in der Lage, Änderun
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [Verweis](reference.md)
+- [Problembehandlung](troubleshooting.md)
+- [Sicherheit in LINQ to SQL](security-in-linq-to-sql.md)

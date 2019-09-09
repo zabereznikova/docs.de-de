@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6f071f907fe38b226a5083699e758bc5fb8bffce
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923882"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252993"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
@@ -28,19 +28,19 @@ Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf e
   
  Sie können die Zeichenfolgenargumente auch mit der <xref:System.Convert>-Klasse oder der `Parse`-Methode in numerische Typen konvertieren. Die folgende Anweisung konvertiert z. B. `string` mithilfe der `long`-Methode in eine <xref:System.Int64.Parse%2A>-Zahl:  
   
-```  
+```csharp  
 long num = Int64.Parse(args[0]);  
 ```  
   
  Sie können auch den C#-Typ `long` verwenden, der als Alias für `Int64` fungiert:  
   
-```  
+```csharp  
 long num = long.Parse(args[0]);  
 ```  
   
  Sie können für dieselbe Aufgabe auch die `Convert`-Klassenmethode `ToInt64` verwenden:  
   
-```  
+```csharp  
 long num = Convert.ToInt64(s);  
 ```  
   

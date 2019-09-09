@@ -2,12 +2,12 @@
 title: Refactoring mit einer Erweiterungsmethode (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 2be848d6454abf0dd37a6974cff915a107336503
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591303"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253101"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring mit einer Erweiterungsmethode (C#)
 Dieses Beispiel baut auf dem vorhergehenden Beispiel, [Retrieving the Text of the Paragraphs (C#) (Abrufen des Textes der Absätze (C#))](./retrieving-the-text-of-the-paragraphs.md), auf. Es gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion um, die als Erweiterungsmethode implementiert wird.  
@@ -80,7 +80,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 onetwothree  
 one:two:three:  
 123  
@@ -221,7 +221,7 @@ class Program
   
  Dieses Beispiel generiert bei Anwendung auf das in [Erstellen eines Office Open-Quell-XML-Dokuments (C#)](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251111"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779344"
 ---
 # <a name="mitigation-path-normalization"></a>Entschärfung: Pfadnormalisierung
 Ab Apps, die gezielt .NET Framework 4.6.2 verwenden, ändert sich die Pfadnormalisierung in .NET Framework.  
@@ -45,7 +45,7 @@ Für Apps, die gezielt .NET Framework 4.6.2 oder eine höhere Version verwende
 Apps mit der Zielplattform .NET Framework 4.6.1 und früheren Versionen, die unter .NET Framework 4.6.2 oder höher ausgeführt werden, sind von dieser Änderung nicht betroffen.  
   
 ## <a name="mitigation"></a>Minderung  
- Apps, die gezielt .NET Framework 4.6.2 oder eine höhere Version verwenden, können diese Änderung deaktivieren und die Legacynormalisierung verwenden. Hierzu muss dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei Folgendes hinzugefügt werden:  
+ Apps, die gezielt .NET Framework 4.6.2 oder eine höhere Version verwenden, können diese Änderung deaktivieren und die Legacynormalisierung verwenden. Hierzu muss dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei Folgendes hinzugefügt werden:  
   
 ```xml  
 <runtime>  
@@ -53,7 +53,7 @@ Apps mit der Zielplattform .NET Framework 4.6.1 und früheren Versionen, die unt
 </runtime>  
 ```  
   
-Für Apps, die gezielt .NET Framework 4.6.1 oder eine niedrigere Version verwenden, aber unter .NET Framework 4.6.2 oder einer höheren Version ausgeführt werden, können die Änderungen an der Pfadnormalisierung aktiviert werden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei die folgende Zeile hinzugefügt wird:  
+Für Apps, die gezielt .NET Framework 4.6.1 oder eine niedrigere Version verwenden, aber unter .NET Framework 4.6.2 oder einer höheren Version ausgeführt werden, können die Änderungen an der Pfadnormalisierung aktiviert werden, indem dem Abschnitt [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei die folgende Zeile hinzugefügt wird:  
   
 ```xml  
 <runtime>  
@@ -63,4 +63,4 @@ Für Apps, die gezielt .NET Framework 4.6.1 oder eine niedrigere Version verwe
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-2.md)

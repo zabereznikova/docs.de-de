@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6016fc43700fda36c6d94408019d25f89bb36b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044214"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779212"
 ---
 # <a name="mitigation-product-versioning"></a>Entschärfung: Produktversionsverwaltung
 
@@ -31,7 +31,7 @@ Im Folgenden finden Sie die detaillierten Änderungen:
 
 Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen solcher Faktoren, wie beispielsweise die Laufzeitversion von .NET Framework und das Installationsverzeichnis, abhängen:
 
-- Wie Sie die Laufzeitversion von .NET Framework ermitteln, erfahren Sie unter [ Gewusst wie: Determine Which .NET Framework Versions Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
+- Wie Sie die Laufzeitversion von .NET Framework ermitteln, erfahren Sie unter [ Gewusst wie: Determine Which .NET Framework Versions Are Installed](how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
 
 - Um den Installationspfad für .NET Framework zu ermitteln, verwenden Sie den Wert des `InstallPath`-Eintrags im `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` Schlüssel.
 
@@ -44,4 +44,4 @@ Im Allgemeinen sollten Anwendungen von den empfohlenen Verfahren zum Erkennen so
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Änderungen zur Laufzeit](runtime-changes-in-the-net-framework-4-6.md)

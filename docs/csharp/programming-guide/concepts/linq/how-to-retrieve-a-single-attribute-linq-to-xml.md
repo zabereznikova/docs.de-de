@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 4a1be51c7f0e89a8f211ae523eb102282bd9747b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8c8d0e3a99f94c4404f0ab23a5edf082be77952
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592647"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253408"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  
@@ -37,7 +37,7 @@ foreach (XElement el in elList)
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -63,7 +63,7 @@ foreach (XElement el in elList)
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -92,7 +92,7 @@ foreach (XElement el in elList)
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```output  
 home  
 work  
 ```  
