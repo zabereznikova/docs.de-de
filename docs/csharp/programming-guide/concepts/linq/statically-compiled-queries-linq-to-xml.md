@@ -2,12 +2,12 @@
 title: Statisch kompilierte Abfragen (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 9f10d93e0e5add02dbfb8c8867031ce68e58c0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924156"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253028"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Statisch kompilierte Abfragen (LINQ to XML) (C#)
 Einer der wichtigsten Leistungsvorteile von LINQ to XML (im Unterschied zu <xref:System.Xml.XmlDocument>) besteht darin, dass Abfragen in LINQ to XML statisch kompiliert werden. XPath-Abfragen müssen dagegen zur Laufzeit interpretiert werden. Diese Funktion ist in LINQ to XML integriert, sodass Sie keine zusätzlichen Schritte ausführen müssen, um diesen Vorteil zu nutzen. Es ist jedoch hilfreich, den Unterschied zu verstehen, wenn Sie eine Auswahl zwischen den beiden Technologien treffen. In diesem Thema wird der Unterschied erklärt.  
@@ -15,11 +15,7 @@ Einer der wichtigsten Leistungsvorteile von LINQ to XML (im Unterschied zu <xref
 ## <a name="statically-compiled-queries-vs-xpath"></a>Statisch kompilierte Abfragen und XPath  
  Im folgenden Beispiel wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmten Namen und mit einem Attribut mit einem bestimmten Wert abrufen können.  
   
- Hier folgt der entsprechende XPath-Ausdruck:  
-  
-```  
-//Address[@Type='Shipping']  
-```  
+ Im Folgenden finden Sie den entsprechenden XPath-Ausdruck: `//Address[@Type='Shipping']`
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -92,4 +88,3 @@ reader.Close();
 - Durchlaufen der Knoten und entsprechendes Auswählen der Knoten für das Resultset auf Grundlage der Ausdrucksauswertung.  
   
  Dies sind bedeutend mehr Arbeitsschritte als bei einer entsprechenden LINQ to XML-Abfrage. Die genauen Leistungsunterschiede variieren je nach Abfragetyp, in der Regel müssen LINQ to XML-Abfragen jedoch weniger Arbeitsschritte ausführen und bieten daher eine bessere Leistung als das Auswerten von XPath-Ausdrücken mit <xref:System.Xml.XmlDocument>.  
-  

@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988828"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254226"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 <a name="top"></a> Das Modul für reguläre Ausdrücke in .NET ist ein leistungsstarkes Tool mit vollem Funktionsumfang, das Texte auf Grundlage von Musterübereinstimmungen verarbeitet, anstatt Literaltext zu vergleichen und nach Übereinstimmungen mit diesem zu suchen. In den meisten Fällen wird die Suche nach Musterabgleichen schnell und effizient ausgeführt. Gelegentlich kann die Engine für reguläre Ausdrücke jedoch sehr langsam wirken. In Extremfällen kann auch der Eindruck entstehen, dass das Modul nicht mehr reagiert, wenn für die Verarbeitung relativ kleiner Eingaben mehrere Stunden oder sogar Tage benötigt werden.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988828"
 > Die Art des Methodenaufrufs (statisch, interpretiert, kompiliert) wirkt sich auf die Leistung aus, wenn ein regulärer Ausdruck wiederholt in Methodenaufrufen verwendet wird oder wenn eine Anwendung umfassenden Gebrauch von Objekten regulärer Ausdrücke macht.  
   
 ### <a name="static-regular-expressions"></a>Statische reguläre Ausdrücke  
- Statische Methoden für reguläre Ausdrücke werden als Alternative zum wiederholten Instanziieren eines Objekts für reguläre Ausdrücke mit demselben regulären Ausdruck empfohlen. Im Gegensatz zu Mustern regulärer Ausdrücke, die von Objekten regulärer Ausdrücke verwendet werden, werden die Vorgangscodes oder die kompilierte Microsoft Intermediate Language (MSIL) von in Instanzmethoden aufgerufenen Mustern von der Engine für reguläre Ausdrücke intern zwischengespeichert.  
+ Statische Methoden für reguläre Ausdrücke werden als Alternative zum wiederholten Instanziieren eines Objekts für reguläre Ausdrücke mit demselben regulären Ausdruck empfohlen. Im Gegensatz zu Mustern regulärer Ausdrücke, die von Objekten regulärer Ausdrücke verwendet werden, speichert die Engine für reguläre Ausdrücke entweder die Vorgangscodes oder die kompilierte Microsoft Intermediate Language (MSIL) aus Mustern intern zwischen, die in statischen Methodenaufrufen verwendet werden.  
   
  Beispielsweise ruft ein Ereignishandler häufig eine andere Methode auf, um Benutzereingaben zu überprüfen. Dies wird im folgenden Code widergespiegelt, in dem das <xref:System.Windows.Forms.Button>-Ereignis eines <xref:System.Windows.Forms.Control.Click>-Steuerelements verwendet wird, um eine Methode namens `IsValidCurrency` aufzurufen, die überprüft, ob der Benutzer ein Währungssymbol gefolgt von mindestens einer Dezimalziffer eingegeben hat.  
   

@@ -2,27 +2,26 @@
 title: $ – Zeichenfolgeninterpolation – C#-Referenz
 ms.custom: seodec18
 description: Mit der Zeichenfolgeninterpolation lassen sich Zeichenfolgenausgaben durch eine Syntax formatieren, die besser lesbar und praktischer ist als bei der herkömmlichen zusammengesetzten Formatierung von Zeichenfolgen.
-ms.date: 04/29/2019
+ms.date: 09/02/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
 helpviewer_keywords:
 - $ special character [C#]
-- $ language element [C#]
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202956"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253865"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
-Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge ist ein Zeichenfolgenliteral, das möglicherweise *Interpolationsausdrücke* enthält. Wenn eine interpolierte Zeichenfolge in eine Ergebniszeichenfolge aufgelöst wird, werden Elemente mit Interpolationsausdrücken durch die Zeichenfolgendarstellungen der Ausdrucksergebnisse ersetzt. Dieses Feature ist in C# 6 und höher verfügbar.
+Das Sonderzeichen `$` kennzeichnet ein Zeichenfolgenliteral als *interpolierte Zeichenfolge*. Eine interpolierte Zeichenfolge ist ein Zeichenfolgenliteral, das möglicherweise *Interpolationsausdrücke* enthält. Wenn eine interpolierte Zeichenfolge in eine Ergebniszeichenfolge aufgelöst wird, werden Elemente mit Interpolationsausdrücken durch die Zeichenfolgendarstellungen der Ausdrucksergebnisse ersetzt. Dieses Feature ist ab C# 6 verfügbar.
 
 Die Zeichenfolgeninterpolation bietet eine Syntax, die besser lesbar und praktischer beim Erstellen formatierter Zeichenfolgen ist als ein Feature für die [kombinierte Formatierung von Zeichenfolgen](../../../standard/base-types/composite-formatting.md). Im folgenden Beispiel wird mit beiden Features die gleiche Ausgabe erzeugt:
 
@@ -30,7 +29,7 @@ Die Zeichenfolgeninterpolation bietet eine Syntax, die besser lesbar und praktis
 
 ## <a name="structure-of-an-interpolated-string"></a>Struktur einer interpolierten Zeichenfolge
 
-Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen `$` und `"` am Anfang des Zeichenfolgenliterals dürfen sich keine Leerzeichen befinden. Dies würde zu einem Kompilierzeitfehler führen.
+Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möchten, stellen Sie ihm ein `$`-Symbol voran. Zwischen `$` und `"` am Anfang des Zeichenfolgenliterals dürfen sich keine Leerzeichen befinden.
 
 Die Struktur eines Elements mit einem Interpolationsausdruck sieht wie folgt aus:
 
@@ -42,8 +41,8 @@ Elemente in eckigen Klammern sind optional. In der folgenden Tabelle wird jedes 
 
 |Element|BESCHREIBUNG|
 |-------------|-----------------|
-|`interpolationExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung des `null`-Ergebnisses ist <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|Der konstante Ausdruck, dessen Wert die minimale Anzahl von Zeichen in einer Zeichenfolgendarstellung des Ergebnisses des Interpolationsausdrucks definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`interpolationExpression`|Der Ausdruck, der zu einem Ergebnis führt, das formatiert werden soll. Die Zeichenfolgendarstellung von `null` lautet <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|Der konstante Ausdruck, dessen Wert die Mindestanzahl von Zeichen in der Zeichenfolgendarstellung des Ausdrucksergebnisses definiert. Bei einem positiven Wert wird die Zeichenfolge rechtsbündig ausgerichtet. Ist der Wert negativ, wird sie linksbündig ausgerichtet. Weitere Informationen finden Sie unter [Ausrichtungskomponente](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Eine Formatierungszeichenfolge oder benutzerdefinierte Formatierungszeichenfolge, die durch den Typ des Ausdrucksergebnisses unterstützt wird. Weitere Informationen finden Sie unter [Formatzeichenfolgen-Komponente](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 Im folgenden Beispiel werden die oben beschriebenen Formatierungskomponenten verwendet:
@@ -60,24 +59,24 @@ Im folgenden Beispiel wird gezeigt, wie Sie eine geschweifte Klammer in eine Erg
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-In ausführlichen interpolierten Zeichenfolgen folgt auf das `$`-Zeichen ein `@`-Zeichen. Weitere Informationen zu ausführlichen Zeichenfolgen finden Sie in den Artikeln zu [Zeichenfolgen](../keywords/string.md) und [ausführlichen Bezeichnern](verbatim.md).
+Ausführliche interpolierte Zeichenfolgen beginnen mit dem Zeichen `$`, gefolgt vom Zeichen `@`. Weitere Informationen zu ausführlichen Zeichenfolgen finden Sie in den Artikeln zu [Zeichenfolgen](../keywords/string.md) und [ausführlichen Bezeichnern](verbatim.md).
 
 > [!NOTE]
-> Das `$`-Token muss in einer wörtlichen interpolierten Zeichenfolge vor dem `@`-Token stehen.
+> Ab C# 8.0 können Sie die Token `$` und `@` in beliebiger Reihenfolge verwenden: Sowohl `$@"..."` als auch `@$"..."` sind gültige interpolierte ausführliche Zeichenfolgen. In früheren C#-Versionen musste das Token `$` vor dem Token `@` vorhanden sein.
 
-## <a name="implicit-conversions-and-specifying-iformatprovider-implementation"></a>Implizite Konvertierungen und Angeben der `IFormatProvider`-Implementierung
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Implizite Konvertierungen und Angeben der `IFormatProvider`-Implementierung
 
 Es gibt drei implizite Konvertierungen aus einer interpolierten Zeichenfolge:
 
-1. Konvertierung einer interpolierten Zeichenfolge in eine Instanz vom Typ <xref:System.String>, die das Ergebnis der Auflösung einer interpolierten Zeichenfolge ist, wobei Elemente des Interpolationsausdrucks durch die ordnungsgemäß formatierten Zeichenfolgendarstellungen ihrer Ergebnisse ersetzt werden. Für diese Konvertierung wird die aktuelle Kultur verwendet.
+1. Konvertierung einer interpolierten Zeichenfolge in eine Instanz vom Typ <xref:System.String>, die das Ergebnis der Auflösung einer interpolierten Zeichenfolge ist, wobei Elemente des Interpolationsausdrucks durch die ordnungsgemäß formatierten Zeichenfolgendarstellungen ihrer Ergebnisse ersetzt werden. Diese Konvertierung verwendet <xref:System.Globalization.CultureInfo.CurrentCulture> zum Formatieren von Ausdrucksergebnissen.
 
-1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Instanz, die eine zusammengesetzte Formatzeichenfolge mit den zu formatierenden Ausdrucksergebnissen darstellt. Dadurch können Sie aus einer einzigen <xref:System.FormattableString>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen. Hierzu können Sie eine der folgenden Methoden aufrufen:
+1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.FormattableString>-Instanz, die eine zusammengesetzte Formatzeichenfolge mit den zu formatierenden Ausdrucksergebnissen darstellt. Dadurch können Sie aus einer einzigen <xref:System.FormattableString>-Instanz mehrere Ergebniszeichenfolgen mit kulturspezifischem Inhalt erstellen. Rufen Sie hierzu eine der folgenden Methoden auf:
 
       - Eine Überladung von <xref:System.FormattableString.ToString>, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.CurrentCulture>-Element erzeugt.
       - Eine <xref:System.FormattableString.Invariant%2A>-Methode, die eine Ergebniszeichenfolge für das <xref:System.Globalization.CultureInfo.InvariantCulture>-Element erzeugt.
       - Eine <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode, die eine Ergebniszeichenfolge für eine bestimmte Kultur erzeugt.
 
-    Sie können auch die <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode verwenden, um eine benutzerdefinierte Implementierung der <xref:System.IFormatProvider>-Schnittstelle bereitzustellen, die das benutzerdefinierte Formatieren unterstützt. Weitere Informationen finden Sie im unter [Benutzerdefinierte Formatierung mit ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter).
+    Sie können auch die <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode verwenden, um eine benutzerdefinierte Implementierung der <xref:System.IFormatProvider>-Schnittstelle bereitzustellen, die das benutzerdefinierte Formatieren unterstützt. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte Formatierung mit ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) des Artikels [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md).
 
 1. Konvertierung einer interpolierten Zeichenfolge in eine <xref:System.IFormattable>-Instanz, die Ihnen das Erstellen mehrerer Ergebniszeichenfolgen mit kulturspezifischem Inhalt aus einer einzigen <xref:System.IFormattable>-Instanz ermöglicht.
 
@@ -101,12 +100,9 @@ Weitere Informationen finden Sie im Abschnitt [Interpolierte Zeichenfolgen](~/_c
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>
-- <xref:System.FormattableString?displayProperty=nameWithType>
-- <xref:System.IFormattable?displayProperty=nameWithType>
-- [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
-- [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
-- [Zeichenfolgen](../../programming-guide/strings/index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [C#-Sonderzeichen](index.md)
 - [C#-Referenz](../index.md)
+- [C#-Sonderzeichen](index.md)
+- [Zeichenfolgen](../../programming-guide/strings/index.md)
+- [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
+- [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
+- <xref:System.String.Format%2A?displayProperty=nameWithType>

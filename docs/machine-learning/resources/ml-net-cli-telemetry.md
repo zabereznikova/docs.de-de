@@ -2,14 +2,14 @@
 title: Erfassen von Telemetriedaten durch die ML.NET-CLI
 description: Erfahren Sie mehr über die die Telemetriefeatures der ML.NET-CLI, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Erfahren Sie auch, wie Sie diese Features deaktivieren können. Außerdem finden Sie hier Links zur .NET-Lizenzvereinbarung und Informationen zur Einhaltung der DSGVO durch Microsoft.
 ms.topic: conceptual
-ms.date: 05/05/2019
+ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: b9f6ccf7ff76f0cf4ce806f39909b7607a20b9f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254006"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Erfassen von Telemetriedaten durch die ML.NET-CLI
 
@@ -36,14 +36,14 @@ Die Telemetrie *wird aktiviert*, wenn Sie einen [ML.NET-CLI-Befehl](../reference
 
 Die Telemetriefeature der ML.NET-CLI ist standardmäßig aktiviert.
 
-Deaktivieren Sie die Telemetriefeature, indem Sie die Umgebungsvariable `MLDOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen. Diese Umgebungsvariable gilt global für das .NET CLI-Tool.
+Deaktivieren Sie die Telemetriefeature, indem Sie die Umgebungsvariable `MLDOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen. Diese Umgebungsvariable gilt global für das ML.NET-CLI-Tool.
 
 ## <a name="data-points-collected"></a>Gesammelte Datenpunkte
 
 Die Funktion sammelt die folgenden Daten:
 
 - Welcher Befehl aufgerufen wurde, z.B. `auto-train`
-- Verwendete Befehlszeilen-Parameternamen (z.B. „dataset-name“, „label-column-name“, „ml-task“, „output-path“, „max-exploration-time“, „verbosity“)
+- Verwendete Befehlszeilen-Parameternamen (also „dataset-name“, „label-column-name“, „ml-task“, „output-path“, „max-exploration-time“, „verbosity“)
 - MAC-Adresse mit Hash: eine kryptografisch (SHA256) anonyme und eindeutige ID für einen Computer
 - Zeitstempel eines Aufrufs
 - Die aus drei Oktetten bestehende IP-Adresse (nicht die vollständige IP-Adresse), die nur zur Bestimmung des geografischen Standorts verwendet wird
@@ -52,7 +52,7 @@ Die Funktion sammelt die folgenden Daten:
 - Datasetdateigrößen-Bucket
 - Betriebssystem und Version
 - Wert des --Taskparameters: Kategoriewerte, z. B. `regression`, `binary-classification` und `multiclass-classification`
-- ML.NET-CLI-Version (d.h. 0.3.27703.4)
+- ML.NET-CLI-Version (d. h. 0.3.27703.4)
 
 Die Daten werden mithilfe der Technologie [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) sicher an die Microsoft-Server gesendet, unter eingeschränktem Zugriff gespeichert und unter strikter Sicherheitskontrolle durch die Systeme von [Azure Storage](https://azure.microsoft.com/services/storage/) verwendet.
 

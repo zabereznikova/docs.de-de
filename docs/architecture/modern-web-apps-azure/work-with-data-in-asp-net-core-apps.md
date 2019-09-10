@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e4303a3046981756cae6951483c100b37425dc80
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105453"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374000"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -76,9 +76,9 @@ Nachdem Sie EF Core installiert, einen untergeordneten DbContext-Typ erstellt un
 
 Sie können wie in Abbildung 8–1 dargestellt die Abfragen abrufen, die EF Core ausführt, indem Sie eine Protokollierung konfigurieren und sicherstellen, dass diese mindestens auf „Information“ festgelegt ist.
 
-![](./media/image8-1.png)
+![Protokollieren von EF Core-Abfragen an die Konsole](./media/image8-1.png)
 
-Abbildung 8–1: Protokollieren von EF Core-Abfragen an die Konsole
+**Abbildung 8-1**. Protokollieren von EF Core-Abfragen an die Konsole
 
 ### <a name="fetching-and-storing-data"></a>Abrufen und Speichern von Daten
 

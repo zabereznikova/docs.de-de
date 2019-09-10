@@ -1,17 +1,17 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105515"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374011"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
-Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits ausprobieren können. 
+Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits ausprobieren können.
 
 - [Readonly-Member](#readonly-members)
 - [Standardschnittstellenmember](#default-interface-members)
@@ -26,6 +26,8 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits au
 - [Nullwerte zulassende Verweistypen](#nullable-reference-types)
 - [Asynchrone Streams](#asynchronous-streams)
 - [Indizes und Bereiche](#indices-and-ranges)
+- [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
+- [Erweiterung von interpolierten ausführlichen Zeichenfolgen](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Dieser Artikel wurde zuletzt für Vorschauversion 5 von C# 8.0 aktualisiert.
@@ -376,7 +378,8 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
 
-Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren.
+Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren:
+
 - <xref:System.Index?displayProperty=nameWithType>: Stellt einen Index in einer Sequenz dar.
 - Der `^`-Operator, der angibt, dass ein Index relativ zum Ende der Sequenz ist.
 - <xref:System.Range?displayProperty=nameWithType>: Stellt einen Unterbereich einer Sequenz dar.
@@ -444,3 +447,34 @@ var text = words[phrase];
 ```
 
 Weitere Informationen zu Indizes und Bereichen finden Sie im Tutorial zu [Indizes und Bereichen](../tutorials/ranges-indexes.md).
+
+## <a name="unmanaged-constructed-types"></a>Nicht verwaltete konstruierte Typen
+
+In C# 7.3 und früher darf ein konstruierter Typ (also ein Typ, der mindestens ein Typargument enthält) kein [nicht verwalteter Typ](../language-reference/builtin-types/unmanaged-types.md) sein. Ab C# 8.0 ist ein konstruierter Werttyp nicht verwaltet, wenn er nur Felder von nicht verwalteten Typen enthält.
+
+Ein Beispiel: Ihr Code enthält die folgende Definition des generischen `Coords<T>`-Typs:
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+Dann ist der `Coords<int>`-Typ in C# 8.0 und höher ein nicht verwalteter Typ. Wie bei allen nicht verwalteten Typen können Sie einen Zeiger auf eine Variable dieses Typs erstellen oder Instanzen dieses Typs einen [Arbeitsspeicherblock im Stapel zuordnen](../language-reference/operators/stackalloc.md):
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Weitere Informationen finden Sie unter [Nicht verwaltete Typen](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Erweiterung von interpolierten ausführlichen Zeichenfolgen
+
+`$`- und `@`-Token in [interpolierten](../language-reference/tokens/interpolated.md) ausführlichen Zeichenfolgen können in beliebiger Reihenfolge vorliegen: sowohl `$@"..."` als auch `@$"..."` sind gültige interpolierte ausführliche Zeichenfolgen. In früheren C#-Versionen musste das Token `$` vor dem Token `@` vorhanden sein.

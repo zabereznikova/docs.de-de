@@ -2,13 +2,13 @@
 title: Zeichenfolgeninterpolation in C#
 description: Informationen zum Hinzufügen von formatierten Ausdrucksergebnissen in einer Ergebniszeichenfolge in C# mithilfe von Zeichenfolgeninterpolation
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251028"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252928"
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C\#
 
@@ -26,7 +26,7 @@ Wenn Sie ein Zeichenfolgenliteral als interpolierte Zeichenfolge ermitteln möch
 
 Wie in dem Beispiel dargestellt, fügen Sie einen Ausdruck zu einer interpolierten Zeichenfolge hinzu, indem Sie diesen in Klammern setzen:
 
-```
+```csharp
 {<interpolationExpression>}
 ```
 
@@ -36,7 +36,7 @@ Interpolierte Zeichenfolgen unterstützen sämtliche Funktionen des Features [ko
 
 Sie können eine Formatzeichenfolge angeben, die von der Art des Ausdrucksergebnisses unterstützt wird, indem Sie den Interpolationsausdruck mit einem Doppelpunkt (:) und der Formatzeichenfolge versehen:
 
-```
+```csharp
 {<interpolationExpression>:<formatString>}
 ```
 
@@ -50,7 +50,7 @@ Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../sta
 
 Sie können die Mindestbreite und die Ausrichtung für das formatierte Ausdrucksergebnis angeben, indem Sie den Interpolationsausdruck mit einem Komma (,) und dem konstanten Ausdruck versehen:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>}
 ```
 
@@ -58,7 +58,7 @@ Wenn der Wert der *Ausrichtung* positiv ist, wird das formatierte Ausdrucksergeb
 
 Wenn Sie sowohl die Ausrichtung als auch die Formatzeichenfolge angeben müssen, beginnen Sie mit der Ausrichtungskomponente:
 
-```
+```csharp
 {<interpolationExpression>,<alignment>:<formatString>}
 ```
 
@@ -74,7 +74,7 @@ Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../sta
 
 Interpolierte Zeichenfolgen unterstützen alle Escapesequenzen, die in gewöhnlichen Zeichenfolgenliteralen verwendet werden können. Weitere Informationen finden Sie unter [Zeichenfolgenescapesequenzen](../programming-guide/strings/index.md#string-escape-sequences).
 
-Verwenden Sie ein [ausführliches](../language-reference/tokens/verbatim.md) Zeichenfolgenliteral, um Escapesequenzen wörtlich zu interpretieren. In ausführlichen interpolierten Zeichenfolgen folgt auf das `$`-Zeichen ein `@`-Zeichen.
+Verwenden Sie ein [ausführliches](../language-reference/tokens/verbatim.md) Zeichenfolgenliteral, um Escapesequenzen wörtlich zu interpretieren. Ausführliche interpolierte Zeichenfolgen beginnen mit dem Zeichen `$`, gefolgt vom Zeichen `@`. Ab C# 8.0 können Sie die Token `$` und `@` in beliebiger Reihenfolge verwenden: Sowohl `$@"..."` als auch `@$"..."` sind gültige interpolierte ausführliche Zeichenfolgen.
 
 Wenn Sie einer Ergebniszeichenfolge eine Klammer hinzufügen möchten „{“ oder „}“, sollten Sie jeweils zwei Klammern verwenden: „{{“ oder „}}“. Weitere Informationen finden Sie im Artikel [Kombinierte Formatierung](../../standard/base-types/composite-formatting.md) im Abschnitt [Versehen von geschweiften Klammern mit Escapezeichen](../../standard/base-types/composite-formatting.md#escaping-braces).
 

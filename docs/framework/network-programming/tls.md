@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038465"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777512"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -66,7 +66,9 @@ Die folgenden Abschnitte zeigen, wie Sie sicherstellen können, dass Sie keine b
 
 ### <a name="for-http-networking"></a>Für HTTP-Netzwerke
 
-<xref:System.Net.ServicePointManager> wird bei Verwendung von .NET Framework 4.7 oder höheren Versionen standardmäßig auf die Vorgabe des Betriebssystems gesetzt, welches das beste Sicherheitsprotokoll und die beste Version auswählt. Damit standardmäßig die beste Wahl des Betriebssystems übernommen wird, legen Sie möglichst keinen Wert für die <xref:System.Net.ServicePointManager.SecurityProtocol>-Eigenschaft fest. Legen Sie sie andernfalls auf <xref:System.Net.SecurityProtocolType.SystemDefault> fest.
+Bei Verwendung von .NET Framework 4.7 und höheren Versionen nutzt <xref:System.Net.ServicePointManager> das Standardsicherheitsprotokoll, das im Betriebssystem konfiguriert ist. Damit die Standardauswahl des Betriebssystems übernommen wird, sofern möglich, legen Sie keinen Wert für die <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType>-Eigenschaft fest. Diese ist standardmäßig auf <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> festgelegt.
+
+Da die Einstellung für <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> bewirkt, dass <xref:System.Net.ServicePointManager> das vom Betriebssystem konfigurierte Standardsicherheitsprotokoll verwendet, wird Ihre Anwendung je nach Betriebssystem möglicherweise etwas anders ausgeführt. Ein Beispiel: Windows 7 SP1 verwendet TLS 1.0, während Windows 8 und Windows 10 TLS 1.2 nutzen.
 
 Der Rest dieses Artikels ist nicht relevant, wenn .NET Framework 4.7 oder höhere Versionen für HTTP-Netzwerke verwendet werden sollen.
 

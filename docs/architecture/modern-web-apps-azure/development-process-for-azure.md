@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 286ffdb73425794e5979cde902e21ebd90a26969
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675147"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374048"
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -28,7 +28,7 @@ Egal, ob Sie eine vollständige und leistungsstarke integrierte Entwicklungsumge
 
 **Visual Studio 2017:** Mit *Visual Studio 2017* können Sie ASP.NET Core-Anwendungen erstellen, solange Sie die Workload *Plattformübergreifende .NET Core-Entwicklung* installiert haben. Abbildung 10-1 zeigt die erforderliche Workload im Setupdialogfeld von Visual Studio 2017.
 
-![](./media/image10-1.png)
+![Installieren der .NET Core-Workload in Visual Studio 2017](./media/image10-1.png)
 
 **Abbildung 10-1** Installieren der .NET Core-Workload in Visual Studio 2017.
 

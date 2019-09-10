@@ -2,12 +2,12 @@
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Echte Produktionsanwendungen müssen mithilfe von Orchestratoren bereitgestellt und verwaltet werden, die Status, Workload und Lebenszyklen aller Container behandeln können.
 ms.date: 02/15/2019
-ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8c1161127eb6b239384444c369de7f11abd3d424
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672417"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373695"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -179,7 +179,7 @@ Weitere Informationen zur Unterstützung von Containern in Azure Service Fabric 
 
 Wie bereits erwähnt, muss jeder Microservice (logische Kontextgrenze) ein eigenes Domänenmodell (Daten und Logik) aufweisen. Zustandslose Microservices verfügen über externe Datenbanken, die mit relationalen Varianten wie SQL Server oder NoSQL-Optionen wie MongoDB oder Azure Cosmos DB arbeiten.
 
-Die Dienste selbst können in Service Fabric auch zustandsbehaftet sein, was bedeutet, dass die Daten im selben Microservice enthalten sind. Diese Daten können nicht bloß auf demselben Server, sondern auch im Microserviceprozess, im Arbeitsspeicher oder beständig auf Festplatten enthalten sein und auf andere Knoten repliziert werden. In Abbildung 4-30 sind die verschiedenen Konzepte dargestellt.
+Die Dienste selbst können in Service Fabric auch zustandsbehaftet sein, was bedeutet, dass die Daten im selben Microservice enthalten sind. Diese Daten können nicht bloß auf demselben Server, sondern auch im Microserviceprozess, im Arbeitsspeicher oder beständig auf Festplatten enthalten sein und auf andere Knoten repliziert werden. Abbildung 4-14 zeigt die verschiedenen Ansätze.
 
 ![In zustandslosen Diensten ist der Zustand (Persistenz, Datenbank) nicht im Microservice enthalten. In zustandsbehafteten Diensten bleibt der Zustand im Microservice erhalten.](./media/stateless-vs-stateful-microservices.png)
 
@@ -189,7 +189,7 @@ Das Konzept der zustandslosen Microservices eignet sich sehr gut und ist einfach
 
 [Zustandsbehaftete Microservices](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) eignen sich hingegen besonders in anspruchsvolleren Szenarios, da es keine Wartezeit zwischen Domänenlogik und -daten gibt. Umfassende Datenverarbeitungsaufgaben, Back-Ends von Spielen, Database-as-a-Service-Lösungen und andere Szenarios mit kurzer Wartezeit profitieren allesamt von zustandsbehafteten Diensten, die einen lokalen Zustand für einen schnelleren Zugriff ermöglichen.
 
-Zustandslose und zustandsbehaftete Dienste ergänzen sich gegenseitig. Im rechten Schaubild in Abbildung 4–31 wird beispielsweise veranschaulicht, dass ein zustandsbehafteter Dienst in mehrere Partitionen aufgeteilt werden kann. Für den Zugriff auf diese Partitionen benötigen Sie einen zustandslosen Dienst, der als Gatewaydienst dient, der weiß, wie die einzelnen Partitionen basierend auf Partitionsschlüsseln adressiert werden.
+Zustandslose und zustandsbehaftete Dienste ergänzen sich gegenseitig. Wie Sie beispielsweise im rechten Diagramm in Abbildung 4–14 sehen können, kann ein zustandsbehafteter Dienst in mehrere Partitionen aufgeteilt werden. Für den Zugriff auf diese Partitionen benötigen Sie einen zustandslosen Dienst, der als Gatewaydienst dient, der weiß, wie die einzelnen Partitionen basierend auf Partitionsschlüsseln adressiert werden.
 
 Zustandsbehaftete Dienste haben einige Nachteile. Sie bringen einen hohen Komplexitätsgrad bei der horizontalen Skalierung mit sich. Für Funktionalitäten, die üblicherweise durch externe Datenbanksysteme implementiert würden, müssen bestimmte Aufgaben berücksichtigt werden, wie etwa die Datenreplikation in zustandsbehafteten Microservices und die Datenpartitionierung. Dies ist jedoch einer der Bereiche, in denen ein Orchestrator wie [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) mit seinen [zustandsbehafteten zuverlässigen Diensten](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) am besten geeignet ist, da er die Entwicklung und den Lebenszyklus von zustandsbehafteten Microservices mithilfe der [API für Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) und der [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) vereinfacht.
 

@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 51feb770e84af170bf31a6ba363a1d9e72616284
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105461"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373778"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -176,9 +176,9 @@ Standardmäßig stellen ASP.NET Core-Anwendungen ihre eigene Ordnerstruktur her,
 
 In diesem Zusammenhang unterstützt ASP.NET Core MVC die Verwendung verschiedener Bereiche. Wenn Sie verschiedene Bereiche verwenden, können Sie verschiedene separate Ordner für Controller und Ansichten (sowie für jegliche zugeordneten Modelle) in jedem Bereichsordner erstellen. In Abbildung 7-1 wird eine Ordnerstruktur dargestellt, in der Bereiche verwendet werden.
 
-![](./media/image7-1.png)
+![Beispielstruktur mit Bereichen](./media/image7-1.png)
 
-Abbildung 7-1: Beispiel für eine Ordnerstruktur mit Bereichen
+**Abbildung 7-1**. Beispielstruktur mit Bereichen
 
 Wenn Sie Bereiche verwenden, müssen Sie Attribute verwenden, um Ihre Controller mit den Namen der Bereiche zu versehen, zu denen sie gehören:
 
@@ -245,7 +245,7 @@ Je größer die Anwendungen werden, desto wichtiger ist es, übergreifende Belan
 
 ![Die Anforderung wird von Autorisierungsfilter, Ressourcenfilter, Modellbindung, Aktionsfilter, Aktionsausführung sowie Aktionsergebniskonvertierung, Ausnahmefilter, Ergebnisfilter und Ergebnisausführung verarbeitet. Beim Verlassen der Pipeline wird die Anforderung nur von Ergebnisfiltern und Ressourcenfiltern verarbeitet, bevor sie an den Client gesendet wird.](./media/image7-2.png)
 
-Abbildung 7-2: Ausführung über Filter anfordern und Anforderungspipeline.
+**Abbildung 7-2**. Anfordern der Ausführung über Filter und Anforderungspipeline
 
 Filter werden in der Regel als Attribute implementiert, damit Sie sie auf Controller oder Aktionen (oder sogar global) anwenden können. Wenn auf diese Weise Filter hinzugefügt werden, überschreiben die auf Aktionsebene angegebenen Filter entweder die auf Controllerebene angegebenen Filter, oder sie bauen auf diesen Filtern auf, die selbst globale Filter überschreiben. Beispielsweise kann das Attribut \[Route\] verwendet werden, um Routen zwischen Controllern und Aktionen zu erstellen. Genauso kann auch die Autorisierung auf Controllerebene konfiguriert und dann von individuellen Aktionen überschrieben werden. Dies wird im folgenden Beispiel dargestellt:
 
@@ -334,9 +334,9 @@ Bei ASP.NET Core Identity handelt es sich um ein Mitgliedschaftssystem, das Sie 
 
 ASP.NET Core Identity ist in neuen Projektvorlagen enthalten, wenn die Option „Einzelne Benutzerkonten“ aktiviert ist. Diese Vorlage umfasst die Unterstützung der Registrierung, Anmeldung, von externen Anmeldungen, vergessenen Kennwörtern und von zusätzlichen Funktionen.
 
-![](./media/image7-3.png)
+![Auswählen einzelner Benutzerkonten zur Vorabkonfiguration von Identity](./media/image7-3.png)
 
-Abbildung 7-3: „Einzelne Benutzerkonten“ aktivieren, damit Identity vorkonfiguriert wird.
+**Abbildung 7-3**. Auswählen einzelner Benutzerkonten zur Vorabkonfiguration von Identity.
 
 Die Unterstützung von Identity wird unter „Startup“ und sowohl in der Methode ConfigureServices als auch in Configure konfiguriert:
 
@@ -563,13 +563,13 @@ ASP.NET Core-Anwendungen, die im Webserver von Kestrel gehostet werden, müssen 
 
 ![Von Kestrel zum Internet](./media/image7-5.png)
 
-Abbildung 7-5 ASP.NET in Kestrel über einen Reverseproxyserver gehostet
+**Abbildung 7-5**. ASP.NET in Kestrel hinter einem Reverseproxyserver gehostet
 
 Ein Reverseproxyserver kann sich außerdem als nützlich erweisen, um mehrere Anwendungen unter Verwendung von SSL/HTTPS zu sichern. In diesem Zusammenhang muss SSL nur für den Reverseproxy konfiguriert sein. Wie in Abbildung 7-6 dargestellt kann die Kommunikation zwischen dem Reverseproxyserver und Kestrel über HTTP hergestellt werden.
 
-![](./media/image7-6.png)
+![ASP.NET hinter einem über HTTPS gesicherten Reverseproxyserver gehostet](./media/image7-6.png)
 
-Abbildung 7-6 ASP.NET über einen mit HTTP gesicherten Reverseproxyserver gehostet
+**Abbildung 7-6**. ASP.NET hinter einem über HTTPS gesicherten Reverseproxyserver gehostet
 
 Ein immer häufiger verwendeter Ansatz ist das Hosten Ihrer ASP.NET Core-Anwendung in einem Docker-Container, der anschließend lokal gehostet oder in Azure für cloudbasiertes Hosting bereitgestellt werden kann. Dann kann der Docker-Container wie oben dargestellt Ihren Anwendungscode enthalten, der auf Kestrel ausgeführt und hinter einem Reverseproxyserver bereitgestellt wird.
 

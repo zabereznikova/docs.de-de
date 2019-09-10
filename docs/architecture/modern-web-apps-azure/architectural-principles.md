@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arch
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105475"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373767"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -36,13 +36,13 @@ In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen 
 
 Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Laufzeitausführung geht. Dadurch wird ein direktes Abhängigkeitsdiagramm erzeugt. Das bedeutet, dass wenn Modul A eine Funktion in Modul B aufruft, das wiederum eine Funktion in Funktion C aufruft, hängt die Kompilierzeit von A von B ab, dessen Kompilierzeit wiederum von C abhängt, so wie in Abbildung 4-1 dargestellt.
 
-![](./media/image4-1.png)
+![Diagramm der direkten Abhängigkeit](./media/image4-1.png)
 
 **Abbildung 4-1.** Diagramm der direkten Abhängigkeit
 
 Durch die Anwendung des Prinzips der Abhängigkeitsumkehr kann A Methoden auf einer Abstraktion abrufen, die von B implementiert wird. So kann B von A zur Laufzeit aufgerufen werden, jedoch kann B von einer Schnittstelle abhängig sein, die von A zur Kompilierzeit kontrolliert wird (das bedeutet, dass die typische Kompilierzeitabhängigkeit *umgekehrt* wird). Der Ablauf der Programmausführung bleibt zur Laufzeit unverändert, jedoch bedeutet die Einführung von Schnittstellen, dass unterschiedliche Implementierungen dieser Schnittstellen einfach mit eingeschlossen werden können.
 
-![](./media/image4-2.png)
+![Diagramm der umgekehrten Abhängigkeit](./media/image4-2.png)
 
 **Abbildung 4-2**. Diagramm der umgekehrten Abhängigkeit
 

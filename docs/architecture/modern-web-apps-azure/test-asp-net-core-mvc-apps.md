@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4e4ab71cc542767460e92be1510ccc5c5e0e7ce0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69038120"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374067"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -50,9 +50,9 @@ Da Funktionstest auf der Systemebene ausgeführt werden, erfordern sie ein gewis
 
 Martin Fowler schrieb über die Testpyramide. Ein Beispiel dafür wird in Abbildung 9–1 dargestellt.
 
-![](./media/image9-1.png)
+![Testpyramide](./media/image9-1.png)
 
-Abbildung 9–1: Testpyramide
+**Abbildung 9-1**. Testpyramide
 
 Die verschiedenen Schichten der Pyramide und ihre Größen stellen verschiedene Arten von Tests dar, und wie viele davon Sie für Ihre Anwendung schreiben sollten. Wie Sie sehen können, wird empfohlen, eine große Basis aus Komponententests zu verwenden, die von einer kleineren Menge von Integrationstests und einer noch kleineren Menge von Funktionstests unterstützt wird. Im Idealfall sollte jede Schicht nur aus Tests bestehen, die auf niedrigeren Schichten nicht ordnungsgemäß ausgeführt werden können. Behalten Sie die Testpyramide im Hinterkopf, wenn Sie sich entscheiden, welche Art von Test Sie für ein bestimmtes Szenario benötigen.
 
@@ -66,15 +66,15 @@ Sie können Testprojekte so organisieren, wie es für Sie am besten funktioniert
 
 Eine gängige Methode ist, die Anwendungsprojekte in einem SRC-Ordner und die Testprojekte der Anwendung im parallelen Ordner „Tests“ zu organisieren. Sie können entsprechende Projektmappenordner in Visual Studio anlegen, wenn Sie diese Organisierung hilfreich finden.
 
-![](./media/image9-2.png)
+![Organisieren von Tests in Ihrer Projektmappe](./media/image9-2.png)
 
-Abbildung 9–2: Organisierung der Tests in Ihrer Projektmappe
+**Abbildung 9-2:** Organisieren von Tests in Ihrer Projektmappe
 
 Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework funktioniert gut und wird für alle Tests für ASP.NET Core und EF Core verwendet. Mit der in Abbildung 9–3 gezeigten Vorlage können Sie ein xUnit-Testprojekt in Visual Studio oder über die CLI mithilfe des Befehls „dotnet new xunit“ hinzufügen.
 
-![](./media/image9-3.png)
+![Hinzufügen eines xUnit-Testprojekts in Visual Studio](./media/image9-3.png)
 
-Abbildung 9–3: xUnit-Testprojekt in Visual Studio hinzufügen
+**Abbildung 9-3.** Hinzufügen eines xUnit-Testprojekts in Visual Studio
 
 ### <a name="test-naming"></a>Benennen von Tests
 
@@ -98,7 +98,7 @@ Einige Teams finden den zweiten Ansatz für die Benennung klarer, obwohl er etwa
 
 Wenn Sie eine Namenskonvention befolgen, die viele kleine Testklassen produziert, wie eine der oben genannten, empfiehlt es sich, Ihre Tests auch mit Ordnern und Namespaces zu sortieren. Abbildung 9–4 veranschaulicht einen Ansatz zum Organisieren von Tests mit Ordnern in mehreren Testprojekten.
 
-![](./media/image9-4.png)
+![Organisieren von Testklassen in Ordnern, basierend auf der getesteten Klasse](./media/image9-4.png)
 
 **Abbildung 9–4** Organisieren von Testklassen in Ordnern, basierend auf der Klasse, die getestet wird.
 

@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107288"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799254"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -28,7 +28,7 @@ Verwenden Sie in folgenden Fällen .NET Framework für Ihre Serveranwendung:
 - Sie verwenden für Ihre Anwendung derzeit .NET Framework (empfohlen wird eine Erweiterung anstelle einer Migration).
 - Ihre Anwendung verwendet .NET-Bibliotheken von Drittanbietern oder NuGet-Paketen, die für .NET Core nicht verfügbar sind.
 - Ihre Anwendung verwendet .NET-Technologien, die für .NET Core nicht verfügbar sind.
-- Ihre Anwendung verwendet eine Plattform, die .NET Core nicht unterstützt.
+- Ihre Anwendung verwendet eine Plattform, die .NET Core nicht unterstützt. Windows, macOS und Linux unterstützen .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>In welchen Fällen sollte .NET Core verwendet werden?
 
@@ -108,6 +108,6 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 - [Zielframeworks](frameworks.md)
 - [Leitfaden für .NET Core](../core/index.md)
 - [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
-- [Einführung in .NET and Docker](../core/docker/intro-net-docker.md)
+- [Einführung in .NET and Docker](../core/docker/introduction.md)
 - [.NET-Komponenten – Übersicht](components.md)
 - [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](../architecture/microservices/index.md)

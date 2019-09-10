@@ -6,20 +6,18 @@ metadata:
   title: 'ML.NET-Dokumentation – Tutorials, API-Referenz'
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 04/18/2019
-  ms.author: cgronlun
-  author: cjgronlund
+  ms.date: 08/15/2019
+  ms.author: nakersha
+  author: natke
 abstract:
   description: 'Erfahren Sie, wie Sie ML.NET verwenden können, ein plattformübergreifendes Open Source-Framework für Machine Learning zum Erstellen von benutzerdefinierten Machine Learning-Lösungen und deren Integration in .NET-Anwendungen. Tutorials, Codebeispiele, API-Referenz und anderes Dokumentationsmaterial zeigen Ihnen, wie.'
 sections:
-  - title: Erste Schritte
-    items:
-      - type: paragraph
-        text: 'Um zu erfahren, wie eine Machine Learning-Anwendung mit ML.NET erstellt wird, lesen Sie <a href="/dotnet/machine-learning/how-does-mldotnet-work">Was ist ML.NET, und wie funktioniert es?</a>. Alternativ können Sie mit dem Hinzufügen des <b>Microsoft.ML</b>-NuGet-Pakets für Ihre Anwendung beginnen.'
   - title: Schritt-für-Schritt-Tutorials
     items:
       - type: paragraph
         text: 'Erfahren Sie, wie Sie allgemeine Lösungen mit ML.NET erstellen:'
+      - type: paragraph
+        text: '<b>Entwickeln mit der ML.NET-API</b>:'
       - type: list
         style: unordered
         items:
@@ -30,13 +28,40 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Erstellen eines Filmempfehlungssystems mit ML.NET</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Erstellen einer benutzerdefinierten ML.NET-Bildklassifizierung mit TensorFlow</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Erkennen von Objekten in Bildern mit ONNX</a>
-  - title: Referenz und Ressourcen
-    items:
       - type: paragraph
-        text: 'Die ML.NET-API verfügt über zwei Sätze von Paketen: Freigabekomponenten und Vorschaukomponenten. Die Release-API enthält Komponenten für die Datenverarbeitung, Algorithmen für die Binärklassifizierung, Multiklassenklassifizierung, Regression, Anomalieerkennung, Zeitreihen und Vorhersagen, Rangfolge, Modellspeicherungs- und -ladefunktionen, ONNX- und TensorFlow-Modellverarbeitung und vieles mehr! Die Vorschau-API enthält Algorithmen für Empfehlungsaufgaben sowie Unterstützung für Deep Learning-Standardmodelle.'
+        text: '<b>Verwenden des Modellgenerators</b>, einer grafischen Visual Studio-Erweiterung:'
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">.NET API-Browser</a>
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET-Vorschau-API</a>
-          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET samples: C# and F#</a> (ML.NET-Beispiele: C# und F#)'
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Vorhersagen von Preisen mit dem Modellgenerator</a>
+      - type: paragraph
+        text: '<b>Ausführen der ML.NET-CLI</b>:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">Stimmungsanalyse über die ML.NET-CLI</a>
+  - title: Proben
+    items:
+      - type: paragraph
+        text: 'Anwendungen, die in C# und F# geschrieben wurden, finden Sie im <a href="https://github.com/dotnet/machinelearning-samples">samples-Repository</a> auf GitHub.'
+  - title: Referenz
+    items:
+      - type: paragraph
+        text: <b>Die ML.NET-API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: 'Die <a href="/dotnet/api/?view=ml-dotnet">Release-ML-NET-API</a> enthält Komponenten für die Datenverarbeitung, Algorithmen für die Binärklassifizierung, Multiklassenklassifizierung, Regression, Anomalieerkennung, Zeitreihen und Vorhersagen, Rangfolge, Modellspeicherungs- und -ladefunktionen, ONNX- und TensorFlow-Modellverarbeitung und vieles mehr!'
+          - html: Die <a href="/dotnet/api/?view=ml-dotnet-preview">Vorschau-ML.NET-API</a> enthält Algorithmen für Empfehlungsaufgaben sowie Unterstützung für Deep Learning-Standardmodelle.
+      - type: paragraph
+        text: <b>Die AutoML-API</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/index?view=automl-dotnet">Auto ML-API</a>
+      - type: paragraph
+        text: <b>ML.NET-CLI-Referenz</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">Befehlsreferenz für die ML.NET-CLI</a>

@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allg
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dc0618eceda4df7c5aa76aee3ac649deb9f5310
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675437"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373907"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -28,9 +28,9 @@ HTML (Hypertext Markup Language) ist die Standardmarkupsprache zum Erstellen von
 
 CSS (Cascading Stylesheet) wird verwendet, um das Aussehen und Layout eines HTML-Elements anzugeben. CSS-Formate können direkt auf ein HTML-Element angewendet werden, das separat auf der gleichen Seite angegeben wird, oder das in einer anderen Datei angegeben wird, auf die von der Seite verwiesen wird. Formate werden auf Grundlage ihrer Verwendung zum Auswählen eines HTML-Elements weitergegeben. Ein Format kann z.B. für ein ganzes Dokument gelten, kann aber von einem Format überschrieben werden, das für ein bestimmtes Element gilt. Ebenso wird ein elementspezifisches Format von einem Format überschrieben, das für eine CSS-Klasse gilt, die auf das Element angewendet wurde. Dieses Format wird wiederum von einem Format überschrieben, das auf eine bestimmte Instanz dieses Elements angewendet wird (über dessen ID). Abbildung 6–1
 
-**Abbildung 6–1**. CSS-Genauigkeitsregeln, aufsteigend.
+![CSS-Genauigkeitsregeln](./media/image6-1.png)
 
-![](./media/image6-1.png)
+**Abbildung 6–1**. CSS-Genauigkeitsregeln, aufsteigend.
 
 Es wird empfohlen, Formate in getrennten Stylesheetdateien zu speichern und das auswahlbasierte Weitergeben zu verwenden, um konsistente und wiederverwendbare Formate innerhalb der Anwendung zu verwenden. Vermeiden Sie Formatregeln in HTML. Wenden Sie nur in Ausnahmefällen Formate auf einzelne Elemente an (statt auf ganze Klassen von Elementen oder auf Elemente, auf die eine bestimmte CSS-Klasse angewendet wurde).
 

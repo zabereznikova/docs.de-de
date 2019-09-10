@@ -3,12 +3,12 @@ title: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembe
 description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorhandenen Schnittstellendefinitionen problemlos neue Funktionen hinzufügen können, ohne alle Klassen und Strukturen zu brechen, die diese Schnittstelle implementieren.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971434"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252915"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmembern in C# 8.0
 
@@ -37,7 +37,7 @@ Eine zweite Schnittstelle wurde definiert, die eine Bestellung darstellt:
 
 Von diesen Schnittstellen aus konnte das Team eine Bibliothek für die Benutzer erstellen, um den Kunden eine bessere Benutzererfahrung zu bieten. Das Ziel bestand darin, eine intensivere Beziehung zu Bestandskunden aufzubauen und ihre Beziehungen zu neuen Kunden zu verbessern.
 
-Jetzt ist es Zeit, die Bibliothek für das nächste Release zu aktualisieren. Eines der angeforderten Features gewährt Kunden, die viele Bestellungen aufgeben, einen Treuerabatt. Dieser neue Treuerabatt wird angewendet, wenn ein Kunde eine Bestellung aufgibt. Der spezifische Rabatt ist eine Eigenschaft jedes einzelnen Kunden. Jede Implementierung von ICustomer kann andere Regeln für den Treuerabatt festlegen. 
+Jetzt ist es Zeit, die Bibliothek für das nächste Release zu aktualisieren. Eines der angeforderten Features gewährt Kunden, die viele Bestellungen aufgeben, einen Treuerabatt. Dieser neue Treuerabatt wird angewendet, wenn ein Kunde eine Bestellung aufgibt. Der spezifische Rabatt ist eine Eigenschaft jedes einzelnen Kunden. Jede Implementierung von `ICustomer` kann andere Regeln für den Treuerabatt festlegen. 
 
 Die naheliegendste Methode zum Hinzufügen dieser Funktionalität ist die Verbesserung der `ICustomer`-Schnittstelle mit einer Methode zur Anwendung eines Treuerabatts. Diese Entwurfsempfehlung löste bei erfahrenen Entwicklern Bedenken aus: „Schnittstellen sind unveränderlich, sobald sie veröffentlicht sind! Dies ist eine einschneidende Änderung!“ C# 8.0 fügt *Standardschnittstellenimplementierungen* zum Aktualisieren von Schnittstellen hinzu. Die Autoren der Bibliothek können der Schnittstelle neue Member hinzufügen und eine Standardimplementierung für diese Member bereitstellen.
 
@@ -47,7 +47,7 @@ Mit Implementierungen von Standardschnittstellen können Entwickler eine Schnitt
 
 Das Team stimmte der wahrscheinlichsten Standardimplementierung zu: einem Treuerabatt für Kunden.
 
-Das Upgrade sollte die Funktionalität zum Festlegen von zwei Eigenschaften bieten: die für den Rabatt erforderliche Anzahl an Bestellungen sowie den Prozentsatz des Rabatts. Damit wird es zum idealen Szenario für Standardschnittstellenmember. Sie können der Schnittstelle ICustomer eine Methode hinzufügen und die wahrscheinlichste Implementierung bereitstellen. Alle vorhandenen und alle neuen Implementierungen können die Standardimplementierung verwenden oder ihre eigene angeben.
+Das Upgrade sollte die Funktionalität zum Festlegen von zwei Eigenschaften bieten: die für den Rabatt erforderliche Anzahl an Bestellungen sowie den Prozentsatz des Rabatts. Damit wird es zum idealen Szenario für Standardschnittstellenmember. Sie können der `ICustomer`-Schnittstelle eine Methode hinzufügen und die wahrscheinlichste Implementierung bereitstellen. Alle vorhandenen und alle neuen Implementierungen können die Standardimplementierung verwenden oder ihre eigene angeben.
 
 Fügen Sie zunächst der Implementierung die neue Methode hinzu:
 
@@ -69,7 +69,7 @@ Ein guter Anfang. Aber die Standardimplementierung ist zu restriktiv. Viele Nutz
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-Viele neue Sprachfunktionen werden in diesem kleinen Codefragment gezeigt. Schnittstellen können nun statische Member einschließlich Feldern und Methoden enthalten. Verschiedene Zugriffsmodifizierer sind ebenfalls aktiviert. Die zusätzlichen Felder sind privat, die neue Methode ist öffentlich. Beliebige der Modifizierer sind auf Schnittstellenmembern erlaubt.
+Dieses kleine Codefragment zeigt viele neue Sprachfunktionen. Schnittstellen können nun statische Member einschließlich Feldern und Methoden enthalten. Verschiedene Zugriffsmodifizierer sind ebenfalls aktiviert. Die zusätzlichen Felder sind privat, die neue Methode ist öffentlich. Beliebige der Modifizierer sind auf Schnittstellenmembern erlaubt.
 
 Anwendungen, die die allgemeine Formel zum Berechnen des Treuerabatts verwenden, aber andere Parameter, müssen keine benutzerdefinierte Implementierung bereitstellen; sie können die Argumente über eine statische Methode festlegen. Der folgende Code legt z.B. eine „Kundenwertschätzung“ fest, die jeden Kunden mit mehr als einem Monat Mitgliedschaft belohnt:
 

@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675377"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373798"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -28,7 +28,7 @@ Jede Anwendungsarchitektur muss mindestens ein Projekt umfassen. In dieser Archi
 
 Wenn ein neues ASP.NET Core-Projekt erstellt wird, stellt dieses anfangs immer einen All-in-One-Monolith dar. Dabei macht es keinen Unterschied, ob es über Visual Studio oder die Befehlszeile erstellt wird. Dieser Monolith enthält das gesamte Verhalten der Anwendung, einschließlich der Darstellungs-, Geschäfts- und Datenzugriffslogik. In Abbildung 5-1 wird die Dateistruktur einer App dargestellt, die aus einem Projekt besteht.
 
-![](./media/image5-1.png)
+![Eine ASP.NET Core-App, die nur aus einem Projekt besteht](./media/image5-1.png)
 
 **Abbildung 5-1.** Eine ASP.NET Core-App, die nur aus einem Projekt besteht.
 
@@ -59,7 +59,7 @@ Das Erstellen logischer Schichten ist eine häufig verwendete Technik zum Verbes
 
 In Abbildung 5-2 wird die am häufigsten verwendete Unterteilung einer Anwendungslogik in Schichten dargestellt.
 
-![](./media/image5-2.png)
+![Typische Anwendungsschichten](./media/image5-2.png)
 
 **Abbildung 5-2.** Typische Anwendungsschichten
 
@@ -69,19 +69,19 @@ Dieser traditionelle Ansatz zum Erstellen von Schichten hat allerdings den Nacht
 
 In Abbildung 5-3 wird eine Projektmappe als Beispiel dargestellt, in der die Anwendung anhand von Zuständigkeiten bzw. Schichten in drei Projekte unterteilt wird.
 
-![](./media/image5-3.png)
+![Eine einfache monolithische Anwendung mit drei Projekten](./media/image5-3.png)
 
 **Abbildung 5-3.** Eine einfache monolithische Anwendung mit drei Projekten
 
 Obwohl diese Anwendung aus Strukturierungsgründen mehrere Projekte verwendet, wird sie als einzelne Einheit bereitgestellt, und ihre Clients interagieren mit ihr wie mit einer einzelnen Web-App. Dies vereinfacht die Bereitstellung. In Abbildung 5-4 wird dargestellt, wie eine solche App unter Verwendung von Azure gehostet werden kann.
 
-![](./media/image5-4.png)
+![Einfache Bereitstellung einer Azure-Web-App](./media/image5-4.png)
 
 **Abbildung 5-4.** Einfache Bereitstellung einer Azure-Web-App
 
 Wenn die Anforderungen an eine App höher werden, ist möglicherweise eine komplexere und robustere Bereitstellungslösung erforderlich. In Abbildung 5-5 ist ein Beispiel einer komplexeren Bereitstellung dargestellt, die mehrere zusätzliche Funktionen unterstützt.
 
-![](./media/image5-5.png)
+![Bereitstellen einer Web-App in Azure App Service](./media/image5-5.png)
 
 **Abbildung 5-5.** Bereitstellen einer Web-App in Azure App Service
 
@@ -91,7 +91,7 @@ Diese Einheit kann zentral oder horizontal hochskaliert werden, um die cloudbasi
 
 Der einfachste Ansatz zum Skalieren einer Webanwendung in Azure ist das manuelle Konfigurieren einer Skalierung im App Service-Plan der Anwendung. In Abbildung 5-6 wird die Anzeige des Azure-Dashboards dargestellt, über die Sie konfigurieren können, wie viele Instanzen einer App zugrunde liegen.
 
-![](./media/image5-6.png)
+![Skalieren des App Service-Plans in Azure](./media/image5-6.png)
 
 **Abbildung 5-6.** Skalieren des App Service-Plans in Azure
 
@@ -104,7 +104,7 @@ Anwendungen, die den Prinzipien der Abhängigkeitsumkehr und des domänengesteue
 
 In der Clean Architecture sind die Geschäftslogik und das Anwendungsmodell im Kern der Anwendung enthalten. Es wird dann das Prinzip Dependency Inversion angewendet, bei dem die Geschäftslogik nicht mehr vom Datenzugriff oder anderen Aufgaben, die die Infrastruktur betreffen, abhängig ist. Stattdessen sind die Informationen zur Infrastruktur und Implementierung vom Anwendungskern abhängig. Dafür werden Abstraktionen oder Schnittstellen im Anwendungskern definiert und anschließend anhand von Typen implementiert, die in der Infrastrukturschicht definiert werden. Diese Architektur wird häufig in Kreisringen dargestellt, die dem Aufbau einer Zwiebel ähneln. In Abbildung 5-7 ist ein Beispiel für die Darstellung der Architektur enthalten.
 
-![](./media/image5-7.png)
+![Clean Architecture: „Zwiebelansicht“](./media/image5-7.png)
 
 **Abbildung 5-7.** Clean Architecture: „Zwiebelansicht“
 
@@ -112,7 +112,7 @@ In diesem Diagramm beziehen sich alle Abhängigkeiten auf den inneren Kreisring,
 
 In Abbildung 5-8 wird ein herkömmlicheres horizontales Schichtendiagramm dargestellt, das die Abhängigkeit zwischen Benutzeroberfläche und anderen Schichten besser darstellt.
 
-![](./media/image5-8.png)
+![Clean Architecture: Ansicht mit horizontalen Schichten](./media/image5-8.png)
 
 **Abbildung 5-8.** Clean Architecture: Ansicht mit horizontalen Schichten
 
@@ -120,7 +120,7 @@ Beachten Sie, dass die Pfeile mit durchgezogener Linie Abhängigkeiten zur Kompi
 
 In Abbildung 5-9 wird eine detailliertere Ansicht der Architektur einer ASP.NET Core-Anwendung dargestellt, die anhand dieser Empfehlungen erstellt wurde.
 
-![ASP.NET Core-Architektur](./media/image5-9.png)
+![Diagramm der ASP.NET Core-Architektur, die dem Prinzip der Clean Architecture folgt](./media/image5-9.png)
 
 **Abbildung 5-9.** Diagramm der ASP.NET Core-Architektur, die dem Prinzip der Clean Architecture folgt
 
@@ -262,7 +262,7 @@ networks:
 
 Die `docker-compose.yml`-Datei verweist auf die `Dockerfile` im `Web`-Projekt. Die `Dockerfile`-Datei wird verwendet, um anzugeben, welcher Basiscontainer verwendet und wie die Anwendung darauf konfiguriert wird. Die `Dockerfile`-Datei von `Web`:
 
-```
+```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
