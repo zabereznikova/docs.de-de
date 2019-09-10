@@ -2,14 +2,14 @@
 title: Arbeiten mit Objekten
 ms.date: 03/30/2017
 ms.assetid: 338d8a55-05cc-46b0-bbb8-1379d77068e9
-ms.openlocfilehash: ad6288b3b6ceabb419d88da9ff81abec177f55d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6e50c5df4ea95447e50f0503809a768600ab278
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667271"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854220"
 ---
 # <a name="working-with-objects"></a>Arbeiten mit Objekten
-Mit dem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] können Sie Daten in Form von typisierten CLR-Objekten (Common Language Runtime), bei denen es sich um Instanzen von Entitätstypen handelt, abfragen, einfügen, aktualisieren und löschen. Die Entitätstypen entsprechen den im konzeptionellen Modell definierten Entitäten. In [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] werden Entitäten und Beziehungen zugeordnet, die in einem konzeptionellen Modell für eine Datenquelle definiert werden. Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bietet Funktionen, durch die folgenden Aktionen ausführen: Materialisieren von Daten aus der Datenquelle als Objekte zurückgegeben, Nachverfolgen von Änderungen, die an den Objekten vorgenommen wurden; Behandeln der Parallelität, Weitergeben von objektänderungen an die Datenquelle und Binden von Objekten an Steuerelemente.  
+Der Entity Framework ermöglicht Ihnen das Abfragen, einfügen, aktualisieren und Löschen von Daten, die als typisierte Common Language Runtime (CLR)-Objekte ausgedrückt werden, die Instanzen von Entitäts Typen sind. Die Entitätstypen entsprechen den im konzeptionellen Modell definierten Entitäten. Der Entity Framework ordnet Entitäten und Beziehungen, die in einem konzeptionellen Modell definiert sind, einer Datenquelle zu. Der Entity Framework stellt Funktionen für die folgenden Aufgaben bereit: Materialisieren von Daten, die von der Datenquelle als Objekte zurückgegeben werden. Nachverfolgen von Änderungen, die an den Objekten vorgenommen wurden. Behandeln von Parallelität; Zurückgeben von Objektänderungen an die Datenquelle und binden Objekte an Steuerelemente.  
   
- Weitere Informationen zum Arbeiten mit Objekten in der neuesten Version von den Entity Framework finden Sie unter [arbeiten mit Objekten](https://go.microsoft.com/fwlink/?LinkId=235289).
+ Weitere Informationen zum Arbeiten mit Objekten in der neuesten Version des Entity Framework finden Sie unter [Arbeiten mit Objekten](https://go.microsoft.com/fwlink/?LinkId=235289).

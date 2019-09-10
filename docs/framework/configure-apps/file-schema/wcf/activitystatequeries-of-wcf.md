@@ -2,12 +2,12 @@
 title: <activityStateQueries>von WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 249ac3d91f6251a943dd856e4122b8b54f691702
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850568"
 ---
 # <a name="activitystatequeries-of-wcf"></a>\<activitystatuequeries-> von WCF
 
@@ -15,13 +15,14 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Lebenszyklusä
 
 Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel>  
-\<Überwachungs >  
-\<Profile >  
-\<trackingProfile>  
-\<workflow>  
-\<activityStateQueries>  
-
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Überwachungs >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profile >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<TrackingProfile->** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Workflow >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<activitystatuequeries->**  
+  
 ## <a name="syntax"></a>Syntax  
   
 ```xml  

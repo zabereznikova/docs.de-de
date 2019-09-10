@@ -2,17 +2,17 @@
 title: Ablaufverfolgungstyp – Zusammenfassung
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 44446b58510e58758934a5eb964efc8643854879
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647187"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856013"
 ---
 # <a name="trace-type-summary"></a>Ablaufverfolgungstyp – Zusammenfassung
-[Quellebenen](https://go.microsoft.com/fwlink/?LinkID=94943) Definieren verschiedener nachverfolgungsebenen: Kritischen, Fehler-, Warn-, Informationen und ausführlich, darüber hinaus wird die Beschreibung des der `ActivityTracing` -Flag, das die Ausgabe des schaltet Ablaufverfolgungsereignisse und übertragen.  
+[Quell Ebenen](https://go.microsoft.com/fwlink/?LinkID=94943) definieren verschiedene Ablauf Verfolgungs Ebenen: "Kritisch", "Fehler", "Warnung", "Information" und "ausführlich" `ActivityTracing` sowie eine Beschreibung des Flags, das die Ausgabe von Ablauf Verfolgungs Grenzen und Aktivitäts Übertragungs Ereignissen umschaltet.  
   
- Sie können auch überprüfen [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) für die ablaufverfolgungstypen, die von ausgegeben werden, können Typen <xref:System.Diagnostics>.  
+ Sie können [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) auch für die Ablauf Verfolgungs Typen überprüfen, die von <xref:System.Diagnostics>ausgegeben werden können.  
   
  In der folgenden Tabelle werden die Wichtigsten aufgelistet.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "64647187"
 |Warnung|Informationsnachricht.|  
 |Information|Kein kritisches Problem.|  
 |Ausführlich|Debuggen der Ablaufverfolgung.|  
-|Starten|Starten einer logischen Verarbeitungseinheit.|  
+|Beginn|Starten einer logischen Verarbeitungseinheit.|  
 |Suspend (Anhalten)|Anhalten einer logischen Verarbeitungseinheit.|  
 |Fortfahren|Fortsetzen einer logischen Verarbeitungseinheit.|  
 |Beenden|Beenden einer logischen Verarbeitungseinheit.|  
@@ -47,12 +47,8 @@ ms.locfileid: "64647187"
   
  Beim folgenden Beispiel handelt es sich um einen regulären Ausdruck zum Definieren einer idealen Aktivität in einem globalen Bereich:  
   
-```  
-R+   
-```  
+`R+`  
   
  R steht hierbei für den regulären Ausdruck einer Aktivität im lokalen Bereich. Dies wird folgendermaßen übersetzt:  
   
-```  
-[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  
-```
+`[R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+`

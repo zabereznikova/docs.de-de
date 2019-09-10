@@ -2,12 +2,12 @@
 title: Generieren von SQL aus Befehlsstrukturen – Best Practices
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251577"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855004"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 
@@ -137,11 +137,11 @@ Auch beim Vereinfachen von Joins verfügen die beteiligten Tabellen (oder Untera
 
 ## <a name="avoid-select-"></a>Vermeiden von SELECT *
 
-Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell in einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung darf nur eine Teilmenge der Spalten enthalten, die in der Datenbanktabelle enthalten sind. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.
+Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell in einer Entity Framework Anwendung darf nur eine Teilmenge der Spalten enthalten, die in der Datenbanktabelle enthalten sind. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.
 
 ## <a name="reuse-of-expressions"></a>Wiederverwendung von Ausdrücken
 
-Ausdrücke werden möglicherweise in der von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] übergebenen Abfragebefehlsstruktur wiederverwendet. Es sollte nicht davon ausgegangen werden, dass die einzelnen Ausdrücke in der Abfragebefehlsstruktur nur einmal vorhanden sind.
+Ausdrücke können in der vom Entity Framework übergebenen Abfrage Befehlsstruktur wieder verwendet werden. Es sollte nicht davon ausgegangen werden, dass die einzelnen Ausdrücke in der Abfragebefehlsstruktur nur einmal vorhanden sind.
 
 ## <a name="mapping-primitive-types"></a>Zuordnen von primitiven Typen
 
