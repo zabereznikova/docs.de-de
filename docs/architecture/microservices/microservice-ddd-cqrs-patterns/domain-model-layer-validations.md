@@ -85,25 +85,25 @@ Wenn Sie z.B. die Feldvalidierung mit Datenanmerkungen verwenden, duplizieren Si
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Rachel Appel. Introduction to model validation in ASP.NET Core MVC** \ (Einführung in die Modellvalidierung im ASP.NET Core MVC)
+- **Rachel Appel. Introduction to model validation in ASP.NET Core MVC** \ (Einführung in die Modellvalidierung im ASP.NET Core MVC)\
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Adding validation** \ (Hinzufügen der Validierung)
+- **Rick Anderson. Adding validation** \ (Hinzufügen der Validierung)\
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen)
+- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen)\
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Specification and Notification Patterns** \ (Spezifikations- und Benachrichtigungsmuster)
+- **Specification and Notification Patterns** \ (Spezifikations- und Benachrichtigungsmuster)\
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Validierung in Domain-Driven-Design [DDD])
+- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)**  \ (Validierung in Domain-Driven-Design [DDD])\
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack. Domain Model Validation** \ (Validierung des Domänenmodells)
+- **Colin Jack. Domain Model Validation** \ (Validierung des Domänenmodells)\
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. Validation in a DDD world** \ (Validierung in einer DDD-Welt)
+- **Jimmy Bogard. Validation in a DDD world** \ (Validierung in einer DDD-Welt)\
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
