@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runti
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 4674cd8750f5a5e628945c1712ac579d88385b94
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104956"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849287"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -108,6 +108,6 @@ Jede Version von .NET Core implementiert eine Version von .NET Standard. Das Imp
 
 - [Zielframeworks](../../standard/frameworks.md)
 - [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../build/distribution-packaging.md)
-- [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)
+- [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)
 - [Docker-Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

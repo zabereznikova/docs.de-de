@@ -4,12 +4,12 @@ description: .NET Core ist eine modulare, hochleistungsfähige Implementierung v
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: db4daa8c78a181f0599c4c75ccd31f46ee278e63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 0007c1c6a9939c46f123535f9053ac1d4ced7266
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202826"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848945"
 ---
 # <a name="net-core-guide"></a>Leitfaden für .NET Core
 
@@ -21,9 +21,9 @@ Sehen Sie sich die [.NET Core-Tutorials](tutorials/index.md) an. Dort erfahren S
 
 ## <a name="download-net-core-22"></a>Herunterladen von .NET Core 2.2
 
-Laden Sie das [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) herunter, um .NET Core auf Ihrem Windows-, macOS- oder Linux-Computer zu testen. Besuchen Sie [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/), wenn Sie lieber Docker-Container verwenden möchten.
+Laden Sie das [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) herunter, um .NET Core auf Ihrem Windows-, macOS- oder Linux-Computer zu testen. Besuchen Sie [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/), wenn Sie lieber Docker-Container verwenden möchten.
 
-Alle .NET Core-Versionen sind unter den [.NET Core-Downloads](https://www.microsoft.com/net/download/archives) verfügbar, wenn Sie nach einer anderen .NET Core-Version suchen.
+Alle .NET Core-Versionen sind unter den [.NET Core-Downloads](https://dotnet.microsoft.com/download/dotnet-core) verfügbar, wenn Sie nach einer anderen .NET Core-Version suchen.
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>Support
 
-.NET Core wird von [Microsoft auf Windows, Mac OS und Linux unterstützt](https://www.microsoft.com/net/support/policy). Die Plattform wird aus Sicherheits- und Qualitätsgründen mehrmals im Jahr (normalerweise monatlich) aktualisiert.
+.NET Core wird von [Microsoft auf Windows, Mac OS und Linux unterstützt](https://dotnet.microsoft.com/platform/support/policy). Die Plattform wird aus Sicherheits- und Qualitätsgründen mehrmals im Jahr (normalerweise monatlich) aktualisiert.
 
 Binäre .NET Core-Verteilungen werden unter Azure auf von Microsoft verwalteten Servern erstellt und getestet und genauso wie jedes andere Produkt von Microsoft unterstützt.
 

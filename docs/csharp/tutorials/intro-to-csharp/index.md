@@ -3,12 +3,12 @@ title: Einführung in C# – interaktive Tutorials
 description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015004"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850766"
 ---
 # <a name="introduction-to-c"></a>Einführung in C\#
 
@@ -45,4 +45,4 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie die oben aufgeführten Lektion
 Dieses letzte Tutorial ist nur für die Ausführung auf Ihrem Computer unter Verwendung Ihrer eigenen lokalen Entwicklungsumgebung und von .NET Core verfügbar.
 Sie erstellen eine Konsolenanwendung und die grundlegenden objektorientierten Funktionen, die Teil der C#-Sprache sind.
 
-Für dieses Tutorial wird vorausgesetzt, dass Sie die Onlineeinführungstutorials abgeschlossen und das [.NET Core SDK](https://www.microsoft.com/net/download) und [Visual Studio Code](https://code.visualstudio.com/) installiert haben.
+Für dieses Tutorial wird vorausgesetzt, dass Sie die Onlineeinführungstutorials abgeschlossen und das [.NET Core SDK](https://dotnet.microsoft.com/download) und [Visual Studio Code](https://code.visualstudio.com/) installiert haben.

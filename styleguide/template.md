@@ -7,19 +7,19 @@ author:
 ms.author:
 - MICROSOFT ALIAS OF INTERNAL OWNER
 ms.date:
-- CREATION/UPDATE DATE - mm/dd/yyyy
+- CREATION/UPDATE DATE - MM/dd/yyyy
 ms.topic:
 - TOPIC TYPE
 ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106914"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254015"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -70,10 +70,7 @@ Dateinamen verwenden die folgenden Regeln:
 
 ## <a name="headings"></a>Kopfzeilen
 
-Verwenden Sie die übliche Groß-/Kleinschreibung. Folgendes sollte immer groß geschrieben werden:
-
-- Das erste Wort eines Headers
-- Das erste Wort nach einem Doppelpunkt in einem Titel oder einer Überschrift (z.B. „Vorgehensweise: Sortieren eines Arrays“).
+Verwenden Sie die übliche Groß-/Kleinschreibung. Schreiben Sie das erste Wort einer Überschrift immer groß, und beachten Sie die Regeln der Groß- und Kleinschreibung nach Doppelpunkten (z. B. „Vorgehensweise: Sortieren eines Arrays“).
 
 Überschriften sollten mithilfe des atx-Stils erstellt werden, d.h. es sollten 1-6 Hash-Zeichen (#) am Anfang der Zeile verwendet werden, um eine Überschrift anzugeben, entsprechend der HTML-Überschriftenebenen H1 bis H6. Beispiele für Header der ersten und zweiten Ebene werden oben verwendet.
 

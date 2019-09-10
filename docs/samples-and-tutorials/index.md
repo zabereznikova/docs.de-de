@@ -4,16 +4,16 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960296"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855773"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
-Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
+Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
