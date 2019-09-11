@@ -24,11 +24,11 @@ Zu den Beispielen für den Typ von Vorhersagen, die Sie mit ML.NET treffen könn
 |Klassifizierung/Kategorisierung|Automatisches Unterteilen von Kundenfeedback in positive und negative Kategorien|
 |Regression/Vorhersagen kontinuierlicher Werte|Vorhersagen des Hauspreises basierend auf Größe und Standort|
 |Anomalieerkennung|Erkennen von betrügerischen Banktransaktionen |
-|Empfehlungen|Empfehlen von Produkten, die Onlinekäufern basierend auf ihren vorherigen Käufen wahrscheinlich gerne erwerben würden|
+|Empfehlungen|Empfehlen von Produkten, die Onlinekäufer basierend auf ihren vorherigen Käufen wahrscheinlich gerne erwerben würden|
 
 ## <a name="hello-mlnet-world"></a>Hallo ML.NET-Welt
 
-Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größe- und Preisdaten. In realen Anwendungen sind Daten und Modell wesentlich komplexer.
+Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größen- und Preisdaten. In realen Anwendungen sind Daten und Modell wesentlich komplexer.
 
  ```csharp
     using System;
@@ -110,7 +110,7 @@ Das Modell ist einfach: $Price = b + Size * w$. Die Parameter „$b$“ und „$
 
 Ein komplexeres Modell klassifiziert finanzielle Transaktionen mithilfe der Transaktionstextbeschreibung in Kategorien.
 
-Jede Transaktionsbeschreibung wird durch Entfernen redundante Wörter und Zeichen und Zählen von Kombinationen aus Word und Zeichen in einen Satz von Features aufgeschlüsselt. Die Featuregruppe wird zum Trainieren eines linearen Modells auf der Basis des Kategoriensatzes in den Trainingsdaten verwendet. Je mehr eine neue Beschreibung denjenigen im Trainingssatz ähnelt, desto eher wird sie derselben Kategorie zugewiesen. 
+Jede Transaktionsbeschreibung wird durch Entfernen redundanter Wörter und Zeichen und durch Zählen von Wort- und Zeichenkombinationen in einen Satz von Features aufgeschlüsselt. Die Featuregruppe wird zum Trainieren eines linearen Modells auf der Basis des Kategoriensatzes in den Trainingsdaten verwendet. Je mehr eine neue Beschreibung denjenigen im Trainingssatz ähnelt, desto eher wird sie derselben Kategorie zugewiesen. 
 
 ![Textklassifizierungsmodell](./media/text-classification-model.svg)
 
@@ -118,7 +118,7 @@ Hauspreismodell und Textklassifizierungsmodell sind beide **lineare** Modelle. J
 
 ## <a name="data-preparation"></a>Datenvorbereitung
 
-In den meisten Fällen können die Daten, die Ihnen zur Verfügung stehen, nicht direkt zum Trainieren von Machine Learning-Modellen verwendet werden. Die unformatierten Daten müssen vorbereitet, d.h. vorverarbeitet werden, bevor Sie sie verwenden können, um die Parameter Ihres Modells zu finden. Möglicherweise müssen Ihre Daten von Zeichenfolgenwerten in eine numerische Darstellung konvertiert werden. Vielleicht enthalten Ihre Eingabedaten redundante Informationen. Sie müssen möglicherweise die Dimensionen der Eingabedaten reduzieren oder erweitern. Ihre Daten müssen vielleicht normalisiert oder skaliert werden.
+In den meisten Fällen können die Daten, die Ihnen zur Verfügung stehen, nicht direkt zum Trainieren von Machine Learning-Modellen verwendet werden. Die unformatierten Daten müssen vorbereitet, d. h. vorverarbeitet werden, bevor Sie sie verwenden können, um die Parameter Ihres Modells zu finden. Möglicherweise müssen Ihre Daten von Zeichenfolgenwerten in eine numerische Darstellung konvertiert werden. Vielleicht enthalten Ihre Eingabedaten redundante Informationen. Sie müssen möglicherweise die Dimensionen der Eingabedaten reduzieren oder erweitern. Ihre Daten müssen vielleicht normalisiert oder skaliert werden.
 
 Die [ML.NET-Tutorials](./tutorials/index.md) informieren Sie über verschiedene Datenverarbeitungspipelines für Text-, Bild-, numerische und Zeitreihendaten, die für bestimmte Machine Learning-Aufgaben verwendet werden.
 
@@ -155,7 +155,7 @@ In unserem Hauspreisbeispiel haben wir die **Regressionsaufgabe** verwendet. Um 
         // RMS error: 0.19
 ```
 
-Die Auswertungsmetriken zeigen, dass der Fehler gering ist, und dass die Korrelation zwischen der vorhergesagten Ausgabe und der Testausgabe hoch ist. Nun, das war einfach. In realen Beispielen ist weitere Optimierung erforderlich, um gute Modellmetriken zu erzielen.
+Die Auswertungsmetriken zeigen, dass der Fehler gering ist, und dass die Korrelation zwischen der vorhergesagten Ausgabe und der Testausgabe hoch ist. Nun, das war einfach. In realen Beispielen sind weitere Optimierungen erforderlich, um gute Modellmetriken zu erzielen.
 
 ## <a name="mlnet-architecture"></a>ML.NET-Architektur
 
@@ -233,7 +233,7 @@ Jede Transformation in der Pipeline weist ein Eingabeschema (Datennamen, -typen 
 
 Wenn das Ausgabeschema einer Transformation in der Pipeline nicht dem Eingabeschema der nächsten Transformation entspricht, löst ML.NET eine Ausnahme aus.
 
-Ein Datenansichtsobjekt enthält Spalten und Zeilen. Jede Spalte hat einen Namen, einen Typ und eine Länge. Beispiel: die Eingabespalten im Hauspreisbeispiel sind **Size** und **Price** („Größe“ und „Preis“). Beide sind Typen, und sie sind eher Skalar- als Vektormengen.
+Ein Datenansichtsobjekt enthält Spalten und Zeilen. Jede Spalte hat einen Namen, einen Typ und eine Länge. Beispiel: Die Eingabespalten im Hauspreisbeispiel sind **Size** und **Price** („Größe“ und „Preis“). Beide sind Typen, und sie sind eher Skalar- als Vektormengen.
 
    ![Beispiel der ML.NET-Datenansicht mit Hauspreis-Vorhersagedaten](./media/ml-net-dataview.png)
 
@@ -243,7 +243,7 @@ Alle ML.NET-Algorithmen suchen nach einer Eingabespalte, die ein Vektor ist. Sta
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Alle Algorithmen erstellen auch neue Spalten, nachdem sie eine Vorhersage ausgeführt haben. Die festgelegten Namen dieser neuen Spalten hängen vom Typ des Machine Learning-Algorithmus ab. Für die Regressionsaufgabe wird eine der neuen Spalten mit **Score**. Darum haben wir unseren Preisdaten diesen Namen zugeordnet.
+Alle Algorithmen erstellen auch neue Spalten, nachdem sie eine Vorhersage ausgeführt haben. Die festgelegten Namen dieser neuen Spalten hängen vom Typ des Machine Learning-Algorithmus ab. Für die Regressionsaufgabe wird eine der neuen Spalten mit **Score** bezeichnet. Darum haben wir unseren Preisdaten diesen Namen zugeordnet.
 
 ```csharp
     public class Prediction
@@ -265,7 +265,7 @@ Sie können die `debug`-Variable im Debugger beobachten und ihren Inhalt untersu
 
 ### <a name="model-deployment"></a>Modellbereitstellung
 
-In realen Anwendungen sind Ihr Modelltrainings- und Auswertungscode von Ihrer Vorhersage getrennt. Diese beiden Aktivitäten werden in der Tat häufig durch separate Teams ausgeführt. Ihr Modellbereitstellungsteam kann das Modell zur Verwendung in der Vorhersageanwendung speichern.
+In realen Anwendungen ist Ihr Modelltrainings- und Auswertungscode von Ihrer Vorhersage getrennt. Diese beiden Aktivitäten werden in der Tat häufig durch separate Teams ausgeführt. Ihr Modellbereitstellungsteam kann das Modell zur Verwendung in der Vorhersageanwendung speichern.
 
 ```csharp   
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
@@ -277,4 +277,4 @@ Erfahren Sie in den [Tutorials](./tutorials/index.md), wie Sie mit anderen Machi
 
 Sie können sich auch in den [Schrittanleitungen für .NET Machine Learning](./how-to-guides/index.md) ausführlicher über bestimmte Themen informieren.
 
-Und wenn Sie extrem interessiert sind, können Sie direkt in die [API-Referenzdokumentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) eintauchen!
+Und wenn Sie extrem interessiert sind, können Sie auch direkt auf die [API-Referenzdokumentation](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) stürzen!
