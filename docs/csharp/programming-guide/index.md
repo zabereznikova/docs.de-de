@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: f41129b33b717efad5f1b1f59e40f95169e31bf8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f9ac3a6c1e96a1ba4cd78be46a1fd3ad7ee5e4ed
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589478"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850958"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
   
- In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie in Bezug auf das Programmieren oder mit C# noch nicht besonders vertraut sind, sollten Sie sich die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das interaktive Tutorial [Erste Schritte mit C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) ansehen, bei dem keine vorherigen Programmierkenntnisse nötig sind.  
+ In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie Einsteiger beim Programmieren oder bei C# sind, sind die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das [Tutorial zu .NET im Browser](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) am besten für Sie geeignet, da für diese keine Programmierkenntnisse erforderlich sind.  
   
  Informationen zu bestimmten Schlüsselwörtern, Operatoren und Präprozessordirektiven finden Sie in der [C#-Referenz](../language-reference/index.md). Informationen zur Spezifikation für C# finden Sie unter [C#-Sprachspezifikation](../language-reference/language-specification/index.md).  
   
