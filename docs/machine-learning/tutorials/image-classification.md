@@ -263,7 +263,7 @@ public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
 Der folgende Code analysiert die `tags.tsv`-Datei, um den Dateipfad für die `ImagePath`-Eigenschaft dem Namen der Bilddatei hinzuzufügen und ihn und das `Label` in ein `ImageData`-Objekt zu laden. Fügen Sie ihn als erste Zeile der `ReadFromTsv()`-Methode hinzu.  Zum Anzeigen der Vorhersageergebnisse benötigen Sie den vollqualifizierten Dateipfad.
 
 [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/glossary.md#data), [Transformatoren](../resources/glossary.md#transformer) (Transformers) und [Schätzer](../resources/glossary.md#estimator) (Estimators).
+In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/glossary.md#data), [Transformatoren](../resources/glossary.md#transformer) und [Kalkulatoren](../resources/glossary.md#estimator).
 
 ## <a name="reuse-and-tune-pre-trained-model"></a>Wiederverwenden und Optimieren des vortrainierten Modells
 

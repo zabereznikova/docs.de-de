@@ -191,7 +191,7 @@ Die Operatoren `+=` und `-=` können auch zum Abonnieren von Ereignissen und zum
 
 ## <a name="operator-precedence-and-associativity"></a>Operatorrangfolge und Assoziativität
 
-In der folgenden Liste sind die arithmetischen Operatoren beginnend mit dem höchsten Rangfolgenoperator absteigend sortiert:
+In der folgenden Liste sind die arithmetischen Operatoren in absteigender Reihenfolge der Priorität sortiert:
 
 - Postfixinkrementoperator `x++` und Postfixdekrementoperator `x--`
 - Präfixinkrementoperator `++x` und Präfixdekrementoperator `--x` sowie unäre `+`- und `-`-Operatoren
@@ -212,7 +212,7 @@ Liegt das Ergebnis einer arithmetischen Operation außerhalb des Bereichs mögli
 
 ### <a name="integer-arithmetic-overflow"></a>Arithmetischer Überlauf bei ganzen Zahlen
 
-Division ganzer Zahlen durch Null löst immer eine <xref:System.DivideByZeroException> aus.
+Die Division ganzer Zahlen durch null löst immer eine <xref:System.DivideByZeroException> aus.
 
 Im Fall eines arithmetischen Überlaufs bei ganzen Zahlen steuert ein Kontext für Überlaufprüfungen, der [aktiviert oder deaktiviert (Checked oder Unchecked)](../keywords/checked-and-unchecked.md) sein kann, das resultierende Verhalten:
 
