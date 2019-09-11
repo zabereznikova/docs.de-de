@@ -2,27 +2,28 @@
 title: <customTrackingQueries>von WCF
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: abc0c7dfb426338ec6bca61b0a4b87754bb63588
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c4bd74ae346c536e8bc0ae454e638b7c76a40fc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925938"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855435"
 ---
-# <a name="customtrackingqueries-of-wcf"></a><span data-ttu-id="36602-102">\<customtrackingqueries-> von WCF</span><span class="sxs-lookup"><span data-stu-id="36602-102">\<customTrackingQueries> of WCF</span></span>
+# <a name="customtrackingqueries-of-wcf"></a><span data-ttu-id="aab85-102">\<customtrackingqueries-> von WCF</span><span class="sxs-lookup"><span data-stu-id="aab85-102">\<customTrackingQueries> of WCF</span></span>
 
-<span data-ttu-id="36602-103">Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Ereignisse nachzuverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="36602-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="36602-104">Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer benutzerdefinierte Nachverfolgungsdatensätze abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="36602-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
+<span data-ttu-id="aab85-103">Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Ereignisse nachzuverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="aab85-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="aab85-104">Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer benutzerdefinierte Nachverfolgungsdatensätze abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="aab85-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
   
- <span data-ttu-id="36602-105">Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="36602-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
+<span data-ttu-id="aab85-105">Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="aab85-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md).</span></span>
   
-<span data-ttu-id="36602-106">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="36602-106">\<system.serviceModel></span></span>  
-<span data-ttu-id="36602-107">\<Überwachungs ></span><span class="sxs-lookup"><span data-stu-id="36602-107">\<tracking></span></span>  
-<span data-ttu-id="36602-108">\<Profile ></span><span class="sxs-lookup"><span data-stu-id="36602-108">\<profiles></span></span>  
-<span data-ttu-id="36602-109">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="36602-109">\<trackingProfile></span></span>  
-<span data-ttu-id="36602-110">\<workflow></span><span class="sxs-lookup"><span data-stu-id="36602-110">\<workflow></span></span>  
-<span data-ttu-id="36602-111">\<customTrackingQueries></span><span class="sxs-lookup"><span data-stu-id="36602-111">\<customTrackingQueries></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="36602-112">Syntax</span><span class="sxs-lookup"><span data-stu-id="36602-112">Syntax</span></span>  
+<span data-ttu-id="aab85-106">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="aab85-106">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="aab85-107">&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="aab85-107">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="aab85-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Überwachungs >** ](tracking-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="aab85-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)</span></span>\
+<span data-ttu-id="aab85-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profile >** </span><span class="sxs-lookup"><span data-stu-id="aab85-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**</span></span>\
+<span data-ttu-id="aab85-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<TrackingProfile->** ](trackingprofile-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="aab85-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)</span></span>\
+<span data-ttu-id="aab85-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Workflow >** ](workflow-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="aab85-111">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)</span></span>\
+<span data-ttu-id="aab85-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customtrackingqueries->**</span><span class="sxs-lookup"><span data-stu-id="aab85-112">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customTrackingQueries>**</span></span>  
+
+## <a name="syntax"></a><span data-ttu-id="aab85-113">Syntax</span><span class="sxs-lookup"><span data-stu-id="aab85-113">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -39,29 +40,29 @@ ms.locfileid: "69925938"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="36602-113">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="36602-113">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="aab85-114">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="aab85-114">Attributes and elements</span></span>
 
-<span data-ttu-id="36602-114">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="36602-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="aab85-115">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="aab85-115">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="36602-115">Attribute</span><span class="sxs-lookup"><span data-stu-id="36602-115">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="aab85-116">Attribute</span><span class="sxs-lookup"><span data-stu-id="aab85-116">Attributes</span></span>
 
-<span data-ttu-id="36602-116">Keine</span><span class="sxs-lookup"><span data-stu-id="36602-116">None.</span></span>
+<span data-ttu-id="aab85-117">Keine</span><span class="sxs-lookup"><span data-stu-id="aab85-117">None.</span></span>
   
-### <a name="child-elements"></a><span data-ttu-id="36602-117">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="36602-117">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="aab85-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="aab85-118">Child elements</span></span>
   
-|<span data-ttu-id="36602-118">Element</span><span class="sxs-lookup"><span data-stu-id="36602-118">Element</span></span>|<span data-ttu-id="36602-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36602-119">Description</span></span>|  
+|<span data-ttu-id="aab85-119">Element</span><span class="sxs-lookup"><span data-stu-id="aab85-119">Element</span></span>|<span data-ttu-id="aab85-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aab85-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="36602-120">\<customTrackingQuery></span><span class="sxs-lookup"><span data-stu-id="36602-120">\<customTrackingQuery></span></span>](customtrackingquery-of-wcf.md)|<span data-ttu-id="36602-121">Eine Abfrage, die verwendet wird, um Ereignisse nachzuverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="36602-121">A query that is used to track events that you define in your code activities.</span></span>|  
+|[<span data-ttu-id="aab85-121">\<customTrackingQuery></span><span class="sxs-lookup"><span data-stu-id="aab85-121">\<customTrackingQuery></span></span>](customtrackingquery-of-wcf.md)|<span data-ttu-id="aab85-122">Eine Abfrage, die verwendet wird, um Ereignisse nachzuverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="aab85-122">A query that is used to track events that you define in your code activities.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="36602-122">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="36602-122">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="aab85-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="aab85-123">Parent elements</span></span>  
   
-|<span data-ttu-id="36602-123">Element</span><span class="sxs-lookup"><span data-stu-id="36602-123">Element</span></span>|<span data-ttu-id="36602-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="36602-124">Description</span></span>|  
+|<span data-ttu-id="aab85-124">Element</span><span class="sxs-lookup"><span data-stu-id="aab85-124">Element</span></span>|<span data-ttu-id="aab85-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aab85-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="36602-125">\<workflow></span><span class="sxs-lookup"><span data-stu-id="36602-125">\<workflow></span></span>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="36602-126">Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die `activityDefinitionId`-Eigenschaft identifiziert wird.</span><span class="sxs-lookup"><span data-stu-id="36602-126">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
+|[<span data-ttu-id="aab85-126">\<workflow></span><span class="sxs-lookup"><span data-stu-id="aab85-126">\<workflow></span></span>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="aab85-127">Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die `activityDefinitionId`-Eigenschaft identifiziert wird.</span><span class="sxs-lookup"><span data-stu-id="aab85-127">A configuration element that contains all queries for a specific workflow identified by the `activityDefinitionId` property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="36602-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36602-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aab85-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aab85-128">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="36602-128">Nachverfolgung und Ablaufverfolgung für Workflows</span><span class="sxs-lookup"><span data-stu-id="36602-128">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="36602-129">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="36602-129">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="aab85-129">Nachverfolgung und Ablaufverfolgung für Workflows</span><span class="sxs-lookup"><span data-stu-id="aab85-129">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="aab85-130">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="aab85-130">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
