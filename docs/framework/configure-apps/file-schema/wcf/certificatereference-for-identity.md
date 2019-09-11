@@ -2,18 +2,22 @@
 title: <certificateReference> für <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 49c731b2637c15e0b968d8c2523c51c8e138e7bf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926172"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849987"
 ---
 # <a name="certificatereference-for-identity"></a>\<certifiupereferenzierung > \<für Identity >
 Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Ein Secure Windows Communication Foundation (WCF)-Client, der eine Verbindung mit einem Endpunkt mit dieser Identität herstellt, stellt sicher, dass die vom Server dargestellten Ansprüche den Identitäts Anspruch enthalten, der zum Erstellen dieser Identität verwendet wurde.  
   
- \<identity>  
-\<certificateReference>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Client >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Endpunkt >** ](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Identitäts >** ](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certifiupereferenzierung >**  
   
 ## <a name="syntax"></a>Syntax  
   

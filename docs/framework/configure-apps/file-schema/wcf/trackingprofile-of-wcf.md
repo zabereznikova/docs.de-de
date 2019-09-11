@@ -2,21 +2,23 @@
 title: <trackingProfile>von WCF
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: 79326322eeed1f6b73729da675eb02fe6de670df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5df03d63653e658a23a36e8943c06f156d2ae00
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932348"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854940"
 ---
 # <a name="trackingprofile-of-wcf"></a>\<TrackingProfile-> von WCF
 Stellt einen Konfigurations Abschnitt zum Erstellen eines Abonnements für Workflow nach Verfolgungs Datensätze in einem nach Verfolgungs Teilnehmer dar. Ein Überwachungsprofil enthält Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert. Die innerhalb des Nachverfolgungsprofilabschnitts definierten Abfragen geben die Art von Ereignissen an, die das Abonnement zurückgibt.  
   
- Weitere Informationen zur Workflow Überwachung und deren Konfiguration finden Sie unter [Workflow Verfolgung und Ablauf](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) Verfolgung und [Überwachungs profile](../../../windows-workflow-foundation/tracking-profiles.md).  
+Weitere Informationen zur Workflow Überwachung und deren Konfiguration finden Sie unter [Workflow Verfolgung und Ablauf](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) Verfolgung und [Überwachungs profile](../../../windows-workflow-foundation/tracking-profiles.md).  
   
- \<system.serviceModel>  
-\<Überwachungs >  
-\<trackingProfile>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Überwachungs >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profile >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<TrackingProfile->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,7 +85,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Name|Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt.|  
+|NAME|Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

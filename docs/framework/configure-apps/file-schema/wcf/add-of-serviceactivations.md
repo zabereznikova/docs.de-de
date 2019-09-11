@@ -2,19 +2,22 @@
 title: <add> von <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a0f68717f765482f53e675458fae63d1a374d6fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920026"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850329"
 ---
 # <a name="add-of-serviceactivations"></a>\<Fügen Sie > \<von serviceactivations >
 
 Ein Konfigurationselement, mit dem Sie Aktivierungs Einstellungen für virtuelle Dienste definieren können, die Ihren Windows Communication Foundation (WCF)-Dienst Typen zugeordnet sind. Auf diese Weise können Sie in WAS/IIS gehostete Dienste ohne eine SVC-Datei aktivieren.
 
-\<system.ServiceModel>\
-\<serviceHostingEnvironment>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<servicehoststingenvironment->** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceactivations->** ](serviceactivations.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
 
 ## <a name="syntax"></a>Syntax
 

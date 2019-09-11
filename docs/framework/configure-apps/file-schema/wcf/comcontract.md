@@ -2,18 +2,20 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926093"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850028"
 ---
 # <a name="comcontract"></a>\<comContract>
 Gibt einen Dienstvertrag für die COM+-Integration an.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts->** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +52,7 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |Vertrag (Contract)|Eine Zeichenfolge, die den Vertragstyp enthält.|  
-|Name|Eine Zeichenfolge, die den Vertragsnamen enthält.|  
+|NAME|Eine Zeichenfolge, die den Vertragsnamen enthält.|  
 |namespace|Eine Zeichenfolge, die den Vertragsnamespace enthält.|  
 |requiresSession|Ein boolescher Wert, der angibt, ob der Vertrag nur für sitzungsbasierte Bindungen verwendet werden kann. Bei der Initialisierung des Diensts wird von der Integrationslaufzeit sichergestellt, dass diese Einstellung mit dem verwendeten Bindungstyp übereinstimmt. Eine Ausnahme wird generiert, wenn eine oder mehrere Bindungen für den Vertrag miteinander in Konflikt stehen. Wenn die Eigenschaft `false` ist, ein Einwegkanal verwendet wird und [out]-Parameter vorhanden sind, wird ebenfalls eine Ausnahme generiert.|  
   

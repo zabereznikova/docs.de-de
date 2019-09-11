@@ -2,20 +2,21 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: d5feab6cb374f98e683cf15f797de4f478e23131
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 478211755b9131c03b72777ee95ff7223b9092c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919920"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850273"
 ---
 # <a name="backuplist"></a>\<backupList>
 Stellt einen Konfigurations Abschnitt zum Definieren einer Sicherungsliste dar, die eine Gruppe von Endpunkten auflistet, die der Routing Dienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann. Wenn der erste Endpunkt in der Liste ausgefallen ist, führt der Routingdienst automatisch ein Failover zum nächsten Endpunkt in der Liste aus.  So können Sie die Zuverlässigkeit einer Anwendung schnell verbessern, wobei die Clientanwendung weder komplexe Muster behandeln noch den Bereitstellungsort aller Dienste kennen muss.  
   
- \<system.serviceModel>  
-\<routing>  
-\<backupLists>  
-\<backupList>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Routing >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backuplists->** ](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<backuplist->**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +37,7 @@ Stellt einen Konfigurations Abschnitt zum Definieren einer Sicherungsliste dar, 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Name|Eine Zeichenfolge, die den Namen der Endpunktliste angibt.|  
+|NAME|Eine Zeichenfolge, die den Namen der Endpunktliste angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

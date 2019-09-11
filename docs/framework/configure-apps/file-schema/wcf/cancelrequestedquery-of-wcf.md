@@ -2,12 +2,12 @@
 title: <cancelRequestedQuery>von WCF
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ac8b87afc44927ab6653dd6fcdc09cd61436a9b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919648"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850050"
 ---
 # <a name="cancelrequestedquery-of-wcf"></a>\<CancelRequestedQuery-> von WCF
 
@@ -15,14 +15,15 @@ Stellt eine Abfrage dar, die verwendet wird, um Anforderungen zum Abbrechen eine
   
 Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).
   
-\<system.serviceModel>  
-\<Überwachungs >  
-\<Profile >  
-\<trackingProfile>  
-\<workflow>  
-\<cancelRequestedQueries>  
-\<cancelRequestedQuery>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Überwachungs >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profile >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<TrackingProfile->** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Workflow >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cancelrequestedqueries->** ](cancelrequestedqueries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<CancelRequestedQuery->**  
+
 ## <a name="syntax"></a>Syntax  
   
 ```xml  

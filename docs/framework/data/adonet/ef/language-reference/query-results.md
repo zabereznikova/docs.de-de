@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3ac80cfe06f8531dcd2343f676a6f78f8eb0e8f6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249266"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854302"
 ---
 # <a name="query-results"></a>Abfrageergebnisse
 Nachdem eine LINQ to Entities Abfrage in Befehlsstrukturen konvertiert und ausgeführt wurde, werden die Abfrageergebnisse in der Regel als eine der folgenden zurückgegeben:  
@@ -23,9 +23,9 @@ Nachdem eine LINQ to Entities Abfrage in Befehlsstrukturen konvertiert und ausge
   
 - Anonyme Typen  
   
- Wenn die Abfrage in der Datenquelle ausgeführt wurde, werden die Ergebnisse in CLR-Typen materialisiert und an den Client zurückgegeben. Die Objektmaterialisierung wird vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] durchgeführt. Alle Fehler, die dadurch entstehen, dass zwischen dem [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] und der CLR keine Zuordnung vorgenommen werden kann, lösen bei der Objektmaterialisierung Ausnahmen aus.  
+ Wenn die Abfrage in der Datenquelle ausgeführt wurde, werden die Ergebnisse in CLR-Typen materialisiert und an den Client zurückgegeben. Jede Objektmaterialisierung wird vom Entity Framework durchgeführt. Alle Fehler, die dadurch entstehen, dass zwischen dem Entity Framework und der CLR keine Zuordnung vorgenommen werden kann, lösen bei der Objektmaterialisierung Ausnahmen aus.
   
- Wenn die Abfrage primitive Typen des konzeptionellen Modells zurückgibt, besteht das Ergebnis aus CLR-Typen, die eigenständig und vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] getrennt sind. Wenn die Abfrage jedoch eine durch <xref:System.Data.Objects.ObjectQuery%601> dargestellte Auflistung typisierter Entitätsobjekte zurückgibt, werden diese Typen vom Objektkontext nachverfolgt. Alle Objekt Verhalten (z. b. untergeordnete/übergeordnete Auflistungen, Änderungs Nachverfolgung, Polymorphie usw.) [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]sind gemäß der Definition in der definiert. Diese Funktionalität kann, wie im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] definiert, in vollem Umfang verwendet werden. Weitere Informationen finden Sie unter [Arbeiten mit Objekten](../working-with-objects.md).  
+ Wenn die Abfrage Ausführung primitive konzeptionelle Modelltypen zurückgibt, besteht das Ergebnis aus CLR-Typen, die eigenständig sind und vom Entity Framework getrennt sind. Wenn die Abfrage jedoch eine durch <xref:System.Data.Objects.ObjectQuery%601> dargestellte Auflistung typisierter Entitätsobjekte zurückgibt, werden diese Typen vom Objektkontext nachverfolgt. Das gesamte Objekt Verhalten (z. b. untergeordnete/übergeordnete Auflistungen, Änderungs Nachverfolgung, Polymorphie usw.) ist wie in der Entity Framework definiert. Diese Funktion kann in ihrer Kapazität verwendet werden, wie Sie in der Entity Framework definiert ist. Weitere Informationen finden Sie unter [Arbeiten mit Objekten](../working-with-objects.md).
   
  Von Abfragen zurückgegebene Strukturtypen (wie anonyme Typen und komplexe Typen, die NULL-Werte zulassen) können den Wert `null` haben. Eine <xref:System.Data.Objects.DataClasses.EntityCollection%601>-Eigenschaft einer zurückgegebenen Entität kann ebenfalls den Wert `null` haben. Dies kann durch die Projektion einer Auflistungseigenschaft einer Entität geschehen, die den Wert `null` hat, wie ein Aufruf von <xref:System.Linq.Queryable.FirstOrDefault%2A> für eine <xref:System.Data.Objects.ObjectQuery%601>, die über keine Elemente verfügt.  
   

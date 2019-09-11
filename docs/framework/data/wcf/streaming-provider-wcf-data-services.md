@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4d51011fddb856cf1ebd00943e9b79776d9181d0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779780"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854113"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 
@@ -53,7 +53,7 @@ Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Entit
 
 Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.
 
-Ein Beispiel für einen Datendienst, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie im Beitrag [Data Services Streaming Provider Series: Implementieren eines streaminganbieters (](https://go.microsoft.com/fwlink/?LinkID=198989)Teil 1).
+Ein Beispiel für einen Datendienst, der den Entity Framework Anbieter verwendet und eine Medien Ressource verfügbar macht, finden Sie [im Beitrag Data Services Streaming Provider Series: Implementieren eines streaminganbieters (](https://go.microsoft.com/fwlink/?LinkID=198989)Teil 1).
 
 **Reflektionsanbieter**
 

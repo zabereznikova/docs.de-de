@@ -2,12 +2,12 @@
 title: Form der Befehlsstrukturen
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8368354049a77a56a5aa54ab500619576f41b0dc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248223"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854263"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Form der Befehlsstrukturen
 
@@ -17,7 +17,7 @@ Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefeh
 
 Bei einer Abfragebefehlsstruktur handelt es sich um die Objektmodelldarstellung einer Abfrage. Abfragebefehlsstrukturen dienen zwei Zwecken:
 
-- Dem Ausdrücken einer Eingabeabfrage für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].
+- , Wenn eine Eingabe Abfrage ausgedrückt werden soll, die für die Entity Framework angegeben wird.
 
 - Dem Ausdrücken eine Ausgabeabfrage, die einem Anbieter übergeben wird und eine Back-End-Abfrage beschreibt.
 
@@ -25,7 +25,7 @@ Abfragebefehlsstrukturen unterstützen eine umfangreichere Semantik als SQL:1999
 
 Die „DBQueryCommandTree.Query“-Eigenschaft ist der Stamm der Ausdrucksbaumstruktur, die die Abfragelogik beschreibt. Die "DBQueryCommandTree.Parameters"-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter. Die Ausdrucksstruktur besteht aus "DbExpression"-Objekten.
 
-Ein "DbExpression"-Objekt stellt eine Berechnung dar. Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join. Jedes DbExpression-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt. Dieser Typ wird als "TypeUsage" ausgedrückt.
+Ein "DbExpression"-Objekt stellt eine Berechnung dar. Mehrere Arten von Ausdrücken werden vom Entity Framework zum Verfassen von Abfrage Ausdrücken bereitgestellt, einschließlich Konstanten, Variablen, Funktionen, Konstruktoren und relationalen Standard Operatoren wie Filter und Join. Jedes DbExpression-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt. Dieser Typ wird als "TypeUsage" ausgedrückt.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formen der Ausgabeabfrage-Befehlsstruktur
 
@@ -75,7 +75,7 @@ Die folgenden Funktionstypen können übergeben werden:
 
 - Benutzerdefinierte Funktionen.
 
-Kanonische Funktionen (Weitere Informationen finden Sie unter [kanonische Funktionen](./language-reference/canonical-functions.md) ) werden als Teil [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]von angegeben, und Anbieter sollten auf der Grundlage dieser Spezifikationen Implementierungen für kanonische Funktionen bereitstellen. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.
+Kanonische Funktionen (Weitere Informationen finden Sie unter [kanonische Funktionen](./language-reference/canonical-functions.md) ) werden als Teil des Entity Framework angegeben, und Anbieter sollten auf der Grundlage dieser Spezifikationen Implementierungen für kanonische Funktionen bereitstellen. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.
 
 Zudem verfügen Funktionen mit dem "NiladicFunction"-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  Das heißt,  *\<dass FunctionName >* anstelle von  *\<FunctionName > ()* ist.
 

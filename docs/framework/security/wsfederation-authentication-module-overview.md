@@ -3,12 +3,12 @@ title: Übersicht über das WSFederation-Authentifizierungsmodul
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: eaf53a352238161ccec1b481649074d322954905
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987702"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851513"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
 Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NET-Anwendungen über das WS-Verbundauthentifizierungsmodul (WS-FAM). In diesem Thema wird beschrieben, wie Verbundauthentifizierung funktioniert und verwendet wird.  
@@ -67,7 +67,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
   
 - Das <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType>-Ereignis wird ausgelöst, wenn die ASP.NET-Infrastruktur die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode zum ersten Mal für eines der Anwendungsmodule aufruft, die von <xref:System.IdentityModel.Services.HttpModuleBase> abgeleitet sind. Diese Methode greift auf die statische <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>-Eigenschaft zu, mit der die Konfiguration aus der Datei Web.config geladen wird. Dieses Ereignis wird beim ersten Zugriff auf die Eigenschaft ausgelöst. Auf das <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>-Objekt, das durch die Konfiguration initialisiert wird, kann durch die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>-Eigenschaft in einem Ereignishandler zugegriffen werden. Mit diesem Ereignis können Sie die Konfiguration ändern, bevor sie in allen Modulen angewendet wird. Sie können einen Handler für dieses Ereignis in der Application_Start-Methode hinzufügen:  
   
-    ```  
+    ```csharp
     void Application_Start(object sender, EventArgs e)  
     {  
         FederatedAuthentication.FederationConfigurationCreated += new EventHandler<FederationConfigurationCreatedEventArgs>(FederatedAuthentication_FederationConfigurationCreated);  

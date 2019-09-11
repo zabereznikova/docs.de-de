@@ -2,12 +2,12 @@
 title: Unterschiede zwischen Entity SQL und Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e809cea2f853eed51d28e55f81a411f7af2e5a33
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250863"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854472"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Unterschiede zwischen Entity SQL und Transact-SQL
 In diesem Thema werden die unter [!INCLUDE[esql](../../../../../../includes/esql-md.md)] schiede zwischen und Transact-SQL beschrieben.  
@@ -18,7 +18,7 @@ In diesem Thema werden die unter [!INCLUDE[esql](../../../../../../includes/esql
  Bei der Vererbung ist es häufig nützlich, Instanzen eines Untertyps aus einer Auflistung von Instanzen des Obertyps auszuwählen. Diese Funktion wird vom [OfType](oftype-entity-sql.md) -Operator [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in C# (ähnlich wie `oftype` in Sequenzen) bereitstellt.  
   
 ## <a name="support-for-collections"></a>Unterstützung von Auflistungen  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]behandelt Auflistungen als erstklassige Entitäten. Beispiel:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]behandelt Auflistungen als erstklassige Entitäten. Zum Beispiel:  
   
 - In einer `from`-Klausel sind Auflistungsausdrücke gültig.  
   
@@ -137,13 +137,13 @@ group by b + c
 ## <a name="collection-based-aggregates"></a>Auflistungsbasierte Aggregate  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Arten von Aggregaten.  
   
- Auflistungsbasierte Aggregate verarbeiten Auflistungen und erstellen das aggregierte Ergebnis. Sie können überall in der Abfrage stehen und erfordern keine `group by`-Klausel. Beispiel:  
+ Auflistungsbasierte Aggregate verarbeiten Auflistungen und erstellen das aggregierte Ergebnis. Sie können überall in der Abfrage stehen und erfordern keine `group by`-Klausel. Zum Beispiel:  
   
 ```  
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt auch Aggregate im SQL-Format. Beispiel:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt auch Aggregate im SQL-Format. Zum Beispiel:  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  
@@ -189,7 +189,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt (bisher) keine analytischen Funktionen.  
   
  Integrierte Funktionen, Operatoren  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]unterstützt eine Teilmenge der integrierten Transact-SQL-Funktionen und-Operatoren. Diese Operatoren und Funktionen werden sehr wahrscheinlich von den großen Speicheranbietern unterstützt. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]verwendet die Speicher spezifischen Funktionen, die in einem Anbieter Manifest deklariert sind. Darüber hinaus können [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] Sie mit dem integrierte und benutzerdefinierte Speicherfunktionen deklarieren [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , die verwendet werden sollen.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]unterstützt eine Teilmenge der integrierten Transact-SQL-Funktionen und-Operatoren. Diese Operatoren und Funktionen werden sehr wahrscheinlich von den großen Speicheranbietern unterstützt. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]verwendet die Speicher spezifischen Funktionen, die in einem Anbieter Manifest deklariert sind. Darüber hinaus können Sie mit dem Entity Framework integrierte und benutzerdefinierte Speicherfunktionen deklarieren, die verwendet werden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sollen.  
   
  Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt keine Mechanismen für Abfragehinweise bereit.  

@@ -2,12 +2,12 @@
 title: <faultPropagationQuery>von WCF
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 6ba6478ca500c0a8ef150966a97898f8743ffdf8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6ef4e198caec4a1f21cedf2ff46d390aeaa2d3b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925629"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855333"
 ---
 # <a name="faultpropagationquery-of-wcf"></a>\<"fehlerpropagationquery"-> von WCF
 
@@ -15,13 +15,14 @@ Stellt eine Abfrage dar, die verwendet wird, um die Behandlung von Fehlern zu ve
 
 Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).
 
-\<System. Service Model > \
-\<Nachverfolgung > \
-\<Profile > \
-\<trackingProfile>\
-\<Workflow > \
-\<faultPropagationQueries>\
-\<faultPropagationQuery>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Überwachungs >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Profile >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<TrackingProfile->** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Workflow >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<"fehlerpropagationqueries"->** ](faultpropagationqueries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> "fehlerpropagationquery"**  
 
 ## <a name="syntax"></a>Syntax
 

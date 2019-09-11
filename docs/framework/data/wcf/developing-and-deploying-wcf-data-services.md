@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 578c480940d70fa84edf18d572992e755c8efed5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780317"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854065"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -121,7 +121,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
-- Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, und diese Skripts können im Webbereitstellungs Paket einer ASP.NET-Anwendung enthalten sein. Weitere Informationen finden Sie unter [Vorgehensweise: Stellen Sie eine Datenbank mit einem Webanwendungs Projekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))bereit. Für eine ASP.NET-Website können Sie dazu den Assistenten für die **Daten Bank Veröffentlichung** in Visual Studio verwenden. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Wenn Sie einen Datendienst bereitstellen, der den Entity Framework Anbieter für den Zugriff auf eine SQL Server Datenbank verwendet, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienst Bereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) in der Zieldatenbank erstellen, und diese Skripts können im Webbereitstellungs Paket einer ASP.NET-Anwendung enthalten sein. Weitere Informationen finden Sie unter [Vorgehensweise: Stellen Sie eine Datenbank mit einem Webanwendungs Projekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))bereit. Für eine ASP.NET-Website können Sie dazu den Assistenten für die **Daten Bank Veröffentlichung** in Visual Studio verwenden. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

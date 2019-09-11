@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 7be3491af48ad29cd7892dd31a077aa7ac44ca63
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250498"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854389"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
 Dieser Abschnitt enthält Informationen zu bekannten Problemen bei LINQ to Entities-Abfragen.  
@@ -42,7 +42,7 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen bei LINQ to Entit
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Keine Unterstützung von ganzen Zahlen ohne Vorzeichen  
- Das [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] angeben eines ganzzahligen Typs ohne Vorzeichen in einer LINQ to Entities Abfrage wird nicht unterstützt, da von keine Ganzzahlen ohne Vorzeichen unterstützt werden. Wenn Sie eine ganze Zahl ohne Vorzeichen angeben, <xref:System.ArgumentException> wird während der Übersetzung des Abfrage Ausdrucks eine Ausnahme ausgelöst, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
+ Das Angeben eines ganzzahligen Typs ohne Vorzeichen in einer LINQ to Entities Abfrage wird nicht unterstützt, da die Entity Framework keine Ganzzahlen ohne Vorzeichen unterstützt. Wenn Sie eine ganze Zahl ohne Vorzeichen angeben, <xref:System.ArgumentException> wird während der Übersetzung des Abfrage Ausdrucks eine Ausnahme ausgelöst, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

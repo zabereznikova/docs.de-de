@@ -6,39 +6,42 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e0bc019ee361cba6a28ac573da3d2ee09e2168ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 32591edd065a8122b84ff14102f672ccf6001d67
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855849"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Vorgehensweise: Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start
-Dieses Beispiel zeigt, wie Sie steuern eine <xref:System.Windows.Media.Animation.Storyboard> nachdem es gestartet wurde. Starten einer <xref:System.Windows.Media.Animation.Storyboard> mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie <xref:System.Windows.Media.Animation.BeginStoryboard>, das verteilt der Animationen an die Objekte und Eigenschaften, die sie animieren, und klicken Sie dann das Storyboard gestartet wird. Wenn Sie geben <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen durch Angabe der <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> -Eigenschaft, Sie machen es ein steuerbares Storyboard. Sie können das Storyboard dann interaktiv steuern, nachdem es gestartet wurde.  
-  
- Verwenden Sie die folgenden Storyboard Aktionen zusammen mit <xref:System.Windows.EventTrigger> Objekte zum Steuern eines Storyboards.  
-  
-- <xref:System.Windows.Media.Animation.PauseStoryboard>: Hält das Storyboard an.  
-  
-- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Setzt ein angehaltenes Storyboard fort.  
-  
-- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Ändert die Geschwindigkeit des Storyboards.  
-  
-- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Setzt ein Storyboard an das Ende seines Füllbereichs, sofern vorhanden.  
-  
-- <xref:System.Windows.Media.Animation.StopStoryboard>: Hält das Storyboard an.  
-  
-- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Entfernt das Storyboard, das Freigeben von Ressourcen.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Aktionen des steuerbaren Storyboards zum interaktiven Steuern eines Storyboards.  
-  
- **Hinweis**: Ein Beispiel zum Steuern eines Storyboards mithilfe von Code finden Sie unter [steuern Sie ein Storyboard nach es beginnt mithilfe von einem interaktiven Methoden](how-to-control-a-storyboard-after-it-starts.md).  
-  
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
-  
- Weitere Beispiele finden Sie unter den [Beispielsammlung](https://go.microsoft.com/fwlink/?LinkID=159969).  
-  
+
+In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Media.Animation.Storyboard> ein nach dem Starten gesteuert wird. Verwenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Media.Animation.Storyboard> Sie,umeinmitzustarten,mithilfevon,wodurchdieAnimationenandievonIhnenanimiertenObjekteundEigenschaftenverteiltwerden,undstartenSiedanndasStoryboard.<xref:System.Windows.Media.Animation.BeginStoryboard> Wenn Sie <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen angeben, indem Sie <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> die zugehörige-Eigenschaft angeben, legen Sie ihn als steuerbares Storyboard fest. Sie können das Storyboard dann interaktiv steuern, nachdem es gestartet wurde.
+
+Verwenden Sie die folgenden storyboardaktionen in <xref:System.Windows.EventTrigger> Verbindung mit-Objekten, um ein Storyboard zu steuern.
+
+- <xref:System.Windows.Media.Animation.PauseStoryboard>: Hält das Storyboard an.
+
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>: Setzt ein angehaltene Storyboard fort.
+
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Ändert die storyboardgeschwindigkeit.
+
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Verschiebt ein Storyboard auf das Ende seines Füllzeitraums, wenn es über eines verfügt.
+
+- <xref:System.Windows.Media.Animation.StopStoryboard>: Beendet das Storyboard.
+
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>: Entfernt das Storyboard und gibt Ressourcen frei.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel werden steuerbare storyboardaktionen verwendet, um ein Storyboard interaktiv zu steuern.
+
+> [!NOTE]
+> Ein Beispiel für die Steuerung eines Storyboards mithilfe von Code finden Sie unter [Steuern eines Storyboards, nachdem es mit seiner interaktiven Methode begonnen](how-to-control-a-storyboard-after-it-starts.md)hat.
+
+[!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]
+
+Weitere Beispiele finden Sie in der [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>

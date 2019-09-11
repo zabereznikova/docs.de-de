@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7edd2eeafcce6a22c3256d0684a9c4f961b34002
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049894"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855708"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams-Methode
-Ruft einen Enumerator für ein Array von generischen Parameter-Token mit dem angegebenen TypeDef oder MethodDef verknüpften token.  
+Ruft einen Enumerator für ein Array von generischen Parameter Token ab, die dem angegebenen TypeDef-oder MethodDef-Token zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -44,30 +44,30 @@ HRESULT EnumGenericParams (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `tk`  
- [in] Das TypeDef oder MethodDef-Token, dessen generischen Parametern werden aufgelistet werden sollen.  
+ in Das TypeDef-oder MethodDef-Token, dessen generische Parameter aufgezählt werden sollen.  
   
  `rGenericParams`  
- [out] Das Array der generischen Parameter aufgelistet werden.  
+ vorgenommen Das Array von generischen Parametern, die aufgelistet werden sollen.  
   
  `cMax`  
- [in] Die angeforderte maximale Anzahl von Token in platzieren `rGenericParams`.  
+ in Die angeforderte maximale Anzahl von Token, die `rGenericParams`in platziert werden sollen.  
   
  `pcGenericParams`  
- [out] Die zurückgegebene Anzahl von Token in platziert `rGenericParams`.  
+ vorgenommen Die zurückgegebene Anzahl von Token, `rGenericParams`die in platziert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|`phEnum` enthält keine Memberelemente. In diesem Fall `pcGenericParams` auf 0 (null) festgelegt ist.|  
+|`S_OK`|`EnumGenericParams`wurde erfolgreich zurückgegeben.|  
+|`S_FALSE`|`phEnum`hat keine Member-Elemente. In diesem Fall `pcGenericParams` wird auf 0 (null) festgelegt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Fern** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

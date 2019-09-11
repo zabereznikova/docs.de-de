@@ -2,12 +2,12 @@
 title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248572"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854293"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 
@@ -27,7 +27,7 @@ Eine DbModificationCommandTree ist eine Objektmodelldarstellung eines DML- Ände
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree und seine Implementierungen, die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erstellt werden, stellen immer einen einzelnen Zeilen Vorgang dar. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.
+DbModificationCommandTree und seine Implementierungen, die vom Entity Framework erstellt werden, stellen immer einen einzelnen Zeilen Vorgang dar. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.
 
 ![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
@@ -90,7 +90,7 @@ Value legt den neuen Wert für die Aktualisierung der Eigenschaft fest. Er ist e
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generierung von Änderungen in SQL im Beispielanbieter
 
-Der [Entity Framework Beispiel Anbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) veranschaulicht die Komponenten von ADO.NET-Datenanbietern, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]unterstützen. Beim Ziel handelt es sich um eine SQL Server 2005-Datenbank. Die Implementierung erfolgt als übergeordneter Wrapper des ADO.NET 2.0-Datenanbieters System.Data.SqlClient.
+Der [Entity Framework Beispiel Anbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) veranschaulicht die Komponenten von ADO.NET-Datenanbietern, die die Entity Framework unterstützen. Beim Ziel handelt es sich um eine SQL Server 2005-Datenbank. Die Implementierung erfolgt als übergeordneter Wrapper des ADO.NET 2.0-Datenanbieters System.Data.SqlClient.
 
 Das SQL-Änderungsgenerierungsmodul des Beispielanbieters (das sich in der Datei SQL Generation\DmlSqlGenerator.cs befindet) erstellt mit einer eingegebenen DbModificationCommandTree eine einzelne SQL-Änderungsanweisung, möglicherweise gefolgt von einer Auswahlanweisung, um einen Reader zurückzugeben, sofern dies durch die DbModificationCommandTree festgelegt wurde. Beachten Sie, dass die Form der generierten Befehle von der SQL Server-Zieldatenbank abhängig ist.
 

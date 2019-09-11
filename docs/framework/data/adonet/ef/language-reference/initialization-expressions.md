@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 109be8ef2bf41326fcab5896ecdc359859683345
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250681"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854430"
 ---
 # <a name="initialization-expressions"></a>Initialisierungsausdrücke
 Ein Initialisierungsausdruck initialisiert ein neues Objekt. Die meisten Initialisierungsausdrücke werden unterstützt, einschließlich der meisten neuen C# 3.0- und Visual Basic 9.0-Initialisierungsausdrücke. Die folgenden Typen können von einer LINQ to Entities-Abfrage initialisiert und zurückgegeben werden:  
   
 - Eine Auflistung von 0 (null) oder mehreren typisierten Entitätsobjekten oder einer Projektion komplexer Typen, die im konzeptionellen Modell definiert sind.  
   
-- Von [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstütze CLR-Typen.  
+- Von der Entity Framework unterstützte CLR-Typen.
   
 - Inlineauflistungen  
   

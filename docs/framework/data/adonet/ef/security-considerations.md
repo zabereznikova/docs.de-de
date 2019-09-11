@@ -2,23 +2,23 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d1fb104f336938cc83d53cae71a8132f9b648dc6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248552"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854250"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
-In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Außerdem sollten Sie die Empfehlungen zum Erstellen von sicheren .NET Framework-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../security-overview.md).  
+In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwicklung, Bereitstellung und Ausführung von Entity Framework-Anwendungen spezifisch sind. Außerdem sollten Sie die Empfehlungen zum Erstellen von sicheren .NET Framework-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Allgemeine Überlegungen zur Sicherheit  
- Die folgenden Sicherheitsaspekte gelten für alle Anwendungen, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwenden.  
+ Die folgenden Sicherheitsüberlegungen gelten für alle Anwendungen, die die Entity Framework verwenden.  
   
 #### <a name="use-only-trusted-data-source-providers"></a>Verwenden Sie nur vertrauenswürdige Datenquellenanbieter.  
  Um mit der Datenquelle zu kommunizieren, muss ein Anbieter wie folgt vorgehen:  
   
-- Empfangen der Verbindungszeichenfolge von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]  
+- Empfangen Sie die Verbindungs Zeichenfolge aus der Entity Framework.  
   
 - Übersetzen der Befehlsstruktur in die native Abfragesprache der Datenquelle  
   
@@ -27,7 +27,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Während des Anmeldevorgangs werden Informationen auf der Grundlage des Benutzerkennworts über die Netzwerkbibliotheken der zugrunde liegenden Datenquelle an den Server übertragen. Ein böswilliger Anbieter kann Benutzeranmeldeinformationen stehlen, böswillige Abfragen generieren oder das Resultset manipulieren.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Verschlüsseln Sie die Verbindung, um vertrauliche Daten zu schützen.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] behandelt die Datenverschlüsselung nicht direkt. Wenn Benutzer über ein öffentliches Netzwerk auf Daten zugreifen, sollte die Anwendung eine verschlüsselte Verbindung mit der Datenquelle herstellen, um die Sicherheit zu erhöhen. Weitere Informationen finden Sie in der die Sicherheit betreffenden Dokumentation für die Datenquelle. Eine SQL Server Datenquelle finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Der Entity Framework verarbeitet die Datenverschlüsselung nicht direkt. Wenn Benutzer über ein öffentliches Netzwerk auf Daten zugreifen, sollte die Anwendung eine verschlüsselte Verbindung mit der Datenquelle herstellen, um die Sicherheit zu erhöhen. Weitere Informationen finden Sie in der die Sicherheit betreffenden Dokumentation für die Datenquelle. Eine SQL Server Datenquelle finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
 #### <a name="secure-the-connection-string"></a>Sichern Sie die Verbindungszeichenfolge ab.  
  Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird oder nicht ordnungsgemäß aufgebaut ist. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet das gesamte System. Folgende Methoden werden zum Sichern von Verbindungszeichenfolgen empfohlen:  
@@ -46,7 +46,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
   
 - Verwenden Sie Verbindungszeichenfolgen-Generatoren, wenn Sie Verbindungen dynamisch erstellen.  
   
-     Wenn Sie Verbindungszeichenfolgen zur Laufzeit erstellen müssen, verwenden Sie die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse. Diese Zeichenfolgen-Generator-Klasse hilft durch Überprüfen und Versehen von ungültigen Eingabeinformationen mit Escapezeichen, Angriffe durch Einschleusen von Verbindungszeichenfolgen zu verhindern. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie eine EntityConnection-](how-to-build-an-entityconnection-connection-string.md)Verbindungs Zeichenfolge. Verwenden Sie auch die entsprechende String Builder-Klasse, um die Datenquellen-Verbindungs Zeichenfolge [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zu erstellen, die Teil der Verbindungs Zeichenfolge ist Informationen zu Verbindungs Zeichenfolgen-Generatoren für ADO.NET-Anbieter finden Sie unter [Verbindungs Zeichenfolgen](../connection-string-builders.md)-Generatoren.  
+     Wenn Sie Verbindungszeichenfolgen zur Laufzeit erstellen müssen, verwenden Sie die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse. Diese Zeichenfolgen-Generator-Klasse hilft durch Überprüfen und Versehen von ungültigen Eingabeinformationen mit Escapezeichen, Angriffe durch Einschleusen von Verbindungszeichenfolgen zu verhindern. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie eine EntityConnection-](how-to-build-an-entityconnection-connection-string.md)Verbindungs Zeichenfolge. Verwenden Sie auch die entsprechende String Builder-Klasse, um die Datenquellen-Verbindungs Zeichenfolge zu erstellen, die Teil der Entity Framework Verbindungs Zeichenfolge ist. Informationen zu Verbindungs Zeichenfolgen-Generatoren für ADO.NET-Anbieter finden Sie unter [Verbindungs Zeichenfolgen](../connection-string-builders.md)-Generatoren.  
   
  Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../protecting-connection-information.md).  
   
@@ -63,7 +63,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Ein Datenquellenadministrator sollte Benutzern nur die notwendigen Berechtigungen gewähren. Auch wenn [!INCLUDE[esql](../../../../../includes/esql-md.md)] DML-Anweisungen zum Ändern von Daten, wie beispielsweise INSERT, UPDATE oder DELETE, nicht unterstützt, können Benutzer dennoch auf die Verbindung zur Datenquelle zugreifen. Ein böswilliger Benutzer könnte diese Verbindung verwenden, um DML-Anweisungen in der systemeigenen Sprache der Datenquelle auszuführen.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>Führen Sie Anwendungen mit den minimalen Berechtigungen aus.  
- Wenn Sie zulassen, dass eine verwaltete Anwendung mit voller Vertrauenswürdigkeit ausgeführt wird, wird der Zugriff der Anwendung auf Ihren Computer durch die .NET Framework nicht eingeschränkt. Dies kann zu einer Sicherheitslücke in der Anwendung führen, durch die das gesamte System gefährdet werden kann. Um die Code Zugriffssicherheit und andere Sicherheitsmechanismen in der .NET Framework zu verwenden, sollten Sie Anwendungen mithilfe von teilweise vertrauenswürdigen Berechtigungen und mit mindestens einem Berechtigungs Satz ausführen, der für die Funktionsweise der Anwendung erforderlich ist. Die folgenden Codezugriffsberechtigungen sind die minimalen Berechtigungen, die eine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung benötigt:  
+ Wenn Sie zulassen, dass eine verwaltete Anwendung mit voller Vertrauenswürdigkeit ausgeführt wird, wird der Zugriff der Anwendung auf Ihren Computer durch die .NET Framework nicht eingeschränkt. Dies kann zu einer Sicherheitslücke in der Anwendung führen, durch die das gesamte System gefährdet werden kann. Um die Code Zugriffssicherheit und andere Sicherheitsmechanismen in der .NET Framework zu verwenden, sollten Sie Anwendungen mithilfe von teilweise vertrauenswürdigen Berechtigungen und mit mindestens einem Berechtigungs Satz ausführen, der für die Funktionsweise der Anwendung erforderlich ist. Die folgenden Code Zugriffsberechtigungen sind die minimalen Berechtigungen, die ihre Entity Framework Anwendung benötigt:  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write>, um die angegebenen Metadatendateien zu öffnen, oder <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>, um in einem Verzeichnis nach Metadatendateien zu suchen.  
   
@@ -78,7 +78,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](../code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>Installieren Sie keine nicht vertrauenswürdigen Anwendungen.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erzwingt keinerlei Sicherheitsberechtigungen und ruft jeden vom Benutzer übergebenen Datenobjektcode während der Verarbeitung auf, unabhängig davon, ob dieser vertrauenswürdig ist oder nicht. Stellen Sie sicher, dass die Authentifizierung und die Autorisierung des Clients durch den Datenspeicher und Ihre Anwendung erfolgen.  
+ Der Entity Framework erzwingt keine Sicherheits Berechtigungen und ruft jeden vom Benutzer bereitgestellten Datenobjekt Code im Prozess auf, unabhängig davon, ob er vertrauenswürdig ist. Stellen Sie sicher, dass die Authentifizierung und die Autorisierung des Clients durch den Datenspeicher und Ihre Anwendung erfolgen.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Schränken Sie den Zugriff auf alle Konfigurationsdateien ein.  
  Ein Administrator muss den Schreibzugriff auf alle Dateien beschränken, die die Konfiguration für eine Anwendung angeben, einschließlich der Dateien "enterprisesec. config", "Security. config", " \<Machine. conf" und der Anwendungs Konfigurationsdatei- *Anwendungs*>. exe. config.  
@@ -86,7 +86,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Der invariante Name des Anbieters kann in app.config geändert werden. Die Clientanwendung ist für den Zugriff auf den zugrunde liegenden Anbieter über das Anbieterfactory-Standardmodell unter Verwendung eines starken Namens zuständig.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Schränken Sie die Zugriffsberechtigungen auf die Modell- und Zuordnungsdateien ein.  
- Ein Administrator muss den Schreibzugriff auf die Modell- und Zuordnungsdateien (EDMX-, CSDL-, SSDL- und MSL-Dateien) auf die Benutzer beschränken, die das Modell oder die Zuordnungen ändern. Erfordert zur Laufzeit nur Lesezugriff auf diese Dateien. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Ein Administrator sollte auch den Zugriff auf Objektebene und vorkompilierte Quell Code Dateien der Ansicht einschränken, die von den Entity Data Model Tools generiert werden.  
+ Ein Administrator muss den Schreibzugriff auf die Modell- und Zuordnungsdateien (EDMX-, CSDL-, SSDL- und MSL-Dateien) auf die Benutzer beschränken, die das Modell oder die Zuordnungen ändern. Der Entity Framework benötigt zur Laufzeit nur Lesezugriff auf diese Dateien. Ein Administrator sollte auch den Zugriff auf Objektebene und vorkompilierte Quell Code Dateien der Ansicht einschränken, die von den Entity Data Model Tools generiert werden.  
   
 ## <a name="security-considerations-for-queries"></a>Sicherheitsaspekte bei Abfragen  
  Folgende Sicherheitsaspekte sollten beim Abfragen eines konzeptionellen Modells beachtet werden. Diese Aspekte gelten für [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen, die EntityClient verwenden, und für Objektabfragen mithilfe von LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] und Abfrage-Generator-Methoden.  
@@ -135,7 +135,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
  Einen <xref:System.Data.Objects.ObjectContext> für mehr als eine Anwendungsdomäne freizugeben macht möglicherweise Informationen in der Verbindungszeichenfolge verfügbar. Stattdessen sollten Sie serialisierte Objekte oder Objektdiagramme an die andere Anwendungsdomäne übertragen und dann diese Objekte einem <xref:System.Data.Objects.ObjectContext> in der Anwendungsdomäne anfügen. Weitere Informationen finden Sie unter [Serialisieren von Objekten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Verhindern Sie Verletzungen der Typsicherheit.  
- Wenn die Typsicherheit verletzt wird, kann [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] die Integrität der Daten in Objekten nicht garantieren. Verletzungen der Typsicherheit könnten auftreten, wenn Sie zulassen, dass nicht vertrauenswürdige Anwendungen mit voll vertrauenswürdiger Codezugriffssicherheit ausgeführt werden.  
+ Wenn die Typsicherheit verletzt wird, kann die Entity Framework die Integrität der Daten in Objekten nicht garantieren. Verletzungen der Typsicherheit könnten auftreten, wenn Sie zulassen, dass nicht vertrauenswürdige Anwendungen mit voll vertrauenswürdiger Codezugriffssicherheit ausgeführt werden.  
   
 #### <a name="handle-exceptions"></a>Behandeln von Ausnahmen  
  Greifen Sie auf die Methoden und Eigenschaften von <xref:System.Data.Objects.ObjectContext> innerhalb eines try-catch-Blocks zu. Das Abfangen von Ausnahmen verhindert, dass nicht behandelte Ausnahmen Benutzern der Anwendung Einträge im <xref:System.Data.Objects.ObjectStateManager> oder Modellinformationen (beispielsweise Tabellennamen), verfügbar machen.  
@@ -145,13 +145,13 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
 Beachten Sie Folgendes, wenn Sie mit Pfaden in ASP.NET-Anwendungen arbeiten.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Überprüfen Sie, ob der Host Pfadprüfungen ausführt.  
- Wenn die `|DataDirectory|` Ersetzungs Zeichenfolge (in pipesymbolen eingeschlossen) verwendet wird, überprüft ADO.net, ob der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung zum Auflösen des Webanwendungs-`~`Stamm Operators () wird vom Prozess ausgeführt, der ASP.net gehostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung bereitstellen.  
+ Wenn die `|DataDirectory|` Ersetzungs Zeichenfolge (in pipesymbolen eingeschlossen) verwendet wird, überprüft ADO.net, ob der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung zum Auflösen des Webanwendungs-`~`Stamm Operators () wird vom Prozess ausgeführt, der ASP.net gehostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine Entity Framework Anwendung bereitstellen.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Gehen Sie nicht von Annahmen über aufgelöste Pfadnamen aus.  
- Obwohl die Werte, in die der Stamm-Operator (`~`) und die `DataDirectory`-Ersatzzeichenfolge aufgelöst werden, während der Laufzeit der Anwendung konstant bleiben sollten, wird der Host durch [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nicht daran gehindert, diese Werte zu ändern.  
+ Obwohl die Werte, auf die der Stamm Operator`~`() und `DataDirectory` die Ersetzungs Zeichenfolge aufgelöst werden, während der Laufzeit der Anwendung konstant bleiben müssen, schränkt der Entity Framework den Host nicht durch das Ändern dieser Werte ein.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Überprüfen Sie die Pfadlänge vor der Bereitstellung.  
- Stellen Sie vor der Bereitstellung einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendung sicher, dass die Werte des Stammoperators (~) und der `DataDirectory`-Ersatzzeichenfolge nicht die Pfadlängengrenze des Betriebssystems überschreiten. ADO.NET-Datenanbieter stellen nicht sicher, dass die Pfadlänge innerhalb gültiger Limits liegt.  
+ Bevor Sie eine Entity Framework Anwendung bereitstellen, sollten Sie sicherstellen, dass die Werte des Stamm Operators ( `DataDirectory` ~) und der Ersetzungs Zeichenfolge nicht die Grenzwerte für die Pfadlänge im Betriebssystem überschreiten. ADO.NET-Datenanbieter stellen nicht sicher, dass die Pfadlänge innerhalb gültiger Limits liegt.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Sicherheitsaspekte für ADO.NET-Metadaten  
  Wenn Sie Modell- und Zuordnungsdateien erzeugen und mit ihnen arbeiten, berücksichtigen Sie Folgendes hinsichtlich der Sicherheit:  

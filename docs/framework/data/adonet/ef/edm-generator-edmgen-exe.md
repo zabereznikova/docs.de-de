@@ -2,18 +2,18 @@
 title: EDM-Generator (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82166782e25cb7a7ea23fe7faf7a30cb0e68d631
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251630"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854720"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM-Generator (EdmGen.exe)
 
-EdmGen.exe ist ein Befehlszeilentool, das für die Arbeit mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Modell- und Zuordnungsdateien verwendet wird. Mit dem Tool EdmGen.exe können folgende Aufgaben ausgeführt werden:
+EdmGen. exe ist ein Befehlszeilen Tool, das zum Arbeiten mit Entity Framework Modell-und Zuordnungs Dateien verwendet wird. Mit dem Tool EdmGen.exe können folgende Aufgaben ausgeführt werden:
 
-- Herstellen einer Verbindung zu einer Datenquelle mithilfe eines datenquellenspezifischen .NET Framework-Datenanbieters, und Erstellen der Dateien für das konzeptionelle Modell (CSDL), das Speichermodell (SSDL) und die Zuordnungen (MSL), die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie EdmGen. exe, um die Modell-und](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)Zuordnungsdateien zu generieren.
+- Stellen Sie eine Verbindung mit einer Datenquelle her, indem Sie eine Datenquelle – spezifische .NET Framework Datenanbieter) verwenden, und generieren Sie das konzeptionelle Modell (CSDL), das Speichermodell (SSDL) und die Mapping-Dateien (. MSL), die vom Entity Framework verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie EdmGen. exe, um die Modell-und](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)Zuordnungsdateien zu generieren.
 
 - Überprüfen eines bestehenden Modells. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie zum Überprüfen von Modell-und Zuordnungsdateien](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)EdmGen. exe.
 

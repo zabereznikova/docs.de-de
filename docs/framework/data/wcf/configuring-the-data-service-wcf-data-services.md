@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 38ec0986ef3e673ad2d624d33dc33d882f7e412c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0e5792fa4f31c4f40047016252100b1de23fd075
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780433"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854195"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurieren des Datendiensts (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]können Sie Datendienste erstellen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , die Feeds verfügbar machen. Die Daten dieser Feeds können aus einer Vielzahl von Datenquellen stammen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]verwendet Datenanbieter, um diese Daten als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed verfügbar zu machen. Zu diesen Anbietern zählen ein [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-Anbieter, ein Reflektionsanbieter und ein Schnittstellensatz für benutzerdefinierte Datendienstanbieter. Die Anbieterimplementierung definiert das Datenmodell für den Dienst. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md).  
+Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]können Sie Datendienste erstellen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , die Feeds verfügbar machen. Die Daten dieser Feeds können aus einer Vielzahl von Datenquellen stammen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]verwendet Datenanbieter, um diese Daten als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Feed verfügbar zu machen. Diese Anbieter schließen einen Entity Framework-Anbieter, einen Reflektionsanbieter und einen Schnittstellensatz für benutzerdefinierter Datendienstanbieter ein. Die Anbieterimplementierung definiert das Datenmodell für den Dienst. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md).  
   
  In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ist ein Datendienst eine Klasse, die von der <xref:System.Data.Services.DataService%601>-Klasse erbt. Dabei ist der Typ des Datendiensts der Entitätscontainer des Datenmodells. Dieser Entitätscontainer verfügt über mindestens eine Eigenschaft, die einen <xref:System.Linq.IQueryable%601> zurückgibt und die für den Zugriff auf Entitätenmengen im Datenmodell verwendet wird.  
   
@@ -69,7 +69,7 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]können Sie Daten
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nicht unterstützt|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
   
- <sup>1</sup> in diesem Beispiel `Address` stellt eine komplexe `Customers` Typeigenschaft der-Entität dar, die über eine `StreetAddress`-Eigenschaft mit dem Namen verfügt. In dem für die Northwind-Datendienste verwendeten Modell ist dieser komplexe Typ nicht explizit definiert. Wenn das Datenmodell mit dem [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter definiert wird, können Sie die Entity Data Model-Tools verwenden, um einen solchen komplexen Typ zu definieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und ändern komplexer Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
+ <sup>1</sup> in diesem Beispiel `Address` stellt eine komplexe `Customers` Typeigenschaft der-Entität dar, die über eine `StreetAddress`-Eigenschaft mit dem Namen verfügt. In dem für die Northwind-Datendienste verwendeten Modell ist dieser komplexe Typ nicht explizit definiert. Wenn das Datenmodell mit dem Entity Framework-Anbieter definiert wird, können Sie mithilfe der Entity Data Model-Tools einen so komplexen Typ definieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und ändern komplexer Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> dieser URI wird unterstützt, wenn eine Eigenschaft, die einen Binary Large Object (BLOB) zurückgibt, als Medien Ressource definiert ist, die zu einer Entität gehört, die ein Medien Link Eintrag ist `Customers`(in diesem Fall). Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).  
   

@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# mit Befehlszeilentools
 description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in F# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOS oder Linux) erstellen.
 ms.date: 03/26/2018
-ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1376b6b5384f380c06a96cdc568ad108de8a6e5f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938696"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855820"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte in F# mit der .NET Core-CLI
 
@@ -15,11 +15,11 @@ Dieser Artikel beschreibt, wie Sie mit F# auf jedem Betriebssystem (Windows, Mac
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Sie müssen die neueste Version des [.NET Core SDK](https://www.microsoft.com/net/download/) installieren, um zu beginnen.
+Sie müssen die neueste Version des [.NET Core SDK](https://dotnet.microsoft.com/download) installieren, um zu beginnen.
 
 In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und dass Sie über einen bevorzugten Text-Editor verfügen. Sollten Sie noch keinen besitzen, dann ist [Visual Studio Code](get-started-vscode.md) ein geeigneter Text-Editor für F#.
 
-## <a name="build-a-simple-multi-project-solution"></a>Erstellen Sie eine einfache Lösung für die mit mehreren Projekte
+## <a name="build-a-simple-multi-project-solution"></a>Erstellen Sie eine einfache Lösung mit mehreren Projekten
 
 Öffnen Sie eine Eingabeaufforderung/ein Terminal und verwenden Sie den Befehl [dotnet new](../../core/tools/dotnet-new.md) zum Erstellen von neuen Projektmappendatei mit dem Namen `FSNetCore`:
 
@@ -27,7 +27,7 @@ In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlsz
 dotnet new sln -o FSNetCore
 ```
 
-Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherigen Befehls:
+Nach dem Ausführen des vorherigen Befehls wird die folgende Verzeichnisstruktur erstellt:
 
 ```console
 FSNetCore
@@ -44,7 +44,7 @@ Verwenden Sie den Befehl `dotnet new`, um ein neues Klassenbibliotheksprojekt un
 dotnet new classlib -lang F# -o src/Library
 ```
 
-Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherigen Befehls:
+Nach dem Ausführen des vorherigen Befehls wird die folgende Verzeichnisstruktur erstellt:
 
 ```console
 └── FSNetCore
@@ -88,7 +88,7 @@ Verwenden sie den Befehl `dotnet new`, um eine Konsolenanwendung unter them Pfad
 dotnet new console -lang F# -o src/App
 ```
 
-Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherigen Befehls:
+Nach dem Ausführen des vorherigen Befehls wird die folgende Verzeichnisstruktur erstellt:
 
 ```console
 └── FSNetCore
@@ -131,7 +131,7 @@ Hinzufügen des `App` Projektes zur `FSNetCore` Projektmappe mithilfe des `dotne
 dotnet sln add src/App/App.fsproj
 ```
 
-Wiederherstellen der NuGet-Abhängigkeiten, `dotnet restore` , und führen Sie `dotnet build` zum Erstellen des Projekts.
+Stellen Sie die nuget- `dotnet restore` Abhängigkeiten wieder `dotnet build` her, und führen Sie zum Erstellen des Projekts aus.
 
 Wechseln Sie zum Verzeichnis der `src/App` Konsolenanwendung und führen Sie das Projekt mit `Hello World` as Argumente aus:
 

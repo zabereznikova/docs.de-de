@@ -2,32 +2,32 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248588"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854499"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
   
  Entitätsdienste werden unabhängig von einem bestimmten Datenspeicheranbieter ausgeführt. Datenanbieter können jedoch explizit definieren, wie Modelle, Zuordnungen und Abfragen mit einem zugrunde liegenden Datenspeicher interagieren. Ohne eine Abstraktionsebene zielen Entitätsdienste lediglich auf einen bestimmten Datenspeicher oder einen Datenanbieter ab.  
   
- Vom Anbieter unterstützte Typen werden direkt oder indirekt von der zugrunde liegende Datenbank unterstützt. Bei diesen Typen muss es sich nicht unbedingt um die genauen Speichertypen handeln, sondern um die Typen, die der Anbieter für die Unterstützung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet. Anbieter-/Speichertypen werden mit den EDM (Entity Data Model)-Begriffen beschrieben.  
+ Vom Anbieter unterstützte Typen werden direkt oder indirekt von der zugrunde liegende Datenbank unterstützt. Bei diesen Typen handelt es sich nicht unbedingt um die genauen Speichertypen, sondern um die Typen, die der Anbieter zur Unterstützung der Entity Framework verwendet. Anbieter-/Speichertypen werden mit den EDM (Entity Data Model)-Begriffen beschrieben.  
   
  Die Parameter und Rückgabetypen für die vom Datenspeicher unterstützten Funktionen werden in EDM-Begriffen angegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] und der Datenspeicher müssen in der Lage sein, Daten in bekannten Typen ohne Datenverlust oder Abschneiden in beide Richtungen zu übergeben.  
+ Der Entity Framework und der Datenspeicher müssen in der Lage sein, Daten in bekannten Typen ohne Datenverlust oder-abschneiden zu übergeben.  
   
  Das Anbietermanifest muss zur Entwurfszeit von Tools geladen werden können, ohne eine Verbindung mit dem Datenspeicher öffnen zu müssen.  
   
- Bei [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] wird die Groß-/Kleinschreibung beachtet, aber der zugrunde liegende Datenspeicher ist nicht. Wenn EDM-Artefakte (z. B. Bezeichner und Typnamen) im Manifest definiert und verwendet werden, muss auf die Groß- und Kleinschreibung in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] geachtet werden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
+ Beim Entity Framework wird die Groß-/Kleinschreibung beachtet, der zugrunde liegende Datenspeicher ist jedoch möglicherweise nicht. Wenn EDM-Artefakte (z. b. Bezeichner und Typnamen) definiert und im Manifest verwendet werden, müssen Sie die Entity Framework Berücksichtigung der Groß-/Kleinschreibung verwenden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erfordert für alle Datenanbieter ein Anbietermanifest. Wenn Sie versuchen, einen Anbieter zu verwenden, der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]nicht über ein Anbieter Manifest mit verfügt, wird eine Fehlermeldung angezeigt.  
+ Für den Entity Framework ist ein Anbieter Manifest für alle Datenanbieter erforderlich. Wenn Sie versuchen, einen Anbieter zu verwenden, der nicht über ein Anbieter Manifest mit dem Entity Framework verfügt, wird eine Fehlermeldung angezeigt.  
   
- In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] auslöst, wenn durch Anbieterinteraktion Ausnahmen auftreten:  
+ In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die von der Entity Framework ausgelöst werden, wenn Ausnahmen durch die Anbieter Interaktion auftreten:  
   
 |Problem|Ausnahme|  
 |-----------|---------------|  
@@ -39,7 +39,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Ein Anbieter sollte die folgenden Szenarien unterstützen:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Schreiben eines Anbieters mit symmetrischer Typzuordnung  
- Sie können einen Anbieter für den [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] schreiben, wobei jeder Speichertyp unabhängig von der Zuordnungs Richtung einem einzelnen EDM-Typ zugeordnet wird. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
+ Sie können einen Anbieter für den Entity Framework schreiben, wobei jeder Speichertyp unabhängig von der Zuordnungs Richtung einem einzelnen EDM-Typ zugeordnet wird. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
   
  Sie können die Einfachheit der Domäne nutzen und ein statisches deklaratives Anbietermanifest erstellen.  
   
@@ -50,7 +50,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 - Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Schreiben eines Anbieters mit asymmetrischer Typzuordnung  
- Wenn Sie einen Datenspeicheranbieter für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] schreiben, unterscheidet sich die EDM-Anbieter-Typzuordnung für einige Typen möglicherweise von der Anbieter-EDM-Typzuordnung. So wird beispielsweise "unbounded EDM PrimitiveTypeKind.String" möglicherweise "nvarchar (4000)" für den Anbieter zugeordnet, während "nvarchar (4000)" dem Typ "EDM PrimitiveTypeKind.String(MaxLength=4000)" zugeordnet wird.  
+ Wenn Sie einen Datenspeicher Anbieter für den Entity Framework schreiben, unterscheidet sich die EDM-zu-Anbieter-Typzuordnung für einige Typen möglicherweise von der Zuordnung des Anbieters zu EDM-Typen. So wird beispielsweise "unbounded EDM PrimitiveTypeKind.String" möglicherweise "nvarchar (4000)" für den Anbieter zugeordnet, während "nvarchar (4000)" dem Typ "EDM PrimitiveTypeKind.String(MaxLength=4000)" zugeordnet wird.  
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
@@ -68,7 +68,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ### <a name="provider-manifest-token"></a>Anbietermanifesttoken  
  Beim Öffnen einer Datenspeicherverbindung kann der Anbieter Informationen abfragen, um das richtige Manifest zurückzugeben. Dies kann in Offlineszenarien unmöglich sein, in denen entweder die Verbindungsinformationen nicht zur Verfügung stehen oder keine Verbindung mit dem Datenspeicher hergestellt werden kann. Identifizieren Sie das Manifest mit dem `ProviderManifestToken`-Attribut des `Schema`-Elements in der SSDL-Datei. Es gibt kein erforderliches Format für dieses Attribut. Der Anbieter wählt die Mindestinformationen aus, die erforderlich sind, um ein Manifest zu identifizieren, ohne eine Verbindung mit dem Speicher zu öffnen.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -248,7 +248,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Um diese Typinformationen im Anbietermanifest auszudrücken, muss jede TypeInformation-Deklaration mehrere Facetbeschreibungen für die einzelnen Typen definieren:  
   
-|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Name|Zeichenfolge|Ja|n/v|Anbieterspezifischer Datentypname|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Ja|n/v|EDM-Typenname|  
@@ -270,7 +270,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Jede Funktion verfügt über eine Auflistung von einem oder mehreren Parameterknoten.  
   
-|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
 |Typ|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  

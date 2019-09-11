@@ -2,19 +2,19 @@
 title: Erstellen von WCF AJAX-Diensten ohne ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: de7e5dc075a821518928514be532ea1940c1ff17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f850d8649f1d67fe916542bfb025afb7cb3f852b
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627120"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856133"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Erstellen von WCF AJAX-Diensten ohne ASP.NET
-Windows Communication Foundation (WCF)-AJAX-Dienste können von jeder JavaScript-aktivierten Webseite zugegriffen werden, ohne dass ASP.NET AJAX erforderlich wäre. Dieses Thema beschreibt, wie ein solcher WCF-Dienst erstellt wird.  
+Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScript-aktivierten Webseite zugegriffen werden, ohne dass ASP.NET AJAX erforderlich ist. In diesem Thema wird beschrieben, wie ein solcher WCF-Dienst erstellt wird.  
   
- Anweisungen zum Verwenden von WCF mit ASP.NET AJAX finden Sie [Erstellen von WCF-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
+ Anweisungen zur Verwendung von WCF mit ASP.NET AJAX finden Sie unter [Erstellen von WCF-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md).  
   
- Es gibt drei Teile, die zur Erstellung eines WCF AJAX-Diensts:  
+ Die Erstellung eines WCF AJAX-Dienstanbieter besteht aus drei Teilen:  
   
 - Erstellen eines AJAX-Endpunkts, auf den vom Browser aus zugegriffen werden kann.  
   
@@ -23,9 +23,9 @@ Windows Communication Foundation (WCF)-AJAX-Dienste können von jeder JavaScript
 - Zugreifen auf den WCF AJAX-Dienst.  
   
 ## <a name="creating-an-ajax-endpoint"></a>Erstellen eines AJAX-Endpunkts  
- Die einfachste Möglichkeit zum Aktivieren von AJAX-Unterstützung in einem WCF-Dienst ist die Verwendung der <xref:System.ServiceModel.Activation.WebServiceHostFactory> in der SVC-Datei, die Verbindung mit dem Dienst, wie im folgenden Beispiel gezeigt.  
+ Die einfachste Möglichkeit, die AJAX-Unterstützung in einem WCF-Dienst zu aktivieren <xref:System.ServiceModel.Activation.WebServiceHostFactory> , ist die Verwendung der in der SVC-Datei, die dem Dienst zugeordnet ist, wie im folgenden Beispiel gezeigt.  
   
-```  
+```svc
 <%ServiceHost   
     language=c#  
     Debug="true"  
@@ -59,31 +59,31 @@ Windows Communication Foundation (WCF)-AJAX-Dienste können von jeder JavaScript
 </configuration>  
 ```  
   
- Ein Arbeitsbeispiel finden Sie unter den [AJAX-Dienst mit JSON und XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
+ Ein funktionierendes Beispiel finden Sie unter [AJAX-Dienst mit JSON und XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="creating-an-ajax-compatible-service-contract"></a>Erstellen eines AJAX-kompatiblen Dienstvertrags  
  Standardmäßig geben die über einem AJAX-Endpunkt verfügbar gemachten Dienstverträge Daten im XML-Format zurück. Ebenso standardmäßig kann auf die Dienstvorgänge über HTTP POST-Anforderungen mit URLs zugegriffen werden, die die Endpunktadresse gefolgt vom Vorgangsnamen enthalten, wie im folgenden Beispiel gezeigt.  
   
-```  
+```csharp
 [OperationContract]  
 string[] GetCities(string firstLetters);  
 ```  
   
- Dieser Vorgang kann zugegriffen werden, mithilfe von HTTP POST für `http://serviceaddress/endpointaddress/GetCities` und zurückgeben eine XML-Nachricht.  
+ Auf diesen Vorgang kann über HTTP Post an `http://serviceaddress/endpointaddress/GetCities` und eine XML-Nachricht zurückgegeben werden.  
   
- Sie können das vollständige Webprogrammiermodell verwenden, um diese grundlegenden Aspekte anzupassen. Sie können beispielsweise die Attribute <xref:System.ServiceModel.Web.WebGetAttribute> oder <xref:System.ServiceModel.Web.WebInvokeAttribute> verwenden, um zu steuern, auf welche HTTP-Verben der Vorgang reagiert, oder die Eigenschaft `UriTemplate` dieser jeweiligen Attribute verwenden, um benutzerdefinierte URIs anzugeben usw. Weitere Informationen finden Sie unter den [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) Thema.  
+ Sie können das vollständige Webprogrammiermodell verwenden, um diese grundlegenden Aspekte anzupassen. Sie können beispielsweise die Attribute <xref:System.ServiceModel.Web.WebGetAttribute> oder <xref:System.ServiceModel.Web.WebInvokeAttribute> verwenden, um zu steuern, auf welche HTTP-Verben der Vorgang reagiert, oder die Eigenschaft `UriTemplate` dieser jeweiligen Attribute verwenden, um benutzerdefinierte URIs anzugeben usw. Weitere Informationen finden Sie im Thema [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md) .  
   
- Das JSON-Datenformat wird oft in AJAX-Diensten verwendet. Um einen Vorgang zu erstellen, der JSON statt XML zurückgibt, legen Sie die <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>-Eigenschaft (oder die <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>-Eigenschaft) auf <xref:System.ServiceModel.Web.WebMessageFormat.Json> fest. Die [eigenständige JSON-Serialisierung](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) Thema zeigt, wie die integrierten .NET Datentypen und Vertrag zugeordnet in JSON.  
+ Das JSON-Datenformat wird oft in AJAX-Diensten verwendet. Um einen Vorgang zu erstellen, der JSON statt XML zurückgibt, legen Sie die <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>-Eigenschaft (oder die <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>-Eigenschaft) auf <xref:System.ServiceModel.Web.WebMessageFormat.Json> fest. Das Thema zur [eigenständigen JSON-Serialisierung](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md) zeigt, wie integrierte .NET-Typen und Daten Vertragstypen JSON zugeordnet werden.  
   
  Normalerweise bestehen JSON-Anforderungen und -Antworten aus nur einem Element. Für den vorangehenden `GetCities`-Vorgang ähnelt die Anforderung der folgenden Anweisung.  
   
-```  
+```json
 "na"  
 ```  
   
  Die Antwort auf diese Anforderung ähnelt der folgenden Anweisung.  
   
-```  
+```json
 ["Nairobi", "Naples", "Nashville"]  
 ```  
   
@@ -95,17 +95,17 @@ string[] GetCities(string firstLetters);
   
  Der folgende Vertrag akzeptiert diese Nachricht.  
   
-```  
+```csharp
 [WebInvoke(BodyStyle=WebMessageBodyStyle.WrappedRequest, ResponseFormat=WebMessageFormat.Json)]  
 [OperationContract]  
 string[] GetCities(string firstLetters, int maxNumber);  
 ```  
   
 ## <a name="accessing-ajax-services"></a>Zugreifen auf AJAX-Dienste  
- WCF AJAX-Endpunkte akzeptieren immer sowohl JSON- und XML-Anforderungen.  
+ WCF AJAX-Endpunkte akzeptieren immer sowohl JSON-als auch XML-Anforderungen.  
   
- HTTP-POST-Anforderungen mit einem Inhaltstyp "Application/JSON" werden als JSON behandelt, und mit dem Inhaltstyp, die XML (z. B. "Text/Xml") angeben, werden als XML behandelt.  
+ HTTP POST-Anforderungen mit dem Inhaltstyp "application/json" werden als JSON behandelt, und diejenigen mit Inhaltstyp, die XML angeben (z. b. "Text/XML") werden als XML behandelt.  
   
  HTTP GET-Anforderungen enthalten alle Anforderungsparameter in der URL selbst.  
   
- Es obliegt dem Benutzer zu entscheiden, wie die HTTP-Anforderung für den Endpunkt erstellt wird. Der Benutzer kann umfassend steuern, wie das den Text der Anforderung bildende JSON erstellt wird. Ein Beispiel für eine Anforderung aus JavaScript zu erstellen, finden Sie unter den [AJAX-Dienst mit JSON und XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).
+ Es obliegt dem Benutzer zu entscheiden, wie die HTTP-Anforderung für den Endpunkt erstellt wird. Der Benutzer kann umfassend steuern, wie das den Text der Anforderung bildende JSON erstellt wird. Ein Beispiel für das Erstellen einer Anforderung aus JavaScript finden Sie unter [AJAX-Dienst mit JSON und XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).

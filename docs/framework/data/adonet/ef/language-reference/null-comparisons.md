@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: 6aa0af812d44f5c63758dd47ea4271bb2d689837
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0996b7d864c5892e383cb98d4065e99b096206d1
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249838"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854333"
 ---
 # <a name="null-comparisons"></a>NULL-Vergleiche
 Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. In LINQ to Entities-Abfragen können Sie nach NULL-Werten suchen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten oder nicht-NULL-Daten ausgeführt werden. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. Dies bedeutet, dass ein Vergleich mit einem NULL-Wert nicht zu `true` oder `false`ausgewertet wird, sondern `unknown`als ausgewertet wird. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
@@ -36,7 +36,7 @@ WHERE h.ShipDate IS Null
  Ein *Schlüsselselektor* ist eine Funktion, die in den Standard Abfrage Operatoren zum Extrahieren eines Schlüssels aus einem Element verwendet wird. In der Schlüsselauswahlfunktion kann ein Ausdruck mit einer Konstante verglichen werden. Die NULL-Semantik der CLR wird angewendet, wenn ein Ausdruck mit einer NULL-Konstante oder zwei NULL-Konstanten miteinander verglichen werden. Die NULL-Semantik des Speichers gilt, wenn zwei Spalten mit NULL-Werten in der Datenquelle verglichen werden. Schlüsselauswahlfunktionen sind in vielen der Standardabfrageoperatoren zum Gruppieren und Sortieren zu finden, wie beispielsweise in <xref:System.Linq.Queryable.GroupBy%2A>. Sie werden verwendet, um Schlüssel auszuwählen, nach denen die Abfrageergebnisse sortiert oder gruppiert werden sollen.  
   
 ## <a name="null-property-on-a-null-object"></a>NULL-Eigenschaft eines NULL-Objekts  
- In [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind die Eigenschaften eines NULL-Objekts gleich NULL. Wenn Sie versuchen, in der CLR auf eine Eigenschaft eines NULL-Objekts zu verweisen, erhalten Sie eine <xref:System.NullReferenceException>. Wenn eine LINQ-Abfrage eine Eigenschaft eines NULL-Objekts einschließt, kann dies zu inkonsistentem Verhalten führen.  
+ In der Entity Framework sind die Eigenschaften eines NULL-Objekts NULL. Wenn Sie versuchen, in der CLR auf eine Eigenschaft eines NULL-Objekts zu verweisen, erhalten Sie eine <xref:System.NullReferenceException>. Wenn eine LINQ-Abfrage eine Eigenschaft eines NULL-Objekts einschließt, kann dies zu inkonsistentem Verhalten führen.  
   
  In der folgenden Abfrage wird die Umwandlung in `NewProduct` auf der Ebene der Befehlsstruktur durchgeführt. Das kann dazu führen, dass die `Introduced`-Eigenschaft NULL sein kann. Wenn NULL-Vergleiche in der Datenbank in der Weise definiert wurden, dass der <xref:System.DateTime>-Vergleich zu true ausgewertet wird, wird die Zeile eingeschlossen.  
   

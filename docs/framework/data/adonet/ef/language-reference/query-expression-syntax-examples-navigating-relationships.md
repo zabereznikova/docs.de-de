@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: 38a8ddfe4366fefccd0a874a2ad7a20424ef8fac
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a99d7d31ce23629bf7a0f390244c1fe67b4554e3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249469"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854408"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen
-Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind Verknüpfungseigenschaften für die Suche nach Entitäten an den Enden einer Zuordnung. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für die Abfrage Ausdruckssyntax zum Navigieren in Beziehungen mithilfe von Navigations Eigenschaften in LINQ to Entities Abfragen.  
+Navigations Eigenschaften im Entity Framework sind Verknüpfungs Eigenschaften, die verwendet werden, um die Entitäten an den Enden einer Zuordnung zu suchen. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für die Abfrage Ausdruckssyntax zum Navigieren in Beziehungen mithilfe von Navigations Eigenschaften in LINQ to Entities Abfragen.  
   
  Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   

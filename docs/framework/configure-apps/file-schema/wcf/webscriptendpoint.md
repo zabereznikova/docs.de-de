@@ -2,18 +2,20 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: cc69029d9830fd12df5a4070f11847fadf4c60bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b4bc33cf8ff4e703973efe7df49e9f1d2189302e
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940410"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854814"
 ---
 # <a name="webscriptendpoint"></a>\<webScriptEndpoint>
 Dieses Konfigurationselement definiert einen Standard Endpunkt mit einem fixierten [ \<WebHttpBinding->](webhttpbinding.md) Bindung, der automatisch das [ \<> Verhalten von enableWebScript](enablewebscript.md) hinzufügt. Verwenden Sie diesen Endpunkt, wenn Sie einen Dienst schreiben, der von einer ASP.NET AJAX-Anwendung aufgerufen wird.  
   
-\<system.ServiceModel>  
-\<standardEndpoints>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Service Model->** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardendpoints->** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<WebScriptEndpoint->**  
   
 ## <a name="syntax"></a>Syntax  
   

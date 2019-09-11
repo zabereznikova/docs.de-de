@@ -2,12 +2,12 @@
 title: Erstellen eines Workflowdiensts mit langer Ausführungszeit
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: e6206babdb728b6ce38c94441f775e1fdffe7d79
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ceda43cc41ceb3381b4700d6ea8b1871e368dccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040417"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70856207"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Erstellen eines Workflowdiensts mit langer Ausführungszeit
 
@@ -95,7 +95,7 @@ Sie müssen folgende Software installiert haben, um diese exemplarische Vorgehen
 
     6. Wählen Sie die Aktivität **ReplyTo startor der** aus. Klicken Sie im Eigenschaften Fenster auf die Schaltfläche mit den Auslassungs Punkten für **correlationinitializers**. Wählen Sie den Link **Initialisierer hinzufügen** aus, geben Sie `orderIdHandle` in das Textfeld Initialisierer ein, wählen Sie als Korrelationstyp Abfrage korrelationsinitialisierer aus, und wählen Sie p_orderId im Dropdown Feld XPath-Abfragen aus. Diese Einstellungen sind in der folgenden Abbildung dargestellt. Klicken Sie auf **OK**.  Dadurch wird eine Korrelation zwischen dem Client und dieser Instanz des Workflowdiensts initialisiert. Wenn eine Nachricht mit dieser Bestell-ID empfangen wird, wird sie an diese Instanz des Workflowdiensts weitergeleitet.
 
-        ![Hinzufügen eines] korrelationsinitialisierers (./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Fügen Sie einen korrelationsinitialisierer hinzu.")
+        ![Hinzufügen eines korrelationsinitialisierers](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Fügen Sie einen korrelationsinitialisierer hinzu.")
 
 7. Ziehen Sie eine andere **receiveandsendreply** -Aktivität per Drag & Drop an das Ende des Workflows (außerhalb der **Sequenz** , in der die ersten **Receive** -und **SendReply** -Aktivitäten enthalten sind). Dadurch wird die zweite Meldung empfangen, die vom Client gesendet wurde, und beantwortet.
 
@@ -191,17 +191,17 @@ Sie müssen folgende Software installiert haben, um diese exemplarische Vorgehen
 
 5. Erstellen Sie die Projektmappe, und führen Sie die `OrderClient`-Anwendung aus. Der folgende Text wird vom Client angezeigt:
 
-    ```Output
+    ```output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6. Um zu überprüfen, ob der Workflow Dienst persistent gespeichert wurde, starten Sie den SQL Server Management Studio , indem Sie im Startmenü **Alle Programme**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**auswählen.
+6. Um zu überprüfen, ob der Workflow Dienst persistent gespeichert wurde, starten Sie den SQL Server Management Studio, indem Sie im **Startmenü** **Alle Programme**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**auswählen.
 
     1. Erweitern Sie im linken Bereich, **Datenbanken**, **sqlpersistencestore**, **views** , und klicken Sie mit der rechten Maustaste auf **System. Activities. DurableInstancing. Instanzen** , und wählen Sie **oberste 1000 Zeilen auswählen**aus. Vergewissern Sie sich im **Ergebnis** Bereich, dass mindestens eine Instanz aufgeführt ist. Es kann sein, dass auch Instanzen früherer Ausführungen aufgelistet sind, wenn Fehler bei der Ausführung aufgetreten sind. Sie können vorhandene Zeilen löschen, indem Sie mit der rechten Maustaste auf **System. Activities. DurableInstancing. Instance** klicken und **Oberste 200 Zeilen bearbeiten**auswählen, auf die Schaltfläche **Ausführen** klicken, alle Zeilen im Ergebnisbereich auswählen und dann **Löschen**auswählen.  Um zu überprüfen, ob in der Datenbank die Instanz angezeigt wird, die von Ihrer Anwendung erstellt wurde, können Sie überprüfen, ob die Ansicht für Instanzen vor Ausführung des Clients leer ist. Führen Sie die Abfrage (Oberste 1000 Zeilen auswählen) erneut aus, sobald der Client ausgeführt wird, und überprüfen Sie, ob eine neue Instanz hinzugefügt wurde.
 
 7. Drücken Sie die EINGABETASTE, um die Nachricht zum Hinzufügen des Artikels an den Workflowdienst zu senden. Der folgende Text wird vom Client angezeigt:
 
-    ```Output
+    ```output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .
     ```
 

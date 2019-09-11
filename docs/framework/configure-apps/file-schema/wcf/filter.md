@@ -2,18 +2,21 @@
 title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: 68de255b9f11dc4377159d1cc3efa575633db316
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918898"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855257"
 ---
 # <a name="filter"></a>\<Filter >
 
 Definiert einen Routing Filter, der den Typ des Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmt, der beim Auswerten eingehender Nachrichten verwendet werden soll, sowie alle für den Filter erforderlichen unterstützenden Daten oder Parameter.
 
-\<System. Service Model > \<Routing > \<Filter > \<Filter >
+[ **\<system.serviceModel>** ](system-servicemodel.md)\
+&nbsp;&nbsp;[ **\<Routing >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Filter >** ](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filter >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +42,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 | customType | Eine Zeichenfolge, die den vollqualifizierten Typnamen des benutzerdefinierten Typs enthält, der als Filter verwendet werden soll. Wenn `filterType` auf`custom`festgelegt ist, enthält dieses Attribut den voll qualifizierten Typnamen der zu erstellenden Klasse.  `filterData`kann auch Werte enthalten, die während der Auswertung des benutzerdefinierten Typfilters verwendet werden sollen. |
 | filterData | Eine Zeichenfolge, die die Filterdaten enthält. Weitere Informationen zur Angabe dieses Attributs finden Sie unter <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
 | filterType | Eine Zeichenfolge, die den Filtertyp enthält. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Routing.Configuration.FilterType>.  Weitere Informationen zur Funktionsweise mit dem `filterData`-Attribut finden Sie unter  <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
-| Name       | Eine Zeichenfolge, die den eindeutigen Namen dieses Filterelements enthält. |
+| NAME       | Eine Zeichenfolge, die den eindeutigen Namen dieses Filterelements enthält. |
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
