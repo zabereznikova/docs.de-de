@@ -189,11 +189,7 @@
         - name: Neuigkeiten in .NET Core 2.0
           href: core/whats-new/dotnet-core-2-0.md
     - name: Anwendungskompatibilität
-      items:
-        - name: Bewerten von Breaking Changes
-          href: core/compatibility/index.md
-        - name: Breaking Change-Kategorien
-          href: core/compatibility/categories.md
+      href: core/compatibility/
     - name: Tutorials
       href: core/tutorials/index.md
       items:
