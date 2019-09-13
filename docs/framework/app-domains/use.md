@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad05d005ece4a52e2df0dbb7e044522db58f1787
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "61674888"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971860"
 ---
 # <a name="using-application-domains"></a>Verwenden von Anwendungsdomänen
 Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runtime (CLR) bereit. Sie werden in einem Prozess erstellt und dort ausgeführt. Anwendungsdomänen werden normalerweise von einem Runtimehost erstellt. Dabei handelt es sich um eine Anwendung, die dafür verantwortlich ist, die Runtime in einen Prozess zu laden und Benutzercode innerhalb einer Anwendungsdomäne auszuführen. Der Runtimehost erstellt einen Prozess und eine Standardanwendungsdomäne und führt darin verwalteten Code aus. Runtimehosts sind z.B. ASP.NET, Microsoft Internet Explorer und Windows-Shell.  
@@ -36,7 +36,7 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Erläutert wie Sie eine Assembly in eine Anwendungsdomäne laden können  
   
- [Vorgehensweise: Abrufen von Typ- und Memberinformationen aus einer Assembly](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [Vorgehensweise: Abrufen von Typ- und Memberinformationen aus einer Assembly](../reflection-and-codedom/get-type-member-information.md)  
  Erläutert, wie Sie Informationen zu einer Assembly abrufen können  
   
  [Erstellen von Schattenkopien von Assemblys](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
@@ -45,7 +45,7 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  [Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Erläutert, wie Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme abrufen können, bevor die CLR mit dem Suchen nach Ausnahmehandlern beginnt.  
   
- [Auflösen beim Laden von Assemblys](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
+ [Auflösen beim Laden von Assemblys](../../standard/assembly/resolve-loads.md)  
  Führt Sie in das Verwenden des Ereignisses <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> ein, um fehlgeschlagene Assemblyladevorgänge aufzulösen.  
   
 ## <a name="reference"></a>Referenz  
@@ -53,10 +53,10 @@ Anwendungsdomänen stellen eine Isolationseinheit für die Common Language Runti
  Stellt eine Anwendungsdomäne dar Bietet Methoden zum Erstellen und Steuern von Anwendungsdomänen  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assemblys in .NET](../../standard/assembly/index.md)  
  Gibt einen Überblick über von Assemblys ausgeführte Funktionen  
   
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programmieren mit Assemblys](../../standard/assembly/program.md)  
  Beschreibt das Erstellen, Signieren und Festlegen von Attributen für Assemblys.  
   
  [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
