@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647241"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925943"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Lernen Sie mit diesen Tutorials .NET Core und die .NET Core SDK-Tools kennen.
 
@@ -44,6 +44,7 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Erste Schritte mit F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Andere
+
 - [Unittests in .NET Core mit dotnet-test](../testing/unit-testing-with-dotnet-test.md)
 - [Unittests mit MSTest und .NET Core](../testing/unit-testing-with-mstest.md)
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](libraries.md)

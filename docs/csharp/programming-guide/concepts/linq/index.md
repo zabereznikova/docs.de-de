@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 185e2cfc84a4134eec8eea1433f0cef43845aa2a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b91d52912c1625c036b3e08e47fbc985b193ebc2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592165"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926733"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
@@ -46,6 +46,7 @@ Das folgende Beispiel zeigt den vollständigen Abfragevorgang. Der vollständige
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfrageausdrücken](../../../linq/query-expression-basics.md) mit einigen grundlegenden Konzepten vertraut, und lesen Sie dann die Dokumentation für die LINQ-Technologie, die Sie interessiert:   
+
 - XML-Dokumente: [LINQ to XML](linq-to-xml.md)  
   
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
@@ -59,3 +60,4 @@ Informationen zu den ersten Schritten mit LINQ in C# erhalten Sie im Tutorial [A
 ## <a name="see-also"></a>Siehe auch
 
 - [Language Integrated Query (LINQ) (C#)](./index.md)
+ 

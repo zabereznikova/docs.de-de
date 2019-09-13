@@ -2,12 +2,12 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .net-apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926490"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -143,6 +143,7 @@ Wenn Sie sich jedoch über die Produktions Bereitstellungs Umgebung oder sogar �
 **Abbildung 4-7.5.** Das containerökosystem in Azure
 
 Über das containerökosystem in Azure unterstützen die folgenden Produkte Container, die als Infrastruktur angesehen werden:
+
 - **Azure Container Instances (ACI)**
 - **Azure-Virtual Machines** (Mit Unterstützung für Container)
 - **Azure-Virtual Machine Scale Sets** (Mit Unterstützung für Container)

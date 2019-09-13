@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie sich mit einem praktischen Ansatz vertraut ma
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577283"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926467"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
@@ -77,7 +77,7 @@ Sie können dann ein Power BI Dashboard erstellen, um Einblicke in die gesammelt
 
 ![Power BI Beispiel](./media/power-bi-example.png)
 
-Das vollständige Link-verkürzer-Repository mit Anweisungen finden Sie hier: [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für Server lose .net-apps in wenigen Minuten](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Das vollständige Link-verkürzer-Repository mit Anweisungen finden Sie hier: [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Überprüfen der Geräte Konnektivität per Ping
 
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie unter [Azure IOT Hub Ping](https://azure.micros
 
 * [Azure Functions Photo-Mosaik Generator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
 * [Azure IOT Hub Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Azure Storage für Server lose .net-apps in wenigen Minuten](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
+* [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 * [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17)
 * [CSV-Import-Lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Event Grid-Kleber](https://github.com/JeremyLikness/Event-Grid-Glue)
