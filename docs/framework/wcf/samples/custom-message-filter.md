@@ -2,12 +2,12 @@
 title: Benutzerdefinierter Nachrichtenfilter
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 0b8336fe4d83f45369af31fe34b58696145d08c0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 30405800cd219f56fcc08b8e8d22f4fe0b907e32
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039920"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928690"
 ---
 # <a name="custom-message-filter"></a>Benutzerdefinierter Nachrichtenfilter
 In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werden, die Windows Communication Foundation (WCF) verwendet, um Nachrichten an Endpunkte zu senden.  
@@ -23,13 +23,16 @@ In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werde
   
  Diese Filter können mit einer Verhaltensweise geändert werden. Im folgenden Beispiel erstellt der Dienst ein <xref:System.ServiceModel.Description.IEndpointBehavior>, das den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> und den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> auf dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ersetzt:  
   
-```  
-class FilteringEndpointBehavior : IEndpointBehavior …  
+```csharp
+class FilteringEndpointBehavior : IEndpointBehavior
+{
+    //...
+}
 ```  
   
  Es werden zwei Adressfilter definiert:  
   
-```  
+```csharp  
 // Matches any message whose To address contains the letter 'e'  
 class MatchEAddressFilter : MessageFilter …  
 // Matches any message whose To address does not contain the letter 'e'  
@@ -38,13 +41,13 @@ class MatchNoEAddressFilter : MessageFilter
   
  Das `FilteringEndpointBehavior` wird konfigurierbar gemacht und ermöglicht zwei verschiedene Varianten.  
   
-```  
+```csharp  
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
 ```  
   
  Variante&#160;1 gleicht nur Adressen ab, die ein "e" (aber eine beliebige Aktion) enthalten, wohingegen Variante&#160;2 nur die Adressen ohne "e" abgleicht:  
   
-```  
+```csharp  
 if (Variation == 1)  
     return new FilteringEndpointBehavior(  
         new MatchEAddressFilter(), new MatchAllMessageFilter());  
@@ -89,7 +92,7 @@ else
   
  Die Implementierung der Clientanwendung ist einfach. Sie erstellt zwei Kanäle zum URI des Diensts (indem der Wert als der zweite (`via`)-Parameter an <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> übergeben wird) und sendet eine einzelne Nachricht auf jedem Kanal, verwendet aber jeweils verschiedene Endpunktadressen. Infolgedessen besitzen die vom Client ausgehenden Nachrichten unterschiedliche To-Ziele, und der Server antwortet entsprechend, wie von der Ausgabe des Clients veranschaulicht:  
   
-```  
+```console  
 Sending message to urn:e...  
 Exception: The message with To 'urn:e' cannot be processed at the receiver, due to an AddressFilter mismatch at the EndpointDispatcher.  Check that the sender and receiver's EndpointAddresses agree.  
   
@@ -125,12 +128,12 @@ Hello
   
 3. Um das Beispiel in einer Computer übergreifenden Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in Client.cs.  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
      Ersetzen Sie "localhost" mit dem Namen des Servers.  
   
-    ```  
+    ```csharp  
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  

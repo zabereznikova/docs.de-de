@@ -2,12 +2,12 @@
 title: Benutzerdefiniertes Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c3c6cfd9d1742f7e839d7b40220792ba455d7673
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b073375325d2989a23624303f2c40b8f61a29d02
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855509"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928657"
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
 
@@ -557,7 +557,7 @@ string GetCallerCreditCardNumber()
 
      Das Zertifikat wird im persönlichen Speicher unter dem Speicherort `LocalMachine` gespeichert. Das Zertifikat wird für die IIS-gehosteten Dienste im LocalMachine-Speicher gespeichert. Für selbst gehostete Dienste sollten Sie die Batchdatei so ändern, dass das Clientzertifikat im Speicherort CurrentUser gespeichert wird. Ersetzen Sie hierzu die Zeichenfolge LocalMachine durch CurrentUser.
 
-    ```
+    ```bat
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -571,7 +571,7 @@ string GetCallerCreditCardNumber()
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-    ```
+    ```bat
     echo ************
     echo copying server cert to client's TrustedPeople store
     echo ************
@@ -580,7 +580,7 @@ string GetCallerCreditCardNumber()
 
 - Um den Zugriff vom IIS-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden. Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.
 
-    ```
+    ```bat
     echo ************
     echo setting privileges on server certificates
     echo ************

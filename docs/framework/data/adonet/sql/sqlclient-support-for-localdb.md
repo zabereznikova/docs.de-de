@@ -2,12 +2,12 @@
 title: SqlClient-Unterstützung für LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780767"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894397"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient-Unterstützung für LocalDB
 Ab SQL Server Codename Denali ist eine vereinfachte Version von SQL Server mit dem Namen localdb verfügbar. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
@@ -25,9 +25,7 @@ Ab SQL Server Codename Denali ist eine vereinfachte Version von SQL Server mit d
   
 - Angeben einer LocalDB-Instanz in der Verbindungszeichenfolge. Wenn der Instanzname z. B. `myInstance`lautet, könnte die Verbindungszeichenfolge Folgendes enthalten:  
   
-    ```  
-    server=(localdb)\\myInstance  
-    ```  
+    `server=(localdb)\\myInstance`  
   
  `User Instance=True` ist bei einer Verbindung mit einer LocalDB-Datenbank nicht zulässig.  
   

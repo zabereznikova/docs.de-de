@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: e45899ddbb4c244e43d3b097cc046acf34fd433e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045581"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928590"
 ---
 # <a name="default-nettcpbinding"></a>Standard-NetTcpBinding
 Dieses Beispiel veranschaulicht die Verwendung der <xref:System.ServiceModel.NetTcpBinding>-Bindung. Dieses Beispiel basiert auf den ersten [Schritten, mit](../../../../docs/framework/wcf/samples/getting-started-sample.md) denen ein Rechner Dienst implementiert wird. In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenanwendungen.  
@@ -83,7 +83,7 @@ Dieses Beispiel veranschaulicht die Verwendung der <xref:System.ServiceModel.Net
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -96,7 +96,7 @@ Press ENTER to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

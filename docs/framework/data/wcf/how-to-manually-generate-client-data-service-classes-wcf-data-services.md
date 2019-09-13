@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f8d99213a1ef98c48855ba9f561f87a800768c89
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790426"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894296"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Vorgehensweise: Manuelles Generieren von Client Datendienst Klassen (WCF Data Services)
 WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client Datendienst Klassen generieren können, wenn Sie das Dialogfeld **Dienstverweis hinzufügen** verwenden, um einen Verweis auf einen Datendienst in einem Visual Studio-Projekt hinzuzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie einen Datendienst](how-to-add-a-data-service-reference-wcf-data-services.md)Verweis hinzu. Sie können auch die gleichen Clientdatendienstklassen mit dem Tool zur Codeerstellung `DataSvcUtil.exe` manuell generieren. Dieses Tool, das in WCF Data Services enthalten ist, generiert .NET Framework Klassen aus der Datendienst Definition. Es kann auch verwendet werden, um Datendienstklassen aus der Konzeptmodelldatei (CSDL) und der EDMX-Datei zu generieren, die ein Entity Framework-Modell in einem Visual Studio-Projekt darstellt.
@@ -43,7 +43,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -54,7 +54,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -65,7 +65,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
     ```
 
@@ -73,7 +73,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
     ```
 
@@ -81,7 +81,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
     ```
 
@@ -89,7 +89,7 @@ WCF Data Services ist in Visual Studio integriert, damit Sie automatisch Client 
 
 - Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb
     ```
 

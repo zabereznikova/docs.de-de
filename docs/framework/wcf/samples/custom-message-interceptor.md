@@ -2,12 +2,12 @@
 title: Benutzerdefinierter Nachrichteninterceptor
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 4a91078ddb8eb66f1ee0f957005e9a0d290370c8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045602"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928920"
 ---
 # <a name="custom-message-interceptor"></a>Benutzerdefinierter Nachrichteninterceptor
 In diesem Beispiel wird die Verwendung des Kanalerweiterbarkeitsmodells veranschaulicht. Es zeigt insbesondere, wie ein benutzerdefiniertes Bindungselement implementiert wird, das Kanalfactorys und Kanallistener erstellt, um sämtliche ein- und ausgehenden Nachrichten an einer bestimmten Stelle im Laufzeitstapel abzufangen. Im Beispiel sind auch ein Client und ein Server, die die Verwendung dieser benutzerdefinierten Factorys veranschaulichen, enthalten.  
@@ -44,25 +44,35 @@ In diesem Beispiel wird die Verwendung des Kanalerweiterbarkeitsmodells veransch
   
  Diese Klassen nehmen eine innere Factory und einen inneren Listener und delegieren alle Aufrufe außer den `OnCreateChannel`- und `OnAcceptChannel`-Aufrufen an die innere Factory und den inneren Listener.  
   
-```  
+```csharp  
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
-{ ... }  
+{ 
+    //... 
+}
+
 class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>  
-{ ... }  
+{ 
+    //...
+}  
 ```  
   
 ## <a name="adding-a-binding-element"></a>Hinzufügen eines Bindungselements  
  Das Beispiel definiert ein benutzerdefiniertes Bindungselement: `InterceptingBindingElement`. `InterceptingBindingElement`nimmt eine `ChannelMessageInterceptor` als Eingabe an und verwendet diese `ChannelMessageInterceptor` , um Nachrichten zu bearbeiten, die Sie durchlaufen. Dies ist die einzige Klasse, die öffentlich sein muss. Die Factory, der Listener und die Kanäle können alle interne Implementierungen der öffentlichen Laufzeitschnittstellen sein.  
   
-```  
-public class InterceptingBindingElement : BindingElement  
+```csharp
+public class InterceptingBindingElement : BindingElement 
+{
+}
 ```  
   
 ## <a name="adding-configuration-support"></a>Hinzufügen von Konfigurationsunterstützung  
  Die Bibliothek definiert einen Konfigurationsabschnittshandler als Bindungselementerweiterungs-Abschnitt, um die Bindungskonfiguration zu integrieren. Die Client- und Serverkonfigurationsdateien müssen die Bindungselementerweiterung auf dem Konfigurationssystem registrieren. Implementierer, die ihr Bindungselement auf dem Konfigurationssystem verfügbar machen möchten, können von dieser Klasse ableiten.  
   
-```  
-public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
+```csharp
+public abstract class InterceptingElement : BindingElementExtensionElement 
+{ 
+    //... 
+}
 ```  
   
 ## <a name="adding-policy"></a>Hinzufügen einer Richtlinie  
@@ -71,7 +81,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="example-droppable-message-inspector"></a>Beispiel: Droppable-Nachrichten Inspektor  
  Das Beispiel umfasst eine Beispielimplementierung von `ChannelMessageInspector`, der Meldungen verwirft.  
   
-```  
+```csharp  
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  
@@ -114,7 +124,7 @@ class DroppingServerElement : InterceptingElement
   
  Nach Ausführen des Diensts und anschließendem Ausführen des Clients sollte folgende Clientausgabe angezeigt werden:  
   
-```  
+```console  
 Reporting the next 10 wind speed  
 100 kph  
 Server dropped a message.  
@@ -138,18 +148,18 @@ Press ENTER to shut down client
   
  Auf dem Dienst sollten Sie die folgende Ausgabe erhalten:  
   
-```  
+```console  
 Press ENTER to exit.  
 Dangerous wind detected! Reported speed (90) is greater than 64 kph.  
 Dangerous wind detected! Reported speed (70) is greater than 64 kph.  
 5 wind speed reports have been received.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

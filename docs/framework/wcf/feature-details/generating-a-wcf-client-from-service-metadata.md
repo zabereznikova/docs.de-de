@@ -2,12 +2,12 @@
 title: Generieren eines WCF-Clients aus Dienstmetadaten
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 938b1363be3b168fce74d80b47c9ae463d018669
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613369"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892747"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
@@ -18,11 +18,11 @@ In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe 
   
 - MEX-Anforderung an die angegebene Adresse mit angefügtem `/mex`  
   
-- DISCO-Anforderung (mit der [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET-Webdiensten) an die angegebene Adresse.  
+- Disco-Anforderung (mit [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) aus ASP.NET-Webdiensten) zur angegebenen Adresse.  
   
- Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Verkettung von des mit dem namens "\@" und das anschließende hinzufügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig, und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung die folgende Fehlermeldung angezeigt: **Der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
+ Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzer Prinzipal Name (User Principal Name, UPN) wird generiert, indem der Benutzer\@Name mit "" verkettet und anschließend ein voll qualifizierter Domänen Name (FQDN) hinzugefügt wird. Für Benutzer, die sich bei Active Directory registriert haben, ist dieses Format jedoch nicht gültig, und der vom Tool generierte UPN verursacht einen Fehler bei der Kerberos-Authentifizierung mit der folgenden Fehlermeldung: **Der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
   
-```  
+```console
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
 ```  
   
@@ -30,7 +30,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ reference:\<Dateipfad >**|Verweist auf Typen in der angegebenen Assembly. Beim Generieren von Clients können Sie diese Option verwenden, um Assemblys anzugeben, die unter Umständen die Typen mit den zu importierenden Metadaten enthalten.<br /><br /> Kurzform: `/r`.|  
+|**/Reference:\<Dateipfad >**|Verweist auf Typen in der angegebenen Assembly. Beim Generieren von Clients können Sie diese Option verwenden, um Assemblys anzugeben, die unter Umständen die Typen mit den zu importierenden Metadaten enthalten.<br /><br /> Kurzform: `/r`.|  
 |**/excludeType:\<type>**|Gibt einen vollqualifizierten oder assemblyqualifizierten Namen an, der aus den verwiesenen Vertragstypen ausgeschlossen werden soll.<br /><br /> Kurzform: `/et`.|  
   
 ## <a name="choosing-a-serializer"></a>Wählen eines Serialisierungsprogramms  
@@ -47,13 +47,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ Language:\<Sprache >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDomProvider-Klasse](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/Language:\<sprach >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDomProvider-Klasse](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Auswählen eines Namespace für den Client  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Abgeleitet aus dem Zielnamespace des Schemadokuments für `DataContracts`. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
+|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Wird vom Ziel Namespace des Schema Dokuments für `DataContracts`abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
   
 ## <a name="choosing-a-data-binding"></a>Auswählen einer Datenbindung  
   

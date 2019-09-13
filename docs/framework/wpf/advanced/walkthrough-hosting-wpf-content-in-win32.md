@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3433819761c19b616a7c9c19fe52e250b0f028dc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917628"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929192"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Exemplarische Vorgehensweise: Hosten von WPF-Inhalt in Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes in Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung wieder zu verwenden, anstatt ihn vollständig neu zu schreiben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bietet einen einfachen Mechanismus zum Hosting [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] von Inhalten in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] einem-Fenster.  
@@ -64,7 +64,6 @@ ms.locfileid: "69917628"
 ## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung
  In diesem Abschnitt wird beschrieben, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wie Sie Inhalte in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] einer Basisanwendung hosten. Der Inhalt selbst wird in C++/CLI als verwaltete Klasse implementiert. Größtenteils handelt es sich um eine einfache [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung. Die wichtigsten Aspekte der Inhalts Implementierung werden unter [Implementieren des WPF-Inhalts](#implementing_the_wpf_page)erläutert.
 
-<a name="autoNestedSectionsOUTLINE1"></a>
 - [Die grundlegende Anwendung](#the_basic_application)
 
 - [Hosten des WPF-Inhalts](#hosting_the_wpf_page)
@@ -169,7 +168,6 @@ ms.locfileid: "69917628"
 ## <a name="implementing-the-wpf-page"></a>Implementieren der WPF-Seite
  Sie können den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt hosten und verwenden, ohne die tatsächliche Implementierung zu kennen. Wenn der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt in einer separaten DLL gepackt wurde, wurde er möglicherweise in jeder beliebigen Common Language Runtime (CLR)-Sprache erstellt. Im folgenden finden Sie eine kurze exemplarische C++Vorgehensweise der/CLI-Implementierung, die im Beispiel verwendet wird. Dieser Abschnitt enthält folgende Unterabschnitte:
 
-<a name="autoNestedSectionsOUTLINE2"></a>
 - [Layout](#page_layout)
 
 - [Zurückgeben der Daten an das Hostfenster](#returning_data_to_window)

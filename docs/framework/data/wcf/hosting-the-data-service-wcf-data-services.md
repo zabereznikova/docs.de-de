@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: ea60ac132fdd94d4e3a3676891964070b7150857
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780269"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894327"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
 Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch keine Bindung an einen Netzwerk Socket für eingehende HTTP-Anforderungen herstellen und diesen überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
@@ -40,7 +40,7 @@ Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als [!I
 
 Wenn Sie das Dialogfeld **Neues Element hinzufügen** in Visual Studio 2015 verwenden, um einen Datendienst in einer ASP.NET-Anwendung zu definieren, generiert das Tool zwei neue Dateien im Projekt. Die erste Datei verfügt über die `.svc`-Erweiterung und weist die WCF-Laufzeit an, wie der Datendienst instanziiert werden soll. Im folgenden finden Sie ein Beispiel für diese Datei für den Northwind-Beispiel Datendienst, der erstellt wird, wenn Sie den [Schnellstart](quickstart-wcf-data-services.md)ausführen:
 
-```
+```aspx-csharp
 <%@ ServiceHost Language="C#"
     Factory="System.Data.Services.DataServiceHostFactory,
             System.Data.Services, Version=4.0.0.0,

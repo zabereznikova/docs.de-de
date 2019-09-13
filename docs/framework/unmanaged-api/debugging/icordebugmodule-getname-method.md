@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988020"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894991"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
 Ruft den Dateinamen des Moduls ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -42,20 +42,20 @@ HRESULT GetName(
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [in] Ein Zeiger auf die Länge des zurückgegebenen Namen.  
+ in Ein Zeiger auf die Länge des zurückgegebenen Namens.  
   
  `szName`  
- [out] Ein Array, das den zurückgegebenen Namen speichert.  
+ vorgenommen Ein Array, in dem der zurückgegebene Name gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` Methode gibt ein S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName` Gibt ein HRESULT S_FALSE zurück, wenn der Name, erstellt wurde, z. B. für eine dynamische oder in-Memory-Modul ist.  
+ Die `GetName` -Methode gibt ein S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName`Gibt ein S_FALSE HRESULT zurück, wenn der Name erfunden ist, z. b. für ein dynamisches Modul oder ein in-Memory-Modul.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

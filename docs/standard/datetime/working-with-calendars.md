@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: dafa7cdaa38180e458a34fd34316f134aa443040
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106699"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929135"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -139,6 +139,7 @@ Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Die <xref:System.
 
 > [!IMPORTANT]
 > Der reiwa <xref:System.Globalization.JapaneseCalendar> -Zeitraum, ein neuer Zeitraum in und <xref:System.Globalization.JapaneseLunisolarCalendar>, beginnt am 1. Mai 2019. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Weitere Informationen finden Sie in den folgenden Artikeln:
+>
 > - [Die Verarbeitung eines neuen Zeitraums im japanischen Kalender in .net](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), mit dem Features dokumentiert werden, die .net hinzugefügt wurden, um Kalender mit mehreren Zeiträumen zu unterstützen, und bewährte Methoden für die Verarbeitung von Kalender in mehreren Epochen erläutert werden.
 > - [Bereiten Sie Ihre Anwendung auf den japanischen](/windows/uwp/design/globalizing/japanese-era-change)Zeitraum vor, der Informationen zum Testen von Anwendungen unter Windows bereitstellt, um sicherzustellen, dass die Zeit für den Zeitraum geändert wird.
 > - [Zusammenfassung der neuen japanischen Zeit Updates für .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), in der .NET Framework Updates für einzelne Windows-Versionen aufgelistet sind, die mit dem neuen japanischen Kalender Zeitraum in Zusammenhang stehen, neue .NET Framework Features für die Unterstützung für mehrere Zeitpunkte enthält. Suchen Sie nach in Testen Ihrer Anwendungen.
@@ -280,8 +281,8 @@ In Fällen, in denen die Zeichenfolgendarstellung eines Datums in einem Kalender
 In den japanischen Kalendern heißt das erste Jahr eines Zeitraums "Gannen" (元年). Beispielsweise kann anstelle von Heisei 1 das erste Jahr der Heisei-Ära als Heisei-Gannen beschrieben werden. .Net übernimmt diese Konvention bei Formatierungs Vorgängen für Datumsangaben und Uhrzeiten, die mit den folgenden standardmäßigen oder benutzerdefinierten Format Zeichenfolgen <xref:System.Globalization.CultureInfo> für Datum und Uhrzeit formatiert sind, wenn Sie mit einem-Objekt verwendet werden, das die Kultur Japanisch-Japan("ja-JP")<xref:System.Globalization.JapaneseCalendar> Klasse:
 
 - [Das lange Datums Muster](../base-types/standard-date-and-time-format-strings.md#LongDate), angegeben durch die Standardformat Zeichenfolge "D" für Datum und Uhrzeit.
-- [Das vollständige Datums](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime)-/Uhrzeit-Muster, das durch die Standardformat Zeichenfolge für Datum und Uhrzeit angegeben wird.
-- [Das Muster für die vollständige Datums](../base-types/standard-date-and-time-format-strings.md#FullDateShortTime)-/Uhrzeit-Zeit, das durch die Standardformat Zeichenfolge "f" angegeben wird.
+- [Das vollständige Datums-/Uhrzeit-Muster](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), das durch die Standardformat Zeichenfolge für Datum und Uhrzeit angegeben wird.
+- [Das Muster für die vollständige Datums-/Uhrzeit-Zeit](../base-types/standard-date-and-time-format-strings.md#FullDateShortTime), das durch die Standardformat Zeichenfolge "f" angegeben wird.
 - [Das Jahr/Monat-Muster](../base-types/standard-date-and-time-format-strings.md#YearMonth), das durch die y-oder y-Standardformat Zeichenfolge für Datum und Uhrzeit angegeben wird.
 - [Die [benutzerdefinierte Format Zeichenfolge für Datum und Uhrzeit](../base-types/custom-date-and-time-format-strings.md)von "ggy" 年 "" oder "ggy年".
 

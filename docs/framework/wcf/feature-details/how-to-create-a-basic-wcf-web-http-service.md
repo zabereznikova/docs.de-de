@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636513"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895179"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
 
-Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Webendpunkt verfügbar macht. Webendpunkte senden Daten über XML oder JSON; es gibt keinen SOAP-Umschlag. Dieses Thema veranschaulicht, wie ein solcher Endpunkt verfügbar gemacht wird.
+Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu erstellen, der einen Webendpunkt verfügbar macht. Webendpunkte senden Daten über XML oder JSON; es gibt keinen SOAP-Umschlag. Dieses Thema veranschaulicht, wie ein solcher Endpunkt verfügbar gemacht wird.
 
 > [!NOTE]
 > Ein Webendpunkt kann nur dadurch gesichert werden, dass er mithilfe der Transportsicherheit über HTTPS verfügbar gemacht wird. Bei Verwendung der nachrichtenbasierten Sicherheit werden die Sicherheitsinformationen in der Regel in SOAP-Header gestellt. Und da die an Nicht-SOAP-Endpunkte gesendeten Nachrichten keinen SOAP-Umschlag enthalten, gibt es keinen Ort, an den die Sicherheitsinformationen gestellt werden können, sodass Sie sich auf die Transportsicherheit verlassen müssen.
@@ -49,13 +49,13 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
     > [!NOTE]
     > Wenn Sie keinen Endpunkt hinzufügen, erstellt <xref:System.ServiceModel.Web.WebServiceHost> automatisch einen Standardendpunkt. <xref:System.ServiceModel.Web.WebServiceHost> fügt auch <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu und deaktiviert die HTTP-Hilfeseite und die GET-Funktion der Web Services Description Language (WSDL), damit der Metadatenendpunkt nicht in Konflikt mit dem standardmäßigen HTTP-Endpunkt gerät.
     >
-    >  Wenn Sie einen Nicht-SOAP-Endpunkt mit der URL "" hinzufügen, wird bei dem Versuch, einen Vorgang an dem Endpunkt aufzurufen, ein unerwartetes Verhalten ausgelöst. Der Grund dafür ist die Überwachung, die URI des Endpunkts identisch mit dem URI der Hilfeseite (die Seite, die angezeigt wird ist, wenn Sie auf die Basisadresse eines WCF-Diensts durchsuchen).
+    >  Wenn Sie einen Nicht-SOAP-Endpunkt mit der URL "" hinzufügen, wird bei dem Versuch, einen Vorgang an dem Endpunkt aufzurufen, ein unerwartetes Verhalten ausgelöst. Der Grund hierfür ist, dass der Abhör-URI des Endpunkts mit dem URI für die Hilfeseite identisch ist (die Seite, die angezeigt wird, wenn Sie zur Basisadresse eines WCF-dienstanzdienstanzdienstanbieter navigieren).
 
      Sie können eine der folgenden Aktionen ausführen, um dies zu verhindern:
 
     - Geben Sie für einen Nicht-SOAP-Endpunkt immer einen nicht leeren URI an.
 
-    - Deaktivieren Sie die Hilfeseite. Dies kann durch den folgenden Code durchgeführt werden:
+    - Deaktivieren Sie die Hilfeseite. Dies kann mit folgendem Code erfolgen:
 
      [!code-csharp[htBasicService#4](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
 
      In diesem Beispiel wird das Hosten eines Webdiensts mit einer Konsolenanwendung veranschaulicht. Sie können einen solchen Dienst auch innerhalb von IIS hosten. Geben Sie dazu, wie im folgenden Code veranschaulicht, die <xref:System.ServiceModel.Activation.WebServiceHostFactory>-Klasse in einer SVC-Datei an.
 
-    ```
+    ```text
     <%ServiceHost
         language=c#
         Debug="true"
@@ -77,7 +77,7 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>So rufen Sie Dienstvorgänge auf, die GET in Internet Explorer zugeordnet werden
 
-1. Öffnen Sie Internet Explorer, und geben "`http://localhost:8000/EchoWithGet?s=Hello, world!`", und drücken Sie die EINGABETASTE. Die URL enthält die Basisadresse des Diensts (`http://localhost:8000/`), die relative Adresse des Endpunkts (""), der Dienstvorgang aufrufen ("EchoWithGet"), und ein Fragezeichen gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
+1. Öffnen Sie Internet Explorer, geben`http://localhost:8000/EchoWithGet?s=Hello, world!`Sie "" ein, und drücken Sie EINGABETASTE Die URL enthält die Basisadresse des Dienstanbieter`http://localhost:8000/`(), die relative Adresse des Endpunkts (""), den aufzurufenden Dienst Vorgang ("EchoWithGet") und ein Fragezeichen, gefolgt von einer Liste benannter Parameter, getrennt durch ein kaufmännisches und-Zeichen (&).
 
 ## <a name="to-call-service-operations-in-code"></a>So rufen Sie Dienstvorgänge in Code auf
 

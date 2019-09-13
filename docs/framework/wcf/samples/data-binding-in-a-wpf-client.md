@@ -2,12 +2,12 @@
 title: Datenbindung in einem Windows Presentation Foundation-Client
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 791afee9772a6f06e57fdd09ad8a47db2bd8ca63
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0f1eb8ca154ab8e37a15b35097f746662511f7c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045104"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928631"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Datenbindung in einem Windows Presentation Foundation-Client
 In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Das Beispiel verwendet einen Windows Communication Foundation (WCF)-Dienst, der nach dem Zufallsprinzip ein Array von Alben generiert, das an den Client zurückgegeben wird. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die vom Dienst zurückgegebenen Informationen werden automatisch an die Benutzeroberfläche (UI) gebunden, die vom WPF-Client (Windows Presentation Foundation) bereitgestellt wird.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Present
   
  Durch die Datenbindung kann eine Datenquelle automatisch an eine Benutzeroberfläche gebunden werden. Dadurch wird das Programmiermodell vereinfacht, da Sie nicht jedes Element der Benutzeroberfläche programmgesteuert mit den Daten aus einem Datenobjekt oder einem Array von Datenobjekten aktualisieren müssen. Sie können ein Objekt an ein Benutzeroberflächenelement oder ein Array an ein Steuerelement mit mehreren Eingaben binden, beispielsweise `ListBox`. Im folgenden Codebeispiel wird das Binden von Daten an den `DataContext` eines Benutzeroberflächenelements veranschaulicht.  
   
-```  
+```csharp  
 // Event handler executed when call is complete  
 void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs e)  
 {  

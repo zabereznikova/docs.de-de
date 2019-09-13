@@ -2,12 +2,12 @@
 title: Konfigurationsbasierte Aktivierung unter IIS und WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5b06f474d26b80f955b1508f01da83448a8708a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928774"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 
@@ -31,6 +31,7 @@ Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC
  Wenn dieser Code in der Datei Web.config enthalten ist, können Sie den Dienstquellcode in das Verzeichnis App_Code der Anwendung oder eine kompilierte Assembly im Verzeichnis Bin der Anwendung einfügen.
 
 > [!NOTE]
+>
 > - Bei Verwendung der konfigurationsbasierten Aktivierung wird Inlinecode in SVC-Dateien nicht unterstützt.
 > - Das `relativeAddress` -Attribut muss auf eine relative Adresse wie "\<Sub-Directory >/Service.svc" oder "~/\<Sub-Directory/Service. svc" festgelegt werden.
 > - Es wird eine Konfigurationsausnahme ausgelöst, wenn Sie eine relative Adresse registrieren, für die keine bekannte Erweiterung mit WCF-Zuordnung vorhanden ist.

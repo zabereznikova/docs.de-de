@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 489de5d8147edd58d90be01975ddbc9927e29902
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8fea29fc420ea6bb922c93ea08e0e23d5bb941d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928662"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- Der Dienst Code im Beispiel ist der der transaktiven [MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ Der Dienst Code im Beispiel ist der der [transaktiven MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
  Die Kommunikation mit dem Dienst findet innerhalb des Bereichs der Transaktion statt. Der Dienst liest die Nachrichten in der Warteschlange, führt den Vorgang aus und zeigt anschließend die Ergebnisse des Vorgangs an. Die Anwendung erstellt auch eine Warteschlange für unzustellbare Nachrichten.
 
@@ -272,7 +272,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 
  Wenn der Client ausgeführt wird, zeigt er die folgende Nachricht an:
 
-```
+```console
 Press <ENTER> to terminate client.
 ```
 
@@ -280,7 +280,7 @@ Press <ENTER> to terminate client.
 
  Anschließend führen Sie den Dienst für unzustellbare Nachrichten aus, der die Nachrichten liest, den Fehlercode anzeigt und die Nachricht zurück an den Dienst sendet.
 
-```
+```console
 The dead letter service is ready.
 Press <ENTER> to terminate service.
 
@@ -295,7 +295,7 @@ Purchase order resent
 
  Der Dienst startet, liest dann die erneut gesendeten Nachrichten und verarbeitet sie.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -318,7 +318,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     2. Erweitern Sie die Registerkarte **Features** .
 
-    3. Klicken Sie mit der rechten Maustaste auf **private**Meldungs Warteschlangen, und wählen Sie **neu**, **private**
+    3. Klicken Sie mit der rechten Maustaste auf private Meldungs **Warteschlangen**, und wählen Sie **neu**, **private**
 
     4. Aktivieren Sie das Kontrollkästchen **transaktional** .
 

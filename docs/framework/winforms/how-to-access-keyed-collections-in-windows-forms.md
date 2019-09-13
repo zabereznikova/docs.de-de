@@ -8,15 +8,16 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 47bd0ff4eb649b4b32113a984f4aa99cd4afc0f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a88e4766a1e774582bcd0356c9b6e77bc31f1960
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665279"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928528"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Vorgehensweise: Zugreifen auf verschlüsselte Auflistungen in Windows Forms
-- Sie können auf einzelne Auflistungselemente mit Schlüssel zugreifen. Diese Funktion verfügt über viele Auflistungsklassen hinzugefügt, die in der Regel von Windows Forms-Anwendungen verwendet werden. Die folgende Liste enthält einige der Auflistungsklassen, die zugänglich schlüsselgebundene Auflistungen haben:  
+
+- Sie können auf einzelne Sammel Elemente nach Schlüssel zugreifen. Diese Funktionalität wurde vielen Sammlungs Klassen hinzugefügt, die in der Regel von Windows Forms Anwendungen verwendet werden. In der folgenden Liste sind einige der Auflistungs Klassen aufgeführt, für die barrierefreie Sammlungen zugänglich sind:  
   
 - <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -28,25 +29,25 @@ ms.locfileid: "64665279"
   
 - <xref:System.Windows.Forms.TreeNodeCollection>  
   
- Ein Element in einer Sammlung zugeordnete Schlüssel wird in der Regel der Name des Elements. Die folgenden Verfahren zeigen, wie Auflistungsklassen zu verwenden, um allgemeine Aufgaben auszuführen.  
+ Der Schlüssel, der einem Element in einer Auflistung zugeordnet ist, ist in der Regel der Name des Elements. In den folgenden Verfahren wird gezeigt, wie Sie mithilfe von Auflistungs Klassen häufige Aufgaben ausführen.  
   
-### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>Suchen, und geben Sie ein geschachteltes Steuerelement in einer steuerelementauflistung den Fokus  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>So suchen und setzen Sie den Fokus auf ein in einer Steuerelement Sammlung eingefügter Steuerelement  
   
-- Verwenden der <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> und <xref:System.Windows.Forms.Control.Focus%2A> Methoden geben Sie den Namen des Steuerelements zu finden, und geben Sie den Fokus auf.  
+- Verwenden Sie <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> die <xref:System.Windows.Forms.Control.Focus%2A> -Methode und die-Methode, um den Namen des Steuer Elements anzugeben, das gesucht werden soll.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### <a name="to-access-an-image-in-an-image-collection"></a>Auf ein Bild in einer imagesammlung  
+### <a name="to-access-an-image-in-an-image-collection"></a>So greifen Sie auf ein Bild in einer Bild Auflistung zu  
   
-- Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> -Eigenschaft den Namen des Bilds an die Sie zugreifen möchten.  
+- Verwenden Sie <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> die-Eigenschaft, um den Namen des Abbilds anzugeben, auf das Sie zugreifen möchten.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### <a name="to-set-a-tab-page-as-the-selected-tab"></a>Festlegen eine Registerkarte als ausgewählte Registerkarte  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a>So legen Sie eine Registerkarte als ausgewählte Registerkarte fest  
   
-- Verwenden der <xref:System.Windows.Forms.TabControl.SelectedTab%2A> Eigenschaft zusammen mit den <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> Eigenschaft, um den Namen der Registerkarte für die festzulegende als ausgewählte Registerkarte anzugeben.  
+- Verwenden Sie <xref:System.Windows.Forms.TabControl.SelectedTab%2A> die-Eigenschaft in <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> Verbindung mit der-Eigenschaft, um den Namen der Registerkarte anzugeben, die als ausgewählte Registerkarte festgelegt werden soll.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
@@ -54,4 +55,4 @@ ms.locfileid: "64665279"
 ## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)
-- [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

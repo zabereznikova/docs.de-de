@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Definieren eines Windows Communication Foundation-Dienstvertrags'
+title: 'Tutorial: Definieren eines Windows Communication Foundation Service-Vertrags'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,54 +7,55 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929349"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928875"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definieren eines Windows Communication Foundation-Dienstvertrags
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definieren eines Windows Communication Foundation Service-Vertrags
 
-In diesem Tutorial wird die erste von fünf Schritte zur Erstellung einer grundlegenden Windows Communication Foundation (WCF)-Anwendung beschrieben. Eine Übersicht über die Lernprogramme, finden Sie unter [Lernprogramm: Erste Schritte mit Windows Communication Foundation-Anwendungen](getting-started-tutorial.md).
+In diesem Tutorial werden die ersten von fünf Aufgaben beschrieben, die zum Erstellen einer Basic Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Eine Übersicht über die Tutorials finden [Sie unter Tutorial: Beginnen Sie mit Windows Communication Foundation Anwendungen](getting-started-tutorial.md).
 
-Bei der Erstellung eines WCF-Diensts ist die erste Aufgabe, um einen Dienstvertrag zu definieren. Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt. Ein Vorgang ähnelt einer Webdienstmethode. Sie erstellen Dienstverträge definieren eine Visualisierung C# oder Visual Basic (VB)-Schnittstelle. Eine Schnittstelle weist folgende Merkmale auf:
+Wenn Sie einen WCF-Dienst erstellen, besteht die erste Aufgabe darin, einen Dienstvertrag zu definieren. Der Dienstvertrag gibt an, welche Vorgänge der Dienst unterstützt. Ein Vorgang ähnelt einer Webdienstmethode. Sie erstellen Dienstverträge, indem Sie eine C# Schnittstelle für Visual oder Visual Basic (VB) definieren. Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 
 - Jede Methode in der Schnittstelle entspricht einem bestimmten Dienstvorgang. 
-- Sie müssen für jede Schnittstelle, Anwenden der <xref:System.ServiceModel.ServiceContractAttribute> Attribut.
-- Sie müssen für jede vorgangsmethode/Anwenden der <xref:System.ServiceModel.OperationContractAttribute> Attribut. 
+- Für jede Schnittstelle müssen Sie das <xref:System.ServiceModel.ServiceContractAttribute> -Attribut anwenden.
+- Für jeden Vorgang/jede Methode müssen Sie das <xref:System.ServiceModel.OperationContractAttribute> -Attribut anwenden. 
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> - Erstellen Sie eine **WCF-Dienstbibliothek** Projekt.
-> - Definieren Sie eine dienstvertragsschnittstelle.
+>
+> - Erstellen Sie ein **WCF-Dienst Bibliotheks** Projekt.
+> - Definieren Sie eine Dienstvertragschnittstelle.
 
-## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Erstellen Sie ein Projekt für die WCF-Dienstbibliothek und definieren eine dienstvertragsschnittstelle
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Erstellen eines WCF-Dienst Bibliotheks Projekts und Definieren einer Dienstvertrags Schnittstelle
 
-1. Öffnen Sie Visual Studio als Administrator. Zu diesem Zweck wählen Sie das Visual Studio-Programm in der **starten** Menü, und wählen Sie dann **weitere** > **als Administrator ausführen** aus dem Kontextmenü.
+1. Öffnen Sie Visual Studio als Administrator. Wählen Sie hierzu im **Startmenü** das Visual Studio-Programm aus, und wählen Sie dann im Kontextmenü die Option **Weitere** > **als Administrator ausführen** aus.
 
-2. Erstellen Sie eine **WCF-Dienstbibliothek** Projekt.
+2. Erstellen Sie ein **WCF-Dienst Bibliotheks** Projekt.
 
    1. Wählen Sie im Menü **Datei** den Befehl **Neu** > **Projekt** aus.
 
-   2. In der **neues Projekt** erweitern Sie im Dialogfeld auf der linken Seite **Visual C#-** oder **Visual Basic**, und wählen Sie dann die **WCF** Kategorie. Visual Studio zeigt eine Liste der Projektvorlagen im mittleren Abschnitt des Fensters. Wählen Sie **WCF-Dienstbibliothek**.
+   2. Erweitern Sie im Dialogfeld **Neues Projekt** auf der linken Seite die Option  **C# Visual** oder **Visual Basic**, und wählen Sie dann die Kategorie **WCF** aus. Visual Studio zeigt eine Liste der Projektvorlagen im mittleren Abschnitt des Fensters an. Wählen Sie **WCF-Dienst Bibliothek**aus.
 
       > [!NOTE]
-      > Wenn Sie nicht sehen die **WCF** Vorlagenkategorie Projekt müssen Sie möglicherweise installieren die **Windows Communication Foundation** Komponente von Visual Studio. In der **neues Projekt** wählen Sie im Dialogfeld die **Visual Studio-Installer öffnen** Link auf der linken Seite. Wählen Sie die **Einzelkomponenten** Registerkarte und suchen Sie dann aus, und wählen Sie **Windows Communication Foundation** unter der **Entwicklungsaktivitäten** Kategorie. Wählen Sie **ändern** zu beginnen, die Komponente zu installieren.
+      > Wenn die Kategorie **WCF** -Projektvorlage nicht angezeigt wird, müssen Sie möglicherweise die **Windows Communication Foundation** Komponente von Visual Studio installieren. Wählen Sie im Dialogfeld **Neues Projekt** den Link **Visual Studio-Installer öffnen** auf der linken Seite aus. Wählen Sie die Registerkarte **einzelne Komponenten** aus, suchen Sie nach **Windows Communication Foundation** unter der Kategorie **Entwicklungsaktivitäten** , und wählen Sie ihn aus. Wählen Sie **ändern** aus, um die Installation der Komponente zu starten
 
-   3. Geben Sie im unteren Bereich des Fensters ein, *GettingStartedLib* für die **Namen** und *GettingStarted* für die **Projektmappenname**. 
+   3. Geben Sie im unteren Abschnitt des Fensters *gettingstartedlib* als **Name** und *GettingStarted* als Projektmappennameein. 
 
    4. Klicken Sie auf **OK**.
 
-      Visual Studio erstellt das Projekt, das drei Dateien enthält: *IService1.cs* (oder *"IService1.vb"* für Visual Basic-Projekt), *Service1.cs* (oder *Service1.vb* für Visual Basic-Projekt), und  *Datei "App.config"*. Visual Studio werden diese Dateien wie folgt definiert: 
-      - Die *IService1* -Datei enthält die Default-Definition des Dienstvertrags. 
-      - Die *"Service1"* -Datei enthält die standardmäßige Implementierung des Dienstvertrags. 
-      - Die *"App.config"* -Datei enthält die Konfigurationsinformationen, die erforderlich sind, um den Standarddienst mit dem Visual Studio-WCF-Diensthost-Tool zu laden. Weitere Informationen zum Tool WCF-Diensthost finden Sie unter [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md).
+      Visual Studio erstellt das Projekt, das über drei Dateien verfügt: *IService1.cs* (oder *IService1. vb* für ein Visual Basic-Projekt), *Service1.cs* (oder *Service1. vb* für ein Visual Basic-Projekt) und *app. config*. Diese Dateien werden von Visual Studio wie folgt definiert: 
+      - Die *IService1* -Datei enthält die Standard Definition des Dienstvertrags. 
+      - Die *Service1* -Datei enthält die Standard Implementierung des Dienstvertrags. 
+      - Die Datei " *app. config* " enthält die Konfigurationsinformationen, die erforderlich sind, um den Standard Dienst mit dem Visual Studio WCF-Dienst Host Tool zu laden. Weitere Informationen zum WCF-Dienst Host Tool finden Sie unter [WCF-Dienst Host (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md).
 
       > [!NOTE]
-      > Wenn Sie Visual Studio mit Visual Basic-entwicklereinstellungen Umgebung installiert haben, kann die Lösung ausgeblendet werden. Wenn dies der Fall ist, wählen Sie **Optionen** aus der **Tools** Menü Wählen Sie dann **Projekte und Projektmappen** > **allgemeine** in die **Optionen** Fenster. Wählen Sie **Projektmappe immer anzeigen**. Darüber hinaus überprüfen Sie, ob **neue Projekte beim Erstellen speichern** ausgewählt ist.
+      > Wenn Sie Visual Studio mit Visual Basic Einstellungen für die Entwicklerumgebung installiert haben, ist die Projekt Mappe möglicherweise ausgeblendet. Wenn dies der Fall ist, wählen Sie **im Menü Extras die** **Option Optionen** aus, und wählen Sie dann im **Fenster Optionen** die Option **Projekte und** > Projektmappen**Allgemein** aus. Wählen Sie Projekt Mappe **immer anzeigen**aus. Vergewissern Sie sich außerdem, dass **neue Projekte beim Erstellen speichern** ausgewählt ist.
 
-3. Von **Projektmappen-Explorer**öffnen die **IService1.cs** oder **"IService1.vb"** Datei aus, und Ersetzen Sie den Code durch den folgenden Code:
+3. Öffnen Sie die Datei **IService1.cs** oder **IService1. vb** von **Projektmappen-Explorer**, und ersetzen Sie den Code durch den folgenden Code:
 
     ```csharp
     using System;
@@ -97,16 +98,17 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
     End Namespace
     ```
 
-     Dieser Vertrag definiert einen Onlinerechner. Beachten Sie, dass die `ICalculator` Schnittstelle ist mit markiert die <xref:System.ServiceModel.ServiceContractAttribute> Attribut (als vereinfachte `ServiceContract`). Dieses Attribut definiert einen Namespace aus, um der Vertragsname eindeutig zu machen. Der Code markiert jeder rechnervorgang wird mit der <xref:System.ServiceModel.OperationContractAttribute> Attribut (als vereinfachte `OperationContract`).
+     Dieser Vertrag definiert einen Onlinerechner. Beachten Sie `ICalculator` , dass die-Schnitt <xref:System.ServiceModel.ServiceContractAttribute> Stelle mit dem- `ServiceContract`Attribut markiert ist (vereinfacht als). Dieses Attribut definiert einen Namespace, um den Vertrags Namen eindeutig zu machen. Der Code markiert jeden Rechner Vorgang mit dem <xref:System.ServiceModel.OperationContractAttribute> -Attribut (vereinfacht `OperationContract`als).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> - Erstellen eines WCF-Dienstbibliothek-Projekts.
-> - Definieren Sie eine dienstvertragsschnittstelle.
+>
+> - Erstellen Sie ein WCF-Dienst Bibliotheksprojekt.
+> - Definieren Sie eine Dienstvertragschnittstelle.
 
-Fahren Sie fort mit dem nächsten Tutorial erfahren, wie die WCF-Dienstvertrag implementiert.
+Fahren Sie mit dem nächsten Tutorial fort, um zu erfahren, wie Sie den WCF-Dienstvertrag implementieren.
 
 > [!div class="nextstepaction"]
 > [Tutorial: Implementieren eines WCF-Dienstvertrags](how-to-implement-a-wcf-contract.md)

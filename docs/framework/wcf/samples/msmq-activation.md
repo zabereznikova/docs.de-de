@@ -2,12 +2,12 @@
 title: MSMQ-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 169881cdc0736fcc94818f6281c35b4e54e06dfe
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 038f4d7e3d713cfe4134ea98f7858ef71f29bab4
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039299"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895253"
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 
@@ -92,15 +92,11 @@ Um den Dienstcode in WAS zu hosten, wird eine SVC-Datei mit dem Namen der Klasse
 
 Die Datei "Service.svc" selbst enthält eine Anweisung zur Erstellung von `OrderProcessorService`.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
 Die Datei „Service.svc“ enthält darüber hinaus eine Assemblyanweisung, um sicherzustellen, dass „System.Transactions.dll“ geladen wird.
 
-```svc
-<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>
-```
+`<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
 Der Client erstellt einen Geltungsbereich für die Transaktion. Die Kommunikation mit dem Dienst findet innerhalb des Geltungsbereichs der Transaktion statt, sodass diese in der Folge als unteilbare Einheit behandelt wird, in der alle Nachrichten entweder erfolgreich sind oder fehlschlagen. Für die Transaktion wird ein Commit ausgeführt, indem `Complete` im Geltungsbereich der Transaktion aufgerufen wird.
 
@@ -226,7 +222,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     3. Klicken Sie **auf Windows-Funktionen ein-oder ausschalten**.
 
-    4. KlickenSie unter featurezusammenfassung auf **Features hinzufügen**.
+    4. Klicken Sie unter **featurezusammenfassung**auf **Features hinzufügen**.
 
     5. Erweitern Sie den Knoten **Microsoft .NET Framework 3,0** , und überprüfen Sie die Funktion **Windows Communication Foundation nicht-HTTP-Aktivierung** .
 
@@ -236,7 +232,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. Der MSMQ-Aktivierungsdienst wird standardmäßig als Netzwerkdienst ausgeführt. Daher muss die Warteschlange, die zur Aktivierung der Anwendung verwendet wird, über Empfangs- und Einsehberechtigungen für den Netzwerkdienst verfügen. Diese können durch Verwendung von Message Queuing MMC hinzugefügt werden:
 
-    1. Klicken Sie im Startmenü auf **Ausführen**, geben `Compmgmt.msc` Sie ein, und drücken Sie dann die EINGABETASTE.
+    1. Klicken Sie im **Startmenü** auf **Ausführen**, geben `Compmgmt.msc` Sie ein, und drücken Sie dann die EINGABETASTE.
 
     2. Erweitern Sie unter **Dienste und Anwendungen** **Message Queuing**.
 
@@ -273,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Dieser Befehl ermöglicht den Zugriff auf die Anwendung/ServiceModelSamples-Anwendung `http://localhost/servicemodelsamples` mithilfe `net.msmq://localhost/servicemodelsamples`von und.
 
-7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im Startmenü auf **Ausführen**, und geben `Services.msc`Sie ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
+7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im **Startmenü** auf **Ausführen**, und geben `Services.msc`Sie ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
 
 8. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie folgenden Code:
 

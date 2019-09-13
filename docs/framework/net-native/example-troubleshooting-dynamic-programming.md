@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fef5894f7452bd32cc4e43433aa60166db241a12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910603"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894492"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Beispiel: Problembehandlung bei dynamischer Programmierung
 > [!NOTE]
@@ -17,7 +17,7 @@ ms.locfileid: "69910603"
   
  Nicht alle Metadaten-Suche-Fehler in apps, die mit der .net Native-Toolkette entwickelt wurden, führen zu einer Ausnahme.  Einige können sich auf unvorhersehbare Weise in einer App zeigen.  Das folgende Beispiel zeigt eine Zugriffsverletzung, die durch das Verweisen auf ein Nullobjekt verursacht wurde:  
   
-```  
+```output
 Access violation - code c0000005 (first chance)  
 App!$3_App::Core::Util::NavigationArgs.Setup  
 App!$3_App::Core::Util::NavigationArgs..ctor  
@@ -38,9 +38,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="what-was-the-app-doing"></a>Was hat die App gerade getan?  
  Zunächst muss die `async`-Schlüsselwortmaschinerie an der Basis des Stapels beachtet werden.  Zu bestimmen, welche Aktion die App in einer `async`-Methode wirklich ausgeführt hat, kann problematisch sein, da der Stapel den Kontext des ursprünglichen Aufrufs verloren und den `async`-Code in einem anderen Thread ausgeführt hat. Allerdings können wir ableiten, dass die App versucht, die erste Seite zu laden.  In der Implementierung für `NavigationArgs.Setup` hat der folgende Code die Zugriffsverletzung verursacht:  
   
-```  
-AppViewModel.Current.LayoutVM.PageMap  
-```  
+`AppViewModel.Current.LayoutVM.PageMap`  
   
  In diesem Fall war die `LayoutVM`-Eigenschaft für `AppViewModel.Current` **NULL**.  Das Fehlen einiger Metadaten hat ein leicht unterschiedliches Verhalten verursacht und dazu geführt, dass eine Eigenschaft anstatt eines Sets nicht initialisiert wurde, wie die App erwartet hat.  Zum Verstehen der Situation könnte es helfen, einen Haltepunkt im Code an der Stelle festzulegen, an der `LayoutVM` initialisiert werden sollte.  Beachten Sie jedoch, dass der Typ von `LayoutVM``App.Core.ViewModels.Layout.LayoutApplicationVM` lautet.  Die einzige bisher in der Datei "rd.xml" vorhandene Metadatenrichtlinnie ist:  
   

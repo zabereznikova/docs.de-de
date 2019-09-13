@@ -3,12 +3,12 @@ title: ICorProfilerInfo10-Schnittstelle
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 496959ecac5b16f1faa138aec90c5194d15cb105
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 06cce79fbb2b2eb143e77e3c6fda194e47d4f4f3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974010"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928803"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10-Schnittstelle
 
@@ -29,5 +29,7 @@ Eine Unterklasse von [ICorProfilerInfo9](../../../../docs/framework/unmanaged-ap
 **Formen** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).  
 **Header:** Corprof. idl, Corprof. h  
 **.NET-Versionen:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)] 
+
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

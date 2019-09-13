@@ -2,12 +2,12 @@
 title: DataContract-Ersatzzeichen
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 525ac356cd00b095e396dc80dbf663646b25b2e2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32ac0b82a637e2fb1a62b81555648942d31c30de
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039852"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928601"
 ---
 # <a name="datacontract-surrogate"></a>DataContract-Ersatzzeichen
 In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können. In diesem Beispiel wird gezeigt, wie ein Ersatz Zeichen in einem Client-und Server Szenario verwendet wird, in dem Daten zwischen einem Windows Communication Foundation (WCF)-Client und-Dienst serialisiert und übertragen werden.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deseriali
   
  Im Beispiel wird der folgende Dienstvertrag verwendet.  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [AllowNonSerializableTypes]  
 public interface IPersonnelDataService  
@@ -34,7 +34,7 @@ public interface IPersonnelDataService
   
  In diesen Vorgängen wird der folgende Datentyp verwendet:  
   
-```  
+```csharp  
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 class Employee  
 {  
@@ -51,7 +51,7 @@ class Employee
   
  Im `Employee`-Typ kann die `Person`-Klasse (im folgenden Beispielcode dargestellt) nicht von <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert werden, da es sich nicht um eine gültige Datenvertragsklasse handelt.  
   
-```  
+```csharp  
 public class Person  
 {  
     public string firstName;  
@@ -70,7 +70,7 @@ public class Person
   
  Im Beispiel wird die `Person`-Klasse logisch durch eine andere Klasse namens `PersonSurrogated` ersetzt.  
   
-```  
+```csharp  
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public class PersonSurrogated  
 {  
@@ -89,7 +89,7 @@ public class PersonSurrogated
   
  In der Schnittstellenimplementierung ist die erste Aufgabe das Einrichten einer Typzuordnung von `Person` zu `PersonSurrogated`. Dies wird bei der Serialisierung sowie beim Schemaexport verwendet. Diese Zuordnung erfolgt durch das Implementieren der <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>-Methode.  
   
-```  
+```csharp  
 public Type GetDataContractType(Type type)  
 {  
     if (typeof(Person).IsAssignableFrom(type))  
@@ -102,7 +102,7 @@ public Type GetDataContractType(Type type)
   
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29>-Methode ordnet bei der Serialisierung eine `Person`-Instanz einer `PersonSurrogated`-Instanz zu, wie im folgenden Beispielcode dargestellt.  
   
-```  
+```csharp  
 public object GetObjectToSerialize(object obj, Type targetType)  
 {  
     if (obj is Person)  
@@ -120,7 +120,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
   
  Die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29>-Methode stellt die umgekehrte Zuordnung für die Deserialisierung bereit, wie im folgenden Beispielcode gezeigt.  
   
-```  
+```csharp  
 public object GetDeserializedObject(object obj,   
 Type targetType)  
 {  
@@ -139,7 +139,7 @@ Type targetType)
   
  Zum Zuordnen des `PersonSurrogated`-Datenvertrags zu der vorhandenen `Person`-Klasse beim Schemaimport wird im Beispiel die <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29>-Methode implementiert, wie im folgenden Beispielcode veranschaulicht.  
   
-```  
+```csharp  
 public Type GetReferencedTypeOnImport(string typeName,   
                string typeNamespace, object customData)  
 {  
@@ -158,7 +158,7 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
   
  Im folgenden Beispielcode wird die Implementierung der <xref:System.Runtime.Serialization.IDataContractSurrogate>-Schnittstelle abgeschlossen.  
   
-```  
+```csharp  
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
           System.CodeDom.CodeTypeDeclaration typeDeclaration,   
           System.CodeDom.CodeCompileUnit compileUnit)  
@@ -190,7 +190,7 @@ public void GetKnownCustomDataTypes(
   
  Die `IContractBehavior`-Implementierung sucht nach Vorgängen, die DataContract verwenden, indem überprüft wird, ob `DataContractSerializerOperationBehavior` registriert ist. Wenn dies der Fall ist, wird die `DataContractSurrogate`-Eigenschaft auf dieses Verhalten festgelegt. Der folgende Beispielcode zeigt die Vorgehensweise. Durch das Festlegen des Ersatzzeichens auf dieses Vorgangsverhalten wird es für die Serialisierung und die Deserialisierung aktiviert.  
   
-```  
+```csharp  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
 {  
     foreach (OperationDescription opDesc in description.Operations)  
@@ -222,7 +222,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  Das `AllowNonSerializableTypesAttribute` Attribut implementiert `IWsdlExportExtension` und `IContractBehavior`. Die Erweiterung kann in diesem Fall `IContractBehavior` entweder `IEndpointBehavior` oder sein. Die Implementierung der `IWsdlExportExtension.ExportContract`-Methode aktiviert das Ersatzzeichen, indem es dem bei der Schemagenerierung für DataContract verwendeten `XsdDataContractExporter` hinzugefügt wird. Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (exporter == null)  

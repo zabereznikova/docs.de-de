@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Speichern Sie strukturierte Daten mit Azure Table Storage oder Azure Cosmos DB in der Cloud.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: c8ab2d61048523ac52f305c7bd035c73ca0d3f60
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630469"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929001"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F\#
 
@@ -194,6 +194,6 @@ Nachdem Sie sich nun mit den Grundlagen von Table Storage vertraut gemacht haben
 - [Einführung in Azure Cosmos DB Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Referenz zur Speicher Client Bibliothek für .net](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
 - [Azure Storage Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure Storage Teamblog](https://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure Storage Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Verbindungs Zeichenfolgen konfigurieren](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Ersten Einstieg in Azure Table Storage in .net](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

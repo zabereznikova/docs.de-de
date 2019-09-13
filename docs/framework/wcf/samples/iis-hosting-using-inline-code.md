@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 7713c8ca690570ee80721329a7857e6111c93e2f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487591"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893204"
 ---
 # <a name="iis-hosting-using-inline-code"></a>IIS-Hosting mithilfe von Inlinecode
 
@@ -24,7 +24,7 @@ Dieses Beispiel zeigt, wie ein von IIS (Internet Information Services, Interneti
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\InlineCode`
 
@@ -48,9 +48,7 @@ In diesem Beispiel wird ein typischer Dienst gezeigt, der einen Vertrag implemen
 
 Die Dienstimplementierung berechnet das entsprechende Ergebnis und gibt es zurück.
 
-```svc
-<%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>
-```
+`<%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>`
 
 ```csharp
 // Service class that implements the service contract.
@@ -88,14 +86,14 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-3. Nachdem die Lösung erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in IIS 7.0 einzurichten. Das Verzeichnis ServiceModelSamples sollte jetzt als IIS 7.0-Anwendung angezeigt werden.
+3. Nachdem die Projekt Mappe erstellt wurde, führen Sie Setup. bat aus, um die Service Model Samples-Anwendung in IIS 7,0 einzurichten. Das Verzeichnis Service Model Samples sollte jetzt als IIS 7,0-Anwendung angezeigt werden.
 
-4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ein Beispiel zum Erstellen einer Clientanwendung, die diesen Dienst aufrufen kann, finden Sie unter [Vorgehensweise: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ein Beispiel zum Erstellen einer Client Anwendung, die diesen Dienst aufruft, [finden Sie unter Gewusst wie: Erstellen Sie einen](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)-Client.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

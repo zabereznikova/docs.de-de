@@ -2,12 +2,12 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 70c7237329d1ae5f6ecde2231a66bca53e220634
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa1180458b118132a632ea5d798db81283fffdab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045019"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928822"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
@@ -112,7 +112,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 ## <a name="custom-client-credentials-and-token-provider"></a>Benutzerdefinierte Clientanmeldeinformationen und Tokenanbieter  
  Die folgenden Schritte zeigen, wie Sie einen benutzerdefinierten Tokenanbieter entwickeln, der ausgestellte Token zwischenspeichert und in WCF: Security integriert.  
   
-#### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
+### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
   
 1. Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
   
@@ -120,7 +120,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Zur Ausführung dieser Aufgabe leitet der benutzerdefinierte Tokenanbieter die <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse ab und überschreibt die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>-Methode. Bei dieser Methode wird versucht, ein Token aus dem Cache abzurufen. Wenn im Cache kein Token gefunden wird, wird ein Token vom zugrunde liegenden Anbieter abgerufen und anschließend im Cache gespeichert. In diesem Fall gibt die Methode ein `SecurityToken` zurück.  
   
-    ```  
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
     {  
       GenericXmlSecurityToken token;  
@@ -137,7 +137,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Der <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird zur Erstellung von einem <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> verwendet, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Der Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und Token-Serialisierungsprogrammen. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten Tokenanbieter zurückzugeben, wenn die übergebenen Tokenanforderungen angeben, dass ein ausgestelltes Token angefordert wird.  
   
-    ```  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        Else  
+        else  
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
      Eine Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.  
   
-    ```  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -182,11 +182,11 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
       public IssuedTokenCache IssuedTokenCache  
       {  
-        Get  
+        get  
         {  
           return this.cache;  
         }  
-        Set  
+        set  
         {  
           this.cache = value;  
         }  
@@ -206,18 +206,18 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 4. Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
   
-    ```  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
       public abstract bool TryGetToken(EndpointAddress target, EndpointAddress issuer, out GenericXmlSecurityToken cachedToken);  
     }  
-    Configure the client to use the custom client credential.  
+    // Configure the client to use the custom client credential.  
     ```  
   
      Im Beispiel wird die Standardklasse für die Clientanmeldeinformationen gelöscht und die neue Klasse für Clientanmeldeinformationen angegeben, sodass der Client die benutzerdefinierten Clientanmeldeinformationen verwenden kann.  
   
-    ```  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -231,7 +231,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
 ## <a name="the-setupcmd-batch-file"></a>Die Batchdatei Setup.cmd  
  Mit der in diesem Beispiel enthaltenen Batchdatei "Setup.cmd" können Sie den Server und den STS mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren. Die Batchdatei erstellt zwei Zertifikate im Zertifikatspeicher CurrentUser/TrustedPeople. Der Antragstellername des ersten Zertifikats lautet CN=STS und wird vom STS zum Signieren des Sicherheitstokens verwendet, das an den Client herausgegeben wird. Der Antragstellername des zweiten Zertifikats lautet CN=localhost und wird vom STS zum Verschlüsseln eines Geheimnisses verwendet, das dann vom Dienst entschlüsselt werden kann.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
 1. Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
   
@@ -241,7 +241,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 4. Führen Sie Client.exe aus.  
   
-#### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
+### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 1. Führen Sie "Cleanup.cmd" im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   

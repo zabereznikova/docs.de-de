@@ -2,12 +2,12 @@
 title: Benutzerdefinierter Diensthost
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 5da6497eadc6f02210c7f9d35d2889c98dc34ce4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 80b2642fa202500aa22dc7d045476cb36677d47c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928865"
 ---
 # <a name="custom-service-host"></a>Benutzerdefinierter Diensthost
 In diesem Beispiel wird veranschaulicht, wie mit einer benutzerdefinierten Ableitung der <xref:System.ServiceModel.ServiceHost>-Klasse das Laufzeitverhalten eines Diensts geändert wird. Dieser Ansatz stellt eine wiederverwendbare Alternative zum Konfigurieren einer großen Anzahl von Diensten auf die übliche Weise war. Außerdem zeigt das Beispiel, wie mithilfe der <xref:System.ServiceModel.Activation.ServiceHostFactory>-Klasse ein benutzerdefinierter ServiceHost in der IIS-(Internet Information Services, Internetinformationsdienste-) oder WAS-(Windows Process Activation Service-)Hostumgebung verwendet wird.  
@@ -34,7 +34,7 @@ In diesem Beispiel wird veranschaulicht, wie mit einer benutzerdefinierten Ablei
   
  In diesem Beispiel soll ein benutzerdefinierter Diensthost erstellt werden, der das ServiceMetadataBehavior hinzufügt (das die Veröffentlichung von Metadaten ermöglicht), selbst wenn dieses Verhalten in der Konfigurationsdatei des Diensts nicht ausdrücklich hinzugefügt wurde. Zu diesem Zweck erstellen wir eine neue Klasse, die von <xref:System.ServiceModel.ServiceHost> erbt und `ApplyConfiguration`() überschreibt.  
   
-```  
+```csharp  
 class SelfDescribingServiceHost : ServiceHost  
 {  
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
@@ -59,7 +59,7 @@ class SelfDescribingServiceHost : ServiceHost
   
  Da die Konfigurationen in der Konfigurationsdatei der Anwendung nicht ignoriert werden sollen, wird beim Überschreiben von `ApplyConfiguration`() zuerst die Basisimplementierung aufgerufen. Nach der Fertigstellung dieser Methode kann das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> der Beschreibung imperativ mithilfe des folgenden imperativen Codes hinzugefügt werden.  
   
-```  
+```csharp  
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
 if (mexBehavior == null)  
 {  
@@ -76,7 +76,7 @@ else
   
  Die letzte Aufgabe, die beim Überschreiben von `ApplyConfiguration`() ausgeführt werden muss, ist das Hinzufügen des Standardmetadatenendpunkts. Entsprechend der Konvention wird für jeden URI in der BaseAddresses-Auflistung des Diensthosts ein Metadatenendpunkt erstellt.  
   
-```  
+```csharp  
 //Add a metadata endpoint at each base address  
 //using the "/mex" addressing convention  
 foreach (Uri baseAddress in this.BaseAddresses)  
@@ -113,7 +113,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
 ## <a name="using-a-custom-servicehost-in-self-host"></a>Verwenden eines benutzerdefinierten Diensthosts bei Selbsthost  
  Nachdem wir nun die Implementierung des benutzerdefinierten Diensthosts fertig gestellt haben, können wird diese verwenden, um einem beliebigen Dienst Metadatenveröffentlichungsverhalten hinzuzufügen, indem dieser Dienst innerhalb einer Instanz von `SelfDescribingServiceHost` gehostet wird. Im folgenden Code wird gezeigt, wie diese im Selbsthostszenario verwendet wird.  
   
-```  
+```csharp  
 SelfDescribingServiceHost host =   
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
@@ -124,7 +124,7 @@ host.Open();
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Verwenden eines benutzerdefinierten Diensthosts in IIS oder WAS  
  Die Verwendung eines benutzerdefinierten Diensthosts in einem Selbsthostszenario ist einfach, da ausschließlich Ihr eigener Anwendungscode für die Erstellung und Öffnung der Diensthostinstanz verantwortlich ist. In der IIS-oder was-Hostingumgebung instanziiert die WCF-Infrastruktur jedoch den Host Ihres Diensts dynamisch als Reaktion auf eingehende Nachrichten. Es können in dieser Hostingumgebung auch benutzerdefinierte Diensthosts verwendet werden, für diese ist jedoch zusätzlicher Code in Form einer ServiceHostFactory erforderlich. Im folgenden Code wird eine Ableitung von <xref:System.ServiceModel.Activation.ServiceHostFactory> dargestellt, die Instanzen des benutzerdefinierten `SelfDescribingServiceHost` zurückgibt.  
   
-```  
+```csharp  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
     protected override ServiceHost CreateServiceHost(Type serviceType,   

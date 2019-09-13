@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939489"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895047"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables-Methode
-Gibt alle Variablen, die im globalen Gültigkeitsbereich innerhalb dieses Namespace definiert.  
+Gibt alle Variablen zurück, die im globalen Gültigkeitsbereich innerhalb dieses Namespace definiert sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -39,16 +39,16 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parameter  
  `cVars`  
- [in] Ein `ULONG32` , der angibt, dass der Größe des der `pVars` Array.  
+ in Ein `ULONG32` -Wert, der die Größe `pVars` des Arrays angibt.  
   
  `pcVars`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Namespaces enthalten.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der Namespaces erforderlich ist.  
   
  `pVars`  
- [out] Ein Zeiger auf einen Puffer, der die Namespaces enthält.  
+ vorgenommen Ein Zeiger auf einen Puffer, der die Namespaces enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
+ S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  

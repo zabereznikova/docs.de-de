@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780834"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894420"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
 Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Mit Benutzerinstanzen können Benutzer, die auf ihrem lokalen Computer nicht mit Administratorrechten arbeiten, eine Verbindung zu SQL Server Express-Datenbanken herstellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers ausgeführt, wobei für jeden Benutzer genau eine Instanz erstellt wird.  
@@ -26,9 +26,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benut
 ## <a name="enabling-user-instances"></a>Aktivieren von Benutzerinstanzen  
  Zum Generieren von Benutzerinstanzen muss eine übergeordnete Instanz von SQL Server Express ausgeführt werden. Benutzer Instanzen werden standardmäßig aktiviert, wenn SQL Server Express installiert ist. Sie können von einem Systemadministrator, der die gespeicherte System Prozedur **sp_configure** auf der übergeordneten Instanz ausführt, explizit aktiviert oder deaktiviert werden.  
   
-```  
+```sql  
 -- Enable user instances.  
-sp_configure 'user instances enabled','1'   
+sp_configure 'user instances enabled','1'
   
 -- Disable user instances.  
 sp_configure 'user instances enabled','0'  
@@ -51,7 +51,7 @@ sp_configure 'user instances enabled','0'
   
 - Die `|DataDirectory|`-Ersatzzeichenfolge zwischen den vertikalen Strichen (|) verweist auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet, und gibt den relativen Pfad zum Speicherort der MDF- und LDF-Datenbank- und Protokolldateien an. Wenn sich diese Dateien woanders befinden, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;AttachDBFilename=|DataDirectory|\InstanceDB.mdf;  
 Initial Catalog=InstanceDB;  
@@ -65,7 +65,7 @@ Initial Catalog=InstanceDB;
   
  Auf welchen physischen Speicherort `DataDirectory` verweist, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei Northwind.mdf im Ordner \app_data der Anwendung.  
   
-```  
+```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
 User Instance=true;  
 AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;  

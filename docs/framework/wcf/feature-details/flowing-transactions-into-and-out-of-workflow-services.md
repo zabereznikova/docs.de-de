@@ -2,12 +2,12 @@
 title: Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: db1a1ef6bcf3f048584b39450c90fac3ff35646b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988816"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893371"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dienstvorgang Teil einer Ambient-Transaktion wird, fügen Sie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität in eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität ein. Alle Aufrufe, die von einer <xref:System.ServiceModel.Activities.Send>-Aktivität oder einer <xref:System.ServiceModel.Activities.SendReply>-Aktivität in <xref:System.ServiceModel.Activities.TransactedReceiveScope> durchgeführt werden, werden auch in der Ambient-Transaktion durchgeführt. Eine Workflowclientanwendung kann mit der <xref:System.Activities.Statements.TransactionScope>-Aktivität eine Ambient-Transaktion erstellen und Dienstvorgänge mithilfe der Ambient-Transaktion aufrufen. In diesem Thema wird die Erstellung eines Workflowdiensts und Workflowclients, die an Transaktionen teilnehmen, erläutert.  
@@ -37,7 +37,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 3. Fügen Sie dem `PrintTransactionInfo`-Projekt eine neue Klasse mit dem Namen `Common` hinzu. Diese Klasse wird von <xref:System.Activities.NativeActivity> abgeleitet und überlädt die <xref:System.Activities.NativeActivity.Execute%2A>-Methode.  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -223,8 +223,8 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 2. Öffnen Sie die generierte Datei Program.cs und den folgenden Code:  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -263,8 +263,8 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 2. Öffnen Sie die Datei program.cs, und fügen Sie den folgenden Code hinzu.  
   
-    ```  
-    class Program  
+    ```csharp
+        class Program  
         {  
   
             private static AutoResetEvent syncEvent = new AutoResetEvent(false);  

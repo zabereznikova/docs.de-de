@@ -17,28 +17,29 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637764"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929315"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
-Gibt an, dass ein Klasse oder Struktur-Member die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  
+Gibt an, dass ein Klassen-oder Strukturmember die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  
   
 ## <a name="remarks"></a>Hinweise  
-Die `Implements` Schlüsselwort ist nicht identisch mit der [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md). Sie verwenden die `Implements` Anweisung, um anzugeben, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, und klicken Sie dann für jedes Element Sie verwenden die `Implements` Schlüsselwort an der Schnittstelle und welcher Member implementiert.
+Das `Implements` Schlüsselwort ist nicht mit der [implementierten Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)identisch. Verwenden Sie die `Implements` -Anweisung, um anzugeben, dass eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert. Anschließend verwenden Sie das `Implements` -Schlüsselwort, um anzugeben, welche Schnittstelle und welcher Member implementiert werden.
 
-Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss sie enthalten die `Implements` Anweisung unmittelbar nach der [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) oder [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md), und alle Member implementieren durch die Schnittstelle definiert.
+Wenn eine Klasse oder Struktur eine Schnittstelle implementiert, muss Sie die `Implements` Anweisung unmittelbar nach der [Klassen Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) oder [Struktur Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)enthalten, und Sie muss alle Member implementieren, die durch die Schnittstelle definiert werden.
 
 ## <a name="reimplementation"></a>Neuimplementierung  
-In einer abgeleiteten Klasse können Sie ein Schnittstellenmember, die die Basisklasse der Klasse bereits implementiert hat. Dies unterscheidet sich von überschreiben die Member der Basisklasse in folgender Hinsicht:
+In einer abgeleiteten Klasse können Sie einen Schnittstellenmember erneut implementieren, der von der Basisklasse bereits implementiert wurde. Dies unterscheidet sich von der Überschreibung des Basisklassenmembers in den folgenden Punkten:
 
-- Member der Basisklasse muss nicht werden [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) , um erneut implementiert werden.
-- Sie können das Element mit einem anderen Namen erneut implementieren.
+- Der Basisklassenmember muss nicht [über schreibbar](../../../visual-basic/language-reference/modifiers/overridable.md) sein, um neu implementiert werden zu können.
+- Sie können den Member mit einem anderen Namen neu implementieren.
 
-Die `Implements` -Schlüsselwort kann in den folgenden Kontexten verwendet werden:
+Das `Implements` -Schlüsselwort kann in den folgenden Kontexten verwendet werden:
+
 - [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)

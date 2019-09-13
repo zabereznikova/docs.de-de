@@ -2,12 +2,12 @@
 title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 0d5ceecebc5f45d62bac7fd0aaa0f8515a469515
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8674d852be45119b247ec10bbc639922850d5a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045117"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928852"
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
@@ -26,7 +26,7 @@ Dieses Beispiel demonstriert, wie Sie
 ## <a name="service"></a>Dienst  
  Der Dienst in diesem Beispiel ist mit zwei benutzerdefinierten Attributen versehen. Das erste Attribut (`WsdlDocumentationAttribute`) nimmt eine Zeichenfolge im Konstruktor entgegen und kann angewendet werden, um eine Vertragsschnittstelle oder einen -vorgang mit einer Zeichenfolge zur Verfügung zu stellen, die dessen Verwendung beschreibt. Das zweite Attribut (`WsdlParamOrReturnDocumentationAttribute`) kann zum Zurückgeben von Werten oder Parametern verwendet werden, um diese Werte im Vorgang zu beschreiben. Das folgende Beispiel zeigt einen Dienstvertrag (`ICalculator`), der mit diesen Attributen beschrieben wird.  
   
-```  
+```csharp  
 // Define a service contract.      
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
@@ -71,7 +71,7 @@ public interface ICalculator
   
  In diesem Beispiel wird je nachdem, ob das Exportkontextobjekt über ein <xref:System.ServiceModel.Description.ContractDescription> oder ein <xref:System.ServiceModel.Description.OperationDescription> verfügt, mithilfe der Texteigenschaft eine Anmerkung aus dem Attribut extrahiert und dem WSDL-Anmerkungselement hinzugefügt (wie im folgenden Code gezeigt).  
   
-```  
+```csharp  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (contractDescription != null)  
@@ -107,7 +107,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
   
  Beim Exportieren eines Vorgangs ruft das Beispiel `WsdlParamOrReturnDocumentationAttribute`-Werte für Parameter und Rückgabewerte mittels Reflektion ab und fügt sie den WSDL-Anmerkungselementen hinzu (wie nachfolgend gezeigt).  
   
-```  
+```csharp  
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -174,7 +174,7 @@ for (int i = 0; i < args.Length; i++)
   
  Zuerst bestimmt das Beispiel in der <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>-Methode, ob sich die WSDL-Anmerkung auf der Vertrags- oder der Vorgangsebene befindet und fügt sich selbst dem entsprechenden Bereich als Verhalten hinzu, wobei der importierte Anmerkungstext an ihren Konstruktor übergeben wird.  
   
-```  
+```csharp  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -201,7 +201,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
   
  Wenn der Code dann generiert ist, ruft das System die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>-Methode und die <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>-Methode auf, wobei die entsprechenden Kontextinformationen übergeben werden. Die benutzerdefinierten WSDL-Anmerkungen werden formatiert und als Kommentare in das CodeDOM eingefügt.  
   
-```  
+```csharp  
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -233,7 +233,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
   
  Nachdem das benutzerdefinierte Import Programm angegeben wurde, lädt das WCF-Metadatensystem den Benutzer <xref:System.ServiceModel.Description.WsdlImporter> definierten Import in alle zu diesem Zweck erstellten. In diesem Beispiel werden die Metadaten mithilfe des <xref:System.ServiceModel.Description.MetadataExchangeClient> heruntergeladen, der <xref:System.ServiceModel.Description.WsdlImporter> wird entsprechend konfiguriert, um die Metadaten mit dem in dem Beispiel erstellten benutzerdefinierten Importer zu importieren, und die geänderten Vertragsinformationen werden mithilfe des <xref:System.ServiceModel.Description.ServiceContractGenerator> in Visual Basic- und C#-Clientcode kompiliert, der in Visual Studio verwendet werden kann, um IntelliSense zu unterstützen, oder der in XML-Dokumentation kompiliert werden kann.  
   
-```  
+```csharp  
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   

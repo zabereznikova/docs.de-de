@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 611ad0a6f4ec8b8c63010938372b733a0ac66052
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 85d554337d11c3f79d8f70048246e978e185645e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955771"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894918"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>ETW-Ereignisse in der Task Parallel Library und PLINQ
 
@@ -21,9 +21,7 @@ Die Task Parallel Library und PLINQ generieren Ereignisse für die Ereignisablau
 
 In der EVENT_HEADER-Struktur, ist Folgendes die ProviderId-GUID für Ereignisse, die durch <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> generiert wurden:
 
-```
-0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5
-```
+`0x2e5dba47, 0xa3d2, 0x4d16, 0x8e, 0xe0, 0x66, 0x71, 0xff, 0xdc, 0xd7, 0xb5`
 
 ### <a name="parallel-loop-begin"></a>Beginn der parallelen Schleife
 
@@ -88,9 +86,7 @@ EVENT_DESCRIPTOR.Id = 1
 ## <a name="plinq-etw-events"></a>PLINQ-ETW-Ereignisse
  Die EVENT_HEADER.ProviderId-GUID für PLINQ ist:
 
-```
-0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87
-```
+`0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>Beginn der parallelen Abfrage
  EVENT_DESCRIPTOR.Task = 1

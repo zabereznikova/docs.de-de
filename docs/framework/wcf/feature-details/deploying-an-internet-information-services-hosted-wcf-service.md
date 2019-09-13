@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: b02c69e00aacafd928c59f06e0e7c050a2ca6509
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856126"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895107"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -49,9 +49,7 @@ Beachten Sie, dass IIS 6,0 und höhere Versionen regelmäßig eine isolierte obj
 
 In IIS gehostete WCF-Dienste werden in der IIS-Anwendung als spezielle Inhalts Dateien (SVC-Dateien) dargestellt. Dieses Modell ähnelt der Art und Weise, wie ASMX-Seiten in einer IIS-Anwendung als ASMX-Dateien dargestellt werden. Eine SVC-Datei enthält eine WCF-spezifische Verarbeitungs Direktive ([\@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)), die es der WCF-Hostinginfrastruktur ermöglicht, gehostete Dienste als Reaktion auf eingehende Nachrichten zu aktivieren. Die gebräuchlichste Syntax für eine SVC-Datei befindet sich in der folgenden Anweisung:
 
-```svc
-<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>
-```
+`<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
 Er besteht aus der [ \@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) -Direktive und einem einzelnen `Service`Attribut,. Der Wert des `Service` -Attributs ist der CLR-Typname (Common Language Runtime) der Dienstimplementierung. Die Verwendung dieser Direktive ist praktisch mit der Erstellung eines Diensthosts mithilfe des folgenden Codes gleichzusetzen:
 

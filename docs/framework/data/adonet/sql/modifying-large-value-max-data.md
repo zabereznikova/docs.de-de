@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792038"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894442"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -41,7 +41,7 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
   
  Im folgenden Beispiel wird ein Foto in die ProductPhoto-Tabelle der AdventureWorks-Beispieldatenbank eingefügt. Wenn Sie den `BULK OPENROWSET` -Anbieter verwenden, müssen Sie die benannte Liste der Spalten angeben, auch wenn Sie keine Werte in jede Spalte einfügen. Der Primärschlüssel ist in diesem Fall als Identitätsspalte definiert und kann in der Liste der Spalten weggelassen werden. Beachten Sie, dass Sie am Ende der `OPENROWSET`-Anweisung auch einen Korrelationsnamen angeben müssen. In diesem Fall lautet er "ThumbnailPhoto". Dies korreliert mit der Spalte in der `ProductPhoto`-Tabelle, in die die Datei geladen wird.  
   
-```  
+```sql  
 INSERT Production.ProductPhoto (  
     ThumbnailPhoto,   
     ThumbnailPhotoFilePath,   
@@ -78,7 +78,7 @@ FROM OPENROWSET
 ## <a name="example"></a>Beispiel  
  In diesem Transact-SQL-Beispiel wird ein Teil eines Werts in &lt;legacyBold&gt;DocumentSummary&lt;/legacyBold&gt; aktualisiert. Dabei handelt es sich um eine `nvarchar(max)`-Spalte in der &lt;legacyBold&gt;Document&lt;/legacyBold&gt;-Tabelle in der &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt;-Datenbank. Das Wort "components" wird ersetzt durch "features". Dazu wird das Ersatzwort, die Anfangsposition (Offset) des zu ersetzenden Worts in den vorhandenen Daten und die Anzahl der zu ersetzenden Zeichen (Length) angegeben. Das Beispiel enthält SELECT-Anweisungen vor und nach der UPDATE-Anweisung, damit die Ergebnisse verglichen werden können.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 --View the existing value.  
@@ -230,7 +230,7 @@ while (reader.Read())
 ## <a name="using-large-value-type-parameters"></a>Verwenden großer Werttypparameter  
  Große Werttypen können in <xref:System.Data.SqlClient.SqlParameter>-Objekten auf dieselbe Weise verwendet werden wie kleinere Werttypen in <xref:System.Data.SqlClient.SqlParameter>-Objekten. Sie können große Werttypen als <xref:System.Data.SqlClient.SqlParameter> -Werte abrufen, wie im folgenden Beispiel gezeigt. Im Code wird davon ausgegangen, dass in der AdventureWorks-Beispieldatenbank die folgende gespeicherte GetDocumentSummary-Prozedur vorhanden ist. Die gespeicherte Prozedur nimmt einen Eingabeparameter mit @DocumentID dem Namen und gibt den Inhalt der DocumentSummary-Spalte @DocumentSummary im Output-Parameter zurück.  
   
-```  
+```sql
 CREATE PROCEDURE GetDocumentSummary   
 (  
     @DocumentID int,  

@@ -1,6 +1,6 @@
 ---
-title: Entwurfszeitfehler im Windows Forms-Designer
-ms.date: 03/30/2017
+title: Entwurfs Zeitfehler im Windows Forms-Designer
+ms.date: 09/09/2019
 f1_keywords:
 - DTELErrorList
 - WhyDTELPage
@@ -11,55 +11,400 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: cce9baf1523391e281593428b633c401103b42b5
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 96ec50e5d3aca2aa24d68d565a35ec7687df2a2e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015973"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893250"
 ---
-# <a name="design-time-errors-in-the-windows-forms-designer"></a>Entwurfs Zeitfehler im Windows Forms-Designer
+# <a name="windows-forms-designer-error-page"></a>Windows Forms-Designer Fehlerseite
 
-In diesem Thema werden die Bedeutung und die Verwendung der Entwurfszeit-Fehlerliste erläutert, die in Visual Studio angezeigt wird, wenn das Windows Forms-Designer nicht geladen werden kann. Wenn diese Fehlerliste angezeigt wird, sollten Sie sie nicht als Fehler im Designer, sondern als Hilfe beim Beheben von Fehlern in Ihrem Code interpretieren.
+Wenn das Windows Forms-Designer aufgrund eines Fehlers im Code, in einer Drittanbieter Komponente oder an einem anderen Ort nicht geladen werden kann, wird anstelle des Designers eine Fehlerseite angezeigt. Diese Fehlerseite weist nicht notwendigerweise auf einen Fehler im Designer hin. Der Fehler ist \<möglicherweise an einer beliebigen Stelle auf der Code Behind-Seite mit dem Namen "Your-Form-Name >". Designer.cs. Fehler werden in redusible, gelben Balken mit einem Link angezeigt, um zum Speicherort des Fehlers auf der Codepage zu springen.
 
-Ein grundlegendes Verständnis dieser Fehlerliste hilft Ihnen beim Debuggen Ihrer Anwendungen, indem detaillierte Informationen zu den Fehlern und mögliche Lösungen vorgeschlagen werden.
+![Windows Forms-Designer Fehlerseite](media/windows-forms-designer-error-page-collapsed.png)
 
-## <a name="the-design-time-error-list-interface"></a>Die Schnittstelle zur Entwurfszeit-Fehlerliste
+Sie können die Fehler ignorieren und mit dem Laden des Designers fortfahren, indem Sie auf **ignorieren und Fortfahren**klicken. Diese Aktion kann zu unerwartetem Verhalten führen, z. b. werden Steuerelemente möglicherweise nicht auf der Entwurfs Oberfläche angezeigt.
 
-Wenn das Windows Forms-Designer nicht geladen werden kann, wird im Designer eine Fehlerliste angezeigt. Die Fehler werden in Kategorien gruppiert. Wenn Sie beispielsweise über vier Instanzen von nicht deklarierten Variablen verfügen, werden diese in der gleichen Fehlerkategorie gruppiert. Jede Fehlerkategorie enthält eine kurze Beschreibung, die den Fehler zusammenfasst.
+## <a name="instances-of-this-error"></a>Instanzen dieses Fehlers
 
-Sie können eine Fehlerkategorie erweitern oder reduzieren, indem Sie auf die Überschrift der Fehlerkategorie klicken oder indem Sie auf das Chevron zum Erweitern/Reduzieren klicken. Wenn Sie eine Fehlerkategorie erweitern, wird folgende zusätzliche Hilfe angezeigt:
+Wenn die gelbe Fehler Leiste erweitert wird, wird jede Instanz des Fehlers aufgelistet. Viele Fehlertypen enthalten eine genaue Position im folgenden Format: *[Projektname]* *[Formular Name]* Zeile: *[Zeilennummer]* Spalte: *[Spaltennummer]* . Wenn dem Fehler eine aufrufsstapel zugeordnet ist, können Sie auf den Link zum **Anzeigen der Telefon** Verbindung klicken, um ihn anzuzeigen. Wenn Sie die-aufrufsstapel untersuchen, können Sie den Fehler weiter beheben.
 
-- Instanzen dieses Fehlers.
-
-- Hilfe zu diesem Fehler.
-
-- Forenbeiträge zu diesem Fehler.
-
-### <a name="instances-of-this-error"></a>Instanzen dieses Fehlers
-
-In der zusätzlichen Hilfe werden alle Instanzen des Fehlers im aktuellen Projekt aufgeführt. Viele Fehler enthalten eine genaue Position im folgenden Format: *[Projektname]* *[Formularname]* Zeile: *[Zeilennummer]* Spalte: *[Spaltennummer]* . Über den Link **Gehe zu Code** gelangen Sie zu der Position im Code, an der der Fehler auftritt.
-
-Wenn dem Fehler eine Aufrufliste zugeordnet ist, können Sie zur näheren Erläuterung des Fehlers auf den Link **Aufrufliste anzeigen** klicken, um die Aufrufliste anzuzeigen. Durch Überprüfen des Stapels können Sie wertvolle Debuginformationen erhalten. Sie können beispielsweise die Funktionen nachverfolgen, die vor Auftreten des Fehlers aufgerufen wurden. Die Aufrufliste ist auswählbar, sodass sie kopiert und gespeichert werden kann.
+![Windows Forms-Designer erweiterter Fehler](media/windows-forms-designer-error-page-expanded.png)
 
 > [!NOTE]
-> In Visual Basic wird in der Entwurfszeit-Fehlerliste nicht mehr als ein Fehler angezeigt, es können jedoch mehrere Instanzen desselben Fehlers angezeigt werden. In Visual C++ weisen die Fehler keine Verknüpfungen mit GoTo-Codes/Zeilennummern auf.
+> - Bei Visual Basic-apps zeigt die Seite Entwurfszeit Fehler nicht mehr als einen Fehler an, es werden jedoch möglicherweise mehrere Instanzen desselben Fehlers angezeigt.
+> - Bei C++ -apps haben Fehler keine Code Speicherort Verknüpfungen.
 
-### <a name="forum-posts-about-this-error"></a>Forumbeiträge zu diesem Fehler
+## <a name="help-with-this-error"></a>Hilfe zu diesem Fehler
 
-Die zusätzliche Hilfe enthält einen Link zu Forumsbeiträgen im Zusammenhang mit dem Fehler. Die Foren werden basierend auf der Zeichenfolge der Fehlermeldung durchsucht. Sie können auch versuchen, die Suche in den folgenden Foren durchführen:
+Wenn ein Hilfethema für den Fehler verfügbar ist, klicken Sie auf den Link **MSDN Help** , um direkt zur Hilfeseite auf docs.Microsoft.com zu navigieren.
 
-- [Windows Forms-Designer Forum](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)
+## <a name="forum-posts-about-this-error"></a>Forumbeiträge zu diesem Fehler
 
-- [Windows Forms Forum](https://social.msdn.microsoft.com/Forums/windows/home?category=windowsforms)
+Klicken Sie auf den Link **MSDN-Foren nach Beiträgen zu diesem Fehler durchsuchen** , um zu den Microsoft Developer Network-Foren zu navigieren. Möglicherweise möchten Sie die [Windows Forms-Designer](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner) -oder [Windows Forms](https://social.msdn.microsoft.com/Forums/windows/home?category=windowsforms) Foren genauer durchsuchen.
 
-### <a name="ignore-and-continue"></a>Ignorieren und fortfahren
+## <a name="design-time-errors"></a>Entwurfs Zeitfehler
 
-Sie können die Fehlerbedingung ignorieren und mit dem Laden des Designers fortfahren. Die Auswahl dieser Aktion kann zu unerwartetem Verhalten führen. Beispielsweise werden Steuerelemente möglicherweise nicht auf der Entwurfsoberfläche angezeigt.
+In diesem Abschnitt werden einige der Fehler aufgelistet, auf die Sie möglicherweise stoßen.
+
+### <a name="identifier-name-is-not-a-valid-identifier"></a>"\<Bezeichnername >" ist kein gültiger Bezeichner.
+
+Dieser Fehler weist darauf hin, dass ein Feld, eine Methode, ein Ereignis oder ein Objekt nicht ordnungsgemäß benannt ist.
+
+### <a name="name-already-exists-in-project-name"></a>'\<Name > ' ist in '\<Project Name > ' bereits vorhanden.
+
+Fehlermeldung: "'\<Name > ' ist bereits in '\<Project Name > ' vorhanden. Geben Sie einen eindeutigen Namen ein. "
+
+Sie haben einen Namen für ein geerbtes Formular angegeben, das bereits im Projekt vorhanden ist. Um diesen Fehler zu beheben, müssen Sie der geerbten Form einen eindeutigen Namen einräumen.
+
+### <a name="toolbox-tab-name-is-not-a-toolbox-category"></a>"\<Toolbox Tab Name >" ist keine Toolbox Kategorie.
+
+Ein Drittanbieter-Designer hat versucht, auf eine Registerkarte in der Toolbox zuzugreifen, die nicht vorhanden ist. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="a-requested-language-parser-is-not-installed"></a>Ein erforderlicher Sprachenparser wurde nicht installiert
+
+Fehlermeldung: "Ein angeforderter sprach Parser ist nicht installiert. Der Name des Sprachen Parsers{0}ist "".
+
+Visual Studio hat versucht, einen Designer zu laden, der für den Dateityp registriert ist, dies ist jedoch nicht möglich. Dies liegt wahrscheinlich daran, dass während des Setups ein Fehler aufgetreten ist. Wenden Sie sich an den Hersteller der Sprache, mit der Sie eine Korrektur durcharbeiten.
+
+### <a name="a-service-required-for-generating-and-parsing-source-code-is-missing"></a>Ein zum Generieren und Verarbeiten des Quellcodes erforderlicher Dienst ist nicht vorhanden
+
+Dies ist ein Problem mit einer Drittanbieter Komponente. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="an-exception-occurred-while-trying-to-create-an-instance-of-object-name"></a>Ausnahme beim Erstellen einer Instanz von "\<Objektname >".
+
+Fehlermeldung: "Beim Erstellen einer Instanz von '\<Object Name > ' ist eine Ausnahme aufgetreten. Die Ausnahme war "\<Exception String\>".
+
+Ein Drittanbieter-Designer hat angefordert, dass Visual Studio ein Objekt erstellt, aber das Objekt hat einen Fehler ausgelöst. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="another-editor-has-document-name-open-in-an-incompatible-mode"></a>Ein anderer Editor hat\<"Dokument Name >" in einem inkompatiblen Modus geöffnet.
+
+Fehlermeldung: "In einem anderen Editor\<ist der Dokument Name >" in einem inkompatiblen Modus geöffnet. Schließen Sie den Editor, und wiederholen Sie den Vorgang. "
+
+Dieser Fehler tritt auf, wenn Sie versuchen, eine Datei zu öffnen, die bereits in einem anderen Editor geöffnet ist. Der Editor, für den die Datei bereits geöffnet ist, wird angezeigt. Um diesen Fehler zu beheben, schließen Sie den Editor, in dem die Datei geöffnet ist, und wiederholen Sie den Vorgang.
+
+### <a name="another-editor-has-made-changes-to-document-name"></a>Ein anderer Editor hat Änderungen an "\<Dokument Name >" vorgenommen.
+
+Schließen Sie den Designer, und öffnen Sie ihn erneut, damit die Änderungen wirksam werden. Normalerweise lädt Visual Studio einen Designer automatisch erneut, nachdem Änderungen vorgenommen wurden. Andere Designer, wie z. b. Komponenten-Designer von Drittanbietern, unterstützen jedoch möglicherweise das Neuladen Verhalten nicht. In diesem Fall werden Sie von Visual Studio aufgefordert, den Designer manuell zu schließen und erneut zu öffnen.
+
+### <a name="another-editor-has-the-file-open-in-an-incompatible-mode"></a>Die Datei ist in einem anderen Editor in einem inkompatiblen Modus geöffnet
+
+Fehlermeldung: "Die Datei wird von einem anderen Editor in einem inkompatiblen Modus geöffnet. Schließen Sie den Editor, und wiederholen Sie den Vorgang. "
+
+Diese Meldung ähnelt der Meldung "ein anderer Editor hat\<einen Dokumentnamen >" in einem inkompatiblen Modus geöffnet ist, aber Visual Studio kann den Dateinamen nicht ermitteln. Um diesen Fehler zu beheben, schließen Sie den Editor, in dem die Datei geöffnet ist, und wiederholen Sie den Vorgang.
+
+### <a name="array-rank-rank-in-array-is-too-high"></a>Arrayrang\<' Rang im Array > ' ist zu hoch
+
+Visual Studio unterstützt nur Einzel Dimensions Arrays in dem Codeblock, der vom Designer analysiert wird. Mehrdimensionale Arrays sind außerhalb dieses Bereichs gültig.
+
+### <a name="assembly-assembly-name-could-not-be-opened"></a>Die Assembly\<"Assemblyname >" konnte nicht geöffnet werden.
+
+Fehlermeldung: Der AssemblyName > "der Assembly\<konnte nicht geöffnet werden. Vergewissern Sie sich, dass die Datei noch vorhanden ist. "
+
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Datei zu öffnen, die nicht geöffnet werden konnte. Vergewissern Sie sich, dass die Datei vorhanden ist und eine gültige Assembly ist.
+
+### <a name="bad-element-type-this-serializer-expects-an-element-of-type-type-name"></a>Ungültiger Elementtyp. Dieses Serialisierungsprogramm erwartet ein Element vom Typ\<"Typname >".
+
+Dies ist ein Problem mit einer Drittanbieter Komponente. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="cannot-access-the-visual-studio-toolbox-at-this-time"></a>Auf die Visual Studio-Toolbox kann derzeit nicht zugegriffen werden
+
+Visual Studio hat einen aufzurufenden Toolbox aufgerufen, der nicht verfügbar war. Wenn dieser Fehler angezeigt wird, melden Sie sich, wenn dieser Fehler angezeigt wird, mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="cannot-bind-an-event-handler-to-the-event-name-event-because-it-is-read-only"></a>Ein Ereignishandler kann nicht an das Ereignis\<' Ereignis Name > ' gebunden werden, da er schreibgeschützt ist.
+
+Dieser Fehler tritt am häufigsten auf, wenn Sie versucht haben, ein Ereignis mit einem Steuerelement zu verbinden, das von einer Basisklasse geerbt wurde. Wenn die Member-Variable des Steuer Elements privat ist, kann Visual Studio das Ereignis nicht mit der-Methode verbinden. An private geerbte Steuerelemente können keine zusätzlichen Ereignisse gebunden werden.
+
+### <a name="cannot-create-a-method-name-for-the-requested-component-because-it-is-not-a-member-of-the-design-container"></a>Für die angeforderte Komponente kann kein Methodenname erstellt werden, da sie kein Member des Entwurfscontainers ist
+
+Visual Studio hat versucht, einen Ereignishandler zu einer Komponente hinzuzufügen, die im Designer nicht über eine Member-Variable verfügt. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>Das Objekt '\<Name > ' kann nicht benannt werden, da es bereits\<den Namen ' Name > ' hat.
+
+Dies ist ein interner Fehler im Visual Studio-Serialisierungsprogramm. Gibt an, dass das Serialisierungsprogramm versucht hat, ein Objekt zweimal zu benennen, was nicht unterstützt wird. Wenn dieser Fehler angezeigt wird, melden Sie sich mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="cannot-remove-or-destroy-inherited-component-component-name"></a>Die geerbte Komponente "\<Komponenten Name >" kann nicht entfernt oder zerstört werden.
+
+Geerbte Steuerelemente sind im Besitz ihrer vererbenden Klasse. Änderungen am geerbten Steuerelement müssen in der Klasse vorgenommen werden, von der das Steuerelement stammt. Daher können Sie Sie nicht umbenennen oder zerstören.
+
+### <a name="category-toolbox-tab-name-does-not-have-a-tool-for-class-class-name"></a>Die Kategorie\<' Toolbox Registerkarten Name > ' weist kein Tool für die Klasse\<' Class Name > ' auf.
+
+Der Designer hat versucht, auf eine Klasse auf einer bestimmten Toolbox Registerkarte zu verweisen, die Klasse ist jedoch nicht vorhanden. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="class-class-name-has-no-matching-constructor"></a>Die Klasse\<"Class Name >" weist keinen übereinstimmenden Konstruktor auf.
+
+Ein Designer von Drittanbietern hat Visual Studio aufgefordert, ein Objekt mit bestimmten Parametern im Konstruktor zu erstellen, das nicht vorhanden ist. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="code-generation-for-property-property-name-failed"></a>Fehler bei der Code Generierung\<für die Eigenschaft "Eigenschaftsname >".
+
+Dies ist ein generischer Wrapper für einen Fehler. Die Fehler Zeichenfolge, die diese Meldung begleitet, enthält weitere Details zur Fehlermeldung und einen Link zu einem spezifischeren Hilfethema. Beheben Sie diesen Fehler, indem Sie den in der Fehlermeldung angegebenen Fehler beheben.
+
+### <a name="component-component-name-did-not-call-containeradd-in-its-constructor"></a>Die Komponente\<"Component Name >" hat im Konstruktor "Container. Add ()" nicht aufgerufen.
+
+Dies ist ein Fehler in der Komponente, die Sie soeben geladen oder im Formular abgelegt haben. Gibt an, dass sich die Komponente nicht selbst dem Container Steuerelement hinzugefügt hat (unabhängig davon, ob dies ein anderes Steuerelement oder ein Formular ist). Der Designer ist weiterhin funktionsfähig, aber es treten möglicherweise Probleme mit der Komponente zur Laufzeit auf.
+
+Wenden Sie sich an den Hersteller der Komponente, um den Fehler zu beheben. Oder wenn es sich um eine von Ihnen erstellte Komponente handelt, `IContainer.Add` müssen Sie die-Methode im Konstruktor der Komponente aufzurufen.
+
+### <a name="component-name-cannot-be-empty"></a>Der Komponentenname darf nicht leer sein
+
+Dieser Fehler tritt auf, wenn Sie versuchen, eine Komponente in einen leeren Wert umzubenennen.
+
+### <a name="could-not-access-the-variable-variable-name-because-it-has-not-been-initialized-yet"></a>Auf die Variable '\<Variable Name > ' konnte nicht zugegriffen werden, da Sie noch nicht initialisiert wurde.
+
+Dieser Fehler kann aufgrund von zwei Szenarios auftreten. Der Drittanbieter eines Drittanbieters hat ein Problem mit einem Steuerelement oder einer Komponente, die Sie verteilt haben, oder der geschriebene Code weist rekursive Abhängigkeiten zwischen Komponenten auf.
+
+Stellen Sie sicher, dass der Code keine rekursive Abhängigkeit hat, um diesen Fehler zu beheben. Wenn dies nicht der Fall ist, notieren Sie den genauen Text der Fehlermeldung, und wenden Sie sich an den Hersteller der Komponente.
+
+### <a name="could-not-find-type-type-name"></a>Der Typ "\<Typname >" wurde nicht gefunden.
+
+Fehlermeldung: "Der Typ Name > '\<wurde nicht gefunden. Stellen Sie sicher, dass auf die Assembly, die diesen Typ enthält, verwiesen wird. Wenn dieser Typ Teil des Entwicklungsprojekts ist, stellen Sie sicher, dass das Projekt erfolgreich erstellt wurde. "
+
+Dieser Fehler ist aufgetreten, weil kein Verweis gefunden wurde. Stellen Sie sicher, dass auf den in der Fehlermeldung aufgeführten Typ verwiesen wird und dass alle Assemblys, die der Typ erfordert, ebenfalls referenziert werden. Häufig besteht das Problem darin, dass ein Steuerelement in der Projekt Mappe nicht erstellt wurde. Wählen Sie zum Erstellen im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus. Wenn das Steuerelement bereits erstellt wurde, fügen Sie einen Verweis manuell aus dem Kontextmenü des Ordners " **Verweise** " oder " **Abhängigkeiten** " in Projektmappen-Explorer hinzu.
+
+### <a name="could-not-load-type-type-name"></a>Der Typ "\<Typname >" konnte nicht geladen werden.
+
+Fehlermeldung: "Typ '\<Typname > ' konnte nicht geladen werden. Stellen Sie sicher, dass die Assembly, die diesen Typ enthält, den Projekt verweisen hinzugefügt wird. "
+
+Visual Studio hat versucht, eine Methode für die Ereignis Behandlung zu verknüpfen, und mindestens einen Parametertypen für die Methode konnte nicht gefunden werden. Dies wird normalerweise durch einen fehlenden Verweis verursacht. Um diesen Fehler zu beheben, fügen Sie dem Projekt den Verweis mit dem Typ hinzu, und wiederholen Sie den Vorgang.
+
+### <a name="could-not-locate-the-project-item-templates-for-inherited-components"></a>Die Projektelementvorlagen für geerbte Komponenten konnten nicht gefunden werden
+
+Die Vorlagen für geerbte Formulare in Visual Studio sind nicht verfügbar. Wenn dieser Fehler angezeigt wird, melden Sie sich mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="delegate-class-class-name-has-no-invoke-method-is-this-class-a-delegate"></a>Die Delegatklasse "\<Class Name >" hat keine Aufruf Methode. Ist diese Klasse ein Delegat?
+
+Visual Studio hat versucht, einen Ereignishandler zu erstellen, aber es gibt ein Problem mit dem Ereignistyp. Dies kann vorkommen, wenn das Ereignis durch eine nicht CLS-kompatible Sprache erstellt wurde. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="duplicate-declaration-of-member-member-name"></a>Doppelte Deklaration des Members\<"Member Name >".
+
+Dieser Fehler tritt auf, weil eine Member-Variable zweimal deklariert wurde (z. b. `Button1` werden zwei Steuerelemente mit dem Namen im Code deklariert). Namen müssen über geerbte Formulare hinweg eindeutig sein. Außerdem dürfen sich Namen nur in der Groß-/Kleinschreibung unterscheiden
+
+### <a name="error-reading-resources-from-the-resource-file-for-the-culture-culture-name"></a>Fehler beim Lesen der Ressourcen aus der Ressourcen Datei für die\<Kultur "Culture Name >".
+
+Dieser Fehler kann auftreten, wenn eine ungültige RESX-Datei im Projekt vorhanden ist.
+
+So beheben Sie diesen Fehler:
+
+1. Klicken Sie in Projektmappen-Explorer auf die Schaltfläche **alle Dateien anzeigen** , um die der Projekt Mappe zugeordneten RESX-Dateien anzuzeigen.
+2. Laden Sie die RESX-Datei im XML-Editor, indem Sie mit der rechten Maustaste auf die RESX-Datei klicken und **Öffnen**auswählen.
+3. Bearbeiten Sie die RESX-Datei manuell, um die Fehler zu beheben.
+
+### <a name="error-reading-resources-from-the-resource-file-for-the-default-culture-culture-name"></a>Fehler beim Lesen der Ressourcen aus der Ressourcen Datei für die Standard\<Kultur ' Culture Name > '.
+
+Dieser Fehler kann auftreten, wenn im Projekt eine ungültige RESX-Datei für die Standard Kultur vorhanden ist.
+
+So beheben Sie diesen Fehler:
+
+1. Klicken Sie in Projektmappen-Explorer auf die Schaltfläche **alle Dateien anzeigen** , um die der Projekt Mappe zugeordneten RESX-Dateien anzuzeigen.
+2. Laden Sie die RESX-Datei im XML-Editor, indem Sie mit der rechten Maustaste auf die RESX-Datei klicken und **Öffnen**auswählen.
+3. Bearbeiten Sie die RESX-Datei manuell, um die Fehler zu beheben.
+
+### <a name="failed-to-parse-method-method-name"></a>Fehler beim Analysieren der Methode "\<Methodenname >".
+
+Fehlermeldung: "Der Methodenname >" der\<Methode konnte nicht analysiert werden. Der Parser hat den folgenden Fehler gemeldet:\<"Fehler Zeichenfolge >". Überprüfen Sie die Aufgabenliste auf mögliche Fehler. "
+
+Dies ist eine allgemeine Fehlermeldung für Probleme, die während der Verarbeitung auftreten. Diese Fehler sind häufig auf Syntax Fehler zurückzuführen. Informationen zu bestimmten Meldungen im Zusammenhang mit dem Fehler finden Sie in der Aufgabenliste.
+
+### <a name="invalid-component-name-component-name"></a>Ungültiger Komponenten Name:\<' Komponenten Name > '
+
+Sie haben versucht, eine Komponente in einen ungültigen Wert für diese Sprache umzubenennen. Benennen Sie die Komponente so, dass Sie den Benennungs Regeln für diese Sprache entspricht, um diesen Fehler zu beheben.
+
+### <a name="the-type-class-name-is-made-of-several-partial-classes-in-the-same-file"></a>Der Typ "\<Class Name >" besteht aus mehreren partiellen Klassen in derselben Datei.
+
+Wenn Sie eine Klasse in mehreren Dateien mit dem [partiellen](/dotnet/csharp/language-reference/keywords/partial-type) Schlüsselwort definieren, können Sie nur eine partielle Definition in jeder Datei verwenden.
+
+Um diesen Fehler zu beheben, entfernen Sie bis auf eine der partiellen Definitionen der Klasse aus der Datei.
+
+### <a name="the-assembly-assembly-name-could-not-be-found"></a>Die Assembly "\<AssemblyName >" konnte nicht gefunden werden.
+
+Fehlermeldung: "Der AssemblyName > ' der Assembly\<wurde nicht gefunden. Stellen Sie sicher, dass auf die Assembly verwiesen wird. Wenn die Assembly Teil des aktuellen Entwicklungsprojekts ist, stellen Sie sicher, dass das Projekt erstellt wurde. "
+
+Dieser Fehler ähnelt dem "der Typ '\<Typname > ' wurde nicht gefunden", aber dieser Fehler tritt in der Regel aufgrund eines metadatenattributs auf. Überprüfen Sie, ob auf alle von Attributen verwendeten Assemblys verwiesen wird, um diesen Fehler zu beheben.
+
+### <a name="the-assembly-name-assembly-name-is-invalid"></a>Der Assemblyname "\<AssemblyName >" ist ungültig.
+
+Eine Komponente hat eine bestimmte Assembly angefordert, aber der von der Komponente angegebene Name ist kein gültiger AssemblyName. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="the-base-class-class-name-cannot-be-designed"></a>Die "\<Class Name >"-Basisklasse kann nicht entworfen werden.
+
+Die Klasse wurde von Visual Studio geladen, aber die Klasse kann nicht entworfen werden, da der Implementierer der Klasse keinen Designer bereitgestellt hat. Wenn die Klasse einen Designer unterstützt, stellen Sie sicher, dass keine Probleme auftreten, die Probleme bei der Anzeige in einem Designer verursachen, z. b. Compilerfehler. Stellen Sie außerdem sicher, dass alle Verweise auf die Klasse korrekt sind und alle Klassennamen richtig geschrieben sind. Wenn die Klasse nicht Entwurfs fähig ist, bearbeiten Sie Sie in der Code Ansicht.
+
+### <a name="the-base-class-class-name-could-not-be-loaded"></a>Die "\<Class Name >"-Basisklasse konnte nicht geladen werden.
+
+Auf die-Klasse wird im Projekt nicht verwiesen, sodass Sie von Visual Studio nicht geladen werden kann. Fügen Sie einen Verweis auf die-Klasse im Projekt hinzu, und schließen Sie das Windows Forms-Designer Fenster, und öffnen Sie es erneut, um diesen Fehler zu beheben.
+
+### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>Die Klasse "\<Class Name >" kann in dieser Version von Visual Studio nicht entworfen werden.
+
+Der Designer für dieses Steuerelement oder diese Komponente unterstützt nicht die gleichen Typen wie Visual Studio. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="the-class-name-is-not-a-valid-identifier-for-this-language"></a>Der Klassenname ist kein gültiger Bezeichner für diese Sprache
+
+Der Quell Code, der vom Benutzer erstellt wird, hat einen Klassennamen, der für die verwendete Sprache ungültig ist. Benennen Sie die Klasse so, dass Sie den Sprachanforderungen entspricht, um diesen Fehler zu beheben.
+
+### <a name="the-component-cannot-be-added-because-it-contains-a-circular-reference-to-reference-name"></a>Die Komponente kann nicht hinzugefügt werden, da Sie einen Zirkel\<Verweis auf den Verweis Namen > enthält.
+
+Ein Steuerelement oder eine Komponente kann nicht selbst hinzugefügt werden. Eine weitere Situation, in der dies auftreten kann, ist, wenn in der InitializeComponent-Methode eines Formulars (z. b. Form1) Code vorhanden ist, der eine andere Instanz von Form1 erstellt.
+
+### <a name="the-designer-cannot-be-modified-at-this-time"></a>Der Designer kann derzeit nicht geändert werden
+
+Dieser Fehler tritt auf, wenn die Datei im Editor als schreibgeschützt gekennzeichnet ist. Stellen Sie sicher, dass die Datei nicht als schreibgeschützt gekennzeichnet ist und die Anwendung nicht ausgeführt wird.
+
+### <a name="the-designer-could-not-be-shown-for-this-file-because-none-of-the-classes-within-it-can-be-designed"></a>Der Designer konnte für diese Datei nicht angezeigt werden, da keine der enthaltenen Klassen entworfen werden kann.
+
+Dieser Fehler tritt auf, wenn Visual Studio keine Basisklasse finden kann, die die Designer Anforderungen erfüllt. Formulare und Steuerelemente müssen von einer Basisklasse abgeleitet werden, die Designer unterstützt. Wenn Sie von einem geerbten Formular oder Steuerelement ableiten, stellen Sie sicher, dass das Projekt erstellt wurde.
+
+### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>Der Designer für die Basisklasse\<"Class Name >" ist nicht installiert.
+
+Visual Studio konnte den Designer für die Klasse nicht laden. Wenn dieser Fehler angezeigt wird, melden Sie sich mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>Der Designer muss eine Instanz vom Typ "\<Typname >" erstellen, dies ist jedoch nicht möglich, weil der Typ als abstrakt deklariert ist.
+
+Dieser Fehler ist aufgetreten, da die Basisklasse des Objekts, das an den Designer übermittelt wird, [abstrakt](/dotnet/csharp/language-reference/keywords/abstract)ist, was nicht zulässig ist.
+
+### <a name="the-file-could-not-be-loaded-in-the-designer"></a>Die Datei konnte nicht in den Designer geladen werden
+
+Die Basisklasse dieser Datei unterstützt keine Designer. Um dieses Problem zu umgehen, verwenden Sie die Code Ansicht, um an der Datei zu arbeiten. Klicken Sie mit der rechten Maustaste auf die Datei in Projektmappen-Explorer und wählen Sie **Code anzeigen**aus.
+
+### <a name="the-language-for-this-file-does-not-support-the-necessary-code-parsing-and-generation-services"></a>Die Sprache für diese Datei unterstützt die erforderlichen Codeverarbeitungs- und die Generierungsdienste nicht.
+
+Fehlermeldung: "Die Sprache für diese Datei unterstützt die erforderlichen Code-und Generierungs Dienste nicht. Stellen Sie sicher, dass die Datei, die Sie öffnen, Mitglied eines Projekts ist, und versuchen Sie dann erneut, die Datei zu öffnen. "
+
+Dieser Fehler ist wahrscheinlich auf das Öffnen einer Datei zurückzuführen, die sich in einem Projekt befindet, das keine Designer unterstützt.
+
+### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>Die sprach Parser-Klasse\<"Class Name >" ist nicht ordnungsgemäß implementiert.
+
+Fehlermeldung: "Die sprach Parser-Klasse\<' Klassenname > ' ist nicht ordnungsgemäß implementiert. Wenden Sie sich für ein aktualisiertes Parsermodul an den Hersteller. "
+
+Die verwendete Sprache hat eine Designer Klasse registriert, die nicht von der richtigen Basisklasse abgeleitet ist. Wenden Sie sich an den Hersteller der von Ihnen verwendeten Sprache.
+
+### <a name="the-name-name-is-already-used-by-another-object"></a>Der Name "\<Name >" wird bereits von einem anderen Objekt verwendet.
+
+Dies ist ein interner Fehler im Visual Studio-Serialisierungsprogramm. Wenn dieser Fehler angezeigt wird, melden Sie sich mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>Das Objekt "\<Object Name >" implementiert nicht die IComponent-Schnittstelle.
+
+Visual Studio hat versucht, eine Komponente zu erstellen, aber das erstellte Objekt implementiert die <xref:System.ComponentModel.IComponent> -Schnittstelle nicht. Wenden Sie sich für eine Korrektur an den Hersteller der Komponente.
+
+### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>Das Objekt "\<Object Name >" hat für die Eigenschaft "\<Property Name >" den Wert NULL zurückgegeben. Dies ist jedoch nicht zulässig.
+
+Einige .net-Eigenschaften sollten immer ein-Objekt zurückgeben. Beispielsweise sollte die **Controls** -Auflistung eines Formulars immer ein Objekt zurückgeben, auch wenn keine Steuerelemente darin vorhanden sind.
+
+Stellen Sie sicher, dass die im Fehler angegebene Eigenschaft nicht NULL ist, um diesen Fehler zu beheben.
+
+### <a name="the-serialization-data-object-is-not-of-the-proper-type"></a>Das Serialisierungsdatenobjekt hat den falschen Typ
+
+Ein vom Serialisierungsprogramm angebotenes Datenobjekt ist keine Instanz eines Typs, der mit dem aktuellen Serialisierungsprogramm übereinstimmt, das verwendet wird. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="the-service-service-name-is-required-but-could-not-be-located"></a>Der Dienst "\<Service Name >" ist erforderlich, konnte aber nicht gefunden werden.
+
+Fehlermeldung: "Der\<Dienst Name >" ist erforderlich, konnte jedoch nicht gefunden werden. Möglicherweise liegt ein Problem mit Ihrer Visual Studio-Installation vor. "
+
+Ein von Visual Studio benötigtes Dienst ist nicht verfügbar. Wenn Sie ein Projekt laden möchten, das den Designer nicht unterstützt, verwenden Sie den Code-Editor, um die erforderlichen Änderungen vorzunehmen. Wenn dieser Fehler angezeigt wird, melden Sie sich mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="the-service-instance-must-derive-from-or-implement-interface-name"></a>Die Dienst Instanz muss von abgeleitet sein oder "\<Interface Name >" implementieren.
+
+Dieser Fehler zeigt an, dass eine Komponente oder ein Komponenten-Designer die **AddService** -Methode aufgerufen hat, die eine Schnittstelle und ein Objekt erfordert, aber das angegebene Objekt implementiert nicht die angegebene Schnittstelle. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="the-text-in-the-code-window-could-not-be-modified"></a>Der Text im Code-Editor konnte nicht geändert werden
+
+Fehlermeldung: "Der Text im Code Fenster konnte nicht geändert werden. Überprüfen Sie, ob die Datei nicht schreibgeschützt ist und dass ausreichend Speicherplatz vorhanden ist. "
+
+Dieser Fehler tritt auf, wenn Visual Studio eine Datei aufgrund von Speicherplatz oder Arbeitsspeicher Problemen nicht bearbeiten kann oder wenn die Datei als schreibgeschützt gekennzeichnet ist.
+
+### <a name="the-toolbox-enumerator-object-only-supports-retrieving-one-item-at-a-time"></a>Das Toolbox-Enumerationsobjekt unterstützt nur das Abfragen von einem Element gleichzeitig
+
+Wenn dieser Fehler angezeigt wird, melden Sie sich, wenn dieser Fehler angezeigt wird, mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="the-toolbox-item-for-component-name-could-not-be-retrieved-from-the-toolbox"></a>Das Toolbox Element für "\<Component Name >" konnte nicht aus der Toolbox abgerufen werden.
+
+Fehlermeldung: "Das Toolbox Element für"\<Component Name > "konnte nicht aus der Toolbox abgerufen werden. Stellen Sie sicher, dass die Assembly, die das Toolbox Element enthält, ordnungsgemäß installiert ist. Das Toolbox Element hat den folgenden Fehler ausgelöst \<: Fehler Zeichenfolge >. "
+
+Die betreffende Komponente hat eine Ausnahme ausgelöst, als Visual Studio darauf zugegriffen hat. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="the-toolbox-item-for-toolbox-item-name-could-not-be-retrieved-from-the-toolbox"></a>Das Toolbox Element für "\<Toolbox Elementname >" konnte nicht aus der Toolbox abgerufen werden.
+
+Fehlermeldung: "Das Toolbox Element für"\<Toolbox Elementname > "konnte nicht aus der Toolbox abgerufen werden. Entfernen Sie das Element aus der Toolbox, und fügen Sie es wieder hinzu. "
+
+Dieser Fehler tritt auf, wenn die Daten innerhalb des Toolbox Elements beschädigt werden oder sich die Version der Komponente geändert hat. Entfernen Sie das Element aus der Toolbox, und fügen Sie es wieder hinzu.
+
+### <a name="the-type-type-name-could-not-be-found"></a>Der Typ "\<Typname >" konnte nicht gefunden werden.
+
+Fehlermeldung: "Der Typ"\<Typname > "konnte nicht gefunden werden. Stellen Sie sicher, dass auf die Assembly mit dem Typ verwiesen wird. Wenn die Assembly Teil des aktuellen Entwicklungsprojekts ist, stellen Sie sicher, dass das Projekt erstellt wurde. "
+
+Beim Laden des Designers konnte von Visual Studio kein Typ gefunden werden. Stellen Sie sicher, dass auf die Assembly mit dem Typ verwiesen wird. Wenn die Assembly Teil des aktuellen Entwicklungsprojekts ist, stellen Sie sicher, dass das Projekt erstellt wurde.
+
+### <a name="the-type-resolution-service-may-only-be-called-from-the-main-application-thread"></a>Der Typauflösungsdienst kann nur vom Hauptanwendungsthread aufgerufen werden
+
+Visual Studio hat versucht, auf die erforderlichen Ressourcen aus dem falschen Thread zuzugreifen. Dieser Fehler wird angezeigt, wenn der Code, der zum Erstellen des Designers verwendet wurde, den Typauflösungs Dienst von einem anderen Thread als dem Hauptanwendungs Thread aufgerufen hat. Um diesen Fehler zu beheben, müssen Sie den Dienst aus dem richtigen Thread abrufen oder den Hersteller der Komponente kontaktieren.
+
+### <a name="the-variable-variable-name-is-either-undeclared-or-was-never-assigned"></a>Die Variable "\<Variable Name >" ist entweder nicht deklariert oder wurde nie zugewiesen.
+
+Der Quellcode enthält einen Verweis auf eine Variable, z. b. **Button1**, die nicht deklariert oder zugewiesen ist. Wenn die Variable nicht zugewiesen wurde, wird diese Meldung als Warnung, nicht als Fehler angezeigt.
+
+### <a name="there-is-already-a-command-handler-for-the-menu-command-menu-command-name"></a>Es ist bereits ein Befehls Handler für den Menübefehl "\<Menübefehls Name >" vorhanden.
+
+Dieser Fehler tritt auf, wenn ein Drittanbieter-Designer einen Befehl hinzufügt, der bereits über einen Handler für die Befehls Tabelle verfügt. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="there-is-already-a-component-named-component-name"></a>Es ist bereits eine Komponente mit dem\<Namen "Component Name >" vorhanden.
+
+Fehlermeldung: "Es ist bereits eine Komponente mit dem\<Namen" Component Name > "vorhanden. Komponenten müssen eindeutige Namen aufweisen, und bei Namen darf die Groß-/Kleinschreibung nicht beachtet werden. Ein Name kann auch nicht mit dem Namen einer Komponente in einer geerbten Klasse in Konflikt stehen. "
+
+Diese Fehlermeldung wird angezeigt, wenn der Name einer Komponente im Eigenschaftenfenster geändert wurde. Stellen Sie sicher, dass alle Komponentennamen eindeutig sind, nicht zwischen Groß-und Kleinschreibung unterliegen und nicht mit den Namen von Komponenten in den geerbten Klassen in Konflikt stehen, um diesen Fehler zu beheben.
+
+### <a name="there-is-already-a-toolbox-item-creator-registered-for-the-format-format-name"></a>Es ist bereits ein Toolbox Element-Ersteller für das Format\<"Format Name >" registriert.
+
+Eine Drittanbieter Komponente hat einen Rückruf an ein Element auf einer Toolbox Registerkarte vorgenommen, aber das Element enthielt bereits einen Rückruf. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="this-language-engine-does-not-support-a-codemodel-with-which-to-load-a-designer"></a>Ein Codemodell, mit dem ein Designer geladen wird, wird von dieser Sprach-Engine nicht unterstützt
+
+Diese Meldung ähnelt der Meldung "die Sprache für diese Datei unterstützt nicht die erforderliche Code-und Generierungs Dienste", aber diese Meldung enthält ein internes Registrierungsproblem. Wenn dieser Fehler angezeigt wird, melden Sie sich, wenn dieser Fehler angezeigt wird, mit " [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)" an.
+
+### <a name="type-type-name-does-not-have-a-constructor-with-parameters-of-types-parameter-type-names"></a>Der Typ\<"Typname\>" hat keinen Konstruktor mit Parametern vom Typ "\<Parametertyp Namen >".
+
+Visual Studio konnte keinen [Konstruktor](/dotnet/csharp/programming-guide/classes-and-structs/constructors) finden, der übereinstimmende Parameter enthielt. Dies kann das Ergebnis sein, wenn ein Konstruktor mit anderen Typen als den erforderlichen Typen bereitgestellt wird. Ein **punktkonstruktor** kann z. b. zwei ganze Zahlen annehmen. Wenn Sie Gleit Komma Zahlen angegeben haben, wird dieser Fehler ausgelöst.
+
+Um diesen Fehler zu beheben, verwenden Sie einen anderen Konstruktor, oder wandeln Sie die Parametertypen explizit um, damit Sie mit den vom Konstruktor bereitgestellten Typen identisch sind.
+
+### <a name="unable-to-add-reference-reference-name-to-the-current-application"></a>Verweis Name "\<Verweis Name >" kann nicht zur aktuellen Anwendung hinzugefügt werden.
+
+Fehlermeldung: "Verweis Name >" kann\<nicht zur aktuellen Anwendung hinzugefügt werden. Überprüfen Sie, ob nicht bereits\<auf eine andere Version von "Verweis Name >" verwiesen wird.
+
+Visual Studio kann keinen Verweis hinzufügen. Um diesen Fehler zu beheben, überprüfen Sie, ob nicht bereits auf eine andere Version des Verweises verwiesen wird.
+
+### <a name="unable-to-check-out-the-current-file"></a>Die aktuelle Datei konnte nicht ausgecheckt werden
+
+Fehlermeldung: "Die aktuelle Datei kann nicht ausgecheckt werden. Möglicherweise ist die Datei gesperrt, oder Sie müssen die Datei möglicherweise manuell auschecken. "
+
+Dieser Fehler tritt auf, wenn Sie eine aktuell eingecheckte Datei in die Quell Code Verwaltung ändern. In der Regel zeigt Visual Studio das Dialogfeld zum Auschecken von Dateien an, sodass der Benutzer die Datei Auschecken kann. Dieses Mal wurde die Datei nicht ausgecheckt, möglicherweise aufgrund eines Mergekonflikts beim Auschecken. Stellen Sie sicher, dass die Datei nicht gesperrt ist, und versuchen Sie dann, die Datei manuell auszuchecken, um diesen Fehler zu beheben.
+
+### <a name="unable-to-find-page-named-options-dialog-box-tab-name"></a>Die Seite mit dem Namen '\<Options Dialog Box Tab Name > ' wurde nicht gefunden.
+
+Dieser Fehler tritt auf, wenn ein Komponenten-Designer den Zugriff auf eine Seite über das Dialogfeld Optionen unter Verwendung eines nicht vorhandenen namens anfordert. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="unable-to-find-property-property-name-on-page-options-dialog-box-tab-name"></a>Die Eigenschaft "\<Eigenschaftsname >" auf der Seite "\<Optionen" des Dialog Felds "Optionen" > "wurde nicht gefunden.
+
+Dieser Fehler tritt auf, wenn ein Komponenten-Designer den Zugriff auf einen bestimmten Wert auf einer Seite im Dialogfeld Optionen anfordert, dieser Wert jedoch nicht vorhanden ist. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="visual-studio-cannot-open-a-designer-for-the-file-because-the-class-within-it-does-not-inherit-from-a-class-that-can-be-visually-designed"></a>Visual Studio kann für die Datei keine Designer öffnen, da die Klasse innerhalb der Datei nicht von einer Klasse erbt, die mit einem Designer bearbeitet werden kann
+
+Die Klasse wurde von Visual Studio geladen, aber der Designer für diese Klasse konnte nicht geladen werden. Visual Studio erfordert, dass Designer die erste Klasse in einer Datei verwenden. Verschieben Sie den Klassen Code so, dass er die erste Klasse in der Datei ist, und laden Sie den Designer dann erneut, um diesen Fehler zu beheben.
+
+### <a name="visual-studio-cannot-save-or-load-instances-of-the-type-type-name"></a>Visual Studio kann keine Instanzen vom Typ "\<Typname >" Speichern oder laden.
+
+Dies ist ein Problem mit einer Drittanbieter Komponente. Wenden Sie sich an den Komponentenhersteller.
+
+### <a name="visual-studio-is-unable-to-open-document-name-in-design-view"></a>In Visual Studio kann "\<Dokument Name >" in nicht geöffnet werden Designansicht
+
+Fehlermeldung: "In Visual Studio kann"\<Dokument Name > "nicht in Designansicht geöffnet werden. Für den Dateityp ist kein Parser installiert. "
+
+Dieser Fehler zeigt an, dass die Sprache des Projekts keinen Designer unterstützt und beim Versuch, eine Datei im Dialogfeld Datei öffnen oder in Projektmappen-Explorer zu öffnen. Bearbeiten Sie die Datei stattdessen in der Code Ansicht.
+
+### <a name="visual-studio-was-unable-to-find-a-designer-for-classes-of-type-type-name"></a>Visual Studio konnte keinen Designer für Klassen vom Typ "\<Typname >" finden.
+
+Die Klasse wurde von Visual Studio geladen, aber die Klasse kann nicht entworfen werden. Bearbeiten Sie stattdessen die-Klasse in der Code Ansicht, indem Sie mit der rechten Maustaste auf die Klasse klicken und **Code anzeigen**auswählen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Problembehandlung bei der Entwurfszeit Entwicklung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](troubleshooting-control-and-component-authoring.md)
-- [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
-- [Fehlermeldungen im Windows Forms-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
+- [Entwickeln von Windows Forms-Steuerelementen mithilfe des Designers](developing-windows-forms-controls-at-design-time.md)
+- [Windows Forms-Designer Forum](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

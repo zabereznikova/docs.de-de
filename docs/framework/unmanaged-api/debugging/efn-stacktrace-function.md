@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687fdd0735e6cb0f3a727c8a2da3cf33bffb6a39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9035d9a53c4b0c8822b79e641aef092b4a48c418
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738980"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895046"
 ---
-# <a name="efnstacktrace-function"></a>\_EFN\_StackTrace-Funktion
+# <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace-Funktion
 Stellt eine Textdarstellung einer verwalteten Stapelüberwachung und ein Array von `CONTEXT`-Datensätzen bereit, einen Datensatz für jeden Übergang zwischen nicht verwaltetem und verwaltetem Code.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,60 +42,60 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="parameters"></a>Parameter  
  `Client`  
- [in] Der Client, der gedebuggt wird.  
+ in Der Client, der deentschlgt wird.  
   
  `wszTextOut`  
- [out] Der Text-Darstellung der stapelüberwachung.  
+ vorgenommen Die Textdarstellung der Stapel Überwachung.  
   
  `puiTextLength`  
- [out] Ein Zeiger auf die Anzahl der Zeichen in `wszTextOut`.  
+ vorgenommen Ein Zeiger auf die Anzahl von Zeichen in `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Das Array von Übergang Kontexte.  
+ vorgenommen Das Array von Übergangs Kontexten.  
   
  `puiTransitionContextCount`  
- [out] Ein Zeiger auf die Anzahl der von Übergangskontexten im Array.  
+ vorgenommen Ein Zeiger auf die Anzahl der Übergangs Kontexte im Array.  
   
  `uiSizeOfContext`  
- [in] Die Größe der Context-Struktur.  
+ in Die Größe der Kontext Struktur.  
   
  `Flags`  
- [in] Auf 0 oder SOS_STACKTRACE_SHOWADDRESSES (0 x 01) festgelegt, um die EBP-Register und die EINGABETASTE Stack Pointer (ESP) vor jeder `module!functionname` Zeile.  
+ in Legen Sie entweder auf 0 oder SOS_STACKTRACE_SHOWADDRESSES (0x01) fest, um das EBP-Register und den Eingabe Stapelzeiger (ESP) vor `module!functionname` jeder Zeile anzuzeigen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_EFN_StackTrace` Struktur kann von einer programmgesteuerten Schnittstelle von WinDbg aufgerufen werden. Parameter werden wie folgt verwendet:  
+ Die `_EFN_StackTrace` Struktur kann von einer WinDbg-programmgesteuerten Schnittstelle aufgerufen werden. Parameter werden wie folgt verwendet:  
   
-- Wenn `wszTextOut` ist null und `puiTextLength` ist nicht null ist, die Funktion gibt die Länge der Zeichenfolge in `puiTextLength`.  
+- Wenn `wszTextOut` NULL ist und `puiTextLength` nicht NULL ist, gibt die Funktion die Zeichen folgen Länge `puiTextLength`in zurück.  
   
-- Wenn `wszTextOut` ist nicht null ist, speichert die Funktion Text in `wszTextOut` bis zu dessen Speicherort vom `puiTextLength`. Es zurückgegeben war es genügend Platz im Puffer oder E_OUTOFMEMORY zurückgegeben, wenn der Puffer nicht groß genug war erfolgreich.  
+- Wenn `wszTextOut` nicht NULL ist, speichert die Funktion Text in `wszTextOut` bis zu dem Speicherort, `puiTextLength`der von angegeben wird. Es wird erfolgreich zurückgegeben, wenn genügend Platz im Puffer vorhanden ist, oder gibt E_OUTOFMEMORY zurück, wenn der Puffer nicht lang genug ist.  
   
-- Der Übergangsteil der Funktion wird ignoriert, wenn `pTransitionContexts` und `puiTransitionContextCount` beide null sind. In diesem Fall stellt die Funktion Aufrufern nur die Funktionsnamen Textausgabe.  
+- Der Übergangsteil der Funktion wird ignoriert, wenn `pTransitionContexts` und `puiTransitionContextCount` beide NULL sind. In diesem Fall stellt die-Funktion Aufrufern nur die Textausgabe der Funktionsnamen bereit.  
   
-- Wenn `pTransitionContexts` ist null und `puiTransitionContextCount` ist nicht null ist, gibt die Funktion die erforderliche Anzahl von Kontext-Einträge im `puiTransitionContextCount`.  
+- Wenn `pTransitionContexts` NULL ist und `puiTransitionContextCount` nicht NULL ist, gibt die-Funktion die erforderliche Anzahl von Kontext Einträgen `puiTransitionContextCount`in zurück.  
   
-- Wenn `pTransitionContexts` ist nicht null ist, die Funktion behandelt es als ein Array von Strukturen der Länge `puiTransitionContextCount`. Die Größe der Struktur erhält von `uiSizeOfContext`, muss die Größe des [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) oder `CONTEXT` für die Architektur.  
+- Wenn `pTransitionContexts` nicht NULL ist, behandelt die Funktion Sie als Array von Längen `puiTransitionContextCount`-Strukturen. Die Struktur Größe wird von `uiSizeOfContext`angegeben, und es muss sich um die Größe von [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) oder `CONTEXT` für die-Architektur handeln.  
   
-- `wszTextOut` Im folgenden Format geschrieben:  
+- `wszTextOut`wird im folgenden Format geschrieben:  
   
-    ```  
+    ```output  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
     ...  
     (TRANSITION)  
     ..."  
     ```  
   
-- Wenn der Offset in hexadezimal 0 x 0 ist, wird kein Offset geschrieben.  
+- Wenn der Offset in Hex 0x0 ist, wird kein Offset geschrieben.  
   
-- Es ist kein verwalteter Code für den Thread aktuell im Kontext, gibt die Funktion SOS_E_NOMANAGEDCODE zurück.  
+- Wenn im Thread derzeit kein verwalteter Code vorhanden ist, gibt die Funktion SOS_E_NOMANAGEDCODE zurück.  
   
-- Die `Flags` Parameter ist entweder 0 oder SOS_STACKTRACE_SHOWADDRESSES um EBP und ESP vor jeder `module!functionname` Zeile. Standardmäßig ist es 0.  
+- Der `Flags` -Parameter ist entweder 0 oder SOS_STACKTRACE_SHOWADDRESSES, um EBP und ESP vor jeder `module!functionname` Zeile anzuzeigen. Standardmäßig ist der Wert 0.  
   
-    ```  
+    ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace.h  
   

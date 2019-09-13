@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 779785e9793939cf121fedf99b23a07288173637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1d9b12a46d674bf591457cdc90c66fc16818734
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967605"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927048"
 ---
 # <a name="caching-in-net-framework-applications"></a>Caching in .NET Framework-Anwendungen
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.  
@@ -69,7 +69,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
   
 - Erstellen Sie eine benutzerdefinierte Klasse, die aus der <xref:System.Runtime.Caching.ObjectCache>-Klasse abgeleitet ist, und geben Sie eine benutzerdefinierte Cacheimplementierung in der abgeleiteten Klasse an.  
   
-- Erstellen Sie eine Klasse, die aus der <xref:System.Runtime.Caching.MemoryCache>-Klasse abgleitet ist, und erweitern Sie die abgeleitete Klasse, oder passen Sie sie an. Ein Beispiel hierzu finden Sie unter [Zwischenspeichern von Anwendungsdaten mithilfe mehrerer Cacheobjekte in einer ASP.NET-Anwendung](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+- Erstellen Sie eine Klasse, die aus der <xref:System.Runtime.Caching.MemoryCache>-Klasse abgleitet ist, und erweitern Sie die abgeleitete Klasse, oder passen Sie sie an. Ein Beispiel hierzu finden Sie unter [Zwischenspeichern von Anwendungsdaten mithilfe mehrerer Cacheobjekte in einer ASP.NET-Anwendung](https://blogs.msdn.microsoft.com/aspnetue/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application/).  
   
 - Erstellen Sie eine Klasse, die aus der <xref:System.Web.Caching.OutputCacheProvider>-Klasse abgeleitet ist, und konfigurieren Sie die Anwendung zur Verwendung des benutzerdefinierten Ausgabecacheanbieters.  
   

@@ -2,12 +2,12 @@
 title: Beispiel für AJAX-Dienst mit JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 62c573a844ce5382308814342330f778fa041a69
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eadb884667a0b29ef36056f0c3bec4675b7f1b05
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045193"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895148"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Beispiel für AJAX-Dienst mit JSON und XML
 
@@ -22,9 +22,7 @@ In diesem Beispiel wird gezeigt, wie der Antworttyp eines Vorgangs zwischen JSON
 
 Um die Verwendung von Nicht-ASP.NET AJAX-Clients zu aktivieren, verwenden Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nicht <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) in der SVC-Datei. <xref:System.ServiceModel.Activation.WebServiceHostFactory> fügt dem Dienst einen <xref:System.ServiceModel.Description.WebHttpEndpoint>-Standardendpunkt hinzu. Der Endpunkt wird mit einer leeren Adresse relativ zur SVC-Datei konfiguriert. Dies bedeutet, dass die Adresse des Dienes `http://localhost/ServiceModelSamples/service.svc`ist, ohne dass zusätzliche Suffixe den Vorgangs Namen haben.
 
-```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>
-```
+`<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>`
 
 Im folgenden Abschnitt in der Datei Web.config können zusätzliche Konfigurationsänderungen am Endpunkt vorgenommen werden. Wenn keine zusätzlichen Änderungen erforderlich sind, kann der Abschnitt entfernt werden.
 

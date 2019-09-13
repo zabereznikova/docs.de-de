@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003745"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894696"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
   
  Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Sie können z. B. Ladeprogrammereignisse sammeln, indem Sie das Schlüsselwort `LoaderKeyword` aktivieren.  
   
- Event Tracing for Windows (ETW)-Ereignisse werden in einer Datei protokolliert mit einer ETL-Erweiterung, die später in durch Trennzeichen getrennte (.csv)-Dateien nach Bedarf nachbearbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Ereignisse der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) werden in einer Datei mit der Erweiterung ETL protokolliert, die später nach Bedarf in durch Trennzeichen getrennten Werten (CSV-Dateien) verarbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Der Laufzeitanbieter  
  Der Laufzeitanbieter ist der zentrale CLR-ETW-Anbieter.  
@@ -60,7 +60,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
 1. Aktivieren Sie die ETW-Protokollierung mit dem CLR-Laufzeitanbieter:  
   
-    ```  
+    ```console
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
     ```  
   
@@ -68,7 +68,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
 2. Um die Profilerstellung zu beenden, während der Prozess weiterhin ausgeführt wird, starten Sie den Rundownanbieter, um die `DCEnd`-Ereignisse zu erfassen:  
   
-    ```  
+    ```console
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
     ```  
   
@@ -76,14 +76,14 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
 3. Deaktivieren Sie die gesamte ETW-Profilerstellung:  
   
-    ```  
+    ```console
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
 4. Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
   
-    ```  
+    ```console
     xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   

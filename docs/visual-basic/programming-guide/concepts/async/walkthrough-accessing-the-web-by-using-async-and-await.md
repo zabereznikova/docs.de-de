@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106954"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928446"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)
 
@@ -22,6 +22,7 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie Folgendes 
 Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 
 > [!div class="checklist"]
+>
 > - [Erstellen einer WPF-Anwendung](#create-a-wpf-application)
 > - [Entwerfen eines einfachen WPF-MainWindow](#design-a-simple-wpf-mainwindow)
 > - [Verweis hinzufügen](#add-a-reference)

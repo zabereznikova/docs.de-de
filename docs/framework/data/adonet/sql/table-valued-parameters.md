@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c01453556a71925c322e9f9aef8065cbddb3540
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780690"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894389"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus einer Clientanwendung nach SQL Server zu marshallen, ohne dass mehrere Roundtrips oder eine besondere serverseitige Logik für die Verarbeitung der Daten notwendig ist. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und diese Daten in einem einzelnen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit Transact-SQL verarbeitet werden kann.  
@@ -43,14 +43,14 @@ Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus ein
   
  Die folgende Anweisung erstellt einen Tabellentyp mit dem Namen &lt;legacyBold&gt;CategoryTableType&lt;/legacyBold&gt;, der aus den Spalten &lt;legacyBold&gt;CategoryID&lt;/legacyBold&gt; und &lt;legacyBold&gt;CategoryName&lt;/legacyBold&gt; besteht:  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  Nach der Erstellung eines Tabellentyps können Tabellenwertparameter auf Grundlage dieses Typs deklariert werden. Das folgende Transact-SQL-Fragment veranschaulicht, wie ein Tabellenwertparameter in der Definition einer gespeicherten Prozedur deklariert wird. Beachten Sie, dass das READONLY-Schlüsselwort zum Deklarieren eines Tabellenwertparameters erforderlich ist.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  Mit der folgenden UPDATE-Anweisung in Transact-SQL wird veranschaulicht, wie ein Tabellenwertparameter durch einen Join mit der Categories-Tabelle verwendet wird. Wenn Sie einen Tabellenwertparameter mit einem JOIN in einer FROM-Klausel verwenden, müssen Sie diesen ebenfalls mit einem Alias versehen. Dies ist im folgenden Beispiel dargestellt, in dem der Tabellenwertparameter mit dem Alias "ec" versehen ist:  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -69,7 +69,7 @@ UPDATE dbo.Categories
   
  Dieses Transact-SQL-Beispiel veranschaulicht, wie Zeilen aus einem Tabellenwertparameter ausgewählt werden, um einen INSERT-Vorgang in einem einzelnen mengenbasierten Vorgang auszuführen.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  

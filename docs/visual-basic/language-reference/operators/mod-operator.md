@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: dc1e866836bb7420ffe17210b5be7a5e1d4048d0
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 08e3eec08ba099e6f5c7796a459c55de09afa917
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929335"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod-Operator (Visual Basic)
 
@@ -84,6 +84,7 @@ Verwandte Operatoren umfassen Folgendes:
 ## <a name="attempted-division-by-zero"></a>Versuchte Division durch Null
 
 Wenn `number2` der Wert 0 (null) ergibt, `Mod` hängt das Verhalten des-Operators vom Datentyp der Operanden ab:
+
 - Eine ganzzahlige Division <xref:System.DivideByZeroException> löst eine `number2` -Ausnahme aus, wenn nicht in der Kompilierzeit bestimmt werden kann `BC30542 Division by zero occurred while evaluating this expression` , `number2` und generiert einen Kompilierzeitfehler, wenn zur Kompilierzeit NULL ergibt.
 - Eine Gleit Komma Division gibt zurück <xref:System.Double.NaN?displayProperty=nameWithType>.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts'
+title: 'Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation Diensts'
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,75 +8,78 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 984c5e73a8efc4e9c2d487485267868ffa2f60f3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929102"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928723"
 ---
-# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Tutorial: Hosten und Ausführen eines grundlegenden Windows Communication Foundation Diensts
 
-In diesem Tutorial wird beschrieben, die dritte von fünf Schritte zur Erstellung einer grundlegenden Windows Communication Foundation (WCF)-Anwendung. Eine Übersicht über die Lernprogramme, finden Sie unter [Lernprogramm: Erste Schritte mit Windows Communication Foundation-Anwendungen](getting-started-tutorial.md).
+In diesem Tutorial wird die dritte von fünf Aufgaben beschrieben, die zum Erstellen einer Basic Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Eine Übersicht über die Tutorials finden [Sie unter Tutorial: Beginnen Sie mit Windows Communication Foundation Anwendungen](getting-started-tutorial.md).
 
-Die nächste Aufgabe zum Erstellen einer WCF-Anwendung wird zum Hosten eines WCF-Diensts in einer Konsolenanwendung. Ein WCF-Dienst verfügbar macht, eine oder mehrere *Endpunkte*, von denen jeder macht eine oder mehrere Dienstvorgänge verfügbar. Ein Dienstendpunkt gibt die folgenden Informationen an: 
-- Eine Adresse, in dem Sie den Dienst finden können.
-- Eine Bindung, die Informationen enthält, die beschreibt, wie ein Client mit dem Dienst kommunizieren muss. 
-- Ein Vertrag, der die Funktionalität definiert, die der Dienst seinen Clients bereitstellt.
+Die nächste Aufgabe zum Erstellen einer WCF-Anwendung besteht darin, einen WCF-Dienst in einer Konsolenanwendung zu hosten. Ein WCF-Dienst macht einen oder mehrere *Endpunkte*verfügbar, von denen jeder einen oder mehrere Dienst Vorgänge verfügbar macht. Ein Dienst Endpunkt gibt die folgenden Informationen an:
+
+- Eine Adresse, an der Sie den Dienst finden können.
+- Eine Bindung, die die Informationen enthält, die beschreiben, wie ein Client mit dem Dienst kommunizieren muss. 
+- Ein Vertrag, der die Funktionalität definiert, die der Dienst für seine Clients bereitstellt.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> - Erstellen Sie und konfigurieren Sie ein Konsolenanwendungsprojekt für das Hosten eines WCF-Diensts.
-> - Fügen Sie Code zum Hosten des WCF-Diensts.
-> - Aktualisieren Sie die Konfigurationsdatei an.
-> - Starten Sie den WCF-Dienst, und überprüfen Sie, ob er ausgeführt wird.
+>
+> - Erstellen und konfigurieren Sie ein Konsolen-App-Projekt zum Hosting eines WCF-Diensts.
+> - Hinzufügen von Code zum Hosten des WCF-Diensts
+> - Aktualisieren Sie die Konfigurationsdatei.
+> - Starten Sie den WCF-Dienst, und prüfen Sie, ob er ausgeführt wird
 
-## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Erstellen Sie und konfigurieren Sie ein Konsolenanwendungsprojekt zum Hosten des Diensts
+## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Erstellen und Konfigurieren eines Konsolen-App-Projekts zum Hosting des Diensts
 
-1. Erstellen Sie ein Konsolenanwendungsprojekt in Visual Studio: 
+1. Erstellen eines Konsolen-App-Projekts in Visual Studio: 
  
-    1. Von der **Datei** , wählen Sie im Menü **öffnen** > **Projekt/Projektmappe** und navigieren Sie zu der **GettingStarted** Lösung Sie zuvor erstellt haben (*GettingStarted.sln*). Wählen Sie **öffnen**.
+    1. Wählen Sie im Menü **Datei** die Option**Projekt/Projekt** Mappe **Öffnen** > aus, und navigieren Sie zur zuvor erstellten Lösung **GettingStarted** (*GettingStarted. sln*). Wählen Sie **Öffnen**aus.
 
-    2. Von der **Ansicht** , wählen Sie im Menü **Projektmappen-Explorer**.
+    2. Wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer**aus.
     
-    3. In der **Projektmappen-Explorer** wählen Sie im Fenster der **GettingStarted** -Lösung (obersten Knoten), und wählen Sie dann **hinzufügen** > **neues Projekt** aus dem Kontextmenü. 
+    3. Wählen Sie im Fenster **Projektmappen-Explorer** die Lösung **GettingStarted** (oberer Knoten) aus, und klicken Sie dann im Kontextmenü auf**Neues Projekt** **Hinzufügen** > . 
 
-    4. In der **neues Projekt hinzufügen** Fenster auf der linken Seite auf die **Windows Desktop** unter Kategorie **Visual C#**  oder **Visual Basic**. 
+    4. Wählen Sie im Fenster **Neues Projekt hinzufügen** auf der linken Seite unter **Visual C#**  oder **Visual Basic**die Kategorie **Windows-Desktop** aus. 
 
-    5. Wählen Sie die **Konsolen-App ((.NET Framework)** Vorlage, und geben Sie *GettingStartedHost* für die **Namen**. Klicken Sie auf **OK**.
+    5. Wählen Sie die Vorlage **Konsolen-app (.NET Framework)** aus, und geben Sie als **Name den Namen** *gettingstartedhost* ein. Klicken Sie auf **OK**.
 
-2. Fügen Sie einen Verweis in der **GettingStartedHost** Projekt die **GettingStartedLib** Projekt: 
+2. Fügen Sie dem **gettingstartedlib** -Projekt einen Verweis im **gettingstartedhost** -Projekt hinzu: 
 
-    1. In der **Projektmappen-Explorer** wählen Sie im Fenster der **Verweise** Ordner unter dem **GettingStartedHost** Projekt, und wählen Sie dann **"Verweis hinzufügen"** aus dem Kontextmenü. 
+    1. Wählen Sie im Fenster **Projektmappen-Explorer** den Ordner **Verweise** unter dem **gettingstartedhost** -Projekt aus, und klicken Sie dann im Kontextmenü auf **Verweis hinzufügen** . 
 
-    2. In der **Verweis hinzufügen** Dialogfeld unter **Projekte** wählen Sie auf der linken Seite des Fensters **Lösung**. 
+    2. **Wählen Sie**im Dialogfeld **Verweis hinzufügen** unter Projekte auf der linken Seite des Fensters **Projekt** Mappe aus. 
  
-    3. Wählen Sie **GettingStartedLib** im mittleren Abschnitt des Fensters, und wählen Sie dann **OK**. 
+    3. Wählen Sie im mittleren Bereich des Fensters **gettingstartedlib** aus, und klicken Sie dann auf **OK**. 
 
-       Dadurch wird die in definierten Typen der **GettingStartedLib** Projekt zur Verfügung, um die **GettingStartedHost** Projekt.
+       Durch diese Aktion werden die Typen, die im **gettingstartedlib** -Projekt definiert sind, für das **gettingstartedhost** -Projekt verfügbar.
 
-3. Fügen Sie einen Verweis in der **GettingStartedHost** Projekt die <xref:System.ServiceModel> Assembly: 
+3. Fügen Sie der <xref:System.ServiceModel> Assembly einen Verweis im **gettingstartedhost** -Projekt hinzu: 
 
-    1. In der **Projektmappen-Explorer** wählen Sie im Fenster der **Verweise** Ordner unter dem **GettingStartedHost** Projekt, und wählen Sie dann **"Verweis hinzufügen"** aus dem Kontextmenü.
+    1. Wählen Sie im Fenster **Projektmappen-Explorer** den Ordner **Verweise** unter dem **gettingstartedhost** -Projekt aus, und klicken Sie dann im Kontextmenü auf **Verweis hinzufügen** .
     
-    2. In der **Verweis hinzufügen** Fenster unter **Assemblys** wählen Sie auf der linken Seite des Fensters **Framework**. 
+    2. Wählen Sie im Fenster **Verweis hinzufügen** unter Assemblys auf der linken Seite des Fensters **Framework** **aus.** 
 
-    3. Wählen Sie **System.ServiceModel**, und wählen Sie dann **OK**. 
+    3. Wählen Sie **System. Service Model**aus, und klicken Sie dann auf **OK**. 
     
-    4. Speichern Sie die Projektmappe durch Auswahl **Datei** > **Alles speichern**.
+    4. Speichern Sie die Projekt Mappe, indem Sie **Datei** > **Alle speichern**auswählen.
 
-## <a name="add-code-to-host-the-service"></a>Fügen Sie Code zum Hosten des Diensts
+## <a name="add-code-to-host-the-service"></a>Hinzufügen von Code zum Hosten des Diensts
 
-Um den Dienst zu hosten, fügen Sie Code aus, um die folgenden Schritte ausführen: 
-   1. Erstellen Sie einen URI für die Basisadresse.
-   2. Erstellen Sie eine Klasseninstanz für den Dienst hostet.
-   3. Erstellen eines Dienstendpunkts.
-   4. Aktivieren des Metadatenaustauschs
-   5. Öffnen Sie den Diensthost zum Lauschen auf eingehender Nachrichten.
+Um den Dienst zu hosten, fügen Sie Code hinzu, um die folgenden Schritte auszuführen: 
+
+1. Erstellen Sie einen URI für die Basisadresse.
+2. Erstellen Sie eine Klasseninstanz für das Hosting des Diensts.
+3. Erstellen Sie einen Dienst Endpunkt.
+4. Aktivieren des Metadatenaustauschs
+5. Öffnen Sie den Dienst Host, um auf eingehende Nachrichten zu lauschen.
   
-Stellen Sie die folgenden Änderungen an den Code ein:
+Nehmen Sie die folgenden Änderungen am Code vor:
 
-1. Öffnen der **"Program.cs"** oder **"Module1.vb"** Datei die **GettingStartedHost** Projekts, und Ersetzen Sie den Code durch den folgenden Code:
+1. Öffnen Sie die Datei **Program.cs** oder **Module1. vb** im **gettingstartedhost** -Projekt, und ersetzen Sie den Code durch den folgenden Code:
 
     ```csharp
     using System;
@@ -173,63 +176,65 @@ Stellen Sie die folgenden Änderungen an den Code ein:
     End Module
     ```
     
-    Informationen dazu, wie dieser Code funktioniert, finden Sie unter [-Dienst hosten der Anwendung, Schritte](#service-hosting-program-steps).
+    Informationen dazu, wie dieser Code funktioniert, finden Sie unter [Service Hosting Program Steps](#service-hosting-program-steps).
 
-2. Aktualisieren Sie die Projekteigenschaften an:
+2. Aktualisieren Sie die Projekteigenschaften:
 
-   1. In der **Projektmappen-Explorer** wählen Sie im Fenster der **GettingStartedHost** Ordner, und wählen Sie dann **Eigenschaften** aus dem Kontextmenü.
+   1. Wählen Sie im Fenster **Projektmappen-Explorer** den Ordner **gettingstartedhost** aus, und klicken Sie dann im Kontextmenü auf **Eigenschaften** .
 
-   2. Auf der **GettingStartedHost** Seite "Eigenschaften", wählen die **Anwendung** Registerkarte:
+   2. Wählen Sie auf der Eigenschaften Seite von **gettingstartedhost** die Registerkarte **Anwendung** aus:
 
-      - Für C# -Projekten auf **GettingStartedHost.Program** aus der **Startobjekt** Liste.
+      - Wählen C# Sie für Projekte in der Liste **Start Objekt** den Befehl **gettingstartedhost. Program** aus.
 
-      - Wählen Sie für Visual Basic-Projekten **Service.Program** aus der **Startobjekt** Liste.
+      - Wählen Sie für Visual Basic Projekte in der Liste **Start Objekt** den Typ **Service. Program** aus.
 
-   3. Von der **Datei** , wählen Sie im Menü **Alles speichern**.
+   3. Wählen Sie im Menü **Datei** die Option **Alle speichern**aus.
 
-## <a name="verify-the-service-is-working"></a>Stellen Sie sicher, dass der Dienst funktioniert.
+## <a name="verify-the-service-is-working"></a>Überprüfen, ob der Dienst funktioniert
 
-1. Erstellen Sie die Projektmappe, und führen Sie die **GettingStartedHost** Console Application "aus" in Visual Studio. 
+1. Erstellen Sie die Projekt Mappe, und führen Sie dann die **gettingstartedhost** -Konsolenanwendung in Visual Studio aus. 
 
-    Der Dienst muss mit Administratorrechten ausgeführt werden. Da Sie beim Ausführen von Visual Studio mit Administratorrechten geöffnet **GettingStartedHost** in Visual Studio mit Administratorrechten sowie die Anwendung ausgeführt wird. Als Alternative können Sie eine neue Eingabeaufforderung als Administrator öffnen (Wählen Sie **weitere** > **als Administrator ausführen** aus dem Kontextmenü), und führen Sie **GettingStartedHost.exe**  darin.
+    Der Dienst muss mit Administratorrechten ausgeführt werden. Da Sie Visual Studio mit Administratorrechten geöffnet haben, wird die Anwendung beim Ausführen von **gettingstartedhost** in Visual Studio ebenfalls mit Administratorrechten ausgeführt. Als Alternative können Sie eine neue Eingabeaufforderung als Administrator öffnen (Klicken Sie im Kontextmenü auf " **mehr** > **als Administrator ausführen** ") und " **gettingstartedhost. exe** " ausführen.
 
-2. Öffnen Sie einen Webbrowser und navigieren Sie zur Seite des Diensts `http://localhost:8000/GettingStarted/CalculatorService`.
+2. Öffnen Sie einen Webbrowser, und navigieren Sie zur Seite des Diensts unter `http://localhost:8000/GettingStarted/CalculatorService`.
    
    > [!NOTE]
-   > Dienste wie dieser erfordern der erforderliche Berechtigung zum Registrieren von HTTP-Adressen auf dem Computer, für die Überwachung. Administratorkonten verfügen über diese Berechtigung, anderen Konten muss jedoch die Berechtigung für HTTP-Namespaces erteilt werden. Weitere Informationen zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS (Konfigurieren von HTTP und HTTPS)](feature-details/configuring-http-and-https.md). 
+   > Dienste wie diese benötigen die richtige Berechtigung zum Registrieren von HTTP-Adressen auf dem Computer für die Überwachung. Administratorkonten verfügen über diese Berechtigung, anderen Konten muss jedoch die Berechtigung für HTTP-Namespaces erteilt werden. Weitere Informationen zum Konfigurieren von Namespacereservierungen finden Sie unter [Configuring HTTP and HTTPS (Konfigurieren von HTTP und HTTPS)](feature-details/configuring-http-and-https.md). 
 
-## <a name="service-hosting-program-steps"></a>Service hosting Programm Schritte
+## <a name="service-hosting-program-steps"></a>Schritte zum Dienst Hostingprogramm
 
-Die Schritte in den Code, zum Hosten des Diensts werden beschrieben hinzufügen, wie folgt:
+Die Schritte im Code, den Sie zum Hosten des Diensts hinzugefügt haben, werden wie folgt beschrieben:
 
-- **Schritt 1**: Erstellen Sie eine Instanz von der `Uri` Klasse, die die Basisadresse des Diensts enthält. Eine URL, eine Basisadresse enthält, verfügt über einen optionalen URI, der einen Dienst kennzeichnet. Die Basisadresse ist wie folgt formatiert: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`. Die Basisadresse für den rechnerdienst verwendet den HTTP-Transport, Localhost, Port 8000 und das URI-Segment, GettingStarted.
+- **Schritt 1**: Erstellen Sie eine Instanz der `Uri` -Klasse, die die Basisadresse des dienstanhält. Eine URL, die eine Basisadresse enthält, verfügt über einen optionalen URI, der einen Dienst identifiziert. Die Basisadresse wird wie folgt formatiert `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`:. Die Basisadresse für den Rechner Dienst verwendet den HTTP-Transport, localhost, Port 8000 und das URI-Segment "GettingStarted".
 
-- **Schritt 2**: Erstellen Sie eine Instanz von der <xref:System.ServiceModel.ServiceHost> -Klasse, die Sie verwenden, um den Dienst zu hosten. Der Konstruktor akzeptiert zwei Parameter: den Typ der Klasse, die den Dienstvertrag und die Basisadresse des Diensts implementiert.
+- **Schritt 2**: Erstellen Sie eine Instanz der <xref:System.ServiceModel.ServiceHost> -Klasse, die Sie zum Hosten des Diensts verwenden. Der Konstruktor benötigt zwei Parameter: den Typ der Klasse, die den Dienstvertrag implementiert, und die Basisadresse des Dienstanbieter.
 
-- **Schritt 3**: Erstellen Sie eine <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz. Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen. Die <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor besteht aus den Schnittstellentyp des Dienstvertrags, eine Bindung und eine Adresse. Der Dienstvertrag ist `ICalculator`, den Sie definiert haben und im Diensttyp implementieren. Die Bindung für dieses Beispiel ist <xref:System.ServiceModel.WSHttpBinding>, das ist eine integrierte Bindung und eine Verbindung mit Endpunkten, die die WS - entsprechen * Spezifikationen. Weitere Informationen zu WCF-Bindungen finden Sie unter [WCF-bindungsübersicht](bindings-overview.md). Sie fügen die Adresse, an der Basisadresse, um den Endpunkt zu identifizieren. Der Code gibt die Adresse als CalculatorService und die vollqualifizierte Adresse für den Endpunkt als `http://localhost:8000/GettingStarted/CalculatorService`.
+- **Schritt 3**: Erstellen Sie eine <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz. Ein Dienstendpunkt setzt sich aus einer Adresse, einer Bindung und einem Dienstvertrag zusammen. Der <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor besteht aus dem Dienstvertragstyp, einer Bindung und einer Adresse. Der Dienstvertrag ist `ICalculator`, den Sie definiert haben und im Diensttyp implementieren. Die Bindung für dieses Beispiel ist <xref:System.ServiceModel.WSHttpBinding>, bei der es sich um eine integrierte Bindung handelt und eine Verbindung mit Endpunkten herstellt, die den WS-*-Spezifikationen entsprechen. Weitere Informationen zu WCF-Bindungen finden Sie unter [Übersicht über WCF-Bindungen](bindings-overview.md). Sie fügen die Adresse an die Basisadresse an, um den Endpunkt zu identifizieren. Der Code gibt die Adresse als CalculatorService und die voll qualifizierte Adresse für den Endpunkt als `http://localhost:8000/GettingStarted/CalculatorService`an.
 
     > [!IMPORTANT]
-    > Für .NET Framework Version 4 und höher, ist das Hinzufügen eines Dienstendpunkts optional. Wenn Sie nicht Ihr Code oder Konfiguration hinzufügen, fügt WCF für diesen Versionen ein Standardendpunkt für jede Kombination aus Basisadresse und vom Dienst implementierten Vertrag. Weitere Informationen zu Standardendpunkten, finden Sie unter [angeben einer Endpunktadresse](specifying-an-endpoint-address.md). Weitere Informationen zu Standardendpunkten, Bindungen und Verhaltensweisen finden Sie unter [Dank vereinfachter Konfiguration](simplified-configuration.md) und [Dank vereinfachter Konfiguration für WCF-Dienste](samples/simplified-configuration-for-wcf-services.md).
+    > Für .NET Framework Version 4 und höher ist das Hinzufügen eines Dienst Endpunkts optional. Wenn Sie den Code oder die Konfiguration nicht hinzufügen, fügt WCF für diese Versionen einen Standard Endpunkt für jede Kombination aus Basisadresse und Vertrag hinzu, die vom Dienst implementiert wird. Weitere Informationen zu Standard Endpunkten finden Sie unter [Angeben einer Endpunkt Adresse](specifying-an-endpoint-address.md). Weitere Informationen zu Standard Endpunkten, Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](samples/simplified-configuration-for-wcf-services.md).
 
-- **Schritt 4**: Aktivieren des Metadatenaustauschs Clients verwenden Metadatenaustausch, um Proxys zu generieren, für die Dienstvorgänge aufruft. Zum Aktivieren von Metadatenaustausch erstellen eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Instanz, legen die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> Eigenschaft `true`, und fügen die `ServiceMetadataBehavior` -Objekt der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> Auflistung von der <xref:System.ServiceModel.ServiceHost> Instanz.
+- **Schritt 4**: Aktivieren des Metadatenaustauschs Clients verwenden den Metadatenaustausch zum Generieren von Proxys zum Aufrufen der Dienst Vorgänge. Um den Metadatenaustausch zu aktivieren <xref:System.ServiceModel.Description.ServiceMetadataBehavior> , erstellen Sie eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> -Instanz `true`, legen Sie Ihre `ServiceMetadataBehavior` -Eigenschaft auf <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> fest, und <xref:System.ServiceModel.ServiceHost> fügen Sie das-Objekt der-Auflistung der-Instanz
 
-- **Schritt 5**: Open <xref:System.ServiceModel.ServiceHost> zum Lauschen auf eingehender Nachrichten. Die Anwendung wartet, bis Sie drücken **EINGABETASTE**. Nachdem die Anwendung instanziiert <xref:System.ServiceModel.ServiceHost>, es wird einen Try/Catch-Block ausgeführt. Weitere Informationen zum sicheren Abfangen von Ausnahmen durch <xref:System.ServiceModel.ServiceHost>, finden Sie unter [verwenden schließen "und" Abort, um WCF-Client-Ressourcen freizugeben](samples/use-close-abort-release-wcf-client-resources.md).
+- **Schritt 5**: Öffnen <xref:System.ServiceModel.ServiceHost> Sie, um auf eingehende Nachrichten zu lauschen. Die Anwendung wartet darauf, dass Sie die **Eingabe**Taste drücken. Nachdem die Anwendung instanziiert <xref:System.ServiceModel.ServiceHost>wurde, wird ein try/catch-Block ausgeführt. Weitere Informationen zum sicheren Abfangen von Ausnahmen, <xref:System.ServiceModel.ServiceHost>die von ausgelöst werden, finden [Sie unter Verwenden von schließen und Abbrechen zum Freigeben von WCF-Client Ressourcen](samples/use-close-abort-release-wcf-client-resources.md).
 
 > [!IMPORTANT]
-> Wenn Sie eine WCF-Dienstbibliothek hinzufügen, hostet Visual Studio es für Sie, wenn Sie es Debuggen, indem Sie ein Diensthost ab. Um Konflikte zu vermeiden, können Sie verhindern, dass Visual Studio Hosten von WCF-Dienstbibliothek. 
-> 1. Wählen Sie die **GettingStartedLib** Projekt **Projektmappen-Explorer** , und wählen Sie **Eigenschaften** aus dem Kontextmenü.
-> 2. Wählen Sie **WCF-Optionen** , und deaktivieren Sie **starten WCF-Diensthost beim Debuggen von einem anderen Projekt in der gleichen Projektmappe**.
+> Wenn Sie eine WCF-Dienst Bibliothek hinzufügen, wird Sie von Visual Studio für Sie gehostet, wenn Sie Sie durchstarten eines Dienst Hosts Debuggen. Um Konflikte zu vermeiden, können Sie verhindern, dass Visual Studio die WCF-Dienst Bibliothek gehostet. 
+>
+> 1. Wählen Sie das **gettingstartedlib** -Projekt in **Projektmappen-Explorer** aus, und wählen Sie im Kontextmenü **Eigenschaften** aus.
+> 2. Wählen Sie **WCF-Optionen** aus, und deaktivieren Sie **beim Debuggen eines anderen Projekts in derselben Projekt Mappe den WCF-Dienst Host starten**
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
-> - Erstellen Sie und konfigurieren Sie ein Konsolenanwendungsprojekt für das Hosten eines WCF-Diensts.
-> - Fügen Sie Code zum Hosten des WCF-Diensts.
-> - Aktualisieren Sie die Konfigurationsdatei an.
-> - Starten Sie den WCF-Dienst, und überprüfen Sie, ob er ausgeführt wird.
+>
+> - Erstellen und konfigurieren Sie ein Konsolen-App-Projekt zum Hosting eines WCF-Diensts.
+> - Hinzufügen von Code zum Hosten des WCF-Diensts
+> - Aktualisieren Sie die Konfigurationsdatei.
+> - Starten Sie den WCF-Dienst, und prüfen Sie, ob er ausgeführt wird
 
-Fahren Sie fort mit dem nächsten Tutorial erfahren, wie beim Erstellen eines WCF-Clients.
+Fahren Sie mit dem nächsten Tutorial fort, um zu erfahren, wie Sie einen WCF-Client erstellen.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Erstellen Sie einen WCF-client](how-to-create-a-wcf-client.md)
+> [Tutorial: Erstellen eines WCF-Clients](how-to-create-a-wcf-client.md)

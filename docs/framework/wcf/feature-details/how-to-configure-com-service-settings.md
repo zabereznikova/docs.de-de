@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 58845ab7b9da7377f4fdaa7da13e7c407226d63c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912208"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895116"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen
 Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im gehosteten com+-Modus wird die Datei "Application. config" im Stammverzeichnis der Anwendung abgelegt (%ProgramFiles%\ComPlus Applications\\{AppID} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
@@ -20,7 +20,7 @@ Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationst
 ## <a name="example"></a>Beispiel  
  Beispiel: Eine Komponente, mit der die folgende Schnittstelle implementiert wird:  
   
-```  
+```csharp
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
 public interface IFinances  
 {  
@@ -31,7 +31,7 @@ public interface IFinances
   
  Wird die Komponente als Webdienst verfügbar gemacht, sieht der entsprechende verfügbare Dienstvertrag, dessen Vorgaben die Clients entsprechen müssen, folgendermaßen aus:  
   
-```  
+```csharp
 [ServiceContract(Session = true,  
 Namespace = "http://tempuri.org/C551FBA9-E3AA-4272-8C2A-84BD8D290AC7",  
 Name = "IFinances")]  

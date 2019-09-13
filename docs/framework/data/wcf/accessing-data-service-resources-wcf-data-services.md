@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: eff8d682004bf437a9b5470a4eb91c9bd52bfad5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 048cbb8708aa705fe6b03491ddfa9c107a21cda1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791322"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894345"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]unterstützt [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
@@ -21,44 +21,44 @@ ms.locfileid: "70791322"
 ## <a name="addressing-resources"></a>Adressieren von Ressourcen  
  In [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] werden alle vom Datenmodell verfügbar gemachten Daten mit einem URI adressiert. Der folgende URI gibt z. b. einen Feed zurück, bei dem es sich um die Entitätenmenge Customers handelt, die Einträge für alle Instanzen des Customer-Entitäts Typs enthält:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers  
+```http
+https://services.odata.org/Northwind/Northwind.svc/Customers  
 ```  
   
  Entitäten verfügen über besondere Eigenschaften, die als Entitätsschlüssel bezeichnet werden. Ein Entitätsschlüssel wird verwendet, um eine einzelne Entität in einer Entitätenmenge eindeutig zu identifizieren. Dies ermöglicht es Ihnen, eine bestimmte Instanz eines Entitätstyps in der Entitätenmenge zu adressieren. Der folgende URI gibt z. B. einen Eintrag für eine bestimmte Instanz des Customer-Entitätstyps mit dem Schlüsselwert `ALFKI` zurück:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')  
 ```  
   
  Primitive und komplexe Eigenschaften einer Entitätsinstanz können auch einzeln behandelt werden. Der folgende URI gibt z. B. ein XML-Element zurück, das den `ContactName`-Eigenschaftswert für einen bestimmten Kunden enthält:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
  Wenn Sie den `$value`-Endpunkt in den vorherigen URI einschließen, wird in der Antwortnachricht nur der Wert der primitiven Eigenschaft zurückgegeben. Im folgenden Beispiel wird nur die Zeichenfolge "Maria Anders" ohne das XML-Element zurückgegeben:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
 ```  
   
  Beziehungen zwischen Entitäten werden im Datenmodell durch Zuordnungen definiert. Diese Zuordnungen ermöglichen es Ihnen, mithilfe der Navigationseigenschaften einer Entitätsinstanz verknüpfte Entitäten zu adressieren. Eine Navigationseigenschaft kann entweder eine einzelne verknüpfte Entität (bei einer n:1-Beziehung) oder einen Satz von verknüpften Entitäten (bei einer 1:n-Beziehung) zurückgeben. Der folgende URI gibt z. B. einen Feed zurück, bei dem es sich um den Satz aller Bestellungen handelt, die sich auf einen bestimmten Kunden beziehen:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders  
 ```  
   
  Gewöhnlich bidirektionale Beziehungen werden mithilfe eines Paars von Navigationseigenschaften dargestellt. Als Gegenstück zu der Beziehung im vorherigen Beispiel gibt der folgende URI einen Verweis auf die Customer-Entität zurück, zu der eine bestimmte Order-Entität gehört:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer  
 ```  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]ermöglicht es Ihnen außerdem, Ressourcen auf der Grundlage der Ergebnisse von Abfrage Ausdrücken zu adressieren. Dies ermöglicht es, Ressourcen Sätze auf der Grundlage eines ausgewerteten Ausdrucks zu filtern. Der folgende URI filtert z. B. die Ressourcen, um nur die Bestellungen für den angegebenen Kunden zurückzugeben, die seit dem 22. September 1997 ausgeliefert wurden:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=ShippedDate gt datetime'1997-09-22T00:00:00'  
 ```  
   
  Weitere Informationen finden [Sie unter odata: URI-](https://go.microsoft.com/fwlink/?LinkId=185564)Konventionen.  
@@ -66,8 +66,8 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$fil
 ## <a name="system-query-options"></a>Systemabfrageoptionen  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen `Order_Detail` mit verknüpften Entitäten zurück, deren Postleitzahlen nicht auf `100`enden:  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
+```http  
+https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity  
 ```  
   
  Die Einträge des zurückgegebenen Feeds werden zudem nach dem Wert der ShipCity-Eigenschaft der Bestellungen geordnet.  
@@ -87,8 +87,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 ## <a name="addressing-relationships"></a>Behandeln von Beziehungen  
  Zusätzlich zur Adressierung von Entitätenmengen und [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Entitäts Instanzen ermöglicht Ihnen auch die Adressierung der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]unterstützt `$link` einen-Operator, um die Zuordnungen zwischen Entitäten zu adressieren Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
   
-```  
-http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
+```http 
+https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
  Weitere Informationen finden [Sie unter odata: Adressieren von Verknüpfungen zwischen Einträgen](https://go.microsoft.com/fwlink/?LinkId=187351).  

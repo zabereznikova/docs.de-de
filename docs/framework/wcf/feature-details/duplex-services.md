@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f9e563cb87ee376e33442cdf718f70202d300f40
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636284"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895171"
 ---
 # <a name="duplex-services"></a>Duplexdienste
 
 Bei einem Duplexdienstvertrag handelt es sich um ein Nachrichtenaustauschmuster, bei dem beide Endpunkte eigenständig Nachrichten an den jeweils anderen Endpunkt senden können. Daher kann ein Duplexdienst Nachrichten zurück an den Clientendpunkt senden und so ein ereignisähnliches Verhalten bereitstellen. Eine Duplexkommunikation findet statt, wenn ein Client eine Verbindung mit einem Dienst herstellt und dem Dienst einen Kanal bereitstellt, über den dieser Nachrichten zurück an den Client senden kann. Beachten Sie, dass Duplexdienste nur innerhalb einer Sitzung ein ereignisähnliches Verhalten zeigen.
 
-Um einen Duplexvertrag einzurichten, erstellen Sie zwei Schnittstellen. Bei der ersten handelt es sich um die Dienstvertragschnittstelle, mit der die Vorgänge beschrieben werden, die von einem Client implementiert werden können. Dieser Dienstvertrag muss Geben Sie einen *Rückrufvertrag* in die <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> Eigenschaft. Der Rückrufvertrag wiederum ist die Schnittstelle, mit der die Vorgänge definiert werden, die vom Dienst auf dem Clientendpunkt aufgerufen werden können. Ein Duplexvertrag erfordert keine Sitzung, die vom System bereitgestellten Duplexbindungen nutzen allerdings Sitzungen.
+Um einen Duplexvertrag einzurichten, erstellen Sie zwei Schnittstellen. Bei der ersten handelt es sich um die Dienstvertragschnittstelle, mit der die Vorgänge beschrieben werden, die von einem Client implementiert werden können. Dieser Dienstvertrag muss in der <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> -Eigenschaft einen *Rückruf Vertrag* angeben. Der Rückrufvertrag wiederum ist die Schnittstelle, mit der die Vorgänge definiert werden, die vom Dienst auf dem Clientendpunkt aufgerufen werden können. Ein Duplexvertrag erfordert keine Sitzung, die vom System bereitgestellten Duplexbindungen nutzen allerdings Sitzungen.
 
 Das folgende Beispiel zeigt einen Duplexvertrag.
 
@@ -33,7 +33,7 @@ Damit Nachrichten vom Dienst empfangen werden können, muss der Client eine Klas
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-Der WCF-Client, der generiert wird, für ein Duplexvertrag erfordert eine <xref:System.ServiceModel.InstanceContext> Klasse, um bei der Erstellung bereitgestellt werden. Diese <xref:System.ServiceModel.InstanceContext>-Klasse wird als Standort für ein Objekt verwendet, das die Rückrufschnittstelle implementiert und die vom Dienst zurückgesendeten Nachrichten verarbeitet. Eine <xref:System.ServiceModel.InstanceContext>-Klasse wird mit einer Instanz der `CallbackHandler`-Klasse erstellt. Dieses Objekt verarbeitet die vom Dienst über die Rückrufschnittstelle an den Client gesendeten Nachrichten.
+Für den für einen Duplex Vertrag generierten WCF-Client muss bei <xref:System.ServiceModel.InstanceContext> der Erstellung eine-Klasse bereitgestellt werden. Diese <xref:System.ServiceModel.InstanceContext>-Klasse wird als Standort für ein Objekt verwendet, das die Rückrufschnittstelle implementiert und die vom Dienst zurückgesendeten Nachrichten verarbeitet. Eine <xref:System.ServiceModel.InstanceContext>-Klasse wird mit einer Instanz der `CallbackHandler`-Klasse erstellt. Dieses Objekt verarbeitet die vom Dienst über die Rückrufschnittstelle an den Client gesendeten Nachrichten.
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -47,12 +47,12 @@ Auf dem Client muss, wie in der folgenden Beispielkonfiguration zu sehen, eine A
 
 Wenn Sie mit dem `WSHttpBinding`-Element einen Client/Dienst erstellen und keinen Clientrückrufendpunkt aufnehmen, wird der folgende Fehler ausgegeben:
 
-```
+```console
 HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.
 ```
 
-Der folgende Beispielcode veranschaulicht, wie an den Client Endpunktadresse programmgesteuert.
+Der folgende Beispielcode zeigt, wie Sie die clientend Punkt Adresse Programm gesteuert angeben.
 
 ```csharp
 WSDualHttpBinding binding = new WSDualHttpBinding();
@@ -87,10 +87,10 @@ Der folgende Beispielcode zeigt, wie Sie die Clientendpunktadresse in der Konfig
 ```
 
 > [!WARNING]
-> Vom duplexmodell erkennen nicht automatisch, wenn der Kanal geschlossen, einen Dienst oder Client wird. Also, wenn ein Client unerwartet beendet wird, wird standardmäßig der Dienst nicht benachrichtigt werden, oder wenn ein Dienst unerwartet beendet wird, wird der Client nicht benachrichtigt. Wenn Sie einen Dienst, die getrennt ist verwenden, die <xref:System.ServiceModel.CommunicationException> Ausnahme ausgelöst. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen. Weitere Informationen zur Fehlerbehandlung finden Sie unter [WCF-Fehlerbehandlung](../wcf-error-handling.md)
+> Das Duplex Modell erkennt nicht automatisch, wenn ein Dienst oder Client seinen Kanal schließt. Wenn ein Client also unerwartet beendet wird, wird der Dienst standardmäßig nicht benachrichtigt, oder wenn ein Dienst unerwartet beendet wird, wird der Client nicht benachrichtigt. Wenn Sie einen Dienst verwenden, der getrennt ist, <xref:System.ServiceModel.CommunicationException> wird die Ausnahme ausgelöst. Clients und Dienste können eigene Protokolle implementieren, um sich bei Bedarf wechselseitig zu benachrichtigen. Weitere Informationen zur Fehlerbehandlung finden Sie unter [WCF-Fehlerbehandlung](../wcf-error-handling.md) .
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Duplex](../samples/duplex.md)
 - [Angeben des Clientlaufzeitverhaltens](../specifying-client-run-time-behavior.md)
-- [Vorgehensweise: Erstellen einer Kanalfactory und zum Erstellen und Verwalten von Kanälen](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Vorgehensweise: Erstellen Sie eine Kanalfactory, und verwenden Sie Sie zum Erstellen und Verwalten von Kanälen.](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

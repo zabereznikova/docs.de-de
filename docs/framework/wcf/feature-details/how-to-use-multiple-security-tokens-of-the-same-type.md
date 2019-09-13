@@ -2,15 +2,16 @@
 title: 'Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 1b383c6ccd96d1b3d7b091b2d7c67bb166da51df
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 84009eacca113fcd83a0e4908c7d6eb0c82db7d5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928759"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs
-- In .NET Framework 3.0 enthalten eine Clientnachricht nur ein Token eines beliebigen angegebenen Typs. Jetzt können Clientnachrichten mehrere Token eines Typs enthalten. In diesem Thema wird das Einfügen mehrerer Token desselben Typs in eine Clientnachricht erläutert.  
+
+- In .NET Framework 3,0 enthielt eine Client Nachricht nur ein Token eines beliebigen Typs. Jetzt können Clientnachrichten mehrere Token eines Typs enthalten. In diesem Thema wird das Einfügen mehrerer Token desselben Typs in eine Clientnachricht erläutert.  
   
 - Ein Dienst kann nicht auf diese Weise konfiguriert werden, da ein Dienst lediglich ein einzelnes unterstützendes Token enthalten kann.  
   

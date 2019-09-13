@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910877"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894543"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
-In Visual C++ und Visual Basic wird ein Filter Ausdruck, der den Stapel weiter oben aufführt, vor jeder **abschließend** -Anweisung ausgeführt. Der **catch** -Block, der diesem Filter zugeordnet ist , wird nach der letztanweisung ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Benutzer gefilterten Ausnahmen](../../standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsauswirkungen dieser Bestellung erläutert. Sehen Sie sich das folgende Pseudo Codebeispiel an, das die Reihenfolge veranschaulicht, in der Filter Anweisungen und **schließlich** -Anweisungen ausgeführt werden.  
+In Visual C++ und Visual Basic wird ein Filter Ausdruck, der den Stapel weiter oben aufführt, vor jeder **abschließend** -Anweisung ausgeführt. Der **catch** -Block, der diesem Filter zugeordnet ist, wird nach der **letztanweisung** ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Benutzer gefilterten Ausnahmen](../../standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsauswirkungen dieser Bestellung erläutert. Sehen Sie sich das folgende Pseudo Codebeispiel an, das die Reihenfolge veranschaulicht, in der Filter Anweisungen und **schließlich** -Anweisungen ausgeführt werden.  
   
 ```cpp  
 void Main()   
@@ -53,14 +53,14 @@ void Sub()
   
  Dieser Code druckt Folgendes:  
   
-```  
+```output
 Throw  
 Filter  
 Finally  
 Catch  
 ```  
   
- Der Filter wird vor der letzten-Anweisung ausgeführt, sodass Sicherheitsprobleme von allen Änderungen verursacht werden können, die eine Zustandsänderung vornehmen, wenn die Ausführung anderer Codes ausgenutzt werden könnte. Beispiel:  
+ **Der Filter wird vor der letzten** -Anweisung ausgeführt, sodass Sicherheitsprobleme von allen Änderungen verursacht werden können, die eine Zustandsänderung vornehmen, wenn die Ausführung anderer Codes ausgenutzt werden könnte. Beispiel:  
   
 ```cpp  
 try   
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Die korrekte Behebung in diesem Fall besteht darin, den vorhandenen **try**/-Block in einem **try**/-**catch** -Block zu wrappen. Wenn Sie einfach eine **catch-throw-** Klausel in den vorhandenen **try**/-Block einführen, wird das Problem nicht behoben, wie im folgenden Beispiel gezeigt.  
+ Die korrekte Behebung in diesem Fall besteht darin, den vorhandenen **try**/-Block in einem **try**/-**catch** **-Block zu** wrappen. Wenn Sie einfach eine **catch-throw-** Klausel in den vorhandenen **try**/-**Block einführen** , wird das Problem nicht behoben, wie im folgenden Beispiel gezeigt.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Dadurch wird das Problem nicht behoben, weil die letzte-Anweisung nicht ausgeführt wurde `FilterFunc` , bevor das-Steuerelement abruft.  
+ Dadurch wird das Problem nicht behoben, weil die letzte **-Anweisung nicht** ausgeführt wurde `FilterFunc` , bevor das-Steuerelement abruft.  
   
- Im folgenden Beispiel wird das Problem behoben, indem sicher gestellt wird, dass die letzte-Klausel ausgeführt wurde, bevor die Ausnahme Filter Blöcke der Aufrufer ausgelöst werden.  
+ Im folgenden Beispiel wird das Problem behoben, indem sichergestellt wird, dass die letzte-Klausel ausgeführt wurde, **bevor die Ausnahme** Filter Blöcke der Aufrufer ausgelöst werden.  
   
 ```cpp  
 YourObject.YourMethod()  

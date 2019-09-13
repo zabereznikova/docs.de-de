@@ -2,12 +2,12 @@
 title: Systemanforderungen für den.NET Framework-Datenanbieter für Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 330bad6f58b1ba6b0d2fdb2baa86a04374946e80
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b64a84b8d8246bae9028a6ca710f0a62cc85bf79
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780579"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894383"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Systemanforderungen für den.NET Framework-Datenanbieter für Oracle
 Der .NET Framework-Datenanbieter für Oracle erfordert Microsoft Data Access Components (MDAC), Version 2.6 oder höher. MDAC 2.8 mit SP1 wird empfohlen.  
@@ -22,9 +22,7 @@ Der .NET Framework-Datenanbieter für Oracle erfordert Microsoft Data Access 
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>Festlegen des Unicode-Werts in einem Verbindungszeichenfolgen-Attribut  
  Beim Arbeiten mit Oracle können Sie das Verbindungszeichenfolgen-Attribut  
   
-```  
-Unicode=True   
-```  
+`Unicode=True`
   
  verwenden, um die Oracle-Clientbibliotheken im UTF-16-Modus zu initialisieren. Dadurch müssen die Oracle-Clientbibliotheken UTF-16-Zeichenfolgen (die UCS-2 sehr ähnlich sind) anstelle von Multi-Byte-Zeichenfolgen akzeptieren. Der Datenanbieter für Oracle kann somit immer eine beliebigen Oracle-Codepage ohne zusätzliche Umwandlungen verwenden. Diese Konfiguration funktioniert nur, wenn Oracle 9i-Clients für die Kommunikation mit einer Oracle 9i-Datenbank mit dem alternativen Zeichensatz AL16UTF16 verwendet werden. Wenn ein Oracle 9i-Client mit einem Oracle 9i-Server kommuniziert, sind zusätzliche Ressourcen erforderlich, um die Unicode- **CommandText** -Werte in den entsprechenden Multibyte-Zeichensatz zu konvertieren, den der Oracle9i-Server verwendet. Durch Hinzufügen von `Unicode=True` zur Verbindungszeichenfolge kann dies vermieden werden, wenn Sie über eine sichere Konfiguration verfügen.  
   

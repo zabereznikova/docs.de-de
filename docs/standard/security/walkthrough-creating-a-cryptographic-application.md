@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916281"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895286"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
@@ -61,7 +61,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 |<xref:System.Windows.Forms.Button>|`buttonExportPublicKey`|Öffentlichen Schlüssel exportieren|  
 |<xref:System.Windows.Forms.Button>|`buttonImportPublicKey`|Öffentlichen Schlüssel importieren|  
 |<xref:System.Windows.Forms.Button>|`buttonGetPrivateKey`|Privaten Schlüssel abrufen|  
-|<xref:System.Windows.Forms.Label>|`label1`||  
+|<xref:System.Windows.Forms.Label>|`label1`|Schlüssel nicht festgelegt|  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 659e3ba02367feee4539a984b679173ee4544d17
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779886"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894314"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zum Verfassen und Ausführen von Abfragen für einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Datendienst finden Sie unter [Abfragen des Daten Dienstanbieter](querying-the-data-service-wcf-data-services.md).  
@@ -32,7 +32,7 @@ Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfrag
   
  Diese LINQ-Abfrage wird in den folgenden Abfrage-URI übersetzt, der für den auf Northwind basierenden [Schnellstart](quickstart-wcf-data-services.md) -Datendienst ausgeführt wird:  
   
-```  
+```http
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   

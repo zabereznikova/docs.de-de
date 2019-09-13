@@ -8,18 +8,18 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: f905eb90b47cb5ab20fd912b1cbcc62947361992
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779771"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894272"
 ---
 # <a name="service-operations-wcf-data-services"></a>Dienstvorgänge (WCF Data Services)
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Beispielsweise übergibt der folgende Dienst Vorgangs-URI (basierend auf dem [Schnellstart](quickstart-wcf-data-services.md) -Datendienst) den `London` Wert an `city` den-Parameter:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
 ```
 
@@ -70,7 +70,7 @@ Beim Definieren von Dienstvorgängen für den Datendienst gelten folgende Anford
 
 Sie können Dienstvorgänge adressieren, indem Sie den Namen der Methode im ersten Pfadsegment eines URI platzieren. Als Beispiel greift der folgende URI auf einen `GetOrdersByState`-Vorgang zu, der eine <xref:System.Linq.IQueryable%601>-Auflistung von `Orders`-Objekten zurückgibt.
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=true
 ```
 
@@ -86,7 +86,7 @@ Nachfolgend sind gültige Rückgabetypen für einen Dienstvorgang aufgeführt:
 
 In Abhängigkeit vom Rückgabetyp des Dienstvorgangs können dem URI zusätzliche Pfadsegmente oder Abfrageoptionen hinzugefügt werden. Beispielsweise greift der folgende URI auf einen `GetOrdersByCity`-Vorgang zu, der eine <xref:System.Linq.IQueryable%601>-Auflistung von `Orders`-Objekten, sortiert nach `RequiredDate` in absteigender Reihenfolge, zusammen mit den verknüpften `Order_Details`-Objekten zurückgibt:
 
-```
+```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order_Details&$orderby=RequiredDate desc
 ```
 

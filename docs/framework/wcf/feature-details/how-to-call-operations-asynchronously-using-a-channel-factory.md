@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 3080514d06119a2f1b621cff16056ac7577c30b3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: adc4d519e8d29fef5595ab7ddc3168462525c4e2
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966804"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895230"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Vorgehensweise: Asynchrones Aufrufen von Vorgängen mit einer Kanalfactory
 In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann, wenn eine auf <xref:System.ServiceModel.ChannelFactory%601> basierende Clientanwendung verwendet wird. (Wenn Sie ein <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>-Objekt verwenden, um einen Dienst aufzurufen, können Sie das ereignisgesteuerte asynchrone Aufrufmodell verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Dienst Vorgänge werden asynchron](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)aufgerufen. Weitere Informationen zum ereignisbasierten asynchronen Aufruf Modell finden Sie unter [Ereignis basiertes asynchrones Muster (EAP)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -23,7 +23,7 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
   
 1. Führen Sie das [Service Model Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool `/async` mit der-Option aus, wie im folgenden Befehl gezeigt.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
     ```  
   

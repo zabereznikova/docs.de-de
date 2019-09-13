@@ -2,12 +2,12 @@
 title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3dbdab152e05487f9dcc9fa00ed0c653d68ab65e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928838"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren
 Dieses Beispiel veranschaulicht das Listen basierte Veröffentlichen-Abonnieren-Muster, das als Windows Communication Foundation (WCF)-Programm implementiert ist.  
@@ -23,7 +23,7 @@ Dieses Beispiel veranschaulicht das Listen basierte Veröffentlichen-Abonnieren-
   
  Der Dienst verwendet Duplexkommunikation. Der `ISampleContract`-Dienstvertrag wird mit einem `ISampleClientCallback`-Rückrufvertrag zusammengefasst. Der Dienst implementiert Subscribe- und Unsubscribe-Dienstvorgänge, die von Clients verwendet werden, um der Liste der Abonnenten beizutreten oder diese zu verlassen. Der Dienst implementiert außerdem den `PublishPriceChange`-Dienstvorgang, der vom Datenquellenprogramm aufgerufen wird, um dem Dienst neue Informationen bereitzustellen. Das Clientprogramm implementiert den `PriceChange`-Dienstvorgang, der vom Dienst aufgerufen wird, um alle Abonnenten über Preisänderungen zu informieren.  
   
-```  
+```csharp  
 // Create a service contract and define the service operations.  
 // NOTE: The service operations must be declared explicitly.  
 [ServiceContract(SessionMode=SessionMode.Required,  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  Der Dienst verwendet ein .NET Framework-Ereignis als Mechanismus, um alle Abonnenten über neue Informationen zu informieren. Wenn ein Client dem Dienst beitritt, indem er Subscribe aufruft, wird ein Ereignishandler bereitgestellt. Wenn ein Client den Dienst verlässt, wird sein Ereignishandler von dem Ereignis entfernt. Wenn eine Datenquelle den Dienst aufruft, um eine Preisänderung mitzuteilen, löst der Dienst das Ereignis aus. Daraufhin wird jede Instanz des Diensts aufgerufen, eine für jeden Client mit einem Abonnement, und die Ereignishandler werden ausgeführt. Jeder Ereignishandler übermittelt die Informationen über seine Rückruffunktion an seinen Client.  
   
-```  
+```csharp  
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  

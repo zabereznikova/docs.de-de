@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 2d075bfebf7b5cbd2b2ce031a1c3855a925405a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0a6f1477ceec5471c22fa3e46d85f5856b298e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964034"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895067"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Vorgehensweise: Asynchrones Abrufen von WCF-Dienst Vorgängen
 In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann. Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann mithilfe des ereignisgesteuerten asynchronen Aufrufmodells die Vorgänge asynchron an dieser Schnittstelle aufrufen. (Weitere Informationen über das ereignisbasierte asynchrone Aufruf Modell finden Sie unter [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](https://go.microsoft.com/fwlink/?LinkId=248184)). Ein Beispiel für das asynchrone Implementieren eines Vorgangs in einem Dienst finden [Sie unter Gewusst wie: Implementieren Sie einen asynchronen Dienst](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)Vorgang. Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -24,7 +24,7 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
   
 1. Führen Sie das [Service Model Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool mit `/async` den `/tcv:Version35` Befehlsoptionen und aus, wie im folgenden Befehl gezeigt.  
   
-    ```  
+    ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   

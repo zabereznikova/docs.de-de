@@ -2,12 +2,12 @@
 title: Erstellen von WCF AJAX-Diensten ohne ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: f850d8649f1d67fe916542bfb025afb7cb3f852b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 04d2831407f4aa32c72aabbbff0e6fdde769bd23
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856133"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895088"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Erstellen von WCF AJAX-Diensten ohne ASP.NET
 Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScript-aktivierten Webseite zugegriffen werden, ohne dass ASP.NET AJAX erforderlich ist. In diesem Thema wird beschrieben, wie ein solcher WCF-Dienst erstellt wird.  
@@ -25,7 +25,7 @@ Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScrip
 ## <a name="creating-an-ajax-endpoint"></a>Erstellen eines AJAX-Endpunkts  
  Die einfachste Möglichkeit, die AJAX-Unterstützung in einem WCF-Dienst zu aktivieren <xref:System.ServiceModel.Activation.WebServiceHostFactory> , ist die Verwendung der in der SVC-Datei, die dem Dienst zugeordnet ist, wie im folgenden Beispiel gezeigt.  
   
-```svc
+```text
 <%ServiceHost   
     language=c#  
     Debug="true"  

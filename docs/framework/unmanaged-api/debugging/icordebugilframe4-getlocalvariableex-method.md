@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6594bb72ce9cd2fbfa9cdafebc152a90618b810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb4eaaa23a810a23852dc5ef88d61c6a5d0f0ccd
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926810"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -38,23 +38,23 @@ HRESULT GetLocalVariableEx(
   
 ## <a name="parameters"></a>Parameter  
  `flags`  
- [in] Ein [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob eine Variable in der Profiler-ReJIT-Instrumentierung hinzugefügt wurde, im Rahmen enthalten ist.  
+ in Ein [ilcodekind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob eine in der Profiler-ReJIT-Instrumentation hinzugefügte Variable im Frame enthalten ist.  
   
  `dwIndex`  
  [in] Der Index der lokalen Variable im IL-Stapelrahmen.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse ein "ICorDebugValue"-Objekt, das den abgerufenen Wert darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den abgerufenen Wert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ähnelt der [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) -Methode, mit dem Unterschied, dass sie optional eine Variable, die in der Profiler-ReJIT-Instrumentierung hinzugefügt zugreift. Beim Aufruf dieser Methode eine `flags` Wert `ILCODE_ORIGINAL_IL` entspricht dem Aufruf [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md); Wenn die Methode mit zusätzlichen lokalen Variablen instrumentiert ist dieser Variablen können nicht zugegriffen werden kann. `ILCODE_REJIT_IL` ermöglicht dem Debugger Zugriff auf die lokalen Variablen in der Profiler-ReJIT-Instrumentierung hinzugefügt. Ist die IL nicht instrumentiert, gibt die Methode `E_INVALIDARG` zurück.  
+ Diese Methode ähnelt der [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) -Methode, außer dass Sie optional auf eine Variable zugreift, die in der Profiler-ReJIT-Instrumentation hinzugefügt wurde. Das Aufrufen dieser Methode mit `flags` einem Wert `ILCODE_ORIGINAL_IL` von entspricht dem Aufrufen von [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md). wenn die Methode mit zusätzlichen lokalen Variablen instrumentiert ist, kann auf diese Variablen nicht zugegriffen werden. `ILCODE_REJIT_IL`ermöglicht dem Debugger Zugriff auf die lokalen Variablen, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurden. Ist die IL nicht instrumentiert, gibt die Methode `E_INVALIDARG` zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
@@ -62,4 +62,4 @@ HRESULT GetLocalVariableEx(
 
 - [ICorDebugILFrame4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
 - [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ReJIT: Einen Leitfaden zur Vorgehensweise](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+- [ReJIT Leitfaden](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

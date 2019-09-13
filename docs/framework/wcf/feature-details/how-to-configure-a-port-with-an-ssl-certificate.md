@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: fb5ca2c5e0040ed86c9f51323f390d625d658903
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e21311802b0a3ce4e415b14686b101d31f18035
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622942"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893317"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat
-Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.WSHttpBinding> Klasse, die transportsicherheit verwendet, müssen Sie auch einen Port mit einem x. 509-Zertifikat. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Beim Erstellen eines selbst gehosteten Windows Communication Foundation (WCF)-Diensts <xref:System.ServiceModel.WSHttpBinding> mit der-Klasse, die Transportsicherheit verwendet, müssen Sie auch einen Port mit einem X. 509-Zertifikat konfigurieren. Wenn Sie keinen selbst gehosteten Dienst erstellen, können Sie Ihren Dienst auch über Internetinformationsdienste (IIS) hosten. Weitere Informationen finden Sie unter [http-Transport Sicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Welches Tool zum Konfigurieren eines Anschlusses verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das HttpCfg.exe-Tool. Unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ist dieses Tool bereits installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool unter [Windows XP Service Pack 2-Supporttools](https://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](https://go.microsoft.com/fwlink/?LinkId=88605). Die [Dokumentation der Windows-Supporttools](https://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax für das Httpcfg.exe-Tool.  
+ Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das HttpCfg.exe-Tool. Unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ist dieses Tool bereits installiert. Mit [!INCLUDE[wxp](../../../../includes/wxp-md.md)]können Sie das Tool unter [Windows XP Service Pack 2-Support Tools](https://go.microsoft.com/fwlink/?LinkId=88606)herunterladen. Weitere Informationen finden Sie unter [Httpcfg Overview](https://go.microsoft.com/fwlink/?LinkId=88605). In der [Dokumentation zur Windows-Support Tools](https://go.microsoft.com/fwlink/?LinkId=94840) wird die Syntax für das Tool "Httpcfg. exe" erläutert.  
   
  Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das bereits installierte Tool Netsh.exe.  
   
@@ -41,23 +41,23 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
 ### <a name="to-determine-how-ports-are-configured"></a>So ermitteln Sie, wie Anschlüsse konfiguriert sind  
   
-1. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool zum Anzeigen der aktuellen Anschlusskonfiguration mithilfe der **Abfrage** und **Ssl** wechselt, wie im folgenden Beispiel gezeigt.  
+1. Verwenden [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Sie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]in oder das Tool Httpcfg. exe, um die aktuelle Port Konfiguration mithilfe der **Abfrage** -und **SSL** -Switches anzuzeigen, wie im folgenden Beispiel gezeigt.  
   
-    ```  
+    ```console
     httpcfg query ssl  
     ```  
   
 2. Verwenden Sie zum Anzeigen der aktuellen Anschlusskonfiguration unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das Netsh.exe-Tool, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```console  
     netsh http show sslcert  
     ```  
   
 ### <a name="to-get-a-certificates-thumbprint"></a>So rufen Sie den Fingerabdruck eines Zertifikats ab  
   
-1. Verwenden Sie das Zertifikats-MMC-Snap-In, um nach einem X.509-Zertifikat zu suchen, das eine bestimmte Clientauthentifizierungsfunktion aufweist. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1. Verwenden Sie das Zertifikats-MMC-Snap-In, um nach einem X.509-Zertifikat zu suchen, das eine bestimmte Clientauthentifizierungsfunktion aufweist. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)-in.  
   
-2. Greifen Sie auf den Fingerabdruck des Zertifikats zu. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Greifen Sie auf den Fingerabdruck des Zertifikats zu. Weitere Informationen finden Sie unter [Vorgehensweise: Rufen Sie den Fingerabdruck eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)ab.  
   
 3. Kopieren Sie den Fingerabdruck des Zertifikats in einen Texteditor, beispielsweise den Windows-Editor.  
   
@@ -67,59 +67,59 @@ Beim Erstellen eines selbst gehosteten Diensts für Windows Communication Founda
   
 1. Verwenden Sie unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] das Tool-HttpCfg.exe im Secure Sockets Layer (SSL)-Speicher im Modus "Set", um das Zertifikat an eine Anschlussnummer zu binden. Das Tool verwendet den Fingerabdruck, um das Zertifikat zu identifizieren, wie im folgenden Beispiel gezeigt.  
   
-    ```  
+    ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    - Die **-i** Switch verfügt über die Syntax der `IP`:`port` und weist das Tool, um das Zertifikat auf den Anschluss 8012 des Computers festzulegen. Optional können Sie die vier Nullen vor der Nummer auch durch die tatsächliche IP-Adresse des Computers ersetzen.  
+    - Der Schalter **-i** hat die Syntax von `IP`:`port` und weist das Tool an, das Zertifikat auf Port 8012 des Computers festzulegen. Optional können Sie die vier Nullen vor der Nummer auch durch die tatsächliche IP-Adresse des Computers ersetzen.  
   
-    - Die **-h** Option gibt den Fingerabdruck des Zertifikats an.  
+    - Der Schalter **-h** gibt den Fingerabdruck des Zertifikats an.  
   
 2. Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das Netsh.exe-Tool, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    - Die **Certhash** Parameter gibt den Fingerabdruck des Zertifikats.  
+    - Der **CertHash** -Parameter gibt den Fingerabdruck des Zertifikats an.  
   
-    - Die **Ipport** Parameter gibt an, die IP-Adresse und den Port und funktioniert genauso wie die **-i** -Schalter des Httpcfg.exe-Tools, beschrieben.  
+    - Der **IPPort** -Parameter gibt die IP-Adresse und den Port sowie die Funktionen an, die genau wie der **-i-** Schalter des Tools "Httpcfg. exe" beschrieben werden.  
   
-    - Die **Appid** -Parameter ist eine GUID, die verwendet werden kann, um die besitzende Anwendung zu identifizieren.  
+    - Der **AppID** -Parameter ist eine GUID, die zum Identifizieren der besitzenden Anwendung verwendet werden kann.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>So binden Sie ein SSL-Zertifikat an eine Anschlussnummer und unterstützen Clientzertifikate  
   
 1. Führen Sie zum Unterstützen von Clients, die die Authentifizierung mithilfe von X.509-Zertifikaten auf der Transportebene durchführen, unter [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)] die obige Prozedur aus, übergeben Sie jedoch einen zusätzlichen Befehlszeilenparameter an HttpCfg.exe, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     Die **-f** Switch verfügt über die Syntax der `n` wobei n eine Zahl zwischen 1 und 7 ist.  Bei dem Wert "2" (wie im vorherigen Beispiel gezeigt) sind Clientzertifikate auf der Transportebene aktiviert. Der Wert&amp;#160;"3" aktiviert Clientzertifikate und ordnet die Zertifikate einem Windows-Konto zu. Das Verhalten bei anderen Werten finden Sie in der Hilfe zu HttpCfg.exe.  
+     Der Schalter **-f** hat die Syntax `n` , wobei n eine Zahl zwischen 1 und 7 ist. Bei dem Wert "2" (wie im vorherigen Beispiel gezeigt) sind Clientzertifikate auf der Transportebene aktiviert. Der Wert&#160;"3" aktiviert Clientzertifikate und ordnet die Zertifikate einem Windows-Konto zu. Das Verhalten bei anderen Werten finden Sie in der Hilfe zu HttpCfg.exe.  
   
 2. Führen Sie zum Unterstützen von Clients, die die Authentifizierung mithilfe von X.509-Zertifikaten auf der Transportebene durchführen, unter [!INCLUDE[wv](../../../../includes/wv-md.md)] die obige Prozedur aus, verwenden Sie jedoch einen zusätzlichen Parameter, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>So löschen Sie ein SSL-Zertifikat aus einer Anschlussnummer  
   
-1. Verwenden Sie das HttpCfg.exe- oder das Netsh.exe-Tool, um die Anschlüsse und Fingerabdrücke aller Bindungen auf dem Computer anzuzeigen. Um die Informationen auf den Datenträger zu drucken, verwenden Sie das Umleitungszeichen ">", wie im folgenden Beispiel gezeigt.  
+1. Verwenden Sie das HttpCfg.exe- oder das Netsh.exe-Tool, um die Anschlüsse und Fingerabdrücke aller Bindungen auf dem Computer anzuzeigen. Um die Informationen auf dem Datenträger zu drucken, verwenden Sie das Umleitungs Zeichen ">", wie im folgenden Beispiel gezeigt.  
   
-    ```  
+    ```console  
     httpcfg query ssl>myMachinePorts.txt  
-    ```  
+    ```
   
-2. In [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool, mit der **löschen** und **Ssl** Schlüsselwörter. Verwenden der **-i** verwenden, um anzugeben der `IP`:`port` Zahl ist, und die **-h** verwenden, um den Fingerabdruck anzugeben.  
+2. Verwenden [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Sie [!INCLUDE[wxp](../../../../includes/wxp-md.md)]in oder das Tool Httpcfg. exe mit den Schlüsselwörtern **Delete** und **SSL** . Verwenden Sie den Schalter **-i** , um `IP`den`port` Wert ": Number" anzugeben, und den Schalter **-h** , um den Fingerabdruck anzugeben.  
   
-    ```  
+    ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
 3. Verwenden Sie unter [!INCLUDE[wv](../../../../includes/wv-md.md)] das Netsh.exe-Tool, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  
     ```  
   
