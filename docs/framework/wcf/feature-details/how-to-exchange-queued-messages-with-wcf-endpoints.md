@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778338"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972224"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten
-Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem Client und einen Windows Communication Foundation (WCF)-Dienst auftreten kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Verfahren zeigen, wie Sie sicherstellen, stabile Kommunikation zwischen einem Client und einem Dienst mit den standardmäßigen Bindung in der Warteschlange beim Implementieren des WCF-Diensts.  
+Warteschlangen stellen sicher, dass zuverlässiges Messaging zwischen einem Client und einem Windows Communication Foundation (WCF)-Dienst erfolgen kann, auch wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. In den folgenden Verfahren wird gezeigt, wie eine permanente Kommunikation zwischen einem Client und einem Dienst mithilfe der standardmäßigen in der Warteschlange befindlichen Bindung bei der Implementierung des WCF-Dienstanbieter sichergestellt  
   
- In diesem Abschnitt wird erläutert, wie Sie mit <xref:System.ServiceModel.NetMsmqBinding> für die Kommunikation zwischen einem WCF-Client und einem WCF-Dienst in der Warteschlange.  
+ In diesem Abschnitt wird erläutert, <xref:System.ServiceModel.NetMsmqBinding> wie für die Warteschlangen Kommunikation zwischen einem WCF-Client und einem WCF-Dienst verwendet wird.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>So verwenden Sie Warteschlangen in einem WCD-Dienst  
   
@@ -41,7 +41,7 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5. Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung von WCF-Konfiguration finden Sie unter [Konfigurieren von WCF-Dienste](../configuring-services.md).  
+5. Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung der WCF-Konfiguration finden Sie unter [Konfigurieren von WCF-Diensten](../configuring-services.md).  
 
 6. Erstellen Sie einen Host für den `OrderProcessing`-Dienst mit <xref:System.ServiceModel.ServiceHost>, der Nachrichten aus der Warteschlange liest und sie verarbeitet. Öffnen Sie den Diensthost, um den Dienst verfügbar zu machen. Zeigen Sie eine Meldung an, die den Benutzer darüber informiert, dass er den Dienst durch Drücken einer beliebigen Taste beenden kann. Rufen Sie `ReadLine` auf, damit auf das Drücken einer Taste gewartet und dann der Dienst geschlossen wird.  
   
@@ -50,15 +50,15 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>So erstellen Sie einen Client für einen Dienst in der Warteschlange  
   
-1. Das folgende Beispiel zeigt, wie die Hostinganwendung ausgeführt und verwenden Sie das Svcutil.exe-Tool zum Erstellen des WCF-Clients.  
+1. Im folgenden Beispiel wird gezeigt, wie Sie die Host Anwendung ausführen und das Tool "Svcutil. exe" verwenden, um den WCF-Client zu erstellen.  
   
-    ```  
+    ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
 2. Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, die die Adresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet, wie im folgenden Beispiel gezeigt.  
 
-3. Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange, rufen die `SubmitPurchaseOrder` Vorgang und Schließen des WCF-Clients, wie im folgenden Beispiel gezeigt.  
+3. Erstellen Sie einen Transaktions Bereich zum Schreiben in die Transaktions Warteschlange, rufen `SubmitPurchaseOrder` Sie den-Vorgang auf, und schließen Sie den WCF-Client, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -80,7 +80,7 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Abgewickelte MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

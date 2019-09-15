@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: f25e71aec03f9808b3263f0353328f92888ccc69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d7fa8c9faa84efc84243387cd27aa264f6155eb
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962316"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989623"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Vorgehensweise: Erstellen eines Workflowdiensts zum Verarbeiten eines vorhandenen Dienstvertrags
 .NET Framework 4,5 bietet eine bessere Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflow Entwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox.  
@@ -27,13 +27,13 @@ ms.locfileid: "69962316"
   
 2. Fügen Sie `System.Servicemodel` im oberen Bereich des angezeigten Codefensters eine Using-Anweisung hinzu.  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
     ```  
   
 3. Ändern Sie die Beispielklassendefinition in die folgende Schnittstellendefinition.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IBookService  
         {  

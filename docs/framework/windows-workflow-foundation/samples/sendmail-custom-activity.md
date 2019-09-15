@@ -2,12 +2,12 @@
 title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 9325817a24fee3ba04c2c305ebfdfbc6ff6da1bd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5797620c4938d7dcffb1f506b682141336b21eab
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038114"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988981"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet die Funktionen <xref:System.Net.Mail.SmtpClient> von, um e-Mail-Nachrichten asynchron zu senden und e-Mails mit Authentifizierung zu senden. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
@@ -47,7 +47,7 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Senden einer E-Mail-Nachricht mit Token im Text  
  Mit diesem Codeausschnitt wird veranschaulicht, wie Sie eine E-Mail-Nachricht mit Token im Text senden können. Die Token werden in der body-Eigenschaft bereitgestellt. Die Werte für die Token werden in der Tokeneigenschaft bereitgestellt.  
   
-```html  
+```csharp  
 IDictionary<string, string> tokens = new Dictionary<string, string>();  
 tokens.Add("@name", "John Doe");  
 tokens.Add("@date", DateTime.Now.ToString());  
@@ -69,7 +69,7 @@ new SendMail
 ### <a name="sending-an-email-using-a-template"></a>Senden einer E-Mail-Nachricht mit einer Vorlage  
  Mit diesem Codeausschnitt wird veranschaulicht, wie Sie eine E-Mail-Nachricht mit Vorlagentoken im Text senden können. Beachten Sie, dass beim Festlegen der `BodyTemplateFilePath`-Eigenschaft kein Wert für die body-Eigenschaft angegeben werden muss (der Inhalt der Vorlagendatei wird in den Text kopiert).  
   
-```  
+```csharp  
 new SendMail  
 {    
     From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  
@@ -86,7 +86,7 @@ new SendMail
 ### <a name="sending-mails-in-testing-mode"></a>Senden von E-Mails im Testmodus  
  In diesem Code Ausschnitt wird gezeigt, wie die zwei Test Eigenschaften festgelegt werden `TestMailTo` : durch Festlegen von auf alle nach `john.doe@contoso.con` richten, die an gesendet werden (ohne Berücksichtigung der Werte von to, CC, BCC). Durch Festlegen von TestDropPath werden alle ausgehenden E-Mail-Nachrichten außerdem unter dem angegebenen Pfad gespeichert. Diese Eigenschaften können unabhängig voneinander festgelegt werden (sie sind nicht verknüpft).  
   
-```  
+```csharp  
 new SendMail  
 {    
    From = new LambdaValue<MailAddress>(ctx => new MailAddress("john.doe@contoso.com")),  

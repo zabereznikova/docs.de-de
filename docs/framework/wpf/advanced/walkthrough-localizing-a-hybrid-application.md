@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b98bf7b3f0aa4e7698a5c0ca7c8ae16051ce6300
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621212"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991781"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
-In dieser exemplarischen Vorgehensweise erfahren Sie, wie zum Lokalisieren von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente in einem [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]--basierten hybridanwendung.
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wie Elemente in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]einer-basierten Hybrid Anwendung lokalisiert werden.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Hostprojekt.
+- Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Host Projekt wird erstellt.
 
 - Lokalisierbaren Inhalt hinzufügen
 
@@ -28,11 +28,11 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 - Verwenden des LocBaml-Tools zum Erzeugen einer Satellitenassembly.
 
-Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Lokalisieren einer Anwendung Hybridbeispiel](https://go.microsoft.com/fwlink/?LinkID=160015).
+Eine komplette Code Auflistung der Aufgaben, die in dieser exemplarischen Vorgehensweise veranschaulicht werden, finden Sie unter Beispiel für das [Lokalisieren einer Hybrid Anwendung](https://go.microsoft.com/fwlink/?LinkID=160015).
 
 Am Ende werden Sie eine lokalisierte Hybridanwendung haben.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -40,35 +40,35 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 ## <a name="creating-the-windows-forms-host-project"></a>Erstellen des Windows Forms-Hostprojekts
 
-Der erste Schritt ist die Erstellung der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung Projekt, und fügen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Element mit dem Inhalt, die Sie lokalisieren werden.
+Der erste Schritt besteht darin, das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungsprojekt zu erstellen und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein-Element mit Inhalt hinzuzufügen, das Sie lokalisieren werden.
 
 ### <a name="to-create-the-host-project"></a>So erstellen Sie das Hostprojekt
 
-1. Erstellen Sie eine **WPF-App** Projekt mit dem Namen `LocalizingWpfInWf`.  (**Datei** > **neue** > **Projekt** > **Visual C#-** oder **Visual Basic**   >  **Klassischer Desktop** > **WPF-Anwendung**).
+1. Erstellen Sie ein **WPF** -Anwendungs `LocalizingWpfInWf`Projekt mit dem Namen.  (**Datei** > **Neues** **Projekt, Visual C#**  oder Visual Basic**klassische Desktop-** WPF- > Anwendung). >  >  > 
 
-2. Hinzufügen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> Element namens `SimpleControl` zum Projekt.
+2. Fügen Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dem Projekt `SimpleControl` ein <xref:System.Windows.Controls.UserControl> -Element mit dem Namen hinzu.
 
-3. Verwenden der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement platzieren einer `SimpleControl` Element auf dem Formular. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten 3D-WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3. Verwenden Sie <xref:System.Windows.Forms.Integration.ElementHost> das-Steuerelement `SimpleControl` , um ein-Element im Formular zu platzieren. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosting eines zusammengesetzten 3D-WPF-Steuer](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)Elements in Windows Forms.
 
 ## <a name="adding-localizable-content"></a>Hinzufügen von lokalisierbarem Inhalt
 
-Als Nächstes fügen Sie eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] beschriftungs-Steuerelement, und legen Sie die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt des Elements auf eine lokalisierbare Zeichenfolge.
+Fügen Sie als nächstes ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Label-Steuerelement hinzu, und legen Sie den Inhalt des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elements auf eine lokalisierbare Zeichenfolge fest.
 
 ### <a name="to-add-localizable-content"></a>So fügen Sie lokalisierbaren Inhalt hinzu
 
-1. In **Projektmappen-Explorer**, doppelklicken Sie auf **SimpleControl.xaml** zum Öffnen der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+1. Doppelklicken Sie in **Projektmappen-Explorer**auf **SimpleControl. XAML** , um [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]es im zu öffnen.
 
-2. Legen Sie den Inhalt von der <xref:System.Windows.Controls.Button> mithilfe des folgenden Codes zu steuern.
+2. Legen Sie den Inhalt des <xref:System.Windows.Controls.Button> -Steuer Elements mithilfe des folgenden Codes fest.
 
      [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
-3. In **Projektmappen-Explorer**, doppelklicken Sie auf **Form1** um es im Windows Forms-Designer zu öffnen.
+3. Doppelklicken Sie in **Projektmappen-Explorer**auf **Form1** , um es im Windows Forms-Designer zu öffnen.
 
-4. Öffnen der **Toolbox** und doppelklicken Sie auf **Bezeichnung** auf dem Formular ein Label-Steuerelement hinzuzufügen. Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf `"Hello"` fest.
+4. Öffnen Sie die **Toolbox** , und doppelklicken Sie auf **Bezeichnung** , um dem Formular ein Label-Steuerelement hinzuzufügen. Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf `"Hello"` fest.
 
 5. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-     Sowohl die `SimpleControl` Element und das Label-Steuerelement zeigt den Text **"Hello"**.
+     Sowohl das `SimpleControl` -Element als auch das Label-Steuerelement zeigen den Text **"Hello"** an.
 
 ## <a name="enabling-localization"></a>Aktivieren der Lokalisierungsfunktionalität
 
@@ -76,33 +76,33 @@ Windows Forms-Designer bietet Einstellungen für das Aktivieren der Lokalisierun
 
 ### <a name="to-enable-localization"></a>So aktivieren Sie die Lokalisierungsfunktionalität
 
-1. In **Projektmappen-Explorer**, doppelklicken Sie auf **"Form1.cs"** um es im Windows Forms-Designer zu öffnen.
+1. Doppelklicken Sie in **Projektmappen-Explorer**auf **Form1.cs** , um es im Windows Forms-Designer zu öffnen.
 
-2. In der **Eigenschaften** legen den Wert des Formulars **Localizable** Eigenschaft `true`.
+2. Legen Sie im Fenster **Eigenschaften** den Wert der **Lokalisier** baren Eigenschaft des Formulars auf `true`fest.
 
-3. In der **Eigenschaften** legen den Wert des der **Sprache** Eigenschaft **Spanisch (Spanien)**.
+3. Legen Sie im Fenster **Eigenschaften** den Wert der **Language** -Eigenschaft auf **Spanisch (Spanien)** fest.
 
 4. Wählen Sie im Windows Forms-Designer das Steuerelement „Label”.
 
-5. In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft `"Hola"`.
+5. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.Forms.Control.Text%2A> der-Eigenschaft auf `"Hola"`fest.
 
      Dem Projekt wird eine neue Ressourcendatei mit dem Namen Form1.es-ES.resx hinzugefügt.
 
-6. In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.cs"** , und klicken Sie auf **Ansichtscode** um ihn im Code-Editor zu öffnen.
+6. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **Form1.cs** , und klicken Sie auf **Code anzeigen** , um ihn im Code-Editor zu öffnen.
 
-7. Kopieren Sie den folgenden Code der `Form1` Konstruktor vor dem Aufruf von `InitializeComponent`.
+7. Kopieren Sie `Form1` `InitializeComponent`den folgenden Code in den-Konstruktor, der dem-Vorgang vorangestellt ist.
 
      [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
-8. In **Projektmappen-Explorer**, mit der rechten Maustaste **LocalizingWpfInWf** , und klicken Sie auf **Projekt entladen**.
+8. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **LocalizingWpfInWf** , und klicken Sie dann auf **Projekt entladen**.
 
-     Der Projektname ist mit der Bezeichnung **(nicht verfügbar)**.
+     Der Projektname hat die Bezeichnung **(nicht verfügbar)** .
 
-9. Mit der rechten Maustaste **LocalizingWpfInWf**, und klicken Sie auf **bearbeiten LocalizingWpfInWf.csproj**.
+9. Klicken Sie mit der rechten Maustaste auf **LocalizingWpfInWf**, und klicken Sie auf **LocalizingWpfInWf. csproj bearbeiten**.
 
      Die Projektdatei wird im Code-Editor angezeigt.
 
-10. Kopieren Sie die folgende Zeile in der ersten `PropertyGroup` in der Projektdatei.
+10. Kopieren Sie die folgende Zeile in die `PropertyGroup` erste in der Projektdatei.
 
     ```xml
     <UICulture>en-US</UICulture>
@@ -110,31 +110,31 @@ Windows Forms-Designer bietet Einstellungen für das Aktivieren der Lokalisierun
 
 11. Speichern Sie die Projektdatei und schließen Sie sie.
 
-12. In **Projektmappen-Explorer**, mit der rechten Maustaste **LocalizingWpfInWf** , und klicken Sie auf **Projekt erneut laden**.
+12. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **LocalizingWpfInWf** , und klicken Sie auf **Projekt erneut laden**.
 
 ## <a name="assigning-resource-identifiers"></a>Ressourcenbezeichner zuweisen
 
-Sie können mithilfe von Ressourcenbezeichnern eine Zuordnung von lokalisierbarem Inhalt zu Ressourcenassemblys erstellen. Die MsBuild.exe-Anwendung weist automatisch Ressourcenbezeichner, bei der Angabe der `updateuid` Option.
+Sie können mithilfe von Ressourcenbezeichnern eine Zuordnung von lokalisierbarem Inhalt zu Ressourcenassemblys erstellen. Die Anwendung MSBuild. exe weist Ressourcen Bezeichner automatisch zu, wenn Sie `updateuid` die Option angeben.
 
 ### <a name="to-assign-resource-identifiers"></a>So weisen Sie Ressourcenbezeichner zu
 
-1. Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, über das Startmenü.
+1. Öffnen Sie im Startmenü die Developer-Eingabeaufforderung für Visual Studio.
 
 2. Verwenden Sie den folgenden Befehl, um ihrem lokalisierbaren Inhalt Ressourcenbezeichner zuzuweisen.
 
-    ```
+    ```console
     msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
-3. In **Projektmappen-Explorer**, doppelklicken Sie auf **SimpleControl.xaml** um ihn im Code-Editor zu öffnen. Sie sehen, dass die `msbuild` Befehl wurde hinzugefügt, die `Uid` Attribut auf alle Elemente. Dies erleichtert die Lokalisierung durch Zuweisung von Ressourcenbezeichnern.
+3. Doppelklicken Sie in **Projektmappen-Explorer**auf **SimpleControl. XAML** , um die Datei im Code-Editor zu öffnen. Sie sehen, dass der `msbuild` Befehl allen Elementen das `Uid` -Attribut hinzugefügt hat. Dies erleichtert die Lokalisierung durch Zuweisung von Ressourcenbezeichnern.
 
      [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
-4. Drücken Sie **F6** zum Erstellen der Projektmappe.
+4. Drücken Sie **F6** , um die Projekt Mappe zu erstellen.
 
 ## <a name="using-locbaml-to-produce-a-satellite-assembly"></a>Verwenden des LocBaml-Tools zum Erzeugen einer Satellitenassembly
 
-Ihr lokalisierte Inhalt befindet sich in einer reinen Ressourcen- *Satellitenassembly*. Verwenden Sie das Befehlszeilentool LocBaml.exe, erstellen Sie eine lokalisierte Assembly für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt.
+Der lokalisierte Inhalt wird in einer *Satellitenassembly*gespeichert. Verwenden Sie das Befehlszeilen Tool "LocBaml. exe", um eine lokalisierte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assembly für Ihren Inhalt zu entwickeln.
 
 ### <a name="to-produce-a-satellite-assembly"></a>So erzeugen Sie eine Satellitenassembly
 
@@ -142,17 +142,17 @@ Ihr lokalisierte Inhalt befindet sich in einer reinen Ressourcen- *Satellitenass
 
 2. Führen Sie im Eingabeaufforderungsfenster den folgenden Befehl aus, um Ressourcenzeichenfolgen in eine temporäre Datei zu extrahieren.
 
-    ```
+    ```console
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv
     ```
 
-3. Öffnen Sie die Datei "temp.csv" mit Visual Studio oder einem anderen Texteditor ein. Ersetzen Sie die Zeichenfolge `"Hello"` mit entsprechende spanische Übersetzung `"Hola"`.
+3. Öffnen Sie die Datei "Temp. csv" mit Visual Studio oder einem anderen Text-Editor. Ersetzen Sie die `"Hello"` Zeichenfolge durch die spanische `"Hola"`Übersetzung.
 
 4. Speichern Sie die Datei „temp.csv”.
 
 5. Verwenden Sie den folgenden Befehl, um die lokalisierte Ressourcendatei zu generieren.
 
-    ```
+    ```console
     LocBaml /generate /trans:temp.csv LocalizingWpfInWf.g.en-US.resources /out:. /cul:es-ES
     ```
 
@@ -160,7 +160,7 @@ Ihr lokalisierte Inhalt befindet sich in einer reinen Ressourcen- *Satellitenass
 
 6. Verwenden Sie den folgenden Befehl, um die lokalisierte Satellitenassembly zu erstellen.
 
-    ```
+    ```console
     Al.exe /out:LocalizingWpfInWf.resources.dll /culture:es-ES /embed:LocalizingWpfInWf.Form1.es-ES.resources /embed:LocalizingWpfInWf.g.es-ES.resources
     ```
 

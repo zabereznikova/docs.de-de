@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Debuggen von Ansprüche unterstützenden Anwendungen und
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: effd670a4d0e12f0bca10301fabc361c73e03328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 604ebf5ad71197f6614ffa45b6d7c181d474e1aa
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625877"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990479"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Vorgehensweise: Debuggen von Ansprüche unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung
 ## <a name="applies-to"></a>Gilt für  
@@ -59,9 +59,9 @@ ms.locfileid: "64625877"
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>So konfigurieren Sie die WIF-Ablaufverfolgung mithilfe der Konfigurationsdatei "Web.config"  
   
-1. Öffnen Sie die Stammkonfigurationsdatei **Web.config** oder **App.config** im Visual Studio-Editor, indem Sie im **Projektmappen-Explorer** darauf klicken. Wenn Ihre Projektmappe die Konfigurationsdatei **Web.config** bzw. **App.config** nicht enthält, müssen Sie diese hinzufügen. Klicken Sie dazu mit der rechten Maustaste im **Projektmappen-Explorer** auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element…**. Wählen Sie im Dialogfeld **Neues Element** die **Anwendungskonfigurationsdatei** (für **App.config**) oder die **Webkonfigurationsdatei** (für **Web.config**) aus der Liste aus, und klicken Sie auf **OK**.  
+1. Öffnen Sie die Stammkonfigurationsdatei **Web.config** oder **App.config** im Visual Studio-Editor, indem Sie im **Projektmappen-Explorer** darauf klicken. Wenn Ihre Projektmappe die Konfigurationsdatei **Web.config** bzw. **App.config** nicht enthält, müssen Sie diese hinzufügen. Klicken Sie dazu mit der rechten Maustaste im **Projektmappen-Explorer** auf die Projektmappe, klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element…** . Wählen Sie im Dialogfeld **Neues Element** die **Anwendungskonfigurationsdatei** (für **App.config**) oder die **Webkonfigurationsdatei** (für **Web.config**) aus der Liste aus, und klicken Sie auf **OK**.  
   
-2. Fügen Sie in der Konfigurationsdatei dem **\<configuration>**-Knoten am Ende der Datei Konfigurationseinträge hinzu, die in etwa wie folgt lauten:  
+2. Fügen Sie in der Konfigurationsdatei dem **\<configuration>** -Knoten am Ende der Datei Konfigurationseinträge hinzu, die in etwa wie folgt lauten:  
   
     ```xml  
     <system.diagnostics>  
@@ -76,14 +76,14 @@ ms.locfileid: "64625877"
     </system.diagnostics>  
     ```  
   
-3. Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren. Eine vollständige Liste der Werte für die **SwitchValue** wechseln, finden Sie in der Ablaufverfolgungsebene-Tabelle finden Sie im folgenden Thema: [Konfigurieren der Ablaufverfolgung](../wcf/diagnostics/tracing/configuring-tracing.md).  
+3. Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren. Eine umfassende Liste der Werte für den **switchValue** -Schalter finden Sie in der Tabelle mit den Ablauf Verfolgungs Ebenen im folgenden Thema: [Konfigurieren](../wcf/diagnostics/tracing/configuring-tracing.md)der Ablauf Verfolgung.  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
  In diesem Schritt verwenden Sie das Trace Viewer-Tool (SvcTraceViewer.exe), um WIF-Ablaufverfolgungsprotokolle zu analysieren.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>So analysieren Sie WIF-Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool (SvcTraceViewer.exe)  
   
-1. Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten. Wenn Sie das Windows SDK noch nicht installiert haben, können Sie es hier herunterladen: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
+1. Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten. Wenn Sie die Windows SDK nicht bereits installiert haben, können Sie Sie hier herunterladen: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2. Führen Sie das Trace Viewer-Tool (SvcTraceViewer.exe) aus. Es befindet sich in der Regel im Installationspfad im Ordner **Bin**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64625877"
   
 4. Überprüfen Sie die Einträge auf der Registerkarte **Aktivität**. Jeder Eintrag muss eine Aktivitätsnummer, die Anzahl der protokollierten Ablaufverfolgungen, die Dauer der Aktivität sowie Zeitstempel für Anfang und Ende der Aktivität enthalten.  
   
-5. Klicken Sie auf die Registerkarte **Aktivität**. Im Hauptbereich des Tools sollten ausführliche Ablaufverfolgungseinträge angezeigt werden. Verwenden der **Ebene** Dropdown-Liste auf das Menü, um bestimmte Ablaufverfolgungsebenen, z. B. filtern: **Alle**, **Warnung**, **Fehler**, **Informationen**usw.  
+5. Klicken Sie auf die Registerkarte **Aktivität**. Im Hauptbereich des Tools sollten ausführliche Ablaufverfolgungseinträge angezeigt werden. Filtern Sie mithilfe der Dropdown Liste **Ebene** im Menü eine bestimmte Ablauf Verfolgungs Ebene, z. b.: **Alle**, **Warnung**, **Fehler**, **Informationen**usw.  
   
 6. Klicken Sie auf bestimmte Ablaufverfolgungseinträge, um die Einzelheiten im unteren Bereich des Tools zu überprüfen. Die Einzelheiten können in den Ansichten **Formatiert** und **XML** angezeigt werden. Wählen Sie die jeweils entsprechende Registerkarte aus.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "64625877"
   
 |**Fehler-ID**|**Fehlermeldung**|**Aktion zum Beheben des Fehlers**|  
 |-|-|-|  
-|ID4175|Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.  Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.|Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen. Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird. Dieses zusätzliche Zeichen bewirkt, dass der Fingerabdruck Übereinstimmung ein Fehler auftritt. Das Verfahren für den Fingerabdruck richtig kopieren finden Sie unter [Claims-basierte Single Sign-in für das Web und die Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
+|ID4175|Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.  Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.|Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen. Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird. Dieses zusätzliche Zeichen bewirkt, dass die Fingerabdruck Übereinstimmung fehlschlägt. Das Verfahren zum ordnungsgemäßen Kopieren des Fingerabdrucks finden Sie unter [Forderungs basiertes einmaliges Anmelden für das Web und Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Verwandte Elemente  
   

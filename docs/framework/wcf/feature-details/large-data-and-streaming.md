@@ -2,12 +2,12 @@
 title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911866"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991516"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem Standardtext Format codiert sind, das in der [XML 1,0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838)definiert ist, haben Entwickler und Architekten von verbundenen Systemen in der Regel den Netzwerk Bedarf (oder die Größe) von Nachrichten, die über das Netzwerk gesendet werden, und die die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung von Binärdaten dar.  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
 ### <a name="programming-model"></a>Programmiermodell  
  Unabhängig davon, welchen der drei integrierten Encoder Sie in Ihrer Anwendung verwenden, erfolgt die Programmierung zur Übertragung binärer Daten in allen Fällen auf die gleiche Weise. Der Unterschied besteht darin, wie WCF die Daten auf Grundlage ihrer Datentypen verarbeitet.  
   
-```  
+```csharp
 [DataContract]  
 class MyData  
 {  
@@ -190,7 +190,7 @@ class MyData
 ### <a name="programming-model-for-streamed-transfers"></a>Programmiermodell für Streamingübertragungen  
  Das Programmiermodell für Streaming ist unkompliziert. Geben Sie für eingehende Streamingdaten einen Vorgangsvertrag mit einem einzelnen Eingabeparameter vom Typ <xref:System.IO.Stream> an. Geben Sie für zurückgehende Streamingdaten einen <xref:System.IO.Stream>-Verweis an.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamedService  
 {  
@@ -209,7 +209,7 @@ public interface IStreamedService
   
  Diese Regel gilt in ähnlicher Weise für Nachrichtenverträge. Wie im folgenden Nachrichtenvertrag dargestellt, kann der Nachrichtenvertrag nur einen einzigen Textmember enthalten, der ein Stream ist. Wenn Sie zusätzliche Informationen mit dem Stream übermitteln möchten, müssen diese Informationen in Nachrichtenheadern übertragen werden. Der Nachrichtentext ist ausschließlich für Streaminginhalt reserviert.  
   
-```  
+```csharp
 [MessageContract]  
 public class UploadStreamMessage  
 {  

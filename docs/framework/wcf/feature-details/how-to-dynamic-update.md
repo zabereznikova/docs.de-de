@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dynamisches Update'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911154"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972078"
 ---
 # <a name="how-to-dynamic-update"></a>Vorgehensweise: Dynamisches Update
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um die Routingkonfiguration zu erstellen und dynamisch zu aktualisieren. In diesem Beispiel wird die ursprüngliche Routingkonfiguration aus der Konfigurationsdatei abgerufen, die alle Nachrichten an den regularCalc-Rechnerdienst weiterleitet. Die Konfiguration wird anschließend jedoch programmgesteuert aktualisiert, um den Zielendpunkt in den roundingCalc-Dienst zu ändern.  
@@ -165,7 +165,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 ## <a name="example"></a>Beispiel  
  Es folgt eine vollständige Liste der Konsolenanwendung, die in diesem Beispiel verwendet wird.  
   
-```  
+```csharp
 //-----------------------------------------------------------------  
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.  
 //-----------------------------------------------------------------  

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2d1b70931fe70dfd605e182d4b23a151bc8130a3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932572"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991183"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode
 "Svcutil.exe" kann Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys wie folgt exportieren:  
@@ -30,7 +30,7 @@ ms.locfileid: "69932572"
     > [!NOTE]
     > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
-    ```  
+    ```console
     svcutil.exe Contracts.dll  
     ```  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69932572"
     > [!NOTE]
     > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
-    ```  
+    ```console  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69932572"
     > [!NOTE]
     > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
-    ```  
+    ```console  
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
@@ -80,26 +80,26 @@ ms.locfileid: "69932572"
   
  So exportieren Sie Metadaten für den Dienstvertrag  
   
-```  
+```console  
 svcutil.exe Contracts.dll  
 ```  
   
  So exportieren Sie Metadaten für Datenverträge  
   
-```  
+```console  
 svcutil.exe /dataContractOnly Contracts.dll  
 ```  
   
  So exportieren Sie Metadaten für die Dienstimplementierung  
   
-```  
+```console  
 svcutil.exe /serviceName:MyService Service.exe /reference:<path>/Contracts.dll  
 ```  
   
  Der `<path>` entspricht dem Pfad zu "Contracts.dll".  
   
-```  
-// The following service contract and data contracts are compiled into   
+```csharp
+// The following service contract and data contracts are compiled into
 // Contracts.dll.  
 [ServiceContract(ConfigurationName="IPeopleFinder")]  
 public interface IPersonFinder  
@@ -133,8 +133,10 @@ public class Address
     [DataMember]  
     public Person person;  
 }  
-  
-// The following service implementation is compiled into Service.exe.     
+```
+
+```csharp
+// The following service implementation is compiled into Service.exe.
 // This service uses the contracts specified in Contracts.dll.  
 [ServiceBehavior(ConfigurationName = "MyService")]  
 public class MyService : IPersonFinder  
@@ -146,7 +148,9 @@ public class MyService : IPersonFinder
         return address;  
     }  
 }  
-  
+```
+
+```xml  
 <!-- The following is the configuration file for Service.exe. -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  

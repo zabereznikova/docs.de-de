@@ -2,12 +2,12 @@
 title: Abrufen von WorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
-ms.openlocfilehash: 73fee4376b1abe29620bfae05bbd96fccf7b17c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f8bd3205f5b7a4b3bae5203dc90a3c393cedcbdd
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038156"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989371"
 ---
 # <a name="get-workflowinstanceid"></a>Abrufen von WorkflowInstanceId
 In diesem Beispiel wird veranschaulicht, wie die benutzerdefinierte Aktivität `GetWorkflowInstanceId` verwendet wird, um die Workflowinstanz-ID zurückzugeben.  
@@ -20,14 +20,14 @@ In diesem Beispiel wird veranschaulicht, wie die benutzerdefinierte Aktivität `
   
  `GetWorkflowInstanceId` wird als <xref:System.Activities.CodeActivity%601> implementiert, da ein Wert vom Typ <xref:System.Guid> zurückgegeben werden muss und Zugriff auf den <xref:System.Activities.CodeActivityContext> zum Abrufen der Instanz-ID des Workflows erforderlich ist. Die Implementierung ist relativ einfach.  
   
-```  
+```csharp  
 public sealed class GetWorkflowInstanceId : CodeActivity<Guid>  
 {  
-protected override Guid Execute(CodeActivityContext context)  
-        {  
-            return context.WorkflowInstanceId;  
-        }  
-}  
+    protected override Guid Execute(CodeActivityContext context)  
+    {  
+        return context.WorkflowInstanceId;  
+    }  
+}
 ```  
   
 > [!IMPORTANT]

@@ -2,12 +2,12 @@
 title: Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: 54e6f33801788c6c992ca3cefee1390e28291a44
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045642"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990025"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Benutzerdefiniertes Binden von zuverlässigen Sitzungen über HTTPS
 In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit mit zuverlässigen Sitzungen veranschaulicht. Zuverlässige Sitzungen implementieren das WS-ReliableMessaging-Protokoll. Durch das Erstellen von WS-Sicherheit über zuverlässige Sitzungen können Sie eine sichere zuverlässige Sitzung erreichen. In einigen Fällen werden Sie jedoch die Verwendung der HTTP-Transportsicherheit mit SSL vorziehen.  
@@ -111,7 +111,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
 
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -124,7 +124,7 @@ Press <ENTER> to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

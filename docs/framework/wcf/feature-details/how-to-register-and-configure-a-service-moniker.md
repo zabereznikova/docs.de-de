@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934318"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972144"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers
 Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in einer COM-Anwendung mit einem typisierten Vertrag müssen Sie die erforderlichen attributierten Typen bei com registrieren und die COM-Anwendung und den Moniker mit der erforderlichen Bindung konfigurieren. konfiguri.  
@@ -21,7 +21,7 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
   
 2. Stellen Sie sicher, dass die Typen in der Assembly als `ComVisible` markiert sind. Fügen Sie hierzu der Datei AssemblyInfo.cs in Ihrem Visual Studio-Projekt das folgende Attribut hinzu:  
   
-    ```  
+    ```csharp
     [assembly: ComVisible(true)]  
     ```  
   
@@ -40,10 +40,8 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
   
      Der folgende Typ wird registriert:  
   
-    ```  
+    ```csharp  
     using System.ServiceModel;  
-  
-    ...  
   
     [ServiceContract]   
     public interface IMathService   
@@ -57,19 +55,19 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
   
      Die Anwendung wird mit einer `wsHttpBinding`-Bindung verfügbar gemacht. Für den angegebenen Typ und die Anwendungskonfiguration werden die folgenden Beispielmonikerzeichenfolgen verwendet:  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
     ```  
   
      `or`  
   
-    ```  
+    ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
      Nachdem ein Verweis auf die Assembly mit den `IMathService`-Typen hinzugefügt wurde (siehe folgendes Codebeispiel), kann jede dieser Monikerzeichenfolgen in einer Visual Basic 6.0-Anwendung verwendet werden.  
   
-    ```  
+    ```vb  
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -91,7 +89,7 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-Dienstmonikers in 
   
      Obgleich in diesem Thema hauptsächlich die Verwendung des Dienstmonikers in VB 6.0-Code behandelt wird, können Dienstmoniker auch in anderen Sprachen verwendet werden. Bei Verwendung eines Monikers in C++-Code muss die von Svcutil.exe generierte Assembly gemäß dem folgenden Beispiel mit "no_namespace named_guids raw_interfaces_only" importiert werden:  
   
-    ```  
+    ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   

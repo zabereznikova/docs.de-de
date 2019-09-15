@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7d68e55972336e304286e967d445f3589219b9a2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929396"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972317"
 ---
 # <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
@@ -36,7 +36,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
 |`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Option `-link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).  
+ Die Option `-link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md).  
   
  Die Option `-link` ist besonders nützlich, wenn Sie COM-Interop verwenden. Sie können COM-Typen einbetten, sodass für Ihre Anwendung keine primäre Interopassembly (PIA) auf dem Zielcomputer mehr erforderlich ist. Die Option `-link` weist den Compiler an, die COM-Typinformationen aus der Interopassembly, auf die verwiesen wird, in den resultierenden kompilierten Code einzubetten. Der COM-Typ wird durch den CLSID (GUID)-Wert identifiziert. Dadurch kann Ihre Anwendung auf einem Zielcomputer ausgeführt werden, auf dem die gleichen COM-Typen mit den gleichen CLSID-Werten installiert sind. Anwendungen, die Microsoft Office automatisieren, sind ein gutes Beispiel. Da Anwendungen wie Office in der Regel den gleichen CLSID-Wert in den verschiedenen Versionen behalten, kann die Anwendung die COM-Typen, auf die verwiesen wird, verwenden, wenn .NET Framework 4 oder höher auf dem Zielcomputer installiert ist und die Anwendung Methoden, Eigenschaften oder Ereignisse verwendet, die in den COM-Typen, auf die verwiesen wird, enthalten sind.  
   
@@ -53,9 +53,9 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
   
 - Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Verwenden Sie [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) , um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden.  
+ Verwenden Sie [-LIBPATH](libpath.md) , um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden.  
   
- Wie die [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) -Compileroption `-link` verwendet die-Compileroption die Antwortdatei "Vbc. rsp", die auf häufig verwendete .NET Framework Assemblys verweist. Verwenden Sie die [-noconfig-](../../../visual-basic/reference/command-line-compiler/noconfig.md) Compileroption, wenn Sie nicht möchten, dass der Compiler die Datei "Vbc. rsp" verwendet.  
+ Wie die [/Reference](reference.md) -Compileroption `-link` verwendet die-Compileroption die Antwortdatei "Vbc. rsp", die auf häufig verwendete .NET Framework Assemblys verweist. Verwenden Sie die [-noconfig-](noconfig.md) Compileroption, wenn Sie nicht möchten, dass der Compiler die Datei "Vbc. rsp" verwendet.  
   
  Die Kurzform von `-link` ist `-l`.  
   
@@ -87,10 +87,10 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-Verweis (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
-- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
+- [-Verweis (Visual Basic)](reference.md)
+- [-noconfig](noconfig.md)
+- [-libpath](libpath.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
 - [Einführung in COM-Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 3972b1c68fa4012de01d4b675523814911f6bae8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 401371bf01a62a20f2834cb76df19d9ddaacf83d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634985"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972355"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
-Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreifen können, muss die Anwendungscode der Name des Zertifikatspeichers und Speicherort angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels mit einem x. 509-Zertifikat im Zertifikatspeicher verknüpft ist, muss WCF dazu berechtigt. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
+Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich zu machen, muss der Anwendungscode den Namen und Speicherort des Zertifikat Speicher angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels, der einem X. 509-Zertifikat in einem Zertifikat Speicher zugeordnet ist, muss WCF über die entsprechende Berechtigung verfügen. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>So machen Sie X.509-Zertifikate für WCF zugänglich  
   
-1. Geben Sie das Konto, unter der WCF Lesezugriff auf die Datei ausgeführt wird, die die dem x. 509-Zertifikat zugeordneten privaten Schlüssel enthält.  
+1. Vergeben Sie das Konto, unter dem WCF Lesezugriff auf die Datei mit dem privaten Schlüssel enthält, der dem X. 509-Zertifikat zugeordnet ist.  
   
-    1. Bestimmen Sie, ob WCF Lesezugriff auf den privaten Schlüssel für das x. 509-Zertifikat erfordert.  
+    1. Stellen Sie fest, ob WCF Lesezugriff auf den privaten Schlüssel für das X. 509-Zertifikat erfordert.  
   
          Die folgende Tabelle beschreibt, ob ein privater Schlüssel bei der Verwendung eines X.509-Zertifikats verfügbar sein muss.  
   
@@ -41,19 +41,19 @@ Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreife
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3. Bestimmen, in dem der private Schlüssel für das Zertifikat auf dem Computer gefunden wurde die [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) Tool.  
+    3. Legen Sie mithilfe des Tools [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) fest, wo sich der private Schlüssel für das Zertifikat auf dem Computer befindet.  
   
-         Die [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) Tool erfordert, den Namen des Zertifikatspeichers, den zertifikatspeicherort und etwas, das das Zertifikat eindeutig identifiziert. Als eindeutiger Bezeichner werden der Antragstellername oder der Fingerabdruck des Zertifikats von dem Tool akzeptiert. Weitere Informationen zum Ermitteln des Fingerabdrucks eines Zertifikats finden Sie unter [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+         Das Tool [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) erfordert den Zertifikat Speicher Namen, den Zertifikat Speicherort und etwas, das das Zertifikat eindeutig identifiziert. Als eindeutiger Bezeichner werden der Antragstellername oder der Fingerabdruck des Zertifikats von dem Tool akzeptiert. Weitere Informationen zum Ermitteln des Fingerabdrucks für ein Zertifikat finden [Sie unter Gewusst wie: Rufen Sie den Fingerabdruck eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)ab.  
   
-         Im folgenden Codebeispiel wird die [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) Tool, um zu bestimmen, den Speicherort des privaten Schlüssels eines Zertifikats in die `My` speichern in `CurrentUser` mit einem Fingerabdruck `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`.  
+         Im folgenden Codebeispiel wird das [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) -Tool verwendet, um den Speicherort des privaten Schlüssels für ein Zertifikat `My` im Speicher `CurrentUser` in mit einem Fingerabdruck `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`von zu bestimmen.  
   
-        ```  
+        ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4. Bestimmen Sie das Konto, dem WCF unter ausgeführt wird.  
+    4. Bestimmen Sie das Konto, unter dem WCF ausgeführt wird.  
   
-         In der folgende Tabelle werden die Konten beschrieben unter der WCF für ein bestimmtes Szenario ausgeführt wird.  
+         In der folgenden Tabelle wird das Konto erläutert, unter dem WCF für ein bestimmtes Szenario ausgeführt wird.  
   
         |Szenario|Prozessidentität|  
         |--------------|----------------------|  
@@ -62,11 +62,11 @@ Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreife
         |Dienst, der in IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) oder IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) gehostet wird.|NETZWERKDIENST|  
         |Dienst, der in IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) gehostet wird.|Wird durch das `<processModel>`-Element in der Datei Machine.config gesteuert. ASPNET ist das Standardkonto.|  
   
-    5. Gewähren von Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto, die WCF enthält unter ausgeführt wird, mithilfe eines Tools wie icacls.exe.  
+    5. Erteilen Sie mithilfe eines Tools wie "icacls. exe" Lesezugriff auf die Datei, die den privaten Schlüssel für das Konto enthält, unter dem WCF ausgeführt wird.  
   
-         Im folgenden Codebeispiel wird bearbeitet die besitzerverwaltete Zugriffssteuerungsliste (DACL) für die angegebene Datei das Lesen der NETZWERKDIENST-Konto zu gewähren (: R) Zugriff auf die Datei.  
+         Im folgenden Codebeispiel wird die freigegebene Zugriffs Steuerungs Liste (DACL) für die angegebene Datei bearbeitet, um dem Netzwerkdienst Konto Lesezugriff (: R) auf die Datei zu gewähren.  
   
-        ```  
+        ```console 
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   

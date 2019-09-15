@@ -2,22 +2,22 @@
 title: Deaktivieren des RealTimeStylus für WPF-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962489"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991843"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Deaktivieren des RealTimeStylus für WPF-Anwendungen
-Windows Presentation Foundation (WPF) verfügt über integrierte Unterstützung für die Verarbeitung von Windows 7-Touch-Punkts. Die Unterstützung wird über die Tablet-Plattform in Echtzeit-Stylus-Eingabe als <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, und <xref:System.Windows.UIElement.OnStylusMove%2A> Ereignisse. Windows 7 bietet außerdem Multitouch-Eingaben als Win32-WM_TOUCH-Windows-Meldungen. Diese beiden APIs gegenseitig auf demselben HWND. Aktivierung Fingereingabe über die Tablet-Plattform (die Standardeinstellung für WPF-Anwendungen) deaktiviert die WM_TOUCH-Nachrichten. Um WM_TOUCH verwenden, um die Touch-Nachrichten von einem WPF-Fenster zu erhalten, müssen Sie daher die integrierten stiftunterstützung in WPF deaktivieren. Dies gilt in einem Szenario wie z. B. ein WPF-Fenster, das Hosten einer Komponente, die WM_TOUCH verwendet.  
+Windows Presentation Foundation (WPF) verfügt über integrierte Unterstützung für die Verarbeitung von Windows 7-Berührungs Eingaben. Die Unterstützung erfolgt durch die Echt Zeit Stift Eingabe der Tablet-Plattform als <xref:System.Windows.UIElement.OnStylusDown%2A>- <xref:System.Windows.UIElement.OnStylusUp%2A>,- <xref:System.Windows.UIElement.OnStylusMove%2A> und-Ereignisse. Windows 7 bietet auch Multitouch-Eingaben als Win32-WM_TOUCH-Fenster Meldungen. Diese beiden APIs schließen sich gegenseitig auf demselben HWND aus. Aktivieren von Finger Eingaben über die Tablet-Plattform (Standard für WPF-Anwendungen) deaktiviert WM_TOUCH-Nachrichten. Wenn Sie WM_TOUCH verwenden möchten, um Fingereingabe Nachrichten von einem WPF-Fenster zu empfangen, müssen Sie daher die integrierte tablettstiftunterstützung in WPF deaktivieren. Dies gilt für ein Szenario wie z. b. ein WPF-Fenster, das eine Komponente mit WM_TOUCH verwendet.  
   
- Um WPF-nastala chyba vstupu Überwachung zu deaktivieren, entfernen Sie alle Tablet-Unterstützung, die von der WPF-Fenster hinzugefügt.  
+ Entfernen Sie alle Tablet-Unterstützung, die vom WPF-Fenster hinzugefügt wurde, um WPF zu deaktivieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Beispielcode veranschaulicht die standardunterstützung für Tablet-Plattform zu entfernen, indem Sie mithilfe von Reflektion.  
+ Der folgende Beispielcode zeigt, wie die standardmäßige Unterstützung der Tablet-Plattform mithilfe von Reflektion entfernt wird.  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    

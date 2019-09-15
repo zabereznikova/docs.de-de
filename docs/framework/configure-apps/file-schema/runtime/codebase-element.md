@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: bd170b817c5ccc337711f8f79968653c29f3eda4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252744"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971889"
 ---
 # <a name="codebase-element"></a>\<CodeBase >-Element
 
@@ -94,7 +94,7 @@ Im folgenden Beispiel wird gezeigt, wie angegeben wird, wo die Common Language R
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](index.md)
+- [Lauf Zeit Einstellungs Schema](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Festlegen des Speicherortes einer Assembly](../../specify-assembly-location.md)
+- [Speicherort einer Assembly angeben](../../../../standard/assembly/location.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)

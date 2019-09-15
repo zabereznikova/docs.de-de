@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Anzeigen von Validierungsfehlern in einem neu gehosteten Designer'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608868882f4bec23c03f0ec78f65673e76056030
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761481"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989661"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Vorgehensweise: Anzeigen von Validierungsfehlern in einem neu gehosteten Designer
 In diesem Thema wird beschrieben, wie Validierungsfehler in einem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] abgerufen und veröffentlicht werden. Er stellt ein Verfahren zur Verfügung, mit dem bestätigt werden kann, dass ein Workflow in einem neu gehosteten Designer gültig ist.  
@@ -18,7 +18,7 @@ In diesem Thema wird beschrieben, wie Validierungsfehler in einem neu gehosteten
   
 1. Das Folgende ist ein Codebeispiel für eine einfache Implementierung, die die Validierungsfehler in das Debugprotokoll schreibt.  
   
-    ```  
+    ```csharp  
     using System.Activities.Presentation.Validation;  
     using System.Collections.Generic;  
     using System.Diagnostics;  
@@ -40,6 +40,6 @@ In diesem Thema wird beschrieben, wie Validierungsfehler in einem neu gehosteten
   
 1. Mit diesem Code erfolgt die Veröffentlichung im Bearbeitungskontext.  
   
-    ```  
+    ```csharp  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  
     ```

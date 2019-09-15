@@ -2,26 +2,26 @@
 title: 'Tutorial: Erstellen eines Typanbieters'
 description: Erfahren Sie, wie Sie eigene F#-Typanbieter in F# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
 ms.date: 02/02/2019
-ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982617"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991867"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
-Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F#, finden Sie unter [Typanbieter](index.md).
+Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zum Typanbieter Mechanismus in F#finden Sie unter [Typanbieter](index.md).
 
 Das F#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Zum Beispiel:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) Typanbieter enthält, für die JSON, XML, CSV und HTML-Formaten zu dokumentieren.
+- [FSharp. Data](https://fsharp.github.io/FSharp.Data/) umfasst Typanbieter für JSON-, XML-, CSV-und HTML-Dokumentformate.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) stellt stark typisierten Zugriff auf die SQL-Datenbanken über einen Objekt-Zuordnung und F# LINQ-Abfragen für diese Datenquellen.
 
 - [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) hat eine Reihe von Typanbieter für zur Kompilierzeit überprüft Einbetten von T-SQL-Code in F#.
 
-- [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist eine ältere Typanbieter für die Verwendung nur mit .NET Framework-Programmierung für den Zugriff auf SQL, Entity Framework, OData und WSDL-Datendienste.
+- [FSharp. Data. typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist ein älterer Satz von typanbietern, der nur mit .NET Framework Programmierung für den Zugriff auf SQL-, Entity Framework-, odata-und WSDL-Datendienste verwendet werden kann.
 
 Bei Bedarf können Sie eigene benutzerdefinierte Typanbieter erstellen oder auf Typanbieter verweisen, die von anderen Entwicklern erstellt wurden. Angenommen, in einer Organisation wird ein Datendienst verwendet, der eine große und wachsende Anzahl von benannten Datasets bereitstellt, die alle ein eigenes, stabiles Datenschema verwenden. Für diesen Dienst können Sie einen Typanbieter erstellen, der die Schemas liest und dem Programmierer alle aktuellen Datasets mit starker Typisierung zur Verfügung stellt.
 
@@ -53,7 +53,7 @@ Typanbieter sind für Situationen geeignet, in denen das Schema zur Laufzeit und
 
 ## <a name="a-simple-type-provider"></a>Ein einfacher Typanbieter
 
-In diesem Beispiel wird Samples.HelloWorldTypeProvider, ähnlich wie in den Beispielen in den `examples` Verzeichnis der [ F# Typ Anbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
+Bei diesem Beispiel handelt es sich um Samples. helloworldtypeprovider, ähnlich wie `examples` die Beispiele im Verzeichnis des [ F# Typanbieter](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)-SDKs. Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie weiter unten in diesem Thema unter [Details zu gelöschten bereitgestellten Typen](#details-about-erased-provided-types) .
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -92,7 +92,7 @@ type Type100 =
 Beachten Sie, dass der Satz der bereitgestellten Typen und Member statisch verfügbar gemacht wird. In diesem Beispiel wird die Möglichkeit von Anbietern, Typen abhängig von einem Schema bereitzustellen, nicht verwendet. Die Implementierung des Typanbieters wird im folgenden Code erläutert. Die Details werden in den folgenden Abschnitten dieses Themas behandelt.
 
 > [!WARNING]
-> Möglicherweise gibt es Unterschiede zwischen diesem Code und die Onlinebeispiele.
+> Möglicherweise gibt es Unterschiede zwischen diesem Code und den Online Beispielen.
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Um diesen Anbieter verwenden möchten, öffnen Sie eine separate Instanz von Visual Studio, erstellen Sie eine F# , und klicken Sie dann einen Verweis auf den Anbieter in Ihrem Skript mithilfe der #r wie im folgenden Code gezeigt:
+Um diesen Anbieter zu verwenden, öffnen Sie eine separate Instanz von Visual Studio, F# erstellen Sie ein Skript, und fügen Sie dann einen Verweis auf den Anbieter aus Ihrem Skript hinzu, indem Sie #r verwenden, wie im folgenden Code gezeigt:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -156,15 +156,15 @@ Zum Debuggen dieses Anbieters mithilfe von print-Anweisungen erstellen Sie ein S
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Klicken Sie zum Debuggen dieses Anbieters mithilfe von Visual Studio öffnen Sie Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten zu, und führen Sie den folgenden Befehl:
+Um diesen Anbieter mithilfe von Visual Studio zu debuggen, öffnen Sie den Developer-Eingabeaufforderung für Visual Studio mit Administrator Anmelde Informationen, und führen Sie den folgenden Befehl aus:
 
 ```
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Öffnen Sie alternativ Visual Studio, öffnen Sie im Menü Debuggen, wählen Sie `Debug/Attach to process…`, und fügen Sie in ein anderes `devenv` Prozess, in dem Sie das Skript bearbeiten. Mit dieser Methode können Sie leichter eine ganz bestimmte Logik im Typanbieter überprüfen, da Sie in der zweiten Instanz interaktiv Ausdrücke eingeben können (mit vollständiger IntelliSense-Unterstützung und anderen Funktionen).
+Öffnen Sie alternativ Visual Studio, öffnen Sie das Menü Debuggen, `Debug/Attach to process…`wählen Sie aus, und `devenv` fügen Sie an einen anderen Prozess an, in dem Sie das Skript bearbeiten. Mit dieser Methode können Sie leichter eine ganz bestimmte Logik im Typanbieter überprüfen, da Sie in der zweiten Instanz interaktiv Ausdrücke eingeben können (mit vollständiger IntelliSense-Unterstützung und anderen Funktionen).
 
-Sie können die Debugging-Option Nur eigenen Code deaktivieren, um Fehler in generiertem Code besser identifizieren zu können. Weitere Informationen zum Aktivieren oder Deaktivieren dieses Feature zu erhalten, finden Sie unter [Navigieren im Code mit dem Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Darüber hinaus können Sie auch nicht abgefangene Ausnahme abfangen, indem Sie öffnen Festlegen der `Debug` Menü auswählen und dann `Exceptions` oder mithilfe der Tastenkombination Strg + Alt + E, öffnen Sie die `Exceptions` Dialogfeld. In diesem Dialogfeld unter `Common Language Runtime Exceptions`, wählen die `Thrown` Kontrollkästchen.
+Sie können die Debugging-Option Nur eigenen Code deaktivieren, um Fehler in generiertem Code besser identifizieren zu können. Informationen dazu, wie Sie diese Funktion aktivieren oder deaktivieren, finden Sie unter [Navigieren im Code mit dem Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Außerdem können Sie das Abfangen von Ausnahmen der ersten Chance festlegen, indem `Debug` Sie das Menü öffnen `Exceptions` und dann auswählen, oder indem Sie die Tasten STRG + ALT + `Exceptions` E auswählen, um das Dialogfeld zu öffnen. Aktivieren Sie in diesem Dialogfeld `Common Language Runtime Exceptions`unter das `Thrown` Kontrollkästchen.
 
 ### <a name="implementation-of-the-type-provider"></a>Implementierung des Typanbieters
 
@@ -175,9 +175,9 @@ In diesem Abschnitt werden die wichtigsten Schritte bei der Implementierung eine
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Dieser Typ muss öffentlich sein und müssen Sie markieren Sie sie mit der [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) Attribut, damit der Compiler den Typanbieter an, wenn ein separates erkennt F# Projekt verweist auf die Assembly, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die F#-Compiler erstellt.
+Dieser Typ muss öffentlich sein, und Sie müssen ihn mit dem [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) -Attribut markieren, damit der Compiler den Typanbieter erkennt, wenn F# ein separates Projekt auf die Assembly verweist, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die F#-Compiler erstellt.
 
-Anschließend implementieren Sie die [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) Schnittstelle. In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem Kontext, den Anbieter *Eager Loading* Typen generiert, selbst wenn sie nicht benötigt oder verwendet werden.
+Als nächstes implementieren Sie die Schnittstelle [itypeer Provider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) . In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem *Kontext generiert der* Anbieter auch dann Typen, wenn Sie nicht benötigt oder verwendet werden.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -236,7 +236,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 Beachten Sie die folgenden Punkte:
 
-- Dieser bereitgestellte Typ wird gelöscht.  Da Sie angeben, dass der Basistyp ist `obj`, Instanzen als Werte des Typs angezeigt [Obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) im kompilierten Code.
+- Dieser bereitgestellte Typ wird gelöscht.  Da Sie angeben, dass der Basistyp `obj`ist, werden-Instanzen im kompilierten Code als Werte des Typs " [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) " angezeigt.
 
 - Wenn Sie einen nicht geschachtelten Typ angeben, müssen Sie die Assembly und den Namespace angeben. Bei gelöschten Typen sollte die Assembly die Typanbieterassembly selbst sein.
 
@@ -282,7 +282,7 @@ Der `InvokeCode` für den Konstruktor gibt ein F#-Zitat zurück, das den Code da
 new Type10()
 ```
 
-Eine Instanz des angegebenen Typs wird mit den ihm zugrunde liegenden Daten erstellt ("The object data"). Der zitierte Code enthält eine Konvertierung in [Obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) da dieser Typ, die Löschung ist dieses bereitgestellten Typs ist (wie Sie angegeben haben, wenn Sie den bereitgestellten Typ deklariert).
+Eine Instanz des angegebenen Typs wird mit den ihm zugrunde liegenden Daten erstellt ("The object data"). Der Code in Anführungszeichen enthält eine Konvertierung in [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) , da dieser Typ die Löschung dieses bereitgestellten Typs ist (wie Sie angegeben haben, als Sie den bereitgestellten Typ deklariert haben).
 
 Fügen Sie dem Konstruktor eine XML-Dokumentation hinzu, und fügen Sie dann den bereitgestellten Konstruktor dem bereitgestellten Typ hinzu:
 
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-Beim Abrufen dieser Eigenschaft wird die Länge der Zeichenfolge (des Darstellungsobjekts) zurückgegeben. Die `GetterCode`-Eigenschaft gibt ein F#-Zitat zurück, das den Code angibt, der vom Hostcompiler zum Abrufen der Eigenschaft generiert wird. Wie `InvokeCode` gibt die `GetterCode`-Funktion ein Zitat zurück. Der Hostcompiler ruft diese Funktion mit einer Argumentliste auf. In diesem Fall enthalten die Argumente nur den einzelnen Ausdruck, der die Instanz darstellt, für die der Getter aufgerufen wird. Ein Zugriff ist über `args.[0]` möglich. Die Implementierung von `GetterCode` verarbeitet anschließend das Ergebniszitat des gelöschten Typs `obj` und verwendet eine Umwandlung, um dem Compilermechanismus für die Typüberprüfung zu entsprechen und das Objekt als Zeichenfolge darzustellen. Der nächste Abschnitt von `makeOneProvidedType` stellt eine Instanzmethode mit einem Parameter bereit.
+Beim Abrufen dieser Eigenschaft wird die Länge der Zeichenfolge (des Darstellungsobjekts) zurückgegeben. Die `GetterCode`-Eigenschaft gibt ein F#-Zitat zurück, das den Code angibt, der vom Hostcompiler zum Abrufen der Eigenschaft generiert wird. Wie `InvokeCode` gibt die `GetterCode`-Funktion ein Zitat zurück. Der Hostcompiler ruft diese Funktion mit einer Argumentliste auf. In diesem Fall enthalten die Argumente nur den einzelnen Ausdruck, der die Instanz darstellt, für die der Getter aufgerufen wird, auf die Sie mithilfe `args.[0]`von zugreifen können. Die Implementierung von `GetterCode` führt dann einen Drilldown in das Ergebnis Anführungszeichen `obj`des gelöschten Typs durch, und eine Umwandlung wird verwendet, um den compilermechanismus zum Überprüfen von Typen, bei denen das Objekt eine Zeichenfolge ist Der nächste Abschnitt von `makeOneProvidedType` stellt eine Instanzmethode mit einem Parameter bereit.
 
 ```fsharp
 let instanceMeth =
@@ -362,7 +362,7 @@ t.AddMembersDelayed(fun () ->
 
 ### <a name="details-about-erased-provided-types"></a>Details über gelöschte bereitgestellte Typen
 
-Im Beispiel in diesem Abschnitt wird nur *gelöschte bereitgestellte Typen*, die in den folgenden Situationen besonders nützlich sind:
+Das Beispiel in diesem Abschnitt enthält nur *Gelöschte bereitgestellte Typen*, die in den folgenden Situationen besonders nützlich sind:
 
 - Wenn Sie einen Anbieter für einen Informationsraum schreiben, der nur Daten und Methoden enthält.
 
@@ -469,7 +469,7 @@ Beachten Sie die folgenden Punkte:
 
 - Für jede benannte Gruppe wird eine bereitgestellte Eigenschaft erzeugt, und bei einem Zugriff auf die Eigenschaft wird ein Indexer verwendet, um eine `Groups`-Auflistung der Übereinstimmungen abzurufen.
 
-Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Für den vollständigen Code, laden Sie das Beispiel aus der [ F# 3.0 Sample Pack](https://archive.codeplex.com/?p=fsharp3sample) auf der CodePlex-Website.
+Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Laden Sie das Beispiel für den vollständigen Code aus dem [ F# Beispiel Paket 3,0](https://archive.codeplex.com/?p=fsharp3sample) auf der CodePlex-Website herunter.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -746,9 +746,9 @@ Als einfaches Beispiel soll ein Typanbieter für den Zugriff auf wissenschaftlic
 
 In diesem Abschnitt wird erläutert, wie Sie einen Typ bereitstellen, mit dem Sie Zeilen mit einer `Distance`-Eigenschaft vom Typ `float<meter>` und einer `Time`-Eigenschaft vom Typ `float<second>` abrufen können. Der Einfachheit halber wird Folgendes vorausgesetzt:
 
-- Namen der Kopfzeilen haben entweder Einheit oder die Form "Name (Einheit)", und enthalten keine Kommas.
+- Header Namen sind entweder Einheiten frei oder haben die Form "Name (Unit)" und enthalten keine Kommas.
 
-- Einheiten sind alle System-International (SI) Einheiten als die [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) Modul definiert.
+- Einheiten sind alle System International-Einheiten (SI), wie das Modul [Microsoft. FSharp. Data. unitsystems. si. unitnames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) definiert.
 
 - Bei den Einheiten handelt es sich nur um einfache Einheiten (z. B. Meter) und nicht um zusammengesetzte Einheiten (z. B. Meter/Sekunde).
 
@@ -873,9 +873,9 @@ Beachten Sie die folgenden Punkte in der Implementierung:
 
 - Überladene Konstruktoren gestatten es, entweder die ursprüngliche Datei oder eine andere Datei mit einem identischen Schema zu laden. Dieses Vorgehen ist üblich, wenn Sie einen Typanbieter für lokale oder Remotedatenquellen schreiben. Es ermöglicht die Verwendung einer lokalen Datei als Vorlage für die Remotedaten.
 
-- Sie können die [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) -Wert, der an um relative Dateinamen aufzulösen typanbieterkonstruktor übergeben wird.
+- Sie können den [typeproviderconfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) -Wert, der an den Typanbieter-Konstruktor übergeben wird, verwenden, um relative Dateinamen aufzulösen.
 
-- Sie können die `AddDefinitionLocation`-Methode verwenden, um den Speicherort der bereitgestellten Eigenschaften zu definieren. Aus diesem Grund bei Verwendung von `Go To Definition` für die angegebene Eigenschaft wird die CSV-Datei in Visual Studio geöffnet.
+- Sie können die `AddDefinitionLocation`-Methode verwenden, um den Speicherort der bereitgestellten Eigenschaften zu definieren. Wenn Sie daher für eine `Go To Definition` bereitgestellte Eigenschaft verwenden, wird die CSV-Datei in Visual Studio geöffnet.
 
 - Sie können den `ProvidedMeasureBuilder`-Typ verwenden, um nach den SI-Einheiten zu suchen und die relevanten `float<_>`-Typen zu generieren.
 
@@ -931,7 +931,7 @@ Wie das Beispiel zeigt, wurden alle Erwähnungen des Typs `Type1` und der `Insta
 
 Beachten Sie die folgenden Konventionen, wenn Sie Typanbieter erstellen.
 
-**Anbieter für Konnektivitätsprotokolle** im allgemeinen Namen der meisten Anbieter-DLLs für Daten- und dienstkonnektivitätsprotokolle, wie OData oder SQL-Verbindungen, enden sollte `TypeProvider` oder `TypeProviders`. Verwenden Sie z. B. einen DLL-Namen ähnlich der folgenden Zeichenfolge:
+**Anbieter für Verbindungsprotokolle** Im Allgemeinen sollten die Namen der meisten Anbieter-DLLs für Daten-und dienstkonnektivitätsprotokolle, z. b. odata `TypeProvider` - `TypeProviders`oder SQL-Verbindungen, auf oder enden. Verwenden Sie z. B. einen DLL-Namen ähnlich der folgenden Zeichenfolge:
 
 ```
   Fabrikam.Management.BasicTypeProviders.dll
@@ -944,7 +944,7 @@ Stellen Sie sicher, dass die bereitgestellten Typen Member des richtigen Namespa
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-**Hilfsanbieter für die allgemeine Programmierung**.  Hilfstypanbieter, wie der zuvor erstellte Anbieter für reguläre Ausdrücke, können in einer Basisbibliothek enthalten sein, wie das folgende Beispiel zeigt:
+**Hilfsprogrammanbieter für allgemeine Codierungen**.  Hilfstypanbieter, wie der zuvor erstellte Anbieter für reguläre Ausdrücke, können in einer Basisbibliothek enthalten sein, wie das folgende Beispiel zeigt:
 
 ```fsharp
 #r "Fabrikam.Core.Text.Utilities.dll"
@@ -1020,12 +1020,12 @@ Die ProvidedType-API stellt verzögerte Versionen von AddMember zur Verfügung.
 
 Diese Versionen werden verwendet, um Typenräume zu erstellen, die erst bei Bedarf generiert werden.
 
-### <a name="providing-array-types-and-generic-type-instantiations"></a>Arraytypen und generischen Typinstanziierungen bereitstellen
+### <a name="providing-array-types-and-generic-type-instantiations"></a>Bereitstellen von Array Typen und generischen Typinstanziierungen
 
-Sie können bereitgestellte Member, die (deren Signaturen enthalten Arraytypen, Byref-Typen und Instanziierungen von generischen Typen) mit der normalen `MakeArrayType`, `MakePointerType`, und `MakeGenericType` auf jeder Instanz von <xref:System.Type>, einschließlich `ProvidedTypeDefinitions`.
+Sie stellen bereitgestellte Member (deren Signaturen Array Typen, ByRef-Typen und Instanziierungen von generischen Typen enthalten) mithilfe der `MakeArrayType`normalen `MakePointerType`, und `MakeGenericType` für jede Instanz von <xref:System.Type>, einschließlich `ProvidedTypeDefinitions`, bereit.
 
 > [!NOTE]
-> In einigen Fällen müssen Sie möglicherweise verwenden Sie das Hilfsprogramm in `ProvidedTypeBuilder.MakeGenericType`.  Finden Sie unter den [Typ Anbieter-SDK-Dokumentation](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) Weitere Details.
+> In einigen Fällen müssen Sie möglicherweise das-Hilfsprogramm `ProvidedTypeBuilder.MakeGenericType`in verwenden.  Weitere Informationen finden Sie in der [Dokumentation zum Typanbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) .
 
 ### <a name="providing-unit-of-measure-annotations"></a>Bereitstellen von Maßeinheiten als Anmerkung
 
@@ -1060,7 +1060,7 @@ Anbieter müssen für den Zugriff auf Schemainformationen häufig einen Cache ve
 
 ### <a name="backing-assembly"></a>Unterstützungsassembly
 
-Beim Kompilieren einer `.dll` oder `.exe` Datei, die zugrunde liegende DLL-Datei für generierte Typen statisch in die resultierende Assembly verknüpft ist. Dieser Link wird erstellt, indem die IL-Typdefinitionen (Intermediate Language) und alle verwalteten Ressourcen aus der Unterstützungsassembly in die endgültige Assembly kopiert werden. Wenn Sie F# Interactive verwenden, wird die zugrunde liegende DLL-Datei nicht kopiert und stattdessen direkt in den F# Interactive-Prozess geladen.
+Wenn Sie eine `.dll` -oder `.exe` -Datei kompilieren, wird die unterstützende dll-Datei für generierte Typen statisch mit der resultierenden Assembly verknüpft. Dieser Link wird erstellt, indem die IL-Typdefinitionen (Intermediate Language) und alle verwalteten Ressourcen aus der Unterstützungsassembly in die endgültige Assembly kopiert werden. Wenn Sie F# Interactive verwenden, wird die zugrunde liegende DLL-Datei nicht kopiert und stattdessen direkt in den F# Interactive-Prozess geladen.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Ausnahmen und Diagnose von Typanbietern
 
@@ -1070,11 +1070,11 @@ Jede Verwendung der Member von bereitgestellten Typen kann eine Ausnahme auslös
 
 - Typanbieter können keine Warnungen ausgeben.
 
-- Wenn ein Typanbieter im F#-Compiler, in einer F#-Entwicklungsumgebung oder in F# Interactive gehostet wird, werden alle Ausnahmen dieses Anbieters abgefangen. Die Message-Eigenschaft enthält dabei immer den Fehlertext, und es wird keine Stapelüberwachung angezeigt. Wenn Sie vorhaben, eine Ausnahme auslösen, können Sie die folgenden Beispielen auslösen: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Wenn ein Typanbieter im F#-Compiler, in einer F#-Entwicklungsumgebung oder in F# Interactive gehostet wird, werden alle Ausnahmen dieses Anbieters abgefangen. Die Message-Eigenschaft enthält dabei immer den Fehlertext, und es wird keine Stapelüberwachung angezeigt. Wenn eine Ausnahme ausgelöst wird, können Sie die folgenden Beispiele auslösen: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Bereitstellen von generierten Typen
 
-In diesem Dokument wurde bisher wie gelöschte Typen bereitgestellt erläutert. Sie können den Typanbietermechanismus in F# auch verwenden, um generierte Typen bereitzustellen, die als echte .NET-Typdefinitionen in das Programm des Benutzers übernommen werden. Auf generierte bereitgestellte Typen müssen Sie über die Typdefinition verweisen.
+Bisher wurde in diesem Dokument erläutert, wie gelöschte Typen bereitgestellt werden. Sie können den Typanbietermechanismus in F# auch verwenden, um generierte Typen bereitzustellen, die als echte .NET-Typdefinitionen in das Programm des Benutzers übernommen werden. Auf generierte bereitgestellte Typen müssen Sie über die Typdefinition verweisen.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders
@@ -1084,9 +1084,9 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 Der Hilfscode „ProvidedTypes-0.2“, der Teil des Releases 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
 
-- `isErased` muss festgelegt werden, um `false`.
+- `isErased`muss auf `false`festgelegt werden.
 
-- Der generierte Typ muss hinzugefügt werden, um eine neu erstellte `ProvidedAssembly()`, steht für einen Container für generierten Codefragmente.
+- Der generierte Typ muss zu einem neu `ProvidedAssembly()`erstellten-Typ hinzugefügt werden, der einen Container für generierte Code Fragmente darstellt.
 
 - Der Anbieter muss über eine Assembly verfügen, der eine tatsächliche .NET-DLL-Datei mit einer entsprechenden, auf dem Datenträger verfügbaren DLL-Datei zugrunde liegt.
 
@@ -1094,11 +1094,11 @@ Der Hilfscode „ProvidedTypes-0.2“, der Teil des Releases 3.0 von F# ist, bi
 
 Berücksichtigen Sie beim Schreiben von Typanbietern die folgenden Regeln und Einschränkungen.
 
-### <a name="provided-types-must-be-reachable"></a>Bereitgestellte Typen müssen erreichbar sein.
+### <a name="provided-types-must-be-reachable"></a>Die bereitgestellten Typen müssen erreichbar sein.
 
 Alle bereitgestellten Typen müssen für die nicht geschachtelten Typen erreichbar sein. Die nicht geschachtelten Typen werden im Aufruf des `TypeProviderForNamespaces`-Konstruktors oder bei einem Aufruf von `AddNamespace` übergeben. Wenn der Anbieter z. B. den Typ `StaticClass.P : T` bereitstellt, müssen Sie sicherstellen, dass T entweder ein nicht geschachtelter Typ ist oder unter einem Typ geschachtelt wird.
 
-Einige Anbieter verwenden beispielsweise eine statische Klasse wie `DataTypes`, die diese `T1, T2, T3, ...`-Typen enthält. Andernfalls wird ein Fehler mit der Meldung ausgegeben, dass in der Assembly A ein Verweis auf den Typ T enthalten ist, der Typ aber in dieser Assembly nicht gefunden wurde. Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass alle Untertypen für die Anbietertypen erreichbar sind. Hinweis: Diese `T1, T2, T3...` Typen werden als bezeichnet die *auf dynamische* Typen. Denken Sie daran, diese in einen erreichbaren Namespace oder in einen übergeordneten Typ einzufügen.
+Einige Anbieter verwenden beispielsweise eine statische Klasse wie `DataTypes`, die diese `T1, T2, T3, ...`-Typen enthält. Andernfalls wird ein Fehler mit der Meldung ausgegeben, dass in der Assembly A ein Verweis auf den Typ T enthalten ist, der Typ aber in dieser Assembly nicht gefunden wurde. Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass alle Untertypen für die Anbietertypen erreichbar sind. Hinweis: Diese `T1, T2, T3...` *Typen werden als dynamische Typen bezeichnet* . Denken Sie daran, diese in einen erreichbaren Namespace oder in einen übergeordneten Typ einzufügen.
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Einschränkungen des Typanbietermechanismus
 
@@ -1110,13 +1110,13 @@ Für den Typanbietermechanismus in F# gelten folgende Einschränkungen:
 
 ## <a name="development-tips"></a>Tipps für die Entwicklung
 
-Sie können die folgenden Tipps während des Entwicklungsprozesses hilfreich finden:
+Möglicherweise sind die folgenden Tipps während des Entwicklungsprozesses hilfreich:
 
-### <a name="run-two-instances-of-visual-studio"></a>Führen Sie zwei Instanzen von Visual Studio
+### <a name="run-two-instances-of-visual-studio"></a>Ausführen von zwei Instanzen von Visual Studio
 
 Sie können den Typanbieter in einer Instanz entwickeln und in der anderen Instanz testen, da die Test-IDE eine Sperre für die DLL-Datei definiert, die verhindert, dass der Typanbieter neu erstellt wird. Daher müssen Sie die zweite Instanz von Visual Studio schließen, wenn der Anbieter in der ersten Instanz erstellt wird, und anschließend die zweite Instanz erneut öffnen, sobald die Erstellung abgeschlossen ist.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Debuggen Sie Typanbieter durch Aufrufe von fsc.exe
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>Debuggen von typanbietern mithilfe von Aufrufen von FSC. exe
 
 Sie können Typanbieter mit den folgenden Tools aufrufen:
 
@@ -1137,4 +1137,4 @@ In vielen Fällen können Typanbieter am einfachsten debuggt werden, indem Sie f
 ## <a name="see-also"></a>Siehe auch
 
 - [Typanbieter](index.md)
-- [Der SDK-Typanbieter](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
+- [Das Typanbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d94843e696848010791b1e22d06e4852d35bc68e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 61e3f01b1259536ff15d71526e91aef42069722e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044418"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989695"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Vorgehensweise: Erstellen eines sequenziellen Workflows
 
@@ -80,7 +80,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 
 2. Ziehen Sie eine **DoWhile** -Aktivität aus dem Abschnitt Ablauf **Steuerung** der **Toolbox** , und legen Sie Sie auf dem Workflow ab, sodass Sie sich unterhalb der **assign** -Aktivität befindet.
 
-3. Geben Sie den folgenden Ausdruck in das Feld Bedingungs Eigenschafts Wert der **DoWhile** -Aktivität ein.
+3. Geben Sie den folgenden Ausdruck **in das Feld Bedingungs Eigenschafts Wert** der **DoWhile** -Aktivität ein.
 
     ```vb
     Guess <> Target
@@ -116,7 +116,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 
 8. Ziehen Sie eine **if** -Aktivität aus dem Abschnitt Ablauf **Steuerung** der **Toolbox** , und legen Sie Sie in der **Sequence** -Aktivität ab, sodass Sie auf die neu hinzugefügte **assign** -Aktivität folgt.
 
-9. Geben Sie den folgenden Ausdruck in das Feld Bedingungs Eigenschafts Wert der **if** -Aktivität ein.
+9. Geben Sie den folgenden Ausdruck in das Feld Bedingungs **Eigenschafts Wert** der **if** -Aktivität ein.
 
     ```vb
     Guess <> Target
@@ -128,13 +128,13 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 
 10. Ziehen Sie eine weitere **if** -Aktivität aus dem Abschnitt Ablauf **Steuerung** der **Toolbox** , und legen Sie Sie im Abschnitt **Then** der ersten **if** -Aktivität ab.
 
-11. Geben Sie den folgenden Ausdruck in das Feldeigenschaften Wert der neu hinzugefügten **if** -Aktivität ein.
+11. Geben Sie den folgenden Ausdruck in das **Feldeigenschaften Wert der neu** hinzugefügten **if** -Aktivität ein.
 
-    ```
+    ```text
     Guess < Target
     ```
 
-12. Ziehen Sie zwei schreiben-Aktivitäten aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie diese so ab, dass Sie sich im **Then** -Abschnitt der neu hinzugefügten **if** -Aktivität befinden und eine im Abschnitt **else** .
+12. Ziehen Sie **zwei schreiben** -Aktivitäten aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie diese so ab, dass Sie sich im **Then** -Abschnitt der neu hinzugefügten **if** -Aktivität befinden und eine im Abschnitt **else** .
 
 13. Klicken Sie im Abschnitt **Then** auf die Aktivität **Write** -Aktivität, um Sie auszuwählen, und geben Sie den folgenden Ausdruck in das Feld **Text** -Eigenschafts Wert ein.
 

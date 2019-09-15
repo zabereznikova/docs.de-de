@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a01300024f89a0a189045d80622121f7db739a39
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f12fae48f1cee198aac22e6f09e616b407b4e9b5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912410"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990064"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen von benutzerdefinierten Kanälen für das Konfigurationssystem verfügbar machen können. Auf diese Weise können Benutzer den benutzerdefinierten Kanal wie bei vom System bereitgestellten Bindungen (wie `NetTcpBinding`) oder benutzerdefinierten Bindungen mit dem `TcpTransportBindingElement` mithilfe einer .config-Datei konfigurieren.  
@@ -16,27 +16,27 @@ Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen 
   
 ### <a name="to-build-the-tool"></a>So erstellen Sie das Tool  
   
-1. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
   
-2. Erstellen der Projektmappe wird eine Datei generiert: ConfigurationCodeGenerator.exe. Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool verwenden, um das Generieren der Klassen für die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+2. Beim Aufbau der Projekt Mappe wird eine Datei generiert: ConfigurationCodeGenerator.exe. Die Datei "SampleRun. cmd" verfügt über eine Beispiel Befehlszeile, die veranschaulicht, wie dieses Tool zum Generieren [der Klassen für den Transport verwendet wird: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) -Beispiel.  
   
 ### <a name="to-run-the-tool"></a>So führen Sie das Tool aus  
   
 1. Wenn Sie sowohl einen benutzerdefinierten `BindingElement`-Typ als auch einen benutzerdefinierten `Binding`-Typ haben, geben Sie an der Eingabeaufforderung Folgendes ein:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereTheseTypesAreDefined  
     ```  
   
      Wenn Sie nur einen benutzerdefinierten `BindingElement`-Typ haben, geben Sie Folgendes ein:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /dll: TheAssemblyWhereThisTypeIsDefined  
     ```  
   
      Wenn Sie nur einen benutzerdefinierten `Binding`-Typ haben, geben Sie Folgendes ein:  
   
-    ```  
+    ```console  
     ConfigurationCodeGenerator.exe /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereThisTypeIsDefined  
     ```  
   
@@ -46,6 +46,6 @@ Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen 
   
     2. Wenn Sie die Option „/sb“ angegeben haben, implementieren zwei der „.cs“-Dateien ein `StandardBindingElement` bzw. ein `StandardBindingCollectionElement`, das Ihre Standardbindung für das Konfigurationssystem verfügbar macht. Die anderen Dateien enthalten Klassen, die Standardwerte und Konstanten darstellen. Die Dateien enthalten `//TODO`-Kommentare, um Sie daran zu erinnern, die Standardwerte zu aktualisieren.  
   
-         Wenn Sie die /sb angegeben: der CodeToAddTo option\<*Ihrestdbindung*> .cs enthält Code, der Sie manuell in die Klasse einfügen müssen, die Ihre standardbindung implementiert.  
+         Wenn Sie die Option "/SB: angegeben haben, verfügt der CodeToAddTo\<*yourstdbinding*->. cs über Code, den Sie manuell der Klasse hinzufügen müssen, die Ihre Standard Bindung implementiert.  
   
      Die Datei "SampleConfig.xml" enthält den Konfigurationscode, den Sie der Konfigurationsdatei hinzufügen müssen, die die oben in Schritt 1 oder 2 definierten Handler registriert.  

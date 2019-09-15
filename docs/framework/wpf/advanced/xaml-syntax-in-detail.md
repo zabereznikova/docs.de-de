@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: d48398f31c1452821292a6feb2867dbd2971e739
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168993"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991416"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elemente der XAML-Syntax zu beschreiben. Diese Begriffe werden im restlichen Teil dieser Dokumentation häufig verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte verwenden, die von der XAML-Sprachunterstützung auf der System. XAML-Ebene aktiviert werden. Dieses Thema erweitert die grundlegende Terminologie, die im Thema [Übersicht über XAML (WPF)](xaml-overview-wpf.md)vorgestellt wurde.  
@@ -112,7 +112,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
  Bei gekennzeichneten Enumerationen basiert das Verhalten auf der <xref:System.Enum.Parse%2A?displayProperty=nameWithType> -Methode. Sie können mehrere Werte für eine flagweise Enumeration angeben, indem Sie die einzelnen Werte durch ein Komma voneinander trennen. Enumerationswerte, die nicht flagweise sind, können jedoch nicht kombiniert werden. Beispielsweise können Sie nicht die Komma Syntax verwenden, um zu versuchen, <xref:System.Windows.Trigger> eine zu erstellen, die mehrere Bedingungen einer Enumeration vom Typ nonflag bearbeitet:  
   
-```  
+```xaml  
 <!--This will not compile, because Visibility is not a flagwise enumeration.-->  
 ...  
 <Trigger Property="Visibility" Value="Collapsed,Hidden">  
@@ -197,7 +197,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
 ### <a name="xaml-content-property-values-must-be-contiguous"></a>XAML-Inhalts Eigenschaftswerte müssen zusammenhängend sein.  
  Der Wert einer XAML-Inhalts Eigenschaft muss entweder vollständig vor oder vollständig nach allen anderen Eigenschafts Elementen für dieses Objekt Element angegeben werden. Dies gilt unabhängig davon, ob der Wert einer XAML-Inhalts Eigenschaft als Zeichenfolge oder als ein oder mehrere-Objekte angegeben wird. Beispielsweise wird das folgende Markup nicht analysiert:  
   
-```  
+```xaml  
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -205,7 +205,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
  Dies ist im Wesentlichen der Fall, wenn diese Syntax mithilfe der Eigenschafts Element Syntax für die Content-Eigenschaft explizit festgelegt wurde, dann wird die Content-Eigenschaft zweimal festgelegt:  
   
-```xml  
+```xaml  
 <Button>  
   <Button.Content>I am a </Button.Content>  
   <Button.Background>Blue</Button.Background>  
@@ -215,7 +215,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
  Ein ähnliches Beispiel ist, wenn die Content-Eigenschaft eine Auflistung ist und untergeordnete Elemente mit Eigenschafts Elementen vermischt werden:  
   
-```xml  
+```xaml  
 <StackPanel>  
   <Button>This example</Button>  
   <StackPanel.Resources>  

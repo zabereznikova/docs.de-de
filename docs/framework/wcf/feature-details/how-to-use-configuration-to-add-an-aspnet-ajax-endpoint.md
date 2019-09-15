@@ -2,25 +2,25 @@
 title: 'Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: db5085d01dbed841109ac46fe4e8b2a0143352e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33f99161034db2aa142a422139406a1a68d42b2c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039116"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972278"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts
-Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, mit der einen ASP.NET AJAX-aktivierten Endpunkt verfügbar, die auf einer Client-Website von JavaScript aufgerufen werden können. Zum Erstellen eines solchen Endpunkts können Sie entweder eine Konfigurationsdatei verwenden, wie bei allen anderen Windows Communication Foundation (WCF)-Endpunkten oder verwenden Sie eine Methode, die keine Konfigurationselemente benötigt. In diesem Thema wird die Konfigurationsmethode veranschaulicht.  
+Mit Windows Communication Foundation (WCF) können Sie einen Dienst erstellen, der einen ASP.NET AJAX-fähigen Endpunkt zur Verfügung stellt, der von JavaScript auf einer Client Website aufgerufen werden kann. Zum Erstellen eines solchen Endpunkts können Sie entweder eine Konfigurationsdatei wie alle anderen Windows Communication Foundation (WCF)-Endpunkte verwenden oder eine Methode verwenden, die keine Konfigurationselemente erfordert. In diesem Thema wird die Konfigurationsmethode veranschaulicht.  
   
- Der Teil der Prozedur, die den Dienstendpunkt ASP.NET AJAX-fähigen werden ermöglicht besteht in der Konfiguration verwendet des Endpunkts der <xref:System.ServiceModel.WebHttpBinding> und zum Hinzufügen der [ \<EnableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Endpunktverhalten. Nach der Konfiguration des Endpunkts, ähneln die Schritte zum Implementieren und Hosten des Diensts von jeden WCF-Dienst verwendet werden. Ein Arbeitsbeispiel finden Sie unter den [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ Der Teil der Prozedur, mit dem der Dienst Endpunkt ASP.NET AJAX-fähig werden kann, besteht aus der Konfiguration des Endpunkts <xref:System.ServiceModel.WebHttpBinding> für die Verwendung von und zum Hinzufügen des [ \<enableWebScript->](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Endpunkt Verhaltens. Nach der Konfiguration des Endpunkts sind die Schritte zum Implementieren und Hosten des Diensts mit denen vergleichbar, die von einem beliebigen WCF-Dienst verwendet werden. Ein funktionierendes Beispiel finden [Sie unter AJAX-Dienst mit HTTP Post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- Weitere Informationen zur Konfiguration ein ASP.NET AJAX-Endpunkts ohne Verwendung einer Konfiguration finden Sie unter [Vorgehensweise: Hinzufügen ein ASP.NET AJAX-Endpunkts ohne Verwendung einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Weitere Informationen zum Konfigurieren eines ASP.NET AJAX-Endpunkts ohne Verwendung der Konfiguration finden [Sie unter Gewusst wie: Fügen Sie einen ASP.NET AJAX-Endpunkt ohne](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)Verwendung der Konfiguration hinzu.  
   
-### <a name="to-create-a-basic-wcf-service"></a>So erstellen Sie einen WCF-Basisdienst  
+## <a name="to-create-a-basic-wcf-service"></a>So erstellen Sie einen WCF-Basisdienst  
   
-1. Definieren ein grundlegenden WCF-Dienstvertrags mit einer Schnittstelle markiert mit dem <xref:System.ServiceModel.ServiceContractAttribute> Attribut. Markieren Sie jeden Vorgang mit <xref:System.ServiceModel.OperationContractAttribute>. Stellen Sie sicher, dass Sie die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft festlegen.  
+1. Definieren Sie einen grundlegenden WCF-Dienstvertrag mit einer mit <xref:System.ServiceModel.ServiceContractAttribute> dem-Attribut markierten Schnittstelle. Markieren Sie jeden Vorgang mit <xref:System.ServiceModel.OperationContractAttribute>. Stellen Sie sicher, dass Sie die <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>-Eigenschaft festlegen.  
   
-    ```  
+    ```csharp
     [ServiceContract(Namespace = "MyService")]  
     public interface ICalculator  
     {  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
   
 2. Implementieren Sie den `ICalculator`-Dienstvertrag mit `CalculatorService`.  
   
-    ```  
+    ```csharp
     public class CalculatorService : ICalculator  
     {  
         public double Add(double n1, double n2)  
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
   
 3. Definieren Sie einen Namespace für die `ICalculator`- und die `CalculatorService`-Implementierung, indem Sie sie in einen Namespaceblock einschließen.  
   
-    ```  
-    Namespace Microsoft.Ajax.Samples  
+    ```csharp
+    namespace Microsoft.Ajax.Samples  
     {  
         //Include the code for ICalculator and Caculator here.  
     }  
     ```  
   
-### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>So erstellen Sie einen ASP.NET AJAX-Endpunkt für den Dienst  
+## <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>So erstellen Sie einen ASP.NET AJAX-Endpunkt für den Dienst  
   
-1. Erstellen Sie eine Verhaltenskonfiguration, und geben die [ \<EnableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Verhalten für ASP.NET AJAX-aktivierte Endpunkte des Diensts.  
+1. Erstellen Sie eine Verhaltens Konfiguration, und geben Sie das [ \<enableWebScript->](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) Verhalten für ASP.NET AJAX-aktivierte Endpunkte des Dienstanbieter an.  
   
     ```xml  
     <system.serviceModel>  
@@ -86,11 +86,11 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
     </system.serviceModel>   
     ```  
   
-### <a name="to-host-the-service-in-iis"></a>So hosten Sie den Dienst in IIS  
+## <a name="to-host-the-service-in-iis"></a>So hosten Sie den Dienst in IIS  
   
-1. Um den Dienst in IIS zu hosten, erstellen Sie in der Anwendung eine neue Datei mit dem Namen service und einer SVC-Erweiterung. Bearbeiten Sie diese Datei durch Hinzufügen des entsprechenden [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) -direktiveninformationen für den Dienst. Die Dienstdatei für das `CalculatorService`-Beispiel enthält z.&amp;#160;B. folgende Informationen.  
+1. Um den Dienst in IIS zu hosten, erstellen Sie in der Anwendung eine neue Datei mit dem Namen service und einer SVC-Erweiterung. Bearbeiten Sie diese Datei, indem Sie die entsprechenden [ \@Service Host](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) -Direktiveninformationen für den Dienst hinzufügen. Die Dienstdatei für das `CalculatorService`-Beispiel enthält z.&#160;B. folgende Informationen.  
   
-    ```  
+    ```
     <%@ServiceHost   
     language=c#   
     Debug="true"   
@@ -98,13 +98,13 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
     %>  
     ```  
   
-2. Weitere Informationen zum Hosten in IIS finden Sie unter [Vorgehensweise: Hosten ein WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2. Weitere Informationen zum Hosting in IIS finden [Sie unter Gewusst wie: Hosten eines WCF-Diensts in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
-### <a name="to-call-the-service"></a>So rufen Sie den Dienst auf  
+## <a name="to-call-the-service"></a>So rufen Sie den Dienst auf  
   
-1. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert, damit der Dienst jetzt verfügbar ist und aufgerufen werden, kann durch das Senden von Anforderungen an service.svc/\<Vorgang > – z. B. service.svc/Add für die `Add` Vorgang. Sie können ihn verwenden, indem Sie die Endpunkt-URL in die Scripts-Auflistung des ASP.NET AJAX Script Manager-Steuerelements eingeben. Ein Beispiel finden Sie unter den [AJAX-Dienst mithilfe von HTTP-POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+1. Der Endpunkt wird mit einer leeren Adresse relativ zur SVC-Datei konfiguriert, sodass der Dienst jetzt verfügbar ist und durch das Senden von Anforderungen an Service. svc/\<Operation > aufgerufen werden kann, z. b. "Service. svc/Add" für den `Add` Vorgang. Sie können ihn verwenden, indem Sie die Endpunkt-URL in die Scripts-Auflistung des ASP.NET AJAX Script Manager-Steuerelements eingeben. Ein Beispiel finden Sie unter der [AJAX-Dienst mit HTTP Post](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von WCF-Diensten für ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Vorgehensweise: Migrieren von AJAX-fähigen ASP.NET-Webdiensten zu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

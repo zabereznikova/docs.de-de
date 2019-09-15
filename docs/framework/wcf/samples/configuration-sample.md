@@ -2,12 +2,12 @@
 title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52f8b5eae56db4b3a506d71c44ff2c49a8085067
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 87afeb0c562254e0f4cf6a85946a765a740c79ec
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040106"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990071"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
@@ -67,9 +67,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
   
  In dieser Konfigurationsdatei werden neben diesen einfachen Schritten noch zusätzliche Verhaltensweisen geändert. Durch die Verwendung von bestimmten Endpunkten können die Suche betreffende Informationen gesteuert werden. Das bedeutet, dass ein Benutzer steuern kann, ob ein Endpunkt erkennbar ist. Der Benutzer kann diesen Endpunkt außerdem mit <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> und benutzerdefinierten XML-Metadaten markieren. Hierzu muss der Benutzer eine `behaviorConfiguration`-Eigenschaft zum Anwendungsendpunkt hinzufügen. In diesem Fall wird dem Anwendungsendpunkt die folgende Eigenschaft hinzugefügt.  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  Mit dem Verhaltenskonfigurationselement können Sie die Suche betreffende Attribute steuern. In diesem Fall werden dem Anwendungsendpunkt zwei Bereiche hinzugefügt.  
   

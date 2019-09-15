@@ -12,12 +12,12 @@ ms.topic: tutorial
 ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b2c8e36c1b8185f28a7ec20402e385f3a1ddf5ce
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799331"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991779"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Ihrer ersten WPF-Anwendung in Visual Studio 2019
 
@@ -25,6 +25,7 @@ In diesem Artikel erfahren Sie, wie Sie eine WPF-Desktop Anwendung (Windows Pres
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Erstellen Sie ein WPF-Projekt.
 > - Verwenden Sie XAML, um die Darstellung der Benutzeroberfläche der Anwendung zu entwerfen.
 > - Schreiben Sie Code, um das Verhalten der Anwendung zu erstellen.
@@ -40,7 +41,7 @@ Am Ende des Tutorials haben Sie eine eigenständige Windows-Anwendung erstellt, 
 >
 > Sie können die Codesprache des Beispielcodes zwischen C# und Visual Basic umschalten, indem Sie die Sprachauswahl auf dieser Seite verwenden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter **.net-desktopentwicklungs-** Arbeitsauslastung.
 

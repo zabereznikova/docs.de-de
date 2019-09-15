@@ -2,12 +2,12 @@
 title: Nicht generisches ForEach-Element
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: e467534ba2b233f1f3c279e89badf12846c6b7f7
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038078"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989037"
 ---
 # <a name="non-generic-foreach"></a>Nicht generisches ForEach-Element
 Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] gehört ein Satz von Ablaufsteuerungsaktivitäten, einschließlich <xref:System.Activities.Statements.ForEach%601>, die das Durchlaufen von <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen ermöglicht.  
@@ -24,7 +24,7 @@ Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current
 ## <a name="class-definition"></a>Klassendefinition  
  Im folgenden Codebeispiel wird die Definition einer nicht generischen `ForEach`-Aktivität veranschaulicht.  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -47,7 +47,7 @@ public class ForEach : NativeActivity
 ## <a name="example-of-using-foreach"></a>Beispiel der Verwendung von ForEach  
  Im folgenden Code wird veranschaulicht, wie die ForEach-Aktivität in einer Anwendung verwendet wird.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -74,7 +74,7 @@ Activity sampleUsage =
 ## <a name="foreach-designer"></a>ForEach-Designer  
  Der Aktivitätsdesigner für das Beispiel ist dem Designer im Aussehen ähnlich, der für die integrierte <xref:System.Activities.Statements.ForEach%601>-Aktivität dient. Der Designer wird in der Toolbox in der Kategorie **Beispiele**, **nicht generische Aktivitäten** angezeigt. Der Designer hat den Namen **ForEachWithBodyFactory** in der Toolbox, da die-Aktivität <xref:System.Activities.Presentation.IActivityTemplateFactory> ein-Objekt in der Toolbox verfügbar macht, das die Aktivität <xref:System.Activities.ActivityAction>mit einem ordnungsgemäß konfigurierten-Objekt erstellt.  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  

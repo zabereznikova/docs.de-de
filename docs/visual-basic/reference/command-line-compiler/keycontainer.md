@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 5892baaa2732d95cfe698147e06b914af968adc5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab81642cd756bfdf525f34ac675173600de5b104
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929426"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972342"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
@@ -37,7 +37,7 @@ Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembl
   
  Außerdem können Sie Ihre Verschlüsselungsinformationen mit [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) an den Compiler übergeben. Verwenden Sie [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), wenn die Assembly teilweise signiert werden soll.  
   
- Weitere Informationen zum Signieren einer Assembly finden [Sie unter Erstellen und verwenden](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) von Assemblys mit starkem Namen.  
+ Weitere Informationen zum Signieren einer Assembly finden [Sie unter Erstellen und verwenden](../../../standard/assembly/create-use-strong-named.md) von Assemblys mit starkem Namen.  
   
 > [!NOTE]
 > Die `-keycontainer` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  

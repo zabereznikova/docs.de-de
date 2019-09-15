@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: aed6cb71ac3ccd7af5423cdb8ccc43133bbe5337
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 70eab39e4bb24dfd1cdd6abc5216e50126ef1f4c
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972030"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972178"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 
@@ -37,7 +37,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
 1. Zur Unterstützung der net.tcp-Aktivierung muss die Standardwebsite zuerst an einen net.tcp-Port gebunden werden. Hierfür können Sie Appcmd. exe verwenden, das mit dem IIS 7,0-Verwaltungs Toolset installiert wird. Führen Sie in einem Eingabeaufforderungsfenster auf Administratorebene den folgenden Befehl aus.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
     ```
 
@@ -46,7 +46,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
 2. Alle Anwendungen innerhalb einer Site nutzen zwar eine gemeinsame net.tcp-Bindung, aber jede Anwendung kann die net.tcp-Unterstützung unabhängig von den anderen Anwendungen aktivieren. Um net.tcp für die Anwendung zu aktivieren, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set app
     "Default Web Site/<WCF Application>" /enabledProtocols:http,net.tcp
     ```
@@ -60,7 +60,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
     1. Entfernen Sie net.tcp aus der Liste aktivierter Protokolle, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen.
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set app
         "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
         ```
@@ -70,7 +70,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
     2. Entfernen Sie die net.tcp-Sitebindung, indem Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene ausführen:
 
-        ```
+        ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
         --bindings.[protocol='net.tcp',bindingInformation='808:*']
         ```
@@ -82,7 +82,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
 1. Um net.tcp aus der Liste aktivierter Protokolle zu entfernen, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http
     ```
 
@@ -93,7 +93,7 @@ Nach der Installation und Konfiguration von was [finden Sie unter Vorgehensweise
 
 1. Um die net.tcp-Sitebindung zu entfernen, führen Sie den folgenden Befehl in einem Eingabeaufforderungsfenster auf Administratorebene aus.
 
-    ```
+    ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
     -bindings.[protocol='net.tcp',bindingInformation='808:*']
     ```

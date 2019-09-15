@@ -1,45 +1,45 @@
 ---
-title: Verarbeiten von OData-feeds eines Workflows – den WF
+title: Verarbeiten von odata-Feeds aus einem Workflow (WF)
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e7cfa138a01719988586f9dce0a9009bea643076
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592983"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989760"
 ---
-# <a name="consuming-odata-feeds-from-a-workflow"></a>Verarbeiten von OData-feeds aus einem workflow
+# <a name="consuming-odata-feeds-from-a-workflow"></a>Verarbeiten von odata-Feeds aus einem Workflow
 
-WCF Data Services ist eine Komponente von .NET Framework, mit der Sie zum Erstellen von Diensten, die das Open Data Protocol (OData) zum Verfügbarmachen und Verarbeiten von Daten über das Internet oder Intranet mit der Semantik von representational State Transfer (REST) verwenden. OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Mit einem OData-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und von einem Datendienst zurückgegebene OData-Feeds verarbeiten kann. Darüber hinaus enthält die WCF Data Services-Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie die OData-Feeds aus .NET Framework-Anwendungen nutzen. Dieses Thema bietet einen Überblick über die Verarbeitung von OData-Feeds in einem Workflow mit bzw. ohne Clientbibliotheken.
+WCF Data Services ist eine Komponente des .NET Framework, die es Ihnen ermöglicht, Dienste zu erstellen, die die Open Data Protocol (odata) verwenden, um Daten mithilfe der Semantik Representational State Transfer (Rest) über das Internet oder Intranet verfügbar zu machen und zu nutzen. OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Mit einem OData-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und von einem Datendienst zurückgegebene OData-Feeds verarbeiten kann. Darüber hinaus enthält WCF Data Services Client Bibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie odata-Feeds von .NET Framework Anwendungen verarbeiten. Dieses Thema bietet einen Überblick über die Verarbeitung von OData-Feeds in einem Workflow mit bzw. ohne Clientbibliotheken.
 
-## <a name="using-the-sample-northwind-odata-service"></a>Verwenden die Northwind-OData-Beispieldienst
+## <a name="using-the-sample-northwind-odata-service"></a>Verwenden des Beispiel-odata-Dienstanbieter Northwind
 
-In die Beispielen in diesem Thema verwenden Sie das Beispiel Northwind-Datendienst controllerarbeitsverzeichnis [ http://services.odata.org/Northwind/Northwind.svc/ ](https://go.microsoft.com/fwlink/?LinkID=187426). Dieser Dienst wird als Teil des [OData-SDK](https://go.microsoft.com/fwlink/?LinkID=185248) bereitgestellt und bietet schreibgeschützten Zugriff auf die Beispieldatenbank Northwind. Wenn Schreibzugriff oder ein lokaler WCF-Datendienst gewünscht ist, können Sie die Schritte in [Schnellstart (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=131076) ausführen und einen lokalen OData-Dienst erstellen, der den Zugriff auf die Northwind-Datenbank ermöglicht. Ersetzen Sie bei Verwendung des Schnellstarts den lokalen URI durch den URI aus dem Beispielcode in diesem Thema.
+In den Beispielen in diesem Thema wird der Northwind-Beispiel Datendienst <https://services.odata.org/Northwind/Northwind.svc/>verwendet, der sich unter befindet. Dieser Dienst wird als Teil des [OData-SDK](https://go.microsoft.com/fwlink/?LinkID=185248) bereitgestellt und bietet schreibgeschützten Zugriff auf die Beispieldatenbank Northwind. Wenn Schreibzugriff oder ein lokaler WCF-Datendienst gewünscht ist, können Sie die Schritte in [Schnellstart (WCF Data Services)](https://go.microsoft.com/fwlink/?LinkID=131076) ausführen und einen lokalen OData-Dienst erstellen, der den Zugriff auf die Northwind-Datenbank ermöglicht. Ersetzen Sie bei Verwendung des Schnellstarts den lokalen URI durch den URI aus dem Beispielcode in diesem Thema.
 
-## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Verarbeitung von OData-feed-Clientbibliotheken
+## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Verarbeiten eines odata-Feeds mit Client Bibliotheken
 
-WCF Data Services enthält Clientbibliotheken, die Ihnen ermöglichen, eine einfachere Nutzung von OData-feed von .NET Framework und Client-Anwendungen. Diese Bibliotheken vereinfachen das Senden und Empfangen von HTTP-Nachrichten. Sie übersetzen außerdem die Nachrichtennutzlast in CLR-Objekte, die Entitätsdaten darstellen. Die Clientbibliotheken enthalten die beiden Kernklassen <xref:System.Data.Services.Client.DataServiceContext> und <xref:System.Data.Services.Client.DataServiceQuery%601>. Diese Klassen ermöglichen es Ihnen, einen Datendienst abzufragen und dann die zurückgegebenen Entitätsdaten als CLR-Objekte zu verarbeiten. In diesem Abschnitt werden zwei Ansätze zum Erstellen von Aktivitäten mit Clientbibliotheken vorgestellt.
+WCF Data Services umfasst Client Bibliotheken, die es Ihnen ermöglichen, einen odata-Feed von .NET Framework und Client Anwendungen aus leichter zu nutzen. Diese Bibliotheken vereinfachen das Senden und Empfangen von HTTP-Nachrichten. Sie übersetzen außerdem die Nachrichtennutzlast in CLR-Objekte, die Entitätsdaten darstellen. Die Clientbibliotheken enthalten die beiden Kernklassen <xref:System.Data.Services.Client.DataServiceContext> und <xref:System.Data.Services.Client.DataServiceQuery%601>. Diese Klassen ermöglichen es Ihnen, einen Datendienst abzufragen und dann die zurückgegebenen Entitätsdaten als CLR-Objekte zu verarbeiten. In diesem Abschnitt werden zwei Ansätze zum Erstellen von Aktivitäten mit Clientbibliotheken vorgestellt.
 
-### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>Hinzufügen eines Dienstverweises in WCF Data service
+### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>Hinzufügen eines Dienst Verweises zum WCF-Datendienst
 
-Um die Northwind-Clientbibliotheken zu generieren, können Sie die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio 2012, um einen Verweis auf die Northwind-OData-Dienst hinzuzufügen.
+Zum Generieren der Northwind-Client Bibliotheken können Sie das Dialogfeld **Dienstverweis hinzufügen** in Visual Studio 2012 verwenden, um einen Verweis auf den Northwind-odata-Dienst hinzuzufügen.
 
-![Screenshot, das Dialogfeld "Dienstverweis hinzufügen zeigt".](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
+![Screenshot, der das Dialogfeld "Dienstverweis hinzufügen" anzeigt.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Beachten Sie Folgendes: Vom Dienst werden keine Dienstvorgänge verfügbar gemacht, und die Liste **Dienste** enthält Elemente, die die Entitäten darstellen, die vom Northwind-Datendienst verfügbar gemacht werden. Beim Hinzufügen des Dienstverweises werden Klassen für diese Entitäten generiert, die im Clientcode verwendet werden können. In den Beispielen in diesem Thema werden diese Klassen und die `NorthwindEntities` -Klasse für die Abfragen verwendet.
 
 > [!NOTE]
-> Weitere Informationen finden Sie unter [Generieren der Datendienst-Clientbibliothek (WCF Data Services)](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
+> Weitere Informationen finden Sie unter [Erstellen der Datendienst-Client Bibliothek (WCF Data Services)](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
 
 ### <a name="using-asynchronous-methods"></a>Verwenden von asynchronen Methoden
 
-Es wird empfohlen, asynchron auf WCF Data Services zuzugreifen, um mögliche Latenzprobleme beim Zugriff auf Ressourcen über das Internet zu umgehen. Die WCF Data Services-Clientbibliotheken enthalten asynchrone Methoden zum Aufrufen von Abfragen und Windows Workflow Foundation (WF) bietet die <xref:System.Activities.AsyncCodeActivity> -Klasse für das Erstellen von asynchronen Aktivitäten. <xref:System.Activities.AsyncCodeActivity> abgeleitete Aktivitäten können .NET Framework-Klassen nutzen, die asynchrone Methoden geschrieben werden, oder der Code, der asynchron ausgeführt werden in eine Methode eingefügt und mit einem Delegaten aufgerufen werden kann. Dieser Abschnitt enthält zwei Beispiele einer von <xref:System.Activities.AsyncCodeActivity> abgeleiteten Aktivität, von denen eine die asynchronen Methoden der Clientbibliotheken von WCF Data Services und die andere einen Delegaten verwendet.
+Es wird empfohlen, asynchron auf WCF Data Services zuzugreifen, um mögliche Latenzprobleme beim Zugriff auf Ressourcen über das Internet zu umgehen. Die WCF Data Services-Client Bibliotheken enthalten asynchrone Methoden zum Aufrufen von Abfragen, und Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> stellt die-Klasse zum Erstellen von asynchronen Aktivitäten bereit. <xref:System.Activities.AsyncCodeActivity>abgeleitete Aktivitäten können so geschrieben werden, dass Sie .NET Framework Klassen, die asynchrone Methoden haben, nutzen können, oder der Code, der asynchron ausgeführt werden soll, in eine Methode eingefügt und mithilfe eines Delegaten aufgerufen werden kann. Dieser Abschnitt enthält zwei Beispiele einer von <xref:System.Activities.AsyncCodeActivity> abgeleiteten Aktivität, von denen eine die asynchronen Methoden der Clientbibliotheken von WCF Data Services und die andere einen Delegaten verwendet.
 
 > [!NOTE]
 > Weitere Informationen finden Sie unter [asynchrone Vorgänge (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) und [Erstellen von asynchronen Aktivitäten](creating-asynchronous-activities-in-wf.md).
 
-### <a name="using-client-library-asynchronous-methods"></a>Verwenden von asynchronen Methoden für Clientbibliotheken
+### <a name="using-client-library-asynchronous-methods"></a>Verwenden von asynchronen Methoden für Client Bibliotheken
 
 Die <xref:System.Data.Services.Client.DataServiceQuery%601> -Klasse stellt die <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> - und die <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> -Methode zum asynchronen Abfragen eines OData-Diensts bereit. Diese Methoden können von der <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> - und der <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> -Überschreibung einer von <xref:System.Activities.AsyncCodeActivity> abgeleiteten Klasse aufgerufen werden. Wenn die Überschreibung für <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> abgeschlossen wird, kann der Workflow in den Leerlauf übergehen (nicht jedoch beibehalten werden), und wenn die asynchrone Arbeit abgeschlossen ist, wird <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> von der Laufzeit aufgerufen.
 
@@ -66,23 +66,23 @@ Calling WCF Data Service...
 > [!NOTE]
 > Wenn keine Verbindung zum OData-Server hergestellt werden kann, wird eine Ausnahme ähnlich der folgenden angezeigt:
 >
-> Ausnahmefehler: System.InvalidOperationException: Fehler beim Verarbeiten dieser Anforderung. ---> System.Net.WebException: Verbindung kann nicht mit dem Remoteserver hergestellt---> System.Net.Sockets.SocketException: Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer Zeitspanne nicht ordnungsgemäß reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host reagiert nicht.
+> Ausnahmefehler: System.InvalidOperationException: Fehler beim Verarbeiten dieser Anforderung. ---> System .net. WebException: Es kann keine Verbindung mit dem Remote Server hergestellt werden,---> System .net. Sockets. SocketException: Ein Verbindungsversuch ist fehlgeschlagen, weil die verbundene Partei nach einem bestimmten Zeitraum nicht ordnungsgemäß reagiert hat, oder eine Verbindung konnte nicht hergestellt werden, da der verbundene Host nicht reagiert hat.
 
 Eine weitere Verarbeitung der von der Abfrage zurückgegebenen Daten kann ggf. in der <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> -Überschreibung der Aktivität erfolgen. <xref:System.Activities.AsyncCodeActivity%601.BeginExecute%2A> und <xref:System.Activities.AsyncCodeActivity%601.EndExecute%2A> werden mit dem Workflowthread aufgerufen, und Code in den Überschreibungen wird nicht asynchron ausgeführt. Wenn die zusätzliche Verarbeitung umfangreich oder langwierig ist, oder wenn die Abfrageergebnisse seitenweise angezeigt werden, kann es empfehlenswert sein, den Ansatz im nächsten Abschnitt zu berücksichtigen. Dabei wird ein Delegat zur Ausführung der Abfrage sowie für weitere asynchrone Verarbeitungen verwendet.
 
-### <a name="using-a-delegate"></a>Mithilfe eines Delegaten
+### <a name="using-a-delegate"></a>Verwenden eines Delegaten
 
-Zusätzlich zum Aufrufen der asynchronen Methode einer .NET Framework-Klasse, eine <xref:System.Activities.AsyncCodeActivity>-basierende Aktivität kann auch die asynchrone Logik in einer der Methoden definieren. Diese Methode wird mit einem Delegaten in der <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> -Überschreibung der Aktivität angegeben. Nach dem Abschluss der Methode wird die <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> -Überschreibung der Methode von der Laufzeit aufgerufen. Beim Aufrufen eines OData-Diensts aus einem Workflow kann diese Methode zum Abfragen des Diensts verwendet werden und weitere Verarbeitungsmöglichkeiten bieten.
+Zusätzlich zum Aufrufen der asynchronen Methode einer .NET Framework Klasse kann eine <xref:System.Activities.AsyncCodeActivity>-basierte Aktivität auch die asynchrone Logik in einer ihrer Methoden definieren. Diese Methode wird mit einem Delegaten in der <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> -Überschreibung der Aktivität angegeben. Nach dem Abschluss der Methode wird die <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> -Überschreibung der Methode von der Laufzeit aufgerufen. Beim Aufrufen eines OData-Diensts aus einem Workflow kann diese Methode zum Abfragen des Diensts verwendet werden und weitere Verarbeitungsmöglichkeiten bieten.
 
 Im folgenden Beispiel wird eine `ListCustomers` -Aktivität definiert. Mit dieser Aktivität wird der Beispieldatendienst Northwind abgefragt und eine `List<Customer>` mit allen Kunden in der Northwind-Datenbank zurückgegeben. Der asynchrone Vorgang wird von der `GetCustomers` -Methode ausgeführt. Mit dieser Methode wird der Dienst für alle Kunden abgefragt, und das Ergebnis wird in eine `List<Customer>`kopiert. Im Anschluss wird überprüft, ob die Ergebnisse seitenweise angegeben sind. Wenn dies der Fall ist, wird die nachfolgende Ergebnisseite vom Dienst abgefragt, die Ergebnisse werden der Liste hinzugefügt, und der Vorgang wird fortgesetzt, bis alle Daten abgerufen wurden.
 
 > [!NOTE]
-> Weitere Informationen zu Paging in WCF Data Services, finden Sie unter [Vorgehensweise: Laden von ausgelagerten Ergebnissen (WCF Data Services)](../data/wcf/how-to-load-paged-results-wcf-data-services.md).
+> Weitere Informationen zum Paging in WCF Data Services finden [Sie unter Gewusst wie: Auslagerungs Ergebnisse laden (WCF Data Services](../data/wcf/how-to-load-paged-results-wcf-data-services.md)).
 
 Sobald alle Kunden hinzugefügt wurden, wird die Liste zurückgegeben. Die `GetCustomers` -Methode wird in der <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> -Überschreibung der Aktivität angegeben. Da die Methode über einen Rückgabewert verfügt, wird eine `Func<string, List<Customer>>` erstellt, um die Methode anzugeben.
 
 > [!NOTE]
-> Wenn die Methode, mit der der asynchrone Vorgang ausgeführt wird, nicht über einen Rückgabewert verfügt, wird eine <xref:System.Action> anstelle einer <xref:System.Func%601> verwendet. Beispiele für die Erstellung eines asynchronen Beispiels mit beiden Ansätzen, finden Sie unter [Erstellen von asynchronen Aktivitäten](creating-asynchronous-activities-in-wf.md).
+> Wenn die Methode, mit der der asynchrone Vorgang ausgeführt wird, nicht über einen Rückgabewert verfügt, wird eine <xref:System.Action> anstelle einer <xref:System.Func%601> verwendet. Beispiele zum Erstellen eines asynchronen Beispiels mit beiden Ansätzen finden Sie unter [Erstellen von asynchronen Aktivitäten](creating-asynchronous-activities-in-wf.md).
 
 Diese <xref:System.Func%601> wird dem <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> zugewiesen, und anschließend wird `BeginInvoke` aufgerufen. Da die aufzurufende Methode nicht auf die Argumentumgebung der Aktivität zugreifen kann, wird der Wert des `ServiceUri` -Arguments als erster Parameter zusammen mit dem Rückruf und dem Zustand übergeben, die in <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>übergeben wurden. Beim Abschluss von `GetCustomers` wird <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>von der Laufzeit aufgerufen. Mit dem Code in <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> wird der Delegat vom <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>abgerufen, `EndInvoke`wird aufgerufen, und das Ergebnis (die Liste der Kunden, die von der `GetCustomers` -Methode zurückgegeben wurde) wird zurückgegeben.
 
@@ -104,7 +104,7 @@ Berglunds snabbköp, Contact: Christina Berglund
 ...
 ```
 
-## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>Verarbeitung von OData-feed ohne Clientbibliotheken
+## <a name="consuming-an-odata-feed-without-using-the-client-libraries"></a>Verarbeiten eines odata-Feeds ohne Verwendung der Client Bibliotheken
 
 OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Diese URIs werden bei der Verwendung von Clientbibliotheken für Sie erstellt, eine Verwendung von Clientbibliotheken ist jedoch nicht erforderlich. Der Zugriff auf OData-Dienste ist auch direkt und ohne Clientbibliotheken möglich. Wenn Sie keine Clientbibliotheken verwenden, werden der Speicherort des Diensts sowie die gewünschten Daten durch den URI angegeben, und die Ergebnisse werden in der Antwort auf die HTTP-Anforderung zurückgegeben. Die Rohdaten können anschließend nach Bedarf verarbeitet oder geändert werden. Eine Möglichkeit, die Ergebnisse einer OData-Abfrage abzurufen, besteht in der Verwendung der <xref:System.Net.WebClient> -Klasse. In diesem Beispiel wird der Name des Ansprechpartners für den Kunden abgerufen, der durch Schlüssel ALFKI dargestellt wird.
 
@@ -154,4 +154,4 @@ xmlns="http://www.w3.org/2005/Atom">
 ...
 ```
 
-Dieses Beispiel enthält eine Methode, die Workflowanwendungsautoren verwenden können, um die Rohdaten zu nutzen, die von einem OData-Dienst zurückgegeben werden. Weitere Informationen zum Zugreifen auf WCF Data Services mit URIs finden Sie unter [zugreifen auf Datendienstressourcen (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) und [OData: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkId=185564).
+Dieses Beispiel enthält eine Methode, die Workflowanwendungsautoren verwenden können, um die Rohdaten zu nutzen, die von einem OData-Dienst zurückgegeben werden. Weitere Informationen zum Zugreifen auf WCF Data Services mithilfe von URIs finden Sie unter [zugreifen auf Datendienst Ressourcen (WCF Data Services)](../data/wcf/accessing-data-service-resources-wcf-data-services.md) und [odata: URI-](https://go.microsoft.com/fwlink/?LinkId=185564)Konventionen.

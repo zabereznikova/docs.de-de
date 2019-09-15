@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786872"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971819"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -50,12 +50,12 @@ ms.locfileid: "70786872"
  Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Sicherheit](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblys  
- Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programming with](../../app-domains/programming-with-assemblies.md)Assemblys.  
+ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programming with](../../../standard/assembly/program.md)Assemblys.  
   
 ### <a name="strong-naming-assemblies"></a>Assemblys mit starkem Namen  
  Ein starker Name (oder eine digitale Signatur) setzt sich aus der Identität der Assembly mit einfachem Textnamen, Versionsnummer und (sofern vorhanden) Kulturinformationen sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Die digitale Signatur wird mit dem entsprechenden privaten Schlüssel aus einer Assemblydatei generiert. Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.  
   
- Wenn eine Assembly mit einem starken Namen versehen wird, erhalten Anwendungen oder Komponenten eine eindeutige Identität, über die andere Software explizit auf die Assembly verweisen können. Ein starker Name schützt Assemblys vor Angriffen durch andere Assemblys, die bösartigen Code enthalten. Außerdem wird durch starke Namen die Versionskonsistenz zwischen verschiedenen Versionen einer Komponente gewährleistet. Assemblys, die im globalen Assemblycache (GAC) bereitgestellt werden sollen, müssen einen starken Namen erhalten. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../app-domains/create-and-use-strong-named-assemblies.md).  
+ Wenn eine Assembly mit einem starken Namen versehen wird, erhalten Anwendungen oder Komponenten eine eindeutige Identität, über die andere Software explizit auf die Assembly verweisen können. Ein starker Name schützt Assemblys vor Angriffen durch andere Assemblys, die bösartigen Code enthalten. Außerdem wird durch starke Namen die Versionskonsistenz zwischen verschiedenen Versionen einer Komponente gewährleistet. Assemblys, die im globalen Assemblycache (GAC) bereitgestellt werden sollen, müssen einen starken Namen erhalten. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Teilweise Vertrauenswürdigkeit in ADO.NET 2.0  
  In ADO.NET 2.0 können der .NET Framework-Datenanbieter für SQL Server, der .NET Framework-Datenanbieter für OLE DB, der .NET Framework-Datenanbieter für ODBC und der .NET Framework-Datenanbieter für Oracle jetzt alle in teilweise vertrauenswürdigen Umgebungen ausgeführt werden. In früheren Releases von .NET Framework wurde nur <xref:System.Data.SqlClient> in nicht vollständig vertrauenswürdigen Umgebungen unterstützt.  

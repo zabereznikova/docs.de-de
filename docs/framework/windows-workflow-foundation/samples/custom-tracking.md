@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: b53b22b485a7ac340821073d2f2914b13a7b7011
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044304"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989401"
 ---
 # <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
 Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird. Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte ausgegeben werden. Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- Die vollständige Nachverfolgungskomponente wird in der Datei "ConsoleTrackingParticipant.cs" implementiert. Das folgende Codebeispiel enthält die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>-Methode für die benutzerdefinierte Nachverfolgungskomponente.
+ Der gesamte Überwachungs Teilnehmer wird in der Datei ConsoleTrackingParticipant.cs implementiert. Das folgende Codebeispiel ist die <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> -Methode für den benutzerdefinierten nach Verfolgungs Teilnehmer.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)

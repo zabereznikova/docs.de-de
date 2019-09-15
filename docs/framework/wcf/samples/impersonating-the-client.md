@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 61befdcaf1381120dba6f72ba592dade09d0490a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968342"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989826"
 ---
 # <a name="impersonating-the-client"></a>Durchführen eines Identitätswechsels für den Client
 Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.  
@@ -117,7 +117,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 4. Wenn Sie veranschaulichen möchten, dass der Dienst die Identität des Aufrufers annimmt, führen Sie den Client auf einem anderen Konto als dem Konto aus, auf dem der Dienst ausgeführt wird. Geben Sie dazu an der Eingabeaufforderung Folgendes ein:  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   

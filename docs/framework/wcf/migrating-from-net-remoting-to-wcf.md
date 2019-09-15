@@ -2,12 +2,12 @@
 title: Migrieren von .NET-Remoting zu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 926ccee49c7a445c724cecd72015ec5a5307cf58
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045856"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990179"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrieren von .NET-Remoting zu WCF
 Dieser Artikel beschreibt die Vorgehensweise zum Migrieren einer Anwendung, die .NET Remoting zur Verwendung von Windows Communication Foundation (WCF) nutzt. Es werden ähnliche Konzepte dieser zwei Produkte verglichen, und es wird beschrieben, wie verschiedene Remoting-Szenarien in WCF realisiert werden können.  
@@ -15,7 +15,7 @@ Dieser Artikel beschreibt die Vorgehensweise zum Migrieren einer Anwendung, die 
  .NET Remoting ist ein Legacy-Produkt, das nur zur Bereitstellung von Abwärtskompatibilität unterstützt wird. Seine Verwendung in Umgebungen mit gemischten Vertrauensstellungen ist nicht sicher, da keine getrennten Vertrauensebenen zwischen Client und Server eingerichtet werden können. Beispielsweise sollten Sie nie einen .NET Remoting-Endpunkt für das Internet oder nicht vertrauenswürdige Clients verfügbar machen. Es wird empfohlen, vorhandene Remoting-Anwendungen auf neuere und sicherere Technologien zu migrieren. Wenn das Anwendungsdesign nur HTTP und RESTful verwendet, wird die ASP.NET-Web-API empfohlen. Weitere Informationen finden Sie unter "ASP.NET-Web-API". Wenn die Anwendung auf SOAP basiert oder Nicht-HTTP-Protokolle wie z. B. TCP erfordert, empfehlen wir WCF.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>Vergleich von .NET Remoting und WCF  
- In diesem Abschnitt werden die grundlegenden Bausteine von .NET Remoting mit ihren Entsprechungen in WCF verglichen. Diese Bausteine werden später verwendet, um einige gängige Client/Server-Szenarien in WCF zu erstellen. Das folgende Diagramm zeigt die wichtigsten Ähnlichkeiten und Unterschiede zwischen .NET Remoting und WCF.  
+ In diesem Abschnitt werden die grundlegenden Bausteine von .NET Remoting mit ihren Entsprechungen in WCF verglichen. Diese Bausteine werden später verwendet, um einige gängige Client/Server-Szenarien in WCF zu erstellen. Im folgenden Diagramm werden die Haupt Ähnlichkeiten und Unterschiede zwischen .NET-Remoting und WCF zusammengefasst.  
   
 ||.NET-Remotezugriff|WCF|  
 |-|-------------------|---------|  
@@ -656,7 +656,7 @@ public class RemotingServer : MarshalByRefObject
     > [!NOTE]
     > Dieser Code zeigt auch das Senden eines abgeleiteten Typs (PremiumCustomer). Die Dienstschnittstelle erwartet ein Customer-Objekt, aber das [KnownType]-Attribut für die Customer-Klasse zeigt an, dass auch PremiumCustomer zulässig ist. WCF lässt keine Serialisierung oder Deserialisierung von anderen Typen über diese Dienstschnittstelle zu.  
   
- Der normale WCF-Datenaustausch erfolgt per Wert. Auf diese Weise wird sichergestellt, dass Methodenaufrufe für diese Datenobjekte nur lokal erfolgen – es wird kein Code auf der anderen Ebene aufgerufen. Obwohl es möglich ist, vom Server zurückgegebene durch Verweis Objekte zu erreichen, ist es nicht möglich, dass ein Client ein per-Verweis-Objekt *an* den Server übergibt. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden. Weitere Informationen finden Sie unter [Duplex Dienste](./feature-details/duplex-services.md).  
+ Der normale WCF-Datenaustausch erfolgt per Wert. Auf diese Weise wird sichergestellt, dass Methodenaufrufe für diese Datenobjekte nur lokal erfolgen – es wird kein Code auf der anderen Ebene aufgerufen. Obwohl es möglich ist *, vom Server zurückgegebene* durch Verweis Objekte zu erreichen, ist es nicht möglich, dass ein Client ein per-Verweis-Objekt *an* den Server übergibt. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden. Weitere Informationen finden Sie unter [Duplex Dienste](./feature-details/duplex-services.md).  
   
 ## <a name="summary"></a>Zusammenfassung  
  .NET Remoting ist ein Kommunikationsframework, das ausschließlich in vollständig vertrauenswürdigen Umgebungen eingesetzt werden sollte. Es handelt sich um ein Legacy-Produkt, das nur zur Bereitstellung von Abwärtskompatibilität unterstützt wird. Es sollte nicht verwendet werden, um neue Anwendungen zu erstellen. Im Gegensatz dazu wurde WCF unter Berücksichtigung von Sicherheitsaspekten entworfen und wird für neue und vorhandene Anwendungen empfohlen. Microsoft empfiehlt, vorhandene Remoting-Anwendungen zu migrieren, um stattdessen WCF oder die ASP.NET-Web-API zu verwenden.

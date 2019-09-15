@@ -2,12 +2,12 @@
 title: Adressierung
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 249060896b97de1694dec121cb25219baccdd88b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045837"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990208"
 ---
 # <a name="addressing"></a>Adressierung
 Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von Endpunktadressen veranschaulicht. Das Beispiel basiert auf den ersten [Schritten.](../../../../docs/framework/wcf/samples/getting-started-sample.md) In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Dienst als auch der Client sind Konsolenanwendungen. Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  
@@ -83,7 +83,7 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
   
  Bei der Durchführung des Beispiels listet der Dienst die Adresse, den Bindungsnamen und den Vertragsnamen für jeden Endpunkt auf. Der MEX-Endpunkt (Metadata Exchange) ist aus Sicht des ServiceHost nur ein weiterer Endpunkt und wird somit ebenfalls aufgelistet.  
   
-```  
+```console  
 Service endpoints:  
 Endpoint - address:  http://localhost:8000/ServiceModelSamples/service  
            binding:  WSHttpBinding  
@@ -107,7 +107,7 @@ Press <ENTER> to terminate service.
   
  Wenn Sie den Client ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

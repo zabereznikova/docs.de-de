@@ -2,12 +2,12 @@
 title: <activityStateQuery>von WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 233bd3a2fa161222977902cc1053f964e8171173
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 49c507424e813067e1dad9b08167d9661acef36f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850486"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991217"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<activitystatus equery-> von WCF
 
@@ -76,7 +76,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ## <a name="remarks"></a>Hinweise
 
-Eine einzigartige Funktion des Elements „ActivityStateQuery“ ist seine Fähigkeit, Daten zu extrahieren, während es die Ausführung eines Workflows nachverfolgt. Dadurch steht zusätzlicher Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. Sie können die [ \<Argumente >](../windows-workflow-foundation/arguments.md), [ \<Zustände >](../windows-workflow-foundation/states.md) und [ \<Zustände >](../windows-workflow-foundation/states.md) Elemente verwenden, um beliebige Variablen oder Argumente aus beliebigen Aktivitäten in einem Workflow zu extrahieren. Das folgende Beispiel zeigt eine Aktivitäts Zustands Abfrage, die Variablen und Argumente extrahiert, wenn der `Closed` nach Verfolgungs Daten Satz der Aktivität ausgegeben wird. Variablen und Argumente können nur mit einem activitystatus erecord extrahiert werden und können daher innerhalb eines Überwachungs Profils mithilfe [ \<von activitystatuequery >](../windows-workflow-foundation/activitystatequery.md)abonniert werden.  
+Eine einzigartige Funktion des Elements „ActivityStateQuery“ ist seine Fähigkeit, Daten zu extrahieren, während es die Ausführung eines Workflows nachverfolgt. Dadurch steht zusätzlicher Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. Sie können die [ \<Argumente >](../windows-workflow-foundation/arguments.md), [ \<Zustände >](../windows-workflow-foundation/states.md) und [ \<Zustände >](../windows-workflow-foundation/states.md) Elemente verwenden, um beliebige Variablen oder Argumente aus beliebigen Aktivitäten in einem Workflow zu extrahieren. Das folgende Beispiel zeigt eine Abfrage des Aktivitätszustands, mit der Variablen und Argumente extrahiert werden, wenn der `Closed`-Überwachungsdatensatz der Aktivität ausgegeben wird. Variablen und Argumente können nur mit einem activitystatus erecord extrahiert werden und können daher innerhalb eines Überwachungs Profils mithilfe [ \<von activitystatuequery >](../windows-workflow-foundation/activitystatequery.md)abonniert werden.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">

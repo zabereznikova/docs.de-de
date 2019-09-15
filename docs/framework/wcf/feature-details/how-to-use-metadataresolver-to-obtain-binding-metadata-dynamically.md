@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 3fe09699304de42ed00312f50f3b9e0edb20615d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa36c81bbeb70c1dd981ff91b4efb6d7c423a5c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047554"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991625"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten
 Dieses Thema zeigt Ihnen, wie man die Klasse <xref:System.ServiceModel.Description.MetadataResolver> einsetzt, um Bindungsmetadaten dynamisch zu erhalten.  
@@ -16,20 +16,20 @@ Dieses Thema zeigt Ihnen, wie man die Klasse <xref:System.ServiceModel.Descripti
   
 1. Erstellen Sie ein <xref:System.ServiceModel.EndpointAddress>-Objekt mit der Adresse des Metadatenendpunkts.  
   
-    ```  
+    ```csharp
     EndpointAddress metaAddress  
-      = new EndpointAddress(new   Uri("http://localhost:8080/SampleService/mex"));  
+      = new EndpointAddress(new Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
 2. Rufen Sie <xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> auf, der im Diensttyp und der Metadatenendpunktadresse übergibt. Es gibt eine Auflistung von Endpunkten zurück, die den angegebenen Vertrag implementieren. Die Metadaten implementieren nur Bindungsinformationen; Vertragsinformationen werden nicht importiert. Stattdessen wird der angegebene Vertrag verwendet.  
   
-    ```  
+    ```csharp  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
     ```  
   
 3. Sie können dann die Auflistung von Dienstendpunkten durchlaufen, um die Bindungsinformationen zu extrahieren, die Sie benötigen. Der folgende Code durchläuft die Endpunkte, erstellt ein Dienstclientobjekt, das in der Bindung und der Adresse, die mit dem aktuellen Endpunkt verbunden ist, übergeben wird, und ruft dann im Dienst eine Methode auf.  
   
-    ```  
+    ```csharp  
     foreach (ServiceEndpoint point in endpoints)  
     {  
        if (point != null)  

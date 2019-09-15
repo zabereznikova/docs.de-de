@@ -5,19 +5,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e625d99cdb30368a798b4829d103f8f26b2c9274
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206172"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991852"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent-Attribut
 Gibt an [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , welche Elemente weiterhin Inhalte haben sollen, die durch relevante übergeordnete Elemente verarbeitet werden sollen, auch wenn das unmittelbare [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] übergeordnete Element von einem Prozessor aufgrund der Angabe des [MC: Ignorable-Attributs](mc-ignorable-attribute.md)ignoriert werden kann. Das `mc:ProcessContent` Attribut unterstützt Markup Kompatibilität sowohl für die Zuordnung von benutzerdefinierten [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Namespaces als auch für die Versionsverwaltung.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  

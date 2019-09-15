@@ -2,12 +2,12 @@
 title: Eigenschaften der Workflowausführung
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913611"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988590"
 ---
 # <a name="workflow-execution-properties"></a>Eigenschaften der Workflowausführung
 Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz zusätzlich zu benutzerdefinierten Threadeigenschaften, z. B. benannte Slots.  
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  Beim Aufruf des Workflows wird die folgende Ausgabe in das Konsolenfenster geschrieben.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  

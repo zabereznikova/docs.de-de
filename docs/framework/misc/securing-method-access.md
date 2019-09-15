@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1157d93585a564f83bf3809ba2fc3a26949fb711
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206126"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971053"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "70206126"
   
 - Für abgeleitete Klassen, die bestimmte Methoden außer Kraft setzen, eine bestimmte Identität oder Berechtigung anfordern.  
   
- Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. In diesem Beispiel wird <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> die mit einer **Anforderung** für den starken Namen verwendet. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie unter [Erstellen und verwenden](../app-domains/create-and-use-strong-named-assemblies.md)von Assemblys mit starkem Namen.  
+ Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. In diesem Beispiel wird <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> die mit einer **Anforderung** für den starken Namen verwendet. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie unter [Erstellen und verwenden](../../standard/assembly/create-use-strong-named.md)von Assemblys mit starkem Namen.  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  

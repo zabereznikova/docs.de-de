@@ -2,12 +2,12 @@
 title: Kanalfactory
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: cd56c47223f0c98e48bd92376c9bbe9db6d2202e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b754531059e367a8102a96cfb50b6147da84978
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045729"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990095"
 ---
 # <a name="channel-factory"></a>Kanalfactory
 
@@ -48,7 +48,7 @@ Zum Schließen des Kanals muss dieser zunächst in eine <xref:System.ServiceMode
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um die Clientanwendung zu schließen.
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25

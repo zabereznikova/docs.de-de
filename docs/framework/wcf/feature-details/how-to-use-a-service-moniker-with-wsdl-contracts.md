@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 80b0d034b92123862d0500106f81d4a566cac467
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7bc628952d4a7198f0b5545014ae931bbf73dab3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968784"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968999"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen
 Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop-Client wünschen. Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX-Endpunkt bereit, oder die WCF-Client-DLL ist nicht für COM-Interop registriert. In diesen Fällen können Sie eine WSDL-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF-Dienstmoniker übergeben. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL-Monikers in WCF aufgerufen wird.  
@@ -28,7 +28,7 @@ Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabh�
   
 6. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
-    ```  
+    ```vb
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
     Const ForReading = 1  
     Set objFSO = CreateObject("Scripting.FileSystemObject")  

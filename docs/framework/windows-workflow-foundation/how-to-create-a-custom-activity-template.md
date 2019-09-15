@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Erstellen einer benutzerdefinierten Aktivitätsvorlage'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: f54a625fbe5497406645ea29f824d361c0392eb3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ec84658dbe3039a4d7d714f8da183e6a5eb6ca4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637729"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989711"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Aktivitätsvorlage
 
-Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration von Aktivitäten, einschließlich benutzerdefinierter zusammengesetzter Aktivitäten, anzupassen. Dadurch müssen Benutzer die Aktivitäten nicht einzeln erstellen und alle zugehörigen Eigenschaften und anderen Einstellungen manuell konfigurieren. Diese benutzerdefinierten Vorlagen in verfügbar gemacht werden die **Toolbox** auf die [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] oder in einem neu gehosteten Designer, von dem Benutzer auf können sie die vorkonfigurierte Entwurfsoberfläche ziehen. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] gehören gute Beispiele für solche Vorlagen: die [SendAndReceiveReply-Vorlagendesigner](/visualstudio/workflow-designer/sendandreceivereply-template-designer) und [ReceiveAndSendReply-Vorlagendesigner](/visualstudio/workflow-designer/receiveandsendreply-template-designer) in die [Messaging-Aktivitätsdesigner](/visualstudio/workflow-designer/messaging-activity-designers) Kategorie.
+Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration von Aktivitäten, einschließlich benutzerdefinierter zusammengesetzter Aktivitäten, anzupassen. Dadurch müssen Benutzer die Aktivitäten nicht einzeln erstellen und alle zugehörigen Eigenschaften und anderen Einstellungen manuell konfigurieren. Diese benutzerdefinierten Vorlagen können in der **Toolbox** im [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] oder in einem neu gehosteten Designer verfügbar gemacht werden, über den Benutzer Sie auf die vorkonfigurierte Entwurfs Oberfläche ziehen können. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]enthält gute Beispiele für solche Vorlagen: den [sendandreceivereply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) -Vorlagen Designer und den [receiveandsendreply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) -Vorlagen Designer in der Kategorie der [Messaging-Aktivitäts Designer](/visualstudio/workflow-designer/messaging-activity-designers) .
 
- Das erste Verfahren in diesem Thema wird beschrieben, wie zum Erstellen einer benutzerdefinierten Aktivitätsvorlage für eine **Verzögerung** Aktivität und das zweite Verfahren beschreibt kurz, wie es in zur Verfügung stellen eine [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] zu überprüfen, ob die benutzerdefinierte Vorlage funktioniert.
+ Das erste Verfahren in diesem Thema beschreibt, wie eine benutzerdefinierte Aktivitäts Vorlage für eine **Verzögerungs** Aktivität erstellt wird, und das zweite Verfahren beschreibt kurz, wie Sie [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in einem verfügbar gemacht wird, um zu überprüfen, ob die benutzerdefinierte Vorlage funktioniert.
 
  Benutzerdefinierte Aktivitätsvorlagen müssen <xref:System.Activities.Presentation.IActivityTemplateFactory> implementieren. Die Schnittstelle verfügt über eine einzelne <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A>-Methode, mit der Sie die in der Vorlage verwendeten Aktivitätsinstanzen erstellen und konfigurieren können.
 
@@ -25,27 +25,27 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3. In der **Projekttypen** wählen Sie im Bereich **Workflow** entweder die **Visual C#-** Projekte oder **Visual Basic** Gruppierungen je Ihre Bevorzugte Sprache.
+3. Wählen Sie im Bereich **Projekttypen** die Option **Workflow** aus den **visuellen C#**  Projekten oder **Visual Basic** Gruppierungen abhängig von ihrer bevorzugte Sprache aus.
 
-4. In der **Vorlagen** wählen Sie im Bereich **Aktivitätsbibliothek**.
+4. Wählen Sie im Bereich **Vorlagen** die Option **Aktivitäts Bibliothek**aus.
 
-5. In der **Namen** geben `DelayActivityTemplate`.
+5. Geben Sie `DelayActivityTemplate`im Feld Name den Namen ein.
 
-6. Übernehmen Sie die Standardwerte in den **Speicherort** und **Projektmappenname** Textfelder, und klicken Sie dann auf **OK**.
+6. Akzeptieren Sie die Standardwerte in den Textfeldern **Speicherort** und Projektmappenname, und klicken Sie dann auf **OK**.
 
-7. Mit der rechten Maustaste in das Verzeichnis "Verweise" des DelayActivityTemplate-Projekts in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen** zum Öffnen der **Verweis hinzufügen** Dialogfeld.
+7. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Verzeichnis Verweise, und wählen Sie **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.
 
-8. Wechseln Sie zu der **.NET** Registerkarte, und wählen Sie **PresentationFramework** aus der **Komponentenname** Spalte auf der linken Seite und auf **OK** zum Hinzufügen eines Verweises in der Datei "PresentationFramework.dll".
+8. Wechseln Sie zur Registerkarte **.net** , wählen Sie in der Spalte **Komponenten Name** auf der linken Seite **presentationframework** aus, und klicken Sie auf **OK** , um einen Verweis auf die Datei "presentationframework. dll" hinzuzufügen.
 
 9. Wiederholen Sie dieses Verfahren, um Verweise auf die Dateien "System.Activities.Presentation.dll" und "WindowsBase.dll" hinzuzufügen.
 
-10. Mit der rechten Maustaste in des Projekts "delayactivitytemplate" im **Projektmappen-Explorer** , und wählen Sie **hinzufügen** und dann **neues Element** zum Öffnen der **neues Element hinzufügen**Dialogfeld.
+10. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt Delta activitytemplate, und wählen Sie **Hinzufügen** und dann **Neues Element** aus, um das Dialogfeld **Neues Element hinzufügen** zu öffnen.
 
-11. Wählen Sie die **Klasse** -Vorlage aus, nennen Sie sie "mydelaytemplate", und klicken Sie dann auf **OK**.
+11. Wählen Sie die **Klassen** Vorlage aus, benennen Sie Sie mydelta-Template, und klicken Sie dann auf **OK**.
 
 12. Öffnen Sie die Datei "MyDelayTemplate.cs", und fügen Sie die folgenden Anweisungen hinzu.
 
-    ```
+    ```csharp
     //Namespaces added
     using System.Activities;
     using System.Activities.Statements;
@@ -55,7 +55,7 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
 
 13. Implementieren Sie <xref:System.Activities.Presentation.IActivityTemplateFactory> mit der `MyDelayActivity`-Klasse mit dem folgenden Code. Damit wird die Verzögerung mit einer Dauer von 10 Sekunden konfiguriert.
 
-    ```
+    ```csharp
     public sealed class MyDelayActivity : IActivityTemplateFactory
     {
         public Activity Create(System.Windows.DependencyObject target)
@@ -70,32 +70,32 @@ Benutzerdefinierte Aktivitätsvorlagen werden verwendet, um die Konfiguration vo
     }
     ```
 
-14. Wählen Sie **Projektmappe** aus der **erstellen** Menü, um die Datei "DelayActivityTemplate.dll" zu generieren.
+14. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus, um die Datei "Delta activitytemplate. dll" zu generieren.
 
 ### <a name="to-make-the-template-available-in-a-workflow-designer"></a>So machen Sie die Vorlage in einem Workflow-Designer verfügbar
 
-1. Mit der rechten Maustaste in der Projektmappe "delayactivitytemplate" im **Projektmappen-Explorer** , und wählen Sie **hinzufügen** und dann **neues Projekt** zum Öffnen der **neues Projekt hinzufügen** Dialogfeld.
+1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf die Projekt Mappe Delta activitytemplate, und wählen Sie **Hinzufügen** und dann **Neues Projekt** aus, um das Dialogfeld **Neues Projekt hinzufügen** zu öffnen
 
-2. Wählen Sie die **Konsolenanwendung für Workflows** Vorlage, nennen Sie sie `CustomActivityTemplateApp`, und klicken Sie dann auf **OK**.
+2. Wählen Sie die Vorlage **Konsolenanwendung für Workflows** aus `CustomActivityTemplateApp`, benennen Sie Sie, und klicken Sie dann auf **OK**.
 
-3. Mit der rechten Maustaste in das Verzeichnis "Verweise" des CustomActivityTemplateApp-Projekts in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen** zum Öffnen der **Verweis hinzufügen** Dialogfeld Box.
+3. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Verzeichnis Verweise des Projekts customactivitytemplateapp, und wählen Sie **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.
 
-4. Wechseln Sie zu der **Projekte** Registerkarte, und wählen Sie **"delayactivitytemplate"** aus der **Projektname** Spalte auf der linken Seite und auf **OK** Hinzufügen einer Ein Verweis auf die Datei "DelayActivityTemplate.dll", die Sie im ersten Verfahren erstellt haben.
+4. Wechseln Sie zur Registerkarte **Projekte** , und wählen Sie in der Spalte **Project Name** auf der linken Seite die Option **Delta activitytemplate** aus, und klicken Sie auf **OK** , um einen Verweis auf die Datei "Delta activitytemplate. dll" hinzuzufügen, die Sie im ersten Verfahren erstellt haben.
 
-5. Mit der rechten Maustaste in des Projekts "customactivitytemplateapp" im **Projektmappen-Explorer** , und wählen Sie **erstellen** zum Kompilieren der Anwendung.
+5. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt customactivitytemplateapp, und wählen Sie **Erstellen** , um die Anwendung zu kompilieren.
 
-6. Mit der rechten Maustaste in des Projekts "customactivitytemplateapp" im **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.
+6. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt customactivitytemplateapp, und wählen Sie **als Startprojekt festlegen**aus.
 
-7. Wählen Sie **Starten ohne Debugging** aus der **Debuggen** Menü, und drücken Sie eine beliebige Taste, um fortgesetzt, wenn Sie aufgefordert, aus dem cmd.exe-Fenster.
+7. Wählen Sie im Menü **Debuggen** die Option **Starten ohne Debugging** aus, und drücken Sie eine beliebige Taste, um fortzufahren, wenn Sie im Fenster "cmd
 
-8. Öffnen Sie die Datei "Workflow1.xaml", und öffnen Sie die **Toolbox**.
+8. Öffnen Sie die Datei Workflow1. XAML, und öffnen Sie die **Toolbox**.
 
-9. Suchen Sie die **MyDelayActivity** Vorlage in der **"delayactivitytemplate"** Kategorie. Ziehen Sie sie auf die Entwurfsoberfläche. Vergewissern Sie sich der **Eigenschaften** Fenster, die die `Duration` -Eigenschaft auf 10 Sekunden festgelegt wurde.
+9. Suchen Sie in der Kategorie " **Delta activitytemplate** " die Vorlage **mydelta-Activity** . Ziehen Sie sie auf die Entwurfsoberfläche. Vergewissern Sie sich im Fenster **Eigenschaften** , `Duration` dass die Eigenschaft auf 10 Sekunden festgelegt wurde.
 
 ## <a name="example"></a>Beispiel
  Die Datei "MyDelayActivity.cs" sollte den folgenden Code enthalten.
 
-```
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

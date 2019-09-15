@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933449"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972445"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
 Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendungen das Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern, dass der Client Anmelde Informationen für die Authentifizierung und Autorisierung angibt. Wenn Sie einen WCF-Dienst von einem WCF-Client aufrufen, können Sie diese Anmelde Informationen in verwaltetem Code oder in einer Anwendungs Konfigurationsdatei angeben. Wenn Sie einen WCF-Dienst aus einer COM-Anwendung aufrufen, können <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Sie die-Schnittstelle verwenden, um Anmelde Informationen anzugeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
@@ -31,7 +31,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
   
 6. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
-    ```  
+    ```vb  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -52,7 +52,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
   
      Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oder <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> können anstelle von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> verwendet werden, um das Clientzertifikat festzulegen:  
   
-    ```  
+    ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
@@ -70,7 +70,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
 
 3. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -95,7 +95,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
 
 2. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
-    ```  
+    ```vb
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
     monString = monString + ", address=http://localhost:8000/ServiceModelSamples/Service"  
     monString = monString + ", contract=ICalculator, contractNamespace=http://Microsoft.ServiceModel.Samples"  
@@ -119,7 +119,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendu
   
      Im folgenden Visual Basic-Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>-Methode aufgerufen wird:  
   
-    ```  
+    ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
         monString = monString + ", address=http://localhost:8000/SomeService/Service"  
         monString = monString + ", contract=ICalculator, contractNamespace=http://SomeService.Samples"  

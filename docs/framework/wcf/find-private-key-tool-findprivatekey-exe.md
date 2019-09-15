@@ -2,23 +2,23 @@
 title: Find Private Key-Tool (FindPrivateKey.exe)
 ms.date: 09/11/2017
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-ms.openlocfilehash: 00ad27d28ee3a589d5ee8702bd036b05d8ceb4b3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 316f55b93cf4d867b99878bf483b73cb3f09ad04
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637575"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990349"
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>Find Private Key-Tool (FindPrivateKey.exe)
 
-Mit diesem Befehlszeilentool kann ein privater Schlüssel aus einem Zertifikatspeicher abgerufen werden. Z. B. *FindPrivateKey.exe* kann verwendet werden, finden Sie den Speicherort und Namen der privaten Schlüsseldatei mit einem bestimmten x. 509-Zertifikat im Zertifikatspeicher verknüpft ist.
+Mit diesem Befehlszeilentool kann ein privater Schlüssel aus einem Zertifikatspeicher abgerufen werden. Mithilfe von *FindPrivateKey. exe* können Sie z. b. den Speicherort und den Namen der privaten Schlüsseldatei suchen, die einem bestimmten X. 509-Zertifikat im Zertifikat Speicher zugeordnet ist.
 
 > [!IMPORTANT]
-> Das FindPrivateKey-Tool wird als WCF-Beispiel zur Verfügung gestellt. Weitere Informationen, wo Sie das Beispiel zu finden und wie diese erstellt werden, finden Sie unter [FindPrivateKey](./samples/findprivatekey.md).
+> Das FindPrivateKey-Tool wird als WCF-Beispiel zur Verfügung gestellt. Weitere Informationen dazu, wo Sie das Beispiel finden und wie Sie es erstellen, finden Sie unter [FindPrivateKey](./samples/findprivatekey.md).
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
@@ -34,21 +34,21 @@ In den folgenden Tabellen werden die Argumente und Optionen beschrieben, die mit
 |Option|Beschreibung|
 |------------|-----------------|
 |`/n <` *subjectName* `>`|Gibt den Betreffnamen des Zertifikats an.|
-|`/t <` *thumbprint* `>`|Gibt den Fingerabdruck des Zertifikats an. Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|
+|`/t <`Finger *Abdruck*`>`|Gibt den Fingerabdruck des Zertifikats an. Verwenden Sie Certmgr.exe, um den Fingerabdruck des Zertifikats abzurufen.|
 |`/f`|Gibt nur den Dateinamen aus.|
 |`/d`|Gibt nur das Verzeichnis aus.|
 |`/a`|Gibt nur den absoluten Dateinamen aus.|
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl ruft den privaten Schlüssel für John Doe:
+Mit dem folgenden Befehl wird der private Schlüssel für John Doe abgerufen:
 
-```
+```console
 FindPrivateKey My CurrentUser -n "CN=John Doe"
 ```
 
-Der folgende Befehl ruft den privaten Schlüssel für den lokalen Computer:
+Der folgende Befehl ruft den privaten Schlüssel für den lokalen Computer ab:
 
-```
+```console
 FindPrivateKey My LocalMachine -t "03 33 98 63 d0 47 e7 48 71 33 62 64 76 5c 4c 9d 42 1d 6b 52" –a
 ```

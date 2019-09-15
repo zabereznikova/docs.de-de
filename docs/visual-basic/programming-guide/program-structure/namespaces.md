@@ -16,34 +16,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd7ac0487a5878122d9b1717a5e5fc8bf21a4ea7
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586302"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972039"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces in Visual Basic
 Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können. Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.  
   
- .NET Framework definiert z. B. die <xref:System.Windows.Forms.ListBox> -Klasse in der <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
+ Beispielsweise definiert der .NET Framework die <xref:System.Windows.Forms.ListBox> -Klasse <xref:System.Windows.Forms?displayProperty=nameWithType> im-Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Vermeiden von Namenskonflikten  
- .NET Framework-Namespaces beheben ein Problem manchmal als *Namespacekonflikte*, in dem die Entwicklung einer Klassenbibliothek durch die Verwendung ähnlicher Namen in einer anderen Bibliothek beeinträchtigt wird. Diese Konflikte mit vorhandenen Komponenten werden auch als *Namenskonflikte*bezeichnet.  
+ .NET Framework-Namespaces beheben ein Problem, das manchmal als *Namespace-Verunreinigung*bezeichnet wird, bei dem der Entwickler einer Klassenbibliothek durch die Verwendung ähnlicher Namen in einer anderen Bibliothek behindert wird. Diese Konflikte mit vorhandenen Komponenten werden auch als *Namenskonflikte*bezeichnet.  
   
- Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Allerdings sollten Sie die .NET Framework verwenden <xref:System.Windows.Forms.ListBox> Klasse im gleichen Projekt müssen Sie einen vollqualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, erzeugt Visual Basic eine Fehlermeldung, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
+ Angenommen, Sie erstellen eine neue Klasse namens `ListBox`, können Sie sie innerhalb des Projekts ohne Qualifikation verwenden. Wenn Sie jedoch die .NET Framework <xref:System.Windows.Forms.ListBox> -Klasse im gleichen Projekt verwenden möchten, müssen Sie einen voll qualifizierten Verweis verwenden, um den Verweis eindeutig zu machen. Wenn der Verweis nicht eindeutig ist, erzeugt Visual Basic einen Fehler, der besagt, dass der Name mehrdeutig ist. Im folgenden Codebeispiel wird die Deklaration dieser Objekte veranschaulicht:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- Die folgende Abbildung zeigt zwei Namespacehierarchien, beide mit einem Objekt mit dem Namen `ListBox`:  
+ Die folgende Abbildung zeigt zwei Namespace Hierarchien, die beide ein Objekt mit `ListBox`dem Namen enthalten:  
   
- ![Screenshot mit zwei Namespacehierarchien.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![Screenshot, der zwei Namespace Hierarchien zeigt.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- Standardmäßig enthält jede ausführbare Datei, die Sie mit Visual Basic erstellen einen Namespace mit dem gleichen Namen wie Ihr Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject`definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
+ Standardmäßig enthält jede ausführbare Datei, die Sie mit Visual Basic erstellen, einen Namespace mit dem gleichen Namen wie das Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject`definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
   
- Mehrere Assemblys können den gleichen Namen verwenden. Visual Basic behandelt sie als einen einzigen Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1`definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
+ Mehrere Assemblys können den gleichen Namen verwenden. Visual Basic behandelt Sie als einen einzigen Satz von Namen. Zum Beispiel können Sie Klassen für einen Namespace mit dem Namen `SomeNameSpace` in einer Assembly mit dem Namen `Assemb1`definieren, und zusätzliche Klassen für den gleichen Namespace in einer Assembly mit dem Namen `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>Vollqualifizierte Namen  
  Vollqualifizierte Namen sind Objektverweise, denen der Name des Namespace vorangestellt ist, in dem das Objekt definiert ist. Sie können in anderen Projekten definierte Objekte verwenden, wenn Sie einen Verweis auf die Klasse erstellen (durch Auswahl von **Verweis hinzufügen** aus dem Menü **Projekt** ) und dann den vollqualifizierten Namen für das Objekt im Code verwenden. Das folgende Codefragment zeigt, wie Sie den vollqualifizierten Namen für ein Objekt aus dem Namespace eines anderen Projekts verwenden:  
@@ -60,7 +60,7 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- Wenn Sie versuchen, `Class1` ohne vollständige Qualifizierung es, generiert Visual Basic einer Fehlermeldung, dass der Name `Class1` ist mehrdeutig.  
+ Wenn Sie versuchen, zu `Class1` verwenden, ohne ihn vollständig zu qualifizieren, erzeugt Visual Basic einen Fehler `Class1` , der besagt, dass der Name mehrdeutig ist.  
   
 ## <a name="namespace-level-statements"></a>Namespaceebenen-Anweisungen  
  Innerhalb eines Namespace können Sie Elemente wie Module, Schnittstellen, Klassen, Delegaten, Enumerationen, Strukturen und andere Namespaces definieren. Sie können keine Elemente wie Eigenschaften, Prozeduren, Variablen und Ereignisse auf Namespaceebene definieren. Diese Elemente müssen in Containern, beispielsweise in Modulen, Strukturen oder Klassen deklariert werden.  
@@ -124,7 +124,6 @@ End Namespace
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [Assemblys in .NET](../../../standard/assembly/index.md)
-- [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
-- [Verweise und die Imports-Anweisung](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Verweise und die Imports-Anweisung](references-and-the-imports-statement.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

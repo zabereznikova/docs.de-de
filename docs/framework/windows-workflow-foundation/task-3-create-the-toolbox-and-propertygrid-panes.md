@@ -2,25 +2,25 @@
 title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6339969c52a5c4eedfb0e89eebdc982ca3fe6686
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641537"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988712"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
-In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+In dieser Aufgabe erstellen Sie die **Toolbox** -und **PropertyGrid** -Bereiche und fügen Sie der neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]hinzu.  
   
- Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss der drei Aufgaben, in der [erneutes Hosten von Workflow-Designer](rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.  
+ Der Code, der in der MainWindow.XAML.cs-Datei enthalten sein sollte, nachdem er die drei Aufgaben im [erneuten Hosting der Workflow-Designer](rehosting-the-workflow-designer.md) Reihe von Themen ausgeführt hat, wird am Ende dieses Themas bereitgestellt.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.  
   
-1. Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md).  
+1. Öffnen Sie das HostingApplication-Projekt, das Sie abgerufen haben, [indem Sie das in Aufgabe 2 beschriebene Verfahren befolgen: Hosten Sie](task-2-host-the-workflow-designer.md)die Workflow-Designer.  
   
-2. In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
+2. Klicken Sie im **Projektmappen-Explorer** Bereich mit der rechten Maustaste auf die Datei "MainWindow. XAML", und wählen Sie **Code anzeigen**aus.  
   
-3. Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt ein neues **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für die auf diese Kategorie.  
+3. `MainWindow` <xref:System.Activities.Presentation.Toolbox.ToolboxControl> <xref:System.Activities.Statements.Assign> <xref:System.Activities.Statements.Sequence>FügenSie der Klasse, die einen erstellt, eine- Methodehinzu,fügtderToolboxeineneueToolboxKategoriehinzu,undweistder-Klassedie-Aktivitätunddie-Aktivität`GetToolboxControl` zu.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4. Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters.  
+4. Fügen Sie der `AddToolbox` `MainWindow` Klasse eine private Methode hinzu, die die **Toolbox** in der linken Spalte des Rasters platziert.  
   
     ```csharp  
     private void AddToolBox()  
@@ -73,13 +73,13 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-6. Drücken Sie F5, um die Lösung zu erstellen und auszuführen. Die **Toolbox** , enthält die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitäten angezeigt werden soll.  
+6. Drücken Sie F5, um die Lösung zu erstellen und auszuführen. Die **Toolbox** mit den <xref:System.Activities.Statements.Assign> Aktivitäten <xref:System.Activities.Statements.Sequence> und sollte angezeigt werden.  
   
 ### <a name="to-create-the-propertygrid"></a>So erstellen Sie den PropertyGrid  
   
-1. In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
+1. Klicken Sie im **Projektmappen-Explorer** Bereich mit der rechten Maustaste auf die Datei "MainWindow. XAML", und wählen Sie **Code anzeigen**aus.  
   
-2. Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` -Klasse die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters.  
+2. Fügen Sie `AddPropertyInspector` der- `MainWindow` Klasse die-Methode hinzu, um den Bereich **PropertyGrid** in der Spalte ganz rechts im Raster zu platzieren.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,12 +103,12 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4. Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> Aktivität auf der Entwurfs-Canvas die Eigenschaftenraster sollte je nach markierter Aktivität aktualisiert werden.  
+4. Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, der Workflow Entwurfs Bereich und der **PropertyGrid** -Bereich sollten alle angezeigt werden, und wenn Sie <xref:System.Activities.Statements.Assign> eine Aktivität oder <xref:System.Activities.Statements.Sequence> eine-Aktivität auf den Entwurfs Bereich ziehen, sollte das Eigenschaften Raster abhängig von der hervorgehobene Aktivität.  
   
 ## <a name="example"></a>Beispiel  
  Die Datei "MainWindow.xaml.cs" sollte jetzt den folgenden Code enthalten.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -215,5 +215,5 @@ namespace HostingApplication
 ## <a name="see-also"></a>Siehe auch
 
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
-- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
-- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)
+- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation Anwendung](task-1-create-a-new-wpf-app.md)
+- [Aufgabe 2: Hosten des Workflow-Designer](task-2-host-the-workflow-designer.md)

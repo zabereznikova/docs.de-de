@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc7a5021f9f8d9e6badcd3e13266fb8f4bfe7a4
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947913"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991748"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Ermöglicht es der Datei "PresentationHost.exe", Geräte für die Eingabe von Rohdaten (Eingabegeräte, Human Interface Devices) zu erkennen, die für die Hostanwendung interessant sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `ppEnum`  
   
- [out] Ein Zeiger auf ein [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) zum Aufzählen der Eingabegeräte für Rohdaten.  
+ vorgenommen Ein Zeiger auf ein [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) zum Auflisten der unformatierten Eingabegeräte.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  HRESULT:  
   
- S_OK - [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) wird nur von PresentationHost.exe verwendet werden, wenn S_OK zurückgegeben wird.  
+ S_OK- [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) wird nur von PresentationHost. exe verwendet, wenn S_OK zurückgegeben wird.  
   
  E_NOTIMPL  
   

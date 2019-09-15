@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364247"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991821"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Sichere Konstruktormuster für DependencyObjects
 Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. Ein Vorgang, bei dem ein Abhängigkeits Eigenschafts Wert <xref:System.Windows.DependencyObject.SetValue%2A> mit einem-Befehl festgelegt wird, beinhaltet möglicherweise einen Rückruf an einer beliebigen Stelle Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es gibt ein bestimmtes Muster für die <xref:System.Windows.DependencyObject> Implementierung von Konstruktoren, die bestimmte Probleme mit den Abhängigkeits Eigenschafts Zuständen und die inhärenten Rückrufe, die hier dokumentiert sind, vermeidet.  
@@ -35,7 +35,7 @@ Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden ode
   
  Der folgende Beispielcode (und die nachfolgenden Beispiele), ist ein Pseudo-C#-Beispiel, das gegen diese Regel verstößt und das Problem erläutert:  
   
-```  
+```csharp  
 public class MyClass : DependencyObject  
 {  
     public MyClass() {}  
@@ -71,7 +71,7 @@ public class MyClass : DependencyObject
 #### <a name="parameterless-constructors-calling-base-initialization"></a>Parameter lose Konstruktoren, die die Basis Initialisierung aufrufen  
  Implementieren Sie diese Konstruktoren, in dem Sie den Basisstandardwert aufrufen:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass() : base() {  
         // ALL class initialization, including initial defaults for   
@@ -83,7 +83,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Nicht-standardmäßige (Komfort) Konstruktoren, die nicht den Basissignaturen entsprechen  
  Wenn diese Konstruktoren die-Parameter verwenden, um Abhängigkeits Eigenschaften in der Initialisierung festzulegen, müssen Sie zuerst Ihren eigenen Klassen Parameter losen Konstruktor für die Initialisierung aufzurufen und dann die-Parameter verwenden, um Abhängigkeits Eigenschaften festzulegen. Dies können entweder von Ihrer Klasse definierte Abhängigkeitseigenschaften oder Abhängigkeitseigenschaften von Klassen sein, die von Basisklassen abstammen, verwenden Sie jedoch in beiden Fällen das folgende Muster:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  

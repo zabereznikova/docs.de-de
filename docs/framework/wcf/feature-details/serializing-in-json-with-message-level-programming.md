@@ -2,12 +2,12 @@
 title: Serialisieren in Json mit Programmierung auf Nachrichtenebene
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: f50f6a699dff54e3d0950f5ce0e1049217b9dc45
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7576594f8fa694ce2d34cf38c88d2e28a00f5295
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928731"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991128"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Serialisieren in Json mit Programmierung auf Nachrichtenebene
 WCF unterstützt die Serialisierung von Daten im JSON-Format. In diesem Thema wird beschrieben, wie WCF angewiesen wird, Typen mit dem <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zu serialisieren.  
@@ -21,7 +21,7 @@ WCF unterstützt die Serialisierung von Daten im JSON-Format. In diesem Thema wi
 ## <a name="untyped-message-programming"></a>Programmieren nicht typisierter Nachrichten  
  Beim direkten Arbeiten mit nicht typisierten Message-Objekten müssen Sie die Eigenschaften für die nicht typisierte Nachricht explizit festlegen, um sie im JSON-Format zu serialisieren. Der folgende Codeausschnitt veranschaulicht, wie Sie dabei vorgehen müssen:  
   
-```  
+```csharp
  Message response = Message.CreateMessage(  
                   MessageVersion.None,    // No SOAP message version  
                              "*",                     // SOAP action, ignored since this is JSON  

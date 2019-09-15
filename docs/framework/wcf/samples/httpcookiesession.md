@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: f0c6cee2eb7ed9552452f95b71db7e942e84bcb0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 71147d98ada3d9814cdbcc8d3e7e85cad4dee0f2
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044927"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989869"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Diensten und ASMX-Clients oder zwischen WCF-Clients und ASMX-Diensten.  
@@ -41,7 +41,7 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
   
 - Wenn der Kanallistener geöffnet wird, akzeptiert er einen inneren Kanal vom inneren Listener. Da es sich bei dem inneren Listener um einen Datagrammlistener handelt und die Lebensdauer eines akzeptierten Kanals unabhängig von der Lebensdauer des Listeners ist, kann der innere Listener geschlossen und nur der innere Kanal beibehalten werden.  
   
-    ```  
+    ```csharp  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
     this.innerChannel = this.innerChannelListener.AcceptChannel(timeoutHelper.RemainingTime());  
     this.innerChannel.Open(timeoutHelper.RemainingTime());  
@@ -50,7 +50,7 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
   
 - Wenn der Prozess zum Öffnen abgeschlossen ist, wird eine Nachrichtenschleife zum Empfangen von Nachrichten vom inneren Kanal eingerichtet.  
   
-    ```  
+    ```csharp  
     IAsyncResult result = BeginInnerReceiveRequest();  
     if (result != null && result.CompletedSynchronously)  
     {  
@@ -65,13 +65,13 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
   
 - Wenn eine Nachricht eingeht, prüft der Dienstkanal die Sitzungs-ID und führt ein De-Multiplexing für den entsprechenden Sitzungskanal durch. Der Kanallistener verwaltet ein Wörterbuch, das die Sitzungs-IDs den Sitzungskanalinstanzen zuordnet.  
   
-    ```  
+    ```csharp  
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
  Die `HttpCookieReplySessionChannel` -Klasse <xref:System.ServiceModel.Channels.IReplySessionChannel>implementiert. In höheren Ebenen des Kanalstapels wird die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen, um Anforderungen für diese Sitzung zu lesen. Jeder Sitzungskanal verfügt über eine private Meldungswarteschlange, die vom Dienstkanal aufgefüllt wird.  
   
-```  
+```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
@@ -137,7 +137,7 @@ InputQueue<RequestContext> requestQueue;
   
  Wenn Sie das Beispiel ausführen, sollten Sie folgende Ausgabe erhalten:  
   
-```  
+```console  
 Simple binding:  
 AddItem(10000,2): ItemCount=2  
 AddItem(10550,5): ItemCount=7  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

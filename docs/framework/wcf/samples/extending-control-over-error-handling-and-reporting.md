@@ -2,12 +2,12 @@
 title: Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d7efc87d7d8a913642c4ac0e3d6d19cd0a9259c5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039682"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989933"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 In diesem Beispiel wird veranschaulicht, wie die Kontrolle über die Fehlerbehandlung und die Fehlerberichterstattung in einem Windows Communication Foundation (WCF <xref:System.ServiceModel.Dispatcher.IErrorHandler> )-Dienst mithilfe der-Schnittstelle erweitert wird. Das Beispiel basiert auf den ersten [Schritten mit zusätzlichem Code, der dem](../../../../docs/framework/wcf/samples/getting-started-sample.md) Dienst zum Behandeln von Fehlern hinzugefügt wurde. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
@@ -21,7 +21,7 @@ In diesem Beispiel wird veranschaulicht, wie die Kontrolle über die Fehlerbehan
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\logs. Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
   
-```  
+```csharp  
 public class CalculatorErrorHandler : IErrorHandler  
 {  
         // Provide a fault. The Message fault parameter can be replaced, or set to  
@@ -51,7 +51,7 @@ public class CalculatorErrorHandler : IErrorHandler
   
  Das `ErrorBehaviorAttribute` dient als Mechanismus zum Registrieren eines Fehlerhandlers mit einem Dienst. Dieses Attribut nimmt einen einzelnen Typparameter entgegen. Dieser Typ sollte die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle implementieren und einen öffentlichen, leeren Konstruktor besitzen. Das Attribut instanziiert dann eine Instanz dieses Fehlerhandlertyps und installiert sie im Dienst. Dazu wird die <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle implementiert, und dann werden dem Dienst mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>-Methode Instanzen des Fehlerhandlers hinzugefügt.  
   
-```  
+```csharp  
 // This attribute can be used to install a custom error handler for a service.  
 public class ErrorBehaviorAttribute : Attribute, IServiceBehavior  
 {  
@@ -98,7 +98,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
   
  Das Beispiel implementiert einen Rechnerdienst. Der Client verursacht im Dienst absichtlich zwei Fehler, indem er Parameter mit ungültigen Werten angibt. Der `CalculatorErrorHandler` protokolliert mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle die Fehler in einer lokalen Datei und lässt dann zu, dass sie wieder zurück an den Client gemeldet werden. Der Client erzwingt eine Division durch Null und einen Argument-außerhalb-des-Bereichs-Zustand.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("Forcing an error in Divide");  
@@ -132,9 +132,9 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- Die Datei "C:\logs\errors.txt" enthält die vom Dienst zu den Fehlern protokollierten Informationen. Beachten Sie, dass Sie sicherstellen müssen, dass der Prozess, unter dem der Dienst ausgeführt wird (meist ASP.NET oder Network Service), über Schreibberechtigungen für das Verzeichnis verfügt, damit der Dienst in das Verzeichnis schreiben kann.  
+ Die Datei "C:\logs\errors.txt" enthält die vom Dienst zu den Fehlern protokollierten Informationen. Beachten Sie, dass Sie für den Dienst, der in das Verzeichnis schreiben soll, sicherstellen müssen, dass der Prozess, unter dem der Dienst ausgeführt wird (normalerweise ASP.net oder Network Service), über die Berechtigung zum Schreiben in das Verzeichnis verfügt.  
   
-```  
+```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
 Fault: Reason = Invalid Argument: The argument must be greater than zero.  
 ```  

@@ -2,12 +2,12 @@
 title: NativeActivity-Basisklasse
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637500"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989553"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity-Basisklasse
 
@@ -34,13 +34,13 @@ ms.locfileid: "65637500"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>So erstellen Sie eine benutzerdefinierte Aktivität, die von NativeActivity erbt
 
-1. OpenVisual Studio 2010.
+1. Openvisual Studio 2010.
 
-2. Wählen Sie **Datei**, **neue**, und klicken Sie dann **Projekt**. Wählen Sie **Workflow 4.0** unter **Visual C#-** in die **Projekttypen** , und wählen die **v2010** Knoten. Wählen Sie **Aktivitätsbibliothek** in die **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen "HelloActivity".
+2. Wählen Sie **Datei**, **neu**und dann **Projekt**aus. Wählen Sie im Fenster **Projekttypen** unter **Visual C#**  den **Workflow 4,0** aus, und wählen Sie den Knoten **v2010** aus. Wählen Sie im Fenster **Vorlagen** die Option **Aktivitäts Bibliothek** aus. Geben Sie dem neuen Projekt den Namen "HelloActivity".
 
-3. Mit der rechten Maustaste Activity1.xaml im HelloActivity-Projekt, und wählen Sie **löschen**.
+3. Klicken Sie im HelloActivity-Projekt mit der rechten Maustaste auf Activity1. XAML, und wählen Sie **Löschen**aus.
 
-4. Maustaste auf das HelloActivity-Projekt, und wählen Sie **hinzufügen**, und klicken Sie dann **Klasse**. Nennen Sie die neue Klasse HelloActivity.cs.
+4. Klicken Sie mit der rechten Maustaste auf das Projekt HelloActivity, und wählen Sie **Hinzufügen**und dann **Klasse**aus. Nennen Sie die neue Klasse HelloActivity.cs.
 
 5. Fügen Sie der Datei "HelloActivity.cs" die folgenden `using`-Direktiven hinzu.
 
@@ -68,7 +68,7 @@ ms.locfileid: "65637500"
 
 9. Verwenden Sie das <xref:System.Activities.NativeActivityContext>-Objekt, um ein Lesezeichen zu planen. Nähere Informationen zum Erstellen, Planen und Fortsetzen eines Lesezeichens finden Sie unter <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 
-    ```
+    ```csharp
     protected override void Execute(NativeActivityContext context)
         {
             // Create a Bookmark and wait for it to be resumed.

@@ -2,12 +2,12 @@
 title: LINQ-Meldungsabfragekorrelation
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: b758296970340890403557770f91237c953f5d91
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038131"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989340"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ-Meldungsabfragekorrelation
 Dieses Beispiel veranschaulicht, wie die inhaltsbasierte Korrelation mithilfe einer benutzerdefinierten <xref:System.ServiceModel.Dispatcher.MessageQuery>-Implementierung im Gegensatz zu der vom System bereitgestellten <xref:System.ServiceModel.XPathMessageQuery> erfolgt.  
@@ -22,7 +22,7 @@ Dieses Beispiel veranschaulicht, wie die inhaltsbasierte Korrelation mithilfe ei
   
 1. Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Zum Ausführen dieses Beispiels müssen die richtigen URL-ACLs hinzugefügt werden (Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten, um die entsprechenden ACLs hinzuzufügen. Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
   
-    ```  
+    ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   

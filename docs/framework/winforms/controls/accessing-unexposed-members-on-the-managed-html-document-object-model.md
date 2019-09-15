@@ -8,20 +8,20 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 525ef52ecbbc61fba787fa8286c56c638d837faf
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959625"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988402"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells
-Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:System.Windows.Forms.HtmlElement> , verfügbar macht, die Eigenschaften, Methoden und Ereignisse, die alle HTML-Elemente gemeinsam haben. In einigen Fällen müssen Sie jedoch auf Member zuzugreifen, die die verwaltete Schnittstelle nicht direkt verfügbar gemacht wird. In diesem Thema werden zwei Methoden für den Zugriff auf nicht verfügbar gemachte Member, einschließlich JScript und VBScript-Funktionen, die innerhalb einer Webseite definierten untersucht.  
+Der verwaltete HTML-Dokumentobjektmodell (DOM) enthält eine Klasse <xref:System.Windows.Forms.HtmlElement> mit dem Namen, die die Eigenschaften, Methoden und Ereignisse verfügbar macht, die alle HTML-Elemente gemeinsam haben. Manchmal müssen Sie jedoch auf Member zugreifen, die von der verwalteten Schnittstelle nicht direkt verfügbar gemacht werden. In diesem Thema werden zwei Möglichkeiten für den Zugriff auf nicht verfügbar gemachte Member untersucht, einschließlich JScript-und VBScript-Funktionen, die in einer Webseite definiert sind.  
   
-## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Zugriff auf nicht verfügbar gemachte Member über verwaltete Schnittstellen  
- <xref:System.Windows.Forms.HtmlDocument> und <xref:System.Windows.Forms.HtmlElement> bieten vier Methoden, die Zugriff auf nicht verfügbar gemachte Member ermöglichen. Die folgende Tabelle zeigt die Typen und die entsprechenden Methoden.  
+## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Zugreifen auf nicht verfügbar gemachte Member über verwaltete Schnittstellen  
+ <xref:System.Windows.Forms.HtmlDocument>und <xref:System.Windows.Forms.HtmlElement> stellen vier Methoden bereit, die den Zugriff auf nicht verfügbar gemachte Member ermöglichen. In der folgenden Tabelle werden die Typen und die zugehörigen Methoden aufgeführt.  
   
-|Memberart|Methode(n)|  
+|Memberart|Methode (en)|  
 |-----------------|-----------------|  
 |Eigenschaften (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.GetAttribute%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.SetAttribute%2A>|  
 |Methoden|<xref:System.Windows.Forms.HtmlElement.InvokeMember%2A>|  
@@ -29,9 +29,9 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
 |Ereignisse (<xref:System.Windows.Forms.HtmlElement>)|<xref:System.Windows.Forms.HtmlElement.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlElement.DetachEventHandler%2A>|  
 |Ereignisse (<xref:System.Windows.Forms.HtmlWindow>)|<xref:System.Windows.Forms.HtmlWindow.AttachEventHandler%2A><br /><br /> <xref:System.Windows.Forms.HtmlWindow.DetachEventHandler%2A>|  
   
- Wenn Sie diese Methoden verwenden, wird davon ausgegangen, dass Sie ein Element mit dem richtigen zugrunde liegenden Typ haben. Nehmen wir an, dass Sie überwachen möchten die `Submit` Ereignis eine `FORM` Element auf einer HTML-Seite, damit Sie eine vorverarbeitung für ausführen können die `FORM`Werte, bevor der Benutzer an den Server übermittelt. Im Idealfall, wenn Sie die Kontrolle über den HTML-Code haben, definieren Sie die `FORM` ein eindeutiges `ID` Attribut.  
+ Wenn Sie diese Methoden verwenden, wird davon ausgegangen, dass Sie über ein Element des richtigen zugrunde liegenden Typs verfügen. Angenommen, Sie möchten das `Submit` -Ereignis `FORM` eines-Elements auf einer HTML-Seite überwachen, damit Sie eine Vorverarbeitung der `FORM`Werte durchführen können, bevor der Benutzer Sie an den Server übermittelt. Wenn Sie die Kontrolle über den HTML-Code haben, würden Sie im `FORM` Idealfall definieren, um `ID` ein eindeutiges Attribut zu erhalten.  
   
-```  
+```html  
 <HTML>  
   
     <HEAD>  
@@ -47,15 +47,15 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
 </HTML>  
 ```  
   
- Laden Sie diese Seite in der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, können Sie die <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> Methode zum Abrufen der `FORM` zur Laufzeit mit `form1` als Argument.  
+ Nachdem Sie diese Seite in <xref:System.Windows.Forms.WebBrowser> das-Steuerelement geladen haben, können Sie die- <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> Methode verwenden, um zur `form1` Laufzeit mithilfe `FORM` von als-Argument abzurufen.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
-## <a name="accessing-unmanaged-interfaces"></a>Zugreifen auf nicht verwalteten Schnittstellen  
- Sie können auch nicht verfügbar gemachte Member auf das verwaltete HTML-DOM zugreifen, mithilfe der nicht verwalteten Component Object Model (COM)-Schnittstellen, die von jeder DOM-Klasse verfügbar gemacht werden. Dies wird empfohlen, wenn Sie mehrere Aufrufe für nicht verfügbar gemachte Member erstellen müssen, oder die nicht verfügbar gemachte Member anderen nicht verwalteten Schnittstellen, die nicht von das verwaltete HTML-DOM. umschlossen zurückgibt  
+## <a name="accessing-unmanaged-interfaces"></a>Zugreifen auf nicht verwaltete Schnittstellen  
+ Sie können auch auf nicht verfügbar gemachte Member im verwalteten HTML-DOM zugreifen, indem Sie die von den einzelnen DOM-Klassen verfügbar gemachten nicht verwalteten Component Object Model (com)-Schnittstellen verwenden. Dies wird empfohlen, wenn Sie mehrere Aufrufe für nicht verfügbar gemachte Member durchführen müssen, oder wenn die nicht verfügbar gemachten Member andere nicht verwaltete Schnittstellen zurückgeben, die nicht vom verwalteten HTML-DOM umschließt werden.  
   
- Die folgende Tabelle zeigt alle nicht verwalteten Schnittstellen verfügbar gemacht werden, über das verwaltete HTML-DOM. Klicken Sie auf jeden Link eine Erläuterung zur Verwendung sowie z. B. Code.  
+ Die folgende Tabelle zeigt alle nicht verwalteten Schnittstellen, die über das verwaltete HTML-DOM verfügbar gemacht werden. Klicken Sie auf die einzelnen Links, um eine Erläuterung der Verwendung und beispielsweise Code zu erhalten.  
   
 |Typ|Nicht verwaltete Schnittstelle|  
 |----------|-------------------------|  
@@ -64,12 +64,12 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- Die einfachste Möglichkeit, die COM-Schnittstellen zu verwenden ist, einen Verweis auf die nicht verwaltete HTML-DOM-Bibliothek (MSHTML.dll) von Ihrer Anwendung hinzufügen, obwohl dies nicht unterstützt wird. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 934368](https://support.microsoft.com/kb/934368).  
+ Die einfachste Möglichkeit, die COM-Schnittstellen zu verwenden, besteht darin, einen Verweis auf die nicht verwaltete HTML-DOM-Bibliothek (MSHTML. dll) aus der Anwendung hinzuzufügen, obwohl dies nicht unterstützt wird. Weitere Informationen finden Sie im [Knowledge Base-Artikel 934368](https://support.microsoft.com/kb/934368).  
   
-## <a name="accessing-script-functions"></a>Zugreifen auf die JavaScript-Funktionen  
- Eine HTML-Seite kann eine oder mehrere Funktionen mit einer Skriptsprache wie z. B. JScript oder VBScript definieren. Diese Funktionen befinden sich in einem `SCRIPT` auf der Seite der Seite, und kann bei Bedarf oder in Reaktion auf ein Ereignis ausgeführt werden, im DOM.  
+## <a name="accessing-script-functions"></a>Zugreifen auf Skriptfunktionen  
+ Eine HTML-Seite kann eine oder mehrere Funktionen mithilfe einer Skriptsprache wie z. b. JScript oder VBScript definieren. Diese Funktionen werden in einer `SCRIPT` Seite auf der Seite platziert und können Bedarfs gesteuert oder als Reaktion auf ein Ereignis im Dom ausgeführt werden.  
   
- Sie können alle Skriptfunktionen, die Sie definieren in einer HTML-Seite mit Aufrufen der <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> Methode. Wenn die Skriptmethode ein HTML-Elements zurückgibt, können eine Umwandlung konvertieren Sie dieses Ergebnis eine <xref:System.Windows.Forms.HtmlElement>. Ausführliche Informationen und Beispielcode finden Sie unter <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ Sie können alle Skriptfunktionen, die Sie in einer HTML-Seite definieren <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> , mithilfe der-Methode abrufen. Wenn die Skript Methode ein HTML-Element zurückgibt, können Sie eine Umwandlung verwenden, um dieses Rückgabe Ergebnis <xref:System.Windows.Forms.HtmlElement>in eine zu konvertieren. Weitere Informationen und Beispielcode finden <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
 

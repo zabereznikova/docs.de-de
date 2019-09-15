@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039559"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989779"
 ---
 # <a name="jsonp"></a>JSONP
 In diesem Beispiel wird erläutert, wie JSON mit Padding (JSONP) in WCF REST-Diensten unterstützt wird. JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird. Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben. JSONP basiert auf der Idee, dass Tags wie z `<script src="http://..." >` . b. Skripts aus beliebigen Domänen auswerten können und dass das von diesen Tags abgerufene Skript innerhalb eines Bereichs ausgewertet wird, in dem andere Funktionen möglicherweise bereits definiert sind.
@@ -39,13 +39,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 
  ScriptManager verwaltet die Interaktion mit dem Dienst und macht damit die Komplexität, die mit einer manuellen Implementierung des JSONP-Zugriffs verbunden ist, überflüssig. Wenn `crossDomainScriptAccessEnabled` auf`true` festgelegt ist und das Antwortformat für einen Vorgang JSON ist, überprüft die WCF-Infrastruktur den URI der Anforderung nach einem Rückruf Abfrage-Zeichen folgen Parameter und umschließt die JSON-Antwort mit dem Wert der Rückruf Abfrage Zeichenfolge. Parame. Im Beispiel ruft die Webseite den WCF REST-Dienst mit dem folgenden URI auf.
 
-```
+```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
  Da der Zeichenfolgenparameter der Rückrufabfrage über den Wert `JsonPCallback` verfügt, gibt der WCF-Dienst die im folgenden Beispiel dargestellte JSONP-Antwort zurück.
 
-```
+```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 

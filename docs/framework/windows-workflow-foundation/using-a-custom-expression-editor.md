@@ -2,19 +2,19 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9e179914a56874ddc9f3f170d35ae04c97dd859e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169967"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988790"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
   
-- Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss angegeben werden, weil der standardmäßige Visual Studio-Ausdrucks-Editor im neu gehosteten Anwendungen verwendet werden kann.  
+- Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktion muss bereitgestellt werden, da der standardmäßige Visual Studio-Ausdrucks-Editor nicht in neu gehosteten Anwendungen verwendet werden kann.  
   
-- Zur Vereinfachung der ausdrucksbearbeitungsumgebung für die Business Analyst-Benutzer, damit sie nicht, z. B. Visual Basic kennen lernen oder befassen sich mit Visual Basic-Ausdrücke erforderlich sind.  
+- Um das Verhalten der Ausdrucks Bearbeitung für die Benutzer des Wirtschafts Analytikers zu vereinfachen, sodass diese nicht zum Beispiel erforderlich sind, um Visual Basic zu erlernen oder mit Visual Basic Ausdrücken umzugehen.  
   
  Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:  
   
@@ -27,7 +27,7 @@ Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfa
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek  
  Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Activities.Presentation.View;  
@@ -73,7 +73,7 @@ namespace MyExpressionEditorService
   
  Im Folgenden finden Sie den Code für eine `MyExpressionEditorInstance`-Klasse zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  
   
-```  
+```csharp  
 using System;  
 using System.Activities.Presentation.View;  
 using System.Windows;  
@@ -222,9 +222,9 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Veröffentlichen eines benutzerdefinierten Ausdrucks-Editors in einem WPF-Projekt  
- Hier ist der Code, der anzeigt, zu den Designer in einer WPF-Anwendung zu hosten und zum Erstellen und veröffentlichen die `MyEditorService` Service. Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.  
+ Der folgende Code zeigt, wie der Designer in einer WPF-Anwendung neu gehostet wird und wie der `MyEditorService` Dienst erstellt und veröffentlicht wird. Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.  
   
-```  
+```csharp  
 using System.Windows;  
 using System.Windows.Controls;  
 using System.Activities.Presentation;  
@@ -276,7 +276,7 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>Hinweise  
- Bei Verwendung einer **ExpressionTextBox** Steuerelement in einem benutzerdefinierten Aktivitätsdesigner angegeben wird, ist es nicht erforderlich, erstellen und Zerstören von Ausdrucks-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> Methoden der <xref:System.Activities.Presentation.View.IExpressionEditorService> Schnittstelle. Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.  
+ Wenn Sie in einem benutzerdefinierten Aktivitäts Designer ein **ExpressionTextBox** -Steuerelement verwenden, ist es nicht erforderlich, Ausdrucks-Editoren mithilfe <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> der <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> <xref:System.Activities.Presentation.View.IExpressionEditorService> -Methode und der-Methode der-Schnittstelle zu erstellen und zu zerstören. Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.  
   
 ## <a name="see-also"></a>Siehe auch
 

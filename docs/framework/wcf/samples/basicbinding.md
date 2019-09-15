@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 0bd692ce0527b498b7514a57442817b86f6c2208
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e98b1254710ebac2305fd7dd5d39a146d749ff44
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045746"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990134"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -73,7 +73,7 @@ Das Bindungselement stellt Attribute für das Festlegen des Hostnamen-Vergleichs
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
-```
+```console
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
 Multiply(9,81.25) = 731.25
@@ -86,7 +86,7 @@ Press <ENTER> to terminate client.
 
 1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 

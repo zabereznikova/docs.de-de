@@ -9,19 +9,19 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: b68909d94ad8cc5bba75b2c520db82c5ccf1b922
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a72b2886c63a80a4887aa16fc6a952fa837a800f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206191"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991444"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable-Attribut
 Gibt an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] , welche Namespace Präfixe, die in einer Markup Datei vorkommen, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] von einem Prozessor ignoriert werden können. Das `mc:Ignorable` Attribut unterstützt Markup Kompatibilität sowohl für die Zuordnung von benutzerdefinierten [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Namespaces als auch für die Versionsverwaltung.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Verwendung von XAML-Attributen (einzelnes Präfix)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix="ignorableUri"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -32,7 +32,7 @@ Gibt an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] , 
   
 ## <a name="xaml-attribute-usage-two-prefixes"></a>Verwendung von XAML-Attributen (zwei Präfixe)  
   
-```  
+```xaml  
 <object  
   xmlns:ignorablePrefix1="ignorableUri"  
   xmlns:ignorablePrefix2="ignorableUri2"  

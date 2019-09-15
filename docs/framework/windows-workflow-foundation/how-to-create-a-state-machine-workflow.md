@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044384"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989814"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Vorgehensweise: Erstellen eines Zustandsautomatworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. In diesem Thema wird Schritt für Schritt beschrieben, wie Sie einen Workflow erstellen, der sowohl <xref:System.Activities.Statements.StateMachine> integrierte Aktivitäten wie die-Aktivität als auch die [benutzerdefinierten Aktivitäten aus der vorherigen Vorgehensweise verwendet: Erstellen Sie ein](how-to-create-an-activity.md) Aktivitäts Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -118,7 +118,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 16. `Guess` Geben SieimEigenschaftenFensterfürdieAktivität"Readint"dieAnführungszeichenindasFeldBookmarkName-EigenschaftsWertein,undgebenSieindasFeldErgebnisEigenschaftsWert`"EnterGuess"` ein.  
   
-17. Geben Sie den folgenden Ausdruck in das Feld Eigenschafts Wert des Bedingungs Werts des Übergangs **erraten** ein.  
+17. Geben Sie den folgenden Ausdruck in das Feld **Eigenschafts Wert des Bedingungs** Werts des Übergangs **erraten** ein.  
   
     ```vb  
     Guess = Target  
@@ -133,7 +133,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     > [!NOTE]
     > Ein Übergang erfolgt, wenn das Triggerereignis empfangen wird und <xref:System.Activities.Statements.Transition.Condition%2A>, falls vorhanden, `True` ergibt. Wenn der Benutzer `Guess` für diesen Übergang mit dem zufällig generierten `Target`übereinstimmt, übergibt die Steuerung an den **FinalState** , und der Workflow wird beendet.  
   
-19. Abhängig davon, ob der Schätzwert richtig ist, sollte der Workflow für einen anderen Versuch entweder in den **FinalState** oder zurück in den Zustand " **Enter Guess** " übergehen. Beide Übergänge verwenden denselben-Triggern, der darauf wartet, dass die Schätzung des Benutzers über die Read **int** -Aktivität empfangen wird. Dies wird als gemeinsamer Übergang bezeichnet. Um einen freigegebenen Übergang zu erstellen, klicken Sie auf den Kreis, der den Anfang des **korrekten Guess** -Übergangs angibt, und ziehen Sie ihn in den gewünschten Zustand. In diesem Fall handelt es sich bei dem Übergang um einen selbst Übergang. ziehen Sie daher den Startpunkt des über-/Unterbrechungs-Übergangs, und legen Sie ihn wieder am unteren Ende des Zustands für die **Eingabe Vermutung** ab Nachdem Sie den Übergang erstellt haben, wählen Sie ihn im Workflow-Designer aus, und legen Sie dessen Eigenschaft **Display Name** auf nicht **richtig**fest.  
+19. Abhängig davon, ob der Schätzwert richtig ist, sollte der Workflow für einen anderen Versuch entweder in den **FinalState** oder zurück in den Zustand " **Enter Guess** " übergehen. Beide Übergänge verwenden denselben-Triggern, der darauf wartet, dass die Schätzung des Benutzers über die Read **int** -Aktivität empfangen wird. Dies wird als gemeinsamer Übergang bezeichnet. Um einen freigegebenen Übergang zu erstellen, klicken Sie auf den Kreis, der den Anfang des **korrekten Guess** -Übergangs angibt, und ziehen Sie ihn in den gewünschten Zustand. In diesem Fall handelt es sich bei dem Übergang um einen selbst Übergang. ziehen Sie daher den Startpunkt des über-/Unterbrechungs **-Übergangs,** und legen Sie ihn wieder am unteren Ende des Zustands für die **Eingabe Vermutung** ab Nachdem Sie den Übergang erstellt haben, wählen Sie ihn im Workflow-Designer aus, und legen Sie dessen Eigenschaft **Display Name** auf nicht **richtig**fest.  
   
     > [!NOTE]
     > Freigegebene Übergänge können auch aus dem Übergangs-Designer erstellt werden, indem Sie im unteren Bereich des Übergangs-Designers auf frei **gegebenen triggerübergang hinzufügen** klicken und dann den gewünschten Zielzustand aus den **verfügbaren Zuständen auswählen, um eine Verbindung herzustellen** . Dropdown.  
@@ -141,9 +141,9 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     > [!NOTE]
     > Wenn die <xref:System.Activities.Statements.Transition.Condition%2A>-Aktivität eines Übergangs mit `false` ausgewertet wird (oder alle Bedingungen eines Übergangs mit freigegebenem Trigger mit `false` ausgewertet werden), erfolgt der Übergang nicht, und die Trigger aller Übergänge aus dem Zustand werden neu geplant. In diesem Lernprogramm kann diese Situation aufgrund der Konfigurationsmethode für die Bedingungen (es gibt spezielle Aktionen für richtige oder falsche Schätzungen) nicht auftreten.  
   
-20. Doppelklicken Sie im Workflow-Designer auf den Übergang **erraten** , um ihn zu erweitern. Beachten Sie, dass der- **Triggerwert** bereits auf die gleiche Read **int** -Aktivität fest gelegt ist, die von der falschen Übertragung verwendet wurde.  
+20. Doppelklicken Sie im Workflow-Designer auf den Übergang **erraten** , um ihn zu erweitern. Beachten Sie, dass der- **Triggerwert** bereits auf die gleiche Read **int** -Aktivität festgelegt ist **, die von der falschen** Übertragung verwendet wurde.  
   
-21. Geben Sie im Feld Bedingungs Eigenschaften Wert den folgenden Ausdruck ein.  
+21. Geben **Sie im Feld Bedingungs Eigenschaften Wert** den folgenden Ausdruck ein.  
   
     ```vb  
     Guess <> Target  
@@ -155,23 +155,23 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 22. Ziehen Sie eine **if** -Aktivität aus dem Abschnitt Ablauf **Steuerung** der **Toolbox** , und legen Sie Sie im Abschnitt **Aktion** des Übergangs ab.  
   
-23. Geben Sie den folgenden Ausdruck in das Feld Bedingungs Eigenschafts Wert der **if** -Aktivität ein.  
+23. Geben Sie den folgenden Ausdruck in das Feld Bedingungs **Eigenschafts Wert** der **if** -Aktivität ein.  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
 24. Ziehen Sie zwei **Write** -Aktivitäten aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie diese so ab, dass Sie sich im **Then** -Abschnitt der **if** -Aktivität befinden und eine im Abschnitt **else** .  
   
 25. Klicken Sie im Abschnitt **Then** auf die Aktivität **Write** -Aktivität, um Sie auszuwählen, und geben Sie den folgenden Ausdruck in das Feld **Text** -Eigenschafts Wert ein.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
 26. Klicken Sie im Abschnitt **else** auf die Aktivität **Write** -Aktivität, um Sie auszuwählen, und geben Sie den folgenden Ausdruck in das Feld **Text** -Eigenschafts Wert ein.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

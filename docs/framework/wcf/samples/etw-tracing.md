@@ -2,12 +2,12 @@
 title: ETW-Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c484e3438ad3512bd6186297f3edf8068a60795e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fb1a1dc77ee6a7be25aade18f76f89464bef0387
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045005"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989964"
 ---
 # <a name="etw-tracing"></a>ETW-Ablaufverfolgung
 In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit Event Tracing for Windows (ETW) und dem in diesem Beispiel bereitgestellten `ETWTraceListener` veranschaulicht. Das Beispiel basiert auf den ersten [Schritten und umfasst](../../../../docs/framework/wcf/samples/getting-started-sample.md) die ETW-Ablauf Verfolgung.  
@@ -56,7 +56,7 @@ In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung
   
  Der ETW-Ablaufverfolgungslistener unterstützt zirkuläre Protokollierung. Um dieses Feature zu aktivieren, wechseln Sie zu **Start**, **Ausführen** , und geben `cmd` Sie ein, um eine Befehlskonsole zu starten. Ersetzen Sie im folgenden Befehl den `<logfilename>`-Parameter durch den Namen der Protokolldatei.  
   
-```  
+```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
@@ -64,14 +64,14 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
   
  Geben Sie den folgenden Befehl ein, um die Sitzung zu starten.  
   
-```  
-Logman start Wcf  
+```console  
+logman start Wcf  
 ```  
   
  Nach Abschluss der Protokollierung können Sie die Sitzung mit dem folgenden Befehl beenden.  
   
-```  
-Logman stop Wcf  
+```console  
+logman stop Wcf  
 ```  
   
  Bei diesem Prozess werden binäre zirkuläre Protokolle generiert, die Sie mit dem Tool Ihrer Wahl verarbeiten können, z. b. [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) oder tracerpt.  

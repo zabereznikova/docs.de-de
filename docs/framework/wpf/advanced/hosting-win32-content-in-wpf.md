@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b598b55c72096daac2487e4c52584abf9735f257
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629882"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991472"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosten von Win32-Inhalt in WPF
 
@@ -70,14 +70,14 @@ Führen Sie als nächstes den Dialog in der [!INCLUDE[TLA2#tla_winclient](../../
 
 Mithilfe der Stile WS_CHILD und DS_CONTROL können Sie ein Dialogfeld in ein untergeordnetes HWND umwandeln. Wechseln Sie in die Ressourcen Datei (RC-Datei), in der das Dialogfeld definiert ist, und suchen Sie den Anfang der Definition des Dialog Felds:
 
-```
+```text
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 ```
 
 Ändern Sie die zweite Zeile in:
 
-```
+```text
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 

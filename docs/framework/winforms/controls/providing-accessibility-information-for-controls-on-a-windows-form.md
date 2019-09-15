@@ -5,13 +5,17 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 3067c90978e6ebd680d10c1c4f9db131f19c9e44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614747"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991710"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Informationen über Eingabehilfen für Steuerelemente in Windows Forms
 Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen. Beispiele hierfür sind Sprachausgaben für Blinde sowie Spracheingabe-Hilfsprogramme für Personen, die verbale Befehle geben, statt Maus oder Tastatur zu verwenden. Diese Eingabehilfen interagieren mit den Eingabehilfeeigenschaften, die von Windows Forms-Steuerelementen verfügbar gemacht werden. Dies sind die folgenden Eigenschaften:  
@@ -32,16 +36,17 @@ Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinder
 ## <a name="accessibledefaultactiondescription-property"></a>AccessibleDefaultActionDescription-Eigenschaft  
  Diese Zeichenfolge beschreibt die Aktion des Steuerelements. Sie wird nicht im Eigenschaftenfenster angezeigt und kann nur in Code festgelegt werden. Im folgenden Beispiel wird diese Eigenschaft für ein Schaltflächen-Steuerelement (Button) festgelegt.  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-  
-// C#  
+``` 
+
+```csharp  
 Button1.AccessibleDefaultActionDescription =   
    "Closes the application.";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDefaultActionDescription =  
    "Closes the application.";  
 ```  
@@ -49,42 +54,45 @@ button1->AccessibleDefaultActionDescription =
 ## <a name="accessibledescription-property"></a>Control.AccessibleDescription-Eigenschaft  
  Diese Zeichenfolge beschreibt das Steuerelement. Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleDescription = "A button with text 'Exit'."  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleDescription = "A button with text 'Exit'";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleDescription = "A button with text 'Exit'";  
 ```  
   
 ## <a name="accessiblename-property"></a>Control.AccessibleName-Eigenschaft  
  Diese Eigenschaft enthält den Namen des Steuerelements, der an Eingabehilfen gemeldet wird. Sie kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
   
-```  
-' Visual Basic  
+```vb  
 Button1.AccessibleName = "Order"  
-  
-// C#  
+```
+
+```csharp  
 Button1.AccessibleName = "Order";  
-  
-// C++  
+```
+
+```cpp  
 button1->AccessibleName = "Order";  
 ```  
   
 ## <a name="accessiblerole-property"></a>AccessibleRole-Eigenschaft  
  Diese Eigenschaft, die eine <xref:System.Windows.Forms.AccessibleRole> enthält, beschreibt die Rolle des Steuerelements in der Benutzeroberfläche. Bei einem neuen Steuerelement ist die Eigenschaft auf `Default`festgelegt. Das heißt, dass sich ein **Schaltflächen** -Steuerelement standardmäßig wie eine **Schaltfläche**verhält. Sie können diese Eigenschaft auf einen anderen Wert festlegen, wenn das jeweilige Steuerelement eine andere Rolle hat. Beispielsweise könnte es sein, dass Sie ein **PictureBox** -Steuerelement als **Diagramm**verwenden und möchten, dass Eingabehilfen die Rolle als **Diagramm**, nicht als **PictureBox**melden. Es ist auch möglich, dass Sie diese Eigenschaft für benutzerdefinierte Steuerelemente angeben, die Sie entwickelt haben. Diese Eigenschaft kann im Eigenschaftenfenster oder wie folgt in Code festgelegt werden:  
   
-```  
-' Visual Basic  
+```vb 
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
-  
-// C#  
+```
+
+```csharp  
 PictureBox1.AccessibleRole = AccessibleRole.Chart;  
-  
-// C++  
+```
+
+```cpp  
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   

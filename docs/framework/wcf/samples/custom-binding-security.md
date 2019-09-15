@@ -2,12 +2,12 @@
 title: Sicherheit mit benutzerdefinierten Bindungen
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0b293c58e13f7add6f2cb49ea3c108a86292691
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045614"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990015"
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
 
@@ -62,7 +62,7 @@ Außerdem verwendet die benutzerdefinierte Bindung Nachrichtensicherheit mit dem
 
 Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Konsolenfenster des Clients angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
-```
+```console
 Press <ENTER> to terminate client.
 Result(100)
 Result(50)
@@ -97,7 +97,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
   Mit den folgenden Zeilen in der Datei "Setup.bat" wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
-  ```
+  ```console
   certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
   ```
 
@@ -152,7 +152,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
     3. Exportieren Sie das Zertifikat des Diensts, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Dienstcomputer `%SERVER_NAME%` ausführen (ersetzen Sie durch den voll qualifizierten Namen des Computers, auf dem der Dienst wird ausgeführt.):
 
-        ```
+        ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
@@ -160,7 +160,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
     5. Importieren Sie das Dienst Zertifikat, indem Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Client Computer ausführen (ersetzen Sie% Servername% durch den voll qualifizierten Namen des Computers, auf dem die der Dienst wird ausgeführt.):
 
-        ```
+        ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 

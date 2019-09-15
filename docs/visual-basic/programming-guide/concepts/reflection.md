@@ -2,12 +2,12 @@
 title: Reflektion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 8a784f3b8647a74e21299e84e04eb7bda60b9cb6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627464"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972119"
 ---
 # <a name="reflection-visual-basic"></a>Reflektion (Visual Basic)
 Reflektion bietet Objekte (vom Typ <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflektion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflektion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](../../../standard/attributes/index.md).  
@@ -49,7 +49,7 @@ System.Console.WriteLine(info)
 - Zum Ausführen von spätem Binden mit Zugriff auf Methoden der zur Laufzeit erstellten Typen Weitere Informationen finden Sie im Thema [Dynamisches Laden und Verwenden von Typen](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- Weitere Informationen finden Sie unter:   
+ Weitere Informationen finden Sie unter:  
   
 - [Reflexion](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -64,4 +64,4 @@ System.Console.WriteLine(info)
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Programmierhandbuch](../../../visual-basic/programming-guide/index.md)
-- [Assemblys in der Common Language Runtime (CLR)](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys in .NET](../../../standard/assembly/index.md)

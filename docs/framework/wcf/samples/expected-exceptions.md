@@ -2,12 +2,12 @@
 title: Erwartete Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 963606f4cfd34acb1c4400324cdbb318e3186103
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039700"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989965"
 ---
 # <a name="expected-exceptions"></a>Erwartete Ausnahmen
 Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten Clients abgefangen werden. Dieses Beispiel basiert auf den ersten [Schritten, mit](../../../../docs/framework/wcf/samples/getting-started-sample.md) denen ein Rechner Dienst implementiert wird. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -54,7 +54,7 @@ catch (CommunicationException exception)
   
  Der Clientprozess führt zwei Szenarios aus, die beide versuchen, `Add` und anschließend `Divide` aufzurufen. Das erste Szenario simuliert ein Netzwerkproblem, indem der Client vor dem Aufruf von `Divide` abgebrochen wird. Das zweite Szenario verursacht einen Timeout-Zustand, indem ein so kurzes Timeout festgelegt wird, dass die Methode nicht abgeschlossen werden kann. Die erwartete Ausgabe vom Clientprozess lautet wie folgt:  
   
-```  
+```output
 Add(100,15.99) = 115.99  
 Simulated network problem occurs...  
 Got System.ServiceModel.CommunicationObjectAbortedException  

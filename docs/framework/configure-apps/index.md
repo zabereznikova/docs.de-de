@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912883"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972203"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -127,4 +127,4 @@ ms.locfileid: "69912883"
 - [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assemblys in der Common Language Runtime (CLR)](../app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys in .NET](../../standard/assembly/index.md)

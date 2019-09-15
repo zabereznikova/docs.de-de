@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3e0cee293a9585b972b0145da953976ed94b74c
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772839"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991429"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze-Attribut
-Legt die <xref:System.Windows.Freezable.IsFrozen%2A> Zustand `true` auf dem mit <xref:System.Windows.Freezable> Element. Standardverhalten für eine <xref:System.Windows.Freezable> ohne die `PresentationOptions:Freeze` Attribut angegeben ist, das <xref:System.Windows.Freezable.IsFrozen%2A> ist `false` am Serverantwortzeiten, Seitenladezeiten und abhängig davon, allgemeine <xref:System.Windows.Freezable> Verhalten zur Laufzeit.  
+Legt den <xref:System.Windows.Freezable.IsFrozen%2A> Zustand für `true` das enthaltende <xref:System.Windows.Freezable> Element auf fest. Das Standardverhalten für <xref:System.Windows.Freezable> eine ohne `PresentationOptions:Freeze` das angegebene- `false` Attribut <xref:System.Windows.Freezable.IsFrozen%2A> ist zur Ladezeit und abhängig vom allgemeinen <xref:System.Windows.Freezable> Verhalten zur Laufzeit.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
-```  
+```xaml  
 <object  
   xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"  
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
@@ -31,15 +31,15 @@ Legt die <xref:System.Windows.Freezable.IsFrozen%2A> Zustand `true` auf dem mit 
   
 |||  
 |-|-|  
-|`PresentationOptions`|Ein XML-Namespace-Präfix, das eine beliebige Zeichenfolge gültiges Präfix gemäß der XML 1.0-Spezifikation werden kann. Das Präfix `PresentationOptions` zu Identifikationszwecken in dieser Dokumentation verwendet wird.|  
-|`freezableElement`|Ein Element aus, die instanziiert wird, eine abgeleitete Klasse von <xref:System.Windows.Freezable>.|  
+|`PresentationOptions`|Ein XML-Namespace Präfix, bei dem es sich um eine beliebige gültige Präfix Zeichenfolge handeln kann, gemäß XML 1,0 Dieses Präfix `PresentationOptions` wird zu Identifikationszwecken in dieser Dokumentation verwendet.|  
+|`freezableElement`|Ein Element, das jede abgeleitete Klasse von <xref:System.Windows.Freezable>instanziiert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Freeze` Attribut das einzige Attribut ist oder anderen Programmierelements definiert, der `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML-Namespace. Die `Freeze` Attribut in diesem speziellen Namespace vorhanden ist, insbesondere, damit es als ignorierbar bezeichnet werden kann [Mc: Ignorable-Attribut](mc-ignorable-attribute.md) als Teil der Stamm-Elementdeklarationen. Der Grund, `Freeze` muss in der Lage, ignoriert werden ist da nicht alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Implementierungen von ereignissprozessoren können so fixieren Sie einen <xref:System.Windows.Freezable> zur Ladezeit; diese Funktion ist nicht Teil der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Spezifikation.  
+ Das `Freeze` -Attribut ist das einzige Attribut oder ein anderes Programmier Element, `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` das im XML-Namespace definiert ist. Das `Freeze` -Attribut ist in diesem speziellen Namespace speziell vorhanden, sodass es als Ignorable festgelegt werden kann, wobei das [MC: Ignorable-Attribut](mc-ignorable-attribute.md) als Teil der Stamm Element Deklarationen verwendet wird. Der Grund, `Freeze` Warum ignoriert werden muss, besteht darin, dass nicht alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor Implementierungen zur Ladezeit ein <xref:System.Windows.Freezable> Einfrieren können. diese Funktion ist nicht Teil [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der Spezifikation.  
   
- Die Möglichkeit zum Verarbeiten der `Freeze` Attribut ist insbesondere in integriert die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor, der verarbeitet [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] für kompilierten Anwendungen. Das Attribut wird nicht unterstützt, von jeder Klasse, und die Attributsyntax ist nicht erweiterbar und können geändert werden kann. Wenn Sie Ihre eigenen implementieren [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor, Sie können auch das Einfrieren Verhalten der parallele, der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor bei der Verarbeitung der `Freeze` -Attribut <xref:System.Windows.Freezable> Elemente zur Ladezeit.  
+ Die Möglichkeit, das `Freeze` -Attribut zu verarbeiten, ist speziell in den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor integriert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , der für kompilierte Anwendungen verarbeitet. Das Attribut wird von keiner Klasse unterstützt, und die Attribut Syntax ist nicht erweiterbar oder änderbar. Wenn Sie einen eigenen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor implementieren, können Sie auswählen, ob das Einfrieren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] des Prozessors beim Verarbeiten des `Freeze` Attributs für <xref:System.Windows.Freezable> Elemente zur Ladezeit parallel durchlaufen werden soll.  
   
- Jeder Wert für die `Freeze` -Attribut ausschließlich `true` (ohne Beachtung von Groß-/Kleinschreibung), wird eine Ladezeitfehler generiert. (Angeben der `Freeze` als Attribut `false` ist kein Fehler, aber, der sich bereits die Standardeinstellung, also zum `false` führt keine Aktion).  
+ Jeder Wert für das `Freeze` -Attribut `true` , der keine Groß-/Kleinschreibung beachtet, generiert einen Lade Zeitfehler. (Die Angabe `Freeze` des- `false` Attributs als ist kein Fehler, aber dies ist bereits der Standardwert, `false` sodass das Festlegen von auf nichts bewirkt.)  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 616e405e191cb264a002e903bed60cf04559a675
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6776c89db474668b3aed0e38a3e18359bf93399d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964903"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991483"
 ---
 # <a name="binding-markup-extension"></a>Bindung als Markuperweiterung
 Gibt an, dass ein Eigenschafts Wert ein Daten gebundener Wert ist, indem ein zwischen Ausdrucks Objekt erstellt und der Datenkontext interpretiert wird, der für das Element und seine Bindung zur Laufzeit gilt.  
   
 ## <a name="binding-expression-usage"></a>Verwendung des Bindungs Ausdrucks  
   
-```  
+```xaml  
 <object property="{Binding}" .../>  
 -or-  
 <object property="{Binding  bindProp1=value1[, bindPropN=valueN]*}" ...  
@@ -31,7 +31,7 @@ Gibt an, dass ein Eigenschafts Wert ein Daten gebundener Wert ist, indem ein zwi
 ```  
   
 ## <a name="syntax-notes"></a>Syntax Hinweise  
- In diesen Syntaxen `[]` sind und `*` keine Literale. Sie sind Teil einer Notation, um anzugeben, dass NULL oder *mehr BindProp*`=`-*Wertpaare* verwendet werden können, `,` wobei ein Trennzeichen zwischen Ihnen und vorangehenden *BindProp*`=`-*Wertpaaren* verwendet werden kann.  
+ In diesen Syntaxen `[]` sind und `*` keine Literale. Sie sind Teil einer Notation, um anzugeben, dass NULL oder mehr *BindProp*`=`-*Wertpaare* verwendet werden können, `,` wobei ein Trennzeichen zwischen Ihnen und vorangehenden *BindProp*`=`-*Wertpaaren* verwendet werden kann.  
   
  Alle Eigenschaften, die im Abschnitt "Bindungseigenschaften, die mit der Bindungs Erweiterung festgelegt werden können" aufgelistet sind, können stattdessen mithilfe der Attribute <xref:System.Windows.Data.Binding> eines-Objekt Elements festgelegt werden. Dies ist jedoch nicht wirklich die Verwendung der Markup Erweiterung von <xref:System.Windows.Data.Binding>, sondern lediglich die allgemeine XAML-Verarbeitung von Attributen, die Eigenschaften der CLR <xref:System.Windows.Data.Binding> -Klasse festlegen. Anders ausgedrückt: `<Binding` *bindProp1*`="`*value1* *bindpropn* *valueN ist eine* äquivalente Syntax für Attribute der <xref:System.Windows.Data.Binding> Verwendung von Objekt Elementen.`"]*/>` `="``"[` anstelle einer `Binding` Ausdrucks Verwendung. Weitere Informationen zur Verwendung von XAML-Attributen für bestimmte Eigenschaften <xref:System.Windows.Data.Binding>von finden Sie im Abschnitt "XAML-Attribut Verwendung" der entsprechenden Eigenschaft <xref:System.Windows.Data.Binding> von in der .NET Framework-Klassenbibliothek.  
   
@@ -66,7 +66,7 @@ Gibt an, dass ein Eigenschafts Wert ein Daten gebundener Wert ist, indem ein zwi
   
 - <xref:System.Windows.Data.Binding.ElementName%2A>: Schließen Sie gegen <xref:System.Windows.Data.Binding.RelativeSource%2A> und <xref:System.Windows.Data.Binding.Source%2A>gegenseitig aus. jede dieser Bindungseigenschaften stellt eine bestimmte Bindungsmethode dar. Siehe [Übersicht über die Datenbindung](../data/data-binding-overview.md).  
   
-- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: kann im Ausdruck als `bindProp` = `value` Zeichenfolge festgelegt werden. Dies ist jedoch abhängig vom Typ des Werts, der weitergegeben wird. Wenn ein Verweistyp übergeben wird, ist ein Objekt Verweis erforderlich, wie z. b. eine eingefügte [statikresource-Markup Erweiterung](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: kann im Ausdruck als `bindProp` = `value` Zeichenfolge festgelegt werden. Dies ist jedoch abhängig vom Typ des Werts, der weitergegeben wird. Wenn ein Verweistyp übergeben wird, ist ein Objekt Verweis erforderlich, wie z. b. eine [eingefügte statikresource-Markup Erweiterung](staticresource-markup-extension.md).  
   
 - <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolescher Wert kann entweder `true` oder `false`sein. Die Standardeinstellung ist `false`.  
   
@@ -86,7 +86,7 @@ Gibt an, dass ein Eigenschafts Wert ein Daten gebundener Wert ist, indem ein zwi
   
 - <xref:System.Windows.Data.BindingBase.StringFormat%2A>: eine Zeichenfolge, die eine Zeichen folgen-Format Konvention für die gebundenen Daten beschreibt. Dies ist ein relativ erweitertes Bindungs Konzept. Siehe Referenzseite für <xref:System.Windows.Data.BindingBase.StringFormat%2A>.  
   
-- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: kann im Ausdruck als `bindProp` = `value` Zeichenfolge festgelegt werden. Dies ist jedoch abhängig vom Typ des übergebenen Parameters. Wenn Sie einen Verweistyp für den Wert übergeben, ist ein Objekt Verweis erforderlich, wie z. b. eine eingefügte [statikresource-Markup Erweiterung](staticresource-markup-extension.md).  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: kann im Ausdruck als `bindProp` = `value` Zeichenfolge festgelegt werden. Dies ist jedoch abhängig vom Typ des übergebenen Parameters. Wenn Sie einen Verweistyp für den Wert übergeben, ist ein Objekt Verweis erforderlich, wie z. b. eine [eingefügte statikresource-Markup Erweiterung](staticresource-markup-extension.md).  
   
 - <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *value* ist ein konstanter Name aus der <xref:System.Windows.Data.UpdateSourceTrigger> -Enumeration. Beispielsweise `{Binding UpdateSourceTrigger=LostFocus}`. Bestimmte Steuerelemente haben möglicherweise unterschiedliche Standardwerte für diese Bindungs Eigenschaft. Siehe <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   

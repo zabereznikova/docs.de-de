@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c9670b00ea4a6b552469b7f33e924b8ab128d9d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948027"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971559"
 ---
 # <a name="redirecting-assembly-versions"></a>Umleiten von Assemblyversionen
 
@@ -157,8 +157,8 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
 - [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect-> Element](./file-schema/runtime/bindingredirect-element.md)
 - [Sicherheitsberechtigung für die Umleitung der Assemblybindung](assembly-binding-redirection-security-permission.md)
-- [Assemblys in der Common Language Runtime (CLR)](../app-domains/assemblies-in-the-common-language-runtime.md)
-- [Programmieren mit Assemblys](../app-domains/programming-with-assemblies.md)
+- [Assemblys in .NET](../../standard/assembly/index.md)
+- [Programmieren mit Assemblys](../../standard/assembly/program.md)
 - [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps](index.md)
 - [Schema für Laufzeiteinstellungen](./file-schema/runtime/index.md)

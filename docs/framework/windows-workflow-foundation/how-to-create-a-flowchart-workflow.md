@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044400"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989688"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Vorgehensweise: Erstellen eines Flussdiagrammworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. In diesem Thema wird Schritt für Schritt beschrieben, wie Sie einen Workflow erstellen, der sowohl <xref:System.Activities.Statements.Flowchart> integrierte Aktivitäten wie die-Aktivität als auch die [benutzerdefinierten Aktivitäten aus der vorherigen Vorgehensweise verwendet: Erstellen Sie ein](how-to-create-an-activity.md) Aktivitäts Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -101,7 +101,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 6. Geben `Turns` Sie im Feld **an** und `Turns + 1` im Feld  **C# Ausdruck eingeben** oder **VB-Ausdruck eingeben ein** .  
   
-7. Ziehen Sie eine **FlowDecision** aus dem Abschnitt **Flowchart** der **Toolbox** , und verbinden Sie Sie unter der **assign** -Aktivität. Geben Sie im **Fenster Eigenschaften**den folgenden Ausdruck in das Feld Bedingungs Eigenschaften Wert ein.  
+7. Ziehen Sie eine **FlowDecision** aus dem Abschnitt **Flowchart** der **Toolbox** , und verbinden Sie Sie unter der **assign** -Aktivität. Geben Sie im **Fenster Eigenschaften**den folgenden Ausdruck **in das Feld Bedingungs Eigenschaften Wert** ein.  
   
     ```vb  
     Guess = Target  
@@ -116,17 +116,17 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     > [!TIP]
     > Wenn die Bezeichnungen **true** und **false** bei **FlowDecision**nicht angezeigt werden, zeigen Sie mit der Maus auf die **FlowDecision**.  
   
-9. Klicken Sie auf die zweite **FlowDecision** -Aktivität, um Sie auszuwählen. Geben Sie im **Fenster Eigenschaften**den folgenden Ausdruck in das Feld Bedingungs Eigenschaften Wert ein.  
+9. Klicken Sie auf die zweite **FlowDecision** -Aktivität, um Sie auszuwählen. Geben Sie im **Fenster Eigenschaften**den folgenden Ausdruck **in das Feld Bedingungs Eigenschaften Wert** ein.  
   
-    ```
-    Guess < Target  
+    ```text
+    Guess < Target
     ```  
   
-10. Ziehen Sie zwei schreiben-Aktivitäten aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie diese so ab, dass Sie sich unter den zwei **FlowDecision** -Aktivitäten nebeneinander befinden. Verbinden Sie die " **true** "-Aktion der untersten **FlowDecision** -Aktivität mit **der Schreib** Schutz-Aktivität ganz links und der " **false** "-Aktion an die "äußersten rechten"-Aktivität " **WriteLine** ".  
+10. Ziehen Sie **zwei schreiben** -Aktivitäten aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie diese so ab, dass Sie sich unter den zwei **FlowDecision** -Aktivitäten nebeneinander befinden. Verbinden Sie die " **true** "-Aktion der untersten **FlowDecision** -Aktivität mit **der Schreib** Schutz-Aktivität ganz links und der " **false** "-Aktion an die "äußersten rechten"-Aktivität " **WriteLine** ".  
   
 11. Klicken Sie zum auswählen auf die **Schreib** geschützte Aktivität ganz links, und geben Sie den folgenden Ausdruck in das Feld **Text** -Eigenschafts Wert im **Eigenschaften Fenster**ein.  
   
-    ```
+    ```text
     "Your guess is too low."  
     ```  
   
@@ -134,7 +134,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 13. Klicken Sie auf die **WriteLine** -Aktivität ganz rechts, um Sie auszuwählen, und geben Sie den folgenden Ausdruck in das Feld **Text** -Eigenschafts Wert im **Fenster Eigenschaften**ein.  
   
-    ```
+    ```text
     "Your guess is too high."  
     ```  
   

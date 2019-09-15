@@ -4,46 +4,46 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947965"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991380"
 ---
 # <a name="getcustomui"></a>GetCustomUI
-Vom PresentationHost.exe abzurufenden benutzerdefinierte Status- und Fehlermeldungen vom Host aufgerufen, wenn es sich bei implementiert.  
+Wird von "PresentationHost. exe" aufgerufen, um beim implementieren benutzerdefinierte Status-und Fehlermeldungen vom Host zu erhalten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pwzProgressAssemblyName`  
   
- [out] Ein Zeiger auf die Assembly mit dem Host bereitgestellte tasksequenzstatus-Benutzeroberfläche.  
+ vorgenommen Ein Zeiger auf die Assembly, die die vom Host bereitgestellte Status-Benutzeroberfläche enthält.  
   
  `pwzProgressClassName`  
   
- [out] Der Name der Klasse an, die Benutzeroberfläche für den Host bereitgestellter Status, vorzugsweise einen [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] -Datei mit <xref:System.Windows.Controls.Page> Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die angegebenen `pwzProgressAssemblyName`.  
+ vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Status-Benutzeroberfläche ist, [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] vorzugsweise <xref:System.Windows.Controls.Page> eine Datei mit dem Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die von `pwzProgressAssemblyName`angegeben wird.  
   
  `pwzErrorAssemblyName`  
   
- [out] Ein Zeiger auf die Assembly, die die Benutzeroberfläche für den Host angegebene Fehler enthält.  
+ vorgenommen Ein Zeiger auf die Assembly, die die vom Host bereitgestellte Fehler Benutzeroberfläche enthält.  
   
  `pwzErrorClassName`  
   
- [out] Der Name der Klasse, die der Host angegebene Benutzer ist Schnittstelle, von denen vorzugsweise eine XAML-Datei mit <xref:System.Windows.Controls.Page> Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die angegebenen `pwzErrorAssemblyName`.  
+ vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Fehler Benutzeroberfläche ist, vorzugsweise eine XAML <xref:System.Windows.Controls.Page> -Datei mit dem Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die von `pwzErrorAssemblyName`angegeben wird.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  HRESULT: Ignoriert.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine hostanwendung möglicherweise ein bestimmtes Design, dem die PresentationHost.exe standardmäßigen Benutzeroberflächen von nicht entspricht. Wenn dies der Fall ist, kann die hostanwendung implementieren [GetCustomUI](getcustomui.md) Status- und Benutzeroberflächen für PresentationHost.exe zurückgegeben. Rufen Sie PresentationHost.exe wird immer [GetCustomUI](getcustomui.md) vor der Verwendung der standardmäßigen Benutzeroberflächen.  
+ Eine Host Anwendung kann über ein bestimmtes Design verfügen, das von den Standardbenutzer Oberflächen von PresentationHost. exe möglicherweise nicht konform ist. Wenn dies der Fall ist, kann die Host Anwendung [GetCustomUI](getcustomui.md) implementieren, um den Fortschritt und Fehler Benutzerschnittstellen an PresentationHost. exe zurückzugeben. "PresentationHost. exe" ruft immer " [GetCustomUI](getcustomui.md) " auf, bevor die Standardbenutzer Oberflächen verwendet werden.  
   
- Diese Funktion wird einmal während der Initialisierung von PresentationHost aufgerufen.  
+ Diese Funktion wird während der PresentationHost-Initialisierung einmal aufgerufen.  
   
 ## <a name="see-also"></a>Siehe auch
 

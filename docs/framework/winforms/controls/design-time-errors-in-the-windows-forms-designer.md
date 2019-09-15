@@ -11,12 +11,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 96ec50e5d3aca2aa24d68d565a35ec7687df2a2e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3e2366513183337c3c5dd05ff45f8a6f724deaae
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893250"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988432"
 ---
 # <a name="windows-forms-designer-error-page"></a>Windows Forms-Designer Fehlerseite
 
@@ -33,6 +33,7 @@ Wenn die gelbe Fehler Leiste erweitert wird, wird jede Instanz des Fehlers aufge
 ![Windows Forms-Designer erweiterter Fehler](media/windows-forms-designer-error-page-expanded.png)
 
 > [!NOTE]
+>
 > - Bei Visual Basic-apps zeigt die Seite Entwurfszeit Fehler nicht mehr als einen Fehler an, es werden jedoch möglicherweise mehrere Instanzen desselben Fehlers angezeigt.
 > - Bei C++ -apps haben Fehler keine Code Speicherort Verknüpfungen.
 

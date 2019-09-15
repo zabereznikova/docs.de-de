@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 012284aa42dfa29ad1a5e4ec4a4df5eaacbd4fb7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642279"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70968852"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>Assembly wurde nicht generiert: \<Fehlermeldung >
+# <a name="unable-to-emit-assembly-error-message"></a>Die Assembly kann nicht ausgegeben \<werden: Fehlermeldung >
 
-Visual Basic-Compiler Ruft den Assemblylinker (*Al.exe*, auch bekannt als Alink) zum Generieren einer Assembly mit einem Manifest und der Linker meldet einen Fehler verwendet, in der Ausgabephase der Assemblyerstellung.
+Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren, und der Linker meldet einen Fehler in der Ausgabe Phase der Erstellung der Assembly.
 
 **Fehler-ID:** BC30145
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) für weitere erläuterungen und Hinweise zu erhalten.
+1. Überprüfen Sie die Fehlermeldung in Anführungszeichen, und lesen Sie das Thema " [Al. exe](../../../framework/tools/al-exe-assembly-linker.md) ".
 
-2. Versuchen Sie es manuell zu signieren der Assemblys, entweder die [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) oder [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md).
+2. Versuchen Sie, die Assembly manuell zu signieren, indem Sie entweder " [Al. exe](../../../framework/tools/al-exe-assembly-linker.md) " oder " [Sn. exe" (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)verwenden.
 
 3. Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.
 
 ### <a name="to-sign-the-assembly-manually"></a>So signieren Sie die Assembly manuell
 
-1. Verwenden Sie die [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)) zum Erstellen einer Datei Paar aus privatem und öffentlichem Schlüssel.
+1. Verwenden Sie " [Sn. exe" (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)), um eine Datei mit einem öffentlichen/privaten Schlüsselpaar zu erstellen.
 
-   Diese Datei enthält eine *snk* Erweiterung.
+   Diese Datei hat die Erweiterung " *. snk* ".
 
 2. Löschen Sie den COM-Verweis, der für den Fehler verantwortlich ist, aus Ihrem Projekt.
 
-3. Öffnen der [Developer-Eingabeaufforderung für Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
+3. Öffnen Sie die [Developer-Eingabeaufforderung für Visual Studio](../../../framework/tools/developer-command-prompt-for-vs.md).
 
-   Geben Sie im Windows 10, **Developer-Eingabeaufforderung** in das Suchfeld auf der Taskleiste. Wählen Sie dann **Developer-Eingabeaufforderung für Visual Studio 2017** in der Ergebnisliste aus.
+   Geben Sie in Windows 10 die **Developer-Eingabeaufforderung** in das Suchfeld auf der Taskleiste ein. Wählen Sie dann in der Ergebnisliste **Developer-Eingabeaufforderung für vs 2017** aus.
 
-4. Wechseln Sie zu dem Verzeichnis, in dem Sie den Assemblywrapper platzieren möchten.
+4. Wechseln Sie in das Verzeichnis, in dem Sie den Assemblywrapper platzieren möchten.
 
 5. Geben Sie folgenden Befehl ein:
 
@@ -48,20 +48,20 @@ Visual Basic-Compiler Ruft den Assemblylinker (*Al.exe*, auch bekannt als Alink)
     tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
     ```
 
-   Ein Beispiel der eigentliche Befehl Ihnen eingegebenen ist:
+   Ein Beispiel für den eigentlichen Befehl, den Sie eingeben können, ist:
 
     ```cmd
     tlbimp c:\windows\system32\msi.dll /out:Interop.WindowsInstaller.dll /keyfile:"c:\documents and settings\mykey.snk"
     ```
 
    > [!TIP]
-   > Verwenden Sie doppelte Anführungszeichen, wenn ein Pfad- oder Dateiname Leerzeichen enthält.
+   > Verwenden Sie doppelte Anführungszeichen, wenn ein Pfad oder eine Datei Leerzeichen enthält.
 
-6. Fügen Sie in Visual Studio einen .NET Framework-Assembly-Verweis auf die Datei, die Sie gerade erstellt haben.
+6. Fügen Sie in Visual Studio einen .net-Assemblyverweis auf die soeben erstellte Datei hinzu.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../standard/assembly/create-public-private-key-pair.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

@@ -2,12 +2,12 @@
 title: Feedformatierung (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 028d2f9abd7e23f18eb90e5ecae8c57da3a871d1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 516a114ee577597611c14ce10ad838d85d6a0fb1
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039642"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989887"
 ---
 # <a name="feed-formatter-json"></a>Feedformatierung (JSON)
 In diesem Beispiel wird veranschaulicht, wie eine Instanz einer <xref:System.ServiceModel.Syndication.SyndicationFeed>-Klasse im JSON-Format (JavaScript Object Notation) unter Verwendung eines benutzerdefinierten <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> und des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serialisiert wird.  
@@ -18,7 +18,7 @@ In diesem Beispiel wird veranschaulicht, wie eine Instanz einer <xref:System.Ser
 ## <a name="writing-json-feeds"></a>Schreiben von JSON-Feeds  
  Ein JSON-Feed kann mithilfe des `JsonFeedFormatter` (implementiert in diesem Beispiel) und des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> geschrieben werden, wie im folgenden Beispielcode dargestellt.  
   
-```  
+```csharp  
 //Basic feed with sample data  
 SyndicationFeed feed = new SyndicationFeed("Custom JSON feed", "A Syndication extensibility sample", null);  
 feed.LastUpdatedTime = DateTime.Now;  

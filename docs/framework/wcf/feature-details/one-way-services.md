@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d567674baa92ad096b10a1199fa3f04f05939df5
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621340"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991173"
 ---
 # <a name="one-way-services"></a>Unidirektionale Dienste
 Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. Bei einem Anforderung-Antwort-Muster wartet der Client auch dann auf die Antwortnachricht, wenn der Dienstvorgang im Code als `void`-Methode dargestellt wird. Mit einem unidirektionalen Vorgang wird nur eine Nachricht gesendet. Der Empfänger sendet keine Antwortnachricht, und vom Absender wird keine erwartet.  
@@ -22,11 +22,11 @@ Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. B
   
 - Wenn die <xref:System.ServiceModel.NetMsmqBinding>-Klasse oder die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse verwendet wird. (Weitere Informationen zu diesem Szenario finden Sie unter [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
- Bei einem unidirektionalen Vorgang gibt es keine Antwortnachricht, über die Fehlerinformationen zurück an den Client übertragen werden. Sie können Fehlerbedingungen mit den Funktionen der zugrunde liegenden Bindung, z.&amp;#160;B. zuverlässige Sitzungen, ermitteln oder durch den Entwurf eines Duplexdienstvertrags, der zwei unidirektionale Vorgänge verwendet: einen unidirektionalen Vertrag vom Client zum Dienst zum Aufrufen von Dienstvorgängen sowie einen anderen unidirektionalen Vertrag zwischen dem Dienst und dem Client, damit der Dienst über einen vom Client implementierten Rückruf Fehler an den Client zurücksenden kann.  
+ Bei einem unidirektionalen Vorgang gibt es keine Antwortnachricht, über die Fehlerinformationen zurück an den Client übertragen werden. Sie können Fehlerbedingungen mit den Funktionen der zugrunde liegenden Bindung, z.&#160;B. zuverlässige Sitzungen, ermitteln oder durch den Entwurf eines Duplexdienstvertrags, der zwei unidirektionale Vorgänge verwendet: einen unidirektionalen Vertrag vom Client zum Dienst zum Aufrufen von Dienstvorgängen sowie einen anderen unidirektionalen Vertrag zwischen dem Dienst und dem Client, damit der Dienst über einen vom Client implementierten Rückruf Fehler an den Client zurücksenden kann.  
   
  Wenn Sie einen unidirektionalen Dienstvertrag erstellen möchten, wenden Sie die <xref:System.ServiceModel.OperationContractAttribute>-Klasse auf alle Vorgänge an, und legen Sie die <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft auf `true` fest, wie im folgenden Beispielcode dargestellt.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOneWayCalculator  
 {  
@@ -41,18 +41,18 @@ public interface IOneWayCalculator
 }  
 ```  
   
- Ein vollständiges Beispiel finden Sie unter den [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
+ Ein umfassendes Beispiel finden [Sie im unidirektionalen Beispiel.](../../../../docs/framework/wcf/samples/one-way.md)  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>Clients, die mit unidirektionalen Vorgängen blockieren  
- Es ist wichtig zu wissen, dazu führen, dass, die zwar einige unidirektionalen Anwendungen zurückgegeben, sobald die ausgehenden Daten an die Netzwerkverbindung in verschiedenen Szenarien die Implementierung einer Bindung oder eines Diensts geschrieben ist ein WCF-Client mit unidirektionalen Vorgängen blockiert. In WCF-Clientanwendungen gibt der WCF-Client-Objekt nicht zurück, bis die ausgehenden Daten an die Netzwerkverbindung geschrieben wurden. Dies gilt für alle Nachrichtenaustauschmuster, einschließlich unidirektionaler Vorgänge. Dies bedeutet, dass jedes Problem, das beim Schreiben der Daten an den Transport auftritt, verhindert, dass der Client zurückgegeben wird. Je nach dem aufgetretenen Problem könnte das Ergebnis eine Ausnahme sein oder eine Verzögerung beim Senden der Nachrichten an den Dienst.  
+ Beachten Sie, dass einige unidirektionale Anwendungen beim Schreiben der ausgehenden Daten in die Netzwerkverbindung zurückgeben, dass die Implementierung einer Bindung oder eines Dienstanbieter in verschiedenen Szenarien dazu führen kann, dass ein WCF-Client mit unidirektionalen Vorgängen blockiert wird. In WCF-Client Anwendungen wird das WCF-Client Objekt erst zurückgegeben, wenn die ausgehenden Daten an die Netzwerkverbindung geschrieben wurden. Dies gilt für alle Nachrichtenaustauschmuster, einschließlich unidirektionaler Vorgänge. Dies bedeutet, dass jedes Problem, das beim Schreiben der Daten an den Transport auftritt, verhindert, dass der Client zurückgegeben wird. Je nach dem aufgetretenen Problem könnte das Ergebnis eine Ausnahme sein oder eine Verzögerung beim Senden der Nachrichten an den Dienst.  
   
- Wenn der Transport z.&amp;#160;B. den Endpunkt nicht finden kann, wird eine <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>-Ausnahme ohne große Verzögerung ausgelöst. Es kann jedoch auch vorkommen, dass der Dienst die Daten aus irgendeinem Grund nicht aus der Verbindung lesen kann. Dadurch wird verhindert, dass der Clienttransport-Sendevorgang zurückgegeben wird. In diesen Fällen wird beim Überschreiten des <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType>-Zeitraums der Clienttransportbindung eine <xref:System.TimeoutException?displayProperty=nameWithType> ausgelöst, jedoch nicht, bis der Timeoutzeitraum überschritten wurde. Es ist auch möglich, an einen Dienst so viele Nachrichten zu senden, dass diese nach einem bestimmten Punkt nicht vom Dienst verarbeitet werden können. In diesem Fall blockiert der unidirektionale Client so lange, bis der Dienst die Nachrichten verarbeiten kann oder bis eine Ausnahme ausgelöst wird.  
+ Wenn der Transport z.&#160;B. den Endpunkt nicht finden kann, wird eine <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType>-Ausnahme ohne große Verzögerung ausgelöst. Es kann jedoch auch vorkommen, dass der Dienst die Daten aus irgendeinem Grund nicht aus der Verbindung lesen kann. Dadurch wird verhindert, dass der Clienttransport-Sendevorgang zurückgegeben wird. In diesen Fällen wird beim Überschreiten des <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType>-Zeitraums der Clienttransportbindung eine <xref:System.TimeoutException?displayProperty=nameWithType> ausgelöst, jedoch nicht, bis der Timeoutzeitraum überschritten wurde. Es ist auch möglich, an einen Dienst so viele Nachrichten zu senden, dass diese nach einem bestimmten Punkt nicht vom Dienst verarbeitet werden können. In diesem Fall blockiert der unidirektionale Client so lange, bis der Dienst die Nachrichten verarbeiten kann oder bis eine Ausnahme ausgelöst wird.  
   
  Eine andere Möglichkeit ist die Situation, in der die <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType>-Diensteigenschaft auf <xref:System.ServiceModel.ConcurrencyMode.Single> festgelegt ist und die Bindung Sitzungen verwendet. In diesem Fall erzwingt der Verteiler die Sortierung der eingehenden Nachrichten (eine Anforderung für Sitzungen), wodurch verhindert wird, dass die nachfolgenden Nachrichten aus dem Netzwerk gelesen werden, bis der Dienst die vorausgehende Nachricht für diese Sitzung verarbeitet hat. Der Client blockiert wiederum, aber ob eine Ausnahme stattfindet, richtet sich danach, ob die wartenden Daten vor den Timeouteinstellungen auf dem Client verarbeitet werden können.  
   
- Sie können dieses Problem verringern, indem Sie einen Puffer zwischen dem Clientobjekt und dem Sendevorgang des Clienttransports einfügen. Wenn Sie z.&amp;#160;B. asynchrone Anrufe oder eine Nachrichtenwarteschlange im Speicher verwenden, wird das Clientobjekt schnell zurückgegeben. Beide Methoden erhöhen eventuell die Funktionalität, aber die Größe des Threadpools und der Nachrichtenwarteschlange erzwingen Beschränkungen.  
+ Sie können dieses Problem verringern, indem Sie einen Puffer zwischen dem Clientobjekt und dem Sendevorgang des Clienttransports einfügen. Wenn Sie z.&#160;B. asynchrone Anrufe oder eine Nachrichtenwarteschlange im Speicher verwenden, wird das Clientobjekt schnell zurückgegeben. Beide Methoden erhöhen eventuell die Funktionalität, aber die Größe des Threadpools und der Nachrichtenwarteschlange erzwingen Beschränkungen.  
   
- Es wird stattdessen empfohlen, die verschiedenen Steuerelemente des Diensts sowie des Clients zu prüfen, um eine optimale Konfiguration auf beiden Seiten zu gewährleisten. Wenn z.&amp;#160;B. die Verwendung von Sitzungen die Verarbeitung von Nachrichten in Ihrem Dienst blockiert, können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.PerCall> festlegen, damit die Nachrichten von einer anderen Dienstinstanz verarbeitet werden können. Außerdem können Sie den <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> auf <xref:System.ServiceModel.ConcurrencyMode.Multiple> festlegen, um das Senden von Nachrichten von mehr als einem Thread gleichzeitig zu erlauben. Eine andere Methode besteht darin, die Lesekontingente des Diensts und der Clientbindungen zu erhöhen.  
+ Es wird stattdessen empfohlen, die verschiedenen Steuerelemente des Diensts sowie des Clients zu prüfen, um eine optimale Konfiguration auf beiden Seiten zu gewährleisten. Wenn z.&#160;B. die Verwendung von Sitzungen die Verarbeitung von Nachrichten in Ihrem Dienst blockiert, können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.PerCall> festlegen, damit die Nachrichten von einer anderen Dienstinstanz verarbeitet werden können. Außerdem können Sie den <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> auf <xref:System.ServiceModel.ConcurrencyMode.Multiple> festlegen, um das Senden von Nachrichten von mehr als einem Thread gleichzeitig zu erlauben. Eine andere Methode besteht darin, die Lesekontingente des Diensts und der Clientbindungen zu erhöhen.  
   
 ## <a name="see-also"></a>Siehe auch
 
