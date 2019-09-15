@@ -3,12 +3,12 @@ title: Debuggen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 201
 description: Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene „Hallo Welt“-App mit Visual Studio 2017 debuggen.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 7239ca52c0b90c4cfacd68581f569b9ac7d70eae
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063058"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969390"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017
 
@@ -26,7 +26,10 @@ Sie sollten immer beginnen, indem Sie Ihr Programm im Debugmodus testen. Im Debu
 
 Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunktionen aus:
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Haltepunkt ausgeführt wird. 
 
    Legen sie einen Haltepunkt auf der Zeile `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` fest, indem Sie auf den linken Rand des Codefensters auf dieser Zeile klicken, oder indem Sie das Menüelement **Debuggen** > **Haltepunkt ein/aus** mit der ausgewählten Zeile auswählen. Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
@@ -56,7 +59,9 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
    ![Konsolenfenster, das den Wert „Jack“ in der Aufforderung „Wie lautet Ihr Name?“ zeigt, gefolgt von „Hallo Gracie“](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und den Debugmodus zu beenden.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Haltepunkt ausgeführt wird. 
 
    Legen sie einen Haltepunkt auf der Zeile `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` fest, indem Sie auf den linken Rand des Codefensters auf dieser Zeile klicken, oder indem Sie das Menüelement **Debuggen** > **Haltepunkt ein/aus** mit der ausgewählten Zeile auswählen. Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
@@ -82,6 +87,7 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
    ![Konsolenfenster mit den in das Direktfenster eingegebenen geänderten Werten](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und den Debugmodus zu beenden.
+
 ---
 
 ## <a name="setting-a-conditional-breakpoint"></a>Festlegen eines bedingten Haltepunkts
@@ -91,6 +97,7 @@ Ihr Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der Benutzer keine Zeichenfolge eingibt, führen Sie folgende Schritte aus:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Feld für **Bedingungen**.
 
    ![Editor mit dem Panel für Haltepunkteinstellungen – C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
@@ -126,7 +133,9 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
 
 1. Löschen Sie den Haltepunkt durch Klicken auf den Punkt am linken Rand des Codefensters oder Auswählen des Menüelements **Debuggen > Haltepunkt ein/aus** mit der ausgewählten Zeile.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Feld für **Bedingungen**.
 
    ![Editor mit dem Panel für Haltepunkteinstellungen – Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
@@ -162,12 +171,14 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
 
 1. Löschen Sie den Haltepunkt durch Klicken auf den Punkt am linken Rand des Codefensters oder Auswählen des Menüelements **Debuggen > Haltepunkt ein/aus** mit der ausgewählten Zeile.
+
 ---
 ## <a name="stepping-through-a-program"></a>Schrittweises Ausführen eines Programms
 
 Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die Ausführung jeder einzelnen Zeile überwachen. Normalerweise würden Sie einen Haltepunkt festlegen und mit diesem Feature den Programmablauf in einem kleinen Teil des Programmcodes verfolgen. Da unser Programm klein ist, können folgendermaßen das gesamte Programm durcharbeiten:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Wählen Sie auf der Menüleiste **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
 
    ![Visual Studio-Einzelschrittausführung in Methode – C#](./media/debugging-with-visual-studio/step-into-method.png)
@@ -191,7 +202,9 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung**, oder drücken Sie UMSCHALT+ F11-Taste. Dadurch wird die schrittweise Ausführung beendet. Das Konsolenfenster zeigt eine Meldung an und wartet, bis Sie eine Taste drücken.
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Wählen Sie auf der Menüleiste **Debuggen** > **Ausführen bis Rücksprung** aus, oder drücken Sie die Taste F11. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
 
    ![Visual Studio-Einzelschrittausführung in Methode – Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
@@ -215,6 +228,7 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 1. Wählen Sie **Debuggen** > **Ausführen bis Rücksprung**, oder drücken Sie UMSCHALT+ F11-Taste. Dadurch wird die schrittweise Ausführung beendet. Das Konsolenfenster zeigt eine Meldung an und wartet, bis Sie eine Taste drücken.
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und den Debugmodus zu beenden.
+
 ---
 
 ## <a name="building-a-release-version"></a>Erstellen einer endgültigen Releaseversion

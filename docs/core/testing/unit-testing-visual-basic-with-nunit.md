@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: c48b2777b451598a0f3ccbb383d702d0069ff6ff
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373824"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849683"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -19,7 +19,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höhere Versionen.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
 
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts

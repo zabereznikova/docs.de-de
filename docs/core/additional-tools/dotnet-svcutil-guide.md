@@ -4,12 +4,12 @@ description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das F
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 7c3e2f7bcfb337a09a9cc13068c22d496762a90f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063291"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969940"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
 
@@ -24,11 +24,15 @@ Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio ve
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
 * Ihr bevorzugter Code-Editor
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 * [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
 * Ihr bevorzugter Code-Editor
 

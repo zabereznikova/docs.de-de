@@ -1,15 +1,16 @@
 ---
-ms.openlocfilehash: cb8cc6574caad6da25b3fced70c58175a33ec896
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68616330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929179"
 ---
 # <a name="voice-and-tone-guidelines"></a>Richtlinien zu Sprache und Schreibstil
 
 Eine Vielzahl von Personen, darunter IT-Profis und Entwickler, lesen Ihre Dokumente, um .NET zu erlernen und für ihre regulären Aufgaben zu nutzen.
 Ziel ist es, eine fundierte Dokumentation zu erstellen, die den Leser bei seiner Arbeit unterstützt. Hierbei helfen unsere Richtlinien. Unsere Stilvorgaben enthalten die folgenden Empfehlungen:
+
 - [Verwenden Sie einen umgangssprachlichen Ton](#use-a-conversational-tone)
 - [Schreiben Sie in zweiter Person](#write-in-2nd-person)
 - [Verwenden Sie Aktivkonstruktionen](#use-active-voice)

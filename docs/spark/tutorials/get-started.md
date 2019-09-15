@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET für Ap
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7ce7d7aec6c15385d3d797d5a548519eea33b764
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "69577007"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928485"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -18,6 +18,7 @@ In diesem Tutorial erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET f
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
+>
 > * Vorbereiten der Windows-Umgebung für .NET für Apache Spark
 > * Herunterladen von **Microsoft.Spark.Worker**
 > * Erstellen und Ausführen einer einfachen .NET für Apache Spark-Anwendung
@@ -124,6 +125,7 @@ Herzlichen Glückwunsch! Sie haben eine .NET für Apache Spark-App erfolgreich e
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Vorbereiten der Windows-Umgebung für .NET für Apache Spark
 > * Herunterladen von **Microsoft.Spark.Worker**
 > * Erstellen und Ausführen einer einfachen .NET für Apache Spark-Anwendung

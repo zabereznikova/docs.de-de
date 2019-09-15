@@ -3,12 +3,12 @@ title: Voraussetzungen für .NET Core unter Windows
 description: Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweisen muss, damit Sie .NET Core-Anwendungen entwickeln und ausführen können.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 7b2bf2b8353c4f02fa11e9e7531e0d936007be0b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331073"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970288"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -61,6 +61,8 @@ Sie können einen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core S
 
 Informationen zu den Änderungen in Visual Studio 2017 finden Sie in den [Anmerkungen zur Version](/visualstudio/releasenotes/vs2017-relnotes).
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 So entwickeln Sie .NET Core-Apps in Visual Studio 2017 mithilfe des .NET Core 2.2 SDK:
@@ -97,8 +99,9 @@ Nach der Konfiguration von Visual Studio mit dem .NET Core 2.2 SDK können Sie f
 
 > [!IMPORTANT]
 > Es ist möglich, Visual Studio 2015 für die .NET Core 1.x-Entwicklung zu verwenden, es wird jedoch aus den folgenden Gründen nicht empfohlen:
-  > * Bei den .NET Core-Tools handelt es sich um eine nicht unterstützte Vorschauversion.
-  > * Die Projekte basieren auf dem Format „project.json“, das veraltet ist.
+>
+> * Bei den .NET Core-Tools handelt es sich um eine nicht unterstützte Vorschauversion.
+> * Die Projekte basieren auf dem Format „project.json“, das veraltet ist.
 >
 > Weitere Informationen zu den Änderungen der Projektformate finden Sie unter [High-level overview of changes (Globale Übersicht der Änderungen)](./tools/cli-msbuild-architecture.md).
 

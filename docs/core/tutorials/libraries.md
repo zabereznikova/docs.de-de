@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken ers
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: d22f73b33c36357b7f8018d1620b240e18d91676
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202655"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849481"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
@@ -17,7 +17,7 @@ Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tool
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-[Das .NET Core SDK und die CLI](https://www.microsoft.com/net/core) müssen auf Ihrem Computer installiert sein.
+[Das .NET Core SDK und die CLI](https://dotnet.microsoft.com/download) müssen auf Ihrem Computer installiert sein.
 
 Für die Abschnitte dieses Dokuments, in denen es um .NET Framework-Versionen geht, muss das [.NET Framework](https://dotnet.microsoft.com) auf einem Windows-Computer installiert sein.
 

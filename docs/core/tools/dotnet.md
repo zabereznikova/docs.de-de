@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: 328fd24cd72110bd235c177398f6f147fbb9d144
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373754"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969779"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -18,6 +18,8 @@ ms.locfileid: "70373754"
 `dotnet`: Ein Tool für das Verwalten von .NET-Quellcode und Binärdateien.
 
 ## <a name="synopsis"></a>Übersicht
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -94,6 +96,7 @@ Zeigt die installierten .NET Core-SDKs an.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht verfügbar ist. `N` kann Folgendes sein:
+
 - `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
 - `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
 - `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.

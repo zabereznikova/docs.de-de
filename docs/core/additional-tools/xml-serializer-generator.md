@@ -5,18 +5,19 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 74d10b0fb27a4acf477fc66451a5cf6fc1f4317c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631691"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926600"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
 
 In diesem Tutorial erfahren Sie, wie Sie den Microsoft XML Serializer Generator in einer .NET Core-Anwendung für C# verwenden. Im Verlauf dieses Tutorials lernen Sie Folgendes:
 
 > [!div class="checklist"]
+>
 > * Erstellen einer .NET Core-App
 > * Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
 > * Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
@@ -29,7 +30,7 @@ Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/
 
 Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höher
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höher
 * Ihren bevorzugten Code-Editor
 
 > [!TIP]
@@ -120,6 +121,7 @@ Wenn alle Vorgänge erfolgreich ausgeführt werden, wird eine Assembly mit dem N
 
 Herzlichen Glückwunsch! Sie haben gerade:
 > [!div class="checklist"]
+>
 > * eine lokale .NET Core-App erstellt
 > * einen Verweis zum Microsoft.XmlSerializer.Generator-Paket hinzugefügt
 > * Ihre MyApp.csproj-Datei bearbeitet, um Abhängigkeiten hinzuzufügen

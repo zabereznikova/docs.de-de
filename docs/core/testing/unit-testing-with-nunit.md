@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 19aa97687c41cf4a4aac00bf6ca83bc27504b09d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4d378e68143192e2f56fb411ae6ee709af753750
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374127"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849667"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
@@ -19,7 +19,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höhere Versionen.
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
 
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts

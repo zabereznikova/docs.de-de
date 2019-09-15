@@ -4,12 +4,12 @@ description: Übersicht zum Microsoft WCF Web Service Reference Provider-Tool, �
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 806f6e90aedc669c3a56ce1cde64311bdd4af32c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750495"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926457"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Verwenden des Provider-Tools für den WCF-Webdienstverweis
 
@@ -26,9 +26,10 @@ Im Laufe der Jahre konnten viele Visual Studio-Entwickler von dem [**Dienstverwe
 
 > [!NOTE]
 > Die Option **WCF Web Service Reference** ist auf Projekte anwendbar, die über eine der folgenden Projektvorlagen erstellt werden:
-> * **Visual C#** > **.NET Core**
-> * **Visual C#** > **.NET Standard**
-> * **Visual C#** > **Web** > **ASP.NET Core-Webanwendung**
+>
+> * **Visual C#**  >  **.NET Core**
+> * **Visual C#**  >  **.NET Standard**
+> * **Visual C#**  > **Web** > **ASP.NET Core-Webanwendung**
 
 In diesem Artikel wird die Projektvorlage **ASP.NET Core-Webanwendung** als Beispiel genommen, um Ihnen exemplarisch zu erläutern, wie Sie einem Projekt einen WCF-Dienstverweis hinzufügen:
 

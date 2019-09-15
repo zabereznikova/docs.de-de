@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 00edb1c8704aab19d7ff44fe26c514b5ccea64b6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925720"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -99,6 +99,7 @@ Wenn die Version von .NET Core, mit der eine Anwendung erstellt wurde, nicht zur
 > Dieses Rollforwardverhalten gilt nicht für Vorschauversionen. Es wird standardmäßig auch nicht auf Hauptreleases angewendet. Dies können Sie mit den folgenden Einstellungen jedoch ändern.
 
 Sie können dieses Verhalten anpassen, indem Sie die Einstellung für den Rollforward auf das freigegebene Framework ohne Candidate. Folgende Einstellungen sind verfügbar:
+
 - `0`: Das Rollforwardverhalten für Nebenversionen deaktivieren. Mit dieser Einstellung wird für Anwendungen für .NET Core 2.0.0 ein Rollforward auf .NET Core 2.0.1 ausgeführt, aber nicht für .NET Core 2.2.0 oder .NET Core 3.0.0.
 - `1`: Das Rollforwardverhalten für Nebenversionen aktivieren. Dies ist die Standardeinstellung. Mit dieser Einstellung wird für Anwendungen für .NET Core 2.0.0 ein Rollforward auf .NET Core 2.0.1 oder .NET Core 2.2.0 abhängig davon ausgeführt, was installiert wird. Es wird jedoch kein Rollforward auf .NET Core 3.0.0 ausgeführt.
 - `2`: Das Rollforwardverhalten für Neben- und Hauptversionen aktivieren. Wenn diese Einstellung festgelegt wird, werden auch verschiedene Hauptversionen für das Rollforwardverhalten beachtet, d. h., für Anwendungen für .NET Core 2.0.0 wird ein Rollforward auf .NET Core 3.0.0 ausgeführt.
@@ -178,15 +179,17 @@ Ohne diese Typen müssen Sie bei der Übergabe solcher Elemente als Teil eines A
 
 Das folgende Beispiel verwendet eine <xref:System.Span%601>- und eine <xref:System.Memory%601>-Instanz, um eine virtuelle Ansicht von 10 Elementen eines Arrays bereitzustellen.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
 
-[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli-Komprimierung
 
 Ab .NET Core 2.1 werden Brotli-Komprimierung und -Dekomprimierung unterstützt. Brotli ist ein allgemein einsetzbarer verlustfreier Komprimierungsalgorithmus, der in [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) definiert ist und von den meisten Webbrowsern und den wichtigsten Webservern unterstützt wird. Sie können die streambasierte <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType>-Klasse oder die leistungsstarken, bereichsbasierten Klassen <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> und <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> verwenden. Im folgenden Beispiel wird die Komprimierung mit der <xref:System.IO.Compression.BrotliStream>-Klasse veranschaulicht:
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 Das <xref:System.IO.Compression.BrotliStream>-Verhalten entspricht dem von <xref:System.IO.Compression.DeflateStream> und <xref:System.IO.Compression.GZipStream>. Dies vereinfacht das Konvertieren von Code, der diese APIs nach <xref:System.IO.Compression.BrotliStream> aufruft.
 

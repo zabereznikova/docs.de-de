@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2787f43645250dbaf7a67aa7b7158372cf624be5
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410379"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926386"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -43,6 +43,7 @@ Wenn Code eng gekoppelt ist, kann es schwierig sein, Komponententests dafür aus
 Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da es ansonsten schwieriger wäre, diesen zu testen.
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Merkmale eines guten Komponententests
+
 - **Schnelligkeit**. Es ist nicht ungewöhnlich, dass ausgereifte Projekte Tausende von Komponententests enthalten. Die Ausführung von Komponententests sollte sehr wenig Zeit in Anspruch nehmen. Sie sollten innerhalb von Millisekunden abgeschlossen sein.
 - **Unabhängigkeit**. Komponententest sind eigenständig, sie können isoliert ausgeführt werden und verfügen über keine Abhängigkeiten auf externen Faktoren, wie etwa einem Dateisystem oder einer Datenbank.
 - **Wiederholbarkeit**. Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
@@ -106,11 +107,13 @@ Der Hauptunterschied zwischen Mocks und Stubs ist also der folgende: Mocks unter
 
 ### <a name="naming-your-tests"></a>Benennen Ihrer Tests
 Der Name Ihres Tests sollte aus drei Teilen bestehen:
+
 - aus dem Namen der Methode, die getestet wird
 - aus den Bedingungen, unter denen getestet wird
 - aus dem erwarteten Verhalten, wenn das Szenario aufgerufen wird
 
 #### <a name="why"></a>Warum?
+
 - Benennungsstandards sind wichtig, da diese die Absicht des Tests explizit ausdrücken.
 
 Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bieten auch Dokumentation. Sie sollten anhand der Komponententestsammlung in der Lage sein, das Verhalten Ihres Codes abzuleiten, auch wenn Sie nicht den Code selbst ansehen. Wenn Tests fehlschlagen, können Sie zusätzlich genau erkennen, welche Szenarios nicht Ihren Erwartungen entsprechen.
@@ -123,11 +126,13 @@ Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bi
 
 ### <a name="arranging-your-tests"></a>Anordnen Ihrer Tests
 **Arrange, Act, Assert** ist ein häufiges Muster beim Ausführen von Komponententests. Dieses Muster besteht aus drei Hauptteilen:
+
 - *Arrange*: Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
 - *Act*: Führen Sie eine Aktion für ein Objekt durch.
 - *Assert*: Überprüfen Sie die ordnungsgemäße Funktionsweise.
 
 #### <a name="why"></a>Warum?
+
 - Durch diese Methode wird ganz klar unterteilt, was unter den Schritten *arrange* und *assert* getestet wird.
 - Es ist weniger wahrscheinlich, dass Überprüfungen mit dem „act“-Code vermischt werden.
 
@@ -143,6 +148,7 @@ Die Lesbarkeit ist einer der wichtigsten Punkte beim Schreiben eines Tests. Durc
 Die in einem Komponententest verwendete Eingabe soll so einfach wie möglich gehalten werden, damit das Verhalten, das Sie gerade testen, überprüft werden kann.
 
 #### <a name="why"></a>Warum?
+
 - Tests funktionieren auch nach Änderungen an der Codebasis wahrscheinlicher weiter.
 - Das Testverhalten steht im Vordergrund, nicht die Implementierung.
 
@@ -158,6 +164,7 @@ Es ist wahrscheinlicher, dass Tests, die mehr Informationen enthalten, als für 
 Das Benennen von Variablen in Komponententests ist genauso wichtig, wenn nicht noch wichtiger, wie das Benennen von Variablen im Produktionscode. Komponententests sollten keine „magischen“ Zeichenfolgen enthalten.
 
 #### <a name="why"></a>Warum?
+
 - Durch magische Zeichenfolgen sieht es der Leser des Tests womöglich nicht als notwendig an, den Produktionscode zu überprüfen, um herauszufinden, was den Wert besonders macht.
 - Sie stellen explizit dar, was Sie *beweisen* möchten und nicht, was Sie versuchen zu *erreichen*.
 
@@ -176,6 +183,7 @@ Magische Zeichenfolgen können den Leser Ihrer Tests verwirren. Wenn eine Zeiche
 Wenn Sie Ihre Komponententests schreiben, vermeiden Sie manuelle Zeichenfolgenverkettungen und logische Bedingungen, z.B. `if`, `while`, `for`, `switch` usw.
 
 #### <a name="why"></a>Warum?
+
 - Es ist weniger wahrscheinlich, dass dies zu einem Fehler innerhalb Ihrer Tests führt.
 - Konzentrieren Sie sich auf das Endergebnis und weniger auf die Implementierungsdetails.
 
@@ -194,6 +202,7 @@ Wenn Sie Logik in Ihre Testsammlung einfügen, erhöht sich die Wahrscheinlichke
 Wenn Sie für Ihre Test ein ähnliches Objekt oder einen ähnlichen Zustand benötigen, nutzen Sie anstatt der „Setup“- und „Teardown“-Attribute (falls vorhanden) lieber eine Hilfsmethode.
 
 #### <a name="why"></a>Warum?
+
 - Weniger Verwirrung beim Lesen der Tests, da der gesamte Code innerhalb der einzelnen Tests sichtbar ist.
 - Für den spezifischen Test ist das Risiko geringer, zu viel oder zu wenig einzurichten.
 - Geringeres Risiko, den Zustand zwischen Tests freizugeben, was zu unnötigen Abhängigkeiten zwischen diesen führen würde.
@@ -223,10 +232,12 @@ In Komponententestframeworks wird `Setup` vor jedem Komponententest innerhalb Ih
 
 ### <a name="avoid-multiple-asserts"></a>Vermeiden mehrerer Assert-Anweisungen
 Wenn Sie Ihre Tests schreiben, versuchen Sie, nur eine Assert-Anweisung pro Test einzuschließen. Allgemeine Ansätze zur Verwendung von nur einer Assert-Anweisung sind die folgenden:
+
 - Erstellen eines separaten Tests für jede Assert-Anweisung
 - Verwenden parametrisierter Tests
 
 #### <a name="why"></a>Warum?
+
 - Wenn eine Assert-Anweisung fehlschlägt, werden die darauffolgenden Assert-Vorgänge nicht ausgewertet.
 - Es wird sichergestellt, dass Sie nicht mehrere Fälle in Ihren Tests überprüfen.
 - Sie erhalten einen Überblick, warum Ihre Tests fehlschlagen. 

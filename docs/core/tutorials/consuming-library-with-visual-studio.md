@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a7ab9e8f148eaab8250a7cb10c7d38d2f70e4cd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 31a9183f541afa5365862b1e89704354cf7bd527
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660578"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969293"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
 
@@ -27,7 +27,10 @@ Nachdem Sie eine .NET Standard-Klassenbibliothek anhand der unter [Erstellen ein
 
 Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wie Ihre Klassenbibliothek, können Sie Ihre Anwendung als Teil dieser Projektmappe einschließen. Angenommen, Sie können Ihre Klassenbibliothek in einer Konsolenanwendung verwenden, die den Benutzer zur Eingabe einer Zeichenfolge auffordert und meldet, ob das erste Zeichen ein Großbuchstabe ist:
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 1. Öffnen Sie die Projektmappe `ClassLibraryProjects`, die Sie im Thema [Erstellen einer C#-Klassenbibliothek mit .NET Core in Visual Studio 2017](./library-with-visual-studio.md). Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Projektmappe **ClassLibraryProjects**, und wählen Sie im Kontextmenü **Hinzufügen** > **Neues Projekt** aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen**, erweitern Sie den Knoten **Visual C#** , und klicken Sie auf den Knoten .**NET Core** und anschließend auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „ShowCase“ ein, und klicken Sie auf die Schaltfläche **OK**.
@@ -57,7 +60,9 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 1. Ändern Sie ggf. die Symbolleiste, um das**Debugrelease** des `ShowCase`-Projekts zu kompilieren. Kompilieren Sie das Programm, und führen Sie es anschließend aus, indem Sie auf den grünen Pfeil auf der Schaltfläche **ShowCase** klicken.
 
    ![Visual Studio-Projektsymbolleiste mit Schaltfläche „Debuggen“ – C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
 1. Öffnen Sie die Projektmappe `ClassLibraryProjects`, die Sie im Thema [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017 (Erstellen einer C#-Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017)](vb-library-with-visual-studio.md). Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Projektmappe **ClassLibraryProjects**, und wählen Sie im Kontextmenü **Hinzufügen** > **Neues Projekt** aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen**, erweitern Sie den Knoten **Visual Basic**, und klicken Sie auf den Knoten .**NET Core** und anschließend auf die Projektvorlage **Konsolen-App (.NET Core)** . Geben Sie im Textfeld **Name** „ShowCase“ ein, und klicken Sie auf die Schaltfläche **OK**.
@@ -87,6 +92,7 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 1. Ändern Sie ggf. die Symbolleiste, um das**Debugrelease** des `ShowCase`-Projekts zu kompilieren. Kompilieren Sie das Programm, und führen Sie es anschließend aus, indem Sie auf den grünen Pfeil auf der Schaltfläche **ShowCase** klicken.
 
    ![Debuggen auf der Symbolleiste – Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+
 ---
 
 Sie können die Anwendung, die diese Bibliothek verwendet, debuggen und schließlich veröffentlichen, indem Sie die Schritte in [Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017](debugging-with-visual-studio.md) und [Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017](publishing-with-visual-studio.md) ausführen.
