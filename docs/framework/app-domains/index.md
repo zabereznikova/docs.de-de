@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7124b6b234601e3afc27109ac318f47e3fe40c35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675350"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971927"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programmieren mit Anwendungsdomänen und Assemblys
 Hosts wie z.B. Microsoft Internet Explorer, ASP.NET und Windows-Shell laden die Common Language Runtime in einen Prozess, erstellen eine [Anwendungsdomäne](../../../docs/framework/app-domains/application-domains.md) in diesem Prozess und laden dann Benutzercode in diese Anwendungsdomäne und führen ihn aus, wenn eine .NET Framework-Anwendung ausgeführt wird. In den meisten Fällen müssen Sie sich nicht darum kümmern, Anwendungsdomänen zu erstellen und Assemblys hinein zu laden, da der Laufzeithost diese Aufgaben ausführt.  
@@ -28,14 +28,14 @@ Hosts wie z.B. Microsoft Internet Explorer, ASP.NET und Windows-Shell laden die 
  [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)  
  Stellt Beispiele zum Erstellen, Konfigurieren und Verwenden von Anwendungsdomänen bereit.  
   
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programmieren mit Assemblys](../../standard/assembly/program.md)  
  Beschreibt das Erstellen, Signieren und Festlegen von Attributen für Assemblys.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Beschreibt das Erstellen dynamischer Assemblys.  
   
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assemblys in .NET](../../standard/assembly/index.md)  
  Bietet eine konzeptionelle Übersicht über Assemblys.  
   
  [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)  

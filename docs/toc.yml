@@ -1070,24 +1070,6 @@
     - name: Programmierkonzepte
       href: visual-basic/programming-guide/concepts/index.md
       items:
-        - name: Assemblys
-          items:
-            - name: Friend-Assemblys
-              items:
-                - name: 'Vorgehensweise: Erstellen von unsignierten Friend-Assemblys'
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md
-                - name: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys'
-                  href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md
-            - name: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
-            - name: 'Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
-            - name: 'Vorgehensweise: Laden und Entladen von Assemblys'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md
-            - name: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/how-to-share-an-assembly-with-other-applications.md
-            - name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys'
-              href: visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md
         - name: Asynchrone Programmierung mit Async und Await
           href: visual-basic/programming-guide/concepts/async/index.md
         - name: Attribute

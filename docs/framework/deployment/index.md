@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d9448edab101ef11447b54e12c53abcb578646a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910972"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971602"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 
@@ -118,7 +118,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
 ## <a name="packaging-and-distributing-net-framework-applications"></a>Verpacken und Verteilen von .NET Framework-Anwendungen
 
-Einige Informationen über das Packen und Bereitstellen in .NET Framework erhalten Sie in anderen Abschnitten der Dokumentation. Diese Abschnitte enthalten Informationen zu den selbstbeschreibenden Einheiten mit dem Namen [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), die keine Registrierungseinträge benötigen, zu [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md), die die Eindeutigkeit der Namen gewährleisten und das Vortäuschen von Namen verhindern, sowie zu [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md), die viele der in Zusammenhang mit DLL-Konflikten auftretenden Probleme behandeln. In den folgenden Abschnitten finden Sie Informationen zum Verpacken und Verteilen von .NET Framework-Anwendungen.
+Einige Informationen über das Packen und Bereitstellen in .NET Framework erhalten Sie in anderen Abschnitten der Dokumentation. Diese Abschnitte enthalten Informationen zu den selbstbeschreibenden Einheiten mit dem Namen [Assemblys](../../standard/assembly/index.md), die keine Registrierungseinträge benötigen, zu [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md), die die Eindeutigkeit der Namen gewährleisten und das Vortäuschen von Namen verhindern, sowie zu [Assemblyversionen](../../standard/assembly/versioning.md), die viele der in Zusammenhang mit DLL-Konflikten auftretenden Probleme behandeln. In den folgenden Abschnitten finden Sie Informationen zum Verpacken und Verteilen von .NET Framework-Anwendungen.
 
 ### <a name="packaging"></a>Verpacken
 
