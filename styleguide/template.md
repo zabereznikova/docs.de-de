@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: d9a377941f54dbd42ae6eaec6c21a93dd48673a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 37133a90ae5bfa18ae17c279caff40d0d30ea25c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254015"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928925"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -445,6 +445,7 @@ Sie können den Markdownteil einer Datei über eine Includeanweisung in eine and
 Für Listen ist eine benutzerdefinierte Formatvorlage vorhanden. Sie können Listen mit grünen Häkchen darstellen.
 
 > [!div class="checklist"]
+>
 > - Erstellen einer .NET Core-App
 > - Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
 > - Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
@@ -463,8 +464,9 @@ Ein Beispiel für Schaltflächen in Aktion finden Sie in der [Visual Studio-Doku
 ### <a name="selectors"></a>Selektoren
 
 > [!div class="op_single_selector"]
-- [macOS](../docs/core/tutorials/using-on-macos.md)
-- [Windows](../docs/core/tutorials/with-visual-studio.md)
+>
+> - [macOS](../docs/core/tutorials/using-on-macos.md)
+> - [Windows](../docs/core/tutorials/with-visual-studio.md)
 
 Ein Beispiel für Selektoren in Aktion finden Sie in der [Azure-Dokumentation](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic).
 

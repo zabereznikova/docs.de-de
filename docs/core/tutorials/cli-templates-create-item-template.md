@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: c50aaf413f08c2e4cbe3f8ce8c057e5841067c92
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870609"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926150"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Erstellen einer Elementvorlage
 
@@ -19,6 +19,7 @@ Mit .NET Core können Sie Vorlagen erstellen und bereitstellen, die Projekte, D
 In diesem Teil der Reihe wird Folgendes vermittelt:
 
 > [!div class="checklist"]
+>
 > * Erstellen einer Klasse für eine Elementvorlage
 > * Erstellen des Konfigurationsordners und der Konfigurationsdatei der Vorlage
 > * Installieren einer Vorlage unter Verwendung eines Dateipfads
@@ -27,7 +28,7 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [.NET Core 2.2 SDK](https://www.microsoft.com/net/core) oder eine höhere Version
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) oder eine höhere Version
 * Lesen Sie den Referenzartikel [Benutzerdefinierte Vorlagen für dotnet new](../tools/custom-templates.md).
 
   Der Referenzartikel enthält grundlegende Informationen zu Vorlagen und zu deren Erstellung. Einige dieser Informationen werden hier wiederholt.

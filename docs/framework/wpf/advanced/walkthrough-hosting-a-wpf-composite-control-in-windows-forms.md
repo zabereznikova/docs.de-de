@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: bff89f1d81b16c8c66d73901ef951626f6d2cb9e
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a062095885e6c1fc8816a78847968b1c250eabf8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400619"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991449"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] den Code haben, kann es effektiver sein, die vorhandene [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt Sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein oder mehrere Steuerelemente, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementiert werden, in Ihre Windows Forms Anwendung einbetten möchten. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Anpassung von Steuer](../controls/control-customization.md)Elementen.  
@@ -116,7 +116,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Die grundlegende Struktur der CodeBehind-Datei  
  Die Code-Behind-Datei besteht aus einem einzelnen Namespace `MyControls`,, der zwei Klassen enthält, `MyControl1` und `MyControlEventArgs`.  
   
-```  
+```csharp  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -259,7 +259,7 @@ Die folgende Abbildung zeigt ein zusammengesetztes WPF-Steuerelement, das in ein
     |groupBox5|radioStyleOriginal|Normal|  
     |groupBox5|radioStyleItalic|Kursiv|  
     |groupBox6|radioWeightOriginal|Ursprünglich|  
-    |groupBox6|radioWeightBold|Fett|  
+    |groupBox6|radioWeightBold|Bold|  
   
 6. Fügen Sie der <xref:System.Windows.Forms.Label?displayProperty=nameWithType> letzten <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>die folgenden Steuerelemente hinzu. Diese Steuerelemente zeigen die vom zusammen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gesetzten Steuerelement zurückgegebenen Daten an.  
   
