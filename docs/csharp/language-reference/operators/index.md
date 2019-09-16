@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 0f7e99aaa171160a813b14dc818846052766551e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 403a79671128ffe95b45c2e18507bb804281d2c5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168609"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925047"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
 
@@ -56,7 +56,7 @@ Die folgende Tabelle listen die C#-Operatoren auf, und zwar von der höchsten zu
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | Bedingtes OR |
 | [x ?? y](null-coalescing-operator.md) | Nullzusammensetzungsoperator |
 | [c ? t : f](conditional-operator.md) | Bedingter Operator |
-| [x = y](assignment-operator.md), [x += y](arithmetic-operators.md#compound-assignment), [x -= y](arithmetic-operators.md#compound-assignment), [x *= y](arithmetic-operators.md#compound-assignment), [x /= y](arithmetic-operators.md#compound-assignment), [x %= y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^= y](boolean-logical-operators.md#compound-assignment), [x <<= y](bitwise-and-shift-operators.md#compound-assignment), [x >>= y](bitwise-and-shift-operators.md#compound-assignment), [=>](lambda-operator.md) | Zuweisungs- und Lambdadeklaration |
+| [x = y](assignment-operator.md), [x += y](arithmetic-operators.md#compound-assignment), [x -= y](arithmetic-operators.md#compound-assignment), [x *= y](arithmetic-operators.md#compound-assignment), [x /= y](arithmetic-operators.md#compound-assignment), [x %= y](arithmetic-operators.md#compound-assignment), [x &= y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^= y](boolean-logical-operators.md#compound-assignment), [x <<= y](bitwise-and-shift-operators.md#compound-assignment), [x >>= y](bitwise-and-shift-operators.md#compound-assignment), [x ??= y](null-coalescing-operator.md), [=>](lambda-operator.md) | Zuweisungs- und Lambdadeklaration |
 
 ## <a name="operator-associativity"></a>Operatorassoziativität
 

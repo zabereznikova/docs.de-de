@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606125"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925341"
 ---
 # <a name="c-reference"></a>C#-Referenz
 Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.  
@@ -38,30 +38,31 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.  
   
  [C#-Programmiersprachenspezifikation](../../../_csharplang/spec/introduction.md)  
- Die C# 6.0-Sprachspezifikation. Dies ist ein Entwurfsvorschlag für die C# 6.0-Sprache. Version 5.0 wurde im Dezember 2017 als Dokument [Standard ECMA-334, 5. Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) veröffentlicht.
+ Die C# 6.0-Sprachspezifikation. Dies ist ein Entwurfsvorschlag für die C# 6.0-Sprache. Dieses Dokument wird durch die Zusammenarbeit mit dem Ecma International-Ausschuss für C#-Standards weiterentwickelt. Version 5.0 wurde im Dezember 2017 als Dokument [Standard ECMA-334, 5. Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) veröffentlicht.
 
-Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprachspezifikationsvorschlägen dargestellt. Diese Dokumente beschreiben die Deltas der Sprachspezifikation, um diese neuen Features hinzuzufügen.
+Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprachspezifikationsvorschlägen dargestellt. Diese Dokumente beschreiben die Deltas der Sprachspezifikation, um diese neuen Features hinzuzufügen. Sie liegen in Entwurfsform vor. Diese Spezifikationen werden weiterentwickelt und zur formellen Prüfung und Implementierung in eine zukünftige Version des C#-Standards an den Ecma International-Normungsausschuss weitergeleitet.
 
- [C# 7.0-Sprachvorschläge](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ [Vorschläge für die C# 7.0-Spezifikation](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  Es gibt eine Reihe neuer Features, die in C# 7.0 implementiert wurden. Dazu gehören der Musterabgleich, lokale Funktionen, out-Variablendeklarationen, throw-Ausdrücke, binäre Literale und Zahlentrennzeichen. Dieser Ordner enthält die Spezifikationen für jedes dieser Features.
   
- [C# 7.1-Sprachvorschläge](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
+ [Vorschläge für die C# 7.1-Spezifikation](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
  In C# 7.1 wurden neue Features hinzugefügt. Erstens können Sie eine `Main`-Methode schreiben, die `Task` oder `Task<int>` zurückgibt. Dadurch können Sie den `async`-Modifizierer `Main` hinzufügen. Der `default`-Ausdruck kann ohne Typ an Stellen verwendet werden, an denen der Typ abgeleitet werden kann. Darüber hinaus können Tupelmembernamen abgeleitet werden. Schließlich kann Mustervergleich mit Generics verwendet werden.
 
- [C# 7.2-Sprachvorschläge](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
+ [Vorschläge für die C# 7.2-Spezifikation](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
  C# 7.2 hat eine Reihe von kleinen Features hinzugefügt. Sie können Argumente durch einen schreibgeschützten Verweis mit dem Schlüsselwort `in` übergeben. Es gibt eine Reihe von Low-Level-Änderungen, die die Sicherheit zur Kompilierzeit für `Span` und verwandte Typen unterstützen. Sie können benannte Argumente verwenden, bei denen spätere Argumente in einigen Situationen positional sind. Mit dem `private protected`-Zugriffsmodifizierer können Sie festlegen, dass Aufrufer auf abgeleitete Typen beschränkt sind, die in derselben Assembly implementiert sind. Der `?:`-Operator kann in einen Verweis auf eine Variable aufgelöst werden. Sie können auch hexadezimale und binäre Zahlen mit einem führenden Zifferntrennzeichen formatieren.
 
- [C# 7.3-Sprachvorschläge](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
+ [Vorschläge für die C# 7.3-Spezifikation](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
  C# 7.3 ist eine weitere Unterversion, die mehrere kleine Aktualisierungen enthält. Sie können neue Einschränkungen für generische Typparameter verwenden. Weitere Änderungen erleichtern das Arbeiten mit `fixed`-Feldern, einschließlich der Verwendung von [`stackalloc`](./operators/stackalloc.md)-Zuordnungen. Lokale Variablen, die mit dem Schlüsselwort `ref` deklariert wurden, können neu zugewiesen werden, um sich auf neuen Speicher zu beziehen. Sie können Attribute für automatisch implementierte Eigenschaften festlegen, die auf das vom Compiler generierte Sicherungsfeld abzielen. Ausdrucksvariablen können in Initialisierern verwendet werden. Tupel können hinsichtlich ihrer Gleichheit (oder Ungleichheit) verglichen werden. Außerdem wurden einige Verbesserungen an der Überladungsauflösung vorgenommen.
   
- [C# 8.0-Sprachvorschläge](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md) C# 8.0 ist in der Vorschau verfügbar. Die folgenden Vorschläge sind die aktuellen Versionen der Spezifikationen für diese Features. Einige sind vollständiger, an anderen wird noch gearbeitet. Zu den Features, die in Vorschauversionen enthalten sind, gehören Nullable-Verweistypen, rekursiver Musterabgleich, asynchrone Streams, Bereiche und Indizes, musterbasiertes using und using-Deklarationen sowie NULL-Zusammenfügungszuordnungen.
+ [Vorschläge für die C# 8.0-Spezifikation](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
+ C# 8.0 wird mit .NET Core 3.0 zur Verfügung gestellt. Zu den Features gehören Nullable-Verweistypen, rekursiver Musterabgleich, Standardschnittstellenmember, asynchrone Streams, Bereiche und Indizes, musterbasiertes using und using-Deklarationen, NULL-Sammelzuweisungen sowie schreibgeschützte Instanzmember.
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
  [Leitfaden für C#](../index.md)  
  Enthält ein Portal für die Visual C#-Dokumentation.  
   
- [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/get-started/csharp)  
  Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.  
   
  [C#-Programmierhandbuch](../programming-guide/index.md)  
