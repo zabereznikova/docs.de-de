@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f4d7cbd00dbf94900185643490b952ced7887965
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963390"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895220"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.  
@@ -98,7 +98,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
     |`^`|Beginnt den Abgleich am Anfang einer Zeile.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Sucht nach 0 oder 1 Vorkommen der Zeichenfolge `<PRIVATE>`, gefolgt von einem Leerzeichen. Weist die Übereinstimmung der Erfassungsgruppe `Pvt` zu.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Wenn die Erfassungsgruppe `Pvt` vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der ersten Erfassungsgruppe zu.|  
-    |<code>&#124;((\w+\p{P}?\s)+))<code>|Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.|  
+    |<code>&#124;((\w+\p{P}?\s)+))</code>|Wenn die Erfassungsgruppe `Pvt` nicht vorhanden ist, wird nach einem oder mehreren Vorkommen eines oder mehrerer Wortzeichen gesucht, denen 0 oder 1 Interpunktionszeichen und dann ein Leerzeichen folgen. Weist die Teilzeichenfolge der dritten Erfassungsgruppe zu.|  
     |`\r?$`|Gleicht das Ende einer Zeile oder das Ende der Zeichenfolge ab.|  
   
      Weitere Informationen zur bedingten Auswertung finden Sie unter [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
