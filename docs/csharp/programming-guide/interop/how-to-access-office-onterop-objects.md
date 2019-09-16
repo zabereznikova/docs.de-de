@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 19fff39969933baa2510458400cabf9646e0c48d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589133"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972091"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
 
@@ -137,7 +137,7 @@ Um diese exemplarische Vorgehensweise auszuführen, müssen Microsoft Office Exc
 
 ## <a name="to-set-the-embed-interop-types-property"></a>So legen Sie die Eigenschaft "Interop-Typen einbetten" fest
 
-1. Weitere Verbesserungen sind möglich, wenn Sie einen COM-Typ aufrufen, der keine primäre Interop-Assembly (PIA) zur Laufzeit benötigt. Das Entfernen der Abhängigkeit von PIAs führt zu einer Versionsunabhängigkeit und einfacheren Bereitstellung. Weitere Informationen zu den Vorteilen der Programmierung ohne PIAs finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).
+1. Weitere Verbesserungen sind möglich, wenn Sie einen COM-Typ aufrufen, der keine primäre Interop-Assembly (PIA) zur Laufzeit benötigt. Das Entfernen der Abhängigkeit von PIAs führt zu einer Versionsunabhängigkeit und einfacheren Bereitstellung. Weitere Informationen zu den Vorteilen der Programmierung ohne PIAs finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md).
 
      Darüber hinaus ist die Programmierung einfacher, da die Typen, die erforderlich sind und von COM-Methoden zurückgegeben werden, mithilfe des Typs `dynamic` anstelle von `Object` dargestellt werden können. Variablen vom Typ `dynamic` werden erst zur Laufzeit ausgewertet, wodurch die Notwendigkeit der expliziten Umwandlung entfällt. Weitere Informationen finden Sie unter [Verwenden von dynamischen Typen](../types/using-type-dynamic.md).
 

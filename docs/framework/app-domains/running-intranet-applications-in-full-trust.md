@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1996c8b317bbfed6362c759a257cafef8400e919
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592763"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971911"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit
 Ab .NET Framework version 3.5 Service Pack 1 (SP1) können Anwendungen und deren Bibliothekassemblys als Assemblys mit voller Vertrauenswürdigkeit von einer Netzwerkfreigabe ausgeführt werden. Der Zonenbeweis <xref:System.Security.SecurityZone.MyComputer> wird automatisch zu Assemblys hinzugefügt, die aus einer Intranetfreigabe geladen wurden. Durch diesen Beweis erhalten alle Assemblys den gleichen Satz an Berechtigungen (normalerweise volles Vertrauen) wie die Assemblys, die sich auf dem Computer befinden. Diese Funktion gilt nicht für ClickOnce-Anwendungen oder für Anwendungen, die dafür entwickelt wurden, auf einem Host ausgeführt zu werden.  
@@ -36,4 +36,4 @@ Ab .NET Framework version 3.5 Service Pack 1 (SP1) können Anwendungen und deren
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programmieren mit Assemblys](../../standard/assembly/program.md)

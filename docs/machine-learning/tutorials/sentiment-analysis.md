@@ -4,12 +4,12 @@ description: Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendu
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f89174204c13b907db5a41ed374e1a31c61dcf11
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107168"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929030"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Standpunktanalyse für Websitekommentare mit binärer Klassifikation in ML.NET
 
@@ -17,6 +17,7 @@ Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendung erstellen,
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Erstellen einer Konsolenanwendung
 > - Vorbereiten von Daten
 > - Laden der Daten
@@ -383,6 +384,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Erstellen einer Konsolenanwendung
 > - Vorbereiten von Daten
 > - Laden der Daten

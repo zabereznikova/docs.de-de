@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef10ba566842db26ed8c29643535c41aaca9806
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 4228da6efe22091c86de95d846c14f504d51457f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378657"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851284"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Konvertierungstool CorFlags)
 Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags-Abschnitts eines Headers eines portierbaren ausführbaren Images.  
@@ -24,17 +24,17 @@ Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 CorFlags.exe assembly [options]  
 ```  
   
 ## <a name="parameters"></a>Parameter  
   
-|Erforderlicher Parameter|Beschreibung|  
+|Erforderlicher Parameter|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |`assembly`|Der Name der Assembly, für die CorFlags konfiguriert werden soll.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Legt das 32BITREQUIRED-Flag fest.|  
 |**/32BIT[REQ]-**|Löscht das 32BITREQUIRED-Flag.|  

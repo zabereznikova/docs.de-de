@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93820120e91d80a3215673982348fd17f2fdb5d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac0b45db0e9aebae830155cbe2469514c392921d
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957972"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894827"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify-Tool)
 Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (Compilerentwickler, Skript-Engine-Entwickler usw.), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie als Entwickler einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes eingeschränkt wurde. Hierzu können Sie das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
@@ -28,7 +28,7 @@ Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Langu
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 peverify filename [options]  
 ```  
   
@@ -68,25 +68,25 @@ peverify filename [options]
 ## <a name="examples"></a>Beispiele  
  Der folgende Befehl validiert Metadaten und verifiziert die MSIL-Typsicherheit von Methoden, die in der `myAssembly.exe`-Assembly implementiert sind.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il  
 ```  
   
  Wenn diese Anforderung erfolgreich ausgeführt wurde, zeigt "Peverify.exe" die folgende Meldung an.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 ```  
   
  Der folgende Befehl validiert Metadaten und verifiziert die MSIL-Typsicherheit von Methoden, die in der `myAssembly.exe`-Assembly implementiert sind. Das Tool zeigt an, wie viel Zeit zur Durchführung dieser Überprüfungen erforderlich ist.  
   
-```  
+```console  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
  Wenn diese Anforderung erfolgreich ausgeführt wurde, zeigt "Peverify.exe" die folgende Meldung an.  
   
-```  
+```output
 All classes and methods in myAssembly.exe Verified  
 Timing: Total run     320 msec  
         MD Val.cycle  40 msec  
@@ -97,25 +97,25 @@ Timing: Total run     320 msec
   
  Der folgende Befehl validiert Metadaten und verifiziert die MSIL-Typsicherheit von Methoden, die in der `myAssembly.exe`-Assembly implementiert sind. "Peverify.exe" wird jedoch beendet, wenn es die maximale Fehleranzahl von 100 erreicht. Das Tool ignoriert auch die angegebenen Fehlercodes.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
  Der folgende Befehl führt zum gleichen Ergebnis wie das vorherige Beispiel, nur werden hier die in der Antwortdatei `ignoreErrors.rsp` zu ignorierenden Fehlercodes angegeben.  
   
-```  
+```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
  Die Antwortdatei kann eine durch Trennzeichen getrennte Liste von Fehlercodes enthalten.  
   
-```  
+```text
 0x12345678, 0xABCD1234  
 ```  
   
  Wahlweise kann die Antwortdatei auch mit einem Fehlercode pro Zeile formatiert werden.  
   
-```  
+```text
 0x12345678  
 0xABCD1234  
 ```  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 71368aa4b7bdd78e36b4e7ea5ceff932e116c5c1
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 8547973c5c8c7a70f429dc513b5ce2fb3c771e7e
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68235661"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70997623"
 ---
 ### <a name="accessibility-improvements-in-wpf"></a>Verbesserungen der Barrierefreiheit in WPF
 

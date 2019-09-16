@@ -1,12 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 88fb589ca2f9a24f861b528bfd601f837e9aac5f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105925"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851041"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C\#
 
@@ -22,7 +22,7 @@ In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objek
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Installieren Sie zum Erstellen und Ausführen von Builds das [.NET Core SDK](https://www.microsoft.com/net/core).
+- Installieren Sie zum Erstellen und Ausführen von Builds das [.NET Core SDK](https://dotnet.microsoft.com/download).
 
 - Installieren Sie Ihren bevorzugten Code-Editor, wenn Sie dies nicht bereits erledigt haben.
 

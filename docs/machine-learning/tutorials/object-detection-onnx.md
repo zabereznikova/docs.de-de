@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a5a11bc49fa834ebd6945e47767deb559244b459
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929091"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -21,6 +21,7 @@ Das von Grund auf neue Trainieren eines Objekterkennungsmodells erfordert das Fe
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Das Problem verstehen
 > - Erfahren Sie, was ONNX ist und wie ONNX mit ML.NET funktioniert.
 > - Verstehen des Modells
@@ -710,6 +711,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Das Problem verstehen
 > - Erfahren Sie, was ONNX ist und wie ONNX mit ML.NET funktioniert.
 > - Verstehen des Modells

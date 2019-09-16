@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5e80e044fe01172c587ef029186035a64cdf0b42
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492438"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971225"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 
@@ -26,25 +26,25 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 regasm assemblyFile [options]
 ```
 
 ## <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
+|Parameter|BESCHREIBUNG|
 |---------------|-----------------|
 |*assemblyFile*|Die in COM zu registrierende Assembly.|
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
-|**/codebase**|Es wird ein Codebase-Eintrag in der Registrierung erstellt. Mit dem Codebase-Eintrag wird der Dateipfad für eine Assembly festgelegt, die nicht im globalen Assemblycache installiert ist. Die Option sollte nicht angegeben werden, wenn Sie die zu registrierende Assembly später im globalen Assemblycache installieren. Bei dem mit der **/codebase**-Option festgelegten *assemblyFile*-Argument muss es sich um eine [Assembly mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md) handeln.|
+|**/codebase**|Es wird ein Codebase-Eintrag in der Registrierung erstellt. Mit dem Codebase-Eintrag wird der Dateipfad für eine Assembly festgelegt, die nicht im globalen Assemblycache installiert ist. Die Option sollte nicht angegeben werden, wenn Sie die zu registrierende Assembly später im globalen Assemblycache installieren. Bei dem mit der **/codebase**-Option festgelegten *assemblyFile*-Argument muss es sich um eine [Assembly mit starkem Namen](../../standard/assembly/strong-named.md) handeln.|
 |**/registered**|Mit dieser Option wird angegeben, dass dieses Tool nur auf bereits registrierte Typbibliotheken verweist.|
 |**/asmpath:directory**|Mit dieser Option wird ein Verzeichnis angegeben, in dem Assemblyverweise enthalten sind. Muss mit der Option **/regfile** verwendet werden|
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|
-|**/regfile** [**:** *regFile*]|Mit dieser Option wird die angegebene REG-Datei mit den erforderlichen Registrierungseinträgen für die Assembly generiert. Bei Angabe dieser Option wird die Registrierung nicht geändert. Sie können diese Option nicht zusammen mit der Option **/u** oder der Option **/tlb** verwenden.|
+|**/regfile** [ **:** *regFile*]|Mit dieser Option wird die angegebene REG-Datei mit den erforderlichen Registrierungseinträgen für die Assembly generiert. Bei Angabe dieser Option wird die Registrierung nicht geändert. Sie können diese Option nicht zusammen mit der Option **/u** oder der Option **/tlb** verwenden.|
 |**/silent** oder **/s**|Unterdrückt die Anzeige von Erfolgsmeldungen.|
-|**/tlb** [**:** *typeLibFile*]|Mit dieser Option wird eine Typbibliothek aus der angegebenen Assembly generiert, die Definitionen der in der Assembly definierten verfügbaren Typen enthält.|
+|**/tlb** [ **:** *typeLibFile*]|Mit dieser Option wird eine Typbibliothek aus der angegebenen Assembly generiert, die Definitionen der in der Assembly definierten verfügbaren Typen enthält.|
 |**/unregister** oder **/u**|Diese Option hebt die Registrierung der in *assemblyFile* gefundenen erstellbaren Klassen auf. Wenn Sie diese Option nicht angeben, registriert "Regasm.exe" die erstellbaren Klassen in der Assembly.|
 |**/verbose**|Mit dieser Option wird der ausführliche Modus angegeben. Es wird eine Liste aller Assemblys angezeigt, auf die verwiesen wird und für die eine Typbibliothek generiert werden muss, wenn zusätzlich die Option **/tlb** angegeben wurde.|
 |**/?** oder **/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|
@@ -68,19 +68,19 @@ Nach dem Registrieren einer Assembly mit „regasm.exe“ können Sie diese im [
 
 Mit dem folgenden Befehl werden alle in `myTest.dll` enthaltenen öffentlichen Klassen registriert.
 
-```
+```console
 regasm myTest.dll
 ```
 
 Mit dem folgenden Befehl wird die Datei `myTest.reg` generiert, in der alle erforderlichen Registrierungseinträge enthalten sind. Bei diesem Befehl wird die Registrierung nicht aktualisiert.
 
-```
+```console
 regasm myTest.dll /regfile:myTest.reg
 ```
 
 Mit dem folgenden Befehl werden alle in `myTest.dll` enthaltenen öffentlichen Klassen registriert. Außerdem wird die Typbibliothek `myTest.tlb`, in der die Definitionen aller in `myTest.dll` definierten öffentlichen Typen enthalten sind, generiert und registriert.
 
-```
+```console
 regasm myTest.dll /tlb:myTest.tlb
 ```
 

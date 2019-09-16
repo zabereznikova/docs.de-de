@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912494"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894867"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -28,7 +28,7 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 ildasm [options] [PEfilename] [options]
 ```
 
@@ -117,14 +117,14 @@ Ab .NET Framework 4.5 verarbeitet *Ildasm.exe* ein unbekanntes Marshall-BLOB (
 public void Test([MarshalAs((short)70)] int test) { }
 ```
 
-```
+```il
 // IL from Ildasm.exe output
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
 Ab .NET Framework 4.5 zeigt *Ildasm.exe* Attribute an, die auf Schnittstellenimplementierungen angewendet werden, wie im folgenden Auszug der Ausgabe von *Ildasm.exe* zu sehen:
 
-```
+```il
 .class public auto ansi beforefieldinit MyClass
   extends [mscorlib]System.Object
   implements IMyInterface

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 77b5e75fede1a4aa93eadcf7e21591d82f565cab
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104825"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929469"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -29,6 +29,7 @@ Für die Verwendung des Modell-Generators sind keine Machine Learning-Kenntnisse
 Sie können viele verschiedene Szenarien in den Modell-Generator einbinden, um ein Machine Learning-Modell für Ihre Anwendung zu erstellen.
 
 Ein Szenario ist eine Beschreibung der Art der Vorhersage, die Sie mit Ihren Daten treffen möchten. Beispiel:
+
 - Vorhersagen des zukünftigen Produktabsatzes auf der Grundlage historischer Verkaufsdaten
 - Klassifizieren der Stimmungen als positiv oder negativ anhand von Kundenrezensionen
 - Erkennen einer betrügerischen Banktransaktion
@@ -41,6 +42,7 @@ Sie müssen einen Machine-Learning-Modelltyp im Modellgenerator auswählen. Der 
 Für Szenarios, bei denen Sie eine Zahl vorhersagen möchten, lautet der Machine-Learning-Modelltyp `regression`.
 
 Für Szenarios, bei denen Sie eine Kategorie vorhersagen möchten, lautet der Machine-Learning-Modelltyp `classification`. Es gibt zwei Arten von Klassifizierung:
+
 - Klassifizierungen mit nur zwei Kategorien: `binary classification`.
 - Klassifizierungen mit drei oder mehr Kategorien: `multiclass classification`.
 
@@ -89,10 +91,12 @@ Sobald Sie Ihren Modelltyp ausgewählt haben, fordert der Modellgenerator Sie au
 ### <a name="choose-the-output-to-predict-label"></a>Auswählen der Ausgabe für die Vorhersage (Bezeichnung)
 
 Ein Dataset ist eine Tabelle mit Zeilen mit Trainingsbeispielen und Spalten mit Attributen. Jede Zeile enthält:
+
 - eine **Bezeichnung** (das Attribut, das Sie vorhersagen möchten)
 - **Features** (Attribute, die als Eingaben verwendet werden, um die Bezeichnung vorherzusagen).
 
 Für das Szenario der Hauspreisvorhersage könnten folgende Features verwendet werden:
+
 - die Quadratmeterzahl des Hauses
 - die Anzahl an Schlafzimmern und Badezimmern
 - die Postleitzahl

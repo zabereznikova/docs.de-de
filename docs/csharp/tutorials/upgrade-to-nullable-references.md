@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 0c95065e6c380fab6ba33432a32b3297e78027a3
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926626"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -17,6 +17,7 @@ C# 8 führt **Verweistypen, die NULL-Werte zulassen** ein, die Verweistypen auf 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
+>
 > - Aktivieren von NULL-Verweis-Überprüfungen beim Arbeiten mit Code.
 > - Diagnostizieren und Korrigieren verschiedener Warnungen im Zusammenhang mit NULL-Werten.
 > - Verwalten der Schnittstelle zwischen NULL-Werte zulassenden und NULL-Werte nicht zulassenden Kontexten.

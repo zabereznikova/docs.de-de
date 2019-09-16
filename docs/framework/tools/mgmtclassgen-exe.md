@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364018"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894646"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 mgmtclassgen   
 WMIClass [options]   
 ```  
@@ -96,7 +96,7 @@ WMIClass [options]
 ## <a name="examples"></a>Beispiele  
  Der folgende Befehl generiert eine verwaltete Klasse in C#-Code für die **Win32_LogicalDisk**-WMI-Klasse im **Root\cimv2**-Namespace. Das Tool schreibt die verwaltete Klasse in die Quelldatei, die sich unter „c:\disk.cs“ im **ROOT.CIMV2.Win32**-Namespace befindet.  
   
-```  
+```console  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   

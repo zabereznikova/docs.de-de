@@ -3,12 +3,12 @@ title: Versionierung in C# – Leitfaden für C#
 description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965669"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926581"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C\#
 
@@ -41,9 +41,9 @@ Folgende Punkte sollten Sie beachten, wenn Sie versuchen die Abwärtskompatibili
 * Virtuelle Methoden: Wenn Sie eine virtuelle Methode in Ihrer neuen Version in eine nicht-virtuelle Methode umwandeln, bedeutet das, dass die Projekte, die diese Methode außer Kraft setzen, aktualisiert werden müssen. Es handelt sich um eine schwere grundlegende Änderung, von der stark abgeraten wird.
 * Methodensignaturen: Wenn Sie beim Aktualisieren des Verhaltens einer Methode ebenfalls deren Signatur ändern müssen, sollten Sie stattdessen eine Überladung erstellen, damit der Code, der diese Methode aufruft, weiterhin funktioniert.
 Sie können die alte Methodensignatur immer so ändern, dass sie die neue Methodensignatur aufruft. Dadurch bleibt die Implementierung konsistent.
-* [Obsolete-Attribut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden.
-Dadurch sind Entwickler, die Ihre Bibliothek verwenden, besser auf grundlegende Änderungen vorbereitet.
+* [Obsolete-Attribut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden. Dadurch sind Entwickler, die Ihre Bibliothek verwenden, besser auf grundlegende Änderungen vorbereitet.
 * Optionale Methodenargumente: Wenn sie vorher optionale in obligatorische Methodenargumente umwandeln oder ihren Standardwert ändern, muss der gesamte Code, der diese Argumente nicht bereitstellt, aktualisiert werden.
+
 > [!NOTE]
 > Obligatorische Argumente in optionale Argumente umzuwandeln, sollte nur geringe Auswirkungen haben, besonders, wenn dadurch das Verhalten der Methode nicht geändert wird.
 
@@ -111,3 +111,4 @@ Derived Method One: Derived Method One
 Der `override`-Modifizierer wird beim Kompilieren ausgewertet, und der Compiler löst einen Fehler aus, wenn kein virtueller Member gefunden wird, der außer Kraft gesetzt werden kann.
 
 Ihre Kenntnis der besprochenen Techniken und Ihr Wissen, in welchen Situationen diese angewendet werden, kann einen großen Unterschied beim reibungslosen Übergang zwischen den Versionen einer Bibliothek ausmachen.
+ 

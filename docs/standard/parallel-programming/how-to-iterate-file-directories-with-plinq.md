@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f80f1903c4187a8da93d42ec6de363d097bcc37
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 5da70cdca16c83b33e525aea588c02c696702ac7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988172"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929157"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Vorgehensweise: Durchlaufen von Dateiverzeichnissen mit PLINQ
 Dieses Beispiel zeigt zwei einfache Möglichkeiten, um Vorgänge für Dateiverzeichnisse zu parallelisieren. Die erste Abfrage füllt mit der <xref:System.IO.Directory.GetFiles%2A>-Methode ein Array von Dateinamen in einem Verzeichnis und allen Unterverzeichnissen. Diese Methode erzeugt keine Rückgabe, solange nicht das gesamte Array aufgefüllt ist, und daher kann am Anfang des Vorgangs eine Wartezeit auftreten. Sobald das Array aufgefüllt ist, kann PLINQ es jedoch sehr schnell parallel verarbeiten.  
@@ -34,7 +34,7 @@ Dieses Beispiel zeigt zwei einfache Möglichkeiten, um Vorgänge für Dateiverze
   
  Achten Sie bei Verwendung von <xref:System.IO.Directory.GetFiles%2A> darauf, dass Sie über ausreichende Berechtigungen für alle Verzeichnisse in der Struktur verfügen. Andernfalls wird eine Ausnahme ausgelöst, und es werden keine Ergebnisse zurückgegeben. Bei Verwendung von <xref:System.IO.Directory.EnumerateDirectories%2A> in einer PLINQ-Abfrage ist es schwierig, E/A-Ausnahmen auf eine ordnungsgemäße Weise zu behandeln, die Ihnen erlaubt, die Iteration fortzusetzen. Wenn der Code E/A- oder nicht autorisierten Zugriff betreffende Ausnahmen behandeln muss, sollten Sie den unter [Vorgehensweise: Iterieren von Dateiverzeichnissen der Parallel-Klasse](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md) beschriebenen Ansatz in Betracht ziehen.  
   
- Wenn E/A-Wartezeit ein Problem ist, z.B. bei Datei-E/A über ein Netzwerk, erwägen Sie die Verwendung einer der in [TPL und herkömmliche asynchrone .NET Framework-Programmierung](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) und in diesem [Blogbeitrag](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/) beschriebenen asynchronen E/A-Techniken.  
+ Wenn E/A-Wartezeit ein Problem ist, z.B. bei Datei-E/A über ein Netzwerk, erwägen Sie die Verwendung einer der in [TPL und herkömmliche asynchrone .NET Framework-Programmierung](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) und in diesem [Blogbeitrag](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/) beschriebenen asynchronen E/A-Techniken.  
   
 ## <a name="see-also"></a>Siehe auch
 

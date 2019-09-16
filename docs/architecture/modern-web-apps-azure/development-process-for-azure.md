@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: dcd2616cd5638aa712c11e370d35111b248e88ec
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374048"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849591"
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -36,7 +36,7 @@ Egal, ob Sie eine vollständige und leistungsstarke integrierte Entwicklungsumge
 
 **Visual Studio Code und DotNet-CLI** (Plattformübergreifende Tools für Mac, Linux und Windows). Wenn Sie einen einfachen und plattformübergreifenden Editor bevorzugen, der jede beliebige Entwicklungssprache unterstützt, können Sie Microsoft Visual Studio Code und die DotNet-CLI verwenden. Diese Produkte bieten eine einfachen aber widerstandsfähigen Prozess, der den Entwicklungsworkflow optimiert. Darüber hinaus unterstützt Visual Studio Code Erweiterung für die C\#- und Webentwicklung durch Bereitstellung von IntelliSense und Verknüpfungen für Aufgaben im Editor.
 
-[.NET Core SDK herunterladen](https://www.microsoft.com/net/download/core)
+[.NET Core SDK herunterladen](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code herunterladen](https://code.visualstudio.com/download)
 

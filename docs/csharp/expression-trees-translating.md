@@ -3,12 +3,12 @@ title: Übersetzen von Ausdrucksbaumstrukturen
 description: Hier erfahren Sie, wie Sie auf jeden Knoten in einer Ausdrucksbaumstruktur zugreifen, während eine geänderte Kopie dieser Ausdrucksbaumstruktur erstellt wird.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: b3c575876b6d53e9db366f59ad45aac714923c45
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202954"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925842"
 ---
 # <a name="translating-expression-trees"></a>Übersetzen von Ausdrucksbaumstrukturen
 
@@ -191,7 +191,7 @@ Während die endgültige Antwort identisch ist, ist das Durchlaufen der Struktur
 
 ## <a name="learning-more"></a>Weitere Informationen
 
-Dieses Beispiel zeigt eine kleine Teilmenge des Codes, den Sie erstellen möchten, um die durch eine Ausdrucksbaumstruktur dargestellten Algorithmen zu durchlaufen und zu interpretieren. Für eine vollständige Beschreibung aller notwendigen Arbeiten zur Erstellung einer allgemeinen Bibliothek, die Ausdrucksbaumstrukturen in eine andere Sprache übersetzt, lesen Sie [diese Serie](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) von Matt Warren. Es wird bis ins Detail erklärt, wie jeder Code übersetzt wird, den Sie in einer Ausdrucksbaumstruktur finden könnten.
+Dieses Beispiel zeigt eine kleine Teilmenge des Codes, den Sie erstellen möchten, um die durch eine Ausdrucksbaumstruktur dargestellten Algorithmen zu durchlaufen und zu interpretieren. Für eine vollständige Beschreibung aller notwendigen Arbeiten zur Erstellung einer allgemeinen Bibliothek, die Ausdrucksbaumstrukturen in eine andere Sprache übersetzt, lesen Sie [diese Serie](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/) von Matt Warren. Es wird bis ins Detail erklärt, wie jeder Code übersetzt wird, den Sie in einer Ausdrucksbaumstruktur finden könnten.
 
 Ich hoffe, dass Sie jetzt die tatsächliche Leistungsfähigkeit von Ausdrucksbaumstrukturen gesehen haben.
 Sie können einen Satz von Code untersuchen, alle Änderungen vornehmen, die Sie für diesen Code haben möchten, und die geänderte Version ausführen. Da die Ausdrucksbaumstrukturen unveränderlich sind, können Sie neue Strukturen mithilfe der Komponenten von vorhandenen Strukturen erstellen. Dies minimiert die Menge an erforderlichem Arbeitsspeicher, um geänderte Ausdrucksbaumstrukturen zu erstellen.

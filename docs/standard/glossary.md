@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106920"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929077"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -85,6 +85,7 @@ Der Begriff „.NET-Umgebung“ unterscheidet sich von ähnlichen Begriffen wie 
 Allgemein handelt es sich dabei um eine umfassende Sammlung von APIs, die die Entwicklung und Bereitstellung von Anwendungen erleichtert, die auf einer bestimmten Technologie basieren. Allgemein sind ASP.NET Core und Windows Forms Beispiele für Anwendungsframeworks. Siehe auch [Bibliotheken](#library).
 
 Das Wort „Framework“ hat in den folgenden Begriffen eine spezifischere technische Bedeutung:
+
 - [.NET Framework](#net-framework)
 - [Zielframework](#target-framework)
 - [TFM (Zielframeworkmoniker)](#tfm)

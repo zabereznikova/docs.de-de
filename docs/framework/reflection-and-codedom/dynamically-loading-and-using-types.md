@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dbbf0f71eaefd0ef7fc7f2b5e69e47ce7b8db26
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915477"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894881"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamisches Laden und Verwenden von Typen
 Reflektion stellt Infrastruktur bereit, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. Visual Basic ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  
   
  Im folgenden Beispiel verwendet der Visual Basic-Compiler Reflektion implizit, um eine Methode für ein Objekt aufzurufen, dessen Typ zur Kompilierzeit nicht bekannt ist. Ein **HelloWorld**-Klasse verfügt über eine **PrintHello**-Methode, die „Hello World“ zusammen mit anderem Text ausgibt, der an die **PrintHello**-Methode übergeben wurde. Die in diesem Beispiel aufgerufene **PrintHello**-Methode ist eigentlich eine <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>-Methode. Im Visual Basic-Code kann die **PrintHello**-Methode aufgerufen werden, als ob der Typ des Objekts (helloObj) schon zur Kompilierzeit bekannt wäre (frühe Bindung) statt erst zur Runtime (späte Bindung).  
   
-```  
-Imports System  
+```vb
 Module Hello  
     Sub Main()  
         ' Sets up the variable.  

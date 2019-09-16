@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bb88127875e0e608c8e8de54ba669f84aa1da5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937990"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894754"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -26,7 +26,7 @@ Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer As
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 tlbexp assemblyName [options]  
 ```  
   
@@ -74,14 +74,14 @@ tlbexp assemblyName [options]
   
  Wenn Sie das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut verwenden, um einen <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType>-Wert `VT_UNKOWN` oder `VT_DISPATCH` anzugeben, ignoriert "Tlbexp.exe" jede nachfolgende Verwendung des Felds <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Betrachten Sie die folgenden Signaturen:  
   
-```  
+```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
  Die folgende Typbibliothek wird generiert:  
   
-```  
+```cpp 
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -99,13 +99,13 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
 ## <a name="examples"></a>Beispiele  
  Der folgende Befehl generiert eine Typbibliothek mit dem Namen der in `myTest.dll` gefundenen Assembly.  
   
-```  
+```console  
 tlbexp myTest.dll  
 ```  
   
  Der folgende Befehl generiert eine Typbibliothek mit dem Namen `clipper.tlb`.  
   
-```  
+```console  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
@@ -113,19 +113,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Importieren Sie zunächst mit "Tlbimp.exe" die Typbibliothek `myLib.tlb`, und speichern Sie sie als `myLib.dll`.  
   
-```  
+```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
  Der folgende Befehl verwendet den C#-Compiler zum Kompilieren von `Sample.dll,`, die auf die im vorhergehenden Beispiel erstellte `myLib.dll` verweist.  
   
-```  
+```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
  Der folgende Befehl generiert eine Typbibliothek für `Sample.dll`, die auf `myLib.dll` verweist.  
   
-```  
+```console  
 tlbexp Sample.dll  
 ```  
   

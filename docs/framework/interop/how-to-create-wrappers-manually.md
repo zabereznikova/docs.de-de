@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 5db0ec9050c74b27d3ee25a99dcf8e2319835ffb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304245"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894222"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Vorgehensweise: Manuelles Erstellen von Wrappern
 Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollten Sie mit einer vorhandenen IDL-Datei oder -Typbibliothek (IDL, Interface Definition Language – Sprache für die Schnittstellendefinition) beginnen. Wenn Sie nicht über eine IDL-Datei verfügen oder keine Typbibliotheksdatei generieren können, können Sie die COM-Typen simulieren, indem Sie verwaltete Deklarationen erstellen und die sich daraus ergebende Assembly in eine Typbibliothek exportieren.  
@@ -39,7 +39,7 @@ Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollte
   
  **IDL-Datei oder -Typbibliotheksdatei**  
   
-```  
+```cpp
  [  
 object,  
 uuid(40A8C65D-2448-447A-B786-64682CBEF133),  

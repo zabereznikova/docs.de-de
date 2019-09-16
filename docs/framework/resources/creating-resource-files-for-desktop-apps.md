@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313657"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851577"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
@@ -74,7 +74,7 @@ HelpMenuName=Help
 
  Leere Zeichenfolgen (eine Ressource, deren Wert <xref:System.String.Empty?displayProperty=nameWithType> ist) sind in Textdateien zulässig. Beispiel:
 
-```
+```text
 EmptyString=
 ```
 
@@ -131,7 +131,7 @@ vbc greeting.vb -resource:GreetingResources.resources
 
  Wenn Sie C# verwenden und die Quellcodedatei "Greeting.cs" genannt wird, erstellt der folgende Befehl eine ausführbare Datei, die die eingebettete RESOURCES-Datei einschließt:
 
- ```console
+```console
 csc greeting.cs -resource:GreetingResources.resources
 ```
 

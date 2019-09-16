@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b3f7363ec5f8c954dd55a9500dcf8f2e302424f
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592519"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894900"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Vorgehensweise: Erstellen einer Klasse mit CodeDOM
 Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompiliert, das eine Klasse erstellt, die zwei Felder, drei Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
@@ -107,7 +107,7 @@ Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompi
   
  Der generierte Quellcode erstellt die folgende Ausgabe, wenn er kompiliert und ausgeführt wird.  
   
-```  
+```output
 The object:  
  width = 5.3,  
  height = 6.9,  

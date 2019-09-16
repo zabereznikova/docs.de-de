@@ -4,12 +4,12 @@ description: Erfahren Sie, wie ein TensorFlow-Modell für die Bildklassifizierun
 ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: eb6e3d3f3a33aa7360802ce1bc6c16532539c828
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67804761"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929240"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Erneutes Trainieren einer TensorFlow-Bildklassifizierung mit Übertragungslernen und ML.NET
 
@@ -19,6 +19,7 @@ Das von Grund auf neue Trainieren eines Modells zur [Bildklassifizierung](https:
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Das Problem verstehen
 > * Wiederverwenden und Optimieren des vortrainierten Modells
 > * Klassifizieren von Bildern
@@ -263,7 +264,7 @@ public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
 Der folgende Code analysiert die `tags.tsv`-Datei, um den Dateipfad für die `ImagePath`-Eigenschaft dem Namen der Bilddatei hinzuzufügen und ihn und das `Label` in ein `ImageData`-Objekt zu laden. Fügen Sie ihn als erste Zeile der `ReadFromTsv()`-Methode hinzu.  Zum Anzeigen der Vorhersageergebnisse benötigen Sie den vollqualifizierten Dateipfad.
 
 [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
-In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/glossary.md#data), [Transformatoren](../resources/glossary.md#transformer) und [Kalkulatoren](../resources/glossary.md#estimator).
+In ML.NET werden die folgenden drei Hauptkonzepte genutzt: [Daten](../resources/glossary.md#data), [Transformatoren](../resources/glossary.md#transformer) (Transformers) und [Schätzer](../resources/glossary.md#estimator) (Estimators).
 
 ## <a name="reuse-and-tune-pre-trained-model"></a>Wiederverwenden und Optimieren des vortrainierten Modells
 
@@ -480,6 +481,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Das Problem verstehen
 > * Wiederverwenden und Optimieren des vortrainierten Modells
 > * Klassifizieren von Bildern mit einem geladenen Modell

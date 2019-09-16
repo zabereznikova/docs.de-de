@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: 5f7084ef638a1d04e0050eab447cb8903c973f45
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926546"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -375,7 +375,7 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
   <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures (Domänenereignisse vs. Integrationsereignisse in DDD und Microservicearchitekturen)**  \
-  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
+  <https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[Zurück](client-side-validation.md)

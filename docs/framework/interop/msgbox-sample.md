@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71d7bb4cc85b0388e18cc7304dfa8c7951eab629
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648590"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894154"
 ---
 # <a name="msgbox-sample"></a>MsgBox-Beispiel
 Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Parameter übergeben werden und wann das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>-Feld, das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld und das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>-Feld zu verwenden sind.  
@@ -25,7 +25,7 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
   
 - **MessageBox** aus „User32.dll“ exportiert.  
   
-    ```  
+    ```cpp
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
        UINT uType);  
     ```  

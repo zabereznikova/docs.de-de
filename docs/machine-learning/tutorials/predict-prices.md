@@ -4,12 +4,12 @@ description: In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein Regress
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: fe3afab4cbd3f77ed4498cc5081180910d7d0b9e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666625"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929448"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Vorhersagen von Preisen per Regression mit ML.NET
 
@@ -17,6 +17,7 @@ In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein [Regressionsmodell](
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Vorbereiten und Verstehen der Daten
 > * Laden und Transformieren der Daten
 > * Auswählen eines Lernalgorithmus
@@ -269,6 +270,7 @@ Herzlichen Glückwunsch! Hiermit haben Sie ein Machine Learning-Modell erfolgrei
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
+>
 > * Vorbereiten und Verstehen der Daten
 > * Erstellen einer Lernpipeline
 > * Laden und Transformieren der Daten

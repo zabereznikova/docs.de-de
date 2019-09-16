@@ -9,19 +9,19 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09f77a60255accc3e4b1c4fa5ea3d7526444e4cb
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177566"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894720"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretieren von Netzwerkablaufverfolgung
 Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung zum Erfassen von Aufrufen durch Ihre Anwendung an verschiedene <xref:System.Net>-Klassenmember verwenden. Die Ausgabe dieser Aufrufe ähnelt möglicherweise den folgenden Beispielen.  
   
-```  
+```output
 [588]   (4357)   Entering Socket#33574638::Send()  
-[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
+[588]   (4387)   Exiting Socket#33574638::Send()-> 61#61
 ```  
   
  Im vorhergehenden Beispiel ist [588] der eindeutige Bezeichner des aktuellen Threads. (4357) und (4387) sind Zeitstempel, die die Anzahl der Millisekunden seit dem Anwendungsstart angeben. Die Daten nach dem Zeitstempel geben an, dass die Methode **Socket.Send** von der Anwendung betreten und beendet wird. Das Objekt, das die Methode **Send** ausführt, besitzt „33574638“ als eindeutigen Bezeichner. Die Ablaufverfolgung zum Beenden der Methode enthält den Rückgabewert (im vorherigen Beispiel 61).  

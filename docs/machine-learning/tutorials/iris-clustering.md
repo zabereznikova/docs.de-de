@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 05/16/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 772558be14d207475d20083f5a6b729f03766471
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666648"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929101"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Kategorisieren von Schwertlilien unter Verwendung eines k-Means-Algorithmus mit ML.NET
 
@@ -18,6 +18,7 @@ Dieses Tutorial zeigt, wie Sie mit ML.NET ein [Clusteringmodell](../resources/ta
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Das Problem verstehen
 > - Auswählen der entsprechenden Machine Learning-Aufgabe
 > - Vorbereiten der Daten
@@ -185,6 +186,7 @@ Herzlichen Glückwunsch! Sie haben erfolgreich ein Machine Learning-Modell für 
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Das Problem verstehen
 > - Auswählen der entsprechenden Machine Learning-Aufgabe
 > - Vorbereiten der Daten

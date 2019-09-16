@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921586"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972022"
 ---
 # <a name="global-assembly-cache"></a>Globaler Assemblycache
 Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
@@ -44,6 +44,6 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys in .NET](../../standard/assembly/index.md)
 - [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
-- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md)

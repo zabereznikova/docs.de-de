@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6955c24c12936ef37bedea2a1dd290bac45a5a2e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321730"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894916"
 ---
 # <a name="accessing-custom-attributes"></a>Zugreifen auf benutzerdefinierte Attribute
 Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion benutzt werden, um deren Existenz und Werte abzufragen. In der .NET Framework Version 1.0 und 1.1 werden benutzerdefinierte Attribute im Ausführungskontext untersucht. Die .NET Framework Version 2.0 stellt einen neuen Ladekontext bereit, den reflektionsbezogener Ladekontext, der zum Untersuchen von Code benutzt werden kann, der nicht für die Ausführung geladen werden kann.  
@@ -34,7 +34,7 @@ Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion b
   
  Das folgende C#-Beispiel ist ein typisches Entwurfsmuster eines benutzerdefinierten Attributs. Es stellt das Runtimemodell der Reflektion des benutzerdefinierten Attributs dar.  
   
-```  
+```csharp
 System.DLL  
 public class DescriptionAttribute : Attribute  
 {  

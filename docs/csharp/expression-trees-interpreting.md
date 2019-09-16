@@ -3,12 +3,12 @@ title: Interpretieren von Ausdrücken
 description: Weitere Informationen zum Schreiben von Code, um die Struktur einer Ausdrucksbaumstruktur zu untersuchen.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: fcc16e7a0cef7b3ac24d99ccbddd93bed100a5bb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925683"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -357,6 +357,7 @@ Dieser Code stellt eine mögliche Implementierung für die mathematische *Fakult
 Ich könnte dies, wenn er bereits ein Delegat wäre, aber ich kann ihn nicht in seiner Form der Ausdrucksbaumstruktur aufrufen. Im Abschnitt zu [building expression trees (Erstellen von Ausdrucksbaumstrukturen)](expression-trees-building.md) werden Sie Techniken erlernen, um diese Einschränkung zu umgehen.
 
 In diesem Ausdruck können Knoten all dieser Typen auftreten:
+
 1. Gleich (binärer Ausdruck)
 2. Multiplizieren (binärer Ausdruck)
 3. Bedingt (der ? : Ausdruck)

@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: f1024e0bf245bbea23673cfb68de676383b672f2
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a5668d36e972699218633d8b8630d38a5c7cc9a3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051901"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853872"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installieren von .NET Framework unter Windows Vista und Windows Server 2008
 
@@ -34,6 +34,6 @@ Sie können [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Herunterladen von .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Herunterladen von .NET Framework](https://dotnet.microsoft.com/download)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installieren von .NET Framework für Entwickler](guide-for-developers.md)

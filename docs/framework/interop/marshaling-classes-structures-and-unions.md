@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 09179ebe123f1287c8b057783bb421153f5e1183
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469730"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894178"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Eigenschaften und Ereignisse enthalten. Sie können auch über statische und nicht statische Methoden verfügen. Ein deutlicher Unterschied ist, dass Strukturen Werttypen sind, während Klassen Verweistypen sind.  
   
  In der folgende Tabelle werden Marshallingoptionen für Klassen, Strukturen und Unions aufgelistet. Ihre Verwendung wird beschrieben, und es werden Links zu den entsprechenden Plattformaufrufbeispielen bereitgestellt.  
   
-|Typ|Beschreibung|Beispiel|  
+|Typ|BESCHREIBUNG|Beispiel|  
 |----------|-----------------|------------|  
 |Klasse als Wert.|Übergibt eine Klasse mit ganzzahligen Membern als In/Out-Parameter, wie der verwaltete Fall.|SysTime-Beispiel|  
 |Struktur als Wert.|Übergibt Strukturen als In-Parameter.|Beispiel für Strukturen|  
@@ -52,25 +52,25 @@ Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Ei
   
 - **TestStructInStruct** aus „PinvokeLib.dll“ exportiert.  
   
-    ```  
+    ```cpp  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
 - **TestStructInStruct3** aus „PinvokeLib.dll“ exportiert.  
   
-    ```  
+    ```cpp  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
 - **TestStructInStruct** aus „PinvokeLib.dll“ exportiert.  
   
-    ```  
+    ```cpp  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die Implementierungen für die zuvor aufgelisteten Funktionen und vier Strukturen enthält: **MYPERSON**, **MYPERSON2**, **MYPERSON3** und **MYARRAYSTRUCT**. Diese Strukturen enthalten die folgenden Elemente:  
   
-```  
+```cpp  
 typedef struct _MYPERSON  
 {  
    char* first;   
@@ -135,13 +135,13 @@ typedef struct _MYARRAYSTRUCT
   
 - **FindFirstFile** aus „Kernel32.dll“ exportiert.  
   
-    ```  
+    ```cpp
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
     ```  
   
  Die ursprüngliche, an die Funktion übergebene Struktur enthält die folgenden Elemente:  
   
-```  
+```cpp
 typedef struct _WIN32_FIND_DATA   
 {  
   DWORD    dwFileAttributes;   
@@ -178,13 +178,13 @@ typedef struct _WIN32_FIND_DATA
   
 - **TestUnion** aus „PinvokeLib.dll“ exportiert.  
   
-    ```  
+    ```cpp
     void TestUnion(MYUNION u, int type);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die eine Implementierung für die zuvor aufgelistete Funktion und zwei Unions enthält: **MYUNION** und **MYUNION2**. Die Union enthält die folgenden Elemente:  
   
-```  
+```cpp
 union MYUNION  
 {  
     int number;  
@@ -221,13 +221,13 @@ union MYUNION2
   
 - **GetSystemTime** aus Kernel32.dll exportiert.  
   
-    ```  
+    ```cpp
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
     ```  
   
  Die ursprüngliche, an die Funktion übergebene Struktur enthält die folgenden Elemente:  
   
-```  
+```cpp
 typedef struct _SYSTEMTIME {   
     WORD wYear;   
     WORD wMonth;   
@@ -256,7 +256,7 @@ typedef struct _SYSTEMTIME {
   
  Dieses Beispiel verwendet eine Wrapperfunktion und Plattformaufrufe, die in [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) definiert sind und auch in den Quelldateien bereitgestellt werden. Es verwendet die `TestOutArrayOfStructs`-Funktion und die `MYSTRSTRUCT2`-Struktur. Die Struktur enthält die folgenden Elemente:  
   
-```  
+```cpp
 typedef struct _MYSTRSTRUCT2  
 {  
    char* buffer;  

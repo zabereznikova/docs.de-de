@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad15c0d4bd69417fffd8bcad0805a3b78321e05b
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777512"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894948"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -213,7 +213,7 @@ Weitere Informationen für die Verwendung mit .NET Framework 3.5.1 finden Sie un
 
 Die folgende _.REG_-Datei legt die Registrierungsschlüssel und deren Varianten auf die sichersten Werte fest:
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]

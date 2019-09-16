@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Prod
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: ed75f1ba0b102ba73eb5671667b5731519c12eb0
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733279"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929057"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Erkennen von Anomalien in Produktverkäufen mit ML.NET
 
@@ -17,6 +17,7 @@ Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Produktvertriebsd
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Laden der Daten
 > * Erstellen einer Transformation zur Erkennung von Anomaliespitzen
 > * Erkennen von Anomaliespitzen mit der Transformation
@@ -372,6 +373,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > * Laden der Daten
 > * Trainieren des Modells zur Erkennung von Anomaliespitzen
 > * Erkennen von Anomaliespitzen mit dem trainierten Modell

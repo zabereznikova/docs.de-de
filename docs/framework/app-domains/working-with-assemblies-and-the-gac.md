@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62760cb9fe5832ee018ebdebf6275ea61691c738
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f45f40cd66c63e660b9091c726533dcfe8db086
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927797"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971583"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Arbeiten mit Assemblys und dem globalen Assemblychache
 Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen möchten, können Sie die Assembly im globalen Assemblycache installieren. Jeder Computer, auf dem die Common Language Runtime installiert ist, verfügt über diesen computerweiten Codecache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind. Eine Assembly muss einen starken Namen haben, um im globalen Assemblycache installiert werden zu können.  
@@ -46,7 +46,7 @@ Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen m
  Beachten Sie, dass es Szenarien gibt, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit XCOPY das Anwendungsverzeichnis kopieren. In einem solchen Fall müssen Sie die Assembly ebenfalls im globalen Assemblycache ablegen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](install-assembly-into-gac.md)  
  Beschreibt die Möglichkeiten, eine Assembly im globalen Assemblycache zu installieren.  
   
  [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
@@ -59,17 +59,17 @@ Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen m
  Erläutert, warum Serviced Components (verwaltete COM+-Komponenten) im globalen Assemblycache abgelegt werden sollten.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+ [Erstellen von Assemblys](../../standard/assembly/create.md)  
  Bietet eine Übersicht über das Erstellen von Assemblys.  
   
  [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
  Beschreibt den globalen Assemblycache.  
   
- [Vorgehensweise: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Vorgehensweise: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)  
  Erläutert, wie der [IL-Disassembler („ildasm.exe“)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwendet wird, um Microsoft Intermediate Language-Informationen (MSIL) in einer Assembly anzuzeigen.  
   
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  Beschreibt, wie die Assemblys, die die Anwendung bilden, von der Common Language Runtime gesucht und geladen werden.  
   
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Programmieren mit Assemblys](../../standard/assembly/program.md)  
  Beschreibt Assemblys, die die Bausteine verwalteter Anwendungen bilden.

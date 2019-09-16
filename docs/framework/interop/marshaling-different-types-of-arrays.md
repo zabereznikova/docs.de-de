@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 358c7f1a339fd473271574a4e97e201f5c15f871
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648596"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894170"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  
   
  Die folgende Tabelle enthält eine Liste der Marshallingoptionen für Arrays und beschreibt deren Verwendung.  
   
-|Array|Beschreibung|  
+|Array|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Aus ganzen Zahlen nach Wert|Übergibt ein aus ganzen Zahlen bestehendes Array als In-Parameter.|  
 |Aus ganzen Zahlen nach Verweis|Übergibt ein aus ganzen Zahlen bestehendes Array als In-/Out-Parameter.|  
@@ -52,43 +52,43 @@ Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente 
   
 - **TestArrayOfInts** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
 - **TestRefArrayOfInts** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
 - **TestMatrixOfInts** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
 - **TestArrayOfStrings** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
 - **TestArrayOfStructs** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
 - **TestArrayOfStructs2** aus PinvokeLib.dll exportiert.  
   
-    ```  
+    ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
  [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die Implementierungen für die zuvor aufgelisteten Funktionen und zwei Strukturvariablen ( **MYPOINT** und **MYPERSON**) enthält. Die Strukturen enthalten die folgenden Elemente:  
   
-```  
+```cpp
 typedef struct _MYPOINT  
 {  
    int x;   

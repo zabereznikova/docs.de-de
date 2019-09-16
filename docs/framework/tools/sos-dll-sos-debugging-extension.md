@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690165"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894629"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS-Debugerweiterung)
 
@@ -21,19 +21,19 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 
 ## <a name="syntax"></a>Syntax
 
-```shell
+```console
 ![command] [options]
 ```
 
 ## <a name="commands"></a>Befehle
 
-|Befehl|Beschreibung|
+|Befehl|BESCHREIBUNG|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|Zeigt die Informationen zum letzten OOM-Ereignis (Out-of-Memory) an, das bei einer Speicherbelegungsanforderung an den Garbage Collection-Heap aufgetreten ist. (Bei Garbage Collection auf einem Server wird ggf. für jeden Garbage Collection-Heap OOM angezeigt.)|
 |**BPMD** [ **-nofuturemodule**] [\<*Modulname*> \<*Methodenname*>] [ **-md** <`MethodDesc`>] **-list** **-clear** \<*Ausstehende Haltepunktnummer*>  **-clearall**|Erstellt einen Haltepunkt bei der angegebenen Methode im angegebenen Modul.<br /><br /> Wenn das angegebene Modul und die entsprechende Methode nicht geladen wurden, wartet dieser Befehl vor dem Erstellen eines Haltepunkts auf die Benachrichtigung, dass das Modul geladen und JIT-kompiliert (Just-in-Time) wurde.<br /><br /> Sie können die Liste der ausstehenden Haltepunkte mithilfe der Optionen **-list**, **-clear** und **-clearall** verwalten:<br /><br /> Mit der Option **-list** wird eine Liste aller ausstehenden Haltepunkte generiert. Wenn ein ausstehender Haltepunkt eine Modul-ID ungleich 0 (null) aufweist, ist dieser Haltepunkt für eine Funktion in diesem bestimmten geladenen Modul spezifisch. Wenn die Modul-ID eines ausstehenden Haltepunkts 0 (null) lautet, gilt dieser Haltepunkt für noch nicht geladene Module.<br /><br /> Verwenden Sie zum Entfernen ausstehender Haltepunkte aus der Liste die Option **-clear** oder die Option **-clearall**.|
 |**CLRStack** [ **-a**] [ **-l**] [ **-p**] [ **-n**]|Stellt eine Stapelüberwachung ausschließlich für verwalteten Code bereit.<br /><br /> Mit der Option **-p** werden Argumente zur verwalteten Funktion angezeigt.<br /><br /> Durch die Option **-l** werden Informationen zu lokalen Variablen in einem Frame angezeigt. Da von der SOS-Debugerweiterung keine lokalen Namen abgerufen werden können, weist die Ausgabe für lokale Namen das Format \<*lokale Adresse*>  **=** \<*Wert*> auf.<br /><br /> Die Option **-a** (alles) kann als Kurzform für die Kombination von **-l** und **-p** verwendet werden.<br /><br /> Durch die Option **-n** wird die Anzeige von Quelldateinamen und Zeilennummern deaktiviert. Wenn für den Debugger die SYMOPT_LOAD_LINES-Option angegeben wird, sucht SOS die Symbole aller verwalteten Frames und zeigt ggf. den entsprechenden Quelldateinamen und die Zeilennummer an. Der Parameter **-n** (keine Zeilennummern) kann angegeben werden, um dieses Verhalten zu deaktivieren.<br /><br /> Auf x64- und IA-64-basierten Plattformen werden von der SOS-Debugerweiterung keine Übergangsframes angezeigt.|
 |**COMState**|Listet für jeden Thread das COM-Apartmentmodell und einen `Context`-Zeiger auf, falls verfügbar.|
-|**DumpArray** [ **-start** \<*startIndex*>] [ **-length** \<*Länge*>] [ **-details**] [ **-nofields**] \<*Arrayobjektadresse*><br /><br /> - oder -<br /><br /> **DA** [ **-start** \<*startIndex*>] [ **-length** \<*Länge*>] [ **-detail**] [ **-nofields**] *Arrayobjektadresse*>|Überprüft Elemente eines Arrayobjekts.<br /><br /> Die Option **-start** gibt den Startindex an, ab dem Elemente angezeigt werden sollen.<br /><br /> Die Option **-length** gibt an, wie viele Elemente angezeigt werden sollen.<br /><br /> Die Option **-details** zeigt mithilfe des **DumpObj**-Formats und des **DumpVC**-Formats Elementdetails an.<br /><br /> Die Option **-nofields** verhindert die Anzeige von Arrays. Diese Option steht nur bei angegebener Option **-detail** zur Verfügung.|
+|**DumpArray** [ **-start** \<*startIndex*>] [ **-length** \<*Länge*>] [ **-details**] [ **-nofields**] \<*Arrayobjektadresse*><br /><br /> Oder<br /><br /> **DA** [ **-start** \<*startIndex*>] [ **-length** \<*Länge*>] [ **-detail**] [ **-nofields**] *Arrayobjektadresse*>|Überprüft Elemente eines Arrayobjekts.<br /><br /> Die Option **-start** gibt den Startindex an, ab dem Elemente angezeigt werden sollen.<br /><br /> Die Option **-length** gibt an, wie viele Elemente angezeigt werden sollen.<br /><br /> Die Option **-details** zeigt mithilfe des **DumpObj**-Formats und des **DumpVC**-Formats Elementdetails an.<br /><br /> Die Option **-nofields** verhindert die Anzeige von Arrays. Diese Option steht nur bei angegebener Option **-detail** zur Verfügung.|
 |**DumpAssembly** \<*Assemblyadresse*>|Zeigt Informationen zu einer Assembly an.<br /><br /> Falls vorhanden, werden durch den Befehl **DumpAssembly** mehrere Module aufgelistet.<br /><br /> Mit dem Befehl **DumpDomain** kann eine Assemblyadresse abgerufen werden.|
 |**DumpClass** \<*EEClass-Adresse*>|Zeigt Informationen zu der einem Typ zugeordneten `EEClass`-Struktur an.<br /><br /> Mit dem Befehl **DumpClass** werden statische, jedoch keine nicht statischen Feldwerte angezeigt.<br /><br /> Verwenden Sie den Befehl **DumpMT**, **DumpObj**, **Name2EE** oder **Token2EE**, um eine `EEClass`-Strukturadresse abzurufen.|
 |**DumpDomain** [\<*Domänenadresse*>]|Listet jedes innerhalb der angegebenen <xref:System.Reflection.Assembly>-Objektadresse geladene <xref:System.AppDomain>-Objekt auf.  Bei einem Aufruf ohne Parameter werden durch den **DumpDomain**-Befehl alle <xref:System.AppDomain>-Objekte in einem Prozess aufgelistet.|
@@ -44,12 +44,12 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**DumpMT** [ **-MD**] \<*MethodTable-Adresse*>|Zeigt Informationen zu einer Methodentabelle bei der angegebenen Adresse an. Durch Angabe der Option **-MD** wird eine Liste aller mit dem Objekt definierten Methoden angezeigt.<br /><br /> Jedes verwaltete Objekt enthält einen Methodentabellenzeiger.|
 |**DumpMethodSig** \<*Signaturadresse*> <*Moduladresse*`r`>|Zeigt Informationen zu einer `MethodSig`-Struktur bei der angegebenen Adresse an.|
 |**DumpModule** [ **-mt**] \<*Moduladresse*>|Zeigt Informationen zu einem Modul bei der angegebenen Adresse an. Mit der Option **-mt** werden sowohl die in einem Modul definierten und als auch die Typen angezeigt, auf die vom Modul verwiesen wird.<br /><br /> Die Adresse eines Moduls kann mithilfe des **DumpDomain**-Befehls oder **DumpAssembly**-Befehls abgerufen werden.|
-|**DumpObj** [ **-nofields**] \<*Objektadresse*><br /><br /> - oder -<br /><br /> **DO** \<*Objektadresse*>|Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an. Durch den Befehl **DumpObj** werden die Felder, die `EEClass`-Strukturinformationen, die Methodentabelle und die Größe des Objekts angezeigt.<br /><br /> Die Adresse eines Objekts kann mithilfe des Befehls **DumpStackObjects** abgerufen werden.<br /><br /> Beachten Sie, dass der Befehl **DumpObj** für Felder vom Typ `CLASS` ausgeführt werden kann, da es sich bei diesen ebenfalls um Objekte handelt.<br /><br /> Mit der Option `-`**nofields** kann die Anzeige von Feldern des Objekts verhindert werden. Dies ist beispielsweise bei Objekten wie „String“ nützlich.|
+|**DumpObj** [ **-nofields**] \<*Objektadresse*><br /><br /> Oder<br /><br /> **DO** \<*Objektadresse*>|Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an. Durch den Befehl **DumpObj** werden die Felder, die `EEClass`-Strukturinformationen, die Methodentabelle und die Größe des Objekts angezeigt.<br /><br /> Die Adresse eines Objekts kann mithilfe des Befehls **DumpStackObjects** abgerufen werden.<br /><br /> Beachten Sie, dass der Befehl **DumpObj** für Felder vom Typ `CLASS` ausgeführt werden kann, da es sich bei diesen ebenfalls um Objekte handelt.<br /><br /> Mit der Option `-`**nofields** kann die Anzeige von Feldern des Objekts verhindert werden. Dies ist beispielsweise bei Objekten wie „String“ nützlich.|
 |**DumpRuntimeTypes**|Zeigt die Laufzeittypobjekte im Garbage Collector-Heap an und listet die zugehörigen Typnamen sowie Methodentabellen auf.|
 |**DumpStack** [ **-EE**] [ **-n**] [`top`-*Stapel* [`bottom`-*Stapel*`k`]]|Zeigt eine Stapelüberwachung an.<br /><br /> Mit der Option **-EE** werden durch den Befehl **DumpStack** nur verwaltete Funktionen angezeigt. Verwenden Sie den `top`-Parameter und den `bottom`-Parameter, um die auf x86-Plattformen angezeigten Stapelrahmen einzuschränken.<br /><br /> Durch die Option **-n** wird die Anzeige von Quelldateinamen und Zeilennummern deaktiviert. Wenn für den Debugger die SYMOPT_LOAD_LINES-Option angegeben wird, sucht SOS die Symbole aller verwalteten Frames und zeigt ggf. den entsprechenden Quelldateinamen und die Zeilennummer an. Der Parameter **-n** (keine Zeilennummern) kann angegeben werden, um dieses Verhalten zu deaktivieren.<br /><br /> Auf x86- und x64-Plattformen wird durch den Befehl **DumpStack** eine ausführliche Stapelüberwachung erstellt.<br /><br /> Auf IA-64-basierten Plattformen wird durch Befehl **DumpStack** der Befehl **K** des Debuggers imitiert. Der `top`- Parameter und der `bottom`-Parameter werden auf IA-64-basierten Plattformen ignoriert.|
 |**DumpSig** \<*Signaturadresse*> \<*Moduladresse*>|Zeigt Informationen zu einer `Sig`-Struktur bei der angegebenen Adresse an.|
 |**DumpSigElem** \<*Signaturadresse*> \<*Moduladresse*>|Zeigt ein einzelnes Element eines Signaturobjekts an. In den meisten Fällen sollten Sie einzelne Signaturobjekte mithilfe von **DumpSig** anzeigen. Wenn eine Signatur jedoch irgendwie beschädigt wurde, können mithilfe von **DumpSigElem** die gültigen Teile ausgelesen werden.|
-|**DumpStackObjects** [ **-verify**] [`top`-*Stapel* [`bottom`-*Stapel*]]<br /><br /> - oder -<br /><br /> **DSO** [ **-verify**] [`top`-*Stapel* [`bottom`-*Stapel*]]|Zeigt alle innerhalb der Grenzen des aktuellen Stapels gefundenen verwalteten Objekte an.<br /><br /> Mit der Option **-verify** wird jedes nicht statische `CLASS`-Feld eines Objektfelds überprüft.<br /><br /> Verwenden Sie den Befehl **DumpStackObject** mit Stapelüberwachungsbefehlen, z.B. dem **K**-Befehl und dem **CLRStack**-Befehl, um die Werte lokaler Variablen und Parameter zu ermitteln.|
+|**DumpStackObjects** [ **-verify**] [`top`-*Stapel* [`bottom`-*Stapel*]]<br /><br /> Oder<br /><br /> **DSO** [ **-verify**] [`top`-*Stapel* [`bottom`-*Stapel*]]|Zeigt alle innerhalb der Grenzen des aktuellen Stapels gefundenen verwalteten Objekte an.<br /><br /> Mit der Option **-verify** wird jedes nicht statische `CLASS`-Feld eines Objektfelds überprüft.<br /><br /> Verwenden Sie den Befehl **DumpStackObject** mit Stapelüberwachungsbefehlen, z.B. dem **K**-Befehl und dem **CLRStack**-Befehl, um die Werte lokaler Variablen und Parameter zu ermitteln.|
 |**DumpVC** \<*MethodTable-Adresse*> \<*Adresse*>|Zeigt Informationen zu den Feldern einer Wertklasse bei der angegebenen Adresse an.<br /><br /> Mit dem Parameter **MethodTable** können Felder durch den Befehl **DumpVC** ordnungsgemäß interpretiert werden. Beim ersten Feld von Wertklassen handelt es sich nicht um eine Methodentabelle.|
 |**EEHeap** [ **-gc**] [ **-loader**]|Zeigt Informationen zu dem von internen CLR-Datenstrukturen verwendeten Prozessspeicher an.<br /><br /> Mit den Optionen **-gc** und **-loader** wird die Ausgabe dieses Befehls auf Garbage Collector- oder Ladeprogrammdatenstrukturen begrenzt.<br /><br /> In den Garbage Collector-Informationen werden die Bereiche jedes Segments im verwalteten Heap aufgelistet.  Wenn der Zeiger in einem durch **-gc** angegebenen Segmentbereich liegt, handelt es sich um einen Objektzeiger.|
 |**EEStack** [ **-short**] [ **-EE**]|Führt den Befehl **DumpStack** für alle Threads des Prozesses aus.<br /><br /> Die Option **-EE** wird direkt an den Befehl **DumpStack** übergeben. Mit dem Parameter **-short** wird die Ausgabe auf folgende Arten von Threads begrenzt:<br /><br /> Gesperrte Threads<br /><br /> Zwecks Ausführung einer Garbage Collection verzögerte Threads<br /><br /> Threads, die sich derzeit in verwaltetem Code befinden|
@@ -74,9 +74,9 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**IP2MD** \<*Codeadresse*>|Zeigt die `MethodDesc`-Struktur bei der angegebenen Adresse in JIT (Just-In-Time)-kompiliertem Code an.|
 |`ListNearObj` (`lno`) *\<obj_address>*|Zeigt die Objekte an, die der angegebenen Adresse vorausgehen und darauf folgen. Der Befehl sucht im Garbage Collection-Heap nach der Adresse, die wie ein gültiger Anfang eines verwalteten Objekts aussieht (auf Grundlage einer gültigen Methodentabelle), und nach dem Objekt, das der Argumentadresse folgt.|
 |**MinidumpMode** [**0**] [**1**]|Verhindert die Ausführung von unsicheren Befehlen bei einem Minidump.<br /><br /> Durch Übergabe von **0** wird diese Funktion deaktiviert und durch **1** aktiviert. In der Standardeinstellung ist der Wert **MinidumpMode** auf **0** festgelegt.<br /><br /> Minidumps, die mit dem Befehl **.dump /m** oder dem Befehl **.dump** erstellt wurden, weisen eingeschränkte CLR-spezifische Daten auf. Daher können nur einige der SOS-Befehle ordnungsgemäß ausgeführt werden. Bei einigen Befehlen können unerwartete Fehlern auftreten, da erforderliche Speicherbereiche nicht oder nur teilweise zugeordnet sind. Mit dieser Option wird die Ausführung unsicherer Befehle bei Minidumps verhindert.|
-|**Name2EE** \<*Modulname*> \<*Typ- oder Methodenname*><br /><br /> - oder -<br /><br /> **Name2EE** \<*Modulname*> **!** \<*Typ- oder Methodenname*>|Zeigt die `MethodTable`-Struktur und die `EEClass`-Struktur für den angegebenen Typ oder die angegebene Methode im angegebenen Modul an.<br /><br /> Das angegebene Modul muss im Prozess geladen werden.<br /><br /> Durchsuchen Sie das Modul mit dem [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md), um den richtigen Typnamen abzurufen. Sie können auch `*` als Modulnamensparameter übergeben, um alle geladenen verwalteten Module zu durchsuchen. Beim Parameter *Modulname* kann es sich auch um den Namen des Debuggers für ein Modul handeln, z.B. `mscorlib` oder `image00400000`.<br /><br /> Von diesem Befehl wird die Windows-Debuggersyntax <`module`>`!`<`type`> unterstützt. Der Typ muss vollqualifiziert sein.|
+|**Name2EE** \<*Modulname*> \<*Typ- oder Methodenname*><br /><br /> Oder<br /><br /> **Name2EE** \<*Modulname*> **!** \<*Typ- oder Methodenname*>|Zeigt die `MethodTable`-Struktur und die `EEClass`-Struktur für den angegebenen Typ oder die angegebene Methode im angegebenen Modul an.<br /><br /> Das angegebene Modul muss im Prozess geladen werden.<br /><br /> Durchsuchen Sie das Modul mit dem [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md), um den richtigen Typnamen abzurufen. Sie können auch `*` als Modulnamensparameter übergeben, um alle geladenen verwalteten Module zu durchsuchen. Beim Parameter *Modulname* kann es sich auch um den Namen des Debuggers für ein Modul handeln, z.B. `mscorlib` oder `image00400000`.<br /><br /> Von diesem Befehl wird die Windows-Debuggersyntax <`module`>`!`<`type`> unterstützt. Der Typ muss vollqualifiziert sein.|
 |**ObjSize** [\<*Objektadresse*>] &#124; [ **-aggregate**] [ **-stat**]|Zeigt die Größe des angegebenen Objekts an. Ohne Angabe von Parametern werden durch den Befehl **ObjSize** die Größe aller in verwalteten Threads gefundenen Objekte, alle Garbage Collector-Handles im Prozess sowie die Gesamtgröße aller Objekte angezeigt, auf die diese Handles verweisen. Der Befehl **ObjSize** enthält neben der Größe des übergeordneten Elements auch die Größe aller untergeordneten Objekte.<br /><br /> In Verbindung mit dem Argument **-stat** kann mithilfe der Option **-aggregate** eine ausführliche Ansicht der Typen abgerufen werden, die immer noch über Stamm verfügen. Mithilfe von **!dumpheap -stat** und **!objsize -aggregate -stat** können Objekte ohne Stamm ermittelt und verschiedene Arbeitsspeicherprobleme diagnostiziert werden.|
-|**PrintException** [ **-nested**] [ **-lines**] [\<*Ausnahmeobjektadresse*>]<br /><br /> - oder -<br /><br /> **PE** [ **-nested**] [\<*Ausnahmeobjektadresse*>]|Zeigt die Felder jedes Objekts an, das bei der angegebenen Adresse von der <xref:System.Exception>-Klasse abgeleitet wird, und formatiert diese Felder. Ohne Angabe einer Adresse wird durch den Befehl **PrintException** die letzte im aktuellen Thread ausgelöste Ausnahme angezeigt.<br /><br /> Mit der Option **-nested** werden Details zu geschachtelten Ausnahmeobjekten angezeigt.<br /><br /> Mit der Option **-lines** werden Quelleninformationen angezeigt, sofern verfügbar.<br /><br /> Mithilfe dieses Befehls kann das `_stackTrace`-Feld formatiert und angezeigt werden, bei dem es sich um ein binäres Array handelt.|
+|**PrintException** [ **-nested**] [ **-lines**] [\<*Ausnahmeobjektadresse*>]<br /><br /> Oder<br /><br /> **PE** [ **-nested**] [\<*Ausnahmeobjektadresse*>]|Zeigt die Felder jedes Objekts an, das bei der angegebenen Adresse von der <xref:System.Exception>-Klasse abgeleitet wird, und formatiert diese Felder. Ohne Angabe einer Adresse wird durch den Befehl **PrintException** die letzte im aktuellen Thread ausgelöste Ausnahme angezeigt.<br /><br /> Mit der Option **-nested** werden Details zu geschachtelten Ausnahmeobjekten angezeigt.<br /><br /> Mit der Option **-lines** werden Quelleninformationen angezeigt, sofern verfügbar.<br /><br /> Mithilfe dieses Befehls kann das `_stackTrace`-Feld formatiert und angezeigt werden, bei dem es sich um ein binäres Array handelt.|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|Zeigt Umgebungsvariablen für den Prozess, die Kernel-CPU-Zeit und Speicherauslastungsstatistiken an.|
 |**RCWCleanupList** \<*RCWCleanupList-Adresse*>|Zeigt die Liste der Runtime Callable Wrapper bei der angegebenen Adresse an, die auf Bereinigung warten.|
 |**SaveModule** \<*Basisadresse*> \<*Dateiname*>|Schreibt ein Image, das bei der angegebenen Adresse in den Speicher geladen wird, in die angegebene Datei.|
@@ -104,7 +104,7 @@ Sie können die SOS-Debugerweiterung auch in den [WinDbg.exe-Debugger](/windows-
 
 Zum Laden der SOS-Debugerweiterungen in den WinDbg.exe-Debugger führen Sie im Tool den folgenden Befehl aus:
 
-```
+```console
 .loadby sos clr
 ```
 
@@ -114,7 +114,7 @@ Wenn Sie eine Dumpdatei verwenden möchten, die auf einem anderen Computer erste
 
 Zum Laden einer bestimmten Version von SOS.dll geben Sie im Windows-Debugger den folgenden Befehl ein:
 
-```
+```console
 .load <full path to sos.dll>
 ```
 
@@ -122,85 +122,85 @@ Zum Laden einer bestimmten Version von SOS.dll geben Sie im Windows-Debugger den
 
 Durch den folgenden Befehl wird der Inhalt eines Arrays bei der Adresse `00ad28d0` angezeigt.  Die Anzeige beginnt beim zweiten Element und wird für fünf Elemente fortgesetzt.
 
-```
+```console
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
 Durch den folgenden Befehl wird der Inhalt einer Assembly bei der Adresse `1ca248` angezeigt.
 
-```
+```console
 !dumpassembly 1ca248
 ```
 
 Durch den folgenden Befehl werden Informationen zum Garbage Collector-Heap angezeigt.
 
-```
+```console
 !dumpheap
 ```
 
 Durch den folgenden Befehl wird der Inhalt des Belastungsprotokolls im Speicher (standardmäßig) in die Datei "StressLog.txt" im aktuellen Verzeichnis geschrieben.
 
-```
+```console
 !DumpLog
 ```
 
 Durch den folgenden Befehl wird die `MethodDesc`-Struktur bei der Adresse `902f40` angezeigt.
 
-```
+```console
 !dumpmd 902f40
 ```
 
 Durch den folgenden Befehl werden Informationen zu einem Modul bei der Adresse `1caa50` angezeigt.
 
-```
+```console
 !dumpmodule 1caa50
 ```
 
 Durch den folgenden Befehl werden Informationen zu einem Objekt bei der Adresse `a79d40` angezeigt.
 
-```
+```console
 !DumpObj a79d40
 ```
 
 Durch den folgende Befehlen werden die Felder einer Wertklasse bei der Adresse `00a79d9c` angezeigt, wobei die Methodentabelle bei der Adresse `0090320c` verwendet wird.
 
-```
+```console
 !DumpVC 0090320c 00a79d9c
 ```
 
 Durch den folgenden Befehl wird der vom Garbage Collector verwendete Prozessspeicher angezeigt.
 
-```
+```console
 !eeheap -gc
 ```
 
 Durch den folgenden Befehl werden alle Objekte angezeigt, für die der Abschluss geplant ist.
 
-```
+```console
 !finalizequeue
 ```
 
 Durch den folgenden Befehl wird die Anwendungsdomäne eines Objekts bei der Adresse `00a79d98` ermittelt.
 
-```
+```console
 !findappdomain 00a79d98
 ```
 
 Durch den folgenden Befehl werden alle Garbage Collector-Handles im aktuellen Prozess angezeigt.
 
-```
+```console
 !gcinfo 5b68dbb8
 ```
 
 Durch den folgenden Befehl werden die `MethodTable`-Struktur und die `EEClass`-Struktur für die `Main`-Methode in der Klasse `MainClass` im `unittest.exe`-Modul angezeigt.
 
-```
+```console
 !name2ee unittest.exe MainClass.Main
 ```
 
 Durch den folgenden Befehl werden Informationen zum Metadatentoken bei der Adresse `02000003` im `unittest.exe`-Modul angezeigt.
 
-```
+```console
 !token2ee unittest.exe 02000003
 ```
 

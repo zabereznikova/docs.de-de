@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33bc0ecb4b7d20f0df96486c046e06fc4cf0e7ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e3b396210cf77cacf3d03439af24de40d2dadeee
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69941457"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971172"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
@@ -43,19 +43,19 @@ Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollt
 ### <a name="retrieving-string-data-an-example"></a>Abrufen von Zeichenfolgedaten: Beispiel  
  Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetString%28System.String%29> -Methode aufgerufen, um die Zeichenfolgenressourcen für die aktuelle UI-Kultur abzurufen. Es umfasst eine neutrale Zeichenfolgenressource für die Kultur Englisch (USA) und lokalisierte Ressourcen für die Kulturen Französisch (Frankreich) und Russisch (Russische Föderation). Die folgende Ressource für Englisch (USA) ist in einer Strings.txt-Datei enthalten:  
   
-```  
+```text
 TimeHeader=The current time is  
 ```  
   
  Die Ressource für Französisch (Frankreich) befindet sich in einer Datei namens Strings.fr-FR.txt:  
   
-```  
+```text
 TimeHeader=L'heure actuelle est  
 ```  
   
  Die Ressource für Russisch (Russische Föderation) befindet sich in einer Datei namens Strings.ru-RU.txt:  
   
-```  
+```text
 TimeHeader=Текущее время —  
 ```  
   
@@ -66,7 +66,7 @@ TimeHeader=Текущее время —
   
  Die folgende Batchdatei (.bat) kompiliert das Beispiel und generiert Satellitenassemblys in die entsprechenden Verzeichnisse. Die Befehle werden für die C#-Sprache und Compiler bereitgestellt. Ändern Sie in Visual Basic `csc` in `vbc`und ändern Sie `GetString.cs` in `GetString.vb`.  
   
-```  
+```console
 resgen strings.txt  
 csc GetString.cs -resource:strings.resources  
   
@@ -96,7 +96,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Sie können die folgende Batchdatei verwenden, um das C#-Beispiel zu erstellen. Ändern Sie in Visual Basic `csc` in `vbc`und ändern Sie die Erweiterung des Quellcodes von `.cs` in `.vb`.  
   
-```  
+```console
 csc CreateResources.cs  
 CreateResources  
   
@@ -122,7 +122,7 @@ csc GetStream.cs -resource:AppResources.resources
   
  Mit der folgenden Batchdatei können Sie die erforderliche Ressourcendatei und Assemblys erstellen und die App ausführen. Verwenden Sie die Option `/r` , um Resgen.exe einen Verweis auf UIElements.dll bereitzustellen, damit die Anwendung Zugriff auf Informationen über die `PersonTable` -Struktur erhält. Wenn Sie C# verwenden, ersetzen Sie den `vbc` -Compilernamen mit `csc`und ersetzen Sie die `.vb` -Erweiterung mit `.cs`.  
   
-```  
+```console
 vbc -t:library UIElements.vb  
 vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
@@ -142,7 +142,7 @@ GetObject.exe
   
  Um vollständige Assemblyversionsunterstützung zu aktivieren, wird empfohlen, Assemblys mit starkem Namen im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) und Assemblys ohne starken Namen im Anwendungsverzeichnis bereitzustellen. Wenn Sie Assemblys mit starkem Namen im Anwendungsverzeichnis bereitstellen möchten, werden Sie nicht in der Lage sein, eine Satellitenassembly-Versionsnummer zu erhöhen, wenn Sie die Assembly aktualisieren. Stattdessen müssen Sie ein direktes Update ausführen, wobei Sie den vorhandenen Code durch den aktualisierten Code ersetzen und die Versionsnummer beibehalten. Wenn Sie beispielsweise Version 1.0.0.0 einer Satellitenassembly mit dem vollständig angegebenen Assemblynamen „myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a“ aktualisieren möchten, überschreiben Sie sie mit der aktualisierten myApp.resources.dll, die mit dem gleichen, vollständig angegebenen Assemblynamen „myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a“ kompiliert wurde. Beachten Sie, dass die Verwendung direkter Updates für Satelliten-Assemblydateien es schwierig für eine App macht, die Version einer Satellitenassembly genau zu bestimmen.  
   
- Weitere Informationen über die Assemblyversionen finden Sie unter [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md) und [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Weitere Informationen über die Assemblyversionen finden Sie unter [Assemblyversionen](../../standard/assembly/versioning.md) und [So sucht die Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Abrufen von Ressourcen aus Ressourcendateien  
@@ -166,21 +166,21 @@ GetObject.exe
 ### <a name="an-example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie der Ressourcen-Manager Ressourcen direkt aus einer Ressourcendatei abruft. Das Beispiel besteht aus drei textbasierten Ressourcendateien für die Kulturen Englisch (USA), Französisch (Frankreich) und Russisch (Russische Föderation). Englisch (USA) ist die Standardkultur in dem Beispiel. Die Ressourcen werden in der folgenden Datei mit dem Namen Strings.txt gespeichert:  
   
-```  
+```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
  Ressourcen für die Kultur Französisch (Frankreich) befinden sich in der folgenden Datei mit dem Namen Strings.fr-FR.txt:  
   
-```  
+```text 
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
  Ressourcen für die Kultur Russisch (Russische Föderation) befinden sich in der folgenden Datei mit dem Namen Strings.ru-RU.txt:  
   
-```  
+```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
@@ -192,7 +192,7 @@ Prompt=Как вас зовут?
   
  Sie können die C#-Version des Beispiels kompilieren, indem Sie die folgende Batchdatei ausführen. Wenn Sie Visual Basic verwenden, ersetzen Sie `csc` mit `vbc` und ersetzen Sie die Erweiterung `.cs` mit `.vb`.  
   
-```  
+```console
 Md Resources  
 Resgen Strings.txt Resources\Strings.resources  
 Resgen Strings.fr-FR.txt Resources\Strings.fr-FR.resources  

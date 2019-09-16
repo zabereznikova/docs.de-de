@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948766"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969352"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
@@ -34,7 +34,7 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
   
 - Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
   
-- Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
+- Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../assembly/strong-named.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../assembly/program.md) (Programmieren mit Assemblys).  
   
 - Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923771"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
@@ -67,6 +67,7 @@ Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standa
 > Bei `[Out]`-Zeichenfolgen verwendet die CLR (Common Language Runtime) standardmäßig `CoTaskMemFree`, um Zeichenfolgen freizugeben, oder `SysStringFree` bei Zeichenfolgen, die als `UnmanagedType.BSTR` gekennzeichnet sind.  
 **Bei den meisten APIs mit Puffer für Ausgabezeichenfolgen gilt Folgendes**:  
 > Die übergebene Zeichenanzahl muss das NULL-Zeichen enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.  
+>
 > - 5 übergeben, 4 abrufen: Die Zeichenfolge ist 4 Zeichen lang und umfasst ein nachgestelltes NULL-Zeichen.
 > - 5 übergeben, 6 abrufen: Die Zeichenfolge ist 5 Zeichen lang und erfordert einen Puffer mit 6 Zeichen für das NULL-Zeichen.  
 > [Windows-Datentypen für Zeichenfolgen](/windows/desktop/Intl/windows-data-types-for-strings)

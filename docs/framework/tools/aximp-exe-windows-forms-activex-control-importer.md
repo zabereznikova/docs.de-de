@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5f76f60c8474b1503dc4cebeeafe241cd40be96
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915424"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970593"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
@@ -30,7 +30,7 @@ Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliot
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
@@ -42,7 +42,7 @@ aximp [options]{file.dll | file.ocx}
   
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|`/delaysign`|Legt fest, dass "Aximp.exe" das resultierende Steuerelement verzögert signiert. Diese Option müssen Sie entweder mit der Option `/keycontainer:`, `/keyfile:` oder `/publickey:` angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|`/delaysign`|Legt fest, dass "Aximp.exe" das resultierende Steuerelement verzögert signiert. Diese Option müssen Sie entweder mit der Option `/keycontainer:`, `/keyfile:` oder `/publickey:` angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |`/keycontainer:` *containername*|Signiert die resultierende Steuerelement mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde|  
 |`/keyfile:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des unter *dateiname* angegebenen Paar aus privatem und öffentlichem Schlüssel des Herausgebers mit einem starken Namen.|  
@@ -75,7 +75,7 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Beispiel  
  Durch den folgenden Befehl werden "MediaPlayer.dll" und "AxMediaPlayer.dll" für das Media Player-Steuerelement `msdxm.ocx` erstellt.  
   
-```  
+```console 
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   

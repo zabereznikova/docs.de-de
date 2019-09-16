@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: b246c75896d00ad2c91ded106682e8cdd817d9d1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 17354c8aaf9131bbcf5e2274eff44d9af611582c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052684"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853865"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installieren von .NET Framework unter Windows XP und Windows Server 2003
 
@@ -39,6 +39,6 @@ Mit .NET Framework 3.5 können Anwendungen ausgeführt werden, die für .NET Fra
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Herunterladen von .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Herunterladen von .NET Framework](https://dotnet.microsoft.com/download)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installieren von .NET Framework für Entwickler](guide-for-developers.md)

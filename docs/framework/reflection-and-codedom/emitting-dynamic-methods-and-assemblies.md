@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 559d6962873540836a49da04bc271857edfa1157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 767382f27a96e8aacce4cc625de610949b3f02a3
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663476"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971041"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
 In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.Emit>-Namespace beschrieben, mit denen ein Compiler oder ein Tool zur Laufzeit Metadaten und Microsoft Intermediate Language (MSIL) ausgeben und optional eine übertragbare ausführbare Datei (PE-Datei) auf dem Datenträger generieren kann. Dieser Namespace wird primär von Skript-Engines und Compilern verwendet. Die vom <xref:System.Reflection.Emit>-Namespace bereitgestellte Funktionalität wird in diesem Abschnitt als Reflektionsausgabe bezeichnet.  
@@ -35,7 +35,7 @@ In diesem Abschnitt wird ein Satz verwalteter Typen im <xref:System.Reflection.E
   
  Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
   
- In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadatendefinition und Semantik und „Partition III: CIL-Anweisungen“ finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](https://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.  
+ In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungen). Die Dokumentation ist online auf [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](https://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   
@@ -71,5 +71,5 @@ Führt in das Thema „entladbare Assemblys“ ein. Dabei handelt es sich um dyn
  [Reflexion](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Erläutert das Durchsuchen von Metadaten und verwaltetem Code.  
   
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Assemblys in .NET](../../standard/assembly/index.md)  
  Bietet eine Übersicht über Assemblys in .NET-Implementierungen.

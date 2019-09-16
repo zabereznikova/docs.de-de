@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 72bb7475fc6b18650e0870bf99c4b8ddbac3ec9f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926620"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -339,6 +339,7 @@ In der Praxis werden manche Algorithmen gut mit der strikten Auswertung ausgefü
 ## <a name="conclusion"></a>Schlussbemerkung
 
 In diesem Projekt wurde Folgendes behandelt:
+
 - Verwendung von LINQ-Abfragen zum Aggregieren von Daten in einer sinnvollen Abfolge
 - Schreiben von Erweiterungsmethoden zum Hinzufügen eigener benutzerdefinierter Funktionalität zu LINQ-Abfragen
 - Lokalisieren von Bereichen in unserem Code, in denen LINQ-Abfragen zu Leistungsproblemen wie Geschwindigkeitseinbußen führen können
@@ -347,6 +348,7 @@ In diesem Projekt wurde Folgendes behandelt:
 Abgesehen von LINQ haben Sie ein wenig über die Verfahren gelernt, die Zauberer für Kartentricks anwenden. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Verderben Sie mit Ihrem Wissen jetzt aber nicht anderen den Spaß!
 
 Weitere Informationen zu LINQ finden Sie unter:
+
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
   - [Einführung in LINQ](../programming-guide/concepts/linq/index.md)
   - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)

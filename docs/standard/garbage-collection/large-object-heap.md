@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ea0110f22e741908ad857fa501553d93c4b98d
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753955"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929139"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -132,7 +132,7 @@ Bevor Sie Leistungsdaten für einen bestimmten Bereich erfassen, sollten Sie Fol
 
 2. Andere bekannte Bereiche ohne ein Ergebnis untersuchen, das das vorhandene Leistungsproblem erklären könnte
 
-Weitere Informationen zu den Grundlagen zu Arbeitsspeicher und CPU finden Sie im Blogbeitrag [Understand the problem before you try to find a solution (Verstehen des Problems vor der Lösungsfindung)](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/).
+Weitere Informationen zu den Grundlagen zu Arbeitsspeicher und CPU finden Sie im Blogbeitrag [Understand the problem before you try to find a solution (Verstehen des Problems vor der Lösungsfindung)](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/).
 
 Sie können folgende Tools verwenden, um Daten über die Leistung des großen Objektheaps zu erfassen:
 
@@ -168,13 +168,13 @@ Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benu
 
 Der Garbage Collector bietet viele ETW-Ereignisse, mit denen Sie besser nachvollziehen können, welche Aktionen der Heap durchführt und warum. In folgenden Blogbeiträgen wird das Erfassen und Verstehen von GC-Ereignissen mit ETW veranschaulicht:
 
-- [GC ETW Events - 1 (Garbage Collection: ETW-Ereignisse (1))](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW Events - 1 (Garbage Collection: ETW-Ereignisse (1))](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW Events - 2 (Garbage Collection: ETW-Ereignisse (2))](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW Events - 2 (Garbage Collection: ETW-Ereignisse (2))](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW Events - 3 (Garbage Collection: ETW-Ereignisse (3))](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW Events - 3 (Garbage Collection: ETW-Ereignisse (3))](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW Events - 4 (Garbage Collection: ETW-Ereignisse (4))](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW Events - 4 (Garbage Collection: ETW-Ereignisse (4))](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 Betrachten Sie die Spalte „Triggergrund“ für die Garbage Collections, um übermäßige Garbage Collections für Generation 2 zu identifizieren, die von temporären Zuordnungen von großen Objektheaps verursacht wurden. Wenn Sie einen einfachen Test durchführen möchten, der nur große Objekte temporär zuordnet, können Sie mithilfe der folgenden [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)-Befehlszeile Informationen zu ETW-Ereignissen erfassen:
 

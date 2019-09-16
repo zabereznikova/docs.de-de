@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e210f14c74efe214be06a1cb901a144dd92af5e0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168880"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894794"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -23,7 +23,7 @@ Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digit
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
@@ -151,61 +151,61 @@ signtool [command] [options] [file_name | ...]
 ## <a name="examples"></a>Beispiele  
  Durch den folgenden Befehl wird der Systemkomponenten- und Treiberdatenbank die Katalogdatei "MyCatalogFileName.cat" hinzugefügt. Mit der `/u`-Option wird ggf. ein eindeutiger Name generiert, um das Ersetzen einer möglicherweise vorhandenen Katalogdatei mit dem Namen `MyCatalogFileName.cat` zu verhindern.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  Durch den folgenden Befehl wird eine Datei automatisch mit dem besten Zertifikat signiert.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird eine Datei mit einem in einer kennwortgeschützten PFX-Datei gespeicherten Zertifikat digital signiert.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird eine Datei digital signiert und mit einem Zeitstempel versehen. Das zum Signieren der Datei verwendete Zertifikat ist in einer PFX-Datei gespeichert.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird eine Datei mit einem Zertifikat aus dem `My`-Speicher signiert, das den Antragstellernamen `My Company Certificate` aufweist.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  Der folgende Befehl signiert ein ActiveX-Steuerelement und stellt Informationen bereit, die dem Benutzer in Internet Explorer bei der Aufforderung zum Installieren des Steuerelements angezeigt werden.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  Durch den folgenden Befehl wird einer bereits digital signierten Datei ein Zeitstempel hinzugefügt.  
   
-```  
+```console  
 signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird überprüft, ob eine Datei signiert wurde.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  Durch den folgenden Befehl wird eine möglicherweise in einem Katalog signierte Systemdatei überprüft.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  Durch den folgenden Befehl wird eine Systemdatei überprüft, die in einem Katalog mit dem Namen `MyCatalog.cat` signiert ist.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   

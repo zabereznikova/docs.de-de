@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d11567b3a5abca6e81ff0358295aa8516ef6443f
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593451"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969027"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -116,5 +116,5 @@ ms.locfileid: "65593451"
 - [Sicherheit](../../docs/standard/security/index.md)
 - [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
 - [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)
-- [Assemblys in der Common Language Runtime (CLR)](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblys in .NET](assembly/index.md)
 - [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)

@@ -3,12 +3,12 @@ title: Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 description: Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen unterstützen, wie Sie diese erstellen können und Methoden zum Arbeiten mit Ausdrucksbaumstruktur-APIs.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d11a13000019faf2ab5c35d41d48fa199e901d1c
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925967"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 
@@ -58,6 +58,7 @@ Sie können in diesem einfachen Beispiel erkennen, dass viele Typen bei der Erst
 
 ## <a name="navigating-the-apis"></a>Navigieren in den APIs
 Es gibt Ausdrucksknotentypen, die fast alle Elemente der Syntax der C#-Sprache zuordnen. Jeder Typ verfügt über spezielle Methoden für diese Art von Sprachelement. Es ist viel, was Sie sich gleichzeitig merken müssen. Anstatt sich alles zu merken, finden Sie hier die Techniken, die ich zum Arbeiten mit Ausdrucksbaumstrukturen verwende:
+
 1. Betrachten Sie die Member des `ExpressionType`-enum, um mögliche Knoten zu bestimmen, die Sie untersuchen sollten. Dies ist wirklich hilfreich, wenn Sie eine Ausdrucksbaumstruktur durchlaufen und verstehen möchten.
 2. Betrachten Sie die statischen Member der `Expression`-Klasse, um einen Ausdruck zu erstellen. Diese Methoden können jeden Ausdruckstyp aus einer Reihe von untergeordneten Knoten erstellen.
 3. Sehen Sie sich die `ExpressionVisitor`-Klasse an, um eine geänderte Ausdrucksbaumstruktur zu erstellen.

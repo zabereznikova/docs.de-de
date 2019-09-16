@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933663"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894685"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -110,7 +110,7 @@ Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.g
 
 Ab .NET Framework 4.5 können Sie ein benutzerdefiniertes Attribut an eine Schnittstellenimplementierung anfügen, indem Sie Code verwenden, der in etwa wie folgt aussieht:
 
-```
+```il
 .class interface public abstract auto ansi IMyInterface
 {
   .method public hidebysig newslot abstract virtual
@@ -130,7 +130,7 @@ Ab .NET Framework 4.5 können Sie ein benutzerdefiniertes Attribut an eine Sch
 
 Ab .NET Framework 4.5 können Sie ein beliebiges Marshall-BLOB (Binary Large Object) angeben, indem Sie die entsprechenden unformatierten Binärdaten wie im folgenden Code gezeigt angeben:
 
-```
+```il
 .method public hidebysig abstract virtual
         instance void
         marshal({ 38 01 02 FF })
@@ -175,7 +175,7 @@ public class Hello
 
 Das folgende IL-Codebeispiel entspricht dem vorherigen C#-Codebeispiel. Sie können diesen Code mithilfe des IL Assembler-Tools in eine Assembly kompilieren. Sowohl der IL- als auch der C#-Beispielcode geben "Hello World!" auf der Konsole aus.
 
-```
+```il
 // Metadata version: v2.0.50215
 .assembly extern mscorlib
 {

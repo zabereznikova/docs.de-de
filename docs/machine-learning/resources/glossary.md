@@ -4,12 +4,12 @@ description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereic
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710542"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929268"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -48,6 +48,7 @@ Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten
 ## <a name="data"></a>Daten
 
 Daten sind für alle Machine Learning-Anwendungen von zentraler Bedeutung. In ML.NET werden Daten durch <xref:Microsoft.ML.IDataView>-Objekte dargestellt. Datenansichtsobjekte:
+
 - bestehen aus Zeilen und Spalten
 - werden verzögert ausgewertet, d.h. Daten werden nur geladen, wenn sie durch einen Vorgang aufgerufen werden
 - enthalten ein Schema, das den Typ, das Format und die-Länge der einzelnen Spalten definiert

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8f82605118f1af0f085aef6e76c1e4bedb2904
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988165"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969060"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Verpacken einer .NET Framework-Assembly für COM
 
@@ -45,7 +45,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 
   Assemblys mit starken Namen, die von einem Herausgeber signiert wurden, können im globalen Assemblycache installiert werden. Nicht signierte Assemblys müssen als private Assemblys auf dem Computer des Benutzers installiert werden.
 
-  Weitere Informationen finden Sie unter [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md).
+  Weitere Informationen finden Sie unter [Überlegungen zur Assemblysicherheit](../../standard/assembly/security-considerations.md).
 
 - Einbindung der Typbibliothek
 
@@ -96,7 +96,7 @@ Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-ser
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
 - [Qualifizieren von .NET-Typen für die Interoperation](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Einführung in die Klassenschnittstelle](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)
+- [Überlegungen zur Assemblysicherheit](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)
 - [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

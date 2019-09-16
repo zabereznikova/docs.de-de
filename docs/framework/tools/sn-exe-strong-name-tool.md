@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938017"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971846"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
-Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
+Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../standard/assembly/strong-named.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
   
 > [!WARNING]
 > Verlassen Sie sich für die Sicherheit nicht auf starke Namen. Diese Namen bieten lediglich eine eindeutige Identität.
 
- Weitere Informationen zu starken Namen und Assemblys mit starken Namen finden Sie unter [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md) und [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
+ Weitere Informationen zu starken Namen und Assemblys mit starken Namen finden Sie unter [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md) und [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).  
   
  Das Strong Name-Tool wird automatisch mit Visual Studio installiert. Zum Starten des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
@@ -36,7 +36,7 @@ Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [star
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 sn [-quiet][option [parameter(s)]]  
 ```  
   
@@ -90,37 +90,37 @@ Das Strong Name-Tool geht davon aus, dass die Paaren aus öffentlichen und priva
 ## <a name="examples"></a>Beispiele  
  Mit dem folgenden Befehl wird ein neues, nach dem Zufallsprinzip erzeugtes Schlüsselpaar erstellt und in `keyPair.snk` gespeichert.  
   
-```  
+```console  
 sn -k keyPair.snk  
 ```  
   
  Mit dem folgenden Befehl wird der Schlüssel aus `keyPair.snk` im CSP für starke Namen im Container `MyContainer` gespeichert.  
   
-```  
+```console  
 sn -i keyPair.snk MyContainer  
 ```  
   
  Der folgende Befehl extrahiert den öffentlichen Schlüssel aus `keyPair.snk` und speichert ihn in `publicKey.snk`.  
   
-```  
+```console  
 sn -p keyPair.snk publicKey.snk  
 ```  
   
  Mit dem folgenden Befehl werden der öffentliche Schlüssel und das in `publicKey.snk` gespeicherte Token für den öffentlichen Schlüssel angezeigt.  
   
-```  
+```console  
 sn -tp publicKey.snk  
 ```  
   
  Mit dem folgenden Befehl wird die Assembly `MyAsm.dll` überprüft.  
   
-```  
+```console  
 sn -v MyAsm.dll  
 ```  
   
  Mit dem folgenden Befehl wird `MyContainer` aus dem Standard-CSP gelöscht.  
   
-```  
+```console  
 sn -d MyContainer  
 ```  
   
@@ -128,5 +128,5 @@ sn -d MyContainer
 
 - [Extras](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

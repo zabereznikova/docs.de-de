@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307200"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972015"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -30,6 +30,8 @@ Docken Sie dieses Toolfenster an einem geeigneten Ort innerhalb von Visual Studi
 
 Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Sie können entweder ein VB- oder ein C#-Projekt erstellen. Wenn Visual Studio die Haupt-Codedatei für dieses Projekt öffnet, zeigt die Schnellansicht die entsprechende Syntaxstruktur an. Sie können eine beliebige C#-/VB-Datei in dieser Instanz von Visual Studio öffnen, und die Schnellansicht zeigt die Syntaxstruktur dieser Datei an. Wenn Sie mehrere Codedateien in Visual Studio geöffnet haben, zeigt die Schnellansicht die Syntaxstruktur für die derzeit aktive Codedatei (die Codedatei, die über den Tastaturfokus verfügt) an.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualisieren einer C#-Syntaxstruktur](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -44,6 +46,7 @@ Syntaxstrukturen umfassen drei Typen von Elementen: *Knoten*, *Token*, und *Triv
 Jedes Element in der Struktur zeigt außerdem seinen eigenen **Bereich** an. Der **Bereich** umfasst die Indizes (Start- und Endposition) des Knotens in der Textdatei.  Im vorherigen C#-Beispiel hat das ausgewählte Token „UsingKeyword [0..5)“ einen **Bereich**, der fünf Zeichen breit ist, [0..5). Die Notation „[..)“ bedeutet, dass der Startindex Teil des Bereichs ist, der Endindex allerdings nicht.
 
 Es gibt zwei Möglichkeiten, in der Struktur zu navigieren:
+
 * Erweitern oder klicken Sie auf Elemente in der Struktur. Die Schnellansicht wählt automatisch den entsprechenden Text aus, der zum Bereich des Elements im Code-Editor gehört.
 * Klicken Sie auf oder wählen Sie Text im Code-Editor. Wenn Sie im vorangegangenen VB-Beispiel die Zeile mit „Module Module1“ im Code-Editor auswählen, navigiert die Schnellansicht automatisch zum entsprechenden ModuleStatement-Knoten in der Struktur. 
 
@@ -114,7 +117,7 @@ Module Program
 End Module
 ```
 
-Dieser Code führt einen Alias mit dem Namen `C` ein, der dem Typ `System.Console` am Anfang der Datei zugeordnet ist und verwendet diesen Alias in `Main()`. Wählen Sie die Verwendung dieses Alias aus, der `C` in `C.WriteLine()`, innerhalb der `Main()`-Methode. Die Schnellansicht wählt den entsprechenden **IdentifierName**-Knoten in der Schnellansicht aus. Klicken Sie mit der rechten Maustaste auf diesen Knoten, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)**. Das Eigenschaftenraster zeigt an, dass dieser Bezeichner an den Typ `System.Console` gebunden ist, wie in der nachfolgenden Abbildung gezeigt:
+Dieser Code führt einen Alias mit dem Namen `C` ein, der dem Typ `System.Console` am Anfang der Datei zugeordnet ist und verwendet diesen Alias in `Main()`. Wählen Sie die Verwendung dieses Alias aus, der `C` in `C.WriteLine()`, innerhalb der `Main()`-Methode. Die Schnellansicht wählt den entsprechenden **IdentifierName**-Knoten in der Schnellansicht aus. Klicken Sie mit der rechten Maustaste auf diesen Knoten, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)** . Das Eigenschaftenraster zeigt an, dass dieser Bezeichner an den Typ `System.Console` gebunden ist, wie in der nachfolgenden Abbildung gezeigt:
 
 ![Symboleigenschaften](media/syntax-visualizer/symbol-visual-basic.png)
 
@@ -122,7 +125,7 @@ Versuchen Sie **View AliasSymbol (if any)** (AliasSymbol anzeigen (sofern vorhan
 
 ![AliasSymbol-Eigenschaften](media/syntax-visualizer/alias-symbol.png)
 
-Untersuchen Sie das Symbol auf deklarierten Typ, Methode, Eigenschaft. Wählen Sie den entsprechenden Knoten in der Schnellansicht aus, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)**. Wählen Sie die Methode `Sub Main()`, einschließlich des Textkörpers der Methode. Klicken Sie auf **Symbol anzeigen (sofern vorhanden)** für den entsprechenden **SubBlock**-Knoten in der Schnellansicht. Das Eigenschaftenraster zeigt, dass das **MethodSymbol** für diesen **SubBlock** den Namen `Main` mit Rückgabetyp `Void` hat.
+Untersuchen Sie das Symbol auf deklarierten Typ, Methode, Eigenschaft. Wählen Sie den entsprechenden Knoten in der Schnellansicht aus, und klicken Sie auf **Symbol anzeigen (sofern vorhanden)** . Wählen Sie die Methode `Sub Main()`, einschließlich des Textkörpers der Methode. Klicken Sie auf **Symbol anzeigen (sofern vorhanden)** für den entsprechenden **SubBlock**-Knoten in der Schnellansicht. Das Eigenschaftenraster zeigt, dass das **MethodSymbol** für diesen **SubBlock** den Namen `Main` mit Rückgabetyp `Void` hat.
 
 ![Symbol für eine Methodendeklaration anzeigen](media/syntax-visualizer/method-symbol.png)
 

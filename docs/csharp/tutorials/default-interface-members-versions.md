@@ -3,12 +3,12 @@ title: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembe
 description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorhandenen Schnittstellendefinitionen problemlos neue Funktionen hinzufügen können, ohne alle Klassen und Strukturen zu brechen, die diese Schnittstelle implementieren.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6a723a116d420dd43d2adeef98b824445dd4f0d7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252915"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926705"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmembern in C# 8.0
 
@@ -17,6 +17,7 @@ Ab C# 8.0 können Sie in .NET Core 3.0 eine Implementierung definieren, wenn Sie
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
+>
 > * Erweitern Sie Schnittstellen problemlos durch Hinzufügen von Methoden mit Implementierungen.
 > * Erstellen Sie parametrisierte Implementierungen, um größere Flexibilität zu bieten.
 > * Ermöglichen Sie Implementierern, eine spezifischere Implementierung in Form einer Überschreibung zu bieten.

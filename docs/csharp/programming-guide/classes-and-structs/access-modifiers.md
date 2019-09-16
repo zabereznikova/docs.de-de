@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b415bf143e7da46b3ecd2c0828a3f8151878435a
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924553"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971680"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Zugriffsmodifizierer (C#-Programmierhandbuch)
 Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von anderem Code in Ihrer Assembly oder anderen Assemblys verwendet werden können. Sie können die folgenden Zugriffsmodifizierer verwenden, um den Zugriff auf einen Typ oder Member anzugeben, wenn Sie sie deklarieren:  
@@ -44,7 +44,7 @@ Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von ander
   
  Abgeleitete Klassen können keine höhere Verfügbarkeit als ihre Basistypen aufweisen. Das heißt, dass Sie über keine öffentliche Klasse `B` verfügen können, die von einer internen Klasse `A` abgeleitet wird. Wenn dies zulässig wäre, müssten Sie `A` öffentlich machen, da auf alle geschützten oder internen Member von `A` aus der abgeleiteten Klasse zugegriffen werden kann.  
   
- Sie können mithilfe des InternalsVisibleTo-Attributs bestimmten anderen Assemblys den Zugriff auf die internen Typen ermöglichen. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
+ Sie können mithilfe des InternalsVisibleTo-Attributs bestimmten anderen Assemblys den Zugriff auf die internen Typen ermöglichen. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Zugriff auf Klassen- und Strukturmember  
  Klassenmember (einschließlich geschachtelter Klassen und Strukturen) können mit einem der sechs Zugriffstypen deklariert werden. Strukturmember können nicht als geschützt deklariert werden, da Strukturen keine Vererbung unterstützen.  

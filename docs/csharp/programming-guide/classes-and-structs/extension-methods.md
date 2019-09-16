@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 2b5bacfc453f16f9c484eebfddf92c6464f8cb78
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e37fc792f79044345d52b2bc463813c0bde22f5b
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597090"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970909"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -77,7 +77,7 @@ using System.Linq;
   
 - Erweiterungsmethoden werden auf Namespace-Ebene eingebunden. Wenn Sie z. B. mehrere statische Klassen haben, die Erweiterungsmethoden in einem einzelnen Namespace mit dem Namen `Extensions` enthalten, werden sie alle mit der `using Extensions;`-Direktive eingebunden.  
   
- Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../framework/app-domains/assembly-versioning.md).
+ Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../standard/assembly/versioning.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

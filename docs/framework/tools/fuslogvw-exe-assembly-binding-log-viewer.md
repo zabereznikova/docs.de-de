@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 320d059e82bfb58e827432fe5f4ec3eb3857510e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041415"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851246"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Assembly Binding Log Viewer-Tool)
 
@@ -29,7 +29,7 @@ Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des T
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
-```
+```console
 fuslogvw
 ```
 
@@ -66,7 +66,7 @@ Für jede fehlgeschlagene Assemblybindung wird ein Eintrag angezeigt. Darin sind
 
 Das folgende Beispiel zeigt einen Protokolleintrag mit den Details einer fehlgeschlagenen Assemblybindung.
 
-```
+```output
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***
 
 The operation failed.
@@ -130,7 +130,7 @@ Standardmäßig protokolliert "Fuslogvw.exe" normale Assembly-Bindungsanforderun
 
 Im folgenden Protokoll ist ein Fehler aufgeführt, der von einer Abhängigkeit ausgelöst wurde, die nicht vorhanden war, als das systemeigene Abbild für die Anwendung erstellt wurde. Wenn sich die Abhängigkeiten zur Laufzeit von den Abhängigkeiten beim Ausführen von "Ngen.exe" unterscheiden, ist das Binden an ein systemeigenes Abbild nicht zulässig.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***
 
 The operation failed.
@@ -154,7 +154,7 @@ LOG: Bind to native image assembly did not succeed. Use IL image.
 
 Im folgenden Protokoll ist ein Bindungsfehler für das systemeigene Abbild aufgeführt, der aufgetreten, weil sich die Sicherheitseinstellungen auf dem Computer, auf dem die Anwendung ausgeführt wurde, von den Sicherheitseinstellungen unterscheiden, die beim Erstellen des systemeigenen Abbilds festgelegt waren.
 
-```
+```output
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***
 
 The operation failed.

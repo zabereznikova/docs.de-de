@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 51c66d6bc2064d8051415de2ac083da478355a99
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602597"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970378"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
 Die Option **-out** gibt den Namen der Ausgabedatei an.  
@@ -45,7 +45,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
   
  Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
   
- Die Compileroption „-out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
+ Die Compileroption „-out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](./index.md)
-- [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md)
+- [Friend-Assemblys](../../../standard/assembly/friend.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105913"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851595"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -176,13 +176,13 @@ Sie können optional Ressourcen aus der Hauptassembly entfernen und angeben, das
 
 Im folgenden .NET Framework-Beispiel wird das Attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> dazu verwendet, die Fallbackressource einer Anwendung in einer Satellitenassembly für Französisch (`fr`) zu speichern. Im Beispiel werden zwei textbasierte Ressourcendateien verwendet, die eine einzelne Zeichenfolgenressource mit dem Namen `Greeting` definieren. Die erste Datei, „resources.fr.txt“, enthält eine französische Sprachressource.
 
-```
+```text
 Greeting=Bon jour!
 ```
 
 Die zweite Datei, „resources.ru.txt“, enthält eine russische Sprachressource.
 
-```
+```text
 Greeting=Добрый день
 ```
 
@@ -223,7 +223,7 @@ Da keine Ressourcen in der Hauptassembly eingebettet sind, müssen Sie nicht mit
 
 Wenn Sie das Beispiel in einem System durchführen, dessen Sprachen nicht Russisch ist, wird die folgende Ausgabe angezeigt:
 
-```
+```output
 Bon jour!
 ```
 

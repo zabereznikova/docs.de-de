@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allg
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3a44b017c6160639ed1be7374b893e103ee5f5d8
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373907"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926498"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -141,6 +141,7 @@ Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am
 JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheiden Sie sich anhand der oben aufgelisteten Fragen für ein geeignetes Framework. Wenn es sein kann, dass sich ein Framework für Sie schnell als ungeeignet herausstellt, entscheiden Sie sich für ein Framework, dass kommerziellen Support anbietet und/oder von einem großen Unternehmen entwickelt wird.
 
 > ### <a name="references--client-web-technologies"></a>Ressourcen: Clientseitige Webtechnologien
+>
 > - **HTML und CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
 > - **Vergleich von Sass und LESS**  

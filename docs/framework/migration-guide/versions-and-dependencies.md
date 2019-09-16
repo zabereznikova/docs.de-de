@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4e3b1768086a1c57979a4c74643036294299a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c9f7a0bc3a7a41a77db3c90c2f88fb5ddfd7bfa0
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787750"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70971080"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 Jede Version von .NET Framework enthält die CLR (Common Language Runtime) sowie die Basisklassenbibliotheken und andere verwaltete Bibliotheken. In diesem Thema werden die Hauptfunktionen von .NET Framework nach Version beschrieben und Informationen zu den zugrunde liegenden CLR-Versionen sowie den zugeordneten Entwicklungsumgebungen bereitgestellt und die vom Windows-Betriebssystem installierten Versionen dargestellt.  
@@ -68,7 +68,7 @@ Jede Version von .NET Framework enthält die CLR (Common Language Runtime) sowie
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Zuweisen und Ausführen von Apps für frühere Versionen  
 
-Die .NET Framework-Versionen 2.0, 3.0 und 3.5 werden mit der gleichen CLR-Version (CLR 2.0) erstellt. Diese Versionen entsprechen aufeinander folgenden Ebenen einer einzelnen Installation. Jede Version wird inkrementell auf den früheren Versionen aufgebaut. Die Versionen 2.0, 3.0 und 3.5 können auf einem Computer nicht parallel ausgeführt werden. Wenn Sie Version 3.5 installieren, rufen Sie automatisch die 2.0- und 3.0-Ebenen und Apps, die für die Versionen 2.0 erstellt wurden, ab, und 3.0 und 3.5 können alle auf Version 3.5 ausgeführt werden. Allerdings wird in .NET Framework 4 der Ebenenansatz nicht mehr aufgegriffen und neuere Releases (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 und 4.8) stellen nachfolgende Ebenen einer einzelnen Installation dar.  Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der CLR in einem einzelnen Prozess ausführen. Weitere Informationen finden Sie unter [Assemblys und parallele Ausführung](../app-domains/assemblies-and-side-by-side-execution.md).  
+Die .NET Framework-Versionen 2.0, 3.0 und 3.5 werden mit der gleichen CLR-Version (CLR 2.0) erstellt. Diese Versionen entsprechen aufeinander folgenden Ebenen einer einzelnen Installation. Jede Version wird inkrementell auf den früheren Versionen aufgebaut. Die Versionen 2.0, 3.0 und 3.5 können auf einem Computer nicht parallel ausgeführt werden. Wenn Sie Version 3.5 installieren, rufen Sie automatisch die 2.0- und 3.0-Ebenen und Apps, die für die Versionen 2.0 erstellt wurden, ab, und 3.0 und 3.5 können alle auf Version 3.5 ausgeführt werden. Allerdings wird in .NET Framework 4 der Ebenenansatz nicht mehr aufgegriffen und neuere Releases (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 und 4.8) stellen nachfolgende Ebenen einer einzelnen Installation dar.  Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der CLR in einem einzelnen Prozess ausführen. Weitere Informationen finden Sie unter [Assemblys und parallele Ausführung](../../standard/assembly/side-by-side-execution.md).  
   
  Wenn die App auf Version 2.0, 3.0 oder 3.5 abzielt, werden die Benutzer möglicherweise aufgefordert, .NET Framework 3.5 auf einem Windows 8-, Windows 8.1.- oder Windows 10-Computer zu aktivieren, bevor sie diese App ausführen können. Weitere Informationen finden Sie unter [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8 (Installieren von .NET Framework 3.5 unter Windows 10, Windows 8.1 und Windows 8)](../install/dotnet-35-windows-10.md).  
   

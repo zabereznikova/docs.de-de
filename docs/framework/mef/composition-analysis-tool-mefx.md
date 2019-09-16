@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b47abc2adb7b515e4d1d76da58c150703a8693d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3777627caec7fc0d383804f71d9b7d3f09756fd
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957441"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894133"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Kompositionsanalysetool (Mefx)
 Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliotheks- (.dll) und Anwendungsdateien (.exe) mit Teilen des Managed Extensibility Framework (MEF) analysiert. MEFX dient in erster Linie dazu, Entwicklern eine Möglichkeit zur Diagnose von Kompositionsfehlern in MEF-Anwendungen zu bieten, ohne dass der Anwendung selbst unübersichtlicher Ablaufverfolgungscode hinzugefügt werden muss. Darüber hinaus kann das Tool nützlich sein, um Teile einer Bibliothek zu verstehen, die von einem Drittanbieter bereitgestellt wird. In diesem Thema wird beschrieben, wie MEFX verwendet wird, und ein Verweis auf die Syntax wird bereitgestellt.  
@@ -26,13 +26,13 @@ Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliothek
 ## <a name="basic-syntax"></a>Allgemeine Syntax  
  MEFX kann wie folgt über die Befehlszeile aufgerufen werden:  
   
-```  
+```console
 mefx [files and directories] [action] [options]  
 ```  
   
  Im ersten Satz von Argumenten werden die Dateien und Verzeichnisse angegeben, aus denen Teile für die Analyse geladen werden. Dateien können mit dem Schalter `/file:` und Verzeichnisse mit dem Schalter `/directory:` angegeben werden. Sie können mehrere Dateien oder Verzeichnisse angeben, wie im folgenden Beispiel veranschaulicht:  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
 ```  
   
@@ -45,7 +45,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
 ## <a name="listing-available-parts"></a>Auflisten verfügbarer Teile  
  Mit der Aktion `/parts` können Sie alle deklarierten Teile in den geladenen Dateien auflisten. Das Ergebnis ist eine einfache Liste mit den Namen der Teile.  
   
-```  
+```console
 mefx /file:MyAddIn.dll /parts  
 MyAddIn.AddIn  
 MyAddIn.MemberPart  
@@ -53,7 +53,7 @@ MyAddIn.MemberPart
   
  Mit der Option `/verbose` können Sie weitere Informationen über Teile abrufen. Dadurch erhalten Sie weitere Angaben zu allen verfügbaren Teilen. Um weitere Informationen über ein einzelnes Teil abzurufen, verwenden Sie die Aktion `/type` anstelle von `/parts`.  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
 [Part] MyAddIn.MemberPart from: AssemblyCatalog (Assembly=" MyAddIn, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] MyAddIn.MemberPart (ContractName=" MyAddIn.MemberPart")  
@@ -63,7 +63,7 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ## <a name="listing-imports-and-exports"></a>Auflisten von Importen und Exporten  
  Mit der Aktion `/imports` und der Aktion `/exports` werden alle importierten Teile und alle exportierten Teile aufgeführt. Sie können auch die Teile auflisten, mit denen ein bestimmter Typ importiert oder exportiert wird, indem Sie die `/importers` - oder die `/exporters` -Aktionen verwenden.  
   
-```  
+```console  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
@@ -76,13 +76,13 @@ MyAddin.AddIn
   
  Mit der `/verbose` -Option und der `/rejected` -Aktion können Sie detaillierte Informationen über abgelehnte Teile ausgeben. Die DLL-Datei `ClassLibrary1` im folgenden Beispiel enthält das Teil `AddIn` , mit dem das Teil `MemberPart` und das Teil `ChainOne` importiert werden. `ChainOne` importiert `ChainTwo`, `ChainTwo` ist jedoch nicht vorhanden. Dies bedeutet, dass `ChainOne` abgelehnt wird, wodurch `AddIn` abgelehnt wird.  
   
-```  
+```console  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
 ```  
   
  Im Folgenden wird die gesamte Ausgabe des vorherigen Befehls veranschaulicht:  
   
-```  
+```output
 [Part] ClassLibrary1.AddIn from: AssemblyCatalog (Assembly="ClassLibrary1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null")  
   [Export] ClassLibrary1.AddIn (ContractName="ClassLibrary1.AddIn")  
   [Import] ClassLibrary1.AddIn.memberPart (ContractName="ClassLibrary1.MemberPart")  
@@ -122,7 +122,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
  Angenommen, die Datei test.txt enthält den Text "ClassLibrary1.ChainOne". Wenn Sie die `/rejected` -Aktion mit der `/whitelist` -Option im vorherigen Beispiel ausführen, wird folgende Ausgabe erzeugt:  
   
-```  
+```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  
 [Unexpected] ClassLibrary1.AddIn  
 ClassLibrary1.ChainOne  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298967"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894678"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
@@ -32,13 +32,13 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [/outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
@@ -52,34 +52,34 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
   
 ## <a name="example"></a>Beispiel  
   
-1. Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe`*,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.  
+1. Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe` *,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
 2. Erstellen Sie die LICENSES-Datei `HostApp.exe.licenses` mit dem folgenden Befehl.  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
 3. Erstellen Sie `HostApp.exe` mit der LICENSES-Datei als Ressource. Wenn Sie eine C#-Anwendung erstellt haben, erstellen Sie die Anwendung mit dem folgenden Befehl.  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  Mit dem folgenden Befehl wird `myApp.licenses` aus den von `hostapplic.txt`, `hostapplic2.txt` und `hostapplic3.txt` angegebenen Listen lizenzierter Komponenten kompiliert. Das `modulesList`-Argument gibt die Module mit den lizenzierten Komponenten an.  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>Beispiel für eine Antwortdatei  
  Die folgende Auflistung enthält ein Beispiel für eine Antwortdatei namens `response.rsp`. Weitere Informationen zu Antwortdateien finden Sie unter [Antwortdateien](/visualstudio/msbuild/msbuild-response-files).  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,7 +88,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  In der folgenden Befehlszeile wird die `response.rsp` Datei verwendet.  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   

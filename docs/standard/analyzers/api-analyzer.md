@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d97921a3e98d85ac1e58c7686eadef3e979211f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107373"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929355"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -30,6 +30,7 @@ Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibilit
 ### <a name="what-are-deprecated-apis"></a>Was sind veraltete APIs?
 
 Die .NET-Familie besteht aus einer Reihe großer Produkte, die ständig aktualisiert werden, um den Kundenbedürfnissen besser gerecht zu werden. Es ist dabei üblich, einige APIs als veraltet zu kennzeichnen und durch neue zu ersetzen. Eine API gilt als veraltet, sobald es eine bessere Alternative gibt. Eine Möglichkeit, darüber zu informieren, dass eine API veraltet ist und nicht mehr verwendet werden sollte, ist die Kennzeichnung der API mit dem Attribut <xref:System.ObsoleteAttribute>. Der Nachteil dieses Ansatzes ist, dass es nur eine Diagnose-ID für alle veralteten APIs gibt (für C#, [CS0612](../../csharp/misc/cs0612.md)). Dies bedeutet Folgendes:
+
 - Es ist unmöglich, über dedizierte Dokumente für jeden Fall zu verfügen.
 - Eine bestimmte Kategorie von Warnungen kann nicht unterdrückt werden. Sie können entweder alle oder keine unterdrücken.
 - Damit Benutzer darüber informiert werden, dass eine API veraltet ist, muss eine referenzierte Assembly oder ein Zielpaket aktualisiert werden.

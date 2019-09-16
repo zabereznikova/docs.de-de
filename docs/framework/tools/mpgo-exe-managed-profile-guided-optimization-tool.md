@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1aa3bbfafb760a3002a218ef52d87957af47c4de
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616061"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894842"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 
@@ -29,7 +29,7 @@ Dieses Tool wird automatisch mit Visual Studio installiert. Wenn Sie das Tool au
   
 Für Desktop-Apps:  
   
-```  
+```console  
 mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <assembly2> ... -OutDir <directory> [options]  
 ```  
   
@@ -37,7 +37,7 @@ Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Ap
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
@@ -47,15 +47,15 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 > Sie können entweder `–Scenario` oder `–Import` als erforderlichen Befehl verwenden, aber nicht beide Befehle. Es wird keiner der erforderlichen Parameter verwendet, wenn Sie die Option `–Reset` angeben.
 
-|Erforderlicher Parameter|Beschreibung|
+|Erforderlicher Parameter|BESCHREIBUNG|
 |------------------------|-----------------|
-|`-Scenario` \<*Befehl*><br /><br /> – oder –<br /><br /> `-Scenario` \<*Paketname*><br /><br /> - oder - <br /><br /> `-Import` \<*Verzeichnis*>|Für Desktop-Apps verwenden Sie `–Scenario` zum Angeben des Befehls zum Ausführen der Anwendung, die Sie optimieren möchten, einschließlich aller Befehlszeilenargumente. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Befehl*, wenn es einen Pfad angibt, der Leerzeichen enthält, z.B: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Verwenden Sie keine doppelten Anführungszeichen, da sie nicht ordnungsgemäß funktionieren, wenn der *Befehl* Leerzeichen enthält.<br /><br /> - oder - <br /><br /> Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden Sie `–Scenario` zum Angeben des Pakets, für das Sie Profilinformationen generieren möchten. Wenn Sie den Paketanzeigenamen oder den Paketfamiliennamen anstelle des vollständigen Paketnamens angeben, wählt Mpgo.exe das Paket aus, das mit dem von Ihnen eingegebenen Namen übereinstimmt, sofern nur eine Übereinstimmung vorliegt. Wenn mehrere Pakete mit dem angegebenen Namen übereinstimmen, werden Sie von Mpgo.exe aufgefordert, ein Paket auszuwählen.<br /><br /> – oder –<br /><br /> Verwenden Sie `-Import` zum Angeben, dass Optimierungsdaten aus zuvor optimiertem Assemblys zum Optimieren der Assemblys in der `-AssemblyList` verwendet werden sollen. *Verzeichnis* gibt das Verzeichnis an, das die zuvor optimierten Dateien enthält. Die in `–AssemblyList` oder `–AssemblyListFile` angegebenen Assemblys sind die neuen Versionen der mit den Daten aus den importierten Dateien zu optimierenden Assemblys. Das Verwenden der Optimierungsdaten aus früheren Versionen der Assemblys ermöglicht Ihnen die Optimierung neuer Versionen, ohne erneute Ausführung des Szenarios.  Wenn die importierten und die neuen Assemblys jedoch erheblich unterschiedlichen Code enthalten, sind die Optimierungsdaten nicht effektiv. Die Assemblynamen, die in `–AssemblyList` oder `–AssemblyListFile` angegeben werden, müssen im Verzeichnis vorhanden sein, das durch `–Import`*verzeichnis* angegeben wird. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.<br /><br /> Sie müssen entweder `–Scenario` oder `–Import` angeben, jedoch nicht beide.|
+|`-Scenario` \<*Befehl*><br /><br /> – oder –<br /><br /> `-Scenario` \<*Paketname*><br /><br /> Oder<br /><br /> `-Import` \<*Verzeichnis*>|Für Desktop-Apps verwenden Sie `–Scenario` zum Angeben des Befehls zum Ausführen der Anwendung, die Sie optimieren möchten, einschließlich aller Befehlszeilenargumente. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Befehl*, wenn es einen Pfad angibt, der Leerzeichen enthält, z.B: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Verwenden Sie keine doppelten Anführungszeichen, da sie nicht ordnungsgemäß funktionieren, wenn der *Befehl* Leerzeichen enthält.<br /><br /> Oder<br /><br /> Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden Sie `–Scenario` zum Angeben des Pakets, für das Sie Profilinformationen generieren möchten. Wenn Sie den Paketanzeigenamen oder den Paketfamiliennamen anstelle des vollständigen Paketnamens angeben, wählt Mpgo.exe das Paket aus, das mit dem von Ihnen eingegebenen Namen übereinstimmt, sofern nur eine Übereinstimmung vorliegt. Wenn mehrere Pakete mit dem angegebenen Namen übereinstimmen, werden Sie von Mpgo.exe aufgefordert, ein Paket auszuwählen.<br /><br /> – oder –<br /><br /> Verwenden Sie `-Import` zum Angeben, dass Optimierungsdaten aus zuvor optimiertem Assemblys zum Optimieren der Assemblys in der `-AssemblyList` verwendet werden sollen. *Verzeichnis* gibt das Verzeichnis an, das die zuvor optimierten Dateien enthält. Die in `–AssemblyList` oder `–AssemblyListFile` angegebenen Assemblys sind die neuen Versionen der mit den Daten aus den importierten Dateien zu optimierenden Assemblys. Das Verwenden der Optimierungsdaten aus früheren Versionen der Assemblys ermöglicht Ihnen die Optimierung neuer Versionen, ohne erneute Ausführung des Szenarios.  Wenn die importierten und die neuen Assemblys jedoch erheblich unterschiedlichen Code enthalten, sind die Optimierungsdaten nicht effektiv. Die Assemblynamen, die in `–AssemblyList` oder `–AssemblyListFile` angegeben werden, müssen im Verzeichnis vorhanden sein, das durch `–Import`*verzeichnis* angegeben wird. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.<br /><br /> Sie müssen entweder `–Scenario` oder `–Import` angeben, jedoch nicht beide.|
 |`-OutDir` \<*Verzeichnis*>|Das Verzeichnis, in dem die optimierten Assemblys gespeichert werden sollen. Wenn eine Assembly bereits im Ausgabeverzeichnisordner vorhanden ist, wird eine neue Kopie erstellt und eine Indexnummer an den Namen angefügt, beispielsweise „*assemblyname*-1.exe“. Verwenden Sie doppelte Anführungszeichen um *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.|
-|`-AssemblyList` \<*Assembly1 Assembly2 ...*><br /><br /> – oder –<br /><br /> `-AssemblyListFile` \<*Datei*>|Eine Liste von Assemblys (einschließlich EXE- und DLL-Dateien), getrennt durch Leerzeichen, von denen Sie Profilinformationen sammeln möchten. Sie können `C:\Dir\*.dll` oder `*.dll` angeben, um alle Assemblys im festgelegten oder aktuellen Arbeitsverzeichnis auszuwählen. Weitere Informationen finden Sie im Abschnitt Hinweise.<br /><br /> – oder –<br /><br /> Eine Textdatei, die die Liste der Assemblys enthält, von denen Sie Profilinformationen sammeln möchten, muss die Assemblys zeilenweise enthalten. Verwenden Sie eine Assemblydateiliste, wenn ein Assemblyname mit einem Bindestrich (-) beginnt oder benennen die Assembly um.|
+|`-AssemblyList` \<*Assembly1 Assembly2 ...* ><br /><br /> – oder –<br /><br /> `-AssemblyListFile` \<*Datei*>|Eine Liste von Assemblys (einschließlich EXE- und DLL-Dateien), getrennt durch Leerzeichen, von denen Sie Profilinformationen sammeln möchten. Sie können `C:\Dir\*.dll` oder `*.dll` angeben, um alle Assemblys im festgelegten oder aktuellen Arbeitsverzeichnis auszuwählen. Weitere Informationen finden Sie im Abschnitt Hinweise.<br /><br /> – oder –<br /><br /> Eine Textdatei, die die Liste der Assemblys enthält, von denen Sie Profilinformationen sammeln möchten, muss die Assemblys zeilenweise enthalten. Verwenden Sie eine Assemblydateiliste, wenn ein Assemblyname mit einem Bindestrich (-) beginnt oder benennen die Assembly um.|
 |`-AppID` \<*appId*>|Die ID der Anwendung im angegebenen Paket. Wenn Sie den Platzhalter (\*) verwenden, versucht „mpgo.exe“ die AppIDs im Paket aufzulisten und greift bei einem Fehler auf die App \<*package_family_name*>! zurück. Wenn Sie eine Zeichenfolge mit einem vorangestellten Ausrufezeichen (!) angeben, wird Mpgo.exe den Paketfamiliennamen mit dem übergebenen Argument verketten.|
 |`-Timeout` \<*Sekunden*>|Die Zeitspanne, in der die [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App ausgeführt werden kann, bevor die App beendet wird.|
 
-|Optionale Parameter|Beschreibung|
+|Optionale Parameter|BESCHREIBUNG|
 |------------------------|-----------------|
 |`-64bit`|Instrumentiert die Assemblys für 64-Bit-Systeme.  Sie müssen diesen Parameter für 64-Bit-Assemblys angeben, auch wenn Ihre Assembly sich selbst als 64-Bit deklariert.|
 |`-ExeConfig` \<*Dateiname*>|Gibt die Konfigurationsdatei an, die in Ihrem Szenario verwendet wird, um Versions- und Loaderinformationen bereitzustellen.|
@@ -110,19 +110,19 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="examples"></a>Beispiele  
  Der folgende Mpgo.exe-Befehl aus einer Developer-Eingabeaufforderung für Visual Studio optimiert eine Steuer-Anwendung:  
   
-```  
+```console  
 mpgo –scenario "C:\MyApp\MyTax.exe /params par" –AssemblyList Mytax.dll MyTaxUtil2011.dll –OutDir C:\Optimized –TimeOut 15  
 ```  
   
  Der folgende Mpgo.exe-Befehl optimiert eine Sound-Anwendung:  
   
-```  
+```console  
 mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" –AssemblyList transcode.dll –OutDir C:\Optimized –TimeOut 15  
 ```  
   
  Der folgende Mpgo.exe-Befehl verwendet Daten aus zuvor optimierten Assemblys, um spätere Versionen der Assemblys zu optimieren:  
   
-```  
+```console  
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   

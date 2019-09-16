@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e257410c51d70af31b565d99a8d28ef82ce681d7
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: a521be147c462146775caa81b6a31fb37b4103af
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373798"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926680"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -292,16 +292,17 @@ Beachten Sie, dass ausgeführte Docker-Container an Ports gebunden sein können,
 Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzufügen möchten, stellen Sie sicher, dass Docker Desktop ausgeführt wird, während Sie dies tun. Der Assistent wird nicht ordnungsgemäß ausgeführt, wenn Docker Desktop beim Starten des Assistenten nicht ausgeführt wird. Darüber hinaus überprüft der Assistent Ihre aktuelle Containerwahl, um die richtige Docker-Unterstützung hinzuzufügen. Wenn Sie Unterstützung für Windows-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker Desktop mit der Konfiguration für Windows-Container ausgeführt wird. Wenn Sie Unterstützung für Linux-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker mit der Konfiguration für Linux-Container ausgeführt wird.
 
 ### <a name="references--common-web-architectures"></a>Ressourcen: Häufig verwendete Webarchitekturen
-> - **Clean Architecture**  
->   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
-> - **Onion Architecture**  
->   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **The Repository Pattern (Das Muster „Repository“)**  
->   <https://deviq.com/repository-pattern/>
-> - **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  
->   <https://github.com/ardalis/cleanarchitecture>
-> - **E-Book „Architecting Microservices“ (E-Book zur Architektur von Microservices)**  
->   <https://aka.ms/MicroservicesEbook>
+
+- **Clean Architecture**  
+  <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
+- **Onion Architecture**  
+  <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+- **The Repository Pattern (Das Muster „Repository“)**  
+  <https://deviq.com/repository-pattern/>
+- **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  
+  <https://github.com/ardalis/cleanarchitecture>
+- **E-Book „Architecting Microservices“ (E-Book zur Architektur von Microservices)**  
+  <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 >[Zurück](architectural-principles.md)

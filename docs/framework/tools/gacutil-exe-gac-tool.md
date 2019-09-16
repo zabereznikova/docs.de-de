@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47d0aba8be60611527d6216227a6c4939479fc38
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613043"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926873"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
 
@@ -36,19 +36,19 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 ```
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |*assemblyName*|Der Name einer Assembly. Sie können entweder einen teilweise angegebenen Assemblynamen, z. B. `myAssembly`, oder einen vollständig angegebenen Assemblynamen, z B. `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`, verwenden.|
 |*assemblyPath*|Der Name einer Datei, die ein Assemblymanifest enthält.|
 |*assemblyListFile*|Der Pfad zu einer ANSI-Textdatei, in der zu installierende oder zu deinstallierende Assemblys aufgeführt sind. Wenn Sie zum Installieren von Assemblys eine Textdatei verwenden möchten, geben Sie den Pfad zu den einzelnen Assemblys in der Datei jeweils in eigenen Zeilen an. Das Tool interpretiert relative Pfade als relativ zum Speicherort von *assemblyListFile*. Wenn Sie zum Deinstallieren von Assemblys eine Textdatei verwenden möchten, geben Sie den vollqualifizierten Namen der einzelnen Assemblys jeweils in eigenen Zeilen in der Datei an. Weitere Informationen hierzu finden Sie in den Beispielen zum Inhalt von *assemblyListFile* weiter unten in diesem Thema.|
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
 |**/cdl**|Löscht den Inhalt des Downloadcaches.|
 |**/f**|Geben Sie zum Erzwingen der Neuinstallation einer Assembly diese Option mit der **/i**-Option oder der **/il**-Option an. Wenn im globalen Assemblycache bereits eine Assembly mit demselben Namen vorhanden ist, wird diese vom Tool überschrieben.|
@@ -81,7 +81,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 Mit der **/il**-Option oder der **/ul**-Option können Sie eine Liste von Assemblys installieren bzw. deinstallieren, die in einer ANSI-Textdatei gespeichert ist. Der Inhalt der Textdatei muss korrekt formatiert sein. Wenn Sie zum Installieren von Assemblys eine Textdatei verwenden möchten, geben Sie den Pfad zu den einzelnen Assemblys in der Datei jeweils in eigenen Zeilen an. Im folgenden Beispiel wird der Inhalt einer Datei veranschaulicht, in der zu installierende Assemblys enthalten sind.
 
-```
+```text
 myAssembly1.dll
 myAssembly2.dll
 myAssembly3.dll
@@ -89,7 +89,7 @@ myAssembly3.dll
 
 Wenn Sie zum Deinstallieren von Assemblys eine Textdatei verwenden möchten, geben Sie den vollqualifizierten Namen der einzelnen Assemblys jeweils in eigenen Zeilen in der Datei an. Im folgenden Beispiel wird der Inhalt einer Datei veranschaulicht, in der zu deinstallierende Assemblys enthalten sind.
 
-```
+```text
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
@@ -98,11 +98,12 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > [!NOTE]
 > Bei dem Versuch, eine Assembly mit einem Dateinamen zu installieren, der länger als 79 und 91 Zeichen ist (Dateierweiterung ausgenommen), kann der folgende Fehler auftreten:
 >
-> ```
+> ```output
 > Failure adding assembly to the cache:   The file name is too long.
 > ```
 >
 > Dies liegt daran, dass „Gacutil.exe“ intern einen Pfad von bis zu MAX_PATH Zeichen erstellt, der aus den folgenden Elementen besteht:
+>
 > - GAC Root – 34 Zeichen (d.h. `C:\Windows\Microsoft.NET\assembly\`)
 > - Architecture – 7 oder 9 Zeichen (d.h. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
 > - AssemblyName – bis zu 91 Zeichen, abhängig von der Größe der anderen Elemente (z.B. `System.Xml.Linq\`)
@@ -117,13 +118,13 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 
 Mit dem folgenden Befehl wird die Assembly `mydll.dll` im globalen Assemblycache installiert.
 
-```
+```console
 gacutil /i mydll.dll
 ```
 
 Mit dem folgenden Befehl wird die Assembly `hello` aus dem globalen Assemblycache entfernt, sofern für die Assembly keine Verweiszählung vorhanden ist.
 
-```
+```console
 gacutil /u hello
 ```
 
@@ -131,49 +132,49 @@ Mit dem vorherigen Befehl können mehrere Assemblys aus dem Assemblycache entfer
 
 Im folgenden Beispiel wird veranschaulicht, wie Sie das Entfernen mehrerer Assemblys vermeiden. Mit diesem Befehl wird lediglich die Assembly `hello` entfernt, die der vollständig angegebenen Versionsnummer, der Kultur und dem öffentlichen Schlüssel entspricht.
 
-```
+```console
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
 ```
 
 Mit dem folgenden Befehl werden die in der Datei `assemblyList.txt` angegebenen Assemblys im globalen Assemblycache installiert.
 
-```
+```console
 gacutil /il assemblyList.txt
 ```
 
 Mit dem folgenden Befehl werden die in der Datei `assemblyList.txt` angegebenen Assemblys aus dem globalen Assemblycache entfernt.
 
-```
+```console
 gacutil /ul assemblyList.txt
 ```
 
 Mit dem folgenden Befehl wird `myDll.dll` im globalen Assemblycache installiert, und es wird ein Verweis für die Zählung hinzugefügt. Die Assembly `myDll.dll` wird von der Anwendung `MyApp` verwendet. Mit dem `UNINSTALL_KEY MyApp` -Parameter wird der Registrierungsschlüssel angegeben, mit dem `MyApp` in Windows der Liste unter "Software" hinzufügt wird. Der description-Parameter wird als `My Application Description` angegeben.
 
-```
+```console
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"
 ```
 
 Mit dem folgenden Befehl wird `myDll.dll` im globalen Assemblycache installiert, und es wird ein Verweis für die Zählung hinzugefügt. Der scheme-Parameter `FILEPATH` und der id-Parameter `c:\applications\myApp\myApp.exe` geben den Pfad der Anwendung an, von der die `myDll.dll.` installiert wird. Der description-Parameter wird als `MyApp` angegeben.
 
-```
+```console
 gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 Mit dem folgenden Befehl wird `myDll.dll` im globalen Assemblycache installiert, und es wird ein Verweis für die Zählung hinzugefügt. Der scheme-Parameter `OPAQUE` ermöglicht die Anpassung des id-Parameters und des description-Parameters.
 
-```
+```console
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"
 ```
 
 Mit dem folgenden Befehl wird der Verweis auf `myDll.dll` von der Anwendung `myApp` entfernt. Wenn es sich hierbei um den letzten Verweis auf die Assembly handelt, wird auch die Assembly aus dem Assemblycache entfernt.
 
-```
+```console
 gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp
 ```
 
 Der folgende Befehl listet den Inhalt des globalen Assemblycaches auf.
 
-```
+```console
 gacutil /l
 ```
 

@@ -3,12 +3,12 @@ title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105785"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926636"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
@@ -17,6 +17,7 @@ Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
+>
 > - Verwenden Sie die Syntax für Bereiche in einer Sequenz.
 > - Lernen Sie die Entwurfsentscheidungen für Start und Ende jeder Sequenz kennen.
 > - Lernen Sie Szenarien für die Typen <xref:System.Index> und <xref:System.Range> kennen.
@@ -24,6 +25,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 ## <a name="language-support-for-indices-and-ranges"></a>Sprachunterstützung für Indizes und Bereiche
 
 Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren.
+
 - <xref:System.Index?displayProperty=nameWithType>: Stellt einen Index in einer Sequenz dar.
 - Der `^`-Operator, der angibt, dass ein Index relativ zum Ende einer Sequenz ist.
 - <xref:System.Range?displayProperty=nameWithType>: Stellt einen Unterbereich einer Sequenz dar.

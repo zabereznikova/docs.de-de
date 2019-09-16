@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911008"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969104"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
@@ -35,7 +35,7 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
 - Assemblys mit starkem Namen  
   
-     Die parallele Ausführung verwendet Assemblys mit starken Namen, um Typinformationen an eine bestimmte Version einer Assembly zu binden. Dadurch wird verhindert, dass eine Anwendung oder Komponente an eine ungültige Version einer Assembly gebunden wird. Assemblys mit starken Namen ermöglichen außerdem das Vorhandensein mehrerer Versionen einer Datei auf demselben Computer und deren Verwendung durch Anwendungen. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md).  
+     Die parallele Ausführung verwendet Assemblys mit starken Namen, um Typinformationen an eine bestimmte Version einer Assembly zu binden. Dadurch wird verhindert, dass eine Anwendung oder Komponente an eine ungültige Version einer Assembly gebunden wird. Assemblys mit starken Namen ermöglichen außerdem das Vorhandensein mehrerer Versionen einer Datei auf demselben Computer und deren Verwendung durch Anwendungen. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md).  
   
 - Versionsabhängige Codespeicherung  
   
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
 |[Konfigurieren der Umleitung der Assemblybindung](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
 |[Prozessinterne parallele Ausführung](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
-|[Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  
+|[Assemblys in .NET](../../standard/assembly/index.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  
 |[Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
 ## <a name="reference"></a>Referenz  

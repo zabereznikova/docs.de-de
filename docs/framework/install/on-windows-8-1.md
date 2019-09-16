@@ -5,12 +5,12 @@ description: Informationen zum Installieren von .NET Framework unter Windows 8.1
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: 752f18eb3cbb87e5b6703fd7e0e81762ba3f0f10
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3959e6c9f45897b799b3305893580ec881b02f8d
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853907"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installieren von .NET Framework unter Windows 8.1 und Windows Server 2012 R2
 
@@ -39,6 +39,6 @@ Wenn Sie die richtige Version von .NET Framework nicht installieren können, [we
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Herunterladen von .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Herunterladen von .NET Framework](https://dotnet.microsoft.com/download)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Installieren von .NET Framework für Entwickler](guide-for-developers.md)

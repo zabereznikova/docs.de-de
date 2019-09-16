@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die die Telemetriefeatures der ML.NET-CLI, 
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: e7b3b3d7789f2368ebc4448e73add817986a5906
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254006"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929282"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Erfassen von Telemetriedaten durch die ML.NET-CLI
 
@@ -58,6 +58,7 @@ Die Daten werden mithilfe der Technologie [Azure Application Insights](https://a
 
 ### <a name="data-points-not-collected"></a>Nicht gesammelte Datenpunkte
 Das Telemetriefeature sammelt *nicht*:
+
 - persönliche Daten, z.B. Benutzernamen
 - Namen der Datasetdateien
 - Daten aus den Datasetdateien
@@ -73,6 +74,7 @@ Die Microsoft-Verteilung der ML.NET-CLI ist gemäß den [Microsoft-Softwarelizen
 Wenn Sie zum ersten Mal einen [ML.NET-CLI-Befehl](../reference/ml-net-cli-reference.md) wie `mlnet auto-train` ausführen, zeigt das ML.NET-CLI-Tool einen Text an, der Ihnen erklärt, wie Sie die Telemetrie deaktivieren können. Der Text kann abhängig von der von Ihnen ausgeführten Version der CLI leicht variieren.
 
 ## <a name="see-also"></a>Siehe auch
+
 - [ML.NET-CLI-Referenz](../reference/ml-net-cli-reference.md)
 - [Microsoft-Software-Lizenzbedingungen: Microsoft .NET-Bibliothek](https://aka.ms/dotnet-core-eula)
 - [Datenschutz bei Microsoft](https://www.microsoft.com/trustcenter/privacy/)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937922"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894569"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -28,7 +28,7 @@ Der Windows-Ressourcenlokalisierungs-Editor, „Winres.exe“, ist ein visuelles
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 winres resourceFile
 winres /?
 ```
@@ -116,13 +116,13 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
      Der folgende Befehl startet "Winres.exe" und lädt das mit `TestApp.resx` verknüpfte Formular in den Formular-Designer.
 
-    ```
+    ```console
     winres TestApp.resx
     ```
 
      Der folgende Befehl startet "Winres.exe" und lädt das mit `TestApp.resources` verknüpfte Formular in den Formular-Designer.
 
-    ```
+    ```console
     winres TestApp.resources
     ```
 
