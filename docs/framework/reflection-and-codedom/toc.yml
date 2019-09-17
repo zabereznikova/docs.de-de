@@ -16,6 +16,8 @@
           href: dynamically-loading-and-using-types.md
         - name: 'Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext'
           href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: 'Vorgehensweise: Abrufen von Typ- und Memberinformationen mithilfe von Reflektion'
+          href: get-type-member-information.md
         - name: Zugreifen auf benutzerdefinierte Attribute
           href: accessing-custom-attributes.md
         - name: Angeben vollständig gekennzeichneter Typnamen

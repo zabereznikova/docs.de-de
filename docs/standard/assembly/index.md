@@ -1,67 +1,120 @@
 ---
 title: Assemblys in .NET
-ms.date: 07/10/2018
+ms.date: 08/15/2019
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 09dc44141a4eea7601df3f918e8740efdb99aeda
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+helpviewer_keywords:
+- dynamic assemblies
+- security [.NET Framework], boundaries
+- boundaries of assemblies
+- assemblies [.NET Framework], about
+- assemblies [.NET Framework], boundaries
+- reference scope boundaries
+- assemblies [.NET Framework]
+- version boundaries
+- type boundaries
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666593"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970015"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
-Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET-basierte Anwendung. Assemblys sind ausführbare Dateien (EXE-Dateien) oder DLL-Dateien, sie bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.
+Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien ( *.exe*) oder Dynamic Link Library-Dateien ( *.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.
 
-In .NET Core und .NET Framework kann eine Assembly aus einer oder mehreren Quellcodedateien erstellt werden. In .NET Framework können Assemblys ein Modul oder mehrere Module umfassen. Dies macht es möglich, größere Projekte so zu planen, dass verschiedene unabhängige Entwickler an verschiedenen Quellcodedateien oder Modulen arbeiten, die anschließend in einer einzigen Assembly kombiniert werden. Weitere Informationen zu Modulen finden Sie unter [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../framework/app-domains/how-to-build-a-multifile-assembly.md).
+In .NET Core und .NET Framework können Sie eine Assembly entweder aus einer oder aus mehreren Quellcodedateien erstellen. In .NET Framework können Assemblys ein Modul oder mehrere Module umfassen. Dies macht es möglich, größere Projekte so zu planen, dass mehrere Entwickler an verschiedenen Quellcodedateien oder Modulen arbeiten, die anschließend in einer einzigen Assembly kombiniert werden. Weitere Informationen zu Modulen finden Sie unter [Vorgehensweise: Erstellen einer Assembly aus mehreren Dateien](../../framework/app-domains/build-multifile-assembly.md).
 
 Assemblys verfügen über folgende Eigenschaften:
 
-- Assemblys werden als EXE- oder DLL-Dateien implementiert.
+- Assemblys werden als *EXE*- oder *DLL*-Dateien implementiert.
 
-- Für Bibliotheken, die auf .NET Framework ausgerichtet sind, können Sie eine Assembly zwischen Anwendungen teilen, indem Sie sie im [globalen Assemblycache](../../framework/app-domains/gac.md) ablegen. Assemblys müssen über einen starken Namen verfügen, bevor sie dem globalen Assemblycache hinzugefügt werden können. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../framework/app-domains/strong-named-assemblies.md).
+- Für Bibliotheken, die auf .NET Framework ausgerichtet sind, können Sie eine Assembly für mehrere Anwendungen freigeben, indem Sie sie im [globalen Assemblycache](../../framework/app-domains/gac.md) ablegen. Sie müssen den Assemblys starke Namen geben, bevor Sie sie zum globalen Assemblycache hinzufügen können. Weitere Informationen finden Sie unter [Assemblys mit starken Namen](strong-named.md).
 
-- Assemblys werden nur in den Arbeitsspeicher geladen, wenn sie erforderlich sind. Wenn sie nicht verwendet werden, werden sie nicht geladen. Dies bedeutet, dass Assemblys eine effiziente Möglichkeit zur Verwaltung von Ressourcen in größeren Projekten sein können.
+- Assemblys werden nur in den Arbeitsspeicher geladen, wenn sie erforderlich sind. Wenn sie nicht verwendet werden, werden sie auch nicht geladen. Dies bedeutet, dass Assemblys eine effiziente Möglichkeit zur Verwaltung von Ressourcen in größeren Projekten sein können.
 
 - Sie können mithilfe der Reflektion programmgesteuert Informationen zu einer Assembly abrufen. Weitere Informationen finden Sie unter [Reflektion (C#)](../../csharp/programming-guide/concepts/reflection.md) oder [Reflektion (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Sie können eine Assembly nur zur Untersuchung laden, indem Sie die <xref:System.Reflection.MetadataLoadContext>-Klasse verwenden.
+- Sie können Assemblys laden, um sie nur zu untersuchen, indem Sie die <xref:System.Reflection.MetadataLoadContext>-Klasse in .NET Core und die Methode <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> oder die Methode <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> in .NET Core und .NET Framework verwenden.
+
+## <a name="assemblies-in-the-common-language-runtime"></a>Assemblys in der Common Language Runtime (CLR)
+
+Assemblys stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen von Typimplementierungen benötigt. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden. 
+
+Eine Assembly definiert die folgenden Informationen:  
+  
+- Code, der von der Common Language Runtime ausgeführt wird. Beachten Sie, dass jede Assembly nur über einen Einstiegspunkt (`DllMain`, `WinMain` oder `Main`) verfügen kann.
+  
+- Sicherheitsgrenze. Eine Assembly ist die Einheit, bei der Berechtigungen angefordert und erteilt werden. Weitere Informationen über Sicherheitsgrenzen in Assemblys finden Sie unter [Überlegungen zur Assemblysicherheit](security-considerations.md).  
+  
+- Typgrenze. Die Identität jedes Typs enthält den Namen der Assembly, in der dieser sich befindet. Wenn der Typ `MyType` in den Gültigkeitsbereich einer Assembly geladen wird, ist dieser nicht derselbe wie der Typ `MyType`, der in den Gültigkeitsbereich einer anderen Assembly geladen wurde. 
+  
+- Grenzen für Gültigkeitsbereiche. Das [Assemblymanifest](#assembly-manifest) enthält Metadaten, die für das Auflösen von Typen und die Bereitstellung angeforderter Ressourcen verwendet werden. Das Manifest gibt die Typen und Ressourcen an, die außerhalb der Assembly verfügbar gemacht werden sollen, und listet andere Assemblys auf, von denen es abhängig ist. MSIL-Code (Microsoft Intermediate Language) in einer übertragbaren ausführbaren Datei (Portable Executable, PE) wird nur ausgeführt, wenn diesem ein [Assemblymanifest](#assembly-manifest) zugeordnet wurde.
+  
+- Versionsgrenze. Die Assembly ist die kleinste versionierbare Einheit in der Common Language Runtime. Alle Typen und Ressourcen in derselben Assembly werden als eine Einheit versioniert. Das [Assemblymanifest](#assembly-manifest) beschreibt die von Ihnen für abhängige Assemblys angegebenen Versionsabhängigkeiten. Weitere Informationen über die Versionsverwaltung finden Sie unter [Assemblyversionsverwaltung](versioning.md).  
+  
+- Bereitstellungseinheit. Beim Starten einer Anwendung müssen nur die von der Anwendung zu Beginn aufgerufenen Assemblys vorhanden sein. Andere Assemblys, z. B. Assemblys mit Lokalisierungsressourcen oder Hilfsklassen, können bei Bedarf abgerufen werden. Dadurch ist die App beim ersten Herunterladen einfach und schlank. Weitere Informationen über die Bereitstellung von Assemblys finden Sie unter [Bereitstellen von Anwendungen](../../framework/deployment/index.md).  
+  
+- Einheit für die parallele Ausführung. Weitere Informationen über das Ausführen mehrerer Versionen einer Assembly finden Sie unter [Assemblys und parallele Ausführung](side-by-side-execution.md).  
+
+## <a name="create-an-assembly"></a>Erstellen einer Assembly
+
+Assemblys können statisch oder dynamisch sein. Statische Assemblys werden auf dem Datenträger in PE-Dateien (Portable Executable, übertragbare ausführbare Datei) gespeichert. Statische Assemblys können Schnittstellen, Klassen und Ressourcen wie Bitmaps, JPEG-Dateien und andere Ressourcendateien beinhalten. Sie können außerdem dynamische Assemblys erstellen, die direkt vom Arbeitsspeicher aus ausgeführt und vor der Ausführung nicht auf dem Datenträger gespeichert werden. Dynamische Assemblys können nach ihrer Ausführung auf dem Datenträger gespeichert werden.  
+
+Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Sie können Entwicklungstools wie Visual Studio verwenden, die *DLL*- und *EXE*-Dateien erstellen können. Mit den Tools im Windows SDK können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erstellt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=nameWithType> erstellen. 
+
+Sie können Assemblys kompilieren, indem Sie sie in Visual Studio, über Tools für die .NET Core-Befehlszeilenschnittstelle oder .NET Framework-Assemblys mit einem Befehlszeilencompiler erstellen. Weitere Informationen zum Erstellen von Assemblys mit Tools für die .NET Core-Befehlszeilenschnittstelle finden Sie unter [Tools für die .NET Core-Befehlszeilenschnittstelle](../../core/tools/index.md). Informationen zum Erstellen von Assemblys mit einem Befehlszeilencompiler finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) für C# oder [Erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) für Visual Basic.
+
+> [!NOTE]
+> Sie können eine Assembly in Visual Studio erstellen, indem Sie im Menü **Build** auf die Option **Build** klicken.
 
 ## <a name="assembly-manifest"></a>Assemblymanifest
 
-Jede Assembly enthält ein *Assemblymanifest*. Ähnlich wie ein Inhaltsverzeichnis enthält das Assemblymanifest Folgendes:
+Jede Assembly enthält eine *Assemblymanifestdatei*. Ähnlich wie ein Inhaltsverzeichnis enthält das Assemblymanifest Folgendes:
 
 - Die Identität der Assembly (Name und Version).
 
-- Eine Dateitabelle, die alle anderen Dateien beschreibt, aus denen die Assembly besteht, z.B. weitere Assemblys, die Sie erstellt haben, auf denen Ihre EXE- oder DLL-Datei basiert, oder sogar Bitmap- oder Infodateien.
+- Eine Dateitabelle, die alle anderen Dateien beschreibt, aus denen die Assembly besteht, z. B. weitere Assemblys, die Sie erstellt haben, von denen Ihre *EXE*- oder *DLL*-Datei abhängig ist, oder sogar Bitmap- oder Infodateien.
 
-- Eine *Assemblyverweisliste*, eine Liste aller externen Abhängigkeiten, z.B. DLL-Dateien oder andere Dateien, die Ihre Anwendung benötigt, die möglicherweise von einer anderen Person erstellt wurden. Assemblyverweise enthalten Verweise auf globale und private Objekte. Globale Objekte stehen für alle weiteren Anwendungen zur Verfügung. In .NET Core sind diese an eine bestimmte .NET Core-Runtime gekoppelt. In .NET Framework befinden sie sich im globalen Assemblycache. Der Namespace <xref:System.IO?displayProperty=nameWithType> ist ein Beispiel für eine Assembly im globalen Assemblycache. Private Objekte müssen sich in einem Verzeichnis auf derselben Ebene oder unterhalb des Verzeichnisses befinden, in dem die Anwendung installiert ist.
+- Eine *Assemblyverweisliste*, also eine Liste aller externen Abhängigkeiten, z. B. *DLL*-Dateien oder andere Dateien. Assemblyverweise enthalten Verweise auf globale und private Objekte. Globale Objekte stehen für alle weiteren Anwendungen zur Verfügung. In .NET Core werden globale Objekte an eine bestimmte .NET Core-Runtime gekoppelt. In .NET Framework befinden sich globale Objekte im globalen Assemblycache. *System. IO. dll* ist ein Beispiel für eine Assembly im globalen Assemblycache. Private Objekte müssen sich auf Verzeichnisebene oder unterhalb des Verzeichnisses befinden, in dem die App installiert ist.
 
-Da Assemblys Informationen zu Inhalt, Versionsverwaltung und Abhängigkeiten enthalten, sind Anwendungen, die die Assemblys verwenden, nicht von Windows-Registrierungswerten abhängig, um ordnungsgemäß zu funktionieren. Assemblys reduzieren DLL-Konflikte, verbessern die Zuverlässigkeit und vereinfachen die Bereitstellung Ihrer Anwendungen. In vielen Fällen können Sie eine .NET-basierte Anwendung einfach durch Kopieren der Dateien auf den Zielcomputer installieren. Weitere Informationen finden Sie unter [Assemblymanifest](../../framework/app-domains/assembly-manifest.md).
+Da Assemblys Informationen zu Inhalt, Versionsverwaltung und Abhängigkeiten enthalten, sind Anwendungen, die die Assemblys verwenden, nicht von externen Quellen wie der Registrierung auf Windows-Systemen abhängig, um ordnungsgemäß zu funktionieren. Assemblys reduzieren *DLL*-Konflikte, verbessern die Zuverlässigkeit und vereinfachen die Bereitstellung Ihrer Anwendungen. In vielen Fällen können Sie eine .NET-basierte Anwendung einfach durch Kopieren der Dateien auf den Zielcomputer installieren. Weitere Informationen finden Sie unter [Assemblymanifest](manifest.md).
 
-## <a name="adding-a-reference-to-an-assembly"></a>Hinzufügen eines Verweises auf eine Assembly
+## <a name="add-a-reference-to-an-assembly"></a>Hinzufügen eines Verweises auf eine Assembly
 
-Um eine Assembly zu verwenden, müssen Sie einen Verweis darauf hinzufügen. Als Nächstes können Sie die [using-Direktive](../../csharp/language-reference/keywords/using-directive.md) für C# oder eine [Imports-Anweisung](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für Visual Basic verwenden, um den Namespace der Elemente auszuwählen, die Sie verwenden möchten. Sobald auf eine Assembly verwiesen und sie importiert wird, sind alle zugänglichen Typen, Eigenschaften, Methoden und anderen Member ihrer Namespaces für Ihre Anwendung verfügbar, als wäre ihr Code Teil der Quelldatei.
-
-> [!NOTE]
-> Die meisten Assemblys der .NET-Klassenbibliothek werden automatisch referenziert. In einigen Fällen jedoch kann eine Systemassembly möglicherweise nicht automatisch referenziert werden. In .NET Core können Sie einen Verweis auf das NuGet-Paket mit der Assembly hinzufügen, indem Sie entweder den NuGet-Paket-Manager in Visual Studio verwenden, oder indem Sie dem *.csproj- oder *.vbproj-Projekt ein [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element)-Element für die Assembly hinzufügen. In .NET Framework können Sie einen Verweis auf die Assembly über das Dialogfeld **Verweis hinzufügen** in Visual Studio hinzufügen, oder Sie verwenden die Befehlszeilenoption `-reference` für den [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)- oder [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)-Compiler.
-
-In C# können Sie auch zwei Versionen derselben Assembly in einer einzigen Anwendung verwenden. Weitere Informationen finden Sie unter [extern-Alias](../../csharp/language-reference/keywords/extern-alias.md).
-
-## <a name="creating-an-assembly"></a>Erstellen einer Assembly
-
-Kompilieren Sie Ihre Anwendung, indem Sie sie in Visual Studio erstellen, indem Sie sie von der Befehlszeile aus mit den CLI-Tools (Command Line Interface) von.NET Core erstellen, oder indem Sie mit einem Befehlszeilencompiler .NET Framework-Assemblys erstellen. Weitere Informationen zum Erstellen von Assemblys mit .NET-CLI-Tools finden Sie unter [Tools für die .NET Core-Befehlszeilenschnittstelle](../../core/tools/index.md). Informationen zum Erstellen von Assemblys mit einem Befehlszeilencompiler finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) für C# und [Erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) für Visual Basic.
+Damit Sie eine Assembly in einer Anwendung verwenden können, müssen Sie einen Verweis auf diese hinzufügen. Sobald auf eine Assembly verwiesen wird, sind alle zugänglichen Typen, Eigenschaften, Methoden und andere Member ihrer Namespaces für Ihre Anwendung verfügbar, als wäre ihr Code Teil der Quelldatei.
 
 > [!NOTE]
-> Sie erstellen eine Assembly in Visual Studio, indem Sie im Menü **Build** die Option **Build** wählen.
+> Die meisten Assemblys der .NET-Klassenbibliothek werden automatisch referenziert. Wenn nicht automatisch auf eine Systemassembly verwiesen wird, können Sie für .NET Core einen Verweis auf das NuGet-Paket hinzufügen, in dem die Assembly enthalten ist. Verwenden Sie entweder den NuGet-Paket-Manager in Visual Studio, oder fügen Sie dem *CSPROJ*- oder dem *VBPROJ*-Projekt ein [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element)-Element für die Assembly hinzu. In .NET Framework können Sie über das Dialogfeld **Verweis hinzufügen** in Visual Studio einen Verweis auf die Assembly hinzufügen, oder Sie verwenden die Befehlszeilenoption `-reference` für den [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)- oder [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)-Compiler.
+
+In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung verwenden. Weitere Informationen finden Sie unter [extern-Alias](../../csharp/language-reference/keywords/extern-alias.md).
+
+## <a name="related-content"></a>Verwandter Inhalt
+  
+|Titel|BESCHREIBUNG|  
+|-----------|-----------------|  
+|[Assemblyinhalte](contents.md)|Elemente, aus denen die Assembly besteht|  
+|[Assemblymanifest](manifest.md)|Die Daten im Assemblymanifest und wie diese in Assemblys gespeichert werden|  
+|[Globaler Assemblycache](../../framework/app-domains/gac.md)|Wie der globale Assemblycache Assemblys speichert und verwendet|  
+|[Assemblys mit starken Namen](strong-named.md)|Die Eigenschaften von Assemblys mit starken Namen|  
+|[Überlegungen zur Assemblysicherheit](security-considerations.md)|Funktionsweise der Sicherheitsmechanismen von Assemblys|  
+|[Assemblyversionsverwaltung](versioning.md)|Übersicht über die Versionsverwaltungsrichtlinie von .NET Framework|  
+|[Assemblypositionierung](../../framework/app-domains/assembly-placement.md)|Die Positionierung von Assemblys|  
+|[Assemblys und parallele Ausführung](side-by-side-execution.md)|Das gleichzeitige Verwenden mehrerer Versionen der Runtime oder einer Assembly|  
+|[Programmieren mit Assemblys](program.md)|Erstellen, Signieren und Festlegen von Attributen für Assemblys|  
+|[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erstellen von dynamischen Assemblys|  
+|[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|So löst .NET Framework zur Laufzeit Assemblyverweise auf|  
+
+## <a name="reference"></a>Referenz  
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET-Assemblydateiformat](file-format.md)
-- [Assemblys in der Common Language Runtime (CLR)](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Friend-Assemblys](friend-assemblies.md)
-- [Vorgehensweise: Laden und Entladen von Assemblys (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)
-- [Vorgehensweise: Laden und Entladen von Assemblys (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)
-- [Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability-howto.md)
-- [Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)
-- [Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)
+- [Assemblys in .NET](index.md)
+- [Friend-Assemblys](friend.md)
+- [Vorgehensweise: Laden und Entladen von Assemblys](load-unload.md)
+- [Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability.md)
+- [Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist](identify.md)
