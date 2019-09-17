@@ -1,29 +1,33 @@
 - name: Anwendungsdomänen und Assemblys
   href: index.md
   items:
-    - name: Assemblys in der Common Language Runtime (CLR)
-      href: assemblies-in-the-common-language-runtime.md
+    - name: Assemblypositionierung
+      href: assembly-placement.md
+    - name: Globaler Assemblycache
+      href: gac.md
+    - name: Arbeiten mit Assemblys und dem globalen Assemblychache
+      href: working-with-assemblies-and-the-gac.md
       items:
-        - name: Assemblyinhalte
-          href: assembly-contents.md
-        - name: Assemblymanifest
-          href: assembly-manifest.md
-        - name: Globaler Assemblycache
-          href: gac.md
-        - name: Assemblys mit starkem Namen
-          href: strong-named-assemblies.md
-        - name: Überlegungen zur Assemblysicherheit
-          href: assembly-security-considerations.md
-        - name: Assemblyversionen
-          href: assembly-versioning.md
-        - name: Assemblypositionierung
-          href: assembly-placement.md
-        - name: Assemblys und parallele Ausführung
-          href: assemblies-and-side-by-side-execution.md
+        - name: 'Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches'
+          href: how-to-view-the-contents-of-the-gac.md
+        - name: 'Vorgehensweise: Installieren einer Assembly im globalen Assemblycache'
+          href: install-assembly-into-gac.md
+        - name: 'Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache'
+          href: how-to-remove-an-assembly-from-the-gac.md
+        - name: Verwenden von Serviced Components mit dem globalen Assemblycache
+          href: use-serviced-components-with-the-gac.md
     - name: Anwendungsdomänen
       href: application-domains.md
     - name: Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
       href: application-domains-and-assemblies-how-to-topics.md
+    - name: 'Vorgehensweise: Erstellen einer Einzeldateiassembly'
+      href: build-single-file-assembly.md
+    - name: Mehrfachdateiassemblys
+      href: multifile-assemblies.md
+    - name: 'Vorgehensweise: Erstellen einer Mehrfachdateiassembly'
+      href: build-multifile-assembly.md
+    - name: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen'
+      href: how-to-share-an-assembly-with-other-applications.md
     - name: Verwenden von Anwendungsdomänen
       href: use.md
       items:
@@ -37,62 +41,9 @@
           href: retrieve-setup-information.md
         - name: 'Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne'
           href: how-to-load-assemblies-into-an-application-domain.md
-        - name: 'Vorgehensweise: Abrufen von Typ- und Memberinformationen aus einer Assembly'
-          href: how-to-obtain-type-and-member-information-from-an-assembly.md
         - name: Erstellen von Schattenkopien von Assemblys
           href: shadow-copy-assemblies.md
         - name: 'Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)'
           href: how-to-receive-first-chance-exception-notifications.md
-        - name: Auflösen beim Laden von Assemblys
-          href: resolve-assembly-loads.md
-    - name: Programmieren mit Assemblys
-      href: programming-with-assemblies.md
-      items:
-        - name: Erstellen von Assemblys
-          href: create-assemblies.md
-        - name: Assemblynamen
-          href: assembly-names.md
-        - name: 'Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly'
-          href: how-to-determine-assembly-fully-qualified-name.md
-        - name: Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit
-          href: running-intranet-applications-in-full-trust.md
-        - name: Assemblyspeicherort
-          href: assembly-location.md
-        - name: 'Vorgehensweise: Erstellen einer Einzeldateiassembly'
-          href: how-to-build-a-single-file-assembly.md
-        - name: Mehrfachdateiassemblys
-          href: multifile-assemblies.md
-        - name: 'Vorgehensweise: Erstellen einer Mehrfachdateiassembly'
-          href: how-to-build-a-multifile-assembly.md
-        - name: Festlegen von Assemblyattributen
-          href: set-assembly-attributes.md
-        - name: Erstellen und Verwenden von Assemblys mit starkem Namen
-          href: create-and-use-strong-named-assemblies.md
-          items:
-            - name: 'Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars'
-              href: how-to-create-a-public-private-key-pair.md
-            - name: 'Vorgehensweise: Signieren einer Assembly mit einem starken Namen'
-              href: how-to-sign-an-assembly-with-a-strong-name.md
-            - name: Verbesserte starke Namen
-              href: enhanced-strong-naming.md
-            - name: 'Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen'
-              href: how-to-reference-a-strong-named-assembly.md
-            - name: 'Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion'
-              href: how-to-disable-the-strong-name-bypass-feature.md
-        - name: Verzögertes Signieren einer Assembly
-          href: delay-sign-assembly.md
-        - name: Arbeiten mit Assemblys und dem globalen Assemblychache
-          href: working-with-assemblies-and-the-gac.md
-          items:
-            - name: 'Vorgehensweise: Installieren einer Assembly im globalen Assemblycache'
-              href: how-to-install-an-assembly-into-the-gac.md
-            - name: 'Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches'
-              href: how-to-view-the-contents-of-the-gac.md
-            - name: 'Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache'
-              href: how-to-remove-an-assembly-from-the-gac.md
-            - name: Verwenden von Serviced Components mit dem globalen Assemblycache
-              href: use-serviced-components-with-the-gac.md
-        - name: 'Vorgehensweise: Anzeigen des Assemblyinhalts'
-          href: how-to-view-assembly-contents.md
-        - name: "Typweiterleitung in der Common\_Language\_Runtime"
-          href: type-forwarding-in-the-common-language-runtime.md
+    - name: Ausführen von Intranetanwendungen mit voller Vertrauenswürdigkeit
+      href: running-intranet-applications-in-full-trust.md
