@@ -9,37 +9,40 @@ helpviewer_keywords:
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4f0c2ad1290a7f9cf8d0c43c504a3e0a9628b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 84d674f7ae8e80d7a5e6a40539e3330fcfa9b563
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971927"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053117"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programmieren mit Anwendungsdomänen und Assemblys
-Hosts wie z.B. Microsoft Internet Explorer, ASP.NET und Windows-Shell laden die Common Language Runtime in einen Prozess, erstellen eine [Anwendungsdomäne](../../../docs/framework/app-domains/application-domains.md) in diesem Prozess und laden dann Benutzercode in diese Anwendungsdomäne und führen ihn aus, wenn eine .NET Framework-Anwendung ausgeführt wird. In den meisten Fällen müssen Sie sich nicht darum kümmern, Anwendungsdomänen zu erstellen und Assemblys hinein zu laden, da der Laufzeithost diese Aufgaben ausführt.  
+
+Hosts wie z.B. Microsoft Internet Explorer, ASP.NET und Windows-Shell laden die Common Language Runtime in einen Prozess, erstellen eine [Anwendungsdomäne](application-domains.md) in diesem Prozess und laden dann Benutzercode in diese Anwendungsdomäne und führen ihn aus, wenn eine .NET Framework-Anwendung ausgeführt wird. In den meisten Fällen müssen Sie sich nicht darum kümmern, Anwendungsdomänen zu erstellen und Assemblys hinein zu laden, da der Laufzeithost diese Aufgaben ausführt.  
   
- Wenn Sie jedoch eine Anwendung erstellen, die die Common Language Runtime hostet, Tools oder Code erstellen, den Sie programmgesteuert entladen möchten, oder austauschbare Komponenten erstellen, die spontan entladen und neu geladen werden können, erstellen Sie Ihre eigenen Anwendungsdomänen. Auch wenn Sie keinen Laufzeithost erstellen, können Sie diesem Abschnitt wichtige Informationen entnehmen zum Arbeiten mit Anwendungsdomänen und Assemblys, die in diese Anwendungsdomänen geladen werden.  
+Wenn Sie jedoch eine Anwendung erstellen, die die Common Language Runtime hostet, Tools oder Code erstellen, den Sie programmgesteuert entladen möchten, oder austauschbare Komponenten erstellen, die spontan entladen und neu geladen werden können, erstellen Sie Ihre eigenen Anwendungsdomänen. Auch wenn Sie keinen Laufzeithost erstellen, können Sie diesem Abschnitt wichtige Informationen entnehmen zum Arbeiten mit Anwendungsdomänen und Assemblys, die in diese Anwendungsdomänen geladen werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Enthält Links zu allen Gewusst-wie-Themen in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  
+
+[Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys](application-domains-and-assemblies-how-to-topics.md)  
+Enthält Links zu allen Gewusst-wie-Themen in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  
   
- [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)  
- Stellt Beispiele zum Erstellen, Konfigurieren und Verwenden von Anwendungsdomänen bereit.  
+[Verwenden von Anwendungsdomänen](use.md)  
+Stellt Beispiele zum Erstellen, Konfigurieren und Verwenden von Anwendungsdomänen bereit.  
   
- [Programmieren mit Assemblys](../../standard/assembly/program.md)  
- Beschreibt das Erstellen, Signieren und Festlegen von Attributen für Assemblys.  
+[Programmieren mit Assemblys](../../standard/assembly/program.md)  
+Beschreibt das Erstellen, Signieren und Festlegen von Attributen für Assemblys.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- Beschreibt das Erstellen dynamischer Assemblys.  
+
+[Ausgeben von dynamischen Methoden und Assemblys](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+Beschreibt das Erstellen dynamischer Assemblys.  
   
- [Assemblys in .NET](../../standard/assembly/index.md)  
- Bietet eine konzeptionelle Übersicht über Assemblys.  
+[Assemblys in .NET](../../standard/assembly/index.md)  
+Bietet eine konzeptionelle Übersicht über Assemblys.  
   
- [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)  
- Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.  
+[Anwendungsdomänen](application-domains.md)  
+Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.  
   
- [Übersicht über Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Beschreibt, wie die **Reflektion**-Klasse verwendet wird, um Informationen zu einer Assembly abzurufen.
+[Übersicht über Reflektion](../reflection-and-codedom/reflection.md)  
+Beschreibt, wie die **Reflektion**-Klasse verwendet wird, um Informationen zu einer Assembly abzurufen.

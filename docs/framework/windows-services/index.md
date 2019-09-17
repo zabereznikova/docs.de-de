@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053541"
 ---
 # <a name="develop-windows-service-apps"></a>Entwickeln von Windows-Dienstanwendungen
 
@@ -27,19 +27,19 @@ ms.locfileid: "62008706"
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+[Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
 
 Stellt eine Übersicht von Windows-Dienstanwendungen bereit, wie die Lebensdauer eines Dienst und wie Dienstanwendungen sich von anderen häufigen Projekttypen unterscheiden
 
-[Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Stellt ein Beispiel zur Erstellung eines Diensts in Visual Basic und Visual C# bereit
 
-[Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+[Programmierarchitektur für Dienstanwendungen](service-application-programming-architecture.md)
 
 Erläutert die Sprachelemente, die in der Dienstprogrammierung verwendet werden
 
-[Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
 
 Beschreibt den Vorgang des Erstellens und Konfigurierens von Windows-Diensten über die Windows-Dienstprojektvorlage
 
