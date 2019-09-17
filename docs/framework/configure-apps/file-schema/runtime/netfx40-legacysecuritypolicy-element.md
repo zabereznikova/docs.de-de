@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663561"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252444"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >-Element
 
 Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.
 
-\<Konfigurations > \
-\<Lauf Zeit > \
-\<NetFx40_LegacySecurityPolicy>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<NetFx40_LegacySecurityPolicy >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,7 +66,7 @@ Die CAS-Richtlinie ist Versions spezifisch. Benutzerdefinierte CAS-Richtlinien, 
 Das Anwenden `<NetFx40_LegacySecurityPolicy>` des-Elements auf eine .NET Framework 4-Assembly wirkt sich nicht auf [Sicherheits transparenten Code](../../../misc/security-transparent-code.md)aus; die Transparenzregeln gelten weiterhin.
 
 > [!IMPORTANT]
-> Das Anwenden `<NetFx40_LegacySecurityPolicy>` des-Elements kann zu erheblichen Leistungseinbußen für Native Image-Assemblys führen, die vom [Native Image Generator (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) erstellt werden, die nicht im [globalen](../../../app-domains/gac.md)Assemblycache installiert sind. Die Leistungsminderung wird dadurch verursacht, dass die Common Language Runtime die Assemblys nicht als systemeigene Images lädt, wenn das Attribut angewendet wird, was dazu führt, dass Sie als Just-in-Time-Assemblys geladen werden.
+> Das Anwenden des `<NetFx40_LegacySecurityPolicy>`-Elements kann zu erheblichen Leistungseinbußen für native Imageassemblys führen, die vom [Native Image Generator (Ngen.exe)](../../../tools/ngen-exe-native-image-generator.md) erstellt wurden und nicht im globalen [Assemblycache](../../../app-domains/gac.md) installiert sind. Die Leistungsminderung wird dadurch verursacht, dass die Common Language Runtime die Assemblys nicht als systemeigene Images lädt, wenn das Attribut angewendet wird, was dazu führt, dass Sie als Just-in-Time-Assemblys geladen werden.
 
 > [!NOTE]
 > Wenn Sie in den Projekteinstellungen für das Visual Studio-Projekt eine Ziel .NET Framework Version angeben, die älter als die .NET Framework 4 ist, wird die CAS-Richtlinie aktiviert, einschließlich aller benutzerdefinierten CAS-Richtlinien, die Sie für diese Version angegeben haben. Sie können jedoch keine neuen .NET Framework 4-Typen und-Member verwenden. Sie können auch eine frühere Version der .NET Framework angeben, indem Sie das [ \<supportedRuntime-> Element](../startup/supportedruntime-element.md) im Schema der Start Einstellungen in der [Anwendungs Konfigurationsdatei](../../index.md)verwenden.
