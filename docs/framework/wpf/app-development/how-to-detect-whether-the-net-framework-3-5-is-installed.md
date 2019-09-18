@@ -7,26 +7,26 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 220fb3236786eb894bb78d12104025d24c9876ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18e5c819eb4deb62208280816d11dce0940d134d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960892"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053430"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="1b7c4-102">Vorgehensweise: Erkennen einer .NET Framework 3.5-Installation</span><span class="sxs-lookup"><span data-stu-id="1b7c4-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
-<span data-ttu-id="1b7c4-103">Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf einem System bereitstellen können, das auf das .NET Framework 3,5 abzielt, müssen Sie zunächst bestätigen, dass die .NET Framework 3,5-Laufzeit vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the .NET Framework 3.5, they must first confirm that the .NET Framework 3.5 runtime is present.</span></span> <span data-ttu-id="1b7c4-104">Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework 3,5 in einem System vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework 3.5 is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="e6347-102">Vorgehensweise: Erkennen einer .NET Framework 3.5-Installation</span><span class="sxs-lookup"><span data-stu-id="e6347-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="e6347-103">Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf einem System bereitstellen können, das auf das .NET Framework 3,5 abzielt, müssen Sie zunächst bestätigen, dass die .NET Framework 3,5-Laufzeit vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="e6347-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the .NET Framework 3.5, they must first confirm that the .NET Framework 3.5 runtime is present.</span></span> <span data-ttu-id="e6347-104">Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework 3,5 in einem System vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="e6347-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework 3.5 is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1b7c4-105">Ausführlichere Informationen zum Installieren, bereitstellen und Ermitteln des .NET Framework finden Sie unter [Installieren des .NET Framework für Entwickler](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="1b7c4-105">For more detailed information on installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
+> <span data-ttu-id="e6347-105">Ausführlichere Informationen zum Installieren, bereitstellen und Ermitteln des .NET Framework finden Sie unter [Installieren des .NET Framework für Entwickler](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="e6347-105">For more detailed information on installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b7c4-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1b7c4-106">Example</span></span>  
- <span data-ttu-id="1b7c4-107">Wenn die .NET Framework 3,5 installiert ist, fügt die msi ".NET CLR" und die Versionsnummer der UserAgent-Zeichenfolge hinzu.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-107">When the .NET Framework 3.5 is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="1b7c4-108">Das folgende Beispiel zeigt ein Skript, das in eine einfache HTML-Seite eingebettet ist.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="1b7c4-109">Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob die .NET Framework 3,5 installiert ist, und zeigt eine Statusmeldung für die Ergebnisse der Suche an.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-109">The script searches the UserAgent string to determine whether the .NET Framework 3.5 is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="example"></a><span data-ttu-id="e6347-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e6347-106">Example</span></span>  
+ <span data-ttu-id="e6347-107">Wenn die .NET Framework 3,5 installiert ist, fügt die msi ".NET CLR" und die Versionsnummer der UserAgent-Zeichenfolge hinzu.</span><span class="sxs-lookup"><span data-stu-id="e6347-107">When the .NET Framework 3.5 is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="e6347-108">Das folgende Beispiel zeigt ein Skript, das in eine einfache HTML-Seite eingebettet ist.</span><span class="sxs-lookup"><span data-stu-id="e6347-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="e6347-109">Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob die .NET Framework 3,5 installiert ist, und zeigt eine Statusmeldung für die Ergebnisse der Suche an.</span><span class="sxs-lookup"><span data-stu-id="e6347-109">The script searches the UserAgent string to determine whether the .NET Framework 3.5 is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1b7c4-110">Dieses Skript ist für Internet Explorer konzipiert.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="1b7c4-111">Andere Browser enthalten möglicherweise keine .NET CLR-Informationen in der UserAgent-Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="1b7c4-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
+> <span data-ttu-id="e6347-110">Dieses Skript ist für Internet Explorer konzipiert.</span><span class="sxs-lookup"><span data-stu-id="e6347-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="e6347-111">Andere Browser enthalten möglicherweise keine .NET CLR-Informationen in der UserAgent-Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="e6347-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.5</TITLE>  
@@ -116,18 +116,18 @@ ms.locfileid: "69960892"
 </HTML>  
 ```  
   
- <span data-ttu-id="1b7c4-112">Wenn die Suche nach der ".NET CLR"-Version erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="1b7c4-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="e6347-112">Wenn die Suche nach der ".NET CLR"-Version erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="e6347-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- <span data-ttu-id="1b7c4-113">Andernfalls wird der folgende Typ der Statusmeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="1b7c4-113">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="e6347-113">Andernfalls wird der folgende Typ der Statusmeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="e6347-113">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a><span data-ttu-id="1b7c4-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b7c4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6347-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6347-114">See also</span></span>
 
-- [<span data-ttu-id="1b7c4-115">Erkennen einer .NET Framework 3.0-Installation</span><span class="sxs-lookup"><span data-stu-id="1b7c4-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="e6347-115">Erkennen einer .NET Framework 3.0-Installation</span><span class="sxs-lookup"><span data-stu-id="e6347-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

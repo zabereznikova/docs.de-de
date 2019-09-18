@@ -3,18 +3,18 @@ title: Referenz zur WIF-Konfiguration
 ms.date: 03/30/2017
 ms.assetid: 098b80ba-9ebd-4078-a1cb-c1151036a207
 author: BrucePerlerMS
-ms.openlocfilehash: e2077135819cb41f2590e3bc1d60ecc376836271
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7691ea781aa65e1c61f8fd488044df4470bc8fb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909362"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045135"
 ---
-# <a name="wif-configuration-reference"></a><span data-ttu-id="f359f-102">Referenz zur WIF-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="f359f-102">WIF Configuration Reference</span></span>
-<span data-ttu-id="f359f-103">Sie können Windows Identity Foundation (WIF) in Ihren Anwendungen durch Hinzufügen von Elementen zu einer Konfigurationsdatei konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="f359f-103">You can configure Windows Identity Foundation (WIF) in your applications by adding elements to a configuration file.</span></span> <span data-ttu-id="f359f-104">Dieses Thema enthält Links zu Referenzthemen für die WIF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="f359f-104">This topic contains links to reference topics for the WIF configuration elements.</span></span>  
+# <a name="wif-configuration-reference"></a><span data-ttu-id="1342b-102">Referenz zur WIF-Konfiguration</span><span class="sxs-lookup"><span data-stu-id="1342b-102">WIF Configuration Reference</span></span>
+<span data-ttu-id="1342b-103">Sie können Windows Identity Foundation (WIF) in Ihren Anwendungen durch Hinzufügen von Elementen zu einer Konfigurationsdatei konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="1342b-103">You can configure Windows Identity Foundation (WIF) in your applications by adding elements to a configuration file.</span></span> <span data-ttu-id="1342b-104">Dieses Thema enthält Links zu Referenzthemen für die WIF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="1342b-104">This topic contains links to reference topics for the WIF configuration elements.</span></span>  
   
- [<span data-ttu-id="f359f-105">WIF Configuration Schema (Schema zur WIF-Konfiguration)</span><span class="sxs-lookup"><span data-stu-id="f359f-105">WIF Configuration Schema</span></span>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- <span data-ttu-id="f359f-106">Der Verweis für die WIF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="f359f-106">The reference for the WIF configuration elements.</span></span>  
+ [<span data-ttu-id="1342b-105">WIF Configuration Schema (Schema zur WIF-Konfiguration)</span><span class="sxs-lookup"><span data-stu-id="1342b-105">WIF Configuration Schema</span></span>](../configure-apps/file-schema/windows-identity-foundation/index.md)  
+ <span data-ttu-id="1342b-106">Der Verweis für die WIF-Konfigurationselemente.</span><span class="sxs-lookup"><span data-stu-id="1342b-106">The reference for the WIF configuration elements.</span></span>  
   
- [<span data-ttu-id="f359f-107">WIF-Konfigurationsschemakonventionen</span><span class="sxs-lookup"><span data-stu-id="f359f-107">WIF Configuration Schema Conventions</span></span>](../../../docs/framework/security/wif-configuration-schema-conventions.md)  
- <span data-ttu-id="f359f-108">Enthält Informationen zu allgemeinen Attributen und Formaten, die durch die Elemente der WIF-Konfiguration verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f359f-108">Contains information about general attributes and formats used by the WIF configuration elements.</span></span>
+ [<span data-ttu-id="1342b-107">WIF-Konfigurationsschemakonventionen</span><span class="sxs-lookup"><span data-stu-id="1342b-107">WIF Configuration Schema Conventions</span></span>](wif-configuration-schema-conventions.md)  
+ <span data-ttu-id="1342b-108">Enthält Informationen zu allgemeinen Attributen und Formaten, die durch die Elemente der WIF-Konfiguration verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1342b-108">Contains information about general attributes and formats used by the WIF configuration elements.</span></span>

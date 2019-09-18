@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938748"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053901"
 ---
-# <a name="xamlname-grammar"></a><span data-ttu-id="5f02b-102">XamlName-Grammatik</span><span class="sxs-lookup"><span data-stu-id="5f02b-102">XamlName Grammar</span></span>
-<span data-ttu-id="5f02b-103">XamlName-Grammatik ist eine bestimmte Grammatik, die in der XAML-Sprachspezifikation [MS-XAML] definiert ist, die hier der Einfachheit halber reproduziert wird.</span><span class="sxs-lookup"><span data-stu-id="5f02b-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
+# <a name="xamlname-grammar"></a><span data-ttu-id="5d7f4-102">XamlName-Grammatik</span><span class="sxs-lookup"><span data-stu-id="5d7f4-102">XamlName Grammar</span></span>
+<span data-ttu-id="5d7f4-103">Die XamlName-Grammatik ist eine bestimmte Grammatik, die in der XAML-Sprachspezifikation [MS-XAML] definiert ist, die zur einfacheren Wiedergabe hier reproduziert wird.</span><span class="sxs-lookup"><span data-stu-id="5d7f4-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## <a name="from-the-xaml-specification"></a><span data-ttu-id="5f02b-104">Der XAML-Spezifikation</span><span class="sxs-lookup"><span data-stu-id="5f02b-104">From the XAML Specification</span></span>  
- <span data-ttu-id="5f02b-105">Die [MS-XAML]-Spezifikation definiert die XamlName-Grammatik zur die zulässigen symbolischen Bezeichner für Typen und Eigenschaften zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="5f02b-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="5d7f4-104">Aus der XAML-Spezifikation</span><span class="sxs-lookup"><span data-stu-id="5d7f4-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="5d7f4-105">Die [MS-XAML]-Spezifikation definiert den Grammatik-XamlName, um den Satz von juristischen symbolischen bezeichmern zu identifizieren, die für Typen und Eigenschaften verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5d7f4-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- <span data-ttu-id="5f02b-106">Zeichenfolgenwerte des Typs, die in der folgenden Grammatik XamlName entsprechen soll:</span><span class="sxs-lookup"><span data-stu-id="5f02b-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="5d7f4-106">Zeichen folgen Werte vom Typ XamlName müssen der folgenden Grammatik entsprechen:</span><span class="sxs-lookup"><span data-stu-id="5d7f4-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- <span data-ttu-id="5f02b-107">Die die folgenden Werte der allgemeinen Kategorie setzt voraus, wie in der Datenbank der Unicode-Zeichen definiert</span><span class="sxs-lookup"><span data-stu-id="5f02b-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+ <span data-ttu-id="5d7f4-107">Dabei werden die folgenden allgemeinen Kategoriewerte angenommen, wie in der Unicode-Zeichen Datenbank definiert.</span><span class="sxs-lookup"><span data-stu-id="5d7f4-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+
+| <span data-ttu-id="5d7f4-108">Unicode-Kategorie</span><span class="sxs-lookup"><span data-stu-id="5d7f4-108">Unicode category</span></span>   | <span data-ttu-id="5d7f4-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d7f4-109">Description</span></span>                   |
+|--------------------|-------------------------------|
+| <span data-ttu-id="5d7f4-110">Lu</span><span class="sxs-lookup"><span data-stu-id="5d7f4-110">Lu</span></span>                 | <span data-ttu-id="5d7f4-111">Letter, Uppercase (Buchstabe, Großschreibung)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-111">Letter, Uppercase</span></span>             |
+| <span data-ttu-id="5d7f4-112">Ll</span><span class="sxs-lookup"><span data-stu-id="5d7f4-112">Ll</span></span>                 | <span data-ttu-id="5d7f4-113">Letter, Lowercase (Buchstabe, Kleinschreibung)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-113">Letter, Lowercase</span></span>             |
+| <span data-ttu-id="5d7f4-114">Lt</span><span class="sxs-lookup"><span data-stu-id="5d7f4-114">Lt</span></span>                 | <span data-ttu-id="5d7f4-115">Letter, Titlecase (Buchstabe, großer Anfangsbuchstabe)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-115">Letter, Titlecase</span></span>             |
+| <span data-ttu-id="5d7f4-116">Lm</span><span class="sxs-lookup"><span data-stu-id="5d7f4-116">Lm</span></span>                 | <span data-ttu-id="5d7f4-117">Letter, Modifier (Buchstabe, Modifizierer)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-117">Letter, Modifier</span></span>              |
+| <span data-ttu-id="5d7f4-118">Lo</span><span class="sxs-lookup"><span data-stu-id="5d7f4-118">Lo</span></span>                 | <span data-ttu-id="5d7f4-119">Letter, Other (Buchstabe, andere)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-119">Letter, Other</span></span>                 |
+| <span data-ttu-id="5d7f4-120">Mn</span><span class="sxs-lookup"><span data-stu-id="5d7f4-120">Mn</span></span>                 | <span data-ttu-id="5d7f4-121">Markierung, nicht Abstand</span><span class="sxs-lookup"><span data-stu-id="5d7f4-121">Mark, Non-Spacing</span></span>             |
+| <span data-ttu-id="5d7f4-122">Mc</span><span class="sxs-lookup"><span data-stu-id="5d7f4-122">Mc</span></span>                 | <span data-ttu-id="5d7f4-123">Mark, Spacing Combining (Satzzeichen, Kombinationszeichen mit Vorschub)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-123">Mark, Spacing Combining</span></span>       |
+| <span data-ttu-id="5d7f4-124">Nd</span><span class="sxs-lookup"><span data-stu-id="5d7f4-124">Nd</span></span>                 | <span data-ttu-id="5d7f4-125">Zahl, Decimal</span><span class="sxs-lookup"><span data-stu-id="5d7f4-125">Number, Decimal</span></span>               |
+| <span data-ttu-id="5d7f4-126">Nl</span><span class="sxs-lookup"><span data-stu-id="5d7f4-126">Nl</span></span>                 | <span data-ttu-id="5d7f4-127">Number, Letter (Zahl, Buchstabe)</span><span class="sxs-lookup"><span data-stu-id="5d7f4-127">Number, Letter</span></span>                |
+ 
+ <span data-ttu-id="5d7f4-128">XAML definiert eine zweite Grammatik (DottedXamlName), die für Eigenschafts-und Ereignis qualifizierte Verweise und auch für angefügte Member verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5d7f4-128">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="5d7f4-129">Weitere Informationen finden <xref:System.Windows.DependencyProperty> Sie unter und [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="5d7f4-129">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ <span data-ttu-id="5d7f4-130">Zeichen folgen Werte vom Typ "DottedXamlName" müssen der folgenden Grammatik entsprechen:</span><span class="sxs-lookup"><span data-stu-id="5d7f4-130">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
- <span data-ttu-id="5f02b-108">XAML definiert, einer zweiten Grammatik, DottedXamlName, die für die Eigenschaft verwendet wird, und Ereignis qualifizierten verweisen, und auch für die angefügte Member.</span><span class="sxs-lookup"><span data-stu-id="5f02b-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="5f02b-109">Weitere Informationen finden Sie unter <xref:System.Windows.DependencyProperty> und [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="5f02b-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).</span></span>  
-  
- <span data-ttu-id="5f02b-110">Zeichenfolgenwerte des Typs, die in der folgenden Grammatik DottedXamlName entsprechen soll:</span><span class="sxs-lookup"><span data-stu-id="5f02b-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5f02b-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5f02b-111">Remarks</span></span>  
- <span data-ttu-id="5f02b-112">Die vollständige Spezifikation finden Sie unter [ \[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="5f02b-112">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
+## <a name="remarks"></a><span data-ttu-id="5d7f4-131">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5d7f4-131">Remarks</span></span>  
+ <span data-ttu-id="5d7f4-132">Die vollständige Spezifikation finden [ \[Sie unter MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="5d7f4-132">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
