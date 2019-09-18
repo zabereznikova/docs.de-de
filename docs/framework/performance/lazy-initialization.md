@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 549030b7e5f7544f593e5aa481a6dc85d5a85329
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943819"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046412"
 ---
 # <a name="lazy-initialization"></a>Verzögerte Initialisierung
 *Verzögerte Initialisierung* eines Objekts bedeutet, dass seine Erstellung bis zur ersten Verwendung verzögert wird. (In diesem Thema werden die Begriffe *verzögerte Initialisierung* und *verzögerte Instanziierung* synonym gebraucht.) Die verzögerte Initialisierung wird vorwiegend verwendet, um die Leistung zu verbessern, aufwendige Berechnungen zu vermeiden und die Speicheranforderungen des Programms zu reduzieren. Die folgenden Szenarios sind die häufigsten:  
@@ -62,7 +62,7 @@ ms.locfileid: "69943819"
  Standardmäßig sind <xref:System.Lazy%601>-Objekte threadsicher. Wird im Konstruktor die Art der Threadsicherheit nicht angegeben, sind die erstellten <xref:System.Lazy%601>-Objekte daher threadsicher. In Multithreadszenarios initialisiert der erste Thread, der auf die <xref:System.Lazy%601.Value%2A>-Eigenschaft eines threadsicheren <xref:System.Lazy%601>-Objekts zugreift, die Eigenschaft für jeden nachfolgenden Zugriff auf allen Threads. Alle Threads nutzen dieselben Daten. Daher spielt es keine Rolle, welcher Thread das Objekt initialisiert. Auch Racebedingungen haben keine Auswirkung.  
   
 > [!NOTE]
-> Diese Konsistenz kann durch das Zwischenspeichern von Ausnahmen auf Fehlerbedingungen erweitert werden. Weitere Informationen finden Sie im folgenden Abschnitt [Ausnahmen bei verzögerten Objekten](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Diese Konsistenz kann durch das Zwischenspeichern von Ausnahmen auf Fehlerbedingungen erweitert werden. Weitere Informationen finden Sie im folgenden Abschnitt [Ausnahmen bei verzögerten Objekten](lazy-initialization.md#ExceptionsInLazyObjects).  
   
  Das folgende Beispiel verdeutlicht, dass die gleiche `Lazy<int>`-Instanz über den gleichen Wert für drei separate Threads verfügt.  
   
@@ -157,4 +157,4 @@ ms.locfileid: "69943819"
 - [Grundlagen des verwalteten Threadings](../../standard/threading/managed-threading-basics.md)
 - [Threads and Threading (Threads und Threading)](../../standard/threading/threads-and-threading.md)
 - [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [Vorgehensweise: Ausführen einer verzögerten Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Vorgehensweise: Ausführen einer verzögerten Initialisierung von Objekten](how-to-perform-lazy-initialization-of-objects.md)

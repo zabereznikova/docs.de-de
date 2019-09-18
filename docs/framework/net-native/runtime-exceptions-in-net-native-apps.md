@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68fe50d24ce547e1cad092e3d871c2d0990fd5af
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 27a2e0906343d115c47230c726efb74cd51d4c93
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894976"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049160"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Laufzeitausnahmen in .NET Native-Apps
 Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattform auf den Zielplattformen zu testen, da die Debug- und Releasekonfigurationen völlig unterschiedlich sind. Die Debugkonfiguration verwendet standardmäßig die .NET Core-Laufzeit zum Kompilieren der App, während die Releasekonfiguration .NET Native verwendet, um die App in systemeigenen Code zu kompilieren.  
   
 > [!IMPORTANT]
-> Informationen zum Umgang mit den Ausnahmen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [missinginteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)und [missingruntimeartifaktexception](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) , die beim Testen der Releaseversionen ihrer app auftreten können, finden Sie unter "Schritt 4: Manuelles auflösen fehlender Metadaten: im Thema " [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md) " (Informationen zu den ersten Schritten) sowie über [Refle.net Native ktionsdirektiven](../../../docs/framework/net-native/reflection-and-net-native.md) [(RD. Xml)-Konfigurationsdatei Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Informationen zum Umgang mit den Ausnahmen [MissingMetadataException](missingmetadataexception-class-net-native.md), [missinginteropdataexception](missinginteropdataexception-class-net-native.md)und [missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md) , die beim Testen der Releaseversionen ihrer app auftreten können, finden Sie unter "Schritt 4: Manuelles auflösen fehlender Metadaten: im Thema " [Getting Started](getting-started-with-net-native.md) " (Informationen zu den ersten Schritten) sowie über [Refle.net Native ktionsdirektiven](reflection-and-net-native.md) [(RD. Xml)-Konfigurationsdatei Referenz](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Debugbuilds und Releasebuilds  
  Wenn der Debugbuild unter Verwendung der .NET Core-Laufzeit ausgeführt wird, wurde er nicht in systemeigenen Code kompiliert. Dadurch werden alle Dienste, die normalerweise von der Laufzeit bereitgestellt werden, für Ihre App verfügbar.  
@@ -62,4 +62,4 @@ Additional information: Value does not fall within the expected range.
 ## <a name="see-also"></a>Siehe auch
 
 - [Debuggen .net Native universellen Windows-apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
-- [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Erste Schritte](getting-started-with-net-native.md)

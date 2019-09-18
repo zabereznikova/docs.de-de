@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio für Mac
 description: Erfahren Sie, wie F# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: 679ed1ea28f5d0e0d910dbd407b38d1d2f0314f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d3604178f93cf17d21f25b09084be7e7977378b5
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629752"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082974"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit F# in Visual Studio für Mac
 
@@ -35,7 +35,7 @@ Beginnen wir, indem wir zuerst Code schreiben.  Stellen Sie sicher, `Program.fs`
 
 Im vorherigen Codebeispiel wurde eine Funktion `square` definiert, die eine Eingabe mit dem Namen `x` annimmt und Sie selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  Der F# Compiler versteht die Typen, bei denen die Multiplikation gültig ist, und weist `x` basierend auf der `square` Aufruf von einen Typ zu.  Wenn Sie den Maus `square`Zeiger darüber bewegen, sollte Folgendes angezeigt werden:
 
-```
+```console
 val square: x:int -> int
 ```
 
@@ -51,7 +51,7 @@ Sie können den Code ausführen und Ergebnisse anzeigen, indem Sie im Menü der 
 
 Nun sollte Folgendes im Konsolenfenster gedruckt angezeigt werden, das Visual Studio für Mac Popup angezeigt wird:
 
-```
+```console
 12 squared is 144!
 ```
 
@@ -63,7 +63,7 @@ Eine der besten Features von der Visual F#-Tools in Visual Studio für Mac ist d
 
 Um mit der Verwendung zu beginnen, `square` markieren Sie die im Code definierte Funktion.  Klicken Sie anschließend im Menü der obersten Ebene auf **Bearbeiten** .  Wählen Sie als Nächstes **Auswahl an F# Interactive senden**.  Dadurch wird den Code in die F# Interactive-Fenster ausgeführt.  Alternativ können Sie klicken Sie mit der rechten Maustaste auf die Auswahl und wählen Sie **Auswahl an F# Interactive senden**.  Es sollte angezeigt werden F# , dass das interaktive Fenster mit folgendem Code angezeigt wird:
 
-```
+```console
 >
 
 val square : x:int -> int
@@ -73,7 +73,7 @@ val square : x:int -> int
 
 Dies zeigt die gleiche Funktions Signatur für die `square` Funktion, die Sie zuvor gesehen haben, als Sie mit dem Mauszeiger auf die Funktion gezeigt haben.  Da `square` ist nun im F# Interactive-Prozess definiert wird, können Sie ihn mit anderen Werten aufrufen:
 
-```
+```console
 > square 12;;
 val it : int = 144
 >square 13;;
@@ -82,7 +82,7 @@ val it : int = 169
 
 Dadurch wird die Funktion ausgeführt, das Ergebnis an einen neuen Namen `it`gebunden und der Typ und der Wert von `it`angezeigt.  Beachten Sie, dass Sie jede Zeile mit `;;`beenden müssen.  Dies ist wie F# Interactive weiß, wenn der Funktionsaufruf abgeschlossen ist.  Sie können auch neue Funktionen in F# Interactive definieren:
 
-```
+```console
 > let isOdd x = x % 2 <> 0;;
 
 val isOdd : x:int -> bool
@@ -93,14 +93,14 @@ val it : bool = false
 
 Im obigen Beispiel wird eine neue Funktion `isOdd`definiert, die eine `int` annimmt und überprüft, ob Sie ungerade ist.  Diese Funktion kann aufgerufen werden, um zu sehen, was Sie mit unterschiedlichen Eingaben zurückgibt.  Sie können Funktionen innerhalb von Funktionsaufrufen aufrufen:
 
-```
+```console
 > isOdd (square 15);;
 val it : bool = true
 ```
 
 Sie können auch den [Pipe-Forward-Operator](../language-reference/symbol-and-operator-reference/index.md) verwenden, um den Wert in die beiden Funktionen zu überführen:
 
-```
+```console
 > 15 |> square |> isOdd;;
 val it : bool = true
 ```

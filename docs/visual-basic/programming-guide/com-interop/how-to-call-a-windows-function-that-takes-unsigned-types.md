@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen (Visual Basic) akzeptiert'
+title: 'Vorgehensweise: Ruft eine Windows-Funktion auf, die Typen ohne Vorzeichen annimmt (Visual Basic).'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,28 +14,28 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97075fb6149ed8c0ce06318d0e5bb6f01b841f30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022362"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053329"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Vorgehensweise: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen (Visual Basic) akzeptiert
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Vorgehensweise: Ruft eine Windows-Funktion auf, die Typen ohne Vorzeichen annimmt (Visual Basic).
 
-Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen ohne Vorzeichen enthält verwenden, können Sie diese Mitglieder mit Visual Basic zugreifen.
+Wenn Sie eine Klasse, ein Modul oder eine Struktur mit Membern von ganzzahligen Typen ohne Vorzeichen verwenden, können Sie mit Visual Basic auf diese Member zugreifen.
 
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Eine Windows-Funktion aufrufen, die einen Typ ohne Vorzeichen akzeptiert.
+## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>So wird eine Windows-Funktion aufgerufen, die einen nicht signierten Typ annimmt
 
-1. Verwenden einer [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) Visual Basic zu informieren, welche Bibliothek die Funktion enthalten, was ihr Name in dieser Bibliothek ist, was die Aufrufsequenz ist und das Konvertieren von Zeichenfolgen bei deren Aufruf.
+1. Verwenden Sie eine [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) , um zu ermitteln, Visual Basic welche Bibliothek die Funktion enthält, wie sich Ihr Name in dieser Bibliothek befindet, welche Aufruf Sequenz Sie enthält und wie Zeichen folgen beim Aufrufen konvertiert werden.
 
-2. In der `Declare` -Anweisung sollten Sie `UInteger`, `ULong`, `UShort`, oder `Byte` entsprechend für jeden Parameter mit einen Typ ohne Vorzeichen.
+2. `Declare` Verwenden `UShort` `ULong`Sie in der-Anweisung,, oder `Byte` nach Bedarf für jeden Parameter mit einem unsignierten Typ. `UInteger`
 
-3. Lesen Sie die Dokumentation für die Windows-Funktion, die Sie finden die Namen und Werte der Konstanten verwendeten aufrufen. Viele davon werden in der WinUser.h-Datei definiert.
+3. In der Dokumentation für die Windows-Funktion, die Sie aufrufen, finden Sie die Namen und Werte der Konstanten, die Sie verwendet. Viele davon sind in der Datei "Winuser. h" definiert.
 
-4. Deklarieren Sie die erforderlichen Konstanten in Ihrem Code. Viele Windows-Konstanten sind 32-Bit-Werten ohne Vorzeichen, deklarieren Sie diese `As UInteger`.
+4. Deklarieren Sie die erforderlichen Konstanten in Ihrem Code. Viele Windows-Konstanten sind 32-Bit-Werte ohne Vorzeichen, und Sie sollten `As UInteger`diese deklarieren.
 
-5. Aufrufen der Funktion auf die übliche Weise. Im folgenden Beispiel wird die Windows-Funktion `MessageBox`, der eine ganze Zahl ohne Vorzeichen-Argument akzeptiert.
+5. Die-Funktion wird auf die übliche Weise aufgerufen. Im folgenden Beispiel wird die Windows- `MessageBox`Funktion aufgerufen, die ein ganzzahliges Argument ohne Vorzeichen annimmt.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen 
     End Class
     ```
 
-     Sie können die Funktion testen `messageThroughWindows` durch den folgenden Code.
+     Sie können die Funktion `messageThroughWindows` mit dem folgenden Code testen.
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,13 +70,13 @@ Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen 
     ```
 
     > [!CAUTION]
-    > Die `UInteger`, `ULong`, `UShort`, und `SByte` Datentypen sind nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, werden diese verwendet.
+    > Die `UInteger`Daten `ULong`Typen `UShort`,, und`SByte` sind nicht Teil der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die Sie verwendet.
 
     > [!IMPORTANT]
-    > Anruf nicht verwaltetem Code, z. B. die Windows-Anwendungsprogrammierschnittstelle (API), macht Ihren Code auf potenzielle Sicherheitsrisiken.
+    > Wenn Sie nicht verwalteten Code, wie z. b. die Windows-API (Application Programming Interface), anrufen, wird der Code für potenzielle Sicherheitsrisiken verfügbar gemacht.
 
     > [!IMPORTANT]
-    > Die Windows-API aufruft, erfordert eine Berechtigung nicht verwalteten Code die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Der Aufruf der Windows-API erfordert die Berechtigung "nicht verwalteter Code", die sich in teilweise vertrauenswürdigen Situationen auf die Ausführung auswirken kann. Weitere Informationen finden <xref:System.Security.Permissions.SecurityPermission> Sie unter und [Code Zugriffsberechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Siehe auch
 

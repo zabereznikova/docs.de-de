@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938748"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053901"
 ---
 # <a name="xamlname-grammar"></a>XamlName-Grammatik
-XamlName-Grammatik ist eine bestimmte Grammatik, die in der XAML-Sprachspezifikation [MS-XAML] definiert ist, die hier der Einfachheit halber reproduziert wird.  
+Die XamlName-Grammatik ist eine bestimmte Grammatik, die in der XAML-Sprachspezifikation [MS-XAML] definiert ist, die zur einfacheren Wiedergabe hier reproduziert wird.  
   
-## <a name="from-the-xaml-specification"></a>Der XAML-Spezifikation  
- Die [MS-XAML]-Spezifikation definiert die XamlName-Grammatik zur die zulässigen symbolischen Bezeichner für Typen und Eigenschaften zu identifizieren.  
+## <a name="from-the-xaml-specification"></a>Aus der XAML-Spezifikation  
+ Die [MS-XAML]-Spezifikation definiert den Grammatik-XamlName, um den Satz von juristischen symbolischen bezeichmern zu identifizieren, die für Typen und Eigenschaften verwendet werden.  
   
- Zeichenfolgenwerte des Typs, die in der folgenden Grammatik XamlName entsprechen soll:  
+ Zeichen folgen Werte vom Typ XamlName müssen der folgenden Grammatik entsprechen:  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- Die die folgenden Werte der allgemeinen Kategorie setzt voraus, wie in der Datenbank der Unicode-Zeichen definiert  
+ Dabei werden die folgenden allgemeinen Kategoriewerte angenommen, wie in der Unicode-Zeichen Datenbank definiert.  
+
+| Unicode-Kategorie   | Beschreibung                   |
+|--------------------|-------------------------------|
+| Lu                 | Letter, Uppercase (Buchstabe, Großschreibung)             |
+| Ll                 | Letter, Lowercase (Buchstabe, Kleinschreibung)             |
+| Lt                 | Letter, Titlecase (Buchstabe, großer Anfangsbuchstabe)             |
+| Lm                 | Letter, Modifier (Buchstabe, Modifizierer)              |
+| Lo                 | Letter, Other (Buchstabe, andere)                 |
+| Mn                 | Markierung, nicht Abstand             |
+| Mc                 | Mark, Spacing Combining (Satzzeichen, Kombinationszeichen mit Vorschub)       |
+| Nd                 | Zahl, Decimal               |
+| Nl                 | Number, Letter (Zahl, Buchstabe)                |
+ 
+ XAML definiert eine zweite Grammatik (DottedXamlName), die für Eigenschafts-und Ereignis qualifizierte Verweise und auch für angefügte Member verwendet wird. Weitere Informationen finden <xref:System.Windows.DependencyProperty> Sie unter und [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ Zeichen folgen Werte vom Typ "DottedXamlName" müssen der folgenden Grammatik entsprechen:  
   
- XAML definiert, einer zweiten Grammatik, DottedXamlName, die für die Eigenschaft verwendet wird, und Ereignis qualifizierten verweisen, und auch für die angefügte Member. Weitere Informationen finden Sie unter <xref:System.Windows.DependencyProperty> und [XAML Overview (WPF)](../wpf/advanced/xaml-overview-wpf.md).  
-  
- Zeichenfolgenwerte des Typs, die in der folgenden Grammatik DottedXamlName entsprechen soll:  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die vollständige Spezifikation finden Sie unter [ \[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525).
+ Die vollständige Spezifikation finden [ \[Sie unter MS-\]XAML](https://go.microsoft.com/fwlink/?LinkId=114525).

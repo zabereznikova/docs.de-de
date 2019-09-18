@@ -5,33 +5,33 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877963"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053293"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
 
-Wenn Sie einen sicheren Dienst oder Client mit Windows Communication Foundation (WCF) zu entwickeln, ist es oft notwendig, geben Sie ein x. 509-Zertifikat als Anmeldeinformationen verwendet werden soll. Das Zertifikat ist normalerweise Teil einer Zertifikatskette mit einer Stammstelle, die im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen des Computers enthalten ist. Wenn Sie über eine Zertifikatskette verfügen, können Sie einen Bereich mit Zertifikatsätzen angeben, wobei die Stammzertifizierungsstelle normalerweise von Ihrer Organisation bzw. Ihrem Geschäftsbereich stammt. Um dies zur Entwicklungszeit zu emulieren, können Sie zwei Zertifikate erstellen, um die Sicherheitsanforderungen zu erfüllen. Beim ersten Zertifikat handelt es sich um ein selbstsigniertes Zertifikat, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird. Das zweite Zertifikat wird aus dem ersten Zertifikat erstellt und entweder in den persönlichen Speicher unter "Lokaler Computer" oder in den persönlichen Speicher unter "Aktueller Benutzer" eingefügt. Dieses Thema führt durch die Schritte zum Erstellen dieser beiden Zertifikate mithilfe von Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) Cmdlet.
+Wenn Sie mit Windows Communication Foundation (WCF) einen sicheren Dienst oder Client entwickeln, müssen Sie häufig ein X. 509-Zertifikat angeben, das als Anmelde Informationen verwendet werden soll. Das Zertifikat ist normalerweise Teil einer Zertifikatskette mit einer Stammstelle, die im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen des Computers enthalten ist. Wenn Sie über eine Zertifikatskette verfügen, können Sie einen Bereich mit Zertifikatsätzen angeben, wobei die Stammzertifizierungsstelle normalerweise von Ihrer Organisation bzw. Ihrem Geschäftsbereich stammt. Um dies zur Entwicklungszeit zu emulieren, können Sie zwei Zertifikate erstellen, um die Sicherheitsanforderungen zu erfüllen. Beim ersten Zertifikat handelt es sich um ein selbstsigniertes Zertifikat, das in den Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen eingefügt wird. Das zweite Zertifikat wird aus dem ersten Zertifikat erstellt und entweder in den persönlichen Speicher unter "Lokaler Computer" oder in den persönlichen Speicher unter "Aktueller Benutzer" eingefügt. In diesem Thema werden die Schritte zum Erstellen dieser beiden Zertifikate mit dem PowerShell-Cmdlet " [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) " erläutert.
 
 > [!IMPORTANT]
-> Die Zertifikate, die das Cmdlet "New-SelfSignedCertificate" generiert werden nur für Testzwecke bereitgestellt. Beim Bereitstellen eines Diensts oder Clients sollten Sie ein geeignetes Zertifikat einer Zertifizierungsstelle verwenden. Dies kann entweder von einem Zertifikatserver für Windows Server in Ihrer Organisation werden oder einem Drittanbieter.
+> Die Zertifikate, die das New-selfsignedcertificate-Cmdlet generiert, werden nur zu Testzwecken bereitgestellt. Beim Bereitstellen eines Diensts oder Clients sollten Sie ein geeignetes Zertifikat einer Zertifizierungsstelle verwenden. Dies kann entweder von einem Windows Server-Zertifikat Server in Ihrer Organisation oder von einem Drittanbieter erfolgen.
 >
-> In der Standardeinstellung die [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) -Cmdlet erstellt die Zertifikate, die Zertifikate selbstsigniert sind, und diese Zertifikate sind unsicher. Platzieren die selbstsignierten Zertifikate in der vertrauenswürdigen Stammzertifizierungsstellen ermöglicht Store Ihnen die Erstellung eine Entwicklungsumgebung, die Ihre bereitstellungsumgebung besser simuliert.
+> Standardmäßig erstellt das Cmdlet " [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) " Zertifikate, die selbst signiert sind, und diese Zertifikate sind unsicher. Wenn Sie die selbst signierten Zertifikate in den Speicher für vertrauenswürdige Stamm Zertifizierungsstellen platzieren, können Sie eine Entwicklungsumgebung erstellen, die Ihre Bereitstellungs Umgebung genauer simuliert.
 
- Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](working-with-certificates.md). Weitere Informationen zur Verwendung von einem Zertifikat als Anmeldeinformationen finden Sie unter [Sichern von Diensten und Clients](securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Weitere Informationen zum Erstellen und Verwenden von Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md). Weitere Informationen zur Verwendung eines Zertifikats als Anmelde Informationen finden Sie unter [Sichern von Diensten und Clients](securing-services-and-clients.md). Ein Lernprogramm zur Verwendung der Microsoft Authenticode-Technologie finden Sie unter [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>So erstellen Sie ein selbstsigniertes Stammzertifizierungsstellen-Zertifikat und exportieren den privaten Schlüssel
 
-Der folgende Befehl erstellt ein selbstsigniertes Zertifikat mit dem Antragstellernamen "Stammzertifizierungsstelle" im Aktueller Benutzer persönlich Speicher.
+Der folgende Befehl erstellt ein selbst signiertes Zertifikat mit dem Antragsteller Namen "rootca" im persönlichen Speicher des aktuellen Benutzers.
 
 ```powershell
-$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
+$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-Wir müssen das Zertifikat in eine PFX-Datei exportieren, sodass es importiert werden kann, wo sie in einem späteren Schritt benötigt wird. Wenn Sie ein Zertifikat mit dem privaten Schlüssel exportieren, ist ein Kennwort erforderlich, für den Schutz aus. Wir speichern das Kennwort in einer `SecureString` und verwenden Sie die [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet, um das Zertifikat mit dem zugehörigen privaten Schlüssel in eine PFX-Datei zu exportieren. Wir speichern auch nur das öffentliche Zertifikat in einer CRT-Datei mithilfe der [Export-Certificate](/powershell/module/pkiclient/export-certificate) Cmdlet.
+Wir müssen das Zertifikat in eine PFX-Datei exportieren, damit es in einem späteren Schritt in importiert werden kann. Beim Exportieren eines Zertifikats mit dem privaten Schlüssel ist ein Kennwort erforderlich, um es zu schützen. Wir speichern das Kennwort in `SecureString` einer und verwenden das [Export-pfxcertificate-](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet, um das Zertifikat mit dem zugehörigen privaten Schlüssel in eine PFX-Datei zu exportieren. Mithilfe des Cmdlets " [Export-Certificate](/powershell/module/pkiclient/export-certificate) " wird auch nur das öffentliche Zertifikat in einer CRT-Datei gespeichert.
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,13 +42,13 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>So erstellen Sie ein neues von einem Stammzertifizierungsstellen-Zertifikat signiertes Zertifikat
 
-Der folgende Befehl erstellt ein Testzertifikat signiertes Zertifikat der `RootCA` mit dem Antragstellernamen "SignedByRootCA" mit dem privaten Schlüssel des Ausstellers.
+`RootCA` Mit dem folgenden Befehl wird ein vom signiertes Zertifikat mit dem Antragsteller Namen "signedbyrootca" erstellt, wobei der private Schlüssel des Ausstellers verwendet wird.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
-Auf ähnliche Weise speichern wir das Zertifikat mit privatem Schlüssel in eine PFX-Datei und nur den öffentlichen Schlüssel in einer CRT-Datei ein.
+Ebenso speichern wir das signierte Zertifikat mit privatem Schlüssel in einer PFX-Datei und nur den öffentlichen Schlüssel in einer CRT-Datei.
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
@@ -62,7 +62,7 @@ Nachdem ein selbstsigniertes Zertifikat erstellt wurde, können Sie es im Speich
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>So installieren Sie ein selbstsigniertes Zertifikat im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen
 
-1. Öffnen Sie das Zertifikat-Snap-In. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Öffnen Sie das Zertifikat-Snap-In. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap](how-to-view-certificates-with-the-mmc-snap-in.md)-in.
 
 2. Öffnen Sie den Ordner, um das Zertifikat zu speichern, also entweder **Lokaler Computer** oder **Aktueller Benutzer**.
 
@@ -70,7 +70,7 @@ Nachdem ein selbstsigniertes Zertifikat erstellt wurde, können Sie es im Speich
 
 4. Klicken Sie mit der rechten Maustaste auf den Ordner **Zertifikate** , und klicken Sie auf **Alle Aufgaben**und anschließend auf **Importieren**.
 
-5. Führen Sie den Assistenten auf dem Bildschirm Anweisungen, um die RootCA.pfx in den Speicher zu importieren.
+5. Befolgen Sie die Anweisungen auf dem Bildschirm, um die Datei rootca. pfx in den Speicher zu importieren.
 
 ## <a name="using-certificates-with-wcf"></a>Verwenden von Zertifikaten mit WCF
 
@@ -92,7 +92,7 @@ Nach dem Einrichten der temporären Zertifikate können diese verwendet werden, 
     </bindings>
     ```
 
-2. Verwenden Sie in der Konfigurationsdatei für einen Client das folgende XML, um anzugeben, dass das Zertifikat im Speicher des Benutzers gefunden wird, und kann durch Durchsuchen des SubjectName-Felds für den Wert "CohoWinery" gefunden werden
+2. Verwenden Sie in der Konfigurationsdatei für einen Client die folgende XML, um anzugeben, dass sich das Zertifikat im Speicher des Benutzers befindet, und suchen Sie, indem Sie im Feld "subjetname" nach dem Wert "cohuwinery" suchen.
 
     ```xml
     <behaviors>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 5fd17f9ca9d83ab3b226ce9fc0a4aebca4f9352a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: eb7156e0e2794fb7cb18e7bfce0e8488d0b145c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044154"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042762"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 
@@ -34,7 +34,7 @@ Verwenden Sie insbesondere keine Felder von Klassen in UIAutomationClient.dll, z
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Anbieterimplementierung durch Windows Presentation Foundation-Elemente
 
-Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements](../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -121,7 +121,7 @@ Anbieter für HWND-basierte Steuerelemente müssen die folgenden Eigenschaften (
 >
 > Die <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> wird in der Regel vom Hostanbieter bereitgestellt. Wenn ein benutzerdefiniertes Steuerelement beispielsweise von <xref:System.Windows.Forms.Control>abgeleitet ist, wird der Name von der `Text` -Eigenschaft des Steuerelements abgeleitet
 
-Beispielcode finden Sie unter [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md).
+Beispielcode finden Sie unter [Return Properties from a UI Automation Provider](return-properties-from-a-ui-automation-provider.md).
 
 <a name="Events_in_Non_WPF_Providers"></a>
 
@@ -191,9 +191,9 @@ Hierfür stellt der Fragmentstammanbieter für die Grundleiste einen Satz an unt
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](ui-automation-providers-overview.md)
+- [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](expose-a-server-side-ui-automation-provider.md)
+- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](return-properties-from-a-ui-automation-provider.md)
+- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](raise-events-from-a-ui-automation-provider.md)
+- [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)

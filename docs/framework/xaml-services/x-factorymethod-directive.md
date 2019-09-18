@@ -6,27 +6,27 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 586965dd4094e81fd830a09b64604cf33f195630
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971833"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053777"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod-Anweisung
-Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, um ein Objekt zu initialisieren, nach dessen Unterstützungstyp auflösen.  
+Gibt eine andere Methode als einen Konstruktor an, der von einem XAML-Prozessor zum Initialisieren eines Objekts nach der Auflösung des Unterstützungs Typs verwendet werden soll.  
   
-## <a name="xaml-attribute-usage-no-xarguments"></a>XAML-Attributverwendung, die keine X: Arguments  
+## <a name="xaml-attribute-usage-no-xarguments"></a>Verwendung von XAML-Attributen, keine x:Arguments  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   ...  
 </object>  
 ```  
   
-## <a name="xaml-attribute-usage-xarguments-as-elements"></a>XAML-Attributverwendung, X: Arguments als Elemente  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a>Verwendung von XAML-Attributen, x:Arguments als Element (e)  
   
-```  
+```xaml  
 <object x:FactoryMethod="methodname"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
@@ -38,23 +38,23 @@ Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, 
   
 |||  
 |-|-|  
-|`methodname`|Der Zeichenfolgenname für die Methode einer Methode, die XAML-Prozessoren aufrufen, zum Initialisieren der Instanz, die als `object`. Siehe Hinweise.|  
-|`oneOrMoreObjectElements`|Eine oder mehrere Object-Elemente für Objekte, die Parameter der Factory-Methode angeben. Die Reihenfolge ist wichtig; Es gibt an, die Reihenfolge, in der Argumente, die an die Factorymethode übergeben werden sollen.|  
+|`methodname`|Der Name der Zeichen folgen Methode einer Methode, die XAML-Prozessoren aufruft, um die Instanz `object`zu initialisieren, die als angegeben wird. Siehe Hinweise.|  
+|`oneOrMoreObjectElements`|Ein oder mehrere Objekt Elemente für-Objekte, die factorymethodenparameter angeben. Die Reihenfolge ist wichtig. Sie gibt die Reihenfolge an, in der Argumente an die Factorymethode geleitet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `methodname` ist eine Instanzmethode, kann nicht qualifiziert sein.  
+ Wenn `methodname` eine Instanzmethode ist, kann Sie nicht qualifiziert werden.  
   
- Statische Methoden als Factorymethoden werden unterstützt. Wenn `methodname` ist eine statische Methode, `methodname` dient als ein *TypeName*. *MethodName* Kombination aus, in denen *TypeName* benennt die Klasse, die von der statischen Factorymethode definiert. *TypeName* möglich Präfix qualifiziert sein, wenn auf einen Typ in einem zugeordneten Xmlns beziehen. *TypeName* möglich ein anderen Typ als `typeof(object)`.  
+ Statische Methoden als Factorymethoden werden unterstützt. Wenn `methodname` eine statische Methode ist, `methodname` wird als *Typname*bereitgestellt. *MethodName* -Kombination, wobei *tykame* die Klasse benennt, die die statische Factorymethode definiert. *Typname* kann als Präfix qualifiziert werden, wenn auf einen Typ in einem zugeordneten xmlns verwiesen wird. *Typname* kann ein anderer Typ sein als `typeof(object)`.  
   
- Die Factorymethode muss es sich um eine deklarierte öffentliche Methode des Typs sein, die die relevante Objektelement unterstützt.  
+ Die Factorymethode muss eine deklarierte öffentliche Methode des Typs sein, der das relevante Objekt Element unterstützt.  
   
- Die Factorymethode muss es sich um eine Instanz zurückgeben, die dem entsprechenden Objekt zugewiesen werden kann. Factorymethoden sollte nie null zurückgeben.  
+ Die Factorymethode muss eine Instanz zurückgeben, die dem relevanten Objekt zugewiesen werden kann. Factorymethoden sollten niemals NULL zurückgeben.  
   
- `x:Arguments` Ein Prinzip der beste Übereinstimmung für Signaturen von Factorymethoden verarbeitet. Abgleich wird die Anzahl der Parameter zuerst ausgewertet. Gibt es ist mehr als eine mögliche Entsprechung für einen die Parameteranzahl, Parametertyp und dann ausgewertet und die beste Übereinstimmung bestimmt wird. Wenn Mehrdeutigkeiten nach dieser Phase der Evaluierung noch vorhanden ist, ist die XAML-Prozessor-Verhalten nicht definiert.  
+ `x:Arguments`arbeitet mit einem Prinzip der besten Entsprechung für Signaturen von Factorymethoden. Bei der Übereinstimmung wird die Parameter Anzahl zuerst ausgewertet. Wenn mehr als eine mögliche Entsprechung für eine Parameter Anzahl vorhanden ist, wird der Parametertyp ausgewertet und die beste Entsprechung festgelegt. Wenn nach dieser Evaluierungsphase immer noch Mehrdeutigkeit vorliegt, ist das XAML-Prozessor Verhalten nicht definiert.  
   
- Die `x:FactoryMethod` Objektelementverwendung ist nicht Eigenschaftselementverwendung im typischen Sinn, da das Markup-Direktive nicht der enthaltenden Objekt Typ des Elements verwiesen wird. Es wird davon ausgegangen, dass Elementverwendung wird seltener auf als die Verwendung von Attributen. `x:Arguments` (entweder Attribut- oder Nutzung) kann verwendet werden, zusammen mit `x:FactoryMethod` Verwendung des Elements, aber dies wird nicht speziell angezeigt in den Abschnitten.  
+ Die `x:FactoryMethod` Element Verwendung ist im typischen Sinn nicht die Verwendung von Eigenschafts Elementen, da das direktivenmarkup nicht auf den Typ des enthaltenden Objekt Elements verweist. Es wird erwartet, dass die Element Verwendung weniger häufig ist als die Attribut Verwendung. `x:Arguments`(entweder Attribut-oder Element Verwendung) kann zusammen mit der `x:FactoryMethod` Verwendung von Elementen verwendet werden, dies wird jedoch nicht speziell in den Verwendungs Abschnitten veranschaulicht.  
   
- `x:FactoryMethod` als ein Element mit allen anderen Eigenschaftenelemente stehen darf, müssen alle vorausgehen `x:Arguments` auch als Elemente angegeben, und muss alle Inhalt "oder" Inner Text/Initialisierungstext vor.  
+ `x:FactoryMethod`Da ein Element vor allen anderen Eigenschaften Elementen stehen muss, muss vor allen `x:Arguments` Elementen stehen, die ebenfalls als-Elemente bereitgestellt werden, und vor jedem Text-/InnerText-/Initialisierungstext stehen muss.  
   
 ## <a name="see-also"></a>Siehe auch
 

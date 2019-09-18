@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ef27b7d1a36121976cbb026f81984a8b84d1fe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614336"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052259"
 ---
 # <a name="trace-switches"></a>Ablaufverfolgungsschalter
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern. Diese Schalter sind Objekte, die im Code vorhanden sind und extern über die Konfigurationsdatei (CONFIG) konfiguriert werden können. .NET Framework bietet drei Typen von Ablaufverfolgungsschaltern: die <xref:System.Diagnostics.BooleanSwitch> -Klasse, die <xref:System.Diagnostics.TraceSwitch> -Klasse und die <xref:System.Diagnostics.SourceSwitch> -Klasse. Die <xref:System.Diagnostics.BooleanSwitch> -Klasse fungiert als Umschalter, d. h., sie aktiviert oder deaktiviert eine Vielzahl von Ablaufverfolgungsanweisungen. Mit der <xref:System.Diagnostics.TraceSwitch> -Klasse und der <xref:System.Diagnostics.SourceSwitch> -Klasse können Sie einen Ablaufverfolgungsschalter für eine bestimmte Ablaufverfolgungsebene aktivieren, sodass die für diese und alle darunter liegenden Ebenen angegebenen <xref:System.Diagnostics.Trace> - oder <xref:System.Diagnostics.TraceSource> -Meldungen angezeigt werden. Wenn Sie den Schalter deaktivieren, werden die Ablaufverfolgungsmeldungen nicht angezeigt. All diese Klassen werden von der abstrakten (**MustInherit**) **Switch**-Klasse abgeleitet. Dies gilt für alle von Benutzern entwickelten Schalter.  
   
- Ablaufverfolgungsschalter können beim Filtern von Informationen hilfreich sein. Beispiel: In einem Datenzugriffsmodul sollen alle Ablaufverfolgungsmeldungen, in der restlichen Anwendung aber nur Fehlermeldungen angezeigt werden. In diesem Fall verwenden Sie einen Ablaufverfolgungsschalter für das Datenzugriffsmodul und einen Schalter für die restliche Anwendung. Wenn Sie die Schalter in der CONFIG-Datei mit den entsprechenden Einstellungen konfigurieren, können Sie steuern, welche Typen von Ablaufverfolgungsmeldungen Sie empfangen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ Ablaufverfolgungsschalter können beim Filtern von Informationen hilfreich sein. Beispiel: In einem Datenzugriffsmodul sollen alle Ablaufverfolgungsmeldungen, in der restlichen Anwendung aber nur Fehlermeldungen angezeigt werden. In diesem Fall verwenden Sie einen Ablaufverfolgungsschalter für das Datenzugriffsmodul und einen Schalter für die restliche Anwendung. Wenn Sie die Schalter in der CONFIG-Datei mit den entsprechenden Einstellungen konfigurieren, können Sie steuern, welche Typen von Ablaufverfolgungsmeldungen Sie empfangen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablauf](how-to-create-initialize-and-configure-trace-switches.md)Verfolgungs Schaltern.  
   
  Eine bereitgestellte Anwendung wird in der Regel mit deaktivierten Schaltern ausgeführt, damit die Benutzer nicht auf viele irrelevante Ablaufverfolgungsmeldungen achten müssen, die beim Ausführen der Anwendung auf dem Bildschirm angezeigt oder in einer Protokolldatei abgelegt werden. Wenn bei der Anwendungsausführung ein Problem auftritt, können Sie die Anwendung beenden, die Schalter aktivieren und die Anwendung neu starten. Dann werden die Ablaufverfolgungsmeldungen angezeigt.  
   
@@ -49,7 +49,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 |Enumerationswert|Ganzzahliger Wert|Angezeigter (oder in angegebenes Ausgabeziel geschriebener) Meldungstyp|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Aus|0|Keiner|  
+|Off|0|None|  
 |Error|1|Nur Fehlermeldungen|  
 |Warnung|2|Warnmeldungen und Fehlermeldungen|  
 |Info|3|Informationsmeldungen, Warnmeldungen und Fehlermeldungen|  
@@ -57,7 +57,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
  Die **TraceSwitch** -Eigenschaften geben die oberste Ablaufverfolgungsebene für den Schalter an. Das bedeutet, dass Ablaufverfolgungsinformationen sowohl für die angegebene Ebene als auch für alle niedrigeren Ebenen geschrieben werden. Wenn **TraceInfo** z. B. **true**ist, sind **TraceError** und **TraceWarning** ebenfalls **true** . **TraceVerbose** kann jedoch **false**sein.  
   
- Diese Eigenschaften sind schreibgeschützt. Sie werden beim Festlegen der **TraceLevel** -Eigenschaft automatisch durch das **TraceSwitch** -Objekt festgelegt. Zum Beispiel:  
+ Diese Eigenschaften sind schreibgeschützt. Sie werden beim Festlegen der **TraceLevel** -Eigenschaft automatisch durch das **TraceSwitch** -Objekt festgelegt. Beispiel:  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  
@@ -85,6 +85,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](trace-listeners.md)
+- [Vorgehensweise: Hinzufügen von Ablauf Verfolgungs Anweisungen zum Anwendungs Code](how-to-add-trace-statements-to-application-code.md)
+- [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)

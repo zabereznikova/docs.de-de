@@ -3,17 +3,17 @@ title: WIF und Webfarmen
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 09d5f3f745f170439a7fbf160b78439c103623b9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 32d2875ebe0a46b9f9b1856ed70a30114793e492
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851519"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045257"
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  
   
- Wenn WIF zur Absicherung von Ressourcen von Anwendungen der vertrauenden Seite verwendet wird (unabhängig davon, ob die vertrauende Seite auf einem einzelnen Computer oder in einer Webfarm ausgeführt wird), wird im Normalfall eine Sitzung mit dem Client erstellt, die auf dem Sicherheitstoken basiert, das vom Sicherheitstokendienst (STS) abgerufen wurde. Dadurch wird vermieden, dass der Client jede mithilfe von WIF gesicherte Anwendungsressource gegenüber des STS authentifizieren muss. Weitere Informationen zur Behandlung von Sitzungen in WIF finden Sie unter [WIF-Sitzungsverwaltung](../../../docs/framework/security/wif-session-management.md).  
+ Wenn WIF zur Absicherung von Ressourcen von Anwendungen der vertrauenden Seite verwendet wird (unabhängig davon, ob die vertrauende Seite auf einem einzelnen Computer oder in einer Webfarm ausgeführt wird), wird im Normalfall eine Sitzung mit dem Client erstellt, die auf dem Sicherheitstoken basiert, das vom Sicherheitstokendienst (STS) abgerufen wurde. Dadurch wird vermieden, dass der Client jede mithilfe von WIF gesicherte Anwendungsressource gegenüber des STS authentifizieren muss. Weitere Informationen zur Behandlung von Sitzungen in WIF finden Sie unter [WIF-Sitzungsverwaltung](wif-session-management.md).  
   
  Wenn die Standardeinstellungen verwendet werden, führt WIF Folgendes aus:  
   
@@ -40,7 +40,7 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
     </securityTokenHandlers>  
     ```  
   
-- Von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ableiten und verteilte Zwischenspeicherung implementieren, d.h., einen Zwischenspeicher, auf den von allen Computern in der Farm, auf denen die vertrauende Seite ausgeführt werden könnte, zugegriffen werden kann. Konfigurieren Sie die vertrauende Seite für die Verwendung Ihres verteilten Zwischenspeichers durch Angabe des [\<SessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Elements in der Konfigurationsdatei. Sie können die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType>-Methode in der abgeleiteten Klasse überschreiben, sodass sie untergeordnete Elemente des `<sessionSecurityTokenCache>`-Elements überschreibt, sofern diese erforderlich sind.  
+- Von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ableiten und verteilte Zwischenspeicherung implementieren, d.h., einen Zwischenspeicher, auf den von allen Computern in der Farm, auf denen die vertrauende Seite ausgeführt werden könnte, zugegriffen werden kann. Konfigurieren Sie die vertrauende Seite für die Verwendung Ihres verteilten Zwischenspeichers durch Angabe des [\<SessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Elements in der Konfigurationsdatei. Sie können die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType>-Methode in der abgeleiteten Klasse überschreiben, sodass sie untergeordnete Elemente des `<sessionSecurityTokenCache>`-Elements überschreibt, sofern diese erforderlich sind.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
   
      Eine Möglichkeit zur Implementierung des verteilten Zwischenspeichers ist die Bereitstellung des WCF-Front-Ends für Ihren benutzerdefinierten Zwischenspeicher. Weitere Informationen zum Implementieren eines WCFS-Caching-Diensts finden Sie unter [Der WCF-Cache-Dienst](#BKMK_TheWCFCachingService). Weitere Informationen zum Implementieren eines WCF-Clients, den die Anwendung der vertrauenden Seite zum Aufrufen des Cache-Diensts verwenden kann, finden Sie unter [Der WCF-Caching-Client](#BKMK_TheWCFClient).  
   
-- Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 > Der gesamte XML-Beispielcode und der Code in diesem Thema stammen aus dem Beispiel [claimsawarewebfarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
@@ -137,7 +137,7 @@ namespace WcfSessionSecurityTokenCacheService
   
 <a name="BKMK_TheWCFClient"></a>   
 ## <a name="the-wcf-caching-client"></a>Der WCF-Cachingclient  
- Dieser Abschnitt zeigt die Implementierung einer Klasse, die von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> abgeleitet ist, und Aufrufe an den Cachedienst weiterleitet. Sie konfigurieren die Anwendung der vertrauenden Seite zur Verwendung dieser Klasse, indem Sie das [\<SessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Element wie im folgenden XML-Code verwenden.  
+ Dieser Abschnitt zeigt die Implementierung einer Klasse, die von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> abgeleitet ist, und Aufrufe an den Cachedienst weiterleitet. Sie konfigurieren die Anwendung der vertrauenden Seite zur Verwendung dieser Klasse, indem Sie das [\<SessionSecurityTokenCache>](../configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Element wie im folgenden XML-Code verwenden.  
   
 ```xml  
 <caches>  
@@ -255,4 +255,4 @@ namespace CacheLibrary
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>
-- [WIF-Sitzungsverwaltung](../../../docs/framework/security/wif-session-management.md)
+- [WIF-Sitzungsverwaltung](wif-session-management.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac43f6b92198fec03e722b6cf5e12b86df6f4b8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754712"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052870"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface-MDA
 Der `dirtyCastAndCallOnInterface`-MDA (Managed Debugging Assistant, Assistent f체r verwaltetes Debuggen) wird aktiviert, wenn f체r eine Klassenschnittstelle, die f체r ausschlie횩lich sp채te Bindung gekennzeichnet ist, ein fr체h gebundener Aufruf 체ber eine Vtable erfolgt.  
@@ -36,7 +36,7 @@ Der `dirtyCastAndCallOnInterface`-MDA (Managed Debugging Assistant, Assistent f�
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR. Er meldet nur Daten 체ber fr체h gebundene Aufrufe f체r sp채t gebundene Schnittstellen.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Der Name der Methode oder des Felds, auf die oder das 체ber fr체he Bindung zugegriffen wird.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -52,4 +52,4 @@ Der `dirtyCastAndCallOnInterface`-MDA (Managed Debugging Assistant, Assistent f�
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten f체r verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten f체r verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)

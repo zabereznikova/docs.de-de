@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd634b4d4a88d83d425b787ed8493f9aa2504988
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949590"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053421"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 Erstellt einen weiteren Enumerator für Geräte für die unformatierte Eingabe, der denselben Zustand wie der aktuelle Enumerator aufweist und dieselbe Liste durchlaufen soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `ppenum`  
   
- [out] Adresse des Output-Variable, die empfängt die [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) Schnittstellenzeiger auf. Wenn die Methode fehlschlägt, ist der Wert, der diese Output-Variable nicht definiert.  
+ vorgenommen Adresse der Ausgabevariablen, die den [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) -Schnittstellen Zeiger empfängt. Wenn die Methode nicht erfolgreich ist, ist der Wert dieser Ausgabevariablen nicht definiert.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- HRESULT: Diese Methode unterstützt die Standardrückgabewerte E_INVALIDARG, E_UNEXPECTED und E_OUTOFMEMORY.  
+ HRESULT: Diese Methode unterstützt die Standard Rückgabewerte E_INVALIDARG, E_OUTOFMEMORY und E_UNEXPECTED.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ermöglicht es, einen Punkt in der Enumerationsfolge aufzeichnen, um bis zu diesem Zeitpunkt zu einem späteren Zeitpunkt zurück. Der Aufrufer muss dieses neuen Enumerator getrennt von der erste Enumerator freigeben.
+ Diese Methode ermöglicht es, einen Punkt in der enumerationssequenz aufzuzeichnen, um zu diesem Zeitpunkt zu einem späteren Zeitpunkt zurückzukehren. Der Aufrufer muss diesen neuen Enumerator getrennt vom ersten Enumerator freigeben.

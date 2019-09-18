@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949252"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046385"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
@@ -36,7 +36,7 @@ Die CLR-Methodenereignisse werden weiter in Folgendes unterteilt:
 
 ## <a name="clr-method-events"></a>CLR-Methodenereignisse
 
-Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)
 
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
@@ -63,7 +63,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 |MethodStartAddress|win:UInt64|Die Startadresse der Methode.|
 |MethodSize|win:UInt32|Die Größe der Methode.|
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode.<br /><br /> 0x4: JIT-kompiliertem Code-Methode (andernfalls NGEN systemeigene Imagecode).<br /><br /> 0x8: Hilfsmethode.|
+|MethodFlags|win:UInt32|0x1 Dynamische Methode.<br /><br /> 0x2 Generische Methode.<br /><br /> 0x4 JIT-kompilierte Code Methode (andernfalls System eigener ngen-imagecode).<br /><br /> 0x8 Hilfsmethode.|
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
 
 [Zurück nach oben](#top)
@@ -130,7 +130,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 |MethodStartAddress|win:UInt64|Die Startadresse.|
 |MethodSize|win:UInt32|Die Länge der Methode.|
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode.<br /><br /> 0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)<br /><br /> 0x8: Hilfsmethode.|
+|MethodFlags|win:UInt32|0x1 Dynamische Methode.<br /><br /> 0x2 Generische Methode.<br /><br /> 0x4 JIT-kompilierte Methode (andernfalls von "ngen. exe" generiert)<br /><br /> 0x8 Hilfsmethode.|
 |MethodNameSpace|win:UnicodeString|Der vollständige Namespacename, der der Methode zugeordnet ist.|
 |MethodName|win:UnicodeString|Der vollständige Klassenname, der der Methode zugeordnet ist.|
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|
@@ -172,4 +172,4 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR-ETW-Ereignisse](clr-etw-events.md)

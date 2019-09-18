@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9079dfa03ab81bfa6875e43bfa8a6e5351e0a35d
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015112"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043950"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "70015112"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]stellt Anbieter für Standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -und Windows Forms-Steuerelemente bereit. Außerdem bietet ein Fall Back Anbieter partielle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Unterstützung für alle Steuerelemente, die nicht von einem anderen serverseitigen Anbieter oder Proxy bereitgestellt werden, aber über eine Microsoft Active Accessibility-Implementierung verfügen. Diese Anbieter werden automatisch geladen und sind für Clientanwendungen verfügbar.  
   
- Weitere Informationen zur Unterstützung von [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelementen finden Sie [unter Unterstützung der Benutzeroberflächen Automatisierung für Standard Steuerelemente](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Weitere Informationen zur Unterstützung von [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Steuerelementen finden Sie [unter Unterstützung der Benutzeroberflächen Automatisierung für Standard Steuerelemente](ui-automation-support-for-standard-controls.md).  
   
  Anwendungen können auch andere clientseitige Anbieter registrieren.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "70015112"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters](create-a-client-side-ui-automation-provider.md)
+- [Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung](implement-ui-automation-providers-in-a-client-application.md)

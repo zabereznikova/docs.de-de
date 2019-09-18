@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 95c56f767bbe8dce44ea742de00c65c357bd1378
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895107"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053316"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -29,7 +29,7 @@ Eine ausführliche Exemplarische Vorgehensweise zum Erstellen eines IIS-gehostet
 
 WCF, IIS und ASP.net müssen installiert sein, damit IIS-gehostete WCF-Dienste ordnungsgemäß funktionieren. Die Verfahren zum Installieren von WCF (als Teil des .NET Framework), ASP.net und IIS variieren je nach Betriebssystem. Weitere Informationen zum Installieren von WCF und der .NET Framework finden Sie unter [Installieren des .NET Framework für Entwickler](../../install/guide-for-developers.md). Um IIS unter Windows 10 zu installieren, öffnen Sie in der **Systemsteuerung** **Programme und Funktionen** , und wählen Sie dann Windows-Funktionen ein- **oder ausschalten aus**. Wählen Sie unter **Windows-Features** **Internetinformationsdienste** aus, und klicken Sie dann auf **OK**.
 
-![Windows-Features mit hervorgehobenem IIS](media/windows-features-iis.png)
+![Windows-Features mit hervorgehobenem IIS](./media/windows-features-iis.png)
 
 Anweisungen zum Installieren von IIS unter anderen Betriebssystemen finden Sie unter [Installieren von IIS unter Windows Vista und Windows 7](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) und [Installieren von IIS 8,5 unter Windows Server 2012 R2](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2).
 

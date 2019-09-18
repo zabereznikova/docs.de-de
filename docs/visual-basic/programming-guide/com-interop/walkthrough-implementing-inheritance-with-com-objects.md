@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: f632df919417c04701727be3e99eb2bf3f6ff1f7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7cbf71d7a2bbd1e94864e785894fdea41d522486
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627038"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053334"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von Vererbung mit COM-Objekten (Visual Basic)
 
@@ -22,7 +22,7 @@ Im folgenden Verfahren wird gezeigt, wie Sie mit Visual Basic 6,0 ein COM-Objekt
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>So erstellen Sie das COM-Objekt, das in dieser exemplarischen Vorgehensweise verwendet wird
+## <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>So erstellen Sie das COM-Objekt, das in dieser exemplarischen Vorgehensweise verwendet wird
 
 1. Öffnen Sie in Visual Basic 6,0 ein neues ActiveX-DLL-Projekt. Es wird ein `Project1` Projekt mit dem Namen erstellt. Es verfügt über eine Klasse `Class1`mit dem Namen.
 
@@ -76,7 +76,7 @@ Im folgenden Verfahren wird gezeigt, wie Sie mit Visual Basic 6,0 ein COM-Objekt
 
 Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die als Brücke zwischen nicht verwaltetem Code (z. b. einem COM-Objekt) und dem verwalteten Code, der von Visual Studio verwendet wird, fungiert. Die Interop-Assembly, die Visual Basic erstellt, verarbeitet viele Details der Arbeit mit COM-Objekten, z. b. *Interop*-Marshalling, das Packen von Parametern und Rückgabe Werten in äquivalente Datentypen beim Wechsel zu und von COM-Objekten. Der Verweis in der Visual Basic Anwendung verweist auf die Interop-Assembly, nicht auf das tatsächliche com-Objekt.
 
-#### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>So verwenden Sie ein COM-Objekt mit Visual Basic 2005 und höheren Versionen
+### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>So verwenden Sie ein COM-Objekt mit Visual Basic 2005 und höheren Versionen
 
 1. Öffnen Sie ein neues Visual Basic-Windows-Anwendungsprojekt.
 
@@ -108,7 +108,7 @@ Im folgenden Verfahren erstellen Sie eine Interop-Assembly, die als Brücke zwis
 
 Die neue Klasse erbt die Eigenschaften der Basisklasse im COM-Objekt, über lädt eine-Methode und definiert eine neue-Methode, um die-Klasse zu erweitern.
 
-#### <a name="to-test-the-inherited-class"></a>So testen Sie die geerbte Klasse
+### <a name="to-test-the-inherited-class"></a>So testen Sie die geerbte Klasse
 
 1. Fügen Sie dem Start Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um den Code anzuzeigen.
 

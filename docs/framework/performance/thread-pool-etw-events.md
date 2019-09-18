@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624296"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046188"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
@@ -28,7 +28,7 @@ ms.locfileid: "64624296"
  Diese Ereignisse beziehen sich auf den Arbeitsthreadpool der Laufzeit und stellen Benachrichtigungen für Threadereignisse bereit (wenn z. B. ein Thread erstellt oder beendet wird). Der Arbeitsthreadpool verwendet einen adaptiven Algorithmus für die Parallelitätssteuerung, bei dem die Anzahl der Threads auf Basis des gemessenen Durchsatzes berechnet wird. Arbeitsthreadpoolereignisse können dazu verwendet werden zu verstehen, wie eine Anwendung den Threadpool verwendet und welche Auswirkungen bestimmte Arbeitsauslastungen möglicherweise auf die Parallelitätssteuerung haben.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart und ThreadPoolWorkerThreadStop  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene für diese Ereignisse an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene für diese Ereignisse an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
@@ -131,7 +131,7 @@ ms.locfileid: "64624296"
 ## <a name="io-thread-events"></a>E/A-Threadereignisse  
  Diese Threadpoolereignisse treten für Threads im E/A-Threadpool (Abschlussanschluss) auf, der asynchron ist.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -152,7 +152,7 @@ ms.locfileid: "64624296"
 |NumRetired|win:UInt64|Anzahl deaktivierter Arbeitsthreads.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -173,7 +173,7 @@ ms.locfileid: "64624296"
 |NumRetired|win:UInt64|Anzahl deaktivierter E/A-Threads.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -217,4 +217,4 @@ ms.locfileid: "64624296"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR-ETW-Ereignisse](clr-etw-events.md)

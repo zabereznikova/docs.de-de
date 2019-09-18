@@ -3,15 +3,15 @@ title: Identitäts- und Zugriffs-Tool für Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 999b85576c52d065075cad105c3212c1b034084f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d58cca13dc3ac67742e5371aed628a6a680e61e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626036"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045416"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identitäts- und Zugriffs-Tool für Visual Studio 2012
-In diesem Thema wird das neue Identitäts- und Zugriffs-Tool für Visual Studio 11 beschrieben. Sie können dieses Tool von folgender URL herunterladen: <https://go.microsoft.com/fwlink/?LinkID=245849> oder direkt aus Visual Studio 11 durch Suchen nach "Identität" direkt im Erweiterungs-Manager.  
+In diesem Thema wird das neue Identitäts- und Zugriffs-Tool für Visual Studio 11 beschrieben. Sie können dieses Tool von folgender URL herunterladen: <https://go.microsoft.com/fwlink/?LinkID=245849> oder direkt in Visual Studio 11, indem Sie direkt im Erweiterungs-Manager nach "Identität" suchen.  
   
  Das Identitäts- und Zugriffs-Tool für Visual Studio 11 bietet eine vereinfachte Entwicklungserfahrung mit folgenden Vorteilen:  
   
@@ -25,8 +25,8 @@ In diesem Thema wird das neue Identitäts- und Zugriffs-Tool für Visual Studio 
   
 - Sie können den Verbund mit Active Directory-Verbunddiensten (AD FS) 2.0 (oder mit anderen WS-Verbund-Anbietern) in nur einem Bildschirm erstellen.  
   
-- Das Tool nutzt die Funktionen von Windows Azure Access Control Service (ACS) mit einer einfachen Liste mit Kontrollkästchen für alle Identitätsanbieter, die Sie verwenden möchten: Facebook, Google, Live ID, Yahoo!, OpenID-Anbieter und WS-Verbund-Anbieter. Wählen Sie die Identitätsanbieter aus, klicken Sie auf "OK", und drücken Sie F5. Daraufhin werden die Anwendung und ACS automatisch konfiguriert und die Testanwendung ist ACS-fähig.  
+- Das Tool nutzt die Funktionen von Windows Azure Access Control Service (ACS) mit einer einfachen Liste von Kontrollkästchen für alle Identitäts Anbieter, die Sie verwenden möchten: Facebook, Google, Live ID, Yahoo!, ein beliebiger OpenID-Anbieter und ein beliebiger WS-Verbund-Anbieter. Wählen Sie die Identitätsanbieter aus, klicken Sie auf "OK", und drücken Sie F5. Daraufhin werden die Anwendung und ACS automatisch konfiguriert und die Testanwendung ist ACS-fähig.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WIF-Features](../../../docs/framework/security/wif-features.md)
+- [WIF-Features](wif-features.md)

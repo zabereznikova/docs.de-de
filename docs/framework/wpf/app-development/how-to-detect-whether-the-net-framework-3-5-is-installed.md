@@ -7,12 +7,12 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 220fb3236786eb894bb78d12104025d24c9876ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18e5c819eb4deb62208280816d11dce0940d134d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960892"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053430"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Vorgehensweise: Erkennen einer .NET Framework 3.5-Installation
 Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf einem System bereitstellen können, das auf das .NET Framework 3,5 abzielt, müssen Sie zunächst bestätigen, dass die .NET Framework 3,5-Laufzeit vorhanden ist. Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework 3,5 in einem System vorhanden ist.  
@@ -26,7 +26,7 @@ Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf eine
 > [!NOTE]
 > Dieses Skript ist für Internet Explorer konzipiert. Andere Browser enthalten möglicherweise keine .NET CLR-Informationen in der UserAgent-Zeichenfolge.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.5</TITLE>  

@@ -2,16 +2,16 @@
 title: Flexible Typen
 description: Erfahren Sie, wie F# Sie eine flexible Typanmerkung verwenden, die angibt, dass ein Parameter, eine Variable oder ein Wert einen Typ aufweist, der mit einem angegebenen Typ kompatibel ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43caa6cd35630df648beda5cc43cffae2ecd6f6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630259"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083062"
 ---
 # <a name="flexible-types"></a>Flexible Typen
 
-Eine *flexible* Typanmerkung gibt an, dass ein Parameter, eine Variable oder ein Wert einen Typ aufweist, der mit einem angegebenen Typ kompatibel ist, wobei die Kompatibilität durch die Position in einer objektorientierten Hierarchie von Klassen oder Schnittstellen bestimmt wird. Flexible Typen sind besonders nützlich, wenn die automatische Konvertierung in Typen, die in der Typhierarchie höher sind, nicht stattfindet, Sie aber weiterhin die Funktion für die Arbeit mit einem beliebigen Typ in der Hierarchie oder einem beliebigen Typ aktivieren möchten, der eine Schnittstelle implementiert.
+Eine *flexible Typanmerkung* gibt an, dass ein Parameter, eine Variable oder ein Wert einen Typ aufweist, der mit einem angegebenen Typ kompatibel ist, wobei die Kompatibilität durch die Position in einer objektorientierten Hierarchie von Klassen oder Schnittstellen bestimmt wird. Flexible Typen sind besonders nützlich, wenn die automatische Konvertierung in Typen, die in der Typhierarchie höher sind, nicht stattfindet, Sie aber weiterhin die Funktion für die Arbeit mit einem beliebigen Typ in der Hierarchie oder einem beliebigen Typ aktivieren möchten, der eine Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Der folgende Code verwendet `Seq.concat` , um die Szenarien zu veranschaulichen,
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]

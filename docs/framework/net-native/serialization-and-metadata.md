@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec8180da9637ec2b2c4e1b432773b4f9f1ac908b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913799"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049175"
 ---
 # <a name="serialization-and-metadata"></a>Serialisierung und Metadaten
 
@@ -22,7 +22,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Drittanbieter-Serialisierungsprogramme
 
- Drittanbieter-Serialisierungsprogramme, einschließlich Newtonsoft.JSON, sind in der Regel reflektionsbasiert. Bei einem BLOB aus serialisierten Daten werden die Felder in den Daten einem konkreten Typ durch Suchen der Felder des Zieltyps nach dem Namen zugewiesen. Durch das Verwenden dieser Bibliotheken werden mindestens [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahmen für alle <xref:System.Type>-Objekte verursacht, die Sie in einer `List<Type>`-Auflistung serialisieren oder deserialisieren möchten.  
+ Drittanbieter-Serialisierungsprogramme, einschließlich Newtonsoft.JSON, sind in der Regel reflektionsbasiert. Bei einem BLOB aus serialisierten Daten werden die Felder in den Daten einem konkreten Typ durch Suchen der Felder des Zieltyps nach dem Namen zugewiesen. Durch das Verwenden dieser Bibliotheken werden mindestens [MissingMetadataException](missingmetadataexception-class-net-native.md)-Ausnahmen für alle <xref:System.Type>-Objekte verursacht, die Sie in einer `List<Type>`-Auflistung serialisieren oder deserialisieren möchten.  
   
  Durch fehlende Metadaten für diese Serialisierungsprogramme verursachte Probleme können am einfachsten gelöst werden, indem Sie Typen auflisten, die bei der Serialisierung unter einem einzigen Namespace verwendet werden (z. B. `App.Models`) und eine `Serialize`-Metadatenanweisung darauf anwenden:  
   
@@ -30,7 +30,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- Informationen zur im Beispiel verwendeten Syntax finden Sie unter [\<Namespace>-Element](../../../docs/framework/net-native/namespace-element-net-native.md).  
+ Informationen zur im Beispiel verwendeten Syntax finden Sie unter [\<Namespace>-Element](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft-Serialisierungsprogramme
@@ -67,11 +67,11 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Informationen zur im Beispiel verwendeten Syntax finden Sie unter [\<Type>-Element](../../../docs/framework/net-native/type-element-net-native.md).  
+ Informationen zur im Beispiel verwendeten Syntax finden Sie unter [\<Type>-Element](type-element-net-native.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace>-Element](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
+- [\<Type >-Element](type-element-net-native.md)
+- [\<Namespace>-Element](namespace-element-net-native.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3ea64668272b6625a9e43c9610496a7e7392129
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854031"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052314"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  
@@ -53,7 +53,7 @@ Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwa
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
 ## <a name="output"></a>Ausgabe  
- Eine Meldung, die angibt, dass ein <xref:System.Runtime.InteropServices.SafeHandle> oder ein <xref:System.Runtime.InteropServices.CriticalHandle> das Handle nicht ordnungsgemäß freigegeben hat. Zum Beispiel:  
+ Eine Meldung, die angibt, dass ein <xref:System.Runtime.InteropServices.SafeHandle> oder ein <xref:System.Runtime.InteropServices.CriticalHandle> das Handle nicht ordnungsgemäß freigegeben hat. Beispiel:  
   
 ```output
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

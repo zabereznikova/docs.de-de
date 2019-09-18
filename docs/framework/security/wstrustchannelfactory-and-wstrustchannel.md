@@ -3,12 +3,12 @@ title: „WSTrustChannelFactory“ und „WSTrustChannel“
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633173"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044912"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>„WSTrustChannelFactory“ und „WSTrustChannel“
 Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wissen Sie, dass ein WCF-Client bereits verbundfähig ist. Wird ein WCF-Client mit <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung konfiguriert, können Sie die Verbundauthentifizierung für einen Dienst aktivieren.
@@ -25,7 +25,7 @@ Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wisse
 
 - Verwenden nur von WIF, um ein Token vom Sicherheitstokendienst abzurufen und es dann einem WCF-Client zu ermöglichen, sich mit diesem Token zu authentifizieren. Weitere Informationen finden Sie unter dem Beispiel [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Das erste Szenario ist selbsterklärend: Vorhandene WCF-Clients werden weiterhin mit WIF-Seiten und Sicherheitstokendiensten arbeiten. In diesem Thema werden die verbleibenden beiden Szenarien besprochen.
+ Das erste Szenario ist selbsterklärend: Vorhandene WCF-Clients funktionieren weiterhin mit WIF-vertrauenden Seiten und StSS. In diesem Thema werden die verbleibenden beiden Szenarien besprochen.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Optimieren eines vorhandenen WCF-Clients mit ActAs/OnBehalfOf
 In einem typischen Identitätsdelegierungsszenario ruft ein Client einen Dienst der mittleren Ebene auf, der dann einen Back-End-Dienst aufruft. Der Dienst der mittleren Ebene dient als oder im Namen vom Client.
@@ -33,7 +33,7 @@ In einem typischen Identitätsdelegierungsszenario ruft ein Client einen Dienst 
 > [!TIP]
 > Worin besteht der Unterschied zwischen "ActAs" und "OnBehalfOf"?
 >
-> Von der WS-Trust-Protokoll-Standpunkt aus:
+> Aus dem WS-Trust-Protokoll:
 >
 > 1. Ein ActAs-RST-Element gibt an, dass der Anforderer ein Token wünscht, das Ansprüche zu zwei verschiedenen Entitäten enthält: den Anforderer und eine externe Entität, die vom Token im ActAs-Element dargestellt wird.
 > 2. Ein OnBehalfOf-RST-Element gibt an, dass der Anforderer ein Token wünscht, das nur Ansprüche zu einer Entität enthält: die externe Entität, die vom Token im OnBehalfOf-Element dargestellt wird.
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 Beachten Sie, dass der `out`-Parameter auf der <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A>-Methode den Zugriff auf die Antwort des Anforderungssicherheitstokens für clientseitige Überprüfung zulässt.
 
-Bisher haben Sie Gewusst wie: Abrufen eines Tokens nur gesehen. Das Token, das vom <xref:System.ServiceModel.Security.WSTrustChannel>-Objekt zurückgegeben wird, ist ein `GenericXmlSecurityToken`-Element, in dem alle Informationen enthalten sind, die für die Authentifizierung bei einer Seite erforderlich ist. Im folgenden Codebeispiel wird die Verwendung dieses Tokens veranschaulicht.
+Bisher haben Sie nur gesehen, wie Sie ein Token abrufen können. Das Token, das vom <xref:System.ServiceModel.Security.WSTrustChannel>-Objekt zurückgegeben wird, ist ein `GenericXmlSecurityToken`-Element, in dem alle Informationen enthalten sind, die für die Authentifizierung bei einer Seite erforderlich ist. Im folgenden Codebeispiel wird die Verwendung dieses Tokens veranschaulicht.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ Die <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A
 
 ## <a name="see-also"></a>Siehe auch
 
-- [WIF-Features](../../../docs/framework/security/wif-features.md)
+- [WIF-Features](wif-features.md)

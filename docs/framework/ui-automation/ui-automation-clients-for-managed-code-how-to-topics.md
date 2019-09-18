@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-ms.openlocfilehash: 8c3107ce2ee20b3369a2ba462775ec7c8a1d3f6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a419f8ac8b94d4f33c7e771c68f230c80a24cbf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042534"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Hilfethemen zu Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
 > [!NOTE]
@@ -21,11 +21,11 @@ ms.locfileid: "69935111"
  Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Funktionen [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] von in einer Client Anwendung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
- [Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
- [Registrieren einer clientseitigen Anbieterassembly](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [Verwenden der AutomationID-Eigenschaft](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+ [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](navigate-among-ui-automation-elements-with-treewalker.md)  
+ [Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement](find-a-ui-automation-element-for-a-list-item.md)  
+ [Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung](get-ui-automation-element-properties.md)  
+ [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)  
+ [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](subscribe-to-ui-automation-events.md)  
+ [Registrieren einer clientseitigen Anbieterassembly](register-a-client-side-provider-assembly.md)  
+ [Verwenden der AutomationID-Eigenschaft](use-the-automationid-property.md)

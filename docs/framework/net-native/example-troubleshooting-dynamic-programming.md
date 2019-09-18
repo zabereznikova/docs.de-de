@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85d64a5577acdaa15a40ae308eb728d75d6a4c69
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 866ec425fd66ee8b3b62263180ac7e6d776108f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894492"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049802"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Beispiel: Problembehandlung bei dynamischer Programmierung
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- Wir versuchen, diese Ausnahme mithilfe der dreistufigen Vorgehensweise zu behandeln, die im Abschnitt „Fehlende Metadaten manuell auflösen“ von [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md) erläutert wird.  
+ Wir versuchen, diese Ausnahme mithilfe der dreistufigen Vorgehensweise zu behandeln, die im Abschnitt „Fehlende Metadaten manuell auflösen“ von [Erste Schritte](getting-started-with-net-native.md) erläutert wird.  
   
 ## <a name="what-was-the-app-doing"></a>Was hat die App gerade getan?  
  Zunächst muss die `async`-Schlüsselwortmaschinerie an der Basis des Stapels beachtet werden.  Zu bestimmen, welche Aktion die App in einer `async`-Methode wirklich ausgeführt hat, kann problematisch sein, da der Stapel den Kontext des ursprünglichen Aufrufs verloren und den `async`-Code in einem anderen Thread ausgeführt hat. Allerdings können wir ableiten, dass die App versucht, die erste Seite zu laden.  In der Implementierung für `NavigationArgs.Setup` hat der folgende Code die Zugriffsverletzung verursacht:  
@@ -56,9 +56,9 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  Andere Probleme können mit `App.Core.ViewModels` ebenfalls auftreten.  Sie müssen entscheiden, ob es sich lohnt, jede Ausnahme aufgrund von fehlenden Metadaten zu identifizieren und zu lösen, oder ob Sie Zeit sparen und Anweisungen für eine größere Typenklasse hinzufügen möchten.  Hier ist das Hinzufügen von `dynamic`-Metadaten für `App.Core.ViewModels` möglicherweise der beste Ansatz, wenn die daraus resultierende Größenzunahme der Ausgabebinärdatei kein Problem ist.  
   
 ## <a name="could-the-code-be-rewritten"></a>Könnte der Code neu geschrieben werden?  
- Hätte die App `typeof(LayoutApplicationVM)` anstelle von `Type.GetType("LayoutApplicationVM")` verwendet, hätte die Toolkette `browse`-Metadaten beibehalten können.  Jedoch wären immer noch keine `invoke`-Metadaten erstellt worden, was zu einer [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme beim Instanziieren des Typs geführt hätte. Um die Ausnahme zu verhindern, müssten Sie eine Laufzeitanweisung für den Namespace oder den Typ hinzufügen, der die `dynamic`-Richtlinie angibt. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Hätte die App `typeof(LayoutApplicationVM)` anstelle von `Type.GetType("LayoutApplicationVM")` verwendet, hätte die Toolkette `browse`-Metadaten beibehalten können.  Jedoch wären immer noch keine `invoke`-Metadaten erstellt worden, was zu einer [MissingMetadataException](missingmetadataexception-class-net-native.md)-Ausnahme beim Instanziieren des Typs geführt hätte. Um die Ausnahme zu verhindern, müssten Sie eine Laufzeitanweisung für den Namespace oder den Typ hinzufügen, der die `dynamic`-Richtlinie angibt. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Anpassen von mit VSTU Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Erste Schritte](getting-started-with-net-native.md)
+- [Anpassen von mit VSTU Behandeln von Ausnahmen beim Binden von Daten](example-handling-exceptions-when-binding-data.md)

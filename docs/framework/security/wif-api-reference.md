@@ -3,12 +3,12 @@ title: WIF-API-Verweis
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fd7f34e619626ddca63074a89ec7253fd818ab55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958343"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045152"
 ---
 # <a name="wif-api-reference"></a>WIF-API-Verweis
 Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteilt: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) und `System.ServiceModel` (System.ServiceModel.dll). Dieses Thema enthält Links zu den WIF-Namespaces und kurze Erläuterungen zu den Klassen, die jeder Namespace enthält.  
@@ -20,7 +20,7 @@ Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteil
  Enthält Klassen, die Cookietransformationen, Sicherheitstokendienste und spezielle XML-Wörterbuch-Reader darstellen.  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- Enthält Klassen, die Konfigurationen für Anwendungen und Dienste erstellen, die mit der Windows Identity Foundation (WIF) erstellt wurden. Die Klassen in diesem Namespace stellen Einstellungen unter dem [\<IdentityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)-Element dar.  
+ Enthält Klassen, die Konfigurationen für Anwendungen und Dienste erstellen, die mit der Windows Identity Foundation (WIF) erstellt wurden. Die Klassen in diesem Namespace stellen Einstellungen unter dem [\<IdentityConfiguration>](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)-Element dar.  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
  Enthält Klassen, die Elemente in einem Verbundmetadatendokument darstellen.  
@@ -29,10 +29,10 @@ Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteil
  Enthält Klassen, die WS-Trust-Elemente darstellen.  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- Enthält Klassen, die in den passiven (WS-Verbund)-Szenarien verwendet werden. Enthält außerdem einige Klassen, die Einstellungen unter dem [\<System.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)-Element darstellen. Einstellungen unter diesem Element konfigurieren WS-Verbund für Anwendungen. Der `System.IdentityModel.Services.Configuration`-Namespace enthält die meisten Klassen, mit denen der WS-Verbund konfiguriert wird.  
+ Enthält Klassen, die in den passiven (WS-Verbund)-Szenarien verwendet werden. Enthält außerdem einige Klassen, die Einstellungen unter dem [\<System.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)-Element darstellen. Einstellungen unter diesem Element konfigurieren WS-Verbund für Anwendungen. Der `System.IdentityModel.Services.Configuration`-Namespace enthält die meisten Klassen, mit denen der WS-Verbund konfiguriert wird.  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- Enthält Klassen, die WIF-Anwendungen, die das WS-Verbundprotokoll verwenden, konfigurieren. Die Klassen in diesem Namespace stellen die Einstellungen unter dem [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)-Element dar. Der `System.IdentityModel.Services`-Namespace enthält auch einige Klassen, mit denen der WS-Verbund konfiguriert wird.  
+ Enthält Klassen, die WIF-Anwendungen, die das WS-Verbundprotokoll verwenden, konfigurieren. Die Klassen in diesem Namespace stellen die Einstellungen unter dem [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)-Element dar. Der `System.IdentityModel.Services`-Namespace enthält auch einige Klassen, mit denen der WS-Verbund konfiguriert wird.  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
  Enthält spezialisierte Sicherheitstokenhandler für Webfarm-Szenarios.  
@@ -48,5 +48,5 @@ Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteil
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz zur WIF-Konfiguration](../../../docs/framework/security/wif-configuration-reference.md)
-- [Namespacezuordnung zwischen WIF 3.5 und WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Referenz zur WIF-Konfiguration](wif-configuration-reference.md)
+- [Namespacezuordnung zwischen WIF 3.5 und WIF 4.5](namespace-mapping-between-wif-3-5-and-wif-4-5.md)

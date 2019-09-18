@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: ca46eb01ee8a18e83cecbc26b2e9bf82778c210b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 450a3f3a4969287181aa031ab581b85447bfde56
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954084"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040424"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Hilfethemen zu Textmustern zur Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -22,9 +22,9 @@ ms.locfileid: "69954084"
  Dieser Abschnitt enthält Themen, in denen die Verwendung des Text Musters für die Benutzeroberflächen Automatisierung erläutert wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung](add-content-to-a-text-box-using-ui-automation.md)  
+ [Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung](find-and-highlight-text-using-ui-automation.md)  
+ [Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung](obtain-text-attributes-using-ui-automation.md)  
+ [Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](traverse-text-using-ui-automation.md)  
+ [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](access-embedded-objects-using-ui-automation.md)

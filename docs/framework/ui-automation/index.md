@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 3c7dc456b9378f1eab09a2300e379d9156722485
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 667f0ded506305f3d7eb1ac5c43d3f65aab2cca9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926976"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043036"
 ---
 # <a name="accessibility"></a>Zugriff
 > [!NOTE]
@@ -22,14 +22,14 @@ ms.locfileid: "70926976"
  In dieser Dokumentation wird [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] die API für verwalteten Code beschrieben. Informationen zum Programmieren für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in C++ finden Sie unter [UI Automation for Win32 Applications (Benutzeroberflächenautomatisierung für Win32-Anwendungen)](/windows/desktop/winauto/windows-automation-api-portal).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Bewährte Methoden für Eingabehilfen](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
- [Grundlagen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/index.md)  
- [Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
- [Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
- [Textmuster zur Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [Steuerelementtypen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
- [Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
+ [Bewährte Methoden für Eingabehilfen](accessibility-best-practices.md)  
+ [Grundlagen der Benutzeroberflächenautomatisierung](index.md)  
+ [Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](ui-automation-providers-for-managed-code.md)  
+ [Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](ui-automation-clients-for-managed-code.md)  
+ [Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns.md)  
+ [Textmuster zur Benutzeroberflächenautomatisierung](ui-automation-text-pattern.md)  
+ [Steuerelementtypen der Benutzeroberflächenautomatisierung](ui-automation-control-types.md)  
+ [Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community](ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 

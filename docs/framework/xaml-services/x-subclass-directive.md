@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6f02998a7648693bd731d6b2afdfd4499abaa04
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938865"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053911"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass-Anweisung
-Ändert die XAML-Markup kompilieren Verhalten beim `x:Class` wird ebenfalls bereitgestellt. Statt eine partielle Klasse, die basierend auf `x:Class`, bereitgestellten `x:Class` wird erstellt, wie ein intermediate-Klasse, und klicken Sie dann Ihre bereitgestellte abgeleitete Klasse wird erwartet, dass auf basiert `x:Class`.  
+Ändert das XAML-Markup Kompilierungs `x:Class` Verhalten, wenn ebenfalls bereitgestellt wird. Anstatt eine partielle Klasse zu erstellen, die auf `x:Class`basiert, wird `x:Class` der bereitgestellte als Zwischenklasse erstellt, und die bereitgestellte abgeleitete Klasse wird erwartet, dass `x:Class`auf basiert.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
-```  
+```xaml  
 <object x:Class="namespace.classname" x:Subclass="subclassNamespace.subclassName">  
    ...  
 </object>  
@@ -32,29 +32,29 @@ ms.locfileid: "61938865"
   
 |||  
 |-|-|  
-|`namespace`|Dies ist optional. Gibt einen CLR-Namespace, die enthält `classname`. Wenn `namespace` angegeben ist, einen Punkt (.) getrennt `namespace` und `classname`.|  
-|`classname`|Erforderlich. Gibt den CLR-Namen der partiellen Klasse, die die geladene XAML und der Code-Behind für diese XAML verbindet. Siehe Hinweise.|  
-|`subclassNamespace`|Dies ist optional. Von unterscheiden können `namespace` Wenn jeden Namespace auf den anderen auflösen kann. Gibt einen CLR-Namespace, die enthält `subclassName`. Wenn `subclassName` angegeben ist, einen Punkt (.) getrennt `subclassNamespace` und `subclassName`.|  
-|`subclassName`|Erforderlich. Gibt den CLR-Namen der Unterklasse.|  
+|`namespace`|Optional. Gibt einen CLR-Namespace an `classname`, der enthält. Wenn `namespace` angegeben wird, werden von einem Punkt (. `namespace` ) `classname`und getrennt.|  
+|`classname`|Erforderlich. Gibt den CLR-Namen der partiellen Klasse an, die die geladene XAML und den Code Behind für dieses XAML verbindet. Siehe Hinweise.|  
+|`subclassNamespace`|Optional. Kann sich von `namespace` unterscheiden, wenn jeder Namespace die andere auflösen kann. Gibt einen CLR-Namespace an `subclassName`, der enthält. Wenn `subclassName` angegeben wird, werden von einem Punkt (. `subclassNamespace` ) `subclassName`und getrennt.|  
+|`subclassName`|Erforderlich. Gibt den CLR-Namen der Unterklasse an.|  
   
 ## <a name="dependencies"></a>Abhängigkeiten  
- [X: Class-Anweisung](x-class-directive.md) muss auch auf das gleiche Objekt bereitgestellt werden und das Objekt muss das Stammelement der XAML-Produktion.  
+ die [x:Class-Direktive](x-class-directive.md) muss auch für dasselbe Objekt bereitgestellt werden, und dieses Objekt muss das Stamm Element der XAML-Produktion sein.  
   
 ## <a name="remarks"></a>Hinweise  
- `x:Subclass` Nutzung dient in erster Linie für Sprachen, die Deklarationen der partiellen Klasse nicht unterstützen.  
+ `x:Subclass`die Verwendung ist hauptsächlich für Sprachen gedacht, die keine partiellen Klassen Deklarationen unterstützen.  
   
- Die Klasse als die `x:Subclass` nicht geschachtelte Klassen und `x:Subclass` muss auf das Stammobjekt verweisen, wie im Abschnitt "Dependencies" erläutert.  
+ Die als `x:Subclass` verwendete Klasse kann keine als eine Klasse der Klasse "- `x:Subclass` Klasse" sein und muss auf das Stamm Objekt verweisen, wie im Abschnitt "Abhängigkeiten" erläutert.  
   
- Andernfalls die konzeptionelle Bedeutung von `x:Subclass` ist nicht definiert, durch eine Implementierung von .NET Framework-XAML-Dienste. Dies ist, da .NET Framework-XAML-Dienste Verhalten nicht das allgemeine Programmiermodell angibt, durch die, das XAML-Markup und Code sichern verbunden sind. Implementierungen von weiteren Konzepte im Zusammenhang mit `x:Class` und `x:Subclass` von bestimmten Frameworks, mit denen Programmiermodelle oder Anwendungsmodelle definieren, wie XAML-Markup, das kompilierte Markup und Code-Behind-CLR-basierte Verbindung ausgeführt werden. Jedes Framework möglicherweise eigene Buildvorgänge, die es ermöglichen, einige der das Verhalten oder die bestimmte Komponenten, die in der Buildumgebung enthalten sein müssen. In einem Framework können-Build Actions auch basierend auf bestimmten CLR-Sprache variieren, die für das Code-Behind verwendet wird.  
+ Andernfalls wird die konzeptionelle Bedeutung von `x:Subclass` durch eine .NET Framework XAML-Dienst Implementierung nicht definiert. Dies liegt daran, dass .NET Framework XAML-Dienst Verhalten nicht das gesamte Programmiermodell angibt, mit dem XAML-Markup und Unterstützungs Code verbunden sind. Implementierungen weiterer Konzepte im Zusammenhang `x:Class` mit `x:Subclass` und werden von bestimmten Frameworks durchgeführt, die Programmier Modelle oder Anwendungsmodelle verwenden, um zu definieren, wie XAML-Markup, kompiliertes Markup und CLR-basiertes Code Behind verbunden werden. Jedes Framework kann über eigene Buildaktionen verfügen, die ein Teil des Verhaltens oder bestimmte Komponenten ermöglichen, die in der Buildumgebung enthalten sein müssen. Innerhalb eines Frameworks können Buildaktionen auch abhängig von der spezifischen CLR-Sprache variieren, die für den Code-Behind verwendet wird.  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
- `x:Subclass` kann sein, oder auf eine Seitenstamm der <xref:System.Windows.Application> Stamm in die Definition der Anwendung, die bereits hat `x:Class`. Deklarieren von `x:Subclass` auf ein beliebiges Element als eine Seite oder Anwendung Stamm oder wenn keine Angabe `x:Class` vorhanden ist, verursacht einen Fehler während der Kompilierung.  
+ `x:Subclass`kann sich in einem Seiten Stamm oder <xref:System.Windows.Application> im Stammverzeichnis der Anwendungs Definition befinden, die bereits über verfügt. `x:Class` Wenn `x:Subclass` Sie in einem anderen Element als einer Seite oder einem Anwendungs Stamm deklarieren, oder `x:Class` wenn es nicht vorhanden ist, wird ein Kompilierzeitfehler verursacht.  
   
- Erstellen von abgeleiteten Klassen, die ordnungsgemäß für funktionieren die `x:Subclass` Szenario ist relativ komplex. Sie müssen möglicherweise untersuchen die Zwischendateien (g von erzeugten Dateien im Ordner "Obj" des Projekts Markupkompilierung, mit dem Namen, die die XAML-Dateien enthalten). Diese temporären Dateien können Sie das Ermitteln des Ursprungs bestimmter Konstrukte in der verknüpften partiellen Klassen in der kompilierten Anwendung.  
+ Das Erstellen abgeleiteter Klassen, die `x:Subclass` für das Szenario ordnungsgemäß funktionieren, ist ziemlich komplex. Möglicherweise müssen Sie die zwischen Dateien (die. g-Dateien, die im Ordner "obj" des Projekts erstellt wurden, durch Markup Kompilierung untersuchen, wobei die Namen der XAML-Dateinamen enthalten). Diese zwischen Dateien können Ihnen helfen, den Ursprung bestimmter Programmierungskonstrukte in den in der kompilierten Anwendung eingefügten partiellen Klassen zu bestimmen.  
   
- Ereignishandler in der abgeleiteten Klasse muss `internal override` (`Friend Overrides` in Microsoft Visual Basic) um die Stubs für die Handler zu überschreiben, wie in der Zwischenklasse während der Kompilierung erstellt. Andernfalls die Implementierungen der abgeleiteten Klasse ausblenden (Schattenkopien) der Implementierung dazwischen liegende Klasse und die fortgeschrittene Klassenhandler werden nicht aufgerufen.  
+ Ereignishandler in der abgeleiteten Klasse müssen ( `internal override` `Friend Overrides` in Microsoft Visual Basic) sein, um die Stubel für die Handler zu überschreiben, die während der Kompilierung in der Zwischenklasse erstellt wurden. Andernfalls blenden die abgeleiteten Klassen Implementierungen die Implementierung der Zwischenklasse aus (Schatten), und die zwischen Klassen Handler werden nicht aufgerufen.  
   
- Wenn Sie beide definieren `x:Class` und `x:Subclass`, Sie müssen keine Implementierung für die Klasse angeben, die verweist `x:Class`. Sie müssen nur diese über benennen die `x:Class` Attribut, damit der Compiler verfügt über einige Hinweise für die Klasse, die es in die Zwischendateien erstellt (der Compiler ist nicht wählen Sie einen Standardnamen in diesem Fall). Sie erhalten die `x:Class` Klasse eine Implementierung; Dies ist jedoch nicht das typische Szenario für die Verwendung beider `x:Class` und `x:Subclass`.  
+ Wenn Sie sowohl `x:Class` als auch `x:Subclass`definieren, müssen Sie keine Implementierung für die Klasse bereitstellen, auf die von `x:Class`verwiesen wird. Sie müssen dem Attribut lediglich einen Namen über das `x:Class` -Attribut zuweisen, damit der Compiler über eine Anleitung für die Klasse verfügt, die in den zwischen Dateien erstellt wird (in diesem Fall wählt der Compiler keinen Standardnamen aus). Sie können der `x:Class` `x:Class` -Klasse eine-Implementierung übergeben. Dies ist jedoch nicht das typische Szenario für die Verwendung `x:Subclass`von und.  
   
 ## <a name="see-also"></a>Siehe auch
 

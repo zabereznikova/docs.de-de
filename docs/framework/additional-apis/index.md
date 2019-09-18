@@ -10,18 +10,18 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0aed6f32bbd3ffdc9446e9d17be2d90c62444ee1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675363"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053243"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
-.NET Framework wird ständig weiterentwickelt. Um plattformübergreifende Entwicklung zu verbessern und eine neue Funktionalität einem frühen Zeitpunkt einführen, werden neue Features of-Band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
+Die .NET Framework wird ständig weiterentwickelt. Um die plattformübergreifende Entwicklung zu verbessern und frühzeitig neue Funktionen einzuführen, werden neue Features out-of-Band (OOB) veröffentlicht. In diesem Thema werden die OOB-Projekte aufgeführt, für die eine Dokumentation bereitgestellt wird.  
   
-Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Z. B. die <xref:System.Text.CodePagesEncodingProvider> -Klasse stellt codepagecodierungen für UWP-apps mit .NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
+Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen oder Implementierungen von .NET Framework entworfen. Beispielsweise macht die <xref:System.Text.CodePagesEncodingProvider> -Klasse Code Page Codierungen für UWP-apps verfügbar, die mithilfe des-.NET Framework entwickelt wurden. Diese Bibliotheken werden in diesem Thema ebenfalls aufgeführt.  
   
 ## <a name="oob-projects"></a>OOB-Projekte
   
@@ -36,7 +36,7 @@ Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen o
   
 | Projekt | Beschreibung |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider> Klasse, um codepagecodierungen für apps zur Verfügung stellen, die auf die universelle Windows-Plattform abzielen. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider> -Klasse, um Code Page Codierungen für Apps zur Verfügung zu stellen, die auf die universelle Windows-Plattform abzielen. |  
   
 ## <a name="private-apis"></a>Private APIs  
 
@@ -44,22 +44,22 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
   
 | Name der API |
 | -------- |
-| [System.Net.Connection-Klasse](../../../docs/framework/additional-apis/connection.md) |
-| [System.Net.Connection.m\_WriteList-Feld](../../../docs/framework/additional-apis/m_writelist.md) |
-| [System.Net.ConnectionGroup-Klasse](../../../docs/framework/additional-apis/connectiongroup.md) |
-| [System.Net.ConnectionGroup.m\_ConnectionList Field](../../../docs/framework/additional-apis/m_connectionlist.md) |
-| [System.Net.CoreResponseData-Klasse](../../../docs/framework/additional-apis/coreresponsedata.md) |
-| [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode-Feld](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest.\_AutoRedirects Field](../../../docs/framework/additional-apis/_autoredirects.md) |
-| [System.Net.HttpWebRequest. \_CoreResponse-Feld](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
-| [System.Net.HttpWebRequest. \_HttpResponse-Feld](../../../docs/framework/additional-apis/_httpresponse.md) |
-| [System.Net.ServicePoint.m\_ConnectionGroupList-Feld](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
-| [System.Net.ServicePointManager.s\_ServicePointTable-Feld](../../../docs/framework/additional-apis/s_servicepointtable.md) |
-| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
-| [System.Windows.Forms.Design.DataMemberFieldEditor Class](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
-| [System.Windows.Forms.Design.DataMemberListEditor Class](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
+| [System .net. Connection-Klasse](connection.md) |
+| [System .net. Connection. m\_-beschreitelist-Feld](m_writelist.md) |
+| [System .net. connectiongroup-Klasse](connectiongroup.md) |
+| [System.Net.ConnectionGroup.m\_ConnectionList Field](m_connectionlist.md) |
+| [System .net. coreresponabdata-Klasse](coreresponsedata.md) |
+| [System.Net.CoreResponseData.m\_ResponseHeaders Field](coreresponsedata_m_responseheaders.md) |
+| [Feld "System .net. coreresponsedata\_. m" (Statuscode)](coreresponsedata_m_statuscode.md) |
+| [System .net. HttpWebRequest. \_Autoreumleitungen-Feld](_autoredirects.md) |
+| [System .net. HttpWebRequest. \_Coreresponse-Feld](httpwebrequest__coreresponse.md) |
+| [System .net. HttpWebRequest. \_Feld "HttpResponse"](_httpresponse.md) |
+| [System .net. Service Point. m\_connectiongrouplist-Feld](m_connectiongrouplist.md) |
+| [System .net. ServicePointManager. s\_servicepointtables-Feld](s_servicepointtable.md) |
+| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field](s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [System.Windows.Forms.Design.DataMemberFieldEditor Class](datamemberfieldeditor-class.md) |
+| [System.Windows.Forms.Design.DataMemberListEditor Class](datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [.NET Framework und Out-of-Band-Releases](../get-started/the-net-framework-and-out-of-band-releases.md)

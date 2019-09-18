@@ -2,12 +2,12 @@
 title: Arrays
 description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 142d2c8d9aa7247e1490867a7bb905e2e7fec41e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ae8f3cfc84fbba4cac496d4221d140dadec25e10
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630041"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082969"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -69,7 +69,7 @@ Das Bibliotheks Modul [`Microsoft.FSharp.Collections.Array`](https://msdn.micros
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 0 1 2 3 4 5 6 7 8 9
 ```
 
@@ -81,7 +81,7 @@ Mehrere Funktionen erstellen Arrays, ohne ein vorhandenes Array zu erfordern. [`
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Length of empty array: 0
 Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
@@ -93,7 +93,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 Der obige Code gibt Folgendes aus:
 
-```
+```console
 [|Test1; Test2; |]
 [|; Test2; |]
 ```
@@ -106,7 +106,7 @@ Die Zeichenfolge `Test1` wird nur im ersten Array angezeigt, da der Vorgang der 
 
 Die Ausgabe zeigt an, dass das Unterfeld bei Element "5" beginnt und 10 Elemente enthält.
 
-```
+```console
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
@@ -118,7 +118,7 @@ Der folgende Code veranschaulicht **Array. Append**.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 [|1; 2; 3; 4; 5; 6|]
 ```
 
@@ -128,7 +128,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
@@ -138,7 +138,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
@@ -148,7 +148,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 [|(1, 1, 1); (1, 2, 2); (1, 3, 3); (2, 1, 2); (2, 2, 4); (2, 3, 6); (3, 1, 3);
 (3, 2, 6); (3, 3, 9)|]
 ```
@@ -159,7 +159,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 [|2; 4; 6; 8; 10|]
 ```
 
@@ -169,7 +169,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 "Hello world!"
 ```
 
@@ -179,7 +179,7 @@ Sie können Funktionen im Array Modul, die Arrays transformieren, mit dem Pipeli
 
 Ausgabe:
 
-```
+```console
 [|100; 36; 16; 4|]
 ```
 
@@ -308,7 +308,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.exists` und 
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
-```
+```console
 true
 false
 false
@@ -321,7 +321,7 @@ Ebenso testet die- [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-
 
 Die Ausgabe dieser Beispiele lautet folgendermaßen.
 
-```
+```console
 false
 true
 true
@@ -338,7 +338,7 @@ Der folgende Code sucht mithilfe von `Array.find` und `Array.findIndex` eine Zah
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
@@ -350,7 +350,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.tryFind`. Di
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Found an element: 1
 Found an element: 729
 ```
@@ -363,7 +363,7 @@ Im folgenden Code wird die Verwendung von `Array.tryPick` veranschaulicht: In di
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Found an element 1 with square root 1 and cube root 1.
 Found an element 64 with square root 8 and cube root 4.
 Found an element 729 with square root 27 and cube root 9.
@@ -394,7 +394,7 @@ Diese Funktionen zum Ausführen von Berechnungen entsprechen den Funktionen dess
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 

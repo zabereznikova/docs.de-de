@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)'
+title: 'Vorgehensweise: Filtern von Abfrage Ergebnissen mithilfe von LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,72 +11,73 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1250f2fe0ccd7661b9bc1986000143ec4a15a9f0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001025"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053291"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Vorgehensweise: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)
-Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen.  
-  
- Das folgende Beispiel zeigt, wie Sie eine neue Anwendung zu erstellen, führt Abfragen in SQL Server-Datenbank und filtert die Ergebnisse nach einem bestimmten Wert mithilfe, der `Where` Klausel. Weitere Informationen finden Sie unter [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md).  
-  
- In die Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie diese Datenbank nicht auf dem Entwicklungscomputer gespeichert haben, können Sie es aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
-  
-[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
-  
-### <a name="to-create-a-connection-to-a-database"></a>Um eine Verbindung mit einer Datenbank zu erstellen.  
-  
-1. Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** durch Klicken auf **Server-Explorer**/**Datenbank Explorer** auf die **Ansicht** Menü.  
-  
-2. Mit der rechten Maustaste **Datenverbindungen** in **Server-Explorer**/**Datenbank-Explorer** , und klicken Sie dann auf **Verbindung hinzufügen**.  
-  
-3. Geben Sie eine gültige Verbindung mit der Beispieldatenbank Northwind.  
-  
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Zum Hinzufügen eines Projekts, das eine LINQ to SQL-Datei enthält.  
-  
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms-Anwendung** als Projekttyp.  
-  
-2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die **LINQ to SQL-Klassen** Elementvorlage.  
-  
-3. Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Für die Datei northwind.dbml wird der Object Relational Designer (O/R Designer) geöffnet.  
-  
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>Hinzufügen von Tabellen zu Abfragen in den O/R-Designer  
-  
-1. In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung zur Northwind-Datenbank. Erweitern Sie die **Tabellen** Ordner.  
-  
-     Wenn Sie den O/R-Designer geschlossen haben, können Sie sie durch Doppelklicken auf die Datei northwind.dbml, die Sie zuvor hinzugefügt haben erneut öffnen.  
-  
-2. Klicken Sie auf der Customers-Tabelle aus, und ziehen Sie es in den linken Bereich des Designers. Klicken Sie auf der Orders-Tabelle aus, und ziehen Sie es in den linken Bereich des Designers.  
-  
-     Der Designer erstellt neue `Customer` und `Order` Objekte für Ihr Projekt. Beachten Sie, dass der Designer Beziehungen zwischen den Tabellen erkennt und untergeordnete Eigenschaften für verknüpfte Objekte erstellt automatisch aus. Z. B. IntelliSense angezeigt, die die `Customer` Objekt verfügt über eine `Orders` -Eigenschaft für alle Bestellungen für diesen Kunden beziehen.  
-  
-3. Speichern Sie die Änderungen zu und schließen Sie den Designer.  
-  
-4. Speichern Sie das Projekt.  
-  
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Hinzufügen von Code aus, um die Datenbank abzufragen und die Ergebnisse werden angezeigt  
-  
-1. Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement auf das Standard-Windows-Formular für das Projekt, Form1.  
-  
-2. Doppelklicken Sie auf Form1, um zum Hinzufügen von Code die `Load` -Ereignis des Formulars.  
-  
-3. Wenn Sie Tabellen in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt eine <xref:System.Data.Linq.DataContext> Objekt für das Projekt. Dieses Objekt enthält den Code, den Sie für den Zugriff auf diese Tabellen, zusätzlich zu einzelnen Objekte und Auflistungen für jede Tabelle benötigen. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit dem Namen wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt mit dem Namen `northwindDataContext`.  
-  
-     Sie können eine Instanz von erstellen die <xref:System.Data.Linq.DataContext> in Ihrem Code und die Abfrage der Tabellen, die vom O/R-Designer angegeben.  
-  
-     Fügen Sie den folgenden Code der `Load` Ereignis, um die Tabellen zu Abfragen, die als Eigenschaften des Datenkontexts verfügbar gemacht werden. Die Abfrage filtert die Ergebnisse und gibt nur die Kunden, die in befinden `London`.  
-  
-     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
-  
-4. Drücken Sie F5, um das Projekt ausführen und die Ergebnisse anzuzeigen.  
-  
-5. Im folgenden werden einige weitere Filter, die Sie ausprobieren können.  
-  
-     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
-  
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Vorgehensweise: Filtern von Abfrage Ergebnissen mithilfe von LINQ (Visual Basic)
+
+Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformationen und das Ausführen von Abfragen.
+
+Im folgenden Beispiel wird gezeigt, wie eine neue Anwendung erstellt wird, die Abfragen für eine SQL Server Datenbank ausführt und die Ergebnisse mithilfe der `Where` -Klausel nach einem bestimmten Wert filtert. Weitere Informationen finden Sie unter [WHERE-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md).
+
+In den Beispielen in diesem Thema wird die Beispieldatenbank Northwind verwendet. Wenn Sie diese Datenbank nicht auf Ihrem Entwicklungs Computer gespeichert haben, können Sie Sie aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
+
+## <a name="to-create-a-connection-to-a-database"></a>So erstellen Sie eine Verbindung mit einer Datenbank
+
+1. Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** , indem Sie im Menü **Ansicht** auf **Server-Explorer**/**Datenbank-Explorer** klicken.
+
+2. Klicken Sie in **Server-Explorer**/**Datenbank-Explorer** mit der rechten Maustaste auf **Datenverbindungen** und dann auf **Verbindung hinzufügen**.
+
+3. Geben Sie eine gültige Verbindung mit der Northwind-Beispieldatenbank an.
+
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>So fügen Sie ein Projekt hinzu, das eine LINQ to SQL Datei enthält
+
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.
+
+2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.
+
+3. Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der objektrelationaler Designer (O/R-Designer) wird für die Datei "Northwind. dbml" geöffnet.
+
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>So fügen Sie dem O/R-Designer abzufragende Tabellen hinzu
+
+1. Erweitern Sie in **Server-Explorer**/**Datenbank-Explorer**die Verbindung mit der Northwind-Datenbank. Erweitern Sie den Ordner **Tabellen** .
+
+     Wenn Sie den O/R-Designer geschlossen haben, können Sie ihn erneut öffnen, indem Sie auf die Datei Northwind. dbml, die Sie zuvor hinzugefügt haben, doppelklicken.
+
+2. Klicken Sie auf die Tabelle Customers, und ziehen Sie Sie in den linken Bereich des Designers. Klicken Sie auf die Tabelle Orders, und ziehen Sie Sie in den linken Bereich des Designers.
+
+     Der Designer erstellt neue `Customer` - `Order` Objekte und-Objekte für Ihr Projekt. Beachten Sie, dass der Designer automatisch Beziehungen zwischen den Tabellen erkennt und untergeordnete Eigenschaften für verbundene Objekte erstellt. IntelliSense zeigt beispielsweise, dass das- `Customer` Objekt über eine `Orders` -Eigenschaft für alle Bestellungen verfügt, die mit diesem Kunden verknüpft sind.
+
+3. Speichern Sie die Änderungen, und schließen Sie den Designer.
+
+4. Speichern Sie das Projekt.
+
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>So fügen Sie Code hinzu, um die Datenbank abzufragen und die Ergebnisse anzuzeigen
+
+1. Ziehen Sie aus der **Toolbox**ein <xref:System.Windows.Forms.DataGridView> -Steuerelement auf das Windows-Standardformular für das Projekt, Form1.
+
+2. Doppelklicken Sie auf Form1, um dem `Load` -Ereignis des Formulars Code hinzuzufügen.
+
+3. Wenn Sie dem O/R-Designer Tabellen hinzugefügt haben, hat der <xref:System.Data.Linq.DataContext> Designer ein-Objekt für das Projekt hinzugefügt. Dieses Objekt enthält den Code, den Sie für den Zugriff auf diese Tabellen benötigen, zusätzlich zu den einzelnen Objekten und Auflistungen für jede Tabelle. Das <xref:System.Data.Linq.DataContext> -Objekt für das Projekt wird basierend auf dem Namen der DBML-Datei benannt. Für dieses Projekt hat das <xref:System.Data.Linq.DataContext> Objekt den Namen `northwindDataContext`.
+
+    Sie können eine Instanz von <xref:System.Data.Linq.DataContext> im Code erstellen und die im O/R-Designer angegebenen Tabellen Abfragen.
+
+    Fügen Sie dem- `Load` Ereignis den folgenden Code hinzu, um die Tabellen abzufragen, die als Eigenschaften des Daten Kontexts verfügbar gemacht werden. Die Abfrage filtert die Ergebnisse und gibt nur Kunden zurück, die `London`sich in befinden.
+
+    [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]
+
+4. Drücken Sie F5, um das Projekt auszuführen und die Ergebnisse anzuzeigen.
+
+5. Im folgenden finden Sie einige weitere Filter, die Sie ausprobieren können.
+
+    [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

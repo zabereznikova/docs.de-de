@@ -2,12 +2,12 @@
 title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6710c58a430c35dae41a1a381335019fd3e75192
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792524"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053041"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
@@ -44,7 +44,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Laufzeitverhaltens-Matrix des Typmappings  
  In der folgenden Grafik wird das erwartete Laufzeitverhalten spezifischer Typmappings dargestellt, wenn Daten von der Datenbank abgerufen oder in ihr gespeichert werden. Mit Ausnahme der Serialisierung unterstützt LINQ to SQL kein Mapping zwischen CLR- oder SQL Server-Datentypen, die nicht in dieser Matrix aufgeführt sind. Weitere Informationen zur Serialisierungsunterstützung finden Sie unter [binäre Serialisierung](#BinarySerialization).  
  
-![SQL CLR-Datentyp-Mapping-Tabelle SQL Server](media/sql-clr-type-mapping.png)
+![SQL CLR-Datentyp-Mapping-Tabelle SQL Server](./media/sql-clr-type-mapping.png)
 
 > [!NOTE]
 > Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen.  

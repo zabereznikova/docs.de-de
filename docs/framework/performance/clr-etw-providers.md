@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec83bfd08277c79f15904d50a85e43cc61ecd527
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894696"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046739"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
   
  Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Sie können z. B. Ladeprogrammereignisse sammeln, indem Sie das Schlüsselwort `LoaderKeyword` aktivieren.  
   
- Ereignisse der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) werden in einer Datei mit der Erweiterung ETL protokolliert, die später nach Bedarf in durch Trennzeichen getrennten Werten (CSV-Dateien) verarbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Ereignisse der Ereignis Ablauf Verfolgung für Windows (Event Tracing for Windows, etw) werden in einer Datei mit der Erweiterung ETL protokolliert, die später nach Bedarf in durch Trennzeichen getrennten Werten (CSV-Dateien) verarbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Der Laufzeitanbieter  
  Der Laufzeitanbieter ist der zentrale CLR-ETW-Anbieter.  
   
  Die GUID des CLR-Laufzeitanbieters ist e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
- Beispiele zum Protokollieren und Anzeigen von CLR-ETW-Ereignissen mithilfe gängiger Tools finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Beispiele zum Protokollieren und Anzeigen von CLR-ETW-Ereignissen mithilfe gängiger Tools finden Sie unter [Steuern der Protokollierung in .NET Framework](controlling-logging.md).  
   
- Neben Schlüsselwörtern wie `LoaderKeyword` müssen Sie möglicherweise Schlüsselwörter zum Protokollieren von Ereignissen aktivieren, die möglicherweise zu häufig ausgelöst werden. Die `StartEnumerationKeyword`- und `EndEnumerationKeyword`-Schlüsselwörter aktivieren diese Ereignisse und werden in [CLR-ETW-Schlüsselwörter und -Ebenen](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) zusammengefasst.  
+ Neben Schlüsselwörtern wie `LoaderKeyword` müssen Sie möglicherweise Schlüsselwörter zum Protokollieren von Ereignissen aktivieren, die möglicherweise zu häufig ausgelöst werden. Die `StartEnumerationKeyword`- und `EndEnumerationKeyword`-Schlüsselwörter aktivieren diese Ereignisse und werden in [CLR-ETW-Schlüsselwörter und -Ebenen](clr-etw-keywords-and-levels.md) zusammengefasst.  
   
 ## <a name="the-rundown-provider"></a>Der Rundownanbieter  
  Für bestimmte Verwendungszwecke muss der Rundownanbieter aktiviert werden. Für die Mehrheit der Benutzer sollte nur der Laufzeitanbieter in Frage kommen.  
@@ -93,4 +93,4 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)

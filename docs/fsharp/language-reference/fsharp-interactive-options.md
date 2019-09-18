@@ -1,13 +1,13 @@
 ---
 title: F# Interactive-Optionen
-description: Erfahren Sie mehr über die Befehlszeilenoptionen, die von unterstützt F# interaktiv fsi.exe.
+description: Erfahren Sie mehr über die Befehlszeilenoptionen, F# die von Interactive, fsi. exe unterstützt werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9cd5c2e73a6e2f6ce0a9b2f2a631b6a2658423c
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996800"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083120"
 ---
 # <a name="f-interactive-options"></a>F# Interactive-Optionen
 
@@ -17,57 +17,57 @@ ms.locfileid: "61996800"
 In diesem Thema werden die von F# Interactive (`fsi.exe`) unterstützten Befehlszeilenoptionen beschrieben. F# Interactive akzeptiert viele Befehlszeilenoptionen des F#-Compilers, jedoch auch einige zusätzliche Optionen.
 
 ## <a name="using-f-interactive-for-scripting"></a>Verwenden von F# Interactive für die Skripterstellung
-F#Interaktive `fsi.exe`, interaktiv gestartet werden oder über die Befehlszeile zum Ausführen eines Skripts gestartet werden. Die Befehlszeilensyntax lautet wie folgt:
+F#Interaktiv, `fsi.exe`, kann interaktiv gestartet werden, oder es kann über die Befehlszeile gestartet werden, um ein Skript auszuführen. Die Befehlszeilensyntax lautet wie folgt:
 
-```
+```console
 > fsi.exe [options] [ script-file [arguments] ]
 ```
 
 Die Dateierweiterung für F#-Skriptdateien lautet `.fsx`.
 
 ## <a name="table-of-f-interactive-options"></a>Tabelle der F# Interactive-Optionen
-In der folgenden Tabelle werden die von F# Interactive unterstützten Optionen zusammengefasst. Sie können diese Optionen an der Befehlszeile oder in der Visual Studio-IDE festlegen. Um diese Optionen in der Visual Studio-IDE festzulegen, öffnen die **Tools** , wählen Sie im Menü **Optionen...** , erweitern Sie dann die  **F# Tools** Knoten, und wählen  **F# interaktiv**.
+In der folgenden Tabelle werden die von F# Interactive unterstützten Optionen zusammengefasst. Sie können diese Optionen an der Befehlszeile oder in der Visual Studio-IDE festlegen. Um diese Optionen in der Visual Studio-IDE festzulegen, öffnen Sie **das Menü Extras** , wählen Sie **Optionen**aus, erweitern Sie dann den  **F# Knoten Tools** , und wählen Sie  **F# Interactive**aus.
 
 Wenn F# Interactive-Optionsargumente Listen enthalten, werden Listenelemente durch Semikolons (`;`) getrennt.
 
 |Option|Beschreibung|
 |------|-----------|
-|**--**|Verwendet, um anzuweisen F# Interactive, um die übrigen Argumente als Befehlszeilenargumente zum Behandeln der F# Programms oder Skripts, die Sie im Code zugreifen können, indem die Liste **fsi.CommandLineArgs**.|
-|**--checked**[**+**&#124;**-**]|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--codepage:&lt;int&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--consolecolors**[**+**&#124;**-**]|Warnung Ausgaben und Fehlermeldungen in der Farbe.|
-|**--crossoptimize**[**+**&#124;**-**]|Aktiviert oder deaktiviert modulübergreifende Optimierungen.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--define:&lt;string&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--deterministic**[**+**&#124;**-**]|Erstellt eine deterministische Assembly (einschließlich Modul Versions-GUID und Timestamp).|
+|**--**|Wird verwendet, F# um Interactive anzuweisen, verbleibende Argumente als Befehlszeilen F# Argumente für das Programm oder Skript zu behandeln, auf das Sie in Code mithilfe der Liste **FSI. CommandLineArgs**zugreifen können.|
+|**--checked**[ **+** &#124; **-** ]|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--Codepage:&lt;int&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--consolecolors**[ **+** &#124; **-** ]|Gibt Warn-und Fehlermeldungen in Farbe aus.|
+|**--crossoptimize**[ **+** &#124; **-** ]|Aktiviert oder deaktiviert modulübergreifende Optimierungen.|
+|**--debug**[ **+** &#124; **-** ]<br /><br />**--Debug:** [**vollständiges**&#124;**pdbonly**&#124;**Portable**&#124;**Embedded**]<br /><br />**-g**[ **+** &#124; **-** ]<br /><br />**-g:** [**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--define:&lt;string&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--deterministic**[ **+** &#124; **-** ]|Erzeugt eine deterministische Assembly (einschließlich Modul Versions-GUID und Timestamp).|
 |**--exec**|Weist das Beenden von F# Interactive an, nachdem die Dateien geladen wurden oder die in der Befehlszeile angegebene Skriptdatei ausgeführt wurde.|
-|**--fullpaths**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--gui**[**+**&#124;**-**]|Aktiviert oder deaktiviert die Windows Forms-Ereignisschleife. Die Option ist standardmäßig aktiviert.|
+|**--fullpaths**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--gui**[ **+** &#124; **-** ]|Aktiviert oder deaktiviert die Windows Forms-Ereignisschleife. Die Option ist standardmäßig aktiviert.|
 |**--help**<br /><br />**-?**|Wird verwendet, um die Befehlszeilensyntax und eine kurze Beschreibung jeder Option anzuzeigen.|
-|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;Ordnerliste&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--load:&lt;filename&gt;**|Kompiliert beim Start den angegebenen Quellcode und lädt die kompilierten F#-Konstrukte in die Sitzung. Wenn der Zielquellcode skriptanweisungen, z. B. enthält **#use** oder **#load**, müssen Sie verwenden **– verwenden Sie** oder **#use** statt **--laden** oder **#load**.|
-|**--mlcompatibility**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--noframework**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md)|
-|**--nologo**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--nowarn:&lt;warning-list&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--optimize**[**+**&#124;**-**]|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--preferreduilang:&lt;lang&gt;**| Gibt die Namen der bevorzugten ausgabesprache Kultur an (z. B. "es-ES", "ja-JP"). |
-|**--quiet**|Unterdrücken F# interaktiv die Ausgabe, um die **"stdout"** Stream.|
-|**--quotations-debug**|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksbaumstrukturknotens hinzugefügt. Finden Sie unter [Codezitate](code-quotations.md) und [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
-|**--readline**[**+**&#124;**-**]|Aktiviert oder deaktiviert die Vervollständigung mit der TAB-TASTE im interaktiven Modus.|
-|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--shadowcopyreferences**[**+**&#124;**-**]|Verhindern, dass Verweise von gesperrt werden, indem die F# interaktiven Prozess.|
-|**--simpleresolution**|Löst Assemblyverweisen mithilfe der Verzeichnis-basierte Regeln anstelle von MSBuild-Auflösung an.|
-|**--tailcalls**[**+**&#124;**-**]|Aktiviert oder deaktiviert die Verwendung der Tail-IL-Anweisung, die für endrekursive Funktionen die Wiederverwendung des Stapelrahmens verursacht. Diese Option ist standardmäßig aktiviert.|
-|**--targetprofile:&lt;string&gt;**|Gibt das Zielframeworkprofil dieser Assembly an. Gültige Werte sind "mscorlib" ",".NET Core "oder" Netstandard.  Der Standardwert ist "mscorlib".|
-|**– Verwenden Sie:&lt;Dateiname&gt;**|Weist den Interpreter an, beim Start die angegebene Datei als anfängliche Eingabe zu verwenden.|
+|**--lib:&lt;Ordner-List&gt;**<br /><br />**-I:&lt;Ordnerliste&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--Load:&lt;Dateiname&gt;**|Kompiliert beim Start den angegebenen Quellcode und lädt die kompilierten F#-Konstrukte in die Sitzung. Wenn die Ziel Quelle Skript Direktiven wie **#use** oder **#Load**enthält, müssen Sie **--use** oder **#use** anstelle von **--Load** oder **#Load**verwenden.|
+|**--mlcompatibility**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--noframework**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md) .|
+|**--nologo**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--nowarn:&lt;Warning-List&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--optimieren** [ **+** &#124; **-** ]|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--preferreduilang:&lt;lang&gt;**| Gibt den bevorzugten Kultur Namen der Ausgabesprache an (z. b. "es-es", "ja-JP"). |
+|**--quiet**|Unter F# Drücken der interaktiven Ausgabe in den **stdout** -Datenstrom.|
+|**--quotations-debug**|Gibt an, dass zusätzliche Debuginformationen für Ausdrücke ausgegeben werden, die von F#-Quotation-Literalen und reflektierten Definitionen abgeleitet werden. Die Debuginformationen werden zu den benutzerdefinierten Attributen eines F#-Ausdrucksbaumstrukturknotens hinzugefügt. Weitere Informationen finden Sie unter [Code Notierungen](code-quotations.md) und [expr. CustomAttribute](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--readline**[ **+** &#124; **-** ]|Aktiviert oder deaktiviert die Vervollständigung mit der TAB-TASTE im interaktiven Modus.|
+|**--Reference:&lt;Dateiname&gt;**<br /><br />**-r:&lt;Dateiname&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--shadowcopyreferences**[ **+** &#124; **-** ]|Verhindert, dass Verweise durch den F# interaktiven Prozess gesperrt werden.|
+|**--simpleresolution**|Löst Assemblyverweise mithilfe von Verzeichnis basierten Regeln anstelle der MSBuild-Auflösung auf.|
+|**--tailcalls**[ **+** &#124; **-** ]|Aktiviert oder deaktiviert die Verwendung der Tail-IL-Anweisung, die für endrekursive Funktionen die Wiederverwendung des Stapelrahmens verursacht. Diese Option ist standardmäßig aktiviert.|
+|**--targetprofile:&lt;Zeichenfolge&gt;**|Gibt das zielframeworkprofil dieser Assembly an. Gültige Werte sind "mscorlib", "Netcore" oder "netstandard".  Der Standardwert ist mscorlib.|
+|**--use:&lt;filename&gt;**|Weist den Interpreter an, beim Start die angegebene Datei als anfängliche Eingabe zu verwenden.|
 |**--utf8output**|Identisch mit der fsc.exe-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--warn:&lt;warning-level&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
-|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|Identisch mit der **fsc.exe** -Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--Warn:&lt;Warnstufe&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
+|**--warnaserror**[ **+** &#124; **-** ]: **&lt;int-list&gt;**|Identisch mit der " **FSC. exe** "-Compileroption. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).|
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[Compileroptionen](compiler-options.md)|Beschreibt die Befehlszeilenoptionen für die F# Compiler **fsc.exe**.|
+|[Compileroptionen](compiler-options.md)|Beschreibt die verfügbaren Befehlszeilenoptionen F# für den Compiler " **FSC. exe**".|

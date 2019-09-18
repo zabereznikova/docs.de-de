@@ -10,15 +10,15 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a2a960870d368e57272b3368e69eb38ebbe2ba5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486204"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053715"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
-Einschränken von übergibt Typargumente eines generischen an den Konstruktor des generischen Typs.  
+Übergibt einschränkende Typargumente eines generischen an den Konstruktor des generischen Typs.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -30,56 +30,56 @@ Einschränken von übergibt Typargumente eines generischen an den Konstruktor de
   
 |||  
 |-|-|  
-|`object`|Ein Object-Element-Deklaration eines XAML-Typs, der von einem generischen CLR-Typ unterstützt wird. Wenn `object` verweist auf einen XAML-Typ, der nicht aus dem XAML-Standardnamespace ist `object` erfordert ein Präfix an, dass der XAML-Namespace, in denen `object` vorhanden ist.|  
-|`typeString`|Eine Zeichenfolge, die eine oder mehrere XAML deklariert Typnamen als Zeichenfolgen, die die Typargumente für den generischen CLR-Typ. Anmerkungen zu dieser Version zusätzliche Syntax finden Sie unter "Hinweise".|  
+|`object`|Eine Objekt Element Deklaration eines XAML-Typs, der durch einen generischen CLR-Typ unterstützt wird. Wenn `object` auf einen XAML-Typ verweist, der nicht aus dem XAML-Standard Namespace gehört, `object` erfordert ein Präfix, um den XAML-Namespace anzugeben, in dem `object` vorhanden ist.|  
+|`typeString`|Eine Zeichenfolge, die einen oder mehrere XAML-Typnamen als Zeichen folgen deklariert, die die Typargumente für den generischen CLR-Typ bereitstellt. Weitere Informationen zur Syntax finden Sie in den hinweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
- In den meisten Fällen, die XAML-Typen, die verwendet werden, als ein Informationselement in einem `typeString` Zeichenfolge vorangestellt werden. Typische Typen von CLR generische Einschränkungen (z. B. <xref:System.Int32> und <xref:System.String>) stammen aus CLR-Basisklassenbibliotheken. Diese Bibliotheken sind nicht zugeordneten typischen frameworkspezifische-standardmäßigen XAML-Namespaces und erfordert daher eine Präfix-Zuordnung für die Verwendung von XAML.  
+ In den meisten Fällen werden die XAML-Typen, die als Informationselement in einer `typeString` Zeichenfolge verwendet werden, als Präfix vorangestellt. Typische Typen von generischen CLR <xref:System.Int32> -Einschränkungen (z. b. und <xref:System.String>) stammen aus CLR-Basisklassen Bibliotheken. Diese Bibliotheken sind nicht typischen Framework-spezifischen XAML-Standard Namespaces zugeordnet und erfordern daher eine Präfix Zuordnung für die XAML-Verwendung.  
   
- Sie können mehr als eine XAML-Typnamen angeben, durch ein Komma als Trennzeichen verwenden.  
+ Sie können mehr als einen XAML-Typnamen angeben, indem Sie ein Komma Trennzeichen verwenden.  
   
- Wenn der generischen Einschränkungen selbst generische Typen verwenden, können die geschachtelte Einschränkung Typargumente durch Klammern () enthalten sein.  
+ Wenn die generischen Einschränkungen selbst generische Typen verwenden, können die Argumente der geschachtelten Einschränkungs Typen in Klammern () enthalten sein.  
   
- Beachten Sie, dass diese Definition von `x:TypeArguments` bezieht sich auf .NET Framework-XAML-Dienste, und Verwenden von CLR-Unterstützung. Eine Definition auf Sprachebene finden Sie im [ \[MS-XAML-\] Abschnitt 5.3.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Beachten Sie, dass diese `x:TypeArguments` Definition von für .NET Framework XAML-Dienste und die Verwendung von CLR-Unterstützung spezifisch ist. Eine Definition auf Sprachebene finden Sie im [ \[Abschnitt 5.3.11 des MS-XAML\] -Abschnitts](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-## <a name="usage-examples"></a>Beispiele zur Verwendung  
- Diesen Beispielen wird davon ausgegangen Sie, dass die folgenden XAML-Namespacedefinitionen deklariert werden:  
+## <a name="usage-examples"></a>Verwendungs Beispiele  
+ Nehmen Sie für diese Beispiele an, dass die folgenden XAML-Namespace Definitionen deklariert sind:  
   
-```  
+```xaml  
 xmlns:sys="clr-namespace:System;assembly=mscorlib"  
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
 ```  
   
-### <a name="liststring"></a>List\<String>  
- `<scg:List x:TypeArguments="sys:String" ...>` instanziiert ein neues <xref:System.Collections.Generic.List%601> mit einem <xref:System.String> Typargument.  
+### <a name="liststring"></a>Listen\<Zeichenfolge >  
+ `<scg:List x:TypeArguments="sys:String" ...>`instanziiert ein neues <xref:System.Collections.Generic.List%601> -Argument <xref:System.String> mit einem Typargument.  
   
-### <a name="dictionarystringstring"></a>Dictionary\<String,String>  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` instanziiert ein neues <xref:System.Collections.Generic.Dictionary%602> mit zwei <xref:System.String> Typargumente.  
+### <a name="dictionarystringstring"></a>Wörter\<Buch Zeichenfolge, String >  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`instanziiert eine neue <xref:System.Collections.Generic.Dictionary%602> mit zwei <xref:System.String> Typargumenten.  
   
 ### <a name="queuekeyvaluepairstringstring"></a>Queue<KeyValuePair\<String,String>>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` instanziiert ein neues <xref:System.Collections.Generic.Queue%601> enthält, die die Einschränkung der <xref:System.Collections.Generic.KeyValuePair%602> mit die Typargumente für die interne Einschränkung <xref:System.String> und <xref:System.String>.  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`instanziiert einen neuen <xref:System.Collections.Generic.Queue%601> , der über eine Einschränkung <xref:System.Collections.Generic.KeyValuePair%602> von mit den inneren Einschränkungs <xref:System.String> Typargumenten und <xref:System.String>verfügt.  
   
-## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Generische XAML-Verwendungen von XAML 2006 und WPF  
- Für die Verwendung von XAML 2006 und XAML, das für WPF-Anwendungen verwendet wird, der die folgenden Einschränkungen gelten für `x:TypeArguments` und generische Typverwendungen aus XAML im Allgemeinen:  
+## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 und allgemeine WPF-XAML-Verwendungen  
+ Bei der Verwendung von XAML 2006 und XAML, die für WPF-Anwendungen verwendet werden, gibt es `x:TypeArguments` die folgenden Einschränkungen für und generische typverwendungen von XAML im allgemeinen:  
   
-- Nur das Stammelement einer XAML-Datei kann es sich um einen generischen XAML-Verwendung unterstützen, die einen generischen Typ verweist.  
+- Nur das Stamm Element einer XAML-Datei kann eine generische XAML-Verwendung unterstützen, die auf einen generischen Typ verweist.  
   
-- Das Stammelement muss auf einen generischen Typ mit mindestens einem Typargument zugeordnet. Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>. Die Seitenfunktionen sind das primäre Szenario für die generischen Verwendung-Unterstützung in WPF-XAML.  
+- Das root-Element muss einem generischen Typ mit mindestens einem Typargument zugeordnet werden. Ein Beispiel hierfür <xref:System.Windows.Navigation.PageFunction%601>ist. Die Seitenfunktionen sind das primäre Szenario für die generische Verwendung von XAML in WPF.  
   
-- Außerdem muss das Stammelement Element XAML-Objektelement für das generische deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
+- Das Stamm Element-XAML-Objekt Element für den generischen muss ebenfalls mithilfe `x:Class`von eine partielle Klasse deklarieren. Dies gilt auch, wenn Sie eine WPF-Buildaktion definieren.  
   
-- `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
+- `x:TypeArguments`auf die generischen generischen Einschränkungen kann nicht verwiesen werden.  
   
-## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 oder XAML 2006 ohne WPF 3.0 oder WPF 3.5 Abhängigkeit  
- In .NET Framework-XAML-Dienste für XAML 2006 oder XAML 2009 sind die WPF-bezogene Einschränkungen für generische XAML-Verwendung gelockert. Sie können ein generisches Objektelement an einer beliebigen Position im XAML-Markup instanziieren, die das dahinter liegende Typ und dem Objektmodell unterstützen kann.  
+## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 oder XAML 2006 ohne WPF 3,0 oder WPF 3,5-Abhängigkeit  
+ In .NET Framework XAML-Dienste für XAML 2006 oder XAML 2009 werden die WPF-bezogenen Einschränkungen bei der generischen XAML-Verwendung gelockert. Sie können ein generisches Objekt Element an einer beliebigen Position in XAML-Markup instanziieren, die das Unterstützungs-Typsystem und das Objektmodell unterstützen können.  
   
- Wenn Sie XAML 2009 verwenden anstelle von mapping des CLR-Basistypen zum Abrufen von XAML-Typen für häufige Sprachprimitive, können Sie [integrierte Typen für häufige XAML-Sprachprimitive](built-in-types-for-common-xaml-language-primitives.md) als Informationselemente in eine `typeString`. Sie können z. B. die folgenden deklarieren (Präfix-Zuordnungen, die nicht angezeigt, aber x ist der XAML-Sprachnamespace XAML für XAML 2009):  
+ Wenn Sie XAML 2009 anstelle der Zuordnung der CLR-Basis Typen zum Abrufen von XAML-Typen für allgemeine sprach primitive verwenden, können Sie [integrierte Typen für allgemeine XAML-sprach primitive](built-in-types-for-common-xaml-language-primitives.md) als Informationselemente in einem `typeString`verwenden. Sie könnten z. b. Folgendes deklarieren (Präfix Zuordnungen werden nicht angezeigt, aber x ist der XAML-sprach Namespace XAML-Namespace für XAML 2009):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- In WPF und .NET Framework 4 abzielen, können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie in Markup der XAML kompilieren müssen, müssen Sie unter den Einschränkungen, die im Abschnitt "XAML 2006 und WPF-generische XAML-Verwendungen" erwähnt ausgeführt werden.  
+ In WPF und beim Ziel .NET Framework 4 können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` verwenden, aber nur für Loose XAML (XAML, das nicht Markup kompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie das XAML-Markup kompilieren müssen, müssen Sie unter den im Abschnitt "generische XAML-Verwendungen von XAML 2006 und WPF" notierten Einschränkungen arbeiten.  
   
 ## <a name="see-also"></a>Siehe auch
 

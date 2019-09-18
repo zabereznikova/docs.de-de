@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875705"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052961"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort-MDA
 Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Thread versucht, einen asynchronen Abbruch in einem anderen Thread hervorzurufen. Der `asynchronousThreadAbort`-MDA wird nicht durch synchrone Threadabbrüche aktiviert.
@@ -42,7 +42,7 @@ Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für v
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit
  Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben zu asynchronen Threadabbrüchen gemeldet.
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
  Der MDA meldet die ID des Threads, der den Abbruch durchführt, und die ID des Zielthreads für den Abbruch. Diese sind niemals gleich, da dieses Problem auf asynchrone Abbrüche beschränkt ist.
 
 ## <a name="configuration"></a>Konfiguration
@@ -73,4 +73,4 @@ void FireMda()
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)

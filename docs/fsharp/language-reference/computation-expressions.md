@@ -2,12 +2,12 @@
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in F#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 03/15/2019
-ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9222be5a585914761d3001d6649b196030eec05e
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106570"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083056"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -32,7 +32,7 @@ Jeder Berechnungs Ausdruck wird durch einen *Builder* -Typ unterstützt. Der Bui
 
 Alle Berechnungs Ausdrücke weisen die folgende Form auf:
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 

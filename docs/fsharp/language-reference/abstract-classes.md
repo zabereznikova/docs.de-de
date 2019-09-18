@@ -2,12 +2,12 @@
 title: Abstrakte Klassen
 description: Erfahren Sie F# mehr über abstrakte Klassen, bei denen einige oder alle Member nicht implementiert werden und allgemeine Funktionen eines unterschiedlichen Satzes von Objekttypen darstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d7fc87178cff7c5c824992c97198b49f87025f00
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629676"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082950"
 ---
 # <a name="abstract-classes"></a>Abstrakte Klassen
 
@@ -34,7 +34,7 @@ Abstrakte Klassen müssen über das `AbstractClass` -Attribut verfügen. Sie kö
 
 Eine Klasse gilt nur als abstrakt, wenn abstrakte Methoden deklariert sind, aber nicht definiert sind. Daher sind Klassen, die abstrakte Methoden haben, nicht notwendigerweise abstrakte Klassen. Verwenden Sie nicht das **abstractclass** -Attribut, es sei denn, eine Klasse hat nicht definierte abstrakte Methoden.
 
-In der vorherigen Syntax kann der Zugriffsmodifizierer `internal`, `private` oder sein `public`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md).
+In der vorherigen Syntax kann `public`der Zugriffsmodifizierer `internal`, `private` oder sein. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md).
 
 Wie bei anderen Typen können abstrakte Klassen über eine Basisklasse und eine oder mehrere Basis Schnittstellen verfügen. Jede Basisklasse oder Schnittstelle wird in einer separaten Zeile mit dem `inherit` -Schlüsselwort angezeigt.
 
@@ -48,7 +48,7 @@ Die Rotations Methode kann überschrieben werden, wie in der Circle-Klasse, bei 
 
 **Ausgabe:**
 
-```
+```console
 Perimeter of square with side length 10.000000 is 40.000000
 Circumference of circle with radius 5.000000 is 31.415927
 Area of Square: 100.000000

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-ms.openlocfilehash: ac9b20d1fd3356941b75df686b2556b3c3c4f179
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5f2651c6a74a7f9ac275a55a4e37baebf653305
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914428"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042082"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Hilfethemen zu Benutzeroberflächenautomatisierungs-Anbietern für verwalteten Code
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "69914428"
  Dieser Abschnitt enthält Codebeispiele, die Aufgaben beim Schreiben [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] von Anbietern [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] für Elemente veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+ [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](expose-a-server-side-ui-automation-provider.md)  
+ [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](return-properties-from-a-ui-automation-provider.md)  
+ [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](raise-events-from-a-ui-automation-provider.md)  
+ [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](enable-navigation-in-a-ui-automation-fragment-provider.md)  
+ [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)  
+ [Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters](create-a-client-side-ui-automation-provider.md)  
+ [Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung](implement-ui-automation-providers-in-a-client-application.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d4e274ad7b64820e74347908c08c7726e96bbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053846"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte
 Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet. Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können. Wenn Sie .NET Framework-XAML-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss. Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird. Der XAML-Schemakontext ist direkt über einen solchen Dienst verfügbar. In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.  
@@ -22,7 +22,7 @@ Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erforder
 ## <a name="services-for-a-markup-extension"></a>Dienste für eine Markuperweiterung  
  <xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider` -Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:  
   
-```  
+```csharp  
 public override object ProvideValue(IServiceProvider serviceProvider)  
 {  
 ...  
@@ -46,7 +46,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
  Der folgende Pseudocode veranschaulicht, wie eine Typkonverter-Implementierung für XAML-Verwendungen Dienste in einer seiner Überschreibungen abfragen kann, in diesem Fall <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:  
   
-```  
+```csharp  
 public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,  
   CultureInfo cultureInfo,  
   object source)  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **Referenzdokumentation**: <xref:System.IServiceProvider>  
   
- **Relevant für:** Grundlegende Vorgänge einer dienstbasierten Infrastruktur in .NET Framework, damit Sie aufrufen können <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
+ **Relevant für:** Grundlegender Betrieb einer Dienst basierten Infrastruktur in der .NET Framework, sodass aufgerufen <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>werden kann.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Referenzdokumentation**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -92,7 +92,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfad-Szenarios sowie die Interaktion mit dem XAML-Schemakontext  
+ **Relevant für:** Laden von Pfad Szenarios und Interaktion mit dem XAML-Schema Kontext  
   
  **Dienst-API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
@@ -103,7 +103,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfads Verarbeitung und Speicherpfads von Elementwerten, bei denen es sich um URIs oder `x:Uri` Werte.  
+ **Relevant für:** Lade Pfad und Speichern der Pfad Verarbeitung von Element Werten, die URIs `x:Uri` oder Werte sind.  
   
  **Dienst-API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Laden Sie Pfad Behandlung und typsuchen-Verzögerungen oder Optimierungen.  
+ **Relevant für:** Lade Pfad Behandlung und Typsuche oder Optimierungen.  
   
  **Dienst-APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 weitere.  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfad und Vorgänge, die einen XAML-Typ in einen Unterstützungstyp auflösen muss.  
+ **Relevant für:** Lade Pfad und jeder Vorgang, der einen XAML-Typ in einen Unterstützungstyp auflösen muss.  
   
  **Dienst-API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -136,7 +136,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfad.  
+ **Relevant für:** Der Ladepfad.  
   
  **Dienst-API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfad und Speicherpfad.  
+ **Relevant für:** Lade Pfad und Speicherpfad.  
   
  **Dienste-APIs:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Laden Sie die Definition des Ladepfadobjektdiagramms, Auflösen identifizierte Objekte `x:Name`, `x:Reference`, oder Framework-spezifischen Techniken.  
+ **Relevant für:** Laden Sie die Diagramm Definition des Pfad Objekts, indem `x:Name`Sie `x:Reference`Objekte auflösen, die durch, oder Framework-spezifische Verfahren identifiziert werden.  
   
  **Dienst-APIs:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; andere APIs für erweiterte Szenarios, z. B. den Umgang mit Vorwärtsverweisen.  
   
@@ -180,7 +180,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfadauflösung von indirekten CLR-Typinformationen.  
+ **Relevant für:** Lade Pfad Auflösung von indirekten CLR-Typinformationen.  
   
  **Dienst-API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5f729837b9bb52ca7d232ca66b58e283a2bcefc
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938826"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053699"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Systeminterner x:XData-XAML-Typ
-Ermöglicht die Platzierung von XML-Dateninseln innerhalb einer XAML-Produktion. XML-Elemente im `x:XData` sollten von XAML-Prozessoren nicht behandelt werden, als wären sie Teil der agierende Standard-XAML-Namespace oder irgendeinen anderen XAML-Namespace. `x:XData` kann beliebigen wohlgeformten XML-Code enthalten.  
+Ermöglicht die Platzierung von XML-Dateninseln in einer XAML-Produktion. XML-Elemente `x:XData` in sollten nicht von XAML-Prozessoren behandelt werden, als ob Sie Teil des aktiven XAML-Standard Namespace oder eines anderen XAML-Namespace sind. `x:XData`kann beliebige wohlgeformte XML-Daten enthalten.  
   
 ## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
   
-```  
+```xaml  
 <x:XData>  
   <elementDataRoot>  
     [elementData]  
@@ -34,20 +34,20 @@ Ermöglicht die Platzierung von XML-Dateninseln innerhalb einer XAML-Produktion.
   
 |||  
 |-|-|  
-|`elementDataRoot`|Das einzelne Stammelement der Dateninsel eingeschlossen. XML, das keinen einzigen Stammknoten verfügt für die meisten Verbraucher "Eventual" wird als ungültig angesehen. Ein einziger Stammknoten ist insbesondere erforderlich, wenn die `x:XData` dient als eine XML-Datenquelle für WPF- oder viele andere Technologien, die XML-Datenquellen für die Datenbindung zu verwenden.|  
-|`[elementData]`|Dies ist optional. XML-Code, der die XML-Daten darstellt. Kann eine beliebige Anzahl von Elementen als Elementdaten enthalten sein, und geschachtelte Elemente in anderen Elementen enthalten sein können; Allerdings gelten die allgemeinen Regeln des XML-Codes.|  
+|`elementDataRoot`|Das einzelne Stamm Element der eingeschlossenen Daten Insel. Bei den meisten möglichen Consumern wird XML, das keinen einzelnen Stamm hat, als ungültig betrachtet. Insbesondere ist ein einzelner Stamm erforderlich, wenn der `x:XData` als XML-Datenquelle für WPF oder viele andere Technologien gedacht ist, die XML-Quellen für die Datenbindung verwenden.|  
+|`[elementData]`|Optional. XML-Code, der die XML-Daten darstellt. Eine beliebige Anzahl von Elementen kann als Elementdaten enthalten sein, und in anderen Elementen können sich auch die in der Tabelle enthaltenen Elemente befinden. Allerdings gelten die allgemeinen Regeln von XML.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die XML-Elemente innerhalb einer `x:XData` -Objekt kann erneut deklarieren, alle möglichen Namespaces und Präfixe der enthaltenden XMLDOM in den Daten.  
+ Die XML-Elemente in `x:XData` einem-Objekt können alle möglichen Namespaces und Präfixe des enthaltenden XMLDOM in den Daten erneut deklarieren.  
   
- Den programmgesteuerten Zugriff auf XML-Daten und die `x:XData` XAML-Grundtyp kann in .NET Framework-XAML-Dienste über die <xref:System.Windows.Markup.XData> Klasse.  
+ Programm gesteuerter Zugriff auf XML- `x:XData` Daten und den systeminternen XAML-Typ ist in .NET Framework XAML-Diensten durch die <xref:System.Windows.Markup.XData> -Klasse möglich.  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
- Die `x:XData` Objekt wird in erster Linie als ein untergeordnetes Objekt verwendet einen <xref:System.Windows.Data.XmlDataProvider>, oder Sie können auch als untergeordnetes Objekt des der <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> Eigenschaft (in XAML, dies ist in der Regel ausgedrückt in Eigenschaftenelement-Syntax).  
+ Das `x:XData` -Objekt wird primär als untergeordnetes Objekt <xref:System.Windows.Data.XmlDataProvider>eines oder alternativ als <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> untergeordnetes Objekt der-Eigenschaft verwendet (in XAML wird dies in der Regel in der Eigenschafts Element Syntax ausgedrückt).  
   
- Die Daten sollten in der Regel den XML-Namespace innerhalb der Dateninsel einer neuen XML-Namespace (festgelegt auf eine leere Zeichenfolge) definieren. Dies ist am einfachsten, für die einfache Daten Dateninseln, da die <xref:System.Windows.Data.Binding.XPath%2A> Ausdrücke, die zum Verweisen auf, und Binden an die Daten verwendet werden keine Einbeziehung von Präfixen. Komplexere Dateninseln möglicherweise mehrere Präfixe für die Daten definieren und Verwenden von einem bestimmten Präfix für den XML-Namespace im Stammverzeichnis. In diesem Fall alle <xref:System.Windows.Data.Binding.XPath%2A> ausdrucksverweisen sollte das entsprechende Namespace zugeordnete Präfix enthalten. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../wpf/data/data-binding-overview.md).  
+ Die Daten sollten in der Regel den Basis-XML-Namespace innerhalb der Daten Insel neu definieren, sodass er ein neuer XML-Standard Namespace ist (auf eine leere Zeichenfolge festgelegt). Dies ist für einfache Dateninseln am einfachsten, <xref:System.Windows.Data.Binding.XPath%2A> weil die Ausdrücke, mit denen auf die Daten verwiesen und diese gebunden werden, die Einbindung von Präfixen vermeiden können. Komplexere Dateninseln definieren möglicherweise mehrere Präfixe für die Daten und verwenden ein bestimmtes Präfix für den XML-Namespace im Stammverzeichnis. In diesem Fall sollten alle <xref:System.Windows.Data.Binding.XPath%2A> Ausdrucks Verweise das entsprechende, Namespace zugeordnete Präfix enthalten. Weitere Informationen finden Sie unter [Übersicht über Datenbindung](../wpf/data/data-binding-overview.md).  
   
- Technisch gesehen `x:XData` können verwendet werden, wie der Inhalt einer beliebigen Eigenschaft des Typs <xref:System.Xml.Serialization.IXmlSerializable>. Allerdings <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> ist die einzige deutlich erkennbare-Implementierung.  
+ Technisch kann als Inhalt einer beliebigen Eigenschaft des Typs <xref:System.Xml.Serialization.IXmlSerializable>verwendet werden. `x:XData` <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> Ist jedoch die einzige bedeutende Implementierung.  
   
 ## <a name="see-also"></a>Siehe auch
 

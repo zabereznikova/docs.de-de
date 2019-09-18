@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)'
+title: 'Vorgehensweise: Entsprechung für eine Zeichenfolge mit einem Muster (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -13,71 +13,73 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bac0869d9e319071abb31dd0576edf0450aa198
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649715"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054156"
 ---
-# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)
-Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
- `Like` akzeptiert zwei Operanden. Der linke Operand ist ein Zeichenfolgenausdruck, und der Rechte Operand ist eine Zeichenfolge, enthält das Muster für den Abgleich verwendet werden. `Like` Gibt eine `Boolean` Wert, der angibt, ob der Ausdruck mit dem Muster entspricht.  
-  
- Sie können jedes Zeichen in den Ausdruck für ein bestimmtes Zeichen, ein Platzhalterzeichen, eine Zeichenliste oder einen Zeichenbereich zuordnen. Die Positionen der Angaben in der Musterzeichenfolge entsprechen die Positionen der Zeichen im Zeichenfolgenausdruck abgeglichen werden.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Um ein Zeichen in den Ausdruck für ein bestimmtes Zeichen  
-  
-- Fügen Sie das Zeichen direkt in der Musterzeichenfolge. Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`). Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
-  
-     Im folgenden Beispiel wird getestet, ob `myString` besteht genau aus das einzelne Zeichen `H`.  
-  
-     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Um ein Zeichen in den Ausdruck mit einem Platzhalterzeichen  
-  
-- Fügen ein Fragezeichen (`?`) in der Musterzeichenfolge. Jedes gültige Zeichen an dieser Position ergibt eine Übereinstimmung.  
-  
-     Im folgenden Beispiel wird getestet, ob `myString` besteht aus den einzelnen Zeichens `W` gefolgt von genau zwei beliebigen Zeichen.  
-  
-     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Um ein Zeichen in den Zeichenfolgenausdruck mit einer Liste von Zeichen  
-  
-- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge, und klicken Sie in den Klammern fügen Sie die Liste von Zeichen. Trennen Sie die Zeichen nicht mit Kommas oder aller anderen Trennzeichen. Beliebiges einzelnes Zeichen in der Liste wird eine Übereinstimmung.  
-  
-     Im folgenden Beispiel wird getestet, ob `myString` irgendeinem gültigen Zeichen, gefolgt von genau einem Zeichen bestehen `A`, `C`, oder `E`.  
-  
-     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
-  
-     Beachten Sie, dass diese Übereinstimmung Groß-/Kleinschreibung beachtet wird.  
-  
-### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Um ein Zeichen in den Ausdruck für einen Bereich von Zeichen  
-  
-- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern, die die niedrigsten und höchsten Zeichen im Bereich einfügen, getrennt durch einen Bindestrich (`–`). Beliebiges einzelnes Zeichen innerhalb des Bereichs ergibt eine Übereinstimmung.  
-  
-     Im folgenden Beispiel wird getestet, ob `myString` besteht aus den Zeichen `num` gefolgt von genau einem Zeichen `i`, `j`, `k`, `l`, `m`, oder `n`.  
-  
-     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
-  
-     Beachten Sie, dass diese Übereinstimmung Groß-/Kleinschreibung beachtet wird.  
-  
-## <a name="matching-empty-strings"></a>Übereinstimmende leere Zeichenfolgen  
- `Like` behandelt die Sequenz `[]` als eine Zeichenfolge der Länge 0 (null) (`""`). Sie können `[]` zu prüfen, ob der gesamte Ausdruck leer ist, aber Sie können keine sie prüfen, ob eine bestimmte Position im Zeichenfolgenausdruck leer ist. Eine der Optionen ist eine leere Position müssen Sie testen, für die Sie verwenden können, `Like` mehr als einmal.  
-  
-#### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Um ein Zeichen in den Ausdruck anhand einer Liste von Zeichen oder keine Zeichen  
-  
-1. Rufen Sie die `Like` Operator zwei Mal auf dem gleichen Ausdruck eine Zeichenfolge, und verbinden Sie die beiden Aufrufe entweder mit der [oder-Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder [OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
-  
-2. In der Musterzeichenfolge für die erste `Like` -Klausel, die in Klammern eingeschlossene Zeichenliste enthalten (`[ ]`).  
-  
-3. In der Musterzeichenfolge für die zweite `Like` -Klausel, platzieren Sie keines Zeichen an der Position betreffende.  
-  
-     Das folgende Beispiel testet die siebenstelligen Telefonnummer `phoneNum` für genau drei Ziffern, gefolgt von einem Leerzeichen, einen Bindestrich (`–`), einen Zeitraum (`.`), oder keine, gefolgt von genau vier Ziffern.  
-  
-     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
-  
+# <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Vorgehensweise: Entsprechung für eine Zeichenfolge mit einem Muster (Visual Basic)
+
+Wenn Sie herausfinden möchten, ob ein Ausdruck des [String-Datentyps](../../../../visual-basic/language-reference/data-types/string-data-type.md) ein Muster erfüllt, können Sie den [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md)verwenden.
+
+`Like`erfordert zwei Operanden. Der linke Operand ist ein Zeichen folgen Ausdruck, und der rechte Operand ist eine Zeichenfolge mit dem Muster, das für den Abgleich verwendet werden soll. `Like`Gibt einen `Boolean` Wert zurück, der angibt, ob der Zeichen folgen Ausdruck dem Muster entspricht.
+
+Sie können jedes Zeichen im Zeichen folgen Ausdruck mit einem bestimmten Zeichen, einem Platzhalter Zeichen, einer Zeichen Liste oder einem Zeichenbereich vergleichen. Die Positionen der Spezifikationen in der Muster Zeichenfolge entsprechen den Positionen der Zeichen, die im Zeichen folgen Ausdruck abgeglichen werden sollen.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>So passen Sie ein Zeichen im Zeichen folgen Ausdruck mit einem bestimmten Zeichen an
+
+Fügen Sie das jeweilige Zeichen direkt in die Muster Zeichenfolge ein. Bestimmte Sonderzeichen müssen in eckige Klammern (`[ ]`) eingeschlossen werden. Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).
+
+Im folgenden Beispiel wird getestet `myString` , ob genau aus dem einzelnen `H`Zeichen besteht.
+
+[!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>So passen Sie ein Zeichen im Zeichen folgen Ausdruck mit einem Platzhalter Zeichen an
+
+Legen Sie ein Fragezeichen`?`() in der Muster Zeichenfolge ab. Ein beliebiges gültiges Zeichen an dieser Position stimmt erfolgreich ab.
+
+Im folgenden Beispiel wird getestet `myString` , ob aus dem einzelnen `W` Zeichen besteht, auf das genau zwei Zeichen von Werten folgen.
+
+[!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>So passen Sie ein Zeichen im Zeichen folgen Ausdruck mit einer Liste von Zeichen an
+
+Legen Sie eckige`[ ]`Klammern () in der Muster Zeichenfolge ab, und legen Sie in den Klammern die Zeichen Liste ab. Trennen Sie die Zeichen nicht durch Kommas oder andere Trennzeichen. Alle einzelnen Zeichen in der Liste Stimmen erfolgreich ab.
+
+Im folgenden Beispiel wird getestet `myString` , ob aus einem gültigen Zeichen, gefolgt von genau einem der `A`Zeichen `C`, oder `E`, besteht.
+
+[!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]
+
+Beachten Sie, dass die Groß-/Kleinschreibung beachtet wird.
+
+## <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>So passen Sie ein Zeichen im Zeichen folgen Ausdruck mit einem Zeichenbereich an
+
+Legen Sie eckige`[ ]`Klammern () in der Muster Zeichenfolge ab, und legen Sie in den Klammern die niedrigsten und höchsten Zeichen im Bereich ab,`–`getrennt durch einen Bindestrich (). Alle einzelnen Zeichen innerhalb des Bereichs Stimmen erfolgreich ab.
+
+Im folgenden Beispiel wird getestet `myString` , ob aus den `num` Zeichen besteht, auf die genau eines `i`der `j` `m`Zeichen `k`, `l`,,, `n`oder folgt.
+
+[!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]
+
+Beachten Sie, dass die Groß-/Kleinschreibung beachtet wird.
+
+## <a name="matching-empty-strings"></a>Vergleichen von leeren Zeichen folgen
+
+`Like`behandelt die Sequenz `[]` als Zeichenfolge der Länge 0 (`""`null). Sie können verwenden `[]` , um zu testen, ob der gesamte Zeichen folgen Ausdruck leer ist, Sie können ihn jedoch nicht verwenden, um zu testen, ob eine bestimmte Position im Zeichen folgen Ausdruck leer ist. Wenn eine leere Position eine der Optionen ist, die Sie testen müssen, können Sie mehrmals verwenden `Like` .
+
+### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>So passen Sie ein Zeichen im Zeichen folgen Ausdruck mit einer Liste von Zeichen oder ohne Zeichen an
+
+1. Rufen Sie `Like` den Operator zweimal für denselben Zeichen folgen Ausdruck auf, und verbinden Sie die beiden Aufrufe entweder mit dem [OR-Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder dem [OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).
+
+2. Fügen Sie in der Muster Zeichenfolge für die erste `Like` Klausel die Zeichen Liste in eckige Klammern (`[ ]`) ein.
+
+3. Fügen Sie in der Muster Zeichenfolge für die zweite `Like` Klausel kein Zeichen an der fraglichen Position ein.
+
+    Im folgenden Beispiel wird die siebenstellige Telefonnummer `phoneNum` für genau drei numerische Ziffern, gefolgt von einem Leerzeichen, einem Bindestrich (`–`), einem Punkte (`.`) oder keinem Zeichen, gefolgt von genau vier numerischen Ziffern getestet.
+
+    [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Vergleichsoperatoren](../../../../visual-basic/language-reference/operators/comparison-operators.md)

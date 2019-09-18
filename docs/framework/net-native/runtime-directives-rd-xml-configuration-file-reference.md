@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: adfc0ae6d9bdae333daacee525c7775acd5a8029
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049138"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 
@@ -37,35 +37,35 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 
 Die Laufzeitdirektivendatei verwendet den Namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
-Das Stammelement ist [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Wie in der folgenden Struktur dargestellt, kann es null oder mehr [Library](../../../docs/framework/net-native/library-element-net-native.md)-Elemente und null oder ein [Application](../../../docs/framework/net-native/application-element-net-native.md)-Element enthalten. Die Attribute des [Application](../../../docs/framework/net-native/application-element-net-native.md)-Elements können eine anwendungsweite Laufzeitreflektionsrichtlinie definieren oder als Container für untergeordnete Elemente dienen. Das [Library](../../../docs/framework/net-native/library-element-net-native.md)-Element hingegen ist lediglich ein Container. Die untergeordneten Elemente der Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md) und [Library](../../../docs/framework/net-native/library-element-net-native.md) definieren die Typen, Methoden, Felder, Eigenschaften und Ereignisse, die für die Reflektion verfügbar sind.
+Das Stammelement ist [Directives](directives-element-net-native.md). Wie in der folgenden Struktur dargestellt, kann es null oder mehr [Library](library-element-net-native.md)-Elemente und null oder ein [Application](application-element-net-native.md)-Element enthalten. Die Attribute des [Application](application-element-net-native.md)-Elements können eine anwendungsweite Laufzeitreflektionsrichtlinie definieren oder als Container für untergeordnete Elemente dienen. Das [Library](library-element-net-native.md)-Element hingegen ist lediglich ein Container. Die untergeordneten Elemente der Elemente [Application](application-element-net-native.md) und [Library](library-element-net-native.md) definieren die Typen, Methoden, Felder, Eigenschaften und Ereignisse, die für die Reflektion verfügbar sind.
 
-Um Referenzinformationen anzuzeigen, wählen Sie Elemente aus der folgenden Struktur aus, oder lesen Sie unter [Laufzeitanweisungselemente](../../../docs/framework/net-native/runtime-directive-elements.md) nach. In der folgenden Hierarchie kennzeichnet die Ellipse eine rekursive Struktur. Die Informationen in Klammern zeigen an, ob dieses Element optional oder erforderlich ist, und wenn es verwendet wird, wie viele Instanzen (eine oder viele) zulässig sind.
+Um Referenzinformationen anzuzeigen, wählen Sie Elemente aus der folgenden Struktur aus, oder lesen Sie unter [Laufzeitanweisungselemente](runtime-directive-elements.md) nach. In der folgenden Hierarchie kennzeichnet die Ellipse eine rekursive Struktur. Die Informationen in Klammern zeigen an, ob dieses Element optional oder erforderlich ist, und wenn es verwendet wird, wie viele Instanzen (eine oder viele) zulässig sind.
 
-[Direktiven](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [Anwendungs](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: m] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: m]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0: M] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: M] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Bibliothek](../../../docs/framework/net-native/library-element-net-native.md) [0: M] [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0: M]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M] [Untertypen](../../../docs/framework/net-native/subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Attributeimplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: M] [Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M] [Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](../../../docs/framework/net-native/type-element-net-native.md) [0: M]. sein. sein.
-[Typeingabe](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Methode](../../../docs/framework/net-native/method-element-net-native.md) [0: M] [Methodinstantiierung](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](../../../docs/framework/net-native/property-element-net-native.md) [0: M] [Feld](../../../docs/framework/net-native/field-element-net-native.md) [0: M] [Ereignis](../../../docs/framework/net-native/event-element-net-native.md) [0: M]
+[Direktiven](directives-element-net-native.md) [1:1] [Anwendungs](application-element-net-native.md) [0:1] [Assembly](assembly-element-net-native.md) [0: m] [Namespace](namespace-element-net-native.md) [0: m]. sein. sein.
+[Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Namespace](namespace-element-net-native.md) [0: M] [Namespace](namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Typ](type-element-net-native.md) [0: M] [Untertypen](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Attributeimplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](genericparameter-element-net-native.md) [0: M] [Methode](method-element-net-native.md) [0: M] [Parameter](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [Genericparameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](property-element-net-native.md) [0: M] [Feld](field-element-net-native.md) [0: M] [Ereignis](event-element-net-native.md) [0: M] [Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Methode](method-element-net-native.md) [0: M] [Parameter](parameter-element-net-native.md) [0: M] [Typeparameter](typeparameter-element-net-native.md) [0: M] [Genericparameter](genericparameter-element-net-native.md) [0: M] [Methodinstantiierung](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](property-element-net-native.md) [0: M] [Feld](field-element-net-native.md) [0: M] [Ereignis](event-element-net-native.md) [0: M] [Bibliothek](library-element-net-native.md) [0: M] [Assembly](assembly-element-net-native.md) [0: M] [Namespace](namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Namespace](namespace-element-net-native.md) [0: M] [Namespace](namespace-element-net-native.md) [0: M]. sein. sein.
+[Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Typ](type-element-net-native.md) [0: M] [Untertypen](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) O:1 [Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Attributeimplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut). O:1 [Genericparameter](genericparameter-element-net-native.md) [0: M] [Methode](method-element-net-native.md) [0: M] [Methodinstantiierung](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](property-element-net-native.md) [0: M] [Feld](field-element-net-native.md) [0: M] [Ereignis](event-element-net-native.md) [0: M] [Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M] [Typ](type-element-net-native.md) [0: M]. sein. sein.
+[Typeingabe](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
+[Methode](method-element-net-native.md) [0: M] [Methodinstantiierung](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: M] [Eigenschaft](property-element-net-native.md) [0: M] [Feld](field-element-net-native.md) [0: M] [Ereignis](event-element-net-native.md) [0: M]
 
-Das [Application](../../../docs/framework/net-native/application-element-net-native.md)-Element kann entweder keine Attribute oder die im [Abschnitt zu Laufzeitanweisungen und -richtlinien](#Directives) beschriebenen Richtlinienattribute besitzen.
+Das [Application](application-element-net-native.md)-Element kann entweder keine Attribute oder die im [Abschnitt zu Laufzeitanweisungen und -richtlinien](#Directives) beschriebenen Richtlinienattribute besitzen.
 
-Ein [Library](../../../docs/framework/net-native/library-element-net-native.md)-Element verfügt über ein einzelnes Attribut, `Name`, das den Namen einer Bibliothek oder die Assembly ohne Dateierweiterung angibt. Das folgende [Library](../../../docs/framework/net-native/library-element-net-native.md)-Element gilt z.B. für eine Assembly namens Extensions.dll.
+Ein [Library](library-element-net-native.md)-Element verfügt über ein einzelnes Attribut, `Name`, das den Namen einer Bibliothek oder die Assembly ohne Dateierweiterung angibt. Das folgende [Library](library-element-net-native.md)-Element gilt z.B. für eine Assembly namens Extensions.dll.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -82,15 +82,15 @@ Ein [Library](../../../docs/framework/net-native/library-element-net-native.md)-
 
 ## <a name="runtime-directives-and-policy"></a>Laufzeitanweisungen und -richtlinien
 
-Das [Application](../../../docs/framework/net-native/application-element-net-native.md)-Element und die untergeordneten Elemente der Elemente [Library](../../../docs/framework/net-native/library-element-net-native.md) und [Application](../../../docs/framework/net-native/application-element-net-native.md) drücken die Richtlinie aus. Das heißt, sie definieren, wie eine App Reflektion auf ein Programmelement anwenden kann. Der Richtlinientyp wird von einem Attribut des Elements definiert (z. B. `Serialize`). Der Richtlinienwert wird vom Wert des Attributs definiert (z. B. `Serialize="Required"`).
+Das [Application](application-element-net-native.md)-Element und die untergeordneten Elemente der Elemente [Library](library-element-net-native.md) und [Application](application-element-net-native.md) drücken die Richtlinie aus. Das heißt, sie definieren, wie eine App Reflektion auf ein Programmelement anwenden kann. Der Richtlinientyp wird von einem Attribut des Elements definiert (z. B. `Serialize`). Der Richtlinienwert wird vom Wert des Attributs definiert (z. B. `Serialize="Required"`).
 
-Jede durch ein Attribut eines Elements angegebene Richtlinie gilt für alle untergeordneten Elemente, die keinen Wert für diese Richtlinie angeben. Wird z.B. eine Richtlinie durch ein [Type](../../../docs/framework/net-native/type-element-net-native.md)-Element angegeben, gilt diese Richtlinie für alle enthaltenen Typen und Member, für die nicht explizit eine Richtlinie angegeben ist.
+Jede durch ein Attribut eines Elements angegebene Richtlinie gilt für alle untergeordneten Elemente, die keinen Wert für diese Richtlinie angeben. Wird z.B. eine Richtlinie durch ein [Type](type-element-net-native.md)-Element angegeben, gilt diese Richtlinie für alle enthaltenen Typen und Member, für die nicht explizit eine Richtlinie angegeben ist.
 
-Die Richtlinie, die durch die Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) und [Type](../../../docs/framework/net-native/type-element-net-native.md) ausgedrückt werden kann, unterscheidet sich von der Richtlinie, die für einzelne Member ausgedrückt werden kann (durch die Elemente [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) und [Event](../../../docs/framework/net-native/event-element-net-native.md)).
+Die Richtlinie, die durch die Elemente [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) und [Type](type-element-net-native.md) ausgedrückt werden kann, unterscheidet sich von der Richtlinie, die für einzelne Member ausgedrückt werden kann (durch die Elemente [Method](method-element-net-native.md), [Property](property-element-net-native.md), [Field](field-element-net-native.md) und [Event](event-element-net-native.md)).
 
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Festlegen von Richtlinien für Assemblys, Namespaces und Typen
 
-Die Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) und [Type](../../../docs/framework/net-native/type-element-net-native.md) unterstützen folgende Richtlinientypen:
+Die Elemente [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) und [Type](type-element-net-native.md) unterstützen folgende Richtlinientypen:
 
 - `Activate`. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.
 
@@ -147,7 +147,7 @@ Die folgende Laufzeitdirektivendatei definiert z. B. die Richtlinie für alle Ty
 
 ### <a name="specifying-policy-for-members"></a>Festlegen von Richtlinien für Member
 
-Die Elemente [Property](../../../docs/framework/net-native/property-element-net-native.md) und [Field](../../../docs/framework/net-native/field-element-net-native.md) unterstützen die folgenden Richtlinientypen:
+Die Elemente [Property](property-element-net-native.md) und [Field](field-element-net-native.md) unterstützen die folgenden Richtlinientypen:
 
 - `Browse` - Steuert das Abfragen von Informationen über diesen Member, aber ermöglicht keinen Laufzeitzugriff.
 
@@ -155,7 +155,7 @@ Die Elemente [Property](../../../docs/framework/net-native/property-element-net-
 
 - `Serialize` - Steuert den Laufzeitzugriff auf den Member, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen. Diese Richtlinie kann auf Konstruktoren, Felder und Eigenschaften angewendet werden.
 
-Die Elemente [Method](../../../docs/framework/net-native/method-element-net-native.md) und [Event](../../../docs/framework/net-native/event-element-net-native.md) unterstützen die folgenden Richtlinientypen:
+Die Elemente [Method](method-element-net-native.md) und [Event](event-element-net-native.md) unterstützen die folgenden Richtlinientypen:
 
 - `Browse` - Steuert das Abfragen von Informationen über diesen Member, aber ermöglicht keinen Laufzeitzugriff.
 
@@ -173,9 +173,9 @@ Die Elemente [Method](../../../docs/framework/net-native/method-element-net-nati
 
 ## <a name="runtime-directives-file-semantics"></a>Semantik der Laufzeitdirektivendatei
 
-Die Richtlinie kann gleichzeitig für Elemente höherer und niedrigerer Ebenen definiert werden. Die Richtlinie kann z. B. für eine Assembly und für einige Typen in dieser Assembly definiert werden. Wenn ein bestimmtes Element auf niedrigerer Ebene nicht dargestellt wird, erbt es die Richtlinie des übergeordneten Objekts. Wenn z. B. ein `Assembly`-Element vorhanden ist, aber keine `Type` Elemente, gilt die im `Assembly`-Element angegebene Richtlinie für alle Typen in der Assembly. Mehrere Elemente können auch eine Richtlinie auf dasselbe Programmelement anwenden. Zum Beispiel können verschiedene [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)-Elemente dasselbe Richtlinienelement für dieselbe Assembly unterschiedlich definieren. In den folgenden Abschnitten wird erläutert, wie die Richtlinie für einen bestimmten Typ in diesen Fällen aufgelöst wird.
+Die Richtlinie kann gleichzeitig für Elemente höherer und niedrigerer Ebenen definiert werden. Die Richtlinie kann z. B. für eine Assembly und für einige Typen in dieser Assembly definiert werden. Wenn ein bestimmtes Element auf niedrigerer Ebene nicht dargestellt wird, erbt es die Richtlinie des übergeordneten Objekts. Wenn z. B. ein `Assembly`-Element vorhanden ist, aber keine `Type` Elemente, gilt die im `Assembly`-Element angegebene Richtlinie für alle Typen in der Assembly. Mehrere Elemente können auch eine Richtlinie auf dasselbe Programmelement anwenden. Zum Beispiel können verschiedene [Assembly](assembly-element-net-native.md)-Elemente dasselbe Richtlinienelement für dieselbe Assembly unterschiedlich definieren. In den folgenden Abschnitten wird erläutert, wie die Richtlinie für einen bestimmten Typ in diesen Fällen aufgelöst wird.
 
-Ein [Type](../../../docs/framework/net-native/type-element-net-native.md)- oder [Method](../../../docs/framework/net-native/method-element-net-native.md)-Element eines generischen Typs oder einer generischen Methode wendet seine Richtlinie auf alle Instanziierungen an, die keine eigene Richtlinie haben. Beispielsweise gilt ein `Type`-Element, das eine Richtlinie für <xref:System.Collections.Generic.List%601> angibt, für alle konstruierten Instanzen dieses generischen Typs, sofern es nicht für einen bestimmten konstruierten generischen Typ (z. B. `List<Int32>`) durch ein `TypeInstantiation`-Element überschrieben wird. Andernfalls definieren Elemente Richtlinien für das genannte Programmelement.
+Ein [Type](type-element-net-native.md)- oder [Method](method-element-net-native.md)-Element eines generischen Typs oder einer generischen Methode wendet seine Richtlinie auf alle Instanziierungen an, die keine eigene Richtlinie haben. Beispielsweise gilt ein `Type`-Element, das eine Richtlinie für <xref:System.Collections.Generic.List%601> angibt, für alle konstruierten Instanzen dieses generischen Typs, sofern es nicht für einen bestimmten konstruierten generischen Typ (z. B. `List<Int32>`) durch ein `TypeInstantiation`-Element überschrieben wird. Andernfalls definieren Elemente Richtlinien für das genannte Programmelement.
 
 Wenn ein Element mehreindeutig ist, sucht das Modul nach Übereinstimmungen, und wenn eine genaue Übereinstimmung gefunden wird, wird sie verwendet. Wenn mehrere Übereinstimmungen gefunden werden, wird eine Warnung oder ein Fehler ausgegeben.
 
@@ -411,9 +411,9 @@ Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisier
 
 Diese Richtlinien wirken sich nicht auf Methoden oder Felder aus.
 
-Weitere Informationen finden Sie im Abschnitt „Unterschiede in den Serialisierungsprogrammen“ [Migrieren Ihrer Windows Store-App auf .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+Weitere Informationen finden Sie im Abschnitt „Unterschiede in den Serialisierungsprogrammen“ [Migrieren Ihrer Windows Store-App auf .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
+- [Reflection and .NET Native (Reflektion und .NET Native)](reflection-and-net-native.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960245"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053438"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Vorgehensweise: Erkennen einer .NET Framework 3.0-Installation
 Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bereitstellen können, müssen Sie zunächst überprüfen, ob die .NET Framework Laufzeit vorhanden ist. Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework auf einem System vorhanden ist.  
@@ -23,7 +23,7 @@ Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bere
 ## <a name="detect-the-net-clr-user-agent-string"></a>Erkennen der Benutzer-Agent-Zeichenfolge ".NET CLR"  
  Wenn .NET Framework installiert ist, fügt die msi ".NET CLR" und die Versionsnummer der UserAgent-Zeichenfolge hinzu. Das folgende Beispiel zeigt ein Skript, das in eine einfache HTML-Seite eingebettet ist. Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob .NET Framework installiert ist, und zeigt eine Statusmeldung für die Ergebnisse der Suche an.  
   
-```  
+```html  
 <HTML>  
   <HEAD>  
     <TITLE>Test for the .NET Framework 3.0</TITLE>  

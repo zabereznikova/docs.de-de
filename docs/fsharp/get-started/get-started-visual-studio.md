@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio
 description: Erfahren Sie, wie Sie F# in Visual Studio verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e573af67a1fc00b0a340f8c73ab1ee0ed2b97810
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629770"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082695"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit F# in Visual Studio
 
@@ -51,7 +51,7 @@ Sie können den Code ausführen und die Ergebnisse anzeigen, indem Sie **STRG**+
 
 Im Konsolenfenster, in dem Visual Studio angezeigt wird, sollte nun Folgendes angezeigt werden:
 
-```
+```console
 12 squared is 144!
 ```
 
