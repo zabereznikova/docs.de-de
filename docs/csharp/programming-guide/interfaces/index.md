@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 30c44b9f98bcc61d54b8103b6b40d14fd35715f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589180"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053269"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -27,7 +27,7 @@ Der Name der Struktur muss ein gültiger C#- [Bezeichnername](../inside-a-progra
 
 Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   
-Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Die Schnittstelle definiert nur die Signatur. Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind. Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben.
+Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur von einer einzelnen Klasse erben.
   
 Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   

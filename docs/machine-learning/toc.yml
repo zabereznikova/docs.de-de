@@ -35,12 +35,16 @@
           href: tutorials/sales-anomaly-detection.md
         - name: Erkennen von Objekten in Bildern (Objekterkennung)
           href: tutorials/object-detection-onnx.md
+        - name: Klassifizieren von Stimmungen mithilfe von TensorFlow (Textklassifizierung)
+          href: tutorials/text-classification-tf.md
     - name: Tools
       items:
         - name: Vorhersagen von Preisen mit dem Modellgenerator
           href: tutorials/predict-prices-with-model-builder.md
         - name: Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
           href: tutorials/mlnet-cli.md
+        - name: Analysieren der Stimmung mit dem Modellgenerator und Razor Pages
+          href: tutorials/sentiment-analysis-model-builder.md
 - name: Konzepte
   items:
     - name: ML.NET-Aufgaben (Modelltypen)
