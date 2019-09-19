@@ -41,7 +41,7 @@ ms.locfileid: "68236074"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
 
-Die **integralen numerischen Typen** sind eine Teilmenge der **einfachen Typen** und können mit [*Literalen*](#integral-literals) initialisiert werden. Alle integrale Typen sind auch Werttypen. Alle integral numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison- and equality](../operators/equality-operators.md)-Operatoren.
+Die **integralen numerischen Typen** sind eine Teilmenge der **einfachen Typen** und können mit [*Literalen*](#integral-literals) initialisiert werden. Alle integralen Typen sind auch Werttypen. Alle integral numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison- und equality](../operators/equality-operators.md)-Operatoren.
 
 ## <a name="characteristics-of-the-integral-types"></a>Merkmale der integralen Typen
 
@@ -50,7 +50,7 @@ C# unterstützt die folgenden vordefinierten integralen Typen:
 |C#-Typ/Schlüsselwort|Bereich|Größe|.NET-Typ|
 |----------|-----------|----------|-------------|
 |`sbyte`|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|<xref:System.SByte?displayProperty=nameWithType>|
-|`byte`|0 bis 255|8-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Byte?displayProperty=nameWithType>|
+|`byte`|0 bis 255|Ganze 8-Bit-Zahl ohne Vorzeichen|<xref:System.Byte?displayProperty=nameWithType>|
 |`short`|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|<xref:System.UInt16?displayProperty=nameWithType>|
 |`int`|-2,147,483,648 bis 2,147,483,647|Eine 32-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int32?displayProperty=nameWithType>|
@@ -115,7 +115,7 @@ var anotherLong = (long)42;
 
 ## <a name="conversions"></a>Konvertierungen
 
-Zwischen zwei beliebigen integralen Typen gibt es eine implizite Konvertierung (*verbreiternde Konvertierung* genannt), bei der der Zieltyp alle Werte des Quelltyps speichern kann. Zum Beispiel gibt es eine implizite Konvertierung von `int` nach `long`, da der Bereich der `int`-Werte eine korrekte Teilmenge von `long` ist. Es gibt implizite Konvertierungen von einem kleineren integral Typ ohne Vorzeichen in einen größeren integralen Typ mit Vorzeichen. Es gibt auch eine implizite Konvertierung von einem beliebigen integralen Typ in einen beliebigen Gleitkommatyp.  Es gibt keine implizite Konvertierung von einem beliebigen integralen Typ mit Vorzeichen in einen beliebigen integralen Typ ohne Vorzeichen.
+Zwischen zwei beliebigen integralen Typen gibt es eine implizite Konvertierung (*erweiternde Konvertierung genannt*), bei der der Zieltyp alle Werte des Quelltyps speichern kann. Zum Beispiel gibt es eine implizite Konvertierung von `int` nach `long`, da der Bereich der `int`-Werte eine korrekte Teilmenge von `long` ist. Es gibt implizite Konvertierungen von einem kleineren integralen Typ ohne Vorzeichen in einen größeren integralen Typ mit Vorzeichen. Es gibt auch eine implizite Konvertierung von einem beliebigen integralen Typ in einen beliebigen Gleitkommatyp.  Es gibt keine implizite Konvertierung von einem beliebigen integralen Typ mit Vorzeichen in einen beliebigen integralen Typ ohne Vorzeichen.
 
 Sie müssen eine explizite Umwandlung verwenden, um einen integralen Typ in einen anderen integralen Typ zu konvertieren, wenn eine implizite Konvertierung vom Quelltyp in den Zieltyp nicht definiert ist. Dies wird als *einschränkende Konvertierung* bezeichnet. Die explizite Anwendung ist erforderlich, da die Konvertierung zu Datenverlust führen kann.
 

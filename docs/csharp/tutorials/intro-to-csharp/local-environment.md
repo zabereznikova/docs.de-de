@@ -2,19 +2,19 @@
 title: Einführung in C# – sich mit den Entwicklungstools vertraut machen
 description: Dieser Artikel bietet eine grundlegende Einführung in die Werkzeuge, die Sie zum Entwickeln von C#- und.NET-Anwendungen auf Ihrem Computer verwenden werden.
 ms.date: 10/23/2018
-ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe39bd5e89bb168316b19c62d6e022e36c58fc2f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920661"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850752"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Einführung in .NET-Entwicklungstools
 
 Der erste Schritt beim Ausführen eines Tutorials auf Ihrem Computer besteht darin, eine Entwicklungsumgebung einzurichten.
-Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC.
+Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac oder Windows- oder Linux-PC.
 
-Alternativ können Sie das [.NET Core SDK](https://www.microsoft.com/net/download) und [Visual Studio Code](https://code.visualstudio.com/) installieren.
+Alternativ können Sie das [.NET Core SDK](https://dotnet.microsoft.com/download) und [Visual Studio Code](https://code.visualstudio.com/) installieren.
 
 ## <a name="basic-application-development-flow"></a>Grundlegender Anwendungsentwicklungsworkflow
 

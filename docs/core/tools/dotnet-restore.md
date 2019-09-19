@@ -2,12 +2,12 @@
 title: Befehl „dotnet restore“
 description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 56d99a4edd69246632560065c415a3f41ac3e1b5
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1e0e1fbf6ab5f595773a072242440e30865fed16
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202821"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969772"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -18,6 +18,8 @@ ms.locfileid: "70202821"
 `dotnet restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
 
 ## <a name="synopsis"></a>Übersicht
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -177,7 +179,7 @@ Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiede
 
 `-s|--source <SOURCE>`
 
-Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in den *nuget.config*-Dateien angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dadurch werden alle Quellen überschrieben, die in den *nuget.config*-Dateien angegeben sind. Die Datei *nuget.config* wird so gelesen, als wäre das `<packageSource>`-Element nicht vorhanden. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
 
 `--verbosity <LEVEL>`
 

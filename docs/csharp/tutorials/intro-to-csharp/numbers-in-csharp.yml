@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Branches und Schleifen in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
-  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+  ms.openlocfilehash: af06d938f86841620784909b16e72d000452fc2a
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/09/2019
-  ms.locfileid: "67661015"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850675"
 items:
 - durationInMinutes: 1
   content: >
@@ -412,7 +412,7 @@ items:
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
-    Sie haben das interaktive Tutorial „Zahlen in C#“ abgeschlossen. Klicken sie unten auf den Link **Verzweigungen und Schleifen**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials.
+    Sie haben das interaktive Tutorial „Zahlen in C#“ abgeschlossen. Klicken sie unten auf den Link **Verzweigungen und Schleifen**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
     Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:

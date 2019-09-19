@@ -3,12 +3,12 @@ title: Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interfa
 description: Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI).
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 50d1bbdd87ecd275b97603a1b47c6f13f879365a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969882"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117390"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
 
@@ -105,7 +105,7 @@ Die CLI-Befehlsstruktur besteht aus dem [Treiber („dotnet“)](#driver), dem [
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
@@ -113,7 +113,7 @@ dotnet /build_output/my_app.dll
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet new console
 dotnet restore
 dotnet build --output /build_output
@@ -130,8 +130,8 @@ Geben Sie zur Ausführung einer Framework-abhängigen Anwendung nach dem Treiber
 
 Wenn Sie einen Befehl an den Treiber geben, startet `dotnet.exe` den Ausführungsprozess des CLI-Befehls. Beispiel:
 
-```bash
-> dotnet build
+```dotnetcli
+dotnet build
 ```
 
 Zunächst bestimmt der Treiber die zu verwendende SDK-Version. Wenn keine [„global.json“](global-json.md)-Datei vorhanden ist, wird die neueste Version des verfügbaren SDK verwendet. Dabei handelt es sich entweder um eine Vorschauversion oder eine stabile Version, je nachdem, welche Version sich aktuell auf dem Computer befindet.  Sobald die SDK-Version bestimmt ist, wird der Befehl ausgeführt.

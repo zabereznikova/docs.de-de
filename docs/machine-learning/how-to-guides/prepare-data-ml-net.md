@@ -3,20 +3,20 @@ title: Vorbereiten von Daten für die Modellerstellung
 description: Erfahren Sie, wie Sie Transformationen in ML.NET verwenden können, um Daten für die weitere Verarbeitung oder die Modellerstellung zu manipulieren und vorzubereiten.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/25/2019
+ms.date: 09/11/2019
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4452aef351f33df532f3c673307dedbbf71631b8
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929370"
 ---
 # <a name="prepare-data-for-building-a-model"></a>Vorbereiten von Daten für die Modellerstellung
 
 Erfahren Sie, wie Sie ML.NET verwenden können, um Daten für die weitere Verarbeitung oder die Erstellung eines Modells aufzubereiten.
 
-Die Daten sind oft unsauber und haben eine geringe Dichte. Zusätzlich erwarten ML.NET Machine Learning-Algorithmen, dass die Eingaben oder Features in einem einzigen numerischen Vektor erfolgen. Daher besteht eines der Ziele der Datenaufbereitung darin, die Daten in das von ML.NET-Algorithmen erwartete Format zu bringen. 
+Die Daten sind oft unsauber und haben eine geringe Dichte. Für Machine-Learning-Algorithmen in ML.NET sind Eingaben oder Features in einem einzigen numerischen Vektor erforderlich. Analog dazu muss der Wert, der vorhersagt werden soll (Label), codiert werden. Dies gilt insbesondere für kategorische Daten. Daher besteht eines der Ziele der Datenaufbereitung darin, die Daten in das von ML.NET-Algorithmen erwartete Format zu bringen. 
 
 ## <a name="filter-data"></a>Filtern von Daten
 

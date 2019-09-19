@@ -15,12 +15,12 @@ ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d478ae9e1db86718236da73917d772820707ea03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 11df25617a618cdc835ca6555c671a187ce09f8d
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678357"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991646"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 
@@ -35,7 +35,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
 
 Ein nummerierter Rückverweis verwendet die folgende Syntax:
 
-`\` *number*
+`\` *Zahl*
 
 wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt. Wenn darüber hinaus *number* eine Erfassungsgruppe an einer bestimmten Ordnungsposition identifiziert, dieser Erfassungsgruppe jedoch ein anderer Name als die zugehörige Ordnungsposition zugewiesen wurde, löst der Parser für reguläre Ausdrücke ebenfalls eine <xref:System.ArgumentException> aus.
 
@@ -53,7 +53,7 @@ Wenn die Mehrdeutigkeit ein Problem ist, können Sie die Notation `\k<`*name*`>`
 
 Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(\w)\1` wird definiert, der aus den folgenden Elementen besteht.
 
-|Element|Beschreibung|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |`(\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zur ersten Erfassungsgruppe.|
 |`\1`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der ersten Erfassungsgruppe identisch ist.|
@@ -75,7 +75,7 @@ wobei *Name* der Name einer Erfassungsgruppe ist, die im Muster eines regulären
 
 Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(?<char>\w)\k<char>` wird definiert, der aus den folgenden Elementen besteht.
 
-|Element|Beschreibung|
+|Element|BESCHREIBUNG|
 |-------------|-----------------|
 |`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zu einer Erfassungsgruppe mit dem Namen `char`|
 |`\k<char>`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der `char`-Erfassungsgruppe identisch ist|
@@ -95,7 +95,7 @@ Wenn *name* die Zeichenfolgendarstellung einer Zahl ist und keine Erfassungsgrup
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassungsgruppe an dieser Position explizit ein numerischer Name zugewiesen wurde, kann der Parser für reguläre Ausdrücke die Erfassungsgruppe nicht anhand ihrer Ordnungsposition identifizieren. Stattdessen löst der Parser eine <xref:System.ArgumentException> aus. Die einzige Erfassungsgruppe im folgenden Beispiel wurde „2“ genannt. Da das `\k`-Konstrukt verwendet wird, um einen Rückverweis namens „1“ zu definieren, kann der Parser für reguläre Ausdrücke die erste Erfassungsgruppe nicht identifizieren und löst eine Ausnahme aus.
+Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassungsgruppe an dieser Position explizit ein numerischer Name zugewiesen wurde, kann der Parser für reguläre Ausdrücke die Erfassungsgruppe nicht anhand ihrer Ordnungsposition identifizieren. Stattdessen wird <xref:System.ArgumentException> ausgelöst. Die einzige Erfassungsgruppe im folgenden Beispiel ist „2“. Da das `\k`-Konstrukt verwendet wird, um einen Rückverweis namens „1“ zu definieren, kann der Parser für reguläre Ausdrücke die erste Erfassungsgruppe nicht identifizieren und löst eine Ausnahme aus.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -106,7 +106,7 @@ Ein Rückverweis bezieht sich auf die aktuellste Definition einer Gruppe (beim A
 
 Das folgende Beispiel enthält ein Muster für reguläre Ausdrücke, `(?<1>a)(?<1>\1b)*`, das die Gruppe namens „\1“ neu definiert. Die folgende Tabelle beschreibt jedes Muster im regulären Ausdruck.
 
-|Muster|Beschreibung|
+|Muster|BESCHREIBUNG|
 |-------------|-----------------|
 |`(?<1>a)`|Übereinstimmung mit dem Zeichen „a“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|
 |`(?<1>\1b)*`|Übereinstimmung mit null oder einem Vorkommen der Gruppe `1` zusammen mit einem „b“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|
@@ -126,7 +126,7 @@ In diesem Beispiel ist `*` ein Schleifenquantifizierer – er wird wiederholt au
 
 Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird durch das Muster des regulären Ausdrucks `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` veranschaulicht, das folgendermaßen definiert ist:
 
-|Muster|Beschreibung|
+|Muster|BESCHREIBUNG|
 |-------------|-----------------|
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|
 |`(\p{Lu}{2})`|Übereinstimmung mit zwei Großbuchstaben. Dies ist die erste Erfassungsgruppe.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 179170c0cafc67027012d2306281eb2cd1d967a4
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8dd7bac8c0cb14421016efad60a7ec0d672e5622
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170658"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854021"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -200,31 +200,23 @@ Beide Methoden ermöglichen es Ihnen, entweder den Webinstaller oder den Offline
 
 Zum automatischen Verketten des .NET Framework-Installationsvorgangs und Bereitstellen der Benutzeroberfläche durch das .NET Framework-Installationsprogramm fügen Sie dem Setupprogramm den folgenden Befehl hinzu:
 
-```
-<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>
-```
+`<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>`
 
 Wenn beispielsweise das Programm „Contoso.exe“ lautet und Sie das weitervertreibbare .NET Framework 4.5-Offlinepaket unbeaufsichtigt installieren lassen möchten, verwenden Sie folgenden Befehl:
 
-```
-dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
-```
+`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
 Sie können die Installation mit zusätzlichen Befehlszeilenoptionen anpassen. Beispiel:
 
 - Um Benutzern das Schließen aktiver .NET Framework-Apps zu ermöglichen und Systemneustarts zu minimieren, legen Sie den passiven Modus fest, und verwenden Sie die Option `/showrmui` wie folgt:
 
-    ```
-    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso
-    ```
+    `dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso`
 
      Dieser Befehl ermöglicht dem Neustart-Manager das Anzeigen eines Meldungsfelds, das Benutzern die Möglichkeit bietet, .NET Framework-Apps zu schließen, bevor das .NET Framework installiert wird.
 
 - Wenn Sie den Webinstaller verwenden, können Sie mit der Option `/LCID` ein Language Pack angeben. Um beispielsweise den .NET Framework 4.5-Webinstaller mit dem Contoso-Setupprogramm zu verketten und das Language Pack für Japanisch zu installieren, fügen Sie dem Setupvorgang der App den folgenden Befehl hinzu:
 
-    ```
-    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041
-    ```
+    `dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041`
 
      Wenn Sie die Option `/LCID` weglassen, wird das Language Pack installiert, das der Benutzereinstellung für die MUI entspricht.
 
@@ -294,13 +286,13 @@ Das .NET Framework-Installationsprogramm schreibt Registrierungsschlüssel, wenn
 
 Sie können testen, ob ein bestimmtes Sprachpaket installiert ist, indem Sie in der Registrierung überprüfen, ob der Ordner „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID*“ den DWORD-Wert mit dem Namen `Release` enthält. (Beachten Sie, dass „.NET Framework Setup“ nicht mit einem Punkt beginnt.) *LCID* gibt einen Gebietsschemabezeichner an. Eine Liste dieser Bezeichner finden Sie unter [Unterstützte Sprachen](#supported-languages).
 
-Um z. B. zu ermitteln, ob das vollständige Sprachpaket Japanisch (LCID=1041) installiert ist, suchen Sie in der Registrierung die folgenden Werte:
+Rufen Sie beispielsweise aus der Registrierung den folgenden benannten Wert ab, um zu ermitteln, ob das gesamte japanische Sprachpaket (LCID=1041) installiert wurde:
 
-```
-Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041
-Name: Release
-Type: DWORD
-```
+| | |
+|-|-|
+| Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| name | Freigabe |
+| Typ | DWORD |
 
 Um festzustellen, ob die endgültige Version eines Sprachpakets für eine bestimmte .NET Framework-Version (4.5 bis 4.7.2) installiert ist, überprüfen Sie den DWORD-Wert des RELEASE-Schlüssels, der im vorherigen Abschnitt [Erkennen von .NET Framework](#detect_net) beschrieben wurde.
 
@@ -337,9 +329,7 @@ Ab .NET Framework 4.5.1 weisen die Paketnamen folgendes Format auf: NDP<`version
 
 Um ein Sprachpaket mit dem .NET Framework-Offlineinstaller zu installieren, müssen Sie es mit dem Setup der App verketten. Verwenden Sie beispielsweise zum Bereitstellen des .NET Framework 4.5.1-Offlineinstallers mit dem Language Pack für Japanisch den folgenden Befehl:
 
-```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
-```
+`NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>`
 
 Sie müssen die Language Packs nicht verketten, wenn Sie den Webinstaller verwenden. In diesem Fall installiert Setup das Language Pack, das der MUI-Einstellung des Benutzers entspricht. Wenn Sie eine andere Sprache installieren möchten, können Sie mit der Option `/LCID` ein Language Pack angeben.
 

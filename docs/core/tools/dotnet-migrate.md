@@ -1,28 +1,21 @@
 ---
 title: Befehl „dotnet migrate“
 description: Der dotnet migrate-Befehl migriert ein Projekt und alle seine Abhängigkeiten.
-ms.date: 06/26/2019
-ms.openlocfilehash: 86f11592e774da12b010886aaa1e30cee063fea6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: 790c607070ff348ca7cfe30137268de18dcb0293
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202537"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990431"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK
 
 ## <a name="name"></a>name
 
 `dotnet migrate`: migriert ein .NET Core-Projekt der Vorschauversion 2 in ein SDK-Projekt für .NET Core.
-
-> [!NOTE]
-> `dotnet migrate` wird aus der nächsten Vorschauversion des SDK für .NET Core 3.0 entfernt.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -49,6 +42,8 @@ Der `dotnet migrate`-Befehl speichert die migrierte *project.json*-Datei in eine
 Standardmäßig gibt der Migrationsvorgang den Status der Migration in die Standardausgabe (STDOUT) aus. Bei Verwendung der `--report-file <REPORT_FILE>`-Option wird die Ausgabe in die angegebene Datei gespeichert.
 
 Der `dotnet migrate`-Befehl unterstützt nur gültige *project.json*-basiere Projekte von Preview 2. Dies bedeutet, dass Sie ihn nicht zum Migrieren von *project.json*-basierten Projekte von DNX oder Preview 1 direkt an MSBuild/csproj-Projekte verwenden können. Sie müssen zuerst das Projekt manuell auf ein *project.json*-basiertes Projekt von Preview 2 migrieren und anschließend den `dotnet migrate`-Befehl verwenden, um das Projekt zu migrieren.
+
+Der `dotnet migrate`-Befehl ist im .NET Core 3.0 SDK und in neueren Versionen nicht mehr verfügbar.
 
 ## <a name="arguments"></a>Argumente
 

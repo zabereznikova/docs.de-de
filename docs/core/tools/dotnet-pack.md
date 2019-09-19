@@ -1,17 +1,21 @@
 ---
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
-ms.date: 12/04/2018
-ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.date: 08/08/2019
+ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202838"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70990411"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
+**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>name
 
@@ -19,27 +23,21 @@ ms.locfileid: "70202838"
 
 ## <a name="synopsis"></a>Übersicht
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
-    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+    [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```console
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
-    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
-```
-
----
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket. Wenn die `--include-symbols`-Option vorhanden ist, wird ein anderes Paket mit den Debugsymbolen erstellt.
+Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket (d. h., eine *NUPKG*-Datei). 
+
+Wenn Sie ein Paket generieren möchten, das die Debugsymbole enthält, stehen Ihnen zwei Optionen zur Verfügung:
+
+- `--include-symbols`: Es erstellt das Symbolpaket.
+- `--include-source`: Es erstellt das Symbolpaket mit einem `src`-Ordner, der die Quelldateien enthält.
 
 NuGet-Abhängigkeiten des gepackten Projekts werden der Datei *nuspec* hinzugefügt. Sie werden ordnungsgemäß aufgelöst, wenn das Paket installiert wird. Verweise zwischen Projekten werden innerhalb des Projekts nicht gepackt. Derzeit benötigen Sie ein Paket pro Projekt, wenn Sie Abhängigkeiten zwischen Projekten haben.
 
@@ -59,13 +57,11 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 ## <a name="arguments"></a>Argumente
 
-* **`PROJECT`**
+`PROJECT | SOLUTION`
 
-  Das zu packende Projekt. Es ist entweder ein Pfad zu einer [csproj-Datei](csproj.md) oder zu einem Verzeichnis. Wenn nicht angegeben, wird standardmäßig das aktuelle Verzeichnis gewählt.
+  Das Projekt oder die Projektmappe, die gepackt werden soll. Es ist entweder ein Pfad zu einer [CSPROJ-Datei](csproj.md), einer Projektmappendatei oder zu einem Verzeichnis. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einem Projekt oder einer Projektmappendatei.
 
 ## <a name="options"></a>Optionen
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -73,7 +69,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 * **`--force`**
 
-  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
+  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
 * **`-h|--help`**
 
@@ -81,11 +77,15 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 * **`--include-source`**
 
-  Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`.
+  Schließt neben den regulären NuGet-Paketen im Ausgabeverzeichnis auch die NuGet-Pakete der Debugsymbole ein. Die Quelldateien befinden sich im `src`-Ordner im Symbolpaket.
 
 * **`--include-symbols`**
 
-  Generiert die Symbole `nupkg`.
+  Schließt neben den regulären NuGet-Paketen im Ausgabeverzeichnis auch die NuGet-Pakete der Debugsymbole ein.
+
+* **`--interactive`**
+
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar seit .NET Core 3.0 SDK.
 
 * **`--no-build`**
 
@@ -93,11 +93,15 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 * **`--no-dependencies`**
 
-  Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her.
+  Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
 * **`--no-restore`**
 
-  Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
+  Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+
+* **`--nologo`**
+
+  Unterdrückt die Anzeige von Startbanner und Copyrightmeldung. Verfügbar seit .NET Core 3.0 SDK.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -105,7 +109,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
 * **`-s|--serviceable`**
 
@@ -118,46 +122,6 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 * **`-v|--verbosity <LEVEL>`**
 
   Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-c|--configuration {Debug|Release}`**
-
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
-
-* **`-h|--help`**
-
-  Druckt eine kurze Hilfe für den Befehl.
-
-* **`--include-source`**
-
-  Nimmt die Quelldateien in das NuGet-Paket auf. Die Quelldateien befinden sich im Ordner `src` im `nupkg`.
-
-* **`--include-symbols`**
-
-  Generiert die Symbole `nupkg`.
-
-* **`--no-build`**
-
-  Erstellt das Projekt nicht vor dem Packen.
-
-* **`-o|--output <OUTPUT_DIRECTORY>`**
-
-  Platziert die erstellten Pakete in das angegebene Verzeichnis.
-
-* **`-s|--serviceable`**
-
-  Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries (.NET Blog: .NET 4.5.1 unterstützt Microsoft Sicherheitsupdates für .NET NuGet-Bibliotheken)](https://aka.ms/nupkgservicing).
-
-* **`--version-suffix <VERSION_SUFFIX>`**
-
-  Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
-
-* **`-v|--verbosity <LEVEL>`**
-
-  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
-
----
 
 ## <a name="examples"></a>Beispiele
 
@@ -212,5 +176,5 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 * Packen Sie das Projekt mithilfe einer [NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

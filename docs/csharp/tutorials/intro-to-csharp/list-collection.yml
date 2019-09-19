@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
-  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+  ms.openlocfilehash: 6dfbbbb6ef64b3dbb83d15ba66860acb7c5b3585
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/19/2019
-  ms.locfileid: "65880565"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850745"
 items:
 - durationInMinutes: 1
   content: >
@@ -227,7 +227,7 @@ items:
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
-    Sie haben das interaktive Listentutorial abgeschlossen. Das ist die finale Einführung in das interaktive C#-Tutorial. Sie können die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) besuchen, um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und mit dem Programmieren fortzufahren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials, um Projekte auf Ihrem Computer zu erstellen.
+    Sie haben das interaktive Listentutorial abgeschlossen. Das ist die finale Einführung in das interaktive C#-Tutorial. Sie können die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) besuchen, um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und mit dem Programmieren fortzufahren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
     Weitere Informationen zu [.NET-Sammlungen](../../../standard/collections/index.md) finden Sie in den folgenden Artikeln:

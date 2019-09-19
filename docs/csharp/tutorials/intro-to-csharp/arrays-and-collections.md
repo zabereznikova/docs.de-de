@@ -3,18 +3,18 @@ title: Arbeiten mit Sammlungen – Tutorial zur Einführung in C#
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 160e34ddb529a8515a08d6aab838ba107936c616
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8db9f0acc69efdb89c276f9bee5e095c7920ffc6
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587255"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850870"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informationen zum Verwalten von Datensammlungen mithilfe des generischen Listentyps
 
 Dieses Tutorial bietet eine Einführung in die Sprache C# und die Grundlagen der <xref:System.Collections.Generic.List%601>-Klasse.
 
-Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie im Artikel [Einführung in Entwicklungstools](local-environment.md), der Links zu weiteren Ressourcen enthält.
+Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac oder Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie im Artikel [Einführung in Entwicklungstools](local-environment.md), der Links zu weiteren Ressourcen enthält.
 
 ## <a name="a-basic-list-example"></a>Beispiel für eine einfache Liste
 

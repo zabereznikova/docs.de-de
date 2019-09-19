@@ -4,18 +4,18 @@ description: Dieses Tutorial erläutert, wie Sie mit dem Zeichenfolgeninterpolat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397804"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850929"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 
 Dieses Tutorial erläutert, wie Sie die [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) in C# verwenden, um Werte in eine einzelne Ergebniszeichenfolge einzufügen. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Dieses Tutorial enthält einige Lektionen, in denen Ihnen gezeigt wird, wie Werte in eine Zeichenfolge eingefügt und auf verschiedene Weisen formatiert werden.
 
-Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Das .NET-Thema [Erste Schritte in 10 Minuten](https://www.microsoft.com/net/core) umfasst Anweisungen zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac-, Windows- oder Linux-PC. Sie können auch die [interaktive Version](interpolated-strings.yml) dieses Tutorials in Ihrem Browser durchführen.
+Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac oder Windows- oder Linux-PC. Sie können auch die [interaktive Version](interpolated-strings.yml) dieses Tutorials in Ihrem Browser durchführen.
 
 ## <a name="create-an-interpolated-string"></a>Erstellen einer interpolierten Zeichenfolge
 

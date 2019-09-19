@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
-  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/05/2019
-  ms.locfileid: "57370318"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850802"
 items:
 - durationInMinutes: 1
   content: >
@@ -296,7 +296,7 @@ items:
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
-    Sie haben die „Hallo C#“-Einführung in das C#-Tutorial abgeschlossen. Klicken sie unten auf den Link **Zahlen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials.
+    Sie haben die „Hallo C#“-Einführung in das C#-Tutorial abgeschlossen. Klicken sie unten auf den Link **Zahlen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
     Weitere Informationen zum `string`-Typ:

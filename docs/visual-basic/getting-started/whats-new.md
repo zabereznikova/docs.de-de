@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3638deeafc052a2da3b438de2c504a9955a15ad3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666865"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895258"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -21,9 +21,12 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
 
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic 15.8/Visual Studio 2017 Version 15.8. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
+Visual Basic 16.0/Visual Studio 2019 Version 16.0  
+Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Frühere Versionen
+
+Visual Basic 15.8/Visual Studio 2017 Version 15.8. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
 
 Visual Basic 15.5/Visual Studio 2017 Version 15.5. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155).
 
@@ -46,6 +49,21 @@ Visual Basic/Visual Studio 2005. Der `My`-Typ und Hilfstypen (Zugriff auf App, C
 Visual Basic/Visual Studio .NET 2003. Bitschiebeoperatoren, Deklaration von Schleifenvariablen.
 
 Visual Basic/Visual Studio .NET 2002. Die erste Version von Visual Basic .NET.
+
+## <a name="visual-basic-160"></a>Visual Basic 16.0
+Bei Visual Basic 16.0 liegt der Fokus darauf, weitere Features der Visual Basic-Laufzeit (microsoft.visualbasic.dll) für .NET Core bereitzustellen, und ist die erste Version von Visual Basic, die auf .NET Core ausgelegt ist. Viele Teile der Visual Basic-Laufzeit sind von WinForms abhängig und werden in einer späteren Version von Visual Basic hinzugefügt. 
+
+**Kommentare sind an weiteren Stellen innerhalb von Anweisungen zulässig:** In Visual Basic 15.8 und früheren Versionen sind Kommentare nur in leeren Zeilen, am Ende von Anweisungen oder an bestimmten Stellen in einer Anweisung zulässig, an denen implizite Zeilenfortsetzungen erlaubt sind. Ab Visual Basic 16.0 sind Kommentare auch nach expliziten Zeilenfortsetzungen und innerhalb von Anweisungen in Zeilen zulässig, die mit einem Leerzeichen gefolgt von einem Unterstrich beginnen.
+
+```vb
+Public Sub Main()
+    cmd.CommandText = ' Comment is allowed here without _
+        "SELECT * FROM Titles JOIN Publishers " _ ' This is a comment
+        & "ON Publishers.PubId = Titles.PubID " _
+ _ ' This is a comment on a line without code
+        & "WHERE Publishers.State = 'CA'"
+End Sub
+```
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 

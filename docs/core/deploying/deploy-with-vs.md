@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698023"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969967"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -89,7 +89,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
 1. Fügen Sie den Quellcode der Anwendung hinzu.
 
-   Öffnen Sie die Datei *Program.cs* in einem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
+   Öffnen Sie die Datei *Program.cs* oder *Program.vb* in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -109,6 +109,8 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
    Wenn Sie den invarianten Globalisierungsmodus aktiviert haben, stellen Sie unbedingt sicher, ob das Fehlen von kulturabhängigen Daten für die Anwendung geeignet ist.
 
 Sobald Sie das Debuggen abgeschlossen haben, können Sie Ihre eigenständige Bereitstellung veröffentlichen:
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 und frühere Versionen](#tab/vs156)
 

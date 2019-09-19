@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
-  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+  ms.openlocfilehash: eb4b1571b4d00d90034148f7b595f4499859ce4b
+  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 05/24/2019
-  ms.locfileid: "66195953"
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70850946"
 items:
 - durationInMinutes: 2
   content: >
@@ -125,7 +125,7 @@ items:
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
-    Sie haben das interaktive Tutorial für die Zeichenfolgeninterpolation abgeschlossen. Klicken sie unten auf den Link **Sammlungen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials.
+    Sie haben das interaktive Tutorial für die Zeichenfolgeninterpolation abgeschlossen. Klicken sie unten auf den Link **Sammlungen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
     Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md).

@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105683"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70893164"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -28,7 +28,7 @@ Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachve
 
 ## <a name="c-version-10"></a>C# Version 1.0
 
-Wenn Sie sich einmal die Version 1.0 von C# ansehen, werden Sie viele Gemeinsamkeiten mit Java feststellen. Als [Teil der vorgegebenen Entwurfsziele für ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html) sollte sie eine „einfache, moderne, objektorientierte Universalsprache sein“.  Zu diesem Zeitpunkt bedeuteten die Ähnlichkeiten mit Java, dass die frühen Entwurfsziele erreicht wurden.
+Die mit Visual Studio .NET 2002 veröffentlichte C#-Version 1.0 ähnelte Java sehr stark. Als [Teil der vorgegebenen Entwurfsziele für ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html) sollte sie eine „einfache, moderne, objektorientierte Universalsprache sein“.  Zu diesem Zeitpunkt bedeuteten die Ähnlichkeiten mit Java, dass die frühen Entwurfsziele erreicht wurden.
 
 Wenn Sie sich C# 1.0 jedoch heute ansehen, wird Ihnen schwindlig. Es fehlten die integrierten Async-Funktionen und einige der cleveren Funktionen bezüglich Generics, die heute als selbstverständlich betrachtet werden. In der Tat fehlten Generics vollständig.  Und was ist mit [LINQ](../linq/index.md)? War noch nicht verfügbar. Bis zum Erscheinen dieser Erweiterungen dauerte es noch einige Jahre.
 
@@ -100,7 +100,7 @@ Es dauerte eine Weile, aber nach und nach verstanden die Menschen das Konzept wi
 
 ## <a name="c-version-40"></a>C# Version 4.0
 
-C#-Version 4.0 hatte es schwierig, an den bahnbrechenden Status von Version 3.0 anzuknüpfen. Mit Version 3.0 bewegte sich C# deutlich aus dem Schatten von Java heraus und gewann an Bedeutung. Die Sprache wurde schnell elegant.
+Die C#-Version 4.0, die mit Visual Studio 2010 veröffentlicht wurde, konnte nicht an den Erfolg der Version 3.0 anknüpfen. Mit Version 3.0 bewegte sich C# deutlich aus dem Schatten von Java heraus und gewann an Bedeutung. Die Sprache wurde schnell elegant.
 
 Die nächste Version führte einige interessante neue Features ein:
 
@@ -117,7 +117,7 @@ Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine ho
 
 ## <a name="c-version-50"></a>C# Version 5.0
 
-C# Version 5.0 war eine fokussierte Version der Sprache. Nahezu die gesamte Arbeit für diese Version war einem weiteren bahnbrechenden Sprachkonzept gewidmet: den Modellen `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
+In der C#-Version 5.0, die mit Visual Studio 2012 veröffentlicht wurde, lag der Fokus auf ganz bestimmten Sprachaspekten. Nahezu die gesamte Arbeit für diese Version war einem weiteren bahnbrechenden Sprachkonzept gewidmet: den Modellen `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
 
 - [Asynchrone Member](../async.md)
 - [Attribute „CallerInfo“](../programming-guide/concepts/caller-information.md)
@@ -132,7 +132,7 @@ Die eigentlichen Stars dieser Version sind aber `async` und `await`. Als diese F
 
 ## <a name="c-version-60"></a>C# Version 6.0
 
-Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. Bei Version 6.0 kam man davon ab, mit einem dominanten „Killerfeature“ aufwarten zu wollen. Stattdessen wurden nun viele kleine Verbesserungen implementiert, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
+Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In der Version 6.0, die mit Visual Studio 2013 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
 
 - [Statische Importe](./csharp-6.md#using-static)
 - [Ausnahmefilter](./csharp-6.md#exception-filters)
@@ -154,7 +154,7 @@ Neben dieser Version wurde noch etwas anderes gemacht, auch wenn es sich nicht u
 
 ## <a name="c-version-70"></a>C# Version 7.0
 
-Die aktuellste Version ist C# 7.0. Diese Version bietet einige evolutionäre und tolle Aspekte im Stil von C# 6.0, aber ohne den Compiler als Dienst. Hier sind einige der neuen Features:
+Die neueste Hauptversion ist C# 7.0 und wurde mit Visual Studio 2017 veröffentlicht. Diese Version bietet einige evolutionäre und tolle Aspekte im Stil von C# 6.0, aber ohne den Compiler als Dienst. Hier sind einige der neuen Features:
 
 - [Out-Variablen](./csharp-7.md#out-variables)
 - [Tupel und Dekonstruktionen](./csharp-7.md#tuples)

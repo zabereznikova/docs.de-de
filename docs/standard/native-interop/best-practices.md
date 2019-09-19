@@ -6,7 +6,7 @@ ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
 ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/12/2019
 ms.locfileid: "70923771"
@@ -33,7 +33,7 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Behalten Sie den Standardwert bei.  | Wenn diese Einstellung explizit auf „false“ festgelegt wird, werden fehlerhafte HRESULT-Rückgabewerte zu Ausnahmen umgewandelt (und der Rückgabewert in der Definition wird dadurch NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Hängt von der API ab.  | Legen Sie diese Einstellung auf „true“ fest, wenn die API „GetLastError“ verwendet, und verwenden Sie „Marshal.GetLastWin32Error“, um den Wert abzurufen. Wenn die API eine Bedingung festlegt, die besagt, dass ein Fehler vorliegt, rufen Sie den Fehler ab, bevor Sie weitere Aufrufe senden, um ein versehentliches Überschreiben zu verhindern.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` – Fallback auf das Verhalten `CharSet.Ansi`.  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` tatsächlich UTF8 oder Unix ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` – Fallback auf das Verhalten `CharSet.Ansi`.  | Verwenden Sie explizit `CharSet.Unicode` oder `CharSet.Ansi`, wenn in der Definition Zeichenfolgen oder Zeichen vorhanden sind. | Damit wird das Marshallingverhalten von Zeichenfolgen angegeben und festgelegt, was `ExactSpelling` bei `false` ausführt. Beachten Sie, dass `CharSet.Ansi` unter Unix tatsächlich UTF8 ist. _In den meisten Fällen_ verwendet Windows Unicode, Unix verwendet UTF8. Weitere Informationen finden Sie in der [Dokumentation zu Zeichensätzen](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Legen Sie diesen Wert auf „true“ fest, um einen leichten Leistungsvorteil zu erzielen, da die Runtime nicht nach alternativen Funktionsnamen mit dem Suffix „A“ oder „W“ sucht, je nach Wert der Einstellung von `CharSet` („A“ für `CharSet.Ansi` und „W“ für `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Zeichenfolgenparameter
@@ -49,7 +49,7 @@ Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei de
 1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
 2. Aufrufen
    1. Ordnet einen nativen Puffer zu **{2}**  
-   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für einen`StringBuilder`-Parameter)_  
+   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für einen `StringBuilder`-Parameter)_  
    3. Kopiert den nativen Puffer in ein neu zugeordnetes verwaltetes Array im Fall von `[Out]` **{3}** _(ebenfalls Standard für `StringBuilder`)_  
 3. `ToString()` ordnet ein weiteres verwaltetes Array zu **{4}**
 
@@ -143,7 +143,7 @@ IntPtr ptr = handle.AddrOfPinnedObject();
 handle.Free();
 ```
 
-Anheften ist kein Standardvorgang für `GCHandle`. Das andere wichtige Muster sieht so aus: Ein Verweis wird über nativen Code an ein verwaltetes Objekt übergeben und, in der Regel über einen Rückruf, wieder zurückgegeben. Hier sehen Sie das Muster:
+Anheften ist kein Standardvorgang für `GCHandle`. Das andere wichtige Muster sieht so aus: Ein Verweis wird über nativen Code an ein verwaltetes Objekt übergeben und in der Regel über einen Rückruf wieder zurückgegeben. Hier sehen Sie das Muster:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj);
@@ -191,7 +191,7 @@ Die folgenden Typen weisen trotz ihrer Namen die gleiche Größe wie 32- und 64-
 
 Die folgenden Typen sind Zeiger und entsprechen der Breite der Plattform. Verwenden Sie `IntPtr`/`UIntPtr` für diese.
 
-| Signierte Zeigertypen (verwenden Sie `IntPtr`). | Nicht signierte Zeigertypen (verwenden Sie `UIntPtr`). |
+| Signierte Zeigertypen (verwenden Sie `IntPtr`) | Nicht signierte Zeigertypen (verwenden Sie `UIntPtr`) |
 |:------------------------------------|:---------------------------------------|
 | `HANDLE`                            | `WPARAM`                               |
 | `HWND`                              | `UINT_PTR`                             |

@@ -4,12 +4,12 @@ description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliot
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198178"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895215"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ Abhängigkeiten von NuGet-Paketen werden im Artikel [Abhängigkeiten](./dependen
 
 Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nuspec). Die folgende Tabelle enthält die wichtigsten Metadaten, die jedes Paket auf NuGet.org bereitstellen sollte:
 
-| MSBuild-Eigenschaftenname              | NUSPEC-Name              | Beschreibung  |
+| MSBuild-Eigenschaftenname              | NUSPEC-Name              | BESCHREIBUNG  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Der Paketbezeichner. Ein Präfix aus dem Bezeichner kann reserviert werden, wenn es die [Kriterien](/nuget/reference/id-prefix-reservation) erfüllt. |
 | `PackageVersion`                   | `version`                  | Die NuGet-Paketversion. Weitere Informationen finden Sie unter [NuGet-Paketversion](./versioning.md#nuget-package-version).             |
@@ -118,7 +118,7 @@ Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für
 
 > Mit Symbolpaketen (`*.snupkg`) erhalten Entwickler eine gute abrufbare Debugfunktion, ohne dass die Größe des Hauptpakets und die Wiederherstellungsleistung für diejenigen, die das NuGet-Paket nicht debuggen möchten, beeinträchtigt wird.
 >
-> Der Nachteil ist, dass sie den NuGet-Symbolserver in ihrer IDE finden und konfigurieren müssen (einmalige Konfiguration), um Symboldateien abzurufen. Für Visual Studio 2019 ist geplant, dass der Symbolserver von NuGet.org als Standardoption bereitgestellt wird. 
+> Der Nachteil ist, dass Benutzer möglicherweise den NuGet-Symbolserver in ihrer IDE finden und konfigurieren müssen (einmalige Konfiguration), um Symboldateien abzurufen. In Version 16.1 von Visual Studio 2019 wurde der Symbolserver von nuget.org der Liste der Standardsymbolserver hinzugefügt.
 
 >[!div class="step-by-step"]
 >[Zurück](strong-naming.md)

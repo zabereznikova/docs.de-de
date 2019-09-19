@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379934"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853971"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 
@@ -22,15 +22,13 @@ Bei .NET Framework 4.5 handelt es sich um eine weitervertreibbare Laufzeit. We
 
 - **Aufruf**. Um das .NET Framework 4.5-Setup aufzurufen und Statusinformationen aus dem MMIO-Abschnitt zu empfangen, muss das Setupprogramm folgende Aktionen ausführen:
 
-    1. Aufrufen des weitervertreibbaren .NET Framework 4.5-Programms:
+    1. Aufrufen des weitervertreibbaren .NET Framework 4.5-Programms:
 
-        ```
-        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
-        ```
+        `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
         Dabei ist *Abschnittname* ein beliebiger Name, mit dem Sie die App identifizieren. Das .NET Framework-Setup liest und schreibt asynchron aus dem/in den MMIO-Abschnitt. Daher ist es möglicherweise hilfreich, während dieser Zeit Ereignisse und Meldungen zu verwenden. Im Beispiel wird der .NET Framework-Setupvorgang von einem Konstruktor erstellt, der sowohl den MMIO-Abschnitt (`TheSectionName`) zuordnet als auch ein Ereignis (`TheEventName`) definiert.
 
-        ```
+        ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 

@@ -1,13 +1,13 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
-ms.date: 09/04/2019
-ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 09/10/2019
+ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374011"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926526"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -26,6 +26,7 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits au
 - [Nullwerte zulassende Verweistypen](#nullable-reference-types)
 - [Asynchrone Streams](#asynchronous-streams)
 - [Indizes und Bereiche](#indices-and-ranges)
+- [NULL-Coalescing-Zuweisung](#null-coalescing-assignment)
 - [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
 - [Erweiterung von interpolierten ausführlichen Zeichenfolgen](#enhancement-of-interpolated-verbatim-strings)
 
@@ -447,6 +448,24 @@ var text = words[phrase];
 ```
 
 Weitere Informationen zu Indizes und Bereichen finden Sie im Tutorial zu [Indizes und Bereichen](../tutorials/ranges-indexes.md).
+
+## <a name="null-coalescing-assignment"></a>NULL-Coalescing-Zuweisung
+
+In C# 8.0 wird der NULL-Coalescing-Zuweisungsoperator `??=` eingeführt. Sie können den `??=`-Operator verwenden, um den Wert des rechten Operanden dem linken Operanden nur dann zuzuweisen, wenn die Auswertung des linken Operanden `null` ergibt.
+
+```csharp
+List<int> numbers = null;
+int? i = null;
+
+numbers ??= new List<int>();
+numbers.Add(i ??= 17);
+numbers.Add(i ??= 20);
+
+Console.WriteLine(string.Join(' ', numbers));  // output: 17 17
+Console.WriteLine(i);  // output: 17
+```
+
+Weitere Informationen finden Sie im Artikel zu den Operatoren [?? und ??=](../language-reference/operators/null-coalescing-operator.md).
 
 ## <a name="unmanaged-constructed-types"></a>Nicht verwaltete konstruierte Typen
 

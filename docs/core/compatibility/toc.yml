@@ -2,7 +2,7 @@
   items:
     - name: Bewerten von Breaking Changes
       href: index.md
-    - name: Breaking Changes
-      href: breaking-changes.md
     - name: Breaking Change-Kategorien
       href: categories.md
+    - name: Breaking Changes
+      href: breaking-changes.md

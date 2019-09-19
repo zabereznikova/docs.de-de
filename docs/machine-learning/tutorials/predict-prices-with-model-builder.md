@@ -3,15 +3,15 @@ title: Vorhersagen von Preisen per Regression mit dem Modell-Generator
 description: In diesem Tutorial wird veranschaulicht, wie mit dem ML.NET-Modell-Generator ein Regressionsmodell für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 07/15/2019
+ms.date: 09/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107143"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991346"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
@@ -21,6 +21,7 @@ Die Preisvorhersagevorlage des Modell-Generators kann für jedes Szenario verwen
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Vorbereiten und Verstehen der Daten
 > - Auswählen eines Szenarios
 > - Laden der Daten
@@ -88,17 +89,9 @@ Der Modellgenerator akzeptiert Daten aus zwei Quellen: aus einer SQL Server-Dat
 
 Die in diesem Tutorial zum Trainieren des Preisvorhersagemodells verwendete Machine Learning-Aufgabe ist die Regression. Während des Modelltrainings trainiert der Modell-Generator einzelne Modelle mit verschiedenen Regressionsalgorithmen und Einstellungen, um das leistungsfähigste Modell für Ihr Dataset zu finden.
 
-Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional zur Datenmenge. Verwenden Sie diese Tabelle als Orientierungshilfe, um einen geeigneten Wert für das Feld `Time to train (seconds)` auszuwählen:
+Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional zur Datenmenge. Der Modell-Generator legt automatisch einen Standardwert für **Time to train (seconds)** (Trainingszeit (Sekunden)) basierend auf der Größe der Datenquelle fest.
 
-*Datasetgröße  | Datasettyp       | Durchschn. Trainingszeit*
-------------- | ------------------ | --------------
-0 bis 10 MB     | Numerisch und Text   | 10 Sek.
-10 bis 100 MB   | Numerisch und Text   | 10 Min.
-100 bis 500 MB  | Numerisch und Text   | 30 Min.
-500 MB bis 1 GB    | Numerisch und Text   | 60 Min.
-1 GB+         | Numerisch und Text   | 3 Stunden +
-
-1. Da die Trainingsdatendatei mehr als 10 MB umfasst, verwenden Sie 600 Sekunden (10 Minuten) als Wert für *Trainingszeit (Sekunden)* .
+1. Ändern Sie den Standardwert für *Time to train (seconds)* (Trainingszeit (Sekunden)) nur, wenn Sie eine längere Trainingszeit angeben möchten.
 2. Wählen Sie *Training starten* aus.
 
 Während des gesamten Trainingsprozesses werden die Fortschrittsdaten im Abschnitt `Progress` des Schritts „Trainieren“ angezeigt.
@@ -190,6 +183,7 @@ Wenn Sie zu einem späteren Zeitpunkt innerhalb einer anderen Projektmappe auf d
 
 In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
+>
 > - Vorbereiten und Verstehen der Daten
 > - Auswählen eines Szenarios
 > - Laden der Daten

@@ -2,12 +2,12 @@
 title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.date: 02/19/2019
-ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: e66d74cdde3b3de9ec3f1b435cdbd3e3b24c2663
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195921"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851062"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -56,20 +56,18 @@ Die NULL-Zulässigkeit eines Typs in einer Variablendeklaration wird durch den *
 
 ## <a name="nullable-contexts"></a>Nullable-Kontexte
 
-Nullable-Kontexte ermöglichen eine differenzierte Steuerung der Interpretation von Verweistypvariablen durch den Compiler. Der **Nullable-Anmerkungskontext** jeder beliebigen Quellzeile ist `enabled` oder `disabled`. Der Compiler vor C# 8 hat all Ihren Code in einem `disabled`-Nullable-Kontext kompiliert: Alle Verweistypen sind möglicherweise NULL. Der **Nullable-Warnungskontext** wird möglicherweise auf `enabled`, `disabled` oder `safeonly` festgelegt. Der Nullable-Warnungskontext gibt die vom Compiler generierten Warnungen mithilfe der Flussanalyse an.
+Nullable-Kontexte ermöglichen eine differenzierte Steuerung der Interpretation von Verweistypvariablen durch den Compiler. Der **Nullable-Anmerkungskontext** jeder beliebigen Quellzeile ist `enabled` oder `disabled`. Der Compiler vor C# 8 hat all Ihren Code in einem `disabled`-Nullable-Kontext kompiliert: Alle Verweistypen sind möglicherweise NULL. Der **Nullable-Warnungskontext** wird möglicherweise auf `enabled` oder `disabled` festgelegt. Der Nullable-Warnungskontext gibt die vom Compiler generierten Warnungen mithilfe der Flussanalyse an.
 
 Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein Projekt festgelegt werden, indem Sie das `Nullable`-Element in Ihrer `csproj`-Datei verwenden. Dieses Element konfiguriert, wie der Compiler die NULL-Zulässigkeit von Typen interpretiert und welche Warnungen generiert werden. Gültige Einstellungen sind folgende:
 
 - `enable`: Der Nullable-Anmerkungskontext ist **enabled** (aktiviert). Der Nullable-Warnungskontext ist **enabled** (aktiviert).
   - Variablen eines Verweistyps wie `string` sind „non-nullable“ (nicht-nullable).  Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
-- `disable`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
-  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend), wie in früheren Versionen von C#. Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
-- `safeonly`: Der Nullable-Anmerkungskontext ist **enabled** (aktiviert). Der Nullable-Warnungskontext ist **safeonly** (nur sicher).
-  - Variablen eines Verweistyps sind „nonnullable“ (nicht-nullable). Alle NULL-Zulässigkeitswarnungen zur Sicherheit sind „enabled“ (aktiviert).
 - `warnings`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **enabled** (aktiviert).
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
-- `safeonlywarnings`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **safeonly** (nur sicher).
-  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen zur Sicherheit sind „enabled“ (aktiviert).
+- `annotations`: Der Nullable-Anmerkungskontext ist **enabled** (aktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
+  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
+- `disable`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
+  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend), wie in früheren Versionen von C#. Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
 
 > [!IMPORTANT]
 > Das `Nullable`-Element hieß früher `NullableContextOptions`. Die Umbenennung erfolgt in Visual Studio 2019, 16.2-p1. Das .NET Core SDK 3.0.100-preview5-011568 umfasst diese Änderung nicht. Wenn Sie die .NET Core-CLI verwenden, müssen Sie `NullableContextOptions`weiter verwenden, bis die nächste Vorschauversion verfügbar ist.
@@ -78,21 +76,12 @@ Sie können auch Anweisungen verwenden, um diese Kontexte überall in Ihrem Proj
 
 - `#nullable enable`: Legt den Nullable-Anmerkungskontext und den Nullable-Warnungskontext auf **enabled** (aktiviert) fest.
 - `#nullable disable`: Legt den Nullable-Anmerkungskontext und den Nullable-Warnungskontext auf **disabled** (deaktiviert) fest.
-- `#nullable safeonly`: Legt den Nullable-Anmerkungskontext auf **enabled** (aktiviert) und den Nullable-Warnungskontext auf **safeonly** (nur sicher) fest.
 - `#nullable restore`: Stellt die Projekteinstellungen für den Nullable-Anmerkungskontext und den Nullable-Warnungskontext wieder her.
 - `#pragma warning disable nullable`: Legt den Nullable-Warnungskontext auf **disabled** (deaktiviert) fest.
 - `#pragma warning enable nullable`: Legt den Nullable-Warnungskontext auf **enabled** (aktiviert) fest.
 - `#pragma warning restore nullable`: Stellt die Projekteinstellungen für den Nullable-Warnungskontext wieder her.
-- `#pragma warning safeonly nullable`: Legt den Nullable-Warnungskontext auf **safeonly** (nur sicher) fest.
 
 Die Standardeinstellung für den Nullable-Anmerkungskontext und -Warnungskontext ist `disabled`. Diese Entscheidung bedeutet, dass Ihr vorhandener Code ohne Änderungen und ohne Warnungen kompiliert wird.
-
-Die Unterschiede zwischen den Nullable-Warnungskontexten `enabled` und `safeonly` sind Warnungen beim Zuweisen eines Nullable-Verweises zu einem Nicht-Nullable-Verweis. Die folgende Zuweisung generiert eine Warnung in einem `enabled`-Warnungskontext, jedoch nicht in einem `safeonly`-Warnungskontext. Jedoch generiert die zweite Zeile, in der `s` dereferenziert wird, eine Warnung in einem `safeonly`-Kontext:
-
-```csharp
-string s = null; // warning when nullable warning context is enabled.
-var txt = s.ToString(); // warning when nullable warnings context is safeonly, or enabled.
-```
 
 ### <a name="nullable-annotation-context"></a>Nullable-Anmerkungskontext
 
@@ -121,7 +110,7 @@ Der Nullable-Warnungskontext unterscheidet sich vom Nullable-Anmerkungskontext. 
 1. Die Variable wurde definitiv einem Wert ungleich NULL zugewiesen.
 1. Die Variable oder der Ausdruck wurde vor der Dereferenzierung auf NULL überprüft.
 
-Der Compiler generiert Warnungen, wenn Sie eine Variable oder einen Ausdruck im Zustand **maybe null** (vielleicht NULL) dereferenzieren und der Nullable-Warnungskontext `enabled` oder `safeonly` ist. Darüber hinaus werden Warnungen generiert, wenn eine Variable oder ein Ausdruck im Zustand **maybe null** (vielleicht NULL) einem Nicht-Nullable-Verweistyp zugewiesen wird und der Nullable-Anmerkungskontext `enabled` ist.
+Der Compiler generiert Warnungen, wenn Sie eine Variable oder einen Ausdruck im Zustand **maybe null** (vielleicht NULL) dereferenzieren und der Nullable-Warnungskontext `enabled` ist. Darüber hinaus werden Warnungen generiert, wenn eine Variable oder ein Ausdruck im Zustand **maybe null** (vielleicht NULL) einem Nicht-Nullable-Verweistyp zugewiesen wird und der Nullable-Anmerkungskontext `enabled` ist.
 
 ## <a name="learn-more"></a>Weitere Informationen
 

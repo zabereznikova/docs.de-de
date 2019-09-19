@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463812"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850990"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -18,7 +18,7 @@ Dieses Tutorial macht Sie mit der Vererbung in C# vertraut. Vererbung ist eine F
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-In diesem Tutorial wird vorausgesetzt, dass Sie .NET Core installiert haben. Installationsanweisungen finden Sie im [.NET Core-Installationshandbuch](https://www.microsoft.com/net/core). Sie benötigen auch einen Code-Editor. In diesem Tutorial wird [Visual Studio Code](https://code.visualstudio.com) verwendet, obwohl Sie einen Code-Editor Ihrer Wahl verwenden können.
+In diesem Tutorial wird vorausgesetzt, dass Sie das .NET Core SDK installiert haben. Sie können dieses auf der Seite [.NET Core-Downloads](https://dotnet.microsoft.com/download) herunterladen. Sie benötigen auch einen Code-Editor. In diesem Tutorial wird [Visual Studio Code](https://code.visualstudio.com) verwendet, obwohl Sie einen Code-Editor Ihrer Wahl verwenden können.
 
 ## <a name="running-the-examples"></a>Ausführen der Beispiele
 

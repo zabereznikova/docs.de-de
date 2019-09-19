@@ -49,13 +49,13 @@ Der unäre Inkrementoperator (`++`) erhöht seinen Operanden um 1. Der Operand m
 
 Der Inkrementoperator wird in zwei Formen unterstützt: als Postfix-Inkrementoperator `x++` und als Präfix-Inkrementoperator `++x`.
 
-### <a name="postfix-increment-operator"></a>Postfix-Operator für Inkrement
+### <a name="postfix-increment-operator"></a>Postfix-Inkrementoperator
 
 Das Ergebnis von `x++` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
 [!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
 
-### <a name="prefix-increment-operator"></a>Präfixinkrement-Operator
+### <a name="prefix-increment-operator"></a>Präfix-Inkrementoperator
 
 Das Ergebnis von `++x` ist der Wert von `x` *nach* dem Vorgang, wie das folgende Beispiel zeigt:
 
@@ -67,7 +67,7 @@ Der unäre Dekrementoperator `--` verringert seinen Operanden um 1. Der Operand 
 
 Der Dekrementoperator wird in zwei Formen unterstützt: als Postfix-Dekrementoperator `x--` und als Präfix-Dekrementoperator `--x`.
 
-### <a name="postfix-decrement-operator"></a>Postfix-Operator für Dekrement
+### <a name="postfix-decrement-operator"></a>Postfix-Dekrementoperator
 
 Das Ergebnis von `x--` ist der Wert von `x` *vor* dem Vorgang, wie das folgende Beispiel zeigt:
 
@@ -137,7 +137,7 @@ Für die Operanden `float` und `double` entspricht das Ergebnis von `x % y` für
 - der absolute Wert von `z` dem von `|x| - n * |y|` erzeugten Wert entspricht, wobei `n` der größtmöglichen Ganzzahl entspricht, die kleiner oder gleich `|x| / |y|` ist. Hierbei sind `|x|` und `|y|` jeweils die absoluten Werte von `x` und `y`.
 
 > [!NOTE]
-> Diese Methode zum Berechnen des Rests ist analog zu der Methode, die für ganzzahlige Operanden verwendet wird, unterscheidet sich jedoch von der Norm IEEE 754. Wenn Sie den Restvorgang benötigen, der der Norm IEEE 754 entspricht, verwenden Sie die Methode <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
+> Diese Methode zum Berechnen des Rests ist analog zu der Methode, die für ganzzahlige Operanden verwendet wird, unterscheidet sich jedoch von der Norm IEEE 754. Wenn Sie die Restberechnung benötigen, die der Norm IEEE 754 entspricht, verwenden Sie die Methode <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.
 
 Weitere Informationen zum Verhalten des `%`-Operators bei nicht begrenzten Operanden finden Sie im Abschnitt [Restoperator](~/_csharplang/spec/expressions.md#remainder-operator) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
@@ -165,13 +165,13 @@ Der `-`-Operator kann auch für die Delegatentfernung verwendet werden. Weitere 
 
 ## <a name="compound-assignment"></a>Verbundzuweisung
 
-Bei einem binären Operator `op` entspricht ein Verbundzuweisungsausdruck der Form
+Bei einem binären Operator `op` ist ein Verbundzuweisungsausdruck in der Form
 
 ```csharp
 x op= y
 ```
 
-für die folgende Syntax:
+gleichbedeutend mit
 
 ```csharp
 x = x op y
