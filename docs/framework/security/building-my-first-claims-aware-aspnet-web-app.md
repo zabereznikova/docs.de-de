@@ -3,12 +3,12 @@ title: Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: db5060826d3bfcc259c098a160354892a050554c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 900ee49b4bf51eeb6e3b0c0cf6879cc12a0cb071
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045592"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Erstellen meiner ersten Ansprüche unterstützenden ASP.NET Web-Anwendung
 ## <a name="applies-to"></a>Gilt für  
@@ -19,7 +19,7 @@ ms.locfileid: "67422391"
   
  In diesem Thema wird beschrieben, wie Ansprüche unterstützende ASP.NET-Webanwendungen mithilfe von WIF erstellt werden. Normalerweise sind an einem Szenario mit Ansprüche unterstützenden Anwendungen drei Parteien beteiligt: die Anwendung selbst, der Endbenutzer und der Sicherheitstokendienst (STS). Die folgende Abbildung beschreibt dieses Szenario:  
   
- ![Das Diagramm zeigt eine WIF Basic Web-App-Komponenten.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
+ ![Das Diagramm zeigt eine grundlegende WIF-Web-App-Komponente.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1. Die Ansprüche unterstützende Anwendung verwendet WIF, um nicht authentifizierte Anforderungen zu identifizieren und an den STS umzuleiten.  
   
@@ -33,20 +33,20 @@ ms.locfileid: "67422391"
   
  STS ist ein Dienst, der Token nach erfolgreicher Authentifizierung ausgibt. Microsoft bietet zwei STS-Dienste nach Industriestandard an:  
   
-- [Active Directory-Verbunddienste (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
+- [Active Directory-Verbunddienste (AD FS) (AD FS) 2,0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
-- [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
+- [Windows Azure-Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 ist Bestandteil von Windows Server R2 und kann als STS für lokale Szenarien verwendet werden. ACS ist ein Cloud-Dienst, der im Rahmen der Microsoft Azure-Plattform angeboten wird. Zu Test- oder Schulungszwecken können Sie auch andere STS verwenden, um die Ansprüche unterstützenden Anwendungen zu erstellen. Beispielsweise können Sie den lokalen Entwicklungs-STS, der Teil der [Identitäts- und Zugriffstool für Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) das kostenlos online erhältlich ist.  
+ AD FS 2.0 ist Bestandteil von Windows Server R2 und kann als STS für lokale Szenarien verwendet werden. ACS ist ein Cloud-Dienst, der im Rahmen der Microsoft Azure-Plattform angeboten wird. Zu Test- oder Schulungszwecken können Sie auch andere STS verwenden, um die Ansprüche unterstützenden Anwendungen zu erstellen. Beispielsweise können Sie den lokalen Entwicklungs-STS verwenden, der Teil des [Identitäts-und Zugriffs Tools für Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) ist, das kostenlos online verfügbar ist.  
   
  Um die erste Ansprüche unterstützende ASP.NET-Anwendung mithilfe von WIF zu erstellen, befolgen Sie die Anweisungen in einem der folgenden Abschnitte:  
   
-- [How To: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Web-Anwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+- [How To: Erstellen von Ansprüche unterstützenden ASP.NET MVC-Webanwendungen mithilfe von WIF](how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-- [How To: Erstellen von Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+- [How To: Erstellen von Ansprüche unterstützenden ASP.net Web Forms Anwendung mithilfe von WIF](how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-- [How To: Erstellen von Ansprüche unterstützenden ASP.NET-Anwendung mithilfe der formularbasierten Authentifizierung](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+- [How To: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Formular basierter Authentifizierung](claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit WIF](../../../docs/framework/security/getting-started-with-wif.md)
+- [Erste Schritte mit WIF](getting-started-with-wif.md)

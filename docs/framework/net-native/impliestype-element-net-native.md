@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType> (Element (.NET Native)
+title: <ImpliesType>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616688"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049677"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > (Element (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<Impliestype-> Element (.net Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -59,7 +59,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -68,9 +68,9 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
+|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
+|[\<Method>](method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `<ImpliesType>`-Element dient in erster Linie der Verwendung durch Bibliotheken. Es wird in folgendem Szenario eingesetzt:  
@@ -99,7 +99,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
- Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Angenommen, eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , die eine angegebene Bibliothek wird dynamisch zugreift, zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601> und <xref:System.Array> Typen. Dies kann folgendermaßen ausgedrückt werden:  
+ Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich zum Beispiel eine generische `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` Methode vor, auf die eine bestimmte Bibliothek zusammen mit den <xref:System.Collections.Generic.List%601> zugehörigen <xref:System.Array> -und-Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
   
 ```xml  
 <Type Name="MyType">  
@@ -112,6 +112,6 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
+- [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

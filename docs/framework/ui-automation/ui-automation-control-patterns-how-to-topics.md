@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: fea9bf959a0537ead01f27bbeb43874d0e5408df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5d75eddd5314067a364bc8e76108ee7794bcfda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953099"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042367"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Hilfethemen zum Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -21,8 +21,8 @@ ms.locfileid: "69953099"
  Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Steuerelementmustern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](expose-the-content-of-a-table-using-ui-automation.md)  
+ [Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung](get-supported-ui-automation-control-patterns.md)  
+ [Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](invoke-a-control-using-ui-automation.md)  
+ [Move a UI Automation Element](move-a-ui-automation-element.md)

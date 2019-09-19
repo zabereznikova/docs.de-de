@@ -2,12 +2,12 @@
 title: Listen
 description: Erfahren Sie F# mehr überlisten, eine geordnete, unveränderliche Reihe von Elementen desselben Typs.
 ms.date: 05/16/2016
-ms.openlocfilehash: e8c4a464306cfedfd36a4685507684d3a1a97a2e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 72f1779d7d077da0f1f4804df93fa4ac11f9b2e3
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630729"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71082911"
 ---
 # <a name="lists"></a>Listen
 
@@ -99,7 +99,7 @@ Die Funktion `RemoveAllMultiples` ist eine rekursive Funktion, die zwei Listen �
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 Primes Up To 100:
 [2; 3; 5; 7; 11; 13; 17; 19; 23; 29; 31; 37; 41; 43; 47; 53; 59; 61; 67; 71; 73; 79; 83; 89; 97]
 ```
@@ -120,7 +120,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung von `List.exists`.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 For list [0; 1; 2; 3], contains zero is true
 ```
 
@@ -130,7 +130,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von `List.exists2`.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 Lists [1; 2; 3; 4; 5] and [5; 4; 3; 2; 1] have at least one equal element at the same position.
 ```
 
@@ -140,7 +140,7 @@ Sie können [List. ForAll](https://msdn.microsoft.com/library/e11a5233-d612-40ac
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 true
 false
 ```
@@ -151,7 +151,7 @@ Auf ähnliche Weise bestimmt [List. forall2](https://msdn.microsoft.com/library/
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 true
 false
 ```
@@ -168,7 +168,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von `List.sort`.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [-2; 1; 4; 5; 8]
 ```
 
@@ -178,7 +178,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von `List.sortBy`.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [1; -2; 4; 5; 8]
 ```
 
@@ -188,7 +188,7 @@ Das nächste Beispiel veranschaulicht die Verwendung von `List.sortWith`. In die
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [{ID = 92;
 Rev = 1;}; {ID = 92;
 Rev = 1;}; {ID = 100;
@@ -213,7 +213,7 @@ Wenn die Elemente zuerst transformiert werden müssen, nennen Sie [List. Pick](h
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 "b"
 ```
 
@@ -223,7 +223,7 @@ Eine andere Gruppe von Such Vorgängen, [List. tryFind](https://msdn.microsoft.c
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 The first even value is 22.
 The first even value is at position 8.
 ```
@@ -252,7 +252,7 @@ Listen, die Tupel enthalten, können mithilfe von Funktionen zum Zippen und Entz
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [(1, -1); (2, -2); (3; -3)]
 ```
 
@@ -262,7 +262,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung von `List.zip3`.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
@@ -274,7 +274,7 @@ Im folgenden Codebeispiel wird die Verwendung von [List. unzip](https://msdn.mic
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 ([1; 3], [2; 4])
 [1; 3] [2; 4]
 ```
@@ -285,7 +285,7 @@ Im folgenden Codebeispiel wird die Verwendung von [List. unzip3](https://msdn.mi
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 ([1; 4], [2; 5], [3; 6])
 ```
 
@@ -297,7 +297,7 @@ F# unterstützt eine Vielzahl von Operationen mit Listenelementen. Das einfachst
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 List.iter: element is 1
 List.iter: element is 2
 List.iter: element is 3
@@ -318,7 +318,7 @@ Eine weitere häufig verwendete Funktion zum Transformieren von Listenelementen 
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [2; 3; 4]
 ```
 
@@ -328,7 +328,7 @@ Im folgenden Beispiel wird eine Verwendung von `List.map2` gezeigt.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [5; 7; 9]
 ```
 
@@ -338,7 +338,7 @@ Im folgenden Beispiel wird eine Verwendung von `List.map3` gezeigt.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [7; 10; 13]
 ```
 
@@ -348,7 +348,7 @@ Im folgenden Beispiel wird eine Verwendung von `List.mapi` gezeigt.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [1; 3; 5]
 ```
 
@@ -358,7 +358,7 @@ Im folgenden Beispiel wird eine Verwendung von `List.mapi2` gezeigt.
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [0; 7; 18]
 ```
 
@@ -368,7 +368,7 @@ Die Ausgabe lautet wie folgt:
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 [1; 2; 3; 2; 4; 6; 3; 6; 9]
 ```
 
@@ -386,7 +386,7 @@ Der folgende Code veranschaulicht die Verwendung von `List.choose`, um Wörter i
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 ["Rome's"; "Bob's"]
 ```
 
@@ -436,7 +436,7 @@ Im folgenden Code erhält der Lambda-Ausdruck die Argumente "2" und "4" und gibt
 
 ### <a name="converting-between-lists-and-other-collection-types"></a>Konvertieren zwischen Listen und anderen Auflistungstypen
 
-Das `List`-Modul stellt Funktionen zum Konvertieren von Sequenzen in Arrays und umgekehrt bereit. Um in eine oder aus einer Sequenz zu konvertieren, verwenden Sie [List.](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) desetq oder [List. of-q](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). Wenn Sie in ein oder aus einem Array konvertieren möchten, verwenden Sie [List.-Array](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) oder [List. ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
+Das `List`-Modul stellt Funktionen zum Konvertieren von Sequenzen in Arrays und umgekehrt bereit. Um in eine oder aus einer Sequenz zu konvertieren, verwenden Sie [List. desetq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) oder [List. of-q](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). Wenn Sie in ein oder aus einem Array konvertieren möchten, verwenden Sie [List.-Array](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) oder [List. ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
 
 ### <a name="additional-operations"></a>Weitere Operationen
 

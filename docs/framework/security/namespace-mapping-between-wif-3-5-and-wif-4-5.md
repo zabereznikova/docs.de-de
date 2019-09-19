@@ -3,16 +3,16 @@ title: Namespacezuordnung zwischen WIF 3.5 und WIF 4.5
 ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
-ms.openlocfilehash: ef5801ccfdda22b1c89c22ea9c2b14ea0855ed26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d967ce931e81ca14645e7464943e1411264d6ca2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670032"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045406"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>Namespacezuordnung zwischen WIF 3.5 und WIF 4.5
 
-Ab .NET 4.5 wurde Windows Identity Foundation (WIF) vollständig in das .NET Framework integriert. Durch diese Integration sind Namensänderungen und einige Konsolidierungen der WIF-Namespaces und der API-Oberfläche entstanden. Diese Thema enthält Empfehlungen und eine allgemeine Zuordnung zwischen den WIF 3.5-Namespaces und den WIF 4.5-Namespaces. Es hat keinen Anspruch auf Vollständigkeit, sondern stellt einige allgemeine Informationen darüber bereit, wo bekannte WIF 3.5-Klassen in WIF 4.5 zu finden sind. Ausführliche Informationen zu den Unterschieden zwischen WIF 3.5 und WIF 4.5 finden Sie unter [What's New in Windows Identity Foundation 4.5 (Neuerungen in Windows Identity Foundation 4.5)](../../../docs/framework/security/whats-new-in-wif.md). Empfehlungen zum Migrieren einer mithilfe von WIF 3.5 erstellten Anwendung zu WIF 4.5 finden Sie unter [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5 (Richtlinien zum Migrieren einer mithilfe von WIF 3.5 erstellten Anwendung zu WIF 4.5)](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).
+Ab .NET 4.5 wurde Windows Identity Foundation (WIF) vollständig in das .NET Framework integriert. Durch diese Integration sind Namensänderungen und einige Konsolidierungen der WIF-Namespaces und der API-Oberfläche entstanden. Diese Thema enthält Empfehlungen und eine allgemeine Zuordnung zwischen den WIF 3.5-Namespaces und den WIF 4.5-Namespaces. Es hat keinen Anspruch auf Vollständigkeit, sondern stellt einige allgemeine Informationen darüber bereit, wo bekannte WIF 3.5-Klassen in WIF 4.5 zu finden sind. Ausführliche Informationen zu den Unterschieden zwischen WIF 3.5 und WIF 4.5 finden Sie unter [What's New in Windows Identity Foundation 4.5 (Neuerungen in Windows Identity Foundation 4.5)](whats-new-in-wif.md). Empfehlungen zum Migrieren einer mithilfe von WIF 3.5 erstellten Anwendung zu WIF 4.5 finden Sie unter [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5 (Richtlinien zum Migrieren einer mithilfe von WIF 3.5 erstellten Anwendung zu WIF 4.5)](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).
 
 ## <a name="wif-35-to-wif-45-namespace-map"></a>Namespace-Zuordnung WIF 3.5 zu WIF 4.5
 
@@ -48,5 +48,5 @@ Die folgende Tabelle enthält Informationen dazu, wo WIF 3.5-Klassen in WIF 4.5 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuerungen in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
-- [Richtlinien für die Migration einer mit WIF 3.5 bis WIF 4.5 erstellten Anwendung](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [Neuerungen in Windows Identity Foundation 4.5](whats-new-in-wif.md)
+- [Richtlinien für die Migration einer mit WIF 3.5 bis WIF 4.5 erstellten Anwendung](guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

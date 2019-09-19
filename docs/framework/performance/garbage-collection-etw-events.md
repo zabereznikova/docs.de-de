@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616420"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046494"
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen. Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.  
@@ -49,8 +49,8 @@ ms.locfileid: "64616420"
 - [GCTerminateConcurrentThread_V1-Ereignis](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>GCStart_V1-Ereignis  
- Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+## <a name="gcstart_v1-event"></a>GCStart_V1-Ereignis  
+ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
@@ -75,7 +75,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>GCEnd_V1-Ereignis  
+## <a name="gcend_v1-event"></a>GCEnd_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -99,7 +99,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1-Ereignis  
+## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -134,7 +134,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1-Ereignis  
+## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -161,7 +161,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1-Ereignis  
+## <a name="gcfreesegment_v1-event"></a>GCFreeSegment_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -184,7 +184,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1-Ereignis  
+## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -202,7 +202,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1-Ereignis  
+## <a name="gcrestarteeend_v1-event"></a>GCRestartEEEnd_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -220,7 +220,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1-Ereignis  
+## <a name="gcsuspendee_v1-event"></a>GCSuspendEE_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -244,7 +244,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1-Ereignis  
+## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -262,7 +262,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2-Ereignis  
+## <a name="gcallocationtick_v2-event"></a>GCAllocationTick_V2-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -290,7 +290,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1-Ereignis  
+## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -308,7 +308,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1-Ereignis  
+## <a name="gcfinalizersend_v1-event"></a>GCFinalizersEnd_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -331,7 +331,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1-Ereignis  
+## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -350,7 +350,7 @@ ms.locfileid: "64616420"
  [Zurück nach oben](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1-Ereignis  
+## <a name="gcterminateconcurrentthread_v1-event"></a>GCTerminateConcurrentThread_V1-Ereignis  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -368,4 +368,4 @@ ms.locfileid: "64616420"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+- [CLR-ETW-Ereignisse](clr-etw-events.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817934"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053367"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Systemeigene WPF-APIs mit Unterstützung für das Hosten in Browsern
 Das Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Anwendungen in Webbrowsern wird durch einen aktiven Dokument Server (auch als DocObject bezeichnet) ermöglicht, der beim WPF-Host registriert ist. Internet Explorer kann direkt aktiviert und in ein aktives Dokument integriert werden. Zum Hosting von XBAPs und losen XAML-Dokumenten in Mozilla- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Browsern bietet ein NPAPI-Plug-in, das eine ähnliche Hostingumgebung wie in Internet Explorer für den [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aktiven Dokument Server bereitstellt. Die einfachste Möglichkeit zum Hosten von XBAPs-und XAML-Dokumenten in anderen Browsern und eigenständigen Anwendungen ist jedoch das Internet Explorer-Webbrowser-Steuerelement. Das WebBrowser-Steuerelement stellt die komplexe aktive Dokument Server-Hostingumgebung bereit, ermöglicht aber seinen eigenen Host, diese Umgebung anzupassen und zu erweitern und direkt mit dem aktuellen aktiven Dokument Objekt zu kommunizieren.  
@@ -22,7 +22,7 @@ Das Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptl
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  Die [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) -Implementierung des aktiven WPF-Dokument Servers unterstützt zahlreiche Navigations bezogene und browserspezifische Befehle der Standard-OLE-Befehlsgruppe (mit einer Befehls Gruppen-GUID mit null). Außerdem wird eine benutzerdefinierte Befehlsgruppe mit dem Namen CGID_PresentationHost erkannt. Zurzeit ist nur ein Befehl innerhalb dieser Gruppe definiert.  
   
-```  
+```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
 enum PresentationHostCommands {   
    PHCMDID_TABINTO = 1   

@@ -1,17 +1,17 @@
 ---
-title: <Namespace> (Element (.NET Native)
+title: <Namespace>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be004776d2a2fd3b4c41fb21b3ac244946f2166
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866911"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049428"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace > (Element (.NET Native)
+# <a name="namespace-element-net-native"></a>\<Namespace > Element (.net Native)
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Namespace an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -53,38 +53,38 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*namespace_name*|Der Namespacename. Wenn das \<Namespace>-Element ein untergeordnetes Element des [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)- oder [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Elements ist, muss *namespace_name* ein vollqualifizierter Namespacename sein. Wenn das \<Namespace>-Element ein untergeordnetes Element eines anderen \<Namespace>-Elements ist, muss *namespace_name* ein relativer Namespacename sein.|  
+|*namespace_name*|Der Namespacename. Wenn das \<Namespace>-Element ein untergeordnetes Element des [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md)- oder [\<Assembly>](assembly-element-net-native.md)-Elements ist, muss *namespace_name* ein vollqualifizierter Namespacename sein. Wenn das \<Namespace>-Element ein untergeordnetes Element eines anderen \<Namespace>-Elements ist, muss *namespace_name* ein relativer Namespacename sein.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für alle Typen im Namespace angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für alle Typen im Namespace angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`<Namespace>`|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem übergeordneten Namespace an.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ an.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
+|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ an.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)-Element kann 0, ein oder mehrere [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Elemente aufweisen.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element kann 0 oder ein [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Element aufweisen.|  
+|[\<Application>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](application-element-net-native.md)-Element kann 0, ein oder mehrere [\<Assembly>](assembly-element-net-native.md)-Elemente aufweisen.|  
+|[\<Assembly>](assembly-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
+|[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Library>](library-element-net-native.md)-Element kann 0 oder ein [\<Assembly>](assembly-element-net-native.md)-Element aufweisen.|  
 |`<Namespace>`|Wendet die Reflektionsrichtlinie auf alle Typen in einem übergeordneten Namespace an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Attribute `Activate`, `Browse`, `Dynamic` und `Serialize` sind optional. Wenn keine vorhanden sind, dient das `<Namespace>`-Element nur als Container für untergeordnete Elemente. Wenn sie vorhanden sind, wendet das `<Namespace>`-Element eine Laufzeitreflektionsrichtlinie auf alle Typen im angegebenen Namespace an.  
   
- Wenn es sich um ein untergeordnetes Element des [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Elements handelt, überschreibt das `<Namespace>`-Element die Laufzeitreflektionsrichtlinie, die vom [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Element definiert wird.  
+ Wenn es sich um ein untergeordnetes Element des [\<Assembly>](assembly-element-net-native.md)-Elements handelt, überschreibt das `<Namespace>`-Element die Laufzeitreflektionsrichtlinie, die vom [\<Assembly>](assembly-element-net-native.md)-Element definiert wird.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

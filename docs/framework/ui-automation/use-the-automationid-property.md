@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 3d1e514b1ff5f71982a3c0d35cfc190ff9327b4e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044091"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040339"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "70044091"
   
  Dieses Thema enthält Szenarien und Codebeispiele zum Veranschaulichen, wie und wann Sie die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwenden können, um ein Element in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur zu suchen.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> unterscheidet ein Automatisierungselement eindeutig von dessen nebengeordneten Elementen. Weitere Informationen zu Eigenschaftenbezeichnern, die zur Identifikation von Steuerelementen dienen, finden Sie unter [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> unterscheidet ein Automatisierungselement eindeutig von dessen nebengeordneten Elementen. Weitere Informationen zu Eigenschaftenbezeichnern, die zur Identifikation von Steuerelementen dienen, finden Sie unter [UI Automation Properties Overview](ui-automation-properties-overview.md).  
   
 > [!NOTE]
 > Durch<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird keine in der gesamten Struktur garantiert eindeutige Identität zur Verfügung gestellt. Für diese Eigenschaft sind normalerweise Container- und Bereichsinformationen erforderlich, damit sie nützlich ist. Eine Anwendung kann beispielsweise ein Menüsteuerelement mit mehreren Menüeinträgen oberster Ebene enthalten, die wiederum mehrere untergeordnete Menüeinträge aufweisen. Diese sekundären Menüeinträge könnten durch ein allgemeines Schema wie „Element1"“, „Element2“, „Element3“ usw. bezeichnet werden, wodurch doppelte Bezeichner für untergeordnete Elemente über die Menüeinträge oberster Ebene hinweg möglich sind.  
@@ -59,5 +59,5 @@ ms.locfileid: "70044091"
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
-- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
+- [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](find-a-ui-automation-element-based-on-a-property-condition.md)

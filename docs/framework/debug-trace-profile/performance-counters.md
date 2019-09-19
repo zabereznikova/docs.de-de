@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614310"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052382"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
-Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
+Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)finden können.  
   
 - [Ausnahmeleistungsindikatoren](#exception)  
   
@@ -41,7 +41,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
 |**Anzahl der ausgelösten Ausnahmen**|Zeigt die Gesamtanzahl der seit dem Anwendungsstart ausgelösten Ausnahmen an. Dies schließt sowohl .NET- als auch nicht verwaltete Ausnahmen, die in .NET-Ausnahmen konvertiert werden, ein. Beispielsweise wird ein durch nicht verwalteten Code zurückgegebenes HRESULT im verwalteten Code in eine Ausnahme konvertiert.<br /><br /> Dieser Indikator bezieht sowohl behandelte als auch nicht behandelte Ausnahmen ein. Erneut ausgelöste Ausnahmen werden auch erneut gezählt.|  
-|**Anzahl der ausgelösten Ausnahmen/s**|Zeigt die Anzahl der pro Sekunde ausgelösten Ausnahmen an. Dies schließt sowohl .NET- als auch nicht verwaltete Ausnahmen, die in .NET-Ausnahmen konvertiert werden, ein. Beispielsweise wird ein durch nicht verwalteten Code zurückgegebenes HRESULT im verwalteten Code in eine Ausnahme konvertiert.<br /><br /> Dieser Indikator bezieht sowohl behandelte als auch nicht behandelte Ausnahmen ein. Der Indikator berechnet keinen zeitlichen Mittelwert, sondern zeigt den Unterschied zwischen den Werten der letzten beiden Messpunkte geteilt durch das Messintervall an. Dieser Indikator ist ein Hinweis auf potenzielle Leistungsprobleme auf, wenn eine große (> 100 s) Anzahl von Ausnahmen ausgelöst werden.|  
+|**Anzahl der ausgelösten Ausnahmen/s**|Zeigt die Anzahl der pro Sekunde ausgelösten Ausnahmen an. Dies schließt sowohl .NET- als auch nicht verwaltete Ausnahmen, die in .NET-Ausnahmen konvertiert werden, ein. Beispielsweise wird ein durch nicht verwalteten Code zurückgegebenes HRESULT im verwalteten Code in eine Ausnahme konvertiert.<br /><br /> Dieser Indikator bezieht sowohl behandelte als auch nicht behandelte Ausnahmen ein. Der Indikator berechnet keinen zeitlichen Mittelwert, sondern zeigt den Unterschied zwischen den Werten der letzten beiden Messpunkte geteilt durch das Messintervall an. Dieser Leistungsindikator ist ein Indikator für potenzielle Leistungsprobleme, wenn eine große (> Hundertstel) Anzahl von Ausnahmen ausgelöst wird.|  
 |**Anzahl Filter/s**|Gibt die Anzahl der pro Sekunde ausgeführten .NET-Ausnahmefilter an. Ein Ausnahmefilter wird immer ausgeführt, unabhängig davon, ob eine Ausnahme behandelt wird.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Finally-Anzahl/s**|Gibt die Anzahl der pro Sekunde ausgeführten finally-Blöcke an. Die Ausführung eines finally-Blocks ist auf jeden Fall garantiert, unabhängig davon, wie der try-Block beendet wurde.  Nur die für eine Ausnahme ausgeführten finally-Blöcke werden gezählt. Finally-Blöcke in normalen Codepfaden werden von diesem Indikator nicht erfasst.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 |**Throw-zu-Catch-Tiefe/s**|Zeigt die Anzahl der traversierten Stackframes (von dem Frame, der die Ausnahme ausgelöst hat, zu dem Frame, der die Ausnahme behandelt hat) pro Sekunde an. Dieser Indikator wird auf null zurückgesetzt, wenn ein Ausnahmehandler gestartet wird, sodass geschachtelte Ausnahmen die Handler-zu-Handler-Stapeltiefe anzeigen.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
@@ -55,8 +55,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
 |**Anzahl der CCWs**|Zeigt die aktuelle Anzahl der COM Callable Wrapper (CCWs) an. Ein CCW ist ein Proxy für ein verwaltetes Objekt, auf das aus einem nicht verwalteten COM-Client verwiesen wird. Dieser Indikator gibt die Anzahl der verwalteten Objekte an, auf die von nicht verwaltetem COM-Code verwiesen wird.|  
 |**Anzahl der Marshallingvorgänge**|Zeigt die Gesamtanzahl an, wie oft Argumente und Rückgabewerte seit dem Anwendungsstart von verwaltetem zu nicht verwaltetem Code (und umgekehrt) gemarshallt wurden. Dieser Indikator wird nicht erhöht, wenn die Stubs inline sind. (Stubs sind verantwortlich für das Marshalling von Argumenten und Rückgabewerten). Stubs sind normalerweise inline, wenn der Marshallingmehraufwand gering ist.|  
 |**Anzahl Stubs**|Zeigt die aktuelle Anzahl von Stubs an, die von der Common Language Runtime erstellt werden. Stubs sind während eines COM-Interop- oder Plattformaufrufs verantwortlich für das Marshalling von Argumenten und Rückgabewerten von verwaltetem zu nicht verwaltetem Code und umgekehrt.|  
-|**Anzahl TLB-Exporte/s**|Für zukünftige Verwendung reserviert.|  
-|**Anzahl TLB-Importe/s**|Für zukünftige Verwendung reserviert.|  
+|**Anzahl TLB-Exporte/s**|Zur künftigen Verwendung reserviert.|  
+|**Anzahl TLB-Importe/s**|Zur künftigen Verwendung reserviert.|  
   
 <a name="jit"></a>   
 ## <a name="jit-performance-counters"></a>JIT-Leistungsindikatoren  
@@ -77,8 +77,8 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
-|**Ladezeit in Prozent**|Für zukünftige Verwendung reserviert.|  
-|**Assemblysuchdauer**|Für zukünftige Verwendung reserviert.|  
+|**Ladezeit in Prozent**|Zur künftigen Verwendung reserviert.|  
+|**Assemblysuchdauer**|Zur künftigen Verwendung reserviert.|  
 |**Bytes im Loaderheap**|Zeigt die aktuelle Größe des vom Klassenladeprogramm in allen Anwendungsdomänen zugesicherten Speichers in Bytes an. Zugesicherter Speicher ist der in der Auslagerungsdatei des Datenträgers reservierte physische Speicherplatz.|  
 |**Aktuelle Anwendungsdomänen**|Zeigt die aktuelle Anzahl der in der Anwendung geladenen Anwendungsdomänen an.|  
 |**Aktuelle Assemblys**|Zeigt die aktuelle Anzahl der in der aktuell ausgeführten Anwendung in allen Anwendungsdomänen geladenen Assemblys an. Wenn die Assembly aus mehreren Anwendungsdomänen domänenneutral geladen wird, wird dieser Zähler nur einmal erhöht.|  
@@ -119,9 +119,9 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
 |-------------------------|-----------------|  
 |**Anzahl Bytes in allen Heaps**|Zeigt die Summe der Indikatoren **Gen 1-Heapgröße**, **Gen 2-Heapgröße** und **Größe des Heaps für große Objekte** an. Dieser Indikator gibt den aktuellen Speicher in Bytes an, der für Garbage Collection-Heaps reserviert ist.|  
 |**Anzahl GC-Handles**|Zeigt die aktuelle Anzahl der verwendeten Garbage Collection-Handles an. Garbage Collection-Handles sind Handles zu Ressourcen, die sich außerhalb der Common Language Runtime und der verwalteten Umgebung befinden.|  
-|**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 0-Objekte (d. h. die jüngsten, zuletzt zugewiesenen Objekte) seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Garbage Collection für die Generation 0 tritt auf, wenn der verfügbare Speicher in der Generation 0 nicht ausreicht, um eine Speicherzuordnungsanforderung zu erfüllen. Dieser Indikator wird am Ende einer Garbage Collection für die Generation 0 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 1 oder 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
-|**Anzahl Gen 1-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
-|**Anzahl Gen 2-Collections**|Zeigt an, wie oft für die Generation 2-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde. Der Indikator wird am Ende einer Garbage Collection für die Generation 2 (auch als vollständige Garbage Collection bezeichnet) aktualisiert.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
+|**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 0-Objekte (d. h. die jüngsten, zuletzt zugewiesenen Objekte) seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Garbage Collection für die Generation 0 tritt auf, wenn der verfügbare Speicher in der Generation 0 nicht ausreicht, um eine Speicherzuordnungsanforderung zu erfüllen. Dieser Indikator wird am Ende einer Garbage Collection für die Generation 0 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 1 oder 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_** -Indikatorwert ist nicht genau und sollte ignoriert werden.|  
+|**Anzahl Gen 1-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_** -Indikatorwert ist nicht genau und sollte ignoriert werden.|  
+|**Anzahl Gen 2-Collections**|Zeigt an, wie oft für die Generation 2-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde. Der Indikator wird am Ende einer Garbage Collection für die Generation 2 (auch als vollständige Garbage Collection bezeichnet) aktualisiert.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_** -Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl induzierte GC**|Zeigt die Höchstzahl der aufgrund eines expliziten Aufrufs von <xref:System.GC.Collect%2A?displayProperty=nameWithType> durchgeführten Garbage Collections. Es wird empfohlen, die Häufigkeit der durchgeführten Garbage Collections dem Garbage Collector zu überlassen.|  
 |**Anzahl fixierte Objekte**|Zeigt die Anzahl der fixierten Objekte an, die in der letzten Garbage Collection vorhanden waren. Ein fixiertes Objekt ist ein Objekt, dass der Garbage Collector nicht im Arbeitsspeicher verschieben kann. Dieser Indikator erfasst fixierte Objekte nur in Heaps, die der Garbage Collection unterliegen. Eine Garbage Collection der Generation 0 verursacht beispielsweise nur eine Zählung der fixierten Objekte im Generation 0-Heap.|  
 |**Anzahl verwendete Sinkblöcke**|Zeigt die aktuelle Anzahl der verwendeten Synchronisierungsblöcken an. Synchronisierungsblöcke sind Datenstrukturen für einzelne Objekte, die zum Speichern von Synchronisierungsdaten angelegt wurden. Sie enthalten schwache Referenzen auf verwaltete Objekte und müssen daher vom Garbage Collector überprüft werden. Synchronisierungsblöcke sind nicht auf die Speicherung von Synchronisierungsinformationen beschränkt. Sie können auch COM-Interop-Metadaten speichern. Dieser Indikator zeigt Leistungsprobleme durch die starke Nutzung von Synchronisierungsprimitiven an.|  
@@ -217,7 +217,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
  Der Zugriff auf und die Verwaltung von Netzwerkleistungsindikatoren kann mithilfe von <xref:System.Diagnostics.PerformanceCounter> und den verwandten Klassen in <xref:System.Diagnostics> erfolgen. Netzwerkleistungsindikatoren können auch mit der Konsole des Windows-Systemmonitors angezeigt werden.  
   
- Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen finden Sie unter [\<Leistungsindikator>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen finden Sie unter [\<Leistungsindikator>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Wenn Netzwerkindikatoren aktiviert sind, werden hierdurch sowohl Indikatoren pro AppDomain als auch globale Leistungsindikatoren erstellt und aktualisiert. Bei Deaktivierung liefert die Anwendung keine Netzwerkleistungsindikator-Daten.  
   
@@ -237,7 +237,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
   
- Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md).  
+ Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](performance-counters.md).  
   
 <a name="security"></a>   
 ## <a name="security-performance-counters"></a>Sicherheitsleistungsindikatoren  
@@ -247,11 +247,11 @@ for (int i = 0; i < Array.Length; i++)
 |-------------------------|-----------------|  
 |**Anzahl Linkzeittests**|Zeigt die Gesamtzahl der Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff seit dem Anwendungsstart an. Sicherheitsüberprüfungen für den Linkzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung zur JIT-Kompilierzeit (Just-in-Time) anfordert. Eine Linkzeitüberprüfung wird einmal pro Aufrufer durchgeführt. Dieser Indikator ist kein Hinweis auf schwerwiegende Leistungsprobleme. Er zeigt lediglich die Sicherheitssystemaktivität an.|  
 |**Zeit in RT-Überprüfungen in Prozent**|Zeigt den Prozentsatz der verstrichenen Zeit an, der seit der letzten Messung mit dem Ausführen von Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff verbracht wurde. Dieser Indikator wird am Ende einer .NET Framework-Sicherheitsüberprüfung aktualisiert. Er ist kein Durchschnittswert. Er zeigt den letzten erfassten Wert an.|  
-|**Sig-Authentifizierungszeit in Prozent**|Für zukünftige Verwendung reserviert.|  
+|**Sig-Authentifizierungszeit in Prozent**|Zur künftigen Verwendung reserviert.|  
 |**Stackwalktiefe**|Zeigt die Tiefe des Stapels während der letzten Sicherheitsüberprüfung für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden durch das Durchlaufen des Stapels (Stackwalk) durchgeführt. Dieser Indikator ist kein Durchschnittswert. Er zeigt nur den letzten erfassten Wert an.|  
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md)
-- [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Leistungsindikatoren](performance-counters.md)
+- [Laufzeit-Profilerstellung](runtime-profiling.md)

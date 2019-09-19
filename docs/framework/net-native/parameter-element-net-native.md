@@ -1,17 +1,17 @@
 ---
-title: <Parameter> (Element (.NET Native)
+title: <Parameter>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9a462e75df535504d0e98c22c34c11ff7af7d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867055"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049347"
 ---
-# <a name="parameter-element-net-native"></a>\<Parameter > (Element (.NET Native)
+# <a name="parameter-element-net-native"></a>\<Parameter >-Element (.net Native)
 Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -59,7 +59,7 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -68,14 +68,14 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
+|[\<Method>](method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `<Parameter>`-Element ist ein untergeordnetes Element des [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)-Elements und wird verwendet, um eine Richtlinie auf einen bestimmten Methodenparameter anzuwenden. Der entsprechende Methodenparameter wird durch den Namen und nicht durch den Typ angegeben. Mindestens ein Attribut, das einen Richtlinientyp wie `Activate` oder `Dynamic` darstellt, muss vorhanden sein.  
+ Das `<Parameter>`-Element ist ein untergeordnetes Element des [\<Method>](method-element-net-native.md)-Elements und wird verwendet, um eine Richtlinie auf einen bestimmten Methodenparameter anzuwenden. Der entsprechende Methodenparameter wird durch den Namen und nicht durch den Typ angegeben. Mindestens ein Attribut, das einen Richtlinientyp wie `Activate` oder `Dynamic` darstellt, muss vorhanden sein.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Method> Element (Element <Method>)](method-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
+- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

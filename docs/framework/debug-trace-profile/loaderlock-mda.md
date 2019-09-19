@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754231"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052545"
 ---
 # <a name="loaderlock-mda"></a>loaderLock-MDA
 Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur Ausführung von verwaltetem Code in einem Thread, der die Loadersperre für das Microsoft Windows-Betriebssystem enthält.  Eine solche Ausführung ist ungültig, da sie zu Deadlocks führen und DLLs verwenden kann, bevor sie vom Ladeprogramm des Betriebssystems initialisiert wird.  
@@ -42,7 +42,7 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
  In einigen seltenen Fällen ist es auch möglich, dass Zugriffsverletzungen oder ähnlichen Probleme in DLLs ausgelöst werden, die vor ihrer Initialisierung aufgerufen wurden.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Dieser MDA meldet, dass eine ungültige verwaltete Ausführung versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -57,4 +57,4 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)

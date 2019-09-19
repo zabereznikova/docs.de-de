@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc4a48c79fc39b12f8231bd913b4ca8970c0f46f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874210"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052368"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance-MDA
 
-Die `PInvokeStackImbalance` -Assistent für verwaltetes Debuggens (MDA) wird aktiviert, wenn die CLR erkennt, dass die Stapeltiefe nach einem Plattformaufruf nicht mit der Stapeltiefe, der angegebenen Aufrufkonvention entspricht der <xref:System.Runtime.InteropServices.DllImportAttribute> Attribut und die die Deklaration der Parameter in der verwalteten Signatur.
+Der `PInvokeStackImbalance` Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn die CLR erkennt, dass die Stapel Tiefe nach einem Platt Form Aufruf nicht <xref:System.Runtime.InteropServices.DllImportAttribute> mit der erwarteten Stapel Tiefe übereinstimmt, wenn die im-Attribut angegebene Aufruf Konvention und die Deklaration der Parameter in der verwalteten Signatur.
 
 Der `PInvokeStackImbalance`-MDA wird nur für 32-Bit-x86-Plattformen implementiert.
 
 > [!NOTE]
-> Die `PInvokeStackImbalance` MDA ist standardmäßig deaktiviert. In Visual Studio 2017 die `PInvokeStackImbalance` MDA wird angezeigt, der **Managed Debugging Assistants** Liste der **Ausnahmeeinstellungen** Dialogfeld (wird angezeigt, wenn Sie auswählen, **Debuggen**  >  **Windows** > **Ausnahmeeinstellungen**). Allerdings aktivieren bzw. Deaktivieren der **unterbrechen Wenn ausgelöst** das Kontrollkästchen nicht aktivieren oder deaktivieren Sie den MDA; Hierdurch wird nur festgelegt, ob es sich bei Visual Studio eine Ausnahme auslöst, wenn der MDA aktiviert wird.
+> Der `PInvokeStackImbalance` MDA ist standardmäßig deaktiviert. In Visual Studio 2017 wird der `PInvokeStackImbalance` MDA in der Liste **der Assistenten für verwaltetes Debuggen** im Dialogfeld **Ausnahme Einstellungen** angezeigt (wird angezeigt, wenn Sie**Windows**  >  >  **Debuggen auswählen. Ausnahme Einstellungen**). Durch Aktivieren oder Deaktivieren des Kontrollkästchens "unter **brechen bei** auslösen" wird jedoch der MDA nicht aktiviert bzw. deaktiviert. Es steuert nur, ob Visual Studio eine Ausnahme auslöst, wenn der MDA aktiviert wird.
 
 ## <a name="symptoms"></a>Symptome
 
@@ -44,11 +44,11 @@ Die verwaltete Signatur des Plattformaufrufs stimmt möglicherweise nicht mit de
 
 Erzwingt für alle Plattformaufrufe die Verwendung des nicht optimierten Pfads in die CLR.
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
-Die MDA-Meldung enthält den Namen der Plattformaufrufmethode, die das Stapelungleichgewicht verursacht hat. Beispielmeldung eines Plattformaufrufs der `SampleMethod`-Methode: 
+Die MDA-Meldung enthält den Namen der Plattformaufrufmethode, die das Stapelungleichgewicht verursacht hat. Beispielmeldung eines Plattformaufrufs der `SampleMethod`-Methode:
 
-**Ein Aufruf PInvoke-Funktion "SampleMethod" hat einen nicht ausgeglichenen Stapel. Dies ist wahrscheinlich, weil die verwaltete PInvoke-Signatur nicht die Signatur nicht verwaltetes Ziel übereinstimmt. Überprüfen Sie, dass die Aufrufkonvention und die Parameter von PInvoke-Signatur die nicht verwalteten Ziel-Signatur entsprechen.**
+**Ein Ping-Befehl für die PInvoke-Funktion "SampleMethod" hat den Stapel nicht ausgeglichen. Dies liegt wahrscheinlich daran, dass die verwaltete PInvoke-Signatur nicht mit der nicht verwalteten Ziel Signatur identisch ist. Überprüfen Sie, ob die Aufruf Konvention und die Parameter der PInvoke-Signatur mit der nicht verwalteten Ziel Signatur übereinstimmen.**
 
 ## <a name="configuration"></a>Konfiguration
 
@@ -63,5 +63,5 @@ Die MDA-Meldung enthält den Namen der Plattformaufrufmethode, die das Stapelung
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

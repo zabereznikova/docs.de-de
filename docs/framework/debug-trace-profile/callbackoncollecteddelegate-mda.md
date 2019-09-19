@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875068"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052934"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>CallbackOnCollectedDelegate-MDA
 Der `callbackOnCollectedDelegate`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn das Marshalling eines Delegaten von verwaltetem zu nicht verwaltetem Code als Funktionszeiger durchgeführt wird und nach der Garbage Collection des Delegaten ein Rückruf mit diesem Funktionszeiger erfolgt.  
@@ -44,7 +44,7 @@ Der `callbackOnCollectedDelegate`-MDA (Managed Debugging Assistant, Assistent f�
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Beim Marshalling von Delegaten als Funktionszeiger wird von der CLR ein Thunk zugeordnet, der für den Übergang vom nicht verwalteten zum verwalteten Code sorgt. Der nicht verwaltete Code ruft dann diesen Thunk auf, bevor schließlich der verwaltete Delegat aufgerufen wird. Ohne aktivierten `callbackOnCollectedDelegate`-MDA wird der nicht verwaltete Marshallingcode gelöscht, wenn für den Delegaten die Garbage Collection erfolgt. Mit aktiviertem `callbackOnCollectedDelegate`-MDA wird der nicht verwaltete Marshallingcode nicht sofort gelöscht, wenn für den Delegaten die Garbage Collection erfolgt. Vielmehr werden standardmäßig die letzten 1.000 Instanzen aufbewahrt und geändert, um bei einem Aufruf den MDA zu aktivieren. Der Thunk wird schließlich gelöscht, nachdem für weitere 1.001 gemarshallte Delegaten die Garbage Collection erfolgte.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Der MDA meldet den Typnamen des Delegaten, für den vor einem Rückruf mithilfe des entsprechenden nicht verwalteten Funktionszeigers eine Garbage Collection erfolgte.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -114,6 +114,6 @@ public class Entry
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
-- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)
+- [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

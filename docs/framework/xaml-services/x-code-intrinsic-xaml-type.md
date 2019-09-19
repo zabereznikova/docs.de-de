@@ -10,43 +10,43 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: f6898008fa3e3e7e385a2bc77c5b2eac7eeda2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b7713548b6269f079ef32b5bf1fe4fa630edcc8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617159"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053796"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Systeminterner x:Code-XAML-Typ
-Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Code kann entweder von einer Implementierung der XAML-Prozessor kompiliert werden, die XAML, oder von links in der XAML-Produktion zur späteren Verwendung für z.B. Interpretation von einer Runtime kompiliert wird.  
+Ermöglicht die Platzierung von Code in einer XAML-Produktion. Dieser Code kann entweder von jeder XAML-Prozessor Implementierung kompiliert werden, die XAML kompiliert, oder in der XAML-Produktion verbleiben, um später verwendet zu werden, z. b. die Interpretation durch eine Laufzeit.  
   
 ## <a name="xaml-object-element-usage"></a>Verwendung von XAML-Objektelementen  
   
-```  
+```xaml  
 <x:Code>  
    // code instructions, usually enclosed by CDATA...  
 </x:Code>  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Code innerhalb der `x:Code` XAML-Anweisungselement ist immer noch innerhalb der allgemeinen XML-Namespace interpretiert und die XAML-Namespaces zur Verfügung gestellt. Daher ist es normalerweise notwendig, schließen Sie den Code zum `x:Code` innerhalb einer `CDATA` Segment.  
+ Der Code im `x:Code` XAML-Direktivenelement wird immer noch innerhalb des allgemeinen XML-Namespace und der bereitgestellten XAML-Namespaces interpretiert. Daher ist es normalerweise erforderlich, den Code, der für `x:Code` innerhalb eines `CDATA` Segments verwendet wird, einzuschließen.  
   
- `x:Code` ist für alle möglichen Bereitstellungsmechanismen einer XAML-Produktion nicht zulässig. In bestimmten Frameworks (z. B. WPF) muss der Code kompiliert werden. In anderen Frameworks `x:Code` Nutzung kann im Allgemeinen als unzulässig erklärt werden.  
+ `x:Code`ist nicht für alle möglichen Bereitstellungs Mechanismen einer XAML-Produktion zulässig. In bestimmten Frameworks (z. b. WPF) muss der Code kompiliert werden. In anderen Frameworks `x:Code` ist die Verwendung möglicherweise in der Regel nicht zulässig.  
   
- Für Frameworks, mit denen verwaltete `x:Code` Inhalt, für die Verwendung der richtigen Sprachcompiler `x:Code` Inhalt richtet sich nach den Einstellungen und Ziele des enthaltenden Projekts, das verwendet wird, um die Anwendung zu kompilieren.  
+ Für Frameworks, die `x:Code` verwalteten Inhalt zulassen, wird der korrekte sprach Compiler `x:Code` , der für-Inhalte verwendet wird, durch Einstellungen und Ziele des enthaltenden Projekts bestimmt, das zum Kompilieren der Anwendung verwendet wird.  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
- Code deklariert in `x:Code` für WPF mehrere wichtige Einschränkungen aufweist:  
+ Der in `x:Code` für WPF deklarierte Code hat mehrere wichtige Einschränkungen:  
   
-- Die `x:Code` -Anweisungselement muss ein unmittelbar untergeordnetes Element des Stammelements der XAML-Produktion sein.  
+- Das `x:Code` Direktivenelement muss ein unmittelbares untergeordnetes Element des Stamm Elements der XAML-Produktion sein.  
   
-- [X: Class-Anweisung](x-class-directive.md) muss für das Stammelement der übergeordneten bereitgestellt werden.  
+- die [x:Class-Direktive](x-class-directive.md) muss für das übergeordnete root-Element bereitgestellt werden.  
   
-- Der Code eingefügt, in `x:Code` behandelt werden, von der Kompilierung innerhalb des Bereichs der partiellen Klasse sein, die bereits für diese XAML-Seite erstellt wird. Aus diesem Grund muss alle Code, den Sie definieren, Member oder Variablen der partiellen Klasse sein.  
+- Der in `x:Code` platzierte Code wird von der Kompilierung behandelt, um innerhalb des Bereichs der partiellen Klasse zu sein, die bereits für diese XAML-Seite erstellt wurde. Daher müssen alle von Ihnen definierten Codes Member oder Variablen dieser partiellen Klasse sein.  
   
-- Sie können keine zusätzliche Klassen definieren, als durch das Schachteln einer Klasse in der partiellen Klasse (Schachtelung ist zulässig, aber es ist nicht typisch, da geschachtelte Klassen in XAML verwiesen werden können). CLR-Namespaces als dem, der für die vorhandene partielle Klasse verwendet wird, kann nicht definiert oder hinzugefügt werden.  
+- Sie können keine zusätzlichen Klassen definieren, außer indem Sie eine Klasse in der partiellen Klasse Schachteln (die Schachtelung ist zulässig, aber nicht typisch, weil auf geschachtelte Klassen in XAML nicht verwiesen werden kann). Andere CLR-Namespaces als der Namespace, der für die vorhandene partielle Klasse verwendet wird, können nicht definiert oder zu hinzugefügt werden.  
   
-- Verweise auf Entitäten außerhalb der partiellen Klasse CLR-Namespace müssen alle vollqualifiziert sein. Wenn Mitglieder, die deklariert wird, überschreibungen, um die partielle Klasse überschreibbare Member sind, muss dies mit dem sprachspezifischen Override-Schlüsselwort angegeben werden. Wenn Sie im Member deklariert `x:Code` Bereich in Konflikt mit Membern der partiellen Klasse aus dem XAML erstellt, so, dass der Compiler den Konflikt, meldet die XAML-Datei kann nicht kompiliert oder geladen.  
+- Verweise auf Code Entitäten außerhalb des CLR-Namespace der partiellen Klasse müssen alle voll qualifiziert sein. Wenn Member, die deklariert werden, über Schreibungen für die partiell baren Member der partiellen Klasse sind, muss dies mit dem sprachspezifischen Überschreibungs Schlüsselwort angegeben werden. Wenn im `x:Code` Bereich deklarierte Member mit Membern der partiellen Klasse, die aus dem XAML erstellt wurden, so in Konflikt stehen, dass der Compiler den Konflikt meldet, kann die XAML-Datei nicht kompiliert oder geladen werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
