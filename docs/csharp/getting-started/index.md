@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 7927cd65de31ba6e835aabdbbd89e410d10d2822
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ba68425fe37c5b939da22edad38bb03afd2b9068
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104788"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117328"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
@@ -27,7 +27,7 @@ Folgende Themen sind verfügbar:
 
 - [Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   In Visual Studio 2017, der neuesten Version von Visual Studio, können Sie Ihre Anwendungen aus einer integrierten Entwicklungsumgebung für Windows programmieren, kompilieren, ausführen, debuggen, als Profil erstellen und veröffentlichen.
+   In Visual Studio 2019 können Sie Ihre Anwendungen in einer integrierten Entwicklungsumgebung für Windows oder Mac programmieren, kompilieren, ausführen, debuggen, als Profil erstellen und veröffentlichen.
 
    In diesem Thema erstellen Sie eine einfache „Hello World“-Anwendung, führen sie aus und ändern sie dann, um eine etwas interaktivere „Hello World“-Anwendung zu erstellen. Nachdem Sie Ihre Anwendung erstellt und ausgeführt haben, lernen Sie auch, wie Sie die Anwendung [debuggen](../../core/tutorials/debugging-with-visual-studio.md) und [veröffentlichen](../../core/tutorials/publishing-with-visual-studio.md), sodass sie auf jeder Plattform ausgeführt werden kann, die von .NET Core unterstützt wird.
 
