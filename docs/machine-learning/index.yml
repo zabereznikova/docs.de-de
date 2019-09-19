@@ -23,7 +23,7 @@ sections:
         items:
           - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung</a>
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Verwenden von ML.NET zur Klassifizierung von GitHub-Issues in einem Szenario mit Multiklassenklassifizierung</a></li>
-          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Vorhersagen von Preisen per Regression mit ML.NET</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices">Vorhersagen von Preisen per Regression</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Erstellen eines Filmempfehlungssystems mit ML.NET</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Erstellen einer benutzerdefinierten ML.NET-Bildklassifizierung mit TensorFlow</a>

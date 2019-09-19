@@ -184,7 +184,7 @@
           items:
             - name: Kontexte für using
               href: keywords/using.md
-            - name: using-Direktive
+            - name: using-Anweisung
               href: keywords/using-directive.md
             - name: using static-Direktive
               href: keywords/using-static.md
@@ -270,7 +270,7 @@
           href: keywords/equals.md
         - name: by
           href: keywords/by.md
-        - name: in
+        - name: Zoll
           href: keywords/in.md
 - name: 'C#-Operatoren'
   items:
@@ -293,7 +293,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: Operatoren für den Memberzugriff
       href: operators/member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
     - name: Typtest- und Umwandlungsoperatoren
       href: operators/type-testing-and-cast.md
       displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
