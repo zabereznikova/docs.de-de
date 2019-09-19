@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
-ms.translationtype: HT
+ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545321"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053482"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Erstellen einer Windows-Dienst-App
 
@@ -28,7 +28,7 @@ Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die 
 
 2. Navigieren Sie zur Projektvorlage **Windows-Dienst (.NET Framework)** , und wählen Sie sie aus. Sie finden diese, indem Sie **Installiert** und **Visual C#** aufklappen oder **Visual Basic**, und dann **Windows-Desktop** auswählen. Alternativ können Sie im Suchfeld oben rechts *Windows-Dienst* eingeben und die **EINGABETASTE** drücken.
 
-   ![Windows-Dienstvorlage im Dialogfeld „Neues Projekt“ in Visual Studio](media/new-project-dialog.png)
+   ![Windows-Dienstvorlage im Dialogfeld „Neues Projekt“ in Visual Studio](./media/new-project-dialog.png)
 
    > [!NOTE]
    > Wenn Sie die Vorlage **Windows-Dienst** nicht finden können, müssen Sie möglicherweise die Workload **.NET-Desktopentwicklung** installieren:
@@ -51,11 +51,11 @@ Benennen Sie den Dienst von **Service1** in **MyNewService** um.
 
 2. Wählen Sie im Popupfenster **Ja** aus.
 
-    ![Eingabeaufforderung „Umbenennen“](media/windows-service-rename.png "Windows-Dienst-Eingabeaufforderung „Umbenennen“")
+    ![Eingabeaufforderung „Umbenennen“](./media/windows-service-rename.png "Windows-Dienst-Eingabeaufforderung „Umbenennen“")
 
 3. Wählen Sie in der Registerkarte **Design** aus dem Kontextmenü **Eigenschaften** aus. Ändern Sie im Fenster **Eigenschaften** den Wert für **ServiceName** in *MyNewService*.
 
-    ![Diensteigenschaften](media/windows-service-properties.png "Windows-Diensteigenschaften")
+    ![Diensteigenschaften](./media/windows-service-properties.png "Windows-Diensteigenschaften")
 
 4. Wählen Sie im Menü **Datei** die Option **Alle speichern** aus.
 
@@ -340,7 +340,7 @@ Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Insta
 
      Dieser Text wird im Fenster **Dienste** in der Spalte **Beschreibung** angezeigt und beschreibt den Dienst für den Benutzer.
 
-    ![Dienstbeschreibung im Fenster „Dienste“.](media/windows-service-description.png "Dienstbeschreibung")
+    ![Dienstbeschreibung im Fenster „Dienste“.](./media/windows-service-description.png "Dienstbeschreibung")
 
 6. Fügen Sie in der <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>-Eigenschaft Text hinzu, z. B. *MyNewService-Anzeigename*.
 
@@ -350,7 +350,7 @@ Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Insta
 
 8. Wenn Sie diesen Vorgang abgeschlossen haben, sollte das **Eigenschaften**-Fenster der folgenden Abbildung entsprechen:
 
-     ![Installer-Eigenschaften für einen Windows-Dienst](media/windows-service-installer-properties.png "Windows-Dienst-Installereigenschaften")
+     ![Installer-Eigenschaften für einen Windows-Dienst](./media/windows-service-installer-properties.png "Windows-Dienst-Installereigenschaften")
 
 9. Klicken Sie in der Ansicht **Design** für **ProjectInstaller** auf **serviceProcessInstaller1**, wenn es sich um ein Visual C#-Projekt handelt, bzw. auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt, und wählen Sie dann im Kontextmenü **Eigenschaften** aus. Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>-Eigenschaft über die Dropdownliste auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem> fest.
 
@@ -497,7 +497,7 @@ Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinsta
 
      Ihr Dienst sollte in **Dienste** alphabetisch nach dem Anzeigenamen aufgeführt sein, den Sie für ihn festgelegt haben.
 
-     ![MyNewService im Fenster "Dienste".](media/windowsservices-serviceswindow.PNG)
+     ![MyNewService im Fenster "Dienste".](./media/windowsservices-serviceswindow.PNG)
 
 2. Der Dienst wird gestartet, wenn Sie im Kontextmenü des Diensts **Starten** auswählen.
 
@@ -516,7 +516,7 @@ Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinsta
 
 3. Suchen Sie den Eintrag für **MyNewLog** (oder **MyLogFile1**, wenn Sie das Verfahren befolgt haben, um Befehlszeilenargumente hinzuzufügen), und klappen Sie ihn auf. Sie sollten Einträge für die beiden Aktionen (Starten und Stopp) sehen, die Ihr Dienst ausgeführt hat.
 
-     ![Verwenden der Ereignisanzeige zum Anzeigen von Einträgen im Ereignisprotokoll](media/windows-service-event-viewer.png)
+     ![Verwenden der Ereignisanzeige zum Anzeigen von Einträgen im Ereignisprotokoll](./media/windows-service-event-viewer.png)
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 

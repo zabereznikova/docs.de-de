@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55eda4ce2fd109715076f81d53e93a80d40cbfa3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 893b6e6e61e23bdc0da1902407017a836bc6cbe8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851577"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045681"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
 Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressourcendateien einschließen, um sie für die Anwendung leicht verfügbar zu machen. .NET Framework bietet fünf Möglichkeiten, Ressourcendateien zu erstellen:
 
-- Erstellen Sie eine Textdatei, die Zeichenfolgenressourcen enthält. Sie können die Textdatei mithilfe des [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in Textdateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#TextFiles).
+- Erstellen Sie eine Textdatei, die Zeichenfolgenressourcen enthält. Sie können die Textdatei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in Textdateien](creating-resource-files-for-desktop-apps.md#TextFiles).
 
-- Erstellen Sie eine XML-Ressourcendatei (.resx), die Zeichenfolgen-, Bild- oder Objektdaten enthält. Sie können die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESX-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResxFiles).
+- Erstellen Sie eine XML-Ressourcendatei (.resx), die Zeichenfolgen-, Bild- oder Objektdaten enthält. Sie können die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESX-Dateien](creating-resource-files-for-desktop-apps.md#ResxFiles).
 
-- Erstellen Sie programmgesteuert mithilfe von Typen im <xref:System.Resources>-Namespace eine XML-Ressourcendatei (.resx). Sie können eine RESX-Datei erstellen, ihre Ressourcen auflisten und bestimmte Ressourcen nach dem Namen abrufen. Weitere Informationen finden Sie im Thema [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+- Erstellen Sie programmgesteuert mithilfe von Typen im <xref:System.Resources>-Namespace eine XML-Ressourcendatei (.resx). Sie können eine RESX-Datei erstellen, ihre Ressourcen auflisten und bestimmte Ressourcen nach dem Namen abrufen. Weitere Informationen finden Sie im Thema [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md).
 
-- Erstellen Sie programmgesteuert eine binäre Ressourcendatei (.resources). Anschließend können Sie die Datei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESOURCES-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+- Erstellen Sie programmgesteuert eine binäre Ressourcendatei (.resources). Anschließend können Sie die Datei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESOURCES-Dateien](creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
-- Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), um eine Ressourcendatei zu erstellen und in das Projekt einzuschließen. Visual Studio stellt einen Ressourcen-Editor bereit, mit dem Sie Ressourcen hinzufügen, löschen und ändern können. Zur Kompilierzeit wird die Ressourcendatei automatisch in eine binäre RESOURCES-Datei konvertiert und in eine Anwendungsassembly oder eine Satellitenassembly eingebettet. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
+- Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), um eine Ressourcendatei zu erstellen und in das Projekt einzuschließen. Visual Studio stellt einen Ressourcen-Editor bereit, mit dem Sie Ressourcen hinzufügen, löschen und ändern können. Zur Kompilierzeit wird die Ressourcendatei automatisch in eine binäre RESOURCES-Datei konvertiert und in eine Anwendungsassembly oder eine Satellitenassembly eingebettet. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Ressourcen in Textdateien
@@ -78,9 +78,9 @@ HelpMenuName=Help
 EmptyString=
 ```
 
- Ab NET Framework 4.5 und in allen Versionen von .NET Core unterstützen Textdateien die bedingte Kompilierung mit den Konstrukten `#ifdef`*Symbol*... `#endif` und `#if !`*Symbol*... `#endif`. Sie können dann den `/define`-Schalter mit dem [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) verwenden, um Symbole zu definieren. Jede Ressource erfordert ein eigenes Konstrukt, entweder `#ifdef`*Symbol*... `#endif` oder `#if !`*Symbol*... `#endif`. Wenn Sie eine `#ifdef`-Anweisung verwenden und *Symbol* definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen. Wenn Sie eine `#if !`-Anweisung verwenden und *Symbol* nicht definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen.
+ Ab NET Framework 4.5 und in allen Versionen von .NET Core unterstützen Textdateien die bedingte Kompilierung mit den Konstrukten `#ifdef`*Symbol*... `#endif` und `#if !`*Symbol*... `#endif`. Sie können dann den `/define`-Schalter mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) verwenden, um Symbole zu definieren. Jede Ressource erfordert ein eigenes Konstrukt, entweder `#ifdef`*Symbol*... `#endif` oder `#if !`*Symbol*... `#endif`. Wenn Sie eine `#ifdef`-Anweisung verwenden und *Symbol* definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen. Wenn Sie eine `#if !`-Anweisung verwenden und *Symbol* nicht definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen.
 
- Kommentare sind in Textdateien optional, und am Anfang einer Zeile wird entweder ein Semikolon (;) vorangestellt oder ein Nummernzeichen (#). Zeilen, die Kommentare enthalten sind, können an beliebiger Stelle in der Datei eingefügt werden. Kommentare sind nicht in einer mit dem [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) erstellten kompilierten RESOURCES-Datei enthalten.
+ Kommentare sind in Textdateien optional, und am Anfang einer Zeile wird entweder ein Semikolon (;) vorangestellt oder ein Nummernzeichen (#). Zeilen, die Kommentare enthalten sind, können an beliebiger Stelle in der Datei eingefügt werden. Kommentare sind nicht in einer mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) erstellten kompilierten RESOURCES-Datei enthalten.
 
  Alle leeren Zeilen in den Textdateien werden als Leerzeichen angesehen ignoriert.
 
@@ -92,13 +92,13 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- Wenn die Textdatei doppelte Vorkommen von *name* enthält, zeigt der [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) eine Warnung an und ignoriert den zweiten Namen.
+ Wenn die Textdatei doppelte Vorkommen von *name* enthält, zeigt der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) eine Warnung an und ignoriert den zweiten Namen.
 
  *value* darf keine Neue-Zeile-Zeichen enthalten. Sie können aber Escapezeichen im C-Stil verwenden, z.B. `\n` für eine neue Zeile oder `\t` für einen Tabstopp. Sie können einen umgekehrten Schrägstrich verwenden, wenn er mit Escapezeichen versehen wird (beispielsweise \\\\). Darüber hinaus ist eine leere Zeichenfolge zulässig.
 
- Sie sollten Ressourcen im Textdateiformat mit UTF-8-Codierung oder UTF-16-Codierung entweder in Little-Endian oder Big-Endian-Bytereihenfolge speichern. Obwohl der [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) TXT-Dateien in RESOURCES-Dateien konvertiert, behandelt er Dateien standardmäßig als UTF-8. Wenn "Resgen.exe" eine als UTF-16 codierte Datei erkennen soll, müssen Sie am Anfang der Datei eine Unicode-Bytereihenfolgemarkierung (U+FEFF) angeben.
+ Sie sollten Ressourcen im Textdateiformat mit UTF-8-Codierung oder UTF-16-Codierung entweder in Little-Endian oder Big-Endian-Bytereihenfolge speichern. Obwohl der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) TXT-Dateien in RESOURCES-Dateien konvertiert, behandelt er Dateien standardmäßig als UTF-8. Wenn "Resgen.exe" eine als UTF-16 codierte Datei erkennen soll, müssen Sie am Anfang der Datei eine Unicode-Bytereihenfolgemarkierung (U+FEFF) angeben.
 
- Um eine Ressourcendatei im Textformat in eine .NET-Assembly einzubetten, müssen Sie die Datei mit dem [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Sie können die RESOURCES-Datei dann mit einem Sprachcompiler in eine .NET-Assembly oder mit dem [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten.
+ Um eine Ressourcendatei im Textformat in eine .NET-Assembly einzubetten, müssen Sie die Datei mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Sie können die RESOURCES-Datei dann mit einem Sprachcompiler in eine .NET-Assembly oder mit dem [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten.
 
  Im folgenden Beispiel wird eine Ressourcendatei im Textformat mit dem Namen "GreetingResources.txt" für eine einfache Konsolenanwendung "Hello World" verwendet. Die Textdatei definiert zwei Zeichenfolgen, `prompt` und `greeting`, die den Benutzer zur Eingabe des Namens auffordern und einen Gruß anzeigen.
 
@@ -172,12 +172,12 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Da RESX-Dateien aus wohlgeformtem XML in einem vordefinierten Format bestehen müssen, empfiehlt es sich nicht, mit RESX-Dateien manuell zu arbeiten, insbesondere, wenn die RESX-Dateien andere Ressourcen als Zeichenfolgen enthalten. Stattdessen bietet [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine transparente Schnittstelle zum Erstellen und Bearbeiten von RESX-Dateien. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Sie können RESX-Dateien auch programmgesteuert erstellen und bearbeiten. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Da RESX-Dateien aus wohlgeformtem XML in einem vordefinierten Format bestehen müssen, empfiehlt es sich nicht, mit RESX-Dateien manuell zu arbeiten, insbesondere, wenn die RESX-Dateien andere Ressourcen als Zeichenfolgen enthalten. Stattdessen bietet [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine transparente Schnittstelle zum Erstellen und Bearbeiten von RESX-Dateien. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles). Sie können RESX-Dateien auch programmgesteuert erstellen und bearbeiten. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Ressourcen in RESOURCES-Dateien
 
-Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klasse können Sie eine binäre Ressourcendatei (.resources) direkt aus Code programmgesteuert erstellen. Sie können auch mithilfe des [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) eine RESOURCES-Datei aus einer Textdatei oder einer RESX-Datei erstellen. Die RESOURCES-Datei kann neben Zeichenfolgendaten Binärdaten (Bytearrays) und Objektdaten enthalten. Das programmgesteuerte Erstellen einer RESOURCES-Datei erfordert die folgenden Schritte:
+Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klasse können Sie eine binäre Ressourcendatei (.resources) direkt aus Code programmgesteuert erstellen. Sie können auch mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) eine RESOURCES-Datei aus einer Textdatei oder einer RESX-Datei erstellen. Die RESOURCES-Datei kann neben Zeichenfolgendaten Binärdaten (Bytearrays) und Objektdaten enthalten. Das programmgesteuerte Erstellen einer RESOURCES-Datei erfordert die folgenden Schritte:
 
 1. Erstellen Sie ein <xref:System.Resources.ResourceWriter>-Objekt mit einem eindeutigen Dateinamen. Geben Sie dazu entweder einen Dateinamen oder einen Dateistream zu einem <xref:System.Resources.ResourceWriter>-Klassenkonstruktor an.
 
@@ -193,12 +193,12 @@ Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klas
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
 
- Nachdem Sie die RESOURCES-Datei erstellt haben, können Sie die RESOURCES-Datei in eine ausführbare Datei oder Runtimebibliothek einbetten, indem Sie den `/resource`-Schalter des Sprachcompilers einschließen, oder Sie betten sie mit dem [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly ein.
+ Nachdem Sie die RESOURCES-Datei erstellt haben, können Sie die RESOURCES-Datei in eine ausführbare Datei oder Runtimebibliothek einbetten, indem Sie den `/resource`-Schalter des Sprachcompilers einschließen, oder Sie betten sie mit dem [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly ein.
 
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Ressourcendateien in Visual Studio
 
-Wenn Sie dem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, wird von Visual Studio im Projektverzeichnis eine RESX-Datei erstellt. Visual Studio stellt Ressourcen-Editoren bereit, die es Ihnen ermöglichen, Zeichenfolgen, Bilder und binäre Objekte hinzuzufügen. Da die Editoren nur dazu dienen, statische Daten zu behandeln, können sie nicht zum Speichern programmgesteuerter Objekte verwendet werden. Sie müssen Objektdaten programmgesteuert in eine RESX-Datei oder in eine RESOURCES-Datei schreiben. Weitere Informationen finden Sie in den Abschnitten [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md) und [Ressourcen in RESOURCES-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+Wenn Sie dem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, wird von Visual Studio im Projektverzeichnis eine RESX-Datei erstellt. Visual Studio stellt Ressourcen-Editoren bereit, die es Ihnen ermöglichen, Zeichenfolgen, Bilder und binäre Objekte hinzuzufügen. Da die Editoren nur dazu dienen, statische Daten zu behandeln, können sie nicht zum Speichern programmgesteuerter Objekte verwendet werden. Sie müssen Objektdaten programmgesteuert in eine RESX-Datei oder in eine RESOURCES-Datei schreiben. Weitere Informationen finden Sie in den Abschnitten [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md) und [Ressourcen in RESOURCES-Dateien](creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
 Wenn Sie lokalisierte Ressourcen hinzufügen, geben Sie ihnen den gleichen Stammdateinamen wie der Hauptressourcendatei. Sie sollten auch ihre Kultur im Dateinamen festlegen. Wenn Sie z. B. eine Ressourcendatei mit dem Namen "Ressourcen.resx" hinzufügen, können Sie auch Ressourcendateien mit dem Namen "Ressourcen.en-US.resx" und "Ressourcen.fr-FR.resx" erstellen, um lokalisierte Ressourcen für die englischen (USA) und französischen (Frankreich) Kulturen zu halten. Sie sollten auch die Standardkultur der Anwendung festlegen. Die Ressourcen dieser Kultur werden verwendet, wenn keine lokalisierten Ressourcen für eine bestimmte Kultur gefunden werden. Zum Angeben der Standardkultur klicken Sie in Visual Studio im Projektmappen-Explorer mit der rechten Maustaste auf den Projektnamen, zeigen Sie auf "Anwendung", klicken Sie auf **Assemblyinformationen**, und wählen Sie die entsprechende Sprache/Kultur in der Liste **Neutrale Sprache** aus.
 
@@ -207,5 +207,5 @@ Zur Kompilierzeit werden von Visual Studio zuerst die RESX-Dateien in einem Proj
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Resources>
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
-- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Ressourcen in Desktop-Apps](index.md)
+- [Verpacken und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)

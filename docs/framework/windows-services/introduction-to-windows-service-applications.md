@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599873"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053522"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Einführung in Windows-Dienstanwendungen
 Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstellen von ausführbaren Anwendungen mit langer Laufzeit ermöglicht, die in eigenen Windows-Sitzungen ausgeführt werden. Die Dienste können automatisch gestartet werden, sobald der Computer gestartet wird. Sie können angehalten und neu gestartet werden. Es wird jedoch keine Benutzeroberfläche angezeigt. Dienste eignen sich mit diesen Funktionen ideal zur Verwendung auf einem Server. Sie sind darüber hinaus für alle Fälle geeignet, in denen Funktionen mit langer Laufzeit benötigt werden und Benutzer, die am gleichen Computer arbeiten, nicht gestört werden sollen. Dienste können auch im Sicherheitskontext eines bestimmten Benutzerkontos ausgeführt werden, bei dem es sich nicht um einen angemeldeten Benutzer oder das Standardcomputerkonto handelt. Weitere Informationen zu Diensten und Windows-Sitzungen finden Sie in der Windows SDK-Dokumentation.  
@@ -41,9 +41,9 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Dienstanwendungen im Vergleich zu anderen Visual Studio-Anwendungen  
  Die Funktionsweise von Dienstanwendungen unterscheidet sich von vielen anderen Projekttypen in mehrfacher Hinsicht:  
   
-- Die kompilierte ausführbare Datei, die von einem Dienstanwendungsprojekt erstellt wird, muss auf dem Server installiert werden. Erst dann kann das Projekt sinnvoll funktionieren. Das Debuggen oder Ausführen einer Dienstanwendung kann nicht durch Drücken von F5 oder F11 gestartet werden. Ein Dienst kann nicht direkt ausgeführt werden, und es besteht keine Möglichkeit, in den Code zu springen. Stattdessen muss der Dienst installiert und gestartet werden. Ein Debugger muss an den Prozess des Diensts angehängt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- Die kompilierte ausführbare Datei, die von einem Dienstanwendungsprojekt erstellt wird, muss auf dem Server installiert werden. Erst dann kann das Projekt sinnvoll funktionieren. Das Debuggen oder Ausführen einer Dienstanwendung kann nicht durch Drücken von F5 oder F11 gestartet werden. Ein Dienst kann nicht direkt ausgeführt werden, und es besteht keine Möglichkeit, in den Code zu springen. Stattdessen muss der Dienst installiert und gestartet werden. Ein Debugger muss an den Prozess des Diensts angehängt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md).  
   
-- Im Gegensatz zu einigen Projekttypen müssen für Dienstanwendungen Installationskomponenten erstellt werden. Mit den Installationskomponenten wird der Dienst auf dem Server installiert und registriert. Zudem wird mit dem **Dienststeuerungs-Manager** von Windows ein Eintrag für den Dienst erstellt. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Im Gegensatz zu einigen Projekttypen müssen für Dienstanwendungen Installationskomponenten erstellt werden. Mit den Installationskomponenten wird der Dienst auf dem Server installiert und registriert. Zudem wird mit dem **Dienststeuerungs-Manager** von Windows ein Eintrag für den Dienst erstellt. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md).  
   
 - Von der `Main`-Methode der Dienstanwendung muss der Befehl zum Ausführen der Dienste erteilt werden, die im Projekt enthalten sind. Von der `Run`-Methode werden die Dienste in den **Dienststeuerungs-Manager** auf dem entsprechenden Server geladen. Wenn die Projektvorlage für **Windows-Dienste** verwendet wird, wird diese Methode automatisch geschrieben. Beachten Sie, dass das Laden eines Diensts und das Starten eines Diensts unterschiedliche Vorgänge darstellen. Weitere Informationen finden Sie weiter unten unter "Lebensdauer von Diensten".  
   
@@ -78,15 +78,15 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
   
 - Dienste müssen in einem Projekt für **Windows-Dienst**-Anwendungen oder einem anderen .NET Framework-fähigen Projekt erstellt werden. Dieses muss beim Erstellen eine EXE-Datei erstellen und von der <xref:System.ServiceProcess.ServiceBase>-Klasse erben.  
   
-- Projekte mit Windows-Diensten müssen Installationskomponenten für das Projekt und seine Dienste aufweisen. Dies kann problemlos im Fenster **Eigenschaften** ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Projekte mit Windows-Diensten müssen Installationskomponenten für das Projekt und seine Dienste aufweisen. Dies kann problemlos im Fenster **Eigenschaften** ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows-Dienstanwendungen](../../../docs/framework/windows-services/index.md)
-- [Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows-Dienstanwendungen](index.md)
+- [Programmierarchitektur für Dienstanwendungen](service-application-programming-architecture.md)
+- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
+- [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)

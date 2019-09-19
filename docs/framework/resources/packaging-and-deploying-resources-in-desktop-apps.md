@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 808f0f8ac6caf15be0bf1ba8735521871c9b94d7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851595"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045580"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -58,7 +58,7 @@ Dieses Modell hat mehrere Vorzüge:
 Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag**  in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
 
 > [!NOTE]
-> Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
@@ -73,9 +73,9 @@ Um die Suchleistung zu verbessern, wenden Sie das Attribut <xref:System.Resource
 Der .NET Framework-Ressourcenfallbackprozess besteht aus folgenden Schritten:
 
 > [!TIP]
-> Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Suchprozess der Runtime nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Suchprozess der Runtime nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
-1. Zunächst prüft die Runtime den [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) auf eine Assembly, die der angeforderten Kultur für Ihre Anwendung entspricht.
+1. Zunächst prüft die Runtime den [globalen Assemblycache](../app-domains/gac.md) auf eine Assembly, die der angeforderten Kultur für Ihre Anwendung entspricht.
 
      Der globale Assemblycache kann Ressourcenassemblys speichern, die in vielen Anwendungen eingesetzt werden. So müssen Sie keine bestimmten Ressourcensätze in die Verzeichnisstruktur von jeder Anwendung, die sie erstellen, einbeziehen. Wenn die Runtime einen Verweis auf die Assembly findet, durchsucht sie die Assembly nach der angeforderten Ressource. Wenn sie den Eintrag in der Assembly findet, verwendet sie die angeforderte Ressource. Wenn sie den Eintrag nicht findet, fährt sie mit der Suche fort.
 
@@ -112,13 +112,13 @@ Nehmen Sie z.B. an, dass die Anwendung eine lokalisierte Ressource für Spanisch
 
 Unter folgenden Bedingungen können Sie den Prozess optimieren, mit dem die Runtime nach Ressourcen in den Satellitenassemblys sucht
 
-- Satellitenassemblys werden am gleichen Ort wie die Codeassembly bereitgestellt. Wenn die Codeassembly im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) installiert wird, werden gleichzeitig Satellitenassemblys im globalen Assemblycache installiert. Wenn die Codeassembly in einem Verzeichnis installiert wird, werden Satellitenassemblys in kulturspezifischen Ordnern in diesem Verzeichnisses installiert.
+- Satellitenassemblys werden am gleichen Ort wie die Codeassembly bereitgestellt. Wenn die Codeassembly im [globalen Assemblycache](../app-domains/gac.md) installiert wird, werden gleichzeitig Satellitenassemblys im globalen Assemblycache installiert. Wenn die Codeassembly in einem Verzeichnis installiert wird, werden Satellitenassemblys in kulturspezifischen Ordnern in diesem Verzeichnisses installiert.
 
 - Satellitenassemblys werden nicht bei Bedarf installiert.
 
 - Der Anwendungscode behandelt nicht das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut in der Anwendungskonfigurationsdatei auf `true` festlegen, wie in folgendem Beispiel veranschaulicht.
+Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut in der Anwendungskonfigurationsdatei auf `true` festlegen, wie in folgendem Beispiel veranschaulicht.
 
 ```xml
 <configuration>
@@ -128,7 +128,7 @@ Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des 
 </configuration>
 ```
 
-Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das heißt, dass die Runtime die Schritte aus [Der Ressourcenfallback-Prozess](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) durchführt, es sei denn, das Element [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) befindet sich in der Anwendungskonfigurationsdatei, während dessen `enabled`-Attribut auf `true` festgelegt ist. Wenn dies der Fall ist, wird der Suchprozess nach einer Satellitenassembly wie folgt angepasst:
+Die optimierte Überprüfung auf Satellitenassemblys ist ein Opt-In-Feature. Das heißt, dass die Runtime die Schritte aus [Der Ressourcenfallback-Prozess](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) durchführt, es sei denn, das Element [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) befindet sich in der Anwendungskonfigurationsdatei, während dessen `enabled`-Attribut auf `true` festgelegt ist. Wenn dies der Fall ist, wird der Suchprozess nach einer Satellitenassembly wie folgt angepasst:
 
 - Die Runtime verwendet den Speicherort der übergeordneten Codeassembly, um nach der Satellitenassembly zu suchen. Wenn die übergeordnete Assembly im globalen Assemblycache installiert ist, durchsucht die Runtime den Cache, aber nicht das Anwendungsverzeichnis. Wenn die übergeordnete Assembly im Anwendungsverzeichnis installiert ist, durchsucht die Runtime das Anwendungsverzeichnis, aber nicht den globalen Assemblycache.
 
@@ -186,7 +186,7 @@ Die zweite Datei, „resources.ru.txt“, enthält eine russische Sprachressourc
 Greeting=Добрый день
 ```
 
-Diese beiden Dateien werden zu RESOURCES-Datei kompiliert, indem Sie das [Resource File Generator-Tool („resgen.exe“)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in der Befehlszeile ausführen. Der Befehl für die französische Sprachressource lautet:
+Diese beiden Dateien werden zu RESOURCES-Datei kompiliert, indem Sie das [Resource File Generator-Tool („resgen.exe“)](../tools/resgen-exe-resource-file-generator.md) in der Befehlszeile ausführen. Der Befehl für die französische Sprachressource lautet:
 
 **resgen.exe resources.fr.txt**
 
@@ -194,7 +194,7 @@ Der Befehl für die russische Sprachressource lautet:
 
 **resgen.exe resources.ru.txt**
 
-Die RESOURCES-Dateien werden in DLLs (Dynamic Link Libraries) eingebettet, indem Sie den [Assemblylinker („al.exe“)](../../../docs/framework/tools/al-exe-assembly-linker.md) in der Befehlszeile für die französische Sprachressource wie folgt ausführen:
+Die RESOURCES-Dateien werden in DLLs (Dynamic Link Libraries) eingebettet, indem Sie den [Assemblylinker („al.exe“)](../tools/al-exe-assembly-linker.md) in der Befehlszeile für die französische Sprachressource wie folgt ausführen:
 
 **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
 
@@ -233,7 +233,7 @@ Möglicherweise können Sie aus Zeit- oder Kostengründen keinen Satz an Ressour
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
-- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
-- [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [Ressourcen in Desktop-Apps](index.md)
+- [Globaler Assemblycache](../app-domains/gac.md)
+- [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md)
+- [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md)

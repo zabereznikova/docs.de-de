@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8826b73c02c4d4c54458f08581c0c35238201f6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: db9571a2d07bcdf9830ef93cd07a5dae912f4677
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662397"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051712"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 
@@ -36,7 +36,7 @@ Es gibt zwei Möglichkeiten, um diese Typinformationen für Ihre Anwendung verf�
 
 Wenn Sie Interop-Assemblys nur zur Entwurfszeit verwenden, können Sie Typinformationen aus der primären Interop-Assembly einbetten, die vom Autor der COM-Komponente veröffentlicht wurden. Sie müssen jedoch die primäre Interop-Assembly nicht mit Ihrer Anwendung bereitstellen.
 
-Das Verwenden von Interop-Assemblys nur zur Entwurfszeit reduziert die Größe Ihrer Anwendung, da die meisten Anwendungen nicht alle Funktionen einer COM-Komponente verwenden. Der Compiler ist sehr effizient, wenn er Typinformationen einbettet. Wenn Ihre Anwendung nur einige der Methoden auf einer COM-Schnittstelle verwendet, bettet der Compiler die nicht verwendeten Methoden nicht ein. Wenn eine Anwendung mit eingebetteten Typinformationen mit einer anderen Anwendung dieser Art oder mit einer Anwendung interagiert, die eine primäre Interop-Assembly verwendet, nutzt die Common Language Runtime Typäquivalenzregeln, um zu bestimmen, ob zwei Typen mit dem gleichen Namen denselben COM-Typ darstellen. Sie müssen diese Regeln nicht kennen, um COM-Objekte zu verwenden. Wenn Sie jedoch an diesen Regeln interessiert sind, finden Sie weitere Informationen unter [Type Equivalence and Embedded Interop Types (Typäquivalenz und eingebettete Interop-Typen)](../../../docs/framework/interop/type-equivalence-and-embedded-interop-types.md).
+Das Verwenden von Interop-Assemblys nur zur Entwurfszeit reduziert die Größe Ihrer Anwendung, da die meisten Anwendungen nicht alle Funktionen einer COM-Komponente verwenden. Der Compiler ist sehr effizient, wenn er Typinformationen einbettet. Wenn Ihre Anwendung nur einige der Methoden auf einer COM-Schnittstelle verwendet, bettet der Compiler die nicht verwendeten Methoden nicht ein. Wenn eine Anwendung mit eingebetteten Typinformationen mit einer anderen Anwendung dieser Art oder mit einer Anwendung interagiert, die eine primäre Interop-Assembly verwendet, nutzt die Common Language Runtime Typäquivalenzregeln, um zu bestimmen, ob zwei Typen mit dem gleichen Namen denselben COM-Typ darstellen. Sie müssen diese Regeln nicht kennen, um COM-Objekte zu verwenden. Wenn Sie jedoch an diesen Regeln interessiert sind, finden Sie weitere Informationen unter [Type Equivalence and Embedded Interop Types (Typäquivalenz und eingebettete Interop-Typen)](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Generieren von Metadaten
 
@@ -46,11 +46,11 @@ Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-CO
 
 - Visual Studio
 
-  Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).
+  Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](how-to-add-references-to-type-libraries.md).
 
-- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)
 
-  Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Anweisungen hierzu finden Sie unter [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).
+  Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Anweisungen hierzu finden Sie unter [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>-Klasse
 
@@ -75,12 +75,12 @@ Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-CO
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
 - [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)
 - [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Kompilieren eines Interop-Projekts](../../../docs/framework/interop/compiling-an-interop-project.md)
-- [Bereitstellen einer Interop-Anwendung](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Kompilieren eines Interop-Projekts](compiling-an-interop-project.md)
+- [Bereitstellen einer Interop-Anwendung](deploying-an-interop-application.md)
+- [Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken](how-to-add-references-to-type-libraries.md)
+- [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md)

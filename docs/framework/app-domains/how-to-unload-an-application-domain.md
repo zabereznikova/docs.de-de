@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: f7419725f3822622a8e4210d4f3f5d8e9e59dbdd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212179"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053130"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Vorgehensweise: Entladen einer Anwendungsdomäne
 Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie mithilfe der <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>-Methode. Durch die **Unload**-Methode wird die angegebene Anwendungsdomäne ordnungsgemäß geschlossen. Während des Entladevorgangs können keine neuen Threads auf die Anwendungsdomäne zugreifen. Alle anwendungsdomänenspezifischen Strukturen werden freigegeben.  
@@ -34,5 +34,5 @@ Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie 
 ## <a name="see-also"></a>Siehe auch
 
 - [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
-- [Vorgehensweise: Erstellen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
-- [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)
+- [Vorgehensweise: Erstellen einer Anwendungsdomäne](how-to-create-an-application-domain.md)
+- [Verwenden von Anwendungsdomänen](use.md)

@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b9781e7ef8edde182a13779a01e042cb44c92881
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912530"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045999"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
   
 > [!IMPORTANT]
-> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>So definieren Sie einen generischen Typ  
   
@@ -121,7 +121,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
   
  Das Programm enthält eine Methode, die Informationen über einen generischen Typ auflistet, sowie eine Methode, die die besonderen Einschränkungen für einen Typparameter auflistet. Diese Methoden werden zur Darstellung von Informationen über die abgeschlossene `Sample`-Klasse verwendet.  
   
- Das Programm speichert die abgeschlossenen Module als `GenericEmitExample1.dll` auf dem Datenträger, damit Sie sie mit dem [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) öffnen können und die MSIL für die `Sample`-Klasse untersuchen können.  
+ Das Programm speichert die abgeschlossenen Module als `GenericEmitExample1.dll` auf dem Datenträger, damit Sie sie mit dem [Ildasm.exe (IL-Disassembler)](../tools/ildasm-exe-il-disassembler.md) öffnen können und die MSIL für die `Sample`-Klasse untersuchen können.  
   
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]

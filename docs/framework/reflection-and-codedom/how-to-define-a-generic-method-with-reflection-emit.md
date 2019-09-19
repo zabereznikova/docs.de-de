@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a224093b47241d951b463a7f3e0be389bba2806
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 857bad224d1a88c7011a42d0595b17b1810381aa
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043725"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046059"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
 
@@ -27,7 +27,7 @@ Im zweiten Verfahren wird veranschaulicht, wie der Methodentext ausgegeben wird 
 Im dritten Verfahren wird das Aufrufen der generischen Methode veranschaulicht.
 
 > [!IMPORTANT]
-> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md).
 
 ### <a name="to-define-a-generic-method"></a>So definieren Sie eine generische Methode
 
@@ -36,7 +36,7 @@ Im dritten Verfahren wird das Aufrufen der generischen Methode veranschaulicht.
     [!code-csharp[GenericMethodHowTo#20](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#20)]
     [!code-vb[GenericMethodHowTo#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#20)]
 
-2. Definieren Sie eine dynamische Assembly und ein dynamisches Modul, um den Typ aufzunehmen, dem die generische Methode angehört. Die Assembly enthält in diesem Fall nur ein Modul mit der Bezeichnung `DemoMethodBuilder1`. Der Modulname setzt sich aus dem Assemblynamen und einer Erweiterung zusammen. In diesem Beispiel wird die Assembly ausgeführt und auf einem Datenträger gespeichert, daher wird <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> angegeben. Mithilfe von [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) können Sie DemoMethodBuilder1.dll untersuchen und mit dem in Schritt 1 gezeigten Microsoft Intermediate Language (MSIL)-Code für die Methode vergleichen.
+2. Definieren Sie eine dynamische Assembly und ein dynamisches Modul, um den Typ aufzunehmen, dem die generische Methode angehört. Die Assembly enthält in diesem Fall nur ein Modul mit der Bezeichnung `DemoMethodBuilder1`. Der Modulname setzt sich aus dem Assemblynamen und einer Erweiterung zusammen. In diesem Beispiel wird die Assembly ausgeführt und auf einem Datenträger gespeichert, daher wird <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> angegeben. Mithilfe von [Ildasm.exe (IL-Disassembler)](../tools/ildasm-exe-il-disassembler.md) können Sie DemoMethodBuilder1.dll untersuchen und mit dem in Schritt 1 gezeigten Microsoft Intermediate Language (MSIL)-Code für die Methode vergleichen.
 
     [!code-csharp[GenericMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#2)]
     [!code-vb[GenericMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#2)]
@@ -156,7 +156,7 @@ Im folgenden Codebeispiel wird ein nicht generischer Typ `DemoType` mit der gene
 
 Die Methode verfügt über einen formalen Parameter, der ein Array von `TInput` ist. Die Methode gibt eine Instanz von `TOutput` zurück, die alle Elemente des Eingabearrays enthält. `TOutput` kann ein beliebiger generischer Auflistungstyp sein, der die generische <xref:System.Collections.Generic.ICollection%601>-Schnittstelle implementiert.
 
-Bei der Codeausführung wird die dynamische Assembly als DemoGenericMethod1.dll gespeichert. Sie kann mit [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) untersucht werden.
+Bei der Codeausführung wird die dynamische Assembly als DemoGenericMethod1.dll gespeichert. Sie kann mit [Ildasm.exe (IL-Disassembler)](../tools/ildasm-exe-il-disassembler.md) untersucht werden.
 
 > [!NOTE]
 > Wenn Sie das Ausgeben von Code erlernen möchten, empfiehlt es sich, ein Visual Basic-, C#- oder Visual C++-Programm zu schreiben, das die Aufgabe ausführt, die Sie ausgeben möchten, und anschließend anhand eines Disassemblers den vom Compiler generierten MSIL-Code zu untersuchen.
@@ -169,4 +169,4 @@ Das Codebeispiel enthält Quellcode, der der ausgegebenen Methode entspricht. Di
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fff2d3309e5f8872a9333bf3d2f86e52bd67ea5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971777"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051779"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“
 
 Es gibt zwei Möglichkeiten, eine primäre Interop-Assembly zu generieren:
 
-- Verwenden von [„Tlbimp.exe“ (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), das im Windows SDK bereitgestellt wird.
+- Verwenden von [„Tlbimp.exe“ (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md), das im Windows SDK bereitgestellt wird.
 
-  Die einfachste Möglichkeit zum Erstellen primärer Interop-Assemblys besteht darin, [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) zu verwenden. "Tlbimp.exe" bietet die folgenden Schutzvorrichtungen:
+  Die einfachste Möglichkeit zum Erstellen primärer Interop-Assemblys besteht darin, [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md) zu verwenden. "Tlbimp.exe" bietet die folgenden Schutzvorrichtungen:
 
   - Es prüft auf andere registrierte primäre Interop-Assemblys, bevor es neue Interop-Assemblys für irgendwelche geschachtelten Typbibliotheksverweise erstellt.
 
@@ -71,4 +71,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Registrieren primärer Interopassemblys](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+- [Vorgehensweise: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)

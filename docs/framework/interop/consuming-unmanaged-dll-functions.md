@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ef6a31ba9589ded9527d15e90724d0d04749579
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946842"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051846"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Verwenden nicht verwalteter DLL-Funktionen
 Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Windows-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
@@ -29,15 +29,15 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
   
 #### <a name="to-consume-exported-dll-functions"></a>So verarbeiten Sie exportierte DLL-Funktionen  
   
-1. [Identifizieren von Funktionen in DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md).  
   
      Sie müssen mindestens den Namen der Funktion und den Namen der DLL angeben, in der sie enthalten ist.  
   
-2. [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md).  
   
      Sie können eine bestehende Klasse verwenden, eine einzelne Klasse für jede nicht verwaltete Funktion erstellen oder eine Klasse erstellen, die einen Satz zusammengehöriger, nicht verwalteter Funktionen enthält.  
   
-3. [Erstellen von Prototypen in verwaltetem Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Verwenden Sie die **Declare**-Anweisung mit den Schlüsselwörtern **Function** und **Lib**. In seltenen Fällen können Sie **DllImportAttribute** mit den Schlüsselwörtern **Shared Function** verwenden. Diese Fälle werden weiter unten in diesem Abschnitt erläutert.  
   
@@ -45,11 +45,11 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
   
      [C++] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Wrappermethode oder Funktion mit **extern "C"** .  
   
-4. [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Aufrufen einer DLL-Funktion](calling-a-dll-function.md).  
   
-     Rufen Sie die Methode für Ihre verwaltete Klasse wie für jede andere verwaltete Methode auf. [Übergeben von Strukturen](../../../docs/framework/interop/passing-structures.md) und [Implementieren von Rückruffunktionen](../../../docs/framework/interop/callback-functions.md) sind spezielle Fälle.  
+     Rufen Sie die Methode für Ihre verwaltete Klasse wie für jede andere verwaltete Methode auf. [Übergeben von Strukturen](passing-structures.md) und [Implementieren von Rückruffunktionen](callback-functions.md) sind spezielle Fälle.  
   
- Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Genauere Betrachtung von Plattformaufrufen  
  Plattformaufrufe beruhen auf Metadaten, um exportierte Funktionen zu suchen und ihre Argumente zur Laufzeit zu marshallen. Die folgende Abbildung veranschaulicht diesen Prozess.  
@@ -73,6 +73,6 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)
-- [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Interoperabilität mit nicht verwaltetem Code](index.md)
+- [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
+- [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)

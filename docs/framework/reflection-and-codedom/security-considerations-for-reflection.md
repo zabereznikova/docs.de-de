@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 852490c57a2954e9d56799ef8deebbef31d5f665
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956708"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045891"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 
@@ -61,7 +61,7 @@ Diese Regeln gelten immer, ganz gleich, ob auf einen sicherheitskritischen Membe
 
 Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wenn der gleiche Code mit teilweiser Vertrauenswürdigkeit ausgeführt wird (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob der Zugriff auf sicherheitskritischen Code gewährt wird: Wenn die Assembly über einen starken Namen verfügt und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und sie kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.
 
-Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](../../../docs/framework/security/security-changes.md).
+Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](../security/security-changes.md).
 
 ## <a name="reflection-and-transparency"></a>Reflektion und Transparenz
 
@@ -117,9 +117,9 @@ Sie sollten keine öffentlichen Member schreiben, an die <xref:System.Reflection
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)
-- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)
-- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Sicherheitsänderungen](../security/security-changes.md)
+- [Codezugriffssicherheit](../misc/code-access-security.md)
+- [Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)
+- [Anzeigen von Typinformationen](viewing-type-information.md)
 - [Anwenden von Attributen](../../standard/attributes/applying-attributes.md)
-- [Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Zugreifen auf benutzerdefinierte Attribute](accessing-custom-attributes.md)

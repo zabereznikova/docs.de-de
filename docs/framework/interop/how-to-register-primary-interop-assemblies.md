@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946672"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051744"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
 
@@ -24,7 +24,7 @@ Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Sc
 
  Selbst wenn Sie nicht beabsichtigen, die COM-Typen von Drittanbietern verfügbar zu machen, lässt sich durch Verwenden der primären Interop-Assembly das Interoperieren mit COM-Komponenten vereinfachen. Diese Strategie bietet jedoch keinen Schutz vor Änderungen, die ein Anbieter an Typen vornehmen kann, die in einer primären Interop-Assembly definiert sind. Wenn Ihre Anwendung einen solchen Schutz erfordert, generieren Sie Ihre eigene Interop-Assembly, anstatt die primäre Interop-Assembly zu verwenden.
 
- Sie müssen alle erworbenen primären Interop-Assemblys auf dem Entwicklungscomputer registrieren, bevor Sie mit Visual Studio auf sie verweisen können. Visual Studio sucht nach einer primären Interop-Assembly und verwendet diese, wenn Sie zum ersten Mal auf einen Typ aus einer COM-Typbibliothek verweisen. Wenn Visual Studio die der Typbibliothek zugeordnete primäre Interop-Assembly nicht finden kann, werden Sie aufgefordert, diese zu erwerben oder stattdessen eine Interop-Assembly zu erstellen. In gleicher Weise verwendet auch das [Type Library Importer-Tool (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) die Registrierung, um nach primären Interop-Assemblys zu suchen.
+ Sie müssen alle erworbenen primären Interop-Assemblys auf dem Entwicklungscomputer registrieren, bevor Sie mit Visual Studio auf sie verweisen können. Visual Studio sucht nach einer primären Interop-Assembly und verwendet diese, wenn Sie zum ersten Mal auf einen Typ aus einer COM-Typbibliothek verweisen. Wenn Visual Studio die der Typbibliothek zugeordnete primäre Interop-Assembly nicht finden kann, werden Sie aufgefordert, diese zu erwerben oder stattdessen eine Interop-Assembly zu erstellen. In gleicher Weise verwendet auch das [Type Library Importer-Tool (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) die Registrierung, um nach primären Interop-Assemblys zu suchen.
 
  Obwohl eine Registrierung von primären Interop-Assemblys nur dann erforderlich ist, wenn Sie Visual Studio verwenden möchten, bietet eine Registrierung zwei Vorteile:
 
@@ -32,7 +32,7 @@ Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Sc
 
 - Sie können vermeiden, versehentlich eine neue Interop-Assembly zu generieren und zu verwenden, wenn Sie irgendwann in der Zukunft Visual Studio verwenden, um auf einen Typ zu verweisen, für den Sie eine nicht registrierte primäre Interop-Assembly haben.
 
-Verwenden Sie das [Assembly Registration-Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), um eine primäre Interop-Assembly zu registrieren.
+Verwenden Sie das [Assembly Registration-Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md), um eine primäre Interop-Assembly zu registrieren.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>So registrieren Sie eine primäre Interop-Assembly
 

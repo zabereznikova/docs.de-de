@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf244271010a7eb47a6c7b283a84c405108d803
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 002434cf51b221a456c8752b5b1388912f875a28
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041466"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045756"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 
@@ -35,13 +35,13 @@ In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschau
 - [Das Einrichten einer einfachen Sandkastenanwendung zum Testen von teilweise vertrauenswürdigem Code](#Setting_up)
 
   > [!IMPORTANT]
-  > Dies ist eine einfache Möglichkeit zum Experimentieren mit teilweise vertrauenswürdigem Code. Informationen zum Ausführen von Code, der aus nicht vertrauenswürdigen Speicherorten stammt, finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+  > Dies ist eine einfache Möglichkeit zum Experimentieren mit teilweise vertrauenswürdigem Code. Informationen zum Ausführen von Code, der aus nicht vertrauenswürdigen Speicherorten stammt, finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Ausführen von Code in teilweise vertrauenswürdigen Anwendungsdomänen](#Running_code)
 
 - [Verwenden von anonym gehosteten dynamischen Methoden zum Ausgeben und Ausführen von Code in Szenarios mit teilweiser Vertrauenswürdigkeit](#Using_methods)
 
-Weitere Informationen zum Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit finden Sie unter [Security Issues in Reflection Emit (Sicherheitsaspekte bei der Reflektionsausgabe)](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md).
+Weitere Informationen zum Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit finden Sie unter [Security Issues in Reflection Emit (Sicherheitsaspekte bei der Reflektionsausgabe)](security-issues-in-reflection-emit.md).
 
 Eine vollständige Auflistung des in diesen Verfahren dargestellten Codes finden Sie im [Beispielabschnitt](#Example) am Ende dieser exemplarischen Vorgehensweise.
 
@@ -71,7 +71,7 @@ Im folgenden Verfahren wird eine Sandbox-Anwendungsdomäne erstellt, die Code mi
 2. Erstellen Sie ein <xref:System.AppDomainSetup>-Objekt, um die Anwendungsdomäne mit einem Anwendungspfad zu initialisieren.
 
     > [!IMPORTANT]
-    > In diesem Codebeispiel wird der Einfachheit halber der aktuelle Ordner verwendet. Um Code auszuführen, der eigentlich aus dem Internet stammt, verwenden Sie einen separaten Ordner für den nicht vertrauenswürdigen Code, wie in [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
+    > In diesem Codebeispiel wird der Einfachheit halber der aktuelle Ordner verwendet. Um Code auszuführen, der eigentlich aus dem Internet stammt, verwenden Sie einen separaten Ordner für den nicht vertrauenswürdigen Code, wie in [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -194,7 +194,7 @@ Um Rechteerweiterungen zu verhindern, werden beim Erstellen anonym gehosteter dy
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Das folgende Codebeispiel veranschaulicht die Verwendung des <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>-Flags, um anonym gehosteten dynamischen Methoden das Überspringen von JIT-Sichtbarkeitsprüfungen zu ermöglichen, wenn der Zielmember die gleiche oder eine geringere Vertrauensebene aufweist als die Assembly, die den Code ausgibt.
 
@@ -225,5 +225,5 @@ Dieser Vergleich zeigt, wie teilweise vertrauenswürdiger Code durch <xref:Syste
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)
+- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

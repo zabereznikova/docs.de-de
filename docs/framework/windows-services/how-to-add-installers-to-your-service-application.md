@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952512"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053653"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  
@@ -47,11 +47,11 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
   
     |Wert|Ergebnis|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Der Dienst muss nach der Installation manuell gestartet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Der Dienst muss nach der Installation manuell gestartet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Der Dienst startet selbst, sobald der Computer neu gestartet wird.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Der Dienst kann nicht gestartet werden.|  
   
-6. Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceProcessInstaller>, und legen Sie die entsprechenden Eigenschaftswerte fest, um den Sicherheitskontext zu bestimmen, in dem Ihr Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceProcessInstaller>, und legen Sie die entsprechenden Eigenschaftswerte fest, um den Sicherheitskontext zu bestimmen, in dem Ihr Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md).  
   
 7. Setzen Sie alle Methoden außer Kraft, für die eine benutzerdefinierte Verarbeitung durchgeführt werden muss.  
   
@@ -62,7 +62,7 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
+- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md)

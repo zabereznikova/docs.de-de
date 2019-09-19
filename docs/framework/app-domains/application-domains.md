@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4a0a6a00fc76a646b4295db726bd8ae67733e321
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040735"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053222"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
 
@@ -64,7 +64,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
 - Wird eine Assembly nicht domänenneutral geladen, muss sie in jeder Anwendungsdomäne, in die sie geladen wird, JIT-kompiliert werden. Die Assembly kann jedoch aus dem Prozess entladen werden, indem alle Anwendungsdomänen entladen werden, in denen die Assembly geladen ist.  
   
- Der Laufzeithost legt beim Laden der Common Language Runtime in einen Prozess fest, ob Assemblys als domänenneutral geladen werden. Wenden Sie für verwaltete Anwendungen das <xref:System.LoaderOptimizationAttribute>-Attribut auf die Einstiegspunktmethode für den Prozess an, und geben Sie einen Wert aus der dazugehörigen <xref:System.LoaderOptimization>-Enumeration an. Geben Sie für nicht verwaltete Anwendungen, in denen sich die Common Language Runtime befindet, beim Aufrufen der [CorBindToRuntimeEx](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)-Methode das entsprechende Flag an.  
+ Der Laufzeithost legt beim Laden der Common Language Runtime in einen Prozess fest, ob Assemblys als domänenneutral geladen werden. Wenden Sie für verwaltete Anwendungen das <xref:System.LoaderOptimizationAttribute>-Attribut auf die Einstiegspunktmethode für den Prozess an, und geben Sie einen Wert aus der dazugehörigen <xref:System.LoaderOptimization>-Enumeration an. Geben Sie für nicht verwaltete Anwendungen, in denen sich die Common Language Runtime befindet, beim Aufrufen der [CorBindToRuntimeEx](../unmanaged-api/hosting/corbindtoruntimeex-function.md)-Methode das entsprechende Flag an.  
   
  Es gibt drei Möglichkeiten für das Laden domänenneutraler Assemblys:  
   
@@ -76,7 +76,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  JIT-kompilierter Code kann nicht gemeinsam von Assemblys genutzt werden, die mit der <xref:System.Reflection.Assembly.LoadFrom%2A>-Methode der <xref:System.Reflection.Assembly>-Klasse in den LoadFrom-Kontext geladen werden oder die aus Abbildern mithilfe von Überladungen der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen werden, die Bytearrays angeben.  
   
- Assemblys, die mit dem [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) in nativen Code kompiliert wurden, können gemeinsam von Anwendungsdomänen genutzt werden, wenn sie beim erstmaligen Laden in einen Prozess als domänenneutral geladen werden.  
+ Assemblys, die mit dem [Native Image Generator (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) in nativen Code kompiliert wurden, können gemeinsam von Anwendungsdomänen genutzt werden, wenn sie beim erstmaligen Laden in einen Prozess als domänenneutral geladen werden.  
   
  JIT-kompilierter Code für die Assembly, die den Anwendungseinstiegspunkt enthält, kann nur gemeinsam genutzt werden, wenn alle zugehörigen Abhängigkeiten gemeinsam genutzt werden können.  
   
@@ -110,7 +110,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Die <xref:System.AppDomain> ist die programmgesteuerte Schnittstelle zu Anwendungsdomänen. Diese Klasse enthält Methoden zum Erstellen und Entladen von Domänen, zum Erstellen von Instanzen von Typen in Domänen und zum Registrieren von verschiedenen Benachrichtigungen wie das Entladen von Domänen. In der folgenden Tabelle werden häufig verwendete <xref:System.AppDomain>-Methoden aufgelistet.  
   
-|AppDomain-Methode|BESCHREIBUNG|  
+|AppDomain-Methode|Beschreibung|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|Erstellt eine neue Anwendungsdomäne. Es wird empfohlen, dass Sie eine Überladung dieser Methode verwenden, die ein <xref:System.AppDomainSetup>-Objekt angibt. Dies ist die bevorzugte Methode zum Festlegen der Eigenschaften einer neuen Domäne, z. B. die Anwendungsbasis oder das Stammverzeichnis für die Anwendung, des Speicherorts der Konfigurationsdatei für die Domäne und des Suchpfads, den die Common Language Runtime verwenden soll, um Assemblys in die Domäne zu laden.|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> und <xref:System.AppDomain.ExecuteAssemblyByName%2A>|Führt eine Assembly in der Anwendungsdomäne aus. Hierbei handelt es sich um eine Instanzmethode, mit der Code in einer anderen Anwendungsdomäne ausgeführt werden kann, für die ein Verweis vorhanden ist.|  
@@ -132,7 +132,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Anmerkungen
+### <a name="remarks"></a>Hinweise
 
  Eine typische Anwendung lädt mehrere Assemblys in eine Anwendungsdomäne, bevor der Code, den sie enthalten, ausgeführt werden kann.  
   

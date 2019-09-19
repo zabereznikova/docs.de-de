@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626295"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051753"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
@@ -20,9 +20,9 @@ Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwi
   
 - Der Remotedienst gibt ein Objekt per Verweis an den Client zurück.  
   
- Aus Sicherheitsgründen ist es in WCF nicht zulässig, ein Objekt per Verweis vom Client an den Dienst zu senden. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden.  Weitere Informationen zu Duplexdiensten finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+ Aus Sicherheitsgründen ist es in WCF nicht zulässig, ein Objekt per Verweis vom Client an den Dienst zu senden. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden.  Weitere Informationen zu Duplexdiensten finden Sie unter [Duplexdienste](../wcf/feature-details/duplex-services.md).  
   
- Weitere Informationen zum Erstellen von WCF-Diensten und Clients für diese Dienste finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md), [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md) und [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md).  
+ Weitere Informationen zum Erstellen von WCF-Diensten und Clients für diese Dienste finden Sie unter [Basis-WCF-Programmierung](../wcf/basic-wcf-programming.md), [Entwerfen und Implementieren von Diensten](../wcf/designing-and-implementing-services.md) und [Erstellen von Clients](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>DCOM-Beispielcode  
  Für diese Szenarien haben die DCOM-Schnittstellen, die für die Verwendung mit WCF veranschaulicht werden, die folgende Struktur:  
@@ -82,7 +82,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>Schritt 2: Definieren des Datenvertrags  
  Als Nächstes sollten Sie einen Datenvertrag für den Dienst erstellen. In diesem Vertrag wird beschrieben, wie die Daten zwischen dem Dienst und seinen Clients ausgetauscht werden.  Klassen, die in dem Datenvertrag beschrieben sind, müssen mit dem [<xref:System.Runtime.Serialization.DataContractAttribute>]-Attribut gekennzeichnet werden. Die einzelnen Eigenschaften oder Felder, die für Client und Server sichtbar sein sollen, müssen mit dem [<xref:System.Runtime.Serialization.DataMemberAttribute>]-Attribut markiert werden. Möchten Sie im Datenvertrag Typen zulassen, die aus einer Klasse abgeleitet wurden, müssen Sie diese mit dem [<xref:System.Runtime.Serialization.KnownTypeAttribute>]-Attribut kennzeichnen. WCF serialisiert oder deserialisiert nur Typen in der Dienstschnittstelle sowie Typen, die als bekannte Typen gekennzeichnet sind. Wenn Sie versuchen, einen Typ zu verwenden, der kein bekannter Typ ist, wird eine Ausnahme ausgelöst.  
   
- Weitere Informationen zu Datenverträgen finden Sie unter [Datenverträge](../../../docs/framework/wcf/samples/data-contracts.md).  
+ Weitere Informationen zu Datenverträgen finden Sie unter [Datenverträge](../wcf/samples/data-contracts.md).  
   
 ```csharp  
 [DataContract]  
@@ -170,7 +170,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>Schritt 5: Ausführen des Diensts  
- Schließlich können Sie den Dienst über Selfhosting in einer Konsolenanwendung bereitstellen, indem Sie der Dienstanwendung die folgenden Zeilen hinzufügen und die Anwendung starten. Weitere Informationen zu anderen Möglichkeiten zum Hosten einer WCF-Dienstanwendung finden Sie unter [Hosting-Dienste](../../../docs/framework/wcf/hosting-services.md).  
+ Schließlich können Sie den Dienst über Selfhosting in einer Konsolenanwendung bereitstellen, indem Sie der Dienstanwendung die folgenden Zeilen hinzufügen und die Anwendung starten. Weitere Informationen zu anderen Möglichkeiten zum Hosten einer WCF-Dienstanwendung finden Sie unter [Hosting-Dienste](../wcf/hosting-services.md).  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -423,7 +423,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)
-- [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Einfache WCF-Programmierung](../wcf/basic-wcf-programming.md)
+- [Entwerfen und Implementieren von Diensten](../wcf/designing-and-implementing-services.md)
+- [Erstellen von Clients](../wcf/building-clients.md)
+- [Duplexdienste](../wcf/feature-details/duplex-services.md)

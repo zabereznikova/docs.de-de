@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 981f5f23bf2aafc41426c858e150ec3664a494f9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: db4380e97cf4d556248f42981b350160710f1dd8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205806"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051821"
 ---
 # <a name="exposing-net-components-to-com"></a>Verfügbarmachen von .NET-Komponenten im COM
 
@@ -27,7 +27,7 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
 
      Benutzerdefinierte Attribute in verwaltetem Code können die Interoperabilität einer Komponente verbessern.
 
-- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).
+- [Verpacken einer Assembly für COM](packaging-an-assembly-for-com.md).
 
      COM-Entwickler fordern möglicherweise, dass Sie die Schritte für Verweise und die Bereitstellung Ihrer Assemblys zusammenfassen.
 
@@ -35,11 +35,11 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
 
 ## <a name="to-consume-a-managed-type-from-com"></a>Nutzen eines verwalteten Typs von COM
 
-1. [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md).
+1. [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md).
 
      Typen in einer Assembly (und Typbibliotheken) müssen zur Entwurfszeit registriert werden. Wenn ein Installer die Assembly nicht registriert, weisen Sie die COM-Entwickler zur Nutzung von Regasm.exe an.
 
-2. [Verweisen auf .NET-Typen in COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).
+2. [Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md).
 
      COM-Entwickler können auf Typen in einer Assembly verweisen, indem sie dieselben Tools und Techniken nutzen, die sie heute bereits verwenden.
 
@@ -53,5 +53,5 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)
-- [COM-Interopbeispiel: COM-Client und .NET-Server](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Interoperabilität mit nicht verwaltetem Code](index.md)
+- [COM-Interopbeispiel: COM-Client und .NET-Server](com-interop-sample-com-client-and-net-server.md)

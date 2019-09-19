@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: d5dc690cfe460be79251d60850319e5232379f3c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935445"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053492"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
@@ -57,7 +57,7 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Ein Beispiel finden Sie unter [Gewusst wie: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    > In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Ein Beispiel finden Sie unter [Gewusst wie: Programmgesteuertes Schreiben von Diensten](how-to-write-services-programmatically.md).  
   
 - Eine Reihe von Eigenschaften in der Klasse <xref:System.ServiceProcess.ServiceBase>. Mit diesen Eigenschaften wird bestimmt, welche Methoden in Ihrem Dienst aufgerufen werden können. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanStop%2A> beispielsweise auf `true` festgelegt wird, kann die Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> in Ihrem Dienst aufgerufen werden. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `true` festgelegt wird, können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A> und <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> aufgerufen werden. Wenn Sie eine dieser Eigenschaften auf `true` festlegen, sollten Sie anschließend die Verarbeitung für die zugeordneten Methoden außer Kraft setzen und definieren.  
   
@@ -68,5 +68,5 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)

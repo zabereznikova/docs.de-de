@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e94bb9d006febb4d8760ac481570dbed3a98341
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a2ac0c7fb5f89c7d6b9daba8da7b37d1135acb6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972022"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053183"
 ---
 # <a name="global-assembly-cache"></a>Globaler Assemblycache
 Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
@@ -31,7 +31,7 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
   
 - Die Verwendung eines Installationsprogramms, das für die Zusammenarbeit mit dem globalen Assemblycache entworfen wurde. Das ist die bevorzugte Option für die Installation von Assemblys im globalen Assemblycache.  
   
-- Die Verwendung des Entwicklertools [Global Assembly Cache-Tool („Gacutil.exe“)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) aus dem Windows SDK.  
+- Die Verwendung des Entwicklertools [Global Assembly Cache-Tool („Gacutil.exe“)](../tools/gacutil-exe-gac-tool.md) aus dem Windows SDK.  
   
     > [!NOTE]
     > Bei Bereitstellungsszenarios sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
@@ -45,5 +45,5 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
 ## <a name="see-also"></a>Siehe auch
 
 - [Assemblys in .NET](../../standard/assembly/index.md)
-- [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Arbeiten mit Assemblys und dem globalen Assemblychache](working-with-assemblies-and-the-gac.md)
 - [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md)

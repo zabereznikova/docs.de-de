@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29739625d29db6dc7c3876007f1e733b15f5c026
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970993"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045689"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 
@@ -54,7 +54,7 @@ Das Speichenarchitekturmodell erfordert, dass Sie Ressourcen an bestimmten Speic
 
 - Informationen zur Kultur der Satellitenassembly müssen in den Metadaten der Assembly enthalten sein. Um den Namen der Kultur in den Assemblymetadaten zu speichern, geben Sie die `/culture`-Option an, wenn Sie den [Assembly Linker](../tools/al-exe-assembly-linker.md) verwenden, um Ressourcen in die Satellitenassembly einzubetten.
 
-Die folgende Abbildung zeigt eine beispielhafte Verzeichnisstruktur und Speicherortanforderungen für Anwendungen, die nicht im [globalen Assemblycache](../../framework/app-domains/gac.md) installiert sind. Die Elemente mit TXT- und RESOURCES-Suffixen werden nicht mit der fertigen Anwendung geliefert. Dabei handelt es sich nur um die vorläufigen Ressourcendateien, die dazu verwendet werden, die endgültigen Ressourcensatellitenassemblys zu erstellen. In diesem Beispiel sollten Sie TXT-Dateien durch RESX-Dateien ersetzen. Weitere Informationen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md).
+Die folgende Abbildung zeigt eine beispielhafte Verzeichnisstruktur und Speicherortanforderungen für Anwendungen, die nicht im [globalen Assemblycache](../app-domains/gac.md) installiert sind. Die Elemente mit TXT- und RESOURCES-Suffixen werden nicht mit der fertigen Anwendung geliefert. Dabei handelt es sich nur um die vorläufigen Ressourcendateien, die dazu verwendet werden, die endgültigen Ressourcensatellitenassemblys zu erstellen. In diesem Beispiel sollten Sie TXT-Dateien durch RESX-Dateien ersetzen. Weitere Informationen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md).
 
 Die folgende Abbildung zeigt die Satellitenassemblyverzeichnis:
 
@@ -78,7 +78,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  In der folgenden Tabelle werden die Optionen von „al.exe“ ausführlicher beschrieben, die in diesen Befehlen verwendet werden.
   
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**-target:** lib|Gibt an, dass Ihre Satellitenassembly in einer Bibliotheksdatei (.dll) kompiliert ist. Da eine Satellitenassembly keinen ausführbaren Code enthält und nicht die Hauptassembly einer Anwendung ist, müssen Sie Satellitenassemblys als DLLs speichern.|
 |**-embed:** strings.de.resources|Gibt den Namen der einzubettenden Ressourcendatei an, wenn „al.exe“ die Assembly kompiliert. Sie können mehrere RESOURCEN-Dateien in einer Satellitenassembly einbetten. Wenn Sie allerdings das Speichenarchitekturmodell einsetzen, müssen Sie eine Satellitenassembly für jede Kultur kompilieren. Sie können allerdings separate RESOURCES-Dateien für Zeichenfolgen und Objekte erstellen.|
@@ -95,8 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 2. Um anzugeben, dass Englisch (en) die Standardkultur der Anwendung ist, fügen Sie folgendes <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType>-Attribut in die AssemblyInfo-Datei der Anwendung oder in die Hauptquellcodedatei hinzu, die in die Hauptassembly der Anwendung kompiliert werden.
   
-     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
-     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
+    [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Fügen Sie Unterstützung für weitere Kulturen (en-US, fr-FR und ru-RU) wie folgt in der Anwendung hinzu:  
   
@@ -150,17 +150,19 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
  Anschließend können Sie das Beispiel ausführen. Eine der unterstützten Kulturen wird willkürlich als aktuelle Kultur festgelegt. Dann wird eine lokalisierte Begrüßung angezeigt.
   
 <a name="SN"></a>   
+
 ## <a name="installing-satellite-assemblies-in-the-global-assembly-cache"></a>Installieren von Satellitenassemblys im globalen Assemblycache  
- Statt Assemblys in einem lokalen Unterverzeichnis der Anwendung zu installieren, können Sie diese auch im globalen Assemblycache (GAC) installieren. Dies ist besonders dann praktisch, wenn Sie Klassenbibliotheken und Ressourcenassemblys von Klassenbibliotheken haben, die von mehreren Anwendungen verwendet werden.
+Statt Assemblys in einem lokalen Unterverzeichnis der Anwendung zu installieren, können Sie diese auch im globalen Assemblycache (GAC) installieren. Dies ist besonders dann praktisch, wenn Sie Klassenbibliotheken und Ressourcenassemblys von Klassenbibliotheken haben, die von mehreren Anwendungen verwendet werden.
   
- Wenn Sie Assemblys im GAC installieren möchten, müssen diese einen starken Namen aufweisen. Assemblys mit starkem Namen werden mit einem gültigen Paar aus privatem und öffentlichem Schlüssel signiert. Sie enthalten Versionsinformationen, die die Runtime verwendet, um zu bestimmen, welche Assembly sie verwenden kann, um eine Bindungsanforderung zu erfüllen. Weitere Informationen zu starken Namen und zur Versionskontrolle finden Sie unter [Assembly Versioning (Assemblyversionskontrolle)](../../standard/assembly/versioning.md). Weitere Informationen zu starken Namen finden Sie unter [Strong-Named Assemblies (Assemblys mit starkem Namen)](../../standard/assembly/strong-named.md).
+Wenn Sie Assemblys im GAC installieren möchten, müssen diese einen starken Namen aufweisen. Assemblys mit starkem Namen werden mit einem gültigen Paar aus privatem und öffentlichem Schlüssel signiert. Sie enthalten Versionsinformationen, die die Runtime verwendet, um zu bestimmen, welche Assembly sie verwenden kann, um eine Bindungsanforderung zu erfüllen. Weitere Informationen zu starken Namen und zur Versionskontrolle finden Sie unter [Assembly Versioning (Assemblyversionskontrolle)](../../standard/assembly/versioning.md). Weitere Informationen zu starken Namen finden Sie unter [Strong-Named Assemblies (Assemblys mit starkem Namen)](../../standard/assembly/strong-named.md).
   
- Es ist unwahrscheinlich, dass Sie beim Entwickeln einer Anwendung Zugriff auf das endgültige Paar aus privatem und öffentlichem Schlüssel haben. Um eine Assembly im GAC zu installieren und sicherzustellen, dass sie wie erwartet funktioniert, können Sie das sogenannte verzögerte Signieren verwenden. Wenn Sie eine Assembly zum Zeitpunkt der Erstellung verzögert signieren, reservieren Sie Speicherplatz in der Datei für die starke Namenssignatur. Die tatsächliche Signatur wird auf einen späteren Zeitpunkt verschoben, wenn das Paar aus privatem und öffentlichem Schlüssel zur Verfügung steht. Weitere Informationen zum verzögerten Signieren finden Sie unter [Delay Signing an Assembly (Verzögertes Signieren einer Assembly)](../../standard/assembly/delay-sign.md).
+Es ist unwahrscheinlich, dass Sie beim Entwickeln einer Anwendung Zugriff auf das endgültige Paar aus privatem und öffentlichem Schlüssel haben. Um eine Assembly im GAC zu installieren und sicherzustellen, dass sie wie erwartet funktioniert, können Sie das sogenannte verzögerte Signieren verwenden. Wenn Sie eine Assembly zum Zeitpunkt der Erstellung verzögert signieren, reservieren Sie Speicherplatz in der Datei für die starke Namenssignatur. Die tatsächliche Signatur wird auf einen späteren Zeitpunkt verschoben, wenn das Paar aus privatem und öffentlichem Schlüssel zur Verfügung steht. Weitere Informationen zum verzögerten Signieren finden Sie unter [Delay Signing an Assembly (Verzögertes Signieren einer Assembly)](../../standard/assembly/delay-sign.md).
   
 ### <a name="obtaining-the-public-key"></a>Abrufen des öffentlichen Schlüssels  
- Um eine Assembly verzögert zu signieren, müssen Sie auf den öffentlichen Schlüssel zugreifen können. Sie können entweder den tatsächlichen öffentlichen Schlüssel von der Organisation in Ihrem Unternehmen abrufen, der das Signieren später durchführen wird, oder einen öffentlichen Schlüssel mit dem [Strong Name-Tool (Sn.exe)](../tools/sn-exe-strong-name-tool.md) erstellen.
+
+Um eine Assembly verzögert zu signieren, müssen Sie auf den öffentlichen Schlüssel zugreifen können. Sie können entweder den tatsächlichen öffentlichen Schlüssel von der Organisation in Ihrem Unternehmen abrufen, der das Signieren später durchführen wird, oder einen öffentlichen Schlüssel mit dem [Strong Name-Tool (Sn.exe)](../tools/sn-exe-strong-name-tool.md) erstellen.
   
- Der folgende Befehl von „sn.exe“ erstellt einen Testpaar aus privatem und öffentlichem Schlüssel. Die Option **–k** gibt an, dass „sn.exe“ ein neues Schlüsselpaar erstellen und dieses in einer Datei mit dem Namen „TestKeyPair.snk“ speichern sollte.
+Der folgende Befehl von „sn.exe“ erstellt einen Testpaar aus privatem und öffentlichem Schlüssel. Die Option **–k** gibt an, dass „sn.exe“ ein neues Schlüsselpaar erstellen und dieses in einer Datei mit dem Namen „TestKeyPair.snk“ speichern sollte.
   
 ```console
 sn –k TestKeyPair.snk
@@ -196,7 +198,7 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
 
 ### <a name="installing-a-satellite-assembly-in-the-global-assembly-cache"></a>Installieren einer Satellitenassembly im globalen Assemblycache
 
-Wenn die Runtime nach einer Ressource im Ressourcenfallback-Prozess sucht, durchsucht sie den [GAC](../../framework/app-domains/gac.md) als Erstes. (Weitere Informationen finden Sie im Abschnitt „Ressourcenfallback-Prozess“ in [Packaging and Deploying Resources (Verpacken und Bereitstellen von Ressourcen)](packaging-and-deploying-resources-in-desktop-apps.md)) Sobald die Satellitenassembly mit einem starken Namen signiert wurde, kann Sie im GAC mit dem [Global Assembly Cache-Tool (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) installiert werden.
+Wenn die Runtime nach einer Ressource im Ressourcenfallback-Prozess sucht, durchsucht sie den [GAC](../app-domains/gac.md) als Erstes. (Weitere Informationen finden Sie im Abschnitt „Ressourcenfallback-Prozess“ in [Packaging and Deploying Resources (Verpacken und Bereitstellen von Ressourcen)](packaging-and-deploying-resources-in-desktop-apps.md)) Sobald die Satellitenassembly mit einem starken Namen signiert wurde, kann Sie im GAC mit dem [Global Assembly Cache-Tool (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) installiert werden.
 
 Der folgende Befehl von „gacutil.exe“ installiert „StringLibrary.resources.dll“ im GAC:
 

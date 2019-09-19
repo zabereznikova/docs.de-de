@@ -7,25 +7,25 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8104d7cd6aa5a26fa69df7be838ea9b7cb2cc44
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
-ms.translationtype: HT
+ms.openlocfilehash: b5d7f97a4ec67e4932aaee922897a16362f6a78c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971770"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053236"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Gewusst-wie-Themen zu Anwendungsdomänen und Assemblys
 Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in der Begriffsdokumentation zum Programmieren mit Anwendungsdomänen und Assemblys.  
   
  **Anwendungsdomänen**  
   
-- [Vorgehensweise: Erstellen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Vorgehensweise: Erstellen einer Anwendungsdomäne](how-to-create-an-application-domain.md)  
   
-- [Vorgehensweise: Entladen einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+- [Vorgehensweise: Entladen einer Anwendungsdomäne](how-to-unload-an-application-domain.md)  
   
-- [Vorgehensweise: Konfigurieren einer Anwendungsdomäne](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+- [Vorgehensweise: Konfigurieren einer Anwendungsdomäne](how-to-configure-an-application-domain.md)  
   
-- [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+- [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Vorgehensweise: Abrufen von Typ- und Memberinformationen aus einer Assembly](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -47,12 +47,12 @@ Die folgenden Abschnitte enthalten Links zu allen Themen zur Vorgehensweise in d
   
 - [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](install-assembly-into-gac.md)  
   
-- [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+- [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](how-to-view-the-contents-of-the-gac.md)  
   
-- [Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+- [Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)  
   
 - [Vorgehensweise: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Anwendungsdomänen und Assemblys](../../../docs/framework/app-domains/index.md)
+- [Anwendungsdomänen und Assemblys](index.md)
