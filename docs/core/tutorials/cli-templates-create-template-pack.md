@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: df8c33856195ba7feacd32203e4a885997b50ad2
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870629"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926080"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Erstellen eines Vorlagenpakets
 
@@ -19,6 +19,7 @@ Mit .NET Core können Sie Vorlagen erstellen und bereitstellen, die Projekte, D
 In diesem Teil der Reihe wird Folgendes vermittelt:
 
 > [!div class="checklist"]
+>
 > * Erstellen eines CSPROJ-Projekts zur Erstellung eines Vorlagenpakets
 > * Konfigurieren der Projektdatei zum Ausführen eines Packvorgangs
 > * Installieren einer Vorlage aus einer NuGet-Paketdatei
@@ -30,17 +31,17 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 
   In diesem Tutorial werden die beiden Vorlagen verwendet, die in den ersten beiden Teilen dieses Tutorials erstellt wurden. Gegebenenfalls kann auch eine andere Vorlage verwendet werden, solange diese als Ordner in den Ordner _working\templates\\_ kopiert wird.
 
-* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_ .
+* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_.
 
 ## <a name="create-a-template-pack-project"></a>Erstellen eines Vorlagenpaketprojekts
 
 Bei einem Vorlagenpaket handelt es sich um eine Datei, in die mindestens eine Vorlage gepackt wurde. Wenn Sie ein Paket installieren oder deinstallieren, werden alle darin enthaltenen Vorlagen hinzugefügt bzw. entfernt. In den vorherigen Teilen dieser Tutorialreihe wurden jeweils nur einzelne Vorlagen verwendet. Wenn Sie eine nicht gepackte Vorlage weitergeben möchten, müssen Sie den Vorlagenordner kopieren und die Installation unter Verwendung dieses Ordners durchführen. Ein Vorlagenpaket ist eine einzelne Datei, die mehrere Vorlagen enthalten kann, was die Weitergabe vereinfacht.
 
-Bei Vorlagenpaketen handelt es sich um NuGet-Paketdateien ( _.nupkg_). Das bedeutet, sie können wie jedes andere NuGet-Paket in einen NuGet-Feed hochgeladen werden. Der Befehl `dotnet new -i` unterstützt die Installation von Vorlagenpaketen aus einem NuGet-Paketfeed. Darüber hinaus kann ein Vorlagenpaket auch direkt über eine __ NUPKG-Datei installiert werden.
+Bei Vorlagenpaketen handelt es sich um NuGet-Paketdateien (_.nupkg_). Das bedeutet, sie können wie jedes andere NuGet-Paket in einen NuGet-Feed hochgeladen werden. Der Befehl `dotnet new -i` unterstützt die Installation von Vorlagenpaketen aus einem NuGet-Paketfeed. Darüber hinaus kann ein Vorlagenpaket auch direkt über eine _NUPKG-Datei_ installiert werden.
 
-Üblicherweise wird eine C#-Projektdatei verwendet, um Code zu kompilieren und eine Binärdatei zu erstellen. Das Projekt kann jedoch auch verwendet werden, um ein Vorlagenpaket zu generieren. Durch Ändern der Einstellungen der __ CSPROJ-Datei können Sie sicherstellen, dass kein Code kompiliert wird, und stattdessen alle Ressourcen ihrer Vorlagen als Ressourcen einschließen. Wenn dieses Projekt erstellt wird, wird ein Vorlagenpaket in Form eines NuGet-Pakets erzeugt.
+Üblicherweise wird eine C#-Projektdatei verwendet, um Code zu kompilieren und eine Binärdatei zu erstellen. Das Projekt kann jedoch auch verwendet werden, um ein Vorlagenpaket zu generieren. Durch Ändern der Einstellungen der _CSPROJ-Datei_ können Sie sicherstellen, dass kein Code kompiliert wird, und stattdessen alle Ressourcen ihrer Vorlagen als Ressourcen einschließen. Wenn dieses Projekt erstellt wird, wird ein Vorlagenpaket in Form eines NuGet-Pakets erzeugt.
 
-Das erstellte Paket enthält die zuvor erstellte [Elementvorlage](cli-templates-create-item-template.md) und [Paketvorlage](cli-templates-create-project-template.md). Da wir die beiden Vorlagen im Ordner _working\templates\\_ zusammengefasst haben, können wir den Ordner _working_ für die __ CSPROJ-Datei verwenden.
+Das erstellte Paket enthält die zuvor erstellte [Elementvorlage](cli-templates-create-item-template.md) und [Paketvorlage](cli-templates-create-project-template.md). Da wir die beiden Vorlagen im Ordner _working\templates\\_ zusammengefasst haben, können wir den Ordner _working_ für die _CSPROJ-Datei_ verwenden.
 
 Navigieren Sie in Ihrem Terminal zum Ordner _working_. Erstellen Sie ein neues Projekt, und legen Sie den Namen auf `templatepack` und den Ausgabeordner auf den aktuellen Ordner fest.
 
@@ -48,7 +49,7 @@ Navigieren Sie in Ihrem Terminal zum Ordner _working_. Erstellen Sie ein neues P
 dotnet new console -n templatepack -o .
 ```
 
-Der Parameter `-n` legt den Dateinamen der __ CSPROJ-Datei auf _templatepack.csproj_ fest, und der Parameter `-o` erstellt die Dateien im aktuellen Verzeichnis. Das Ergebnis sollte in etwa wie in der folgenden Ausgabe aussehen:
+Der Parameter `-n` legt den Dateinamen der _CSPROJ-Datei_ auf _templatepack.csproj_ fest, und der Parameter `-o` erstellt die Dateien im aktuellen Verzeichnis. Das Ergebnis sollte in etwa wie in der folgenden Ausgabe aussehen:
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -139,11 +140,11 @@ Example templates: async project                  consoleasync          [C#]    
 Class library                                     classlib              [C#], F#, VB      Common/Library
 ```
 
-Wenn Sie das NuGet-Paket in einen NuGet-Feed hochgeladen haben, können Sie den Befehl `dotnet new -i PACKAGEID` verwenden. `PACKAGEID` entspricht dabei der Einstellung `<PackageId>` aus der __ CSPROJ-Datei. Diese Paket-ID ist mit der NuGet-Paket-ID identisch.
+Wenn Sie das NuGet-Paket in einen NuGet-Feed hochgeladen haben, können Sie den Befehl `dotnet new -i PACKAGEID` verwenden. `PACKAGEID` entspricht dabei der Einstellung `<PackageId>` aus der _CSPROJ-Datei_. Diese Paket-ID ist mit der NuGet-Paket-ID identisch.
 
 ## <a name="uninstall-the-template-pack"></a>Deinstallieren des Vorlagenpakets
 
-Beim Entfernen eines Vorlagenpakets spielt es keine Rolle, ob Sie das Vorlagenpaket direkt über die __ NUPKG-Datei oder per NuGet-Feed installiert haben. Verwenden Sie die Paket-ID (`<PackageId>`) der Vorlage, die Sie deinstallieren möchten. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen abrufen.
+Beim Entfernen eines Vorlagenpakets spielt es keine Rolle, ob Sie das Vorlagenpaket direkt über die _NUPKG-Datei_ oder per NuGet-Feed installiert haben. Verwenden Sie die Paket-ID (`<PackageId>`) der Vorlage, die Sie deinstallieren möchten. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen abrufen.
 
 ```console
 C:\working> dotnet new -u
