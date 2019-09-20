@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e38f70ded85e8db36068c19fdd1708511817db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: df1c86f2d75b0046af851585e943e13d668d8c55
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040721"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053074"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 
@@ -76,7 +76,7 @@ Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, ge
 
 Ab .NET Framework 4 besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.
 
-Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen von .NET Framework wiederherstellen, indem Sie das [\<<shadowCopyVerifyByTimestamp>-Element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.
+Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen von .NET Framework wiederherstellen, indem Sie das [\<<shadowCopyVerifyByTimestamp>-Element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.
 
 <a name="ObsoleteMethods"></a>
 
@@ -90,4 +90,4 @@ Die <xref:System.AppDomain>-Klasse verfügt über mehrere Methoden, wie <xref:Sy
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp>-Element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp>-Element](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
