@@ -3,12 +3,12 @@ title: 'global.json: Übersicht'
 description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei die .NET Core SDK-Version beim Ausführen eines .NET Core-CLI-Befehls festgelegen.
 ms.date: 12/03/2018
 ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 3c3793011560cd7428e47bd3340d0a935247760f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849597"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117432"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 
@@ -24,13 +24,13 @@ Weitere Informationen zum Angeben der Laufzeit finden Sie unter [Zielframeworks]
 
 ### <a name="sdk"></a>SDK
 
-Typ: Object
+Geben Sie Folgendes ein:  Object
 
 Gibt Informationen zum auszuwählenden .NET Core SDK an.
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>version
 
-Typ: Zeichenfolge
+Geben Sie Folgendes ein:  Zeichenfolge
 
 Die Version des zu verwendenden .NET Core SDK.
 
@@ -53,7 +53,7 @@ Das folgende Beispiel zeigt den Inhalt einer *global.json*-Datei an.
 
 Es ist nützlich zu wissen, welche Versionen verfügbar sind, um in der *global.json*-Datei eine Version festzulegen. Eine vollständige Liste der unterstützten und verfügbaren SDKs finden Sie auf der Seite [.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core). Ab .NET Core 2.1 SDK können Sie den folgenden Befehl ausführen, um zu überprüfen, welche SDK-Versionen bereits auf Ihrem Computer installiert sind:
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
@@ -61,7 +61,7 @@ Weitere .NET Core SDK-Versionen, die Sie auf Ihrem Computer installieren können
 
 Sie können im aktuellen Verzeichnis eine neue *global.json*-Datei erstellen, indem Sie den Befehl [dotnet new](dotnet-new.md) ausführen, wie im folgenden Beispiel:
 
-```console
+```dotnetcli
 dotnet new globaljson --sdk-version 2.2.100
 ```
 

@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie eine .NET Core-Anwendung m
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: f0e0fad9bde4c35fb5c5b0b505b9fa8441e432ba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926304"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116560"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerisieren einer .NET Core-App
 
@@ -49,13 +49,13 @@ Wenn Sie ein neueres SDK als 3.0 verwenden, stellen Sie sicher, dass Ihre App ge
 }
 ```
 
-Speichern Sie die Datei. Dies zwingt .NET Core, Version 2.2 für jeden `dotnet`-Befehl zu verwenden, der aus diesem Ordner oder einem Unterordner aufgerufen wird.
+Speichern Sie diese Datei. Dies zwingt .NET Core, Version 2.2 für jeden `dotnet`-Befehl zu verwenden, der aus diesem Ordner oder einem Unterordner aufgerufen wird.
 
-## <a name="create-net-core-app"></a>Erstellen der .NET Core-App
+## <a name="create-net-core-app"></a>Erstellen einer .NET Core-App
 
 Sie benötigen eine.NET Core-App, die der Docker-Container ausführen kann. Öffnen Sie Ihr Terminal, erstellen Sie einen Arbeitsordner, falls noch nicht geschehen, und geben Sie den Ordnernamen ein. Führen Sie im Arbeitsordner den folgenden Befehl aus, um ein neues Projekt in einem Unterverzeichnis namens „app“ zu erstellen:
 
-```console
+```dotnetcli
 dotnet new console -o app -n myapp
 ```
 
@@ -146,7 +146,7 @@ Bevor Sie Ihre .NET Core-App zum Docker-Image hinzufügen, veröffentlichen Sie 
 
 Geben Sie im Arbeitsordner den Ordner **app** mit dem exemplarischen Quellcode ein, und führen Sie den folgenden Befehl aus:
 
-```console
+```dotnetcli
 dotnet publish -c Release
 ```
 

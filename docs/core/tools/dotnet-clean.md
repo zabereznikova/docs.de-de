@@ -2,12 +2,12 @@
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
 ms.date: 06/26/2019
-ms.openlocfilehash: 113bc076b9f14a471c631801fe4a7cb1e044a411
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168056"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117743"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -17,13 +17,13 @@ ms.locfileid: "70168056"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet clean`: Löscht die Ausgabe eines Projekts.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
-```console
+```dotnetcli
 dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
@@ -43,7 +43,7 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
+  Legt die Buildkonfiguration fest. Standardwert: `Debug`. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -71,18 +71,18 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Die Standardeinstellung ist `normal`.
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert lautet `normal`.
 
 ## <a name="examples"></a>Beispiele
 
 * Bereinigen Sie einen Standardbuild des Projekts:
 
-  ```console
+  ```dotnetcli
   dotnet clean
   ```
 
 * Bereinigen Sie ein Projektbuild mit der Konfiguration „Release“:
 
-  ```console
+  ```dotnetcli
   dotnet clean --configuration Release
   ```

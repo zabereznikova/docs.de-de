@@ -2,24 +2,24 @@
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 ms.date: 06/13/2018
-ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202794"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117589"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet sln`: Ändert eine .NET Core-Projektmappendatei.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
-```console
+```dotnetcli
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -34,7 +34,7 @@ Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer P
 
 Die Projektmappendatei muss immer vorhanden sein, um den Befehl `dotnet sln` verwenden zu können. Wenn Sie eine Datei erstellen müssen, verwenden Sie den Befehl [dotnet new](dotnet-new.md) wie in folgendem Beispiel:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 

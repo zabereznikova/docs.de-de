@@ -3,13 +3,13 @@ title: Erste Schritte mit .NET Core
 description: Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendungen auf Windows, Linux und Mac OS erstellen können.
 author: thraka
 ms.author: adegeo
-ms.date: 06/27/2018
-ms.openlocfilehash: 3c530c71d1cfa9d0c4cf09f38519970f6ef8da51
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.date: 09/19/2019
+ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
+ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969894"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71151509"
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
@@ -23,12 +23,12 @@ Laden Sie das [.NET Core SDK](https://dotnet.microsoft.com/download) auf Ihrem C
 
 Als Nächstes öffnen Sie ein Terminal, z.B. **PowerShell**, die **Eingabeaufforderung** oder die **Bash**. Geben Sie die folgenden `dotnet`-Befehle ein, um eine C#-Anwendung zu erstellen und zu veröffentlichen:
 
-```console
+```dotnetcli
 dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Die folgende Ausgabe wird angezeigt:
+Die folgende Ausgabe wird angezeigt.
 
 ```console
 Hello World!
@@ -36,7 +36,7 @@ Hello World!
 
 Herzlichen Glückwunsch! Sie haben eine einfache .NET Core-Anwendung erstellt. Sie können auch [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (nur Windows) oder [Visual Studio für Mac](tutorials/using-on-mac-vs.md) (nur macOS) verwenden, um eine .NET Core-Anwendung zu erstellen.
 
-## <a name="tutorials"></a>Tutorials
+## <a name="tutorials"></a>Lernprogramme
 
 Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
 

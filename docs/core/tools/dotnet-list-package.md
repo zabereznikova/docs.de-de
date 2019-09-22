@@ -2,24 +2,24 @@
 title: Befehl „dotnet list package“
 description: Der Befehl „dotnet list package“ bietet eine praktische Option zum Listen von Pakettverweisen auf ein Projekt oder eine Projektmappe.
 ms.date: 06/26/2019
-ms.openlocfilehash: 48eef0ccc6acf2bbd6c1acf748870882d2480ce5
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168024"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117726"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 [!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet list package`: Hiermit listen Sie die Paketverweise für ein Projekt oder eine Projektmappe auf.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
-```console
+```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
@@ -121,18 +121,18 @@ Die zu verwendende Projekt- oder Projektmappendatei. Wenn keine angegeben ist, s
 
 * Liste der Paketverweise eines bestimmten Projekts:
 
-  ```console
+  ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
 * Liste von Paketverweisen, für die neuere Versionen verfügbar sind, einschließlich Vorabversionen:
 
-  ```console
+  ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
 * Liste von Paketverweisen für ein bestimmtes Zielframework:
 
-  ```console
+  ```dotnetcli
   dotnet list package --framework netcoreapp3.0
   ```

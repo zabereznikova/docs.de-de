@@ -4,12 +4,12 @@ description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängig
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5fcf931572f3c7e9b9857d2e91e9d620c7aad0bd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 31c53b2cc0fe576e56685f4a5561258136fd2541
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969865"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116591"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
@@ -71,7 +71,7 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 3.
 
 .NET Core 3.0 Vorschauversion 1 wird unter den folgenden Linux-Verteilungen und -Versionen unterstützt. 
 
-Betriebssystem                            | Version               | Architekturen  
+OS                            | Version               | Architekturen  
 ------------------------------|-----------------------|----------------
 Red Hat Enterprise Linux      | 6                     | x64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | x64
@@ -150,7 +150,7 @@ Die [Dotnet-Installationsskripts](./tools/dotnet-install-script.md) werden verwe
 
 Das Skript installiert standardmäßig die neueste Version von „LTS“, aktuell .NET Core 1.1. Zum Installieren von .NET Core 2.1 führen Sie das Skript mit dem folgenden Switch aus:
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 

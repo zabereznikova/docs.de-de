@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e10f09d3f7146817770e74aa173f742322aafafc
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4a9c24455136fe4ccd13379d05c16d6b7cbf85de
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926600"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117012"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
 
@@ -28,7 +28,7 @@ Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
+Für dieses Tutorial benötigen Sie Folgendes:
 
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höher
 * Ihren bevorzugten Code-Editor
@@ -44,7 +44,7 @@ In den folgenden Anweisungen wird erläutert, wie Sie den XML Serializer Generat
 
 Öffnen Sie eine Eingabeaufforderung, und erstellen Sie einen Ordner mit dem Namen *MyApp*. Navigieren Sie zum erstellten Ordner, und geben Sie den folgenden Befehl ein:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
@@ -52,9 +52,9 @@ dotnet new console
 
 Verwenden Sie den [`dotnet add package`](../tools//dotnet-add-package.md)-Befehl, um den Verweis Ihrem Projekt hinzuzufügen.
 
-Typ:
+Geben Sie Folgendes ein:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 ```
 
@@ -101,13 +101,13 @@ Fügen Sie die folgende Zeile unter *Main* hinzu, um einen `XmlSerializer` für 
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>Erstellen eines Builds und Ausführen der Anwendung
+### <a name="build-and-run-the-application"></a>Erstellen und Ausführen der Anwendung
 
 Führen Sie (immer noch im Ordner *MyApp*) die Anwendung über [`dotnet run`](../tools/dotnet-run.md) aus. Dann werden die zuvor generierten Serializer zur Runtime automatisch geladen und verwendet.
 
 Geben Sie den folgenden Befehl in Ihr Konsolenfenster ein:
 
-```console
+```dotnetcli
 dotnet run
 ```
 
@@ -128,8 +128,8 @@ Herzlichen Glückwunsch! Sie haben gerade:
 > * „XmlSerializer“ und eine Klasse hinzugefügt
 > * die Anwendung erstellt und ausgeführt
 
-## <a name="related-resources"></a>Weitere Informationen
+## <a name="related-resources"></a>Zugehörige Ressourcen
 
 * [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
-* [Vorgehensweise: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [Vorgehensweise: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Gewusst wie: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Gewusst wie: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

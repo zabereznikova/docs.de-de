@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in HDIn
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9da0e0fd83d70887109c63a5e95ec0b0b31a2edd
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2e8da5497035a83fde75bf91a7d21437d510b480
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928471"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117980"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight
 
 In diesem Tutorial erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Azure HDInsight bereitstellen.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 >
 > * Vorbereiten von Microsoft.Spark.Worker
 > * Veröffentlichen einer .NET für Apache Spark-Anwendung
 > * Bereitstellen einer App in Azure HDInsight
-> * Ausführen der App
+> * Führen Sie Ihre App aus.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -49,7 +49,7 @@ Führen Sie zunächst folgende Schritte aus:
 
    Sie können unter Linux den folgenden Befehl ausführen:
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
@@ -83,14 +83,14 @@ Führen Sie mithilfe der [HDInsight-Skriptaktionen](https://docs.microsoft.com/a
 |Einstellung|Wert|
 |-------|-----|
 |Skripttyp|Benutzerdefiniert|
-|name|Installation von Microsoft.Spark.Worker.|
-|Bash-Skript-URI|Der URI für die hochgeladene Datei `install-worker.sh`. Beispiel: `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
+|NAME|Installation von Microsoft.Spark.Worker.|
+|Bash-Skript-URI|Der URI für die hochgeladene Datei `install-worker.sh`. Zum Beispiel, `abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/install-worker.sh`|
 |Knotentyp(en)|Worker|
 |Parameter|Parameter für `install-worker.sh`. Wenn Sie z. B. `install-worker.sh` in Azure Data Lake Gen 2 hochgeladen haben, würden folgende Parameter verwendet werden: `azure abfss://<your-file-system-name>@<your-storage-account-name>.dfs.core.windows.net/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz /usr/local/bin`.|
 
 ![Screenshot mit Skriptaktion](./media/hdinsight-deployment/deployment-hdi-action-script.png)
 
-## <a name="run-your-app"></a>Ausführen der App
+## <a name="run-your-app"></a>Führen Sie Ihre App aus.
 
 Sie können einen Auftrag mit `spark-submit` oder Apache Livy an Azure HDInsight übermitteln.
 

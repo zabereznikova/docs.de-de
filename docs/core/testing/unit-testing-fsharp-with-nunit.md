@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: cf313f8197280bdbb943c12ef0c7a29284ec01a5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849765"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116205"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
 
@@ -29,7 +29,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-with-fsharp*, um die Projektmappe zu speichern.
 Führen Sie in diesem neuen Verzeichnis den folgenden Befehl aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -43,7 +43,7 @@ Erstellen Sie als Nächstes das Verzeichnis *MathService*. Die folgende Gliederu
 
 Legen Sie *MathService* als aktuelles Verzeichnis fest, und führen Sie den folgenden Befehl aus, um das Quellprojekt zu erstellen:
 
-```console
+```dotnetcli
 dotnet new classlib -lang F#
 ```
 
@@ -56,7 +56,7 @@ module MyMath =
 
 Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-with-fsharp*. Führen Sie den folgenden Befehl aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen:
 
-```console
+```dotnetcli
 dotnet sln add .\MathService\MathService.fsproj
 ```
 
@@ -75,7 +75,7 @@ Erstellen Sie als Nächstes das Verzeichnis *MathService.Tests*. Die folgende Gl
 
 Legen Sie das Verzeichnis *MathService.Tests* als aktuelles Verzeichnis fest, und erstellen Sie mit dem folgenden Befehl ein neues Projekt:
 
-```console
+```dotnetcli
 dotnet new nunit -lang F#
 ```
 
@@ -91,7 +91,7 @@ Dies erstellt ein Testprojekt, das NUnit als Testframework verwendet. Die generi
 
 Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. Mithilfe von `dotnet new` wurden im vorhergehenden Schritt NUnit und der NUnit-Testadapter hinzugefügt. Fügen Sie jetzt die `MathService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -112,7 +112,7 @@ Sie verfügen über das folgende endgültige Projektmappenlayout:
 
 Führen Sie im Verzeichnis *unit-testing-with-fsharp* den folgenden Befehl aus:
 
-```console
+```dotnetcli
 dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 ```
 

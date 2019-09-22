@@ -2,26 +2,26 @@
 title: Befehl „dotnet msbuild“
 description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
 ms.date: 12/03/2018
-ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b83f1272cdd4c5fcdb6b1e34aef7692e9acc01cd
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632033"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117699"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der `dotnet msbuild`-Befehl ermöglicht den Zugriff auf eine voll funktionsfähige MSBuild-Instanz.
 
@@ -33,24 +33,24 @@ Der [dotnet build](dotnet-build.md)-Befehl ist äquivalent zu `dotnet msbuild -r
 
 * Erstellt ein Projekt und seine Abhängigkeiten:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild
   ```
 
 * Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -p:Configuration=Release
   ```
 
 * Führt das Veröffentlichungsziel aus und veröffentlicht für die RID `osx.10.11-x64`:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
   ```
 
 * Zeigen Sie das gesamte Projekt mit allen Zielen an, die über das SDK eingeschlossen werden:
 
-  ```console
+  ```dotnetcli
   dotnet msbuild -pp
   ```

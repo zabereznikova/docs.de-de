@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 08/08/2019
-ms.openlocfilehash: ba5a438d58963222c3fa55d2c585ef503dcd49db
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990411"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117656"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -17,13 +17,13 @@ ms.locfileid: "70990411"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet pack`: Packt den Code in ein NuGet-Paket
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
-```console
+```dotnetcli
 dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
     [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
     [-v|--verbosity] [--version-suffix]
@@ -63,118 +63,118 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 ## <a name="options"></a>Optionen
 
-* **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
+  Legt die Buildkonfiguration fest. Standardwert: `Debug`.
 
-* **`--force`**
+- **`--force`**
 
   Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Druckt eine kurze Hilfe für den Befehl.
 
-* **`--include-source`**
+- **`--include-source`**
 
   Schließt neben den regulären NuGet-Paketen im Ausgabeverzeichnis auch die NuGet-Pakete der Debugsymbole ein. Die Quelldateien befinden sich im `src`-Ordner im Symbolpaket.
 
-* **`--include-symbols`**
+- **`--include-symbols`**
 
   Schließt neben den regulären NuGet-Paketen im Ausgabeverzeichnis auch die NuGet-Pakete der Debugsymbole ein.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar seit .NET Core 3.0 SDK.
 
-* **`--no-build`**
+- **`--no-build`**
 
   Erstellt das Projekt nicht vor dem Packen. Zudem wird das Flag `--no-restore` implizit festgelegt.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
-* **`--nologo`**
+- **`--nologo`**
 
   Unterdrückt die Anzeige von Startbanner und Copyrightmeldung. Verfügbar seit .NET Core 3.0 SDK.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   Platziert die erstellten Pakete in das angegebene Verzeichnis.
 
-* **`--runtime <RUNTIME_IDENTIFIER>`**
+- **`--runtime <RUNTIME_IDENTIFIER>`**
 
   Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
 
-* **`-s|--serviceable`**
+- **`-s|--serviceable`**
 
   Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries (.NET Blog: .NET 4.5.1 unterstützt Microsoft Sicherheitsupdates für .NET NuGet-Bibliotheken)](https://aka.ms/nupkgservicing).
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
 ## <a name="examples"></a>Beispiele
 
-* Packt das Projekt im aktuellen Verzeichnis:
+- Packt das Projekt im aktuellen Verzeichnis:
 
-  ```console
+  ```dotnetcli
   dotnet pack
   ```
 
-* Packt das `app1`-Projekt:
+- Packt das `app1`-Projekt:
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* Packt das Projekt im aktuellen Verzeichnis, und platziert die erstellten Pakete in den `nupkgs`-Ordner:
+- Packt das Projekt im aktuellen Verzeichnis, und platziert die erstellten Pakete in den `nupkgs`-Ordner:
 
-  ```console
+  ```dotnetcli
   dotnet pack --output nupkgs
   ```
 
-* Packt das Projekt im aktuellen Verzeichnis in den `nupkgs`-Ordner und überspringt den Buildschritt:
+- Packt das Projekt im aktuellen Verzeichnis in den `nupkgs`-Ordner und überspringt den Buildschritt:
 
-  ```console
+  ```dotnetcli
   dotnet pack --no-build --output nupkgs
   ```
 
-* Mit dem Versionssuffix des Projekts, das als `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in der *.csproj*-Datei konfiguriert ist, packen Sie das aktuelle Projekt, und aktualisieren Sie die resultierende Paketversion mit dem angegebenen Suffix:
+- Mit dem Versionssuffix des Projekts, das als `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in der *.csproj*-Datei konfiguriert ist, packen Sie das aktuelle Projekt, und aktualisieren Sie die resultierende Paketversion mit dem angegebenen Suffix:
 
-  ```console
+  ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* Legen Sie die Paketversion auf `2.1.0` mithilfe der MSBuild-Eigenschaft `PackageVersion` fest.
+- Legen Sie die Paketversion auf `2.1.0` mithilfe der MSBuild-Eigenschaft `PackageVersion` fest.
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* Packen Sie das Projekt für ein bestimmtes [Zielframework](../../standard/frameworks.md):
+- Packen Sie das Projekt für ein bestimmtes [Zielframework](../../standard/frameworks.md):
 
-  ```console
+  ```dotnetcli
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* Packen Sie das Projekt, und verwenden Sie eine bestimmte Runtime (Windows 10) für den Wiederherstellungsvorgang (.NET Core SDK 2.0 und spätere Versionen):
+- Packen Sie das Projekt, und verwenden Sie eine bestimmte Runtime (Windows 10) für den Wiederherstellungsvorgang (.NET Core SDK 2.0 und spätere Versionen):
 
-  ```console
+  ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
-* Packen Sie das Projekt mithilfe einer [NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Packen Sie das Projekt mithilfe einer [NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
-  ```console
+  ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```

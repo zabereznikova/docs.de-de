@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: rprouse
 ms.date: 10/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1682cf7cb351951d3bea9a64d963cd6a8995c083
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 97902bbfb035d3403d3e7236a0c67fa60d7d9d94
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849683"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117334"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -26,7 +26,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-vb-nunit*, um die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis den folgenden Befehl aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen:
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
@@ -40,7 +40,7 @@ Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Glieder
 
 Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie den folgenden Befehl aus, um das Quellprojekt zu erstellen:
 
-```console
+```dotnetcli
 dotnet new classlib -lang VB
 ```
 
@@ -60,7 +60,7 @@ End Namespace
 
 Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-vb-using-mstest*. Führen Sie den folgenden Befehl aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen:
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService\PrimeService.vbproj
 ```
 
@@ -79,7 +79,7 @@ Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende G
 
 Machen Sie das Verzeichnis *PrimeService.Tests* zum aktuellen Verzeichnis, und erstellen Sie mit dem folgenden Befehl ein neues Projekt:
 
-```console
+```dotnetcli
 dotnet new nunit -lang VB
 ```
 
@@ -89,7 +89,7 @@ Mit dem Befehl [dotnet new](../tools/dotnet-new.md) wird ein Testprojekt erstell
 
 Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. Mithilfe von `dotnet new` wurden im vorhergehenden Schritt NUnit und der NUnit-Testadapter hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -110,7 +110,7 @@ Sie verfügen über das folgende endgültige Projektmappenlayout:
 
 Führen Sie im Verzeichnis *unit-testing-vb-nunit* den folgenden Befehl aus:
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 ```
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutz
 author: bleroy
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697984"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116543"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 
@@ -64,13 +64,13 @@ Das im folgenden Beispiel dargestellte Paketspeichermanifest (*packages.csproj*)
 
 Bereitstellen des Laufzeitpaketspeichers durch Ausführen von `dotnet store` mit dem Paketspeichermanifest, der Laufzeit und dem Framework:
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **Beispiel**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ Die Datei *artifact.xml* wird erzeugt, nachdem das vorherige Beispiel ausgeführ
 
 Wenn Sie eine Zielmanifestdatei auf Ihrer Festplatte haben, geben Sie den Pfad zu dieser Datei an, wenn Sie Ihre App mit dem [`dotnet publish`](../tools/dotnet-publish.md)-Befehl veröffentlichen:
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **Beispiel**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 

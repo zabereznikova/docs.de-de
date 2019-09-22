@@ -2,12 +2,12 @@
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 ms.date: 06/26/2019
-ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105166"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117792"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -17,11 +17,11 @@ ms.locfileid: "70105166"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet add package`: Fügt einen Paketverweis zu einer Projektdatei hinzu.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
@@ -96,19 +96,19 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 - Fügen Sie das `Newtonsoft.Json`-NuGet-Pakets zu einem Projekt hinzu:
 
-  ```console
+  ```dotnetcli
   dotnet add package Newtonsoft.Json
   ```
 
 - Fügen Sie eine bestimmte Version eines Pakets zu einem Projekt hinzu:
 
-  ```console
+  ```dotnetcli
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
 - Fügen Sie ein Paket mit einer bestimmten NuGet-Quelle hinzu:
 
-  ```console
+  ```dotnetcli
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken ers
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 90d960c996acd5a34ffb2215344e123dabad1014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849481"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117411"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
@@ -29,8 +29,8 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 | 4.6                    | Paket zur Festlegung von Zielversionen für .NET Framework 4.6                      |
 | 4.5.2                  | .NET Framework 4.5.2 Entwicklerpaket                    |
 | 4.5.1                  | .NET Framework 4.5.1 Entwicklerpaket                    |
-| 4.5                    | Windows Software Development Kit für Windows 8         |
-| 4.0                    | Windows SDK für Windows 7 und .NET Framework 4         |
+| 4,5                    | Windows Software Development Kit für Windows 8         |
+| 4,0                    | Windows SDK für Windows 7 und .NET Framework 4         |
 | 2.0, 3.0 und 3.5      | .NET Framework 3.5 SP1-Runtime (oder Windows 8+-Version) |
 
 ## <a name="how-to-target-the-net-standard"></a>So legen Sie .NET Standard als Ziel fest
@@ -249,7 +249,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. So stellen Sie Pakete wieder her und erstellen Projekte:
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
@@ -258,7 +258,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
-Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
+Das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
 1. Führen Sie mit dem Befehl `dotnet test` in Ihrem Testverzeichnis Tests über die Befehlszeile aus.
@@ -321,7 +321,7 @@ Dadurch werden die drei Projekte von oben in eine Projektmappe hinzugefügt, die
 
 Die beste Möglichkeit, auf ein Projekt zu verweisen, ist die Verwendung der .NET Core-CLI, um einen Projektverweis hinzuzufügen. Sie können den folgenden Befehl von den Projektverzeichnissen **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** ausführen:
 
-```console
+```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 

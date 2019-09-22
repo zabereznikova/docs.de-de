@@ -2,12 +2,12 @@
 title: Befehl „dotnet list reference“
 description: Der Verweisbefehl „dotnet-list“ bietet eine praktische Option zum Listen von Verweisen zwischen Projekten.
 ms.date: 06/26/2019
-ms.openlocfilehash: 1f87ff89997cdaa6d0095a4db9f28a2e7cb7e6a9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b4b82ca1e7aeb2b73d9f99aff1c97452b2166770
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421832"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117671"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -17,11 +17,11 @@ ms.locfileid: "67421832"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet list reference`: Listet Projekt-zu-Projekt-Verweise auf.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
@@ -45,12 +45,12 @@ Der `dotnet list reference`-Befehl bietet eine praktische Option zum Listen von 
 
 * Listen Sie die Projektverweise für das angegebene Projekt:
 
-  ```console
+  ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
 * Listen Sie die Projektverweise für das Projekt im aktuellen Verzeichnis:
 
-  ```console
+  ```dotnetcli
   dotnet list reference
   ```

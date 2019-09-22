@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: db374a47140392577872f6635eb7275682a7a547
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928556"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117941"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
 In diesem Tutorial erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Databricks bereitstellen.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 >
 > - Vorbereiten von Microsoft.Spark.Worker
 > - Veröffentlichen einer .NET für Apache Spark-Anwendung
 > - Bereitstellen der App in Databricks
-> - Ausführen der App
+> - Führen Sie Ihre App aus.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -49,7 +49,7 @@ Führen Sie zunächst folgende Schritte aus:
 
    Sie können unter Linux den folgenden Befehl ausführen:
 
-   ```bash
+   ```dotnetcli
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
@@ -103,7 +103,7 @@ Der folgende Schritt ist nur einmal für einen Cluster erforderlich.
 
    ![Screenshot mit Skriptaktion](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>Ausführen der App 
+## <a name="run-your-app"></a>Führen Sie Ihre App aus. 
 
 Sie können `set JAR` oder `spark-submit` verwenden, um Ihren Auftrag an Databricks zu übermitteln.
 

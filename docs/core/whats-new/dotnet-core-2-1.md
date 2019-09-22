@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: d0f4e2997e6e847cfd3c41ddb13096379d75343e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 519c55dbe8b55191b682067da558167f86199b7e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925720"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116222"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -39,7 +39,7 @@ Ein wichtiger Schwerpunkt von .NET Core 2.1 ist die Verbesserung der Buildzeitle
 
 - Verwendung von SDK-Buildservern mit langer Ausführungszeit, wobei es sich um Prozesse handelt, die sich über einzelne `dotnet build`-Aufrufe erstrecken. Sie machen die Notwendigkeit der JIT-Kompilierung großer Codeblöcke bei jeder Ausführung von `dotnet build` überflüssig. Buildserverprozesse können automatisch mithilfe des folgenden Befehls beendet werden:
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -49,7 +49,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
 
 - `dotnet watch` bietet eine Dateisystemüberwachung, die vor der Ausführung eines designierten Satzes von Befehlen auf die Änderung einer Datei wartet. Der folgende Befehl erstellt beispielsweise automatisch das aktuelle Projekt neu und generiert eine ausführliche Ausgabe, sobald sich eine Datei darin ändert:
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -71,7 +71,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
 
 Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Beispiel:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -116,7 +116,7 @@ Sie können diese Einstellung auf drei verschiedene Arten ändern:
 
 - Fügen Sie bei Verwendung der [.NET Core-CLI-Tools](../tools/index.md) die folgende Option mit dem gewünschten Wert zu einem .NET Core-Befehl wie `run` hinzu:
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 
@@ -171,9 +171,9 @@ Zum Aktivieren der mehrstufigen Kompilierung können Sie zwischen zwei Arten wä
 
 .NET Core 2.1 enthält einige neue Typen, die das Arbeiten mit Arrays und anderen Arten von Arbeitsspeicher wesentlich effizienter machen. Die neuen Typen umfassen:
 
-- <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>.
+- <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>:
 
-- <xref:System.Memory%601?displayProperty=nameWithType> und <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>.
+- <xref:System.Memory%601?displayProperty=nameWithType> und <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>:
 
 Ohne diese Typen müssen Sie bei der Übergabe solcher Elemente als Teil eines Arrays oder Abschnitt eines Arbeitsspeicherpuffers eine Kopie eines Teils der Daten anfertigen, bevor Sie sie einer Methode übergeben. Diese Typen bieten eine virtuelle Sicht der Daten, die die zusätzliche Speicherzuweisung und Kopiervorgänge überflüssig macht.
 

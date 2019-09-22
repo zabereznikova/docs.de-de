@@ -4,12 +4,12 @@ description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ff7e33a50eb0c5fb649b44dda6d72412a134584
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202589"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117452"
 ---
 # <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
 
@@ -49,7 +49,7 @@ Wenn das Tool auf NuGet gehostet wird, können Sie den Autor und seine Statistik
 
 Verwenden Sie den .NET Core-CLI-Befehl [dotnet tool install](dotnet-tool-install.md), um ein globales Tool zu installieren. Im folgenden Beispiel wird gezeigt, wie ein globales Tool am Standardspeicherort installiert wird:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,7 +57,7 @@ Wenn das Tool nicht installiert werden kann, werden Fehlermeldungen angezeigt. S
 
 Wenn Sie versuchen, eine Vorabversion oder eine spezifische Version des Tools zu installieren, können Sie die Versionsnummer im folgenden Format angeben:
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Globale Tools können im Standardverzeichnis oder an einem spezifischen Speicherort installiert werden. Die Standardverzeichnisse sind:
 
-| Betriebssystem          | Pfad                          |
+| OS          | `Path`                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -94,7 +94,7 @@ dotnetsay
 
 Wenn der Autor des Tools das Tool im Kontext der `dotnet`-Eingabeaufforderung anzeigen wollte, ist es möglicherweise so geschrieben, dass Sie es als `dotnet <command>` aufrufen, zum Beispiel:
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -120,7 +120,7 @@ Wenn eine Anwendung keine entsprechende Runtime finden kann, schlägt die Ausfü
 
 Ein weiteres Problem kann darin bestehen, dass ein globales Tool, das in einer vorherigen Vorschauversion erstellt wurde, möglicherweise nicht mit Ihren aktuell installierten .NET Core-Runtimes ausgeführt werden kann. Sie können die auf Ihrem Computer installierten Runtimes mit dem folgenden Befehl anzeigen:
 
-```console
+```dotnetcli
 dotnet --list-runtimes
 ```
 
@@ -141,24 +141,24 @@ Das .NET Core SDK enthält andere Befehle, die globale .NET Core-Tools unterstü
 
 So finden Sie heraus, welche Befehle für globale Tools verfügbar sind:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 Das Aktualisieren eines globalen Tools umfasst das Deinstallieren und Neuinstallieren mit der neuesten stabilen Version. Verwenden Sie den Befehl [dotnet tool update](dotnet-tool-update.md), um ein globales Tool zu aktualisieren:
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 Entfernen Sie ein globales Tool mit [dotnet tool uninstall](dotnet-tool-uninstall.md):
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 Verwenden Sie den Befehl [dotnet tool list](dotnet-tool-list.md), um alle derzeit auf dem Computer installierten globalen Tools mit ihren Versionen und Befehlen anzuzeigen:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```

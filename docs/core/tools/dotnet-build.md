@@ -2,12 +2,12 @@
 title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 08/08/2019
-ms.openlocfilehash: e92555dad2bc76d8c72eca9a30be1d3a8b5924f7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0b353d60691fb4bb85536c68dc4ab248f45c3a76
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988523"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117750"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -17,13 +17,13 @@ ms.locfileid: "70988523"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet build`: Erstellt ein Projekt und alle seine Abhängigkeiten
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
-```console
+```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
@@ -68,7 +68,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
+  Legt die Buildkonfiguration fest. Standardwert: `Debug`.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -112,7 +112,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Die Standardeinstellung ist `minimal`.
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert lautet `minimal`.
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -122,30 +122,30 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 * Erstellt ein Projekt und seine Abhängigkeiten:
 
-  ```console
+  ```dotnetcli
   dotnet build
   ```
 
 * Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
 
-  ```console
+  ```dotnetcli
   dotnet build --configuration Release
   ```
 
 * Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in diesem Beispiel Ubuntu 18.04):
 
-  ```console
+  ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
 * Erstellt ein Projekt und verwendet die angegebene NuGet-Paketquelle während des Wiederherstellungsvorgangs (.NET Core 2.0 SDK und spätere Versionen):
 
-  ```console
+  ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
 * Erstellen Sie das Projekt, und legen Sie Version 1.2.3.4 als Buildparameter mithilfe der `-p` [MSBuild-Option](#msbuild) fest:
 
-  ```console
+  ```dotnetcli
   dotnet build -p:Version=1.2.3.4
   ```

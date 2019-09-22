@@ -2,35 +2,35 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: 801320bf7f3527ac70f1d5b9fe3d0ce537e50e93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969779"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117505"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>NAME
 
 `dotnet`: Ein Tool für das Verwalten von .NET-Quellcode und Binärdateien.
 
-## <a name="synopsis"></a>Übersicht
+## <a name="synopsis"></a>Zusammenfassung
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
     [--runtimeconfig] [-v|--verbosity] [--version]
@@ -38,7 +38,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
@@ -217,7 +217,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| Befehl                                       | Funktion                                                            |
+| Get-Help                                       | Funktion                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interagiert mit Servern, die von einem Build gestartet wurden.                          |
@@ -236,7 +236,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| Befehl                             | Funktion                                                            |
+| Get-Help                             | Funktion                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet clean](dotnet-clean.md)     | Bereinigen von Buildausgaben.                                              |
@@ -254,7 +254,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| Befehl                             | Funktion                                                            |
+| Get-Help                             | Funktion                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet clean](dotnet-clean.md)     | Bereinigen von Buildausgaben.                                              |
@@ -272,7 +272,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 ### <a name="project-references"></a>Projektverweise
 
-Befehl | Funktion
+Get-Help | Funktion
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | Fügt einen Projektverweis hinzu.
 [dotnet list reference](dotnet-list-reference.md) | Listet Projektverweise auf.
@@ -280,14 +280,14 @@ Befehl | Funktion
 
 ### <a name="nuget-packages"></a>NuGet-Pakete
 
-Befehl | Funktion
+Get-Help | Funktion
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Fügt ein NuGet-Paket hinzu.
 [dotnet remove package](dotnet-remove-package.md) | Entfernt ein NuGet-Paket.
 
 ### <a name="nuget-commands"></a>NuGet-Befehle
 
-Befehl | Funktion
+Get-Help | Funktion
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Löscht ein Paket vom Server oder hebt dessen Auflistung auf.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder den Ordner mit globalen Paketen auf dem Computer, oder listet diese Ressourcen auf.
@@ -297,7 +297,7 @@ Befehl | Funktion
 
 [Globale .NET Core-Tools](global-tools.md) sind beginnend mit .NET Core SDK 2.1.300 verfügbar:
 
-Befehl | Funktion
+Get-Help | Funktion
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Installiert ein Global Tool auf dem Computer.
 [dotnet tool list](dotnet-tool-list.md) | Listet alle globalen Tools auf, die derzeit im Standardverzeichnis oder unter dem angegebenen Pfad auf Ihrem Computer installiert sind.
