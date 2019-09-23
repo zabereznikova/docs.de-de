@@ -4,12 +4,12 @@ description: Dieses Tutorial erläutert, wie Sie mit dem Zeichenfolgeninterpolat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 3e4e886d898854f5c1d966529e94f49c752220d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850929"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117847"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 
@@ -21,7 +21,7 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen
 
 Erstellen Sie ein Verzeichnis namens **interpolated**. Legen Sie dieses als das aktuelle Verzeichnis fest, und führen Sie folgenden Befehl in einem Konsolenfenster aus:
 
-```console
+```dotnetcli
 dotnet new console
 ```
 
