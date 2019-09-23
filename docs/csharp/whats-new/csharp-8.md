@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
 ms.date: 09/10/2019
-ms.openlocfilehash: 141f7a2fa0bc5f6a2a253e196a218938dd4c170e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926526"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117818"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -377,7 +377,7 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 ## <a name="indices-and-ranges"></a>Indizes und Bereiche
 
-Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
+Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, einer [Zeichenfolge](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
 
 Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren:
 
