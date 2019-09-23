@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 4bd51f579231b13b0831ef7114c2a648c55cd6a2
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926080"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117401"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Erstellen eines Vorlagenpakets
 
@@ -31,13 +31,13 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 
   In diesem Tutorial werden die beiden Vorlagen verwendet, die in den ersten beiden Teilen dieses Tutorials erstellt wurden. Gegebenenfalls kann auch eine andere Vorlage verwendet werden, solange diese als Ordner in den Ordner _working\templates\\_ kopiert wird.
 
-* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_.
+* Öffnen Sie ein Terminal, und navigieren Sie zum Ordner _working\templates\\_ .
 
 ## <a name="create-a-template-pack-project"></a>Erstellen eines Vorlagenpaketprojekts
 
 Bei einem Vorlagenpaket handelt es sich um eine Datei, in die mindestens eine Vorlage gepackt wurde. Wenn Sie ein Paket installieren oder deinstallieren, werden alle darin enthaltenen Vorlagen hinzugefügt bzw. entfernt. In den vorherigen Teilen dieser Tutorialreihe wurden jeweils nur einzelne Vorlagen verwendet. Wenn Sie eine nicht gepackte Vorlage weitergeben möchten, müssen Sie den Vorlagenordner kopieren und die Installation unter Verwendung dieses Ordners durchführen. Ein Vorlagenpaket ist eine einzelne Datei, die mehrere Vorlagen enthalten kann, was die Weitergabe vereinfacht.
 
-Bei Vorlagenpaketen handelt es sich um NuGet-Paketdateien (_.nupkg_). Das bedeutet, sie können wie jedes andere NuGet-Paket in einen NuGet-Feed hochgeladen werden. Der Befehl `dotnet new -i` unterstützt die Installation von Vorlagenpaketen aus einem NuGet-Paketfeed. Darüber hinaus kann ein Vorlagenpaket auch direkt über eine _NUPKG-Datei_ installiert werden.
+Bei Vorlagenpaketen handelt es sich um NuGet-Paketdateien ( _.nupkg_). Das bedeutet, sie können wie jedes andere NuGet-Paket in einen NuGet-Feed hochgeladen werden. Der Befehl `dotnet new -i` unterstützt die Installation von Vorlagenpaketen aus einem NuGet-Paketfeed. Darüber hinaus kann ein Vorlagenpaket auch direkt über eine _NUPKG-Datei_ installiert werden.
 
 Üblicherweise wird eine C#-Projektdatei verwendet, um Code zu kompilieren und eine Binärdatei zu erstellen. Das Projekt kann jedoch auch verwendet werden, um ein Vorlagenpaket zu generieren. Durch Ändern der Einstellungen der _CSPROJ-Datei_ können Sie sicherstellen, dass kein Code kompiliert wird, und stattdessen alle Ressourcen ihrer Vorlagen als Ressourcen einschließen. Wenn dieses Projekt erstellt wird, wird ein Vorlagenpaket in Form eines NuGet-Pakets erzeugt.
 
@@ -45,7 +45,7 @@ Das erstellte Paket enthält die zuvor erstellte [Elementvorlage](cli-templates-
 
 Navigieren Sie in Ihrem Terminal zum Ordner _working_. Erstellen Sie ein neues Projekt, und legen Sie den Namen auf `templatepack` und den Ausgabeordner auf den aktuellen Ordner fest.
 
-```console
+```dotnetcli
 dotnet new console -n templatepack -o .
 ```
 
@@ -103,7 +103,7 @@ Die letzten drei Einstellungen dienen zur korrekten Konfiguration des Projekts, 
 
 Speichern Sie die Datei, und führen Sie anschließend den Befehl „pack“ aus.
 
-```console
+```dotnetcli
 dotnet pack
 ```
 

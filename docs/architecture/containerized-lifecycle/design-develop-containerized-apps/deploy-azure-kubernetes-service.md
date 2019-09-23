@@ -2,12 +2,12 @@
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Lernen Sie, wie eine App mithilfe von Azure Kubernetes Service bereitgestellt wird.
 ms.date: 02/15/2019
-ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672627"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182373"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Bereitstellen für Azure Kubernetes Service (AKS)
 
@@ -19,12 +19,12 @@ Voraussetzungen für die Verwendung von AKS sind:
 - Windows-Entwicklungscomputer
   - Aktivierter Entwicklermodus unter Windows
   - Windows-Subsystem für Linux
-- Unter [Windows, Mac oder Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) installierte Azure-CLI
+- Unter [Windows, Mac oder Linux](https://docs.microsoft.com/cli/azure/install-azure-cli) installierte Azure-CLI
 
 > [!NOTE]
 > Hier finden Sie vollständige Informationen zu:
 >
-> Azure-CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
+> Azure-CLI: <https://docs.microsoft.com/cli/azure/index>
 >
 > Windows-Subsystem für Linux: <https://docs.microsoft.com/windows/wsl/about>
 

@@ -2,12 +2,12 @@
 title: Implementieren des Trennschaltermusters
 description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
 ms.date: 10/16/2018
-ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674637"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181928"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -55,7 +55,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn beim Wiederholen der HTTP-Anforderungen fünf aufeinanderfolgende Fehler aufgetreten sind. In diesem Fall wird der Schaltkreis 30 Sekunden lang unterbrochen: In diesem Zeitraum schlagen Aufrufe durch den Circuit Breaker sofort fehl, statt tatsächlich durchgeführt zu werden.  Die Richtlinie interpretiert [relevante Ausnahmen und HTTP-Statuscodes](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) automatisch als Fehler.  
+Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn beim Wiederholen der HTTP-Anforderungen fünf aufeinanderfolgende Fehler aufgetreten sind. In diesem Fall wird der Schaltkreis 30 Sekunden lang unterbrochen: In diesem Zeitraum schlagen Aufrufe durch den Circuit Breaker sofort fehl, statt tatsächlich durchgeführt zu werden.  Die Richtlinie interpretiert [relevante Ausnahmen und HTTP-Statuscodes](/aspnet/core/fundamentals/http-requests#handle-transient-faults) automatisch als Fehler.  
 
 Circuit Breakers sollten auch verwendet werden, um Anforderungen an eine Fallbackinfrastruktur umzuleiten, wenn Probleme bei einer bestimmten Ressource aufgetreten sind, die in einer anderen Umgebung als die Clientanwendung oder der Dienst bereitgestellt wird, die bzw. der den HTTP-Aufruf ausführt. Auf diese Weise kann die Clientanwendung bei einem Ausfall im Rechenzentrum, der nur Back-End-Microservices, nicht aber Clientanwendungen betrifft, Anforderungen an Fallbackdienste umleiten. Für Polly wird aktuell eine Richtlinie zur Automatisierung dieses [Failoverrichtlinienszenarios](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) geplant. 
 

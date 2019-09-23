@@ -5,12 +5,12 @@ ms.date: 08/20/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: e1dcc719738a2beb3e63463245d4721c5298cf85
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8d21ae5ae3aa4701ddd7d042d5069351c22864bb
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666663"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182554"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Bereitstellen eines Modells in einer ASP.NET Core-Web-API
 
@@ -105,7 +105,7 @@ Sie müssen einige Klassen für die Eingabedaten und Vorhersagen erstellen. Füg
 
 Sie können [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) verwenden, um eine einzelne Vorhersage zu treffen. Um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) in Ihrer Anwendung verwenden zu können, müssen Sie sie bei Bedarf erstellen. Für diesen Fall hat sich die Abhängigkeitsinjektion bewährt.
 
-Unter dem folgenden Link finden Sie weitere Informationen über die [Abhängigkeitsinjektion in ASP.NET Core](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
+Unter dem folgenden Link finden Sie weitere Informationen über die [Abhängigkeitsinjektion in ASP.NET Core](/aspnet/core/fundamentals/dependency-injection).
 
 1. Öffnen Sie die *Startup.cs*-Klasse, und fügen Sie am Anfang der Datei die folgdende using-Anweisung hinzu:
 
@@ -202,4 +202,4 @@ Herzlichen Glückwunsch! Sie haben Ihr Modell erfolgreich bereitgestellt, um mit
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Bereitstellung in Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.1#deploy-the-app-to-azure)
+- [Bereitstellung in Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
