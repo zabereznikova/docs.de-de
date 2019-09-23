@@ -14,18 +14,18 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373688"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182629"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Exemplarische Vorgehensweise: Serialisieren von Auflistungen von Standardtypen
 
 Die benutzerdefinierten Steuerelemente machen manchmal eine Auflistung als Eigenschaft verfügbar. Diese exemplarische Vorgehensweise veranschaulicht die Verwendung <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> der-Klasse, um zu steuern, wie eine Auflistung zur Entwurfszeit serialisiert wird. Wenn Sie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> den Wert auf Ihre Auflistungs Eigenschaft anwenden, wird sichergestellt, dass die Eigenschaft serialisiert wird.
 
-Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Serialisieren Sie Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Serialisieren Sie Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -129,11 +129,11 @@ Um das Serialisierungsverhalten Ihres Steuer Elements zu testen, platzieren Sie 
 
 Wenn Sie wissen, wie eine Auflistung von Standardtypen serialisiert werden soll, sollten Sie in Erwägung gezogen werden, die benutzerdefinierten Steuerelemente tiefer in die Entwurfszeit Umgebung zu integrieren. In den folgenden Themen wird beschrieben, wie Sie die Entwurfszeit Integration Ihrer benutzerdefinierten Steuerelemente verbessern:
 
-- [Entwurfszeit Architektur](/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
+- [Entwurfszeit Architektur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))
 
 - [Attribute in Windows Forms-Steuerelementen](attributes-in-windows-forms-controls.md)
 
-- [Übersicht über die Designer-Serialisierung](/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Übersicht über die Designer-Serialisierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
 - [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen nutzt](creating-a-wf-control-design-time-features.md)
 

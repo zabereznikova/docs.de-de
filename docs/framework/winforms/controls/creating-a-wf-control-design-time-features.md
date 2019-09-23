@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 53824336e1ae47870e6acffe20340f145caf9b4d
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016006"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182596"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Steuer Elements, das Entwurfszeit Features nutzt
 
@@ -34,9 +34,9 @@ Wenn Sie diese exemplarische Vorgehensweise abgeschlossen haben, sieht Ihr benut
 
 ![Die APP zeigt ein Marquee an, das Text und eine Schaltfläche zum Starten und Abbrechen anzeigt.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Das komplette Codelisting finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeit Funktionen](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.
+Das komplette Codelisting finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeit Funktionen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
@@ -177,7 +177,7 @@ Dies ist der Umfang der `MarqueeControl` Anpassungen. Die Lauf Zeitfunktionen `M
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]
 
-2. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnLayout%2A>-Methode.
+2. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnLayout%2A> -Methode.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
@@ -468,12 +468,12 @@ Das `MarqueeBorder` -Steuerelement macht mehrere Eigenschaften im Eigenschaftenf
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]
 
-4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>-Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>zurück, die der Entwurfs Umgebung mitteilt, wie das `LightShapeEditor`angezeigt werden soll.
+4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> -Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>zurück, die der Entwurfs Umgebung mitteilt, wie das `LightShapeEditor`angezeigt werden soll.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]
 
-5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>-Methode. Mit dieser Implementierung wird die Entwurfs Umgebung für <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> ein Objekt abgefragt. Bei erfolgreicher Ausführung wird ein `LightShapeSelectionControl`erstellt. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> -Methode wird aufgerufen, um `LightShapeEditor`das zu starten. Der Rückgabewert dieses aufzurufenden wird an die Entwurfs Umgebung zurückgegeben.
+5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> -Methode. Mit dieser Implementierung wird die Entwurfs Umgebung für <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> ein Objekt abgefragt. Bei erfolgreicher Ausführung wird ein `LightShapeSelectionControl`erstellt. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> -Methode wird aufgerufen, um `LightShapeEditor`das zu starten. Der Rückgabewert dieses aufzurufenden wird an die Entwurfs Umgebung zurückgegeben.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
@@ -535,7 +535,7 @@ Die `MarqueeLightShape` -Eigenschaft unterstützt zwei Arten von hellen `Square`
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-11. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode. Diese Implementierung zeichnet ein ausgefülltes Quadrat und einen Kreis. Außerdem wird der ausgewählte Wert hervorgehoben, indem ein Rahmen um eine Form gezeichnet wird.
+11. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode. Diese Implementierung zeichnet ein ausgefülltes Quadrat und einen Kreis. Außerdem wird der ausgewählte Wert hervorgehoben, indem ein Rahmen um eine Form gezeichnet wird.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]

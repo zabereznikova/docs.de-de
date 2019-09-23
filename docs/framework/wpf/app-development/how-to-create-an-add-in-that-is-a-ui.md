@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt'
+title: 'Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: fa30b7860bd8afdb68b0b54cd8d40f3e1ec86077
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b0e847061a30e93d36997ab603c52715e2730765
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949132"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182643"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist
 Dieses Beispiel zeigt, wie ein Add-in erstellt wird, das ein Windows Presentation Foundation (WPF) ist, das von einer eigenständigen WPF-Anwendung gehostet wird.  
   
  Das-Add-in ist eine Benutzeroberfläche, die ein WPF-Benutzer Steuerelement ist. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die eigenständige WPF-Anwendung hostet die Add-in-Benutzeroberfläche als Inhalt des Haupt Anwendungsfensters.  
@@ -28,7 +28,7 @@ Dieses Beispiel zeigt, wie ein Add-in erstellt wird, das ein Windows Presentatio
   
  In diesem Beispiel werden die WPF-Erweiterungen für das .NET Framework Add-in-Modell hervorgehoben, das dieses Szenario ermöglicht, und es wird Folgendes vorausgesetzt:  
   
-- Kenntnisse des .NET Framework Add-in-Modells, einschließlich Pipeline, Add-in und Host Entwicklung. Wenn Sie mit diesen Konzepten nicht vertraut sind, finden Sie weitere Informationen unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Tutorial, in dem die Implementierung einer Pipeline, ein Add-in und eine Host Anwendung veranschaulicht wird, finden [Sie unter Exemplarische Vorgehensweise: Erstellen einer erweiterbaren Anwendung](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
+- Kenntnisse des .NET Framework Add-in-Modells, einschließlich Pipeline, Add-in und Host Entwicklung. Wenn Sie mit diesen Konzepten nicht vertraut sind, finden Sie weitere Informationen unter [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Tutorial, in dem die Implementierung einer Pipeline, ein Add-in und eine Host Anwendung veranschaulicht wird, finden [Sie unter Exemplarische Vorgehensweise: Erstellen einer erweiterbaren Anwendung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
 - Kenntnisse der WPF-Erweiterungen für das .NET Framework Add-in-Modell. Siehe [Übersicht über WPF-Add-ins](wpf-add-ins-overview.md).  
   
@@ -120,5 +120,5 @@ Die Host Anwendung verwendet typische .NET Framework Add-in-Modellcode, um das A
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md)

@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Speichern Sie strukturierte Daten mit Azure Table Storage oder Azure Cosmos DB in der Cloud.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: f5fe2fe667b6d529bba4d29729a975c7890b5aba
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929001"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182600"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F\#
 
@@ -32,7 +32,7 @@ Weitere Informationen finden Sie unter [Einführung in Azure Cosmos DB Tabellen-
 
 In diesem Tutorial wird gezeigt, F# wie Sie Code schreiben können, um einige gängige Aufgaben mithilfe von Azure Table Storage oder der Azure Cosmos DB Tabellen-API auszuführen. dazu zählen das Erstellen und Löschen einer Tabelle sowie das Einfügen, aktualisieren, löschen und Abfragen von Tabellendaten.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um dieses Handbuch verwenden zu können, müssen Sie zunächst [ein Azure-Speicherkonto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB Konto](https://azure.microsoft.com/try/cosmosdb/)erstellen.
 
@@ -192,7 +192,7 @@ Sie können eine Tabelle aus einem Speicherkonto löschen. Eine Tabelle, die gel
 Nachdem Sie sich nun mit den Grundlagen von Table Storage vertraut gemacht haben, folgen Sie diesen Links, um mehr über komplexere Speicher Aufgaben und die Azure Cosmos DB Tabellen-API zu erfahren.
 
 - [Einführung in Azure Cosmos DB Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Referenz zur Speicher Client Bibliothek für .net](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Referenz zur Speicher Client Bibliothek für .net](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Azure Storage Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Verbindungs Zeichenfolgen konfigurieren](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

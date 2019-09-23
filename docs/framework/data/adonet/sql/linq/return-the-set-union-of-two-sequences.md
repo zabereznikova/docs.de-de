@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 1b981d3002cf4a23897ce98927aebe96086f8a4a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 058856243b2a8daaecd653a9b5999013de5407a8
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781228"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182527"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>Zurückgeben der Vereinigungsmenge von zwei Sequenzen
 Verwenden Sie den <xref:System.Linq.Queryable.Union%2A>-Operator, um die Vereinigungsmenge von zwei Sequenzen zurückzugeben.  
@@ -21,7 +21,7 @@ Verwenden Sie den <xref:System.Linq.Queryable.Union%2A>-Operator, um die Vereini
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]
  [!code-vb[DLinqQueryExamples#43](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#43)]  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird der <xref:System.Linq.Queryable.Union%2A> -Operator für Multisets als ungeordnete Verkettung der Multisets definiert ( [`UNION ALL`](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) effektiv das Ergebnis der-Klausel in SQL).
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wird der <xref:System.Linq.Queryable.Union%2A> -Operator für Multisets als ungeordnete Verkettung der Multisets definiert ( [`UNION ALL`](/sql/t-sql/language-elements/set-operators-union-transact-sql) effektiv das Ergebnis der-Klausel in SQL).
 
 Weitere Informationen und Beispiele finden <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>Sie unter.
   

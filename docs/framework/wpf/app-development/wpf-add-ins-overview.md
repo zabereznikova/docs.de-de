@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 4fd8fe00fe6974bdcbf7b4af4da25150996de8c3
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a146f15a1c2755f254e198d471a42ca9ec29b072
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401698"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182535"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 
@@ -25,9 +25,9 @@ ms.locfileid: "68401698"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Vertrautheit mit dem .NET Framework Add-in-Modell ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+Vertrautheit mit dem .NET Framework Add-in-Modell ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="AddInsOverview"></a>
 
@@ -61,12 +61,12 @@ Damit Add-Ins verwendet werden können, müssen sie von Hostanwendungen gefunden
 
 - **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungs Domänen und Prozessen auf eine saubere, vorhersagbare Weise (siehe [Anwendungs Domänen](../../app-domains/application-domains.md)).
 
-- **Versions**Verwaltung: Sicherstellen, dass Host Anwendungen und Add-Ins auch dann kommunizieren können, wenn neue Versionen von erstellt werden.
+- **Versionsverwaltung**: Sicherstellen, dass Host Anwendungen und Add-Ins auch dann kommunizieren können, wenn neue Versionen von erstellt werden.
 
 Letztlich ist es eine wichtige Aufgabe, ein stabiles Add-In-Modell zu entwickeln. Aus diesem Grund stellt die .NET Framework eine Infrastruktur zum Entwickeln von Add-in-Modellen bereit.
 
 > [!NOTE]
-> Weitere Informationen zu Add-Ins finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
+> Weitere Informationen zu Add-Ins finden Sie unter [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
 <a name="NETFrameworkAddInModelOverview"></a>
 
@@ -127,7 +127,7 @@ Wie <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipel
 
 Damit ein Add-in eine Benutzeroberfläche an eine Host Anwendung zurückgibt, sind folgende Schritte erforderlich:
 
-1. Die Host Anwendung, das Add-in und die Pipeline müssen erstellt werden, wie in den .NET Framework [-Add-Ins und der Erweiterbarkeits](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation beschrieben.
+1. Die Host Anwendung, das Add-in und die Pipeline müssen erstellt werden, wie in den .NET Framework [-Add-Ins und der Erweiterbarkeits](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation beschrieben.
 
 2. Der Vertrag muss implementieren <xref:System.AddIn.Contract.IContract> und, um eine Benutzeroberfläche zurückzugeben. der Vertrag muss eine Methode mit einem Rückgabewert vom <xref:System.AddIn.Contract.INativeHandleContract>Typ deklarieren.
 
@@ -147,7 +147,7 @@ Ein Beispiel für das Implementieren eines Add-Ins, das eine Benutzeroberfläche
 
 Wenn ein Add-in eine Benutzeroberfläche ist, ist Folgendes erforderlich:
 
-1. Die Host Anwendung, das Add-in und die Pipeline müssen erstellt werden, wie in den .NET Framework [-Add-Ins und der Erweiterbarkeits](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation beschrieben.
+1. Die Host Anwendung, das Add-in und die Pipeline müssen erstellt werden, wie in den .NET Framework [-Add-Ins und der Erweiterbarkeits](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation beschrieben.
 
 2. Die Vertrags Schnittstelle für das Add-in muss implementieren <xref:System.AddIn.Contract.INativeHandleContract>.
 
@@ -311,7 +311,7 @@ Wenn mehrere Anwendungs Domänen verwendet werden, werden standardmäßig die ve
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Anwendungsdomänen](../../app-domains/application-domains.md)
 - [Übersicht über .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Erstellen von Objekten als remotable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331541"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182565"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic von der Kategorie aufgelisteten Compileroptionen
 Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bereitgestellt. Im folgenden finden Sie eine Liste der Visual Basic Befehlszeilen-Compileroptionen, sortiert nach Funktions Kategorie.  
@@ -72,7 +72,7 @@ Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Stuft Warnungen zu Fehlern hoch.|  
 |`-ruleset:<file>`|Geben Sie eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|  
   
-## <a name="help"></a>Help  
+## <a name="help"></a>Hilfe  
   
 |Option|Zweck|  
 |---|---|  
@@ -129,4 +129,4 @@ Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic Compileroptionen in alphabetischer Reihenfolge](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
-- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)
+- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
