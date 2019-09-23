@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299123"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048091"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Vorgehensweise: Festlegen der zeitbasierten Standardcacherichtlinie für eine Anwendung
 Mit der standardmäßigen zeitbasierten Cacherichtlinie kann das Cacheverhalten einer Anwendung von den Headern definiert werden, die mit der zwischengespeicherten Ressource gesendet werden. Außerdem wird das Cacheverhalten ermöglicht, das in Abschnitt 13 und 14 des RFC 2616 definiert wird, verfügbar auf der Website der [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Dies ist das angemessene Cacheverhalten für die meisten Anwendungen.  
@@ -64,8 +64,8 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
-- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
+- [Cacherichtlinie](cache-policy.md)
+- [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)
+- [Zeitbasierte Cacherichtlinien](time-based-cache-policies.md)
+- [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

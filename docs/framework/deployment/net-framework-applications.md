@@ -7,23 +7,23 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 92c7bbfe2c35aa1474c83eae49240af39b664714
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132612"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052047"
 ---
 # <a name="deploying-net-framework-applications"></a>Bereitstellen von .NET Framework-Anwendungen
 Dieser Abschnitt der Dokumentation zu .NET Framework bietet wichtige Informationen zum Bereitstellen von .NET Framework-Anwendungen, einschließlich der Richtlinien für das Laden von Assemblys, das Auflösen von Assemblyverweisen und das Verbessern der Leistung Ihrer Anwendung durch die Generierung von systemeigenen Images.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [So sucht Common Language Runtime nach Assemblys](how-the-runtime-locates-assemblies.md)  
  Beschreibt, wie die Assemblys, die Ihre Anwendung bilden, von der Common Language Runtime gesucht und gebunden werden.  
   
- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ [Bewährte Methoden für das Laden von Assemblys](best-practices-for-assembly-loading.md)  
  In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
+- [Entwicklungshandbuch](../development-guide.md)

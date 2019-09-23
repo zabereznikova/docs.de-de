@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109953"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047772"
 ---
 # <a name="listening-with-sockets"></a>Überwachen mit Sockets
 Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann darauf, dass ein Client eine Verbindung zu diesem Port herstellt. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie ein Remotedienst für ein TCP/IP-Netzwerk erstellt wird.  
@@ -61,8 +61,8 @@ listener.Listen(100);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Verwenden von Clientsockets](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Vorgehensweise: Erstellen eines Sockets](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
+- [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
+- [Verwenden von Clientsockets](using-client-sockets.md)
+- [Vorgehensweise: Erstellen eines Sockets](how-to-create-a-socket.md)
+- [Sockets](sockets.md)

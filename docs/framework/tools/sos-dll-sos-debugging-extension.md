@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c5033b32c1623885b5408f428ce4bc4202d50ce1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9a8d41228c46de0f18b5a92def0591d6373d3d69
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894629"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044096"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS-Debugerweiterung)
 
@@ -74,7 +74,7 @@ Die SOS-Debugerweiterung (SOS.dll) unterstützt Sie durch die Bereitstellung von
 |**IP2MD** \<*Codeadresse*>|Zeigt die `MethodDesc`-Struktur bei der angegebenen Adresse in JIT (Just-In-Time)-kompiliertem Code an.|
 |`ListNearObj` (`lno`) *\<obj_address>*|Zeigt die Objekte an, die der angegebenen Adresse vorausgehen und darauf folgen. Der Befehl sucht im Garbage Collection-Heap nach der Adresse, die wie ein gültiger Anfang eines verwalteten Objekts aussieht (auf Grundlage einer gültigen Methodentabelle), und nach dem Objekt, das der Argumentadresse folgt.|
 |**MinidumpMode** [**0**] [**1**]|Verhindert die Ausführung von unsicheren Befehlen bei einem Minidump.<br /><br /> Durch Übergabe von **0** wird diese Funktion deaktiviert und durch **1** aktiviert. In der Standardeinstellung ist der Wert **MinidumpMode** auf **0** festgelegt.<br /><br /> Minidumps, die mit dem Befehl **.dump /m** oder dem Befehl **.dump** erstellt wurden, weisen eingeschränkte CLR-spezifische Daten auf. Daher können nur einige der SOS-Befehle ordnungsgemäß ausgeführt werden. Bei einigen Befehlen können unerwartete Fehlern auftreten, da erforderliche Speicherbereiche nicht oder nur teilweise zugeordnet sind. Mit dieser Option wird die Ausführung unsicherer Befehle bei Minidumps verhindert.|
-|**Name2EE** \<*Modulname*> \<*Typ- oder Methodenname*><br /><br /> Oder<br /><br /> **Name2EE** \<*Modulname*> **!** \<*Typ- oder Methodenname*>|Zeigt die `MethodTable`-Struktur und die `EEClass`-Struktur für den angegebenen Typ oder die angegebene Methode im angegebenen Modul an.<br /><br /> Das angegebene Modul muss im Prozess geladen werden.<br /><br /> Durchsuchen Sie das Modul mit dem [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md), um den richtigen Typnamen abzurufen. Sie können auch `*` als Modulnamensparameter übergeben, um alle geladenen verwalteten Module zu durchsuchen. Beim Parameter *Modulname* kann es sich auch um den Namen des Debuggers für ein Modul handeln, z.B. `mscorlib` oder `image00400000`.<br /><br /> Von diesem Befehl wird die Windows-Debuggersyntax <`module`>`!`<`type`> unterstützt. Der Typ muss vollqualifiziert sein.|
+|**Name2EE** \<*Modulname*> \<*Typ- oder Methodenname*><br /><br /> Oder<br /><br /> **Name2EE** \<*Modulname*> **!** \<*Typ- oder Methodenname*>|Zeigt die `MethodTable`-Struktur und die `EEClass`-Struktur für den angegebenen Typ oder die angegebene Methode im angegebenen Modul an.<br /><br /> Das angegebene Modul muss im Prozess geladen werden.<br /><br /> Durchsuchen Sie das Modul mit dem [Ildasm.exe (IL-Disassembler)](ildasm-exe-il-disassembler.md), um den richtigen Typnamen abzurufen. Sie können auch `*` als Modulnamensparameter übergeben, um alle geladenen verwalteten Module zu durchsuchen. Beim Parameter *Modulname* kann es sich auch um den Namen des Debuggers für ein Modul handeln, z.B. `mscorlib` oder `image00400000`.<br /><br /> Von diesem Befehl wird die Windows-Debuggersyntax <`module`>`!`<`type`> unterstützt. Der Typ muss vollqualifiziert sein.|
 |**ObjSize** [\<*Objektadresse*>] &#124; [ **-aggregate**] [ **-stat**]|Zeigt die Größe des angegebenen Objekts an. Ohne Angabe von Parametern werden durch den Befehl **ObjSize** die Größe aller in verwalteten Threads gefundenen Objekte, alle Garbage Collector-Handles im Prozess sowie die Gesamtgröße aller Objekte angezeigt, auf die diese Handles verweisen. Der Befehl **ObjSize** enthält neben der Größe des übergeordneten Elements auch die Größe aller untergeordneten Objekte.<br /><br /> In Verbindung mit dem Argument **-stat** kann mithilfe der Option **-aggregate** eine ausführliche Ansicht der Typen abgerufen werden, die immer noch über Stamm verfügen. Mithilfe von **!dumpheap -stat** und **!objsize -aggregate -stat** können Objekte ohne Stamm ermittelt und verschiedene Arbeitsspeicherprobleme diagnostiziert werden.|
 |**PrintException** [ **-nested**] [ **-lines**] [\<*Ausnahmeobjektadresse*>]<br /><br /> Oder<br /><br /> **PE** [ **-nested**] [\<*Ausnahmeobjektadresse*>]|Zeigt die Felder jedes Objekts an, das bei der angegebenen Adresse von der <xref:System.Exception>-Klasse abgeleitet wird, und formatiert diese Felder. Ohne Angabe einer Adresse wird durch den Befehl **PrintException** die letzte im aktuellen Thread ausgelöste Ausnahme angezeigt.<br /><br /> Mit der Option **-nested** werden Details zu geschachtelten Ausnahmeobjekten angezeigt.<br /><br /> Mit der Option **-lines** werden Quelleninformationen angezeigt, sofern verfügbar.<br /><br /> Mithilfe dieses Befehls kann das `_stackTrace`-Feld formatiert und angezeigt werden, bei dem es sich um ein binäres Array handelt.|
 |**ProcInfo** [ **-env**] [ **-time**] [ **-mem**]|Zeigt Umgebungsvariablen für den Prozess, die Kernel-CPU-Zeit und Speicherauslastungsstatistiken an.|
@@ -206,5 +206,5 @@ Durch den folgenden Befehl werden Informationen zum Metadatentoken bei der Adres
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

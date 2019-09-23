@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: eee533e87c868fadc04e26b374b36a0256dcf38e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095439"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047133"
 ---
 # <a name="synchronous-server-socket-example"></a>Synchroner Serversocket, Beispiel
 Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem synchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  
@@ -157,6 +157,6 @@ public class SynchronousSocketListener {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Synchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Socketcodebeispiele](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Synchrone Clientsockets - Beispiel](synchronous-client-socket-example.md)
+- [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
+- [Socketcodebeispiele](socket-code-examples.md)

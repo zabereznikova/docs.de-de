@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877044"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044729"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 
@@ -88,9 +88,9 @@ Für den einfacheren Zugriff können Sie die Developer-Eingabeaufforderung von V
 
    Das neue Menüelement wird hinzugefügt, und Sie können über das Menü **Extras** auf die Eingabeaufforderung zugreifen.
 
-   ![Menüelement „Eingabeaufforderung“ in Visual Studio](media/command-prompt-vs-menu.png)
+   ![Menüelement „Eingabeaufforderung“ in Visual Studio](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
+- [Extras](index.md)
 - [Verwalten von externen Tools](/visualstudio/ide/managing-external-tools)

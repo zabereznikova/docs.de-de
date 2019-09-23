@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: e5f4dc22ad75dc4d4f7dc30f44e6ae304403ef16
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 44845fb67aac4ff9ab9dda8cf4934153c8c4f23c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914531"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048273"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Vorgehensweise: Überschreiben einer globalen Proxyauswahl
 In diesem Beispiel wird an `www.contoso.com` eine **WebRequest** gesendet, die die globale Proxyauswahl mit einem Proxyserver namens `alternateproxy` auf Port 80 überschreibt.  
@@ -34,5 +34,5 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
+- [Zugreifen auf das Internet über einen Proxy](accessing-the-internet-through-a-proxy.md)

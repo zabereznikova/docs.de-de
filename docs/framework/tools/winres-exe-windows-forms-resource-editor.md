@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0683499241f594b8b37b7dd69b91ed5929670024
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894569"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043902"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
-Der Windows-Ressourcenlokalisierungs-Editor, „Winres.exe“, ist ein visuelles Layouttool, das Lokalisierungsexperten beim Lokalisieren von Ressourcen der Windows Forms-Benutzeroberfläche unterstützt, die von Formularen verwendet werden. Die als Eingabe für "Winres.exe" verwendeten RESX- oder RESOURCES-Dateien können unter Verwendung einer visuellen Entwurfsumgebung, wie Microsoft Visual Studio, erstellt werden. Informationen zum Bereitstellen von Ressourcen in .NET Framework-Anwendungen finden Sie unter [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md).
+Der Windows-Ressourcenlokalisierungs-Editor, „Winres.exe“, ist ein visuelles Layouttool, das Lokalisierungsexperten beim Lokalisieren von Ressourcen der Windows Forms-Benutzeroberfläche unterstützt, die von Formularen verwendet werden. Die als Eingabe für "Winres.exe" verwendeten RESX- oder RESOURCES-Dateien können unter Verwendung einer visuellen Entwurfsumgebung, wie Microsoft Visual Studio, erstellt werden. Informationen zum Bereitstellen von Ressourcen in .NET Framework-Anwendungen finden Sie unter [Ressourcen in Desktop-Apps](../resources/index.md).
 
-„Winres.exe“ wird mit Visual Studio installiert. Verwenden Sie zum Ausführen des Tools die Developer-Eingabeaufforderung für Visual Studio. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+„Winres.exe“ wird mit Visual Studio installiert. Verwenden Sie zum Ausführen des Tools die Developer-Eingabeaufforderung für Visual Studio. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Der Zustand von Elementen der Benutzeroberfläche aus einem Formular in einem Wi
 
 Weitere Informationen finden Sie unter [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) und [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
-"Winres.exe" kann eine RESX-Datei nicht in die zugehörige RESOURCES-Datei konvertieren. Verwenden Sie dazu das Tool "Resgen.exe". Weitere Informationen zu „resgen.exe“ finden Sie unter [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
+"Winres.exe" kann eine RESX-Datei nicht in die zugehörige RESOURCES-Datei konvertieren. Verwenden Sie dazu das Tool "Resgen.exe". Weitere Informationen zu „resgen.exe“ finden Sie unter [Resource File Generator (Resgen.exe)](resgen-exe-resource-file-generator.md).
 
 „Winres.exe“ ist eine grafische Anwendung, die eine Entwurfszeitversion eines Windows Forms-Formulars aus der Ressourcendatei ohne Zugriff auf den Quellcode neu erstellt. „Winres.exe“ hostet den **Windows Forms-Formular-Designer** und das **Eigenschaftenfenster** von Visual Studio. Mithilfe dieser Funktionen ist die visuelle Bearbeitung einer RESOURCES- oder RESX-Datei möglich, die ein Windows Forms-Formular enthält. Lokalisierungsexperten verwenden „Winres.exe“ normalerweise, um Steuerelementbeschriftungen zu bearbeiten und die Position und Größe der einzelnen Steuerelemente so anzupassen, dass die Beschriftungen in der Zielsprache ordnungsgemäß angezeigt werden.
 
@@ -76,7 +76,7 @@ Für die Lokalisierung mithilfe von „Winres.exe“ müssen Sie zunächst unter
 > [!NOTE]
 > "Winres.exe" kann nicht zum Bearbeiten der Standardressourcendatei verwendet werden. "Winres.exe" interpretiert alle geänderten Eigenschaften als lokalisierte Eigenschaften und speichert diese in der Ressourcendatei für die Zielkultur.
 
-Mithilfe der endgültigen Versionen der Kulturressourcendateien können lokalisierte Versionen der Anwendung erstellt werden. Weitere Informationen finden Sie unter [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md).
+Mithilfe der endgültigen Versionen der Kulturressourcendateien können lokalisierte Versionen der Anwendung erstellt werden. Weitere Informationen finden Sie unter [Ressourcen in Desktop-Apps](../resources/index.md).
 
 „Winres.exe“ weist die folgenden Funktionen und Möglichkeiten auf:
 
@@ -127,7 +127,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
     ```
 
     > [!NOTE]
-    > Wenn das Formular, dessen Ressourcen Sie bearbeiten, ein geerbtes Formular ist, muss sowohl die im geerbten Formular enthaltene Assembly als auch die Assembly, die das erbende (abgeleitete) Formular enthält, im globalen Assemblycache (GAC) registriert sein oder sich in demselben Verzeichnis wie "WinRes.exe" befinden. Weitere Informationen zur Installation von .NET Framework-Komponenten in GAC finden Sie unter [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md).
+    > Wenn das Formular, dessen Ressourcen Sie bearbeiten, ein geerbtes Formular ist, muss sowohl die im geerbten Formular enthaltene Assembly als auch die Assembly, die das erbende (abgeleitete) Formular enthält, im globalen Assemblycache (GAC) registriert sein oder sich in demselben Verzeichnis wie "WinRes.exe" befinden. Weitere Informationen zur Installation von .NET Framework-Komponenten in GAC finden Sie unter [Globaler Assemblycache](../app-domains/gac.md).
 
 3. Wählen Sie Steuerelemente in dem Formular aus, und ändern Sie ihre <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft und andere Eigenschaften in die lokalisierte Kultur und die entsprechende Sprache. Damit der lokalisierte Text ordnungsgemäß angezeigt wird, verschieben Sie die Steuerelemente bei Bedarf bzw. ändern ihre Größe.
 
@@ -135,7 +135,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 5. Wählen Sie die entsprechende Kultur und den entsprechenden Dateimodus aus, und klicken Sie dann auf **OK**.
 
-   Die Datei wird gespeichert, wobei die Benennungskonvention verwendet wird, die die Laufzeit für lokalisierte Ressourcendateien erwartet. Wenn Sie beispielsweise `TestApp.resources` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resources`. Wenn Sie `TestApp.resx` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resx`. Weitere Informationen zu Benennungskonventionen für Ressourcen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Eine Liste der von der Runtime verwendeten vordefinierten Kulturnamen finden Sie unter der Klasse <xref:System.Globalization.CultureInfo>.
+   Die Datei wird gespeichert, wobei die Benennungskonvention verwendet wird, die die Laufzeit für lokalisierte Ressourcendateien erwartet. Wenn Sie beispielsweise `TestApp.resources` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resources`. Wenn Sie `TestApp.resx` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resx`. Weitere Informationen zu Benennungskonventionen für Ressourcen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Eine Liste der von der Runtime verwendeten vordefinierten Kulturnamen finden Sie unter der Klasse <xref:System.Globalization.CultureInfo>.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -144,6 +144,6 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+- [Extras](index.md)
+- [Ressourcen in Desktop-Apps](../resources/index.md)
 - [Globalisierung und Lokalisierung](../../standard/globalization-localization/index.md)

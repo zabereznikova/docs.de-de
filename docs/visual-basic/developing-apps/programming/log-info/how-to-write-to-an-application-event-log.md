@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a85d956a0de727e3c061ec447a3d53ad6c159
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366503"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054147"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Vorgehensweise: Schreiben in ein Anwendungsereignisprotokoll (Visual Basic)
 
@@ -22,7 +22,7 @@ In das Sicherheitsprotokoll kann nicht geschrieben werden. Um in das Systemproto
 
 Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder die **Windows-Ereignisanzeige**verwenden. Weitere Informationen finden Sie unter [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).
 
-### <a name="to-add-and-configure-the-event-log-listener"></a>Hinzufügen und Konfigurieren des Ereignisprotokolllisteners
+## <a name="to-add-and-configure-the-event-log-listener"></a>Hinzufügen und Konfigurieren des Ereignisprotokolllisteners
 
 1. Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.
 
@@ -61,11 +61,11 @@ Zum Anzeigen von Ereignisprotokollen können Sie den **Server-Explorer** oder di
     > [!NOTE]
     > Normalerweise schreiben Anwendungen nur Fehler in das Ereignisprotokoll. Informationen zum Filtern von Protokollausgaben finden Sie unter [Exemplarische Vorgehensweise: Filterung der Ausgabe von „My.Application.Log“](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-### <a name="to-write-event-information-to-the-event-log"></a>Schreiben von Ereignisinformationen in das Ereignisprotokoll
+## <a name="to-write-event-information-to-the-event-log"></a>Schreiben von Ereignisinformationen in das Ereignisprotokoll
 
-- Verwenden Sie die `My.Application.Log.WriteEntry` - oder die `My.Application.Log.WriteException` -Methode, um Informationen in das Ereignisprotokoll zu schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben von Protokollmeldungen (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) und [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Verwenden Sie die `My.Application.Log.WriteEntry` - oder die `My.Application.Log.WriteException` -Methode, um Informationen in das Ereignisprotokoll zu schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben von Protokollmeldungen (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) und [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-    Nachdem Sie den Ereignisprotokolllistener für eine Assembly konfiguriert haben, empfängt er alle Meldungen, die `My.Application.Log` für die betreffende Assembly schreibt.
+Nachdem Sie den Ereignisprotokolllistener für eine Assembly konfiguriert haben, empfängt er alle Meldungen, die `My.Application.Log` für die betreffende Assembly schreibt.
 
 ## <a name="see-also"></a>Siehe auch
 

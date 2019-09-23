@@ -2,12 +2,12 @@
 title: Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über neue Optionen zum Implementieren von Hintergrundtasks in Microservices in .NET Core mit IHostedService und BackgroundService
 ms.date: 01/07/2019
-ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff263212536233bef85e9517442b4d7ed9eff115
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038127"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039882"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 
@@ -236,16 +236,16 @@ Auch wenn `WebHost` in einem Anwendungspool bereitgestellt würde, müssten ande
 
 Die `IHostedService`-Schnittstelle bietet eine einfache Möglichkeit, Hintergrundtasks in einer ASP.NET Core-Webanwendung (.NET 2.0 Core) oder in einem Prozess oder Host zu starten (ab .NET Core 2.1 mit `IHost`). Der Hauptvorteil besteht darin, dass Sie durch einen ordnungsgemäßen Abbruch Bereinigungscode in Ihren Hintergrundtasks ausführen können, wenn der Host heruntergefahren wird.
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Building a scheduled task in ASP.NET Core/Standard 2.0 (Erstellen eines geplanten Tasks in ASP.NET Core/Standard 2.0)** <br/>
-    <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Building a scheduled task in ASP.NET Core/Standard 2.0 (Erstellen eines geplanten Tasks in ASP.NET Core/Standard 2.0)**  
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementing IHostedService in ASP.NET Core 2.0 (Implementieren von IHostedService in ASP.NET Core 2.0)** <br/>
-    <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementing IHostedService in ASP.NET Core 2.0 (Implementieren von IHostedService in ASP.NET Core 2.0)**  
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **GenericHost Sample using ASP.NET Core 2.1 (GenericHost-Beispiel mithilfe von ASP.NET Core 2.1)** <br/>
-    <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **GenericHost Sample using ASP.NET Core 2.1 (GenericHost-Beispiel mithilfe von ASP.NET Core 2.1)**  
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Zurück](test-aspnet-core-services-web-apps.md)

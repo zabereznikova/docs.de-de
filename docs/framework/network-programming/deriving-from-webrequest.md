@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6bee864f8d24076d16f226c29d61801e856739d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216482"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048601"
 ---
 # <a name="deriving-from-webrequest"></a>Ableiten von WebRequest
 Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die grundlegende Methoden und Eigenschaften bereitstellt, mit denen ein protokollspezifischer Anforderungshandler erstellt wird, der in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die **WebRequest**-Klasse verwenden, können Daten mit einem beliebigen unterstützten Protokoll anfordern, ohne das verwendete Protokoll anzugeben.  
@@ -93,5 +93,5 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>
-- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)
+- [Ableiten von WebResponse](deriving-from-webresponse.md)

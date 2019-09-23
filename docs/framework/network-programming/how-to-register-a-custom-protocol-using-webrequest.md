@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
-ms.openlocfilehash: 5c9a81fc61a2272056ba34fa387fdafee6203824
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 05b6f6c3f0f1fc1b36b60e8b0dae50de2826aba4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079499"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048248"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a>Vorgehensweise: Registrieren eines benutzerdefinierten Protokolls mit WebRequest
 In diesem Beispiel wird gezeigt, wie Sie eine protokollspezifische Klasse registrieren, die an anderer Stelle definiert ist. In diesem Beispiel stellt `CustomWebRequestCreator` das vom Benutzer implementierte Objekt dar, das die **Create**-Methode implementiert, die wiederum das `CustomWebRequest`-Objekt zurückgibt. Im Codebeispiel wird vorausgesetzt, dass Sie den `CustomWebRequest`-Code geschrieben haben, der das benutzerdefinierte Protokoll implementiert.  
@@ -34,4 +34,4 @@ Dim req As WebRequest = WebRequest.Create("custom://customHost.contoso.com/")
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)

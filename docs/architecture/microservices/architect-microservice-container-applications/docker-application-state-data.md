@@ -2,12 +2,12 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Zustands- und Datenverwaltung in Docker-Anwendungen. Microservice-Instanzen sind erweiterbar, DATEN jedoch NICHT. Wie lässt sich dieser Tatsache mithilfe von Microservices Rechnung tragen?
 ms.date: 09/20/2018
-ms.openlocfilehash: 9d7b0ff0e73267c6b80be2f1c956c3b4eae140e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673127"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039577"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -47,7 +47,7 @@ Volumes können benannt oder anonym sein (letzteres ist die Standardeinstellung)
 
 Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder virtuellen Computer aus auf ein Volume auf einem anderen Hostserver oder virtuellen Computer zugreifen. Anders gesagt: Bei diesen Volumes ist es nicht möglich, Daten zu verwalten, die von auf verschiedenen Docker-Hosts ausgeführten Containern gemeinsam verwendet werden. Dieses Szenario ließe sich allerdings mit einem Volumetreiber umsetzen, der Remotehosts unterstützt.
 
-![Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt. ](./media/image5.png)
+![Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt.](./media/image5.png)
 
 **Abbildung 4-5**. Volumes und externe Datenquellen für containerbasierte Anwendungen
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46475cbc8517fc73d8b7fd868c7632e5c85a7726
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894794"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044192"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |Befehl|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#catdb).|  
-|`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#sign).|  
-|`Timestamp`|Fügt Dateien Timestamps hinzu. Eine Liste der vom `TimeStamp`-Befehl unterstützten Optionen finden Sie unter [TimeStamp-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#TimeStamp).|  
-|`Verify`|Überprüft die digitale Signatur von Dateien, indem ermittelt wird, ob das Signaturzertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde, und (optional) ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist. Eine Liste der vom `Verify`-Befehl unterstützten Optionen finden Sie unter [Verify-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#Verify).|  
+|`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](signtool-exe.md#catdb).|  
+|`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](signtool-exe.md#sign).|  
+|`Timestamp`|Fügt Dateien Timestamps hinzu. Eine Liste der vom `TimeStamp`-Befehl unterstützten Optionen finden Sie unter [TimeStamp-Befehlsoptionen](signtool-exe.md#TimeStamp).|  
+|`Verify`|Überprüft die digitale Signatur von Dateien, indem ermittelt wird, ob das Signaturzertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde, ob das Signaturzertifikat widerrufen wurde, und (optional) ob das Signaturzertifikat für eine bestimmte Richtlinie gültig ist. Eine Liste der vom `Verify`-Befehl unterstützten Optionen finden Sie unter [Verify-Befehlsoptionen](signtool-exe.md#Verify).|  
   
  Die folgenden Optionen gelten für alle Signierungstoolbefehle.  
   
@@ -211,5 +211,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

@@ -2,12 +2,12 @@
 title: Wann sollte .NET Framework für Docker-Container verwendet werden?
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?
 ms.date: 01/07/2019
-ms.openlocfilehash: 0b948017c3bbbcc8c43d5d2d9698d9a1a6f9deed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784083"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039643"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Wann sollte .NET Framework für Docker-Container verwendet werden?
 
@@ -45,22 +45,22 @@ Zwar wird .NET Core 3 (zum Zeitpunkt der Erstellung dieses Texts in Arbeit) Unte
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Verwenden einer Plattform oder API, die .NET Core nicht unterstützt
 
-Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nicht. Einige Azure-Dienste stellen beispielsweise ein SDK bereit, das noch nicht für die Nutzung in .NET Core verfügbar ist. Dieses Problem ist jedoch nur vorübergehend, da alle Azure-Dienste letztendlich .NET Core verwenden werden. Das [Azure DocumentDB SDK für .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core/1.2.1) wurde z.B. als Vorschauversion am 16. November 2016 veröffentlicht und ist jetzt als stabile Version allgemein verfügbar.
+Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nicht. Einige Azure-Dienste stellen beispielsweise ein SDK bereit, das noch nicht für die Nutzung in .NET Core verfügbar ist. Dieses Problem ist jedoch nur vorübergehend, da alle Azure-Dienste letztendlich .NET Core verwenden werden. Das [Azure DocumentDB SDK für .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) wurde z.B. als Vorschauversion am 16. November 2016 veröffentlicht und ist jetzt als stabile Version allgemein verfügbar.
 
 Wenn eine der Plattformen oder einer der Dienste in Azure .NET Core weiterhin nicht mit der Client-API unterstützt, können Sie in der Zwischenzeit die entsprechende REST-API aus dem Azure-Dienst oder das Client SDK in .NET Framework verwenden.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Leitfaden für .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 - **Portieren von .NET Framework zu .NET Core**  
-    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
+  [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 - **Einführung zu .NET und Docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **.NET-Komponenten – Übersicht**  
-    [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
+  [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
 >[Zurück](net-core-container-scenarios.md)

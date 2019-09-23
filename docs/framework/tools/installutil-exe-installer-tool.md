@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ad0497bd5303dc4113dbb7b8078c70cb044cc95
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496687"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044538"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Installer-Tool)
 
 Das Installationsprogrammtool ist ein Befehlszeilen-Hilfsprogramm, mit dem Sie Serverressourcen installieren und deinstallieren können, indem Sie die Komponenten des Installationsprogramms in angegebenen Assemblys ausführen. Dieses Tool funktioniert in Verbindung mit Klassen im <xref:System.Configuration.Install>-Namespace.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -38,7 +38,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assembly`|Der Dateiname der Assembly, in der die Installationsprogrammkomponenten ausgeführt werden sollen. Lassen Sie diesen Parameter aus, wenn Sie den starken Namen der Assembly angeben möchten, indem Sie die `/AssemblyName`-Option verwenden.|
 
@@ -46,10 +46,10 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Optionen
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> - oder - <br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
-|`/help` *assembly*<br /><br /> - oder - <br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|
+|`/h[elp]`<br /><br /> Oder<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
+|`/help` *assembly*<br /><br /> Oder<br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Gibt den starken Namen einer Assembly an, die im globalen Assemblycache registriert werden muss. Der Assemblyname muss mit der Version, Kultur und dem öffentlichen Schlüsseltoken der Assembly vollständig qualifiziert werden. Der vollqualifizierte Name muss in Anführungszeichen stehen.<br /><br /> "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" ist beispielsweise ein vollqualifizierter Assemblyname.|
 |`/InstallStateDir=[` *directoryName* `]`|Gibt das Verzeichnis der INSTALLSTATE-Datei an, die die Daten enthält, die verwendet werden, um die Assembly zu deinstallieren. Das Standardverzeichnis ist das Verzeichnis, das die Assembly enthält.|
 |`/LogFile=`[*filename*]|Gibt den Namen der Protokolldatei an, in der der Installationsverlauf aufgezeichnet wird. Wenn die Option `/LogFile` fehlt, wird standardmäßig die Protokolldatei „*assemblyname*.InstallLog“ erstellt. Wenn *filename* nicht angegeben wird, wird keine Protokolldatei generiert.|
@@ -170,5 +170,5 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Configuration.Install>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc9ba5e379897247f50175603b1002d5688d215
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894685"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044635"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
 Der IL-Assembler generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus der Zwischensprache (Intermediate Language, IL). Weitere Informationen über die Zwischensprache finden Sie unter [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md). Die erstellte ausführbare Datei, die IL und die erforderlichen Metadaten enthält, können Sie ausführen, um zu überprüfen, ob die IL wie erwartet funktioniert.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -92,7 +92,7 @@ Der IL-Assembler kann alle vorhandenen Metadaten und IL-Funktionen der Programmi
 > [!NOTE]
 > Wenn die letzte Codezeile in der IL-Quelldatei weder ein nachgestelltes Leerzeichen noch ein Zeilenendezeichen besitzt, kann die Kompilierung fehlschlagen.
 
-Sie können *Ilasm.exe* zusammen mit dem zugehörigen Tool [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden. *Ildasm.exe* nimmt eine PE-Datei mit IL-Code entgegen und erstellt eine Textdatei, die als Eingabe für *Ilasm.exe* geeignet ist. Dies ist zum Beispiel nützlich, wenn Code in einer Programmiersprache programmiert werde soll, die nicht alle Attribute der Metadaten der Laufzeit unterstützt. Nachdem der Code kompiliert und die Ausgabe über *Ildasm.exe* verarbeitet wurde, kann die resultierende IL-Textdatei manuell bearbeitet werden, um die fehlenden Attribute hinzuzufügen. Anschließend können Sie diese Textdatei per *Ilasm.exe* verarbeiten, um eine endgültige ausführbare Datei zu erstellen.
+Sie können *Ilasm.exe* zusammen mit dem zugehörigen Tool [*Ildasm.exe*](ildasm-exe-il-disassembler.md) verwenden. *Ildasm.exe* nimmt eine PE-Datei mit IL-Code entgegen und erstellt eine Textdatei, die als Eingabe für *Ilasm.exe* geeignet ist. Dies ist zum Beispiel nützlich, wenn Code in einer Programmiersprache programmiert werde soll, die nicht alle Attribute der Metadaten der Laufzeit unterstützt. Nachdem der Code kompiliert und die Ausgabe über *Ildasm.exe* verarbeitet wurde, kann die resultierende IL-Textdatei manuell bearbeitet werden, um die fehlenden Attribute hinzuzufügen. Anschließend können Sie diese Textdatei per *Ilasm.exe* verarbeiten, um eine endgültige ausführbare Datei zu erstellen.
 
 Mit diesem Verfahren können Sie auch eine einzelne PE-Datei aus mehreren PE-Dateien erstellen, die von unterschiedlichen Compilern generiert wurden.
 
@@ -159,7 +159,7 @@ Der folgende Befehl assembliert die IL-Datei *myTestFile.il* und erstellt die *D
 ilasm myTestFile /dll /output:myNewTestFile.dll
 ```
 
-Im folgenden Codebeispiel wird eine sehr einfache Anwendung gezeigt, die "Hello World!" auf der Konsole aus. Sie können diesen Code kompilieren und dann das Tool [*Ildasm.exe*](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um eine IL-Datei zu generieren.
+Im folgenden Codebeispiel wird eine sehr einfache Anwendung gezeigt, die "Hello World!" auf der Konsole aus. Sie können diesen Code kompilieren und dann das Tool [*Ildasm.exe*](ildasm-exe-il-disassembler.md) verwenden, um eine IL-Datei zu generieren.
 
 ```csharp
 using System;
@@ -229,7 +229,7 @@ Das folgende IL-Codebeispiel entspricht dem vorherigen C#-Codebeispiel. Sie kön
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [*Ildasm.exe* (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Extras](index.md)
+- [*Ildasm.exe* (IL-Disassembler)](ildasm-exe-il-disassembler.md)
 - [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

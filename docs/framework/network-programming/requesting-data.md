@@ -17,12 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228509"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047316"
 ---
 # <a name="requesting-data"></a>Anfordern von Daten
 Um Anwendungen zu entwickeln, die in der verteilten Betriebssystemumgebung des heutigen Internets ausgeführt werden können, benötigen Sie eine effiziente und einfach zu nutzende Methode für das Abrufen von Daten aus Ressourcen aller Art. Mithilfe austauschbarer Protokolle lassen sich Anwendungen entwickeln, in denen über eine einzige Schnittstelle Daten aus mehreren Internetprotokollen abgerufen werden.  
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Vorgehensweise: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Vorgehensweise: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Netzwerkprogrammierung in .NET Framework](index.md)
+- [Vorgehensweise: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Vorgehensweise: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-ms.openlocfilehash: d3fecb9fe78ca54f68d3c5a97dae5d5dd9fbb28d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d5b07617617ac28e4f7f72bc23a96b45a85dff75
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075417"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047977"
 ---
 # <a name="httplistener"></a>HttpListener
 Die <xref:System.Net.HttpListener>-Klasse stellt einen programmgesteuerten HTTP-Protokolllistener bereit. Der Listener ist für die Lebensdauer des <xref:System.Net.HttpListener>-Objekts aktiv und wird in der Anwendung ausgeführt.  
@@ -26,4 +26,4 @@ Die <xref:System.Net.HttpListener>-Klasse stellt einen programmgesteuerten HTTP-
 - [Security Enhancements in Internet Information (Sicherheitsverbesserungen bei Internetinformationen)](https://go.microsoft.com/fwlink/?LinkID=178286)
 - [Beispiel zur HttpListener ASPX-Hostanwendung](https://go.microsoft.com/fwlink/?LinkID=179560)
 - [Beispiel zur HttpListener-Technologie](https://go.microsoft.com/fwlink/?LinkID=179558)
-- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)

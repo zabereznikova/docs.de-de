@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226572"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048114"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung
 Das folgende Beispiel veranschaulicht das Festlegen einer Cacherichtlinie für eine Anforderung. Die Beispieleingabe ist eine URI wie `http://www.contoso.com/`.  
@@ -107,8 +107,8 @@ End Namespace
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
-- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
+- [Cacherichtlinie](cache-policy.md)
+- [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)
+- [Zeitbasierte Cacherichtlinien](time-based-cache-policies.md)
+- [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

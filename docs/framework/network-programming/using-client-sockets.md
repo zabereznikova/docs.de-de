@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046958"
 ---
 # <a name="using-client-sockets"></a>Verwenden von Clientsockets
 Bevor Sie eine Konversation über <xref:System.Net.Sockets.Socket> initiieren können, müssen Sie eine Datenpipeline zwischen Ihrer Anwendung und dem Remotegerät erstellen. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie eine TCP/IP-Verbindung mit einem Remotedienst erstellt wird.  
@@ -79,7 +79,7 @@ try {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Vorgehensweise: Erstellen eines Sockets](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Verwenden eines synchronen Clientsockets](using-a-synchronous-client-socket.md)
+- [Verwenden von asynchronen Clientsockets](using-an-asynchronous-client-socket.md)
+- [Vorgehensweise: Erstellen eines Sockets](how-to-create-a-socket.md)
+- [Sockets](sockets.md)

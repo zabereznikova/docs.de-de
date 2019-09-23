@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623061"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047354"
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
@@ -24,7 +24,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 ## <a name="adaptive-proxies"></a>Adaptive Proxys  
  Im .NET Framework gibt es zwei Grundtypen von Proxys: adaptive und statische. Adaptive Proxys ändern Sie ihre Einstellungen, wenn sich die Konfiguration ändert. Wenn z. B. ein Laptop-Benutzer eine DFÜ-Netzwerkverbindung gestartet hat, würde ein adaptiver Proxy diese Änderung erkennen, das neue Konfigurationsskript entdecken und ausführen und die Einstellungen entsprechend anpassen.  
   
- Adaptive Proxys werden durch ein Konfigurationsskript konfiguriert (siehe [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)). Das Skript generiert eine Reihe von Anwendungsprotokollen und ein Proxy für jedes Protokoll.  
+ Adaptive Proxys werden durch ein Konfigurationsskript konfiguriert (siehe [Automatische Proxyerkennung](automatic-proxy-detection.md)). Das Skript generiert eine Reihe von Anwendungsprotokollen und ein Proxy für jedes Protokoll.  
   
  Änderungen in der Netzwerkumgebung erfordern, dass das System einen neuen Satz von Proxys verwendet. Wenn eine Netzwerkverbindung ausfällt oder eine neue Netzwerkverbindung initialisiert wird, muss das System die entsprechende Quelle des Konfigurationsskripts in der neuen Umgebung erkennen und das neue Skript ausführen.  
   
@@ -53,7 +53,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
   
  Die folgende Tabelle zeigt die Konfigurationsoptionen für einen statischen Proxy.  
   
-|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung|  
+|Attribut-, Eigenschafts- oder Konfigurationseinstellung|BESCHREIBUNG|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` oder <xref:System.Net.WebProxy.Address>|Die Adresse des Proxyservers, der verwendet werden soll.|  
 |`bypassonlocal` oder <xref:System.Net.WebProxy.BypassProxyOnLocal>|Steuert, ob der Proxy für lokale Adressen umgangen wird.|  
@@ -79,4 +79,4 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
-- [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+- [Automatische Proxyerkennung](automatic-proxy-detection.md)

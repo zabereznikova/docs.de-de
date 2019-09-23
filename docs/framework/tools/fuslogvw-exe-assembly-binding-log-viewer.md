@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd27bebdc71c70226a61ad8d912135e0e1671dd8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851246"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044679"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Assembly Binding Log Viewer-Tool)
 
@@ -25,7 +25,7 @@ In der Assemblybindungs-Protokollanzeige werden Details zu Assemblybindungen ang
 > [!IMPORTANT]
 > Sie müssen "fuslogvw.exe" mit Administratorrechten ausführen.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7) mit Administratoranmeldeinformationen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7) mit Administratoranmeldeinformationen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -60,7 +60,7 @@ Für jede fehlgeschlagene Assemblybindung wird ein Eintrag angezeigt. Darin sind
 
     - Gegebenenfalls eine Beschreibung aller angewendeten Versionsrichtlinien (Anwendung, Herausgeber oder Administrator).
 
-    - Angabe, ob die Assembly im [globalen Assemblycache](../../../docs/framework/app-domains/gac.md) vorhanden ist.
+    - Angabe, ob die Assembly im [globalen Assemblycache](../app-domains/gac.md) vorhanden ist.
 
     - Eine Liste aller bei der Untersuchung verwendeten URLs.
 
@@ -122,7 +122,7 @@ LOG: All probing URLs attempted and failed.
 
 ## <a name="binding-logs-for-native-images"></a>Binden von Protokollen für native Abbilder
 
-Standardmäßig protokolliert "Fuslogvw.exe" normale Assembly-Bindungsanforderungen. Alternativ können Sie Assemblybindungen für native Bilder protokollieren, die mit dem [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellt wurden.
+Standardmäßig protokolliert "Fuslogvw.exe" normale Assembly-Bindungsanforderungen. Alternativ können Sie Assemblybindungen für native Bilder protokollieren, die mit dem [Native Image Generator (Ngen.exe)](ngen-exe-native-image-generator.md) erstellt wurden.
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>So protokollieren Sie Assemblybindungen für systemeigene Abbildungen
 
@@ -218,7 +218,7 @@ Sie können das Dialogfeld **Protokolleinstellungen** verwenden, um die folgende
 2. Geben Sie den Pfad in das Textfeld **Benutzerdefinierter Protokollpfad** ein.
 
 > [!NOTE]
-> Der [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwendet den Internet Explorer-Cache zum Speichern des Bindungsprotokolls. Aufgrund gelegentlicher Beschädigungen des IE-Caches ist es möglich, dass der [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) keine neuen Bindungsprotokolle mehr im Ansichtsfenster anzeigt. In Folge einer solchen Beschädigung kann die .NET-Bindungsinfrastruktur (Fusion) weder in das Bindungsprotokoll schreiben noch daraus lesen. (Dieses Problem tritt nicht auf, wenn Sie einen benutzerdefinierten Protokollpfad verwenden.)  Um die Beschädigung zu beheben und Fusion wieder das Anzeigen von Bindungsprotokollen zu ermöglichen, müssen Sie den IE-Cache löschen. Löschen Sie dazu im Dialogfeld "Internetoptionen" von Internet Explorer die temporären Internetdateien.
+> Der [Assembly Binding Log Viewer (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) verwendet den Internet Explorer-Cache zum Speichern des Bindungsprotokolls. Aufgrund gelegentlicher Beschädigungen des IE-Caches ist es möglich, dass der [Assembly Binding Log Viewer (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) keine neuen Bindungsprotokolle mehr im Ansichtsfenster anzeigt. In Folge einer solchen Beschädigung kann die .NET-Bindungsinfrastruktur (Fusion) weder in das Bindungsprotokoll schreiben noch daraus lesen. (Dieses Problem tritt nicht auf, wenn Sie einen benutzerdefinierten Protokollpfad verwenden.)  Um die Beschädigung zu beheben und Fusion wieder das Anzeigen von Bindungsprotokollen zu ermöglichen, müssen Sie den IE-Cache löschen. Löschen Sie dazu im Dialogfeld "Internetoptionen" von Internet Explorer die temporären Internetdateien.
 >
 > Wenn die nicht verwaltete Anwendung die Common Language Runtime durch Implementieren der `IHostAssemblyManager`-Schnittstelle und der `IHostAssemblyStore`-Schnittstelle hostet, können Protokolleinträge nicht im WinInet-Cache gespeichert werden.  Um Protokolleinträge für benutzerdefinierte Hosts anzuzeigen, die diese Schnittstellen implementieren, müssen Sie einen alternativen Protokollpfad angeben.
 
@@ -234,7 +234,7 @@ Sie können das Dialogfeld **Protokolleinstellungen** verwenden, um die folgende
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.TypeLoadException>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Globaler Assemblycache](../app-domains/gac.md)
+- [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

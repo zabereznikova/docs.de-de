@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 727d1b4ecb17eafb448205aa0c7eea36c5545b98
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614140"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052223"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Best Practices für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
@@ -44,7 +44,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
 - Der LoadFrom-Kontext enthält Assemblys, die von Speicherorten geladen werden, die vom Ladeprogramm nicht durchsucht wurden. Add-Ins können z.B. in einem Verzeichnis installiert sein, dass sich nicht im Anwendungspfad befindet. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> und <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sind Beispiel für Methoden, die anhand des Pfads laden.  
   
-- Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Wenn Sie eine vorübergehende dynamische Assembly mit der Reflektionsausgabe erstellt haben, befindet die Assembly sich in keinem Kontext. Außerdem werden Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFile%2A>-Methode geladen wurden, ohne Kontext geladen. Assemblys, die aus Bytearrays geladen werden, werden ohne Kontext geladen, es sei denn, ihre Identität (nachdem eine Richtlinie angewendet wurde) gibt an, dass sie sich im globalen Assemblycache befinden.  
   

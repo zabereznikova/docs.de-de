@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d13c2d2cc391e61c8ed764c26e5e5b5e7ea2a3bb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851383"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044807"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
   
- Das Certificate Manager-Tool wird automatisch mit Visual Studio installiert. Verwenden Sie zum Starten des Tools die [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Das Certificate Manager-Tool wird automatisch mit Visual Studio installiert. Verwenden Sie zum Starten des Tools die [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
 > Das Certificate Manager-Tool (Certmgr.exe) ist ein Befehlszeilendienstprogramm, wohingegen "Zertifikate" (Certmgr.msc) ein MMC-Snap-In (Microsoft Management Console) ist. Da sich „Certmgr.msc“ normalerweise im Windows-Systemverzeichnis befindet, kann durch die Eingabe von `certmgr` in der Befehlszeile das MMC-Snap-In „Zertifikate“ geladen werden, auch wenn Sie die Developer-Eingabeaufforderung für Visual Studio geöffnet haben. Dies geschieht, weil der Pfad zum Snap-In dem Pfad für das Certificate Manager-Tool in der PATH-Umgebungsvariablen vorangestellt ist. Wenn dieses Problem auftritt, können Sie "Certmgr.exe"-Befehle ausführen, indem Sie den Pfad zu der ausführbaren Datei angeben.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
- Einen Überblick über X.509-Zertifikate finden Sie unter [Arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Einen Überblick über X.509-Zertifikate finden Sie unter [Arbeiten mit Zertifikaten](../wcf/feature-details/working-with-certificates.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -92,7 +92,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Beispiele  
  Mit dem folgenden Befehl wird der Standardsystemspeicher `my` mit ausführlicher Ausgabe angezeigt.  
@@ -139,6 +139,6 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
+- [Extras](index.md)
 - [Makecert.exe (Tool für die Zertifikaterstellung)](/windows/desktop/SecCrypto/makecert)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

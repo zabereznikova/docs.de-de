@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296965"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048423"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen
 
@@ -32,7 +32,7 @@ ms.locfileid: "59296965"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. Erstellen Sie eine Anforderung für eine bestimmte URL. Der folgende Code erstellt z.B. eine Anforderung für die URL `http://www.contoso.com.`  
+2. Erstellen Sie eine Anforderung für eine bestimmte URL. Im folgenden Code wird z.B. eine Anforderung für die URL `http://www.contoso.com.` erstellt.  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -109,5 +109,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwalten von Verbindungen](../../../docs/framework/network-programming/managing-connections.md)
-- [Verbindungsgruppierung](../../../docs/framework/network-programming/connection-grouping.md)
+- [Verwalten von Verbindungen](managing-connections.md)
+- [Connection Grouping (Verbindungsgruppierung)](connection-grouping.md)

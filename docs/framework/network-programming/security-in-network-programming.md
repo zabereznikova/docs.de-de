@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195852"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047307"
 ---
 # <a name="security-in-network-programming"></a>Sicherheit in der Netzwerkprogrammierung
 
@@ -28,16 +28,16 @@ Die Klassen des .NET Framework Namespace <xref:System.Net> stellen integrierte U
 [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](tls.md)  
 Beschreibt bewährte TLS-Methoden mit .NET Framework.
  
-[Using Secure Sockets Layer (Verwenden von Secure Sockets Layer)](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+[Using Secure Sockets Layer (Verwenden von Secure Sockets Layer)](using-secure-sockets-layer.md)  
 Hier erfahren Sie, wie Sie SSL-Verbindungen (Secure Sockets Layer) verwenden.  
   
-[Internet Authentication (Internetauthentifizierung)](../../../docs/framework/network-programming/internet-authentication.md)  
+[Internet Authentication (Internetauthentifizierung)](internet-authentication.md)  
 Hier erfahren Sie, wie Sie HTTP-Authentifizierungsmethoden nutzen, um authentifizierte Verbindungen zu HTTP-Servern herzustellen.  
   
-[Web and Socket Permissions (Die Berechtigungen „Web“ und „Socket“)](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+[Web and Socket Permissions (Die Berechtigungen „Web“ und „Socket“)](web-and-socket-permissions.md)  
 Hier erfahren Sie, wie Sie die Codezugriffssicherheit für Anwendungen einrichten, die Internetverbindungen nutzen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
+[Netzwerkprogrammierung in .NET Framework](index.md)  
 Hier erhalten Sie eine Einführung in die Klassen der Namespaces <xref:System.Net> und <xref:System.Net.Sockets>.

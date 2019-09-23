@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911118"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052101"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -60,7 +60,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
   
      Installierte .NET Framework-Versionen: Eine frühere Version von .NET Framework sowie .NET Framework 4.  
   
-     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../../../docs/framework/configure-apps/index.md) im Anwendungsverzeichnis das [Element \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) und das [Element \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
+     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../configure-apps/index.md) im Anwendungsverzeichnis das [Element \<startup>](../configure-apps/file-schema/startup/startup-element.md) und das [Element \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
   
     ```xml  
     <configuration>  
@@ -175,5 +175,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<startup>-Element](../configure-apps/file-schema/startup/startup-element.md)
+- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

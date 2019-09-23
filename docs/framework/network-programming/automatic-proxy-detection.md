@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: d7d0dae2ffbec5e334057715cd1d8d44e52cec9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910466"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048946"
 ---
 # <a name="automatic-proxy-detection"></a>Automatische Proxyerkennung
 Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom System identifiziert und zum Senden von Anforderungen im Auftrag des Clients verwendet wird. Diese Funktion ist auch bekannt als Web Proxy Auto-Discovery (WPAD). Wenn die automatische Proxyerkennung aktiviert ist, versucht das System, ein Proxykonfigurationsskript zu finden, das für die Rückgabe des Proxysatzes verantwortlich ist, der für die Anforderung verwendet werden kann. Wenn das Proxykonfigurationsskript gefunden wird, wird es heruntergeladen, kompiliert und auf dem lokalen Computer ausgeführt, wenn Proxyinformationen, der Anforderungsstream oder die Antwort für eine Anforderung abgerufen werden, die eine <xref:System.Net.WebProxy>-Instanz verwendet.  
@@ -44,7 +44,7 @@ Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom Syst
   
  Proxys werden pro Benutzeroberfläche konfiguriert. Eine Benutzeroberfläche ist ein Element im Netzwerkverbindungsdialogfeld und kann ein physisches Netzwerkgerät (Modem oder Ethernet-Karte) oder eine virtuelle Schnittstelle (z.B. eine über ein Netzwerkgerät ausgeführte VPN-Verbindung) sein. Wenn sich eine Benutzeroberfläche ändert (z.B. ändert eine Funkverbindung einen Zugriffspunkt oder ein VPN wird aktiviert), wird der Proxyerkennungsalgorithmus erneut ausgeführt.  
   
- Die Proxyeinstellungen werden standardmäßig von Internet Explorer verwendet, um den Proxy zu erkennen. Wenn Ihre Anwendung unter einem nicht interaktiven Konto (ohne eine einfache Möglichkeit zum Konfigurieren von Proxyeinstellungen für Internet Explorer) ausgeführt wird, oder wenn Sie Proxyeinstellungen verwenden möchten, die anders als die Internet Explorer-Einstellungen sind, können Sie den Proxy konfigurieren, indem Sie eine Konfigurationsdatei mit den Elementen [\<DefaultProxy>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) und [\<Proxy>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md) definieren.  
+ Die Proxyeinstellungen werden standardmäßig von Internet Explorer verwendet, um den Proxy zu erkennen. Wenn Ihre Anwendung unter einem nicht interaktiven Konto (ohne eine einfache Möglichkeit zum Konfigurieren von Proxyeinstellungen für Internet Explorer) ausgeführt wird, oder wenn Sie Proxyeinstellungen verwenden möchten, die anders als die Internet Explorer-Einstellungen sind, können Sie den Proxy konfigurieren, indem Sie eine Konfigurationsdatei mit den Elementen [\<DefaultProxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) und [\<Proxy>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/proxy-element-network-settings.md) definieren.  
   
  Für Anforderungen, die Sie erstellen, können Sie automatische Proxyerkennung auf der Anforderungsebene deaktivieren, indem ein NULL-<xref:System.Net.WebRequest.Proxy%2A> mit Ihrer Anforderung verwendet wird. Dies wird im folgenden Codebeispiel gezeigt.  
   
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/system-net-element-network-settings.md)

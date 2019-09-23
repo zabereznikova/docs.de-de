@@ -6,20 +6,20 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab80cfbd0ae2130f465216ca77812bda0002c24
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854006"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052114"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Debuggen von CLR-Aktivierungsproblemen
 
-Wenn Sie Probleme beim Ausführen Ihrer Anwendung mit Ihrer korrekten Version der Common Language Runtime (CLR) haben, können Sie CLR-Aktivierungsprotokolle anzeigen und debuggen. Diese Protokolle können sehr nützlich beim Bestimmen der zugrunde liegenden Ursache für Probleme bei der Aktivierung sein, wenn Ihre Anwendung entweder eine andere CLR-Version als erwartet lädt oder die CLR überhaupt nicht lädt. Im Artikel [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) wird die Vorgehensweise erläutert, wenn keine CLR für eine Anwendung gefunden werden konnte.
+Wenn Sie Probleme beim Ausführen Ihrer Anwendung mit Ihrer korrekten Version der Common Language Runtime (CLR) haben, können Sie CLR-Aktivierungsprotokolle anzeigen und debuggen. Diese Protokolle können sehr nützlich beim Bestimmen der zugrunde liegenden Ursache für Probleme bei der Aktivierung sein, wenn Ihre Anwendung entweder eine andere CLR-Version als erwartet lädt oder die CLR überhaupt nicht lädt. Im Artikel [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](initialization-errors-managing-the-user-experience.md) wird die Vorgehensweise erläutert, wenn keine CLR für eine Anwendung gefunden werden konnte.
 
 Die CLR-Aktivierungsprotokollierung kann systemweit mithilfe des Registrierungsschlüssels HKEY_LOCAL_MACHINE oder einer Systemumgebungsvariable aktiviert werden. Das Protokoll wird generiert bis der Registrierungseintrag oder Umgebungsvariable entfernt wird. Sie können alternativ einen Benutzer oder eine prozessbezogene Umgebungsvariable für die Aktivierung der Protokollierung mit einem anderen Bereich und anderer Dauer verwenden.
 
-CLR-Aktivierungsprotokolle dürfen nicht mit [Assemblybindungsprotokollen](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwechselt werden. Bei diesen handelt es sich um einen vollständig anderen Protokolltyp.
+CLR-Aktivierungsprotokolle dürfen nicht mit [Assemblybindungsprotokollen](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwechselt werden. Bei diesen handelt es sich um einen vollständig anderen Protokolltyp.
 
 ## <a name="to-enable-clr-activation-logging"></a>So aktivieren Sie die CLR-Aktivierungsprotokollierung
 
@@ -106,13 +106,13 @@ Die wichtigste Information im folgenden Beispiel eines Aktivierungsprotokolls is
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
     ```
 
-- **mit Version erstellt** ist die Version der CLR, die zum Erstellen der Binärdatei verwendet wurde, die einer Methode, z.B. [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md), bereitgestellt wurde.
+- **mit Version erstellt** ist die Version der CLR, die zum Erstellen der Binärdatei verwendet wurde, die einer Methode, z.B. [ICLRMetaHostPolicy::GetRequestedRuntime](../unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md), bereitgestellt wurde.
 
     ```output
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **Feature-on-Demand-Installation** bezieht sich auf die Aktivierung von .NET Framework 3.5 unter Windows 8. Im Artikel [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) finden Sie weitere Informationen zu diesem Szenario.
+- **Feature-on-Demand-Installation** bezieht sich auf die Aktivierung von .NET Framework 3.5 unter Windows 8. Im Artikel [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](initialization-errors-managing-the-user-experience.md) finden Sie weitere Informationen zu diesem Szenario.
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
@@ -120,5 +120,5 @@ Die wichtigste Information im folgenden Beispiel eines Aktivierungsprotokolls is
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Bereitstellung](../../../docs/framework/deployment/index.md)
-- [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Bereitstellung](index.md)
+- [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

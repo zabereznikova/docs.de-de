@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487042"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044453"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
-"MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).
+"MageUI.exe" unterstützt dieselbe Funktionalität wie das Befehlszeilentool "Mage.exe", verwendet jedoch eine Windows-basierte Benutzeroberfläche. Mit diesem Tool können Sie Bereitstellungs- und Anwendungsmanifeste erstellen, bearbeiten und signieren. Für neue Manifeste, die mit "MageUI.exe" erstellt werden, wird als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festgelegt. Voherige Versionen von "MageUI.exe" sollten verwendet werden, um ältere .NET Framework-Versionen als Ziel festzulegen. Beim Hinzufügen oder Entfernen von Assemblys aus einem Manifest oder beim erneuten Signieren von vorhandenen Manifesten wird das Manifest von "MageUI.exe" nicht aktualisiert, um als Zielversion [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] festzulegen. Weitere Informationen finden Sie unter [„Mage.exe“ (Tool zum Generieren und Bearbeiten von Manifesten)](mage-exe-manifest-generation-and-editing-tool.md).
 
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
  Zwei Versionen von Mage.exe und MageUI.exe sind als Komponenten von Visual Studio inbegriffen. Die Versionsinformationen können Sie anzeigen, indem Sie "MageUI.exe" ausführen, zunächst **Hilfe**und anschließend **Info**auswählen. In dieser Dokumentation wird Version 4.0.x.x von "Mage.exe" und "MageUI.exe" beschrieben.
 
 > [!NOTE]
-> „MageUI.exe“ unterstützt nicht das Element [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment), wenn es ein Anwendungsmanifest speichert, das bereits mithilfe von „MageUI.exe“ mit einem Zertifikat signiert wurde. Stattdessen müssen Sie [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md) verwenden.  
+> „MageUI.exe“ unterstützt nicht das Element [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment), wenn es ein Anwendungsmanifest speichert, das bereits mithilfe von „MageUI.exe“ mit einem Zertifikat signiert wurde. Stattdessen müssen Sie [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md) verwenden.  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
  Die folgende Tabelle gibt einen Überblick über die verfügbaren Menü- und Symbolleistenelemente.  
@@ -92,7 +92,7 @@ ms.locfileid: "67487042"
 |----------------|-----------------|  
 |**Name**|Erforderlich. Der Name des Anwendungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
-|**Prozessor**|Optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
+|**Prozessor**|Optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md).|  
 |**Kultur**|Optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
 |**Öffentliches Schlüsseltoken**|Optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
@@ -194,4 +194,4 @@ ms.locfileid: "67487042"
 
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](mage-exe-manifest-generation-and-editing-tool.md)

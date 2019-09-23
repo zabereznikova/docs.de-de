@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379959"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052155"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 
-In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .NET Framework 4.5 und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../../../docs/framework/get-started/system-requirements.md).
+In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .NET Framework 4.5 und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
 
 > [!NOTE]
 > Die Software, auf die in diesem Dokument verwiesen wird (einschließlich .NET Framework 4.5, System Center Configuration Manager und Active Directory), unterliegt jeweils den geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.
@@ -280,5 +280,5 @@ Sonstige Fehlercodes
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
+- [Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)
+- [Systemanforderungen](../get-started/system-requirements.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung'
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: af6eb8a334108c988967a555024b524e27d40f58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 362e7af36d214df9f0454479e25a80af9d440b2b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959079"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048278"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung
 Das folgende Codebeispiel zeigt, wie Sie die Computerkonfigurationsdatei *machine.config* ändern, um die IPv6-Unterstützung zu aktivieren. Die Datei *machine.config* ist im Ordner *%Windir%\Microsoft.NET\Framework* in dem Verzeichnis gespeichert, in dem Windows installiert wurde. Es gibt für jede Version von .NET Framework, die auf dem Computer installiert ist, eine eigene Datei *machine.config* in den Unterordnern von *%Windir%\Microsoft.NET\Framework* (z.B. *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
@@ -37,6 +37,6 @@ Das folgende Codebeispiel zeigt, wie Sie die Computerkonfigurationsdatei *machin
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IPv6-Adressierung](../../../docs/framework/network-programming/ipv6-addressing.md)
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<IPv6>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [IPv6-Adressierung](ipv6-addressing.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../configure-apps/file-schema/network/index.md)
+- [\<IPv6>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

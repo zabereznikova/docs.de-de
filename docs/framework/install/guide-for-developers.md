@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de7df6ae2d6463d05d1680c288dd202edc639b09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949119"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051944"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -28,7 +28,7 @@ Dieser Artikel enthält Links zur Installation aller .NET Framework-Versionen vo
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Weitere Informationen zu .NET Framework-Versionen und zum Feststellen, welche Versionen auf einem Computer installiert sind, finden Sie unter [Versions and Dependencies (Versionen und Abhängigkeiten)](../migration-guide/versions-and-dependencies.md) sowie unter [Vorgehensweise: Determine Which .NET Framework Versions Are Installed](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
+Weitere Informationen zu .NET Framework-Versionen und zum Feststellen, welche Versionen auf einem Computer installiert sind, finden Sie unter [Versions and Dependencies (Versionen und Abhängigkeiten)](../migration-guide/versions-and-dependencies.md) sowie unter [Vorgehensweise: Determine Which .NET Framework Versions Are Installed](../migration-guide/how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
 
 > [!NOTE]
 > Weitere Informationen zu .NET Framework 3.5 finden Sie unter [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](dotnet-35-windows-10.md).
@@ -227,7 +227,7 @@ In der folgenden Tabelle sind die unterstützten Sprachen aufgeführt.
 
 - .NET Framework-Einsteiger erhalten unter [Übersicht](../get-started/overview.md) eine Einführung in die Schlüsselkonzepte und -komponenten.
 
-- Informationen zu den neuen Features und Verbesserungen in .NET Framework 4.5 und allen höheren Versionen finden Sie unter [Neuigkeiten](../../../docs/framework/whats-new/index.md).
+- Informationen zu den neuen Features und Verbesserungen in .NET Framework 4.5 und allen höheren Versionen finden Sie unter [Neuigkeiten](../whats-new/index.md).
 
 - Ausführliche Informationen zum Bereitstellen von .NET Framework mit der App finden Sie im [Handbuch für die Bereitstellung für Entwickler](../deployment/deployment-guide-for-developers.md).
 

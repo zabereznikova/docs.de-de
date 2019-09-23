@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f990c5194c2e5dc1422aab96c7608c019ae9855b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894754"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044009"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -64,11 +64,11 @@ tlbexp assemblyName [options]
   
  Die Assembly wird immer vollständig konvertiert. Sie können mit Tlbexp.exekeine Typinformationen für einen Teil der in der Assembly definierten Typen generieren.  
   
- „Tlbexp.exe“ kann nicht zum Erstellen einer Typbibliothek aus einer Assembly verwendet werden, die mit dem [Type Library Importer-Tool (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) importiert wurde. Stattdessen sollten Sie auf die ursprüngliche Typbibliothek verweisen, die mit "Tlbimp.exe" importiert wurde. Sie können eine Typbibliothek aus einer Assembly exportieren, die auf Assemblys verweist, die mit "Tlbimp.exe" importiert wurden. Weitere Informationen finden Sie im Abschnitt mit den Beispielen weiter unten.  
+ „Tlbexp.exe“ kann nicht zum Erstellen einer Typbibliothek aus einer Assembly verwendet werden, die mit dem [Type Library Importer-Tool (Tlbimp.exe)](tlbimp-exe-type-library-importer.md) importiert wurde. Stattdessen sollten Sie auf die ursprüngliche Typbibliothek verweisen, die mit "Tlbimp.exe" importiert wurde. Sie können eine Typbibliothek aus einer Assembly exportieren, die auf Assemblys verweist, die mit "Tlbimp.exe" importiert wurden. Weitere Informationen finden Sie im Abschnitt mit den Beispielen weiter unten.  
   
  "Tlbexp.exe" speichert generierte Typbibliotheken im aktuellen Arbeitsverzeichnis oder dem für die Ausgabedatei angegebenen Verzeichnis. Für eine einzelne Assembly können mehrere Typbibliotheken generiert werden.  
   
- "Tlbexp.exe" generiert eine Typbibliothek, registriert diese jedoch nicht. Dies steht im Gegensatz zum [Assembly Registration-Tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), das eine Typbibliothek generiert und gleichzeitig registriert. Verwenden Sie zum Generieren einer Typbibliothek und Registrieren in COM "Regasm.exe".  
+ "Tlbexp.exe" generiert eine Typbibliothek, registriert diese jedoch nicht. Dies steht im Gegensatz zum [Assembly Registration-Tool (Regasm.exe)](regasm-exe-assembly-registration-tool.md), das eine Typbibliothek generiert und gleichzeitig registriert. Verwenden Sie zum Generieren einer Typbibliothek und Registrieren in COM "Regasm.exe".  
   
  Wenn Sie weder die `/win32`- noch die `/win64`-Option angeben, generiert "Tlbexp.exe" eine 32-Bit- oder 64-Bit-Typbibliothek, die dem Computertyp entspricht, auf dem Sie die Kompilierung ausführen (32-Bit- oder 64-Bit-Computer). Bei Kreuzkompilierungen können Sie die `/win64`-Option auf einem 32-Bit-Computer zum Generieren einer 64-Bit-Typbibliothek verwenden, und Sie können die `/win32`-Option auf einem 64-Bit-Computer zum Generieren einer 32-Bit-Typbibliothek verwenden. In 32-Bit-Typbibliotheken ist der <xref:System.Runtime.InteropServices.ComTypes.SYSKIND>-Wert auf <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32> festgelegt. In 64-Bit-Typbibliotheken ist der <xref:System.Runtime.InteropServices.ComTypes.SYSKIND>-Wert auf <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64> festgelegt. Alle Datentyptransformationen (z. B. Datentypen in Zeigergröße wie `IntPtr` und `UIntPtr`) werden entsprechend konvertiert.  
   
@@ -132,8 +132,8 @@ tlbexp Sample.dll
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Regasm.exe (Assembly Registration-Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Extras](index.md)
+- [Regasm.exe (Assembly Registration-Tool)](regasm-exe-assembly-registration-tool.md)
 - [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Tlbimp.exe (Type Library Importer-Tool)](tlbimp-exe-type-library-importer.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

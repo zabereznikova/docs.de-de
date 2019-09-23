@@ -2,12 +2,12 @@
 title: Erweiterungen der Socketleistung in Version 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 577c033fc5639f9d9f50e413fd2cb55a75d48f2c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333287"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047243"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Erweiterungen der Socketleistung in Version 3.5
 Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
@@ -39,5 +39,5 @@ Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde i
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>
-- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
 - [Socketcodebeispiele](socket-code-examples.md)

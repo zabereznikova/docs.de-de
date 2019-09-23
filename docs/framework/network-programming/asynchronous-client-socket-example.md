@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b284698904b3795c2369a5bca47742175e012553
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172093"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048988"
 ---
 # <a name="asynchronous-client-socket-example"></a>Asynchrone Clientsockets - Beispiel
 Das folgende Beispielprogramm erstellt einen Client, der mit einem Server verbunden ist. Der Client wird mit einem asynchronen Socket erstellt, damit die Ausführung der Clientanwendung nicht anhält, während der Server eine Antwort zurückgibt. Die Anwendung sendet eine Zeichenfolge an den Server und zeigt dann die Zeichenfolge, die vom Server in der Konsole zurückgegeben wird.  
@@ -323,6 +323,6 @@ public class AsynchronousClient {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Asynchroner Serversocket, Beispiel](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [Socketcodebeispiele](../../../docs/framework/network-programming/socket-code-examples.md)
+- [Asynchroner Serversocket, Beispiel](asynchronous-server-socket-example.md)
+- [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
+- [Socketcodebeispiele](socket-code-examples.md)

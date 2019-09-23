@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172548"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047113"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Datagram Protocol (UDP) mit den <xref:System.Net.Sockets.TcpClient>-, <xref:System.Net.Sockets.TcpListener>- und <xref:System.Net.Sockets.UdpClient>-Klassen verwenden. Diese Protokollklassen bauen auf der <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse auf und kümmern sich um die Details der Datenübertragung.  
@@ -34,9 +34,9 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)
-- [Verwenden von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)
-- [Verwenden von Datenströmen im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)
-- [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
+- [Verwenden von TCP-Diensten](using-tcp-services.md)
+- [Verwenden von UDP-Diensten](using-udp-services.md)
+- [Verwenden von Datenströmen im Netzwerk](using-streams-on-the-network.md)
+- [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
+- [Verwenden von asynchronen Clientsockets](using-an-asynchronous-client-socket.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)

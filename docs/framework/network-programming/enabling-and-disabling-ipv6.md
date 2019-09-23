@@ -2,12 +2,12 @@
 title: Aktivieren und Deaktivieren von IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083685"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048565"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Aktivieren und Deaktivieren von IPv6
 Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betriebssystemversion ausgeführt wird, die IPv6 unterstützt. Stellen Sie zudem sicher, dass das Betriebssystem und die Netzwerkklassen ordnungsgemäß konfiguriert sind.  
@@ -15,7 +15,7 @@ Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betrie
 ## <a name="configuration-steps"></a>Konfigurationsschritte  
  In der folgenden Tabelle werden verschiedene Konfigurationen aufgelistet:  
   
-|Ist Betriebssystem IPv6-fähig?|Sind Netzwerkklassen IPv6-fähig?|Beschreibung|  
+|Ist Betriebssystem IPv6-fähig?|Sind Netzwerkklassen IPv6-fähig?|BESCHREIBUNG|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |Nein|Nein|Kann IPv6-Adressen analysieren.|  
 |Nein|Ja|Kann IPv6-Adressen analysieren.|  
@@ -24,7 +24,7 @@ Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betrie
   
  Bedenken Sie, dass Sie zum Aktivieren der IPv6-Unterstützung für alle Klassen im System.Net-Namespace die Computerkonfigurationsdatei oder die Konfigurationsdatei für die Anwendung ändern müssen. Die Konfigurationsdatei für die Anwendung hat Vorrang vor der Computerkonfigurationsdatei.  
   
- Ein Beispiel, wie Sie die Computerkonfigurationsdatei *machine.config* ändern, um die Ipv6-Unterstützung zu aktivieren, finden Sie unter [Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der Ipv6-Unterstützung](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Stellen Sie außerdem sicher, dass die IPv6-Unterstützung für das Betriebssystem aktiviert ist.  
+ Ein Beispiel, wie Sie die Computerkonfigurationsdatei *machine.config* ändern, um die Ipv6-Unterstützung zu aktivieren, finden Sie unter [Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der Ipv6-Unterstützung](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Stellen Sie außerdem sicher, dass die IPv6-Unterstützung für das Betriebssystem aktiviert ist.  
   
  .NET Framework verfügt über einen Konfigurationsschalter, der in einer Konfigurationsdatei wie folgt festgelegt ist:  
   
@@ -46,7 +46,7 @@ Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betrie
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
-- [Netzwerkeinstellungsschema](../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [\<IPv6>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [Internetprotokoll Version 6](internet-protocol-version-6.md)
+- [Sockets](sockets.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../configure-apps/file-schema/network/index.md)
+- [\<IPv6>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917972"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052000"
 ---
 # <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
 
@@ -33,7 +33,7 @@ Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklung
 - Aufbau der gesamten Kommunikation auf Industriestandards, um die Integration von Code, der auf .NET Framework basiert, in jeden anderen Code zu gewährleisten.
 
 > [!NOTE]
-> Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](../../../docs/framework/get-started/index.md).
+> Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](index.md).
 
 Das .NET Framework besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek. .NET Framework setzt auf der Common Language Runtime auf. Stellen Sie sich die Common Language Runtime als Agent vor, der zum Ausführungszeitpunkt Code verwaltet sowie Basisdienste wie Speicherverwaltung, Threadverwaltung und Remoting bereitstellt. Er erzwingt gleichzeitig strikte Typsicherheit und andere Formen der Codegenauigkeit, mit denen Sicherheit und Zuverlässigkeit unterstützt werden. Das Konzept der Codeverwaltung ist ein fundamentales Prinzip der Laufzeitumgebung. Code, der die Laufzeit zum Ziel hat, wird als verwalteter Code bezeichnet, während Code, der nicht auf die Laufzeit abzielt, als nicht verwalteter Code gilt. Die Klassenbibliothek, ist eine umfassende, objektorientierte Auflistung wiederverwendbarer Typen für die Entwicklung vielfältiger Apps, z. B. solcher mit herkömmlicher Befehlszeile oder grafischer Benutzeroberfläche (GUI), bis hin zu Apps, die auf den neuesten Innovationen von ASP.NET, wie beispielsweise Web Forms und XML-Webdiensten, basieren.
 
@@ -77,15 +77,15 @@ Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit 
 
 - Konsolen-Apps Siehe [Erstellen von Konsolenanwendungen](../../standard/building-console-apps.md).
 
-- GUI-Apps für Windows (Windows Forms) Siehe [Windows Forms](../../../docs/framework/winforms/index.md).
+- GUI-Apps für Windows (Windows Forms) Siehe [Windows Forms](../winforms/index.md).
 
-- Apps für Windows Presentation Foundation (WPF) Siehe [Windows Presentation Foundation](../../../docs/framework/wpf/index.md).
+- Apps für Windows Presentation Foundation (WPF) Siehe [Windows Presentation Foundation](../wpf/index.md).
 
-- ASP.NET-Apps Siehe [Webanwendungen mit ASP.NET](../../../docs/framework/develop-web-apps-with-aspnet.md).
+- ASP.NET-Apps Siehe [Webanwendungen mit ASP.NET](../develop-web-apps-with-aspnet.md).
 
-- Windows-Dienste Siehe [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md).
+- Windows-Dienste Siehe [Einführung in Windows-Dienstanwendungen](../windows-services/introduction-to-windows-service-applications.md).
 
-- Dienstorientierte Apps mit Windows Communication Foundation (WCF) Siehe [Dienstorientierte Anwendungen mit WCF](../../../docs/framework/wcf/index.md).
+- Dienstorientierte Apps mit Windows Communication Foundation (WCF) Siehe [Dienstorientierte Anwendungen mit WCF](../wcf/index.md).
 
 - Workflowfähige Apps mit Windows Workflow Foundation (WF) Siehe [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
@@ -93,9 +93,9 @@ Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwe
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
-- [Installationshandbuch](../../../docs/framework/install/index.md)
-- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
-- [Extras](../../../docs/framework/tools/index.md)
+- [Systemanforderungen](system-requirements.md)
+- [Installationshandbuch](../install/index.md)
+- [Entwicklungshandbuch](../development-guide.md)
+- [Extras](../tools/index.md)
 - [Beispiele und Tutorials](../../samples-and-tutorials/index.md)
 - [.NET Framework-Klassenbibliothek](https://go.microsoft.com/fwlink/?LinkID=227195)

@@ -6,32 +6,34 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01fa0cf9811e72333b091858e2f78a80dda1d9ef
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 78cbb98d4fb3887b82b2432451c47ac64d96ab91
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969104"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052019"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
+
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
   
- Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen der Common Language Runtime verwenden. Anwendungen A, B und C verwenden Common Language Runtime, Version 1.0, während Anwendung D die Version 1.1 verwendet.  
+Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen der Common Language Runtime verwenden. Anwendungen A, B und C verwenden Common Language Runtime, Version 1.0, während Anwendung D die Version 1.1 verwendet.  
   
- ![Parallele Ausführung verschiedener Laufzeitversionen](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
+![Parallele Ausführung verschiedener Laufzeitversionen](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
- .NET Framework besteht aus der Common Language Runtime und einer Reihe von Assemblys, die die API-Typen enthalten. Die Versionsnummern der Common Language Runtime und der .NET Framework-Assemblys sind voneinander unabhängig. So ist z. B. die Common Language Runtime Version 4.0 eigentlich Version 4.0.319, während die Version 1.0 der .NET Framework-Assemblys eigentlich Version 1.0.3300.0 ist.  
+.NET Framework besteht aus der Common Language Runtime und einer Reihe von Assemblys, die die API-Typen enthalten. Die Versionsnummern der Common Language Runtime und der .NET Framework-Assemblys sind voneinander unabhängig. So ist z. B. die Common Language Runtime Version 4.0 eigentlich Version 4.0.319, während die Version 1.0 der .NET Framework-Assemblys eigentlich Version 1.0.3300.0 ist.  
   
- Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen einer Komponente verwenden. Anwendungen A und B verwenden Version 1.0 der Komponente, während Anwendung C Version 2.0 der gleichen Komponente verwendet.  
+Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen einer Komponente verwenden. Anwendungen A und B verwenden Version 1.0 der Komponente, während Anwendung C Version 2.0 der gleichen Komponente verwendet.  
   
- ![Diagramm der parallelen Ausführung einer Komponente](./media/side-by-side-execution/side-by-side-component-execution.gif)  
+![Diagramm der parallelen Ausführung einer Komponente](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
- Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
+Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Vorteile der parallelen Ausführung  
- Vor der Entwicklung von Windows XP und .NET Framework traten DLL-Konflikte auf, da Anwendungen nicht zwischen inkompatiblen Versionen des gleichen Codes unterscheiden konnten. In einer DLL enthaltene Typinformationen waren lediglich an einen Dateinamen gebunden. Einer Anwendung war nicht bekannt, ob die in einer DLL enthaltenen Typen dieselben Typen waren, mit denen die Anwendung erstellt wurde. Dadurch konnten neue Versionen einer Komponente ältere Versionen überschreiben und ein ordnungsgemäßes Funktionieren von Anwendungen verhindern.  
+ 
+Vor der Entwicklung von Windows XP und .NET Framework traten DLL-Konflikte auf, da Anwendungen nicht zwischen inkompatiblen Versionen des gleichen Codes unterscheiden konnten. In einer DLL enthaltene Typinformationen waren lediglich an einen Dateinamen gebunden. Einer Anwendung war nicht bekannt, ob die in einer DLL enthaltenen Typen dieselben Typen waren, mit denen die Anwendung erstellt wurde. Dadurch konnten neue Versionen einer Komponente ältere Versionen überschreiben und ein ordnungsgemäßes Funktionieren von Anwendungen verhindern.  
   
- Die parallele Ausführung und .NET Framework bieten die folgenden Features zur Vermeidung von DLL-Konflikten:  
+Die parallele Ausführung und .NET Framework bieten die folgenden Features zur Vermeidung von DLL-Konflikten:  
   
 - Assemblys mit starkem Namen  
   
@@ -39,43 +41,49 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
 - Versionsabhängige Codespeicherung  
   
-     .NET Framework bietet versionsabhängige Codespeicherung im globalen Assemblycache. Der globale Asssemblycache ist ein Codecache für den gesamten Computer, der auf allen Computern vorhanden ist, auf denen .NET Framework installiert ist. Im Cache werden Assemblys anhand der Version, Kultur und Herstellerinformationen gespeichert, und es werden mehrere Versionen von Komponenten und Anwendungen unterstützt. Weitere Informationen finden Sie unter [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md).  
+     .NET Framework bietet versionsabhängige Codespeicherung im globalen Assemblycache. Der globale Asssemblycache ist ein Codecache für den gesamten Computer, der auf allen Computern vorhanden ist, auf denen .NET Framework installiert ist. Im Cache werden Assemblys anhand der Version, Kultur und Herstellerinformationen gespeichert, und es werden mehrere Versionen von Komponenten und Anwendungen unterstützt. Weitere Informationen finden Sie unter [Globaler Assemblycache](../app-domains/gac.md).  
   
 - Isolation.  
   
-     Mit .NET Framework können Sie Anwendungen und Komponenten erstellen, die isoliert ausgeführt werden. Isolation ist eine wesentliche Komponente der parallelen Ausführung. Sie umfasst sowohl die Erkennung der verwendeten Ressourcen als auch die zuverlässige gemeinsame Verwendung von Ressourcen durch mehrere Versionen einer Anwendung oder Komponente. Die Isolation umfasst außerdem das versionsspezifische Speichern von Dateien. Weitere Informationen zur Isolation finden Sie unter [Richtlinien für die Erstellung von Anwendungen und Komponenten für die parallele Ausführung](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
+     Mit .NET Framework können Sie Anwendungen und Komponenten erstellen, die isoliert ausgeführt werden. Isolation ist eine wesentliche Komponente der parallelen Ausführung. Sie umfasst sowohl die Erkennung der verwendeten Ressourcen als auch die zuverlässige gemeinsame Verwendung von Ressourcen durch mehrere Versionen einer Anwendung oder Komponente. Die Isolation umfasst außerdem das versionsspezifische Speichern von Dateien. Weitere Informationen zur Isolation finden Sie unter [Richtlinien für die Erstellung von Anwendungen und Komponenten für die parallele Ausführung](guidelines-for-creating-components-for-side-by-side-execution.md).  
   
 ## <a name="version-compatibility"></a>Versionskompatibilität  
- Die Versionen 1.0 und 1.1 von .NET Framework sind miteinander kompatibel. Eine mit .NET Framework, Version 1.0, erstellte Anwendung ist in Version 1.1 ausführbar, und eine mit .NET Framework, Version 1.1, erstellte Anwendung kann auch in Version 1.0 ausgeführt werden. Beachten Sie jedoch, dass die in Version 1.1 von .NET Framework neuen API-Funktionen nicht mit Version 1.0 von .NET Framework funktionieren. In Version 2.0 erstellte Anwendungen können nur mit Version 2.0 ausgeführt werden. Anwendungen für Version 2.0 können nicht mit Version 1.1 oder einer früheren Version ausgeführt werden.  
+
+Die Versionen 1.0 und 1.1 von .NET Framework sind miteinander kompatibel. Eine mit .NET Framework, Version 1.0, erstellte Anwendung ist in Version 1.1 ausführbar, und eine mit .NET Framework, Version 1.1, erstellte Anwendung kann auch in Version 1.0 ausgeführt werden. Beachten Sie jedoch, dass die in Version 1.1 von .NET Framework neuen API-Funktionen nicht mit Version 1.0 von .NET Framework funktionieren. In Version 2.0 erstellte Anwendungen können nur mit Version 2.0 ausgeführt werden. Anwendungen für Version 2.0 können nicht mit Version 1.1 oder einer früheren Version ausgeführt werden.  
   
- Versionen von .NET Framework werden als eine abgeschlossene Einheit behandelt, die aus Common Language Runtime und den zugeordneten .NET Framework-Assemblys bestehen. Dieses Konzept wird als Assemblyvereinheitlichung bezeichnet. Assemblybindungen können umgeleitet werden, um andere Versionen von .NET Framework-Assemblys einzubeziehen, das Überschreiben der Standardassemblybindung kann jedoch riskant sein und muss vor der Bereitstellung gründlich getestet werden.  
+Versionen von .NET Framework werden als eine abgeschlossene Einheit behandelt, die aus Common Language Runtime und den zugeordneten .NET Framework-Assemblys bestehen. Dieses Konzept wird als Assemblyvereinheitlichung bezeichnet. Assemblybindungen können umgeleitet werden, um andere Versionen von .NET Framework-Assemblys einzubeziehen, das Überschreiben der Standardassemblybindung kann jedoch riskant sein und muss vor der Bereitstellung gründlich getestet werden.  
   
 ## <a name="locating-runtime-version-information"></a>Feststellen der Laufzeitversionsinformationen  
- Informationen darüber, mit welcher Laufzeitversion eine Anwendung oder Komponente kompiliert wurde und welche der Laufzeitversionen für die Anwendung ausgeführt werden müssen, werden an zwei Orten gespeichert. Bei der Kompilierung einer Anwendung oder Komponente werden die Informationen über die für die Kompilierung verwendete Laufzeitversion in der verwalteten ausführbaren Datei gespeichert. Informationen über die für die Anwendung oder Komponente erforderlichen Laufzeitversionen werden in der Anwendungskonfigurationsdatei gespeichert.  
+
+Informationen darüber, mit welcher Laufzeitversion eine Anwendung oder Komponente kompiliert wurde und welche der Laufzeitversionen für die Anwendung ausgeführt werden müssen, werden an zwei Orten gespeichert. Bei der Kompilierung einer Anwendung oder Komponente werden die Informationen über die für die Kompilierung verwendete Laufzeitversion in der verwalteten ausführbaren Datei gespeichert. Informationen über die für die Anwendung oder Komponente erforderlichen Laufzeitversionen werden in der Anwendungskonfigurationsdatei gespeichert.  
   
 ### <a name="runtime-version-information-in-the-managed-executable"></a>Laufzeitversionsinformationen in der verwalteten ausführbaren Datei  
- Der Dateiheader der PE-Datei (Portable Executable, übertragbare ausführbare Datei) jeder verwalteten Anwendung und Komponente enthält Informationen über die Laufzeitversion, mit der diese erstellt wurde. Die Common Language Runtime verwendet diese Information, um die wahrscheinlichste Laufzeitversion zu bestimmen, die die Anwendung für die Ausführung benötigt.  
+
+Der Dateiheader der PE-Datei (Portable Executable, übertragbare ausführbare Datei) jeder verwalteten Anwendung und Komponente enthält Informationen über die Laufzeitversion, mit der diese erstellt wurde. Die Common Language Runtime verwendet diese Information, um die wahrscheinlichste Laufzeitversion zu bestimmen, die die Anwendung für die Ausführung benötigt.  
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>Laufzeitversionsinformationen in der Anwendungskonfigurationsdatei  
- Zusätzlich zu den Informationen im Dateiheader der PE-Datei kann eine Anwendung auch über eine Anwendungskonfigurationsdatei verfügen, die die Informationen über die Laufzeitversion bereitstellt. Die Anwendungskonfigurationsdatei ist eine XML-Datei, die vom Anwendungsentwickler erstellt wird und mit der Anwendung ausgeliefert wird. Das [\<<RequiredRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) des [\<<Startup>-Abschnitts](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md), wenn in dieser Datei vorhanden, gibt an, welche Versionen der Runtime und welche Versionen einer Komponente von der Anwendung unterstützt werden. Diese Datei kann auch beim Testen der Kompatibilität einer Anwendung mit verschiedenen Laufzeitversionen verwendet werden.  
+
+Zusätzlich zu den Informationen im Dateiheader der PE-Datei kann eine Anwendung auch über eine Anwendungskonfigurationsdatei verfügen, die die Informationen über die Laufzeitversion bereitstellt. Die Anwendungskonfigurationsdatei ist eine XML-Datei, die vom Anwendungsentwickler erstellt wird und mit der Anwendung ausgeliefert wird. Das [\<<RequiredRuntime>-Element](../configure-apps/file-schema/startup/requiredruntime-element.md) des [\<<Startup>-Abschnitts](../configure-apps/file-schema/startup/startup-element.md), wenn in dieser Datei vorhanden, gibt an, welche Versionen der Runtime und welche Versionen einer Komponente von der Anwendung unterstützt werden. Diese Datei kann auch beim Testen der Kompatibilität einer Anwendung mit verschiedenen Laufzeitversionen verwendet werden.  
   
- Nicht verwalteter Code, einschließlich COM- und COM+-Anwendungen, können über Anwendungskonfigurationsdateien verfügen, die die Common Language Runtime für das Zusammenwirken mit verwaltetetem Code verwendet. Die Anwendungskonfigurationsdatei wirkt sich auf beliebigen verwalteten Code aus, der über COM aktiviert wird. Die Datei kann angeben, welche Laufzeitversionen unterstützt und welche Assemblyumleitungen durchgeführt werden. COM-Interop-Anwendungen, die verwalteten Code aufrufen, verwenden standardmäßig die zuletzt auf dem Computer installierte Laufzeitversion.  
+Nicht verwalteter Code, einschließlich COM- und COM+-Anwendungen, können über Anwendungskonfigurationsdateien verfügen, die die Common Language Runtime für das Zusammenwirken mit verwaltetetem Code verwendet. Die Anwendungskonfigurationsdatei wirkt sich auf beliebigen verwalteten Code aus, der über COM aktiviert wird. Die Datei kann angeben, welche Laufzeitversionen unterstützt und welche Assemblyumleitungen durchgeführt werden. COM-Interop-Anwendungen, die verwalteten Code aufrufen, verwenden standardmäßig die zuletzt auf dem Computer installierte Laufzeitversion.  
   
- Weitere Informationen zu den Anwendungskonfigurationsdateien finden Sie unter [Konfigurationsdateien](../../../docs/framework/configure-apps/index.md).  
+ Weitere Informationen zu den Anwendungskonfigurationsdateien finden Sie unter [Konfigurationsdateien](../configure-apps/index.md).  
   
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Bestimmen der zu ladenden Laufzeitversion  
- Die Common Language Runtime verwendet die folgenden Informationen, um zu bestimmen, welche Version der Runtime für eine Anwendung geladen werden soll:  
+
+Die Common Language Runtime verwendet die folgenden Informationen, um zu bestimmen, welche Version der Runtime für eine Anwendung geladen werden soll:  
   
 - Die verfügbaren Runtime-Versionen  
   
 - Die Runtime-Versionen, die von einer Anwendung unterstützt werden  
   
 ### <a name="supported-runtime-versions"></a>Unterstützte Runtime-Versionen  
- Die Common Language Runtime verwendet die Anwendungskonfigurationsdatei und den PE-Dateiheader (Portable Executable, übertragbare ausführbare Datei), um zu bestimmen, welche Version der Runtime von einer Anwendung unterstützt wird. Wenn keine Anwendungskonfigurationsdatei vorhanden ist, lädt die Runtime die im PE-Dateiheader der Anwendung angegebene Runtime-Version, sofern diese verfügbar ist.  
+
+Die Common Language Runtime verwendet die Anwendungskonfigurationsdatei und den PE-Dateiheader (Portable Executable, übertragbare ausführbare Datei), um zu bestimmen, welche Version der Runtime von einer Anwendung unterstützt wird. Wenn keine Anwendungskonfigurationsdatei vorhanden ist, lädt die Runtime die im PE-Dateiheader der Anwendung angegebene Runtime-Version, sofern diese verfügbar ist.  
   
- Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die entsprechende zu ladende Runtime-Version anhand der Ergebnisse der folgenden Vorgehensweise:  
+Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die entsprechende zu ladende Runtime-Version anhand der Ergebnisse der folgenden Vorgehensweise:  
   
-1. Die Runtime überprüft das [\<<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>** -Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>** -Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>** -Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>** -Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
+1. Die Runtime überprüft das [\<<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>** -Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>** -Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>** -Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>** -Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
   
 2. Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
   
@@ -88,9 +96,10 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
 > Nachdem eine Runtime-Version geladen wurde, kann über Umleitungen von Assemblybindungen angegeben werden, dass eine andere Version einer einzelnen .NET Framework-Assembly geladen werden soll. Diese Umleitungen von Bindungen betreffen nur die spezielle Assembly, die umgeleitet wird.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Teilweise gekennzeichnete Assemblynamen und parallele Ausführung  
- Teilweise gekennzeichnete Assemblyverweise können lediglich zum Binden von Assemblies in einem Anwendungsverzeichnis verwendet werden, da sie eine mögliche Problemquelle bei der parallelen Ausführung darstellen. Vermeiden Sie teilweise gekennzeichnete Assemblyverweise in Ihrem Code.  
+
+Teilweise gekennzeichnete Assemblyverweise können lediglich zum Binden von Assemblies in einem Anwendungsverzeichnis verwendet werden, da sie eine mögliche Problemquelle bei der parallelen Ausführung darstellen. Vermeiden Sie teilweise gekennzeichnete Assemblyverweise in Ihrem Code.  
   
- Um teilweise gekennzeichnete Assemblyverweise in Code zu verringern, können Sie das [\<<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)-Element in einer Anwendungskonfigurationsdatei verwenden, um im Code vorhandene teilweise gekennzeichnete Assemblyverweise vollständig zu kennzeichnen (qualifizieren). Verwenden Sie das **\<<qualifyAssembly>** -Element, um nur die Felder anzugeben, die im partiellen Verweis nicht festgelegt wurden. Die im **fullName**-Attribut aufgeführte Assemblyidentität muss alle Informationen enthalten, die für die vollständige Kennzeichnung (Qualifizierung) des Assemblynamens erforderlich sind: Assemblyname, öffentlicher Schlüssel, Kultur und Version.  
+Um teilweise gekennzeichnete Assemblyverweise in Code zu verringern, können Sie das [\<<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)-Element in einer Anwendungskonfigurationsdatei verwenden, um im Code vorhandene teilweise gekennzeichnete Assemblyverweise vollständig zu kennzeichnen (qualifizieren). Verwenden Sie das **\<<qualifyAssembly>** -Element, um nur die Felder anzugeben, die im partiellen Verweis nicht festgelegt wurden. Die im **fullName**-Attribut aufgeführte Assemblyidentität muss alle Informationen enthalten, die für die vollständige Kennzeichnung (Qualifizierung) des Assemblynamens erforderlich sind: Assemblyname, öffentlicher Schlüssel, Kultur und Version.  
   
  Im folgenden Beispiel wird der Eintrag in der Anwendungskonfigurationsdatei dargestellt, mit dem die Assembly `myAssembly` vollständig qualifiziert wird.  
   
@@ -113,11 +122,12 @@ publicKeyToken=...,
   
 |Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
-|[Konfigurieren der Umleitung der Assemblybindung](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
-|[Prozessinterne parallele Ausführung](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
+|[Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
+|[Konfigurieren der Umleitung der Assemblybindung](configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
+|[Prozessinterne parallele Ausführung](in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
 |[Assemblys in .NET](../../standard/assembly/index.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  
-|[Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
+|[Anwendungsdomänen](../app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
 ## <a name="reference"></a>Referenz  
- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+
+[\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

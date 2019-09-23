@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583475"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046874"
 ---
 # <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
 Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
@@ -104,5 +104,5 @@ sr.Close()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+- [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](how-to-request-data-using-the-webrequest-class.md)
+- [Requesting Data (Anfordern von Daten)](requesting-data.md)

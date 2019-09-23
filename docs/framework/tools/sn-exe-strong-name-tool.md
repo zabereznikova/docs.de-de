@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef977206bf0d5b818cfd9779f063fbc2bd50632e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 262ee168dabafcdc0b284f1ae5528843975a7e9d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971846"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044165"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../standard/assembly/strong-named.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -27,7 +27,7 @@ Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [star
 
  Weitere Informationen zu starken Namen und Assemblys mit starken Namen finden Sie unter [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md) und [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).  
   
- Das Strong Name-Tool wird automatisch mit Visual Studio installiert. Zum Starten des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Das Strong Name-Tool wird automatisch mit Visual Studio installiert. Zum Starten des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
 > Auf 64-Bit-Computern können die 32-Bit-Version von Sn.exe über die Developer-Eingabeaufforderung für Visual Studio und auch die 64-Bit-Version über die Eingabeaufforderung für Visual Studio x64 Win64 ausgeführt werden. 
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |**-k** [*schlüsselgröße*] *ausgabedatei*|Generiert einen neuen <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Schlüssel mit der angegebenen Größe und schreibt ihn in die angegebene Datei.  Sowohl ein öffentlicher als auch ein privater Schlüssel werden in die Datei geschrieben.<br /><br /> Wenn Sie keine Schlüsselgröße angeben, wird standardmäßig ein 1.024-Bit-Schlüssel generiert, sofern Microsoft Enhanced Cryptographic Provider installiert ist; andernfalls wird ein 512-Bit-Schlüssel generiert.<br /><br /> Wenn der Microsoft Enhanced Cryptographic Provider installiert ist, unterstützt der Parameter *keysize* nur Schlüssellängen von 384 bis 16.384 Bit (in Schritten von 8 Bit).  Wenn der Microsoft Base Cryptographic Provider installiert ist, werden Schlüssellängen von 384 bis 512 Bit (in Schritten von 8 Bit) unterstützt.|  
 |**-m** [**y** *&#124;* **n**]|Gibt an, ob Schlüsselcontainer computerspezifisch oder benutzerspezifisch sind. Wenn Sie *y* angeben, sind die Schlüsselcontainer computerspezifisch. Bei Angabe von *n* sind die Schlüsselcontainer benutzerspezifisch.<br /><br /> Wenn weder "y" noch "n" angegeben wird, zeigt diese Option die aktuelle Einstellung an.|  
 |**-o** *eingabedatei* [*ausgabedatei*]|Extrahiert den öffentlichen Schlüssel aus der *Eingabedatei* und speichert ihn in einer CSV-Datei. Die einzelnen Byte des öffentlichen Schlüssels werden durch Kommas getrennt. Dieses Format eignet sich zum Hartcodieren von Schlüsselverweisen als initialisierte Arrays im Quellcode. Wenn Sie keine *Ausgabedatei* angeben, wird die Ausgabe dieser Option in der Zwischenablage gespeichert. **Hinweis**:  Diese Option überprüft nicht, ob die Eingabe nur ein öffentlicher Schlüssel ist. Wenn `infile` ein Schlüsselpaar mit einem privaten Schlüssel enthält, wird der private Schlüssel auch extrahiert.|  
-|**-p** *eingabedatei ausgabedatei* [*hashalg*]|Extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar in der *Eingabedatei* und speichert ihn in der *Ausgabedatei* unter optionaler Verwendung des RSA-Algorithmus, der von *hashalg* angegeben wird. Dieser öffentlichen Schlüssel kann zum verzögerten Signieren einer Assembly unter Verwendung der Optionen **/delaysign+** und **/keyfile** des [Assembly Linker-Tools („al.exe“)](../../../docs/framework/tools/al-exe-assembly-linker.md) verwendet werden. Beim verzögerten Signieren einer Assembly wird während der Kompilierung nur der öffentliche Schlüssel festgelegt und Speicherplatz in der Datei reserviert, damit die Signatur später hinzugefügt werden kann, wenn der private Schlüssel bekannt ist.|  
+|**-p** *eingabedatei ausgabedatei* [*hashalg*]|Extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar in der *Eingabedatei* und speichert ihn in der *Ausgabedatei* unter optionaler Verwendung des RSA-Algorithmus, der von *hashalg* angegeben wird. Dieser öffentlichen Schlüssel kann zum verzögerten Signieren einer Assembly unter Verwendung der Optionen **/delaysign+** und **/keyfile** des [Assembly Linker-Tools („al.exe“)](al-exe-assembly-linker.md) verwendet werden. Beim verzögerten Signieren einer Assembly wird während der Kompilierung nur der öffentliche Schlüssel festgelegt und Speicherplatz in der Datei reserviert, damit die Signatur später hinzugefügt werden kann, wenn der private Schlüssel bekannt ist.|  
 |**-pc** *container* *ausgabedatei* [*hashalg*]|Extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar im *Container* und speichert ihn in der *Ausgabedatei*. Wenn Sie die Option *hashalg* verwenden, wird der öffentliche Schlüssel mit dem RSA-Algorithmus extrahiert.|  
 |**-Pb** [**y** *&#124;* **n**]|Legt fest, ob die Bypassrichtlinie für starke Namen erzwungen wird. Wenn Sie *y* angeben, werden starke Namen für voll vertrauenswürdige Assemblys beim Laden in ein voll vertrauenswürdiges <xref:System.AppDomain> nicht geprüft. Wenn Sie *n* angeben, werden starke Namen auf Korrektheit geprüft, jedoch nicht auf einen bestimmten starken Namen. <xref:System.Security.Permissions.StrongNameIdentityPermission> hat keine Auswirkung auf voll vertrauenswürdige Assemblys. Sie müssen eine eigene Überprüfung auf Übereinstimmung bei einem starken Namen durchführen.<br /><br /> Wenn weder `y` noch `n` angegeben ist, zeigt diese Option die aktuelle Einstellung an. Die Standardeinstellung ist `y`. **Hinweis**:  Auf 64-Bit-Computern müssen diese Parameter sowohl in der 32-Bit- als auch in der 64-Bit-Instanz von SN.EXE festgelegt werden.|  
 |**-q**[**uiet**]|Gibt den stillen Modus an, in dem die Anzeige von Erfolgsmeldungen unterdrückt wird.|  
@@ -126,7 +126,7 @@ sn -d MyContainer
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Extras](index.md)
+- [Al.exe (Assembly Linker-Tool)](al-exe-assembly-linker.md)
 - [Assemblys mit starkem Namen](../../standard/assembly/strong-named.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

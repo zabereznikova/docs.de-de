@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96160b0751e0377b429e63c1be6c6761c406096
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6409bbecdef2da03a18ed246cb90478b2a1fd7f6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664033"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71054071"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 
@@ -249,7 +249,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen Haltepunkt festlegen, sod
 
 <a name="GenBreak"></a>
 
-##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>So legen Sie einen Haltepunkt am Ende der Garbage Collection fest
+#### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>So legen Sie einen Haltepunkt am Ende der Garbage Collection fest
 
 - Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein:
 
@@ -301,7 +301,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="IsGC"></a>
 
-##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>So stellen Sie fest, ob das Problem durch die Garbage Collection verursacht wird
+### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>So stellen Sie fest, ob das Problem durch die Garbage Collection verursacht wird
 
 - Überprüfen Sie die folgenden beiden Leistungsindikatoren für den Arbeitsspeicher:
 
@@ -313,7 +313,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="OOMIsManaged"></a>
 
-##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist
+### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist
 
 1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:
 
@@ -347,7 +347,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="GetVM"></a>
 
-##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>So ermitteln Sie, wie viel virtueller Speicher reserviert werden kann
+### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>So ermitteln Sie, wie viel virtueller Speicher reserviert werden kann
 
 - Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein, um den größten freien Bereich abzurufen:
 
@@ -381,7 +381,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Physical"></a>
 
-##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>So bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist
+### <a name="to-determine-whether-there-is-enough-physical-memory"></a>So bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist
 
 1. Starten Sie Windows Task-Manager.
 
@@ -391,7 +391,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="ManagedHeapCommit"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap zusichert
+### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap zusichert
 
 - Verwenden Sie den Speicherleistungsindikator `# Total committed bytes`, um die Anzahl an Bytes abzurufen, die der verwaltete Heap zusichert. Der Garbage Collector sichert nach Bedarf Ausschnitte in einem Segment zu, niemals alle zur selben Zeit.
 
@@ -400,7 +400,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="ManagedHeapReserve"></a>
 
-##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap reserviert
+### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>So bestimmen Sie, wie viel Arbeitsspeicher der verwaltete Heap reserviert
 
 - Verwenden Sie den Speicherleistungsindikator `# Total reserved bytes`.
 
@@ -449,7 +449,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="ExamineGen2"></a>
 
-##### <a name="to-determine-large-objects-in-generation-2"></a>So bestimmen Sie große Objekte in Generation 2
+### <a name="to-determine-large-objects-in-generation-2"></a>So bestimmen Sie große Objekte in Generation 2
 
 - Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:
 
@@ -489,7 +489,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="ObjRef"></a>
 
-##### <a name="to-determine-references-to-objects"></a>So bestimmen Sie Verweise auf Objekte
+### <a name="to-determine-references-to-objects"></a>So bestimmen Sie Verweise auf Objekte
 
 - Geben Sie in WinDbg bei geladener SOS-Debuggererweiterung folgenden Befehl ein, um Objektverweise aufzulisten:
 
@@ -523,7 +523,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Induce"></a>
 
-##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>So bestimmen Sie, ob ein Finalizer ausgeführt wurde
+### <a name="to-determine-whether-a-finalizer-has-been-run"></a>So bestimmen Sie, ob ein Finalizer ausgeführt wurde
 
 - Führen Sie ein Testprogramm aus, das den folgenden Code enthält:
 
@@ -537,7 +537,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Finalize"></a>
 
-##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>So bestimmen Sie, ob Objekte auf einen Abschluss warten
+### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>So bestimmen Sie, ob Objekte auf einen Abschluss warten
 
 1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:
 
@@ -562,7 +562,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Fragmented"></a>
 
-##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>So bestimmen Sie den freien Speicherplatz im verwalteten Heap
+### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>So bestimmen Sie den freien Speicherplatz im verwalteten Heap
 
 - Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:
 
@@ -639,7 +639,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Pinned"></a>
 
-##### <a name="to-determine-the-number-of-pinned-objects"></a>So bestimmen Sie die Anzahl der fixierten Objekte
+### <a name="to-determine-the-number-of-pinned-objects"></a>So bestimmen Sie die Anzahl der fixierten Objekte
 
 - Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:
 
@@ -655,7 +655,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="TimeInGC"></a>
 
-##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>So bestimmen Sie die Dauer einer Garbage Collection
+### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>So bestimmen Sie die Dauer einer Garbage Collection
 
 - Überprüfen Sie den Speicherleistungsindikator `% Time in GC`.
 
@@ -743,7 +743,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="Triggered"></a>
 
-##### <a name="to-determine-what-triggered-a-garbage-collection"></a>So ermitteln Sie, was eine Garbage Collection ausgelöst
+### <a name="to-determine-what-triggered-a-garbage-collection"></a>So ermitteln Sie, was eine Garbage Collection ausgelöst
 
 - Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:
 
@@ -822,7 +822,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 <a name="HighCPU"></a>
 
-##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>So ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird
+### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>So ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird
 
 - Setzen Sie den Wert des Speicherleistungsindikators `% Time in GC` zur Prozesszeit in Beziehung.
 

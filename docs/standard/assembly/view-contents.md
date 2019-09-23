@@ -16,14 +16,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 8f27afafde0b83dfe886d218f3148d8ff07b30cb
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053948"
 ---
 # <a name="how-to-view-assembly-contents"></a>Vorgehensweise: Anzeigen des Assemblyinhalts
+
 Sie können den [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Microsoft Intermediate Language-Informationen (MSIL) in einer Datei anzuzeigen. Wenn die untersuchte Datei eine Assembly ist, kann die Information die Attribute der Assembly enthalten sowie Verweise auf andere Module und Assemblys. Dieses Information kann Ihnen helfen, zu bestimmen, ob eine Datei eine Assembly oder Teil einer Assembly ist und ob die Datei über Verweise auf andere Module oder Assemblys verfügt.  
   
 Wenn Sie den Inhalt einer Assembly mithilfe von *Ildasm.exe* anzeigen möchten, geben Sie bei einer Eingabeaufforderung **ildasm** \<*Assemblyname*> ein. Beispielsweise disassembliert der folgende Befehl die *Hello.exe*-Assembly.  
@@ -35,6 +36,7 @@ ildasm Hello.exe
 Klicken Sie doppelt auf das **Manifest**-Symbol im Fenster „MSIL-Disassembler“, um Informationen zum Assemblymanifest anzuzeigen.  
   
 ## <a name="example"></a>Beispiel  
+
 Das folgende Beispiel beginnt mit einem einfachen „Hallo Welt“-Programm. Nachdem Sie das Programm kompiliert haben, verwenden Sie *Ildasm.exe*, um das *Hello.exe*-Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.  
 
 ```cpp

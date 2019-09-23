@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0664a68d258380fd9e4824b80f0d7a244cb61e85
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894780"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044016"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das Windows-Runtime-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die Windows-Runtime-Metadaten enthält. Obwohl .NET Framework-Assemblys und Windows-Runtime-Metadatendateien dasselbe physische Format haben, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, was bedeutet, dass .NET Framework-Assemblys nicht automatisch als Komponenten für Windows-Runtime verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine Komponente für Windows-Runtime wird als *Exportieren* bezeichnet. In .NET Framework 4.5 und .NET Framework 4.5.1 enthält die resultierende Windows-Metadatendatei (.winmd) sowohl die Metadaten als auch die Implementierung.  
   
  Wenn Sie die Vorlage **Komponente für Windows-Runtime**, die im **Windows Store** zu finden ist, für C# und Visual Basic in Visual Studio 2013 oder Visual Studio 2012 verwenden, ist das Compilerziel eine WINMDOBJ-Datei. Ein nachfolgender Buildschritt ruft „Winmdexp.exe“ auf, um die WINMDOBJ-Datei in eine WINMD-Datei zu exportieren. Dies ist die empfohlene Methode zum Erstellen einer Komponente für Windows-Runtime. Verwenden Sie "Winmdexp.exe" direkt, wenn Sie mehr Kontrolle über den Buildvorgang möchten, als Visual Studio bietet.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -54,5 +54,5 @@ winmdexp [options] winmdmodule
 
 - [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
-- [Winmdexp.exe-Fehlermeldungen](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
+- [Winmdexp.exe-Fehlermeldungen](winmdexp-exe-error-messages.md)
 - [Build-, Bereitstellungs- und Konfigurationstools (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

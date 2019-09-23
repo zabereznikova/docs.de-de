@@ -2,12 +2,12 @@
 title: Peer-to-Peer-Zusammenarbeit
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7cf92f6bf3c269e584cb8b3cdcf910be5b89fd7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623177"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047383"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
 
@@ -42,4 +42,4 @@ Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementieru
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.PeerToPeer.Collaboration>
-- [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+- [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](about-the-system-net-peertopeer-collaboration-namespace.md)

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99ffbccca8cd8a719e5571638308e28d494d687a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 437d2d1bb026795dfa01a4c01ca12acf2b8f5792
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926873"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044666"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
 
 Das Global Assembly Cache-Tool ermöglicht das Anzeigen und Bearbeiten vom Inhalt des globalen Assemblycaches und des Downloadcaches.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -66,7 +66,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/u**  *assemblyName*|Deinstalliert eine Assembly aus dem globalen Assemblycache.|
 |**/uf**  *assemblyName*|Erzwingt die Deinstallation einer angegebenen Assembly durch Entfernen aller Verweise auf die Assembly.<br /><br /> Die Angabe dieser Option entspricht der kombinierten Angabe der **/u**-Option und der **/f**-Option. **Hinweis**:  Mit dieser Option können Sie keine Assembly entfernen, die mit dem Microsoft Windows Installer installiert wurde. Bei einem Versuch, diesen Vorgang auszuführen, wird vom Tool eine Fehlermeldung angezeigt.|
 |**/ul** *assemblyListFile*|Mindestens eine in *assemblyListFile* angegebene Assembly wird aus dem globalen Assemblycache deinstalliert.|
-|**/u**[**ngen**] *assemblyName*|Eine bestimmte Assembly wird aus dem globalen Assemblycache deinstalliert. Wenn die angegebene Assembly über einen Zähler für vorhandene Verweise verfügt, wird der Verweiszähler vom Tool angezeigt, und die Assembly wird nicht aus dem globalen Assemblycache entfernt. **Hinweis**:  In der .NET Framework-Version 2.0 wird `/ungen` nicht unterstützt. Verwenden Sie stattdessen den `uninstall`-Befehl von [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> In .NET Framework, Version 1.0 und 1.1 wird bei Angabe von **/ungen** die Assembly von „Gacutil.exe“ aus dem nativen Imagecache entfernt. In diesem Cache werden die nativen Images für Assemblys gespeichert, die mit dem [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellt wurden.|
+|**/u**[**ngen**] *assemblyName*|Eine bestimmte Assembly wird aus dem globalen Assemblycache deinstalliert. Wenn die angegebene Assembly über einen Zähler für vorhandene Verweise verfügt, wird der Verweiszähler vom Tool angezeigt, und die Assembly wird nicht aus dem globalen Assemblycache entfernt. **Hinweis**:  In der .NET Framework-Version 2.0 wird `/ungen` nicht unterstützt. Verwenden Sie stattdessen den `uninstall`-Befehl von [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md). <br /><br /> In .NET Framework, Version 1.0 und 1.1 wird bei Angabe von **/ungen** die Assembly von „Gacutil.exe“ aus dem nativen Imagecache entfernt. In diesem Cache werden die nativen Images für Assemblys gespeichert, die mit dem [Ngen.exe (Native Image Generator)](ngen-exe-native-image-generator.md) erstellt wurden.|
 |**/ur**  *assemblyName*<br /><br /> *Schema*<br /><br /> *ID*<br /><br /> *Beschreibung*|Deinstalliert einen Verweis auf eine angegebene Assembly aus dem globalen Assemblycache. Um einen Verweis auf eine Assembly zu entfernen, müssen Sie dieselben Parameter *scheme*, *id* und *description* angeben, die beim Installieren der Assembly mit der **/i**-Option und der **/r**-Option (bzw. der **/ir**-Option) angegeben wurden. Eine Beschreibung der gültigen Werte, die für diese Parameter angegeben werden können, finden Sie unter der **/r**-Option.<br /><br /> Die Angabe dieser Option entspricht der kombinierten Angabe der **/u**-Option und der **/r**-Option.|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
@@ -180,7 +180,7 @@ gacutil /l
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
-- [Regasm.exe (Assembly Registration-Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Globaler Assemblycache](../app-domains/gac.md)
+- [Regasm.exe (Assembly Registration-Tool)](regasm-exe-assembly-registration-tool.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9e6d9e57528f3eae9b30706013a0529313877c7
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894867"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044658"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
 Der IL-Disassembler ist ein ergänzendes Tool zum IL-Assembler (*Ilasm.exe*). *Ildasm.exe* erfasst eine portierbare ausführbare Datei (Portable Executable, PE) mit IL-Code (Intermediate Language) und erstellt eine Textdatei, die in *Ilasm.exe* eingegeben werden kann.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -186,7 +186,7 @@ Bei einem geschachtelten Typ muss die Klasse, in der er enthalten ist, vorangest
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Ilasm.exe (IL-Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Extras](index.md)
+- [Ilasm.exe (IL-Assembler)](ilasm-exe-il-assembler.md)
 - [Der verwaltete Ausführungsprozess](../../standard/managed-execution-process.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

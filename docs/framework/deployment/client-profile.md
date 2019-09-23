@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052202"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 Das .NET Client Profile stellt eine Teilmenge von .NET Framework dar, die mit .NET Framework 4 und früheren Versionen bereitgestellt wurde und für Anwendungen auf dem Client optimiert war. Das .NET Framework ist eine Entwicklungsplattform für Windows, Windows Phone und Microsoft Azure und stellt eine verwaltete App-Ausführungsumgebung und die .NET Framework-Klassenbibliothek bereit. In .NET Framework 4 und früheren Versionen standen zwei Bereitstellungsoptionen zur Verfügung: vollständiges .NET Framework und .NET Client Profile. Das Client Profile ermöglichte eine schnellere Bereitstellung und kleinere App-Installationspakete als das vollständige .NET Framework.  
@@ -25,7 +25,7 @@ Das .NET Client Profile stellt eine Teilmenge von .NET Framework dar, die mit 
   
  Wenn Sie jedoch .NET Framework 4 oder 3.5 als Zielversion verwenden und mehr über das Clientprofil und dessen Verwendung erfahren möchten, finden Sie Informationen hierzu unter [.NET Framework Client Profile (.NET Framework-Clientprofil)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) in der Dokumentation zu .NET Framework 4.  
   
- Wenn Sie .NET Framework 4.5 installieren, wird .NET Framework 4.5 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von .NET Framework 4.5 finden Sie unter [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Installieren von .NET Framework für Entwickler).  
+ Wenn Sie .NET Framework 4.5 installieren, wird .NET Framework 4.5 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von .NET Framework 4.5 finden Sie unter [Install the .NET Framework for developers](../install/guide-for-developers.md) (Installieren von .NET Framework für Entwickler).  
   
 ## <a name="see-also"></a>Siehe auch
 

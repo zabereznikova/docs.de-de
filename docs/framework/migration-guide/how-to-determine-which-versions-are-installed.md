@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d719debd39309415f996d655c68abd8c80ec5e3
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928421"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051589"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen
 
@@ -72,7 +72,7 @@ Informationen zum Ermitteln der installierten Updates für jede Version von .NET
 
 3. Suchen Sie nach einem DWORD-Eintrag mit dem Namen **Release**. Wenn dieser vorhanden ist, haben Sie .NET Framework 4.5 oder höhere Versionen installiert. Der Wert ist ein Releaseschlüssel, der einer bestimmten Version des .NET Framework entspricht. In der folgenden Abbildung hat der Eintrag **Release** beispielsweise den Wert *378389*, was dem Releaseschlüssel für .NET Framework 4.5 entspricht.
 
-     ![Registrierungseintrag für .NET Framework 4.5](media/clr-installdir.png "Registrierungseintrag für .NET Framework 4.5")
+     ![Registrierungseintrag für .NET Framework 4.5](./media/clr-installdir.png "Registrierungseintrag für .NET Framework 4.5")
 
 Die folgende Tabelle enthält den Wert des **Release**-DWORD für einzelne Betriebssysteme für .NET Framework 4.5 und höhere Versionen.
 
@@ -163,7 +163,7 @@ Ersetzen Sie in diesen Beispielen *394802* durch einen **Release**-Wert aus der 
 
     Die folgende Abbildung zeigt den Unterschlüssel und dessen **Version**-Eintrag für .NET Framework 3.5.
 
-    ![Der Registrierungseintrag für .NET Framework 3.5.](media/net-4-and-earlier.png ".NET Framework 3.5 und frühere Versionen")
+    ![Der Registrierungseintrag für .NET Framework 3.5.](./media/net-4-and-earlier.png ".NET Framework 3.5 und frühere Versionen")
 
 <a name="net_c"></a>
 

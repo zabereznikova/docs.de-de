@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c71816b1bd2e9c95e8c7efb44e3e689dce4ab93
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853971"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052084"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 
@@ -50,7 +50,7 @@ Bei .NET Framework 4.5 handelt es sich um eine weitervertreibbare Laufzeit. We
 
 ## <a name="chainer-sample"></a>Chainer-Beispiel
 
-Im Chainer-Beispiel wird das .NET Framework 4.5-Setup automatisch gestartet und nachverfolgt, während der Status angezeigt wird. Dieses Beispiel ähnelt dem Chainer-Beispiel für .NET Framework 4. Jedoch werden außerdem Systemneustarts vermieden, indem das Meldungsfeld zum Schließen von .NET Framework 4-Apps verarbeitet wird. Weitere Informationen zu diesem Meldungsfeld finden Sie unter [Reducing System Restarts During .NET Framework 4.5 Installations (Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen)](../../../docs/framework/deployment/reducing-system-restarts.md). Sie können dieses Beispiel mit dem .NET Framework 4-Installationsprogramm verwenden. In diesem Szenario wird die Meldung einfach nicht gesendet.
+Im Chainer-Beispiel wird das .NET Framework 4.5-Setup automatisch gestartet und nachverfolgt, während der Status angezeigt wird. Dieses Beispiel ähnelt dem Chainer-Beispiel für .NET Framework 4. Jedoch werden außerdem Systemneustarts vermieden, indem das Meldungsfeld zum Schließen von .NET Framework 4-Apps verarbeitet wird. Weitere Informationen zu diesem Meldungsfeld finden Sie unter [Reducing System Restarts During .NET Framework 4.5 Installations (Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen)](reducing-system-restarts.md). Sie können dieses Beispiel mit dem .NET Framework 4-Installationsprogramm verwenden. In diesem Szenario wird die Meldung einfach nicht gesendet.
 
 > [!WARNING]
 > Sie müssen das Beispiel als Administrator ausführen.
@@ -311,5 +311,5 @@ Ein typischer Server erstellt einen zufälligen MMIO-Dateinamen, erstellt die Da
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Bereitstellung](../../../docs/framework/deployment/index.md)
+- [Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)
+- [Bereitstellung](index.md)

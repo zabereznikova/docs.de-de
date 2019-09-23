@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410f95b373e079fe959068a6540642a6ad043e95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 22e1ae495276b0c474ad47f695d8410288289f83
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952824"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053724"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -169,7 +169,7 @@ In Anwendungen, die auf .NET Framework 4.7.2 und frühere Versionen abzielen, ka
 
 Die folgende Abbildung zeigt die QuickInfo, wenn der Benutzer eine Schaltfläche mit der Tastatur ausgewählt hat.
 
-![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](media/tooltip.png)
+![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](./media/tooltip.png)
 
 <a name="wpf48" />
 
@@ -189,7 +189,7 @@ In .NET Framework 4.7.2.2 hat WPF die Möglichkeit hinzugefügt, eine <xref:Syst
 
 Um diese Eigenschaft zu verwenden, fügen Sie sie einfach zu Ihrem XAML-Code hinzu, und verwenden Sie den entsprechenden Pinsel oder die passende Bindung. Die sich daraus ergebende Textauswahl sieht folgendermaßen aus:
 
-![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](media/selectiontextbrush-property.png)
+![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](./media/selectiontextbrush-property.png)
 
 Sie können die Verwendung der Eigenschaften `SelectionBrush` und `SelectionTextBrush` kombinieren, um jede beliebige Hintergrund- und Vordergrundfarbkombination zu generieren, die Sie für zweckmäßig halten.
 
@@ -482,11 +482,11 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
   Vorher: 
 
-  ![Das Expander-Steuerelement mit Fokus vor der Verbesserung der Barrierefreiheit](media/expander-before.png)
+  ![Das Expander-Steuerelement mit Fokus vor der Verbesserung der Barrierefreiheit](./media/expander-before.png)
 
   Nachher: 
 
-  ![Das Expander-Steuerelement mit Fokus nach der Verbesserung der Barrierefreiheit](media/expander-after.png)
+  ![Das Expander-Steuerelement mit Fokus nach der Verbesserung der Barrierefreiheit](./media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente
 
@@ -494,11 +494,11 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
   Vorher: 
 
-  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus vor der Verbesserung der Barrierefreiheit](media/radio-button-before.png)
+  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus vor der Verbesserung der Barrierefreiheit](./media/radio-button-before.png)
 
   Nachher: 
 
-  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus nach der Verbesserung der Barrierefreiheit](media/radio-button-after.png)
+  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus nach der Verbesserung der Barrierefreiheit](./media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox>-Steuerelement
 
@@ -506,31 +506,31 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
   Vorher: 
 
-  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements vor der Verbesserung der Barrierefreiheit](media/combo-disabled-before.png)
+  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements vor der Verbesserung der Barrierefreiheit](./media/combo-disabled-before.png)
 
   Nachher:   
 
-  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements nach der Verbesserung der Barrierefreiheit](media/combo-disabled-after.png)
+  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements nach der Verbesserung der Barrierefreiheit](./media/combo-disabled-after.png)
 
   Darüber hinaus verwenden deaktivierte Schaltflächen und Schaltflächen mit Fokus das richtige Farbdesign.
 
   Vorher:
 
-  ![Farbdesign der Schaltflächen vor der Verbesserung der Barrierefreiheit](media/button-themes-before.png) 
+  ![Farbdesign der Schaltflächen vor der Verbesserung der Barrierefreiheit](./media/button-themes-before.png) 
 
   Nachher: 
 
-  ![Farbdesign der Schaltflächen nach der Verbesserung der Barrierefreiheit](media/button-themes-after.png) 
+  ![Farbdesign der Schaltflächen nach der Verbesserung der Barrierefreiheit](./media/button-themes-after.png) 
 
   In .NET Framework 4.7 und früher führte das Festlegen des Formats eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf `Toolbar.ComboBoxStyleKey` dazu, dass der Dropdownpfeil nicht angezeigt wurde. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Beispiel:
 
   Vorher: 
 
-  ![„Toolbar.ComboBoxStyleKey“ vor der Verbesserung der Barrierefreiheit](media/comboboxstylekey-before.png) 
+  ![„Toolbar.ComboBoxStyleKey“ vor der Verbesserung der Barrierefreiheit](./media/comboboxstylekey-before.png) 
 
   Nachher: 
 
-  ![„Toolbar.ComboBoxStyleKey“ nach der Verbesserung der Barrierefreiheit](media/comboboxstylekey-after.png) 
+  ![„Toolbar.ComboBoxStyleKey“ nach der Verbesserung der Barrierefreiheit](./media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid>-Steuerelement
 
@@ -538,21 +538,21 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
   Vorher: 
 
-  ![Pfeil für die Sortieranzeige vor der Verbesserung der Barrierefreiheit](media/sort-indicator-before.png) 
+  ![Pfeil für die Sortieranzeige vor der Verbesserung der Barrierefreiheit](./media/sort-indicator-before.png) 
 
   Nachher:   
 
-  ![Pfeil für die Sortieranzeige nach der Verbesserung der Barrierefreiheit](media/sort-indicator-after.png) 
+  ![Pfeil für die Sortieranzeige nach der Verbesserung der Barrierefreiheit](./media/sort-indicator-after.png) 
 
   Darüber hinaus wurde in .NET Framework 4.7 und früher das Standarddesign für Links geändert, wodurch Links beim Bewegen der Maus über diese im Modus mit hohem Kontrast in der falschen Farbe angezeigt wurden. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Auf ähnliche Weise verwenden die Spalten des Kontrollkästchens <xref:System.Windows.Controls.DataGrid> ab .NET Framework 4.7.1 die erwarteten Farben für das Feedback des Tastaturfokus.
 
   Vorher: 
 
-  ![DataGrid-Standarddesign für Links vor der Verbesserung der Barrierefreiheit](media/default-link-style-before.png) 
+  ![DataGrid-Standarddesign für Links vor der Verbesserung der Barrierefreiheit](./media/default-link-style-before.png) 
 
   Nachher:    
 
-  ![DataGrid-Standarddesign für Links nach der Verbesserung der Barrierefreiheit](media/default-link-style-after.png) 
+  ![DataGrid-Standarddesign für Links nach der Verbesserung der Barrierefreiheit](./media/default-link-style-after.png) 
 
 Weitere Informationen zu Verbesserungen der WPF-Barrierefreiheit in .NET Framework 4.7.1 finden Sie unter [Verbesserung der Barrierefreiheit in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -583,11 +583,11 @@ Folgende Änderungen wurden am Design mit hohem Kontrast vorgenommen:
 
   Vorher:
 
-  ![Deaktivierter Text vor der Verbesserung der Barrierefreiheit](media/wf-disabled-before.png) 
+  ![Deaktivierter Text vor der Verbesserung der Barrierefreiheit](./media/wf-disabled-before.png) 
 
   Nachher:
 
-  ![Deaktivierter Text nach der Verbesserung der Barrierefreiheit](media/wf-disabled-after.png) 
+  ![Deaktivierter Text nach der Verbesserung der Barrierefreiheit](./media/wf-disabled-after.png) 
 
 - Verbesserungen am Design mit hohem Kontrast im Dialogfeld der Threadausnahme.
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07ac564b5a2b227a62b7073bb837ab8bd1f434fb
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894769"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044214"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator-Tool)
 Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.  
   
  [Security Annotator,](https://go.microsoft.com/fwlink/?LinkId=198007) eine Visual Studio-Erweiterung, stellt eine grafische Benutzeroberfläche für „secAnnotate.exe“ bereit und ermöglicht die Ausführung des Tools in Visual Studio.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein, wobei *Parameter* im folgenden Abschnitt beschrieben werden und *Assemblys* aus mindestens einem durch Leerzeichen getrennten Assemblynamen bestehen:  
   

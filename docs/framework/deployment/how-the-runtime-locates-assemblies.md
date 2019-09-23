@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f8046852f847cd5493a2ed17b491a39e494ce2b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969111"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052129"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 
@@ -144,7 +144,9 @@ Der abgesicherte Modus kann auf die gesamte Anwendung oder ausgewählte Assembly
 Im dritten Schritt überprüft die Common Language Runtime die Computerkonfigurationsdatei. Diese Datei mit dem Namen "Machine.config" befindet sich auf dem lokalen Computer im Unterverzeichnis "Config" des Stammverzeichnisses, in dem die Common Language Runtime installiert ist. Diese Datei kann von Administratoren verwendet werden, um lokale Assemblybindungsbeschränkungen für diesen Computer festzulegen. Die Einstellungen in der Computerkonfigurationsdatei haben Vorrang vor allen anderen Konfigurationseinstellungen. Dies bedeutet allerdings nicht, dass sich alle Konfigurationseinstellungen in dieser Datei befinden sollten. Die Version, die in der Administratorrichtliniendatei festgelegt ist, ist endgültig und kann nicht überschrieben werden. Überschreibungen, die in der Datei "Machine.config" festgelegt sind, haben Auswirkungen auf alle Anwendungen. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../configure-apps/index.md).
 
 <a name="step2"></a> 
+
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Schritt 2: Suchen nach Assemblys, auf die zuvor verwiesen wurde
+
 Wenn die angeforderte Assembly bereits in vorherigen Aufrufen angefordert wurde, verwendet die Common Language Runtime die Assembly, die bereits geladen ist. Dies kann sich auf die Namensgebung für Assemblys auswirken, aus denen eine Anwendung zusammengesetzt ist. Weitere Informationen zum Benennen von Assemblys finden Sie unter [Assemblynamen](../../standard/assembly/names.md).
 
 Wenn eine vorherige Anforderung für die Assembly nicht ausgeführt werden konnte, führen weitere Anforderungen sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu laden. Ab .NET Framework Version 2.0 werden Assemblybindungsfehler zwischengespeichert. Anhand der zwischengespeicherten Informationen wird bestimmt, ob versucht wird, die Assembly zu laden.

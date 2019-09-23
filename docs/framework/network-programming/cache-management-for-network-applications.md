@@ -6,12 +6,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199590"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048873"
 ---
 # <a name="cache-management-for-network-applications"></a>Cacheverwaltung für Netzwerkanwendungen
 Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicherung von Ressourcen, die mithilfe der <xref:System.Net.WebClient>-, <xref:System.Net.WebRequest>-, <xref:System.Net.HttpWebRequest>- und <xref:System.Net.FtpWebRequest>-Klassen erhalten werden.  
@@ -23,16 +23,16 @@ Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicher
  Aus Sicherheitsgründen wird das Zwischenspeichern **nicht** für Szenarios der mittleren Ebene empfohlen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)  
+ [Cacherichtlinie](cache-policy.md)  
  Erläutert, was eine Cacherichtlinie ist und wie sie definiert werden kann.  
   
- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)  
  Definiert jeden Typ von verfügbaren speicherortbasierten Cacherichtlinien für Ressourcen von Hypertext Transfer Protocol (http und https).  
   
- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Zeitbasierte Cacherichtlinien](time-based-cache-policies.md)  
  Beschreibt die Kriterien, die zum Anpassen einer zeitbasierten Cacherichtlinie verwendet werden können.  
   
- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](configuring-caching-in-network-applications.md)  
  Beschreibt, wie Sie programmgesteuert Cacherichtlinien und Anforderungen erstellen, die Zwischenspeicher verwenden.  
   
 ## <a name="reference"></a>Referenz  

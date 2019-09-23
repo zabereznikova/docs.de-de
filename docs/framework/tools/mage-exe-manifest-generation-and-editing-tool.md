@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 13a22cd15da3d4cf7eb26359c692389d27d377c0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422354"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044511"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
 Bei Manifest Generation and Editing Tool (*Mage.exe*) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann *Mage.exe* von Batchskripten und anderen Windows-basierten Anwendungen ausgeführt werden, beispielsweise ASP.NET-Anwendungen.
 
-Sie können statt *Mage.exe* auch die grafische Anwendung *MageUI.exe* verwenden. Weitere Informationen finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+Sie können statt *Mage.exe* auch die grafische Anwendung *MageUI.exe* verwenden. Weitere Informationen finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio, um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio, um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
 Zwei Versionen von *Mage.exe* und *MageUI.exe* sind in Visual Studio enthalten. Die Versionsinformationen können Sie anzeigen, indem Sie *MageUI.exe* ausführen und auf **Hilfe** und **Info** klicken. In dieser Dokumentation wird Version 4.0.x.x von *Mage.exe* und *MageUI.exe* beschrieben.
 
@@ -107,7 +107,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  Die Option **-TrustLevel** für Anwendungsmanifeste beschreibt den Berechtigungssatz, der für eine Anwendung erforderlich ist, damit sie auf dem Clientcomputer ausgeführt werden kann. Standardmäßig wird Anwendungen auf Grundlage der *Zone* , in der sich die zugehörige URL befindet, eine Vertrauensebene zugewiesen. Anwendungen, die über ein Unternehmensnetzwerk bereitgestellt werden, werden in der Regel in der Intranetzone platziert. Anwendungen, die über das Internet bereitgestellt werden, werden in der Internetzone platziert. In beiden Sicherheitszonen wird der Zugriff der Anwendung auf lokale Ressourcen eingeschränkt, wobei für die Intranetzone etwas geringere Einschränkungen der Berechtigungen gelten als für die Internetzone. Anwendungen in der FullTrust-Zone wird vollständiger Zugriff auf die lokalen Ressourcen eines Computers gewährt. Wenn Sie mithilfe der Option **-TrustLevel** eine Anwendung in dieser Zone platzieren, fordert die Trust-Manager-Komponente der CLR den Benutzer auf, anzugeben, ob diese höhere Vertrauensebene gewährt werden soll. Bei Bereitstellung der Anwendung über ein Unternehmensnetzwerk können Sie die Vertrauensebene der Anwendung mithilfe der Bereitstellung vertrauenswürdiger Anwendungen erhöhen, ohne dazu den Benutzer auffordern zu müssen.
 
- Anwendungsmanifeste unterstützen zudem benutzerdefinierte Trust-Abschnitte. Auf diese Weise kann die Anwendung das Sicherheitsprinzip der geringsten Berechtigung einhalten, da Sie das Manifest so konfigurieren können, dass nur genau die Berechtigungen angefordert werden, die zum Ausführen der Anwendung erforderlich sind. *Mage.exe* bietet keine direkte Unterstützung für das Hinzufügen eines benutzerdefinierten Trust-Abschnitts. Sie können einen solchen Abschnitt mit einem Text-Editor, einem XML-Parser oder dem grafischen Tool *MageUI.exe* hinzufügen. Weitere Informationen zum Hinzufügen benutzerdefinierter Trust-Abschnitte mit *MageUI.exe* finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, grafischer Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
+ Anwendungsmanifeste unterstützen zudem benutzerdefinierte Trust-Abschnitte. Auf diese Weise kann die Anwendung das Sicherheitsprinzip der geringsten Berechtigung einhalten, da Sie das Manifest so konfigurieren können, dass nur genau die Berechtigungen angefordert werden, die zum Ausführen der Anwendung erforderlich sind. *Mage.exe* bietet keine direkte Unterstützung für das Hinzufügen eines benutzerdefinierten Trust-Abschnitts. Sie können einen solchen Abschnitt mit einem Text-Editor, einem XML-Parser oder dem grafischen Tool *MageUI.exe* hinzufügen. Weitere Informationen zum Hinzufügen benutzerdefinierter Trust-Abschnitte mit *MageUI.exe* finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, grafischer Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
 Visual Studio 2017 enthält Version 4.6.1 von *Mage.exe*. Manifeste, die mit dieser Version von *Mage.exe* erstellt werden, sind an .NET Framework 4 ausgerichtet. Für die Verwendung früherer Versionen von .NET Framework verwenden Sie eine frühere Version von *Mage.exe*.
 
@@ -222,5 +222,5 @@ mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -Cryp
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)
-- [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

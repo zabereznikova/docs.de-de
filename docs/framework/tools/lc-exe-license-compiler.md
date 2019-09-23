@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 753312005cd60b5be6bf5504fa9b7f14bd6367fe
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2e66534cac1edcc6759321c3024effa4990faeda
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894678"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044496"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
@@ -26,7 +26,7 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
   
  Kreuzkompilierung zwischen 32-Bit und 64-Bit wird nicht unterstützt, wenn Sie beim Erstellen des Projekts den Lizenzcompiler verwenden. Das liegt daran, dass der Lizenzcompiler Assemblys laden muss und das Laden von 64-Bit-Assemblys aus einer 32-Bit-Anwendung und umgekehrt nicht erlaubt ist. Verwenden Sie in diesem Fall den Lizenzcompiler von der Befehlszeile aus, um die Lizenz manuell zu kompilieren, und geben Sie die entsprechende Architektur an.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -94,6 +94,6 @@ lc @response.rsp
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)
-- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Al.exe (Assembly Linker-Tool)](al-exe-assembly-linker.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

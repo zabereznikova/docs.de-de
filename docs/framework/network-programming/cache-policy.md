@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112800"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048776"
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
@@ -24,7 +24,7 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
   
  Die in der folgenden Tabelle beschriebenen Klassen werden verwendet, um Cacherichtlinien anzugeben.  
   
-|Klassenname|Beschreibung|  
+|Klassenname|BESCHREIBUNG|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Stellt speicherortbasierte und zeitbasierte Cacherichtlinien für mithilfe von <xref:System.Net.HttpWebRequest>-Objekten angeforderte Ressourcen dar.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Stellt die speicherortbasierten oder die <xref:System.Net.Cache.RequestCacheLevel.Default>-zeitbasierten Cacherichtlinien für Ressourcen dar, die mithilfe von <xref:System.Net.WebRequest>-Objekten angefordert werden.|  
@@ -32,15 +32,15 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|Gibt Werte an, die zum Erstellen von speicherort- und zeitbasierten <xref:System.Net.Cache.HttpRequestCachePolicy>-Objekten verwendet werden.|  
 |<xref:System.Net.Cache.RequestCacheLevel>|Gibt Werte an, die zum Erstellen von speicherort- oder <xref:System.Net.Cache.RequestCacheLevel.Default> zeitbasierten <xref:System.Net.Cache.RequestCachePolicy>-Objekten verwendet werden.|  
   
- Sie können eine Cacherichtlinie für alle Anforderungen der Anwendung oder für einzelne Anforderungen definieren. Wenn Sie eine Cacherichtlinie auf Anwendungsebene und eine Cacherichtlinie auf Anforderungsebene angeben, wird die Richtlinie für die Anforderungsebenen verwendet. Sie können eine Cacherichtlinie auf Anwendungsebene programmgesteuert oder mithilfe der Anwendung oder Computerkonfigurationsdateien angeben. Weitere Informationen finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+ Sie können eine Cacherichtlinie für alle Anforderungen der Anwendung oder für einzelne Anforderungen definieren. Wenn Sie eine Cacherichtlinie auf Anwendungsebene und eine Cacherichtlinie auf Anforderungsebene angeben, wird die Richtlinie für die Anforderungsebenen verwendet. Sie können eine Cacherichtlinie auf Anwendungsebene programmgesteuert oder mithilfe der Anwendung oder Computerkonfigurationsdateien angeben. Weitere Informationen finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
  Um eine Cacherichtlinie zu erstellen, müssen Sie ein Richtlinienobjekt erstellen, indem Sie die Instanz der <xref:System.Net.Cache.RequestCachePolicy>- oder <xref:System.Net.Cache.HttpRequestCachePolicy>-Klasse erstellen. Um die Richtlinie für eine Anforderung anzugeben, legen Sie die <xref:System.Net.WebRequest.CachePolicy%2A>-Eigenschaft der Anforderung auf das Richtlinienobjekt fest. Wenn Sie eine Richtlinie auf Anwendungsebene programmgesteuert festlegen, legen Sie die <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A>-Eigenschaft auf das Richtlinienobjekt fest.  
   
- Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+ Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
+- [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)
+- [Zeitbasierte Cacherichtlinien](time-based-cache-policies.md)
+- [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](configuring-caching-in-network-applications.md)

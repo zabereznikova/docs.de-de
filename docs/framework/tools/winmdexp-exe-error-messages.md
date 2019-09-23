@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9844505516550b9d817b52c72cea15a2468f7b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ad4ea3b2d5fb828c425f30e76244772f5ca9a11a
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025954"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043979"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe-Fehlermeldungen
-Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **Komponente für Windows-Runtime** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  
+Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **Komponente für Windows-Runtime** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  
   
  Die Fehlermeldungen sollen alle Informationen enthalten, die Sie benötigen, um die Fehlerbedingungen anzugehen, die gemeldet werden. Jedoch erfordern einige Probleme mehr Informationen als in die Meldung passen. Zusätzliche Informationen zu [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127) finden Sie im Windows Dev Center.  
   
@@ -175,5 +175,5 @@ Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127)

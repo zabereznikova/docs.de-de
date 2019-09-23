@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce281398fe7ea3a280355a7b79cc7144aba256be
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b40cb5d5d629ea7a3cb019be42b42a1072572311
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894646"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044382"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
@@ -155,5 +155,5 @@ public class App
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
-- [Extras](../../../docs/framework/tools/index.md)
-- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](index.md)
+- [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

@@ -1,19 +1,19 @@
 ---
-title: Vorhersagen von Preisen per Regression mit dem Modell-Generator
+title: 'Tutorial: Vorhersagen von Preisen per Regression mit dem Modell-Generator'
 description: In diesem Tutorial wird veranschaulicht, wie mit dem ML.NET-Modell-Generator ein Regressionsmodell für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 09/12/2019
+ms.date: 09/18/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 675ca58ab071293fe5c04b1b85337fb1e48dfbea
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bb344a7f01e8ffe0e40578c6fb2f28bebd2eb807
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991346"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117961"
 ---
-# <a name="predict-prices-using-regression-with-model-builder"></a>Vorhersagen von Preisen per Regression mit dem Modell-Generator
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
 Hier erfahren Sie, wie Sie mit dem ML.NET-Modellgenerator ein Regressionsmodells für Preisvorhersagen erstellen.  Die .NET Konsolenanwendung, die Sie in diesem Tutorial entwickeln, sagt Taxipreise basierend auf historischen Taxipreisdaten aus New York vorher.
 
@@ -127,7 +127,7 @@ Das Ergebnis des Trainings sind zwei Projekte.
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-1. Fügen Sie der Klasse `Program` zur Klasse `ConsumeModel` hinzu.
+1. Fügen Sie der `ConsumeModel`-Klasse die `Program`-Methode hinzu.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)

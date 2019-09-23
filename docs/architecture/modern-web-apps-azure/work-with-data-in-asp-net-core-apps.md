@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3b251003a2da998936a11acff3cc2975c4b78838
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374000"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117305"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -25,13 +25,13 @@ Wenn Sie eine neue ASP.NET Core-Anwendung programmieren, die mit relationalen Da
 
 Wenn Sie EF Core mit einer SQL Server-Datenbank verwenden möchten, führen Sie den folgenden Dotnet-CLI-Befehl aus:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
 Führen Sie den folgenden Befehl zum Testen aus, wenn Sie Unterstützung für eine InMemory-Datenquelle hinzufügen möchten:
 
-```console
+```dotnetcli
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 ```
 

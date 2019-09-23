@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 41a55df53f8b0dfd4eefc9bc4ecf6b2eef122c8d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394276"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047860"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
@@ -68,6 +68,6 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
-- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)
+- [Netzwerkprogrammierung in .NET Framework](index.md)
+- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)

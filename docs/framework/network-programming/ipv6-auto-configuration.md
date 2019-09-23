@@ -2,12 +2,12 @@
 title: Automatische IPv6-Konfiguration
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647320"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047809"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatische IPv6-Konfiguration
 Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. Das bedeutet, dass es möglich sein soll, dass ein Knoten in ein IPv6-Netzwerk eingeführt und dann automatisch ohne Benutzereingriff konfiguriert wird.  
@@ -15,9 +15,9 @@ Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. 
 ## <a name="type-of-auto-configuration"></a>Typen der automatischen Konfiguration  
  IPv6 unterstützt die folgenden Typen der automatischen Konfiguration:  
   
-- **Stateful auto-configuration (Zustandsbehaftete automatische Konfiguration)**. Diese Art der Konfiguration erfordert ein gewisses Maß an Benutzereingriff, da ein Server mit einem Dynamic Host Configuration-Protokoll für IPv6 (DHCPv6) für die Installation und Verwaltung der Knoten benötigt wird. Der DHCPv6-Server führt eine Liste von Knoten, für die er Konfigurationsinformationen bereitstellt. Er verwaltet auch Statusinformationen, sodass der Server weiß, wie lange jede Adresse verwendet wird und wann diese für eine Neuzuweisung verfügbar ist.  
+- **Stateful auto-configuration (Zustandsbehaftete automatische Konfiguration)** . Diese Art der Konfiguration erfordert ein gewisses Maß an Benutzereingriff, da ein Server mit einem Dynamic Host Configuration-Protokoll für IPv6 (DHCPv6) für die Installation und Verwaltung der Knoten benötigt wird. Der DHCPv6-Server führt eine Liste von Knoten, für die er Konfigurationsinformationen bereitstellt. Er verwaltet auch Statusinformationen, sodass der Server weiß, wie lange jede Adresse verwendet wird und wann diese für eine Neuzuweisung verfügbar ist.  
   
-- **Stateless auto-configuration (Zustandslose automatische Konfiguration)**. Diese Art der Konfiguration ist für kleine Organisationen und Einzelpersonen geeignet. In diesem Fall bestimmt jeder Host seine Adressen aus den Inhalten der empfangenen Routerankündigungen. Wenn der IEEE EUI-64-Standard verwendet wird, um die Netzwerk-ID einer Adresse zu definieren, empfiehlt es sich, die Eindeutigkeit der Hostadresse auf dem Link anzunehmen.  
+- **Stateless auto-configuration (Zustandslose automatische Konfiguration)** . Diese Art der Konfiguration ist für kleine Organisationen und Einzelpersonen geeignet. In diesem Fall bestimmt jeder Host seine Adressen aus den Inhalten der empfangenen Routerankündigungen. Wenn der IEEE EUI-64-Standard verwendet wird, um die Netzwerk-ID einer Adresse zu definieren, empfiehlt es sich, die Eindeutigkeit der Hostadresse auf dem Link anzunehmen.  
   
  Unabhängig davon, wie die Adresse bestimmt wird, muss der Knoten überprüfen, dass die potenzielle Adresse für den lokalen Link eindeutig ist. Dies erfolgt, indem eine Nachbaranfrage eine Nachricht an die potenzielle Adresse sendet. Wenn der Knoten eine Antwort empfängt, weiß er, dass die Adresse bereits verwendet wird und er eine andere Adresse bestimmen muss.  
   
@@ -26,5 +26,5 @@ Ein wichtiges Ziel von IPv6 ist die Unterstützung von Plug & Play für Knoten. 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Sockets](../../../docs/framework/network-programming/sockets.md)
+- [Internetprotokoll Version 6](internet-protocol-version-6.md)
+- [Sockets](sockets.md)

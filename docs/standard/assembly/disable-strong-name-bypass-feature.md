@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cdc700ecc8195da1b5e0975f00a4dc6785d330
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 35bf61ffd2a85221cdf33a0304765d94770c1eab
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972750"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053989"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
@@ -36,7 +36,7 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
   
 1. Öffnen oder erstellen Sie die Anwendungskonfigurationsdatei.  
   
-     Weitere Informationen zu dieser Datei finden Sie im Abschnitt zu Anwendungskonfigurationsdateien unter [Konfigurieren von Apps](../../framework/configure-apps/index.md).  
+    Weitere Informationen zu dieser Datei finden Sie im Abschnitt zu Anwendungskonfigurationsdateien unter [Konfigurieren von Apps](../../framework/configure-apps/index.md).  
   
 2. Fügen Sie folgenden Eintrag hinzu:  
   

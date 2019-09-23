@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8924ed14c597a691698180c7c362b80c41532c2c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d0cbe66870fc75da02ad56da73de86d4837c0c8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614094"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052143"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
 Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalteten Anwendungen oder Komponenten, die für die parallele Ausführung entwickelt wurden:  
@@ -60,9 +60,9 @@ Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalt
   
  Die Laufzeit verwendet die Assemblyversion für die Assemblybindung. Die Laufzeit behandelt zwei identische Assemblys mit unterschiedlichen Versionsnummern als zwei verschiedene Assemblys.  
   
- Mit dem [Tool für den globalen Assemblycache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) können Sie eine Assembly ersetzen, wenn lediglich die Dateiversionsnummer höher ist. Der Installer führt in in der Regel nur dann eine Installation über eine Assembly durch, wenn die Assemblyversionsnummer höher ist.  
+ Mit dem [Tool für den globalen Assemblycache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) können Sie eine Assembly ersetzen, wenn lediglich die Dateiversionsnummer höher ist. Der Installer führt in in der Regel nur dann eine Installation über eine Assembly durch, wenn die Assemblyversionsnummer höher ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md)
-- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Parallele Ausführung](side-by-side-execution.md)
+- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

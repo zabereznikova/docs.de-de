@@ -3,12 +3,12 @@ title: Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 description: Übersicht und Installation des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106902"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118001"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Installieren des ML.NET-Befehlszeilenschnittstellen-Tools (CLI)
 
@@ -33,7 +33,7 @@ Die ML.NET-CLI wird wie jedes andere globale .NET-Tool installiert. Sie verwende
 
 Im folgenden Beispiel wird gezeigt, wie eine ML.NET-CLI im standardmäßigen NuGet-Feedspeicherort installiert wird:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet
 ```
 
@@ -58,13 +58,13 @@ Es sollte die Hilfe zu den verfügbaren Befehlen für das mlnet-Tool angezeigt w
 
 Wenn Sie versuchen, eine Vorabversion oder eine spezifische Version des Tools zu installieren, können Sie das [Framework](../../standard/frameworks.md) im folgenden Format angeben:
 
-```console
+```dotnetcli
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 Sie können auch überprüfen, ob das Paket ordnungsgemäß installiert ist, indem Sie den folgenden Befehl eingeben:
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
 
@@ -72,7 +72,7 @@ dotnet tool list -g
 
 Geben Sie den folgenden Befehl ein, um das Paket über Ihren lokalen Computer zu deinstallieren:
 
-```console
+```dotnetcli
 dotnet tool uninstall mlnet -g
 ```
 
@@ -80,7 +80,7 @@ dotnet tool uninstall mlnet -g
 
 Geben Sie den folgenden Befehl ein, um das Paket über Ihren lokalen Computer zu aktualisieren:
 
-```console
+```dotnetcli
 dotnet tool update -g mlnet
 ```
 
@@ -100,7 +100,7 @@ Auf dem Computer, auf dem Sie die Vervollständigung aktivieren möchten, müsse
 
 1. Installieren Sie das globale `dotnet-suggest`-Tool, indem Sie den folgenden Befehl ausführen:
 
-    ```console
+    ```dotnetcli
     dotnet tool install dotnet-suggest -g
     ```
 

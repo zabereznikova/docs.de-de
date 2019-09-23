@@ -2,12 +2,12 @@
 title: Zertifikatauswahl und -überprüfung
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048746"
 ---
 # <a name="certificate-selection-and-validation"></a>Zertifikatauswahl und -überprüfung
 Die <xref:System.Net>-Klassen unterstützen mehrere Möglichkeiten zur Auswahl und Überprüfung von <xref:System.Security.Cryptography.X509Certificates> für SSL-Verbindungen (Secure Socket Layer). Ein Client kann ein oder mehrere Zertifikate zur Authentifizierung gegenüber eines Servers wählen. Ein Server kann fordern, dass ein Clientzertifikat ein oder mehrere bestimmte Attribute für die Authentifizierung aufweist.  
@@ -54,5 +54,5 @@ Das *HttpCfg.exe*-Tool kann verwendet werden, um Serverzertifikate für die <xre
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)
-- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](security-in-network-programming.md)
+- [Netzwerkprogrammierung in .NET Framework](index.md)

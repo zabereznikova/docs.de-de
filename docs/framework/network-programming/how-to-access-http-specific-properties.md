@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f902fb3ee97e94c85192836be047dfe632249735
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645806"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048490"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Vorgehensweise: Zugreifen auf HTTP-spezifische Eigenschaften
 In diesem Beispiel wird gezeigt, wie das HTTP-Verhalten **Keep-Alive** deaktiviert und die Protokollversionsnummer vom Webserver erhalten werden kann.  
@@ -51,6 +51,6 @@ HttpWResp.Close();
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zugreifen auf das Internet über einen Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
-- [HTTP](../../../docs/framework/network-programming/http.md)
+- [Zugreifen auf das Internet über einen Proxy](accessing-the-internet-through-a-proxy.md)
+- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
+- [HTTP](http.md)

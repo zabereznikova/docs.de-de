@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 5b4936a54627e6016cabc41954d1a18ae82cdf90
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422472"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048122"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung
-Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung  
   
@@ -155,8 +155,8 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
-- [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
-- [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
+- [Cacherichtlinie](cache-policy.md)
+- [Speicherortbasierte Cacherichtlinien](location-based-cache-policies.md)
+- [Zeitbasierte Cacherichtlinien](time-based-cache-policies.md)
+- [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

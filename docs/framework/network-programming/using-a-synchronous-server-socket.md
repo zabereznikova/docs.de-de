@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117247"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047036"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Verwenden eines synchronen Serversockets
 Synchrone Serversockets halten die Ausführung der Anwendung an, bis eine Verbindungsanforderung für den Socket empfangen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können für einfache Netzwerkanwendungen geeignet sein.  
@@ -77,6 +77,6 @@ handler.Close();
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [Synchroner Serversocket, Beispiel](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
+- [Synchroner Serversocket, Beispiel](synchronous-server-socket-example.md)
+- [Überwachen mit Sockets](listening-with-sockets.md)
