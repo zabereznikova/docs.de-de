@@ -2,12 +2,12 @@
 title: Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Modernisieren Sie den Lebenszyklus Ihrer APP mit CI/CD-Pipelines und devops-Tools in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 62b6c541780ed3bf82c55e576fa485f811b55b17
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374141"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181904"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 
@@ -17,9 +17,9 @@ Obwohl Continuous Integration und Bereitstellungs Methoden gut festgelegt sind, 
 
 Azure DevOps Services unterstützt Continuous Integration und die Bereitstellung von Anwendungen mit mehreren Containern in einer Vielzahl von Umgebungen über die offiziellen Azure DevOps Services Bereitstellungs Aufgaben:
 
-- [Bereitstellen in einem Azure-Web-App für Container](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops)
+- [Bereitstellen in einem Azure-Web-App für Container](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 
-- [Bereitstellen auf Azure Container Service – Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
+- [Bereitstellen in Azure Kubernetes Service](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
 Sie können jedoch auch in [docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) oder DC/OS bereitstellen, indem Sie Azure DevOps Services skriptbasierten Tasks verwenden.
 
