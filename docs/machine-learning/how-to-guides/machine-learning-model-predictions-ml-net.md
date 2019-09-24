@@ -1,16 +1,16 @@
 ---
 title: Treffen von Vorhersagen mit einem trainierten Modell
 description: Erfahren Sie, wie Sie mit einem trainierten Modell Vorhersagen treffen
-ms.date: 06/20/2019
+ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: ef2b22ff220d1fce1ec43f26c7d51f7e551e038d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 33e0cb74342ca3e82ff5f108453d63e022d63d20
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307400"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118018"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Treffen von Vorhersagen mit einem trainierten Modell
 
@@ -43,14 +43,12 @@ Für die vorhergesagten Wertspalten, die von einem Modell erstellt werden, hat M
 Da der in diesem Beispiel verwendete Algorithmus ein linearer Regressionsalgorithmus ist, lautet der Standardname der Ausgabespalte `Score` und wird durch das [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)-Attribut für die `PredictedPrice`-Eigenschaft definiert.
 
 ```csharp
-class HousingPrediction : HousingData
+class HousingPrediction
 {
     [ColumnName("Score")]
     public float PredictedPrice { get; set; }
 }
 ```
-
-Das `HousingPrediction`-Datenmodell erbt von `HousingData`, um das Visualisieren der ursprünglichen Eingabedaten zusammen mit der vom Modell generierten Ausgabe zu erleichtern.  
 
 ## <a name="set-up-a-prediction-pipeline"></a>Einrichten einer Vorhersagepipeline
 
@@ -90,7 +88,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 Wenn Sie auf die `Score`-Eigenschaft des `prediction`-Objekts zugreifen, sollten Sie einen Wert ähnlich wie `150079` erhalten.
 
-## <a name="batch-prediction"></a>Batchvorhersage
+## <a name="multiple-predictions"></a>Mehrere Vorhersagen
 
 Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist `inputData` der Name von [`IDataView`](xref:Microsoft.ML.IDataView). Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
 

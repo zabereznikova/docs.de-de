@@ -3,16 +3,16 @@ title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 27f4b90f130345dd10517a5de78c759066afdf07
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926636"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117838"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
-Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in <xref:System.Array>, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>. Diese Funktionen ermöglichen eine kürzere, klarere Syntax für den Zugriff auf einzelne Elemente oder Bereiche von Elementen in einer Sequenz.
+Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>. Diese Funktionen ermöglichen eine kürzere, klarere Syntax für den Zugriff auf einzelne Elemente oder Bereiche von Elementen in einer Sequenz.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -24,12 +24,12 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Sprachunterstützung für Indizes und Bereiche
 
-Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren.
+Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren:
 
 - <xref:System.Index?displayProperty=nameWithType>: Stellt einen Index in einer Sequenz dar.
-- Der `^`-Operator, der angibt, dass ein Index relativ zum Ende einer Sequenz ist.
+- Der Index vom Endeoperator `^`, der angibt, dass ein Index relativ zum Ende einer Sequenz ist.
 - <xref:System.Range?displayProperty=nameWithType>: Stellt einen Unterbereich einer Sequenz dar.
-- Der Bereichsoperator (`..`), die den Beginn und das Ende eines Bereichs als Operanden angibt.
+- Der Bereichsoperator `..`, der den Beginn und das Ende eines Bereichs als seine Operanden angibt.
 
 Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence[sequence.Length - n]`.
 

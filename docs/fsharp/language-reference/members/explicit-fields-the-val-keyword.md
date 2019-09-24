@@ -2,12 +2,12 @@
 title: 'Explizite Felder: Das Val-Schlüsselwort'
 description: Erfahren Sie mehr F# über das Schlüsselwort "Val", das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp zu deklarieren, ohne den Typ zu initialisieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627533"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216476"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val-Schlüsselwort
 
@@ -23,7 +23,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 In der Regel werden Felder in einer Klasse oder einem Strukturtyp durch eine `let`-Bindung definiert. `let`-Bindungen müssen jedoch als Teil des Klassenkonstruktors initialisiert werden, was nicht immer möglich, notwendig oder gewünscht ist. Sie können das `val`-Schlüsselwort verwenden, wenn Sie ein nicht initialisiertes Feld implementieren möchten.
 
-Explizite Felder können statisch oder nicht statisch sein. Der Zugriffsmodifizierer `private`kann, `internal`oder sein. `public` Standardmäßig sind explizite Felder öffentlich. Dies unterscheidet sich von `let`-Bindungen in Klassen, die immer privat sind.
+Explizite Felder können statisch oder nicht statisch sein. Der *Zugriffsmodifizierer* kann `public`, `internal` `private`oder sein. Standardmäßig sind explizite Felder öffentlich. Dies unterscheidet sich von `let`-Bindungen in Klassen, die immer privat sind.
 
 Das [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) -Attribut ist für explizite Felder in Klassentypen erforderlich, die über einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
 
@@ -48,7 +48,7 @@ Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine 
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 11 12 abc
 30 def
 ```

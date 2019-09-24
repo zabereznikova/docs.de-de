@@ -2,12 +2,12 @@
 title: 'Schleifen: while...do-Ausdruck'
 description: Sehen Sie sich an, wie der while-... "Do Expression" wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine angegebene Test Bedingung "true" ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: f05bdd9f8f4b9446d59f68e1231fb75e18e9b526
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73526279358db101f8d07721a200920f1e87f119
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630754"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216632"
 ---
 # <a name="loops-whiledo-expression"></a>Schleifen: while...do-Ausdruck
 
@@ -30,7 +30,7 @@ Das folgende Beispiel veranschaulicht die Verwendung des `while...do` -Ausdrucks
 
 Die Ausgabe des vorherigen Codes ist ein Stream von Zufallszahlen zwischen 1 und 20, der letzte Wert ist 10.
 
-```
+```console
 13 19 8 18 16 2 10
 Found a 10!
 ```

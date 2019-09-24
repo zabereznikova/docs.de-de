@@ -2,12 +2,12 @@
 title: 'Entscheidungstabelle: .NET Frameworks zur Verwendung für Docker'
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entscheidungstabelle, .NET Frameworks zur Verwendung für Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 96b2750e52d64b06444b7f87dea624879f37d3d7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675817"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039676"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Entscheidungstabelle: .NET Frameworks zur Verwendung für Docker
 
@@ -16,74 +16,18 @@ In der folgenden Entscheidungstabelle wird zusammengefasst, ob .NET Framework od
 > [!IMPORTANT]
 > Ihre Entwicklungscomputer führen einen Docker-Host aus: entweder Linux oder Windows. Verwandte Microservices, die Sie zusammen in einer Lösung ausführen und testen wollen, müssen alle auf der gleichen Containerplattform ausgeführt werden.
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Architektur/App-Typ</strong></th>
-<th><strong>Linux-Container</strong></th>
-<th><strong>Windows-Container</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Microservices in Containern</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Monolithische App</td>
-<td>.NET Core</td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p></td>
-</tr>
-<tr class="odd">
-<td>Klassenbeste Leistung und Skalierbarkeit</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>Migration von Windows Server-Legacy-App („braunes Feld“) in Container</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="odd">
-<td>Neue containerbasierte Entwicklung („grünes Feld“)</td>
-<td>.NET Core</td>
-<td>.NET Core</td>
-</tr>
-<tr class="even">
-<td>ASP.NET Core</td>
-<td>.NET Core</td>
-<td><p>.NET Core (empfohlen)</p>
-<p>.NET Framework</p></td>
-</tr>
-<tr class="odd">
-<td>ASP.NET 4 (MVC 5, Web-API 2 und Web Forms)</td>
-<td>--</td>
-<td>.NET Framework</td>
-</tr>
-<tr class="even">
-<td>SignalR-Dienste</td>
-<td>.NET Core 2.1 oder eine höhere Version</td>
-<td><p>.NET Framework</p>
-<p>.NET Core 2.1 oder eine höhere Version</p></td>
-</tr>
-<tr class="odd">
-<td>WCF, WF und andere Legacyframeworks</td>
-<td>WCF in .NET Core (nur die WCF-Clientbibliothek)</td>
-<td><p>.NET Framework</p>
-<p>WCF in .NET Core (nur die WCF-Clientbibliothek)</p></td>
-</tr>
-<tr class="even">
-<td>Nutzung von Azure-Diensten</td>
-<td><p>.NET Core</p>
-<p>(Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen)</p></td>
-<td><p>.NET Framework</p>
-<p>.NET Core</p>
-<p>(Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen)</p></td>
-</tr>
-</tbody>
-</table>
+| Architektur/App-Typ | Linux-Container | Windows-Container |
+|-------------------------|------------------|--------------------|
+| Microservices in Containern | .NET Core | .NET Core |
+| Monolithische App | .NET Core | .NET Framework <br/> .NET Core |
+| Klassenbeste Leistung und Skalierbarkeit | .NET Core | .NET Core |
+| Migration von Windows Server-Legacy-App („braunes Feld“) in Container | -- | .NET Framework |
+| Neue containerbasierte Entwicklung („grünes Feld“) | .NET Core | .NET Core |
+| ASP.NET Core | .NET Core | .NET Core (empfohlen) <br/> .NET Framework |
+| ASP.NET 4 (MVC 5, Web-API 2 und Web Forms) | -- | .NET Framework |
+| SignalR-Dienste | .NET Core 2.1 oder eine höhere Version | .NET Framework <br/> .NET Core 2.1 oder eine höhere Version |
+| WCF, WF und andere Legacyframeworks | WCF in .NET Core (nur Clientbibliothek) | .NET Framework <br/> WCF in .NET Core (nur Clientbibliothek) |
+| Nutzung von Azure-Diensten | .NET Core <br/> (Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen) | .NET Framework <br/> .NET Core <br/> (Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen) |
 
 >[!div class="step-by-step"]
 >[Zurück](net-framework-container-scenarios.md)

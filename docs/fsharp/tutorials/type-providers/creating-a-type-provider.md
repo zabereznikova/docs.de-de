@@ -2,18 +2,18 @@
 title: 'Tutorial: Erstellen eines Typanbieters'
 description: Erfahren Sie, wie Sie eigene F#-Typanbieter in F# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
 ms.date: 02/02/2019
-ms.openlocfilehash: 800b5a670b7f25f462e1ce23c3d40fd2eab3b102
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991867"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214269"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
 Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zum Typanbieter Mechanismus in F#finden Sie unter [Typanbieter](index.md).
 
-Das F#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Zum Beispiel:
+Das F#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Beispiel:
 
 - [FSharp. Data](https://fsharp.github.io/FSharp.Data/) umfasst Typanbieter für JSON-, XML-, CSV-und HTML-Dokumentformate.
 
@@ -152,13 +152,13 @@ Bevor Sie den Anbieter neu kompilieren, stellen Sie sicher, dass alle Instanzen 
 
 Zum Debuggen dieses Anbieters mithilfe von print-Anweisungen erstellen Sie ein Skript, das ein Problem mit dem Anbieter erzeugt, und verwenden Sie dann den folgenden Code:
 
-```
+```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
 Um diesen Anbieter mithilfe von Visual Studio zu debuggen, öffnen Sie den Developer-Eingabeaufforderung für Visual Studio mit Administrator Anmelde Informationen, und führen Sie den folgenden Befehl aus:
 
-```
+```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
@@ -370,7 +370,7 @@ Das Beispiel in diesem Abschnitt enthält nur *Gelöschte bereitgestellte Typen*
 
 - Wenn Sie einen Anbieter für einen Informationsraum schreiben, der so groß ist und so viele Verbindungen verwendet, dass es technisch nicht möglich ist, echte .NET-Typen für den Informationsraum zu generieren.
 
-In diesem Beispiel wird jeder bereitgestellte Typ zu `obj` gelöscht, und alle Verwendungen des Typs erscheinen im kompilierten Code als `obj`. Tatsächlich sind die zugrunde liegenden Objekte in diesen Beispielen Zeichenfolgen, der Typ im kompilierten .NET-Code ist jedoch `System.Object`. Wie bei jeder Verwendung der Typlöschung können Sie explizites Boxing und Unboxing sowie Umwandlungen verwenden, um gelöschte Typen zu unterlaufen. In diesem Fall kann eine ungültige Umwandlungsausnahme auftreten, wenn das Objekt verwendet wird. Eine Anbieterlaufzeit kann ihren eigenen privaten Darstellungstyp definieren, um falsche Darstellungen zu vermeiden. In F# selbst können Sie keine gelöschten Typen definieren. Nur bereitgestellte Typen dürfen gelöscht werden. Sie müssen sich darüber im Klaren sein, welche Auswirkungen, sowohl praktisch als auch semantisch, die Verwendung von gelöschten Typen für Ihren Typanbieter hat, im Vergleich zu einem Anbieter, der selbst gelöschte Typen bereitstellt. Ein gelöschter Typ hat keinen tatsächlichen .NET-Typ. Daher können Sie keine genaue Reflektion über den Typ ausführen, und Sie unterlaufen möglicherweise gelöschte Typen, wenn Sie zur Laufzeit Umwandlungen oder andere Techniken verwenden, die zur Laufzeit eine exakte Typsemantik erfordern. Das Unterlaufen gelöschter Typen führt zur Laufzeit häufig zu Ausnahmen bei der Typumwandlung.
+In diesem Beispiel wird jeder bereitgestellte Typ zu `obj` gelöscht, und alle Verwendungen des Typs erscheinen im kompilierten Code als `obj`. Tatsächlich sind die zugrunde liegenden Objekte in diesen Beispielen Zeichenfolgen, der Typ im kompilierten .NET-Code ist jedoch `System.Object`. Wie bei jeder Verwendung der Typlöschung können Sie explizites Boxing und Unboxing sowie Umwandlungen verwenden, um gelöschte Typen zu unterlaufen. In diesem Fall kann eine ungültige Umwandlungsausnahme auftreten, wenn das Objekt verwendet wird. Eine Anbieterlaufzeit kann ihren eigenen privaten Darstellungstyp definieren, um falsche Darstellungen zu vermeiden. In F# selbst können Sie keine gelöschten Typen definieren. Nur bereitgestellte Typen dürfen gelöscht werden. Sie müssen sich darüber im Klaren sein, welche Auswirkungen, sowohl praktisch als auch semantisch, die Verwendung von gelöschten Typen für Ihren Typanbieter hat, im Vergleich zu einem Anbieter, der selbst gelöschte Typen bereitstellt. Ein gelöschter Typ hat keinen tatsächlichen .NET-Typ. Daher können Sie keine genaue Reflektion über den Typ ausführen, und Sie unterlaufen möglicherweise gelöschte Typen, wenn Sie zur Laufzeit Umwandlungen oder andere Techniken verwenden, die zur Laufzeit eine exakte Typsemantik erfordern. Die Subversion gelöschter Typen führt zur Laufzeit häufig zu Ausnahmen bei der Typumwandlung.
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Auswählen von Darstellungen für gelöschte bereitgestellte Typen
 
@@ -463,7 +463,7 @@ Beachten Sie die folgenden Punkte:
 
 - Der Regex-Standardtyp stellt den parametrisierten `RegexTyped`-Typ dar.
 
-- Der `RegexTyped`-Konstruktor führt zu einem Aufruf des Regex-Konstruktors und übergibt als Muster das statische Argument.
+- Der `RegexTyped`-Konstruktor führt zu einem Aufruf des Regex-Konstruktors und übergibt als Muster das statische Typargument.
 
 - Die Ergebnisse der `Match`-Methode werden durch den <xref:System.Text.RegularExpressions.Match>-Standardtyp dargestellt.
 
@@ -899,7 +899,7 @@ let function1 () =
 
 Im Folgenden sehen Sie eine Abbildung des resultierenden Codes, der mit ildasm.exe dekompiliert wurde:
 
-```
+```il
 .class public abstract auto ansi sealed Module1
 extends [mscorlib]System.Object
 {
@@ -933,13 +933,11 @@ Beachten Sie die folgenden Konventionen, wenn Sie Typanbieter erstellen.
 
 **Anbieter für Verbindungsprotokolle** Im Allgemeinen sollten die Namen der meisten Anbieter-DLLs für Daten-und dienstkonnektivitätsprotokolle, z. b. odata `TypeProvider` - `TypeProviders`oder SQL-Verbindungen, auf oder enden. Verwenden Sie z. B. einen DLL-Namen ähnlich der folgenden Zeichenfolge:
 
-```
-  Fabrikam.Management.BasicTypeProviders.dll
-```
+`Fabrikam.Management.BasicTypeProviders.dll`
 
 Stellen Sie sicher, dass die bereitgestellten Typen Member des richtigen Namespace sind, und geben Sie das Konnektivitätsprotokoll an, das Sie implementiert haben:
 
-```
+```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
@@ -1082,7 +1080,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-Der Hilfscode „ProvidedTypes-0.2“, der Teil des Releases 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
+Der Hilfscode "ProvidedTypes-0.2", der Teil der Version 3.0 von F# ist, bietet nur eine eingeschränkte Unterstützung für das Bereitstellen von generierten Typen. Die folgenden Aussagen müssen für eine generierte Typdefinition zutreffen:
 
 - `isErased`muss auf `false`festgelegt werden.
 
@@ -1128,8 +1126,8 @@ Sie können Typanbieter mit den folgenden Tools aufrufen:
 
 In vielen Fällen können Typanbieter am einfachsten debuggt werden, indem Sie fsc.exe zusammen mit einer Testskriptdatei verwenden (z. B. script.fsx). Sie können ein Debugger von einer Eingabeaufforderung aus starten.
 
-```
-  devenv /debugexe fsc.exe script.fsx
+```console
+devenv /debugexe fsc.exe script.fsx
 ```
 
   Zur Protokollierung können Sie die normale Ausgabe auf die Standardausgabe verwenden.

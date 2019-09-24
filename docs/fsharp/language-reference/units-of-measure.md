@@ -2,12 +2,12 @@
 title: Maßeinheiten
 description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in F# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
 ms.date: 05/16/2016
-ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a81f7760301dc580e333d4659a72e6259d2c916b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630160"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216690"
 ---
 # <a name="units-of-measure"></a>Maßeinheiten
 
@@ -81,7 +81,7 @@ Wenn Sie dimensionierte Werte an Funktionen übergeben, die wenig Gleit Komma Za
 
 Die folgende Beispielsitzung zeigt die Ausgaben von und Eingaben für diesen Code.
 
-```
+```console
 Enter a temperature in degrees Fahrenheit.
 90
 That temperature in degrees Celsius is    32.22.

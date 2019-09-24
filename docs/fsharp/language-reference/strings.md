@@ -2,12 +2,12 @@
 title: Zeichenfolgen
 description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 07/05/2019
-ms.openlocfilehash: 284de939c90c4d9d4ea064fb4db1fb90a37038e2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 25f5d7ce5059ba5ddb4e938313c511734c2d7320
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627107"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216734"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
@@ -18,7 +18,7 @@ Der `string` -Typ stellt unveränderlichen Text als Sequenz von Unicode-Zeichen 
 
 ## <a name="remarks"></a>Hinweise
 
-Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen zu codieren. Der umgekehrte Schrägstrich und das nächste Zeichen werden als Escapesequenz bezeichnet. In F# Zeichenfolgenliteralen unterstützte Escapesequenzen werden in der folgenden Tabelle gezeigt.
+Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen zu codieren. Der umgekehrte Schrägstrich und das nächste Zeichen werden als *Escapesequenz*bezeichnet. In F# Zeichenfolgenliteralen unterstützte Escapesequenzen werden in der folgenden Tabelle gezeigt.
 
 |Zeichen|Escapesequenz|
 |---------|---------------|
@@ -71,7 +71,7 @@ Sie können auch Teil Zeichenfolgen extrahieren, indem Sie die Array Slice-Synta
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 abc
 def
 ```

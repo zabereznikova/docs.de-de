@@ -2,12 +2,12 @@
 title: Parameter und Argumente
 description: Erfahren Sie F# mehr über die Sprachunterstützung zum Definieren von Parametern und zum Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: e8094ffbc55870b5de75acb740aa2736ec6590a5
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106595"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216828"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
@@ -56,7 +56,7 @@ Andere Muster, die manchmal in Argumenten verwendet werden, `as` sind das Muster
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
@@ -121,7 +121,7 @@ Das folgende Beispiel veranschaulicht die Verwendung optionaler Parameter.
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true

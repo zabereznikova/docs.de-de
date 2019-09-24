@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 09/05/2019
-ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.date: 09/17/2019
+ms.openlocfilehash: 08ad77fbad7ad468e45fe629041ded82544792f2
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394284"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116120"
 ---
-# <a name="whats-new-in-net-core-30-preview-9"></a>Neuerungen in .NET Core 3.0 (Preview 9)
+# <a name="whats-new-in-net-core-30-release-candidate-1"></a>Neuerungen in .NET Core 3.0 (Release Candidate 1)
 
-In diesem Artikel werden Neuerungen in .NET Core 3.0 (in Preview 9) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
+In diesem Artikel werden Neuerungen in .NET Core 3.0 Release Candidate 1 (RC1) beschrieben. Eine der wichtigsten Verbesserungen ist die Unterstützung für Windows-Desktopanwendungen (nur Windows). Mit der .NET Core 3.0 SDK-Komponente Windows Desktop können Sie Ihre Windows Forms- und WPF-Anwendungen (Windows Presentation Foundation) portieren. Die Windows Desktop-Komponente wird ausdrücklich nur für Windows unterstützt und ist nur unter Windows enthalten. Weitere Informationen finden Sie im Abschnitt [Windows-Desktop](#windows-desktop) weiter unten in diesem Artikel.
 
-.NET Core 3.0 bietet Unterstützung für C# 8.0. Es wird dringend empfohlen, dass Sie [Visual Studio 2019 16.3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio für Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) oder [Visual Studio Code](https://code.visualstudio.com/) mit der **C#-Erweiterung** verwenden.
+.NET Core 3.0 bietet Unterstützung für C# 8.0. Es wird dringend empfohlen, dass Sie [Visual Studio 2019 16.3 Vorschau 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Visual Studio für Mac 8.3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019) oder [Visual Studio Code](https://code.visualstudio.com/) mit der **C#-Erweiterung** verwenden.
 
-[Sie können .NET Core 3.0 Preview 9 jetzt für Windows, macOS oder Linux herunterladen und sofort starten.](https://aka.ms/netcore3download)
+[Sie können .NET Core 3.0 RC1 jetzt für Windows, macOS oder Linux herunterladen und sofort starten](https://aka.ms/netcore3download).
 
 Weitere Informationen zu den einzelnen Vorschauversionen finden Sie in den folgenden Ankündigungen:
 
+- [Ankündigung von .NET Core 3.0 RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/)
 - [Ankündigung von .NET Core 3.0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [Ankündigung von .NET Core 3.0 Preview 8](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [Ankündigung von .NET Core 3.0 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
@@ -36,9 +37,9 @@ Weitere Informationen zu den einzelnen Vorschauversionen finden Sie in den folge
 
 ## <a name="production-supported-preview"></a>Von der Produktion unterstützte Vorschauversion
 
-.NET Core Preview 9 wird von Microsoft als produktionsbereit betrachtet und vollständig unterstützt. Ab Preview 7 liegt der Fokus bei Releases auf der Optimierung von .NET Core 3.0 und nicht auf dem Hinzuzufügen neuer Features. Weitere Informationen zu Änderungen in Preview 9 finden Sie in der [Ankündigung von .NET Core 3.0 Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
+.NET Core RC1 wird von Microsoft als produktionsbereit betrachtet und vollständig unterstützt. Ab Preview 7 liegt der Fokus bei Releases auf der Optimierung von .NET Core 3.0 und nicht auf dem Hinzuzufügen neuer Features. Weitere Informationen zu Änderungen in RC1 finden Sie in der [Ankündigung von RC1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-release-candidate-1/).
 
-Wenn Sie eine vorherige Vorschauversion verwenden, müssen Sie für die weitere Unterstützung von „Go Live“ zu Preview 9 wechseln.
+Wenn Sie eine vorherige Vorschauversion verwenden, müssen Sie für die weitere Unterstützung von „Go Live“ zu RC1 wechseln.
 
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer von .NET Core SDK
 
@@ -125,7 +126,7 @@ Legen Sie zum Veröffentlichen einer einzelnen ausführbaren Datei `PublishSingl
 
 Oder
 
-```console
+```dotnetcli
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
 
@@ -147,7 +148,7 @@ Fügen Sie die Einstellung `<PublishTrimmed>` zu Ihrem Projekt hinzu, und veröf
 </PropertyGroup>
 ```
 
-```console
+```dotnetcli
 dotnet publish -r <rid> -c Release
 ```
 
@@ -197,7 +198,7 @@ Gehen Sie folgendermaßen vor, um Ihr Projekt als „ReadyToRun“ (Bereit zur A
 
 01. Veröffentlichen Sie eine eigenständige App. Dieser Befehl erstellt beispielsweise eine eigenständige App für die 64-Bit-Version von Windows:
 
-    ```console
+    ```dotnetcli
     dotnet publish -c Release -r win-x64 --self-contained true
     ```
 
@@ -258,7 +259,7 @@ Kein Rollforward. Nur Binden an angegebene Version. Diese Richtlinie wird nicht 
 
 Abgesehen von der **Disable**-Einstellung verwenden alle Einstellungen die höchste verfügbare Patchversion.
 
-## <a name="windows-desktop"></a>Windows-Desktop
+## <a name="windows-desktop"></a>Windows Desktop
 
 .NET Core 3.0 unterstützt die Windows-Desktopanwendungen mit Windows Presentation Foundation (WPF) und Windows Forms. Diese Frameworks unterstützt auch die Verwendung moderner Steuerelemente und des Fluent-Stils aus der Windows-UI-XAML-Bibliothek (WinUI) über [XAML-Inseln](/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -266,7 +267,7 @@ Die Windows Desktop-Komponente ist Teil des Windows .NET Core 3.0 SDK.
 
 Mit dem folgenden `dotnet`-Befehl können Sie eine neue WPF- oder Windows Forms-Anwendung erstellen:
 
-```console
+```dotnetcli
 dotnet new wpf
 dotnet new winforms
 ```
@@ -429,7 +430,7 @@ Hier ist ein Beispiel für die Deserialisierung einer JSON-Zeichenfolge in ein O
 
 .NET Core 3.0 verbessert natives API-Interop.
 
-### <a name="type-nativelibrary"></a>Typ: NativeLibrary
+### <a name="type-nativelibrary"></a>Geben Sie Folgendes ein:  NativeLibrary
 
 <xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> bietet eine Kapselung zum Laden einer nativen Bibliothek (mit derselben Lastlogik wie .NET Core P/Invoke) und Bereitstellen der relevanten Hilfsfunktionen wie z.B. `getSymbol`. Ein Codebeispiel finden Sie in der [DLLMap-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo).
 

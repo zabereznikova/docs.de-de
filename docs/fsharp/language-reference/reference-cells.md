@@ -2,12 +2,12 @@
 title: Referenzzellen
 description: Erfahren Sie, wie F# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: faaa4a6b54ff0366163b6821edff7fa4cb2f5a88
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bca7797b272c0e7d5bf54df07041dc08e33709a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627253"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216778"
 ---
 # <a name="reference-cells"></a>Referenzzellen
 
@@ -55,7 +55,7 @@ Die folgende Tabelle enthält die Funktionen, die für die Referenzzelle verfüg
 |`!` (Dereferenzierungsoperator)|Gibt den zugrunde liegenden Wert zurück.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=` (Zuweisungsoperator)|Ändert den zugrunde liegenden Wert.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
 |`ref` (Operator)|Kapselt einen Wert in einer neuen Referenzzelle.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value` (Eigenschaft)|Ruft den zugrunde liegenden Wert ab oder legt diesen fest.|`unit -> 'a`|`member x.Value = x.contents`|
+|`Value`Property|Ruft den zugrunde liegenden Wert ab oder legt diesen fest.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (Datensatzfeld)|Ruft den zugrunde liegenden Wert ab oder legt diesen fest.|`'a`|`let ref x = { contents = x }`|
 
 Es gibt mehrere Möglichkeiten, auf den zugrunde liegenden Wert zuzugreifen. Der vom Dereferenzierungsoperator (`!`) zurückgegebene Wert ist kein zuweisbarer Wert. Wenn Sie den zugrunde liegenden Wert ändern, müssen Sie daher stattdessen den Zuweisungsoperator (`:=`) verwenden.
@@ -66,7 +66,7 @@ Sowohl die `Value`-Eigenschaft als auch das `contents`-Feld sind zuweisbare Wert
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 10
 10
 11

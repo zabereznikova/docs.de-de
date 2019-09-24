@@ -1,0 +1,93 @@
+- name: Architektur von cloudbasierten .NET-Apps für Azure
+  href: index.md
+  items:
+    - name: Einführung in cloudbasierte Anwendungen
+      href: introduction.md
+      items:
+        - name: Definition von cloudbasiert
+          href: definition.md
+        - name: Apps-Kandidaten für cloudbasiert
+          href: candidate-apps.md
+    - name: Vorstellung der Referenz-App eShopOnContainers
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: Zuordnen von eShopOnContainers zu Azure-Diensten
+          href: map-eshoponcontainers-azure-services.md
+        - name: Bereitstellen von eShopOnContainers in Azure
+          href: deploy-eshoponcontainers-azure.md
+        - name: Zentralisierte Konfiguration
+          href: centralized-configuration.md
+    - name: Skalieren von cloudbasierten .NET-Anwendungen
+      href: scale-applications.md
+      items:
+        - name: Nutzen von Containern und Orchestratoren
+          href: leverage-containers-orchestrators.md
+        - name: Nutzen von serverlosen Funktionen
+          href: leverage-serverless-functions.md
+        - name: Kombinieren von Containern und serverlosen Ansätzen
+          href: combine-containers-serverless-approaches.md
+        - name: Bereitstellen von Containern in Azure
+          href: deploy-containers-azure.md
+        - name: Skalieren von Containern und serverlosen Anwendungen
+          href: scale-containers-serverless.md
+        - name: Weitere Optionen für die Bereitstellung
+          href: other-deployment-options.md
+    - name: Cloudbasierte Kommunikationsmuster
+      href: communication-patterns.md
+      items:
+        - name: Front-End-Clientkommunikation
+          href: front-end-communication.md
+        - name: Kommunikation zwischen Diensten
+          href: service-to-service-communication.md
+        - name: REST und gRPC
+          href: rest-grpc.md
+        - name: Service Mesh-Kommunikationsinfrastruktur
+          href: service-mesh-communication-infrastructure.md
+    - name: Verteilte Daten
+      href: distributed-data.md
+      items:
+        - name: Cloudbasierte Datenmuster
+          href: data-patterns.md
+        - name: Datenspeicherung in Azure
+          href: azure-data-storage.md
+    - name: Cloudbasierte Resilienz
+      href: resiliency.md
+      items:
+        - name: Anwendungsresilienzmuster
+          href: application-resiliency-patterns.md
+        - name: Resiliente Cloudinfrastruktur mit Azure
+          href: infrastructure-resiliency-azure.md
+        - name: Resiliente Kommunikation
+          href: resilient-communications.md
+    - name: Überwachung und Integrität
+      href: monitoring-health.md
+      items:
+        - name: Beobachtbarkeitsmuster
+          href: observability-patterns.md
+        - name: Protokollierung mit Elastic Stack
+          href: logging-with-elastic-stack.md
+        - name: Überwachen in Azure Kubernetes Services
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: Identität
+      href: identity.md
+      items:
+        - name: Authentifizierung und Autorisierung in cloudbasierten Apps
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: IdentityServer
+          href: identity-server.md
+    - name: Sicherheit
+      href: security.md
+      items:
+        - name: Azure-Sicherheit für cloudbasierte Apps
+          href: azure-security.md
+    - name: Cloudbasiertes DevOps
+      href: devops.md
+      items:
+        - name: Infrastructure-as-Code
+          href: infrastructure-as-code.md
+        - name: Bundles von cloudbasierten Anwendungen
+          href: application-bundles.md

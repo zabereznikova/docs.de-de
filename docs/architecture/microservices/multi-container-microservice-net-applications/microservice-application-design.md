@@ -2,12 +2,12 @@
 title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übersicht über die Vor- und Nachteile von microserviceorientierten Anwendungen zum Treffen fundierter Entscheidungen
 ms.date: 10/02/2018
-ms.openlocfilehash: ddca4ecf0b0ed1103e4da75ecc759546d6e53800
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926542"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039812"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -89,8 +89,8 @@ Daher handelt es sich bei den Bereitstellungseinheiten für Microservices (und b
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung**\
-    <https://aka.ms/eShopOnContainers/>
+- **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung** \
+  <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile eines auf Microservices basierenden Ansatzes
 
@@ -118,7 +118,7 @@ Ein auf Microservices basierender Ansatz wie dieser hat viele Vorteile:
 
 Eine auf Microservices basierende Lösung wie diese hat auch einige Nachteile:
 
-**Verteilte Anwendung**. Durch das Verteilen der Anwendung erhöht sich die Komplexität für Entwickler beim Entwerfen und Erstellen der Dienste. Beispielsweise müssen Entwickler die Kommunikation innerhalb des Diensts mithilfe von Protokollen wie HTTP oder AMPQ implementieren, wodurch das Testen und Ausnahmebehandlungen komplexer werden. Außerdem führt dies beim System zu erhöhter Wartezeit.
+**Verteilte Anwendung**. Durch das Verteilen der Anwendung erhöht sich die Komplexität für Entwickler beim Entwerfen und Erstellen der Dienste. Beispielsweise müssen Entwickler die Kommunikation zwischen Diensten mithilfe von Protokollen wie HTTP oder AMPQ implementieren, wodurch das Testen und die Ausnahmebehandlung komplexer werden. Außerdem führt dies beim System zu erhöhter Wartezeit.
 
 **Bereitstellungskomplexität**. Eine Anwendung, die über Dutzende Typen von Microservices verfügt und hohe Skalierbarkeit erfordert (sie muss in der Lage sein, viele Instanzen pro Dienst zu erstellen und diese Dienste über mehrere Hosts hinweg auszugleichen), bedeutet einen hohen Grad an Bereitstellungskomplexität in Bezug auf IT-Vorgänge und -Verwaltung. Wenn Sie keine an Microservices orientierte Infrastruktur (wie einen Orchestrator und Scheduler) verwenden, kann der Entwicklungsaufwand für diese zusätzliche Komplexität den Aufwand für die Geschäftsanwendung selbst übersteigen.
 

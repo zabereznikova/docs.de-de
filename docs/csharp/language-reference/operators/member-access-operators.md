@@ -1,12 +1,14 @@
 ---
 title: Operatoren für den Memberzugriff – C#-Referenz
 description: Enthält Informationen zu C#-Operatoren, die Sie für den Zugriff auf Typmember verwenden können.
-ms.date: 05/09/2019
+ms.date: 09/18/2019
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
 - '[]_CSharpKeyword'
 - ()_CSharpKeyword
+- ^_CSharpKeyword
+- .._CSharpKeyword
 helpviewer_keywords:
 - member access operators [C#]
 - member access operator [C#]
@@ -25,12 +27,17 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 5ff5e68fbce320076e6d18e9e139b418a15bba77
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+- ^ operator [C#]
+- index from end operator [C#]
+- hat operator [C#]
+- .. operator [C#]
+- range operator [C#]
+ms.openlocfilehash: 45af31d10d77f4c63b27b34595b97fdd11ef95a1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924643"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116136"
 ---
 # <a name="member-access-operators-c-reference"></a>Operatoren für den Memberzugriff (C#-Referenz)
 
@@ -40,6 +47,8 @@ Sie können die folgenden Operatoren zum Zugriff auf einen Typmember verwenden:
 - [`[]` (Zugriff auf Arrayelement oder Indexer) ](#indexer-operator-): Zugriff auf ein Arrayelement oder einen Typindexer
 - [`?.` und `?[]` (NULL-bedingte Operatoren)](#null-conditional-operators--and-): Ausführen eines Member- oder Elementzugriffs nur dann, wenn ein Operand ungleich NULL ist.
 - [`()` (Aufruf)](#invocation-operator-): Aufrufen einer Methode, auf die zugegriffen wurde, oder Aufrufen eines Delegaten
+- [`^` (Index vom Ende)](#index-from-end-operator-): Angeben, dass die Elementposition vom Ende einer Sequenz erfolgt.
+- [`..` Bereich](#range-operator-): Angeben eines Bereichs von Indizes, mit dem ein Bereich von Sequenzelementen abgerufen werden kann.
 
 ## <a name="member-access-operator-"></a>Memberzugriffsoperator „.“
 
@@ -149,9 +158,37 @@ Mit Klammern passen Sie auch die Reihenfolge an, in der Vorgänge in einem Ausdr
 
 [Cast-Ausdrücke](type-testing-and-cast.md#cast-operator-), die explizite Typkonvertierungen ausführen, verwenden ebenfalls Klammern.
 
+## <a name="index-from-end-operator-"></a>Index vom Endeoperator ^
+
+Der `^`-Operator ist in C# 8.0 und höher verfügbar und gibt die Elementposition vom Ende einer Sequenz an. Für eine Sequenz der Länge `length` verweist `^n` auf das Element mit dem Offset `length - n` vom Beginn einer Sequenz. `^1` zeigt beispielsweise auf das letzte Element einer Sequenz, und `^length` zeigt auf das erste Element einer Sequenz.
+
+[!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
+
+Wie das vorherige Beispiel zeigt, weist Ausdruck `^e` den Typ <xref:System.Index?displayProperty=nameWithType> auf. In Ausdruck `^e` muss das Ergebnis von `e` implizit in `int` konvertierbar sein.
+
+Sie können auch den `^`-Operator mit dem [Bereichsoperator](#range-operator-) verwenden, um einen Bereich von Indizes zu erstellen. Weitere Informationen finden Sie unter [Indizes und Bereiche](../../tutorials/ranges-indexes.md).
+
+## <a name="range-operator-"></a>Bereichsoperator ..
+
+Der Operator `..`, der in C# 8.0 und höher verfügbar ist, gibt den Anfang und das Ende eines Bereichs von Indizes als seine Operanden an. Der linke Operand ist der *inklusive* Anfang eines Bereichs. Der rechte Operand ist das *exklusive* Ende eines Bereichs. Beide Operanden können ein Index vom Anfang oder vom Ende einer Sequenz sein, wie das folgende Beispiel zeigt:
+
+[!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
+
+Wie das vorherige Beispiel zeigt, weist der Ausdruck `a..b` den Typ <xref:System.Range?displayProperty=nameWithType> auf. In Ausdruck `a..b` muss das Ergebnis von `a` und `b` implizit in `int` oder <xref:System.Index> konvertierbar sein.
+
+Sie können Operanden des Operators `..` auslassen, um einen Bereich ohne Ende abzurufen:
+
+- `a..` entspricht `a..^0`
+- `..b` entspricht `0..b`
+- `..` entspricht `0..^0`
+
+[!code-csharp[ranges with omitted operands](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#RangesOptional)]
+
+Weitere Informationen finden Sie unter [Indizes und Bereiche](../../tutorials/ranges-indexes.md).
+
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Die Operatoren `.` und `()` können nicht überladen werden. Der `[]`-Operator wird auch als nicht überladbarer Operator betrachtet. Verwenden Sie [Indexer](../../programming-guide/indexers/index.md) zur Unterstützung der Indizierung mit benutzerdefinierten Typen.
+Die Operatoren `.`, `()`, `^` und `..` können nicht überladen werden. Der `[]`-Operator wird auch als nicht überladbarer Operator betrachtet. Verwenden Sie [Indexer](../../programming-guide/indexers/index.md) zur Unterstützung der Indizierung mit benutzerdefinierten Typen.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

@@ -2,12 +2,12 @@
 title: 'Schleifen: for...in-Ausdruck'
 description: Siehe How F# for... im Ausdrucks Schleifen Konstrukt wird verwendet, um die Übereinstimmungen eines Musters in einer Aufzähl baren Auflistung zu durchlaufen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 640b0f91f6c641f3b49a99dc67abe7e4c31911ea
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5a2ca59ca4199ece5d78010ff780e86ae2b25181
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630714"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216449"
 ---
 # <a name="loops-forin-expression"></a>Schleifen: for...in-Ausdruck
 
@@ -44,7 +44,7 @@ Die folgenden Codebeispiele veranschaulichen die Verwendung des `for...in` -Ausd
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 1
 5
 100
@@ -58,7 +58,7 @@ Im folgenden Beispiel wird gezeigt, wie eine Schleife über eine Sequenz ausgef�
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 1 squared is 1
 2 squared is 4
 3 squared is 9
@@ -77,7 +77,7 @@ Im folgenden Beispiel wird gezeigt, wie ein einfacher ganzzahliger Bereich durch
 
 Die Ausgabe von Funktion1 lautet wie folgt.
 
-```
+```console
 1 2 3 4 5 6 7 8 9 10
 ```
 
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird gezeigt, wie ein Bereich mit einem Skip von 2 durchla
 
 Die Ausgabe von `function2` lautet wie folgt.
 
-```
+```console
 1 3 5 7 9
 ```
 
@@ -97,7 +97,7 @@ Im folgenden Beispiel wird gezeigt, wie ein Zeichenbereich verwendet wird.
 
 Die Ausgabe von `function3` lautet wie folgt.
 
-```
+```console
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
@@ -107,7 +107,7 @@ Im folgenden Beispiel wird gezeigt, wie ein negativer Skip-Wert für eine umgeke
 
 Die Ausgabe von `function4` lautet wie folgt.
 
-```
+```console
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
 ```
 
@@ -117,7 +117,7 @@ Der Anfang und das Ende des Bereichs können auch Ausdrücke sein, z. b. Funktio
 
 Die Ausgabe von `function5` mit dieser Eingabe lautet wie folgt.
 
-```
+```console
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
@@ -127,7 +127,7 @@ Das nächste Beispiel zeigt die Verwendung eines Platzhalter Zeichens (\_), wenn
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 Number of elements in list1: 5
 ```
 

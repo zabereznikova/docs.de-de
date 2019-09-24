@@ -2,19 +2,19 @@
 title: Sequenzen
 description: Erfahren Sie, wie F# Sie Sequenzen verwenden, wenn Sie über eine große, geordnete Sammlung von Daten verfügen, aber nicht unbedingt alle Elemente verwenden.
 ms.date: 02/19/2019
-ms.openlocfilehash: a57142c5d07455cff02b0b691ebccb9cb9f347fd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627163"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216757"
 ---
 # <a name="sequences"></a>Sequenzen
 
 > [!NOTE]
 > Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Eine *Sequenz* ist eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste bieten kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den `seq<'T>` -Typ dargestellt, bei dem es sich um einen Alias für `System.Collections.Generic.IEnumerable`handelt. Daher kann jeder .NET Framework Typ, der `System.IEnumerable` implementiert, als Sequenz verwendet werden. Das- [Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) "SQ" bietet Unterstützung für Manipulationen bei Sequenzen.
+Eine *Sequenz* ist eine logische Reihe von Elementen, die alle einen Typ haben. Sequenzen sind besonders nützlich, wenn Sie über eine große, geordnete Auflistung von Daten verfügen, aber nicht unbedingt alle Elemente erwarten. Einzelne Sequenz Elemente werden nur bei Bedarf berechnet, sodass eine Sequenz eine bessere Leistung als eine Liste bieten kann, wenn nicht alle Elemente verwendet werden. Sequenzen werden durch den `seq<'T>` -Typ dargestellt, bei dem es sich um einen Alias für `System.Collections.Generic.IEnumerable`handelt. Daher kann jeder .NET Framework Typ, der `System.IEnumerable` implementiert, als Sequenz verwendet werden. Das- [Modul "SQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) " bietet Unterstützung für Manipulationen bei Sequenzen.
 
 ## <a name="sequence-expressions"></a>Sequenz Ausdrücke
 
@@ -66,7 +66,7 @@ Viele Datentypen, z. b. Listen, Arrays, Mengen und Zuordnungen, sind implizit Se
 
 ## <a name="module-functions"></a>Modulfunktionen
 
-Das- [Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) "SQ" im [Microsoft. FSharp. Collections-Namespace](https://msdn.microsoft.com/library/24f64e5f-5030-47d0-9759-8d3e398ed13f) enthält Funktionen zum Arbeiten mit Sequenzen. Diese Funktionen können auch mit Listen, Arrays, Zuordnungen und Sätzen verwendet werden, da alle diese Typen Enumerable sind und daher als Sequenzen behandelt werden können.
+Das- [Modul "SQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) " im [Microsoft. FSharp. Collections-Namespace](https://msdn.microsoft.com/library/24f64e5f-5030-47d0-9759-8d3e398ed13f) enthält Funktionen zum Arbeiten mit Sequenzen. Diese Funktionen können auch mit Listen, Arrays, Zuordnungen und Sätzen verwendet werden, da alle diese Typen Enumerable sind und daher als Sequenzen behandelt werden können.
 
 ## <a name="creating-sequences"></a>Erstellen von Sequenzen
 
@@ -82,7 +82,7 @@ Mithilfe von " [sq. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-
 
 Ausgabe:
 
-```
+```console
 0 10 20 30 40
 ```
 
@@ -104,7 +104,7 @@ Mit "" wird eine Sequenz aus einer Berechnungs [Funktion generiert,](https://msd
 
 Die Ausgabe lautet wie folgt:
 
-```
+```console
 The sequence seq1 contains numbers from 0 to 20.
 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
@@ -124,7 +124,7 @@ Funktionen zur Unterstützung von Sequenzen mit Listen: [Seq.exists](https://msd
 
 ## <a name="obtaining-subsequences"></a>Abrufen von unter Sequenzen
 
-"Set [" und "](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) [Set](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) " sind wie die entsprechenden Funktionen, die für Listen verfügbar sind, mit dem Unterschied, dass das Filtern und auswählen erst erfolgt, wenn die Sequenz Elemente ausgewertet werden.
+" [Set](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) " und "Set" sind wie die entsprechenden Funktionen, die für Listen verfügbar sind, mit [dem Unterschied](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) , dass das Filtern und auswählen erst erfolgt, wenn die Sequenz Elemente ausgewertet werden.
 
 Mit " [sq. TRUNCATE](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) " wird eine Sequenz aus einer anderen Sequenz erstellt, die Sequenz wird jedoch auf eine angegebene Anzahl von Elementen beschränkt. "* [. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) " erstellt eine neue Sequenz, die nur eine angegebene Anzahl von Elementen ab dem Anfang einer Sequenz enthält. Wenn in der Sequenz weniger Elemente vorhanden sind, als Sie für die Ausführung `Seq.take` von angeben `System.InvalidOperationException`, löst eine aus. Der Unterschied `Seq.take` zwischen `Seq.truncate` und ist `Seq.truncate` , dass keinen Fehler erzeugt, wenn die Anzahl der Elemente kleiner ist als die angegebene Zahl.
 
@@ -134,7 +134,7 @@ Der folgende Code zeigt das Verhalten von und Unterschiede `Seq.truncate` zwisch
 
 Die Ausgabe vor dem Auftreten des Fehlers lautet wie folgt.
 
-```
+```console
 1 4 9 16 25 
 1 4 9 16 25 36 49 64 81 100 
 1 4 9 16 25 
@@ -149,7 +149,7 @@ Im folgenden Codebeispiel wird das Verhalten von und unterschieden `Seq.takeWhil
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 1 4 9 
 36 49 64 81 100 
 16 25 36 49 64 81 100
@@ -171,7 +171,7 @@ Die Ausgabe lautet wie folgt.
 
 Anfangssequenz:
 
-```
+```console
 1.0 1.5 2.0 1.5 1.0 1.5 
 
 Windows of length 3: 
@@ -203,7 +203,7 @@ Im vorherigen Code wird nur das erste Element berechnet und überprüft, und das
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 (1, 34) (2, 33) (0, 33)
 ```
 
@@ -217,7 +217,7 @@ Im folgenden Codebeispiel wird die Verwendung von `Seq.groupBy` veranschaulicht,
 
 Die Ausgabe lautet wie folgt.
 
-```
+```console
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 
@@ -241,9 +241,9 @@ Mit "*" wird eine schreibgeschützte Kopie einer [Sequenz erstellt.](https://msd
 
 ## <a name="performing-computations-on-sequences"></a>Ausführen von Berechnungen für Sequenzen
 
-Einfache arithmetische Operationen ähneln denen von Listen, wie z [. b. "*. Average](https://msdn.microsoft.com/library/609d793b-c70f-4e36-9ab4-d928056d65b8)", "* [. Sum](https://msdn.microsoft.com/library/01208515-4880-4358-91f5-af34f66dc77a)", "* [. averageBy](https://msdn.microsoft.com/library/47c855c1-2dbd-415a-885e-b909d9d3e4f8)", "SQ [. sumBy](https://msdn.microsoft.com/library/68cca78c-94ed-4a45-9b8d-34d2c5f2b1b1)" usw.
+Einfache arithmetische Operationen ähneln denen von Listen, wie z [. b. "*. Average](https://msdn.microsoft.com/library/609d793b-c70f-4e36-9ab4-d928056d65b8)", "* [. Sum](https://msdn.microsoft.com/library/01208515-4880-4358-91f5-af34f66dc77a)", "* [. averageBy](https://msdn.microsoft.com/library/47c855c1-2dbd-415a-885e-b909d9d3e4f8)", " [sq. sumBy](https://msdn.microsoft.com/library/68cca78c-94ed-4a45-9b8d-34d2c5f2b1b1)" usw.
 
-" [Setq. Fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3)", "setq [. Reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9)" und "setq [. Scan](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) " ähneln den entsprechenden Funktionen, die für Listen verfügbar sind. Sequenzen unterstützen eine Teilmenge der vollständigen Variationen dieser Funktionen, die die-Unterstützung auflisten. Weitere Informationen und Beispiele finden Sie unter [Listen](lists.md).
+" [Setq. Fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3)", " [setq. Reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9)" und " [setq. Scan](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) " ähneln den entsprechenden Funktionen, die für Listen verfügbar sind. Sequenzen unterstützen eine Teilmenge der vollständigen Variationen dieser Funktionen, die die-Unterstützung auflisten. Weitere Informationen und Beispiele finden Sie unter [Listen](lists.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/07/2019
-ms.openlocfilehash: 34d2a90cb5208736b1b414e25ac3e627929f45a0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 36caff247d031b8808ab953ec884b7ce292858eb
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674817"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71040199"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -204,28 +204,37 @@ Die ursprüngliche Dockerfile kann wie folgt aussehen:
 
 Hier sind die Details zeilenweise dargestellt:
 
-<!-- markdownlint-disable MD029-->
-1. Beginnen Sie eine Stufe mit einem „kleinen“ Basisimage, das nur als Runtime dient. Nennen Sie es zu Referenzzwecken **base**.
-2. Erstellen Sie das **/app**-Verzeichnis im Image.
-3. Machen Sie den Port **80** verfügbar.
-<!-- skip -->
-5. Beginnen Sie eine Stufe mit einem „großen“ Basisimage zur Erstellung/Veröffentlichung. Nennen Sie es zu Referenzzwecken **build**.
-6. Erstellen Sie das **/src**-Verzeichnis im Image.
-7. Kopieren Sie bis zur Zeile 16 die **.csproj**-Projektdateien, auf die verwiesen wird, damit Sie zu einem späteren Zeitpunkt Pakete wiederherstellen können.
-<!-- skip -->
-17. Stellen Sie die Pakete für das **Catalog.API**-Projekt und die Projekte, auf die verwiesen wird, wieder her.
-18. Kopieren Sie **alle Verzeichnisstrukturen für die Projektmappe** (außer die Dateien und Verzeichnisse in der **.dockerignore**-Datei) aus dem **/src**-Verzeichnis in das Image.
-19. Ändern Sie den aktuellen Ordner in das **Catalog.API**-Projekt.
-20. Erstellen Sie das Projekt (und andere Projektabhängigkeiten) sowie die Ausgabe im **/app**-Verzeichnis im Image.
-<!-- skip -->
-22. Beginnen Sie eine Stufe aus dem vorherigen Build, und nennen Sie sie zu Referenzzwecken **publish**.
-23. Veröffentlichen Sie das Projekt (und die Abhängigkeiten) sowie die Ausgabe im **/app**-Verzeichnis im Image.
-<!-- skip -->
-25. Beginnen Sie eine neue Stufe aus dem Image **base**, und nennen Sie sie **final**.
-26. Ändern Sie das aktuelle Verzeichnis in **/app**.
-27. Kopieren Sie das Verzeichnis **/app** aus der Stufe **publish** in das aktuelle Verzeichnis.
-28. Definieren Sie den Befehl, der ausgeführt werden soll, sobald der Container gestartet wird.
-<!-- markdownlint-enable MD029-->
+- **Linie 1:** Beginnen Sie eine Stufe mit einem „kleinen“ Basisimage, das nur als Runtime dient. Nennen Sie es zu Referenzzwecken **base**.
+
+- **Zeile 2:** Erstellen Sie das Verzeichnis **/app** im Image.
+
+- **Zeilen 3:** Machen Sie den Port **80** verfügbar.
+
+- **Zeilen 5:** Beginnen Sie eine neue Stufe mit einem „großen“ Image zur Erstellung/Veröffentlichung. Nennen Sie es zu Referenzzwecken **build**.
+
+- **Zeilen 6:** Erstellen Sie das **/src**-Verzeichnis im Image.
+
+- **Zeilen 7:** Kopieren Sie bis zur Zeile 16 die **CSPROJ**-Projektdateien, auf die verwiesen wird, damit Sie Pakete zu einem späteren Zeitpunkt wiederherstellen können.
+
+- **Zeile 17:** Stellen Sie die Pakete für das **Catalog.API**-Projekt und die Projekte, auf die verwiesen wird, wieder her.
+
+- **Zeilen 18:** Kopieren Sie **alle Verzeichnisstrukturen für die Projektmappe** (mit Ausnahme der Dateien und Verzeichnisse in der **DOCKERIGNORE**-Datei) in das Verzeichnis **/src** im Image.
+
+- **Zeilen 19:** Ändern Sie den aktuellen Ordner in das **Catalog.API**-Projekt.
+
+- **Zeilen 20:** Erstellen Sie das Projekt (und andere Projektabhängigkeiten) sowie die Ausgabe im Verzeichnis **/app** im Image.
+
+- **Zeile 22:** Beginnen Sie eine weitere neue Stufe aus dem Build. Nennen Sie sie zu Verweiszwecken **publish**.
+
+- **Zeile 23:** Veröffentlichen Sie das Projekt (und die Abhängigkeiten) sowie die Ausgabe im Verzeichnis **/app** im Image.
+
+- **Zeile 25:** Beginnen Sie eine neue Stufe aus dem Image **base**, und nennen Sie sie **final**.
+
+- **Zeile 26:** Ändern Sie das aktuelle Verzeichnis in **/app**.
+
+- **Zeile 27:** Kopieren Sie das Verzeichnis **/app** aus der Stufe **publish** in das aktuelle Verzeichnis.
+
+- **Zeile 28:** Definieren Sie den Befehl, der ausgeführt werden soll, sobald der Container gestartet wird.
 
 Lernen Sie nun einige Optimierungen kennen, die Ihnen dabei helfen, die gesamte Prozessleistung zu verbessern. Im Falle von eShopOnContainers bedeutet dies, dass es 22 Minuten oder länger dauert, um die gesamte Projektmappe in Linux-Containern zu erstellen.
 
@@ -239,9 +248,9 @@ COPY . .
 
 Die Vorgehensweise wäre dann für jeden Dienst die gleiche: Die gesamte Projektmappe wird kopiert, und es wird eine größere Ebene erstellt. Dazu ist jedoch Folgendes zu beachten:
 
-1) Der Kopiervorgang würde nur zum ersten Mal ausgeführt (und bei einer Neuerstellung, wenn eine Datei geändert wird) und würde den Cache für alle anderen Dienste verwenden.
+1. Der Kopiervorgang würde nur zum ersten Mal ausgeführt (und bei einer Neuerstellung, wenn eine Datei geändert wird) und würde den Cache für alle anderen Dienste verwenden.
 
-2) Da das größere Image in einem Zwischenstadium auftritt, wirkt es sich nicht auf die endgültige Imagegröße aus.
+2. Da das größere Image in einem Zwischenstadium auftritt, wirkt es sich nicht auf die endgültige Imagegröße aus.
 
 Die nächste wichtige Optimierung umfasst den `restore`-Befehl, der in Zeile 17 ausgeführt wird, der sich jedoch auch für jeden Dienst von eShopOnContainers unterscheidet. Wenn Sie also diese Zeile nur wie folgt ändern...
 

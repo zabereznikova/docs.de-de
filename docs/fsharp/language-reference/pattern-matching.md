@@ -2,12 +2,12 @@
 title: Musterabgleich
 description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733467"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216799"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der optionale when -Bedingungs Teil wird in [Match-Ausdrücken](match-expressions.md)erläutert.
+Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der *optionale when-* Bedingungs Teil wird in [Match-Ausdrücken](match-expressions.md)erläutert.
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
@@ -37,7 +37,7 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |`as`-Muster|*Muster* als *Bezeichner*|`(a, b) as tuple1`|
 |OR-Muster|*muster1* &#124; *muster2*|<code>([h] &#124; [h; _])</code>|
 |AND-Muster|*muster1* &amp; *muster2*|`(a, b) & (_, "test")`|
-|Cons-Muster|*Bezeichner* :: *List-Identifier*|`h :: t`|
+|Cons-Muster|*Bezeichner:: List-Identifier*|`h :: t`|
 |Listenmuster|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
 |Arraymuster|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Muster in Klammern|( *Muster* )|`( a )`|
@@ -95,7 +95,7 @@ Die Verwendung des benannten Felds ist optional. Im vorherigen Beispiel haben `C
 
 Wenn Sie mehrere Felder angeben, verwenden Sie das Semikolon (;) als Trennzeichen.
 
-```
+```fsharp
 match shape with
 | Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
 | _ -> ()
@@ -103,7 +103,7 @@ match shape with
 
 Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen zu aktiven Mustern finden Sie unter [aktive Muster](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Mustervergleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 
@@ -139,7 +139,7 @@ Das folgende Beispiel ist ähnlich `detectZeroTuple` wie im Abschnitt [tupelmust
 
 ## <a name="cons-pattern"></a>Cons-Muster
 
-Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste mit den restlichen Elementen, dem Ende,zu zerlegen.
+Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste *mit den restlichen*Elementen, dem Ende, zu zerlegen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -163,7 +163,7 @@ Muster können in Klammern eingeschlossen werden, um die gewünschte Assoziativi
 
 ## <a name="tuple-pattern"></a>Tupelmuster
 
-Mithilfe des Tupelmusters werden Eingabe in Tupelform verglichen. Es ermöglicht das Zerlegen des Tupels in seine Bestandteile mithilfe von Mustervergleichsvariablen für die einzelnen Positionen im Tupel.
+Mithilfe des Tupelmusters werden Eingabe in Tupelform verglichen. Es ermöglicht das Zerlegen des Tupels in seine Bestandteile mithilfe von Musterabgleichsvariablen für die einzelnen Positionen im Tupel.
 
 Im folgenden Beispiel wird die Verwendung des Tupelmusters veranschaulicht, und es werden außerdem Literalmuster, Variablenmuster und das Platzhaltermuster verwendet.
 

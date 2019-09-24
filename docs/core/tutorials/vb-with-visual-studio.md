@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7787121afcfae4978141d36d25ddfa0a4f54df56
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660432"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71039611"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit dem .NET Core SDK in Visual Studio 2017
 
@@ -20,7 +20,7 @@ Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Ve
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) mit installierter Arbeitsauslastung für die „plattformübergreifende .NET Core-Entwicklung“. Sie können Ihre App mit .NET Core 2.0 entwickeln.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) mit installierter Arbeitsauslastung für die „plattformübergreifende .NET Core-Entwicklung“. Sie können Ihre App mit .NET Core 2.1 oder höher entwickeln.
 
 Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../windows-prerequisites.md).
 

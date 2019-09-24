@@ -2,12 +2,12 @@
 title: Operatorüberladung
 description: Erfahren Sie, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene in F# zu überladen.
 ms.date: 05/16/2016
-ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d902a06193481ed87131b3336cd8a2ff54b811b4
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627390"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216835"
 ---
 # <a name="operator-overloading"></a>Operatorüberladung
 
@@ -135,7 +135,7 @@ Im folgenden Code wird veranschaulicht, wie mit Operatorüberladung ein Bruchtyp
 
 **Ausgabe:**
 
-```
+```console
 3/4 + 1/2 = 5/4
 3/4 - 1/2 = 1/4
 3/4 * 1/2 = 3/8
