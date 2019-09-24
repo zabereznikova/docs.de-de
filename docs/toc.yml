@@ -599,7 +599,7 @@
       href: csharp/tour-of-csharp/
     - name: 'Neues in C#'
       items:
-        - name: 'C# 8.0: Vorschauversion 5'
+        - name: 'C# 8.0'
           href: csharp/whats-new/csharp-8.md
         - name: 'C# 7.3'
           href: csharp/whats-new/csharp-7-3.md
@@ -1067,7 +1067,7 @@
               href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
             - name: 'Anpassen, welche Objekte in „My“ verfügbar sind'
               href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
-    - name: Programmierkonzepte
+    - name: Programmierungskonzepte
       href: visual-basic/programming-guide/concepts/index.md
       items:
         - name: Asynchrone Programmierung mit Async und Await
@@ -1536,17 +1536,17 @@
                   href: visual-basic/language-reference/operators/and-assignment-operator.md
                 - name: '* Operator'
                   href: visual-basic/language-reference/operators/multiplication-operator.md
-                - name: '*=-Operator'
+                - name: "Operator\_*="
                   href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
                 - name: + Operator
                   href: visual-basic/language-reference/operators/addition-operator.md
-                - name: +=-Operator
+                - name: "Operator\_+="
                   href: visual-basic/language-reference/operators/addition-assignment-operator.md
-                - name: =-Operator
+                - name: "Operator\_="
                   href: visual-basic/language-reference/operators/assignment-operator.md
                 - name: '- Operator'
                   href: visual-basic/language-reference/operators/subtraction-operator.md
-                - name: '-=-Operator'
+                - name: "Operator\_-="
                   href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
                 - name: <-Operator
                   href: visual-basic/language-reference/operators/comparison-operators.md
@@ -1554,7 +1554,7 @@
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: '> Operator'
                   href: visual-basic/language-reference/operators/comparison-operators.md
-                - name: '>=-Operator'
+                - name: ">Operator\_="
                   href: visual-basic/language-reference/operators/comparison-operators.md
                 - name: <<-Operator
                   href: visual-basic/language-reference/operators/left-shift-operator.md
@@ -1562,19 +1562,19 @@
                   href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
                 - name: '>> Operator'
                   href: visual-basic/language-reference/operators/right-shift-operator.md
-                - name: '>>=-Operator'
+                - name: ">>Operator\_="
                   href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
-                - name: /-Operator
+                - name: "Operator\_/"
                   href: visual-basic/language-reference/operators/floating-point-division-operator.md
-                - name: /=-Operator
+                - name: "Operator\_/="
                   href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
                 - name: \-Operator
                   href: visual-basic/language-reference/operators/integer-division-operator.md
                 - name: \=-Operator
                   href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
-                - name: ^-Operator
+                - name: "Operator\_^"
                   href: visual-basic/language-reference/operators/exponentiation-operator.md
-                - name: ^=-Operator
+                - name: "Operator\_^="
                   href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
                 - name: '?()-Operator'
                   href: visual-basic/language-reference/operators/null-conditional-operators.md
