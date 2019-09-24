@@ -200,7 +200,7 @@
       items:
         - name: new-Einschränkung
           href: keywords/new-constraint.md
-        - name: wo
+        - name: where
           href: keywords/where-generic-type-constraint.md
     - name: Zugriffsschlüsselwörter
       items:
@@ -593,7 +593,7 @@
       href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
     - name: Trennzeichen für vorangestellte Ziffern
       href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-- name: 'Vorschläge für die C# 7.3-Spezifikation'
+- name: "Vorschläge für die C#\_7.3-Spezifikation"
   items:
     - name: Nicht verwaltete generische Typeneinschränkungen
       href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
