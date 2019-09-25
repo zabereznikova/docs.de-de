@@ -1,13 +1,13 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
-ms.date: 09/10/2019
-ms.openlocfilehash: 1d6d52692a9a3f8b6fa4e333f086a880c54106b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 09/20/2019
+ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117818"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182414"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -28,6 +28,7 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits au
 - [Indizes und Bereiche](#indices-and-ranges)
 - [NULL-Coalescing-Zuweisung](#null-coalescing-assignment)
 - [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
+- [„stackalloc“ in geschachtelten Ausdrücken](#stackalloc-in-nested-expressions)
 - [Erweiterung von interpolierten ausführlichen Zeichenfolgen](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -493,6 +494,16 @@ Span<Coords<int>> coordinates = stackalloc[]
 ```
 
 Weitere Informationen finden Sie unter [Nicht verwaltete Typen](../language-reference/builtin-types/unmanaged-types.md).
+
+## <a name="stackalloc-in-nested-expressions"></a>„stackalloc“ in geschachtelten Ausdrücken
+
+Ab C# 8.0 können Sie, wenn das Ergebnis eines [stackalloc](../language-reference/operators/stackalloc.md)-Ausdrucks vom Typ <xref:System.Span%601?displayProperty=nameWithType> oder <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ist, den `stackalloc`-Ausdruck in anderen Ausdrücken verwenden:
+
+```csharp
+Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+Console.WriteLine(ind);  // output: 1
+```
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Erweiterung von interpolierten ausführlichen Zeichenfolgen
 
