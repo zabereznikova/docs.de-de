@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740689"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274226"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE-Struktur
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE-Struktur
 Enthält Informationen zu einem Objekt, das speicherbereinigt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,38 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`domain`|Ein Zeiger auf die Anwendungsdomäne, zu der das Handle oder das Objekt gehört. Der Wert möglicherweise `null`.|  
-|`location`|ICorDebugValue- oder eine ICorDebugReferenceValue-Schnittstelle, die das Objekt, das speicherbereinigt werden soll entspricht.|  
-|`type`|Ein [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, woher das Stammverzeichnis stammen. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
-|`extraData`|Zusätzliche Daten über das Objekt, das speicherbereinigt werden soll. Diese Informationen hängen von der Quelle des Objekts, die durch die `type` Feld. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
+|`domain`|Ein Zeiger auf die Anwendungsdomäne, zu der das Handle oder das Objekt gehört. Der Wert kann sein `null`.|  
+|`location`|Eine ICorDebugValue-oder ICorDebugReferenceValue-Schnittstelle, die dem Objekt entspricht, das in die Garbage Collection aufgenommen werden soll.|  
+|`type`|Ein [corgkreferencetype](corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, woher der Stamm stammt. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
+|`extraData`|Zusätzliche Daten zu dem Objekt, für das die Garbage Collection durchgeführt werden soll. Diese Informationen hängen von `type` der Quelle des Objekts ab, wie im Feld angegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `type` Feld ist ein [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, in dem der Verweis stammt. Eine bestimmte `COR_GC_REFERENCE` Wert kann eine der folgenden Arten von verwalteten Objekten widerspiegeln:  
+ Das `type` Feld ist ein [corgkreferencetype](corgcreferencetype-enumeration.md) -Enumerationswert, der angibt, woher der Verweis stammt. Ein bestimmter `COR_GC_REFERENCE` Wert kann eine der folgenden Arten von verwalteten Objekten widerspiegeln:  
   
-- Objekte aus allen verwalteten Stapel (`CorGCReferenceType.CorReferenceStack`). Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
+- Objekte aus allen verwalteten Stapeln (`CorGCReferenceType.CorReferenceStack`). Dies schließt sowohl Live Verweise in verwaltetem Code als auch Objekte ein, die vom Common Language Runtime erstellt wurden.  
   
-- Objekte aus der Handletabelle (`CorGCReferenceType.CorHandle*`). Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
+- Objekte aus der Handle-Tabelle`CorGCReferenceType.CorHandle*`(). Dies schließt starke Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) sowie statische Variablen in einem Modul ein.  
   
-- Objekte aus der Finalizerwarteschlange (`CorGCReferenceType.CorReferenceFinalizer`). Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
+- Objekte aus der Finalizerwarteschlange (`CorGCReferenceType.CorReferenceFinalizer`). Die Finalizer-Warteschlange wurzelt Objekte, bis der Finalizer ausgeführt wurde.  
   
- Die `extraData` Feld enthält die zusätzliche Daten abhängig von der Quelle (oder Typ) des Verweises. Dabei sind folgende Werte möglich:  
+ Das `extraData` Feld enthält zusätzliche Daten, abhängig von der Quelle (oder dem Typ) des Verweises. Dabei sind folgende Werte möglich:  
   
-- `DependentSource`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongDependent`, dieses Feld ist das Objekt, das, wenn aktiv ist, wird das Objekt, um die Garbage Collection auf Stammelemente `COR_GC_REFERENCE.Location`.  
+- `DependentSource`. Wenn den `type` `CorGCREferenceType.CorHandleStrongDependent`Wert hat, ist dieses Feld das Objekt, das, wenn es aktiv ist, das Objekt, für das `COR_GC_REFERENCE.Location`die Garbage Collection durchgeführt werden soll.  
   
-- `RefCount`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongRefCount`, dieses Feld wird der Verweiszähler des Handles.  
+- `RefCount`. Wenn den `type` `CorGCREferenceType.CorHandleStrongRefCount`Wert hat, ist dieses Feld der Verweis Zähler des Handles.  
   
-- `Size`. Wenn die `type` ist `CorGCREferenceType.CorHandleStrongSizedByref`, dieses Feld ist die letzte Größe der Objektstruktur, die für den Garbage Collector die Stämme Objekt berechnet. Beachten Sie, dass diese Berechnung nicht unbedingt auf dem neuesten Stand ist.  
+- `Size`. Wenn den `type` `CorGCREferenceType.CorHandleStrongSizedByref`Wert hat, ist dieses Feld die letzte Größe der Objektstruktur, für die der Garbage Collector die Objekt Stämme berechnet hat. Beachten Sie, dass diese Berechnung nicht unbedingt auf dem neuesten Stand ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Strukturen](debugging-structures.md)
+- [Debuggen](index.md)

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741031"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274290"
 ---
-# <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP-Struktur
+# <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP-Struktur
 
-Definiert eine IL-Adresszuordnung an.
+Definiert eine Il-to-Address-Zuordnung.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,24 +44,24 @@ typedef struct
 
 | Member         | Beschreibung                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | IL-Offset für den eigenständigen-Adressbereich              |
+| `ilOffset`     | IL-Offset für den enthaltenen Adressbereich              |
 | `startAddress` | Die Startadresse des Bereichs.                        |
-| `endAddress`   | Die letzte Adresse des Bereichs.                          |
+| `endAddress`   | Die Endadresse des Bereichs.                          |
 | `type`         | Der Typ der Daten. Dieser Wert wird derzeit nicht verwendet. |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich in der Common Language Runtime und nicht über Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben, in dem `CLRDATA_ADDRESS` ist eine 64-Bit-Ganzzahl ohne Vorzeichen.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben `CLRDATA_ADDRESS` , wobei eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner   
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+**Header:** Keine  
+**Fern** Keine   
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
+- [Debuggen](index.md)
+- [Debuggen von Strukturen](debugging-structures.md)

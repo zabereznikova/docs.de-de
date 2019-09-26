@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: eaf92bea30b80a47d0f623e38eed7768bccdbb6a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9e70e2fff0bee22bcb7d7668f33302f7e7013117
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928502"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273141"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Anwendungsszenarios (WCF Data Services)
 
@@ -18,7 +18,7 @@ ms.locfileid: "70928502"
 
 Machen Sie relationale Daten aus einer Datenbank [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] als-Feed verfügbar.
 
-- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Schnellstart](quickstart-wcf-data-services.md)
 
 - [Verfügbarmachen der Daten als Dienst](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -26,7 +26,7 @@ Machen Sie relationale Daten aus einer Datenbank [!INCLUDE[ssODataShort](../../.
 
 Machen Sie beliebige CLR-Datenklassen als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed verfügbar.
 
-- [Verfügbarmachen der Daten als Dienst](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Verfügbarmachen der Daten als Dienst](exposing-your-data-as-a-service-wcf-data-services.md)
 
 - [Vorgehensweise: Erstellen eines Daten Dienes mithilfe des reflektionsanbieters](create-a-data-service-using-rp-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ Machen Sie beliebige CLR-Datenklassen als [!INCLUDE[ssODataShort](../../../../in
 
 Nutzen Sie in einer .NET Framework-basierten Clientanwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed.
 
-- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Schnellstart](quickstart-wcf-data-services.md)
 
 - [Verwenden eines Datendiensts in einer Clientanwendung](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -50,7 +50,7 @@ Nutzen Sie in einer Silverlight-basierten Clientanwendung einen [!INCLUDE[ssODat
 
 Nutzen Sie in einer AJAX-basierten Clientanwendung einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed.
 
-- [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+- [Verwenden eines Datendiensts in einer Clientanwendung](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
 - [OData URI-Konventionen](https://go.microsoft.com/fwlink/?LinkId=185564)
 
@@ -58,7 +58,7 @@ Nutzen Sie in einer AJAX-basierten Clientanwendung einen [!INCLUDE[ssODataShort]
 
 Erstellen Sie eine End-to-End-Daten Lösung [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , die zum Übertragen von Daten zwischen Client und Server verwendet.
 
-- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Schnellstart](quickstart-wcf-data-services.md)
 
 - [Verwenden eines Datendiensts in einer Clientanwendung](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -66,7 +66,7 @@ Erstellen Sie eine End-to-End-Daten Lösung [!INCLUDE[ssODataShort](../../../../
 
 Erstellen Sie eine .NET Framework-basierte Clientanwendung, die einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed asynchron nutzt, um Latenzzeitprobleme auf dem Client zu vermeiden.
 
-- [Vorgehensweise: Ausführen von asynchronen Datendienst Abfragen](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+- [Vorgehensweise: Ausführen von asynchronen Datendienst Abfragen](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
 
 - [Asynchrone Vorgänge](asynchronous-operations-wcf-data-services.md)
 
@@ -74,13 +74,13 @@ Erstellen Sie eine .NET Framework-basierte Clientanwendung, die einen [!INCLUDE[
 
 Verfügbar machen und nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] eines Feeds mit einer Binary Large Object, auf die als Stream zugegriffen und diese geändert wird.
 
-- [Streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+- [Streaminganbieter](streaming-provider-wcf-data-services.md)
 
 - [Arbeiten mit Binärdaten](working-with-binary-data-wcf-data-services.md)
 
 Bindet [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds an Steuerelemente in einer Windows Presentation Framework (WPF)-Anwendung.
 
-- [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Binden von Daten an Steuerelemente](binding-data-to-controls-wcf-data-services.md)
 
 - [Vorgehensweise: Binden von Daten an Windows Presentation Foundation Elemente](bind-data-to-wpf-elements-wcf-data-services.md)
 
@@ -88,13 +88,13 @@ Bindet [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds a
 
 Fangen Sie eingehende Nachrichten zum Datendienst ab, um Datenvalidierung und rollenbasierte Filterung von Abfragen auszuführen.
 
-- [Vorgehensweise: Abfangen von Datendienst Nachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+- [Vorgehensweise: Abfangen von Datendienst Nachrichten](how-to-intercept-data-service-messages-wcf-data-services.md)
 
 - [Interceptors](interceptors-wcf-data-services.md)
 
 Erstellen Sie Endpunkte auf einem Datendienst, um benutzerdefiniertes Dienstverhalten zu aktivieren.
 
-- [Vorgehensweise: Definieren eines Dienst Vorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Vorgehensweise: Definieren eines Dienst Vorgangs](how-to-define-a-service-operation-wcf-data-services.md)
 
 - [Dienstvorgänge](service-operations-wcf-data-services.md)
 

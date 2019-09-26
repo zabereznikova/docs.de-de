@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658572"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer
@@ -52,7 +52,7 @@ Einer der Vorteile von Visual Studio ist die Möglichkeit, in einem kurzen Zeitr
 
     2. Legen Sie die <xref:System.Windows.Forms.ListView.View%2A> -Eigenschaft auf <xref:System.Windows.Forms.View.Details>fest.
 
-    3. Öffnen Sie den ColumnHeader-Auflistungs-Editor,![indem Sie in <xref:System.Windows.Forms.ListView.Columns%2A> der-Eigenschaft auf die Auslassungs Punkte (die Schaltfläche mit](./media/visual-studio-ellipsis-button.png)den Auslassungs Punkten (...) im Eigenschaftenfenster von Visual Studio klicken. Fügen Sie drei Spalten hinzu, <xref:System.Windows.Forms.ColumnHeader.Text%2A> und legen `Name`Sie `Type`die zugehörige-Eigenschaft auf, `Last Modified`bzw. fest. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
+    3. Öffnen Sie den ColumnHeader-Auflistungs-Editor,![indem Sie in <xref:System.Windows.Forms.ListView.Columns%2A> der **-Eigenschaft auf** die Auslassungs Punkte (die Schaltfläche mit](./media/visual-studio-ellipsis-button.png)den Auslassungs Punkten (...) im Eigenschaftenfenster von Visual Studio klicken. Fügen Sie drei Spalten hinzu, <xref:System.Windows.Forms.ColumnHeader.Text%2A> und legen `Name`Sie `Type`die zugehörige-Eigenschaft auf, `Last Modified`bzw. fest. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
 
     4. Legen Sie die <xref:System.Windows.Forms.ListView.SmallImageList%2A>-Eigenschaft auf `imageList1.` fest.
 

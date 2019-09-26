@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bda8079cff8f5e8fafade03a02c3dfe8798c5ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d5e2eb5e2743fca4876ed09add79be3eba514f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740767"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274204"
 ---
-# <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE-Struktur
+# <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE-Struktur
 Enthält die Offsetinformationen für einen Codebereich.  
   
- Diese Struktur wird verwendet, durch die [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) Methode.  
+ Diese Struktur wird von der [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) -Methode verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,16 +45,16 @@ typedef struct {
 |`endOffset`|Der Offset des Endes des Bereichs.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [StepRange-Methode](icordebugstepper-steprange-method.md)
+- [Debuggen von Strukturen](debugging-structures.md)
+- [Debuggen](index.md)

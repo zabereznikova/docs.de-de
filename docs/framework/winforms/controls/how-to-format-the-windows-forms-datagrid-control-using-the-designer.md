@@ -10,10 +10,10 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69666164"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
@@ -76,7 +76,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 1. Wählen Sie <xref:System.Windows.Forms.DataGrid> das Steuerelement auf dem Formular aus.
 
-2. Wählen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft aus, und klicken Sie![auf die Schaltfläche mit den Auslassungs Punkten (...) in der Eigenschaftenfenster von](./media/visual-studio-ellipsis-button.png)Visual Studio.).
+2. Wählen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft aus, und klicken Sie![auf die Schaltfläche mit den Auslassungs **Punkten (.** ..) in der Eigenschaftenfenster von](./media/visual-studio-ellipsis-button.png)Visual Studio.).
 
 3. Klicken Sie im Dialogfeld **DataGridTableStyle** -Auflistungs-Editor auf **Hinzufügen** , um der Sammlung einen Tabellen Stil hinzuzufügen.
 
@@ -93,7 +93,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
      Mit dem **DataGridColumnStyle**-Auflistungs-Editor können Sie Spalten Stile hinzufügen und entfernen, Anzeige-und Layouteigenschaften festlegen und den Zuordnungsnamen und die Formatierungs Zeichenfolgen für die Datenspalten festlegen.
 
     > [!NOTE]
-    > Weitere Informationen zum Formatieren von Zeichen folgen finden Sie unter Formatieren von [Typen](../../../standard/base-types/formatting-types.md).
+    > Weitere Informationen zum Formatieren von Zeichen folgen finden Sie unter [Formatieren von Typen](../../../standard/base-types/formatting-types.md).
 
 ## <a name="see-also"></a>Siehe auch
 

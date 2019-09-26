@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740826"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274145"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION-Struktur
-Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind. Diese Struktur wird verwendet, durch die [ICorDebugThread2:: GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) Methode.  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION-Struktur
+Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind. Diese Struktur wird von der [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) -Methode verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,22 +42,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`pAppDomain`|Zeiger auf den Besitzer des der `ilOffset` Feld.|  
-|`pModule`|Zeiger auf die modulbesitzer, der die `ilOffset` Feld.|  
-|`pFunction`|Zeiger zum Inhaber der Funktion der `ilOffset` Feld.|  
-|`ilOffset`|Der Microsoft intermediate Language (MSIL)-Offset des Frames.|  
+|`pAppDomain`|Zeiger auf den Anwendungs Domänen Besitzer des `ilOffset` Felds.|  
+|`pModule`|Zeiger auf den Modul Besitzer des `ilOffset` Felds.|  
+|`pFunction`|Zeiger auf den Funktions Besitzer des `ilOffset` Felds.|  
+|`ilOffset`|Der MSIL-Offset (Microsoft Intermediate Language) des Frames.|  
 |`flags`|Reserviert für zukünftige Erweiterbarkeit.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Strukturen](debugging-structures.md)
+- [Debuggen](index.md)

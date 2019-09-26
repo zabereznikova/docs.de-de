@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
 ms.openlocfilehash: 62665746ea9fcd1553717b02b1f1349dc6415ab2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69040087"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms mithilfe des Designers
@@ -22,9 +22,9 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 1. Wählen Sie das <xref:System.Windows.Forms.ListView>-Steuerelement.
 
-2. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Items%2A> ) neben der-Eigenschaft.
+2. Klicken Sie **im Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs **Punkten (.** ..) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Items%2A> ) neben der-Eigenschaft.
 
-     Der **ListViewItem** -Auflistungs-Editor wird angezeigt.
+     Der **ListViewItem-Auflistungs-Editor** wird angezeigt.
 
 3. Um ein Element hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** . Sie können dann die Eigenschaften des neuen Elements festlegen, z. b <xref:System.Windows.Forms.ListView.Text%2A> . <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> die-Eigenschaft und die-Eigenschaft.
 

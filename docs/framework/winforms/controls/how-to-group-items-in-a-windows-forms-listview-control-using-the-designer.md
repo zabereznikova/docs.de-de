@@ -7,10 +7,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
 ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69039400"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
@@ -28,7 +28,7 @@ Um die Gruppierung zu aktivieren, müssen Sie zunächst ein oder <xref:System.Wi
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>So können Sie Gruppen im Designer hinzufügen oder entfernen
 
-1. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Groups%2A> ) neben der-Eigenschaft.
+1. Klicken Sie **im Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs **Punkten (.** ..) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Groups%2A> ) neben der-Eigenschaft.
 
      Der **ListViewGroup-Sammlungs-Editor** wird angezeigt.
 
@@ -36,9 +36,9 @@ Um die Gruppierung zu aktivieren, müssen Sie zunächst ein oder <xref:System.Wi
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>So weisen Sie Gruppen im Designer Elemente zu
 
-1. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Items%2A> ) neben der-Eigenschaft.
+1. Klicken Sie **im Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs **Punkten (.** ..) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Items%2A> ) neben der-Eigenschaft.
 
-     Der **ListViewItem** -Auflistungs-Editor wird angezeigt.
+     Der **ListViewItem-Auflistungs-Editor** wird angezeigt.
 
 2. Um ein neues Element hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** . Sie können dann die Eigenschaften des neuen Elements festlegen, z. b <xref:System.Windows.Forms.ListViewItem.Text%2A> . <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> die-Eigenschaft und die-Eigenschaft.
 

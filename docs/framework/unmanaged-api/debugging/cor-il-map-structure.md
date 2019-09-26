@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740534"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274048"
 ---
-# <a name="corilmap-structure"></a>COR_IL_MAP-Struktur
+# <a name="cor_il_map-structure"></a>COR_IL_MAP-Struktur
 Gibt Änderungen im relativen Offset einer Funktion an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,57 +40,57 @@ typedef struct _COR_IL_MAP {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`oldOffset`|Die alten Microsoft intermediate Language (MSIL) offset relativ zum Anfang der Funktion.|  
+|`oldOffset`|Der alte MSIL-Offset (Microsoft Intermediate Language) relativ zum Anfang der Funktion.|  
 |`newOffset`|Der neue MSIL-Offset relativ zum Anfang der Funktion.|  
-|`fAccurate`|`true` Wenn die Zuordnung als genau bekannt wird; andernfalls `false`.|  
+|`fAccurate`|`true`, wenn die Zuordnung bekanntermaßen korrekt ist. `false`andernfalls.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Format der Karte sieht folgendermaßen aus: Der Debugger geht davon aus, die `oldOffset` verweist auf einen MSIL-Offset innerhalb der ursprünglichen, unveränderten MSIL-Code. Die `newOffset` Parameter verweist auf die entsprechenden MSIL-Offset innerhalb der neuen, instrumentierten Code.  
+ Das Format der Zuordnung lautet wie folgt: Der Debugger geht davon aus `oldOffset` , dass auf einen MSIL-Offset im ursprünglichen, nicht geänderten MSIL-Code verweist. Der `newOffset` -Parameter verweist auf den entsprechenden MSIL-Offset innerhalb des neuen, instrumentierten Codes.  
   
- Für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten, sollten die folgenden Anforderungen erfüllt sein:  
+ Die folgenden Anforderungen müssen erfüllt sein, damit die Schritt Ausführung ordnungsgemäß funktioniert:  
   
-- Die Karte sollten in aufsteigender Reihenfolge sortiert werden.  
+- Die Zuordnung sollte in aufsteigender Reihenfolge sortiert werden.  
   
-- Instrumentierter MSIL-Code muss nicht neu angeordnet werden.  
+- Instrumentierter MSIL-Code sollte nicht neu angeordnet werden.  
   
-- Ursprüngliche MSIL-Code sollte nicht entfernt werden.  
+- Der ursprüngliche MSIL-Code sollte nicht entfernt werden.  
   
-- Die Zuordnung sollte Einträge zum Zuordnen der Sequenzpunkte über die Programmdatenbankdatei (PDB) enthalten.  
+- Die Zuordnung sollte Einträge enthalten, mit denen alle Sequenz Punkte aus der Programm Datenbankdatei (PDB) zugeordnet werden können.  
   
- Die Zuordnung wird nicht fehlenden Einträge interpoliert. Das folgende Beispiel zeigt eine Zuordnung und ihre Ergebnisse.  
+ Fehlende Einträge werden von der Zuordnung nicht interpolieren. Das folgende Beispiel zeigt eine Karte und ihre Ergebnisse.  
   
- Ordnen Sie:  
+ Bilden  
   
-- 0 alte Offset, 0 neue offset  
+- 0 Alter Offset, 0 neuer Offset  
   
-- 5 alte Offset, 10 neuen offset  
+- 5-jähriger Offset, 10 neuer Offset  
   
-- 9 alte Offset, 20 neue offset  
+- 9 Alter Offset, 20 neue Offset  
   
- Ergebnisse:  
+ Folgen  
   
-- Ein Alter Offset von 0, 1, 2, 3 oder 4 wird ein neuer Offset 0 zugeordnet werden.  
+- Der alte Offset 0, 1, 2, 3 oder 4 wird einem neuen Offset von 0 zugeordnet.  
   
-- Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
+- Der alte Offset 5, 6, 7 oder 8 wird dem neuen Offset 10 zugeordnet.  
   
-- Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
+- Ein Alter Offset von 9 oder höher wird dem neuen Offset 20 zugeordnet.  
   
-- Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
+- Der neue Offset 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 wird dem alten Offset 0 zugeordnet.  
   
-- Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
+- Ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 wird dem alten Offset 5 zugeordnet.  
   
-- Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
+- Ein neuer Offset von 20 oder höher wird dem alten Offset 9 zugeordnet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorProf.idl  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Strukturen](debugging-structures.md)
+- [Debuggen](index.md)

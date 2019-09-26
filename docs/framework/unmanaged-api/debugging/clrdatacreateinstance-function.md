@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740993"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274262"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance-Funktion
-Erstellt ein Schnittstellenobjekt für das angegebene Ziel-Element.  
+Erstellt ein Schnittstellen Objekt für das angegebene Ziel Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +39,26 @@ HRESULT CLRDataCreateInstance (
   
 ## <a name="parameters"></a>Parameter  
  `iid`  
- [in] Der Bezeichner der Schnittstelle, die instanziiert werden.  
+ in Der Bezeichner der Schnittstelle, die instanziiert werden soll.  
   
  `target`  
- [in] Ein Zeiger auf eine vom Benutzer implementierte [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) -Objekt, das Zielelement, für die zum Erstellen des Schnittstellenobjekts darstellt.  
+ in Ein Zeiger auf ein vom Benutzer implementiertes [ICLRDataTarget](iclrdatatarget-interface.md) -Objekt, das das Ziel Element darstellt, für das das Schnittstellen Objekt erstellt werden soll.  
   
  `iface`  
- [out] Ein Zeiger auf die Adresse des Objekts zurückgegebene Schnittstelle.  
+ vorgenommen Ein Zeiger auf die Adresse des zurückgegebenen Schnittstellen Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICLRDataTarget` Objekt wird vom Writer der Debuganwendung implementiert. Die Implementierung hängt von den Typ des Target-Element dargestellt wird. Das Zielelement ist möglicherweise ein Prozess, Speicherabbild, Remotecomputer und So weiter.  
+ Das `ICLRDataTarget` -Objekt wird vom Writer der debugginganwendung implementiert. Die-Implementierung hängt vom Typ des dargestellten Ziel Elements ab. Das Ziel Element kann ein Prozess, ein Speicher Abbild, ein Remote Computer usw. sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** ClrData.idl  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Debuggen von globalen statischen Funktionen](debugging-global-static-functions.md)

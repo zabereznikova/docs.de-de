@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd274b1eb14532629580e777288317186544912
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740506"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274164"
 ---
-# <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT-Struktur
+# <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT-Struktur
 Bietet Informationen zum Layout eines Objekts im Speicher.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,25 +42,25 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`parentID`|Der Bezeichner des übergeordneten Typs auf diesen Typ. Dadurch werden die NULL-Typ-Id (ttoken1 = 0 "," token2 = 0) Wenn die Typ-Id entspricht <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|Die Grundgröße eines Objekts dieses Typs. Dies ist die Gesamtgröße für große Objekte nicht-Variable.|  
-|`numFields`|Die Anzahl der Felder, die in der Objekte dieses Typs enthalten.|  
-|`boxOffset`|Wenn dieser Typ geschachtelt ist, offset am Anfang der Felder eines Objekts aus. Dieses Feld gilt nur für Werttypen wie z. B. primitive Typen und Strukturen.|  
-|`type`|Die CorElementType, zu dem dieser Typ gehört.|  
+|`parentID`|Der Bezeichner des übergeordneten Typs für diesen Typ. Dabei handelt es sich um <xref:System.Object?displayProperty=nameWithType>die NULL-Typ-ID (ttoken1 = 0, Token2 = 0), wenn die Typ-ID entspricht.|  
+|`objectSize`|Die Basis Größe eines Objekts dieses Typs. Dies ist die Gesamtgröße für Objekte, die keine Variablen groß sind.|  
+|`numFields`|Die Anzahl der Felder, die in Objekten dieses Typs enthalten sind.|  
+|`boxOffset`|Wenn dieser Typ ein Boxing ist, der Anfangs Offset der Felder eines Objekts. Dieses Feld ist nur für Werttypen, z. b. primitive und Strukturen, gültig.|  
+|`type`|Der CorElementType, zu dem dieser Typ gehört.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `numFields` ist größer als 0 (null), rufen Sie die [icordebugprocess5:: Gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) Methode zum Abrufen von Informationen zu den Feldern in dieser Art. Wenn `type` ist `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, oder `ELEMENT_TYPE_SZARRAY`, die Größe der Objekte dieses Typs ist, Variablen und können Sie übergeben die [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Struktur in der [icordebugprocess5:: Getarraylayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) Methode.  
+ Wenn `numFields` größer als 0 (null) ist, können Sie die [ICorDebugProcess5:: gettypeer Fields](icordebugprocess5-gettypefields-method.md) -Methode aufrufen, um Informationen zu den Feldern in diesem Typ zu erhalten. Wenn `type` , `ELEMENT_TYPE_STRING` oderist`ELEMENT_TYPE_SZARRAY`, ist die Größe von Objekten dieses Typs variabel, und Sie können die [COR_TYPEID](cor-typeid-structure.md) -Struktur an die [ICorDebugProcess5:: getarraylayout](icordebugprocess5-getarraylayout-method.md) -Methode übergeben. `ELEMENT_TYPE_ARRAY`  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Strukturen](debugging-structures.md)
+- [Debuggen](index.md)
