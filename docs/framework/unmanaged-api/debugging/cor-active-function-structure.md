@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740826"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274145"
 ---
-# <a name="coractivefunction-structure"></a><span data-ttu-id="a6bc1-102">COR_ACTIVE_FUNCTION-Struktur</span><span class="sxs-lookup"><span data-stu-id="a6bc1-102">COR_ACTIVE_FUNCTION Structure</span></span>
-<span data-ttu-id="a6bc1-103">Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-103">Contains information about the functions that are currently active in a thread's frames.</span></span> <span data-ttu-id="a6bc1-104">Diese Struktur wird verwendet, durch die [ICorDebugThread2:: GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-104">This structure is used by the [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) method.</span></span>  
+# <a name="cor_active_function-structure"></a><span data-ttu-id="e499e-102">COR_ACTIVE_FUNCTION-Struktur</span><span class="sxs-lookup"><span data-stu-id="e499e-102">COR_ACTIVE_FUNCTION Structure</span></span>
+<span data-ttu-id="e499e-103">Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="e499e-103">Contains information about the functions that are currently active in a thread's frames.</span></span> <span data-ttu-id="e499e-104">Diese Struktur wird von der [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) -Methode verwendet.</span><span class="sxs-lookup"><span data-stu-id="e499e-104">This structure is used by the [ICorDebugThread2::GetActiveFunctions](icordebugthread2-getactivefunctions-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6bc1-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a6bc1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e499e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e499e-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
@@ -38,26 +38,26 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 } COR_ACTIVE_FUNCTION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a6bc1-106">Member</span><span class="sxs-lookup"><span data-stu-id="a6bc1-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e499e-106">Member</span><span class="sxs-lookup"><span data-stu-id="e499e-106">Members</span></span>  
   
-|<span data-ttu-id="a6bc1-107">Member</span><span class="sxs-lookup"><span data-stu-id="a6bc1-107">Member</span></span>|<span data-ttu-id="a6bc1-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a6bc1-108">Description</span></span>|  
+|<span data-ttu-id="e499e-107">Member</span><span class="sxs-lookup"><span data-stu-id="e499e-107">Member</span></span>|<span data-ttu-id="e499e-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e499e-108">Description</span></span>|  
 |------------|-----------------|  
-|`pAppDomain`|<span data-ttu-id="a6bc1-109">Zeiger auf den Besitzer des der `ilOffset` Feld.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-109">Pointer to the application domain owner of the `ilOffset` field.</span></span>|  
-|`pModule`|<span data-ttu-id="a6bc1-110">Zeiger auf die modulbesitzer, der die `ilOffset` Feld.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-110">Pointer to the module owner of the `ilOffset` field.</span></span>|  
-|`pFunction`|<span data-ttu-id="a6bc1-111">Zeiger zum Inhaber der Funktion der `ilOffset` Feld.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-111">Pointer to the function owner of the `ilOffset` field.</span></span>|  
-|`ilOffset`|<span data-ttu-id="a6bc1-112">Der Microsoft intermediate Language (MSIL)-Offset des Frames.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-112">The Microsoft intermediate language (MSIL) offset of the frame.</span></span>|  
-|`flags`|<span data-ttu-id="a6bc1-113">Reserviert für zukünftige Erweiterbarkeit.</span><span class="sxs-lookup"><span data-stu-id="a6bc1-113">Reserved for future extensibility.</span></span>|  
+|`pAppDomain`|<span data-ttu-id="e499e-109">Zeiger auf den Anwendungs Domänen Besitzer des `ilOffset` Felds.</span><span class="sxs-lookup"><span data-stu-id="e499e-109">Pointer to the application domain owner of the `ilOffset` field.</span></span>|  
+|`pModule`|<span data-ttu-id="e499e-110">Zeiger auf den Modul Besitzer des `ilOffset` Felds.</span><span class="sxs-lookup"><span data-stu-id="e499e-110">Pointer to the module owner of the `ilOffset` field.</span></span>|  
+|`pFunction`|<span data-ttu-id="e499e-111">Zeiger auf den Funktions Besitzer des `ilOffset` Felds.</span><span class="sxs-lookup"><span data-stu-id="e499e-111">Pointer to the function owner of the `ilOffset` field.</span></span>|  
+|`ilOffset`|<span data-ttu-id="e499e-112">Der MSIL-Offset (Microsoft Intermediate Language) des Frames.</span><span class="sxs-lookup"><span data-stu-id="e499e-112">The Microsoft intermediate language (MSIL) offset of the frame.</span></span>|  
+|`flags`|<span data-ttu-id="e499e-113">Reserviert für zukünftige Erweiterbarkeit.</span><span class="sxs-lookup"><span data-stu-id="e499e-113">Reserved for future extensibility.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a6bc1-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a6bc1-114">Requirements</span></span>  
- <span data-ttu-id="a6bc1-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6bc1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e499e-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e499e-114">Requirements</span></span>  
+ <span data-ttu-id="e499e-115">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e499e-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a6bc1-116">**Header:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="a6bc1-116">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="e499e-116">**Header:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="e499e-116">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="a6bc1-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a6bc1-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e499e-117">**Fern** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e499e-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a6bc1-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6bc1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e499e-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e499e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6bc1-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6bc1-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e499e-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e499e-119">See also</span></span>
 
-- [<span data-ttu-id="a6bc1-120">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="a6bc1-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="a6bc1-121">Debuggen</span><span class="sxs-lookup"><span data-stu-id="a6bc1-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e499e-120">Debuggen von Strukturen</span><span class="sxs-lookup"><span data-stu-id="e499e-120">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="e499e-121">Debuggen</span><span class="sxs-lookup"><span data-stu-id="e499e-121">Debugging</span></span>](index.md)

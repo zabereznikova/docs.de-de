@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eab5fc13b74d8af4f0baaa3953c5c73ea255bfe6
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740548"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274018"
 ---
-# <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="fd2b5-102">COR_PUB_ENUMPROCESS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="fd2b5-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
-<span data-ttu-id="fd2b5-103">Identifiziert den aufzulistenden Prozesstyp.</span><span class="sxs-lookup"><span data-stu-id="fd2b5-103">Identifies the type of process to be enumerated.</span></span>  
+# <a name="cor_pub_enumprocess-enumeration"></a><span data-ttu-id="fb7ab-102">COR_PUB_ENUMPROCESS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="fb7ab-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
+<span data-ttu-id="fb7ab-103">Identifiziert den aufzulistenden Prozesstyp.</span><span class="sxs-lookup"><span data-stu-id="fb7ab-103">Identifies the type of process to be enumerated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd2b5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fd2b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb7ab-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fb7ab-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,24 +34,24 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fd2b5-105">Member</span><span class="sxs-lookup"><span data-stu-id="fd2b5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fb7ab-105">Member</span><span class="sxs-lookup"><span data-stu-id="fb7ab-105">Members</span></span>  
   
-|<span data-ttu-id="fd2b5-106">Membername</span><span class="sxs-lookup"><span data-stu-id="fd2b5-106">Member name</span></span>|<span data-ttu-id="fd2b5-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fd2b5-107">Description</span></span>|  
+|<span data-ttu-id="fb7ab-106">Membername</span><span class="sxs-lookup"><span data-stu-id="fb7ab-106">Member name</span></span>|<span data-ttu-id="fb7ab-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fb7ab-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="fd2b5-108">Ein verwalteter Prozess.</span><span class="sxs-lookup"><span data-stu-id="fd2b5-108">A managed process.</span></span>|  
+|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="fb7ab-108">Ein verwalteter Prozess.</span><span class="sxs-lookup"><span data-stu-id="fb7ab-108">A managed process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fd2b5-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fd2b5-109">Remarks</span></span>  
- <span data-ttu-id="fd2b5-110">Die aktuelle Version von der nicht verwalteten Debug-API Listet nur verwaltete Prozesse.</span><span class="sxs-lookup"><span data-stu-id="fd2b5-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb7ab-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fb7ab-109">Remarks</span></span>  
+ <span data-ttu-id="fb7ab-110">Mit der aktuellen Version der nicht verwalteten Debug-API werden nur verwaltete Prozesse aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="fb7ab-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd2b5-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fd2b5-111">Requirements</span></span>  
- <span data-ttu-id="fd2b5-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd2b5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb7ab-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fb7ab-111">Requirements</span></span>  
+ <span data-ttu-id="fb7ab-112">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb7ab-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd2b5-113">**Header:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="fd2b5-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="fb7ab-113">**Header:** Corpub. idl, Corpub. h</span><span class="sxs-lookup"><span data-stu-id="fb7ab-113">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="fd2b5-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd2b5-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fb7ab-114">**Fern** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fb7ab-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fd2b5-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd2b5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fb7ab-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb7ab-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd2b5-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd2b5-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb7ab-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fb7ab-116">See also</span></span>
 
-- [<span data-ttu-id="fd2b5-117">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="fd2b5-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="fb7ab-117">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="fb7ab-117">Debugging Enumerations</span></span>](debugging-enumerations.md)

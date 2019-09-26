@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9eb9bb1e4abeb98d8d0ba2b052612d918c45f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a05a779d4a56eb8f881da1824d5ffaa363b5a01
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741085"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274285"
 ---
-# <a name="closeclrenumeration-function"></a><span data-ttu-id="d2630-102">CloseCLREnumeration-Funktion</span><span class="sxs-lookup"><span data-stu-id="d2630-102">CloseCLREnumeration Function</span></span>
-<span data-ttu-id="d2630-103">Schließt alle gültigen common Language Runtime (CLR) weiterhin-Starts Ereignisse befindet sich in einem Array von Handles, die vom der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), und den Speicher für den Pfad von Handle- und Zeichenfolgenarrays freigegeben.</span><span class="sxs-lookup"><span data-stu-id="d2630-103">Closes any valid common language runtime (CLR) continue-startup events located in an array of handles returned by the [EnumerateCLRs function](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), and frees the memory for the handle and string path arrays.</span></span>  
+# <a name="closeclrenumeration-function"></a><span data-ttu-id="9d4a5-102">CloseCLREnumeration-Funktion</span><span class="sxs-lookup"><span data-stu-id="9d4a5-102">CloseCLREnumeration Function</span></span>
+<span data-ttu-id="9d4a5-103">Schließt alle gültigen Common Language Runtime (CLR) Continue-Startup-Ereignisse in einem Array von Handles, die von der [enumerateclrs-Funktion](enumerateclrs-function.md)zurückgegeben werden, und gibt den Arbeitsspeicher für das Handle und die Zeichen folgen Pfad Arrays frei.</span><span class="sxs-lookup"><span data-stu-id="9d4a5-103">Closes any valid common language runtime (CLR) continue-startup events located in an array of handles returned by the [EnumerateCLRs function](enumerateclrs-function.md), and frees the memory for the handle and string path arrays.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2630-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d2630-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d4a5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9d4a5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseCLREnumeration (  
@@ -38,31 +38,31 @@ HRESULT CloseCLREnumeration (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2630-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d2630-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d4a5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9d4a5-105">Parameters</span></span>  
  `pHandleArray`  
- <span data-ttu-id="d2630-106">[in] Zeiger auf das Array von Ereignishandles zurückgegeben wird, aus der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).</span><span class="sxs-lookup"><span data-stu-id="d2630-106">[in] Pointer to the array of event handles returned from the [EnumerateCLRs function](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).</span></span>  
+ <span data-ttu-id="9d4a5-106">in Ein Zeiger auf das Array von Ereignis Handles, die von der [enumerateclrs-Funktion](enumerateclrs-function.md)zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="9d4a5-106">[in] Pointer to the array of event handles returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
   
  `pStringArray`  
- <span data-ttu-id="d2630-107">[in] Zeiger auf das Array von CLR-Zeichenfolgenpfaden, die zurückgegeben werden, aus der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).</span><span class="sxs-lookup"><span data-stu-id="d2630-107">[in] Pointer to the array of CLR string paths returned from the [EnumerateCLRs function](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md).</span></span>  
+ <span data-ttu-id="9d4a5-107">in Ein Zeiger auf das Array von CLR-Zeichen folgen Pfaden, die von der [enumerateclrs-Funktion](enumerateclrs-function.md)zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="9d4a5-107">[in] Pointer to the array of CLR string paths returned from the [EnumerateCLRs function](enumerateclrs-function.md).</span></span>  
   
  `dwArrayLength`  
- <span data-ttu-id="d2630-108">[in] DWORD, das die Größe (Länge) von `pHandleArray` oder `pStringArray` enthält (diese sind identisch).</span><span class="sxs-lookup"><span data-stu-id="d2630-108">[in] DWORD that contains the size (length) of either `pHandleArray` or `pStringArray` (they are the same).</span></span>  
+ <span data-ttu-id="9d4a5-108">[in] DWORD, das die Größe (Länge) von `pHandleArray` oder `pStringArray` enthält (diese sind identisch).</span><span class="sxs-lookup"><span data-stu-id="9d4a5-108">[in] DWORD that contains the size (length) of either `pHandleArray` or `pStringArray` (they are the same).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d2630-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d2630-109">Return Value</span></span>  
- <span data-ttu-id="d2630-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="d2630-110">S_OK</span></span>  
- <span data-ttu-id="d2630-111">Handles geöffnet wird, indem die [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) geschlossen werden, und für die Handle- und Zeichenfolgenarrays zugewiesenen Arbeitsspeicher wird freigegeben.</span><span class="sxs-lookup"><span data-stu-id="d2630-111">Handles opened by the [EnumerateCLRs function](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md) are closed, and memory allocated for the handle and string arrays is freed.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9d4a5-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9d4a5-109">Return Value</span></span>  
+ <span data-ttu-id="9d4a5-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="9d4a5-110">S_OK</span></span>  
+ <span data-ttu-id="9d4a5-111">Handles, die von der [enumerateclrs-Funktion](enumerateclrs-function.md) geöffnet werden, werden geschlossen, und für das Handle-und Zeichen folgen Arrays zugeordnete Arbeitsspeicher wird freigegeben</span><span class="sxs-lookup"><span data-stu-id="9d4a5-111">Handles opened by the [EnumerateCLRs function](enumerateclrs-function.md) are closed, and memory allocated for the handle and string arrays is freed.</span></span>  
   
- <span data-ttu-id="d2630-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="d2630-112">E_INVALIDARG</span></span>  
- <span data-ttu-id="d2630-113">Die Länge von `pHandleArray` stimmt nicht mit der Länge überein, die in `dwArrayLength` übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="d2630-113">The length of `pHandleArray` does not match the length that is passed in `dwArrayLength`.</span></span>  
+ <span data-ttu-id="9d4a5-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="9d4a5-112">E_INVALIDARG</span></span>  
+ <span data-ttu-id="9d4a5-113">Die Länge von `pHandleArray` stimmt nicht mit der Länge überein, die in `dwArrayLength` übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="9d4a5-113">The length of `pHandleArray` does not match the length that is passed in `dwArrayLength`.</span></span>  
   
- <span data-ttu-id="d2630-114">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="d2630-114">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="d2630-115">Die Funktion kann den Arbeitsspeicher für `pHandleArray` und `pStringArray` nicht freigeben.</span><span class="sxs-lookup"><span data-stu-id="d2630-115">The function is unable to free the memory for `pHandleArray` and `pStringArray`.</span></span>  
+ <span data-ttu-id="9d4a5-114">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="9d4a5-114">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="9d4a5-115">Die Funktion kann den Arbeitsspeicher für `pHandleArray` und `pStringArray` nicht freigeben.</span><span class="sxs-lookup"><span data-stu-id="9d4a5-115">The function is unable to free the memory for `pHandleArray` and `pStringArray`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2630-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d2630-116">Requirements</span></span>  
- <span data-ttu-id="d2630-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2630-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d4a5-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9d4a5-116">Requirements</span></span>  
+ <span data-ttu-id="9d4a5-117">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d4a5-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2630-118">**Header:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="d2630-118">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="9d4a5-118">**Header:** dbgshim. h</span><span class="sxs-lookup"><span data-stu-id="9d4a5-118">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="d2630-119">**Bibliothek:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="d2630-119">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="9d4a5-119">**Bibliothek:** dbgshim. dll</span><span class="sxs-lookup"><span data-stu-id="9d4a5-119">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="d2630-120">**.NET Framework-Versionen:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d2630-120">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="9d4a5-120">**.NET Framework Versionen:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="9d4a5-120">**.NET Framework Versions:** 3.5 SP1</span></span>
