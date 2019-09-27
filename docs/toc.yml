@@ -532,6 +532,8 @@
       href: framework/tools/
     - name: Zusätzliche Klassenbibliotheken und APIs
       href: framework/additional-apis/
+- name: .NET-Desktopleitfaden (WPF)
+  href: desktop-wpf/
 - name: 'Leitfaden für C#'
   href: csharp/index.md
   items:
@@ -1031,7 +1033,7 @@
             - name: Zugreifen auf Anwendungswebdienste
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: 'Vorgehensweise: Asynchrones Aufrufen eines Webdiensts'
+                - name: 'Gewusst wie: Asynchrones Aufrufen eines Webdiensts'
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1153,7 +1155,7 @@
             - name: Zusammengesetzte Datentypen
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
+                - name: 'Gewusst wie: Ablegen mehrerer Werte in einer Variablen'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: Generische Typen
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
@@ -1242,7 +1244,7 @@
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
         - name: 'Vorgehensweise: Aufrufen von Windows-APIs'
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 'Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
+        - name: 'Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
         - name: 'Exemplarische Vorgehensweise: Erstellen von COM-Objekten'
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
