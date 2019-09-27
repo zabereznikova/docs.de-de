@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770589"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332810"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState-Methode
-Flags, die beschreiben, den Debugzustand ICorDebugThread festgelegt.  
+Legt Flags fest, die den Debugzustand dieses ICorDebugThread beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT SetDebugState (
   
 ## <a name="parameters"></a>Parameter  
  `state`  
- [in] Eine bitweise Kombination von Werten der CorDebugThreadState-Enumeration, die den Debugzustand dieses Threads angeben.  
+ in Eine bitweise Kombination von CorDebugThreadState-Enumerationswerten, die den Debugzustand dieses Threads angeben.  
   
 ## <a name="remarks"></a>Hinweise  
- `SetDebugState` Legt den aktuellen Debugzustand des Threads fest. (Der "aktuellen Debugzustand" stellt den Debugzustand dar, würde der Vorgang fortgesetzt werden, wird nicht den tatsächlichen aktuellen Status.) Der normale Wert für diesen ist THREAD_RUNNING. Nur der Debugger kann den Debugzustand eines Threads beeinträchtigen. Debuggen Sie Zustände zuletzt über fortgesetzt wird, sodass Wenn einen Thread THREAD_SUSPENDed über mehrere weiterhin beibehalten werden sollen, können Sie es einmal festgelegt und danach keine Gedanken. Anhalten von Threads und den Vorgang fortsetzen können Deadlocks verursachen, obwohl dies eher unwahrscheinlich ist. Dies ist eine systeminterne Qualität von Threads und Prozessen und standardmäßig. Ein Debugger kann asynchron unterbrechen und Fortsetzen von Threads um den Deadlock zu durchbrechen. Wenn der Thread des Benutzerstatus USER_UNSAFE_POINT enthält, kann der Thread eine Garbagecollection (GC) blockiert. Dies bedeutet, dass der unterbrochene Thread eine viel höhere Chance und einen Deadlock verursachen. Dies beeinflusst möglicherweise nicht debuggen, die Ereignisse bereits in der Warteschlange. Daher sollte ein Debugger die gesamte Ereigniswarteschlange abzuleiten (durch Aufrufen von [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) vor dem Anhalten oder Fortsetzen von Threads. Andernfalls kann es Ereignisse in einem Thread ab, die er glaubt, dass sie bereits angehalten wurde.  
+ `SetDebugState` legt den aktuellen Debugzustand des Threads fest. (Der "aktuelle Debugzustand" stellt den Debugzustand dar, wenn der Prozess fortgesetzt werden soll, und nicht der tatsächliche aktuelle Zustand.) Der normale Wert hierfür ist THREAD_RUN. Nur der Debugger kann sich auf den Debugzustand eines Threads auswirken. Die debugzustände werden am Ende fortgesetzt. Wenn Sie also einen Thread beibehalten möchten THREAD_SUSPENDed über mehrere Vorgänge hinweg, können Sie ihn einmal festlegen und sich danach nicht mehr darum kümmern. Das Anhalten von Threads und das Fortsetzen des Prozesses kann zu Deadlocks führen, obwohl dies in der Regel unwahrscheinlich ist. Dies ist eine systeminterne Qualität von Threads und Prozessen und ist Entwurfs bedingt. Ein Debugger kann die Threads asynchron unterbrechen und fortsetzen, um den Deadlock zu unterbrechen. Wenn der Benutzer Zustand des Threads USER_UNSAFE_POINT enthält, kann der Thread eine Garbage Collection (GC) blockieren. Dies bedeutet, dass der angehaltene Thread eine viel höhere Wahrscheinlichkeit hat, dass ein Deadlock verursacht wird. Dies wirkt sich möglicherweise nicht auf Debugereignisse aus Daher sollte ein Debugger die gesamte Ereignis Warteschlange (durch Aufrufen von [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) abgleichen, bevor Threads angehalten oder fortgesetzt werden. Andernfalls werden möglicherweise Ereignisse in einem Thread angezeigt, der davon ausgeht, dass er bereits angehalten wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,14 +2,14 @@
 title: Was ist F#
 description: Erfahren Sie, was der F#-Programmiersprache und F#-Programmierung wie. Hier finden Sie Informationen zu umfangreichen Datentypen, Funktionen und deren Anpassung.
 ms.date: 08/03/2018
-ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630458"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332731"
 ---
-# <a name="what-is-f"></a>Was ist F?\#
+# <a name="what-is-f"></a>Was ist F @ no__t-0
 
 F#ist eine funktionale Programmiersprache, die das Schreiben von korrekter und verwalbbarem Code erleichtert.
 
@@ -100,7 +100,7 @@ F#Funktionen sind ebenfalls die erste Klasse, d. h., Sie können als Parameter u
 F#bietet vollständige Unterstützung für-Objekte, bei denen es sich um nützliche Datentypen handelt, wenn Sie Daten und Funktionen mischen müssen. F#-Funktionen werden verwendet, um-Objekte zu bearbeiten.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 
