@@ -23,7 +23,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann Web
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>So verknüpfen Sie eine Webseite mit dem RichTextBox-Steuerelement
 
-1. Legen Sie <xref:System.Windows.Forms.RichTextBox.Text%2A> die-Eigenschaft auf eine Zeichenfolge fest, die eine gültige URL enthält http://www.microsoft.com/ (z. b. "").
+1. Legen Sie <xref:System.Windows.Forms.RichTextBox.Text%2A> die-Eigenschaft auf eine Zeichenfolge fest, die eine gültige URL enthält"http://www.microsoft.com/"(z. b.).
 
 2. Stellen Sie sicher <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> , dass die- `true` Eigenschaft auf festgelegt ist (die Standardeinstellung).
 
