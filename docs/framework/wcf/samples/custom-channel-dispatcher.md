@@ -23,7 +23,7 @@ In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weis
  Der Verteiler öffnet zuerst den Kanallistener und akzeptiert dann den Singletonantwortkanal. Er beginnt mit dem Kanal mit dem Senden von Nachrichten (Anforderungen) in einer Endlosschleife. Für jede Anforderung erstellt er eine Antwortnachricht und sendet sie an den Client zurück.  
   
 ## <a name="creating-a-response-message"></a>Erstellen einer Antwortnachricht  
- Die Nachrichtenverarbeitung wird im Typ `MyServiceManager` implementiert. In der `HandleRequest`-Methode wird der `Action`-Header der Nachricht zuerst daraufhin überprüft, ob die Anforderung unterstützt wird. Eine vordefinierte SOAP- http://tempuri.org/HelloWorld/Hello Aktion "" ist für die Nachrichtenfilterung definiert. Dies ähnelt dem Dienstvertrags Konzept in der WCF-Implementierung von <xref:System.ServiceModel.ServiceHost>.  
+ Die Nachrichtenverarbeitung wird im Typ `MyServiceManager` implementiert. In der `HandleRequest`-Methode wird der `Action`-Header der Nachricht zuerst daraufhin überprüft, ob die Anforderung unterstützt wird. Eine vordefinierte SOAP-"http://tempuri.org/HelloWorld/Hello"Aktion "" ist für die Nachrichtenfilterung definiert. Dies ähnelt dem Dienstvertrags Konzept in der WCF-Implementierung von <xref:System.ServiceModel.ServiceHost>.  
   
  Im Beispiel werden für den richtigen SOAP-Aktionsfall die angeforderten Nachrichtendaten abgerufen, und es wird eine entsprechende Antwort auf die Anforderung generiert, ähnlich dem <xref:System.ServiceModel.ServiceHost>-Fall.  
   
