@@ -374,6 +374,19 @@
             - name: XAML-Dienste
               tocHref: /dotnet/framework/xaml-services/
               topicHref: /dotnet/framework/xaml-services/index
+        - name: Desktopleitfaden (WPF)
+          tocHref: /dotnet/desktop-wpf/
+          topicHref: /dotnet/desktop-wpf/index
+          items:
+            - name: Erste Schritte
+              tocHref: /visualstudio/get-started/csharp/tutorial-wpf
+              topicHref: /dotnet/desktop-wpf/getting-started/index
+            - name: Migration
+              tocHref: /dotnet/desktop-wpf/migration
+              topicHref: /dotnet/desktop-wpf/migration/index
+            - name: Datenbindung
+              tocHref: /dotnet/desktop-wpf/data
+              topicHref: /dotnet/desktop-wpf/data/index
         - name: 'Leitfaden für C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
