@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 92f7e94d8003823c0b166cc617563e63aba78027
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038019"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591605"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -66,7 +66,7 @@ Möglicherweise müssen Sie ein Objekt in einen anderen Typ konvertieren.
 - [Verwenden des Musterabgleichs sowie der Operatoren `as` und `is` zur sicheren Umwandlung in einen anderen Typ](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Definieren benutzerdefinierter Typkonvertierungen](../language-reference/operators/user-defined-conversion-operators.md)
 - [Identifizieren, ob ein Typ ein Typ ist, der NULL-Werte zulässt](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
+- [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Übereinstimmungs- und Reihenfolgenvergleiche
 
