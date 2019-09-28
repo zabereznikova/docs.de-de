@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929940"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592115"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Gibt an, dass eine Typdeklaration eine partielle Definition des Typs ist.  
@@ -31,7 +31,7 @@ Gibt an, dass eine Typdeklaration eine partielle Definition des Typs ist.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
 Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]  
     [ Inherits classname ]  
@@ -45,7 +45,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Begriff|Definition|  
 |---|---|  
-|`attrlist`|Optional. Liste der Attribute, die für diesen Typ gelten. Sie müssen die [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md) in Spitze Klammern (`< >`) einschließen.|  
+|`attrlist`|Optional. Liste der Attribute, die für diesen Typ gelten. Sie müssen die [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern (`< >`) einschließen.|  
 |`accessmodifier`|Optional. Gibt an, welcher Code auf diesen Typ zugreifen kann. Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Optional. Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Optional. Siehe [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  

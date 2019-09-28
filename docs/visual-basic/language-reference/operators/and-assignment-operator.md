@@ -1,5 +1,5 @@
 ---
-title: '&amp;=-Operator (Visual Basic)'
+title: '&amp; =-Operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,37 +10,37 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82d791e5d66c301442c99d2cc73e3172c3e30f17
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608436"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591637"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;=-Operator (Visual Basic)
-Verkettet eine `String` Ausdruck, der eine `String` Variable oder eine Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft.  
+# <a name="amp-operator-visual-basic"></a>&amp; =-Operator (Visual Basic)
+Verkettet einen `String`-Ausdruck mit einer `String`-Variablen oder-Eigenschaft und weist das Ergebnis der Variablen oder der Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 variableorproperty &= expression  
 ```  
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Alle `String` Variable oder eine Eigenschaft.  
+ Erforderlich. Eine beliebige `String`-Variable oder-Eigenschaft.  
   
  `expression`  
  Erforderlich. Beliebiger `String` -Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite von der `&=` Operator kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). Die `&=` Operator verkettet die `String` Ausdruck auf der rechten Seite, um die `String` Variable oder eine Eigenschaft auf der linken Seite und weist das Ergebnis der Variablen oder die Eigenschaft auf der linken Seite.  
+ Das Element auf der linken Seite des `&=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md) Der `&=`-Operator verkettet den `String`-Ausdruck rechts von der `String`-Variablen oder-Eigenschaft auf der linken Seite und weist das Ergebnis der Variablen oder der Eigenschaft auf der linken Seite zu.  
   
 ## <a name="overloading"></a>Überladen  
- Die [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Das Überladen der `&` Operator beeinflusst das Verhalten von der `&=` Operator. Wenn Ihr Code verwendet `&=` für eine Klasse oder Struktur, die Überladungen `&`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `&`-Operators wirkt sich auf das Verhalten des `&=`-Operators aus. Wenn Ihr Code `&=` für eine Klasse oder Struktur verwendet, die `&` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `&=` Operator zum Verketten von zwei `String` Variablen und das Ergebnis der ersten Variablen zuzuweisen.  
+ Im folgenden Beispiel wird der `&=`-Operator verwendet, um zwei `String`-Variablen zu verketten und das Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   

@@ -10,138 +10,138 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757403"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353740"
 ---
 # <a name="parameter-design"></a>Parameterentwurf
-Dieser Abschnitt enthält allgemeine Richtlinien zum parameterentwurf, einschließlich der Abschnitte mit Richtlinien für die Überprüfung der Argumente. Darüber hinaus, lesen Sie die Hinweise in [Naming Parameters](../../../docs/standard/design-guidelines/naming-parameters.md).  
+Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschließlich Abschnitten mit Richtlinien zum Überprüfen von Argumenten. Außerdem sollten Sie die in [Benennungs Parametern](../../../docs/standard/design-guidelines/naming-parameters.md)beschriebenen Richtlinien beachten.  
   
  **✓ DO** verwenden, der am wenigsten abgeleiteten Parametertyp, die die Funktionen für das Element bereitstellt.  
   
- Nehmen wir beispielsweise an, dass eine Methode zu entwerfen, die Listet eine Auflistung, und jedes Element in der Konsole ausgegeben, werden soll. Eine solche Methode dauert <xref:System.Collections.IEnumerable> als Parameter nicht <xref:System.Collections.ArrayList> oder <xref:System.Collections.IList>, z. B.  
+ Angenommen, Sie möchten eine Methode entwerfen, die eine Auflistung auflistet und jedes Element in der Konsole ausgibt. Eine solche Methode sollte beispielsweise <xref:System.Collections.IEnumerable> als Parameter annehmen, nicht <xref:System.Collections.ArrayList> oder <xref:System.Collections.IList>.  
   
  **X DO NOT** reservierte Parameter verwenden.  
   
- Wenn mehr Eingabe, um ein Element in einer künftigen Version erforderlich ist, kann eine neue Überladung hinzugefügt werden.  
+ Wenn in einer zukünftigen Version mehr Eingaben für einen Member erforderlich sind, kann eine neue Überladung hinzugefügt werden.  
   
  **X DO NOT** haben öffentlich verfügbar gemachten Methoden, die Zeiger, Arrays von Zeigern oder mehrdimensionale Arrays als Parameter akzeptieren.  
   
- Zeiger und mehrdimensionale Arrays sind relativ schwierig, ordnungsgemäß zu verwenden. In fast allen Fällen können APIs überarbeitet werden, um zu vermeiden, nehmen diese Typen als Parameter.  
+ Zeiger und mehrdimensionale Arrays sind relativ schwierig zu verwenden. In fast allen Fällen können APIs umgestaltet werden, um zu vermeiden, dass diese Typen als Parameter übernommen werden.  
   
  **✓ DO** platzieren Sie alle `out` Parameter, die alle per-Wert und `ref` Parameter (ausgenommen Parameterarrays), auch wenn dies zu einer Inkonsistenz der Sortierung zwischen Überladungen Parameter führt (finden Sie unter [Member Überladen von](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- Die `out` Parameter können als zusätzliche Werte angezeigt werden, und gruppieren sie die Signatur der Methode ist einfacher zu verstehen.  
+ Die `out`-Parameter können als zusätzliche Rückgabewerte angesehen werden, und durch Gruppierung werden die Methoden Signaturen leichter zu verstehen.  
   
  **✓ DO** benennen Parameter aus, wenn Sie Member überschreiben oder Implementieren von Schnittstellenmembern konsistent sein.  
   
- Dies besser wird die Beziehung zwischen den Methoden kommuniziert.  
+ Dadurch wird die Beziehung zwischen den Methoden besser kommuniziert.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen für Enumerationen und booleschen Parametern  
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen Aufzählungs-und booleschen Parametern  
  **✓ DO** Enumerationen verwenden, wenn ein Element mindestens zwei boolesche Parameter hätten.  
   
  **X DO NOT** boolesche Werte verwenden, es sei denn, Sie absolut sicher, dass es werden nie mehr als zwei Werte erforderlich sind.  
   
- Enumerationen bieten Ihnen etwas Platz für zukünftige Hinzufügen von Werten, aber Sie sollten über alle Auswirkungen auf die Enumerationen, die in beschriebenen Werte hinzufügen [Enum-Entwurf](../../../docs/standard/design-guidelines/enum.md).  
+ Enumerationen geben Ihnen einen gewissen Raum für eine zukünftige Addition von Werten. Sie sollten jedoch alle Implikationen beachten, die sich aus dem Hinzufügen von Werten zu Enumerationen machen, die im [Enumerationsentwurf](../../../docs/standard/design-guidelines/enum.md)beschrieben werden.  
   
  **✓ CONSIDER** mit boolesche Werte für Konstruktorparameter, die tatsächlich zwei-Status-Werte sind und zur Initialisierung von boolescher Eigenschaften, die einfach verwendet werden.  
   
-### <a name="validating-arguments"></a>Überprüfen von Argumenten  
- **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Löst <xref:System.ArgumentException?displayProperty=nameWithType>, oder eine ihrer Unterklassen, wenn die Validierung fehlschlägt.  
+### <a name="validating-arguments"></a>Validieren von Argumenten  
+ **✓ DO** weitergegebenen Argumenten um öffentlich, geschützt oder explizit implementierten Member zu überprüfen. Lösen Sie <xref:System.ArgumentException?displayProperty=nameWithType> oder eine der zugehörigen Unterklassen aus, wenn die Validierung fehlschlägt.  
   
- Beachten Sie, dass die tatsächliche Validierung nicht unbedingt in der öffentlichen oder geschützten Member selbst nicht geschehen. Dies kann auf einer niedrigeren Ebene in eine private oder interne Routine eintreten. Der wichtigste Aspekt ist, überprüft die Argumente, die gesamte Oberfläche, die an die Endbenutzer verfügbar gemacht wird.  
+ Beachten Sie, dass die tatsächliche Validierung nicht unbedingt im öffentlichen oder geschützten Member selbst erfolgen muss. Dies kann in einer privaten oder internen Routine auf einer niedrigeren Ebene vorkommen. Der Hauptgrund dafür ist, dass die gesamte Oberfläche, die den Endbenutzern zur Verfügung gestellt wird, die Argumente prüft.  
   
  **✓ DO** auslösen <xref:System.ArgumentNullException> Wenn ein null-Argument übergeben wird und das Element keine null-Argumente unterstützt.  
   
  **✓ DO** Enum-Parameter überprüft.  
   
- Führen Sie Sie nicht davon gehen Sie aus, dass Enum-Argumente in den Bereich, der von der Enumeration definiert ist. Die CLR ermöglicht, einen beliebigen ganzzahligen Wert in einen Enum-Wert umwandeln, selbst wenn der Wert nicht in die Enumeration definiert ist.  
+ Gehen Sie nicht davon aus, dass sich die Aufzählungs Argumente in dem von der-Aufzählung definierten Bereich befinden. Die CLR ermöglicht das Umwandeln eines beliebigen ganzzahligen Werts in einen Enumerationswert, auch wenn der Wert nicht in der Enumeration definiert ist.  
   
  **X DO NOT** verwenden <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> für Enum Bereich überprüft.  
   
  **✓ DO** Beachten Sie, dass änderbare Argumente möglicherweise geändert wurden, nachdem sie überprüft wurden.  
   
- Wenn der Member sicherheitsrelevant ist, werden Sie aufgefordert, erstellen Sie eine Kopie, und klicken Sie dann überprüfen und verarbeiten das Argument.  
+ Wenn der Member Sicherheits sensibel ist, wird empfohlen, eine Kopie zu erstellen und dann das Argument zu validieren und zu verarbeiten.  
   
 ### <a name="parameter-passing"></a>Parameterübergabe  
- Aus der Perspektive einer Framework-Designer, es gibt drei Hauptgruppen von Parametern: per-Wert-Parametern `ref` Parameter und `out` Parameter.  
+ Aus Sicht eines Framework-Designers gibt es drei Hauptgruppen von Parametern: nach Wert Parameter, `ref`-Parametern und `out`-Parametern.  
   
- Wenn ein Argument über einen Parameter nach Wert übergeben wird, erhält das Element eine Kopie des tatsächlichen Arguments übergeben. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Verweistyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Am häufigsten verwendete CLR-Sprachen wie c#, VB.NET und C++-Standard zum Übergeben von Parametern als Wert.  
+ Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Die gängigsten CLR-Sprachen, C#wie z. b C++., VB.net und, übergeben standardmäßig Parameter nach Wert.  
   
- Wenn ein Argument übergeben wird, über eine `ref` Parameter, der Mitglied erhält einen Verweis auf das tatsächliche Argument übergeben. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn das Argument ein Verweistyp ist, wird ein Verweis auf den Verweis auf dem Stapel abgelegt. `Ref` Parameter können verwendet werden, um das Element zu ändern, vom Aufrufer übergegebene Argumente machen.  
+ Wenn ein Argument über einen `ref`-Parameter übergeben wird, empfängt der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref`-Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.  
   
- `Out` Parameter sind ähnlich, `ref` Parameter, mit einigen kleinen unterschieden. Der Parameter wird anfänglich betrachtet, nicht zugewiesen und kann nicht in den Text des Elements gelesen werden, bevor ihr einen Wert zugewiesen wird. Darüber hinaus muss der Parameter einen Wert zugewiesen werden, bevor das Element zurückgibt.  
+ `Out`-Parameter ähneln `ref`-Parametern mit einigen kleinen unterschieden. Der-Parameter wird anfänglich als nicht zugewiesen betrachtet und kann nicht im Element Text gelesen werden, bevor ihm ein Wert zugewiesen wird. Außerdem muss dem-Parameter ein Wert zugewiesen werden, bevor der Member zurückgegeben wird.  
   
  **X AVOID** mit `out` oder `ref` Parameter.  
   
- Mithilfe von `out` oder `ref` Parameter erfordert Erfahrung mit Zeigern, Kenntnisse der Unterschiede zwischen Werttypen und Verweistypen und Umgang mit Methoden mit mehreren Rückgabewerten. Außerdem ist der Unterschied zwischen `out` und `ref` Parameter kann häufig nicht interpretiert werden. Framework-Architekten Entwerfen für eine Breite Zielgruppe sollten nicht erwarten, dass der Benutzer das master arbeiten mit `out` oder `ref` Parameter.  
+ Die Verwendung von `out`-oder `ref`-Parametern erfordert die Verwendung von Zeigern, die Unterschiede zwischen Werttypen und Verweis Typen sowie die Behandlung von Methoden mit mehreren Rückgabe Werten. Außerdem wird der Unterschied `out` zwischen `ref` -und-Parametern nicht häufig verstanden. Framework-Architekten, die für eine allgemeine Zielgruppe entwerfen, sollten nicht erwarten, dass Benutzer mit `out`-oder `ref`-Parametern arbeiten.  
   
  **X DO NOT** Verweistypen als Verweis übergeben.  
   
- Es gibt einige wenige Ausnahmen für die Regel, wie z. B. eine Methode, die zum Austauschen von Verweisen verwendet werden kann.  
+ Es gibt einige begrenzte Ausnahmen für die Regel, z. b. eine Methode, die zum Austauschen von Verweisen verwendet werden kann.  
   
-### <a name="members-with-variable-number-of-parameters"></a>Elemente mit einer Variablen Anzahl von Parametern  
- Elemente, die eine Variable Anzahl von Argumenten akzeptieren können, werden durch die Bereitstellung eines Arrayparameter ausgedrückt. Z. B. <xref:System.String> bietet die folgende Methode:  
+### <a name="members-with-variable-number-of-parameters"></a>Elemente mit variabler Anzahl von Parametern  
+ Member, die eine Variable Anzahl von Argumenten annehmen können, werden durch Angabe eines Array Parameters ausgedrückt. @No__t-0 stellt z. b. die folgende Methode bereit:  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, object[] parameters);  
 }  
 ```  
   
- Ein Benutzer kann dann Aufrufen der <xref:System.String.Format%2A?displayProperty=nameWithType> -Methode wie folgt:  
+ Ein Benutzer kann dann die <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode wie folgt aufzurufen:  
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
- Durch Hinzufügen des C#-Params-Schlüsselworts auf einen Arrayparameter ändert der Parameter auf einen Arrayparameter so genannte Params und verfügt über eine Tastenkombination für das ein temporäres Array erstellen.  
+ Durch das C# Hinzufügen des params-Schlüssel Worts zu einem Array Parameter wird der Parameter in einen sogenannten params-Array Parameter geändert und eine Verknüpfung zur Erstellung eines temporären Arrays bereitgestellt.  
   
-```  
+```csharp  
 public class String {  
     public static string Format(string format, params object[] parameters);  
 }  
 ```  
   
- Auf diese Weise kann der Benutzer zum Aufrufen der Methode durch die Elemente des Arrays in der Argumentliste direkt übergeben.  
+ Dadurch kann der Benutzer die Methode aufzurufen, indem er die Array Elemente direkt in der Argumentliste übergibt.  
   
  `String.Format("File {0} not found in {1}",filename,directory);`  
   
- Beachten Sie, dass das Params-Schlüsselwort nur der letzte Parameter in der Liste hinzugefügt werden kann.  
+ Beachten Sie, dass das parameterschlüsselwort nur dem letzten Parameter in der Parameterliste hinzugefügt werden kann.  
   
- **✓ CONSIDER** Arrayparameter des Params-Schlüsselworts hinzugefügt, wenn Sie davon ausgehen, die Endbenutzer zum Übergeben von Arrays mit einer kleinen Anzahl von Elementen dass. Erwartet werden, dass viele der Elemente in gängigen Szenarien übergeben werden, Benutzer übergibt diese Elemente Inline wahrscheinlich nicht ohnehin, und das Params-Schlüsselwort ist daher nicht erforderlich.  
+ **✓ CONSIDER** Arrayparameter des Params-Schlüsselworts hinzugefügt, wenn Sie davon ausgehen, die Endbenutzer zum Übergeben von Arrays mit einer kleinen Anzahl von Elementen dass. Wenn davon ausgegangen wird, dass viele Elemente in gängigen Szenarien übergeben werden, werden diese Elemente wahrscheinlich nicht von den Benutzern Inline übergeben, sodass das params-Schlüsselwort nicht erforderlich ist.  
   
  **X AVOID** Params-Arrays verwenden, wenn ein Aufrufer fast immer die Eingabe bereits in einem Array würde.  
   
- Mitglieder mit Arrayparametern Byte würde z. B. durch Übergeben der einzelnen Bytes fast nie aufgerufen werden. Aus diesem Grund verwenden Byte-Array-Parameter in .NET Framework nicht das Params-Schlüsselwort.  
+ Beispielsweise werden Elemente mit Bytearray-Parametern fast nie aufgerufen, indem einzelne Bytes übergeben werden. Aus diesem Grund verwenden Bytearray-Parameter im .NET Framework nicht das params-Schlüsselwort.  
   
  **X DO NOT** Params-Arrays verwenden, wenn das Array vom dauert des Params-Array Parameters-Element geändert wird.  
   
- Aufgrund der Tatsache, dass viele Compiler die Argumente für das Element in ein temporäres Array an der Aufrufsite umwandeln das Array kann kein temporäres Objekt sein, und somit keine Änderungen an das Array verloren.  
+ Aufgrund der Tatsache, dass viele Compiler die Argumente für den Member in ein temporäres Array an der aufrufssite umwandeln, kann das Array ein temporäres Objekt sein. Daher gehen alle Änderungen am Array verloren.  
   
  **✓ CONSIDER** des Params-Schlüsselworts in einer einfachen Überladung verwenden, auch wenn eine komplexere Überladung, konnte ihn nicht verwenden.  
   
- Fragen Sie sich, wenn Benutzer in einer Überladung der Parameterarray müssen, auch wenn es in alle Überladungen war nicht Wert würde.  
+ Fragen Sie sich, ob Benutzer den Wert des params-Arrays in einer Überladung haben würden, auch wenn Sie nicht in allen über Ladungen vorhanden wäre.  
   
  **✓ DO** versuchen, Order-Parameter, und es Ihnen ermöglicht mithilfe des Params-Schlüsselworts.  
   
  **✓ CONSIDER** spezielle Überladungen und Codepfade für Aufrufe mit einer kleinen Anzahl von Argumenten in extrem leistungsabhängigen-APIs bereitstellen.  
   
- Dadurch kann vermieden werden Array von Objekten erstellen, wenn die API mit einer kleinen Anzahl von Argumenten aufgerufen wird. Bilden Sie die Namen der Parameter, indem ein einzelnes Format des Array-Parameters und ein numerisches Suffix hinzugefügt.  
+ Dadurch ist es möglich, keine Array Objekte zu erstellen, wenn die API mit einer kleinen Anzahl von Argumenten aufgerufen wird. Bilden Sie die Namen der Parameter, indem Sie eine Singular Form des Array-Parameters und ein numerisches Suffix hinzufügen.  
   
- Sie sollten dies nur tun, wenn Sie beabsichtigen, der Pfad für den gesamten besondere Schreibweisen, nicht nur ein Array erstellen, und rufen Sie die allgemeine Methode.  
+ Dies sollten Sie nur tun, wenn Sie den gesamten Codepfad als Sonderfall verwenden, nicht nur ein Array erstellen und die allgemeinere Methode aufrufen.  
   
  **✓ DO** Beachten Sie, dass Null kann als ein Params-Argument übergeben werden.  
   
- Sie sollten überprüfen, dass das Array nicht vor der Verarbeitung null ist.  
+ Vor der Verarbeitung sollten Sie überprüfen, ob das Array nicht NULL ist.  
   
  **X DO NOT** verwenden die `varargs` Methoden, sogenannten mit den Auslassungspunkten.  
   
- Einige CLR-Sprachen, z. B. C++, unterstützen eine alternative Konvention für die Übergabe von Variablen Parameterlisten namens `varargs` Methoden. Die Konvention sollte nicht in Frameworks verwendet werden, da es nicht CLS-kompatibel ist.  
+ Einige CLR-Sprachen, wie C++z. b., unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten, die `varargs`-Methoden genannt werden Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.  
   
 ### <a name="pointer-parameters"></a>Zeigerparameter  
- Im Allgemeinen Zeiger nicht in die öffentliche Oberfläche eines Frameworks gut entworfene von verwaltetem Code angezeigt werden soll. In den meisten Fällen, sollte als Zeiger gekapselt werden. Jedoch in einigen Fällen Zeiger aus Gründen der Interoperabilität erforderlich sind, und Verwenden von Zeigern in solchen Fällen eignet.  
+ Im Allgemeinen sollten Zeiger nicht in der öffentlichen Oberfläche eines gut entworfenen verwalteten Code-Frameworks angezeigt werden. In den meisten Fällen sollten Zeiger gekapselt werden. In einigen Fällen sind Zeiger aber aus Interoperabilitäts Gründen erforderlich, und die Verwendung von Zeigern in solchen Fällen ist angemessen.  
   
  **✓ DO** bieten eine Alternative für ein Element, das ein Zeigerargument akzeptiert, da Zeiger nicht CLS-kompatibel sind.  
   
@@ -149,11 +149,11 @@ public class String {
   
  **✓ DO** Konventionen gemeinsamen Zeiger-bezogene beim Entwerfen der Member mit Zeigern.  
   
- Beispielsweise besteht keine Notwendigkeit, übergeben den Startindex, da einfache Zeigerarithmetik verwendet werden kann, um das gleiche Ergebnis zu erzielen.  
+ Beispielsweise ist es nicht erforderlich, den Start Index zu übergeben, da einfache Zeigerarithmetik verwendet werden kann, um das gleiche Ergebnis zu erzielen.  
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
   
 ## <a name="see-also"></a>Siehe auch
 

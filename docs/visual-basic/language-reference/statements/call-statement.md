@@ -8,44 +8,48 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0b62d6cfacbcf94f527e049e07e51bf496a6cf
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945066"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392758"
 ---
 # <a name="call-statement-visual-basic"></a>Call-Anweisung (Visual Basic)
-Überträgt die Steuerung an eine `Function`, `Sub`, oder eine Dynamic Link Library (DLL)-Prozedur.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-[ Call ] procedureName [ (argumentList) ]  
-```  
-  
-## <a name="parts"></a>Teile  
+
+Überträgt die Steuerung an eine `Function`-, `Sub`-oder DLL-Prozedur (Dynamic-Link Library).
+
+## <a name="syntax"></a>Syntax
+
+```vb
+[ Call ] procedureName [ (argumentList) ]
+```
+
+## <a name="parts"></a>Teile
+
 |||
 |---|---|
-|`procedureName`|Erforderlich. Der Name der Prozedur aufrufen.|
-|`argumentList`|Dies ist optional. Liste der Variablen oder Ausdrücke zurück, die Argumente, die an die Prozedur übergeben werden, wenn sie aufgerufen wird. Mehrere Argumente werden durch Kommas getrennt. Wenn Sie einschließen `argumentList`, müssen Sie es in Klammern einschließen.|
+|`procedureName`|Erforderlich. Der Name der aufzurufenden Prozedur.|
+|`argumentList`|Optional. Liste der Variablen oder Ausdrücke, die Argumente darstellen, die beim Aufrufen an die Prozedur übermittelt werden. Mehrere Argumente werden durch Kommas getrennt. Wenn Sie `argumentList` einschließen, müssen Sie Sie in Klammern einschließen.|
 |||
   
-## <a name="remarks"></a>Hinweise  
- Sie können die `Call` -Schlüsselwort, wenn Sie eine Prozedur aufrufen. Für die meisten Aufrufe von Prozeduren müssen Sie sich nicht auf dieses Schlüsselwort verwenden.  
-  
- In der Regel die `Call` -Schlüsselwort, wenn der aufgerufene Ausdruck nicht mit einer ID, startet. Verwenden der `Call` Schlüsselwort für einen anderen Verwendungszweck wird nicht empfohlen.  
-  
- Wenn die Prozedur einen Wert zurückgibt, die `Call` Anweisung verworfen.  
-  
-## <a name="example"></a>Beispiel  
- Der folgende Code zeigt zwei Beispiele, in denen die `Call` Schlüsselwort ist erforderlich, um eine Prozedur aufrufen. In beiden Beispielen beginnen nicht der aufgerufene Ausdruck mit einem Bezeichner.  
-  
+## <a name="remarks"></a>Hinweise
+
+ Sie können das Schlüsselwort `Call` verwenden, wenn Sie eine Prozedur aufzurufen. Bei den meisten Prozedur aufrufen müssen Sie dieses Schlüsselwort nicht verwenden.
+
+ Normalerweise verwenden Sie das Schlüsselwort "`Call`", wenn der aufgerufene Ausdruck nicht mit einem Bezeichner beginnt. Die Verwendung des Schlüssel Worts "`Call`" für andere Verwendungszwecke wird nicht empfohlen.
+
+ Wenn die Prozedur einen Wert zurückgibt, wird Sie durch die `Call`-Anweisung verworfen.
+
+## <a name="example"></a>Beispiel
+
+ Der folgende Code zeigt zwei Beispiele, in denen das `Call`-Schlüsselwort erforderlich ist, um eine Prozedur aufzurufen. In beiden Beispielen beginnt der aufgerufene Ausdruck nicht mit einem Bezeichner.
+
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Function-Anweisung](function-statement.md)
+- [Sub-Anweisung](sub-statement.md)
+- [Declare-Anweisung](declare-statement.md)
+- [Lambda-Ausdrücke](../../programming-guide/language-features/procedures/lambda-expressions.md)

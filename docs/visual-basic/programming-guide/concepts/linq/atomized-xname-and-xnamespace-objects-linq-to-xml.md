@@ -1,15 +1,15 @@
 ---
-title: Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic)
+title: Atomisierte XName-und XNamespace-Objekte (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-ms.openlocfilehash: fe0c4429c89e0028b3b012c87684bd14048de27a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6d21c21aac4455e7932015c131fb4295673056
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951930"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351829"
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomisierte XName- und XNamespace-Objekte (LINQ to XML) (Visual Basic)
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Atomisierte XName-und XNamespace-Objekte (LINQ to XML) (Visual Basic)
 
 Die <xref:System.Xml.Linq.XName>- und <xref:System.Xml.Linq.XNamespace>-Objekte sind *atomisiert*. Dies bedeutet, dass sie auf dasselbe Objekt verweisen, wenn sie denselben qualifizierten Namen enthalten. Dies wirkt sich positiv auf die Leistung bei Abfragen aus: Beim Vergleichen zweier atomisierter Namen auf Übereinstimmung muss die zugrunde liegende Zwischensprache nur ermitteln, ob die beiden Verweise auf dasselbe Objekt zeigen. Im zugrunde liegenden Code müssen keine zeitaufwändigen Zeichenfolgenvergleiche ausgeführt werden.
 
@@ -46,7 +46,7 @@ End If
 
 Dieses Beispiel erzeugt die folgende Ausgabe:
 
-```
+```console
 r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.
 ```

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d37f7980c3024fa545e5395a4614dcd41a111794
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968703"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353202"
 ---
 # <a name="encrypting-data"></a>Verschlüsseln von Daten
 Symmetrische Verschlüsselung und asymmetrische Verschlüsselung werden mit unterschiedlichen Prozesse ausgeführt. Die symmetrische Verschlüsselung wird für Streams ausgeführt und ist daher für die Verschlüsselung großer Datenmengen geeignet. Die asymmetrische Verschlüsselung wird für eine kleine Anzahl von Bytes ausgeführt und ist daher nur für kleine Datenmengen geeignet.  
@@ -160,13 +160,13 @@ public class main
   
  Damit das vorherige Beispiel erfolgreich ausgeführt werden kann, muss es einen Prozess geben, der an der IP‑Adresse und der Portnummer lauscht, die in der <xref:System.Net.Sockets.TcpClient> -Klasse angegeben sind. Wenn ein lauschender Prozess vorhanden ist, stellt der Code eine Verbindung mit diesem Prozess her, verschlüsselt den Stream mit dem symmetrischen Rijndael-Algorithmus und schreibt „Hello World!“ in den Stream. Wenn der Code erfolgreich ausgeführt wurde, wird in der Konsole folgender Text angezeigt:  
   
-```  
+```console  
 The message was sent.  
 ```  
   
  Wenn jedoch kein lauschender Prozess gefunden oder eine Ausnahme ausgelöst wurde, wird in der Konsole folgender Text angezeigt:  
   
-```  
+```console  
 The connection failed.  
 ```  
   

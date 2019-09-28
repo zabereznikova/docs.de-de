@@ -8,54 +8,54 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: 74f82f9be734cb7dc5225dc4226e14c2cee317df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a35f2b4062edb18914c55046a69dcd9b8825d778
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605522"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353842"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten 3D-WPF-Steuerelements in Windows Forms
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie kann eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetzten steuern und hosten Sie es in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Steuerelementen und-Formularen mithilfe der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement.
+Diese exemplarische Vorgehensweise veranschaulicht, wie Sie ein zusammengesetztes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelement erstellen und es in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen und-Formularen mit dem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement hosten.
 
-In dieser exemplarischen Vorgehensweise implementieren Sie eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> , das zwei untergeordnete Steuerelemente enthält. Die <xref:System.Windows.Controls.UserControl> zeigt einen Kegel der dreidimensionalen (3D). 3D-Objekte zu rendern ist viel einfacher, mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] als mit [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Aus diesem Grund ist es sinnvoll, auf Host eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> -Klasse zur Erstellung von 3D-Grafiken in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+In dieser exemplarischen Vorgehensweise implementieren Sie einen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-<xref:System.Windows.Controls.UserControl>, der zwei untergeordnete Steuerelemente enthält. Der <xref:System.Windows.Controls.UserControl> zeigt einen dreidimensionalen (3D-) Kegel an. Das Rendern von 3D-Objekten ist mit dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wesentlich einfacher als bei [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Daher ist es sinnvoll, eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-<xref:System.Windows.Controls.UserControl>-Klasse zu hosten, um 3D-Grafiken in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zu erstellen.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
+- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-<xref:System.Windows.Controls.UserControl> wird erstellt.
 
-- Erstellen die Windows Forms-Hostprojekts.
+- Das Windows Forms Host Projekt wird erstellt.
 
-- Hosten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>.
+- Das Hosting des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-<xref:System.Windows.Controls.UserControl>.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
 - Visual Studio 2017
 
 <a name="To_Create_the_UserControl"></a>
-## <a name="create-the-usercontrol"></a>Erstellen Sie das UserControl-Steuerelement
+## <a name="create-the-usercontrol"></a>Erstellen des UserControl-Steuer Elements
 
-1. Erstellen Sie eine **WPF-Benutzersteuerelementbibliothek** Projekt mit dem Namen `HostingWpfUserControlInWf`.
+1. Erstellen Sie ein **WPF-Benutzer Steuer** Element-Bibliotheksprojekt mit dem Namen `HostingWpfUserControlInWf`.
 
-2. Öffnen Sie die Datei UserControl1.xaml im der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+2. Öffnen Sie UserControl1. XAML in der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
 3. Ersetzen Sie den generierten Code durch den folgenden Code:
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
-     Dieser Code definiert eine <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> , das zwei untergeordnete Steuerelemente enthält. Das erste untergeordnete Steuerelement ist ein <xref:System.Windows.Controls.Label?displayProperty=nameWithType> Steuerelement, das zweite ist ein <xref:System.Windows.Controls.Viewport3D> Steuerelement, das einen 3D-Kegel anzeigt.
+     Mit diesem Code wird ein <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> definiert, das zwei untergeordnete Steuerelemente enthält. Das erste untergeordnete Steuerelement ist ein <xref:System.Windows.Controls.Label?displayProperty=nameWithType>-Steuerelement. bei der zweiten handelt es sich um ein <xref:System.Windows.Controls.Viewport3D>-Steuerelement, das einen 3D-Kegel anzeigt.
 
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
-## <a name="create-the-host-project"></a>Erstellen des Hostprojekts
+## <a name="create-the-host-project"></a>Erstellen des Host Projekts
 
-1. Hinzufügen einer **WPF-App ((.NET Framework)** Projekt mit dem Namen `WpfUserControlHost` der Projektmappe. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+1. Fügen Sie der Projekt Mappe ein **Windows Forms App-Projekt (.NET Framework)** mit dem Namen `WpfUserControlHost` hinzu.
 
-2. In **Projektmappen-Explorer**, fügen Sie einen Verweis auf die Assembly "WindowsFormsIntegration", mit dem Namen WindowsFormsIntegration.dll.
+2. Fügen Sie in **Projektmappen-Explorer**einen Verweis auf die WindowsFormsIntegration-Assembly mit dem Namen "WindowsFormsIntegration. dll" hinzu.
 
-3. Fügen Sie Verweise auf die folgenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assemblys:
+3. Fügen Sie Verweise auf die folgenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Assemblys hinzu:
 
     - PresentationCore
 
@@ -65,20 +65,20 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 4. Fügen einen Verweis auf das `HostingWpfUserControlInWf`-Projekt hinzu.
 
-5. Legen Sie im Projektmappen-Explorer die `WpfUserControlHost` Projekt das Startprojekt sein.
+5. Legen Sie in Projektmappen-Explorer das Projekt `WpfUserControlHost` als Startprojekt fest.
 
 <a name="To_Host_the_Windows_Presentation_Foundation"></a>
-## <a name="host-the-usercontrol"></a>Hosten Sie das UserControl-Steuerelement
+## <a name="host-the-usercontrol"></a>Hosten von UserControl
 
-1. Öffnen Sie Form1 im Windows Forms-Designer.
+1. Öffnen Sie in der Windows Forms-Designer Form1.
 
-2. Klicken Sie im Fenster Eigenschaften auf **Ereignisse**, und doppelklicken Sie dann auf die <xref:System.Windows.Forms.Form.Load> Ereignis, um einen Ereignishandler erstellen.
+2. Klicken Sie im Eigenschaftenfenster auf **Ereignisse**, und doppelklicken Sie dann auf das Ereignis <xref:System.Windows.Forms.Form.Load>, um einen Ereignishandler zu erstellen.
 
-     Der Code-Editor wird geöffnet, mit dem neu generierten `Form1_Load` -Ereignishandler.
+     Der Code-Editor wird mit dem neu generierten `Form1_Load`-Ereignishandler geöffnet.
 
-3. Ersetzen Sie den Code in "Form1.cs" durch den folgenden Code ein.
+3. Ersetzen Sie den Code in Form1.cs durch den folgenden Code.
 
-     Die `Form1_Load` -Ereignishandler erstellt eine Instanz des `UserControl1` und fügt hinzu, auf die <xref:System.Windows.Forms.Integration.ElementHost> des Steuerelements Auflistung von untergeordneten Steuerelementen. Die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement des Formulars die Auflistung der untergeordneten Steuerelemente hinzugefügt.
+     Der `Form1_Load`-Ereignishandler erstellt eine Instanz von `UserControl1` und fügt die Auflistung der untergeordneten Steuerelemente des <xref:System.Windows.Forms.Integration.ElementHost>-Steuer Elements hinzu. Das <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement wird der Auflistung von untergeordneten Steuerelementen des Formulars hinzugefügt.
 
      [!code-csharp[HostingWpfUserControlInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
@@ -90,6 +90,6 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160001)
+- [Exemplarische Vorgehensweise: Hosting eines zusammengesetzten WPF-Steuer Elements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Exemplarische Vorgehensweise: Hosting eines Windows Forms zusammengesetzten Steuer Elements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Hosting eines zusammengesetzten WPF-Steuer Elements in Windows Forms Beispiel](https://go.microsoft.com/fwlink/?LinkID=160001)

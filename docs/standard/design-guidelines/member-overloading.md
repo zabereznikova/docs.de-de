@@ -10,17 +10,17 @@ helpviewer_keywords:
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: KrzysztofCwalina
-ms.openlocfilehash: b13f9e1551aec7e53ba1ac2ed0b9049d46b0a756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4caa0ae78d168b23fd2862153bef0e3960d3ea42
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392949"
 ---
 # <a name="member-overloading"></a>Überladen von Membern
-Überladen von Membern bedeutet das Erstellen von zwei oder mehr Elemente auf dem gleichen Typ, die unterscheiden sich nur hinsichtlich der Anzahl oder den Typ der Parameter, aber den gleichen Namen haben. Z. B. im folgenden die `WriteLine` -Methode ist überladen:  
+Das Überladen von Elementen bedeutet, dass zwei oder mehr Member für denselben Typ erstellt werden, die sich nur in der Anzahl oder dem Typ der Parameter unterscheiden, aber denselben Namen aufweisen. Im folgenden Beispiel wird die `WriteLine`-Methode überladen:  
   
-```  
+```csharp  
 public static class Console {  
     public void WriteLine();  
     public void WriteLine(string value);  
@@ -29,21 +29,21 @@ public static class Console {
 }  
 ```  
   
- Da nur Methoden, Konstruktoren und indizierte Eigenschaften Parameter verfügen können, können nur für die Elemente überladen werden.  
+ Da nur Methoden, Konstruktoren und indizierte Eigenschaften über Parameter verfügen können, können nur die Elemente überladen werden.  
   
- Überladen ist eine der wichtigsten Techniken zur Verbesserung der benutzerfreundlichkeit, Produktivität und Lesbarkeit von wiederverwendbaren Bibliotheken. Auf der Anzahl von Parametern überladen ermöglicht es, einfachere Versionen von Konstruktoren und Methoden enthalten. Für den Parametertyp überladen ermöglicht die mit dem gleichen Elementnamen für Elemente, die identische Vorgänge für eine ausgewählte Gruppe verschiedener Typen.  
+ Überladen ist eine der wichtigsten Techniken zur Verbesserung der Benutzerfreundlichkeit, Produktivität und Lesbarkeit von wiederverwendbaren Bibliotheken. Das Überladen der Anzahl von Parametern ermöglicht die Bereitstellung einfacherer Versionen von Konstruktoren und Methoden. Das Überladen für den Parametertyp ermöglicht die Verwendung desselben Element namens für Member, die identische Vorgänge für einen ausgewählten Satz von unterschiedlichen Typen ausführen.  
   
  **✓ DO** versuchen, beschreibende Parameternamen zu verwenden, um anzugeben, die Standardeinstellung von kürzeren Überladungen verwendet.  
   
- **X AVOID** nach dem Zufallsprinzip varying Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe als Parameter in eine andere Überladung darstellt, sollte der Parameter den gleichen Namen aufweisen.  
+ **X AVOID** nach dem Zufallsprinzip varying Parameternamen in Überladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe wie ein Parameter in einer anderen Überladung darstellt, sollten die Parameter denselben Namen haben.  
   
- **X AVOID** Mitglieder überlastet werden in der Reihenfolge der Parameter in inkonsistent. Parameter mit dem gleichen Namen in der gleichen Position in der alle Überladungen angezeigt.  
+ **X AVOID** Mitglieder überlastet werden in der Reihenfolge der Parameter in inkonsistent. Parameter mit dem gleichen Namen sollten in allen über Ladungen an derselben Position angezeigt werden.  
   
- **✓ DO** stellen nur die längste Überladung virtuellen (wenn Erweiterbarkeit erforderlich ist). Kürzere Überladungen sollten einfach bis zu einer längeren Überladung aufrufen.  
+ **✓ DO** stellen nur die längste Überladung virtuellen (wenn Erweiterbarkeit erforderlich ist). Kürzere über Ladungen sollten einfach bis zu einer längeren Überladung aufrufen.  
   
  **X DO NOT** verwenden `ref` oder `out` Modifizierer zum Überladen von Membern.  
   
- Aufrufe der Überladungen wie folgt können nicht bei einigen Sprachen aufgelöst werden. Darüber hinaus sollte solche Überladungen in der Regel völlig unterschiedliche Semantiken und wahrscheinlich nicht Überladungen jedoch zwei separate Methoden stattdessen.  
+ Einige Sprachen können keine Aufrufe von über Ladungen wie diesem auflösen. Außerdem verfügen solche über Ladungen in der Regel über eine ganz andere Semantik und sollten wahrscheinlich nicht über Ladungen, sondern auch über zwei separate Methoden verfügen.  
   
  **X DO NOT** Überladungen mit Parametern, die an der gleichen Position und ähnliche Typen noch mit einer anderen Semantik haben.  
   
@@ -55,7 +55,7 @@ public static class Console {
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
   
 ## <a name="see-also"></a>Siehe auch
 

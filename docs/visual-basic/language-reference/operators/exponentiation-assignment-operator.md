@@ -9,43 +9,43 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 382e0b27c2dbf27e5acccf29f1b8d2b002cb6664
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778520"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592235"
 ---
 # <a name="-operator-visual-basic"></a>^=-Operator (Visual Basic)
-Erhöht den Wert einer Variablen oder Eigenschaft, um die Leistung eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft an.  
+Löst den Wert einer Variablen oder Eigenschaft für die Potenz eines Ausdrucks aus und weist das Ergebnis wieder der Variablen oder der Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 variableorproperty ^= expression  
 ```  
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Alle numerischen Variablen oder Eigenschaft.  
+ Erforderlich. Eine beliebige numerische Variable oder Eigenschaft.  
   
  `expression`  
  Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite von der `^=` Operator kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite des `^=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- Die `^=` löst der Operator zuerst den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators) mit dem Wert des Ausdrucks (auf der rechten Seite des Operators). Der Operator weist das Ergebnis des Vorgangs klicken Sie dann die Variable oder Eigenschaft an.  
+ Der `^=`-Operator löst zuerst den Wert der Variablen oder der Eigenschaft (auf der linken Seite des Operators) bis zur Potenz des Werts des Ausdrucks (auf der rechten Seite des Operators) aus. Der Operator weist dann das Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zurück.  
   
- Visual Basic führt immer die Potenzierung der [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md). Die Operanden eines anderen Typs werden in konvertiert `Double`, und das Ergebnis ist immer `Double`.  
+ Visual Basic führt immer eine exponentiell im [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md)aus. Operanden eines beliebigen Typs werden in `Double` konvertiert, und das Ergebnis ist immer `Double`.  
   
- Der Wert des `expression` möglich Bruch, negativ oder beides.  
+ Der Wert von `expression` kann eine Bruch Zahl, eine negative oder beides sein.  
   
 ## <a name="overloading"></a>Überladen  
- Die [^-Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Das Überladen der `^` Operator beeinflusst das Verhalten von der `^=` Operator. Wenn Ihr Code verwendet `^=` für eine Klasse oder Struktur, die Überladungen `^`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [^-Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md) kann *überladen*werden, was bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `^`-Operators wirkt sich auf das Verhalten des `^=`-Operators aus. Wenn Ihr Code `^=` für eine Klasse oder Struktur verwendet, die `^` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `^=` Operator, um den Wert eines auslösen `Integer` Variable mit einer zweiten Variablen, und das Ergebnis der ersten Variablen zuzuweisen.  
+ Im folgenden Beispiel wird der `^=`-Operator verwendet, um den Wert einer `Integer`-Variablen auf die Potenz einer zweiten Variablen zu erhöhen und das Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   

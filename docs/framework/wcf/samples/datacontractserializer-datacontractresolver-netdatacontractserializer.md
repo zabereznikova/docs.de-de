@@ -2,12 +2,12 @@
 title: Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: e52b6da80100cbffb7dc8725d16c31a67bc19445
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039864"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351661"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver
 In diesem Beispiel wird veranschaulicht, wie die Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie der <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitstellt. In diesem Beispiel wird gezeigt, wie der entsprechende <xref:System.Runtime.Serialization.DataContractResolver> erstellt und dem <xref:System.Runtime.Serialization.DataContractSerializer> hinzugefügt wird.
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 
@@ -59,7 +56,7 @@ class MyDataContractResolver : DataContractResolver
 
 1. Öffnen Sie mit Visual Studio 2012 die Projektmappendatei "DCRSample. sln".
 
-2. Klicken Sie mit der rechten Maustaste auf dieProjektmappendatei und wählen Sie
+2. Klicken Sie mit der rechten Maustaste auf die Projektmappendatei **und wählen Sie**
 
 3. Wählen Sie im Dialogfeld **Eigenschaften Seiten** für Projekt Mappe unter **Allgemeine Eigenschaften**die Option **Startprojekt**aus, und wählen Sie **mehrere Start Projekte aus:** .
 

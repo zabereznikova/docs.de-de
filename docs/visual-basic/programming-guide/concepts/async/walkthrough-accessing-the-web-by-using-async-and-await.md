@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 72132c4884f3d9bc94de447a122354b3e0dc2ee5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2d9d3ea3d55fcd3a59039f4b8b93f37df35bf86d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928446"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351906"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)
 
@@ -215,9 +215,9 @@ Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere I
 
 1. Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .
 
-    Die Ausgabe sollte der folgenden Liste gleichen.
+    Die Ausgabe sollte der folgenden Liste ähnlich sein:
 
-    ```
+    ```console
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832
     msdn.microsoft.com                                            33964
     msdn.microsoft.com/library/hh290136.aspx               225793

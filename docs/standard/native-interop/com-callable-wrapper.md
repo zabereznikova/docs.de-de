@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 601f9a216bc2e11ccb34f1f3b3df267002efb01f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631464"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353914"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper (CCW)
 
@@ -49,7 +49,7 @@ Zur Unterstützung dieses nahtlosen Ansatzes erstellt der CCW traditionelle COM-
 
 Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt die .NET-Runtime für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown**- und **IDispatch**-Schnittstellen bereit.
 
-|Interface|BESCHREIBUNG|
+|Interface|Beschreibung|
 |---------------|-----------------|
 |**IDispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|
 |**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|
@@ -60,7 +60,7 @@ Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der v
 
  Eine verwaltete Klasse kann zudem die COM-Schnittstellen bereitstellen, die in der folgenden Tabelle beschrieben werden.
 
-|Interface|BESCHREIBUNG|
+|Interface|Beschreibung|
 |---------------|-----------------|
 |Die Klassenschnittstelle (\_*Klassenname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|
 |**IConnectionPoint** und **IConnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|
@@ -100,7 +100,7 @@ public class Mammal
 
 Der COM-Client kann einen Zeiger auf eine Klassenschnittstelle mit dem Namen `_Mammal` abrufen. In .NET Framework können Sie das [Type Library Exporter-Tool (Tlbexp.exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) verwenden, um eine Typbibliothek zu erstellen, die die `_Mammal`-Schnittstellendefinition enthält. Das Type Library Exporter-Tool wird unter .NET Core nicht unterstützt. Wenn die `Mammal`-Klasse eine oder mehrere Schnittstellen implementiert hat, werden die Schnittstellen unter der Co-Klasse angezeigt.
 
-```
+```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
 interface _Mammal : IDispatch
 {

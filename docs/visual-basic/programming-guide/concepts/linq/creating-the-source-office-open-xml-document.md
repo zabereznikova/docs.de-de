@@ -2,12 +2,12 @@
 title: Erstellen des Office Open-Quell-XML-Dokuments (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965255"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352949"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Erstellen des Office Open-Quell-XML-Dokuments (Visual Basic)
 In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokuments erläutert, das in den anderen Beispielen in diesem Lernprogramm verwendet wird. Wenn Sie diese Anweisungen befolgen, entspricht Ihre Ausgabe der Ausgabe im jeweiligen Beispiel.  
@@ -24,7 +24,7 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
   
 2. Fügen Sie in das neue Dokument den folgenden Text ein:  
   
-    ```  
+    ```text  
     Parsing WordprocessingML with LINQ to XML  
   
     The following example prints to the console.  
@@ -55,4 +55,4 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

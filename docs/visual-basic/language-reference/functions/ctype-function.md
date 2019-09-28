@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: dbf01263723a9e2890dab57d5ffc3d467ed250fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a0391b0a5d76f36803b433369d4832c02b05e09
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801678"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592096"
 ---
 # <a name="ctype-function-visual-basic"></a>CType-Funktion (Visual Basic)
 
@@ -22,22 +22,22 @@ Gibt das Ergebnis einer expliziten Konvertierung eines Ausdrucks in einen angege
 
 ## <a name="syntax"></a>Syntax
 
-```
+```vb
 CType(expression, typename)
 ```
 
 ## <a name="parts"></a>Teile
 
-`expression` Jeder gültige Ausdruck. Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.
+`expression` jeder gültige Ausdruck. Wenn der Wert von `expression` außerhalb des von `typename` definierten Bereichs liegt, wird von Visual Basic eine Ausnahme ausgelöst.
 
-`typename` Ein Ausdruck, der gültig ist ein `As` -Klausel in einer `Dim` -Anweisung, d. h. den Namen des alle-Datentyp, Objekt, Struktur, Klasse oder Schnittstelle.
+`typename` beliebiger Ausdruck, der in einer `As`-Klausel in einer `Dim`-Anweisung zulässig ist, d. h. der Name eines beliebigen Datentyps, Objekts, Struktur, Klasse oder Schnittstelle.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!TIP]
 > Sie können die folgenden Funktionen auch zum Ausführen einer Typkonvertierung verwenden:
 >
-> - Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann. Weitere Informationen finden Sie unter [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
+> - Typkonvertierungsfunktionen, wie `CByte`, `CDbl` und `CInt`, mit denen eine Konvertierung in einen bestimmten Datentyp ausgeführt werden kann. Weitere Informationen finden Sie unter [Typkonvertierungs Funktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).
 > - [DirectCast-Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) oder [TryCast-Operator](../../../visual-basic/language-reference/operators/trycast-operator.md). Diese Operatoren erfordern, dass ein Typ von dem Anderen erbt oder diesen implementiert. Sie können etwas bessere Leistung beim Konvertieren in und aus dem `CType`-Datentyp bieten, als `Object`.
 
 `CType` wird inline kompiliert. Das bedeutet, dass der Konvertierungscode Bestandteil des Codes für die Auswertung des Ausdrucks ist. In einigen Fällen wird der Code schneller ausgeführt, da keine Prozeduren zum Ausführen der Konvertierung aufgerufen werden.
@@ -46,7 +46,7 @@ Wenn keine Konvertierung von `expression` in `typename` (zum Beispiel von `Integ
 
 Falls eine Konvertierung zur Laufzeit fehlschlägt, wird die entsprechende Ausnahme ausgelöst. Ist eine einschränkende Konvertierung fehlerhaft, wird meist ein <xref:System.OverflowException>-Fehler verursacht. Wenn die Konvertierung nicht definiert ist, wird eine <xref:System.InvalidCastException> ausgelöst. Dies kann z. B. der Fall sein, wenn `expression` vom Typ `Object` ist und für seinen Laufzeittyp keine Konvertierung in `typename` definiert ist.
 
-Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren. Dadurch `CType` fungieren als eine *überladener Operator*. Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.
+Handelt es sich beim Datentyp von `expression` oder `typename` um eine von Ihnen definierte Klasse oder Struktur, können Sie `CType` für diese Klasse oder Struktur als Konvertierungsoperator definieren. Dadurch wird `CType` als *überladener Operator*fungieren. Wenn Sie einen Konvertierungsoperator definieren, können Sie nicht nur das Verhalten von Konvertierungen in und aus der Klasse oder Struktur steuern, sondern auch die ausgelösten Ausnahmen bestimmen.
 
 ## <a name="overloading"></a>Überladen
 

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: COM-Verweisobjekte aus Visual Basic'
+title: 'Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592177"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351995"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Vorgehensweise: COM-Verweisobjekte aus Visual Basic
-In Visual Basic ist beim Hinzufügen von Verweisen auf COM-Objekte, die über Typbibliotheken verfügen die Erstellung einer Interop-Assembly für COM-Bibliothek erforderlich. Verweise auf die Member des COM-Objekts sind die interop-Assembly an, und klicken Sie dann auf die tatsächliche COM-Objekt weitergeleitet. Antworten von COM-Objekts sind die interop-Assembly an, und an .NET Framework-Anwendung weitergeleitet.  
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic
+In Visual Basic erfordert das Hinzufügen von Verweisen auf COM-Objekte, die über Typbibliotheken verfügen, das Erstellen einer Interop-Assembly für die com-Bibliothek. Verweise auf die Member des COM-Objekts werden an die Interop-Assembly weitergeleitet und dann an das tatsächliche com-Objekt weitergeleitet. Antworten aus dem COM-Objekt werden an die Interop-Assembly weitergeleitet und an Ihre .NET Framework Anwendung weitergeleitet.  
   
- Sie können ein COM-Objekt verweisen, ohne eine interop-Assembly die Typinformationen für COM-Objekts in einer .NET-Assembly. Legen Sie zum Einbetten von Typinformationen der `Embed Interop Types` Eigenschaft `True` für den Verweis auf das COM-Objekt. Wenn Sie mithilfe des Befehlszeilencompilers kompilieren, verwenden Sie die `/link` Option aus, um die COM-Bibliothek verweisen. Weitere Informationen finden Sie unter [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Sie können auf ein COM-Objekt verweisen, ohne eine Interopassembly zu verwenden, indem Sie die Typinformationen für das COM-Objekt in eine .NET-Assembly einbetten. Zum Einbetten von Typinformationen legen Sie die `Embed Interop Types`-Eigenschaft für den Verweis auf das COM-Objekt auf `True` fest. Wenn Sie mithilfe des Befehlszeilen Compilers kompilieren, verwenden Sie die Option "`/link`", um auf die com-Bibliothek zu verweisen. Weitere Informationen finden Sie unter [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
- Visual Basic erstellt automatisch interop-Assemblys auf, wenn Sie einen Verweis auf eine Typbibliothek aus der integrierten Entwicklungsumgebung (IDE) hinzufügen. Wenn Sie über die Befehlszeile arbeiten, können Sie das Tlbimp-Dienstprogramm, interop-Assemblys manuell zu erstellen.  
+ Visual Basic erstellt automatisch Interop-Assemblys, wenn Sie einen Verweis auf eine Typbibliothek aus der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) hinzufügen. Wenn Sie von der Befehlszeile aus arbeiten, können Sie das Hilfsprogramm Tlbimp verwenden, um Interop-Assemblys manuell zu erstellen.  
   
-### <a name="to-add-references-to-com-objects"></a>Zum Hinzufügen von Verweisen auf COM-Objekte  
+### <a name="to-add-references-to-com-objects"></a>So fügen Sie Verweise auf COM-Objekte hinzu  
   
-1. Auf der **Projekt** Menü wählen **Verweis hinzufügen** , und klicken Sie dann auf die **COM** Registerkarte im Dialogfeld.  
+1. Wählen Sie im Menü **Projekt** die Option **Verweis hinzufügen** aus, und klicken Sie dann im Dialogfeld auf die Registerkarte **com** .  
   
-2. Wählen Sie die Komponente, die Sie aus der Liste der COM-Objekte verwenden möchten.  
+2. Wählen Sie die Komponente aus der Liste der COM-Objekte aus, die Sie verwenden möchten.  
   
-3. Um den Zugriff auf die interop-Assembly zu vereinfachen, fügen eine `Imports` Anweisung am Anfang der Klasse oder das Modul, in dem Sie das COM-Objekt verwenden. Das folgende Codebeispiel importiert z. B. den Namespace `INKEDLib` für Objekte, die auf die verwiesen wird der `Microsoft InkEdit Control 1.0` Bibliothek.  
+3. Fügen Sie am Anfang der Klasse oder des Moduls, in dem Sie das COM-Objekt verwenden, eine `Imports`-Anweisung hinzu, um den Zugriff auf die Interop-Assembly zu vereinfachen. Im folgenden Codebeispiel wird z. b. der-Namespace `INKEDLib` für Objekte importiert, auf die in der `Microsoft InkEdit Control 1.0`-Bibliothek verwiesen wird.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
-### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Eine Interop-Assembly, die über "Tlbimp" erstellen  
+### <a name="to-create-an-interop-assembly-using-tlbimp"></a>So erstellen Sie eine Interop-Assembly mit Tlbimp  
   
-1. Fügen Sie den Speicherort des "Tlbimp" dem Suchpfad hinzu, wenn es nicht bereits Teil des Pfads für die Suche und Sie aktuell nicht in das Verzeichnis werden, in dem er sich befindet.  
+1. Fügen Sie den Speicherort von Tlbimp dem Suchpfad hinzu, wenn er nicht bereits Teil des Suchpfads ist und Sie sich derzeit nicht in dem Verzeichnis befinden, in dem es sich befindet.  
   
-2. Rufen Sie "Tlbimp" über eine Eingabeaufforderung, die die folgenden Informationen angeben:  
+2. Wenden Sie Tlbimp über eine Eingabeaufforderung an, und geben Sie dabei die folgenden Informationen an:  
   
-    - Name und Speicherort der DLL, die die Typbibliothek enthält.  
+    - Name und Speicherort der dll, die die Typbibliothek enthält  
   
-    - Name und Speicherort des Namespace, in dem die Informationen platziert werden soll  
+    - Name und Speicherort des Namespace, in dem die Informationen abgelegt werden sollen  
   
-    - Name und Speicherort der Ziel-Interop-Assembly  
+    - Name und Speicherort der zielinterop-Assembly  
   
      Der folgende Code veranschaulicht dies:  
   
-    ```  
+    ```console  
     Tlbimp test3.dll /out:NameSpace1 /out:Interop1.dll  
     ```  
   
-     Sie können "Tlbimp" verwenden, um interop-Assemblys für Typbibliotheken und sogar für nicht registrierte COM-Objekte zu erstellen. Die COM-Objekte, die interop-Assemblys verweist müssen jedoch ordnungsgemäß auf dem Computer registriert werden, wo sie sind, verwendet werden soll. Sie können ein COM-Objekt registrieren, mit dem Dienstprogramm "Regsvr32" mit dem Windows-Betriebssystem enthalten.  
+     Mit Tlbimp können Sie Interop-Assemblys für Typbibliotheken erstellen, auch für nicht registrierte COM-Objekte. Die COM-Objekte, auf die von Interopassemblys verwiesen wird, müssen jedoch auf dem Computer, auf dem Sie verwendet werden sollen, ordnungsgemäß registriert werden. Sie können ein COM-Objekt registrieren, indem Sie das im Windows-Betriebssystem enthaltene regsvr32-Hilfsprogramm verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

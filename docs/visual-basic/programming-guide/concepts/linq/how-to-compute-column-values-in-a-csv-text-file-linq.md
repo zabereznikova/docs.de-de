@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 21f4e6445824a6664b5eaa7ff793ee925aa06cef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593003"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351755"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (Visual Basic)
 In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen. Die hier gezeigten Beispielprinzipien können auf andere Typen von strukturiertem Text angewendet werden.  
@@ -16,7 +16,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum
   
 1. Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Angenommen, die erste Spalte enthält eine Schüler-ID und die nachfolgende Spalten stellen die Noten aus vier Prüfungen dar.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,9 +143,9 @@ End Class
  Die Abfrage nutzt die Methode <xref:System.String.Split%2A>, um jede Textzeile in ein Array zu konvertieren. Jedes Arrayelement stellt eine Spalte dar. Schließlich wird der Text in jeder Spalte in die entsprechend numerische Darstellung konvertiert. Wenn es sich bei der Datei um eine tabstoppgetrennte Datei handelt, aktualisieren Sie einfach das Argument in der `Split`-Methode auf `\t`.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
-Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
+Erstellen Sie ein VB.net-Konsolen Anwendungsprojekt mit einer `Imports`-Anweisung für den System. Linq-Namespace.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichen folgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

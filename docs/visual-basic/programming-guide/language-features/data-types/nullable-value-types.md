@@ -1,5 +1,5 @@
 ---
-title: Auf NULL festlegbare Werttypen – Visual Basic
+title: Auf NULL festleg Bare Werttypen-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,63 +10,63 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642131"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351761"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Auf NULL festlegbare Werttypen (Visual Basic)
 
-In einigen Fällen arbeiten Sie mit einem Werttyp, der nicht über einen definierten Wert unter bestimmten Umständen verfügt. Z. B. möglicherweise ein Feld in einer Datenbank zu unterscheiden, dass einen Wert zugewiesen, der sinnvoll ist, ohne dass einen Wert zugewiesen. Werttypen können erweitert werden, um entweder die normalen Werte oder ein null-Wert. Eine solche Erweiterung wird aufgerufen, eine *nullable-Typ*.
+Manchmal arbeiten Sie mit einem Werttyp, der unter bestimmten Umständen keinen definierten Wert hat. Beispielsweise muss ein Feld in einer Datenbank möglicherweise zwischen einem zugewiesenen Wert unterscheiden, der aussagekräftig ist und keinem zugewiesenen Wert zugeordnet ist. Werttypen können so erweitert werden, dass Sie entweder Ihre normalen Werte oder einen NULL-Wert akzeptieren. Eine solche Erweiterung wird als Typ bezeichnet, der *NULL-Werte*zulässt.
 
-Jede nullable-Typ erstellt wird, von der generischen <xref:System.Nullable%601> Struktur. Nehmen Sie eine Datenbank, die geschäftliche Aktivitäten nachverfolgt werden soll. Das folgende Beispiel erstellt eine auf NULL festlegbare `Boolean` geben und deklariert eine Variable dieses Typs. Sie können die Deklaration gibt drei Möglichkeiten zum Schreiben:
+Jeder Typ, der NULL-Werte zulässt, wird aus der generischen Struktur <xref:System.Nullable%601> erstellt. Stellen Sie sich eine Datenbank vor, die arbeitsbezogene Aktivitäten nachverfolgt. Im folgenden Beispiel wird ein Werte zulässt-`Boolean`-Typ erstellt und eine Variable dieses Typs deklariert. Es gibt drei Möglichkeiten, die Deklaration zu schreiben:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-Die Variable `ridesBusToWork` kann einen Wert von aufzunehmen `True`, einen Wert von `False`, oder überhaupt kein Wert. Der anfängliche Standardwert ist kein Wert, der bedeuten in diesem Fall, dass sich die Informationen noch nicht für diese Person abgerufen wurde. Im Gegensatz dazu `False` bedeuten, dass sich die Informationen abgerufen wurden und die Person, die nicht mit den Bus zur Arbeit kommt.
+Die Variable `ridesBusToWork` kann den Wert `True`, den Wert `False` oder überhaupt keinen Wert enthalten. Der anfängliche Standardwert ist überhaupt kein Wert, was in diesem Fall bedeuten könnte, dass die Informationen für diese Person noch nicht abgerufen wurden. Im Gegensatz dazu könnte `False` bedeuten, dass die Informationen abgerufen wurden und die Person den Bus nicht zum Arbeiten fährt.
 
-Sie können Variablen und Eigenschaften mit auf NULL festlegbare Typen deklarieren, und Sie können ein Array mit Elementen von einem nullable-Typ deklarieren. Sie können Prozeduren mit nullable-Typen als Parameter deklarieren, und Sie können einen nullable-Typ von Zurückgeben einer `Function` Verfahren.
+Sie können Variablen und Eigenschaften mit Typen deklarieren, die NULL-Werte zulassen, und Sie können ein Array mit Elementen eines Typs deklarieren, der NULL-Werte zulässt. Sie können Prozeduren mit Typen, die NULL-Werte zulassen, als Parameter deklarieren, und Sie können einen Typ zurückgeben, @no__t der NULL-Werte zulässt.
 
-Sie können keinen nullable-Typ in einen Verweistyp handelt, z. B. ein Array ist, erstellen eine `String`, oder eine Klasse. Der zugrunde liegende Typ muss ein Werttyp sein. Weitere Informationen finden Sie unter [Value Types and Reference Types](value-types-and-reference-types.md).
+Sie können einen Typ, der NULL-Werte zulässt, nicht für einen Referenztyp erstellen, z. b. ein Array, eine `String` oder eine Klasse. Der zugrunde liegende Typ muss ein Werttyp sein. Weitere Informationen finden Sie unter [Value Types and Reference Types](value-types-and-reference-types.md).
 
-## <a name="using-a-nullable-type-variable"></a>Verwenden die Variable ein Nullable-Typ
+## <a name="using-a-nullable-type-variable"></a>Verwenden einer Typvariablen, die NULL-Werte zulässt
 
-Die wichtigsten Mitglieder von einem nullable-Typ werden die <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A> Eigenschaften. Für eine Variable vom einen nullable-Typ <xref:System.Nullable%601.HasValue%2A> Aufschluss darüber, ob die Variable einen definierten Wert enthält. Wenn <xref:System.Nullable%601.HasValue%2A> ist `True`, Sie können den Wert von lesen <xref:System.Nullable%601.Value%2A>. Beachten Sie, dass beide <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A> sind `ReadOnly` Eigenschaften.
+Die wichtigsten Member eines Typs, der NULL-Werte zulässt, sind die Eigenschaften <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A>. Für eine Variable eines Typs, der NULL-Werte zulässt, gibt <xref:System.Nullable%601.HasValue%2A> Aufschluss darüber, ob die Variable einen definierten Wert enthält. Wenn <xref:System.Nullable%601.HasValue%2A> `True` ist, können Sie den Wert aus <xref:System.Nullable%601.Value%2A> lesen. Beachten Sie, dass die <xref:System.Nullable%601.HasValue%2A> und <xref:System.Nullable%601.Value%2A> `ReadOnly`-Eigenschaften sind.
 
 ### <a name="default-values"></a>Standardwerte
 
-Wenn Sie eine Variable mit einem NULL-Werte zulässt, deklarieren die <xref:System.Nullable%601.HasValue%2A> Eigenschaft hat den Standardwert `False`. Dies bedeutet, dass standardmäßig die Variable keinen definierten Wert statt des Standardwerts, der den zugrunde liegenden Werttyp hat. Im folgenden Beispiel ist die Variable `numberOfChildren` Anfangs hat keinen definierter Wert, obwohl den Standardwert der `Integer` ist 0.
+Wenn Sie eine Variable mit einem Typ deklarieren, der NULL-Werte zulässt, hat die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft den Standardwert `False`. Dies bedeutet, dass die Variable standardmäßig keinen definierten Wert anstelle des Standardwerts des zugrunde liegenden Werttyps aufweist. Im folgenden Beispiel hat die Variable `numberOfChildren` anfänglich keinen definierten Wert, obwohl der Standardwert des `Integer`-Typs 0 ist.
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Ein null-Wert ist hilfreich, einen nicht definierten oder unbekannten Wert anzugeben. Wenn `numberOfChildren` deklariert wurde als `Integer`, es gäbe keine-Wert, der anzeigen kann, dass die Informationen zurzeit nicht verfügbar ist.
+Ein NULL-Wert ist nützlich, um einen nicht definierten oder unbekannten Wert anzugeben. Wenn `numberOfChildren` als `Integer` deklariert wurde, wäre kein Wert vorhanden, der darauf hindeuten kann, dass die Informationen zurzeit nicht verfügbar sind.
 
 ### <a name="storing-values"></a>Speichern von Werten
 
-Sie speichern einen Wert in einer Variablen oder die Eigenschaft einen nullable-Typ, auf die gewohnte Weise. Im folgende Beispiel wird die Variable ein Wert zugewiesen `numberOfChildren` im vorherigen Beispiel deklariert.
+Sie speichern einen Wert in einer Variablen oder Eigenschaft eines Typs, der NULL-Werte zulässt, auf die übliche Weise. Im folgenden Beispiel wird der Variablen `numberOfChildren`, die im vorherigen Beispiel deklariert wurde, ein Wert zugewiesen.
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-Wenn eine Variable oder eine Eigenschaft einen nullable-Typ um einen definierten Wert enthält, können Sie es auf seinen ursprünglichen Zustand des ohne eines zugewiesenen Wert zurückgesetzt auslösen. Hierzu legen Sie die Variable oder Eigenschaft, um `Nothing`, wie im folgende Beispiel gezeigt.
+Wenn eine Variable oder Eigenschaft eines Typs, der NULL-Werte zulässt, einen definierten Wert enthält, können Sie bewirken, dass Sie in den ursprünglichen Zustand zurückversetzt wird, dass kein Wert zugewiesen ist. Hierzu legen Sie die-Variable oder die-Eigenschaft auf `Nothing` fest, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Sie können zwar zuweisen `Nothing` auf eine Variable eines Typs mit NULL-Werte zulässt, kann nicht für test `Nothing` mit dem Gleichheitszeichen. Vergleich, das Gleichheitszeichen verwendet `someVar = Nothing`, ergibt immer `Nothing`. Sie können des Wert der Variablentyps testen <xref:System.Nullable%601.HasValue%2A> -Eigenschaft für `False`, oder testen, indem die `Is` oder `IsNot` Operator.
+> Obwohl Sie `Nothing` einer Variablen eines Typs zuweisen können, der NULL-Werte zulässt, können Sie ihn nicht mit dem Gleichheitszeichen für `Nothing` testen. Bei einem Vergleich, bei dem das Gleichheitszeichen (`someVar = Nothing`) verwendet wird, wird immer `Nothing` ausgewertet. Sie können die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft der Variablen für `False` testen oder mithilfe des Operators `Is` oder `IsNot` testen.
 
 ### <a name="retrieving-values"></a>Abrufen von Werten
 
-Sie sollten zunächst testen, zum Abrufen des Werts einer Variablen mit einem nullable-Typ der <xref:System.Nullable%601.HasValue%2A> Eigenschaft, um sicherzustellen, dass es sich um einen Wert aufweist. Wenn Sie versuchen, den Wert zu lesen bei <xref:System.Nullable%601.HasValue%2A> ist `False`, Visual Basic löst eine <xref:System.InvalidOperationException> Ausnahme. Das folgende Beispiel zeigt die empfohlene Methode zum Lesen der Variablen `numberOfChildren` von den vorherigen Beispielen.
+Zum Abrufen des Werts einer Variablen eines Typs, der NULL-Werte zulässt, sollten Sie zunächst die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft testen, um zu bestätigen, dass Sie über einen Wert verfügt. Wenn Sie versuchen, den Wert zu lesen, wenn <xref:System.Nullable%601.HasValue%2A> `False` ist, löst Visual Basic eine <xref:System.InvalidOperationException>-Ausnahme aus. Das folgende Beispiel zeigt die empfohlene Vorgehensweise zum Lesen der Variablen `numberOfChildren` der vorherigen Beispiele.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>Vergleichen von Nullable-Typen
+## <a name="comparing-nullable-types"></a>Vergleichen von Typen mit Nullwert
 
-Wenn auf NULL festlegbare `Boolean` Variablen in booleschen Ausdrücken verwendet werden, kann das Ergebnis `True`, `False`, oder `Nothing`. Im folgenden finden Sie die Wahrheitstabelle für `And` und `Or`. Da `b1` und `b2` haben jetzt drei mögliche Werte sind neun Kombinationen ausgewertet.
+Wenn NULL-Werte zulassen `Boolean`-Variablen in booleschen Ausdrücken verwendet werden, kann das Ergebnis `True`, `False` oder `Nothing` sein. Im folgenden finden Sie die Wahrheitstabelle für `And` und `Or`. Da `b1` und `b2` nun drei mögliche Werte aufweisen, gibt es neun zu bewertende Kombinationen.
 
-|b1|b2|B1 und b2|b1 Or b2|
+|b1|b2|B1 und B2|B1 oder B2|
 |--------|--------|---------------|--------------|
 |`Nothing`|`Nothing`|`Nothing`|`Nothing`|
 |`Nothing`|`True`|`Nothing`|`True`|
@@ -78,38 +78,37 @@ Wenn auf NULL festlegbare `Boolean` Variablen in booleschen Ausdrücken verwende
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-Wenn der Wert, der eine boolesche Variable oder einen Ausdruck ist `Nothing`, es ist keines von beiden `true` noch `false`. Betrachten Sie das folgende Beispiel.
+Wenn der Wert einer booleschen Variablen oder eines Ausdrucks `Nothing` ist, ist Sie weder `true` noch `false`. Betrachten Sie das folgende Beispiel.
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-In diesem Beispiel `b1 And b2` ergibt `Nothing`. Daher die `Else` -Klausel ausgeführt wird, in den einzelnen `If` -Anweisung und die Ausgabe sieht folgendermaßen aus:
+In diesem Beispiel wird "`b1 And b2`" als "`Nothing`" ausgewertet. Folglich wird die `Else`-Klausel in jeder `If`-Anweisung ausgeführt, und die Ausgabe sieht wie folgt aus:
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` und `OrElse`, welche verwenden kurzschlussauswertung muss ihrer zweiten Operanden ausgewertet werden, wenn die erste ergibt `Nothing`.
+> `AndAlso` und `OrElse`, bei denen die Kurzschluss Auswertung verwendet wird, müssen die zweiten Operanden auswerten, wenn der erste Wert als `Nothing` ausgewertet wird.
 
 ## <a name="propagation"></a>Weitergabe
 
-Wenn eine oder beide der Operanden des eine Arithmetik, Vergleich, UMSCHALT oder einem Rollenporttyp-Vorgang ist NULL-Werte zulässt, ist das Ergebnis des Vorgangs auch NULL-Werte zulässt. Wenn beide Operanden Werte verfügen, die nicht `Nothing`, der Vorgang erfolgt auf die zugrunde liegenden Werte der Operanden, als wäre keine nullable-Typ. Im folgenden Beispiel Variablen `compare1` und `sum1` implizit typisiert werden. Wenn Sie den Mauszeiger darüber bewegen, sehen Sie sich, dass leitet der Compiler die nullable-Typen für beide Ausgaben.
+Wenn einer der Operanden eines arithmetischen, Vergleichs-, Verschiebungs-oder typvorgangs NULL-Werte zulässt, kann das Ergebnis des Vorgangs ebenfalls NULL-Werte zulassen. Wenn beide Operanden Werte aufweisen, die nicht `Nothing` sind, wird der Vorgang für die zugrunde liegenden Werte der Operanden ausgeführt, als wären keine NULL-Werte zulässig. Im folgenden Beispiel werden die Variablen `compare1` und `sum1` implizit typisiert. Wenn Sie den Mauszeiger darüber bewegen, sehen Sie, dass der Compiler Werte zulässt-Typen für beide ausleitet.
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-Wenn eine oder beide der Operanden einen Wert `Nothing`, das Ergebnis `Nothing`.
+Wenn ein oder beide Operanden den Wert `Nothing` aufweisen, ist das Ergebnis `Nothing`.
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
 ## <a name="using-nullable-types-with-data"></a>Verwenden von Nullable-Typen mit Daten
 
-Eine Datenbank ist eine der wichtigsten Quellen für die nullable-Typen zu verwenden. Nicht alle Datenbankobjekte wird derzeit auf NULL festlegbare Typen unterstützt, aber die vom Designer generierten Tabellenadaptern. Finden Sie unter [TableAdapter-Unterstützung für auf NULL festlegbare Typen](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
+Eine Datenbank ist einer der wichtigsten Orte für die Verwendung von Typen, die NULL-Werte zulassen. Nicht alle Datenbankobjekte unterstützen zurzeit Typen, die NULL-Werte zulassen, aber die vom Designer generierten Tabellen Adapter. Siehe [TableAdapter-Unterstützung für Typen](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types), die NULL-Werte zulassen
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Verwenden von Typen mit Nullwert](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Datentypen](index.md)
 - [Value Types and Reference Types](value-types-and-reference-types.md)
 - [Problembehandlung bei Datentypen](troubleshooting-data-types.md)
@@ -118,3 +117,4 @@ Eine Datenbank ist eine der wichtigsten Quellen für die nullable-Typen zu verwe
 - [Lokaler Typrückschluss](../variables/local-type-inference.md)
 - [Is-Operator](../../../language-reference/operators/is-operator.md)
 - [IsNot-Operator](../../../language-reference/operators/isnot-operator.md)
+- [Verwenden von auf NULL festlegC#baren Werttypen ()](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

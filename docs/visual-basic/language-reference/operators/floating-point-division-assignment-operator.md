@@ -10,48 +10,48 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4855e8270a329f9345339060a323b5ca9cd9792
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778468"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71592173"
 ---
 # <a name="-operator-visual-basic"></a>/=-Operator (Visual Basic)
-Dividiert den Wert einer Variablen oder Eigenschaft den Wert eines Ausdrucks und weist das Gleitkomma-Ergebnis der Variablen oder Eigenschaft.  
+Dividiert den Wert einer Variablen oder Eigenschaft durch den Wert eines Ausdrucks und weist das Gleit Komma Ergebnis der Variablen oder Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 variableorproperty /= expression  
 ```  
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Alle numerischen Variablen oder Eigenschaft.  
+ Erforderlich. Eine beliebige numerische Variable oder Eigenschaft.  
   
  `expression`  
  Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite von der `/=` Operator kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite des `/=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- Die `/=` Operator dividiert den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators) zuerst durch den Wert des Ausdrucks (auf der rechten Seite des Operators). Der Operator weist die Gleitkomma-Ergebnisses des Vorgangs klicken Sie dann zu der Variablen oder Eigenschaft.  
+ Der `/=`-Operator dividiert zuerst den Wert der Variablen oder der Eigenschaft (auf der linken Seite des Operators) durch den Wert des Ausdrucks (auf der rechten Seite des Operators). Der-Operator weist dann das Gleit Komma Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zu.  
   
- Diese Anweisung weist ein `Double` Wert der Variablen oder die Eigenschaft auf der linken Seite. Wenn `Option Strict` ist `On`, `variableorproperty` muss eine `Double`. Wenn `Option Strict` ist `Off`, Visual Basic führt eine implizite Konvertierung und weist den resultierenden Wert `variableorproperty`, wobei ein Fehler zur Laufzeit. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) und [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Diese Anweisung weist der Variablen oder der Eigenschaft auf der linken Seite einen `Double`-Wert zu. Wenn `Option Strict` `On` ist, muss `variableorproperty` ein `Double` sein. Wenn `Option Strict` `Off` ist, führt Visual Basic eine implizite Konvertierung durch und weist den resultierenden Wert `variableorproperty` mit einem möglichen Fehler zur Laufzeit zu. Weitere Informationen finden Sie unter [erweiternde und einschränkende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) und [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="overloading"></a>Überladen  
- Die [/-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Das Überladen der `/` Operator beeinflusst das Verhalten von der `/=` Operator. Wenn Ihr Code verwendet `/=` für eine Klasse oder Struktur, die Überladungen `/`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [Operator/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `/`-Operators wirkt sich auf das Verhalten des `/=`-Operators aus. Wenn Ihr Code `/=` für eine Klasse oder Struktur verwendet, die `/` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `/=` Operator, um eine teilen `Integer` Variable, indem Sie das zweite und das Zuweisen der Quotient der ersten Variablen.  
+ Im folgenden Beispiel wird der `/=`-Operator verwendet, um eine `Integer`-Variable durch eine Sekunde zu teilen und den Quotienten der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [/-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [Operator/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
+- [\\ =-Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)

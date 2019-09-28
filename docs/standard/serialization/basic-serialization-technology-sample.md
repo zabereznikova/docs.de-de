@@ -2,12 +2,12 @@
 title: Technologiebeispiel für einfache Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 73bc600c7b4339c1f53ca6e366ae6030015ecfaf
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663773"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353140"
 ---
 # <a name="basic-serialization-technology-sample"></a>Technologiebeispiel für einfache Serialisierung
 
@@ -25,7 +25,7 @@ Weitere Informationen zur Serialisierung finden Sie in den Kommentaren der Quell
 
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio
 
-1. Öffnen Sie Datei-Explorer, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.
+1. Öffnen Sie den Datei-Explorer, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.
 
 2. Doppelklicken Sie je nach verwendeter Programmiersprache auf das Symbol für die Datei SerializationCS.sln, SerializationJSL.sln oder SerializationVB.sln, um die Datei in Visual Studio zu öffnen.
 
@@ -48,7 +48,7 @@ Die Beispielanwendung akzeptiert Befehlszeilenparameter, die angeben, welcher Te
 
 Beispiel:
 
-```
+```console
 Serialize.exe -sx Test.xml 10
 ```
 
@@ -56,7 +56,7 @@ Verwenden Sie die **dx Test.xml**-Parameter, um die Datei **Test.xml** aus dem v
 
 Beispiel:
 
-```
+```console
 Serialize.exe -dx Test.xml
 ```
 
@@ -64,7 +64,7 @@ In den beiden oben aufgeführten Beispielen bedeutet das "x" im Befehlszeilensch
 
 Beispiel:
 
-```
+```console
 Serialize.exe -sb Test.bin 10000 >somefile.txt
 ```
 
@@ -72,11 +72,11 @@ In der folgenden Aufzählung werden die in diesem Beispiel verwendeten Klassen u
 
 - Laufzeitserialisierung
 
-  - <xref:System.Runtime.Serialization.IFormatter> Zum Verweisen auf entweder eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Objekt.
+  - <xref:System.Runtime.Serialization.IFormatter>, um entweder auf ein <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder ein <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Objekt zu verweisen.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Verwendet, um eine verknüpfte Liste in einen Stream im Binärformat zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird verwendet, um eine verknüpfte Liste in einen Stream in einem binären Format zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Verwendet, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, das verwendet wird, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.
 
 - Stream-E/A
 

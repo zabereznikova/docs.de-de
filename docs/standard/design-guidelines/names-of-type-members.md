@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757494"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353697"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.  
@@ -28,7 +28,7 @@ Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren u
   
  **✓ DO**: Geben Sie Methodennamen an, die Verben oder Verbalphrasen sind.  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -56,7 +56,7 @@ public class String {
   
  Die folgende Eigenschaft ruft ordnungsgemäß einen Enumerationswert namens `Color` ab und legt ihn fest. Die Eigenschaft heißt also `Color`:  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -99,7 +99,7 @@ public class Control {
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
+ *reprint von der Berechtigung "Pearson Education, Inc." aus [framework-Entwurfs Richtlinien: Konventionen, Idiome und Muster für wiederverwendbare .NET-Bibliotheken, 2. Edition @ no__t-0 von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows-Entwicklungsreihe.*  
   
 ## <a name="see-also"></a>Siehe auch
 

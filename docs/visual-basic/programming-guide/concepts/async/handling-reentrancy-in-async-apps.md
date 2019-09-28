@@ -2,12 +2,12 @@
 title: Verarbeiten von erneuten eintreten in Async-Apps (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bc8156b1d2baa53255870364e680d62d7b93a50f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630935"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351987"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Verarbeiten von erneuten eintreten in Async-Apps (Visual Basic)
 
@@ -22,7 +22,7 @@ Im Beispiel in diesem Thema entscheiden sich Benutzer für eine Schaltfläche **
 
 Im folgenden Beispiel wird die erwartete Ausgabe bei einmaliger Betätigung der Schaltfläche **Start** dargestellt. Eine Liste der heruntergeladenen Websites wird mit der Größe, in Bytes für jede Site, angezeigt. Die Gesamtanzahl von Bytes wird am Ende angezeigt.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -37,7 +37,7 @@ TOTAL bytes returned:  890591
 
 Wenn der Benutzer die Schaltfläche allerdings mehrmals auswählt, wird der Ereignishandler wiederholt aufgerufen, und der Downloadvorgang beginnt jedes Mal erneut. Daher werden mehrere asynchrone Vorgänge gleichzeitig ausgeführt, die Ausgabe überlappt mit den Ergebnissen, und die Gesamtzahl der Bytes ist verwirrend.
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -94,7 +94,7 @@ Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, 
 
 Sie können die Schaltfläche **Start** während eines ausführenden Vorgangs blockieren, indem Sie die Schaltfläche oben im `StartButton_Click`-Ereignishandler deaktivieren. Sie können die Schaltfläche aus einem `Finally`-Block erneut aktivieren, sobald der Vorgang beendet ist, damit Benutzer die App erneut ausführen können.
 
-Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt. Sie können die Änderungen am Code am Ende dieses Themas hinzufügen, oder Sie können die fertige App aus [den Async-Beispielen herunterladen: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Projektname ist "DisableStartButton".
+Im folgenden Code werden diese Änderungen mit Sternchen gekennzeichnet dargestellt. Sie können die Änderungen am Code am Ende dieses Themas hinzufügen, oder Sie können die fertige App aus den [async-Beispielen herunterladen: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Projektname ist "DisableStartButton".
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -136,7 +136,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
         Dim cts As CancellationTokenSource
     ```
 
-2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert von `cts` ist `Nothing`, ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing`ist, wird der Vorgang, der bereits ausgeführt wird, abgebrochen.
+2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert von `cts` `Nothing` ist, ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing` ist, wird der Vorgang, der bereits ausgeführt wird, abgebrochen.
 
     ```vb
     ' *** If a download process is already underway, cancel it.
@@ -153,7 +153,7 @@ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüf
     cts = newCTS
     ```
 
-4. Am Ende von `StartButton_Click`ist der aktuelle Prozess abgeschlossen. Legen Sie daher den Wert von `cts` auf `Nothing`zurück.
+4. Am Ende `StartButton_Click` ist der aktuelle Prozess abgeschlossen. Legen Sie daher den Wert von `cts` auf `Nothing` zurück.
 
     ```vb
     ' *** When the process completes, signal that another process can proceed.
@@ -245,9 +245,9 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function
 ```
 
-Wenn Sie die Schaltfläche **Start** mehrmals anklicken, während diese App ausgeführt wird, sollten Ergebnisse erzeugt werden, die der folgenden Ausgabe ähneln.
+Wenn Sie die Schaltfläche " **Start** " mehrmals auswählen, während diese APP ausgeführt wird, sollte Sie Ergebnisse wie die folgende Ausgabe ergeben:
 
-```
+```console
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -285,7 +285,7 @@ Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in
 
 Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -305,7 +305,7 @@ TOTAL bytes returned:  918876
 
 Wenn der Benutzer die Schaltfläche **Start** dreimal anklickt, erzeugt die App eine Ausgabe, die den folgenden Zeilen ähnelt. Die Informationszeilen, die mit einem Nummernzeichen (#) beginnen, verfolgen den Status der Anwendung.
 
-```
+```console
 #Starting group A.
 #Task assigned for group A.
 
@@ -479,7 +479,7 @@ Die Ausgabe zeigt die folgenden Muster an.
 
 - Eine Gruppe kann gestartet werden, während die Ausgabe einer vorherigen Gruppe angezeigt wird. Doch die Anzeige der Ausgabe der vorherigen Gruppe wird nicht unterbrochen.
 
-  ```
+  ```console
   #Starting group A.
   #Task assigned for group A. Download tasks are active.
 
@@ -513,11 +513,11 @@ Die Ausgabe zeigt die folgenden Muster an.
   TOTAL bytes returned:  915908
   ```
 
-- Der `pendingWork` Task befindet `Nothing` sich`FinishOneGroupAsync` nur für die Gruppe A, die zuerst gestartet wurde. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
+- Die `pendingWork`-Aufgabe ist `Nothing` am Anfang von `FinishOneGroupAsync` nur für Gruppe A, die zuerst gestartet wurde. Gruppe A hat bei Erreichen von `FinishOneGroupAsync` einen Erwartungsausdruck noch nicht abgeschlossen. Daher wurde die Steuerung nicht an `AccessTheWebAsync` zurückgegeben, und die erste Zuweisung zu `pendingWork` ist nicht aufgetreten.
 
 - Die folgenden zwei Zeilen werden immer zusammen in der Ausgabe angezeigt. Der Code wird zwischen dem Starten des Vorgangs einer Gruppe in `StartButton_Click` und dem Zuweisen eines Tasks für die Gruppe zu `pendingWork` nie unterbrochen.
 
-  ```
+  ```console
   #Starting group B.
   #Task assigned for group B. Download tasks are active.
   ```
@@ -677,5 +677,5 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und warten (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

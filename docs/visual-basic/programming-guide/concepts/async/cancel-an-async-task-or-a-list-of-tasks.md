@@ -2,12 +2,12 @@
 title: Abbrechen einer Async-Aufgabe oder einer Aufgabenliste (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2b2fa7447c046f70c840791e7fe9bd874ff3795f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630952"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353131"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Abbrechen einer Async-Aufgabe oder einer Aufgabenliste (Visual Basic)
 
@@ -125,16 +125,16 @@ Fügen Sie dann die folgenden Änderungen der Datei "MainWindow. XAML. vb" des P
     End Function
     ```
 
-5. Wenn Sie das Programm nicht abbrechen, wird folgende Ausgabe erzeugt.
+5. Wenn Sie das Programm nicht abbrechen, wird die folgende Ausgabe erzeugt:
 
-    ```
+    ```console
     Ready to download.
     Length of the downloaded string: 158125.
     ```
 
-    Wenn Sie die Schaltfläche **Abbrechen** auswählen, bevor das Programm das Herunterladen des Inhalts abgeschlossen hat, erzeugt das Programm die folgende Ausgabe.
+    Wenn Sie die Schaltfläche **Abbrechen** auswählen, bevor das Programm das Herunterladen des Inhalts abgeschlossen hat, erzeugt das Programm die folgende Ausgabe:
 
-    ```
+    ```console
     Ready to download.
     Download canceled.
     ```
@@ -222,9 +222,9 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
     Await AccessTheWebAsync(cts.Token)
     ```
 
-5. Wenn Sie das Programm nicht abbrechen, wird folgende Ausgabe erzeugt.
+5. Wenn Sie das Programm nicht abbrechen, wird die folgende Ausgabe erzeugt:
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.
@@ -244,7 +244,7 @@ Um das Beispiel selbst zu erweitern, befolgen Sie Schritt für Schritt die Anwei
 
     Wenn Sie die Schaltfläche **Abbrechen** auswählen, bevor die Downloads abgeschlossen sind, enthält die Ausgabe die Längen der Downloads, die vor dem Abbruch abgeschlossen wurden.
 
-    ```
+    ```console
     Length of the downloaded string: 35939.
 
     Length of the downloaded string: 237682.

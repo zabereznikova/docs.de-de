@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690567"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353052"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurieren der Überwachung von Workflowdiensten
 
-Ein Workflow kann als beim Hosten in WCF-Dienst verfügbar gemacht werden die <xref:System.ServiceModel.Activities.WorkflowServiceHost> Diensthost. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.
+Ein Workflow kann als WCF-Dienst verfügbar gemacht werden, wenn er im <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Dienst Host gehostet wird. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.
 
-Für die in ein Workflowdienst gehostet <xref:System.ServiceModel.WorkflowServiceHost>, hinzufügbaren den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe der <`behavior`> Element in einer Konfigurationsdatei, wie im folgenden Beispiel gezeigt.
+Für einen Workflow Dienst, der in <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, können Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe des < `behavior` >-Elements in einer Konfigurationsdatei hinzufügen, wie im folgenden Beispiel gezeigt.
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ Für die in ein Workflowdienst gehostet <xref:System.ServiceModel.WorkflowServic
 Alternativ können Sie einem Workflowdienst, der im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, die Erweiterung für das <xref:System.Activities.Tracking.EtwTrackingParticipant>-Verhalten über Code hinzufügen. Um einen benutzerdefinierten Überwachungsteilnehmer hinzuzufügen, erstellen Sie eine neue Verhaltenserweiterung, und fügen Sie diese dem <xref:System.ServiceModel.ServiceHost> hinzu, wie im folgenden Beispielcode gezeigt.
 
 > [!NOTE]
-> Wenn Sie Beispielcode, der zeigt, wie ein benutzerdefiniertes verhaltenselement erstellt wird, die einen benutzerdefinierten Überwachungsteilnehmer hinzufügt, anzeigen möchten, lesen Sie die [nachverfolgung](./samples/tracking.md) Beispiele.
+> Wenn Sie Beispielcode anzeigen möchten, der zeigt, wie ein benutzerdefiniertes Verhaltens Element erstellt wird, das einen benutzerdefinierten nach Verfolgungs Teilnehmer hinzufügt, lesen Sie die nach [Verfolgungs](./samples/tracking.md) Beispiele.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -95,10 +95,7 @@ TrackingProfile GetProfile(string profileName, string displayName)
                 return null;
             }
 
-            if (profileName == null)
-            {
-                profileName = "";
-            }
+            profileName ??= "";
 
             //Find the profile with the specified profile name in the list of profile found in config
             var match = from p in new List<TrackingProfile>(trackingSection.TrackingProfiles)
@@ -137,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Weitere Informationen über nachverfolgungsprofile finden Sie unter [Nachverfolgungsprofile](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Weitere Informationen zu Überwachungs Profilen finden Sie unter [Überwachungs profile](https://go.microsoft.com/fwlink/?LinkId=201310).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurieren der Nachverfolgung mit WorkflowInvoker
 
-Um die Nachverfolgung für einen mit <xref:System.Activities.WorkflowInvoker> ausgeführten Workflow zu konfigurieren, fügen Sie den Nachverfolgungsanbieter als Erweiterung einer <xref:System.Activities.WorkflowInvoker>-Instanz hinzu. Im folgenden Codebeispiel stammt aus dem [benutzerdefinierte nachverfolgung](./samples/custom-tracking.md) Beispiel.
+Um die Nachverfolgung für einen mit <xref:System.Activities.WorkflowInvoker> ausgeführten Workflow zu konfigurieren, fügen Sie den Nachverfolgungsanbieter als Erweiterung einer <xref:System.Activities.WorkflowInvoker>-Instanz hinzu. Das folgende Codebeispiel wird aus dem Beispiel für die [benutzerdefinierte Nachverfolgung](./samples/custom-tracking.md) entnommen.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -151,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Anzeigen von Nachverfolgungsdatensätzen in der Ereignisanzeige
 
-Es gibt zwei Ereignisanzeigeprotokolle, die bei der Nachverfolgung der WF-Ausführung besonders von Interesse sind: das Analyseprotokoll und das Debugprotokoll. Beide befinden sich unter Microsoft&#124;Windows&#124;Anwendungsserver-Anwendungen-Knoten. Protokolle in diesem Abschnitt enthalten Ereignisse einer einzelnen Anwendung und keine Ereignisse, die Auswirkungen auf das gesamte System haben.
+Es gibt zwei Ereignisanzeigeprotokolle, die bei der Nachverfolgung der WF-Ausführung besonders von Interesse sind: das Analyseprotokoll und das Debugprotokoll. Beide befinden sich unter dem&#124;Knoten&#124;Microsoft Windows-Anwendungs Server-Anwendungen. Protokolle in diesem Abschnitt enthalten Ereignisse einer einzelnen Anwendung und keine Ereignisse, die Auswirkungen auf das gesamte System haben.
 
 Ereignisse zur Debugablaufverfolgung werden in das Debugprotokoll geschrieben. Um WF-Debugablaufverfolgungs-Ereignisse in der Ereignisanzeige zu sammeln, aktivieren Sie das Debugprotokoll.
 
-1. Klicken Sie zum Öffnen der Ereignisanzeige auf **starten**, und klicken Sie dann auf **ausführen.** Geben Sie im Dialogfeld Ausführen `eventvwr`.
+1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld "ausführen" `eventvwr` ein.
 
-2. Erweitern Sie im Dialogfeld Ereignisanzeige den **Anwendungs- und Dienstprotokolle** Knoten.
+2. Erweitern Sie im Dialogfeld Ereignisanzeige den Knoten **Anwendungs-und Dienst Protokolle** .
 
-3. Erweitern Sie die **Microsoft**, **Windows**, und **Anwendungsserver-Anwendungen** Knoten.
+3. Erweitern Sie die Knoten **Microsoft**, **Windows**und **Anwendungs Server-Anwendungen** .
 
-4. Mit der rechten Maustaste die **Debuggen** Knoten unter dem **Anwendungsserver-Anwendungen** Knoten, und wählen **Protokoll aktivieren**.
+4. Klicken Sie mit der rechten Maustaste unter dem Knoten **Anwendungs Server-Anwendungen** auf den Knoten **Debuggen** , und wählen Sie **Protokoll aktivieren**aus.
 
 5. Führen Sie die für die Ablaufverfolgung aktivierte Anwendung aus, um Ablaufverfolgungsereignisse zu generieren.
 
-6. Mit der rechten Maustaste die **Debuggen** Knoten, und wählen **aktualisieren.** Ablaufverfolgungsereignisse sollten im mittleren Bereich sichtbar sein.
+6. Klicken Sie mit der rechten Maustaste auf den Knoten **Debug** , und wählen Sie **Aktualisieren** Ablaufverfolgungsereignisse sollten im mittleren Bereich sichtbar sein.
 
 WF4 stellt einen Nachverfolgungsteilnehmer bereit, der Nachverfolgungsdatensätze in eine ETW (Ereignisablaufverfolgung für Windows)-Sitzung schreibt. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Wenn die Nachverfolgung aktiviert ist, werden Nachverfolgungsdatensätze für Fehler in ETW ausgegeben. ETW-Nachverfolgungsereignisse (im Bereich von 100-113), die den vom ETW-Nachverfolgungsteilnehmer ausgegebenen Nachverfolgungsereignissen entsprechen, werden in das Analyseprotokoll geschrieben.
 
 Gehen Sie wie folgt vor, um Nachverfolgungsdatensätze anzuzeigen.
 
-1. Klicken Sie zum Öffnen der Ereignisanzeige auf **starten**, und klicken Sie dann auf **ausführen.** Geben Sie im Dialogfeld Ausführen `eventvwr`.
+1. Klicken Sie zum Öffnen von Ereignisanzeige auf **Start**und dann auf **ausführen.** Geben Sie im Dialogfeld "ausführen" `eventvwr` ein.
 
-2. Erweitern Sie im Dialogfeld Ereignisanzeige den **Anwendungs- und Dienstprotokolle** Knoten.
+2. Erweitern Sie im Dialogfeld Ereignisanzeige den Knoten **Anwendungs-und Dienst Protokolle** .
 
-3. Erweitern Sie die **Microsoft**, **Windows**, und **Anwendungsserver-Anwendungen** Knoten.
+3. Erweitern Sie die Knoten **Microsoft**, **Windows**und **Anwendungs Server-Anwendungen** .
 
-4. Mit der rechten Maustaste die **analytisch** Knoten unter dem **Anwendungsserver-Anwendungen** Knoten, und wählen **Protokoll aktivieren**.
+4. Klicken Sie mit der rechten Maustaste auf den Knoten **Analyse** unter dem Knoten **Anwendungs Server-Anwendungen** , und wählen Sie **Protokoll aktivieren**aus.
 
 5. Führen Sie die für die Nachverfolgung aktivierte Anwendung aus, um Nachverfolgungsdatensätze zu generieren.
 
-6. Mit der rechten Maustaste die **analytisch** Knoten, und wählen **aktualisieren.** Nachverfolgungsdatensätze sollten im mittleren Bereich sichtbar sein.
+6. Klicken Sie mit der rechten Maustaste auf den Knoten **Analyse** , und wählen Sie **Aktualisieren** Nachverfolgungsdatensätze sollten im mittleren Bereich sichtbar sein.
 
-Das folgende Bild zeigt Nachverfolgungsereignisse in der Ereignisanzeige:
+Die folgende Abbildung zeigt nach Verfolgungs Ereignisse in der Ereignisanzeige:
 
-![Screenshot der Ereignisanzeige mit nachverfolgungsdatensätzen.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![Screenshot der Ereignisanzeige, die nach Verfolgungs Datensätze zeigt](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrieren einer anwendungsspezifischen Anbieter-ID
 
@@ -199,7 +196,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
     </system.serviceModel>
     ```
 
-2. Kopieren Sie die Manifestdatei aus %windir%\Microsoft.NET\Framework\\\<neueste Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie sie in "Microsoft.Windows.ApplicationServer.applications_provider1.man" um
+2. Kopieren Sie die Manifest-Datei aus%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie Sie in um. Microsoft. Windows. ApplicationServer. Applications_Provider1. man
 
 3. Ändern Sie die GUID in der Manifestdatei in die neue GUID.
 
@@ -225,7 +222,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
 
 6. Generieren Sie die Ressourcen-DLL, indem Sie folgende Schritte ausführen.
 
-    1. Installieren Sie das Windows SDK. Das Windows SDK enthält den meldungscompiler ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) und den Ressourcencompiler ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Installieren Sie das Windows SDK. Die Windows SDK enthält den Nachrichten Compiler ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) und den Ressourcen Compiler ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
 
     2. Führen Sie in einer Windows SDK-Eingabeaufforderung mc.exe für die neue Manifestdatei aus.
 
@@ -247,13 +244,13 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. Ändern Sie den Ressourcen- und Dll-Namen in der Manifestdatei aus `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` in den neuen Dll-Namen.
+    6. Ändern Sie den Namen der Ressourcen-und nachrichtendll in der Manifest-Datei von `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` in den neuen DLL-Namen.
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Verwendung [Wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) zum Registrieren des Manifests.
+    7. Verwenden Sie [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) , um das Manifest zu registrieren.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -261,5 +258,5 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Windows Server-App-Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Überwachen von Anwendungen mit App-Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

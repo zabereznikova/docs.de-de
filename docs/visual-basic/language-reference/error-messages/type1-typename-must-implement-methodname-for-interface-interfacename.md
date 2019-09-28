@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c387b0225375f4675042bef593b23a084305b4fd
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013607"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591599"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<Typ1 >'\<Typname > 'implementieren muss'\<Methodname > 'für Schnittstelle'\<Schnittstellenname >'
-Eine Klasse oder Struktur vorgibt, eine Schnittstelle zu implementieren, ohne dass eine Prozedur, die von der Schnittstelle definierten implementiert. Jeder Member der Schnittstelle muss implementiert werden.  
+Eine Klasse oder Struktur beansprucht, eine Schnittstelle zu implementieren, implementiert jedoch keine durch die Schnittstelle definierte Prozedur. Jeder Member der Schnittstelle muss implementiert werden.  
   
  **Fehler-ID:** BC30149  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Deklarieren Sie eine Prozedur mit dem gleichen Namen und die gleiche Signatur wie in der Schnittstelle definiert. Müssen Sie mindestens die `End Function` oder `End Sub` Anweisung.  
+1. Deklarieren Sie eine Prozedur mit dem gleichen Namen und der gleichen Signatur wie in der-Schnittstelle definiert. Stellen Sie sicher, dass Sie mindestens die `End Function`-oder `End Sub`-Anweisung einschließen.  
   
-2. Hinzufügen einer `Implements` Klausel am Ende der `Function` oder `Sub` Anweisung. Zum Beispiel:  
+2. Fügen Sie am Ende der `Function`-oder `Sub`-Anweisung eine `Implements`-Klausel hinzu. Zum Beispiel:  
   
-    ```  
+    ```vb  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
     ```  
   

@@ -1,21 +1,21 @@
 ---
-title: Suchen der standardmäßigen Absatzformatvorlage (Visual Basic)
+title: Suchen der standardmäßigen Absatzformat Vorlage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: f874033b9a070b951d27f37aae36f738ab1fd222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6754c48148e81b02eb8c63843b57bc3d28a5774a
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618381"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71352899"
 ---
-# <a name="finding-the-default-paragraph-style-visual-basic"></a>Suchen der standardmäßigen Absatzformatvorlage (Visual Basic)
+# <a name="finding-the-default-paragraph-style-visual-basic"></a>Suchen der standardmäßigen Absatzformat Vorlage (Visual Basic)
 Die erste Aufgabe im Tutorial „Bearbeiten des Inhalts eines WordprocessingML-Dokuments“ besteht darin, die Standardabsatzformatvorlage im Dokument zu ermitteln.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel öffnet ein Office Open XML-WordprocessingML-Dokument, bestimmt den Dokument- und den Formatvorlagenteil des Pakets und führt dann eine Abfrage aus, um den Namen der Standardformatvorlage zu ermitteln. Weitere Informationen zu Office Open XML-Dokumentpaketen und deren Bestandteilen sie bestehen, finden Sie unter [Details von Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+ Das folgende Beispiel öffnet ein Office Open XML-WordprocessingML-Dokument, bestimmt den Dokument- und den Formatvorlagenteil des Pakets und führt dann eine Abfrage aus, um den Namen der Standardformatvorlage zu ermitteln. Informationen zu Office Open XML-Dokument Paketen und den Teilen, aus denen Sie bestehen, finden Sie unter [Details zu Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
   
  Die Abfrage sucht nach einem Knoten mit dem Namen `w:style`, der ein `w:type`-Attribut mit dem Wert "paragraph" und ein `w:default`-Attribut mit dem Wert "1" besitzt. Da es nur einen XML-Knoten mit diesen Attributen gibt, verwendet die Abfrage den <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType>-Operator, um eine Auflistung in ein Singleton umzuwandeln. Dann ruft die Abfrage den Wert des Attributs mit dem Namen `w:styleId` ab.  
   
@@ -82,7 +82,7 @@ End Module
 ### <a name="comments"></a>Kommentare  
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 The default style is: Normal  
 ```  
   
@@ -93,4 +93,4 @@ The default style is: Normal
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

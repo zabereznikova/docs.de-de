@@ -2,12 +2,12 @@
 title: Async-Rückgabe Typen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 387b75db3078afb92e6fc3ad7607b293abb0c851
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988837"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351944"
 ---
 # <a name="async-return-types-visual-basic"></a>Async-Rückgabe Typen (Visual Basic)
 Asynchrone Methoden haben drei mögliche Rückgabetypen: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> und den void-Typ. In Visual Basic wird der void-Rückgabetyp als [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)-Prozedur geschrieben. Weitere Informationen zu Async-Methoden finden Sie unter [asynchrone Programmierung mit Async und warten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -18,7 +18,7 @@ Asynchrone Methoden haben drei mögliche Rückgabetypen: <xref:System.Threading.
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.  
   
 ## <a name="BKMK_TaskTReturnType"></a> Task(T)-Rückgabetyp  
- Der <xref:System.Threading.Tasks.Task%601> Rückgabetyp wird für eine Async-Methode verwendet, die eine [Return](../../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung enthält, in `TResult`der der Operand den Typ aufweist.  
+ Der <xref:System.Threading.Tasks.Task%601>-Rückgabetyp wird für eine Async-Methode verwendet, die eine [Return](../../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung enthält, in der der Operand den Typ "`TResult`" aufweist.  
   
  Im folgenden Beispiel enthält die asynchrone `TaskOfT_MethodAsync`-Methode eine "return"-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration den Rückgabetyp `Task(Of Integer)` haben.  
   
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt. Die Anwendung eines `Await` Operators erzeugt in diesem Fall keinen Wert.  
+ `Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt. Die Anwendung eines `Await`-Operators erzeugt in diesem Fall keinen Wert.  
   
  Der folgende Code ruft auf und erwartet die `Task_MethodAsync`-Methode.  
   
@@ -107,7 +107,7 @@ End Function
 Await Task_MethodAsync()  
 ```  
   
- Wie im vorherigen <xref:System.Threading.Tasks.Task%601> Beispiel können Sie den `Task_MethodAsync` -Befehl `Await` von der Anwendung eines Operators trennen, wie im folgenden Code gezeigt. Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.  
+ Wie im vorherigen Beispiel <xref:System.Threading.Tasks.Task%601> können Sie den-Befehl `Task_MethodAsync` von der Anwendung eines `Await`-Operators trennen, wie im folgenden Code gezeigt. Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.  
   
  Der folgende Code trennt Aufrufe von `Task_MethodAsync` vom Erwarten der Aufgabe, die `Task_MethodAsync` zurückgibt.  
   
@@ -122,7 +122,7 @@ Await simpleTask
 ```  
   
 ## <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“  
- Die primäre Verwendung von `Sub` Prozeduren erfolgt in Ereignis Handlern, bei denen kein Rückgabetyp (in anderen Sprachen als void-Rückgabetyp bezeichnet) vorhanden ist. Eine "void"-Rückgabe kann auch verwendet werden, um Methoden mit einer "void"-Rückgabe zu überschreiben, oder auch für Methoden, die "Fire-and-Forget"-Aktivitäten ausführen. Sie sollten nach Möglichkeit immer eine `Task` zurückgeben, da eine "void" zurückgebende asynchrone Methode nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
+ Die primäre Verwendung von `Sub`-Prozeduren erfolgt in Ereignis Handlern, bei denen kein Rückgabetyp (in anderen Sprachen als void-Rückgabetyp bezeichnet) vorhanden ist. Eine "void"-Rückgabe kann auch verwendet werden, um Methoden mit einer "void"-Rückgabe zu überschreiben, oder auch für Methoden, die "Fire-and-Forget"-Aktivitäten ausführen. Sie sollten nach Möglichkeit immer eine `Task` zurückgeben, da eine "void" zurückgebende asynchrone Methode nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
   
  Der Aufrufer einer "void" zurückgebenden asynchronen Methode kann die von der Methode ausgelöste Ausnahmen nicht behandeln, und solche Ausnahmefehler können möglicherweise zu Fehlern in der Anwendung führen. Wenn eine Ausnahme in einer asynchronen Methode auftritt, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgibt, wird die Ausnahme in der zurückgegebenen Aufgabe gespeichert und erneut ausgelöst, wenn die Aufgabe erwartet wird. Stellen Sie daher sicher, dass jede asynchrone Methode, die eine Ausnahme erstellen kann, über den Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> verfügt und die Aufrufe der Methode erwartet werden.  
   
@@ -274,9 +274,9 @@ End Sub
   
 9. Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
   
-     Es sollte folgende Ausgabe angezeigt werden.  
+     Die folgende Ausgabe sollte angezeigt werden:  
   
-    ```  
+    ```console  
     Application can continue working while the Task<T> runs. . . .   
   
     Value of result1 variable:   5  
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit "Async" und "warten" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und warten (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Ablaufsteuerung in asynchronen Programmen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)

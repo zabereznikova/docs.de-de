@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0383dc3024352b9fac879532ab2789a60488c96
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331634"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353166"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Gewährleisten der Datenintegrität über Hashcodes
 Ein Hashwert ist ein numerischer Wert einer festen Länge, der die Daten eindeutig identifiziert. Hashwerte stellen große Mengen von Daten als viel kleinere numerische Werte dar, damit sie mit digitalen Signaturen verwendet werden. Sie können einen Hashwert effizienter signieren als den größeren Wert. Hashwerte sind auch zum Überprüfen der Integrität der Daten nützlich, die über unsichere Kanäle gesendet werden. Der Hashwert der empfangenen Daten kann mit dem Hashwert der Daten verglichen werden, da sie gesendet wurden, um festzustellen, ob die Daten verändert wurden.  
@@ -50,13 +50,13 @@ Ein Hashwert ist ein numerischer Wert einer festen Länge, der die Daten eindeut
   
  Wenn die beiden Hashwerte übereinstimmen, zeigt dieser Code Folgendes in der Konsole an:  
   
-```  
+```console  
 The hash codes match.  
 ```  
   
  Wenn sie nicht übereinstimmen, zeigt der Code Folgendes an:  
   
-```  
+```console  
 The hash codes do not match.  
 ```  
   

@@ -8,38 +8,38 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 098ca95687d8b0e9f4ac90d5c7e0df9a9a0ad950
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebadf5ded1a23fe46b8e16cf18ae265b5d3c255
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760376"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591652"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf-Operator (Visual Basic)
-Erstellt eine Delegatinstanz, die auf bestimmte Prozedur verweist.  
+Erstellt eine Delegatinstanz, die auf die jeweilige Prozedur verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 AddressOf procedurename  
 ```  
   
 ## <a name="parts"></a>Teile  
  `procedurename`  
- Erforderlich. Gibt an, wie durch den neu erstellten Delegaten verwiesen werden.  
+ Erforderlich. Gibt die Prozedur an, auf die durch den neu erstellten Delegaten verwiesen werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `AddressOf` Operator erstellt einen Delegaten, der auf die Sub oder Funktion anhand des zeigt `procedurename`. Wenn die angegebene Prozedur ist, dass eine Instanzmethode klicken Sie dann den Delegaten auf die Instanz und die Methode verweist. Klicken Sie dann, wenn der Delegat aufgerufen wird, wird die angegebene Methode der angegebenen Instanz aufgerufen.  
+ Der `AddressOf`-Operator erstellt einen Delegaten, der auf die untergeordnete or-Funktion verweist, die von `procedurename` angegeben wird. Wenn die angegebene Prozedur eine Instanzmethode ist, verweist der Delegat sowohl auf die-Instanz als auch auf die-Methode. Wenn der Delegat aufgerufen wird, wird die angegebene Methode der angegebenen-Instanz aufgerufen.  
   
- Die `AddressOf` Operator kann verwendet werden, wie der Operand eines Delegatkonstruktors oder in einem Kontext, in dem der Typ des Delegaten vom Compiler bestimmt werden kann, verwendet werden.  
+ Der `AddressOf`-Operator kann als Operand eines Delegatkonstruktors oder in einem Kontext verwendet werden, in dem der Typ des Delegaten vom Compiler bestimmt werden kann.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `AddressOf` Operator zum Festlegen eines Delegaten behandeln die `Click` -Ereignis einer Schaltfläche.  
+ In diesem Beispiel wird der `AddressOf`-Operator verwendet, um einen Delegaten zu bestimmen, der das `Click`-Ereignis einer Schaltfläche behandelt.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `AddressOf` Operator, um die Startfunktion für einen Thread bezeichnet.  
+ Im folgenden Beispiel wird der `AddressOf`-Operator verwendet, um die Startup-Funktion für einen Thread festzulegen.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
