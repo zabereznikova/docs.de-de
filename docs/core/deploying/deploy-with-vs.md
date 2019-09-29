@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0a886c77204697268adf4ee7bc4b62184b056112
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4e8fbfa14c241c79f8708dfc2b288eeff2899891
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969967"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216236"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -26,7 +26,7 @@ Die folgenden Abschnitte zeigen, wie Sie Microsoft Visual Studio zum Erstellen d
 - Eigenständige Bereitstellung
 - Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Informationen zur Verwendung von Visual Studio zur Entwicklung von .NET Core-Anwendungen finden Sie unter [Voraussetzungen für .NET Core unter Windows](../windows-prerequisites.md#prerequisites-with-visual-studio-2017).
+Informationen zur Verwendung von Visual Studio zur Entwicklung von .NET Core-Anwendungen finden Sie unter [Voraussetzungen für .NET Core unter Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
 
 ## <a name="framework-dependent-deployment"></a>Framework-abhängige Bereitstellung
 

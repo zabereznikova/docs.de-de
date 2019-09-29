@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 39d1b2dba8077bf9bf998775f8967d455f36b549
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a35439efce25db94e70420fc6aeaf04816525758
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119083"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71263321"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>JSON-Serialisierungsausnahmetyp von `JsonException` in `NotSupportedException` geändert
 
@@ -14,12 +14,12 @@ In .NET Core 3.0 Vorschau 6 bis 8 hat das Serialisierungsmodul eine <xref:System
 
 In .NET Core 3.0 Vorschau 6 bis Vorschau 8 hat das Serialisierungsmodul eine <xref:System.Text.Json.JsonException> ausgelöst, wenn ein nicht unterstützter abgeleiteter Sammlungstyp vorhanden war. Ein *nicht unterstützter abgeleiteter Sammlungstyp* ist ein beliebiger Sammlungstyp, der keinem der folgenden Typen zugewiesen werden kann:
 
- - <xref:System.Collections.IList>
- - <xref:System.Collections.Generic.ICollection%601>
- - <xref:System.Collections.Generic.Stack%601>
- - <xref:System.Collections.Generic.Queue%601>`
- - <xref:System.Collections.IDictionary>
- - [IDictionary\<String,T>](xref:System.Collections.Generic.IDictionary%602)
+- <xref:System.Collections.IList>
+- <xref:System.Collections.Generic.ICollection%601>
+- <xref:System.Collections.Generic.Stack%601>
+- <xref:System.Collections.Generic.Queue%601>`
+- <xref:System.Collections.IDictionary>
+- [IDictionary\<String,T>](xref:System.Collections.Generic.IDictionary%602)
 
 Ab .NET Core 3.0 Vorschau 9 löst das Serialisierungsmodul eine <xref:System.NotSupportedException> aus, wenn ein nicht unterstützter Auflistungstyp vorhanden ist. Der neue Ausnahmetyp spiegelt besser wider, warum der Deserialisierungsvorgang fehlschlägt.
 
@@ -31,7 +31,7 @@ Ab .NET Core 3.0 Vorschau 9 löst das Serialisierungsmodul eine <xref:System.Not
 
 Wenn Sie <xref:System.Text.Json.JsonException> bei der Deserialisierung abfangen, sollten Sie auch <xref:System.NotSupportedException> abfangen.
 
-#### <a name="category"></a>Category (Kategorie)
+#### <a name="category"></a>Kategorie
 
 CoreFx
 

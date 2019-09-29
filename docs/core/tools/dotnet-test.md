@@ -2,22 +2,22 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 05/29/2018
-ms.openlocfilehash: 306b6f8d890e567afc419b0408d7e683baaa814d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117573"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182516"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 <!-- markdownlint-disable MD025 -->
 
@@ -122,7 +122,7 @@ Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeich
 
 `-s|--settings <SETTINGS_FILE>`
 
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -136,7 +136,7 @@ Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[ui
 
 Argumente, die als RunSettings-Konfigurationen für den Test übergeben werden. Argumente werden als `[name]=[value]`-Paaren nach „-- “ angegeben (Beachten Sie das Leerzeichen nach --). Ein Leerzeichen wird verwendet, um mehrere `[name]=[value]`-Paare voneinander zu trennen.
 
-Beispiel: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+Ein Beispiel: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
 Weitere Informationen zu RunSettings finden Sie unter [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (Übergeben von RunSettings-Argumenten).
 
@@ -192,7 +192,7 @@ Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeich
 
 `-s|--settings <SETTINGS_FILE>`
 
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -242,7 +242,7 @@ Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
+Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -278,7 +278,7 @@ Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Test
 
 | Testframework | Unterstützte Eigenschaften                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>NAME</li><li>ClassName</li><li>Priority</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>Priorität</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Merkmale</li></ul>                                   |
 
 `<operator>` beschreibt die Beziehung zwischen der Eigenschaft und dem Wert:
@@ -287,7 +287,7 @@ Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Test
 | :------: | --------------- |
 | `=`      | Genaue Übereinstimmung     |
 | `!=`     | Keine genaue Übereinstimmung |
-| `~`      | Contains        |
+| `~`      | Enthält        |
 
 `<value>` ist eine Zeichenfolge. Bei allen Suchvorgängen ist die Groß-/Kleinschreibung nicht relevant.
 
@@ -297,8 +297,8 @@ Ausdrücke können mit bedingten Operatoren verknüpft werden:
 
 | Operator            | Funktion |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
-| `&`                 | AND      |
+| <code>&#124;</code> | ODER       |
+| `&`                 | UND      |
 
 Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren verwenden (z.B. `(Name~TestMethod1) | (Name~TestMethod2)`).
 

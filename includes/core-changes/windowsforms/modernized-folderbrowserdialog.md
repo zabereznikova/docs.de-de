@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a7cf6210e288d3521f1df248927f0e7cfaf45cab
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 24141f4b95cda2ae382a923da034e75c329b8555
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119119"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216906"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>Modernisierung von FolderBrowserDialog
 
@@ -36,7 +36,7 @@ dialog.AutoUpgradeEnabled = false;
 dialog.ShowDialog();
 ```
 
-#### <a name="category"></a>Category (Kategorie)
+#### <a name="category"></a>Kategorie
 
 Windows Forms
 
@@ -44,7 +44,7 @@ Windows Forms
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 
-<!-- 
+<!--
 
 ### Affected APIs
 

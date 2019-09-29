@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6643f64010332cf14d466cbba28a1c3cca671ac3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0795ee244bf3d1261bbe61dc0c67c3936f427f04
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117220"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216356"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0 befolgt bewährte Unicode-Methoden beim Ersetzen von falsch formatierten UTF-8-Bytesequenzen
 
@@ -34,7 +34,7 @@ Diese 3-Zeichen-Ausgabe ist die bevorzugte Ausgabe gemäß _Tabelle 3-9_ der obe
 
 Auf der Seite des Entwicklers ist keine Aktion erforderlich.
 
-#### <a name="category"></a>Category (Kategorie)
+#### <a name="category"></a>Kategorie
 
 CoreFx
 
@@ -44,7 +44,7 @@ CoreFx
 - <xref:System.Text.UTF8Encoding.GetChars%2A?displayProperty=nameWithType>
 - <xref:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)?displayProperty=nameWithType>
 
-<!-- 
+<!--
 
 ### Affected APIs
 
@@ -53,4 +53,3 @@ CoreFx
 - `M:System.Text.UTF8Encoding.GetString(System.Byte[],System.Int32,System.Int32)`
 
 -->
-
