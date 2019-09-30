@@ -97,7 +97,7 @@ So fügen Sie einer **Web. config** -Datei Bindungs Umleitungen hinzu:
 
    Ein Dialogfeld, in dem Sie die erforderlichen Bindungs Umleitungen automatisch zur **Web. config** -Quelldatei hinzufügen können.
 
-   ![Dialogfeld "Bindungs Umleitung] " (./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Dialogfeld Bindungs Umleitung](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Siehe auch
 

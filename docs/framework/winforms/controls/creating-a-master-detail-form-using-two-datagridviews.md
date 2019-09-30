@@ -71,7 +71,7 @@ Diese Anwendung enthält grundlegende Kenntnisse über die <xref:System.Windows.
 
 - Ändern von Rahmen-und Header Stilen. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern Sie die Rahmen-und Rasterlinien Stile im Windows Forms DataGridView](change-the-border-and-gridline-styles-in-the-datagrid.md)-Steuerelement.
 
-- Aktivieren oder Einschränken der Benutzereingaben für <xref:System.Windows.Forms.DataGridView> das Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern Sie das Hinzufügen und Löschen von Zeilen im Windows Forms DataGridView [-Steuer](prevent-row-addition-and-deletion-datagridview.md)Element, und Gewusst wie: Legen Sie die Spalten im Windows Forms DataGridView-Steuer](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)Element als schreibgeschützt fest.
+- Aktivieren oder Einschränken der Benutzereingaben für <xref:System.Windows.Forms.DataGridView> das Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern Sie das Hinzufügen und Löschen von Zeilen im Windows Forms DataGridView -Steuer](prevent-row-addition-and-deletion-datagridview.md), und [Gewusst wie: Legen Sie die Spalten im Windows Forms DataGridView-Steuer](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)Element als schreibgeschützt fest.
 
 - Überprüfen Sie die Benutzer <xref:System.Windows.Forms.DataGridView> Eingaben für das Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Validieren von Daten im Windows Forms DataGridView-](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)Steuerelement.
 
