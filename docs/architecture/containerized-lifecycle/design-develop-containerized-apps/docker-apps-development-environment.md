@@ -2,12 +2,12 @@
 title: Entwicklungsumgebung für Docker-Apps
 description: Lernen Sie die wichtigsten Optionen für Entwicklungstools kennen, die den Docker-Entwicklungslebenszyklus unterstützen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672427"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71214301"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entwicklungsumgebung für Docker-Apps
 
@@ -20,7 +20,6 @@ Ganz gleich, ob Sie eine vollständige und leistungsstarke integrierte Entwicklu
 Wenn Sie einen einfachen und plattformübergreifenden Editor bevorzugen, der jede beliebige Entwicklungssprache unterstützt, können Sie Visual Studio Code und die Docker-CLI verwenden. Diese Produkte bieten einen einfachen aber widerstandsfähigen Prozess, der für die Optimierung des Entwicklungsworkflows kritisch ist. Durch Installieren von „Docker für Mac“ oder „Docker für Windows“ (Entwicklungsumgebung), können Docker-Entwickler eine einzelne Docker-CLI verwenden, um Apps sowohl für Windows als auch für Linux (Laufzeitumgebung) zu erstellen. Außerdem unterstützt Visual Studio Code mit IntelliSense für Docker-Dateien und Verknüpfungsaufgaben, um Docker-Befehle aus dem Editor auszuführen, Erweiterungen für Docker.
 
 > [!NOTE]
->
 > Sie können Visual Studio Code hier herunterladen: <https://code.visualstudio.com/download>.
 >
 > Docker für Mac und Windows können Sie hier herunterladen: <https://www.docker.com/products/docker>.

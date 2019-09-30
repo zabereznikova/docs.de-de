@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 304c433e7f15301b77e8b2440e27795dcdea345c
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e8bf39716482eb94e5686c1a150667be9f8ef620
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893164"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391952"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -57,7 +57,7 @@ Nun wird es langsam interessant. Werfen wir einen Blick auf einige wichtige Feat
 - [Generics](../programming-guide/generics/index.md)
 - [Partial types (Partielle Typen)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonyme Methoden](../language-reference/operators/delegate-operator.md)
-- [Nullable-Typen](../programming-guide/nullable-types/index.md)
+- [Auf NULL festlegbare Werttypen](../programming-guide/nullable-types/index.md)
 - [Iteratoren](../programming-guide/concepts/iterators.md)
 - [Kovarianz und Kontravarianz](../programming-guide/concepts/covariance-contravariance/index.md)
 

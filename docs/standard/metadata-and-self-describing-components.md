@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ccfb0dee0eb6380d48498ba61f763eb777bded1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754942"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353895"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 
@@ -84,9 +84,7 @@ Jede Zeile einer Metadatentabelle wird im MSIL-Bereich einer PE-Datei durch ein 
 
 Ein Metadatentoken ist eine Vier-Byte-Zahl. Das oberste Byte kennzeichnet die Metadatentabelle, auf die ein bestimmtes Token verweist (Methode, Typ usw.). Die restlichen drei Bytes geben die Zeile in der Metadatentabelle an, die dem beschriebenen Programmierelement entspricht. Wenn Sie eine Methode in C# definieren und in eine PE-Datei kompilieren, befindet sich möglicherweise folgendes Metadatentoken im MSIL-Bereich der PE-Datei:
 
-```
-0x06000004
-```
+`0x06000004`
 
 Das oberste Byte (`0x06`) gibt an, dass es sich um ein **MethodDef**-Token handelt. Die unteren drei Bytes (`000004`) weisen die **Common Language Runtime** an, in der vierten Zeile der MethodDef-Tabelle nach Informationen zu suchen, welche die Methodendefinition beschreiben.
 
@@ -140,7 +138,7 @@ Beim Ausführen des Codes lädt Common Language Runtime das Modul in den Speic
 
 Das folgende Beispiel zeigt einen Teil der MSIL, die aus der `Main`-Funktion des vorherigen Codes erstellt wurde. Sie können die MSIL und die Metadaten aus jeder .NET-Anwendung mithilfe des [MSIL Disassembler-Tools (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) anzeigen.
 
-```
+```console
 .entrypoint
 .maxstack  3
 .locals ([0] int32 ValueOne,
@@ -175,6 +173,6 @@ Mithilfe von Metadaten stehen Common Language Runtime alle Informationen zur V
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Attribute](../../docs/standard/attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|

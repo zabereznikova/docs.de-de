@@ -3,12 +3,12 @@ title: Verarbeiten von NULL-Werten in Abfrageausdrücken (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie NULL-Werte in Abfrageausdrücken in C# verarbeiten.
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 14609aee2bbd1fbb487589bb41683a1f3cad1362
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 38a5c5e4a869cc44be78f70cbf0e50166baaab16
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857566"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353320"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Behandeln von NULL-Werten in Abfrageausdrücken
 
@@ -32,4 +32,4 @@ Wenn in einer join-Klausel nur einer der Vergleichsschlüssel ein Nullable-Wertt
 
 - <xref:System.Nullable%601>
 - [Language-Integrated Query (LINQ)](index.md)
-- [Nullable-Typen](../programming-guide/nullable-types/index.md)
+- [Auf NULL festlegbare Werttypen](../programming-guide/nullable-types/index.md)
