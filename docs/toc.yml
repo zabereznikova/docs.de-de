@@ -317,13 +317,18 @@
       items:
         - name: Übersicht
           href: core/tools/index.md
-        - name: Globale Tools
+        - name: Tools
           expanded: true
           items:
-            - name: Übersicht
-              href: core/tools/global-tools.md
-            - name: Erstellen eines globalen Tools
-              href: core/tools/global-tools-how-to-create.md
+            - name: Globale Tools
+              expanded: true
+              items:
+                - name: Übersicht
+                  href: core/tools/global-tools.md
+                - name: Erstellen eines globalen Tools
+                  href: core/tools/global-tools-how-to-create.md
+            - name: Problembehandlung bei Problemen mit der Toolnutzung
+              href: core/tools/troubleshoot-usage-issues.md
         - name: Erhöhte Zugriffsrechte
           href: core/tools/elevated-access.md
         - name: Erweiterbarkeitsmodell
@@ -1033,7 +1038,7 @@
             - name: Zugreifen auf Anwendungswebdienste
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: 'Gewusst wie: Asynchrones Aufrufen eines Webdiensts'
+                - name: 'Vorgehensweise: Asynchrones Aufrufen eines Webdiensts'
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1155,12 +1160,12 @@
             - name: Zusammengesetzte Datentypen
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 'Gewusst wie: Ablegen mehrerer Werte in einer Variablen'
+                - name: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: Generische Typen
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: 'Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
+                - name: 'Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
                 - name: 'Vorgehensweise: Verwenden einer generischen Klasse'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
@@ -1186,7 +1191,7 @@
             - name: Strukturen
               href: visual-basic/programming-guide/language-features/data-types/structures.md
               items:
-                - name: 'Vorgehensweise: Deklarieren einer Struktur'
+                - name: 'Gewusst wie: Deklarieren einer Struktur'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
                 - name: Strukturvariablen
                   href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
@@ -1236,15 +1241,15 @@
       items:
         - name: Einführung in COM-Interop
           href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
-        - name: 'Vorgehensweise: Verweisen auf COM-Objekte'
+        - name: 'Gewusst wie: Verweisen auf COM-Objekte'
           href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
-        - name: 'Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen'
+        - name: 'Gewusst wie: Arbeiten mit ActiveX-Steuerelementen'
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 'Exemplarische Vorgehensweise: Aufrufen von Windows-APIs'
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
         - name: 'Vorgehensweise: Aufrufen von Windows-APIs'
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 'Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
+        - name: 'Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
         - name: 'Exemplarische Vorgehensweise: Erstellen von COM-Objekten'
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
