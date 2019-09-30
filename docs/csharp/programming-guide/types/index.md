@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a5ccd0e9e0e3e5bedad06a619be115c362b38e0d
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588399"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392154"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -50,7 +50,7 @@ Der Compiler bettet die Typinformationen als Metadaten in die ausführbare Datei
 
 ### <a name="specifying-types-in-variable-declarations"></a>Angeben von Typen in Variablendeklarationen
 
-Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie ihren Typ festlegen oder das [var](../../language-reference/keywords/var.md)-Schlüsselwort verwenden, damit der Typ vom Compiler abgeleitet wird. Im folgenden Beispiel werden einige Variablendeklarationen dargestellt, die sowohl integrierte numerische Typen als auch komplexe benutzerdefinierte Typen verwenden:
+Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie den Typ festlegen oder das [var](../../language-reference/keywords/var.md)-Schlüsselwort verwenden, damit der Typ vom Compiler abgeleitet wird. Im folgenden Beispiel werden einige Variablendeklarationen dargestellt, die sowohl integrierte numerische Typen als auch komplexe benutzerdefinierte Typen verwenden:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
@@ -168,13 +168,13 @@ stringList.Add(4);
 
 Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](../../language-reference/keywords/object.md) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `stringList`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](../generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Implizite Typen, anonyme Typen und Typen, die NULL-Werte zulassen
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>Implizite Typen, anonyme Typen und Werttypen, die Nullwerte zulassen
 
 Wie bereits zuvor erläutert, können Sie eine lokale Variable (jedoch keine Klassenmember) implizit eingeben, indem Sie das [var](../../language-reference/keywords/var.md)-Schlüsselwort verwenden. Die Variable erhält weiterhin zur Kompilierzeit einen Typ, aber der Typ wird vom Compiler bereitgestellt. Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../classes-and-structs/implicitly-typed-local-variables.md).
 
 In einigen Fällen ist es unpraktisch, einen benannten Typ für einfache Sätze verwandter Werte zu erstellen, die nicht außerhalb von Methodengrenzen gespeichert oder übergeben werden sollen. Sie können für diesen Zweck *anonyme Typen* erstellen. Weitere Informationen finden Sie unter [Anonyme Typen](../classes-and-structs/anonymous-types.md).
 
-Gewöhnliche Werttypen können den Wert [NULL](../../language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../language-reference/keywords/null.md) aufweisen kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Nullable-Typen](../nullable-types/index.md).
+Gewöhnliche Werttypen können den Wert [NULL](../../language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../language-reference/keywords/null.md) aufweisen kann. Werttypen, die Nullwerte zulassen, sind Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Werttypen, die Nullwerte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Werttypen, die Nullwerte zulassen](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
@@ -196,7 +196,7 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 - [Generics](../generics/index.md)
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

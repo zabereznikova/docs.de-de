@@ -11,6 +11,8 @@
       href: how-to-explicitly-throw-exceptions.md
     - name: 'Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen'
       href: how-to-create-user-defined-exceptions.md
+    - name: 'Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen mit lokalisierten Ausnahmemeldungen'
+      href: how-to-create-localized-exception-messages.md
     - name: Verwenden benutzergefilterter Ausnahmehandler
       href: using-user-filtered-exception-handlers.md
     - name: 'Vorgehensweise: Verwenden von finally-Blöcken'
