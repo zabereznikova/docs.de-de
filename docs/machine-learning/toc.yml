@@ -45,6 +45,10 @@
           href: tutorials/mlnet-cli.md
         - name: Analysieren der Stimmung mit dem Modellgenerator und Razor Pages
           href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Probabilistische Programmierung mit Infer.NET
+          href: how-to-guides/matchup-app-infer-net.md
 - name: Konzepte
   items:
     - name: ML.NET-Aufgaben (Modelltypen)
@@ -95,10 +99,6 @@
           href: how-to-guides/install-ml-net-cli.md
         - name: Verwenden der automatisierten ML-API
           href: how-to-guides/how-to-use-the-automl-api.md
-    - name: Infer.NET
-      items:
-        - name: Probabilistische Programmierung mit Infer.NET
-          href: how-to-guides/matchup-app-infer-net.md
 - name: Referenz
   items:
     - name: API
