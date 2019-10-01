@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bac288bb28c4176e52366d0e0b7d8bc7d313cf96
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920970"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698007"
 ---
-# <a name="network-element-network-settings"></a>\<Network >-Element (Netzwerkeinstellungen)
+# <a name="network-element-network-settings"></a>\<network >-Element (Netzwerkeinstellungen)
 Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server (Simple Mail Transport Protocol).  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
-\<network>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<mailsettings >** ](mailsettings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<smtp >** ](smtp-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<network >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,8 +47,8 @@ Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server (Simple Mail T
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`clientDomain`|Gibt den Client Domänen Namen an, der in der ursprünglichen SMTP-Protokoll Anforderung zum Herstellen einer Verbindung mit dem SMTP-Mailserver verwendet wird. Der Standardwert ist der localhost-Name des lokalen Computers, der die Anforderung sendet.|  
-|`defaultCredentials`|Gibt an, ob die Standardbenutzer Anmelde Informationen für den Zugriff auf den SMTP-Mailserver für SMTP-Transaktionen verwendet werden sollen. Der Standardwert ist `false`.|  
-|`enableSsl`|Gibt an, ob für den Zugriff auf einen SMTP-Mailserver SSL verwendet wird. Der Standardwert ist `false`.|  
+|`defaultCredentials`|Gibt an, ob die Standardbenutzer Anmelde Informationen für den Zugriff auf den SMTP-Mailserver für SMTP-Transaktionen verwendet werden sollen. Der Standardwert ist `false`sein.|  
+|`enableSsl`|Gibt an, ob für den Zugriff auf einen SMTP-Mailserver SSL verwendet wird. Der Standardwert ist `false`sein.|  
 |`host`|Gibt den Hostnamen des SMTP-Mailservers an, der für SMTP-Transaktionen verwendet werden soll. Dieses Attribut hat keinen Standardwert.|  
 |`password`|Gibt das Kennwort an, das für die Authentifizierung beim SMTP-Mailserver verwendet werden soll. Dieses Attribut hat keinen Standardwert.|  
 |`port`|Gibt die Portnummer an, die für die Verbindung mit dem SMTP-Mailserver verwendet werden soll. Der Standardwert ist 25.|  
@@ -62,31 +62,31 @@ Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server (Simple Mail T
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SMTP->-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert SMTP (Simple Mail Transport Protocol)-e-Mail-Sende Optionen.|  
+|[\<SMTP-> Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert SMTP (Simple Mail Transport Protocol)-e-Mail-Sende Optionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Einige SMTP-Server erfordern, dass Sie sich vor der Verwendung beim Server authentifizieren. Wenn Sie sich mit den standardmäßigen Netzwerk Anmelde Informationen auf dem Host authentifizieren möchten, legen `defaultCredentials` Sie das `true`-Attribut auf fest. Die <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `defaultCredentials` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Einige SMTP-Server erfordern, dass Sie sich vor der Verwendung beim Server authentifizieren. Wenn Sie sich mit den standardmäßigen Netzwerk Anmelde Informationen auf dem Host authentifizieren möchten, legen Sie das `defaultCredentials`-Attribut auf `true` fest. Die <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `defaultCredentials`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
  Sie können auch die Standard Authentifizierung (Benutzername und Kennwort) verwenden, um sich beim SMTP-Server zu authentifizieren. Um diese Option verwenden zu können, müssen Sie einen gültigen Benutzernamen und ein Kennwort für den angegebenen SMTP-Server angeben.  
   
 > [!NOTE]
-> Bei der Standard Authentifizierung `userName` werden `password` die Werte und unverschlüsselt an den Server gesendet. Personen, die den Netzwerk Datenverkehr überwachen, können Ihre Anmelde Informationen anzeigen und zum Herstellen der Verbindung mit dem Server verwenden Sie sollten die Verwendung eines sichereren Authentifizierungsmechanismus in Erwägung gezogen werden, z. b. Kerberos oder NT-LAN-Manager (NTLM). Wenn `defaultCredentials`den Wert hat,wirdKerberosoderNTLMverwendet,wennderServerdieseProtokolleunterstützt.`true`  
+> Bei der Standard Authentifizierung werden die Werte für `userName` und `password` unverschlüsselt an den Server gesendet. Personen, die den Netzwerk Datenverkehr überwachen, können Ihre Anmelde Informationen anzeigen und zum Herstellen der Verbindung mit dem Server verwenden Sie sollten die Verwendung eines sichereren Authentifizierungsmechanismus in Erwägung gezogen werden, z. b. Kerberos oder NT-LAN-Manager (NTLM). Wenn `defaultCredentials` `true` ist, wird Kerberos oder NTLM verwendet, wenn der Server diese Protokolle unterstützt.  
   
- Die Optionen Standard Authentifizierung und Standard-Netzwerk Anmelde Informationen schließen sich gegenseitig aus. Wenn Sie auf `defaultCredentials` `true` festlegen und einen Benutzernamen und ein Kennwort angeben, werden die standardmäßigen Netzwerk Anmelde Informationen verwendet, und die grundlegenden Authentifizierungsdaten werden ignoriert.  
+ Die Optionen Standard Authentifizierung und Standard-Netzwerk Anmelde Informationen schließen sich gegenseitig aus. Wenn Sie `defaultCredentials` auf `true` festlegen und einen Benutzernamen und ein Kennwort angeben, werden die standardmäßigen Netzwerk Anmelde Informationen verwendet, und die grundlegenden Authentifizierungsdaten werden ignoriert.  
   
- Bei der Standard Authentifizierung `userName`sollten Sie auch einen `password` angeben, um sich selbst beim Mailserver zu authentifizieren.  
+ Wenn Sie einen `userName` angeben, sollten Sie für die Standard Authentifizierung auch eine `password` angeben, um sich selbst beim Mailserver zu authentifizieren.  
   
- Die <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `userName` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Die <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `password` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Ein `password` -Attribut wird aus Sicherheitsgründen normalerweise nicht in Konfigurationsdateien eingegeben.  
+ Die <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `userName`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Die <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `password`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten. Aus Sicherheitsgründen würde das Attribut "`password`" normalerweise nicht in Konfigurationsdateien eingegeben werden.  
   
- Das `clientDomain` -Attribut ändert den Client Domänen Namen, der in der ursprünglichen SMTP-Protokoll Anforderung verwendet wird, an einen SMTP-Server. Das `clientDomain` -Attribut kann auf den voll qualifizierten Domänen Namen des lokalen Computers und nicht auf den standardmäßig verwendeten localhost-Namen festgelegt werden. Dies ermöglicht eine bessere Konformität mit den SMTP-Protokollstandards. Der Standardwert ist der localhost-Name des lokalen Computers, der die Anforderung sendet. Die <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `clientDomain` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Das Attribut `clientDomain` ändert den Client Domänen Namen, der in der ursprünglichen SMTP-Protokoll Anforderung verwendet wird, an einen SMTP-Server. Das `clientDomain`-Attribut kann auf den voll qualifizierten Domänen Namen des lokalen Computers und nicht auf den standardmäßig verwendeten localhost-Namen festgelegt werden. Dies ermöglicht eine bessere Konformität mit den SMTP-Protokollstandards. Der Standardwert ist der localhost-Name des lokalen Computers, der die Anforderung sendet. Die <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `clientDomain`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
- Das `targetName` -Attribut wird für die Authentifizierung verwendet, wenn der erweiterte Schutz verwendet wird. Der Standardwert ist die Form "SmtpSvc/\<Host >", wobei \<Host > der Hostname des SMTP-Mailservers ist. Die <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `targetName` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Das Attribut "`targetName`" wird für die Authentifizierung verwendet, wenn der erweiterte Schutz verwendet wird. Der Standardwert ist die Form "SmtpSvc/\<host >", wobei \<Host > der Hostname des SMTP-Mailservers ist. Die <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `targetName`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
- Das `enableSsl` -Attribut gibt an, ob für den Zugriff auf einen SMTP-Mailserver SSL verwendet wird. Die <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> -Klasse unterstützt nur die SMTP-Dienst Erweiterung für Secure SMTP over Transport Layer Security, wie in RFC 3207 definiert. In diesem Modus beginnt die SMTP-Sitzung auf einem unverschlüsselten Kanal. Anschließend wird vom Client ein STARTTLS-Befehl an den Server ausgegeben, um zur sicheren Kommunikation über SSL zu wechseln. Weitere Informationen finden Sie unter RFC 3207, veröffentlicht von der Internet Engineering Task Force (IETF).  
+ Das Attribut "`enableSsl`" gibt an, ob für den Zugriff auf einen SMTP-Mailserver SSL verwendet wird. Die <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> -Klasse unterstützt nur die SMTP-Dienst Erweiterung für Secure SMTP over Transport Layer Security, wie in RFC 3207 definiert. In diesem Modus beginnt die SMTP-Sitzung auf einem unverschlüsselten Kanal. Anschließend wird vom Client ein STARTTLS-Befehl an den Server ausgegeben, um zur sicheren Kommunikation über SSL zu wechseln. Weitere Informationen finden Sie unter RFC 3207, veröffentlicht von der Internet Engineering Task Force (IETF).  
   
  Eine Alternative Verbindungsmethode besteht darin, dass vor dem Senden von Protokoll Befehlen eine SSL-Sitzung eingerichtet wird. Diese Verbindungsmethode wird manchmal als SMTPS bezeichnet und verwendet standardmäßig Port 465. Diese Alternative Verbindungsmethode mithilfe von SSL wird derzeit nicht unterstützt.  
   
- Die <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert `enableSsl` des Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Die <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des `enableSsl`-Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden die entsprechenden SMTP-Parameter zum Senden von e-Mails mit den standardmäßigen Netzwerk Anmelde Informationen angegeben.  

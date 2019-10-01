@@ -10,22 +10,22 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 99c18bd5b779845d52831b4a9591eaf4d5e5530b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920960"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697897"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Entfernen von >-Element für bypasslist (Netzwerkeinstellungen)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<remove >-Element für bypasslist (Netzwerkeinstellungen)
 
 Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxy Umgehungs Liste.
 
-\<Konfigurations > \
-\<system.net>\
-\<defaultProxy>\
-\<bypasslist>\
-\<remove>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Keine
 
 ## <a name="remarks"></a>Hinweise
 
-Das `remove` -Element entfernt reguläre Ausdrücke, in denen IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxy Server umgehen, beschrieben werden. Die Adressen wurden zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert.
+Das `remove`-Element entfernt reguläre Ausdrücke, in denen IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxy Server umgehen, beschrieben werden. Die Adressen wurden zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert.
 
-Der Wert für das `address` -Attribut muss ein regulärer Ausdruck sein, der einen Satz von IP-Adressen oder Hostnamen beschreibt.
+Der Wert für das `address`-Attribut muss ein regulärer Ausdruck sein, der einen Satz von IP-Adressen oder Hostnamen beschreibt.
 
 Weitere Informationen zu regulären Ausdrücken finden Sie unter. [.NET Framework reguläre Ausdrücke](../../../../standard/base-types/regular-expressions.md).
 

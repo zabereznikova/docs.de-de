@@ -1,41 +1,41 @@
 ---
-title: 'Vorgehensweise: Suchen innerhalb einer Zeichenfolge (Visual Basic)'
+title: 'Gewusst wie: Suchen innerhalb einer Zeichenfolge Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 57a3d9650ad78e1c8580fd46839c9a1cbc7794c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe9e50dc5458fdf8546094e5f41c2f001f1d2791
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665341"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700066"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>Vorgehensweise: Suchen innerhalb einer Zeichenfolge (Visual Basic)
-Dieses Beispiel ruft die <xref:System.String.IndexOf%2A> Methode für eine <xref:System.String> Objekt, das den Index des ersten Vorkommens einer Teilzeichenfolge gemeldet.  
-  
-## <a name="example"></a>Beispiel  
- [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
-  
-- Ein `Imports` angeben der Anweisung die <xref:System> Namespace. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
-  
-## <a name="robust-programming"></a>Stabile Programmierung  
- Die <xref:System.String.IndexOf%2A> -Methode gibt den Speicherort des ersten Zeichens des ersten Vorkommens der Teilzeichenfolge. Der Index ist 0-basiert, dies bedeutet, dass das erste Zeichen einer Zeichenfolge mit den Index 0 hat.  
-  
- Wenn <xref:System.String.IndexOf%2A> findet nicht die Teilzeichenfolge, wird-1 zurückgegeben.  
-  
- Die <xref:System.String.IndexOf%2A> -Methode wird die Groß-/Kleinschreibung beachtet und die aktuelle Kultur verwendet.  
-  
- Zur optimalen Fehlerbehandlung, Sie möchten die Zeichenfolgensuche in der `Try` -Block eine [testen... Catch... Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) Konstruktion.  
-  
+# <a name="how-to-search-within-a-string-visual-basic"></a>Gewusst wie: Suchen innerhalb einer Zeichenfolge (Visual Basic)
+
+Dieser Artikel zeigt ein Beispiel für die Suche in einer Zeichenfolge in Visual Basic.
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird die <xref:System.String.IndexOf%2A>-Methode für ein <xref:System.String>-Objekt aufgerufen, um den Index des ersten Vorkommens einer Teil Zeichenfolge zu melden:
+
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]
+
+## <a name="robust-programming"></a>Stabile Programmierung
+
+Die <xref:System.String.IndexOf%2A>-Methode gibt den Speicherort des ersten Zeichens des ersten Vorkommens der Teil Zeichenfolge zurück. Der Index ist 0-basiert, was bedeutet, dass das erste Zeichen einer Zeichenfolge einen Index von 0 aufweist.
+
+Wenn die Teil Zeichenfolge von <xref:System.String.IndexOf%2A> nicht gefunden wird, wird-1 zurückgegeben.
+
+Bei der <xref:System.String.IndexOf%2A>-Methode wird die Groß-/Kleinschreibung beachtet und die aktuelle Kultur verwendet.
+
+Um die optimale Fehler Steuerung zu erzielen, sollten Sie die Zeichen folgen Suche in den `Try`-Block eines [try... Catch... Schließlich ist die Anweisungs](../../../language-reference/statements/try-catch-finally-statement.md) Erstellung.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.String.IndexOf%2A>
-- [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [Try...Catch...Finally-Anweisung](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Einführung in Zeichenfolgen in Visual Basic](introduction-to-strings.md)
+- [Zeichenfolgen](index.md)

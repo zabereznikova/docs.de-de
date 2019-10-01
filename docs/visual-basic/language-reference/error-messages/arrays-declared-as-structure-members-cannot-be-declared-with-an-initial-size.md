@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de9d77aa9ea853b6f044e91878044115588ca77c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935368"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701250"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Arrays, die als Strukturmember deklariert sind, können nicht mit einer vorgegebenen Größe definiert werden.
-Ein Array in einer Struktur wird mit einer vorgegebenen Größe deklariert. Jedes Strukturelement kann nicht initialisiert, und deklarieren eine Arraygröße ist eine Form der Initialisierung.  
+Ein Array in einer Struktur wird mit einer Anfangs Größe deklariert. Sie können kein Strukturelement initialisieren, und das Deklarieren einer Array Größe ist eine Form der Initialisierung.  
   
  **Fehler-ID:** BC31043  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Definieren Sie das Array als dynamisches (keine anfängliche Größe) in Ihrer Struktur.  
+1. Definieren Sie das Array in der Struktur als dynamisch (keine anfängliche Größe).  
   
-2. Wenn Sie eine bestimmte Größe des Arrays benötigen, können Sie ein dynamisches Array mit dimensionieren eine [ReDim-Anweisung](../../../visual-basic/language-reference/statements/redim-statement.md) Wenn Ihr Code ausgeführt wird. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+2. Wenn Sie eine bestimmte Array Größe benötigen, können Sie ein dynamisches Array mit einer [ReDim-Anweisung](../../../visual-basic/language-reference/statements/redim-statement.md) redimensionen, wenn der Code ausgeführt wird. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-    ```  
+    ```vb  
     Structure demoStruct  
         Public demoArray() As Integer  
     End Structure  

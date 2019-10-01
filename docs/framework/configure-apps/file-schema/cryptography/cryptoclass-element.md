@@ -8,22 +8,22 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 6a868f62c6a327012a6225b86bf0103d178d6ab7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: db3681ea141bb7e3905f6a470f5c74ce05f6ef4b
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921167"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699788"
 ---
-# <a name="cryptoclass-element"></a>\<cryptoClass-> Element
+# <a name="cryptoclass-element"></a>\<cryptoclass >-Element
 Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element [\<nameEntry>](nameentry-element.md) zugeordnet ist.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
-\<cryptoNameMapping>  
-\<cryptoClasses>  
-\<cryptoClass>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographysettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptonamemapping >** ](cryptonamemapping-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0cryptoclasses >** ](cryptoclasses-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1cryptoclass >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element [\<nameEntry
 |`mscorlib`|Enthält das Element [\<cryptographySettings>](cryptographysettings-element.md).|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das  **\<cryptoClass >** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> die-Methode verwenden `MyCryptoRSAClass` , um ein-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptoclass->** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  

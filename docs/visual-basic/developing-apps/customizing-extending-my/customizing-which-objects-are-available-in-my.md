@@ -5,72 +5,72 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caddad463f7c525c8b715d70f49bf8bebcc7cfbd
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014231"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701262"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
 
-In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte werden durch Festlegen des Projekts aktiviert `_MYTYPE` Konstante für bedingte Kompilierung. Der Visual Studio integrierte Entwicklungsumgebung (IDE) behält die `_MYTYPE` Konstante für bedingte Kompilierung für ein Projekt mit den Projekttyp synchronisiert.  
+In diesem Thema wird beschrieben, wie Sie steuern können, welche `My`-Objekte durch Festlegen der `_MYTYPE`-Konstante für bedingte Kompilierung des Projekts aktiviert werden. Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bewahrt die Konstante für die `_MYTYPE`-bedingte Kompilierung für ein Projekt synchron mit dem Projekttyp auf.  
   
-## <a name="predefined-mytype-values"></a>Vordefinierte \_MYTYPE-Werte  
+## <a name="predefined-_mytype-values"></a>Vordefinierte \_mytype-Werte  
 
-Verwenden Sie die `/define` Compileroption zum Festlegen der `_MYTYPE` Konstante für bedingte Kompilierung. Wenn Sie einen eigenen Wert für angeben der `_MYTYPE` konstant ist, müssen Sie den Zeichenfolgenwert in umgekehrter Schrägstrich/Anführungszeichen einschließen (\\") Sequenzen. Sie könnten beispielsweise Folgendes verwenden:  
+Sie müssen die `/define`-Compileroption verwenden, um die Konstante für die bedingte Kompilierung von `_MYTYPE` festzulegen. Wenn Sie einen eigenen Wert für die `_MYTYPE`-Konstante angeben, müssen Sie den Zeichen folgen Wert in Zeichen folgen für den umgekehrten Schrägstrich/Anführungszeichen (\\) einschließen. Beispielsweise können Sie Folgendes verwenden:  
   
-```  
+```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- Diese Tabelle wird gezeigt, wie die `_MYTYPE` Konstante für bedingte Kompilierung auf festgelegt ist, für verschiedene Projekttypen.  
+ Diese Tabelle zeigt, wie die Konstante für die `_MYTYPE`-Konstante Kompilierung für mehrere Projekttypen auf festgelegt ist.  
   
-|Projekttyp:|\_Wert von MYTYPE|  
+|Projekttyp:|\_mytype-Wert|  
 |------------------|--------------------|  
-|Klassenbibliothek|"Windows"|  
-|Konsolenanwendung|"Console"|  
-|Web|"Web"|  
-|Websteuerelementbibliothek|"WebControl"|  
-|Windows-Anwendung|"WindowsForms"|  
-|Beim Starten mit benutzerdefinierten Windows-Anwendung `Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Windows-Steuerelementbibliothek|"Windows"|  
-|Windows-Dienst|"Console"|  
-|Empty|"Empty"|  
+|Klassenbibliothek|Windows|  
+|Konsolenanwendung|TS|  
+|Web|Kamera|  
+|Websteuer Element Bibliothek|WebControl|  
+|Windows-Anwendung|WindowsForms|  
+|Windows-Anwendung, wenn Sie mit der benutzerdefinierten `Sub Main` beginnen|"Windowsformswithcustomsubmain"|  
+|Windows-Steuerelement Bibliothek|Windows|  
+|Windows-Dienst|TS|  
+|Empty|Leer|  
   
 > [!NOTE]
-> Alle Zeichenfolgenvergleichen für die bedingte Kompilierung wird die Groß-/Kleinschreibung beachtet, unabhängig davon, wie der `Option Compare` Anweisung festgelegt ist.  
+> Bei allen Zeichen folgen vergleichen mit bedingter Kompilierung wird die Groß-/Kleinschreibung beachtet, unabhängig davon, wie die `Option Compare`-Anweisung festgelegt  
   
-## <a name="dependent-my-compilation-constants"></a>Abhängige \_Meine Kompilierungskonstanten  
+## <a name="dependent-_my-compilation-constants"></a>Abhängige \_kompilierungs Konstanten  
 
-Die `_MYTYPE` Konstante für bedingte Kompilierung, wiederum steuert die Werte von mehreren anderen `_MY` Kompilierungskonstanten:  
+Die Konstante für die bedingte Kompilierung mit `_MYTYPE` steuert wiederum die Werte mehrerer anderer `_MY`-Kompilierungs Konstanten:  
   
 |\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Console"|"Console"|"Windows"|Nicht definiert|"Windows"|true|  
-|"Custom"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
-|"Empty"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
-|"Web"|Nicht definiert|"Web"|false|"Web"|false|  
-|"WebControl"|Nicht definiert|"Web"|false|"Web"|true|  
-|"Windows" oder ""|"Windows"|"Windows"|Nicht definiert|"Windows"|true|  
-|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
-|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
+|TS|TS|Windows|Nicht definiert|Windows|true|  
+|Zollunion|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
+|Leer|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
+|Kamera|Nicht definiert|Kamera|false|Kamera|false|  
+|WebControl|Nicht definiert|Kamera|false|Kamera|true|  
+|"Windows" oder ""|Windows|Windows|Nicht definiert|Windows|true|  
+|WindowsForms|WindowsForms|Windows|true|Windows|true|  
+|"Windowsformswithcustomsubmain"|TS|Windows|true|Windows|true|  
   
- In der Standardeinstellung nicht definierte Konstanten für bedingte Kompilierung in aufgelöst `FALSE`. Sie können Werte für den nicht definierten Konstanten angeben, beim Kompilieren des Projekts, um das Standardverhalten außer Kraft zu setzen.  
+ Standardmäßig werden nicht definierte Konstanten für bedingte Kompilierung in `FALSE` aufgelöst. Sie können Werte für die nicht definierten Konstanten angeben, wenn Sie das Projekt kompilieren, um das Standardverhalten zu überschreiben.  
   
 > [!NOTE]
-> Wenn `_MYTYPE` festgelegt ist auf "Custom", das Projekt enthält die `My` Namespace, aber es enthält keine Objekte. Jedoch festlegen `_MYTYPE` um "Leere" verhindert, dass der Compiler Hinzufügen der `My` Namespace und seine Objekte.  
+> Wenn `_MYTYPE` auf "Custom" festgelegt ist, enthält das Projekt den `My`-Namespace, es enthält jedoch keine-Objekte. Wenn Sie jedoch `_MYTYPE` auf "Empty" festlegen, wird verhindert, dass der Compiler den `My`-Namespace und seine Objekte hinzufügt.  
   
- Diese Tabelle beschreibt die Auswirkungen der vordefinierten Werte von der `_MY` Kompilierungskonstanten.  
+ In dieser Tabelle werden die Auswirkungen der vordefinierten Werte der `_MY`-Kompilierungs Konstanten beschrieben.  
   
 |Konstante|Bedeutung|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Ermöglicht `My.Application`, wenn die Konstante befindet sich "Console", Windows, "oder"WindowsForms-":<br /><br /> – Die Version "Console" leitet sich von <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>. und verfügt über weniger Elemente als die Version "Windows".<br />– Die Version "Windows" leitet sich von <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>und verfügt über weniger Elemente als die Version "WindowsForms-".<br />– Die Version "WindowsForms-" der `My.Application` leitet sich von <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>. Wenn die `TARGET` Konstante definiert "Winexe", und klicken Sie dann die Klasse enthält eine `Sub Main` Methode.|  
-|`_MYCOMPUTERTYPE`|Ermöglicht `My.Computer`, wenn die Konstante befindet sich "Web" oder "Windows":<br /><br /> – Die Version "Web" leitet sich von <xref:Microsoft.VisualBasic.Devices.ServerComputer>, und verfügt über weniger Elemente als die Version "Windows".<br />– Die "Windows"-Version der `My.Computer` leitet sich von <xref:Microsoft.VisualBasic.Devices.Computer>.|  
-|`_MYFORMS`|Ermöglicht `My.Forms`, wenn die Konstante befindet sich `TRUE`.|  
-|`_MYUSERTYPE`|Ermöglicht `My.User`, wenn die Konstante befindet sich "Web" oder "Windows":<br /><br /> – Die "Web"-Version der `My.User` die Benutzeridentität des die aktuelle HTTP-Anforderung zugeordnet ist.<br />– Die "Windows"-Version der `My.User` aktuellen Prinzipal des Threads zugeordnet ist.|  
-|`_MYWEBSERVICES`|Ermöglicht `My.WebServices`, wenn die Konstante befindet sich `TRUE`.|  
-|`_MYTYPE`|Ermöglicht `My.Log`, `My.Request`, und `My.Response`, wenn die Konstante befindet sich "Web".|  
+|`_MYAPPLICATIONTYPE`|Aktiviert `My.Application`, wenn die Konstante "Console", "Windows" oder "WindowsForms" ist:<br /><br /> -Die Konsolenversion wird von <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> abgeleitet. und verfügt über weniger Mitglieder als die "Windows"-Version.<br />-Die "Windows"-Version wird von @no__t -0 abgeleitet und verfügt über weniger Mitglieder als die Version "Windows Forms".<br />-Die Version "WindowsForms" von `My.Application` wird von <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> abgeleitet. Wenn die `TARGET`-Konstante als "winexe" definiert ist, enthält die-Klasse eine `Sub Main`-Methode.|  
+|`_MYCOMPUTERTYPE`|Aktiviert `My.Computer`, wenn die Konstante "Web" oder "Windows" ist:<br /><br /> -Die "Web"-Version wird von <xref:Microsoft.VisualBasic.Devices.ServerComputer> abgeleitet und verfügt über weniger Mitglieder als die "Windows"-Version.<br />-Die "Windows"-Version von `My.Computer` wird von <xref:Microsoft.VisualBasic.Devices.Computer> abgeleitet.|  
+|`_MYFORMS`|Aktiviert `My.Forms`, wenn die Konstante `TRUE` ist.|  
+|`_MYUSERTYPE`|Aktiviert `My.User`, wenn die Konstante "Web" oder "Windows" ist:<br /><br /> -Die "Web"-Version von `My.User` ist der Benutzeridentität der aktuellen HTTP-Anforderung zugeordnet.<br />-Die "Windows"-Version von `My.User` ist dem aktuellen Prinzipal des Threads zugeordnet.|  
+|`_MYWEBSERVICES`|Aktiviert `My.WebServices`, wenn die Konstante `TRUE` ist.|  
+|`_MYTYPE`|Aktiviert `My.Log`, `My.Request` und `My.Response`, wenn die Konstante "Web" ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 

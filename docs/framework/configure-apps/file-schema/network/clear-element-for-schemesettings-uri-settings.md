@@ -2,20 +2,20 @@
 title: <clear>-Element für schemeSettings (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 51c669aff767948523172aa075677ad3fb6478a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664182"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699445"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<> Element für SchemeSettings löschen (URI-Einstellungen)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\<clear >-Element für SchemeSettings (URI-Einstellungen)
 Löscht alle vorhandenen Schema Einstellungen.  
   
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemesettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ Löscht alle vorhandenen Schema Einstellungen.
 |[\<schemeSettings>-Element (URI-Einstellungen)](schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden von <xref:System.Uri?displayProperty=nameWithType> der-Klasse in Prozent codierte Pfad Trennzeichen vor dem Ausführen der Pfad Komprimierung aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
+ Standardmäßig werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse vor dem Ausführen der Pfad Komprimierung die Prozentwerte für Prozent codierte Pfad Trennzeichen aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -47,7 +47,7 @@ Löscht alle vorhandenen Schema Einstellungen.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund werden <xref:System.Uri?displayProperty=nameWithType> von der-Klasse zuerst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an <xref:System.Uri?displayProperty=nameWithType> den Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse zunächst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an den <xref:System.Uri?displayProperty=nameWithType>-Klassenkonstruktor führt zum folgenden URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -57,7 +57,7 @@ Löscht alle vorhandenen Schema Einstellungen.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine Konfiguration, die von <xref:System.Uri> der-Klasse verwendet wird, mit der alle Schema Einstellungen gelöscht werden. Anschließend wird die Unterstützung für die nicht-Escapezeichen für Prozent codierte Pfade für das http-Schema  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, die alle Schema Einstellungen löscht und dann Unterstützung für die nicht-Escapezeichen für Prozent codierte Pfade für das http-Schema hinzufügt.  
   
 ```xml  
 <configuration>  

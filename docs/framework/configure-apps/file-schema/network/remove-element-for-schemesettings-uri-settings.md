@@ -2,20 +2,20 @@
 title: <remove>-Element für schemeSettings (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 4a891eb8a2fd2d66b6435e2ae774ecd4a157c0f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0dc8c6111157ba1f23d4a0449bee8f6626027e23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659223"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697851"
 ---
-# <a name="remove-element-for-schemesettings-uri-settings"></a>\<Entfernen von >-Element für SchemeSettings (URI-Einstellungen)
+# <a name="remove-element-for-schemesettings-uri-settings"></a>\<remove >-Element für SchemeSettings (URI-Einstellungen)
 Entfernt eine Schema Einstellung für einen Schema Namen.  
   
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemesettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,7 +32,7 @@ Entfernt eine Schema Einstellung für einen Schema Namen.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Name|Der Name des Schemas, für das diese Einstellung gilt. Die einzigen unterstützten Werte sind Name = "http" und Name = "https".|  
+|NAME|Der Name des Schemas, für das diese Einstellung gilt. Die einzigen unterstützten Werte sind Name = "http" und Name = "https".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -44,7 +44,7 @@ Entfernt eine Schema Einstellung für einen Schema Namen.
 |[\<schemeSettings>-Element (URI-Einstellungen)](schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden von <xref:System.Uri?displayProperty=nameWithType> der-Klasse in Prozent codierte Pfad Trennzeichen vor dem Ausführen der Pfad Komprimierung aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
+ Standardmäßig werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse vor dem Ausführen der Pfad Komprimierung die Prozentwerte für Prozent codierte Pfad Trennzeichen aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -52,7 +52,7 @@ Entfernt eine Schema Einstellung für einen Schema Namen.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund werden <xref:System.Uri?displayProperty=nameWithType> von der-Klasse zuerst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an <xref:System.Uri?displayProperty=nameWithType> den Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse zunächst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an den <xref:System.Uri?displayProperty=nameWithType>-Klassenkonstruktor führt zum folgenden URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -62,7 +62,7 @@ Entfernt eine Schema Einstellung für einen Schema Namen.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine Konfiguration, die von <xref:System.Uri> der-Klasse verwendet wird, mit der alle Schema Einstellungen für das http-Schema entfernt werden.  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, mit der alle Schema Einstellungen für das http-Schema entfernt werden.  
   
 ```xml  
 <configuration>  

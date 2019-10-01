@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2a5ab99ff68e6dce783a2fd986ee6e8c15ae858
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013841"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701173"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Auf einen Instanzmember einer Klasse kann nicht ohne explizite Instanz einer Klasse von einer/m freigegebenen Methode/Member aus verwiesen werden.
-Sie haben versucht, auf einen nicht freigegebenen Member einer Klasse über ein gemeinsames Verfahren zu verweisen. Das folgende Beispiel zeigt eine solche Situation.  
+Sie haben versucht, auf einen nicht freigegebenen Member einer Klasse in einer freigegebenen Prozedur zu verweisen. Im folgenden Beispiel wird eine solche Situation veranschaulicht.  
   
-```  
+```vb  
 Class sample  
     Public x as Integer  
     Public Shared Sub setX()  
@@ -27,21 +27,21 @@ Class sample
 End Class  
 ```  
   
- Im vorherigen Beispiel die zuweisungsanweisung `x = 10` generiert diese Fehlermeldung wird angezeigt. Dies ist, da ein gemeinsames Verfahren eine Instanzvariable zugreifen möchte.  
+ Im vorherigen Beispiel generiert die Zuweisungsanweisung `x = 10` diese Fehlermeldung. Dies liegt daran, dass eine freigegebene Prozedur versucht, auf eine Instanzvariable zuzugreifen.  
   
- Die Variable `x` ein Instanzmember ist, da er nicht als deklariert wird [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Jede Instanz der Klasse `sample` enthält eine eigene Variable `x`. Wenn eine Instanz legt fest oder ändert den Wert des `x`, es hat keine Auswirkungen auf den Wert der `x` in einer anderen Instanz.  
+ Die Variable `x` ist ein Instanzmember, weil Sie nicht als " [Shared](../../../visual-basic/language-reference/modifiers/shared.md)" deklariert ist. Jede Instanz der Klasse `sample` enthält eine eigene Variable `x`. Wenn eine Instanz den Wert `x` festlegt oder ändert, wirkt sich dies nicht auf den Wert von `x` in einer anderen Instanz aus.  
   
- Allerdings die Prozedur `setX` ist `Shared` von allen Instanzen der Klasse `sample`. Dies bedeutet, es ist nicht mit einer Instanz der Klasse verknüpft und unabhängig von den einzelnen Instanzen angewendet wird. Da sie keine Verbindung mit einer bestimmten Instanz ist, hat `setX` eine Instanzvariable kann nicht zugegriffen werden kann. Es muss nur auf ausgeführt `Shared` Variablen. Wenn `setX` legt fest oder ändert den Wert für eine freigegebene Variable, dass der neue Wert für alle Instanzen der Klasse verfügbar ist.  
+ Die Prozedur `setX` ist jedoch für alle Instanzen der Klasse `sample` `Shared`. Dies bedeutet, dass Sie keiner Instanz der-Klasse zugeordnet ist, sondern unabhängig von einzelnen Instanzen funktioniert. Da keine Verbindung mit einer bestimmten Instanz besteht, kann `setX` nicht auf eine Instanzvariable zugreifen. Er muss nur für `Shared`-Variablen verwendet werden. Wenn `setX` den Wert einer freigegebenen Variablen festlegt oder ändert, ist dieser neue Wert für alle Instanzen der Klasse verfügbar.  
   
  **Fehler-ID:** BC30369  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Entscheiden Sie, ob das Element für alle Instanzen der Klasse freigegeben oder jeder Instanz beibehalten werden sollen.  
+1. Entscheiden Sie, ob der Member für alle Instanzen der Klasse freigegeben werden soll, oder ob der Member für jede Instanz beibehalten werden soll.  
   
-2. Wenn Sie eine einzelne Kopie des Elements, die für alle Instanzen freigegeben werden soll, Hinzufügen der `Shared` Schlüsselwort zur Memberdeklaration. Beibehalten der `Shared` -Schlüsselwort in der Deklaration der Prozedur.  
+2. Wenn Sie möchten, dass eine einzelne Kopie des Members von allen Instanzen gemeinsam verwendet wird, fügen Sie der Element Deklaration das Schlüsselwort `Shared` hinzu. Behalten Sie das `Shared`-Schlüsselwort in der Prozedur Deklaration bei.  
   
-3. Wenn Sie jede Instanz über ein eigenes Exemplar des Elements haben möchten, geben Sie keine `Shared` für die Element-Deklaration. Entfernen Sie die `Shared` -Schlüsselwort aus der Deklaration der Prozedur.  
+3. Wenn jede Instanz über eine eigene Kopie des Members verfügen soll, geben Sie `Shared` nicht für die Element Deklaration an. Entfernen Sie das Schlüsselwort "`Shared`" aus der Prozedur Deklaration.  
   
 ## <a name="see-also"></a>Siehe auch
 

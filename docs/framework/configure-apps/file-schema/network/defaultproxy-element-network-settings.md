@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 7e49762ee017564734bfb2b2f7074d94b7eabe11
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659394"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698206"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > Element (Netzwerkeinstellungen)
 Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultproxy >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,8 +41,8 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert ist `true`.|  
-|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob ein Webproxy verwendet wird. Der Standardwert ist `true`sein.|  
+|`useDefaultCredentials`|Gibt an, ob die Standardanmeldeinformationen für diesen Host für den Zugriff auf den Webproxy verwendet werden. Der Standardwert ist `false`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

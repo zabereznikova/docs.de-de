@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: ab18a7137a31ed8e616f465e7d617305c96d7b10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3187551afb7d25470f48dad894188766a811bb0a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943020"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700998"
 ---
 # <a name="-operator-visual-basic"></a>+-Operator (Visual Basic)
 Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zurück. Kann auch verwendet werden, um zwei Zeichen folgen Ausdrücke zu verketten.  
@@ -23,9 +23,13 @@ Addiert zwei Zahlen oder gibt den positiven Wert eines numerischen Ausdrucks zur
 ## <a name="syntax"></a>Syntax  
   
 ```vb
-expression1 + expression2  
-- or -  
-+ expression1  
+expression1 + expression2
+```
+  
+oder
+
+```vb  
++expression1  
 ```  
   
 ## <a name="parts"></a>Teile  
@@ -38,11 +42,11 @@ expression1 + expression2
 ## <a name="result"></a>Ergebnis  
  Wenn `expression1` und`expression2` beide numerisch sind, entspricht das Ergebnis Ihrer arithmetischen Summe.  
   
- Wenn `expression2` nicht vorhanden ist, `+` ist der Operator der unäre Identitäts Operator für den *unveränderten* Wert eines Ausdrucks. In diesem Sinne besteht der Vorgang darin, das Vorzeichen von `expression1`beizubehalten, sodass das Ergebnis negativ ist, wenn `expression1` negativ ist.  
+ Wenn `expression2` fehlt, ist der `+`-Operator der *unäre* Identitäts Operator für den unveränderten Wert eines Ausdrucks. In diesem Sinne besteht der Vorgang darin, das Vorzeichen von `expression1`beizubehalten, sodass das Ergebnis negativ ist, wenn `expression1` negativ ist.  
   
  Wenn `expression1` und`expression2` beide Zeichen folgen sind, ist das Ergebnis die Verkettung ihrer Werte.  
   
- Wenn `expression1` und`expression2` gemischte Typen sind, hängt die ausgeführte Aktion von ihren Typen, ihrem Inhalt und der Einstellung der [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)ab. Weitere Informationen finden Sie in den Tabellen unter "Hinweise".  
+ Wenn `expression1` und `expression2` gemischte Typen sind, hängt die ausgeführte Aktion von ihren Typen, deren Inhalt und der Einstellung der [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)ab. Weitere Informationen finden Sie in den Tabellen unter "Hinweise".  
   
 ## <a name="supported-types"></a>Unterstützte Typen  
  Alle numerischen Typen, einschließlich der unsignierten-und Gleit Komma Typen `Decimal`und, `String`und.  
@@ -58,7 +62,7 @@ expression1 + expression2
 |Beide Ausdrücke sind vom Typ.`String`|Verketten.|  
 |Ein Ausdruck ist ein numerischer Datentyp, der andere eine Zeichenfolge.|Wenn `Option Strict`den Wert hat,generierenSieeinenCompilerfehler.`On`<br /><br /> `Option Strict` `String` Wenn den Wert `Double` hat, konvertieren Sie den implizit in, und fügen Sie hinzu. `Off`<br /><br /> Wenn nicht in `Double`konvertiert werden kann, wird eine <xref:System.InvalidCastException> Ausnahme ausgelöst. `String`|  
 |Ein Ausdruck ist ein numerischer Datentyp, der andere ist [Nothing](../../../visual-basic/language-reference/nothing.md) .|Fügen Sie mit `Nothing` einem Wert von 0 (null) hinzu.|  
-|Ein Ausdruck ist eine Zeichenfolge, und die andere ist.`Nothing`|Concatenate mit dem `Nothing` Wert "".|  
+|Ein Ausdruck ist eine Zeichenfolge, und die andere ist.`Nothing`|Concatenate, wobei `Nothing` den Wert "" hat.|  
   
  Wenn ein Ausdruck ein `Object` Ausdruck ist, führt Visual Basic die folgenden Aktionen aus.  
   
@@ -83,7 +87,7 @@ expression1 + expression2
 > Wenn Sie den- `+` Operator verwenden, sind Sie möglicherweise nicht in der Lage, zu bestimmen, ob Addition oder Zeichen folgen Verkettung auftreten. Verwenden Sie `&` den Operator für die Verkettung, um Mehrdeutigkeit zu vermeiden und selbst dokumentierenden Code bereitzustellen.  
   
 ## <a name="overloading"></a>Überladen  
- Der `+` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `+`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der `+` -Operator verwendet, um Zahlen hinzuzufügen. Wenn die Operanden beide numerisch sind, berechnet Visual Basic das arithmetische Ergebnis. Das arithmetische Ergebnis stellt die Summe der beiden Operanden dar.  

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: f3b4238a8d7028d47122a420526b38ee4f327332
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926944"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699192"
 ---
-# <a name="systemdiagnostics-element"></a>\<System. Diagnostics >-Element
+# <a name="systemdiagnostics-element"></a>\<system. Diagnostics >-Element
 Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.  
   
- \<configuration>  
-\<system.diagnostics>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<System. Diagnostics >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,10 +52,10 @@ Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterle
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie einen Ablauf Verfolgungs Schalter und einen Ablaufverfolgungslistener in das  **\<System. Diagnostics->** Element einbetten Der `General` Ablauf Verfolgungs Schalter ist auf die <xref:System.Diagnostics.TraceLevel> -Ebene festgelegt. Der Ablaufverfolgungslistener erstellt eine Datei namens `MyListener.log` und schreibt die Ausgabe in die Datei. `myListener`  
+ Im folgenden Beispiel wird gezeigt, wie ein Ablauf Verfolgungs Schalter und ein Ablaufverfolgungslistener in das **>-Element \<System. Diagnostics** eingebettet werden. Der `General`-Ablauf Verfolgungs Schalter ist auf <xref:System.Diagnostics.TraceLevel>-Ebene festgelegt. Der Ablaufverfolgungslistener `myListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei.  
   
 > [!NOTE]
-> In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise können Sie für einen `true` <xref:System.Diagnostics.BooleanSwitch> angeben oder den Text verwenden, der einen `Error` Enumerationswert wie z. <xref:System.Diagnostics.TraceSwitch>b. für einen darstellt. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
+> In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise können Sie `true` für einen <xref:System.Diagnostics.BooleanSwitch> angeben oder den Text, der einen Enumerationswert wie `Error` für eine <xref:System.Diagnostics.TraceSwitch> darstellt. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

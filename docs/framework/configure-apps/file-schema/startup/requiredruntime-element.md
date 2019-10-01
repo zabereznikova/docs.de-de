@@ -9,18 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634191"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697490"
 ---
-# <a name="requiredruntime-element"></a>\<RequiredRuntime >-Element
+# <a name="requiredruntime-element"></a>> Element \<requirements druntime
 
-Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Die [ `supportedRuntime` ](supportedruntime-element.md) Element sollte stattdessen verwendet werden.
+Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Stattdessen sollte das Element [`supportedRuntime`](supportedruntime-element.md) verwendet werden.
 
-\<configuration> \<startup> \<requiredRuntime>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requirements druntime >**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +40,15 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`version`|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der angibt, die Version von .NET Framework, die diese Anwendung unterstützt. Der Zeichenfolgenwert muss den Namen des Verzeichnisses finden Sie unter dem Stamm der .NET Framework-Installation übereinstimmen. Der Inhalt des Zeichenfolgenwerts wird nicht analysiert.|
-|`safemode`|Optionales Attribut.<br /><br /> Gibt an, ob die Common Language Runtime-Startcode die Registrierung zum Ermitteln der RuntimeVersion der Common Language durchsucht.|
+|`version`|Optionales Attribut.<br /><br /> Ein Zeichen folgen Wert, der die Version der .NET Framework angibt, die von dieser Anwendung unterstützt wird. Der Zeichen folgen Wert muss mit dem Verzeichnisnamen unter dem Stammverzeichnis der .NET Framework Installation identisch sein. Der Inhalt des Zeichen folgen Werts wird nicht analysiert.|
+|`safemode`|Optionales Attribut.<br /><br /> Gibt an, ob der Startcode der Laufzeit die Registrierung durchsucht, um die Laufzeitversion zu bestimmen.|
 
-## <a name="safemode-attribute"></a>Safemode-Attribut
+## <a name="safemode-attribute"></a>safemode-Attribut
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|`false`|Der Startcode für die Common Language Runtime sucht in der Registrierung. Dies ist der Standardwert.|
-|`true`|Der Laufzeitstartcode scheint sich nicht in der Registrierung.|
+|`false`|Der Startcode der Laufzeit sucht in der Registrierung. Dies ist der Standardwert.|
+|`true`|Der Startcode der Laufzeit sucht nicht in der Registrierung.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -57,22 +59,22 @@ Keine
 |Element|Beschreibung|
 |-------------|-----------------|
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
-|`startup`|Enthält die `<requiredRuntime>` Element.|
+|`startup`|Enthält das `<requiredRuntime>` -Element.|
 
 ## <a name="remarks"></a>Hinweise
- Anwendungen, die nur in Version 1.0 von der Laufzeit nicht verwenden, müssen die `<requiredRuntime>` Element. Erstellen von Anwendungen mit Version 1.1 oder höher der Runtime verwenden, müssen die `<supportedRuntime>` Element.
+ Anwendungen, die zur Unterstützung von nur Version 1,0 der Laufzeit erstellt wurden, müssen das `<requiredRuntime>`-Element verwenden. Anwendungen, die mit Version 1,1 oder höher der Laufzeit erstellt wurden, müssen das `<supportedRuntime>`-Element verwenden.
 
 > [!NOTE]
-> Bei Verwendung der [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) Funktion, um die Konfigurationsdatei angeben, müssen Sie die `<requiredRuntime>` -Element für alle Versionen der Laufzeit. Die `<supportedRuntime>` Element wird ignoriert, wenn Sie [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).
+> Wenn Sie die [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) -Funktion verwenden, um die Konfigurationsdatei anzugeben, müssen Sie das `<requiredRuntime>`-Element für alle Versionen der Laufzeit verwenden. Das `<supportedRuntime>`-Element wird ignoriert, wenn Sie [corbindtoriuntimebycfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)verwenden.
 
- Die `version` Attributzeichenfolge muss den Ordnernamen Installation, für die angegebene Version von .NET Framework entsprechen. Diese Zeichenfolge wird nicht interpretiert. Wenn der Laufzeitstartcode einen entsprechenden Ordner nicht gefunden wird, ist die Runtime nicht geladen werden. der Startcode zeigt eine Fehlermeldung an und wird beendet.
+ Die Attribut Zeichenfolge `version` muss mit dem Namen des Installations Ordners für die angegebene Version des .NET Framework identisch sein. Diese Zeichenfolge wird nicht interpretiert. Wenn der Startcode der Laufzeit keinen übereinstimmenden Ordner findet, wird die Laufzeit nicht geladen. der Startcode zeigt eine Fehlermeldung an und beendet den Vorgang.
 
 > [!NOTE]
-> Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert der `<requiredRuntime>` Element.
+> Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert das `<requiredRuntime>`-Element.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie die Runtime-Version in einer Konfigurationsdatei angegeben wird.
+Im folgenden Beispiel wird gezeigt, wie die Laufzeitversion in einer Konfigurationsdatei angegeben wird.
 
 ```xml
 <configuration>

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: d6b186ad519bcd7cf82cce12523f2d75e09317cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1300ab60e825e7910825be2c65dcab90135ba988
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966885"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701117"
 ---
 # <a name="-operator-visual-basic"></a>\<\<Operator (Visual Basic)
 Führt eine arithmetische linke Verschiebung in einem Bitmuster aus.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 result = pattern << amount  
 ```  
   
@@ -37,40 +37,40 @@ result = pattern << amount
 ## <a name="remarks"></a>Hinweise  
  Arithmetische Verschiebungen sind nicht zirkulär, d. h., dass die Bits, die von einem Ende des Ergebnisses entfernt wurden, nicht erneut am anderen Ende eingefügt werden. In einer arithmetischen linken Schicht werden die Bits, die nach dem Bereich des Ergebnis Datentyps verschoben werden, verworfen, und die auf der rechten Seite frei gewordenen Bitpositionen werden auf 0 (null) festgelegt.  
   
- Um eine Verschiebung um mehr Bits zu verhindern, als das Ergebnis enthalten kann, Visual Basic den Wert `amount` von mit einer Größen Maske, die dem Datentyp von `pattern`entspricht. Die Binärdatei und diese Werte werden für die UMSCHALT Menge verwendet. Die Größen Masken lauten wie folgt:  
+ Um eine Verschiebung um mehr Bits zu verhindern, als das Ergebnis aufnehmen kann, Visual Basic den Wert `amount` mit einer Größen Maske, die dem Datentyp `pattern` entspricht, maskiert. Die Binärdatei und diese Werte werden für die UMSCHALT Menge verwendet. Die Größen Masken lauten wie folgt:  
   
-|Datentyp von`pattern`|Größen Maske (dezimal)|Größen Maske (hexadezimal)|  
+|Datentyp von `pattern`|Größen Maske (dezimal)|Größen Maske (hexadezimal)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|& H00000007|  
 |`Short`, `UShort`|15|& H0000000F|  
 |`Integer`, `UInteger`|31|& H0000001F|  
 |`Long`, `ULong`|63|& H0000003F|  
   
- Wenn `amount` 0 (null) ist, `result` ist der Wert von mit dem `pattern`Wert von identisch. Wenn `amount` negativ ist, wird es als nicht signierter Wert angenommen und mit der entsprechenden Größen Maske maskiert.  
+ Wenn `amount` 0 (null) ist, ist der Wert von `result` mit dem Wert von `pattern` identisch. Wenn `amount` negativ ist, wird es als nicht signierter Wert angenommen und mit der entsprechenden Größen Maske maskiert.  
   
  Arithmetische Verschiebungen generieren niemals Überlauf Ausnahmen.  
   
 > [!NOTE]
-> Der `<<` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Der `<<`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der `<<` -Operator verwendet, um die arithmetischen linken Verschiebungen für ganzzahlige Werte auszuführen. Das Ergebnis weist immer den gleichen Datentyp wie der zu Verschiebe Ausdruck auf.  
+ Im folgenden Beispiel wird der `<<`-Operator verwendet, um die arithmetischen linken Verschiebungen für ganzzahlige Werte auszuführen. Das Ergebnis weist immer den gleichen Datentyp wie der zu Verschiebe Ausdruck auf.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
  Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `result1`ist 192 (0000 0000 1100 0000).  
+- `result1` ist 192 (0000 0000 1100 0000).  
   
-- `result2`ist 3072 (0000 1100 0000 0000).  
+- `result2` ist 3072 (0000 1100 0000 0000).  
   
-- `result3`ist-32768 (1000 0000 0000 0000).  
+- `result3` ist-32768 (1000 0000 0000 0000).  
   
-- `result4`ist 384 (0000 0001 1000 0000).  
+- `result4` ist 384 (0000 0001 1000 0000).  
   
-- `result5`ist 0 (von 15 Stellen nach links verschoben).  
+- `result5` ist 0 (verschoben von 15 Stellen nach links).  
   
- Die UMSCHALT Menge für `result4` wird als 17 und 15 berechnet, was dem Wert 1 entspricht.  
+ Der Verschiebungs Betrag für `result4` wird als 17 und 15 berechnet, was dem Wert 1 entspricht.  
   
 ## <a name="see-also"></a>Siehe auch
 

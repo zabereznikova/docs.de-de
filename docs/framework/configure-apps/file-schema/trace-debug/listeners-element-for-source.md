@@ -7,21 +7,21 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 853bc94978218fd4d426e6070b3a36e20435cd6d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920492"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697301"
 ---
-# <a name="listeners-element-for-source"></a>\<Listener > Element für \<Quell >
-Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> -Auflistung für eine <xref:System.Diagnostics.TraceSource>hinzu oder entfernt Sie. Ein Listener leitet die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel, z. b. ein Protokoll, ein Fenster oder eine Textdatei.  
+# <a name="listeners-element-for-source"></a>\<listener >-Element für \<source->
+Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A>-Auflistung für einen <xref:System.Diagnostics.TraceSource> hinzu oder entfernt Sie. Ein Listener leitet die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel, z. b. ein Protokoll, ein Fenster oder eine Textdatei.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<Quellen >  
-\<Quell >  
-\<Listener > Element  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listener >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> -Auflis
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners`-Auflistung.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -62,7 +62,7 @@ Fügt Listener in der <xref:System.Diagnostics.TraceSource.Listeners%2A> -Auflis
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<listeners>` -Element verwendet wird, um der Quelle einen `mySource` Ablaufverfolgungslistener für die-Quelle hinzuzufügen und um den Standard  
+ Im folgenden Beispiel wird gezeigt, wie das `<listeners>`-Element verwendet wird, um der `mySource`-Quelle einen Ablaufverfolgungslistener hinzuzufügen und um den standardablaufverfolgungsli  
   
 ```xml  
 <configuration>  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95a190dac3a9512b404a054c60c48de9c4574790
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659426"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698339"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Löschen von >-Element für webRequestModules (Netzwerkeinstellungen)
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<clear >-Element für webRequestModules (Netzwerkeinstellungen)
 Entfernt alle registrierten Webanforderungs Module aus der Anwendung.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webrequestmodules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ Entfernt alle registrierten Webanforderungs Module aus der Anwendung.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `clear` -Element entfernt alle registrierten Webanforderungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
+ Das `clear`-Element entfernt alle registrierten Webanforderungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

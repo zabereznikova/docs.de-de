@@ -23,18 +23,18 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 76073037dcaac0e87bc8a352f3b438332d11d881
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d95feec3a976a38c92a215f6da58ae6324085fe8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630128"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696868"
 ---
 # <a name="user-defined-data-type"></a>Benutzerdefinierter Datentyp
 
-Enthält Daten in einem Format, das Sie definieren. Die `Structure` -Anweisung definiert das Format.
+Enthält Daten in einem Format, das Sie definieren. Die `Structure`-Anweisung definiert das Format.
 
-In früheren Versionen von Visual Basic wird der benutzerdefinierte Typ (User-Defined Type, UDT) unterstützt. Die aktuelle Version erweitert den UDT in eine- *Struktur*. Eine Struktur ist eine Verkettung von einem *oder mehreren* Membern verschiedener Datentypen. Visual Basic behandelt eine Struktur als eine Einheit, obwohl Sie auch einzeln auf die Member zugreifen können.
+In früheren Versionen von Visual Basic wird der benutzerdefinierte Typ (User-Defined Type, UDT) unterstützt. Die aktuelle Version erweitert den UDT in eine- *Struktur*. Eine Struktur ist eine Verkettung von einem *oder mehreren Membern verschiedener Daten* Typen. Visual Basic behandelt eine Struktur als eine Einheit, obwohl Sie auch einzeln auf die Member zugreifen können.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -44,13 +44,13 @@ Der Standardwert eines Structure-Datentyps besteht aus der Kombination der Stand
 
 ## <a name="declaration-format"></a>Deklarations Format
 
-Eine Struktur Deklaration beginnt mit der [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) und endet `End Structure` mit der-Anweisung. Die `Structure` -Anweisung gibt den Namen der Struktur an, die auch der Bezeichner des Datentyps ist, den die Struktur definiert. Andere Teile des Codes können diesen Bezeichner verwenden, um Variablen, Parameter und Funktions Rückgabewerte für den Datentyp dieser Struktur zu deklarieren.
+Eine Struktur Deklaration beginnt mit der [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) und endet mit der Anweisung `End Structure`. Die `Structure`-Anweisung gibt den Namen der Struktur an, die auch der Bezeichner des Datentyps ist, den die Struktur definiert. Andere Teile des Codes können diesen Bezeichner verwenden, um Variablen, Parameter und Funktions Rückgabewerte für den Datentyp dieser Struktur zu deklarieren.
 
-Die Deklarationen zwischen `Structure` der `End Structure` -Anweisung und der-Anweisung definieren die Member der-Struktur.
+Die Deklarationen zwischen den Anweisungen `Structure` und `End Structure` definieren die Member der Struktur.
 
 ## <a name="member-access-levels"></a>Mitglieds Zugriffsebenen
 
-Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md) oder einer-Anweisung, die die Zugriffsebene angibt, wie z. b. [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../visual-basic/language-reference/modifiers/private.md), deklarieren. Wenn Sie eine `Dim` -Anweisung verwenden, ist die Zugriffsebene standardmäßig auf Public eingestellt.
+Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md) oder einer-Anweisung, die die Zugriffsebene angibt, wie z. b. [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../visual-basic/language-reference/modifiers/private.md), deklarieren. Wenn Sie eine `Dim`-Anweisung verwenden, ist die Zugriffsebene standardmäßig auf Public eingestellt.
 
 ## <a name="programming-tips"></a>Programmiertipps
 
@@ -58,17 +58,17 @@ Sie müssen jeden Member mithilfe einer [Dim-Anweisung](../../../visual-basic/la
 
 - **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass benutzerdefinierte Typen in anderen Umgebungen nicht mit Visual Basic Strukturtypen kompatibel sind.
 
-- **Tet.** Es gibt keine automatische Konvertierung in oder aus einem Struktur Datentyp. Mithilfe der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)können Sie Konvertierungs Operatoren für die Struktur definieren, und Sie können jeden Konvertierungs `Widening` Operator `Narrowing`als oder deklarieren.
+- **Tet.** Es gibt keine automatische Konvertierung in oder aus einem Struktur Datentyp. Mithilfe der [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)können Sie Konvertierungs Operatoren für die Struktur definieren, und Sie können jeden Konvertierungs Operator so deklarieren, dass er `Widening` oder `Narrowing` ist.
 
 - **Geben Sie Zeichen ein.** Struktur Datentypen haben kein Literaltyp Zeichen oder Bezeichnertyp Zeichen.
 
-- **Frameworktyp.** In der .NET Framework ist kein entsprechender Typ vorhanden. Alle-Strukturen erben von der .NET Framework <xref:System.ValueType?displayProperty=nameWithType>-Klasse, aber keine einzelne Struktur <xref:System.ValueType?displayProperty=nameWithType>entspricht.
+- **Frameworktyp.** In der .NET Framework ist kein entsprechender Typ vorhanden. Alle Strukturen erben von der .NET Framework-Klasse <xref:System.ValueType?displayProperty=nameWithType>, aber keine einzelne Struktur entspricht <xref:System.ValueType?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Beispiel
 
 Das folgende Paradigma zeigt den Umriss der Deklaration einer-Struktur.
 
-```
+```vb
 [Public | Protected | Friend | Protected Friend | Private] Structure structname
     {Dim | Public | Friend | Private} member1 As datatype1
     ' ...

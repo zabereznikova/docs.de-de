@@ -17,44 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdf59ee3c7bf41a2bb0ff68db5e70dd5a519a0e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748888"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700784"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue-Methode
-Setzt die Ausführung von verwalteten Threads nach einem Aufruf von [Methode beenden](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-HRESULT Continue (  
-    [in] BOOL fIsOutOfBand  
-);  
-```  
-  
-## <a name="parameters"></a>Parameter  
+
+Setzt die Ausführung verwalteter Threads nach einem Aufrufvorgang der [Methode "Ende](icordebugcontroller-stop-method.md)" fort.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT Continue (
+    [in] BOOL fIsOutOfBand
+);
+```
+
+## <a name="parameters"></a>Parameter
+
  `fIsOutOfBand`  
- [in] Legen Sie auf `true` , wenn Sie von einem Out-of-Band-Ereignis, den Vorgang fortsetzen, andernfalls legen Sie auf `false`.  
+ in Wird auf `true` festgelegt, wenn ein Out-of-Band-Ereignis fortgesetzt wird. andernfalls legen Sie auf `false` fest.
+
+## <a name="remarks"></a>Hinweise
+
+`Continue` setzt den Prozess nach einem aufzurufenden `ICorDebugController::Stop`-Methode fort.
+
+Wenn Sie das Debuggen im gemischten Modus durchführen, sollten Sie `Continue` nicht für den Win32-Ereignis Thread aufzurufen, es sei denn, Sie setzen ein Out-of-Band-Ereignis
+
+Ein *in-Band-Ereignis* ist entweder ein verwaltetes Ereignis oder ein normales nicht verwaltetes Ereignis, in dem der Debugger die Interaktion mit dem verwalteten Status des Prozesses unterstützt. In diesem Fall empfängt der Debugger den [ICorDebugUnmanagedCallback::D ebugevent](icordebugunmanagedcallback-debugevent-method.md) -Rückruf, dessen `fOutOfBand`-Parameter auf `false` festgelegt ist.
   
-## <a name="remarks"></a>Hinweise  
- `Continue` wird der Prozess fortgesetzt wird, nach einem Aufruf der `ICorDebugController::Stop` Methode.  
-  
- Beim Debuggen im gemischten Modus, rufen Sie nicht `Continue` auf die Win32 Ereignis thread, es sei denn, Sie von einem Out-of-Band-Ereignis fortsetzen möchten.  
-  
- Ein *in-Band-Ereignis* ist entweder ein verwaltetes Ereignis oder ein normaler nicht verwaltetes Ereignis während der der Debugger die Interaktion mit den verwalteten Zustand des Prozesses unterstützt. In diesem Fall empfängt der Debugger die [ICorDebugUnmanagedCallback:: DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) Rückruffunktion mit der `fOutOfBand` Parametersatz zu `false`.  
-  
- Ein *Out-of-Band-Ereignis* ist ein nicht verwaltetes Ereignis während der Interaktion mit den verwalteten Zustand des Prozesses nicht möglich, ist während der Prozess, aufgrund des Ereignisses beendet wird. In diesem Fall empfängt der Debugger die `ICorDebugUnmanagedCallback::DebugEvent` Rückruffunktion mit der `fOutOfBand` Parametersatz zu `true`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** CorDebug.idl, CorDebug.h  
-  
- **Bibliothek:** CorGuids.lib  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch
+Bei einem *out-of-Band-Ereignis* handelt es sich um ein nicht verwaltetes Ereignis, bei dem die Interaktion mit dem verwalteten Zustand des Prozesses unmöglich ist, während der Prozess aufgrund des Ereignisses beendet wird. In diesem Fall empfängt der Debugger den `ICorDebugUnmanagedCallback::DebugEvent`-Rückruf, dessen `fOutOfBand`-Parameter auf `true` festgelegt ist.
+
+## <a name="requirements"></a>Anforderungen
+
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Header:** Cordebug. idl, Cordebug. h
+
+ **Fern** CorGuids.lib
+
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

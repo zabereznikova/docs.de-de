@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ca35d9be5e1eaf36a2c9cae99efc2736ef3403d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926954"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699210"
 ---
-# <a name="sources-element"></a>\<Quellen > Element
+# <a name="sources-element"></a>\<sources >-Element
 Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<Quellen >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sources >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,7 +54,7 @@ Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<sources>` -Element verwendet wird, um `mySource` die Ablauf Verfolgungs Quelle hinzuzufügen und die Ebene für `sourceSwitch`den Quell Switch mit dem Namen festzulegen. Ein Konsolen Ablaufverfolgungslistener wird hinzugefügt, der Ablauf Verfolgungs Informationen in die Konsole  
+ Im folgenden Beispiel wird gezeigt, wie das `<sources>`-Element verwendet wird, um die Ablauf Verfolgungs Quelle `mySource` hinzuzufügen und um die Ebene für den Quell Switch `sourceSwitch` festzulegen. Ein Konsolen Ablaufverfolgungslistener wird hinzugefügt, der Ablauf Verfolgungs Informationen in die Konsole  
   
 ```xml  
 <configuration>  

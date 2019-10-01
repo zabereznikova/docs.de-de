@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f448f34dc5909b9128fc700abab5b4f00e911edf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934276"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701013"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
-Ein Programmierelement, das eine oder mehrere Argumente akzeptiert, ist in einer LINQ-Abfrage enthalten. Der Compiler ist nicht möglich, eine Bereichsvariable, die von diesem Programmierelement abzuleiten.  
+Ein Programmier Element, das ein oder mehrere Argumente annimmt, ist in einer LINQ-Abfrage enthalten. Der Compiler kann keine Bereichs Variable von diesem Programmier Element ableiten.  
   
  **Fehler-ID:** BC36599  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Geben Sie einen expliziten Variablennamen für das Programmierelement, wie im folgenden Code gezeigt:  
+1. Geben Sie für das Programmier Element einen expliziten Variablennamen an, wie im folgenden Code gezeigt:  
   
-```  
+```vb  
 Dim query = From var1 In collection1   
             Select VariableAlias= SampleFunction(var1), var1  
 ```  

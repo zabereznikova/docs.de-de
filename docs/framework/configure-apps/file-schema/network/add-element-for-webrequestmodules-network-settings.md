@@ -10,20 +10,20 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f99c5b0dc7eab57d4e3e86f49dbbb3228c7b7d8b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0248706ed78de160ef0131a0c7595374febf1aa9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664220"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699585"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<Add >-Element für webRequestModules (Netzwerkeinstellungen)
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<add >-Element für webRequestModules (Netzwerkeinstellungen)
 Fügt der Anwendung ein benutzerdefiniertes Webanforderungs Modul hinzu.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<webrequestmodules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Fügt der Anwendung ein benutzerdefiniertes Webanforderungs Modul hinzu.
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
 |`prefix`|Das URI-Präfix für Anforderungen, die von diesem Webanforderungs Modul behandelt werden.|  
-|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A> -Eigenschaft) und der AssemblyName ( <xref:System.Reflection.Assembly.FullName%2A> angegeben durch die-Eigenschaft), getrennt durch ein Komma, das dieses Webanforderungs Modul implementiert.|  
+|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A>-Eigenschaft) und der AssemblyName (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft), der durch ein Komma getrennt ist, das dieses Webanforderungs Modul implementiert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,13 +54,13 @@ Fügt der Anwendung ein benutzerdefiniertes Webanforderungs Modul hinzu.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `prefix` -Attribut definiert das URI-Präfix, das das angegebene Webanforderungs Modul verwendet. Webanforderungs Module sind in der Regel für die Verarbeitung eines bestimmten Protokolls registriert, z. b. http oder FTP, können jedoch registriert werden, um eine Anforderung an einen bestimmten Server oder Pfad auf einem Server zu verarbeiten.  
+ Das `prefix`-Attribut definiert das URI-Präfix, das das angegebene Webanforderungs Modul verwendet. Webanforderungs Module sind in der Regel für die Verarbeitung eines bestimmten Protokolls registriert, z. b. http oder FTP, können jedoch registriert werden, um eine Anforderung an einen bestimmten Server oder Pfad auf einem Server zu verarbeiten.  
   
- Das Webanforderungs Modul wird erstellt, wenn ein URI-übereinstimmendes <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> Präfix an die Methode übermittelt wird.  
+ Das Webanforderungs Modul wird erstellt, wenn ein URI-übereinstimmendes Präfix an die <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode übermittelt wird.  
   
- Der Wert für das `prefix` -Attribut muss die führenden Zeichen eines gültigen URI sein. Beispielsweise `http` oder `http://www.contoso.com`.
+ Der Wert für das `prefix`-Attribut muss die führenden Zeichen eines gültigen URIs sein. Beispielsweise `http` oder `http://www.contoso.com`.
   
- Der Wert für das `type` -Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.
+ Der Wert für das `type`-Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: a6a40d97bf16a3125452311e7762617e657ca384
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 95ad1880cbb832a17311e7e63e9203f53257f65f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659148"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697715"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<ServicePointManager-> Element (Netzwerkeinstellungen)
+# <a name="servicepointmanager-element-network-settings"></a>\<servicepointmanager >-Element (Netzwerkeinstellungen)
 Konfiguriert Verbindungen mit Netzwerkressourcen.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<servicePointManager>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<servicepointmanager >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ Konfiguriert Verbindungen mit Netzwerkressourcen.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Gibt an, ob das System überprüfen soll, ob der Name des Zertifikats mit dem Server Hostnamen übereinstimmt, bevor das Zertifikat verwendet wird. Der Standardwert ist `true`.|  
-|`checkCertificateRevocationList`|Gibt an, ob das System vor der Verwendung des Zertifikats überprüfen soll, ob das Zertifikat widerrufen wurde. Der Standardwert ist `false`.|  
+|`checkCertificateName`|Gibt an, ob das System überprüfen soll, ob der Name des Zertifikats mit dem Server Hostnamen übereinstimmt, bevor das Zertifikat verwendet wird. Der Standardwert ist `true`sein.|  
+|`checkCertificateRevocationList`|Gibt an, ob das System vor der Verwendung des Zertifikats überprüfen soll, ob das Zertifikat widerrufen wurde. Der Standardwert ist `false`sein.|  
 |`dnsRefreshTimeout`|Gibt an, wie lange die Auflösung von Domain Name Service (DNS) in Verbindung mit der Option "DNS Round Robin" in Millisekunden zwischengespeichert wird. Der Standardwert ist 120.000 Millisekunden (zwei Minuten).|  
-|`enableDnsRoundRobin`|Gibt an, ob DNS-Auflösungen von Hostnamen mit mehreren IP-Adressen (Internet Protocol) alle Adressen oder nur den ersten zurückgeben. Der Standardwert ist `false`.|  
-|`encryptionPolicy`|Gibt die Verschlüsselungs Richtlinie an, die auf eine SSL/TLS- <xref:System.Net.ServicePointManager> Sitzung auf einer-Instanz angewendet wird. Die möglichen Werte entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy> -Enumeration. Wenn die Verschlüsselungs <xref:System.Security.Authentication.CipherAlgorithmType.Null> Richtlinie auf festgelegt ist, `NoEncryption`ist die Verwendung von erforderlich. Der Standardwert ist `RequireEncryption`.|  
-|`expect100Continue`|Gibt an, ob Post-Methoden erwarten, `100-continue` dass eine Antwort vom Server empfangen wird. Der Standardwert ist `true`.|  
-|`useNagleAlgorithm`|Gibt an, ob vom Dienst Punkt-Manager gesteuerte Verbindungen den Nagle-Algorithmus verwenden. Der Standardwert ist `true`.|  
+|`enableDnsRoundRobin`|Gibt an, ob DNS-Auflösungen von Hostnamen mit mehreren IP-Adressen (Internet Protocol) alle Adressen oder nur den ersten zurückgeben. Der Standardwert ist `false`sein.|  
+|`encryptionPolicy`|Gibt die Verschlüsselungs Richtlinie an, die auf eine SSL/TLS-Sitzung auf einer <xref:System.Net.ServicePointManager>-Instanz angewendet wird. Die möglichen Werte entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy>-Enumeration. Die Verwendung von <xref:System.Security.Authentication.CipherAlgorithmType.Null> ist erforderlich, wenn die Verschlüsselungs Richtlinie auf `NoEncryption` festgelegt ist. Der Standardwert ist `RequireEncryption`sein.|  
+|`expect100Continue`|Gibt an, ob Post-Methoden erwarten, dass vom Server eine `100-continue`-Antwort empfangen wird. Der Standardwert ist `true`sein.|  
+|`useNagleAlgorithm`|Gibt an, ob vom Dienst Punkt-Manager gesteuerte Verbindungen den Nagle-Algorithmus verwenden. Der Standardwert ist `true`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

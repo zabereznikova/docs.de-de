@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664240"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698431"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Add >-Element für authenticationModules (Netzwerkeinstellungen)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add >-Element für authenticationModules (Netzwerkeinstellungen)
 Fügt der Anwendung ein Authentifizierungs Modul hinzu.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationmodules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ Fügt der Anwendung ein Authentifizierungs Modul hinzu.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A> -Eigenschaft) und der AssemblyName ( <xref:System.Reflection.Assembly.FullName%2A> angegeben durch die-Eigenschaft), getrennt durch ein Komma.|  
+|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A>-Eigenschaft) und der AssemblyName (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft), getrennt durch ein Komma.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -52,9 +52,9 @@ Fügt der Anwendung ein Authentifizierungs Modul hinzu.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `add` -Element fügt ein Authentifizierungs Modul am Ende der Liste registrierter Authentifizierungs Module hinzu. Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.  
+ Das `add`-Element fügt ein Authentifizierungs Modul am Ende der Liste der registrierten Authentifizierungs Module hinzu. Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.  
   
- Der Wert für das `type` -Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.  
+ Der Wert für das `type`-Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

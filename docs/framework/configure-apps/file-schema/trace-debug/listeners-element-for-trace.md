@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927022"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699351"
 ---
-# <a name="listeners-element-for-trace"></a>\<Listener > Element für \<die Ablauf Verfolgungs >
+# <a name="listeners-element-for-trace"></a>\<listener > Element für \<trace >
 Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.  
   
- \<Configuration >-Element  
-\<System. Diagnostics >-Element  
-\<Trace > Element  
-\<Listener > Element für \<die Ablauf Verfolgungs >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listener >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Lis
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners` Auflistung.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners`-Auflistung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -55,13 +55,13 @@ Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet. Lis
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die <xref:System.Diagnostics.Debug> - <xref:System.Diagnostics.Trace> Klasse und die- Klasse verwenden dieselbe Listener-Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit dem .NET Framework ausgeliefert <xref:System.Diagnostics.TraceListener> werden, werden von der-Klasse abgeleitet  
+ Die Klassen <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> **verwenden dieselbe Listener** -Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die mit dem .NET Framework ausgeliefert werden, werden von der <xref:System.Diagnostics.TraceListener>-Klasse abgeleitet.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das  **\<Listener >** `MyListener` -Element verwendet wird, um `MyEventListener` die Listener und der Listener-Auflistung hinzuzufügen. `MyListener`erstellt eine Datei mit `MyListener.log` dem Namen und schreibt die Ausgabe in die Datei. `MyEventListener`erstellt einen Eintrag im Ereignisprotokoll.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<listener->** -Element verwendet wird, **um die Listener** `MyListener` und `MyEventListener` der Listener-Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
   
 ```xml  
 <configuration>  

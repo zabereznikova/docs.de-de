@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2abab3de2965c31c11d9acaf7b78f3a668563506
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659044"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697458"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<WebProxyScript >-Element (Netzwerkeinstellungen)
+# <a name="webproxyscript-element-network-settings"></a>\<webproxyscript >-Element (Netzwerkeinstellungen)
 Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<webProxyScript>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<webproxyscript >**  
   
 ## <a name="syntax"></a>Syntax  
   

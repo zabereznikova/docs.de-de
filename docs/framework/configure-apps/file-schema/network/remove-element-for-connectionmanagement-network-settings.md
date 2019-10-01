@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664033"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697841"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Entfernen von >-Element für connectionManagement (Netzwerkeinstellungen)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remove >-Element für connectionManagement (Netzwerkeinstellungen)
 Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungs Verwaltungsliste.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionmanagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,15 +52,15 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungs Verwaltungslis
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `remove` -Element entfernt den Verbindungs Verwaltungs Listeneintrag für den angegebenen Server.  
+ Das `remove`-Element entfernt den Verbindungs Verwaltungs Listeneintrag für den angegebenen Server.  
   
- Der Wert des `address` -Attributs muss eine gültige IP-Adresse oder ein gültiger Hostname sein.  
+ Der Wert des `address`-Attributs muss eine gültige IP-Adresse oder ein gültiger Hostname sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden alle Verbindungs Verwaltungs Listeneinträge für den- `www.adventure-works.com` Server entfernt. Anschließend wird eine Anwendung so konfiguriert, dass vier Verbindungen `www.contoso.com` mit dem Server und zwei Verbindungen mit allen anderen Servern verwendet werden.  
+ Im folgenden Beispiel werden alle Verbindungs Verwaltungs Listeneinträge für den Server `www.adventure-works.com` entfernt. Anschließend wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  

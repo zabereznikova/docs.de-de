@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663945"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697460"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules >-Element (Netzwerkeinstellungen)
+# <a name="webrequestmodules-element-network-settings"></a>\<webrequestmodules >-Element (Netzwerkeinstellungen)
 Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webrequestmodules >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,9 +50,9 @@ Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `webRequestModules` -Element registriert Nachfolger <xref:System.Net.WebRequest> der-Klasse, um Informationsanforderungen an Netzwerk Hosts zu verarbeiten. Webanforderungs Module müssen die <xref:System.Net.IWebRequestCreate> -Schnittstelle implementieren.  
+ Das `webRequestModules`-Element registriert Nachfolger der <xref:System.Net.WebRequest>-Klasse, um Informationsanforderungen an Netzwerk Hosts zu verarbeiten. Webanforderungs Module müssen die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren.  
   
- Die .NET Framework enthält Webanforderungs Module für URIs, die `http://`mit `https://`, und `file://`beginnen. Sie können die Standardmodule nur überschreiben, indem Sie ein benutzerdefiniertes Modul in der Konfigurationsdatei registrieren.  
+ Die .NET Framework enthält Webanforderungs Module für URIs, die mit `http://`, `https://` und `file://` beginnen. Sie können die Standardmodule nur überschreiben, indem Sie ein benutzerdefiniertes Modul in der Konfigurationsdatei registrieren.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

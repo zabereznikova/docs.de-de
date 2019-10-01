@@ -9,18 +9,19 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 022f0efbbb2e6e9a4ac9d3d7ddcc1fb1022cdbee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 634d9c5248c33619abec50d441d95c111febdcbf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169773"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699415"
 ---
-# <a name="startup-element"></a>\<Startup >-Element
+# <a name="startup-element"></a>\<startup >-Element
 
-Gibt beim Start zur common Language Runtime an.
+Gibt Common Language Runtime Startinformationen an.
 
- \<configuration> \<startup>
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<startup>**  
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,20 +38,20 @@ Gibt beim Start zur common Language Runtime an.
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|Optionales Attribut.<br /><br /> Gibt an, ob die .NET Framework 2.0 Runtime Activation-Richtlinie zu aktivieren oder die .NET Framework 4-Activation-Richtlinie verwendet werden soll.|
+|`useLegacyV2RuntimeActivationPolicy`|Optionales Attribut.<br /><br /> Gibt an, ob die Richtlinie für die .NET Framework 2,0-Lauf Zeit Aktivierung aktiviert oder die .NET Framework 4-Aktivierungs Richtlinie verwendet werden soll.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy attribute
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy-Attribut
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|`true`|Aktivieren Sie .NET Framework 2.0 Runtime Activation-Richtlinie für die ausgewählte Runtime, die ältere Laufzeit Aktivierung Techniken gebunden ist (z. B. die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) für die Laufzeit stattdessen aus der Konfigurationsdatei ausgewählt der Taskausführungsanforderungen begrenzt wird, werden an die CLR, Version 2.0. Wenn CLR-Version 4 oder höher aus der Konfigurationsdatei ausgewählt wird, sind gemischte Assemblys, die mit früheren Versionen von .NET Framework erstellt daher mit der ausgewählten Version der CLR geladen. Festlegen dieses Werts verhindert, dass CLR, Version 1.1 oder CLR-Version 2.0 in den gleichen Prozess, effektiv deaktivieren, die in-Process-Seite-an-Seite lädt.|
-|`false`|Verwenden der Standard-Activation-Richtlinie für .NET Framework 4 und höher, damit ältere Runtime Activation-Verfahren, um die CLR, Version 1.1 oder 2.0 in den Prozess zu laden kann. Wenn dieser Wert verhindert, dass im gemischten Modus Assemblys in .NET Framework 4 oder höher werden geladen, es sei denn, sie mit .NET Framework 4 oder höher erstellt wurden. Dies ist der Standardwert.|
+|`true`|Aktivieren Sie die Richtlinie für die .NET Framework 2,0-Lauf Zeit Aktivierung für die ausgewählte Laufzeit, die Legacy-Lauf Zeit Aktivierungs Techniken (z. b. die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) an die von der Konfigurationsdatei gewählte Laufzeit bindet, anstatt Sie bei der CLR zu untersuchen. Version 2,0. Wenn also CLR-Version 4 oder höher aus der Konfigurationsdatei ausgewählt wird, werden Assemblys im gemischten Modus, die mit früheren Versionen der .NET Framework erstellt wurden, mit der ausgewählten CLR-Version geladen. Durch Festlegen dieses Werts wird verhindert, dass CLR-Version 1,1 oder CLR-Version 2,0 in denselben Prozess geladen wird, wodurch die Prozess interne parallele Funktion deaktiviert wird.|
+|`false`|Verwenden Sie die Standard Aktivierungs Richtlinie für die .NET Framework 4 und höher, damit ältere Lauf Zeit Aktivierungs Techniken die CLR-Version 1,1 oder 2,0 in den Prozess laden können. Durch Festlegen dieses Werts wird verhindert, dass Assemblys im gemischten Modus in die .NET Framework 4 oder höher geladen werden, es sei denn, Sie wurden mit dem .NET Framework 4 oder höher erstellt Dies ist der Standardwert.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Anwendungen, die mit der Common Language RuntimeVersion 1.1 oder höher verwenden, sollte die  **\<SupportedRuntime >** Element.|
+|[\<requiredRuntime>](requiredruntime-element.md)|Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Anwendungen, die mit der Runtime-Version 1,1 oder höher erstellt wurden, sollten das **\<supportedruntime->-** Element verwenden.|
 |[\<supportedRuntime>](supportedruntime-element.md)|Gibt an, welche Versionen der Common Language Runtime von der Anwendung unterstützt werden.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
@@ -61,20 +62,20 @@ Gibt beim Start zur common Language Runtime an.
 
 ## <a name="remarks"></a>Hinweise
 
- Die  **\<SupportedRuntime >** Element sollte verwendet werden, von allen Anwendungen, die mit Version 1.1 oder höher der Runtime erstellt. Anwendungen, die nur in Version 1.0 von der Laufzeit nicht verwenden, müssen die  **\<RequiredRuntime >** Element.
+ Das **\<supportedruntime->** Element sollte von allen Anwendungen verwendet werden, die mit Version 1,1 oder höher der Laufzeit erstellt wurden. Anwendungen, die zur Unterstützung von nur Version 1,0 der Laufzeit erstellt wurden, müssen das **\<requirements druntime >-** Element verwenden.
 
- Der Startcode für eine in Microsoft Internet Explorer gehostete Anwendung ignoriert die  **\<Start >** -Element und seine untergeordneten Elemente.
+ Der Startcode für eine in Microsoft Internet Explorer gehostete Anwendung ignoriert das **\<startup >-** Element und seine untergeordneten Elemente.
 
-## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>Das Attribut useLegacyV2RuntimeActivationPolicy
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>Das useLegacyV2RuntimeActivationPolicy-Attribut
 
- Dieses Attribut ist nützlich, wenn Ihre Anwendung legacy-Aktivierungspfade,, wie z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), und diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren möchten oder wenn Ihre Anwendung erstellt mit .NET Framework 4 weist jedoch eine Abhängigkeit für eine gemischte-Assembly, die mit einer früheren Version von .NET Framework erstellt. In diesen Szenarien legen Sie das Attribut auf `true`.
+ Dieses Attribut ist nützlich, wenn Ihre Anwendung ältere Aktivierungs Pfade verwendet, wie z. b. die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), und Sie möchten, dass diese Pfade Version 4 der CLR anstelle einer früheren Version aktivieren, oder wenn Ihre Anwendung mit .NET erstellt wurde. Framework 4, aber eine Abhängigkeit von einer Assembly im gemischten Modus, die mit einer früheren Version des .NET Framework erstellt wurde. Legen Sie in diesen Szenarien das-Attribut auf `true` fest.
 
 > [!NOTE]
-> Festlegen des Attributs auf `true` verhindert CLR, Version 1.1 oder CLR, Version 2.0 lädt in den gleichen Prozess, der effektiv den deaktivieren, in-Process Side-by-Side (finden Sie unter [Seite-an-Seite-Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
+> Wenn das-Attribut auf `true` festgelegt wird, wird verhindert, dass CLR-Version 1,1 oder CLR-Version 2,0 in denselben Prozess geladen wird, wodurch die Prozess interne parallele Funktion deaktiviert wird (siehe parallele [Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Beispiel
 
- Das folgende Beispiel zeigt, wie die Runtime-Version in einer Konfigurationsdatei angegeben wird.
+ Im folgenden Beispiel wird gezeigt, wie die Laufzeitversion in einer Konfigurationsdatei angegeben wird.
 
 ```xml
 <!-- When used with version 1.0 of the .NET Framework runtime -->
@@ -97,5 +98,5 @@ Gibt beim Start zur common Language Runtime an.
 - [Startup Settings Schema (Schema für Starteinstellungen)](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Seite-an-Seite-Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+- [Parallele Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Prozessinterne parallele Ausführung](../../../deployment/in-process-side-by-side-execution.md)

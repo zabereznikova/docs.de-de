@@ -10,39 +10,39 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 7c009a6b3acfe1528a2c34ed1e10735ac86507e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47d3239af6ff24501e6babc23c0db4103c477796
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032130"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701072"
 ---
 # <a name="-operator-visual-basic"></a>*=-Operator (Visual Basic)
-Multipliziert den Wert einer Variablen oder die Eigenschaft durch den Wert eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft.  
+Multipliziert den Wert einer Variablen oder Eigenschaft mit dem Wert eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 variableorproperty *= expression  
 ```  
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Alle numerischen Variablen oder Eigenschaft.  
+ Erforderlich. Eine beliebige numerische Variable oder Eigenschaft.  
   
  `expression`  
  Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite von der `*=` Operator kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite des `*=`-Operators kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder [Eigenschaft darf nicht schreibgeschützt sein.](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- Die `*=` Operator multipliziert zunächst den Wert des Ausdrucks (auf der rechten Seite des Operators) durch den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators). Der Operator weist das Ergebnis des Vorgangs klicken Sie dann die Variable oder Eigenschaft.  
+ Der `*=`-Operator multipliziert zuerst den Wert des Ausdrucks (auf der rechten Seite des Operators) durch den Wert der Variablen oder Eigenschaft (auf der linken Seite des Operators). Der-Operator weist dann das Ergebnis dieses Vorgangs der Variablen oder der Eigenschaft zu.  
   
 ## <a name="overloading"></a>Überladen  
- Die [*-Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Das Überladen der `*` Operator beeinflusst das Verhalten von der `*=` Operator. Wenn Ihr Code verwendet `*=` für eine Klasse oder Struktur, die Überladungen `*`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [Operator *](../../../visual-basic/language-reference/operators/multiplication-operator.md) kann *überladen*werden. das bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen des `*`-Operators wirkt sich auf das Verhalten des `*=`-Operators aus. Wenn Ihr Code `*=` für eine Klasse oder Struktur verwendet, die `*` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `*=` Operator, um eine Multiplizieren `Integer` Variable, indem Sie das zweite und das Ergebnis der ersten Variablen zuzuweisen.  
+ Im folgenden Beispiel wird der `*=`-Operator verwendet, um eine `Integer`-Variable mit einer Sekunde zu multiplizieren und das Ergebnis der ersten Variablen zuzuweisen.  
   
  [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   

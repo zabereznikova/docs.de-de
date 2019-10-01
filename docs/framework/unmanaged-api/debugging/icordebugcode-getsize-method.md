@@ -17,35 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52ba9d5bac5e772d721d38e4e8a7ba6757d0ae2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89df0e9be0600b51dcc8a68c5aba3f06e86e1b53
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747489"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700801"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize-Methode
-Ruft die Größe des Binärcodes dargestellt durch "ICorDebugCode" in Bytes ab.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-HRESULT GetSize (  
-    [out] ULONG32    *pcBytes  
-);  
-```  
-  
-## <a name="parameters"></a>Parameter  
+
+Ruft die Größe des durch diesen "ICorDebugCode" dargestellten Binär Codes in Bytes ab.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT GetSize (
+    [out] ULONG32    *pcBytes
+);
+```
+
+## <a name="parameters"></a>Parameter
+
  `pcBytes`  
- [out] Ein Zeiger auf die Größe in Bytes, die Binärdatei zu code, den dieses `ICorDebugCode` -Objekt darstellt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** CorDebug.idl, CorDebug.h  
-  
- **Bibliothek:** CorGuids.lib  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch
+ vorgenommen Ein Zeiger auf die Größe (in Bytes) des binären Codes, den dieses `ICorDebugCode`-Objekt darstellt.
+
+## <a name="requirements"></a>Anforderungen
+
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+
+ **Header:** Cordebug. idl, Cordebug. h
+
+ **Fern** CorGuids.lib
+
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ 

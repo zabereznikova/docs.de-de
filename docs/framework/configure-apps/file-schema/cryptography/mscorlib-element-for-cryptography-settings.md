@@ -8,18 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921070"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699743"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib-> Element für Kryptografieeinstellungen
-Enthält das [ \<cryptographySettings-> Element](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > Element für Kryptografieeinstellungen
+Enthält das [> Element \<cryptographysettings](cryptographysettings-element.md).  
   
- \<configuration>  
-\<mscorlib>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1 **\<mscorlib >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ Enthält das [ \<cryptographySettings-> Element](cryptographysettings-element.md
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das  **\<mscorlib->** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> die-Methode verwenden `MyCryptoRSAClass` , um ein-Objekt zurückzugeben.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<mscorlib->** Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  

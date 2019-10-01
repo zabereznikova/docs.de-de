@@ -2,20 +2,20 @@
 title: <add>-Element für schemeSettings (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 027c7aaffea7950739f532309255d77afa031ada
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: efd52557ea8b617a39e685ff8ad69bab01322a7a
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659554"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699593"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<Add >-Element für SchemeSettings (URI-Einstellungen)
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<add >-Element für SchemeSettings (URI-Einstellungen)
 Fügt eine Schema Einstellung für einen Schema Namen hinzu.  
   
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemesettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Hinzufügen**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +33,7 @@ Fügt eine Schema Einstellung für einen Schema Namen hinzu.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Name|Der Name des Schemas, für das diese Einstellung gilt. Die einzigen unterstützten Werte sind Name = "http" und Name = "https".|  
+|NAME|Der Name des Schemas, für das diese Einstellung gilt. Die einzigen unterstützten Werte sind Name = "http" und Name = "https".|  
   
 ## <a name="attribute-name-attribute"></a>{Attribut Name} Versehen  
   
@@ -51,7 +51,7 @@ Fügt eine Schema Einstellung für einen Schema Namen hinzu.
 |[\<schemeSettings>-Element (URI-Einstellungen)](schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden von <xref:System.Uri?displayProperty=nameWithType> der-Klasse in Prozent codierte Pfad Trennzeichen vor dem Ausführen der Pfad Komprimierung aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
+ Standardmäßig werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse vor dem Ausführen der Pfad Komprimierung die Prozentwerte für Prozent codierte Pfad Trennzeichen aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -59,7 +59,7 @@ Fügt eine Schema Einstellung für einen Schema Namen hinzu.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Aus diesem Grund werden <xref:System.Uri?displayProperty=nameWithType> von der-Klasse zuerst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an <xref:System.Uri?displayProperty=nameWithType> den Klassenkonstruktor führt zum folgenden URI:  
+ Aus diesem Grund werden von der <xref:System.Uri?displayProperty=nameWithType>-Klasse zunächst Pfad Trennzeichen aufgehoben, und anschließend wird die Pfad Komprimierung angewendet. Das Ergebnis der Übergabe der obigen bösartigen URL an den <xref:System.Uri?displayProperty=nameWithType>-Klassenkonstruktor führt zum folgenden URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -69,7 +69,7 @@ Fügt eine Schema Einstellung für einen Schema Namen hinzu.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine Konfiguration, die von <xref:System.Uri> der-Klasse verwendet wird, um das Escapezeichen für Prozent codierte Pfade für das http-Schema zu unterstützen.  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, um das Escapezeichen für Prozent codierte Pfad Trennzeichen für das http-Schema zu unterstützen.  
   
 ```xml  
 <configuration>  

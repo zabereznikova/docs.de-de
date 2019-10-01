@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 05aac6c1ed3c04bce263a45cafdb9bec906bd75b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664063"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698004"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<Performance Counter >-Element (Netzwerkeinstellungen)
+# <a name="performancecounter-element-network-settings"></a>\<performancecounter >-Element (Netzwerkeinstellungen)
 Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<performancecounters >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Gibt an, ob die Netzwerk Leistungsindikatoren aktiviert sind. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob die Netzwerk Leistungsindikatoren aktiviert sind. Der Standardwert ist `false`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -56,10 +56,10 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
   
  Der Standardwert ist, dass Netzwerk Leistungsindikatoren deaktiviert werden.  
   
- Die <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> -Eigenschaft kann verwendet werden, um den aktuellen Wert des **aktivierten** Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
+ Die <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>-Eigenschaft kann verwendet werden, um den aktuellen Wert des **aktivierten** Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die <xref:System.Net> verknüpften Namespaces und zum Aktivieren von Netzwerk Leistungsindikatoren konfiguriert werden.  
+ Im folgenden Beispiel wird gezeigt, wie Sie die <xref:System.Net> und verwandte Namespaces konfigurieren, um Netzwerk Leistungsindikatoren zu aktivieren.  
   
 ```xml  
 <configuration>  

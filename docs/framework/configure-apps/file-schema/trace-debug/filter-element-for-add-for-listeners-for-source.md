@@ -1,5 +1,5 @@
 ---
-title: <filter>-Element <add> für <listeners> für für<source>
+title: <filter>-Element für <add> für <listeners> für <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 0d25d0b955a94986147922914068c8a1cf2d96c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec288685f47c8a35e2371c31d359b604a4967196
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920519"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697161"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<Filter > Element für \<Add > for \<Listener > for \<Source >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter > Element für \<ADD > für \<listener > für \<source >
 Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.  
   
- \<configuration>  
-\<system.diagnostics>  
-\<Quellen >  
-\<Quell >  
-\<Listener >  
-\<add>  
-\<Filter >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0listener >** ](listeners-element-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9[ **&nbsp;2add >** ](add-element-for-listeners-for-source.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 @ no__t-10 @ no__t-11 **&nbsp;3filter >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablau
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters an, der von der <xref:System.Diagnostics.TraceFilter> -Klasse erben soll. Sie können den mit dem Namespace qualifizierten Namen des Typs verwenden, der der-Eigenschaft des Typs <xref:System.Type.FullName%2A> entspricht, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen verwenden, die der <xref:System.Type.AssemblyQualifiedName%2A> -Eigenschaft entsprechen. Informationen zu voll qualifizierten Typnamen finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters an, der von der <xref:System.Diagnostics.TraceFilter>-Klasse erben soll. Sie können den mit dem Namespace qualifizierten Namen des Typs verwenden, der der <xref:System.Type.FullName%2A>-Eigenschaft des Typs entspricht, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen verwenden, die der Eigenschaft <xref:System.Type.AssemblyQualifiedName%2A> entsprechen. Informationen zu voll qualifizierten Typnamen finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die an den Konstruktor für die angegebene Filterklasse übergeben wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -60,12 +60,12 @@ Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablau
 |`add`|Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `<filter>` -Element muss in einem `<add>` -Element für einen Ablaufverfolgungs-quelllistener enthalten sein, der den Typ des Listener angibt, nicht nur den Namen eines Listener, der in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist. Wenn der Listener in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist, muss der Filter für diesen Listener in diesem Element definiert werden.  
+ Das `<filter>`-Element muss in einem `<add>`-Element für einen Ablaufverfolgungs-quelllistener enthalten sein, der den Typ des Listener angibt, nicht nur den Namen eines Listener, der in einem [\<sharedlistener->](sharedlisteners-element.md)definiert ist. Wenn der Listener in einem [\<sharedlistener->](sharedlisteners-element.md)definiert ist, muss der Filter für diesen Listener in diesem Element definiert werden.  
   
  Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<filter>` -Element verwendet wird, um dem Listener `console` in der `Listeners` -Auflistung für die Ablauf `myTraceSource`Verfolgungs Quelle einen Filter hinzuzufügen, `Error`wobei die Filter Ereignis Ebene als angegeben wird.  
+ Im folgenden Beispiel wird gezeigt, wie das `<filter>`-Element verwendet wird, um dem Listener `console` in der `Listeners`-Auflistung für die Ablauf Verfolgungs Quelle `myTraceSource` einen Filter hinzuzufügen, wobei die Filter Ereignis Ebene als `Error` angegeben wird.  
   
 ```xml  
 <configuration>  

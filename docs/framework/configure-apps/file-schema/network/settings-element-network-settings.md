@@ -8,19 +8,19 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 12797e2f06d03aacd81700eae57d5776c1a6f354
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663996"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697681"
 ---
-# <a name="settings-element-network-settings"></a>\<Settings >-Element (Netzwerkeinstellungen)
+# <a name="settings-element-network-settings"></a>\<settings >-Element (Netzwerkeinstellungen)
 Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,13 +46,13 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|Passt Parameter an, die von <xref:System.Net.HttpListener> der-Klasse verwendet werden.|  
+|[httpListener](httplistener-element-network-settings.md)|Passt die Parameter an, die von der <xref:System.Net.HttpListener>-Klasse verwendet werden.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Passt Webanforderungs Parameter an.|  
 |[ipv6](ipv6-element-network-settings.md)|Aktiviert die IPv6-Unterstützung (Internet Protocol Version 6).|  
-|[\<Performance Counter >-Element (Netzwerkeinstellungen)](performancecounter-element-network-settings.md)|Aktiviert Netzwerk Leistungsindikatoren.|  
+|[\<performancecounter >-Element (Netzwerkeinstellungen)](performancecounter-element-network-settings.md)|Aktiviert Netzwerk Leistungsindikatoren.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Konfiguriert Verbindungen mit Netzwerkressourcen.|  
 |[Glühbirne](socket-element-network-settings.md)|Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.|  
-|[\<WebProxyScript >-Element (Netzwerkeinstellungen)](webproxyscript-element-network-settings.md)|Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.|  
+|[\<webproxyscript >-Element (Netzwerkeinstellungen)](webproxyscript-element-network-settings.md)|Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

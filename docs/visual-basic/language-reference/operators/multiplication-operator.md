@@ -1,5 +1,5 @@
 ---
-title: '* -Operator (Visual Basic)'
+title: '* Operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.*
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: 09b95585325b05c0b7925c4c1c9e123f45791e10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5b601c7604cb7ce1afaebc98b2157634a77fda4
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936642"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701089"
 ---
 # <a name="-operator-visual-basic"></a>*-Operator (Visual Basic)
 Multipliziert zwei Zahlen miteinander.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 number1 * number2  
 ```  
   
@@ -34,28 +34,28 @@ number1 * number2
 |`number2`|Erforderlich. Ein beliebiger numerischer Ausdruck.|  
   
 ## <a name="result"></a>Ergebnis  
- Das Ergebnis ist das Produkt der `number1` und `number2`.  
+ Das Ergebnis ist das Produkt von `number1` und `number2`.  
   
 ## <a name="supported-types"></a>Unterstützte Typen  
- Alle numerischen Typen, einschließlich der Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
+ Alle numerischen Typen, einschließlich der nicht signierten-und Gleit Komma Typen `Decimal`und.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Datentyp des Ergebnisses, hängt von den Typen der Operanden ab. Die folgende Tabelle zeigt, wie der Datentyp des Ergebnisses bestimmt wird.  
+ Der Datentyp des Ergebnisses hängt von den Typen der Operanden ab. In der folgenden Tabelle wird gezeigt, wie der Datentyp des Ergebnisses bestimmt wird.  
   
-|Datentypen der Operanden|Der Ergebnisdatentyp|  
+|Operanden Datentypen|Ergebnis Datentyp|  
 |---|---|  
-|Beide Ausdrücke sind ganzzahlige Datentypen ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [kurze](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Ganzzahl](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md), [lange](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md))|Einen numerischen Datentyp aufweisen, die für die Datentypen der entsprechenden `number1` und `number2`. Finden Sie in den Tabellen "Ganzzahlarithmetik" in [Datentypen von Operatorergebnissen Daten](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Beide Ausdrücke sind [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|`Decimal`|  
-|Beide Ausdrücke sind [einzelne](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
-|Einer der Ausdrücke ist ein Gleitkomma-Datentyp (`Single` oder [doppelte](../../../visual-basic/language-reference/data-types/double-data-type.md)) jedoch nicht beides `Single` (Hinweis `Decimal` ist kein Gleitkommadatentyp)|`Double`|  
+|Beide Ausdrücke sind [ganzzahlige](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)Datentypen ([SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md), [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md), [Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md), UInteger, [Long](../../../visual-basic/language-reference/data-types/long-data-type.md), [ulong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)).|Ein numerischer Datentyp, der für die Datentypen von `number1` und `number2` geeignet ist. Weitere Informationen finden Sie in den Tabellen "ganzzahlige Arithmetik" unter [Datentypen von Operator Ergebnissen](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)|  
+|Beide Ausdrücke sind [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) .|`Decimal`|  
+|Beide Ausdrücke sind [Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|`Single`|  
+|Jeder Ausdruck ist ein Gleit Komma Datentyp (`Single` oder [Double](../../../visual-basic/language-reference/data-types/double-data-type.md)), aber nicht beide `Single` (Hinweis `Decimal` ist kein Gleit Komma Datentyp).|`Double`|  
   
- Wenn ein Ausdruck ergibt [nichts](../../../visual-basic/language-reference/nothing.md), wird er als 0 (null) behandelt.  
+ Wenn ein Ausdruck zu " [Nothing](../../../visual-basic/language-reference/nothing.md)" ausgewertet wird, wird er als 0 (null) behandelt.  
   
 ## <a name="overloading"></a>Überladen  
- Die `*` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `*`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `*` Operator zum Multiplizieren zweier Zahlen. Das Ergebnis ist das Produkt der beiden Operanden.  
+ In diesem Beispiel wird der `*`-Operator verwendet, um zwei Zahlen zu multiplizieren. Das Ergebnis ist das Produkt der beiden-Operanden.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   

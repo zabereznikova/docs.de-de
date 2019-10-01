@@ -17,38 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 155a8d5465e0fb19c55c9d11b67c6031c2b2c4a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4b6fd6e8043f1c62da8994b43a9b9af45fb2e3c0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747521"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700821"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a>ICorDebugCode::GetVersionNumber-Methode
-Ruft ab, die mit eins beginnende Zahl, die die Version des Codes, die identifiziert "ICorDebugCode" darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-HRESULT GetVersionNumber (  
-    [out] ULONG32    *nVersion  
-);  
-```  
-  
-## <a name="parameters"></a>Parameter  
+
+Ruft die einsbasierte Zahl ab, die die Version des Codes identifiziert, den dieser "ICorDebugCode" darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT GetVersionNumber (
+    [out] ULONG32    *nVersion
+);
+```
+
+## <a name="parameters"></a>Parameter
+
  `nVersion`  
- [out] Ein Zeiger auf die Versionsnummer des Codes.  
+ vorgenommen Ein Zeiger auf die Versionsnummer des Codes.
+
+## <a name="remarks"></a>Hinweise
+
+ Die Versionsnummer wird jedes Mal inkrementiert, wenn ein Edit-and-Continue-Vorgang (ENC) für den Code ausgeführt wird.
+
+## <a name="requirements"></a>Anforderungen
+
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
-## <a name="remarks"></a>Hinweise  
- Die Versionsnummer wird jedes Mal inkrementiert, die ein Vorgang für bearbeiten und Fortfahren (EnC) für den Code ausgeführt wird.  
+ **Header:** Cordebug. idl, Cordebug. h  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Fern** CorGuids.lib  
   
- **Header:** CorDebug.idl, CorDebug.h  
-  
- **Bibliothek:** CorGuids.lib  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

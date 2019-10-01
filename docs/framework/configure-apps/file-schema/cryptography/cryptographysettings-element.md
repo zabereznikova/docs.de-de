@@ -8,19 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927654"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699823"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings >-Element
+# <a name="cryptographysettings-element"></a>\<cryptographysettings > Element
 Enthält Kryptografieeinstellungen.  
   
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographysettings >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ Enthält Kryptografieeinstellungen.
 |`mscorlib`|Enthält das `cryptographySettings` -Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das  **\<cryptographySettings >** -Element verwendet wird, um kryptografienamenszuordnungen und OID-Zuordnungen zu enthalten. In diesem Beispiel wird die Laufzeit so konfiguriert <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> , dass `MyHashClass` ein-Objekt `MyCryptoClass` zurückgibt, und die-Klasse wird dem Objekt Bezeichner 1.3.36.2.1 zugeordnet.  
+ Im folgenden Beispiel wird gezeigt, wie das **\<cryptographysettings >** -Element verwendet wird, um kryptografienamenszuordnungen und OID-Zuordnungen zu enthalten. In diesem Beispiel wird die Laufzeit so konfiguriert, dass <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> ein `MyHashClass`-Objekt zurückgibt, und die `MyCryptoClass`-Klasse wird dem Objekt Bezeichner 1.3.36.2.1 zugeordnet.  
   
 ```xml  
 <configuration>  

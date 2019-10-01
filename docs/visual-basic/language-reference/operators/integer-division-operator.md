@@ -17,19 +17,19 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: 276071fef3632d1a617f177b6fe18026b290103a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1a46f99c21be007d33361ba095a3f0c52fe906c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917239"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701144"
 ---
 # <a name="-operator-visual-basic"></a>\-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt ein ganzzahliges Ergebnis zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 expression1 \ expression2  
 ```  
   
@@ -51,7 +51,7 @@ expression1 \ expression2
  Der [Operator/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) gibt den vollständigen Quotienten zurück, der den Restwert im Bruch Teil beibehält.  
   
 ## <a name="remarks"></a>Hinweise  
- Vor der Durchführung der Division versucht Visual Basic, den numerischen Gleit Komma Ausdruck in zu `Long`konvertieren. Wenn `Option Strict`den Wert hat,tritteinCompilerfehlerauf.`On` Wenn `Option Strict` den Wert `Off` aufweist, ist <xref:System.OverflowException> möglich, wenn der Wert außerhalb des Bereichs des [Long-Datentyps](../../../visual-basic/language-reference/data-types/long-data-type.md) liegt. Die Konvertierung in `Long` unterliegt auch der *-Rundung des Bankers*. Weitere Informationen finden Sie unter "Bruchteile" in den [Typkonvertierungs Funktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Vor der Durchführung der Division versucht Visual Basic, den numerischen Gleit Komma Ausdruck in zu `Long`konvertieren. Wenn `Option Strict`den Wert hat,tritteinCompilerfehlerauf.`On` Wenn `Option Strict` den Wert `Off` aufweist, ist <xref:System.OverflowException> möglich, wenn der Wert außerhalb des Bereichs des [Long-Datentyps](../../../visual-basic/language-reference/data-types/long-data-type.md) liegt. Die Konvertierung in "`Long`" unterliegt auch der über *Rundung von bankten*. Weitere Informationen finden Sie unter "Bruchteile" in den [Typkonvertierungs Funktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
  Wenn `expression1` oder`expression2` als " [Nothing](../../../visual-basic/language-reference/nothing.md)" ausgewertet wird, wird es als 0 (null) behandelt.  
   
@@ -59,7 +59,7 @@ expression1 \ expression2
  Wenn `expression2` NULL ergibt, löst der `\` Operator eine <xref:System.DivideByZeroException> -Ausnahme aus. Dies gilt für alle numerischen Datentypen der Operanden.  
   
 > [!NOTE]
-> Der `\` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> Der `\`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der `\` -Operator verwendet, um eine ganz Zahl Division auszuführen. Das Ergebnis ist eine ganze Zahl, die den ganzzahligen Quotienten der beiden Operanden darstellt, wobei der restliche Rest verworfen wird.  
@@ -70,7 +70,7 @@ expression1 \ expression2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\\=-Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [\\ =-Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Operator/(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
 - [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 052f7eef30500d37389585956728250a46b718a3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659468"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698396"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Löschen von >-Element für authenticationModules (Netzwerkeinstellungen)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<clear >-Element für authenticationModules (Netzwerkeinstellungen)
 Löscht alle Authentifizierungs Module aus der Anwendung.  
   
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<clear>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationmodules >** ](authenticationmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ Löscht alle Authentifizierungs Module aus der Anwendung.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `clear` -Element entfernt alle Authentifizierungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
+ Das `clear`-Element entfernt alle Authentifizierungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

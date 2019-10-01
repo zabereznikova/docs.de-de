@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: 88212fb2c04eab61b719a161ae01ccdda9a6110d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95a67a552efacf9e77dc3ebc3e0187817a6d82e2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640724"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698585"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>Das Extension-Attribut darf nur in Module-, Sub- oder Function-Deklarationen verwendet werden
-Die einzige Möglichkeit zum Erweitern von eines Datentyps in Visual Basic ist eine Erweiterungsmethode in einem Standardmodul definieren. Die Erweiterungsmethode möglich ein `Sub` Prozedur oder ein `Function` Verfahren. Alle Erweiterungsmethoden müssen mit dem Extension-Attribut markiert werden `<Extension()>`, aus der <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> Namespace. Optional kann ein Modul, eine Erweiterungsmethode enthält, auf die gleiche Weise gekennzeichnet werden. Keine andere Verwendung der das Extension-Attribut ist ungültig.  
+Die einzige Möglichkeit zum Erweitern eines Datentyps in Visual Basic besteht darin, eine Erweiterungsmethode in einem Standardmodul zu definieren. Bei der Erweiterungsmethode kann es sich um eine `Sub`-Prozedur oder um eine `Function`-Prozedur handeln. Alle Erweiterungs Methoden müssen mit dem Erweiterungs Attribut `<Extension()>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace gekennzeichnet werden. Optional kann ein Modul, das eine Erweiterungsmethode enthält, auf dieselbe Weise gekennzeichnet werden. Keine andere Verwendung des Erweiterungs Attributs ist gültig.  
   
  **Fehler-ID:** BC36550  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Entfernen Sie das Extension-Attribut.  
+- Entfernen Sie das Erweiterungs Attribut.  
   
-- Entwerfen Sie die Erweiterung als eine Methode, in ein einschließendes Modul definiert.  
+- Entwerfen Sie Ihre Erweiterung als eine Methode, die in einem umschließenden Modul definiert ist.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel definiert eine `Print` -Methode für die `String` -Datentyp.  
+ Im folgenden Beispiel wird eine `Print`-Methode für den `String`-Datentyp definiert.  
   
-```  
+```vb  
 Imports StringUtility  
 Imports System.Runtime.CompilerServices  
 Namespace StringUtility  

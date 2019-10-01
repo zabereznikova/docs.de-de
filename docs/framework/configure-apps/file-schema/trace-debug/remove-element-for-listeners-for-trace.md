@@ -1,5 +1,5 @@
 ---
-title: <remove>-Element <listeners> für für<trace>
+title: <remove>-Element für <listeners> für <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56d1e56514aed98d5f3b9f7363e461af6ac68a8c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920478"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697216"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<Entfernen Sie > Element \<für Listener > \<für die Ablauf Verfolgung >
-Entfernt einen Listener aus der listenerauflistung.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove >-Element für \<listener > für \<trace >
+Entfernt einen Listener aus der **listenerauflistung** .  
   
- \<configuration>  
-\<system.diagnostics>  
-\<Ablauf Verfolgungs >  
-\<Listener >  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<listener >** ](listeners-element-for-trace.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ Entfernt einen Listener aus der listenerauflistung.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**name**|Erforderliches Attribut.<br /><br /> Der Name des Listener, der aus der listenerauflistung entfernt werden soll.|  
+|**name**|Erforderliches Attribut.<br /><br /> Der Name des Listener, der aus der **listenerauflistung** entfernt werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,7 +53,7 @@ Entfernt einen Listener aus der listenerauflistung.
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
-> `Listeners` <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>Wenn Sie ausderAuflistungentfernen,ändertsichdasVerhaltenderMethoden,,und.<xref:System.Diagnostics.DefaultTraceListener> Wenn Sie `Assert` eine `Fail` -oder-Methode aufrufen, <xref:System.Diagnostics.DefaultTraceListener> wird normalerweise die Anzeige eines Meldungs Felds angezeigt, das Meldungs Feld wird jedoch nicht `Listeners` angezeigt, wenn sich nicht in der Auflistung befindet.  
+> Wenn Sie die <xref:System.Diagnostics.DefaultTraceListener> aus der `Listeners`-Auflistung entfernen, ändert sich das Verhalten der Methoden <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType>. Das Aufrufen einer `Assert`-oder `Fail`-Methode führt normalerweise dazu, dass ein Meldungs Feld angezeigt wird. das Meldungs Feld wird jedoch nicht angezeigt, wenn die <xref:System.Diagnostics.DefaultTraceListener> nicht in der `Listeners`-Auflistung enthalten ist.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie der Standardablaufverfolgungslistener aus der Auflistung der ablaufverfol  

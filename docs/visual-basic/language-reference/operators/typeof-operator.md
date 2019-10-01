@@ -12,23 +12,23 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063253"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701283"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf-Operator (Visual Basic)
-Überprüft, ob der Laufzeittyp des Ausdrucks Ergebnis kompatiblen Typ ist mit dem angegebenen Typ.
+Überprüft, ob der Lauf Zeittyp des Ergebnisses eines Ausdrucks typkompatibel mit dem angegebenen Typ ist.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 result = TypeOf objectexpression Is typename  
 ```  
   
-```  
+```vb  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
@@ -66,7 +66,7 @@ result = TypeOf objectexpression IsNot typename
 
 - [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Vergleichsoperatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Vergleichs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

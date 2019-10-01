@@ -9,46 +9,46 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0351d224d9bf08a8f3ca74090de7b9c51c2c61bf
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917221"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701364"
 ---
 # <a name="is-operator-visual-basic"></a>Is-Operator (Visual Basic)
 Vergleicht zwei Objekt Verweis Variablen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 result = object1 Is object2  
 ```  
   
 ## <a name="parts"></a>Teile  
  `result`  
- Erforderlich. Ein `Boolean` beliebiger Wert.  
+ Erforderlich. Alle `Boolean`-Werte.  
   
  `object1`  
- Erforderlich. Ein `Object` beliebiger Name.  
+ Erforderlich. Alle `Object`-Namen.  
   
  `object2`  
- Erforderlich. Ein `Object` beliebiger Name.  
+ Erforderlich. Alle `Object`-Namen.  
   
 ## <a name="remarks"></a>Hinweise  
- Der `Is` -Operator bestimmt, ob zwei Objekt Verweise auf das gleiche Objekt verweisen. Es werden jedoch keine Wert Vergleiche durchgeführt. Wenn `object1` `result` und `result` `False`beide auf genau`True`dieselbe Objektinstanz verweisen, ist. andernfalls ist der Wert. `object2`  
+ Der `Is`-Operator bestimmt, ob zwei Objekt Verweise auf das gleiche Objekt verweisen. Es werden jedoch keine Wert Vergleiche durchgeführt. Wenn `object1` und `object2` auf genau dieselbe Objektinstanz verweisen, `result` `True`; Wenn dies nicht der Fall ist, ist `result` `False`.  
   
- `Is`kann auch mit dem `TypeOf` -Schlüsselwort verwendet werden, um eine `TypeOf`zu erstellen... `Is` Ausdruck, der testet, ob eine Objekt Variable mit einem Datentyp kompatibel ist.  
+ `Is` kann auch mit dem Schlüsselwort `TypeOf` verwendet werden, um einen `TypeOf`... `Is`-Ausdruck zu erstellen, der testet, ob eine Objekt Variable mit einem Datentyp kompatibel ist.  
   
 > [!NOTE]
-> Das `Is` Schlüsselwort wird auch im [SELECT... Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> Das Schlüsselwort "`Is`" wird auch im [SELECT... Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der `Is` -Operator verwendet, um Paare von Objekt verweisen zu vergleichen. Die Ergebnisse werden einem `Boolean` Wert zugewiesen, der angibt, ob die beiden-Objekte identisch sind.  
+ Im folgenden Beispiel wird der `Is`-Operator verwendet, um Paare von Objekt verweisen zu vergleichen. Die Ergebnisse werden einem `Boolean`-Wert zugewiesen, der angibt, ob die beiden-Objekte identisch sind.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Wie das vorherige Beispiel zeigt, können Sie den `Is` -Operator verwenden, um früh gebundene und spät gebundene Objekte zu testen.  
+ Wie das vorherige Beispiel zeigt, können Sie den `Is`-Operator verwenden, um früh gebundene und spät gebundene Objekte zu testen.  
   
 ## <a name="see-also"></a>Siehe auch
 

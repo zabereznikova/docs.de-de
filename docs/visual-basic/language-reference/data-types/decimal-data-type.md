@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: bab5a0bd7e0a85d550362bc3c1166566f6dcb81b
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 892824b61cfb6a0172361d220c638cab0a78565d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512770"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700876"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal-Datentyp (Visual Basic)
 
@@ -33,19 +33,19 @@ Enthält signierte 128-Bit-Werte (16 Byte), die 96-Bit (12-Byte)-ganzzahlige Zah
 
 ## <a name="remarks"></a>Hinweise
 
-Der `Decimal` -Datentyp bietet die größte Anzahl von signifikanten Ziffern für eine Zahl. Sie unterstützt bis zu 29 signifikante Ziffern und kann Werte über 7,9228 x 10 ^ 28 darstellen. Sie eignet sich besonders für Berechnungen, z. b. Finanz Weise, die eine große Anzahl von Ziffern erfordern, aber keine Rundungsfehler tolerieren können.
+Der `Decimal`-Datentyp gibt die größte Anzahl von signifikanten Ziffern für eine Zahl an. Sie unterstützt bis zu 29 signifikante Ziffern und kann Werte über 7,9228 x 10 ^ 28 darstellen. Sie eignet sich besonders für Berechnungen, z. b. Finanz Weise, die eine große Anzahl von Ziffern erfordern, aber keine Rundungsfehler tolerieren können.
 
 Der Standardwert von `Decimal` lautet 0.
 
 ## <a name="programming-tips"></a>Programmiertipps
 
-- **Präziser.** `Decimal`ist kein Gleit Komma Datentyp. Die `Decimal` -Struktur enthält einen binären ganzzahligen Wert, sowie ein Vorzeichen-Bit und einen ganzzahligen Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimal Bruch ist. Aus diesem `Decimal` Grund weisen Zahlen eine präzisere Darstellung im Arbeitsspeicher auf als Gleit Komma Typen (`Single` und `Double`).
+- **Präziser.** `Decimal` ist kein Gleit Komma Datentyp. Die `Decimal`-Struktur enthält einen binären ganzzahligen Wert sowie ein Vorzeichen-und einen ganzzahligen Skalierungsfaktor, der angibt, welcher Teil des Werts ein Dezimal Bruch ist. Aus diesem Grund weisen `Decimal`-Zahlen eine präzisere Darstellung im Arbeitsspeicher auf als Gleit Komma Typen (`Single` und `Double`).
 
-- **Leistung:** Der `Decimal` -Datentyp ist der langsamste Wert aller numerischen Typen. Vor dem Auswählen eines Datentyps sollten Sie die Wichtigkeit der Genauigkeit vor der Leistung abwägen.
+- **Leistung:** Der `Decimal`-Datentyp ist der langsamste Wert aller numerischen Typen. Vor dem Auswählen eines Datentyps sollten Sie die Wichtigkeit der Genauigkeit vor der Leistung abwägen.
 
-- **Tet.** Der `Decimal` -Datentyp wird zu `Single` oder `Double`erweitert. Dies bedeutet, dass Sie `Decimal` in einen dieser Typen konvertieren können, ohne <xref:System.OverflowException?displayProperty=nameWithType> dass ein Fehler auftritt.
+- **Tet.** Der `Decimal`-Datentyp wird auf `Single` oder `Double` erweitert. Dies bedeutet, dass Sie `Decimal` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.
 
-- **Nachfolgende Nullen.** In Visual Basic werden nachfolgende Nullen nicht in `Decimal` einem Literalformat gespeichert. Allerdings behält `Decimal` eine Variable alle nachfolgenden Nullen bei, die rechnerisch abgerufen wurden. Dies wird anhand des folgenden Beispiels veranschaulicht.
+- **Nachfolgende Nullen.** Visual Basic speichert nachfolgende Nullen nicht in einem `Decimal`-Literal. Allerdings behält eine `Decimal`-Variable alle nachfolgenden Nullen, die rechnerisch abgerufen wurden. Dies wird anhand des folgenden Beispiels veranschaulicht.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,9 +57,9 @@ Der Standardwert von `Decimal` lautet 0.
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  Die Ausgabe von `MsgBox` im vorherigen Beispiel lautet wie folgt:
+  Die Ausgabe von `MsgBox` im vorangehenden Beispiel lautet wie folgt:
 
-  ```
+  ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
@@ -68,7 +68,7 @@ Der Standardwert von `Decimal` lautet 0.
 - **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Decimal?displayProperty=nameWithType>-Struktur.
 
 ## <a name="range"></a>Bereich
- Möglicherweise müssen Sie das `D` Typzeichen verwenden, um einer `Decimal` Variablen oder Konstanten einen großen Wert zuzuweisen. Diese Anforderung liegt daran, dass der Compiler ein Literalzeichen als `Long` interpretiert, es sei denn, ein Literaltypzeichen folgt dem Literalen, wie im folgenden Beispiel gezeigt
+ Möglicherweise müssen Sie das Typzeichen "`D`" verwenden, um einer `Decimal`-Variablen oder-Konstante einen großen Wert zuzuweisen. Diese Anforderung liegt daran, dass der Compiler ein Literale als `Long` interpretiert, es sei denn, ein Literaltypzeichen folgt dem Literalzeichen, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -76,11 +76,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-Die Deklaration `bigDec1` für erzeugt keinen Überlauf, da der zugewiesene Wert innerhalb des Bereichs für `Long`liegt. Der `Long` Wert kann der `Decimal` Variablen zugewiesen werden.
+Die Deklaration für `bigDec1` erzeugt keinen Überlauf, da der zugewiesene Wert innerhalb des Bereichs für `Long` liegt. Der `Long`-Wert kann der Variablen `Decimal` zugewiesen werden.
 
-Die-Deklaration für `bigDec2` generiert einen Überlauf Fehler, da der zugewiesene Wert für `Long`zu groß ist. Da das numerische Literale nicht als `Long`erstes interpretiert werden kann, kann es der `Decimal` Variablen nicht zugewiesen werden.
+Die Deklaration für "`bigDec2`" generiert einen Überlauf Fehler, da der zugewiesene Wert für `Long` zu groß ist. Da das numerische Literale nicht als `Long` interpretiert werden kann, kann es nicht der `Decimal`-Variablen zugewiesen werden.
 
-Für `bigDec3`löst das Literaltypzeichen `D` das Problem, indem der Compiler gezwungen wird, das Literale `Decimal` als anstelle von als `Long`zu interpretieren.
+Bei `bigDec3` löst das Literaltypzeichen `D` das Problem, indem der Compiler gezwungen wird, das Literale als `Decimal` statt als `Long` zu interpretieren.
 
 ## <a name="see-also"></a>Siehe auch
 

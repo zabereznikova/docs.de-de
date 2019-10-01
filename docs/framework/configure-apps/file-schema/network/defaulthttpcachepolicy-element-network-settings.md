@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f3b029e8b931e976bee85c98dd926e020c5b8743
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664154"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698276"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy >-Element (Netzwerkeinstellungen)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaulthttpcachepolicy >-Element (Netzwerkeinstellungen)
 Beschreibt, ob HTTP-Zwischenspeicherung aktiviert ist, und beschreibt die Standard Cache Richtlinie.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultHttpCachePolicy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<requestcaching >** ](requestcaching-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<defaulthttpcachepolicy >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Beschreibt, ob HTTP-Zwischenspeicherung aktiviert ist, und beschreibt die Standa
 |`maximumAge`|Gibt das maximale Zeitintervall an, nach dem ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
 |`maximumStale`|Gibt die maximale Zeit an, die nach der berechneten Aktualität liegt, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
 |`minimumFresh`|Gibt die minimale Zeit an, für die ein zwischengespeichertes Objekt als aktuell angesehen wird.|  
-|`policyLevel`|Gibt an, ob die Cachingrichtlinie automatisch erfolgt oder ob der Cache umgangen wird. Der Standardwert ist `BypassCache`.|  
+|`policyLevel`|Gibt an, ob die Cachingrichtlinie automatisch erfolgt oder ob der Cache umgangen wird. Der Standardwert ist `BypassCache`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  None  
@@ -56,9 +56,9 @@ Beschreibt, ob HTTP-Zwischenspeicherung aktiviert ist, und beschreibt die Standa
 |[requestCaching](requestcaching-element-network-settings.md)|Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert für das `policyLevel` -Attribut ist `BypassCache` entweder `Default`oder.  
+ Der Wert für das `policyLevel`-Attribut ist entweder `BypassCache` oder `Default`.  
   
- Werte für die `maximumAge`Elemente `maximumStale`, und `minimumFresh` sind entweder ein explizites Zeitintervall mit dem Format *d*. *HH*:*mm*:*SS* (Tage, Stunden, Minuten und Sekunden) oder die Konstanten `minValue` oder `maxValue`, je nach Bedarf.  
+ Werte für die Elemente "`maximumAge`", "`maximumStale`" und "`minimumFresh`" sind entweder ein explizites Zeitintervall mit dem Format " *d*". *HH*:*mm*:*SS* (Tage, Stunden, Minuten und Sekunden) oder die Konstanten `minValue` oder `maxValue`, je nach Bedarf.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: d89c2e2c6943aca38f8a71092ba3121447a77574
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: bf04b16682c2c1bc677fecbd6dc966090c77e1da
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664100"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698134"
 ---
 # <a name="ipv6-element-network-settings"></a>\<IPv6>-Element (Netzwerkeinstellungen)
-Aktiviert IPv6-Antworten (Internet Protokollversion 6) von veralteten Membern <xref:System.Net.Dns> der-Klasse.  
+Aktiviert IPv6-Antworten (Internet Protocol Version 6) von veralteten Membern der <xref:System.Net.Dns>-Klasse.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<ipv6>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<ipv6 >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ Aktiviert IPv6-Antworten (Internet Protokollversion 6) von veralteten Membern <x
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`enabled`|Gibt an, ob Member <xref:System.Net.Dns> der-Klasse IPv6 (Internet Protocol Version 6)-Adressen zurückgeben. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob Member der <xref:System.Net.Dns>-Klasse IPv6-Adressen (Internet Protocol Version 6) zurückgeben. Der Standardwert ist `false`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -50,13 +50,13 @@ Aktiviert IPv6-Antworten (Internet Protokollversion 6) von veralteten Membern <x
 |[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Einstellung aktiviert die IPv6-Unterstützung für die veralteten <xref:System.Net.Dns> Member der <xref:System.Net.Dns.BeginGetHostByName%2A>- <xref:System.Net.Dns.BeginResolve%2A>Klasse: <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> <xref:System.Net.Dns.EndGetHostByName%2A>,, <xref:System.Net.Dns.Resolve%2A>, und. Bei anderen Membern des <xref:System.Net?displayProperty=nameWithType> -Namespace werden möglicherweise IPv6-Adressen zurückgegeben, wenn IPv6 im Betriebssystem aktiviert ist.  
+ Diese Einstellung ermöglicht die IPv6-Unterstützung für veraltete Member der <xref:System.Net.Dns>-Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A> und <xref:System.Net.Dns.Resolve%2A>. Bei anderen Membern des <xref:System.Net?displayProperty=nameWithType>-Namespace werden möglicherweise IPv6-Adressen zurückgegeben, wenn IPv6 im Betriebssystem aktiviert ist.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die IPv6-unter <xref:System.Net.Dns> Stützung für die-Klasse aktiviert wird.  
+ Im folgenden Beispiel wird gezeigt, wie die IPv6-Unterstützung für die <xref:System.Net.Dns>-Klasse aktiviert wird.  
   
 ```xml  
 <configuration>  

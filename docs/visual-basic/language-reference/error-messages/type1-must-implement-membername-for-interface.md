@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a824b66eaad964049ced5cae5eb2cc370d00ba7f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792092"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696894"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<Typ1 >'\<Typename > 'implementieren müssen'\<Membername >' für die Schnittstelle '\<Schnittstellenname >'
-'\<Typename >' implementieren muss '\<Membername >' für die Schnittstelle '\<Schnittstellenname >'. Die implementierende Eigenschaft müssen übereinstimmen 'ReadOnly' / 'WriteOnly' Spezifizierer.  
+'\<Typename >' implementieren muss '\<Membername >' für die Schnittstelle '\<Schnittstellenname >'. Die implementierende Eigenschaft muss über übereinstimmende "schreibgeschützte"/"schreibgeschützte"-spezifiatoren verfügen.  
   
- Eine Klasse oder Struktur vorgibt, eine Schnittstelle zu implementieren, aber eine Prozedur, Eigenschaft oder das Ereignis definiert, die von der Schnittstelle nicht implementiert. Jeder Member der Schnittstelle muss implementiert werden.  
+ Eine Klasse oder Struktur beansprucht, eine Schnittstelle zu implementieren, implementiert jedoch keine Prozedur, Eigenschaft oder ein Ereignis, das von der Schnittstelle definiert wird. Jeder Member der Schnittstelle muss implementiert werden.  
   
  **Fehler-ID:** BC30154  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1. Deklarieren Sie ein Element mit dem gleichen Namen und die gleiche Signatur wie in der Schnittstelle definiert. Müssen Sie mindestens die `End Function`, `End Sub`, oder `End Property` Anweisung.  
+1. Deklarieren Sie einen Member mit dem gleichen Namen und der gleichen Signatur wie in der-Schnittstelle definiert. Stellen Sie sicher, dass Sie mindestens die `End Function`-, `End Sub`-oder `End Property`-Anweisung einschließen.  
   
-2. Hinzufügen einer `Implements` Klausel am Ende der `Function`, `Sub`, `Property`, oder `Event` Anweisung. Zum Beispiel:  
+2. Fügen Sie am Ende der `Function`-, `Sub`-, `Property`-oder `Event`-Anweisung eine `Implements`-Klausel hinzu. Zum Beispiel:  
   
-    ```  
+    ```vb  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3. Wenn Sie eine Eigenschaft zu implementieren, stellen sicher, dass `ReadOnly` oder `WriteOnly` wird verwendet, auf die gleiche Weise wie die Schnittstellendefinition.  
+3. Wenn Sie eine Eigenschaft implementieren, stellen Sie sicher, dass `ReadOnly` oder `WriteOnly` auf die gleiche Weise wie in der Schnittstellen Definition verwendet wird.  
   
-4. Wenn Sie eine Eigenschaft implementieren möchten, deklarieren `Get` und `Set` Verfahren nach Bedarf.  
+4. Wenn Sie eine Eigenschaft implementieren, deklarieren Sie nach Bedarf `Get`-und `Set`-Prozeduren.  
   
 ## <a name="see-also"></a>Siehe auch
 

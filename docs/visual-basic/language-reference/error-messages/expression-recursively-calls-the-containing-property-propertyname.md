@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42177f22e632e4a05b1f0b4d934f3e56ab9ff0f2
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665170"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698570"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft '\<Propertyname >'
-Eine Anweisung in der `Set` Definition einer Prozedur speichert einen Wert in den Namen der Eigenschaft.  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft ' \<propertyname > ' auf.
+Eine-Anweisung in der `Set`-Prozedur einer Eigenschafts Definition speichert einen Wert in den Namen der Eigenschaft.  
   
- Der empfohlene Ansatz zum Speichern des Werts einer Eigenschaft wird zum definieren eine `Private` -Variable im Container der Eigenschaft und verwenden in beiden die `Get` und `Set` Verfahren. Die `Set` Prozedur muss dann den eingehenden Wert in dieser speichern `Private` Variable.  
+ Die empfohlene Vorgehensweise, um den Wert einer Eigenschaft zu speichern, besteht darin, eine `Private`-Variable im Container der Eigenschaft zu definieren und Sie in den Prozeduren `Get` und `Set` zu verwenden. In der `Set`-Prozedur sollte der eingehende Wert in dieser `Private`-Variablen gespeichert werden.  
   
- Die `Get` Prozedur verhält sich wie ein `Function` Prozedur, damit Namen der Eigenschaft einen Wert zuzuweisen und die Steuerung, durch die auftreten zurück können die `End Get` Anweisung. Allerdings wird empfohlen, sollen die `Private` -Variable als den Wert in eine [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).  
+ Die Prozedur `Get` verhält sich wie eine `Function`-Prozedur, sodass Sie dem Eigenschaftsnamen einen Wert zuweisen und die Steuerung zurückgeben kann, indem Sie die `End Get`-Anweisung trifft. Die empfohlene Vorgehensweise besteht jedoch darin, die `Private`-Variable als Wert in eine [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md)einzuschließen.  
   
- Die `Set` Prozedur verhält sich wie ein `Sub` -Prozedur, die keinen Wert zurückgibt. Aus diesem Grund hat der Prozedur oder Eigenschaft Name keine besondere Bedeutung innerhalb einer `Set` Prozedur, und Sie können keinen Wert darin speichern.  
+ Die Prozedur `Set` verhält sich wie eine `Sub`-Prozedur, die keinen Wert zurückgibt. Daher hat der Name der Prozedur oder Eigenschaft in einer `Set`-Prozedur keine besondere Bedeutung, und Sie können keinen Wert in der Prozedur speichern.  
   
- Das folgende Beispiel veranschaulicht den Ansatz, der diesen Fehler, gefolgt von der empfohlene Ansatz verursachen kann.  
+ Im folgenden Beispiel wird die Vorgehensweise veranschaulicht, die diesen Fehler verursachen kann, gefolgt von der empfohlenen Vorgehensweise.  
   
-```  
+```vb  
 Public Class illustrateProperties  
 ' The code in the following property causes this error.  
     Public Property badProp() As Char  
@@ -61,7 +61,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Schreiben Sie die Eigenschaftsdefinition, um die empfohlene Vorgehensweise verwenden, wie im vorherigen Beispiel gezeigt.  
+- Schreiben Sie die Eigenschafts Definition so um, dass die empfohlene Vorgehensweise verwendet wird, wie im vorherigen Beispiel veranschaulicht.  
   
 ## <a name="see-also"></a>Siehe auch
 

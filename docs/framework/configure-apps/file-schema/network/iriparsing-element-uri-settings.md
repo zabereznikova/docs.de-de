@@ -2,22 +2,19 @@
 title: <iriParsing>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 2c99edf2f1a03e0e510858c106cad43b0eaa27b4
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664086"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698093"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<iriparamesing >-Element (URI-Einstellungen)
+# <a name="iriparsing-element-uri-settings"></a>\<iribising > Element (URI-Einstellungen)
 Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.  
   
-## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<configuration> Element](../configuration-element.md)  
-  
- [\<URI-> Element (URI-Einstellungen)](uri-element-uri-settings.md)  
-  
- [\<iriParsing>](iriparsing-element-uri-settings.md)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<iribising >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +31,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|`enabled`|Gibt an, ob die IRI-Verarbeitung aktiviert ist. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob die IRI-Verarbeitung aktiviert ist. Der Standardwert ist `false`sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  None  
@@ -46,7 +43,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
 |[uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die vorhandene <xref:System.Uri> Klasse wurde in .NET Framework 3,5 erweitert. 3,0 SP1 und 2,0 SP1 zur Unterstützung von International Resource Identifier (IRI) und internationalisierten Domänen Namen (IDN). Aktuelle Benutzer sehen keine Änderung des Verhaltens von .NET Framework 2,0, es sei denn, Sie aktivieren speziell IRI-und IDN-Unterstützung. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
+ Die vorhandene <xref:System.Uri>-Klasse wurde in .NET Framework 3,5 erweitert. 3,0 SP1 und 2,0 SP1 zur Unterstützung von International Resource Identifier (IRI) und internationalisierten Domänen Namen (IDN). Aktuelle Benutzer sehen keine Änderung des Verhaltens von .NET Framework 2,0, es sei denn, Sie aktivieren speziell IRI-und IDN-Unterstützung. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
   
  Die folgenden beiden Änderungen sind erforderlich, um die Unterstützung für IRI zu aktivieren:  
   
@@ -58,7 +55,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
   
 2. Geben Sie an, ob die IRI-Verarbeitungs Regeln angewendet werden sollen. Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.  
   
- Durch das Aktivieren der IRI-Verarbeitung (iriising aktiviert = `true`) erfolgt die Normalisierung und Zeichen Überprüfung gemäß den neuesten IRI-Regeln in RFC 3987. Der Standardwert ist `false` und führt normalisierungs-und Zeichen Prüfungen gemäß RFC 2396 und RFC 3986 (für IPv6-Literale) durch.  
+ Durch das Aktivieren der IRI-Verarbeitung (iriising aktiviert = `true`) erfolgt die Normalisierung und Zeichen Überprüfung gemäß den neuesten IRI-Regeln in RFC 3987. Der Standardwert ist `false` und führt eine Normalisierung und Zeichen Überprüfung gemäß RFC 2396 und RFC 3986 durch (für IPv6-Literale).  
   
 ### <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
@@ -66,7 +63,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel zeigt eine Konfiguration, die von <xref:System.Uri> der-Klasse zur Unterstützung der IRI-Verarbeitung und IDN-Namen verwendet wird.  
+ Das folgende Beispiel zeigt eine Konfiguration, die von der <xref:System.Uri>-Klasse verwendet wird, um die IRI-Verarbeitung und IDN-Namen zu unterstützen.  
   
 ### <a name="code"></a>Code  
   
