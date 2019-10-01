@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: faaba1b9de302ed916ad1a81c7e80b3fb5a67170
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d377a77a4a1b4c57e9edd4fbfa364387f1bae479
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664158"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699431"
 ---
-# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement >-Element (Netzwerkeinstellungen)
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionmanagement >-Element (Netzwerkeinstellungen)
 Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<connectionmanagement >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,13 +50,13 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `connectionManagement` -Element definiert die maximale Anzahl von Verbindungen mit einem Server oder einer Gruppe von Servern.  
+ Das `connectionManagement`-Element definiert die maximale Anzahl von Verbindungen mit einem Server oder einer Gruppe von Servern.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem `www.contoso.com` Server und zwei Verbindungen mit allen anderen Servern verwendet werden.  
+ Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '>> -Operator (Visual Basic)'
+title: '>> Operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.>>
@@ -10,81 +10,81 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 870460d78eb2e627de2984c79571fd5172672b55
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 337d651e831dc2ab132056f6e9a1f2b5300bf7f8
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629108"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701329"
 ---
-# <a name="-operator-visual-basic"></a>>>-Operator (Visual Basic)
-Führt eine arithmetische rechtsverschiebung in einem Bitmuster aus.  
+# <a name="-operator-visual-basic"></a>> > Operator (Visual Basic)
+Führt eine arithmetische Rechtsverschiebung in einem Bitmuster aus.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 result = pattern >> amount  
 ```  
   
 ## <a name="parts"></a>Teile  
  `result`  
- Erforderlich. Ganzzahliger numerischer Wert. Das Ergebnis der Verschiebung des Bitmusters. Der Datentyp ist identisch mit der `pattern`.  
+ Erforderlich. Ganzzahliger numerischer Wert. Das Ergebnis der Verschiebung des Bitmusters. Der-Datentyp ist mit dem von `pattern`identisch.  
   
  `pattern`  
- Erforderlich. Ein ganzzahliger numerischer Ausdruck. Das Bitmuster verschoben werden sollen. Der Datentyp muss ein ganzzahliger Typ sein (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).  
+ Erforderlich. Ganzzahliger numerischer Ausdruck. Das Bitmuster, das verschoben werden soll. Der Datentyp muss ein ganzzahliger Typ`SByte`( `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`) sein.  
   
  `amount`  
- Erforderlich. Numerischer Ausdruck. Die Anzahl der Bits, um das Bitmuster verschoben werden soll. Der Datentyp muss `Integer` oder zu verbreitern `Integer`.  
+ Erforderlich. Numerischer Ausdruck. Die Anzahl der Bits, um die das Bitmuster verschoben werden soll. Der Datentyp muss oder `Integer` `Integer`erweitert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Arithmetische Verschiebungen sind nicht zirkuläre, was bedeutet die Bits verschoben aus einem Ende des Resultsets nicht am anderen Ende wieder eingeführt werden. In eine arithmetische Verschiebung nach rechts die Bits, die hinter der äußere rechte Bit stellt Position verschoben werden verworfen und das Bit ganz links (Anmeldung) wird in der Bitpositionen, die auf der linken Seite weitergegeben. Dies bedeutet, dass bei `pattern` hat einen negativen Wert an, die frei werdenden Positionen auf 1 gesetzt werden; andernfalls werden sie auf 0 (null) festgelegt.  
+ Arithmetische Verschiebungen sind nicht zirkulär, d. h., dass die Bits, die von einem Ende des Ergebnisses entfernt wurden, nicht erneut am anderen Ende eingefügt werden. In einer arithmetischen rechten Schicht werden die Bits, die über die bitmost-Bitposition hinaus verschoben werden, verworfen, und das äußteste äußteste Bit (Vorzeichen) wird an die auf der linken Seite freigegebenen Bitpositionen weitergegeben. Dies bedeutet Folgendes: Wenn `pattern` einen negativen Wert aufweist, werden die frei gewordenen Positionen auf 1 festgelegt. Andernfalls werden Sie auf 0 (null) festgelegt.  
   
- Beachten Sie, dass die Datentypen `Byte`, `UShort`, `UInteger`, und `ULong` ohne Vorzeichen sind, es gibt also keine Vorzeichenbit weitergegeben werden. Wenn `pattern` ist ein vorzeichenloser Typ, werden die frei werdenden Stellen immer 0 (null) festgelegt.  
+ Beachten Sie, dass die Datentypen `Byte`, `UShort`, `UInteger` und `ULong` nicht signiert sind, sodass kein Signier Bit vorhanden ist. Wenn `pattern` einen beliebigen Typ ohne Vorzeichen aufweist, werden die frei gewordenen Positionen immer auf 0 (null) festgelegt.  
   
- Um zu verhindern, verschieben, um mehr Bits, die als Ergebnis werden kann, maskiert Visual Basic den Wert der `amount` mit einer Größenmaske, die in den Datentyp der entsprechenden `pattern`. Das binäre AND der folgenden Werte wird für den Betrag der Verschiebung verwendet. Die Größenmasken lauten wie folgt aus:  
+ Um zu verhindern, dass mehr Bits verschoben werden, als das Ergebnis aufnehmen kann, Visual Basic den Wert `amount` mit einer Größen Maske, die dem Datentyp von `pattern` entspricht, maskiert. Die Binärdatei und diese Werte werden für die UMSCHALT Menge verwendet. Die Größen Masken lauten wie folgt:  
   
-|Datentyp `pattern`|Size-Maske (dezimal)|Size-Maske (hexadezimal)|  
+|Datentyp von `pattern`|Größen Maske (dezimal)|Größen Maske (hexadezimal)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&AMP; H0000000F|  
-|`Integer`, `UInteger`|31|&AMP; H0000001F|  
-|`Long`, `ULong`|63|&AMP; H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Wenn `amount` NULL ist, den Wert der `result` ist identisch mit dem Wert des `pattern`. Wenn `amount` ist negativ, dabei handelt es sich als ein Wert ohne Vorzeichen mit der entsprechenden Größe maskiert.  
+ Wenn `amount` 0 (null) ist, ist der Wert von `result` mit dem Wert von `pattern` identisch. Wenn `amount` negativ ist, wird es als nicht signierter Wert angenommen und mit der entsprechenden Größen Maske maskiert.  
   
- Arithmetische Schichten generieren keine Stapelüberlauf-Ausnahmen.  
+ Arithmetische Verschiebungen generieren niemals Überlauf Ausnahmen.  
   
 ## <a name="overloading"></a>Überladen  
- Die `>>` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `>>`-Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `>>` Operator zum Ausführen von arithmetischer rechtsverschiebungen für ganzzahlige Werte. Das Ergebnis hat immer den gleichen Datentyp wie der Ausdruck, der verschoben werden.  
+ Im folgenden Beispiel wird der `>>`-Operator verwendet, um arithmetische Rechte Verschiebungen für ganzzahlige Werte auszuführen. Das Ergebnis weist immer den gleichen Datentyp wie der zu Verschiebe Ausdruck auf.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
- Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
+ Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `result1` 2560 (0000 1010-0000-0000) ist.  
+- `result1` ist 2560 (0000 1010 0000 0000).  
   
 - `result2` ist 160 (0000 0000 1010 0000).  
   
-- `result3` ist 2 (0000-0000-0000-0010).  
+- `result3` ist 2 (0000 0000 0000 0010).  
   
 - `result4` ist 640 (0000 0010 1000 0000).  
   
-- `result5` ist 0 (15 Stellen nach rechts verschoben).  
+- `result5` ist 0 (verschoben von 15 Stellen nach rechts).  
   
- Der Betrag der Verschiebung für `result4` wird berechnet als 18 und 15, die gleich 2 ist.  
+ Der Verschiebungs Betrag für `result4` wird als 18 und 15 berechnet, was dem Wert 2 entspricht.  
   
- Das folgende Beispiel zeigt die arithmetische Schichten auf einen negativen Wert.  
+ Das folgende Beispiel zeigt arithmetische Verschiebungen bei einem negativen Wert.  
   
  [!code-vb[VbVbalrOperators#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#55)]  
   
- Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
+ Die Ergebnisse des vorherigen Beispiels lauten wie folgt:  
   
-- `negresult1` ist-512 (1111 1110 0000-0000).  
+- `negresult1` ist-512 (1111 1110 0000 0000).  
   
-- `negresult2` ist-1 (das signierte Bit wird weitergegeben).  
+- `negresult2` ist-1 (das Signier Bit wird weitergegeben).  
   
 ## <a name="see-also"></a>Siehe auch
 

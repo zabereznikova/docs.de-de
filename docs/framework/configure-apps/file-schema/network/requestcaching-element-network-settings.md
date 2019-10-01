@@ -8,19 +8,19 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 2a3d0b182acad2351ed095934ca97c6194d344fc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659138"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697829"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching>-Element (Netzwerkeinstellungen)
 Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.  
   
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestcaching >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,9 +42,9 @@ Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`isPrivateCache`|Gibt an, ob der Cache eine Isolation zwischen den Informationen verschiedener Benutzer bereitstellt. Der Standardwert ist `true`. Dieser Wert sollte für `false` Anwendungen der mittleren Ebene sein.|  
+|`isPrivateCache`|Gibt an, ob der Cache eine Isolation zwischen den Informationen verschiedener Benutzer bereitstellt. Der Standardwert ist `true`sein. Dieser Wert sollte für Anwendungen der mittleren Ebene `false` sein.|  
 |`disableAllCaching`|Gibt an, dass das Zwischenspeichern für alle Webanwendungen deaktiviert ist und nicht Programm gesteuert überschrieben werden kann.|  
-|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>-Enumeration. Der Standardwert ist `BypassCache`.|  
+|`defaultPolicyLevel`|Einer der Werte in der <xref:System.Net.Cache.RequestCacheLevel>-Enumeration. Der Standardwert ist `BypassCache`sein.|  
 |`unspecifiedMaximumAge`|Gibt die Standardzeit an, nach der der Inhalt als abgelaufen gekennzeichnet wird.|  
   
 ## <a name="policylevel-attribute"></a>PolicyLevel-Attribut  
@@ -65,7 +65,7 @@ Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob HTTP-Zwischenspeicherung aktiviert ist, und beschreibt die Standard Cache Richtlinie.|  
-|[\<DefaultFtpCachePolicy >-Element (Netzwerkeinstellungen)](defaultftpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Richtlinie.|  
+|[\<defaultftpcachepolicy >-Element (Netzwerkeinstellungen)](defaultftpcachepolicy-element-network-settings.md)|Optionales Element.<br /><br /> Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Richtlinie.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

@@ -1,5 +1,5 @@
 ---
-title: '##Const-Anweisung (Visual Basic)'
+title: '#Konstanten Direktive (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b8d2da2158a8244b4533eb6ef49049949417216
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746681"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71696856"
 ---
 # <a name="const-directive"></a>#Const-Anweisung
-Definiert Konstanten für bedingte Kompilierung für Visual Basic.  
+Definiert bedingte Compilerkonstanten für Visual Basic.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 #Const constname = expression  
 ```  
   
 ## <a name="parts"></a>Teile  
  `constname`  
- Erforderlich. Die Namen der Konstanten definiert wird.  
+ Erforderlich. Der Name der Konstanten, die definiert wird.  
   
  `expression`  
- Erforderlich. Literal, andere Konstanten für bedingte Kompilierung oder eine beliebige Kombination, die alle arithmetische oder logische Operatoren außer enthält `Is`.  
+ Erforderlich. Literale, andere Bedingte Compilerkonstante oder eine beliebige Kombination, die beliebige oder alle arithmetischen oder logischen Operatoren mit Ausnahme von `Is` einschließt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bedingte Compilerkonstanten sind immer privat für die Datei, die in der sie angezeigt werden. Kann nicht erstellt werden öffentliche Compilerkonstanten mithilfe der `#Const` -Direktive; Sie können diese erstellen, nur in der Benutzeroberfläche oder mit der `/define` -Compileroption.  
+ Bedingte Compilerkonstanten sind immer privat für die Datei, in der Sie angezeigt werden. Sie können keine öffentlichen Compilerkonstanten mithilfe der `#Const`-Direktive erstellen; Sie können nur auf der Benutzeroberfläche oder mit der `/define`-Compileroption erstellt werden.  
   
- Sie können nur Bedingte Compilerkonstanten und Literale in `expression`. Verwenden eine standard-Konstante definiert `Const` verursacht einen Fehler. Im Gegensatz dazu können Sie mit definierte Konstanten der `#Const` Schlüsselwort nur für die bedingte Kompilierung. Konstanten können auch nicht definiert sein, bei dem sie einen Wert von aufweisen `Nothing`.  
+ In `expression` können nur bedingte Compilerkonstanten und Literale verwendet werden. Die Verwendung einer Standard Konstanten, die mit `Const` definiert ist, verursacht einen Fehler. Umgekehrt können Sie Konstanten verwenden, die mit dem-Schlüsselwort `#Const` definiert sind, nur für die bedingte Kompilierung. Konstanten können ebenfalls nicht definiert werden. in diesem Fall haben Sie den Wert `Nothing`.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verwendet die `#Const`-Anweisung.  
