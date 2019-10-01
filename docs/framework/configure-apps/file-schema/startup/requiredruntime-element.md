@@ -9,20 +9,22 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634191"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697490"
 ---
-# <a name="requiredruntime-element"></a><span data-ttu-id="8a615-102">\<RequiredRuntime >-Element</span><span class="sxs-lookup"><span data-stu-id="8a615-102">\<requiredRuntime> element</span></span>
+# <a name="requiredruntime-element"></a><span data-ttu-id="fda8d-102">> Element \<requirements druntime</span><span class="sxs-lookup"><span data-stu-id="fda8d-102">\<requiredRuntime> element</span></span>
 
-<span data-ttu-id="8a615-103">Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8a615-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="8a615-104">Dieses Element ist veraltet und sollte nicht mehr verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8a615-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="8a615-105">Die [ `supportedRuntime` ](supportedruntime-element.md) Element sollte stattdessen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8a615-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>
+<span data-ttu-id="fda8d-103">Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt.</span><span class="sxs-lookup"><span data-stu-id="fda8d-103">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="fda8d-104">Dieses Element ist veraltet und sollte nicht mehr verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-104">This element is deprecated and should no longer be used.</span></span> <span data-ttu-id="fda8d-105">Stattdessen sollte das Element [`supportedRuntime`](supportedruntime-element.md) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-105">The [`supportedRuntime`](supportedruntime-element.md) element should be used instead.</span></span>
 
-<span data-ttu-id="8a615-106">\<configuration> \<startup> \<requiredRuntime></span><span class="sxs-lookup"><span data-stu-id="8a615-106">\<configuration> \<startup> \<requiredRuntime></span></span>
+[<span data-ttu-id="fda8d-106"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="fda8d-106">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="fda8d-107">&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)</span><span class="sxs-lookup"><span data-stu-id="fda8d-107">&nbsp;&nbsp;[**\<startup>**](startup-element.md)</span></span>  
+<span data-ttu-id="fda8d-108">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requirements druntime >**</span><span class="sxs-lookup"><span data-stu-id="fda8d-108">&nbsp;&nbsp;&nbsp;&nbsp;**\<requiredRuntime>**</span></span>  
 
-## <a name="syntax"></a><span data-ttu-id="8a615-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="8a615-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fda8d-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="fda8d-109">Syntax</span></span>
 
 ```xml
    <requiredRuntime  
@@ -30,49 +32,49 @@ version="runtime version"
 safemode="true|false"/>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="8a615-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="8a615-108">Attributes and elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="fda8d-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="fda8d-110">Attributes and elements</span></span>
 
-<span data-ttu-id="8a615-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="8a615-109">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="fda8d-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="fda8d-111">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="8a615-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="8a615-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="fda8d-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="fda8d-112">Attributes</span></span>
 
-|<span data-ttu-id="8a615-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="8a615-111">Attribute</span></span>|<span data-ttu-id="8a615-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8a615-112">Description</span></span>|
+|<span data-ttu-id="fda8d-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="fda8d-113">Attribute</span></span>|<span data-ttu-id="fda8d-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fda8d-114">Description</span></span>|
 |---------------|-----------------|
-|`version`|<span data-ttu-id="8a615-113">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="8a615-113">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8a615-114">Ein Zeichenfolgenwert, der angibt, die Version von .NET Framework, die diese Anwendung unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8a615-114">A string value that specifies the version of the .NET Framework that this application supports.</span></span> <span data-ttu-id="8a615-115">Der Zeichenfolgenwert muss den Namen des Verzeichnisses finden Sie unter dem Stamm der .NET Framework-Installation übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="8a615-115">The string value must match the directory name found under the .NET Framework installation root.</span></span> <span data-ttu-id="8a615-116">Der Inhalt des Zeichenfolgenwerts wird nicht analysiert.</span><span class="sxs-lookup"><span data-stu-id="8a615-116">The contents of the string value are not parsed.</span></span>|
-|`safemode`|<span data-ttu-id="8a615-117">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="8a615-117">Optional attribute.</span></span><br /><br /> <span data-ttu-id="8a615-118">Gibt an, ob die Common Language Runtime-Startcode die Registrierung zum Ermitteln der RuntimeVersion der Common Language durchsucht.</span><span class="sxs-lookup"><span data-stu-id="8a615-118">Specifies whether the runtime startup code searches the registry to determine the runtime version.</span></span>|
+|`version`|<span data-ttu-id="fda8d-115">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="fda8d-115">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fda8d-116">Ein Zeichen folgen Wert, der die Version der .NET Framework angibt, die von dieser Anwendung unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="fda8d-116">A string value that specifies the version of the .NET Framework that this application supports.</span></span> <span data-ttu-id="fda8d-117">Der Zeichen folgen Wert muss mit dem Verzeichnisnamen unter dem Stammverzeichnis der .NET Framework Installation identisch sein.</span><span class="sxs-lookup"><span data-stu-id="fda8d-117">The string value must match the directory name found under the .NET Framework installation root.</span></span> <span data-ttu-id="fda8d-118">Der Inhalt des Zeichen folgen Werts wird nicht analysiert.</span><span class="sxs-lookup"><span data-stu-id="fda8d-118">The contents of the string value are not parsed.</span></span>|
+|`safemode`|<span data-ttu-id="fda8d-119">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="fda8d-119">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fda8d-120">Gibt an, ob der Startcode der Laufzeit die Registrierung durchsucht, um die Laufzeitversion zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="fda8d-120">Specifies whether the runtime startup code searches the registry to determine the runtime version.</span></span>|
 
-## <a name="safemode-attribute"></a><span data-ttu-id="8a615-119">Safemode-Attribut</span><span class="sxs-lookup"><span data-stu-id="8a615-119">safemode attribute</span></span>
+## <a name="safemode-attribute"></a><span data-ttu-id="fda8d-121">safemode-Attribut</span><span class="sxs-lookup"><span data-stu-id="fda8d-121">safemode attribute</span></span>
 
-|<span data-ttu-id="8a615-120">Wert</span><span class="sxs-lookup"><span data-stu-id="8a615-120">Value</span></span>|<span data-ttu-id="8a615-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8a615-121">Description</span></span>|
+|<span data-ttu-id="fda8d-122">Wert</span><span class="sxs-lookup"><span data-stu-id="fda8d-122">Value</span></span>|<span data-ttu-id="fda8d-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fda8d-123">Description</span></span>|
 |-----------|-----------------|
-|`false`|<span data-ttu-id="8a615-122">Der Startcode für die Common Language Runtime sucht in der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="8a615-122">The runtime startup code looks in the registry.</span></span> <span data-ttu-id="8a615-123">Dies ist der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="8a615-123">This is the default value.</span></span>|
-|`true`|<span data-ttu-id="8a615-124">Der Laufzeitstartcode scheint sich nicht in der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="8a615-124">The runtime startup code does not look in the registry.</span></span>|
+|`false`|<span data-ttu-id="fda8d-124">Der Startcode der Laufzeit sucht in der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="fda8d-124">The runtime startup code looks in the registry.</span></span> <span data-ttu-id="fda8d-125">Dies ist der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="fda8d-125">This is the default value.</span></span>|
+|`true`|<span data-ttu-id="fda8d-126">Der Startcode der Laufzeit sucht nicht in der Registrierung.</span><span class="sxs-lookup"><span data-stu-id="fda8d-126">The runtime startup code does not look in the registry.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="8a615-125">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8a615-125">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="fda8d-127">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="fda8d-127">Child elements</span></span>
 
-<span data-ttu-id="8a615-126">Keine</span><span class="sxs-lookup"><span data-stu-id="8a615-126">None.</span></span>
+<span data-ttu-id="fda8d-128">Keine</span><span class="sxs-lookup"><span data-stu-id="fda8d-128">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="8a615-127">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8a615-127">Parent elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="fda8d-129">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="fda8d-129">Parent elements</span></span>
 
-|<span data-ttu-id="8a615-128">Element</span><span class="sxs-lookup"><span data-stu-id="8a615-128">Element</span></span>|<span data-ttu-id="8a615-129">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8a615-129">Description</span></span>|
+|<span data-ttu-id="fda8d-130">Element</span><span class="sxs-lookup"><span data-stu-id="fda8d-130">Element</span></span>|<span data-ttu-id="fda8d-131">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fda8d-131">Description</span></span>|
 |-------------|-----------------|
-|`configuration`|<span data-ttu-id="8a615-130">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8a615-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
-|`startup`|<span data-ttu-id="8a615-131">Enthält die `<requiredRuntime>` Element.</span><span class="sxs-lookup"><span data-stu-id="8a615-131">Contains the `<requiredRuntime>` element.</span></span>|
+|`configuration`|<span data-ttu-id="fda8d-132">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="fda8d-132">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+|`startup`|<span data-ttu-id="fda8d-133">Enthält das `<requiredRuntime>` -Element.</span><span class="sxs-lookup"><span data-stu-id="fda8d-133">Contains the `<requiredRuntime>` element.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="8a615-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8a615-132">Remarks</span></span>
- <span data-ttu-id="8a615-133">Anwendungen, die nur in Version 1.0 von der Laufzeit nicht verwenden, müssen die `<requiredRuntime>` Element.</span><span class="sxs-lookup"><span data-stu-id="8a615-133">Applications built to support only version 1.0 of the runtime must use the `<requiredRuntime>` element.</span></span> <span data-ttu-id="8a615-134">Erstellen von Anwendungen mit Version 1.1 oder höher der Runtime verwenden, müssen die `<supportedRuntime>` Element.</span><span class="sxs-lookup"><span data-stu-id="8a615-134">Applications built using version 1.1 or later of the runtime must use the `<supportedRuntime>` element.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="8a615-135">Bei Verwendung der [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) Funktion, um die Konfigurationsdatei angeben, müssen Sie die `<requiredRuntime>` -Element für alle Versionen der Laufzeit.</span><span class="sxs-lookup"><span data-stu-id="8a615-135">If you use the [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="8a615-136">Die `<supportedRuntime>` Element wird ignoriert, wenn Sie [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span><span class="sxs-lookup"><span data-stu-id="8a615-136">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>
-
- <span data-ttu-id="8a615-137">Die `version` Attributzeichenfolge muss den Ordnernamen Installation, für die angegebene Version von .NET Framework entsprechen.</span><span class="sxs-lookup"><span data-stu-id="8a615-137">The `version` attribute string must match the installation folder name for the specified version of the .NET Framework.</span></span> <span data-ttu-id="8a615-138">Diese Zeichenfolge wird nicht interpretiert.</span><span class="sxs-lookup"><span data-stu-id="8a615-138">This string is not interpreted.</span></span> <span data-ttu-id="8a615-139">Wenn der Laufzeitstartcode einen entsprechenden Ordner nicht gefunden wird, ist die Runtime nicht geladen werden. der Startcode zeigt eine Fehlermeldung an und wird beendet.</span><span class="sxs-lookup"><span data-stu-id="8a615-139">If the runtime startup code does not find a matching folder, the runtime is not loaded; the startup code shows an error message and quits.</span></span>
+## <a name="remarks"></a><span data-ttu-id="fda8d-134">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fda8d-134">Remarks</span></span>
+ <span data-ttu-id="fda8d-135">Anwendungen, die zur Unterstützung von nur Version 1,0 der Laufzeit erstellt wurden, müssen das `<requiredRuntime>`-Element verwenden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-135">Applications built to support only version 1.0 of the runtime must use the `<requiredRuntime>` element.</span></span> <span data-ttu-id="fda8d-136">Anwendungen, die mit Version 1,1 oder höher der Laufzeit erstellt wurden, müssen das `<supportedRuntime>`-Element verwenden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-136">Applications built using version 1.1 or later of the runtime must use the `<supportedRuntime>` element.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8a615-140">Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert der `<requiredRuntime>` Element.</span><span class="sxs-lookup"><span data-stu-id="8a615-140">The startup code for an application that is hosted in Microsoft Internet Explorer ignores the `<requiredRuntime>` element.</span></span>
+> <span data-ttu-id="fda8d-137">Wenn Sie die [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) -Funktion verwenden, um die Konfigurationsdatei anzugeben, müssen Sie das `<requiredRuntime>`-Element für alle Versionen der Laufzeit verwenden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-137">If you use the [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) function to specify the configuration file, you must use the `<requiredRuntime>` element for all versions of the runtime.</span></span> <span data-ttu-id="fda8d-138">Das `<supportedRuntime>`-Element wird ignoriert, wenn Sie [corbindtoriuntimebycfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)verwenden.</span><span class="sxs-lookup"><span data-stu-id="fda8d-138">The `<supportedRuntime>` element is ignored when you use [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="8a615-141">Beispiel</span><span class="sxs-lookup"><span data-stu-id="8a615-141">Example</span></span>
+ <span data-ttu-id="fda8d-139">Die Attribut Zeichenfolge `version` muss mit dem Namen des Installations Ordners für die angegebene Version des .NET Framework identisch sein.</span><span class="sxs-lookup"><span data-stu-id="fda8d-139">The `version` attribute string must match the installation folder name for the specified version of the .NET Framework.</span></span> <span data-ttu-id="fda8d-140">Diese Zeichenfolge wird nicht interpretiert.</span><span class="sxs-lookup"><span data-stu-id="fda8d-140">This string is not interpreted.</span></span> <span data-ttu-id="fda8d-141">Wenn der Startcode der Laufzeit keinen übereinstimmenden Ordner findet, wird die Laufzeit nicht geladen. der Startcode zeigt eine Fehlermeldung an und beendet den Vorgang.</span><span class="sxs-lookup"><span data-stu-id="fda8d-141">If the runtime startup code does not find a matching folder, the runtime is not loaded; the startup code shows an error message and quits.</span></span>
 
-<span data-ttu-id="8a615-142">Das folgende Beispiel zeigt, wie die Runtime-Version in einer Konfigurationsdatei angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="8a615-142">The following example shows how to specify the runtime version in a configuration file.</span></span>
+> [!NOTE]
+> <span data-ttu-id="fda8d-142">Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert das `<requiredRuntime>`-Element.</span><span class="sxs-lookup"><span data-stu-id="fda8d-142">The startup code for an application that is hosted in Microsoft Internet Explorer ignores the `<requiredRuntime>` element.</span></span>
+
+## <a name="example"></a><span data-ttu-id="fda8d-143">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fda8d-143">Example</span></span>
+
+<span data-ttu-id="fda8d-144">Im folgenden Beispiel wird gezeigt, wie die Laufzeitversion in einer Konfigurationsdatei angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="fda8d-144">The following example shows how to specify the runtime version in a configuration file.</span></span>
 
 ```xml
 <configuration>
@@ -82,8 +84,8 @@ safemode="true|false"/>
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8a615-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8a615-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fda8d-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fda8d-145">See also</span></span>
 
-- [<span data-ttu-id="8a615-144">Startup Settings Schema (Schema für Starteinstellungen)</span><span class="sxs-lookup"><span data-stu-id="8a615-144">Startup Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="8a615-145">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="8a615-145">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="8a615-146">Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher</span><span class="sxs-lookup"><span data-stu-id="8a615-146">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [<span data-ttu-id="fda8d-146">Startup Settings Schema (Schema für Starteinstellungen)</span><span class="sxs-lookup"><span data-stu-id="fda8d-146">Startup Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="fda8d-147">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="fda8d-147">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="fda8d-148">Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher</span><span class="sxs-lookup"><span data-stu-id="fda8d-148">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
