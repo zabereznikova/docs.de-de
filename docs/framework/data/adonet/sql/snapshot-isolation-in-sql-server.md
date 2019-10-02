@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6d85cc041850300d1d079b227dcb8ed9201a0502
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791739"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699063"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informationen zur Snapshot-Isolation und Zeilenversionserstellung  
- Sobald die Momentaufnahme Isolation aktiviert ist, werden aktualisierte Zeilen Versionen für jede Transaktion in **tempdb**verwaltet. Jede Transaktion wird durch eine Transaktionsfolgenummer gekennzeichnet, und diese eindeutigen Nummern werden für jede Zeilenversion aufgezeichnet. Für die Transaktion werden die aktuellsten Zeilenversionen verwendet, die über eine Folgenummer verfügen, die niedriger ist als diejenige der Transaktion. Aktuellere, nach dem Beginn der Transaktion erstellte Zeilenversionen werden von der Transaktion ignoriert.  
+ Sobald die Momentaufnahme Isolation aktiviert ist, müssen die aktualisierten Zeilen Versionen für jede Transaktion beibehalten werden.  Vor SQL Server 2019 wurden diese Versionen in **tempdb**gespeichert. In SQL Server 2019 wird eine neue Funktion eingeführt, Accelerated Database Recovery (ADR), die einen eigenen Satz von Zeilen Versionen erfordert.  Ab SQL Server 2019 werden Zeilen Versionen in **tempdb** wie immer beibehalten, wenn die ADR nicht aktiviert ist.  Wenn die automatische Bereitstellungs Funktion aktiviert ist, werden alle Zeilen Versionen, die mit der Momentaufnahme Isolation und der AdR verknüpft sind, im permanenten Versionsspeicher der AdR (PVS) gespeichert, der sich in der Benutzerdatenbank in einer Datei Gruppe befindet, die der Benutzer angibt. Jede Transaktion wird durch eine Transaktionsfolgenummer gekennzeichnet, und diese eindeutigen Nummern werden für jede Zeilenversion aufgezeichnet. Für die Transaktion werden die aktuellsten Zeilenversionen verwendet, die über eine Folgenummer verfügen, die niedriger ist als diejenige der Transaktion. Aktuellere, nach dem Beginn der Transaktion erstellte Zeilenversionen werden von der Transaktion ignoriert.  
   
  Die Benennung „Momentaufnahme“ gibt die Tatsache wieder, dass alle Abfragen in der Transaktion auf dieselbe Version (Momentaufnahme) der Datenbank zurückgehen, die auf dem Zustand der Datenbank zum Zeitpunkt des Beginns der Transaktion basiert. In einer Snapshot-Transaktion werden für die zugrunde liegenden Datenzeilen oder Datenseiten keine Sperren bezogen, wodurch andere Transaktionen ausgeführt werden können, ohne durch eine vorherige, nicht vollständig ausgeführte Transaktion blockiert zu werden. Transaktionen, die Daten ändern, blockieren keine Transaktionen, die Daten lesen; und Transaktionen, die Daten lesen, blockieren keine Transaktionen, die Daten schreiben. Bei der READ COMMITTED-Standardisolationsstufe in SQL Server wäre dies i. d. R. der Fall. Dieses nicht blockierende Verhalten verringert die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen beträchtlich.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Eine Snapshot-Transaktion verwendet immer vollständige Parallelitätssteuerung, wobei alle Sperren zurückgehalten werden, die das Aktualisieren von Zeilen durch andere Transaktionen verhindern. Wenn eine Snapshot-Transaktion versucht, ein Update für eine Zeile zu übernehmen, die nach dem Beginn der Transaktion geändert wurde, wird die Transaktion zurückgenommen und ein Fehler ausgelöst.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Verwenden der Snapshot-Isolation in ADO.NET  
- Die Snapshot-Isolation wird in ADO.NET durch die <xref:System.Data.SqlClient.SqlTransaction>-Klasse unterstützt. Wenn eine Datenbank für die Momentaufnahme Isolation aktiviert ist, aber nicht für READ_COMMITTED_SNAPSHOT on konfiguriert ist, müssen Sie <xref:System.Data.SqlClient.SqlTransaction> eine mit dem **IsolationLevel. Snapshot** -Enumerationswert <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> initiieren, wenn Sie die-Methode aufrufen. Für dieses Codefragment wird angenommen, dass es sich bei der Verbindung um ein offenes <xref:System.Data.SqlClient.SqlConnection>-Objekt handelt.  
+ Die Snapshot-Isolation wird in ADO.NET durch die <xref:System.Data.SqlClient.SqlTransaction>-Klasse unterstützt. Wenn eine Datenbank für die Momentaufnahme Isolation aktiviert ist, aber nicht für READ_COMMITTED_SNAPSHOT on konfiguriert ist, müssen Sie beim Aufrufen der <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode eine <xref:System.Data.SqlClient.SqlTransaction> mit dem **IsolationLevel. Snapshot** -Enumerationswert initiieren. Für dieses Codefragment wird angenommen, dass es sich bei der Verbindung um ein offenes <xref:System.Data.SqlClient.SqlConnection>-Objekt handelt.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  

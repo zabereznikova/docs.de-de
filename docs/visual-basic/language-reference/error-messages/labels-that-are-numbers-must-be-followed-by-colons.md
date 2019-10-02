@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 3634ea4b97f25e41e27629c51119f2ea4df5f887
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589777"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700982"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Nach Sprungmarken, die Zahlen sind, muss ein Doppelpunkt stehen.
-Zeilennummern führen Sie dieselben Regeln wie für andere Arten von Bezeichnungen, und es müssen einen Doppelpunkt enthalten.  
+Für Zeilennummern gelten dieselben Regeln wie für andere Arten von Bezeichnungen, und Sie müssen einen Doppelpunkt enthalten.  
   
  **Fehler-ID:** BC30801  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Die Anzahl, gefolgt von einem Doppelpunkt am Anfang einer Zeile des Codes zu platzieren; Zum Beispiel:  
+- Platzieren Sie die Nummer, gefolgt von einem Doppelpunkt, am Anfang einer Codezeile. Zum Beispiel:  
   
-    ```  
+    ```vb  
     400:    X += 1  
     ```  
   
