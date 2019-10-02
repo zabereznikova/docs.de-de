@@ -2,12 +2,12 @@
 title: Attribute
 description: Erfahren Sie F# , wie Attribute das Anwenden von Metadaten auf ein Programmierkonstrukt ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08d50f7f57b6c0a81221e8f635f77f67750d0ff9
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082939"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736803"
 ---
 # <a name="attributes"></a>Attribute
 
@@ -25,13 +25,13 @@ In der vorherigen Syntax ist das *Ziel* optional und gibt, sofern vorhanden, die
 
 Der *Attribut Name* verweist auf den Namen (möglicherweise mit Namespaces qualifiziert) eines gültigen Attributtyps mit oder ohne das Suffix `Attribute` , das normalerweise in Attributtyp Namen verwendet wird. Der Typ `ObsoleteAttribute` kann z. b. nur `Obsolete` in diesem Kontext verkürzt werden.
 
-Die *Argumente* sind die Argumente für den Konstruktor für den Attributtyp. Wenn ein Attribut über einen Standardkonstruktor verfügt, können die Argumentliste und die Klammern ausgelassen werden. Attribute unterstützen sowohl positionelle Argumente als auch benannte Argumente. *Positions Argumente* sind Argumente, die in der Reihenfolge verwendet werden, in der Sie angezeigt werden. Benannte Argumente können verwendet werden, wenn das Attribut öffentliche Eigenschaften hat. Sie können diese mithilfe der folgenden Syntax in der Argumentliste festlegen.
+Die *Argumente* sind die Argumente für den Konstruktor für den Attributtyp. Wenn ein Attribut über einen Parameter losen Konstruktor verfügt, können die Argumentliste und die Klammern ausgelassen werden. Attribute unterstützen sowohl positionelle Argumente als auch benannte Argumente. *Positions Argumente* sind Argumente, die in der Reihenfolge verwendet werden, in der Sie angezeigt werden. Benannte Argumente können verwendet werden, wenn das Attribut öffentliche Eigenschaften hat. Sie können diese mithilfe der folgenden Syntax in der Argumentliste festlegen.
 
 ```fsharp
 property-name = property-value
 ```
 
-Solche Eigenschafts Initialisierungen können in beliebiger Reihenfolge vorliegen, aber Sie müssen beliebige Positions Argumente einhalten. Im folgenden finden Sie ein Beispiel für ein Attribut, das Positions Argumente und Eigenschafts Initialisierungen verwendet.
+Solche Eigenschafts Initialisierungen können in beliebiger Reihenfolge vorliegen, aber Sie müssen beliebige Positions Argumente einhalten. Im folgenden finden Sie ein Beispiel für ein Attribut, das Positions Argumente und Eigenschafts Initialisierungen verwendet:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
@@ -41,13 +41,13 @@ Attribute sind ein .net-Programmierkonstrukt, mit dem ein Objekt, das als *Attri
 
 Attribute in F# können angewendet werden, um die folgenden Konstrukte der Programmierung: Funktionen, Methoden, Assemblys, Modulen, Typen (Klassen, Datensätze, Strukturen, Schnittstellen, Delegaten, Enumerationen, Unions und So weiter), Konstruktoren, Eigenschaften, Felder, Parameter Geben Sie Parameter und Rückgabewerte. Attribute sind für Bindungen innerhalb `let` von Klassen, Ausdrücken oder Workflow Ausdrücken nicht zulässig.
 
-In der Regel wird die Attribut Deklaration direkt vor der Deklaration des Attribut Ziels angezeigt. Mehrere Attribut Deklarationen können wie folgt verwendet werden.
+In der Regel wird die Attribut Deklaration direkt vor der Deklaration des Attribut Ziels angezeigt. Mehrere Attribut Deklarationen können wie folgt verwendet werden:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
 Sie können Attribute zur Laufzeit mithilfe der .NET-Reflektion Abfragen.
 
-Sie können mehrere Attribute einzeln deklarieren, wie im vorherigen Codebeispiel, oder Sie können Sie in einer Gruppe von Klammern deklarieren, wenn Sie die einzelnen Attribute und Konstruktoren mit einem Semikolon trennen, wie hier gezeigt.
+Sie können mehrere Attribute einzeln deklarieren, wie im vorherigen Codebeispiel, oder Sie können Sie in einer Gruppe von Klammern deklarieren, wenn Sie die einzelnen Attribute und Konstruktoren mit einem Semikolon trennen, wie im folgenden dargestellt:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
@@ -55,13 +55,13 @@ Zu den Attributen zählen in `Obsolete` der Regel das Attribut, Attribute für S
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Für die Attribut Ziele `assembly` und `module`wenden Sie die Attribute auf eine Bindung der obersten Ebene `do` in der Assembly an. Sie können das Wort `assembly` oder `module` in die Attribut Deklaration wie folgt einschließen.
+Für die Attribut Ziele `assembly` und `module`wenden Sie die Attribute auf eine Bindung der obersten Ebene `do` in der Assembly an. Sie können das Wort `assembly` oder `module` in der Attribut Deklaration wie folgt einschließen:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
 Wenn Sie weglassen, dass das Attributziel für ein Attribut auf eine `do` Bindung, die F#-Compiler versucht, das Attributziel zu bestimmen, die sinnvoll für dieses Attribut ist. Viele Attribut Klassen verfügen über ein Attribut vom `System.AttributeUsageAttribute` Typ, das Informationen über die möglichen Ziele enthält, die für dieses Attribut unterstützt werden. Wenn das `System.AttributeUsageAttribute` angibt, dass das Attribut Funktionen als Ziele unterstützt, wird das Attribut auf den Haupteinstiegspunkt des Programms angewendet. Wenn das `System.AttributeUsageAttribute` angibt, dass das Attribut Assemblys als Ziele unterstützt, übernimmt der Compiler das-Attribut, das auf die Assembly angewendet wird. Die meisten Attribute gelten nicht für Funktionen und Assemblys, aber in Fällen, in denen Sie dies tun, wird das Attribut für die Hauptfunktion des Programms übernommen. Wenn das Attribut Ziel explizit angegeben wird, wird das Attribut auf das angegebene Ziel angewendet.
 
-Obwohl Sie in der Regel das Attribut Ziel nicht explizit angeben müssen, sind in der folgenden Tabelle die gültigen Werte für *target* in einem Attribut sowie Beispiele für die Verwendung aufgeführt.
+Obwohl Sie in der Regel das Attribut Ziel nicht explizit angeben müssen, werden in der folgenden Tabelle gültige Werte für das *Ziel* in einem Attribut und Verwendungs Beispiele angezeigt:
 
 <table>
   <tr>

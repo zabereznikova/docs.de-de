@@ -2,16 +2,16 @@
 title: Konstruktoren
 description: Informationen Sie zum Definieren und Verwenden von Konstruktoren in F# zu erstellen und initialisieren die Klasse und Struktur von Objekten.
 ms.date: 05/16/2016
-ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6769ec7fc6768090d8ae68e21946a58829b6eea0
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627595"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736847"
 ---
 # <a name="constructors"></a>Konstruktoren
 
-In diesem Thema wird beschrieben, wie Konstruktoren definiert und verwendet werden, um Klassen-und Struktur Objekte zu erstellen und zu initialisieren.
+In diesem Artikel wird beschrieben, wie Konstruktoren definiert und verwendet werden, um Klassen-und Struktur Objekte zu erstellen und zu initialisieren.
 
 ## <a name="construction-of-class-objects"></a>Konstruktion von Klassen Objekten
 
@@ -21,11 +21,11 @@ Der primäre Konstruktor enthält `let` - `do` und-Bindungen, die am Anfang der 
 
 Unabhängig davon, ob der Konstruktor, den Sie aufzurufen, ein primärer Konstruktor oder ein zusätzlicher Konstruktor ist, können Sie- `new` Objekte erstellen, indem Sie einen- `new` Ausdruck mit oder ohne das optionale-Schlüsselwort verwenden. Sie initialisieren die Objekte mit Konstruktorargumenten, indem Sie entweder die Argumente in der Reihenfolge auflisten und durch Kommas getrennt und in Klammern eingeschlossen sind, oder indem Sie benannte Argumente und Werte in Klammern verwenden. Sie können auch Eigenschaften für ein Objekt während der Erstellung des Objekts festlegen, indem Sie die Eigenschaftsnamen verwenden und Werte zuweisen, genauso wie Sie benannte Konstruktorargumente verwenden.
 
-Der folgende Code veranschaulicht eine-Klasse, die über einen Konstruktor und verschiedene Methoden zum Erstellen von-Objekten verfügt.
+Der folgende Code veranschaulicht eine-Klasse, die über einen Konstruktor und verschiedene Methoden zum Erstellen von-Objekten verfügt:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
-Die Ausgabe lautet wie folgt.
+Die Ausgabe lautet wie folgt:
 
 ```console
 Initialized object that has coordinates (1, 2, 3)
@@ -36,7 +36,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>Konstruktion von Strukturen
 
-Strukturen befolgen alle Regeln der Klassen. Daher können Sie über einen primären Konstruktor verfügen, und Sie können zusätzliche Konstruktoren mithilfe `new`von bereitstellen. Es gibt jedoch einen wichtigen Unterschied zwischen Strukturen und Klassen: Strukturen können über einen Parameter losen Konstruktor (d. h. einen ohne Argumente) verfügen, auch wenn kein primärer Konstruktor definiert ist. Der Parameter lose Konstruktor initialisiert alle Felder mit dem Standardwert für diesen Typ, normalerweise 0 (null) oder dessen Entsprechung. Alle Konstruktoren, die Sie für Strukturen definieren, müssen mindestens ein Argument aufweisen, damit Sie nicht mit dem Standardkonstruktor in Konflikt stehen.
+Strukturen befolgen alle Regeln der Klassen. Daher können Sie über einen primären Konstruktor verfügen, und Sie können zusätzliche Konstruktoren mithilfe `new`von bereitstellen. Es gibt jedoch einen wichtigen Unterschied zwischen Strukturen und Klassen: Strukturen können über einen Parameter losen Konstruktor (d. h. einen ohne Argumente) verfügen, auch wenn kein primärer Konstruktor definiert ist. Der Parameter lose Konstruktor initialisiert alle Felder mit dem Standardwert für diesen Typ, normalerweise 0 (null) oder dessen Entsprechung. Alle Konstruktoren, die Sie für Strukturen definieren, müssen mindestens ein Argument aufweisen, damit Sie nicht mit dem Parameter losen Konstruktor in Konflikt stehen.
 
 Außerdem verfügen Strukturen häufig über Felder, die mithilfe des `val` Schlüssel Worts erstellt werden. Klassen können auch über diese Felder verfügen. Strukturen und Klassen, die mithilfe des `val` -Schlüssel Worts definierte Felder haben, können auch in zusätzlichen Konstruktoren mithilfe von Daten Satz Ausdrücken initialisiert werden, wie im folgenden Code gezeigt.
 
@@ -50,7 +50,7 @@ Ein primärer Konstruktor in einer Klasse kann Code in einer `do` Bindung ausfü
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-Die Nebeneffekte des primären Konstruktors werden weiterhin ausgeführt. Aus diesem Grund lautet die Ausgabe wie folgt.
+Die Nebeneffekte des primären Konstruktors werden weiterhin ausgeführt. Aus diesem Grund lautet die Ausgabe wie folgt:
 
 ```console
 Created a person object.
@@ -64,7 +64,7 @@ In anderen Membern geben Sie einen Namen für das aktuelle Objekt in der Definit
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-In zusätzlichen Konstruktoren können Sie auch einen selbst Bezeichner definieren, indem Sie `as` die-Klausel direkt nach den Konstruktorparametern platzieren. Diese Syntax wird im folgenden Beispiel veranschaulicht.
+In zusätzlichen Konstruktoren können Sie auch einen selbst Bezeichner definieren, indem Sie `as` die-Klausel direkt nach den Konstruktorparametern platzieren. Das folgende Beispiel veranschaulicht diese Syntax:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
@@ -74,11 +74,11 @@ Der Name des selbst Bezeichners muss nicht sein `this`. Dies kann ein beliebiger
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>Zuweisen von Werten zu Eigenschaften bei der Initialisierung
 
-Sie können den Eigenschaften eines Klassen Objekts im Initialisierungs Code Werte zuweisen, indem Sie eine Liste der Zuweisungen des Formulars `property = value` an die Argumentliste für einen Konstruktor anhängen. Dies wird im folgenden Codebeispiel gezeigt.
+Sie können den Eigenschaften eines Klassen Objekts im Initialisierungs Code Werte zuweisen, indem Sie eine Liste der Zuweisungen des Formulars `property = value` an die Argumentliste für einen Konstruktor anhängen. Dies wird im folgenden Codebeispiel gezeigt:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-In der folgenden Version des vorherigen Codes wird die Kombination aus normalen Argumenten, optionalen Argumenten und Eigenschafts Einstellungen in einem konstruktorbefehl veranschaulicht.
+In der folgenden Version des vorherigen Codes wird die Kombination aus normalen Argumenten, optionalen Argumenten und Eigenschafts Einstellungen in einem konstruktorbefehl veranschaulicht:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 

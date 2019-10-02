@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417550397582641c5a8fa97c061377beadfb0e6f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: aae38c8c2446ead128925e0e1d910ae12c8f220f
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045580"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736754"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -42,20 +42,20 @@ Anwendungen sind davon abhängig, dass der .NET Framework-Ressourcen-Manager, de
 Dieses Modell hat mehrere Vorzüge:
 
 - Sie können Ressourcen für neue Kulturen inkrementell hinzufügen, nachdem Sie eine Anwendung bereitgestellt haben. Da die aufeinanderfolgende Entwicklung von kulturspezifischen Ressourcen viel Zeit in Anspruch nehmen kann, können Sie so zunächst Ihre Hauptanwendung veröffentlichen und kulturspezifische Ressourcen zu einem späteren Zeitpunkt nachreichen.
-
 - Sie können die Satellitenassembly einer Anwendung aktualisieren oder ändern, ohne die Anwendung erneut kompilieren zu müssen.
-
 - Eine Anwendung muss nur die Satellitenassemblys laden, die die für eine bestimmte Kultur benötigten Ressourcen enthalten. Dadurch kann die Auslastung von Systemressourcen deutlich verringert werden.
 
  Dennoch hat dieses Modell auch Nachteile:
 
 - Sie müssen mehrere Ressourcensätze gleichzeitig verwalten.
-
 - Der anfängliche Kostenaufwand für das Testen einer Anwendung steigt, da Sie mehrere Konfigurationen überprüfen müssen. Beachten Sie, dass es auf lange Sicht einfacher und kostengünstiger wird, eine Kernanwendung mit mehreren Satelliten zu testen, als mehrere internationale Versionen gleichzeitig zu testen und zu verwalten.
 
-## <a name="resource-naming-conventions"></a>Namenskonventionen für Ressourcen
+## <a name="resource-naming-conventions"></a>Benennungs Konventionen für Ressourcen
 
 Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag**  in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
+
+> [!NOTE]
+> Es gibt einige Ausnahmen für die Kultur Namen mit zwei Buchstaben, z. b. `zh-Hans` für Chinesisch (vereinfacht).
 
 > [!NOTE]
 > Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md).
@@ -204,8 +204,8 @@ und für die russische Sprachressource:
 
 Der Quellcode der Anwendung befindet sich in einer Datei mit dem Namen „example1.cs“ oder „example1.vb“. Er beinhaltet das Attribut <xref:System.Resources.NeutralResourcesLanguageAttribute>, um anzugeben, dass sich die Standardanwendungsressource im Unterverzeichnis „fr“ befindet. Er instantiiert den Ressourcen-Manager, ruft den Wert der `Greeting`-Ressource ab und zeigt ihn in der Konsole an.
 
-[!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
-[!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
+[!code-csharp[Conceptual.Resources.Packaging#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
+[!code-vb[Conceptual.Resources.Packaging#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
 Dann können Sie den C#-Quellcode aus der Befehlszeile wie folgt kompilieren:
 

@@ -2,12 +2,12 @@
 title: 'Explizite Felder: Das Val-Schlüsselwort'
 description: Erfahren Sie mehr F# über das Schlüsselwort "Val", das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp zu deklarieren, ohne den Typ zu initialisieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe339e33dae27ae226022a68dd8247d1ab1994b3
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2703d9a2734cfda1614a401ec24c6630ec31b2f1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216476"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736835"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val-Schlüsselwort
 
@@ -28,19 +28,16 @@ Explizite Felder können statisch oder nicht statisch sein. Der *Zugriffsmodifiz
 Das [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) -Attribut ist für explizite Felder in Klassentypen erforderlich, die über einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
 
 - Ein primitiver Typ, der einen Wert von 0 (null) hat.
-
 - Ein Typ, der den Wert 0 (null) unterstützt, entweder als ein normaler Wert, als ein nicht normaler Wert oder als Darstellung eines Werts. Dazu gehören Klassen, Tupel, Datensätze, Funktionen, Schnittstellen, .NET-Verweistypen, der `unit`-Typ und diskriminierte Union-Typen.
-
 - Ein .NET-Werttyp.
-
 - Eine Struktur, deren Felder alle einen Standardwert von 0 (null) unterstützen.
 
 Ein unveränderliches Feld mit der Bezeichnung `someField` verfügt zum Beispiel über ein zugrunde liegendes Feld in der kompilierten .NET-Darstellung, das `someField@` heißt, und Sie greifen auf den gespeicherten Wert mit einer Eigenschaft mit der Bezeichnung `someField` zu.
 
 Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Feld.
 
->[!WARNING]
->Der .NET Framework-Namespace `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
+> [!WARNING]
+> Der .NET Framework-Namespace `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter <xref:System.ComponentModel.DefaultValueAttribute>.
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.
 
@@ -59,7 +56,7 @@ Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Klasse, d
 
 Die Ausgabe lautet `35 22`.
 
-Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Struktur. Da eine Struktur ein Werttyp ist, verfügt sie automatisch über einen Standardkonstruktor, der die Werte der zugehörigen Felder auf 0 (null) festlegt. Daher ist das `DefaultValue`-Attribut nicht erforderlich.
+Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Struktur. Da eine Struktur ein Werttyp ist, verfügt sie automatisch über einen Parameter losen Konstruktor, der die Werte der Felder auf 0 (null) festlegt. Daher ist das `DefaultValue`-Attribut nicht erforderlich.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
