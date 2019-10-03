@@ -4,12 +4,12 @@ description: Eine Anleitung für verschiedene Möglichkeiten, wie Unternehmens A
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a1203ea2fc7089223c03b3a3e02fd3303610272
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577633"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834338"
 ---
 # <a name="architecture-deployment-approaches"></a>Ansätze der Architekturbereitstellung
 
@@ -97,7 +97,7 @@ Zu den Vorteilen von Containern gehören:
 
 Ein Container wird auf einem Container Host ausgeführt (der wiederum auf einem Bare-Metal-Computer oder einem virtuellen Computer ausgeführt werden kann). Mehrere Container oder Instanzen desselben Containers können auf einem einzelnen Host ausgeführt werden. Für ein echtes Failover und Resilienz müssen Container zwischen den Hosts skaliert werden.
 
-Weitere Informationen zu docker-Containern finden Sie unter [Was ist docker](../microservices/container-docker-introduction/docker-defined.md)?
+Weitere Informationen zu docker-Containern finden Sie unter [Was ist docker](../microservices/container-docker-introduction/docker-defined.md)?.
 
 Das Verwalten von Containern auf allen Hosts erfordert in der Regel ein Orchestrierungs Tool wie Kubernetes. Das Konfigurieren und Verwalten von Orchestrierungs Lösungen kann zu weiteren mehr Aufwand und Komplexität von Projekten führen. Glücklicherweise bieten viele cloudanbieter Orchestrierungs Dienste mithilfe von "Pas"-Lösungen, um die Verwaltung von Containern zu vereinfachen.
 

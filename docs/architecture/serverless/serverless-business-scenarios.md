@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie sich mit einem praktischen Ansatz vertraut ma
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cb761524976125c816aae925f0c369eb8c76e7de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926467"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834299"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
@@ -33,7 +33,7 @@ Das vollständige Repository und Anweisungen zum Erstellen der Logik-App finden 
 
 Erfahren Sie, wie Sie eine einfache Server lose Azure-Funktion im Azure-Webportal oder in Visual Studio implementieren. Erstellen Sie einen Client mit xamarin. Forms, der unter Android, IOS und Windows ausgeführt wird. Die Anwendung wird dann für die Verwendung von JavaScript Object Notation (JSON) als Kommunikationsmedium zwischen dem Server und den mobilen Clients mit einem Server losen Back-End verfeinert.
 
-Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client.](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Foto-Mosaik mit Server loser Bild Erkennung generieren
 
