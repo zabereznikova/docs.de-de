@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: f51ac96105f6d6ae0ea5fbd57a0dc50735e470a3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107078"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835308"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -40,14 +40,14 @@ ms.locfileid: "70107078"
 
 - Durchführen von Datums- und Uhrzeitberechnungen, möglicherweise mit einem Ergebnis, das einen einzigen Zeitpunkt eindeutig identifiziert.
 
-.NET enthält die <xref:System.DateTime>Typen <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, und <xref:System.TimeZoneInfo> , die alle zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
+.NET enthält die Typen "<xref:System.DateTime>", "<xref:System.DateTimeOffset>", "<xref:System.TimeSpan>" und "<xref:System.TimeZoneInfo>", die zum Erstellen von Anwendungen verwendet werden können, die mit Datums-und Uhrzeitangaben arbeiten.
 
 > [!NOTE]
-> In diesem Thema wird <xref:System.TimeZone> nicht erläutert, weil seine Funktionalität fast vollständig <xref:System.TimeZoneInfo> in die-Klasse integriert ist. Verwenden Sie nach Möglichkeit die <xref:System.TimeZoneInfo> -Klasse anstelle <xref:System.TimeZone> der-Klasse.
+> In diesem Thema wird <xref:System.TimeZone> nicht erörtert, da seine Funktionalität fast vollständig in der <xref:System.TimeZoneInfo>-Klasse integriert ist. Verwenden Sie, wenn möglich, die Klasse <xref:System.TimeZoneInfo> anstelle der Klasse <xref:System.TimeZone>.
 
 ## <a name="the-datetime-structure"></a>Die DateTime-Struktur
 
-Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Sie enthält eine <xref:System.DateTime.Kind%2A> -Eigenschaft, die eingeschränkte Informationen über die Zeitzone bereitstellt, zu der dieses Datum und die Uhrzeit gehören. Der von der <xref:System.DateTimeKind> -Eigenschaft zurückgegebene <xref:System.DateTime.Kind%2A> Wert zeigt an, ob der <xref:System.DateTime> -Wert eine lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), eine Zeit im UTC-Format (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Sie enthält eine <xref:System.DateTime.Kind%2A>-Eigenschaft, die eingeschränkte Informationen über die Zeitzone bietet, zu der dieses Datum und die Uhrzeit gehören. Der von der <xref:System.DateTimeKind> -Eigenschaft zurückgegebene <xref:System.DateTime.Kind%2A> Wert zeigt an, ob der <xref:System.DateTime> -Wert eine lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), eine Zeit im UTC-Format (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes können:
 
@@ -90,7 +90,7 @@ Ein <xref:System.DateTimeOffset> -Wert ist nicht an eine bestimmte Zeitzone gebu
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-Die Ausgabe zeigt, dass jeder Datums- und Uhrzeitwert in diesem Beispiel zu mindestens drei verschiedenen Zeitzonen gehören kann. Der <xref:System.DateTimeOffset> -Wert "6/10/2007" zeigt, dass, wenn ein Datums- und Uhrzeitwert eine Sommerzeit darstellt, sein Offset von UTC noch nicht einmal unbedingt dem UTC-Basisoffset der Ursprungszeitzone oder dem in seinem Anzeigenamen vorgefundenen Offset von UTC entsprechen muss. Dies bedeutet, dass, weil ein einzelner <xref:System.DateTimeOffset> -Wert nicht eng mit seiner Zeitzone verknüpft ist, er nicht den Übergang einer Zeitzone zur und aus der Sommerzeit wiedergeben kann. Dies kann besonders problematisch sein, wenn ein <xref:System.DateTimeOffset> -Wert mithilfe von Datums- und Uhrzeitberechnungen manipuliert wird. (Eine Erläuterung der Durchführung von Datums- und Uhrzeitberechnungen auf eine Weise, die die Anpassungsregeln einer Zeitzone berücksichtigt, finden Sie unter [Performing arithmetic operations with dates and times](../../../docs/standard/datetime/performing-arithmetic-operations.md).)
+Die Ausgabe zeigt, dass jeder Datums- und Uhrzeitwert in diesem Beispiel zu mindestens drei verschiedenen Zeitzonen gehören kann. Der <xref:System.DateTimeOffset> -Wert "6/10/2007" zeigt, dass, wenn ein Datums- und Uhrzeitwert eine Sommerzeit darstellt, sein Offset von UTC noch nicht einmal unbedingt dem UTC-Basisoffset der Ursprungszeitzone oder dem in seinem Anzeigenamen vorgefundenen Offset von UTC entsprechen muss. Dies bedeutet, dass, weil ein einzelner <xref:System.DateTimeOffset> -Wert nicht eng mit seiner Zeitzone verknüpft ist, er nicht den Übergang einer Zeitzone zur und aus der Sommerzeit wiedergeben kann. Dies kann besonders problematisch sein, wenn ein <xref:System.DateTimeOffset> -Wert mithilfe von Datums- und Uhrzeitberechnungen manipuliert wird. Eine Erläuterung der Durchführung von Datums- und Uhrzeitberechnungen auf eine Weise, die die Anpassungsregeln einer Zeitzone berücksichtigt, finden Sie unter [Durchführen arithmetischer Datums- und Uhrzeitoperationen](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>Die TimeSpan-Struktur
 
@@ -98,9 +98,9 @@ Die <xref:System.TimeSpan> -Struktur stellt ein Zeitintervall dar. Sein zwei typ
 
 - Darstellen des Zeitintervalls zwischen zwei Datums- und Uhrzeitwerten. Beispielsweise gibt die Subtraktion eines <xref:System.DateTime> -Werts von einem anderen einen <xref:System.TimeSpan> -Wert zurück.
 
-- Messen der verstrichenen Zeit. Beispielsweise gibt die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> -Eigenschaft einen <xref:System.TimeSpan> Wert zurück, der das Zeitintervall angibt, das seit dem <xref:System.Diagnostics.Stopwatch> Aufruf einer der Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
+- Messen der verstrichenen Zeit. Die <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType>-Eigenschaft gibt beispielsweise einen <xref:System.TimeSpan>-Wert zurück, der das Zeitintervall angibt, das seit dem Aufruf einer der <xref:System.Diagnostics.Stopwatch>-Methoden, die die verstrichene Zeit zu messen beginnen, verstrichen ist.
 
-Ein <xref:System.TimeSpan> -Wert kann auch als Ersatz für einen <xref:System.DateTime> -Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt der <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> -Eigenschaft und der- <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> Eigenschaft, die <xref:System.TimeSpan> einen Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
+Ein <xref:System.TimeSpan>-Wert kann auch als Ersatz für einen <xref:System.DateTime>-Wert verwendet werden, wenn dieser Wert eine Uhrzeit ohne Verweis auf einen bestimmten Tag widerspiegelt. Diese Verwendung ähnelt den Eigenschaften <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType>, die einen <xref:System.TimeSpan>-Wert zurückgeben, der die Uhrzeit ohne Verweis auf ein Datum darstellt. Beispielsweise kann die <xref:System.TimeSpan> -Struktur verwendet werden, um die täglichen Öffnungszeiten eines Geschäfts darzustellen oder um die Uhrzeit darzustellen, zu der alle regulären Ereignisse auftreten.
 
 Das folgende Beispiel definiert eine `StoreInfo` -Struktur, die <xref:System.TimeSpan> -Objekte für Öffnungszeiten von Geschäften enthält sowie ein <xref:System.TimeZoneInfo> -Objekt, das die Zeitzone des Geschäfts darstellt. Die Struktur enthält außerdem zwei Methoden, `IsOpenNow` und `IsOpenAt`, die angeben, ob das Geschäft zu einem vom Benutzer angegebenen Zeitpunkt geöffnet ist, wobei angenommen wird, dass er sich in der lokalen Zeitzone aufhält.
 

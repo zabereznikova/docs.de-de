@@ -2,12 +2,12 @@
 title: Konfigurieren der Suche in einer Konfigurationsdatei
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: c282767e686ac8a6382268aee8b45eb2d1297f5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad44d0ad1f0d67d84cc42f6b9938d096c245417
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857518"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834761"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurieren der Suche in einer Konfigurationsdatei
 Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche verwendet wurden. In diesem Thema werden die Gruppen beschrieben und jeweils Beispiele für deren Konfiguration angegeben. Nach jedem Abschnitt folgt ein Link zu einer ausführlicheren Dokumentation der einzelnen Bereiche.  
@@ -28,7 +28,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
       </serviceBehaviors>  
 ```  
   
- Nachdem Sie das Verhalten angegeben haben, verweisen sie aus einem <`service`>-Element wie im folgenden Beispiel gezeigt.  
+ Nachdem Sie das Verhalten angegeben haben, verweisen Sie aus einem < `service`->-Element, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <system.serviceModel>  
@@ -46,7 +46,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
   
  Damit ein Dienst erkennbar ist, müssen Sie auch einen Suchendpunkt hinzufügen. Im Beispiel oben wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Standardendpunkt hinzugefügt.  
   
- Wenn Sie ankündigungsendpunkte hinzufügen, müssen Sie auch einen ankündigungslistenerdienst Hinzufügen der <`services`>-Element wie im folgenden Beispiel gezeigt.  
+ Wenn Sie Ankündigungs Endpunkte hinzufügen, müssen Sie dem < `services` >-Element auch einen Ankündigungs-Listenerdienst hinzufügen, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <services>  
@@ -137,7 +137,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </behavior>  
 ```  
   
- Weitere Informationen zu <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> und <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> finden Sie unter [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).  
+ Weitere Informationen zu <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> und <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> finden Sie unter [Übersicht über die WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)-Ermittlung.  
   
 ## <a name="binding-element-configuration"></a>Bindungselementkonfiguration  
  Die Bindungselementkonfiguration eignet sich am besten auf der Clientseite. Sie können die Konfiguration verwenden, um die Suchkriterien anzugeben, mit deren Hilfe die Dienste einer WCF-Clientanwendung ermittelt werden.  Im folgenden Beispiel wird eine benutzerdefinierte Bindung mit dem <xref:System.ServiceModel.Discovery.DiscoveryClient>-Kanal erstellt, und es werden die Suchkriterien angegeben, die einen Typ und einen Bereich enthalten. Außerdem werden Werte für die Eigenschaften <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> und <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> angegeben.  
@@ -177,10 +177,10 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
     </client>  
 ```  
   
- Weitere Informationen zu Suchkriterien finden Sie unter [Ermittlung zu suchen und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Weitere Informationen zur Ermittlung und Bindung Elemente finden Sie unter [WCF Netzwerkermittlung (Übersicht)](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Weitere Informationen zu Suchkriterien finden Sie unter [Discovery Find und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Weitere Informationen zu Such-und Bindungs Elementen finden Sie unter [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md) .  
   
 ## <a name="standard-endpoint-configuration"></a>Konfiguration eines Standardendpunkts  
- Standardendpunkte sind vordefinierte Endpunkte, die Standardwerte für eine oder mehrere Eigenschaften (Adresse, Bindung oder Vertrag) bzw. einen oder mehrere Eigenschaftenwerte aufweisen, die nicht geändert werden können. Im Lieferumfang von .NET 4 sind drei Standardendpunkte für die Suche enthalten: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> und <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Klasse ist ein Standardendpunkt, der für Suchvorgänge über eine UDP-Multicastbindung vorkonfiguriert ist. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ist ein Standardendpunkt, der für das Senden von Ankündigungsnachrichten über eine UDP-Bindung vorkonfiguriert ist. <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist ein Standardendpunkt, der die Suche verwendet, um zur Laufzeit dynamisch nach der Endpunktadresse eines ermittelten Diensts zu suchen.  Standardbindungen werden mit angegeben, dass ein <`endpoint`>-Element, das Kind-Attribut, die den Typ des enthält hinzuzufügenden Standardendpunkts angegeben. Im folgenden Beispiel wird gezeigt, wie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und ein <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> addiert werden.  
+ Standardendpunkte sind vordefinierte Endpunkte, die Standardwerte für eine oder mehrere Eigenschaften (Adresse, Bindung oder Vertrag) bzw. einen oder mehrere Eigenschaftenwerte aufweisen, die nicht geändert werden können. Im Lieferumfang von .NET 4 sind drei Standardendpunkte für die Suche enthalten: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> und <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  Die <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Klasse ist ein Standardendpunkt, der für Suchvorgänge über eine UDP-Multicastbindung vorkonfiguriert ist. <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ist ein Standardendpunkt, der für das Senden von Ankündigungsnachrichten über eine UDP-Bindung vorkonfiguriert ist. <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist ein Standardendpunkt, der die Suche verwendet, um zur Laufzeit dynamisch nach der Endpunktadresse eines ermittelten Diensts zu suchen.  Standard Bindungen werden mit einem < `endpoint` >-Element angegeben, das ein Kind-Attribut enthält, das den Typ des hinzu zufügenden Standard Endpunkts angegeben hat. Im folgenden Beispiel wird gezeigt, wie ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und ein <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> addiert werden.  
   
 ```xml  
 <services>  
@@ -194,7 +194,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </services>  
 ```  
   
- Standardendpunkte werden konfiguriert, einem <`standardEndpoints`> Element. Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> konfigurieren.  
+ Standard Endpunkte werden in einem < `standardEndpoints`->-Element konfiguriert. Das folgende Beispiel zeigt, wie Sie <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> konfigurieren.  
   
 ```xml  
 <standardEndpoints>  
@@ -226,7 +226,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
       </udpDiscoveryEndpoint>  
 ```  
   
- Nachdem Sie die standardendpunktkonfiguration hinzugefügt haben, verweisen auf die Konfiguration in der <`endpoint`>-Element für jeden Endpunkt, wie im folgenden Beispiel gezeigt.  
+ Nachdem Sie die standardend Punkt Konfiguration hinzugefügt haben, verweisen Sie im < `endpoint` >-Element für jeden Endpunkt auf die Konfiguration, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <services>  
@@ -269,4 +269,4 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
 </system.ServiceModel>  
 ```  
   
- Weitere Informationen zu Standardendpunkten finden Sie unter [Standardendpunkte](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+ Weitere Informationen zu Standard Endpunkten finden Sie unter [Standard Endpunkte](standard-endpoints.md).

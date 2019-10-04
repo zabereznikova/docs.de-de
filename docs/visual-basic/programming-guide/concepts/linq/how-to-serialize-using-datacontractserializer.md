@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Serialisieren Sie mit DataContractSerializer (Visual Basic)'
+title: 'Vorgehensweise: Serialisieren mithilfe von DataContractSerializer (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b747f505b0314c082929fbce25a67f79dd4af35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054431"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835164"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Vorgehensweise: Serialisieren Sie mit DataContractSerializer (Visual Basic)
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Vorgehensweise: Serialisieren mithilfe von DataContractSerializer (Visual Basic)
 Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.  
   
 ## <a name="example"></a>Beispiel  
@@ -74,7 +74,7 @@ End Class
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Serialisieren von Objektdiagrammen, die XElement-Objekte (Visual Basic) enthalten.](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [Serialisieren von Objekt Diagrammen, die XElement-Objekte enthalten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

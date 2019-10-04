@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Fehlerbehandlung'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 4958e7914d9feb32dc00d11a215cf8247e9baffc
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3b8e48a74ff7671b942b5499fb3a0b5d0f389d61
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424608"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834703"
 ---
 # <a name="how-to-error-handling"></a>Vorgehensweise: Fehlerbehandlung
 
@@ -79,7 +79,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </backupLists>
     ```
 
-4. Definieren Sie die Filtertabelle, in der dem Filter der deadDestination-Endpunkt und die Liste der Sicherungsendpunkte zugeordnet wird.  Zuerst versucht der Routingdienst, die Nachricht an den Zielendpunkt zu senden, der dem Filter zugeordnet ist. Da deadDestination eine Adresse enthält, die nicht auf einen ausgeführten Dienst verweist, führt dies zu einem Netzwerkfehler. Der Routingdienst versucht dann zum Senden der Nachricht an den Endpunkt in der BackupEndpointList angegeben.
+4. Definieren Sie die Filtertabelle, in der dem Filter der deadDestination-Endpunkt und die Liste der Sicherungsendpunkte zugeordnet wird.  Zuerst versucht der Routingdienst, die Nachricht an den Zielendpunkt zu senden, der dem Filter zugeordnet ist. Da deadDestination eine Adresse enthält, die nicht auf einen ausgeführten Dienst verweist, führt dies zu einem Netzwerkfehler. Der Routing Dienst versucht dann, die Nachricht an den in backupodpointlist angegebenen Endpunkt zu senden.
 
     ```xml
     <filterTables>
@@ -93,7 +93,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
           </filterTables>
     ```
 
-5. Um eingehende Nachrichten anhand des in der Filtertabelle enthaltenen Filters auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.  Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten.
+5. Um eingehende Nachrichten anhand des in der Filtertabelle enthaltenen Filters auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.  Im folgenden Beispiel wird die Zuordnung von "filterTable1" zu den Dienst Endpunkten veranschaulicht.
 
     ```xml
     <behaviors>
@@ -108,7 +108,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 
 ## <a name="example"></a>Beispiel
 
-Es folgt eine vollständige Auflistung der Konfigurationsdatei.
+Im folgenden finden Sie eine komplette Liste der Konfigurationsdatei:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

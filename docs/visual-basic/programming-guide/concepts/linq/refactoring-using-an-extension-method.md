@@ -2,15 +2,15 @@
 title: Refactoring mit einer Erweiterungsmethode (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 360b723fd8ef63338213dfcaa2c00f659ba3e74a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6ed0e81a7139411507d8f3c16b34a50b2e7aebf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666082"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834904"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring mit einer Erweiterungsmethode (Visual Basic)
-Dieses Beispiel baut auf dem vorherigen Beispiel, [Abrufen des Texts der Absätze (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion, die implementiert wird, als eine Erweiterungsmethode.  
+Dieses Beispiel baut auf dem vorherigen Beispiel auf und [Ruft den Text der Absätze (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)ab, indem die Verkettung von Zeichen folgen mit einer reinen Funktion, die als Erweiterungsmethode implementiert ist, umgestaltet wird.  
   
  Im vorherigen Beispiel wurde zum Verketten mehrerer Zeichenfolgen zu einer Zeichenfolge der <xref:System.Linq.Enumerable.Aggregate%2A>-Standardabfrageoperator verwendet. Bequemer ist es aber, dafür eine Erweiterungsmethode zu schreiben, weil die Abfrage dadurch kleiner und einfacher wird.  
   
@@ -19,7 +19,7 @@ Dieses Beispiel baut auf dem vorherigen Beispiel, [Abrufen des Texts der Absätz
   
  Das Beispiel enthält mehrere Überladungen der `StringConcatenate`-Methode.  
   
- Finden Sie Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel in [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Erstellen des Office Open XML-Quelldokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -82,7 +82,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), 
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 onetwothree  
 one:two:three:  
 123  
@@ -216,9 +216,9 @@ Module Module1
 End Module  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe bei Anwendung auf das Dokument, die in beschriebenen [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ In diesem Beispiel wird die folgende Ausgabe erzeugt, wenn Sie auf das Dokument angewendet wird, [das unter Erstellen des Open XML-Quelldokuments (Visual Basic)](creating-the-source-office-open-xml-document.md)beschrieben wird.
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -245,5 +245,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refactoring in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

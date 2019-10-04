@@ -2,12 +2,12 @@
 title: Erstellen eines AJAX-aktivierten WCF-Dienstanbieter und eines ASP.NET-Clients in Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 1f5c9eb1750b0df28836f147d5b4be1b223bb52e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053693"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834790"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Vorgehensweise: Erstellen Sie einen AJAX-fähigen WCF-Dienst und einen ASP.NET-Client, der auf den Dienst zugreift.
 
@@ -104,9 +104,9 @@ In diesem Thema wird gezeigt, wie Sie mit Visual Studio einen AJAX-fähigen Wind
 
 ## <a name="run-the-program"></a>Ausführen des Programms
 
-Stellen Sie sicher, dass *WebForm1. aspx* den Fokus besitzt, und drücken Sie dann die Schaltfläche **Start** , um den WebClient zu starten. Die Schaltfläche hat ein grünes Dreieck und sagt etwas wie **IIS Express (Microsoft Edge)** . Alternativ können Sie **F5**drücken. Klicken Sie auf den **Preis der drei Sandwiches** -Schaltfläche, um die erwartete Ausgabe von "3,75" zu generieren.
+Stellen Sie sicher, dass *WebForm1. aspx* den Fokus besitzt, und drücken Sie dann die Schaltfläche **Start** , um den WebClient zu starten. Die Schaltfläche hat ein grünes Dreieck und sagt etwas wie **IIS Express (Microsoft Edge)** . Alternativ können Sie <kbd>F5</kbd>drücken. Klicken Sie auf den **Preis der drei Sandwiches** -Schaltfläche, um die erwartete Ausgabe von "3,75" zu generieren.
 
-## <a name="example-code"></a>Beispielcode
+## <a name="example"></a>Beispiel
 
 Im folgenden finden Sie den vollständigen Code in der Datei *CostService.svc.cs* :
 
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-Im folgenden finden Sie den vollständigen Inhalt der Seite " *WebForm1. aspx* ":
+Im folgenden finden Sie den vollständigen Inhalt der Seite *WebForm1. aspx* :
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>

@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Arbeiten Sie mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)'
+title: 'Vorgehensweise: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9773b926d16b51ea912792b0f348a26a9a3c7a29
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614144"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835082"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Vorgehensweise: Arbeiten Sie mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Vorgehensweise: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)
 Es ist häufig sinnvoll, verschiedene Datenstrukturen in XML und aus XML in andere Datenstrukturen umzuwandeln. In diesem Thema wird eine konkrete Implementierung dieser allgemeinen Herangehensweise gezeigt, bei der ein <xref:System.Collections.Generic.Dictionary%602> in XML umgewandelt und dann wieder zurückgewandelt wird.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet XML-Literale und eine Abfrage in einem eingebetteten Ausdruck an. Die Abfrage projiziert neue <xref:System.Xml.Linq.XElement> Objekte, die dann zum neuen Inhalt für die `Root` <xref:System.Xml.Linq.XElement> Objekt.  
+ In diesem Beispiel werden XML-Literale und eine Abfrage in einem eingebetteten Ausdruck verwendet. Die Abfrage projiziert neue <xref:System.Xml.Linq.XElement>-Objekte, die dann zum neuen Inhalt für das `Root` <xref:System.Xml.Linq.XElement>-Objekt werden.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -63,7 +63,7 @@ Next
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  

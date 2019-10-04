@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58249a0e080e045223bdaf170f2eaedb67fc0dea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046385"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834549"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 
@@ -36,7 +36,7 @@ Die CLR-Methodenereignisse werden weiter in Folgendes unterteilt:
 
 ## <a name="clr-method-events"></a>CLR-Methodenereignisse
 
-Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. Weitere Informationen finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md).
 
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
@@ -45,7 +45,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informa
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|
 |`NGENRundownKeyword` (0x20)-Rundownanbieter|Information (4)|
 
-Die folgende Tabelle zeigt die Ereignisinformationen an.
+Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 |event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
@@ -54,7 +54,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an.
 |`MethodDCStart_V1`|137|Listet Methoden während eines Startrundowns auf.|
 |`MethodDCEnd_V1`|138|Listet Methoden während eines Endrundowns auf.|
 
-Die folgende Tabelle zeigt die Ereignisdaten an.
+Die folgende Tabelle zeigt die Ereignisdaten an:
 
 |Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
@@ -74,7 +74,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 
 Diese Ereignisse werden nur unter dem Rundownanbieter ausgelöst. Sie bezeichnen das Ende der Methodenenumeration während eines Start- oder Endrundowns. (Das heißt, sie werden ausgelöst, wenn eins der Schlüsselwörter `NGENRundownKeyword`, `JitRundownKeyword`, `LoaderRundownKeyword`oder `AppDomainResourceManagementRundownKeyword` aktiviert wird.)
 
-Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
@@ -82,7 +82,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Information (4)|
 |`NGENRundownKeyword` (0x20)-Rundownanbieter|Information (4)|
 
-Die folgende Tabelle zeigt die Ereignisinformationen an.
+Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 |event|Ereignis-ID|Beschreibung|
 |-----------|--------------|----------------|
@@ -91,7 +91,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an.
 |`DCEndInit_V1`|148|Wird vor dem Start der Enumeration während eines Endrundowns gesendet.|
 |`DCEndComplete_V1`|146|Wird am Ende der Enumeration während eines Endrundowns gesendet.|
 
-Die folgende Tabelle zeigt die Ereignisdaten an.
+Die folgende Tabelle zeigt die Ereignisdaten an:
 
 |Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
@@ -103,7 +103,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 
 ## <a name="clr-method-verbose-events"></a>Ausführliche CLR-Methodenereignisse
 
-Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
@@ -112,7 +112,7 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Ausführlich (5)|
 |`NGENRundownKeyword` (0x20)-Rundownanbieter|Ausführlich (5)|
 
-Die folgende Tabelle zeigt die Ereignisinformationen an.
+Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 |event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
@@ -121,7 +121,7 @@ Die folgende Tabelle zeigt die Ereignisinformationen an.
 |`MethodDCStartVerbose_V1`|141|Listet Methoden während eines Startrundowns auf.|
 |`MethodDCEndVerbose_V1`|142|Listet Methoden während eines Endrundowns auf.|
 
-Die folgende Tabelle zeigt die Ereignisdaten an.
+Die folgende Tabelle zeigt die Ereignisdaten an:
 
 |Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|
@@ -142,7 +142,7 @@ Die folgende Tabelle zeigt die Ereignisdaten an.
 
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted-Ereignis
 
-Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
+Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:
 
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|
 |-----------------------------------|-----------|
@@ -151,13 +151,13 @@ Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.
 |`JitRundownKeyword` (0x10)-Rundownanbieter|Ausführlich (5)|
 |`NGENRundownKeyword` (0x20)-Rundownanbieter|Ausführlich (5)|
 
-Die folgende Tabelle zeigt die Ereignisinformationen an.
+Die folgende Tabelle zeigt die Ereignisinformationen an:
 
 |event|Ereignis-ID|Beschreibung|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|Wird ausgelöst, wenn eine Methode JIT-kompiliert wird.|
 
-Die folgende Tabelle zeigt die Ereignisdaten an.
+Die folgende Tabelle zeigt die Ereignisdaten an:
 
 |Feldname|Datentyp|Beschreibung|
 |----------------|---------------|-----------------|

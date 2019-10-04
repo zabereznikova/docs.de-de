@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dynamisches Update'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 0a103e980d0d1be08f3ae6850c6af64405582c7b
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972078"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834722"
 ---
 # <a name="how-to-dynamic-update"></a>Vorgehensweise: Dynamisches Update
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um die Routingkonfiguration zu erstellen und dynamisch zu aktualisieren. In diesem Beispiel wird die ursprüngliche Routingkonfiguration aus der Konfigurationsdatei abgerufen, die alle Nachrichten an den regularCalc-Rechnerdienst weiterleitet. Die Konfiguration wird anschließend jedoch programmgesteuert aktualisiert, um den Zielendpunkt in den roundingCalc-Dienst zu ändern.  
@@ -163,7 +163,8 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     > Da die Methode zum Bereitstellen einer neuen RoutingConfiguration in der RoutingExtension-Diensterweiterung enthalten ist, können neue RoutingConfiguration-Objekte überall im WCF-Erweiterbarkeitsmodell bereitgestellt werden, sofern das Modell über einen Verweis auf ServiceHost oder ServiceExtensions (z. B. in einer anderen ServiceExtension) verfügt oder diesen abrufen kann.
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine vollständige Liste der Konsolenanwendung, die in diesem Beispiel verwendet wird.  
+
+Im folgenden finden Sie eine komplette Liste der Konsolenanwendung, die in diesem Beispiel verwendet wird:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -241,7 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine vollständige Liste der Konfigurationsdatei, die in diesem Beispiel verwendet wird.  
+ 
+Im folgenden finden Sie eine komplette Liste der Konfigurationsdatei, die in diesem Beispiel verwendet wird:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,4 +300,4 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Routingdienste](../samples/routing-services.md)

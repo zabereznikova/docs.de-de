@@ -1,20 +1,20 @@
 ---
-title: Einführung in die XML-Literalen in Visual Basic2
+title: Einführung in XML-Literale in Visual basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61834274"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834992"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Einführung in XML-Literale in Visual Basic
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in Visual Basic.  
   
- Weitere Informationen zur Verwendung von der Ergebnisse von LINQ-Abfragen als Inhalt für eine XML-Struktur finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Informationen zur Verwendung der Ergebnisse von LINQ-Abfragen als Inhalt für eine XML-Struktur finden Sie unter [funktionale Konstruktion (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Weitere Informationen zu XML-Literale in Visual Basic, finden Sie unter [Übersicht über die von LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Weitere Informationen zu XML-Literalen in Visual Basic finden Sie unter [Übersicht über LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Erstellen von XML-Strukturen  
  Im folgenden Beispiel wird gezeigt, wie Sie ein <xref:System.Xml.Linq.XElement>, in diesem Fall `contacts`, erstellen können.  
@@ -190,7 +190,7 @@ Console.WriteLine("Child2 was {0}", _
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  

@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Stream von XML-Fragmenten aus einem XmlReader (Visual Basic)'
+title: 'Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: 8c5aa1afff983f3763bbf7c74268eba622df7751
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3edb9cbbe9b649a5b4d232a3937e6f322b4a6b7d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614895"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835144"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Vorgehensweise: Stream von XML-Fragmenten aus einem XmlReader (Visual Basic)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (Visual Basic)
 Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden. In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.  
   
  Eine der effektivsten Möglichkeiten, einen <xref:System.Xml.XmlReader> zum Lesen von <xref:System.Xml.Linq.XElement>-Objekten zu verwenden, besteht darin, eine eigene benutzerdefinierte Achsenmethode zu schreiben. Achsenmethoden geben in der Regel eine Auflistung, z. B. die <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurück, wie dies im Beispiel in diesem Thema dargestellt ist. Nachdem Sie in der benutzerdefinierten Achsenmethode durch Aufrufen der <xref:System.Xml.Linq.XNode.ReadFrom%2A>-Methode das XML-Fragment erstellt haben, geben Sie die Auflistung mit `yield return` zurück. Auf diese Weise versehen Sie Ihre benutzerdefinierte Achsenmethode mit der Semantik für eine verzögerte Ausführung.  
@@ -18,9 +18,9 @@ Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte X
   
  Wenn Sie eine Teilstruktur erstellen möchten, können Sie einen <xref:System.Xml.XmlReader> instanziieren, den Reader auf dem Knoten positionieren, der in eine <xref:System.Xml.Linq.XElement>-Struktur umgewandelt werden soll, und dann das <xref:System.Xml.Linq.XElement>-Objekt erstellen.  
   
- Unter [Vorgehensweise: Stream von XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) enthält Informationen und ein Beispiel dazu, wie komplexere Dokumente gestreamt.  
+ Unter [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Header Informationen (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) enthält Informationen und ein Beispiel für das Streamen eines komplexeren Dokuments.  
   
- Unter [Vorgehensweise: Führen Sie Streaming Transform of Large XML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) enthält ein Beispiel mit LINQ to XML extrem große XML-Dokumenten zu transformieren, Beibehaltung einer geringen speicherbeanspruchung.  
+ Unter [Vorgehensweise: Durchführen einer streamingtransformation großer XML-Dokumente (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) ist ein Beispiel für die Verwendung von LINQ to XML zum Transformieren sehr großer XML-Dokumente und gleichzeitiger Beibehaltung einer geringen Speicher Beanspruchung enthalten.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Zum Abfragen kann eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage verwendet werden. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  
@@ -138,7 +138,7 @@ End Class
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 bbb  
 ccc  
 ```  
@@ -147,5 +147,5 @@ ccc
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
-- [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Exemplarische Vorgehensweise: Implementieren von IEnumerable (of T) in Visual Basic @ no__t-0
+- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

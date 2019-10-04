@@ -1,15 +1,15 @@
 ---
-title: Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen ein "XElement" (Visual Basic)
+title: Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen eines "XElement" (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 500b1e58663ef6aca052850ad7994687e2cc36f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4aba08319abeb21de79b3b8511044b8272402984
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766492"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834938"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen ein "XElement" (Visual Basic)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Vergleich zwischen dem Abfragen eines "XDocument" und dem Abfragen eines "XElement" (Visual Basic)
 Das Schreiben von Abfragen für Dokumente, die über <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> geladen werden, unterscheidet sich geringfügig vom Schreiben von Abfragen für Dokumente, die über <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> geladen werden.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Vergleich zwischen "XDocument.Load" und "XElement.Load"  
@@ -38,7 +38,7 @@ Next
   
  Wie zu erwarten, erzeugt dieses Beispiel die folgende Ausgabe:  
   
-```  
+```console
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -69,7 +69,7 @@ Next
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -104,7 +104,7 @@ Next
   
  Diese Abfrage ist jetzt genauso schnell wie die Abfrage für die Struktur mit dem <xref:System.Xml.Linq.XElement> als Stammelement. Das Beispiel führt zur folgenden Ausgabe:  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  
@@ -114,4 +114,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

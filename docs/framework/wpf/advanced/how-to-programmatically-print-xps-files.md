@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 28197b22b379b84c34e7fdf8991472e082c8cb42
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d44f372fe5ef9633e91d8e46cca9e9a0967b9615
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855746"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834575"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Vorgehensweise: Programmgesteuertes Drucken von XPS-Dateien
 
@@ -27,7 +27,7 @@ Eine weitere Möglichkeit zum Drucken von XPS ist die <xref:System.Windows.Contr
 
 Die wichtigsten Schritte bei der Verwendung der Methode mit <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> drei Parametern lauten wie folgt. Das folgende Beispiel enthält Details.
 
-1. Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. (Weitere Informationen zu XPSDrv finden Sie unter [Übersicht über das Drucken](printing-overview.md).)
+1. Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. Weitere Informationen zu XPSDrv finden Sie unter Übersicht über das [Drucken](printing-overview.md) .
 
 2. Wenn es sich bei dem Drucker nicht um einen XPSDrv-Drucker handelt, legen Sie das Apartment des Threads auf Singlethread fest.
 

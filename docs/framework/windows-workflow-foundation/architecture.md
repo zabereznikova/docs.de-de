@@ -2,15 +2,15 @@
 title: Architektur von Windows-Workflows
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: d341ebd354d5324c5ad71436837cb85737f46c08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605894"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834864"
 ---
 # <a name="windows-workflow-architecture"></a>Architektur von Windows-Workflows
-Windows Workflow Foundation (WF), löst die Abstraktionsebene zum Entwickeln von interaktiven lang andauernden Anwendungen aus. Arbeitseinheiten werden als Aktivitäten gekapselt. Aktivitäten werden in einer Umgebung ausgeführt, die Funktionen für Flusssteuerung, Ausnahmebehandlung, Fehlerweitergabe, Persistenz von Zustandsdaten, Laden und Entladen von aktuell verarbeiteten Workflows aus dem Arbeitsspeicher, Nachverfolgung und Transaktionsfluss bietet.  
+Windows Workflow Foundation (WF) erhöht die Abstraktions Ebene für die Entwicklung interaktiver Anwendungen mit langer Ausführungszeit. Arbeitseinheiten werden als Aktivitäten gekapselt. Aktivitäten werden in einer Umgebung ausgeführt, die Funktionen für Flusssteuerung, Ausnahmebehandlung, Fehlerweitergabe, Persistenz von Zustandsdaten, Laden und Entladen von aktuell verarbeiteten Workflows aus dem Arbeitsspeicher, Nachverfolgung und Transaktionsfluss bietet.  
   
 ## <a name="activity-architecture"></a>Aktivitätsarchitektur  
  Aktivitäten werden als CLR-Typen entwickelt, die von <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> oder <xref:System.Activities.NativeActivity> abgeleitet werden oder aber von den entsprechenden Varianten, die einen Wert zurückgeben: <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601> oder <xref:System.Activities.NativeActivity%601>. Das Entwickeln von Aktivitäten, die von <xref:System.Activities.Activity> abgeleitet werden, ermöglicht dem Benutzer, bereits vorhandene Aktivitäten zusammenzustellen, um so schnell Arbeitseinheiten zu erstellen, die in der Workflowumgebung ausgeführt werden. <xref:System.Activities.CodeActivity> hingegen ermöglicht das Schreiben von Ausführungslogik in verwaltetem Code mit <xref:System.Activities.CodeActivityContext>, hauptsächlich für den Zugriff auf Aktivitätsargumente. <xref:System.Activities.AsyncCodeActivity> ist mit <xref:System.Activities.CodeActivity> vergleichbar, außer dass sie verwendet werden kann, um asynchrone Aufgaben zu implementieren. Das Entwickeln von Aktivitäten, die von <xref:System.Activities.NativeActivity> abgeleitet werden, ermöglicht Benutzern, über den <xref:System.Activities.NativeActivityContext> auf die Laufzeit zuzugreifen, um Funktionen wie die Planung untergeordneter Elemente, das Erstellen von Lesezeichen, das Aufrufen asynchroner Arbeit, das Registrieren von Transaktionen und viele mehr zu nutzen.  
@@ -41,12 +41,12 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
  [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>Aktivitätslebenszyklus  
- Eine Instanz einer Aktivität startet mit dem <xref:System.Activities.ActivityInstanceState.Executing>-Zustand. Wenn keine Ausnahmen auftreten, verbleibt die Instanz in diesem Zustand, bis die Ausführung aller untergeordneten Aktivitäten beendet wurde und alle weiteren ausstehenden Arbeitsvorgänge (z. B. <xref:System.Activities.Bookmark>-Objekte) abgeschlossen sind. An diesem Punkt geht die Instanz in den <xref:System.Activities.ActivityInstanceState.Closed>-Zustand über. Das übergeordnete Element einer Aktivitätsinstanz kann den Abbruch eines untergeordneten Elements anfordern. Wenn das untergeordnete Element abgebrochen werden kann, wird es mit dem <xref:System.Activities.ActivityInstanceState.Canceled>-Zustand abgeschlossen. Wenn während der Ausführung eine Ausnahme ausgelöst wird, versetzt die Laufzeit die Aktivität in den <xref:System.Activities.ActivityInstanceState.Faulted>-Zustand und gibt die Ausnahme an die Kette übergeordneter Aktivitäten weiter. Dies sind die drei Abschlusszustände einer Aktivität:  
+ Eine Instanz einer Aktivität startet mit dem <xref:System.Activities.ActivityInstanceState.Executing>-Zustand. Wenn keine Ausnahmen auftreten, verbleibt die Instanz in diesem Zustand, bis die Ausführung aller untergeordneten Aktivitäten beendet wurde und alle weiteren ausstehenden Arbeitsvorgänge (z. B. <xref:System.Activities.Bookmark>-Objekte) abgeschlossen sind. An diesem Punkt geht die Instanz in den <xref:System.Activities.ActivityInstanceState.Closed>-Zustand über. Das übergeordnete Element einer Aktivitätsinstanz kann den Abbruch eines untergeordneten Elements anfordern. Wenn das untergeordnete Element abgebrochen werden kann, wird es mit dem <xref:System.Activities.ActivityInstanceState.Canceled>-Zustand abgeschlossen. Wenn während der Ausführung eine Ausnahme ausgelöst wird, versetzt die Laufzeit die Aktivität in den <xref:System.Activities.ActivityInstanceState.Faulted>-Zustand und gibt die Ausnahme an die Kette übergeordneter Aktivitäten weiter. Im folgenden sind die drei Vervollständigungs Zustände einer Aktivität aufgeführt:
   
-- **Geschlossen:** Die Aktivität hat alle Arbeitsvorgänge abgeschlossen und wurde beendet.  
+- **Geschlossen** Die Aktivität hat ihre Arbeit abgeschlossen und wurde beendet.  
   
-- **Abgebrochen:** Die Aktivität wurde ordnungsgemäß seine Arbeit abgebrochen und beendet. Für die Arbeit wird kein expliziter Rollback ausgeführt, wenn dieser Zustand eintritt.  
+- **Hob** Die Aktivität hat ihre Arbeit ordnungsgemäß abgebrochen und wurde beendet. Für die Arbeit wird kein expliziter Rollback ausgeführt, wenn dieser Zustand eintritt.  
   
-- **Fehler:** Die Aktivität hat einen Fehler festgestellt und wurde ohne Abschließen der Arbeit beendet.  
+- **Faulted** Die Aktivität hat einen Fehler ermittelt und wurde beendet, ohne die Arbeit abzuschließen.  
   
  Beim dauerhaften Speichern und Entladen verbleiben Aktivitäten im <xref:System.Activities.ActivityInstanceState.Executing>-Zustand.

@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (Visual Basic)'
+title: 'Vorgehensweise: Schreiben einer LINQ to XML Achsen Methode (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87c068c3a59f1ca8e62c092bf4841f50a26a7f6a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614595"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835051"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Vorgehensweise: Schreiben einer LINQ to XML Achsen Methode (Visual Basic)
 Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen. Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt. Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.  
   
 ## <a name="example"></a>Beispiel  
@@ -204,7 +204,7 @@ End Module
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
 1999-10-20  
 /PurchaseOrders/PurchaseOrder[1]/Items/Item[2]/ShipDate  
@@ -217,4 +217,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

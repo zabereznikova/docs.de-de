@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (Visual Basic)'
+title: 'Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML Bäumen in einem XSLT-Format (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: 9ebff2276fc9f574989530fdb07a0d0875ff74a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa0561ecc26139d191107521a8bb5fc2889332cd
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648814"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835073"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML Bäumen in einem XSLT-Format (Visual Basic)
 Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu ermöglichen.  
   
  Einige XML-Dokumente sind "dokumentorientiert mit gemischtem Inhalt". Bei solchen Dokumenten kennen Sie nicht unbedingt die Form der untergeordneten Knoten eines Elements. So könnte z. B. ein Knoten, der Text enthält, wie folgt aussehen:  
@@ -18,7 +18,7 @@ Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu e
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. Dieser Ansatz führt zu einer Reihe anderer Situationen: z. B. Seiten, die eine Vielzahl von untergeordneten Elementen, z. B. normale Absätze, Absätze mit Aufzählungszeichen und Bitmaps enthalten können. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.  
+ Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. Diese Vorgehensweise wird auf eine Reihe anderer Situationen ausgedehnt: z. b. Seiten, die eine Vielzahl untergeordneter Elemente enthalten können, z. b. reguläre Absätze, Absätze mit aufgelistete Absätze und Bitmaps. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.  
   
  Wenn Sie Elemente in einer Struktur transformieren möchten und nicht wirklich viel über die untergeordneten Elemente der Elemente wissen, die transformiert werden sollen, bietet sich die Verwendung von Anmerkungen als effektiver Ansatz an.  
   
@@ -135,7 +135,7 @@ End Module
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root>  
@@ -158,33 +158,23 @@ After Transform
 ## <a name="effecting-the-transform"></a>Ausführen der Transformation  
  Eine kleine Funktion, `XForm`, erstellt aus der ursprünglichen, mit Anmerkungen versehenen Struktur eine neue transformierte Struktur.  
   
-- Der Pseudocode für die Funktion ist recht einfach:  
+Der Pseudocode für die Funktion ist recht einfach:  
   
-```  
-The function takes an XElement as an argument and returns an XElement.   
-If an element has an XElement annotation, then  
-    Return a new XElement  
-        The name of the new XElement is the annotation element's name.  
-        All attributes are copied from the annotation to the new node.  
-        All child nodes are copied from the annotation, with the  
-            exception that the special node xf:ApplyTransforms is  
-            recognized, and the source element's child nodes are  
-            iterated. If the source child node is not an XElement, it  
-            is copied to the new tree. If the source child is an  
-            XElement, then it is transformed by calling this function  
-            recursively.  
-If an element is not annotated  
-    Return a new XElement  
-        The name of the new XElement is the source element's name  
-        All attributes are copied from the source element to the  
-            destination's element.  
-        All child nodes are copied from the source element.  
-        If the source child node is not an XElement, it is copied to  
-            the new tree. If the source child is an XElement, then it  
-            is transformed by calling this function recursively.  
-```  
-  
- Es folgt die Implementierung dieser Funktion:  
+> Die Funktion nimmt ein XElement als Argument an und gibt ein XElement zurück.
+>   
+> Wenn ein Element über eine XElement-Anmerkung verfügt, geben Sie ein neues XElement zurück:  
+>    - Der Name des neuen XElement-Elements ist der Name des Anmerkung-Elements.  
+>    - Alle Attribute werden aus der Anmerkung in den neuen Knoten kopiert.  
+>    - Alle untergeordneten Knoten werden aus der-Anmerkung kopiert, mit der Ausnahme, dass der besondere Knoten XF: applytransformationen erkannt wird und die untergeordneten Knoten des Quell Elements durchlaufen werden. Wenn der untergeordnete Quellknoten kein XElement ist, wird er in die neue Struktur kopiert. Wenn das untergeordnete Quell Element ein XElement ist, wird es transformiert, indem diese Funktion rekursiv aufgerufen wird.
+>  
+> Wenn ein Element nicht mit Anmerkungen versehen ist:  
+>    - Zurückgeben eines neuen XElement  
+>        - Der Name des neuen XElement-Elements ist der Name des Quell Elements.  
+>        - Alle Attribute werden aus dem Quell Element in das-Element des Ziels kopiert.  
+>        - Alle untergeordneten Knoten werden aus dem Quell Element kopiert.  
+>        - Wenn der untergeordnete Quellknoten kein XElement ist, wird er in die neue Struktur kopiert. Wenn das untergeordnete Quell Element ein XElement ist, wird es transformiert, indem diese Funktion rekursiv aufgerufen wird.  
+
+Im folgenden finden Sie die Implementierung dieser Funktion:  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -346,7 +336,7 @@ End Module
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -380,4 +370,4 @@ After Transform
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

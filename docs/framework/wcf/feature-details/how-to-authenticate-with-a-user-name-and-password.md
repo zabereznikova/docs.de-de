@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e1db413dfdcfa18403e1b67361cea710b203fe5d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045956"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834732"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort
 
-In diesem Thema wird veranschaulicht, wie ein Windows Communication Foundation (WCF)-Dienst zum Authentifizieren eines Clients mit einem Benutzernamen und einem Kennwort für Windows-Domäne aktiviert wird. Es wird davon ausgegangen, dass Sie über einen funktionsfähigen selbst gehosteten WCF-Dienst verfügen. Ein Beispiel für das Erstellen eines selbst gehosteten WCF-Dienstanbieter finden Sie unter " [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)". In diesem Thema wird davon ausgegangen, dass der Dienst im Code konfiguriert ist. Ein Beispiel für die Konfiguration eines ähnlichen Diensts mithilfe einer Konfigurationsdatei finden Sie unter [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+In diesem Thema wird veranschaulicht, wie ein Windows Communication Foundation (WCF)-Dienst zum Authentifizieren eines Clients mit einem Benutzernamen und einem Kennwort für Windows-Domäne aktiviert wird. Es wird davon ausgegangen, dass Sie über einen funktionsfähigen selbst gehosteten WCF-Dienst verfügen. Ein Beispiel für das Erstellen eines selbst gehosteten WCF-Dienstanbieter finden Sie unter " [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)". In diesem Thema wird davon ausgegangen, dass der Dienst im Code konfiguriert ist. Ein Beispiel für die Konfiguration eines ähnlichen Diensts mithilfe einer Konfigurationsdatei finden Sie unter [Message Security User Name](../samples/message-security-user-name.md).
 
 Um einen Dienst zu konfigurieren, der seine Clients mit dem Benutzernamen und Kennwort einer Windows-Domäne authentifiziert, verwenden Sie die <xref:System.ServiceModel.WSHttpBinding> und legen die `Security.Mode`-Eigenschaft auf `Message` fest. Darüber hinaus müssen Sie ein X.509-Zertifikat angeben, das zum Verschlüsseln des Benutzernamens und Kennworts verwendet wird, während diese vom Client an den Dienst gesendet werden.
 
@@ -25,14 +25,14 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
 
     ```csharp
     // ...
-    WSHttpBinding userNameBinding = new WSHttpBinding();
+    var userNameBinding = new WSHttpBinding();
     userNameBinding.Security.Mode = SecurityMode.Message;
     userNameBinding.Security.Message.ClientCredentialType = MessageCredentialType.UserName;
     svcHost.AddServiceEndpoint(typeof(IService1), userNameBinding, "");
     // ...
     ```
 
-2. Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat verwendet, das von der Datei "Setup. bat" aus dem Beispiel für den [Nachrichten Sicherheits Benutzernamen](../../../../docs/framework/wcf/samples/message-security-user-name.md) erstellt wurde:
+2. Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat verwendet, das von der Datei "Setup. bat" aus dem Beispiel für den [Nachrichten Sicherheits Benutzernamen](../samples/message-security-user-name.md) erstellt wurde:
 
     ```csharp
     // ...
@@ -44,7 +44,7 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>So rufen Sie den Dienst auf, der den Benutzernamen und das Kennwort übergibt
 
-1. Die Clientanwendung muss den Benutzer zur Eingabe von Benutzername und Kennwort auffordern. Der folgende Code fordert den Benutzer zur Eingabe von Benutzername und Kennwort auf.
+1. Die Clientanwendung muss den Benutzer zur Eingabe von Benutzername und Kennwort auffordern. Der folgende Code fragt den Benutzer nach Benutzername und Kennwort:
 
     > [!WARNING]
     > Dieser Code sollte nicht in Produktionssystemen verwendet werden, da das Kennwort bei der Eingabe sichtbar ist.
@@ -57,27 +57,26 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
         username = Console.ReadLine();
         Console.WriteLine("   Enter password:");
         password = Console.ReadLine();
-        return;
     }
     ```
 
-2. Erstellen Sie eine Instanz des Clientproxys, indem Sie die Anmeldeinformationen des Clients wie im folgenden Code dargestellt angeben:
+2. Erstellen Sie eine Instanz des Client Proxys, indem Sie die Anmelde Informationen des Clients angeben, wie im folgenden Code gezeigt:
 
     ```csharp
     string username;
     string password;
 
-    // Instantiate the proxy
-    Service1Client proxy = new Service1Client();
+    // Instantiate the proxy.
+    var proxy = new Service1Client();
 
-    // Prompt the user for username & password
+    // Prompt the user for username & password.
     GetPassword(out username, out password);
 
-    // Set the user’s credentials on the proxy
+    // Set the user's credentials on the proxy.
     proxy.ClientCredentials.UserName.UserName = username;
     proxy.ClientCredentials.UserName.Password = password;
 
-    // Treat the test certificate as trusted
+    // Treat the test certificate as trusted.
     proxy.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode = System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust;
     // Call the service operation using the proxy
     ```
@@ -92,6 +91,6 @@ Auf dem Client muss der Benutzer zur Eingabe des Benutzernamens und Kennworts un
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Transportsicherheit mit Standardauthentifizierung](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
-- [Sicherheit bei verteilten Anwendungen](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
-- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [Transportsicherheit mit Standardauthentifizierung](transport-security-with-basic-authentication.md)
+- [Sicherheit bei verteilten Anwendungen](distributed-application-security.md)
+- [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)

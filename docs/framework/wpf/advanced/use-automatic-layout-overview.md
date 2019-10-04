@@ -5,30 +5,30 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: d4a0fd819d08fdd936dd1ef35e8cd8c00947f9e0
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662680"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834673"
 ---
 # <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
 
-In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendungen mit lokalisierbarem [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In der Vergangenheit nahm die Lokalisierung einer Benutzeroberfläche viel Zeit in Anspruch. Jede Sprache, die für die Benutzeroberfläche angepasst wurde, benötigt eine pixelweise Anpassung. Sofort mit dem richtigen Entwurfs- und Codierungsstandards können [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konstruiert werden kann, sodass Lokalisierer Ändern der Größe und die neupositionierung vorhanden sind. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können ist als automatisches Layout bezeichnet und kann erreicht werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsentwurf.
+In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen mit lokalisierbaren [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] vorgestellt. In der Vergangenheit war die Lokalisierung einer Benutzeroberfläche ein zeitaufwändiger Prozess. Jede Sprache, für die die Benutzeroberfläche angepasst wurde, erforderte ein Pixel nach Pixel Anpassung. Mit den richtigen Entwurfs-und richtigen Codierungsstandards können [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] erstellt werden, sodass Lokalisierer weniger Größe und Neupositionierung haben. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können, wird als automatisches Layout bezeichnet und kann mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungsdesign erreicht werden.
 
 <a name="advantages_of_autolayout"></a>
 
 ## <a name="advantages-of-using-automatic-layout"></a>Vorteile der Verwendung des automatischen Layouts
 
-Da die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Präsentationssystem ist leistungsfähiger und flexibler, es bietet die Möglichkeit, Elemente in einer Anwendung, die die Anforderungen für verschiedene Sprachen angepasst werden kann. Die folgende Liste hebt einige der Vorteile des automatischen Layouts hervor.
+Da das Präsentationssystem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] leistungsstark und flexibel ist, bietet es die Möglichkeit, Elemente in einer Anwendung zu erstellen, die an die Anforderungen unterschiedlicher Sprachen angepasst werden können. Die folgende Liste hebt einige der Vorteile des automatischen Layouts hervor.
 
-- Benutzeroberfläche wird in jeder Sprache gut angezeigt werden.
+- Die Benutzeroberfläche wird in jeder Sprache gut angezeigt.
 
 - Reduziert nach der Übersetzung des Text die Notwendigkeit der Anpassung von Position und Größe von Steuerelementen.
 
 - Reduziert die Notwendigkeit zur Anpassung der Fenstergröße.
 
-- Layout der Benutzeroberfläche, die korrekt in einer beliebigen Sprache gerendert werden.
+- Das Layout der Benutzeroberfläche wird in jeder beliebigen Sprache ordnungsgemäß
 
 - Die Lokalisierung kann bis zu dem Punkt reduziert werden, dass sie nur wenig komplexer als eine Zeichenfolgeübersetzung ist.
 
@@ -44,7 +44,7 @@ Alles, was Sie in diesem Beispiel tun müssen, um eine spanische Schaltfläche z
 
 [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]
 
-Die folgende Abbildung zeigt die Ausgabe der Codebeispiele:
+Die folgende Grafik zeigt die Ausgabe der Codebeispiele:
 
 ![Die gleiche Schaltfläche mit Text in unterschiedlichen Sprachen](./media/use-automatic-layout-overview/auto-resizable-button.png)
 
@@ -52,17 +52,17 @@ Die folgende Abbildung zeigt die Ausgabe der Codebeispiele:
 
 ## <a name="automatic-layout-and-coding-standards"></a>Automatisches Layout und Codierungsstandards
 
-Verwenden des automatischen layoutansatzes erfordert einen Satz von Programmieren und Entwurfsstandards sowie Regeln, um eine vollständig lokalisierbare Benutzeroberfläche zu erstellen. Die folgenden Richtlinien werden Ihnen bei der automatischen Layoutcodierung helfen .
+Die Verwendung des automatischen Layoutansatzes erfordert eine Reihe von Codierungs-und Entwurfs Standards und Regeln, um eine vollständig lokalisierbare Benutzeroberfläche zu erstellen Die folgenden Richtlinien werden Ihnen bei der automatischen Layoutcodierung helfen .
 
-**Verwenden Sie nicht die absolute Positionen**
+**Keine absoluten Positionen verwenden**
 
-- Verwenden Sie keine <xref:System.Windows.Controls.Canvas> , weil dieses Elemente absolut positioniert.
+- Verwenden Sie <xref:System.Windows.Controls.Canvas> nicht, da Elemente absolut positioniert werden.
 
-- Verwendung <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, und <xref:System.Windows.Controls.Grid> um Steuerelemente zu positionieren.
+- Verwenden Sie <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel> und <xref:System.Windows.Controls.Grid>, um Steuerelemente zu positionieren.
 
-Weitere Informationen zu verschiedenen Bereichen, finden Sie unter [Panels Overview](../controls/panels-overview.md).
+Eine Erläuterung zu den verschiedenen Arten von Panels finden Sie unter [Übersicht über Panels](../controls/panels-overview.md).
 
-**Legen Sie eine feste Größe für ein Fenster nicht**
+**Legen Sie keine festgelegte Größe für ein Fenster fest.**
 
 - Verwenden Sie <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Zum Beispiel:
 
@@ -70,17 +70,17 @@ Weitere Informationen zu verschiedenen Bereichen, finden Sie unter [Panels Overv
 
 **Hinzufügen einer <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
-- Hinzufügen einer <xref:System.Windows.FrameworkElement.FlowDirection%2A> auf das Stammelement der Anwendung.
+- Fügen Sie dem Stamm Element der Anwendung eine <xref:System.Windows.FrameworkElement.FlowDirection%2A> hinzu.
 
-  WPF bietet eine praktische Möglichkeit zur Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In Präsentationsframework das <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:Die flussrichtung Muster sind:
+  WPF bietet eine bequeme Möglichkeit zur Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In Presentation Framework kann die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:Die flussrichtung Muster sind:
 
-  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — horizontales Layout für Latein, Ostasiatisch usw.
+  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) – horizontales Layout für Lateinisch, ostasiatisch usw.
 
-  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — bidirektional für Arabisch, Hebräisch und So weiter.
+  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RLTB) – bidirektional für Arabisch, Hebräisch usw.
 
-**Verwenden Sie zusammengesetzte Schriftarten anstelle von physischen Schriftarten**
+**Verwenden von zusammengesetzten Schriftarten anstelle physischer Schriftarten**
 
-- Bei zusammengesetzten Schriftarten der <xref:System.Windows.Controls.Control.FontFamily%2A> Eigenschaft muss nicht lokalisiert werden soll.
+- Bei zusammengesetzten Schriftarten muss die <xref:System.Windows.Controls.Control.FontFamily%2A>-Eigenschaft nicht lokalisiert werden.
 
 - Entwickler können eine der folgenden Schriftarten verwenden oder ihre eigenen erstellen.
 
@@ -88,34 +88,34 @@ Weitere Informationen zu verschiedenen Bereichen, finden Sie unter [Panels Overv
   - Global San Serif
   - Global Serif
 
-**Fügen Sie XML: lang hinzu.**
+**XML hinzufügen: lang**
 
-- Hinzufügen der `xml:lang` Attribut in das Stammelement der Benutzeroberfläche, z. B. `xml:lang="en-US"` für eine englische Anwendung.
+- Fügen Sie das `xml:lang`-Attribut im Root-Element ihrer Benutzeroberfläche hinzu, z. b. `xml:lang="en-US"` für eine englische Anwendung.
 
-- Da zusammengesetzte Schriftarten `xml:lang` um zu bestimmen, welche Schriftart verwendet, legen Sie diese Eigenschaft zur Unterstützung von mehrsprachigen Szenarios.
+- Da zusammengesetzte Schriftarten `xml:lang` verwenden, um zu bestimmen, welche Schriftart verwendet werden soll, legen Sie diese Eigenschaft fest, um mehrsprachige Szenarien
 
 <a name="autolay_grids"></a>
 
 ## <a name="automatic-layout-and-grids"></a>Automatisches Layout und Raster
 
-Die <xref:System.Windows.Controls.Grid> -Element eignet sich für automatisches Layout, da es die Positionierung von Elementen ermöglicht. Ein <xref:System.Windows.Controls.Grid> Steuerelement ist in der Lage, den verfügbaren Platz auf seine untergeordneten Elemente, die mit einer Spalten- und zeilenanordnung zu verteilen. Die Elemente der Benutzeroberfläche können mehrere Zellen umfassen, und es ist möglich, verschachtelte Raster aufweisen. Raster sind sehr hilfreich, da sie Ihnen ermöglichen das Erstellen und positionieren Sie komplexen Benutzeroberflächen. Im folgende Beispiel wird veranschaulicht, wie mit einem Raster einige Schaltflächen und Text positioniert werden. Beachten Sie, die die Höhe und Breite der Zellen, um festgelegt werden <xref:System.Windows.GridUnitType.Auto>daher die Zelle mit der Schaltfläche mit einem Bild passt, das Bild angepasst.
+Das <xref:System.Windows.Controls.Grid>-Element ist für das automatische Layout nützlich, da es einem Entwickler ermöglicht, Elemente zu positionieren. Ein <xref:System.Windows.Controls.Grid>-Steuerelement ist in der Lage, mithilfe einer Spalten-und Zeilen Anordnung den verfügbaren Platz unter seinen untergeordneten Elementen zu verteilen. Die Benutzeroberflächen Elemente können mehrere Zellen umfassen, und es ist möglich, Raster in Raster zu haben. Raster sind nützlich, da Sie Ihnen ermöglichen, eine komplexe Benutzeroberfläche zu erstellen und zu positionieren. Im folgende Beispiel wird veranschaulicht, wie mit einem Raster einige Schaltflächen und Text positioniert werden. Beachten Sie, dass die Höhe und Breite der Zellen auf "<xref:System.Windows.GridUnitType.Auto>" festgelegt ist. Daher wird die Zelle, die die Schaltfläche mit einem Bild enthält, an das Bild angepasst.
 
 [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]
 
 Die folgende Grafik zeigt die vom vorherigen Code erzeugten Raster.
 
-![Rasterbeispiel](./media/glob-grid.png "Glob_grid") Raster
+![Raster Beispiel](./media/glob-grid.png "glob_grid") Raster
 
 <a name="autolay_grids_issharedsizescope"></a>
 
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Automatisches Layout und Raster mit der IsSharedSizeScope-Eigenschaft
 
-Ein <xref:System.Windows.Controls.Grid> Element ist nützlich in lokalisierbaren Anwendungen um Steuerelemente zu erstellen, die an Inhalt anpassen. Manchmal ist es jedoch notwendig, dass Steuerelemente unabhängig vom Inhalt eine bestimmte Größe beibehalten. Beispielsweise sollen die Schaltflächen „OK“, „Abbrechen“ und „Durchsuchen“ wahrscheinlich nicht die Größe des Inhalts angepasst werden. In diesem Fall die <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> angefügte Eigenschaft ist nützlich für dieselbe Größe in mehreren Rasterelementen. Im folgende Beispiel wird veranschaulicht, wie Spalten- und Zeilengröße zwischen mehreren Teilen <xref:System.Windows.Controls.Grid> Elemente.
+Ein <xref:System.Windows.Controls.Grid>-Element ist in lokalisierbaren Anwendungen hilfreich, um Steuerelemente zu erstellen, die an den Inhalt angepasst werden. Manchmal ist es jedoch notwendig, dass Steuerelemente unabhängig vom Inhalt eine bestimmte Größe beibehalten. Beispielsweise sollen die Schaltflächen „OK“, „Abbrechen“ und „Durchsuchen“ wahrscheinlich nicht die Größe des Inhalts angepasst werden. In diesem Fall ist die angefügte <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType>-Eigenschaft für die gemeinsame Nutzung derselben Größe in mehreren Raster Elementen nützlich. Im folgenden Beispiel wird veranschaulicht, wie Spalten-und Zeilen Größendaten zwischen mehreren <xref:System.Windows.Controls.Grid>-Elementen gemeinsam genutzt werden.
 
 [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]
 
 > [!NOTE]
-> Das vollständige Codebeispiel finden Sie unter [Freigabe Sizing Eigenschaften zwischen Grids](../controls/how-to-share-sizing-properties-between-grids.md)
+> Das Codebeispiel für den gesamten Code finden Sie unter [Freigeben von Größen Eigenschaften zwischen](../controls/how-to-share-sizing-properties-between-grids.md)Rastern.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML-Ereignisse (Visual Basic)
+title: Ereignisse LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: dcdaf321cfb75ca77e1d8b3f5a541a9418c3f512
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021270"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834983"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML-Ereignisse (Visual Basic)
+# <a name="linq-to-xml-events-visual-basic"></a>Ereignisse LINQ to XML (Visual Basic)
 Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.  
   
  Ereignisse können allen Instanzen eines <xref:System.Xml.Linq.XObject> hinzugefügt werden. Der Ereignishandler empfängt dann Ereignisse für Änderungen an diesem <xref:System.Xml.Linq.XObject> und dessen Nachfolgern. So können Sie z. B. dem Stamm der Struktur einen Ereignishandler hinzufügen und alle Änderungen an der Struktur von diesem Ereignishandler behandeln lassen.  
@@ -95,7 +95,7 @@ End Module
 ### <a name="comments"></a>Kommentare  
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 8290e642db3ec76a931bdd2febe427309457bc86
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860144"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835246"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse-Operator (Visual Basic)
-Führt eine verkürzte einschließende logischen Disjunktion zweier Ausdrücke.  
+Führt eine kurze, inklusive logische Disjunktion für zwei Ausdrücke aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,32 +38,32 @@ result = expression1 OrElse expression2
  Erforderlich. Beliebiger `Boolean` -Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine logische Operation gilt *kurzschließen* Wenn der kompilierte Code die Auswertung eines Ausdrucks je nach Ergebnis eines anderen Ausdrucks umgehen kann. Wenn das Ergebnis des ersten Ausdrucks, ausgewertet über das endgültige Ergebnis des Vorgangs feststellt, besteht keine Notwendigkeit zum Auswerten des zweiten Ausdrucks, da das endgültige Ergebnis nicht mehr ändern können. Das kurzschließen kann die Leistung verbessern, wenn der Ausdruck Umgangene komplex ist oder Prozeduraufrufe enthält.  
+ Eine logische Operation wird als *Kurzschluss* bezeichnet, wenn der kompilierte Code die Auswertung eines Ausdrucks abhängig vom Ergebnis eines anderen Ausdrucks umgehen kann. Wenn das Ergebnis des ersten ausgewerteten Ausdrucks das Endergebnis des Vorgangs bestimmt, muss der zweite Ausdruck nicht ausgewertet werden, da er das Endergebnis nicht ändern kann. Kurzschluss kann die Leistung verbessern, wenn der umgangen-Ausdruck Komplex ist, oder wenn er Prozedur Aufrufe umfasst.  
   
- Wenn eine oder beide Ausdrücke `True`, `result` ist `True`. In der folgende Tabelle wird veranschaulicht, wie `result` bestimmt ist.  
+ Wenn ein oder beide Ausdrücke zu `True` ausgewertet werden, ist `result` `True`. In der folgenden Tabelle wird veranschaulicht, wie `result` bestimmt wird.  
   
-|Wenn `expression1` ist|Und `expression2` ist|Der Wert des `result` ist|  
+|Wenn `expression1` ist|Und `expression2` ist|Der Wert von `result` ist|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|(nicht ausgewertet)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Datentypen  
- Die `OrElse` Operator ist definiert, nur für die [Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic konvertiert alle Operanden nach Bedarf `Boolean` vor der Auswertung des Ausdrucks. Wenn Sie das Ergebnis in einen numerischen Typ zuweisen, konvertiert Visual Basic aus `Boolean` auf diesen Typ, `False` wird `0` und `True` wird `-1`.
-Weitere Informationen finden Sie unter [booleschen Typkonvertierungen](../data-types/boolean-data-type.md#type-conversions)
+ Der `OrElse`-Operator ist nur für den [booleschen Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md)definiert. Visual Basic konvertiert jeden Operanden nach Bedarf in `Boolean`, bevor der Ausdruck ausgewertet wird. Wenn Sie das Ergebnis einem numerischen Typ zuweisen, wird Visual Basic von `Boolean` in diesen Typ konvertiert, sodass `False` `0` und `True` `-1` ist.
+Weitere Informationen finden Sie unter [boolesche Typkonvertierungen](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Überladen  
- Die [oder-Operator](../../../visual-basic/language-reference/operators/or-operator.md) und [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur des Verhaltens neu definiert, wenn ein Operand den Typ dieser Klasse hat oder Struktur. Das Überladen der `Or` und `IsTrue` Operatoren beeinflusst das Verhalten von der `OrElse` Operator. Wenn Ihr Code verwendet `OrElse` für eine Klasse oder Struktur, die Überladungen `Or` und `IsTrue`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der [OR-Operator](../../../visual-basic/language-reference/operators/or-operator.md) und der [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) können *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur ihr Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Das Überladen der Operatoren `Or` und `IsTrue` wirkt sich auf das Verhalten des Operators `OrElse` aus. Wenn Ihr Code `OrElse` für eine Klasse oder Struktur verwendet, die `Or` und `IsTrue` überlastet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `OrElse` Operator, um die logische Disjunktion zweier Ausdrücke ausgeführt. Das Ergebnis ist eine `Boolean` Wert, der darstellt, ob einer der beiden Ausdrücke "true". Wenn der erste Ausdruck `True`, das zweite wird nicht ausgewertet.  
+ Im folgenden Beispiel wird der `OrElse`-Operator verwendet, um eine logische Disjunktion für zwei Ausdrücke auszuführen. Das Ergebnis ist ein `Boolean`-Wert, der angibt, ob einer der beiden Ausdrücke True ist. Wenn der erste Ausdruck `True` ist, wird der zweite Ausdruck nicht ausgewertet.  
   
  [!code-vb[VbVbalrOperators#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#37)]  
   
- Im vorherige Beispiel erzeugt die Ergebnisse der `True`, `True`, und `False` bzw. Bei der Berechnung des `firstCheck`, der zweite Ausdruck nicht ausgewertet, da die erste bereits ist `True`. Allerdings wird der zweite Ausdruck ausgewertet, bei der Berechnung des `secondCheck`.  
+ Im vorangehenden Beispiel werden die Ergebnisse `True`, `True` und `False` erstellt. Bei der Berechnung von `firstCheck` wird der zweite Ausdruck nicht ausgewertet, da der erste Wert bereits `True` ist. Der zweite Ausdruck wird jedoch in der Berechnung von `secondCheck` ausgewertet.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine `If`... `Then` Anweisung, die zwei Prozeduraufrufe enthält. Wenn der erste Aufruf gibt `True`, im zweite Verfahren wird nicht aufgerufen. Dies kann zu unerwarteten Ergebnissen führen, wenn das zweite Verfahren wichtige Aufgaben, die immer ausgeführt werden soll ausführt, wenn in diesem Abschnitt des Codes ausgeführt wird.  
+ Im folgenden Beispiel wird eine `If`... `Then`-Anweisung gezeigt, die zwei Prozedur Aufrufe enthält. Wenn der erste Aufruf `True` zurückgibt, wird die zweite Prozedur nicht aufgerufen. Dies kann zu unerwarteten Ergebnissen führen, wenn die zweite Prozedur wichtige Aufgaben durchführt, die immer ausgeführt werden sollten, wenn dieser Code Abschnitt ausgeführt wird.  
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   

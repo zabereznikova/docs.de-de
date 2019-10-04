@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
-ms.openlocfilehash: 0459c9549238257c0a76276a1d10f6d370144214
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 41b967e2876be98016b48da5122478f63385c6a8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709864"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834970"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (Visual Basic)
 Es kann vorkommen, dass Sie LINQ to XML-Abfragen mit komplexen Filtern schreiben möchten. Vielleicht möchten Sie z. B. auf diese Weise nach allen Elementen suchen, die ein untergeordnetes Element mit einem bestimmten Namen und einem bestimmten Wert besitzen. In diesem Thema finden Sie ein Beispiel für das Schreiben von Fragen mit komplexer Filterung.  
@@ -17,7 +17,7 @@ Es kann vorkommen, dass Sie LINQ to XML-Abfragen mit komplexen Filtern schreiben
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
- Weitere Informationen `Any` zum-Operator finden Sie unter [quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+ Weitere Informationen zum `Any`-Operator finden Sie unter [quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -38,7 +38,7 @@ Next
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 99505  
 ```  
   
@@ -72,7 +72,7 @@ End Module
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 99505  
 ```  
   

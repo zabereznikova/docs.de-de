@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a61f4eedde611cfb7598d55465103924516e06c6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949914"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834600"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Mausereignisse in Windows Forms
 
@@ -48,7 +48,7 @@ Wenn Sie Mausklickereignisse in der richtigen Reihenfolge behandeln möchten, m�
 
 4. <xref:System.Windows.Forms.Control.MouseUp> -Ereignis.
 
-In der folgenden Liste ist die Reihenfolge der Ereignisse aufgeführt, die bei einem Doppelklick mit der Maus ausgelöst werden:
+Im folgenden finden Sie die Reihenfolge der Ereignisse, die bei einem doppelten Mausklick ausgelöst werden:
 
 1. <xref:System.Windows.Forms.Control.MouseDown> -Ereignis.
 
@@ -66,13 +66,16 @@ In der folgenden Liste ist die Reihenfolge der Ereignisse aufgeführt, die bei e
 
 8. <xref:System.Windows.Forms.Control.MouseUp> -Ereignis.
 
-Ein Codebeispiel, das die Reihenfolge der Maus Klick Ereignisse veranschaulicht, finden [Sie unter Gewusst wie: Behandeln von Benutzereingabe Ereignissen in Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md)-Steuerelementen.
+Ein Codebeispiel, das die Reihenfolge der Maus Klick Ereignisse veranschaulicht, finden Sie unter [gewusst wie: Behandeln von Benutzereingabe Ereignissen in Windows Forms-Steuerelementen @ no__t-0.
 
 ### <a name="individual-controls"></a>Einzelne Steuerelemente
 
 Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickereignissen auf:
 
-- <xref:System.Windows.Forms.Button>-Steuerelement, <xref:System.Windows.Forms.CheckBox>-Steuerelement, <xref:System.Windows.Forms.ComboBox>-Steuerelement und <xref:System.Windows.Forms.RadioButton>-Steuerelement
+- <xref:System.Windows.Forms.Button>
+- <xref:System.Windows.Forms.CheckBox>
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.RadioButton>
 
   > [!NOTE]
   > Für das <xref:System.Windows.Forms.ComboBox>-Steuerelement tritt das im Folgenden beschriebene Verhalten auf, wenn der Benutzer auf das Bearbeitungsfeld, die Schaltfläche oder ein Element in der Liste klickt.
@@ -124,7 +127,7 @@ Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickere
 
   - Doppelklick mit der rechten Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-### <a name="painting-behavior-of-toggle-controls"></a>Zeichnungsverhalten umschaltbarer Steuerelemente
+### <a name="painting-behavior-of-toggle-controls"></a>Zeichen Verhalten beim Umschalten von Steuerelementen
 
 Umschaltbare Steuerelemente, wie die Steuerelemente, die von der <xref:System.Windows.Forms.ButtonBase>-Klasse abgeleitet werden, weisen bei Mausklickereignissen das folgende Zeichnungsverhalten auf:
 

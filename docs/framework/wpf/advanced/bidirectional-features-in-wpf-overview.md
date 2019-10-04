@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 4c3a39c1d1252951b0847638809c9e1e6be2a21e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 2a599322ef955b9f702f8960f294f5d093ede74a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856190"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834749"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
 
@@ -178,7 +178,7 @@ Dadurch haben Anwendungen die Möglichkeit, numerische Werte zu verarbeiten, ohn
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt diese Tradition fort und fügt weitere Unterstützung für diese Funktion hinzu, die mehreren Benutzern die Steuerung darüber ermöglicht, wann und wie die Ersetzung verwendet wird. Diese Funktion ist für jede Sprache konzipiert, da sie besonders für bidirektionalen Inhalt nützlich ist, bei dem die Strukturierung von Ziffern für eine bestimmte Sprache in der Regel eine Herausforderung für die Entwickler der Anwendung darstellt, da eine Anwendung aufgrund der verschiedenen Kulturen möglicherweise weiter ausgeführt wird.
 
-Die Kern Eigenschaft, die steuert, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zahlen Ersetzung <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> in funktioniert, ist die Abhängigkeits Eigenschaft. Die <xref:System.Windows.Media.NumberSubstitution> -Klasse gibt an, wie Zahlen im Text angezeigt werden sollen. Er verfügt über drei öffentliche Eigenschaften, die sein Verhalten definieren. Es folgt eine Zusammenfassung der einzelnen Eigenschaften.
+Die Kern Eigenschaft, die steuert, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zahlen Ersetzung <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> in funktioniert, ist die Abhängigkeits Eigenschaft. Die <xref:System.Windows.Media.NumberSubstitution> -Klasse gibt an, wie Zahlen im Text angezeigt werden sollen. Er verfügt über drei öffentliche Eigenschaften, die sein Verhalten definieren. Im folgenden finden Sie eine Zusammenfassung der einzelnen Eigenschaften:
 
 **CultureSource:**
 

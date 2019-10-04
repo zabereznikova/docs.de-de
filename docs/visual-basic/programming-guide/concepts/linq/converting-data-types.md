@@ -1,18 +1,18 @@
 ---
-title: Konvertieren von Datentypen (Visual Basic)
+title: Datentypen werden umgerechnet (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 866b30d3d65add8714f2088169b0769c340f264e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d0658983b5873c635d1926444293b0ddf5b0a87
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641982"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835173"
 ---
-# <a name="converting-data-types-visual-basic"></a>Konvertieren von Datentypen (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Datentypen werden umgerechnet (Visual Basic)
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.  
   
- Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Nachstehend sind einige Beispiele aufgeführt:  
+ Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Im folgenden finden Sie einige Beispiele:
   
 - Die <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>-Methode kann zum Ausblenden einer benutzerdefinierten Implementierung eines Standardabfrageoperators eines Typs verwendet werden.  
   
@@ -25,7 +25,7 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
   
  Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen, ändern den statischen Typ der Quellauflistung, listen ihn jedoch nicht auf. Die Methoden, deren Namen mit „To“ anfangen, listen die Quellauflistung auf und verschieben die Elemente in den entsprechenden Auflistungstyp.  
   
-|Methodenname|Beschreibung|Visual Basic-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|Syntax von Visual Basic-Abfrage Ausdrücken|Weitere Informationen|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |AsEnumerable|Gibt die Eingabe als <xref:System.Collections.Generic.IEnumerable%601> typisiert zurück|Nicht zutreffend.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Konvertiert ein (generisches) <xref:System.Collections.IEnumerable>-Element in ein (generisches) <xref:System.Linq.IQueryable>-Element|Nicht zutreffend.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -37,7 +37,7 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 |ToLookup|Platziert Elemente, basierend auf einer Schlüsselauswahlfunktion, in ein <xref:System.Linq.Lookup%602> (one-to-many-Wörterbuch) ein. Diese Methode erzwingt die Ausführung der Abfrage.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
- Im folgenden Codebeispiel wird die `From As` -Klausel, um einen Typ in einen Untertyp umzuwandeln, vor dem Zugriff auf ein Element, das nur im Untertyp verfügbar ist.  
+ Im folgenden Codebeispiel wird die `From As`-Klausel verwendet, um einen Typ in einen Untertyp umzuwandeln, bevor auf einen Member zugegriffen wird, der nur für den Untertyp verfügbar ist.  
   
 ```vb  
 Class Plant  
@@ -82,4 +82,4 @@ End Sub
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Vorgehensweise: Abfragen einer ArrayList mit LINQ (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

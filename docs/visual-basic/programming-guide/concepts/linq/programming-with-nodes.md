@@ -2,12 +2,12 @@
 title: Programmieren mit Knoten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a331d77f1c54f6428d36b6ccb403dcc01094c98
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756935"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834930"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Programmieren mit Knoten (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Entwickler, die Programme, wie einen XML-Editor, ein Transformationssystem oder einen Berichts-Generator schreiben müssen, müssen häufig Programme schreiben, die auf einer detaillierteren Ebene als Elemente und Attribute arbeiten. Sie müssen oft auf der Ebene der Knoten arbeiten und dabei Textknoten, Verarbeitungsanweisungen und Kommentare bearbeiten. Dieses Thema beschäftigt sich mit einigen Aspekten des Programmierens auf Knotenebene.  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent Is Nothing)
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 True  
 True  
 ```  
@@ -53,7 +53,7 @@ Console.WriteLine(xmlTree.Nodes().OfType(Of XText)().Count())
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 1  
 1  
 2  
@@ -75,7 +75,7 @@ Console.WriteLine(">>{0}<<", textNode2)
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 >><<  
 ```  
   
@@ -117,7 +117,7 @@ Next
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -143,7 +143,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 3  
 0  
 ```  
@@ -173,4 +173,4 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Erweiterte LINQ to XML Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

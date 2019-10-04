@@ -11,12 +11,12 @@ ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: f52c1d127df8f0e831db0749e3453bb1c54d5886
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 86ec8f9ae76f010ebbc3be393d8d257ba5cfc6b6
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972066"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834617"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“
 
@@ -24,9 +24,9 @@ Wenn Sie Steuerelemente entwickeln und verteilen, möchten Sie möglicherweise, 
 
 So zeigen Sie das Steuerelement im Dialogfeld Toolbox Elemente auswählen an:
 
-- Installieren Sie die steuerungsassembly im globalen Assemblycache. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../app-domains/install-assembly-into-gac.md)
+- Installieren Sie die steuerungsassembly im globalen Assemblycache. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../app-domains/install-assembly-into-gac.md).
 
-  -oder-
+  - oder -
 
 - Registrieren Sie das Steuerelement und die zugehörigen Entwurfszeit-Assemblys mithilfe der AssemblyFoldersEx-Registrierungs Prozedur. AssemblyFoldersEx ist ein Registrierungs Speicherort, an dem Drittanbieter Pfade für jede Version des Frameworks speichern, das Sie unterstützen. Die Entwurfszeit Auflösung kann in diesem Registrierungs Speicherort nach Verweisassemblys suchen. Das Registrierungs Skript kann die Steuerelemente angeben, die in der Toolbox angezeigt werden sollen.
 
