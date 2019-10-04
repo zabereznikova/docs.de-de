@@ -5,13 +5,13 @@ hide_bc: true
 title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
-ms.date: 09/23/2019
-ms.openlocfilehash: f58e1c03f529629556f79881aebd69afc9ed9bde
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.date: 09/30/2019
+ms.openlocfilehash: a30744ca8831375f9a54f054b226274e273a67a5
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351644"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736773"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "71351644"
         <h1>.NET-Dokumentation</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Dokumentation</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">.NET-Leitfäden</a>
@@ -114,7 +114,7 @@ ms.locfileid: "71351644"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core/">Leitfaden für .NET Core</a></h3>
                                                 <p><a href="/dotnet/core/get-started">Erste Schritte</a></p>
-                                                <p><a href="/dotnet/core/tutorials/">Tutorials</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">Lernprogramme</a></p>
                                                 <p><a href="/dotnet/core/porting/">Portieren aus .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/">EF Core</a></p>
@@ -194,7 +194,7 @@ ms.locfileid: "71351644"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp/">Leitfaden für F#</a></h3>
+                                                <h3><a href="/dotnet/fsharp/">F# Guide</a></h3>
                                                 <p><a href="/dotnet/fsharp/get-started/">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Einführung in F#</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference/">F#-Sprachreferenz</a></p>
@@ -233,7 +233,7 @@ ms.locfileid: "71351644"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning/">Leitfaden für ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials/">Tutorials</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">Lernprogramme</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/">Ressourcen</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
                                                 <p><a href="/dotnet/api/?view=ml-dotnet">ML.NET-API-Referenz</a></p>
@@ -253,7 +253,7 @@ ms.locfileid: "71351644"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/spark/">Leitfaden für .NET für Apache Spark</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials/">Tutorials</a></p>
+                                                <p><a href="/dotnet/spark/tutorials/">Lernprogramme</a></p>
                                                 <p><a href="/dotnet/spark/resources/">Ressourcen</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">API-Referenz zu .NET für Apache Spark</a></p>
                                             </div>
@@ -497,7 +497,7 @@ ms.locfileid: "71351644"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobile</a>
+                        <a href="#mobile">Mobil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
@@ -818,6 +818,155 @@ ms.locfileid: "71351644"
                                                 <div class="cardText">
                                                     <h3>.NET für Apache Spark</h3>
                                                     <p>Verarbeitet Datenbatches, Echtzeitdatenströme, Machine Learning-Daten und Ad-hoc-Abfragen überall dort, wo Sie .NET-Code schreiben.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#architecture">Architektur</a>
+                        <ul id="architecture" class="cardsC">
+                            <li>
+                                <a href="/dotnet/architecture/microservices">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/microservices.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/containerized-lifecycle">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/devops.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/modernize-with-azure-containers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/azure-containers.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/modern-web-apps-azure">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/tools.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/serverless">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/serverless.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Serverlose Apps: Architektur, Muster und Azure-Implementierung</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/cloud-native">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/cloud-native.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>Vorschau</strong> Entwickeln cloudnativer .NET-Anwendungen für Azure</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/blazor-for-web-forms-developers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/blazor.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>Vorschau</strong> Blazor für ASP.NET Web Forms-Entwickler</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/architecture/grpc-for-wcf-developers">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/grpc.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3><strong>Vorschau</strong> ASP.NET Core gRPC für WCF-Entwickler</h3>
                                                 </div>
                                             </div>
                                         </div>
