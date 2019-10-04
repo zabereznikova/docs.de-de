@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 686d1b31478121a8b2c907d99672a5fcc3438a71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849027"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216224"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Verfügbarmachen von .NET Core-Komponenten in COM
 
@@ -25,16 +25,24 @@ In .NET Core wurde das Verfügbarmachen von .NET-Objekten für COM im Vergleich 
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Installieren Sie das [.NET Core 3.0 Preview 7 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
+- Installieren Sie [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
 
 ## <a name="create-the-library"></a>Erstellen der Bibliothek
 
 Im ersten Schritt erstellen Sie die Bibliothek.
 
-1. Erstellen Sie einen neuen Ordner, und führen Sie `dotnet new classlib` in diesem Ordner aus.
+1. Erstellen Sie einen neuen Ordner, und führen Sie in diesem Ordner den folgenden Befehl aus:
+    
+    ```dotnetcli
+    dotnet new classlib
+    ```
+
 2. Öffnen Sie `Class1.cs`.
 3. Fügen Sie `using System.Runtime.InteropServices;` am Anfang der Datei ein.
-4. Erstellen Sie eine Schnittstelle mit dem Namen `IServer`. Beispiel: [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)].
+4. Erstellen Sie eine Schnittstelle mit dem Namen `IServer`. Beispiel:
+
+   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+
 5. Fügen Sie der Schnittstelle das `[Guid("<IID>")]`-Attribut mit der Schnittstellen-GUID für die COM-Schnittstelle hinzu, die Sie implementieren. Beispielsweise `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Diese GUID muss eindeutig sein, da sie der einzige Bezeichner dieser COM-Schnittstelle ist. In Visual Studio können Sie eine GUID generieren. Rufen Sie dazu „Extras“ > „GUID erstellen“ auf, um das entsprechende Tool zu verwenden.
 6. Fügen Sie der Schnittstelle das `[InterfaceType]`-Attribut hinzu, und geben Sie an, welche COM-Basisschnittstellen Ihre Schnittstelle implementieren soll.
 7. Erstellen Sie eine Klasse mit dem Namen `Server`, die `IServer` implementiert.

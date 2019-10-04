@@ -5,14 +5,14 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: b2a660d2fc42f0dfe932afce167058f7c1efc92b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7480c86af1acd482adff5e3e24dc229f24af0e5b
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116505"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216320"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Gewusst wie: Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Vorgehensweise: Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
 Dieser Artikel beschreibt, wie Sie Ihre Desktop-App auf Windows Forms-Basis von .NET Framework 3.0 zu .NET Core 3.0 portieren. Das .NET Core 3.0 SDK bietet Unterstützung für Windows Forms-Anwendungen. Windows Forms ist immer noch ein ausschließlich für Windows bestimmtes Framework und kann nur unter Windows ausgeführt. In diesem Beispiel verwenden Sie das .NET Core SDK-CLI, um ein Projekt zu erstellen und zu verwalten.
 
@@ -50,7 +50,7 @@ Wenn Sie eine .NET Framework Windows Forms-Anwendung portieren, müssen Sie ein 
 
 01. Sie verwenden eine andere Version von Windows Forms.
 
-    Als .NET Core 3.0 Preview 1 veröffentlicht wurde, wurde Windows Forms als Open Source auf GitHub zur Verfügung gestellt. Der Code für .NET Core-Windows Forms ist ein Fork der .NET Framework-Windows Forms-Codebasis. Es ist möglich, dass einige Unterschiede bestehen, und Ihre App nicht portiert wird.
+    Als .NET Core 3.0 Preview 1 veröffentlicht wurde, wurde Windows Forms als Open Source auf GitHub zur Verfügung gestellt. Der Code für .NET Core-Windows Forms ist ein Fork der .NET Framework-Windows Forms-Codebasis. Es ist möglich, dass einige Unterschiede bestehen, und Ihre App nicht portiert wird.
 
 01. Das [Windows Compatibility Pack][compat-pack] könnte Ihnen bei der Migration helfen.
 

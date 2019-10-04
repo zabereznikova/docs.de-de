@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2a0ebcf61fd96df6d2235962c1f1e9cac3fb22e6
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117104"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182000"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>„Microsoft.VisualBasic.Constants.vbNewLine“ ist veraltet
 
-Die <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>-Konstante ist im .NET Framework mit [ObsoleteAttribute](xref:System.ObsoleteAttribute) versehen und damit als veraltet gekennzeichnet. Das Attribut fehlte jedoch bislang in der .NET Core 3.0-Bibliothek.
+Die Konstante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> ist ab .NET Core 3.0 Preview 8 als [Veraltet](xref:System.ObsoleteAttribute) gekennzeichnet.
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -16,17 +16,17 @@ Die <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>-Ko
 
 #### <a name="details"></a>Details
 
-Ab Preview 8 von .NET Core 3.0 wird das Attribut [ObsoleteAttribute](xref:System.ObsoleteAttribute) auf die <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>-Konstante angewendet, um eine Angleichung an `vbNewLine` im .NET Framework zu erzielen. Die Verwendung der `vbNewLine`-Konstante führt zu einer Compilerwarnung. 
+Ab .NET Core 3.0 Preview 8 wird das Attribut [Veraltet](xref:System.ObsoleteAttribute) auf die Konstante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> angewendet. Die Verwendung der Konstante führt zu einer Compilerwarnung. In früheren Releases von .NET Core und .NET Framework war sie nicht als veraltet gekennzeichnet.
 
-In früheren Versionen von .NET Core löste `vbNewLine` keine Compilerwarnung aus.
-
+Diese Änderung wurde vorgenommen, um Visual Basic als Sprache für die Entwicklung auf mehreren Plattformen zu unterstützen. Die Konstante `vbNewLine` entspricht `\r\n`, der Zeichenfolge für neue Zeile bei Windows. Bei Unix-basierten Systemen ist `\n` das Zeichen für eine neue Zeile.
+ 
 #### <a name="recommended-action"></a>Empfohlene Maßnahme
 
 Die [ObsoleteAttribute](xref:System.ObsoleteAttribute)-Meldung für `vbNewLine` enthält folgende Empfehlung:
 
 > For a carriage return and line feed, use [vbCrLf](xref:Microsoft.VisualBasic.Constants.vbCrLf). For the current platform's newline, use <xref:System.Environment.NewLine?displayProperty=nameWithType>. (Verwenden Sie für einen Wagenrücklauf und Zeilenvorschub „vbCrLf“. Verwenden Sie auf der aktuellen Plattform für einen Zeilenumbruch „Environment.NewLine“.).
 
-#### <a name="category"></a>Category (Kategorie)
+#### <a name="category"></a>Kategorie
 
 Visual Basic
 

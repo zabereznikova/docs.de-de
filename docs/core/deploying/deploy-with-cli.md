@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 00064b774145e7267fe26b31ef3bba4d5271a5c3
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306065"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181505"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
 
@@ -128,8 +128,7 @@ Beim Veröffentlichen einer frameworkabhängigen ausführbaren Datei wird eine A
 
 Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden um eine frameworkabhängige ausführbare Datei zu veröffentlichen (dies gilt nicht, wenn Sie bei .NET Core 3.x die aktuelle Plattform als Zielplattform verwenden):
 
-- `-r <RID>`
-  Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
+- `-r <RID>` Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - `--self-contained false` Dieser Switch weist das .NET Core SDK an, eine ausführbare Datei als frameworkabhängige ausführbare Datei zu erstellen.
 
@@ -142,14 +141,13 @@ Führen Sie `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false
 
 ## <a name="self-contained-deployment"></a>Eigenständige Bereitstellung
 
-Wenn Sie eine eigenständige Bereitstellung veröffentlichen, erstellt das .NET Core SDK eine plattformspezifische ausführbare Datei. Beim Veröffentlichen einer  eigenständigen Bereitstellung sind alle zum Ausführen der App erforderlichen .NET Core-Dateien enthalten, jedoch sind die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) nicht enthalten. Diese Abhängigkeiten müssen auf dem System vorhanden sein, bevor die App ausgeführt wird.
+Wenn Sie eine eigenständige Bereitstellung veröffentlichen, erstellt das .NET Core SDK eine plattformspezifische ausführbare Datei. Beim Veröffentlichen einer eigenständigen Bereitstellung sind alle zum Ausführen der App erforderlichen .NET Core-Dateien enthalten, jedoch sind die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) nicht enthalten. Diese Abhängigkeiten müssen auf dem System vorhanden sein, bevor die App ausgeführt wird.
 
 Beim Veröffentlichen einer eigenständigen Bereitstellung wird eine App erstellt, für die kein Rollforward auf den neuesten verfügbaren .NET Core-Sicherheitspatch ausgeführt wird. Weitere Informationen über die Versionsbindung zur Kompilierzeit finden Sie unter [.NET Core-Versionsauswahl](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, um eine eigenständige Bereitstellung zu veröffentlichen:
 
-- `-r <RID>`
-  Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
+- `-r <RID>` Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - `--self-contained true` Dieser Switch weist das .NET Core SDK an, eine ausführbare Datei als eigenständige Bereitstellung zu erstellen.
 
@@ -158,5 +156,5 @@ Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, u
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die .NET Core-Anwendungsbereitstellung](index.md)
-- [.NET Core Runtime-ID-Katalog (RID)](../rid-catalog.md)
+- [.NET Core Application Deployment Overview (Übersicht über die .NET Core-Anwendungsbereitstellung)](index.md)
+- [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

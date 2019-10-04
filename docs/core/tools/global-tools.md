@@ -4,12 +4,12 @@ description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 01c1463ceddcd64e5bab05b95a5ae4a91b6da838
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117452"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332020"
 ---
 # <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
 
@@ -70,7 +70,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 Globale Tools können im Standardverzeichnis oder an einem spezifischen Speicherort installiert werden. Die Standardverzeichnisse sind:
 
-| OS          | `Path`                          |
+| Betriebssystem          | Pfad                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -107,31 +107,6 @@ Darüber hinaus können Sie sich die Anweisungen auf der Website zum Tool ansehe
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>Was kann schief gehen
-
-Globale Tools sind [Framework-abhängige Anwendungen](../deploying/index.md#framework-dependent-deployments-fdd), d.h. sie sind von der auf Ihrem Computer installierten .NET Core-Runtime abhängig. Wenn die erwartete Runtime nicht gefunden wurde, orientieren sie sich an den normalen Regeln für das Rollforward der .NET Core-Runtime, zum Beispiel:
-
-* Eine Anwendung wird auf das neueste Patchrelease der angegebenen Haupt- und Nebenversion gebracht.
-* Wenn keine übereinstimmende Runtime mit einer übereinstimmenden Haupt- und Nebenversion vorhanden ist, wird die nächsthöhere Nebenversion verwendet.
-* Ein Rollforward findet nicht zwischen Vorschauversionen der Runtime oder Vorschauversionen und Releaseversionen statt. Daher müssen globale Tools, die mit Vorschauversionen erstellt wurden, vom Autor neu erstellt, veröffentlicht und installiert werden.
-* Mit globalen Tools, die in .NET Core 2.1 Vorschau 1 erstellt wurden, können weitere Fehler auftreten. Weitere Informationen finden Sie unter [.NET Core 2.1 Preview 2 Known Issues (Bekannte Probleme mit .NET Core 2.1 Vorschau 2)](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md).
-
-Wenn eine Anwendung keine entsprechende Runtime finden kann, schlägt die Ausführung fehl, und ein Fehler wird gemeldet.
-
-Ein weiteres Problem kann darin bestehen, dass ein globales Tool, das in einer vorherigen Vorschauversion erstellt wurde, möglicherweise nicht mit Ihren aktuell installierten .NET Core-Runtimes ausgeführt werden kann. Sie können die auf Ihrem Computer installierten Runtimes mit dem folgenden Befehl anzeigen:
-
-```dotnetcli
-dotnet --list-runtimes
-```
-
-Wenden Sie sich an den Autor des globalen Tools, und finden Sie heraus, ob sie das Toolpaket mit einer aktualisierten Versionsnummer neu kompilieren und auf NuGet veröffentlichen können. Wenn sie das Paket auf NuGet aktualisiert haben, können Sie Ihre Kopie aktualisieren.
-
-Die .NET Core-CLI versucht bei der ersten Verwendung, die Standardspeicherorte der Umgebungsvariable „PATH“ hinzuzufügen. Es gibt jedoch einige Szenarios, in denen der Speicherort nicht automatisch dem Pfad hinzugefügt werden kann, zum Beispiel:
-
-* Wenn Sie die Umgebungsvariable `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` festgelegt haben.
-* Wenn Sie das .NET Core SDK mit *TAR.GZ*-Dateien anstelle von *PKG*-Dateien auf macOS installiert haben.
-* Wenn Sie die Shellumgebungsdatei unter Linux bearbeiten müssen, um den Pfad zu konfigurieren.
-
 ## <a name="other-cli-commands"></a>Andere CLI-Befehle
 
 Das .NET Core SDK enthält andere Befehle, die globale .NET Core-Tools unterstützen. Verwenden Sie einen beliebigen `dotnet tool`-Befehl mit einer der folgenden Optionen:
@@ -162,3 +137,7 @@ Verwenden Sie den Befehl [dotnet tool list](dotnet-tool-list.md), um alle derzei
 ```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>Siehe auch
+
+* [Behandlung von Problemen bei der Nutzung von .NET Core-Tools](troubleshoot-usage-issues.md)

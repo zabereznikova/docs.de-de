@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 54a4459619ee69fc74a14da7ff7fe10a472a4433
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849447"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216261"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
@@ -22,15 +22,29 @@ In diesem Tutorial lernen Sie:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Installieren Sie das [.NET Core 3.0 Preview 2 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
+- Installieren Sie [.NET Core 3.0](https://dotnet.microsoft.com/download) oder eine neuere Version.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
 Im ersten Schritt erstellen Sie die Anwendung:
 
-1. Erstellen Sie einen neuen Ordner, und führen Sie `dotnet new console -o AppWithPlugin` in diesem Ordner aus. 
-2. Erstellen Sie eine Visual Studio-Projektmappendatei, um das Erstellen des Projekts zu vereinfachen. Führen Sie `dotnet new sln` im gleichen Ordner aus. 
-3. Führen Sie `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` aus, um das App-Projekt zur Projektmappe hinzuzufügen.
+1. Erstellen Sie einen neuen Ordner, und führen Sie in diesem Ordner den folgenden Befehl aus:
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. Erstellen Sie eine Visual Studio-Projektmappendatei, um das Erstellen des Projekts zu vereinfachen. Führen Sie im selben Ordner den folgenden Befehl aus:
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. Führen Sie den folgenden Befehl aus, um das Anwendungsprojekt zur Projektmappe hinzuzufügen:
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 Das Gerüst der Anwendung kann nun aufgefüllt werden. Ersetzen Sie den Code der Datei *AppWithPlugin/Program.cs* durch folgenden Code:
 
@@ -203,8 +217,18 @@ Aufgrund der verschiedenen `PluginLoadContext`-Instanzen für jedes Plug-In kön
 
 Führen Sie folgende Schritte im Stammverzeichnis aus:
 
-1. Führen Sie `dotnet new classlib -o HelloPlugin` aus, um ein neues Klassenbibliotheksprojekt namens `HelloPlugin` zu erstellen.
-2. Führen Sie `dotnet sln add HelloPlugin/HelloPlugin.csproj` aus, um das Projekt zur `AppWithPlugin`-Projektmappe hinzuzufügen. 
+1. Führen Sie den folgenden Befehl aus, um ein neues Klassenbibliotheksprojekt namens `HelloPlugin` zu erstellen:
+    
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. Führen Sie den folgenden Befehl aus, um das Projekt zur Projektmappe `AppWithPlugin` hinzuzufügen:
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. Ersetzen Sie die Datei *HelloPlugin/Class1.cs* durch eine Datei namens *HelloCommand.cs* mit folgendem Inhalt:
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
