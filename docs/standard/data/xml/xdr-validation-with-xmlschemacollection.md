@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83eabbccfa2116142e9ee5889e3368ad4273b541
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306392"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957013"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-Validierung mit „XmlSchemaCollection“
 
@@ -24,8 +24,12 @@ Wenn das XDR-Schema (XML-Data Reduced), anhand dessen validiert wird, in der **X
 
 Beispiel: Wenn das Stammelement des XML-Dokuments `<bookstore xmlns="urn:newbooks-schema">` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:
 
-```
+```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
+```
+
+```csharp
+xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
 Im folgenden Codebeispiel wird ein **XmlValidatingReader** erstellt, der einen **XmlTextReader** annimmt und der **XmlSchemaCollection**ein XDR-Schema (HeadCount. XDR) hinzufügt:

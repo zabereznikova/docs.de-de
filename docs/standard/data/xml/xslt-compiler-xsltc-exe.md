@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923285"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956996"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
@@ -19,19 +19,19 @@ Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Ass
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]  
 ```  
   
 ## <a name="argument"></a>Argument  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |`sourceFile`|Gibt den Namen des Stylesheets an. Das Stylesheet muss eine lokale Datei sein oder sich im Intranet befinden.|  
   
 ## <a name="options"></a>Optionen  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Gibt den Namen der Klasse für das folgende Stylesheet an. Der Klassenname kann vollqualifiziert sein.<br /><br /> In der Standardeinstellung ist der Klassenname mit dem Namen des Stylesheets identisch. Wenn zum Beispiel das Stylesheet customers.xsl kompiliert wird, lautet der standardmäßige Klassenname customers.|  
 |`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis**:  Beim Kompilieren im Debugmodus kann sich die XSLT-Geschwindigkeit spürbar verringern.|  
@@ -43,7 +43,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`@` `file`|Ermöglicht die Angabe einer Datei, die Compileroptionen enthält.|  
 |`?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  XSLT-Lösungen können aus mehreren Stylesheetmodulen bestehen. Das Tool &lt;legacyBold&gt;xsltc.exe&lt;/legacyBold&gt; generiert Assemblys auf der Grundlage von Stylesheets. Die Assemblys können dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Auf diese Weise lassen sich in einigen XSLT-Bereitstellungsszenarios die zu verzeichnenden Leistungseinbußen verringern.  
   
 > [!NOTE]
@@ -54,31 +54,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 ## <a name="examples"></a>Beispiele  
  Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl  
 ```  
   
  Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen booksort.dll und eine PDB-Datei mit dem Namen booksort.pdb.  
   
-```  
+```console  
 xsltc booksort.xsl /debug  
 ```  
   
  Der folgende Befehl kompiliert ein Stylesheet, das ein &lt;legacyBold&gt;msxsl:script&lt;/legacyBold&gt;-Element enthält, und erstellt zwei Assemblys namens &lt;legacyBold&gt;calc.dll&lt;/legacyBold&gt; und &lt;legacyBold&gt;calc_Script1.dll&lt;/legacyBold&gt;.  
   
-```  
+```console  
 xsltc /settings:script+ calc.xsl  
 ```  
   
  Der folgende Befehl aktiviert die DTD-Verarbeitung und die Unterstützung für Skripts und erstellt zwei Assemblys namens myTest.dll und myTest_Script1.dll.  
   
-```  
+```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
  Der folgende Befehl kompiliert zwei Stylesheetmodule und eine Assembly mit dem Namen booksort.dll.  
   
-```  
+```console  
 xsltc booksort.xsl output.xsl  
 ```  
   

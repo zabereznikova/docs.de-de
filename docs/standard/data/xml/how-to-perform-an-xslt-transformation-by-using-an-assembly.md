@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bf0669b94f925052ad5f139cce049018ce7da4f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 7e998526f3e5fcefdf6b776fb493cf9625e6c696
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666531"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957147"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.  
@@ -134,15 +134,15 @@ Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Ass
   
 1. Bei Ausführung des folgenden Befehls von der Eingabeaufforderung werden die beiden Assemblys `Transform.dll` und `Transform_Script1.dll` erstellt. (Dies ist das Standardverhalten. Sofern nicht anders angegeben, erhalten die Klasse und die Assembly standardmäßig denselben Namen wie das Hauptstylesheet.):  
   
-    ```  
+    ```console  
     xsltc /settings:script+ Transform.xsl  
+    ```
+  
+    Der folgende Befehl legt den Klassennamen explizit auf &lt;legacyBold&gt;Transform&lt;/legacyBold&gt; fest:  
+  
+    ```console  
+    xsltc /settings:script+ /class:Transform Transform.xsl  
     ```  
-  
- Der folgende Befehl legt den Klassennamen explizit auf &lt;legacyBold&gt;Transform&lt;/legacyBold&gt; fest:  
-  
-```  
-xsltc /settings:script+ /class:Transform Transform.xsl  
-```  
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>So binden Sie die kompilierte Assembly beim Kompilieren Ihres Codes als Verweis ein  
   
@@ -150,36 +150,36 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 2. Wenn Sie mit der Eingabeaufforderung und C# arbeiten, verwenden Sie folgenden Befehl:  
   
-    ```  
+    ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 3. Wenn Sie mit der Eingabeaufforderung und Visual Basic arbeiten, verwenden Sie folgenden Befehl:  
   
-    ```  
+    ```console  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>So verwenden Sie die kompilierte Assembly in Ihrem Code  
   
-1. Im folgenden Beispiel wird gezeigt, wie Sie die XSLT-Transformation mithilfe des kompilierten Stylesheets ausführen können.  
+Im folgenden Beispiel wird gezeigt, wie Sie die XSLT-Transformation mithilfe des kompilierten Stylesheets ausführen können.  
   
- [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
- [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
+[!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
+[!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- Wenn Sie eine dynamische Verknüpfung zur kompilierten Assembly herstellen möchten, ersetzen Sie im Beispiel oben  
+Wenn Sie eine dynamische Verknüpfung zur kompilierten Assembly herstellen möchten, ersetzen Sie im Beispiel oben
   
-```  
-xslt.Load(typeof(Transform))  
-```  
-  
- durch  
-  
-```  
-xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
+```csharp  
+xslt.Load(typeof(Transform));  
 ```  
   
- im oben aufgeführten Beispiel. Weitere Informationen zur Assembly.Load-Methode finden Sie unter <xref:System.Reflection.Assembly.Load%2A>  
+durch  
+  
+```csharp 
+xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
+``` 
+  
+im oben aufgeführten Beispiel. Weitere Informationen zur Assembly. Load-Methode finden Sie unter <xref:System.Reflection.Assembly.Load%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
 

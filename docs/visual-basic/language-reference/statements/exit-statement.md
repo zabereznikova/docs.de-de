@@ -12,82 +12,88 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c25653809c51662ea5b606ab97be6a9b50d5986
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638115"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956937"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit-Anweisung (Visual Basic)
-Beendet eine Prozedur oder der Block und überträgt die Steuerung sofort an die Anweisung nach dem Prozeduraufruf oder der Blockdefinition.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-Exit { Do | For | Function | Property | Select | Sub | Try | While }  
-```  
-  
-## <a name="statements"></a>Anweisungen  
+
+Beendet eine Prozedur oder einen Block und überträgt die Steuerung sofort an die Anweisung nach dem Prozedur-oder der Block Definition.
+
+## <a name="syntax"></a>Syntax
+
+```vb
+Exit { Do | For | Function | Property | Select | Sub | Try | While }
+```
+
+## <a name="statements"></a>Anweisungen
+
  `Exit Do`  
- Beendet sofort die `Do` wurde eine Schleife in der es angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der `Loop` Anweisung. `Exit Do` kann verwendet werden, nur innerhalb einer `Do` Schleife. Bei der Verwendung in geschachtelten `Do` Schleifen `Exit Do` verlässt die innerste Schleife und überträgt die Steuerung an der nächsthöheren Ebene Schachtelungsebenen.  
-  
+ Beendet sofort die `Do`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `Loop`-Anweisung fortgesetzt. `Exit Do` kann nur innerhalb einer `Do`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `Do`-Schleifen beendet `Exit Do` die innerste Schleife und überträgt die Steuerung an die nächsthöhere Schachtelungs Ebene.
+
  `Exit For`  
- Beendet sofort die `For` wurde eine Schleife in der es angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der `Next` Anweisung. `Exit For` kann verwendet werden, nur innerhalb einer `For`... `Next` oder `For Each`... `Next` Schleife. Bei der Verwendung in geschachtelten `For` Schleifen `Exit For` verlässt die innerste Schleife und überträgt die Steuerung an der nächsthöheren Ebene Schachtelungsebenen.  
-  
+ Beendet sofort die `For`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `Next`-Anweisung fortgesetzt. `Exit For` kann nur innerhalb einer `For`... `Next`-oder `For Each`... `Next`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `For`-Schleifen beendet `Exit For` die innerste Schleife und überträgt die Steuerung an die nächsthöhere Schachtelungs Ebene.
+
  `Exit Function`  
- Sofort beendet die `Function` Prozedur, die in der sie angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der Anweisung, die Namen der `Function` Verfahren. `Exit Function` kann verwendet werden, nur innerhalb einer `Function` Verfahren.  
-  
- Um einen Rückgabewert anzugeben, können Sie den Wert zuweisen, auf den Funktionsnamen in einer Zeile vor der `Exit Function` Anweisung. Weisen Sie den Rückgabewert und die Funktion in einer Anweisung beenden, können Sie stattdessen die [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).  
-  
+ Beendet sofort die Prozedur "`Function`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der Anweisung fortgesetzt, die die Prozedur "`Function`" aufgerufen hat. `Exit Function` kann nur innerhalb einer `Function`-Prozedur verwendet werden.
+
+ Zum Angeben eines Rückgabewerts können Sie den Wert dem Funktionsnamen in einer Zeile vor der `Exit Function`-Anweisung zuweisen. Wenn Sie den Rückgabewert zuweisen und die Funktion in einer Anweisung beenden möchten, können Sie stattdessen die [Return-Anweisung](return-statement.md)verwenden.
+
  `Exit Property`  
- Sofort beendet die `Property` Prozedur, die in der sie angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung, die Namen der `Property` Prozedur, d. h. mit der Anweisung angefordert oder den Wert der Eigenschaft festgelegt. `Exit Property` kann verwendet werden, nur innerhalb einer Eigenschaft `Get` oder `Set` Verfahren.  
-  
- An einen Rückgabewert in einer `Get` Verfahren können Sie den Wert auf den Funktionsnamen in einer Zeile vor dem Zuweisen der `Exit Property` Anweisung. Zuweisen von den Rückgabewert und Beenden der `Get` Prozedur in einer Anweisung können Sie stattdessen verwenden die `Return` Anweisung.  
-  
- In einem `Set` Verfahren der `Exit Property` Anweisung entspricht der `Return` Anweisung.  
-  
+ Beendet sofort die Prozedur "`Property`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung fortgesetzt, die die Prozedur `Property` aufgerufen hat, d. h. mit der Anweisung, die den Wert der Eigenschaft anfordert oder festlegt. `Exit Property` kann nur innerhalb der `Get`-oder `Set`-Prozedur einer Eigenschaft verwendet werden.
+
+ Um einen Rückgabewert in einer `Get`-Prozedur anzugeben, können Sie den Wert dem Funktionsnamen in einer Zeile vor der `Exit Property`-Anweisung zuweisen. Um den Rückgabewert zuzuweisen und die `Get`-Prozedur in einer Anweisung zu beenden, können Sie stattdessen die `Return`-Anweisung verwenden.
+
+ In einer `Set`-Prozedur entspricht die `Exit Property`-Anweisung der Anweisung `Return`.
+
  `Exit Select`  
- Beendet sofort die `Select Case` -block in der es angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der `End Select` Anweisung. `Exit Select` kann verwendet werden, nur innerhalb einer `Select Case` Anweisung.  
-  
+ Beendet sofort den Block "`Select Case`", in dem er angezeigt wird. Die Ausführung wird mit der Anweisung nach der `End Select`-Anweisung fortgesetzt. `Exit Select` kann nur innerhalb einer `Select Case`-Anweisung verwendet werden.
+
  `Exit Sub`  
- Sofort beendet die `Sub` Prozedur, die in der sie angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der Anweisung, die Namen der `Sub` Verfahren. `Exit Sub` kann verwendet werden, nur innerhalb einer `Sub` Verfahren.  
-  
- In einem `Sub` Verfahren der `Exit Sub` Anweisung entspricht der `Return` Anweisung.  
-  
+ Beendet sofort die Prozedur "`Sub`", in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der Anweisung fortgesetzt, die die Prozedur "`Sub`" aufgerufen hat. `Exit Sub` kann nur innerhalb einer `Sub`-Prozedur verwendet werden.
+
+ In einer `Sub`-Prozedur entspricht die `Exit Sub`-Anweisung der Anweisung `Return`.
+
  `Exit Try`  
- Beendet sofort die `Try` oder `Catch` -block in der es angezeigt wird. Ausführung wird fortgeführt, mit der `Finally` blockieren, sofern vorhanden, oder mit der Anweisung nach der `End Try` Anweisung andernfalls. `Exit Try` kann verwendet werden, nur innerhalb einer `Try` oder `Catch` Block und nicht in eine `Finally` Block.  
-  
+ Beendet sofort den Block "`Try`" oder "`Catch`", in dem er angezeigt wird. Die Ausführung wird mit dem Block "`Finally`" fortgesetzt, sofern vorhanden, oder mit der Anweisung, die der `End Try`-Anweisung folgt, andernfalls. `Exit Try` kann nur innerhalb eines `Try`-oder `Catch`-Blocks und nicht innerhalb eines `Finally`-Blocks verwendet werden.
+
  `Exit While`  
- Beendet sofort die `While` wurde eine Schleife in der es angezeigt wird. Ausführung wird fortgeführt, mit der Anweisung nach der `End While` Anweisung. `Exit While` kann verwendet werden, nur innerhalb einer `While` Schleife. Bei der Verwendung in geschachtelten `While` Schleifen, `Exit While` überträgt die Steuerung an die Schleife, die eine geschachtelte Ebene über der Schleife befindet, in denen `Exit While` auftritt.  
-  
-## <a name="remarks"></a>Hinweise  
- Verwechseln Sie nicht `Exit` -Anweisungen mit `End` Anweisungen. `Exit` das Ende einer Anweisung werden keine definiert werden.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die schleifenbedingung die Schleife beendet, mit denen bei der `index` Variable ist größer als 100. Die `If` Anweisung in der Schleife, bewirkt jedoch, dass die `Exit Do` Anweisung zum Beenden der Schleife, wenn die Indexvariable größer als 10 ist.  
-  
- [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel weist den zurückgegeben Wert den Namen der Funktion `myFunction`, und verwendet dann `Exit Function` von der Funktion zurückgegeben.  
-  
- [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) weisen den Rückgabewert und die Funktion beenden.  
-  
- [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
-  
+ Beendet sofort die `While`-Schleife, in der Sie angezeigt wird. Die Ausführung wird mit der Anweisung nach der `End While`-Anweisung fortgesetzt. `Exit While` kann nur innerhalb einer `While`-Schleife verwendet werden. Bei der Verwendung in geschachtelten `While`-Schleifen überträgt `Exit While` die Steuerung an die Schleife, die eine geschachtelte Ebene oberhalb der Schleife ist, in der `Exit While` auftritt.
+
+## <a name="remarks"></a>Hinweise
+
+Verwechseln Sie `Exit`-Anweisungen nicht mit `End`-Anweisungen. `Exit` definiert nicht das Ende einer-Anweisung.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel stoppt die Schleifen Bedingung die Schleife, wenn die `index`-Variable größer als 100 ist. Die Anweisung "`If`" in der Schleife bewirkt jedoch, dass die `Exit Do`-Anweisung die Schleife beendet, wenn die Index Variable größer als 10 ist.
+
+[!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird der Rückgabewert dem Funktionsnamen `myFunction` zugewiesen, und anschließend wird `Exit Function` verwendet, um von der-Funktion zurückzugeben:
+
+[!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird die [Return-Anweisung](return-statement.md) verwendet, um den Rückgabewert zuzuweisen und die-Funktion zu beenden:
+
+[!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
+
 ## <a name="see-also"></a>Siehe auch
 
-- [Continue-Anweisung](../../../visual-basic/language-reference/statements/continue-statement.md)
-- [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [End-Anweisung](../../../visual-basic/language-reference/statements/end-statement.md)
-- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md)
-- [Stop-Anweisung](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Continue-Anweisung](continue-statement.md)
+- [Do...Loop-Anweisung](do-loop-statement.md)
+- [End-Anweisung](end-statement.md)
+- [For Each...Next-Anweisung](for-each-next-statement.md)
+- [For...Next-Anweisung](for-next-statement.md)
+- [Function-Anweisung](function-statement.md)
+- [Return-Anweisung](return-statement.md)
+- [Stop-Anweisung](stop-statement.md)
+- [Sub-Anweisung](sub-statement.md)
+- [Try...Catch...Finally-Anweisung](try-catch-finally-statement.md)
