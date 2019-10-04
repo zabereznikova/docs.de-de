@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566288"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353722"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und die Operatoren „is“ und „as“
 
@@ -23,11 +23,11 @@ Im folgenden Code wird der Musterabgleich mit der `is`-Anweisung veranschaulicht
 
 Im vorhergehenden Beispiel werden einige Features der Syntax für den Musterabgleich veranschaulicht. Die Anweisungen `if (a is Mammal m)` und `if (o is Mammal m)` kombinieren den Test mit einer Initialisierungszuweisung. Die Zuweisung tritt nur auf, wenn der Test erfolgreich ist. Die Variable `m` befindet sich nur im Bereich der eingebetteten `if`-Anweisung, dem sie zugewiesen wurde. Sie können in der gleichen Methode später nicht auf `m` zugreifen. Probieren Sie dies im interaktiven Fenster aus.
 
-Sie können die gleiche Syntax zum Testen verwenden, wenn ein [Nullable-Typ](../programming-guide/nullable-types/index.md) wie im folgenden Beispielcode über einen Wert verfügt:
+Sie können die gleiche Syntax zum Testen verwenden, wenn ein [Nullable-Werttyp](../programming-guide/nullable-types/index.md) wie im folgenden Beispielcode über einen Wert verfügt:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-Im vorhergehenden Beispiel werden weitere Features des Musterabgleichs veranschaulicht, die mit Konvertierungen verwendet werden können. Sie können eine Variable für das NULL-Muster prüfen, indem Sie spezifisch nach dem `null`-Wert sehen. Wenn der Laufzeitwert der Variable `null` ist, gibt eine `is`-Anweisung, die nach einem Typ prüft, immer `false` zurück. Die `is`-Anweisung für den Musterabgleich lässt keinen Nullable-Typ für den Wert zu, z.B. `int?` oder `Nullable<int>`, jedoch können Sie nach jedem anderen Werttyp prüfen.
+Im vorhergehenden Beispiel werden weitere Features des Musterabgleichs veranschaulicht, die mit Konvertierungen verwendet werden können. Sie können eine Variable für das NULL-Muster prüfen, indem Sie spezifisch nach dem `null`-Wert sehen. Wenn der Laufzeitwert der Variable `null` ist, gibt eine `is`-Anweisung, die nach einem Typ prüft, immer `false` zurück. Die `is`-Anweisung für den Musterabgleich lässt keinen Nullable-Typ für den Wert zu, z.B. `int?` oder `Nullable<int>`, jedoch können Sie nach jedem anderen Werttyp prüfen. Die `is`-Muster aus dem vorherigen Beispiel sind nicht auf die Nullable-Werttypen beschränkt. Sie können diese Muster auch verwenden, um zu testen, ob eine Variable eines Verweistyps über einen Wert oder verfügt oder `null` ist.
 
 Im vorhergehenden Beispiel wird auch veranschaulicht, wie Sie den `is`-Ausdruck für den Musterabgleich in einer `switch`-Anweisung verwenden, in der die Variable einen von vielen verschiedenen Typen aufweisen kann.
 

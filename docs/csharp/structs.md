@@ -3,14 +3,15 @@ title: Strukturen - Leitfaden für C#
 description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen erstellen
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608018"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396125"
 ---
 # <a name="structs"></a>Strukturen
+
 Eine *Struktur* ist ein Werttyp. Wenn eine Struktur erstellt wird, enthält die Variable, der die Struktur zugewiesen wird, die eigentlichen Daten der Struktur. Wenn die Struktur einer neuen Variable zugewiesen wird, werden diese kopiert. Die neue Variable und die ursprüngliche Variable enthalten daher zwei separate Kopien der gleichen Daten. Änderungen an einer Kopie wirken sich nicht auf die andere Kopie aus.
 
 Werttypvariablen enthalten die zugehörigen Werte direkt, d. h., der Speicher wird inline in dem Kontext belegt, in dem die Variable deklariert ist. Für Werttypvariablen erfolgt keine getrennte Heapzuordnung oder ein Mehraufwand für die Garbage Collection.  
@@ -51,7 +52,8 @@ Strukturen teilen sich einen großen Teil der Syntax mit Klassen, obwohl Struktu
   
 - Eine Struktur kann Schnittstellen implementieren.
 
-## <a name="literal-values"></a>Literalwerte  
+## <a name="literal-values"></a>Literalwerte
+
 In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler den `double`-Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](./language-reference/keywords/value-types.md).  
   
 Da Literale typisiert sind und alle Typen letztlich von <xref:System.Object> abgeleitet werden, können Sie Code der folgenden Art erstellen und kompilieren:  
@@ -62,8 +64,9 @@ Die letzten beiden Beispiele veranschaulichen die Sprachfunktionen, die in C# 7.
 
 Im zweiten Beispiel werden *binäre Literale* veranschaulicht, mit denen Sie ein Bitmuster direkt angeben können, anstatt Hexadezimalnotation zu verwenden.
 
-## <a name="nullable-types"></a>Auf NULL festlegbare Typen  
-Gewöhnliche Werttypen können den Wert [NULL](./language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie ein **?** nach dem Typ anfügen. Zum Beispiel ist **int?** ein **int**-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) haben kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp <xref:System.Nullable%601>. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)](./programming-guide/nullable-types/index.md).
+## <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen
+
+Gewöhnliche Werttypen können den Wert [NULL](language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) aufweisen kann. Nullable-Werttypen sind Instanzen des generischen Strukturtyps <xref:System.Nullable%601>. Nullable-Werttypen sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL oder nicht definiert sein können. Weitere Informationen finden Sie unter [Nullable-Werttypen](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

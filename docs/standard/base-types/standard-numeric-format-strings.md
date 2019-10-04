@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99e3bc59266846fcd5c5774b6050b4e075cbc3f
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b2f997cf398e59f8e30ac87c1e0360e43a448e85
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374496"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216708"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -117,10 +117,10 @@ Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|Definiert die Zeichenfolge, die Gruppen von ganzen Zahlen trennt.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|Definiert die Anzahl von ganzzahligen Ziffern, die in einer Gruppe angezeigt werden.|
 
-Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Währungsformatbezeichner formatiert.
+Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Währungsformatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+[!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
 [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]
 
 [Zurück zur Tabelle](#table)
@@ -165,10 +165,10 @@ Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die die ganzzahlige Ziffer von Dezimalstellen im Koeffizienten trennt.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Definiert die Zeichenfolge, die angibt, dass ein Exponent positiv ist.|
 
-Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Exponentialformatbezeichner formatiert.
+Im folgenden Beispiel wird ein <xref:System.Double>-Wert mit dem Exponentialformatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+[!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
 [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]
 
 [Zurück zur Tabelle](#table)
@@ -189,10 +189,10 @@ Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Definiert die Standardanzahl von Dezimalzahlen. Dieser Wert kann mit der Genauigkeitsangabe überschrieben werden.|
 
-Im folgenden Beispiel wird ein <xref:System.Double>-Wert und ein <xref:System.Int32>-Wert mit dem Festkommaformatbezeichner formatiert.
+Im folgenden Beispiel wird ein <xref:System.Double>-Wert und ein <xref:System.Int32>-Wert mit dem Festkommaformatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+[!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
 [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]
 
 [Zurück zur Tabelle](#table)
@@ -236,10 +236,10 @@ Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|Definiert die Zeichenfolge, die angibt, dass ein Exponent positiv ist.|
 
-Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem allgemeinen Formatbezeichner formatiert.
+Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem allgemeinen Formatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+[!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
 [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]
 
 [Zurück zur Tabelle](#table)
@@ -261,10 +261,10 @@ Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen und Dezimalzahlen trennt.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|Definiert die Standardanzahl von Dezimalzahlen. Dieser Wert kann mit einer Genauigkeitsangabe überschrieben werden.|
 
-Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Zahlenformatbezeichner formatiert.
+Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Zahlenformatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+[!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
 [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]
 
 [Zurück zur Tabelle](#table)
@@ -288,10 +288,10 @@ In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-E
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|Definiert die Zeichenfolge, die Gruppen von ganzen Zahlen trennt.|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|Definiert die Anzahl von ganzzahligen Ziffern, die in einer Gruppe angezeigt werden.|
 
-Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Prozentformatbezeichner formatiert.
+Im folgenden Beispiel werden gemischte Gleitkommawerte mit dem Prozentformatbezeichner formatiert:
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
-[!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+[!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
 [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]
 
 [Zurück zur Tabelle](#table)
@@ -324,9 +324,9 @@ Im folgenden Beispiel wird ein <xref:System.Numerics.BigInteger>-Wert mit dem Ro
 > [!IMPORTANT]
 > In einigen Fällen werden <xref:System.Double>-Werte, die mit der Standardformatzeichenfolge für Zahlen "R" formatiert sind, nicht erfolgreich zurückkonvertiert, wenn sie mit dem `/platform:x64`- oder dem `/platform:anycpu`-Parameter kompiliert wurden und auf 64-Bit-Systemen ausgeführt werden. Weitere Informationen erhalten Sie im folgenden Abschnitt.
 
-Um das Problem zu umgehen, dass mit der standardmäßigen numerischen Formatierungszeichenfolge "R" formatierte <xref:System.Double>-Werte bei der Kompilierung mit der `/platform:x64`-Option oder der `/platform:anycpu`-Option und bei Ausführung auf 64-Bit-Systemen keinen erfolgreichen Roundtrip durchführen, können Sie <xref:System.Double>-Werte mit der standardmäßigen numerischen Formatierungszeichenfolge "G17" formatieren. Im folgenden Beispiel wird die Formatzeichenfolge "R" mit einem <xref:System.Double>-Wert verwendet, der nicht erfolgreich zurückkonvertiert wird, und es wird die Formatzeichenfolge "G17" verwendet, um erfolgreich in den ursprünglichen Wert zurückzukonvertieren.
+Um das Problem zu umgehen, dass mit der standardmäßigen numerischen Formatierungszeichenfolge "R" formatierte <xref:System.Double>-Werte bei der Kompilierung mit der `/platform:x64`-Option oder der `/platform:anycpu`-Option und bei Ausführung auf 64-Bit-Systemen keinen erfolgreichen Roundtrip durchführen, können Sie <xref:System.Double>-Werte mit der standardmäßigen numerischen Formatierungszeichenfolge "G17" formatieren. Im folgenden Beispiel wird die Formatzeichenfolge „R“ mit einem <xref:System.Double>-Wert verwendet, der nicht erfolgreich zurückkonvertiert wird, und es wird die Formatzeichenfolge „G17“ verwendet, um erfolgreich in den ursprünglichen Wert zurückzukonvertieren:
 
-[!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
+[!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
 
 [Zurück zur Tabelle](#table)
@@ -380,7 +380,7 @@ Wenn der Wert eines <xref:System.Single>-Gleitkommatyps oder eines <xref:System.
 
 Durch das folgende Beispiel werden mithilfe der Kultur en-US und allen Standardzahlen-Formatbezeichnern ein ganzzahliger Wert und ein numerischer Gleitkommawert formatiert. In diesem Beispiel werden zwei bestimmte numerische Typen (<xref:System.Double> und <xref:System.Int32>) verwendet. Die Ergebnisse sind jedoch für alle numerischen Basistypen (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> und <xref:System.Single>) ähnlich.
 
-[!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
+[!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
 ## <a name="see-also"></a>Siehe auch

@@ -3,12 +3,12 @@ title: 'Gewusst wie: Verwenden der automatisierten ML-API von ML.NET'
 description: Die automatisierte ML-API von ML.NET automatisiert das Erstellen von Modellen und generiert ein zur Bereitstellung geeignetes Modell. Erfahren Sie, welche Optionen Sie verwenden können, um automatisierte Machine Learning-Aufgaben zu konfigurieren.
 ms.date: 04/24/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 02e4203b0d9f388c7bd7133f3cd4e97cc60cff14
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a7057337fb6ff19a1e402d7bf74a766b246ea3c1
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929392"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332723"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Gewusst wie: Verwenden der automatisierten ML-API von ML.NET
 
@@ -126,6 +126,9 @@ Die Metrikoptimierung, wie im obigen Beispiel dargestellt, bestimmt, welche Metr
 |PositiveRecall
 
 ## <a name="data-pre-processing-and-featurization"></a>Datenvorverarbeitung und Featurebereitstellung
+
+> [!NOTE]
+> Die Featurespalte unterstützt nur die Typen [`Boolean`](https://docs.microsoft.com/en-us/dotnet/api/system.boolean), [`Single`](https://docs.microsoft.com/en-us/dotnet/api/system.single) und [`String`](https://docs.microsoft.com/en-us/dotnet/api/system.string).
 
 Die Datenvorverarbeitung erfolgt standardmäßig, und die folgenden Schritte werden automatisch für Sie ausgeführt:
 

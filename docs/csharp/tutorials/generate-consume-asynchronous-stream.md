@@ -3,12 +3,12 @@ title: Generieren und Nutzen asynchroner Datenströme
 description: In diesem fortgeschrittenen Tutorial werden Szenarien dargestellt, in denen das Generieren und Nutzen asynchroner Datenströme eine natürlichere Möglichkeit zur Arbeit mit Datensequenzen bietet, die asynchron generiert werden können.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 3fdf5299deca365c62a00a8320ea335e96d9078c
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926687"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216556"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich dem C# 8.0-Beta-Compiler. Der C# 8-Betacompiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder dem neuesten [.NET Core 3.0 SDK – Vorschauversion](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar. Asynchrone Datenströme stehen in Vorschauversion 1 von .NET Core 3.0 erstmals zur Verfügung.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) zur Verfügung.
 
 Sie müssen ein [GitHub-Zugriffstoken](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) erstellen, damit Sie auf den GitHub GraphQL-Endpunkt zugreifen können. Wählen Sie die folgenden Berechtigungen für Ihr GitHub-Zugriffstoken aus:
 

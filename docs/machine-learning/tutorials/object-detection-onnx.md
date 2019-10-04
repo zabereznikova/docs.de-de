@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 956cbedd7e354b36c447bdc06ea996948c745264
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4856608e2c944c3a0fee65a328076bf1581f3d2a
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929091"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332628"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -45,7 +45,7 @@ Dieses Beispiel erstellt eine .NET Core-Konsolenanwendung, die Objekte in einem 
 
 Objekterkennung ist ein Problem des maschinellen Sehens. Obwohl die Objekterkennung eng mit der Bildklassifizierung verwandt ist, führt sie die Bildklassifizierung auf einer detaillierteren Ebene durch. Die Objekterkennung ermittelt _und_ kategorisiert Entitäten in Bildern. Verwenden Sie die Objekterkennung, wenn Bilder mehrere Objekte verschiedener Typen enthalten.
 
-![](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Nebeneinander liegende Bilder, die die Bildklassifizierung eines Hundes auf der linken Seite und die Objektklassifizierung einer Gruppe auf einer Hundeausstellung auf der rechten Seite zeigen.](./media/object-detection-onnx/img-classification-obj-detection.PNG)
 
 Einige Anwendungsfälle für die Objekterkennung sind:
 
@@ -66,7 +66,7 @@ Es gibt verschiedene Arten von neuronalen Netzen, wobei die häufigsten MLP (Mul
 
 Objekterkennung ist eine Bildverarbeitungsaufgabe. Daher sind die meisten Deep Learning-Modelle, die zur Lösung dieses Problems trainiert werden, CNNs. Das in diesem Tutorial verwendete Modell ist das Tiny YOLOv2-Modell, eine kompaktere Version des YOLOv2-Modells, das im folgenden Dokument beschrieben wird: [„YOLO9000: Better, Faster, Stronger“ von Redmon und Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Tiny YOLOv2 wird mit dem Pascal VOC-Dataset trainiert und besteht aus 15 Schichten, die 20 verschiedene Klassen von Objekten vorhersagen können. Da Tiny YOLOv2 eine komprimierte Version des ursprünglichen YOLOv2-Modells ist, wird ein Kompromiss zwischen Geschwindigkeit und Genauigkeit erzielt. Die verschiedenen Schichten, die das Modell bilden, können mithilfe von Tools wie etwa Netron visualisiert werden. Die Untersuchung des Modells würde eine Zuordnung der Verbindungen zwischen allen Schichten ergeben, aus denen sich das neuronale Netz zusammensetzt, wobei jede Schicht den Namen der Schicht zusammen mit den Dimensionen der jeweiligen Ein- bzw. Ausgabe enthalten würde. Die Datenstrukturen, die zum Beschreiben der Eingaben und Ausgaben des Modells verwendet werden, werden als Tensoren bezeichnet. Tensoren können als Container betrachtet werden, in denen Daten in N Dimensionen gespeichert werden. Im Fall von Tiny YOLOv2 ist der Name der Eingabeschicht `image`, und es wird ein Tensor mit den Dimensionen `3 x 416 x 416` erwartet. Der Name der Ausgabeschicht ist `grid`, und es wird ein Tensor mit den Dimensionen `125 x 13 x 13` generiert.
 
-![](./media/object-detection-onnx/netron-model-map.png)
+![Die Eingabeschicht wird in verborgene Schichten aufgeteilt und führt zur Ausgabeschicht.](./media/object-detection-onnx/netron-model-map.png)
 
 Das Yolo-Modell verwendet ein Bild mit `3(RGB) x 416px x 416px`. Das Modell nimmt diese Eingabe an und übergibt sie durch die verschiedenen Schichten, um eine Ausgabe zu generieren. Die Ausgabe teilt das Eingabebild in ein `13 x 13`-Raster auf, wobei jede Zelle im Raster aus `125` Werten besteht.
 
@@ -74,11 +74,11 @@ Das Yolo-Modell verwendet ein Bild mit `3(RGB) x 416px x 416px`. Das Modell nimm
 
 ONNX (Open Neural Network Exchange) ist ein Open-Source-Format für KI-Modelle. ONNX unterstützt die Interoperabilität zwischen Frameworks. Das bedeutet, dass Sie ein Modell in einem der vielen gängigen Machine Learning-Frameworks wie PyTorch trainieren, es in das ONNX-Format konvertieren und das ONNX-Modell in einem anderen Framework wie ML.NET verwenden können. Weitere Informationen finden Sie auf der [ONNX-Website](https://onnx.ai/).
 
-![](./media/object-detection-onnx/onnx-frameworks.png)
+![Von ONNX unterstützte Formate werden in ONNX importiert und dann von anderen von O unterstützten Formaten verwendet](./media/object-detection-onnx/onnx-frameworks.png)
 
 Das vortrainierte Tiny YOLOv2-Modell wird im ONNX-Format gespeichert, einer serialisierten Darstellung der Schichten und erlernten Muster dieser Schichten. In ML.NET wird die Interoperabilität mit ONNX mit den NuGet-Paketen [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) und [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) erreicht. Das Paket [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) enthält eine Reihe von Transformationen, die ein Bild annehmen und in numerische Werte codieren, die als Eingabe in eine Vorhersage- oder Trainingspipeline verwendet werden können. Das Paket [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) nutzt die ONNX Runtime, um ein ONNX-Modell zu laden und damit Vorhersagen basierend auf bereitgestellten Eingaben zu treffen.
 
-![](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![Datenfluss der ONNX-Datei in die ONNX-Laufzeit und schließlich in die C# Anwendung](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>Einrichten des .NET Core-Projekts
 
@@ -183,7 +183,7 @@ Initialisieren Sie die `mlContext`-Variable mit einer neuen Instanz von `MLConte
 
 Das Modell segmentiert ein Bild in ein `13 x 13`-Raster, in dem jede Rasterzelle `32px x 32px` groß ist. Jede Rasterzelle enthält fünf potenzielle Objektbegrenzungsrahmen. Ein Begrenzungsrahmen enthält 25 Elemente:
 
-![](./media/object-detection-onnx/model-output-description.png)
+![Rasterbeispiel auf der linken Seite und Begrenzungsfeldbeispiel auf der rechten Seite](./media/object-detection-onnx/model-output-description.png)
 
 - `x`: die x-Position der Mitte des Begrenzungsrahmens relativ zu der Rasterzelle, der er zugeordnet ist.
 - `y`: die y-Position der Mitte des Begrenzungsrahmens relativ zu der Rasterzelle, der er zugeordnet ist.
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Navigieren Sie zum Verzeichnis `assets/images/output/`, um die Bilder mit Begrenzungsrahmen anzuzeigen. Unten sehen Sie ein Beispiel aus einem der verarbeiteten Bilder.
 
-![](./media/object-detection-onnx/image3.jpg)
+![Beispiel für ein verarbeitetes Bild eines Esszimmers](./media/object-detection-onnx/image3.jpg)
 
 Herzlichen Glückwunsch! Sie haben nun durch Wiederverwenden eines vortrainierten `ONNX`-Modells in ML.NET erfolgreich ein Machine Learning-Modell für die Objekterkennung erstellt.
 

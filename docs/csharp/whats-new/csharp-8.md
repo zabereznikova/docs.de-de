@@ -1,17 +1,17 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
-description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 5.
+description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: a434d1f7598bc3f6787f7466e48fb161db192761
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ee0f6c9d7cfbe829508e3e0900e249c204266ca3
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182414"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396036"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
-Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits ausprobieren können.
+C# 8.0 fügt der Sprache C# die folgenden Features und Verbesserungen hinzu:
 
 - [Readonly-Member](#readonly-members)
 - [Standardschnittstellenmember](#default-interface-members)
@@ -30,9 +30,6 @@ Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits au
 - [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
 - [„stackalloc“ in geschachtelten Ausdrücken](#stackalloc-in-nested-expressions)
 - [Erweiterung von interpolierten ausführlichen Zeichenfolgen](#enhancement-of-interpolated-verbatim-strings)
-
-> [!NOTE]
-> Dieser Artikel wurde zuletzt für Vorschauversion 5 von C# 8.0 aktualisiert.
 
 Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Artikel verfügbar sind, werden Links zu diesen Tutorials und Übersichten bereitgestellt. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
 
@@ -378,18 +375,18 @@ Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Ver
 
 ## <a name="indices-and-ranges"></a>Indizes und Bereiche
 
-Bereiche und Indizes bieten eine prägnante Syntax zur Angabe von Teilbereichen in einem Array, einer [Zeichenfolge](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>.
+Indizes und Bereiche bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in einer Sequenz.
 
 Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatoren:
 
 - <xref:System.Index?displayProperty=nameWithType>: Stellt einen Index in einer Sequenz dar.
-- Der `^`-Operator, der angibt, dass ein Index relativ zum Ende der Sequenz ist.
+- Der Index vom Endeoperator `^`, der angibt, dass ein Index relativ zum Ende der Sequenz ist.
 - <xref:System.Range?displayProperty=nameWithType>: Stellt einen Unterbereich einer Sequenz dar.
-- Der Bereichsoperator (`..`), die den Beginn und das Ende eines Bereichs als Operanden angibt.
+- Der Bereichsoperator `..`, der den Beginn und das Ende eines Bereichs als seine Operanden angibt.
 
 Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence.Length - n`.
 
-Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Der Beginn des Bereichs ist inklusiv, das Ende des Bereichs ist jedoch exklusiv. Das bedeutet dass der *Beginn* im Bereich enthalten ist, das *Ende* aber nicht. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar. 
+Ein Bereich gibt den *Beginn* und das *Ende* eines Bereichs an. Der Beginn des Bereichs ist inklusiv, das Ende des Bereichs ist jedoch exklusiv. Das bedeutet dass der *Beginn* im Bereich enthalten ist, das *Ende* aber nicht. Der Bereich `[0..^0]` stellt ebenso wie `[0..sequence.Length]` den gesamten Bereich dar.
 
 Schauen wir uns einige Beispiele an. Betrachten Sie das folgende Array, kommentiert mit seinem Index „from the start“ und „from the end“:
 
@@ -447,6 +444,8 @@ Der Bereich kann dann innerhalb der Zeichen `[` und `]` verwendet werden:
 ```csharp
 var text = words[phrase];
 ```
+
+Indizes und Bereiche werden nicht nur von Arrays unterstützt. Indizes und Bereiche können auch mit [string](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601> verwendet werden. Weitere Informationen finden Sie unter [Typunterstützung für Indizes und Bereiche](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Weitere Informationen zu Indizes und Bereichen finden Sie im Tutorial zu [Indizes und Bereichen](../tutorials/ranges-indexes.md).
 

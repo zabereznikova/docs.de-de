@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definiere
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e23007deffea0f542d623be918cd1c61496d1362
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081834"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353888"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -27,12 +27,12 @@ Es gibt einige Einschränkungen für den Ausdruck, den eine Methode als Verweisr
 
 - Der Rückgabewert darf nicht das `null`-Literal sein. Bei der Rückgabe von `null` tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
-   Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit null ist (nicht instanziiert) oder ein [Nullable-Typ](../nullable-types/index.md) für einen Werttyp darstellt.
- 
+   Eine Methode mit einer Verweisrückgabe kann einen Alias an eine Variable zurückgeben, deren Wert derzeit NULL ist (nicht instanziiert) oder ein [Nullable-Werttyp](../nullable-types/index.md) für einen Werttyp darstellt.
+
 - Der Rückgabewert darf keine Konstante, kein Enumerationsmember, nicht der by-value-Rückgabewert einer Eigenschaft und keine Methode einer `class` oder `struct` sein. Wenn gegen diese Regel verstoßen wird, tritt der Compilerfehler CS8156 „Ein Ausdruck kann in diesem Kontext nicht verwendet werden, weil er ggf. nicht als Verweis zurückgegeben wird.“ auf.
 
 Zusätzlich sind Verweisrückgabewerte nicht für asynchrone Methoden zulässig. Eine asynchrone Methode wird möglicherweise zurückgegeben, bevor die Ausführung abgeschlossen ist, wobei der Rückgabewert noch unbekannt ist.
- 
+
 ## <a name="defining-a-ref-return-value"></a>Definieren eines ref-Rückgabewerts
 
 Eine Methode, die einen *Verweisrückgabewert* zurückgibt, muss die beiden folgenden Bedingungen erfüllen:

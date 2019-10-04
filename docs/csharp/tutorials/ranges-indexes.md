@@ -1,18 +1,18 @@
 ---
 title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
-ms.date: 04/19/2019
+ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: d0eeadfff9732ced22e045536a88ed49cd98bbaa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117838"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391971"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
-Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> oder <xref:System.ReadOnlySpan%601>. Diese Funktionen ermöglichen eine kürzere, klarere Syntax für den Zugriff auf einzelne Elemente oder Bereiche von Elementen in einer Sequenz.
+Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in einer Sequenz.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -74,6 +74,14 @@ Sie können Bereiche oder Indizes auch als Variablen deklarieren. Die Variable k
 Das folgende Beispiel zeigt viele der Gründe für diese Auswahl. Ändern Sie `x`, `y` und `z`, um verschiedene Kombinationen zu testen. Verwenden Sie beim Experimentieren Werte, wo `x` kleiner ist als `y` und `y` kleiner als `z` für gültige Kombinationen. Fügen Sie den folgenden Code in einer neuen Methode hinzu. Probieren Sie verschiedene Kombinationen aus:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
+
+## <a name="type-support-for-indices-and-ranges"></a>Typunterstützung für Indizes und Bereiche
+
+Wenn ein Typ einen [Indexer](../programming-guide/indexers/index.md) mit einem <xref:System.Index>- oder <xref:System.Range>-Parameter bereitstellt, unterstützt er explizit Indizes bzw. Bereiche.
+
+Ein Typ ist **zählbar**, wenn er über eine Eigenschaft mit dem Namen `Length` oder `Count` mit einem zugreifbaren Getter und einem Rückgabetyp von `int` verfügt. Ein zählbarer Typ, der Indizes oder Bereiche nicht explizit unterstützt, kann implizite Unterstützung dafür bieten. Weitere Informationen finden Sie in den Abschnitten [Implizite Indexunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) und [Implizite Bereichsunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) der [Featurevorschläge](~/_csharplang/proposals/csharp-8.0/ranges.md).
+
+Beispielsweise unterstützen die folgenden .NET-Typen Indizes und Bereiche: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> und <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> unterstützt Indizes, jedoch keine Bereiche.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Szenarien für Indizes und Bereiche
 

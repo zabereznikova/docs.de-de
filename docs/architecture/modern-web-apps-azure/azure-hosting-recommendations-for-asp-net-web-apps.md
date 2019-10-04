@@ -4,12 +4,12 @@ description: Entwerfen moderner Web-Apps mit ASP.NET Core und Azure | Empfehlung
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675467"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71331987"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps
 
@@ -124,9 +124,9 @@ Für kurzlebige Daten, die im Zusammenhang mit Befehlen und Ereignissen stehen u
 
 Die Anforderungen Ihrer Anwendung sollten die Architektur vorgeben. Es sind viele verschiedene Azure-Dienste verfügbar. Die Auswahl des richtigen Diensts ist eine wichtige Entscheidung. Microsoft bietet einen Katalog von Referenzarchitekturen, um dabei zu helfen, typische Architekturen zu identifizieren, die für allgemeine Szenarios optimiert sind. Sie können eine Referenzarchitektur suchen, die den Anforderungen Ihrer Anwendung genau entspricht oder einen Ausgangspunkt darstellt.
 
-Abbildung 11-2 zeigt ein Beispiel einer Referenzarchitektur. Dieses Diagramm beschreibt eine empfohlene Architektur für eine Website, die für Marketingzwecke optimiert ist und ein Content Management-System von Sitecore verwendet.
+Abbildung 11-1 zeigt ein Beispiel einer Referenzarchitektur. Dieses Diagramm beschreibt eine empfohlene Architektur für eine Website, die für Marketingzwecke optimiert ist und ein Content Management-System von Sitecore verwendet.
 
-![](./media/image11-2.png)
+![Abbildung 11–1](./media/image11-2.png)
 
 **Abbildung 11-1**. Referenzarchitektur der Marketingwebsite mit Sitecore
 

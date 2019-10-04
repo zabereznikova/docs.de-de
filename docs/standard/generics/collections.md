@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948927"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353947"
 ---
 # <a name="generic-collections-in-net"></a>Generische Auflistungen in .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "69948927"
  Die generische <xref:System.Nullable%601>Struktur ermöglicht es Ihnen, die Werttypen so zu verwenden, als ob ihnen `null` zugewiesen werden könnte. Dies kann nützlich sein, wenn Datenbankabfragen verwendet werden, für die möglicherweise Felder fehlen, die Werttypen enthalten. Der generische Typparameter kann ein beliebiger Werttyp sein.  
   
 > [!NOTE]
-> In C# und Visual Basic muss <xref:System.Nullable%601> nicht explizit verwendet werden, weil die Sprache eine Syntax für NULL-fähige Typen umfasst. Siehe [Nullable-Typen (C#-Programmierhandbuch)](../../csharp/programming-guide/nullable-types/index.md) und [Auf NULL festlegbare Werttypen (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> In C# und Visual Basic muss <xref:System.Nullable%601> nicht explizit verwendet werden, weil die Sprache eine Syntax für NULL-fähige Typen umfasst. Siehe [Nullable-Werttypen (C#-Programmierleitfaden)](../../csharp/programming-guide/nullable-types/index.md) und [Nullwerte zulassende Werttypen (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md).
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   

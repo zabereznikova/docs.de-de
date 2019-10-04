@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8820fb898e0944704b7c81363962d523770a541c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442476"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393119"
 ---
 # <a name="globalization"></a>Globalisierung
 
@@ -40,7 +40,7 @@ Standardmäßig verwendet .NET Unicode-Zeichenfolgen. Eine Unicode-Zeichenfolge 
 
 Viele Anwendungen und Betriebssysteme, einschließlich das Windows-Betriebssystem, können auch Codepages verwenden, um Zeichensätze darzustellen. Codepages enthalten normalerweise die ASCII-Standardwerte von 0x00 bis 0x7F und ordnen andere Zeichen den restlichen Werten von 0x80 bis 0xFF zu. Die Interpretation der Werte von 0x80 bis 0xFF ist von der jeweiligen Codepage abhängig. Daher sollten Sie Codepages, soweit möglich, in globalisierten Apps vermeiden.
 
-Das folgende Beispiel veranschaulicht die Risiken beim Interpretieren von Codepagedaten, wenn sich die Standardcodepage in einem System von der Codepage unterscheidet, auf der die Daten gespeichert wurden. (Um dieses Szenario zu simulieren, werden im Beispiel explizit unterschiedliche Codepages angegeben.) Zuerst wird im Beispiel ein Array definiert, das aus den Großbuchstaben des griechischen Alphabets besteht. Diese werden durch die Verwendung von Codepage 737 (auch als MS-DOS Greek bezeichnet) in ein Bytearray codiert, das in eine Datei geschrieben wird. Wenn die Datei abgerufen und das Bytearray mit Codepage 737 decodiert wird, werden die ursprünglichen Zeichen wiederhergestellt. Wenn die Datei dagegen abgerufen und das Bytearray mit Codepage 1252 (bzw. Windows-1252 zur Darstellung der Zeichen im lateinischen Alphabet) decodiert wird, gehen die ursprünglichen Zeichen verloren.
+Das folgende Beispiel veranschaulicht die Risiken beim Interpretieren von Codepagedaten, wenn sich die Standardcodepage in einem System von der Codepage unterscheidet, auf der die Daten gespeichert wurden. (Um dieses Szenario zu simulieren, werden im Beispiel explizit unterschiedliche Codepages angegeben.) Zunächst wird im Beispiel ein Array definiert, das aus den Großbuchstaben des griechischen Alphabets besteht. Diese werden durch die Verwendung von Codepage 737 (auch als MS-DOS Greek bezeichnet) in ein Bytearray codiert, das in eine Datei geschrieben wird. Wenn die Datei abgerufen und das Bytearray mit Codepage 737 decodiert wird, werden die ursprünglichen Zeichen wiederhergestellt. Wenn die Datei dagegen abgerufen und das Bytearray mit Codepage 1252 (bzw. Windows-1252 zur Darstellung der Zeichen im lateinischen Alphabet) decodiert wird, gehen die ursprünglichen Zeichen verloren.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -183,7 +183,7 @@ Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Ein einzelne
 
 Wenn die Daten auf einem System in der gleichen Zeitzone wiederhergestellt werden, in der sie auch serialisiert wurden, spiegeln die deserialisierten Datums- und Uhrzeitwerte den ursprünglichen Wert wider, wie die Ausgabe zeigt:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/30/2013 6:00:00 PM Local
@@ -193,7 +193,7 @@ Wenn die Daten auf einem System in der gleichen Zeitzone wiederhergestellt werde
 
 Wenn Sie die Daten jedoch auf einem System in einer anderen Zeitzone wiederherstellen, behält nur der Datums- und Uhrzeitwert, der mit der Standardformatzeichenfolge "o" (Roundtrip) formatiert wurde, die Zeitzoneninformationen bei und stellt daher den gleichen Zeitpunkt dar. Wenn die Datums- und Uhrzeitdaten auf einem System in der Zeitzone Romanische Normalzeit wiederhergestellt werden, lautet die Ausgabe wie folgt:
 
-```
+```console
 '3/30/2013 6:00:00 PM' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00' --> 3/30/2013 6:00:00 PM Unspecified
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
@@ -218,7 +218,7 @@ Das folgende Beispiel veranschaulicht die einzelnen Techniken:
 
 Wenn die Daten auf einem System in der Zeitzone Pazifik Normalzeit serialisiert und auf einem System in der Zeitzone Romanische Normalzeit deserialisiert werden, lautet die Ausgabe wie folgt:
 
-```
+```console
 '2013-03-30T18:00:00.0000000-07:00' --> 3/31/2013 3:00:00 AM Local
 'Sun, 31 Mar 2013 01:00:00 GMT' --> 3/31/2013 3:00:00 AM Local
 '2013-03-31 01:00:00Z' --> 3/31/2013 3:00:00 AM Local

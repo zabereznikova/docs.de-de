@@ -5,12 +5,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 06/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: 54ab595c56f816517180aab48022c7df207fe84d
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b0d45ab7807bf84b98c58e85580d5aa04d0c5f7d
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410568"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306323"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Installieren des ML.NET-Modell-Generators
 
@@ -43,15 +43,27 @@ Der ML.NET-Modell-Generator kann entweder über den Visual Studio Marketplace od
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. Klicken Sie in der Menüleiste auf **Tools** > **Erweiterungen und Updates**.
+
+    ![VS2017-Dialogfeld zum Öffnen des Erweiterungs-Managers](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
 1. Wählen Sie in der Anzeige *Erweiterungen und Updates* den *Onlineknoten* aus.
 1. Suchen Sie in der Suchleiste nach *ML.NET-Modell-Generator*, und wählen Sie in den Ergebnissen „ML.NET-Modell-Generator (Vorschauversion)“ aus.
+
+    ![VS2017-Dialogfeld zum Suchen und Installieren der Modell-Generator-Erweiterung im Erweiterungs-Manager](./media/install-model-builder/vs2017-install-model-builder.png)
+
 1. Folgen Sie den Anweisungen, um die Installation abzuschließen.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
 1. Wählen Sie in der Menüleiste **Erweiterungen** > **Erweiterungen verwalten** aus.
+
+    ![VS2019-Dialogfeld zum Öffnen des Erweiterungs-Managers](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
 1. Wählen Sie in der Anzeige *Erweiterungen und Updates* den *Onlineknoten* aus.
 1. Geben Sie in die Suchleiste *ML.NET-Modell-Generator* ein, und wählen Sie „ML.NET-Modellgenerator (Vorschauversion)“ aus.
+
+    ![VS2019-Dialogfeld zum Suchen und Installieren der Modell-Generator-Erweiterung im Erweiterungs-Manager](./media/install-model-builder/vs2019-install-model-builder.png)
+
 1. Folgen Sie den Anweisungen, um die Installation abzuschließen.
 
 ## <a name="uninstall"></a>Deinstallieren
@@ -59,15 +71,27 @@ Der ML.NET-Modell-Generator kann entweder über den Visual Studio Marketplace od
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 1. Wählen Sie in der Menüleiste **Tools** > **Erweiterungen und Updates** aus.
+
+    ![VS2017-Dialogfeld zum Öffnen der Verwaltungserweiterungen](./media/install-model-builder/vs2017-open-extensions-manager.png)
+
 1. Erweitern Sie innerhalb der Eingabeaufforderung *Erweiterung und Updates* den Knoten *Installiert*, und wählen Sie *Tools* aus.
 1. Wählen Sie in der Liste der Tools „ML.NET-Modell-Generator“ (Vorschauversion) aus und dann *Deinstallieren*.
+
+    ![VS2017-Dialogfeld zum Suchen und Deinstallieren der Modell-Generator-Erweiterung im Erweiterungs-Manager](./media/install-model-builder/vs2017-uninstall-model-builder.png)
+
 1. Folgen Sie den Anweisungen, um die Deinstallation abzuschließen.
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
 1. Wählen Sie in der Menüleiste **Erweiterungen** > **Erweiterungen verwalten** aus.
+
+    ![VS2019-Dialogfeld zum Öffnen der Verwaltungserweiterungen](./media/install-model-builder/vs2019-open-extensions-manager.png)
+
 1. Erweitern Sie innerhalb der Eingabeaufforderung *Erweiterung und Updates* den Knoten *Installiert*, und wählen Sie *Tools* aus.
 1. Wählen Sie in der Liste der Tools „ML.NET-Modell-Generator“ (Vorschauversion) aus und dann *Deinstallieren*.
+
+    ![VS2019-Dialogfeld zum Suchen und Deinstallieren der Modell-Generator-Erweiterung im Erweiterungs-Manager](./media/install-model-builder/vs2019-uninstall-model-builder.png)
+
 1. Folgen Sie den Anweisungen, um die Deinstallation abzuschließen.
 
 ## <a name="upgrade"></a>Upgrade
