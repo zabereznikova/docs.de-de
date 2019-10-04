@@ -2,12 +2,12 @@
 title: Vergleichssemantik (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: da7b8f662d10376abd649e674701b43b7b740a6f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8d7868b0166f0a18824ec25e6cdf639deec665ac
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251180"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833944"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Vergleichssemantik (Entity SQL)
 Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operationen werden Typinstanzen verglichen:  
@@ -78,7 +78,7 @@ Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-
   
  <sup>1</sup> Die Verweise der angegebenen Entitätstyp Instanzen werden implizit verglichen, wie im folgenden Beispiel gezeigt:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   
@@ -87,7 +87,7 @@ WHERE p1 != p2 OR p1 IS NULL
   
  Eine Entitätsinstanz kann nicht mit einem expliziten Verweis verglichen werden. Eine Ausnahme wird ausgelöst, wenn dies versucht wird. Folgende Abfrage löst beispielsweise eine Ausnahme aus:  
   
-```  
+```sql  
 SELECT p1, p2   
 FROM AdventureWorksEntities.Product AS p1   
      JOIN AdventureWorksEntities.Product AS p2   

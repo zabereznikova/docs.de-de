@@ -2,18 +2,18 @@
 title: Bezeichner (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 4a8f98a9ea9601e1bf5f178e404f99e4a9160078
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b467a42ed0a0083b9e72037f437dd70aa6b46390
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250719"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833709"
 ---
 # <a name="identifiers-entity-sql"></a>Bezeichner (Entity SQL)
-Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bietet zwei Arten von Bezeichnern: einfache Bezeichner und Bezeichner in Anführungszeichen.  
+Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet zwei Arten von Bezeichnern: einfache Bezeichner und Bezeichner in Anführungszeichen.  
   
 ## <a name="simple-identifiers"></a>Einfacher Bezeichner  
- Ein einfacher Bezeichner [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in ist eine Sequenz von alphanumerischen Zeichen und unterstrichen. Das erste Zeichen des Bezeichners muss ein alphabetisches Zeichen (a-z oder A-Z) sein.  
+ Ein einfacher Bezeichner in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine Sequenz von alphanumerischen Zeichen und unterstrichen. Das erste Zeichen des Bezeichners muss ein alphabetisches Zeichen (a-z oder A-Z) sein.  
   
 ## <a name="quoted-identifiers"></a>Bezeichner in Anführungszeichen  
  Ein Bezeichner in Anführungszeichen ist eine beliebige Sequenz von in eckige Klammern ([]) eingeschlossenen Zeichen. Mit Bezeichnern in Anführungszeichen können Bezeichner mit Zeichen festgelegt werden, die in gewöhnlichen Bezeichnern nicht zulässig sind. Alle Zeichen zwischen den eckigen Klammern werden Teil des Bezeichners, einschließlich aller Leerzeichen.  
@@ -51,7 +51,7 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
  Informationen zur Vergleichs Semantik in Anführungszeichen finden Sie unter [Eingabe Zeichensatz](input-character-set-entity-sql.md).  
   
 ## <a name="aliasing-rules"></a>Regeln für das Aliasing  
- Es empfiehlt sich, bei Bedarf [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aliase in Abfragen anzugeben, einschließlich [!INCLUDE[esql](../../../../../../includes/esql-md.md)] der folgenden Konstrukte:  
+ Es empfiehlt sich, bei Bedarf Aliase in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfragen anzugeben, einschließlich der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Konstrukte:  
   
 - Felder eines Zeilenkonstruktors.  
   
@@ -65,7 +65,7 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
  Gültige Aliase in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sind einfache Bezeichner oder Bezeichner in Anführungszeichen.  
   
 ### <a name="alias-generation"></a>Generierung von Aliasen  
- Wenn in einem [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage Ausdruck kein Alias angegeben ist, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] versucht, einen Alias auf der Grundlage der folgenden einfachen Regeln zu generieren:  
+ Wenn in einem [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage Ausdruck kein Alias angegeben wird, versucht [!INCLUDE[esql](../../../../../../includes/esql-md.md)], einen Alias auf der Grundlage der folgenden einfachen Regeln zu generieren:  
   
 - Wenn es sich bei dem Abfrageausdruck (für den der Alias nicht angegeben wurde) um einen einfachen Bezeichner oder Bezeichner in Anführungszeichen handelt, wird dieser Bezeichner als Alias verwendet. Beispiel: `ROW(a, [b])` wird zu `ROW(a AS a, [b] AS [b])`.  
   
@@ -75,22 +75,22 @@ Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ver
   
  Implizite Aliase werden anhand von Benutzereingaben automatisch generiert. Beispielsweise generiert die folgende Codezeile "NAME" als Alias für beide Spalten, wodurch ein Konflikt entsteht.  
   
-```  
+```sql  
 SELECT product.NAME, person.NAME  
 ```  
   
  Die folgende Codezeile, in der explizite Aliase verwendet werden, schlägt ebenfalls fehl. Der Fehler ist jedoch offensichtlicher beim Lesen des Codes.  
   
-```  
+```sql  
 SELECT 1 AS X, 2 AS X …  
 ```  
   
 ## <a name="scoping-rules"></a>Bereichsregeln  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]definiert Bereichs Regeln, die bestimmen, wann bestimmte Variablen in der Abfragesprache sichtbar sind. Mit einigen Ausdrücken oder Anweisungen werden neue Namen eingeführt. Die Bereichsregeln bestimmen, wo solche Namen verwendet werden können und wann oder wo eine neue Deklaration mit demselben Namen wie eine andere die vorherige übergehen kann.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] definiert Bereichs Regeln, die bestimmen, wann bestimmte Variablen in der Abfragesprache sichtbar sind. Mit einigen Ausdrücken oder Anweisungen werden neue Namen eingeführt. Die Bereichsregeln bestimmen, wo solche Namen verwendet werden können und wann oder wo eine neue Deklaration mit demselben Namen wie eine andere die vorherige übergehen kann.  
   
- Wenn Namen in einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage definiert werden, werden Sie in einem Bereich definiert. Ein Gültigkeitsbereich deckt einen vollständigen Bereich der Abfrage ab. Für alle Ausdrücke oder Namensverweise innerhalb eines bestimmten Gültigkeitsbereichs sind Namen sichtbar, die innerhalb dieses Gültigkeitsbereichs definiert sind. Vor dem Beginn und nach dem Ende eines Gültigkeitsbereichs kann nicht auf Namen verwiesen werden, die innerhalb des Gültigkeitsbereichs definiert sind.  
+ Wenn Namen in einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage definiert sind, werden Sie in einem Bereich definiert. Ein Gültigkeitsbereich deckt einen vollständigen Bereich der Abfrage ab. Für alle Ausdrücke oder Namensverweise innerhalb eines bestimmten Gültigkeitsbereichs sind Namen sichtbar, die innerhalb dieses Gültigkeitsbereichs definiert sind. Vor dem Beginn und nach dem Ende eines Gültigkeitsbereichs kann nicht auf Namen verwiesen werden, die innerhalb des Gültigkeitsbereichs definiert sind.  
   
- Gültigkeitsbereiche können geschachtelt werden. Teile von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellen neue Bereiche vor, die ganze Regionen abdecken, und diese Regionen können [!INCLUDE[esql](../../../../../../includes/esql-md.md)] andere Ausdrücke enthalten, die auch Bereiche enthalten. Wenn Gültigkeitsbereiche geschachtelt sind, kann auf Namen verwiesen werden, die im innersten Gültigkeitsbereich definiert sind, der den Verweis enthält. Außerdem kann auf alle Namen verwiesen werden, die in beliebigen äußeren Gültigkeitsbereichen definiert sind. Zwei beliebige Gültigkeitsbereiche, die innerhalb desselben Gültigkeitsbereichs definiert sind, werden als nebengeordnete Gültigkeitsbereiche bezeichnet. Es kann nicht auf Namen verwiesen werden, die innerhalb nebengeordneter Gültigkeitsbereiche definiert sind.  
+ Gültigkeitsbereiche können geschachtelt werden. Teile von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellen neue Bereiche dar, die ganze Regionen abdecken, und diese Regionen können andere [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Ausdrücke enthalten, die auch Bereiche enthalten. Wenn Gültigkeitsbereiche geschachtelt sind, kann auf Namen verwiesen werden, die im innersten Gültigkeitsbereich definiert sind, der den Verweis enthält. Außerdem kann auf alle Namen verwiesen werden, die in beliebigen äußeren Gültigkeitsbereichen definiert sind. Zwei beliebige Gültigkeitsbereiche, die innerhalb desselben Gültigkeitsbereichs definiert sind, werden als nebengeordnete Gültigkeitsbereiche bezeichnet. Es kann nicht auf Namen verwiesen werden, die innerhalb nebengeordneter Gültigkeitsbereiche definiert sind.  
   
  Wenn ein Name in einem inneren Gültigkeitsbereich mit einem Namen in einem äußeren Gültigkeitsbereich übereinstimmt, beziehen sich Verweise im inneren Gültigkeitsbereich oder in Gültigkeitsbereichen, die innerhalb dieses Gültigkeitsbereichs deklariert sind, ausschließlich auf den neu deklarierten Namen. Der Name im äußeren Gültigkeitsbereich ist nicht sichtbar.  
   
@@ -101,7 +101,7 @@ SELECT 1 AS X, 2 AS X …
  Parameter befinden sich nicht in einem Gültigkeitsbereich. Da Verweise auf Parameter eine spezielle Syntax einschließen, treten niemals Konflikte zwischen Namen von Parametern und anderen Namen in der Abfrage auf.  
   
 ### <a name="query-expressions"></a>Abfrageausdrücke  
- Mit [!INCLUDE[esql](../../../../../../includes/esql-md.md)] einem Abfrage Ausdruck wird ein neuer Bereich eingeführt. Namen, die in der FROM-Klausel definiert sind, werden im FROM-Gültigkeitsbereich in der Reihenfolge ihres Auftretens von links nach rechts eingeführt. In der Joinliste können Ausdrücke auf Namen verweisen, die zuvor in der Liste definiert wurden. Öffentliche Eigenschaften (Felder usw.) von in der FROM-Klausel festgelegten Elementen werden dem FROM-Gültigkeitsbereich nicht hinzugefügt. Auf sie muss immer durch den aliasqualifizierten Namen verwiesen werden. Üblicherweise werden alle Teile des SELECT-Ausdrucks als innerhalb des FROM-Gültigkeitsbereichs angesehen.  
+ Mit einem [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage Ausdruck wird ein neuer Bereich eingeführt. Namen, die in der FROM-Klausel definiert sind, werden im FROM-Gültigkeitsbereich in der Reihenfolge ihres Auftretens von links nach rechts eingeführt. In der Joinliste können Ausdrücke auf Namen verweisen, die zuvor in der Liste definiert wurden. Öffentliche Eigenschaften (Felder usw.) von in der FROM-Klausel festgelegten Elementen werden dem FROM-Gültigkeitsbereich nicht hinzugefügt. Auf sie muss immer durch den aliasqualifizierten Namen verwiesen werden. Üblicherweise werden alle Teile des SELECT-Ausdrucks als innerhalb des FROM-Gültigkeitsbereichs angesehen.  
   
  Mit der GROUP BY-Klausel wird auch ein neuer nebengeordneter Gültigkeitsbereich eingeführt. Jede Gruppe kann über einen Gruppennamen verfügen, der auf die Auflistung der Elemente in der Gruppe verweist. Mit jedem Gruppierungsausdruck wird auch ein neuer Name im Gruppengültigkeitsbereich eingeführt. Darüber hinaus wird das Schachtelaggregat (bzw. die benannte Gruppe) ebenfalls dem Gültigkeitsbereich hinzugefügt. Die Gruppierungsausdrücke selbst befinden sich innerhalb des FROM-Gültigkeitsbereichs. Wenn jedoch eine GROUP BY-Klausel verwendet wird, werden die SELECT-Liste (Projektion), die HAVING-Klausel und die ORDER BY-Klausel als innerhalb des Gruppengültigkeitsbereichs und nicht des FROM-Gültigkeitsbereichs angesehen. Aggregate werden besonders behandelt, wie in der folgenden Aufzählung beschrieben wird.  
   
@@ -114,9 +114,9 @@ SELECT 1 AS X, 2 AS X …
 - Die Reihenfolge der Auswertung von Klauseln innerhalb des SELECT-Ausdrucks bestimmt die Reihenfolge, in der Namen im Gültigkeitsbereich eingeführt werden. Die FROM-Klausel wird zuerst ausgewertet, gefolgt von der WHERE-Klausel, GROUP BY-Klausel, HAVING-Klausel, SELECT-Klausel und schließlich der ORDER BY-Klausel.  
   
 ### <a name="aggregate-handling"></a>Aggregatbehandlung  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]unterstützt zwei Formen von Aggregaten: Auflistungs basierte Aggregate und gruppenbasierte Aggregate. Auflistungsbasierte Aggregate sind das bevorzugte Konstrukt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], und gruppenbasierte Aggregate werden für die SQL-Kompatibilität unterstützt.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Formen von Aggregaten: Auflistungs basierte Aggregate und gruppenbasierte Aggregate. Auflistungsbasierte Aggregate sind das bevorzugte Konstrukt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], und gruppenbasierte Aggregate werden für die SQL-Kompatibilität unterstützt.  
   
- Beim Auflösen eines Aggregats [!INCLUDE[esql](../../../../../../includes/esql-md.md)] versucht zunächst, es als Auflistungs basiertes Aggregat zu behandeln. Wenn dies fehlschlägt [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , wandelt die Aggregat Eingabe in einen Verweis auf das Schachteln-Aggregat um und versucht, diesen neuen Ausdruck aufzulösen, wie im folgenden Beispiel veranschaulicht.  
+ Beim Auflösen eines Aggregats versucht [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zuerst, es als Auflistungs basiertes Aggregat zu behandeln. Wenn dies nicht möglich ist, transformiert [!INCLUDE[esql](../../../../../../includes/esql-md.md)] die Aggregat Eingabe in einen Verweis auf das Schachteln-Aggregat und versucht, diesen neuen Ausdruck aufzulösen, wie im folgenden Beispiel veranschaulicht.  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   

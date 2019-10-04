@@ -8,17 +8,18 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 410c8bdb63b56a78dbfa64c21344fdcd6a6656c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a5449b4fa77ba99a18595077081089e80bd32df
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051608"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833619"
 ---
 # <a name="specifying-an-entry-point"></a>Angeben eines Einstiegspunktes
+
 Ein Einstiegspunkt identifiziert die Position einer Funktion in einer DLL. In einem verwalteten Projekt wird diese Funktion vom ursprünglichen Namen oder vom Ordinaleinstiegspunkt einer Zielfunktion über die Grenzen der Interoperation hinaus identifiziert. Außerdem können Sie dem Einstiegspunkt einen anderen Namen zuordnen und damit die Funktion umbenennen.  
   
- Aus folgenden Gründen kann es sinnvoll sein, eine DLL-Funktion umzubenennen:  
+ Im folgenden finden Sie eine Liste möglicher Gründe für das Umbenennen einer DLL-Funktion:  
   
 - Um keine API-Funktionsnamen zu verwenden, die zwischen Groß- und Kleinschreibung unterscheiden.  
   
@@ -31,7 +32,8 @@ Ein Einstiegspunkt identifiziert die Position einer Funktion in einer DLL. In ei
  In diesem Abschnitt wird das Umbenennen einer DLL-Funktion in verwaltetem Code veranschaulicht.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Umbenennen einer Funktion in Visual Basic  
- Visual Basic verwendet das **Function**-Schlüsselwort in der **Declare**-Anweisung, um das<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>-Feld festzulegen. Das folgende Beispiel zeigt eine Basisdeklaration.  
+ 
+Visual Basic verwendet das **Function**-Schlüsselwort in der **Declare**-Anweisung, um das<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>-Feld festzulegen. Das folgende Beispiel zeigt eine Basisdeklaration.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +45,7 @@ Friend Class NativeMethods
 End Class
 ```
   
- Sie können den **MessageBox**-Einstiegspunkt durch **MsgBox** ersetzen, indem Sie das **Alias**-Schlüsselwort wie im folgenden Beispiel dargestellt in die Definition aufnehmen. In beiden Beispielen erübrigt sich aufgrund des **Auto**-Schlüsselwortes die Angabe der Zeichensatzversion des Einstiegspunktes. Weitere Informationen zum Auswählen eines Zeichensatzes finden Sie unter [Angeben eines Zeichensatzes](specifying-a-character-set.md).  
+Sie können den **MessageBox**-Einstiegspunkt durch **MsgBox** ersetzen, indem Sie das **Alias**-Schlüsselwort wie im folgenden Beispiel dargestellt in die Definition aufnehmen. In beiden Beispielen erübrigt sich aufgrund des **Auto**-Schlüsselwortes die Angabe der Zeichensatzversion des Einstiegspunktes. Weitere Informationen zum Auswählen eines Zeichensatzes finden Sie unter [Angeben eines Zeichensatzes](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods

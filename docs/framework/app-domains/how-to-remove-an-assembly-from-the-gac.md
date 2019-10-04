@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa88cbc73415695a1545704a2ad8cab535f011e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a085ff6955f706bcd90f895c42e6405a28d408a
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053143"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834037"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache
 
@@ -28,29 +28,29 @@ Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) 
 
 - Mithilfe von [Windows Installer](/windows/desktop/Msi/windows-installer-portal). Diese Option für das Deinstallieren von Assemblys sollten Sie für Produktionssysteme und dann verwenden, wenn Sie Installationspakete testen.
 
-### <a name="removing-an-assembly-with-gacutilexe"></a>Entfernen einer Assembly mit "Gacutil.exe"
+## <a name="removing-an-assembly-with-gacutilexe"></a>Entfernen einer Assembly mit "Gacutil.exe"
 
-1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-    **gacutil –u** \<*assemblyname*>
+**gacutil –u** \<*assemblyname*>
 
-    In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.
+In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.
 
-    > [!WARNING]
-    > Sie sollten "Gacutil.exe" nicht verwenden, um Assemblys auf Produktionssystemen zu entfernen, denn es besteht die Möglichkeit, dass die Assembly für einige Anwendungen weiterhin erforderlich ist. Stattdessen sollten Sie den Windows Installer verwenden, der einen Verweiszähler für jede Assembly verwaltet, die er im GAC installiert.
+> [!WARNING]
+> Sie sollten "Gacutil.exe" nicht verwenden, um Assemblys auf Produktionssystemen zu entfernen, denn es besteht die Möglichkeit, dass die Assembly für einige Anwendungen weiterhin erforderlich ist. Stattdessen sollten Sie den Windows Installer verwenden, der einen Verweiszähler für jede Assembly verwaltet, die er im GAC installiert.
 
- Im folgenden Beispiel wird die Assembly `hello.dll` aus dem globalen Assemblycache entfernt.
+Im folgenden Beispiel wird eine Assembly mit dem Namen `hello.dll` aus dem globalen Assemblycache entfernt:
 
-```
+```console
 gacutil -u hello
 ```
 
-### <a name="removing-an-assembly-with-windows-installer"></a>Entfernen einer Assembly mit Windows Installer
+## <a name="removing-an-assembly-with-windows-installer"></a>Entfernen einer Assembly mit Windows Installer
 
-1. Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten. Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.
+Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten. Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.
 
-    > [!NOTE]
-    > Windows Installer verwaltet einen Verweiszähler für Assemblys, die im GAC installiert sind. Eine Assembly wird nur dann aus dem GAC entfernt, wenn ihr Verweiszähler gleich null wird, wodurch angegeben ist, dass sie von keiner der Anwendungen verwendet wird, die über ein Windows Installer-Paket installiert wurden.
+> [!NOTE]
+> Windows Installer verwaltet einen Verweiszähler für Assemblys, die im GAC installiert sind. Eine Assembly wird nur dann aus dem GAC entfernt, wenn ihr Verweiszähler gleich null wird, wodurch angegeben ist, dass sie von keiner der Anwendungen verwendet wird, die über ein Windows Installer-Paket installiert wurden.
 
 ## <a name="see-also"></a>Siehe auch
 

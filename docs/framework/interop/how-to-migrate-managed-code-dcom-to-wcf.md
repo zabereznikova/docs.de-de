@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2e37de4d3032db6d9578eae7ba0be5c1e39f39d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051753"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833627"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
@@ -302,7 +302,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Es folgt die Implementierung dieses Diensts: Diese Implementierung verwaltet eine Singleton-Kanalfactory, um sitzungsbasierte Objekte zu erstellen.  Wenn `GetInstanceAddress` aufgerufen wird, werden ein Kanal und ein <xref:System.ServiceModel.EndpointAddress10>-Objekt erstellt, das auf die Remoteadresse verweist, die diesem Kanal zugeordnet ist.   <xref:System.ServiceModel.EndpointAddress10> ist ein Datentyp, der per Wert an den Client zurückgegeben werden kann.  
+ Im folgenden finden Sie die Implementierung dieses Dienstanbieter. Diese Implementierung verwaltet eine Singleton-Kanalfactory, um sitzungsbasierte Objekte zu erstellen.  Wenn `GetInstanceAddress` aufgerufen wird, werden ein Kanal und ein <xref:System.ServiceModel.EndpointAddress10>-Objekt erstellt, das auf die Remoteadresse verweist, die diesem Kanal zugeordnet ist.   <xref:System.ServiceModel.EndpointAddress10> ist ein Datentyp, der per Wert an den Client zurückgegeben werden kann.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -329,7 +329,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. Deklarieren Sie im `<services>`-Abschnitt Dienstendpunkte für die Factory und das sitzungsbasierte Objekt.  Dadurch wird es dem Client ermöglicht, mit den Dienstendpunkten zu kommunizieren, die <xref:System.ServiceModel.EndpointAddress10>-Instanz abzurufen und den sitzungsbasierten Kanal zu erstellen.  
   
- Es folgt eine Beispielkonfigurationsdatei mit diesen Einstellungen:  
+ Im folgenden finden Sie eine Beispielkonfigurationsdatei mit diesen Einstellungen:  
   
 ```xml  
 <configuration>  

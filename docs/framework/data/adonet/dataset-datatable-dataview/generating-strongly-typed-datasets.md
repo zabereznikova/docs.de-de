@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce7e5ad53f7aa5dad457ca1aa6ab76716086c0c3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786309"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833994"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generieren von stark typisierten "DataSets"
-Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit dem <xref:System.Data.DataSet> Tool XSD. exe, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird, ein stark typisiertes generieren.  
+Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit dem Tool XSD. exe, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird, einen stark typisierten <xref:System.Data.DataSet> generieren.  
   
- (Informationen zum Erstellen einer XSD aus Datenbanktabellen <xref:System.Data.DataSet.WriteXmlSchema%2A> finden Sie unter oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
+ (Informationen zum Erstellen einer XSD aus Datenbanktabellen finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
  Der folgende Code zeigt die Syntax zum Erstellen eines **DataSets** mithilfe dieses Tools.  
   
@@ -23,7 +23,7 @@ Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) ents
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- In dieser Syntax `/d` weist die-Direktive das Tool an, ein **DataSet**zu generieren `/l:` , und teilt dem Tool mit, welche Sprache verwendet werden C# soll (z. b. oder Visual Basic .net). Die optionale `/eld` -Direktive gibt an, dass Sie LINQ to DataSet verwenden können, um das generierte **DataSet** abzufragen. Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen von typisierten Datasets](../querying-typed-datasets.md). Die optionale `/n:` -Direktive weist das Tool an, auch einen Namespace für das **DataSet** mit dem Namen **xsdschema. Namespace**zu generieren. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
+ In dieser Syntax weist die `/d`-Direktive das Tool an, ein **DataSet**zu generieren, und die `/l:` weist das Tool an, welche Sprache verwendet C# werden soll (z. b. oder Visual Basic .net). Die optionale `/eld`-Direktive gibt an, dass Sie LINQ to DataSet verwenden können, um das generierte **DataSet** abzufragen. Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen von typisierten Datasets](../querying-typed-datasets.md). Die optionale `/n:`-Direktive weist das Tool an, auch einen Namespace für das **DataSet** mit dem Namen **xsdschema. Namespace**zu generieren. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
   
  Im folgenden Codebeispiel wird die Syntax dargestellt, die zum Kompilieren des generierten Codes als Bibliothek mithilfe des C#-Compilers (csc.exe) verwendet wird.  
   
@@ -31,7 +31,7 @@ xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- Die `/t:`-Direktive weist das Tool an, eine Bibliothek zu kompilieren, und die `/r:`-Direktiven geben die zum Kompilieren erforderlichen abhängigen Bibliotheken an. Als Ergebnis des Befehls wird die Datei XSDSchemaFileName.dll ausgegeben, die an den Compiler übergeben werden kann, wenn eine ADO.NET-Anwendung mit der `/r:`-Direktive kompiliert wird.  
+ Die `/t:`-Direktive weist das Tool an, eine Bibliothek zu kompilieren, und die `/r:`-Direktiven geben die zum Kompilieren erforderlichen abhängigen Bibliotheken an. Als Ergebnis des Befehls wird die Datei XSDSchemaFileName.dll ausgegeben, die an den Compiler übergeben werden kann, wenn eine ADO.NET-Anwendung mit der `/r:`-Anweisung kompiliert wird.  
   
  Im folgenden Codebeispiel wird die Syntax für den Zugriff auf den Namespace dargestellt, der in einer ADO.NET-Anwendung an XSD.exe übergeben wird.  
   
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- Im Folgenden wird das im Beispiel verwendete XML-Schema dargestellt.  
+ Im folgenden finden Sie das XML-Schema, das für das Beispiel verwendet wird:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

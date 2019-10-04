@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: af22b6a895fef8037eb5c069ffb7cb23d1333531
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781015"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833679"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 
@@ -38,12 +38,12 @@ Die <xref:System.Linq.Enumerable.Union%2A>-Methode ist für Multisets definiert,
 
 ### <a name="take-skip"></a>Take, Skip
 
-<xref:System.Linq.Enumerable.Take%2A>die <xref:System.Linq.Enumerable.Skip%2A> -Methode und die-Methode sind nur für *geordnete Sätze*gut definiert. Die Semantik für ungeordnete Sätze oder Multisets ist nicht definiert.
+<xref:System.Linq.Enumerable.Take%2A>-und <xref:System.Linq.Enumerable.Skip%2A>-Methode sind nur für *geordnete Sätze*gut definiert. Die Semantik für ungeordnete Sätze oder Multisets ist nicht definiert.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie im Eintrag "überspringen und Entfernen von Ausnahmen in SQL Server 2000" in der [Problem](troubleshooting.md)Behandlung.
 
-Aufgrund von Einschränkungen bei der Reihenfolge in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL versucht, die Reihenfolge des Arguments dieser Methoden auf das Ergebnis der-Methode zu verschieben. Betrachten Sie z. B. die folgende [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage:
+Aufgrund von Einschränkungen bei der Reihenfolge in SQL versucht [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die Reihenfolge des Arguments dieser Methoden auf das Ergebnis der Methode zu verschieben. Betrachten Sie z. B. die folgende [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
@@ -94,7 +94,7 @@ Der Wert von `null` in der Zusammenstellung wird von SQL-Server definiert. [!INC
 
 ### <a name="aggregates"></a>Aggregate
 
-Die Aggregationsmethode für Standardabfrageoperatoren <xref:System.Linq.Enumerable.Sum%2A> ergibt bei einer leeren Sequenz oder bei einer aus Nullen bestehenden Sequenz 0. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bleibt die Semantik von SQL unverändert, und <xref:System.Linq.Enumerable.Sum%2A> für eine leere Sequenz `null` oder eine Sequenz, die nur Nullen enthält, wird anstelle von NULL ausgewertet.
+Die Aggregationsmethode für Standardabfrageoperatoren <xref:System.Linq.Enumerable.Sum%2A> ergibt bei einer leeren Sequenz oder bei einer aus Nullen bestehenden Sequenz 0. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bleibt die Semantik von SQL unverändert, und <xref:System.Linq.Enumerable.Sum%2A> ergibt bei einer leeren Sequenz oder bei einer Sequenz, die nur Nullen enthält, den Wert `null` anstelle von 0 (null).
 
 SQL-Einschränkungen für Zwischenergebnisse gelten in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für Summen. Die <xref:System.Linq.Enumerable.Sum%2A> von 32-Bit-Ganzzahlmengen wird nicht berechnet, indem man 64-Bit-Ergebnisse verwendet. Bei einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Übersetzung von <xref:System.Linq.Enumerable.Sum%2A> kann es zu einem Überlauf kommen, auch wenn die Implementierung von Standardabfrageoperatoren bei der entsprechenden Sequenz im Arbeitsspeicher keinen Überlauf verursacht.
 
@@ -102,7 +102,7 @@ In gleicher Weise wird die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbte
 
 ### <a name="entity-arguments"></a>Entitätsargumente
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ermöglicht die Verwendung von Entitäts Typen in <xref:System.Linq.Enumerable.GroupBy%2A> der <xref:System.Linq.Enumerable.OrderBy%2A> -Methode und der-Methode. In der Übersetzung dieser Operatoren gilt die Verwendung eines Arguments als Entsprechung zur Angabe aller Member dieses Typs. Der folgende Code ist z. B. äquivalent:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ermöglicht die Verwendung von Entitäts Typen in den Methoden <xref:System.Linq.Enumerable.GroupBy%2A> und <xref:System.Linq.Enumerable.OrderBy%2A>. In der Übersetzung dieser Operatoren gilt die Verwendung eines Arguments als Entsprechung zur Angabe aller Member dieses Typs. Der folgende Code ist z. B. äquivalent:
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
@@ -121,17 +121,17 @@ Die Gleichheit von Argumenten ist in der Implementierung der folgenden Methoden 
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt Gleichheit und Vergleich für *flache* Argumente, jedoch nicht für Argumente, die Sequenzen sind oder enthalten. Ein flaches Argument ist ein Typ, der einer SQL-Zeile zugeordnet werden kann. Eine Projektion von einem oder mehreren statisch festgelegten Entitätstypen ohne Sequenz gilt als flaches Argument.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt Gleichheit und Vergleich für *flache* Argumente, jedoch nicht für Argumente, die Sequenzen sind oder enthalten. Ein flaches Argument ist ein Typ, der einer SQL-Zeile zugeordnet werden kann. Eine Projektion von einem oder mehreren statisch festgelegten Entitätstypen ohne Sequenz gilt als flaches Argument.
 
-Es folgen Beispiele für flache Argumente:
+Im folgenden finden Sie Beispiele für flatarguments:
 
-[!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
-[!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
+[!code-csharp[DLinqSQOTranslation#3](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
+[!code-vb[DLinqSQOTranslation#3](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-Es folgen Beispiele für nicht flache (hierarchische) Argumente.
+Im folgenden finden Sie Beispiele für nicht flache (hierarchische) Argumente:
 
-[!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
-[!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
+[!code-csharp[DLinqSQOTranslation#4](~/samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
+[!code-vb[DLinqSQOTranslation#4](~/samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
 ### <a name="visual-basic-function-translation"></a>Visual Basic-Funktionsübersetzung
 
@@ -158,7 +158,7 @@ Konvertierungsmethoden:
 
 ### <a name="inheritance-mapping-restrictions"></a>Einschränkungen der Vererbungszuordnung
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von Vererbungs Hierarchien](how-to-map-inheritance-hierarchies.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Zuordnen von Vererbungs Hierarchien @ no__t-0.
 
 ### <a name="inheritance-in-queries"></a>Vererbung in Abfragen
 
@@ -198,7 +198,7 @@ Weitere Informationen über das Mapping zu diesen SQL Server Datums-und Uhrzeit 
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000-Unterstützung
 
-Die folgenden 2000 SQL Server Einschränkungen (im Vergleich zu Microsoft SQL Server 2005) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wirken sich auf die-Unterstützung aus.
+Die folgenden SQL Server Einschränkungen für 2000 (verglichen mit Microsoft SQL Server 2005) wirken sich auf die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung aus.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply-Operator und Outer Apply-Operator
 
@@ -208,13 +208,13 @@ Diese Operatoren sind in SQL Server 2000 nicht verfügbar. [!INCLUDE[vbtecdlinq]
 
 ### <a name="text--ntext"></a>text / ntext
 
--Daten `text` Typen  /  können`ntext`nicht in bestimmten Abfrage Vorgängen fürverwendetwerden,dievonMicrosoftSQLServer2005unterstütztwerden. /  `varchar(max)` `nvarchar(max)`
+Die Datentypen `text` @ no__t-1 @ no__t-2 können nicht in bestimmten Abfrage Vorgängen für `varchar(max)` @ no__t-4 @ no__t-5 verwendet werden, die von Microsoft SQL Server 2005 unterstützt werden.
 
 Für diese Einschränkung ist keine Lösung verfügbar. Sie können insbesondere `Distinct()` nicht für Ergebnisse verwenden, die Member enthalten, die der `text`-Spalte oder der `ntext`-Spalte zugeordnet sind.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Von verschachtelten Abfragen ausgelöstes Verhalten
 
-SQL Server 2000-Binder (über SP4) verfügt über einige idiosyncraasen, die durch geschachtelte Queries ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund können Sie keine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen definieren, die SQL Server Ausnahmen verursachen können.
+SQL Server 2000-Binder (über SP4) verfügt über einige idiosyncraasen, die durch geschachtelte Queries ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund ist es nicht möglich, den Satz von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen zu definieren, die SQL Server Ausnahmen verursachen können.
 
 ### <a name="skip-and-take-operators"></a>Skip-Operator und Take-Operator
 
@@ -232,7 +232,7 @@ Die Materialisierung erstellt CLR-Objekte aus Zeilen, die von einer oder mehrere
 
   - Typumwandlungen in Projektionen
 
-- Methoden, die der <xref:System.Linq.Enumerable.AsEnumerable%2A> -Methode folgen, werden *lokal ausgeführt*. Diese Methode verursacht keine unmittelbare Ausführung.
+- Methoden, die der <xref:System.Linq.Enumerable.AsEnumerable%2A>-Methode folgen, werden *lokal ausgeführt*. Diese Methode verursacht keine unmittelbare Ausführung.
 
 - Sie können einen `struct` als Rückgabetyp eines Abfrageergebnisses oder als Member des Ergebnistyps verwenden. Entitäten müssen Klassen sein. Anonyme Typen werden als Klasseninstanzen materialisiert. Benannte structs (Nicht-Entitäten) können jedoch in Projektionen verwendet werden.
 

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: d9767844400d67e81c7065148b22c62352af0428
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784786"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834269"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Anwenden einer XSLT-Transformation auf ein DataSet
-Mit der **beschreitexml** -Methode <xref:System.Data.DataSet> von können Sie den Inhalt eines **DataSets** als XML-Daten schreiben. Häufig werden diese XML-Daten anschließend mit XSL-Transformationen (XSLT) in ein anderes Format transformiert. Wenn Sie jedoch ein **DataSet** <xref:System.Xml.XmlDataDocument> mit einem synchronisieren, können Sie ein XSLT-Stylesheet auf den Inhalt eines **DataSets** anwenden, ohne zuerst den Inhalt des **DataSets** als XML-Daten mit "Write **texml**" schreiben zu müssen.  
+
+Die **beschreitexml** -Methode des <xref:System.Data.DataSet> ermöglicht das Schreiben des Inhalts eines **DataSets** als XML-Daten. Häufig werden diese XML-Daten anschließend mit XSL-Transformationen (XSLT) in ein anderes Format transformiert. Wenn Sie jedoch ein **DataSet** mit einem <xref:System.Xml.XmlDataDocument> synchronisieren, können Sie ein XSLT-Stylesheet auf den Inhalt eines **DataSets** anwenden, ohne zuerst den Inhalt des **DataSets** als XML-Daten mit " **Schreibweise**" schreiben zu müssen.  
   
- Im folgenden Beispiel wird ein **DataSet** mit Tabellen und Beziehungen gefüllt, das **DataSet** mit einem **xmldatadocumschlag**synchronisiert und ein Teil des **DataSets** mithilfe eines XSLT-Stylesheets als HTML-Datei geschrieben. Ein XSLT-Stylesheet hat folgenden Inhalt:  
+ Im folgenden Beispiel wird ein **DataSet** mit Tabellen und Beziehungen gefüllt, das **DataSet** mit einem **xmldatadocumschlag**synchronisiert und ein Teil des **DataSets** mithilfe eines XSLT-Stylesheets als HTML-Datei geschrieben. Im folgenden finden Sie den Inhalt des XSLT-Stylesheets:
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -59,7 +60,7 @@ Mit der **beschreitexml** -Methode <xref:System.Data.DataSet> von können Sie de
  Der folgende Code füllt das **DataSet** auf und wendet das XSLT-Stylesheet an.  
   
 > [!NOTE]
-> Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen Sie eine optimale Leistung, wenn Sie die- <xref:System.Data.DataRelation> Eigenschaft des-Objekts auf **true** für jede **schsted-** Beziehung festlegen. Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind. Weitere Informationen zu geschachtelten Beziehungen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.  
+> Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen Sie eine optimale Leistung, wenn Sie die Eigenschaft " **schsted** " des <xref:System.Data.DataRelation> für jede einzelne schalte Beziehung auf " **true** " festlegen. Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind. Weitere Informationen zu geschachtelten Beziehungen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

@@ -2,19 +2,19 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 711fbdc2d51177037cf349150c3431de14b11974
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250894"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833778"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](select-entity-sql.md)) zurückgegebene Objekte platziert werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
@@ -23,7 +23,7 @@ Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](select-entity-sql.
  Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` kann eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Aggregatfunktionen in der SELECT-Klausel \<enthalten sind, wählen Sie Liste >, Gruppieren nach einen Zusammenfassungs Wert für jede Gruppe aus. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  
+ Wenn Aggregatfunktionen in der SELECT-Klausel \<select List > enthalten sind, berechnet Group by einen Zusammenfassungs Wert für jede Gruppe. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  
   
 > [!NOTE]
 > Falls die ORDER BY-Klausel nicht angegeben wird, haben die von der GROUP BY-Klausel zurückgegebenen Gruppen keine feste Reihenfolge. Es wird empfohlen, dass Sie die ORDER BY-Klausel zum Angeben einer bestimmten Reihenfolge von Daten verwenden.  
@@ -50,7 +50,7 @@ Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](select-entity-sql.
   
  Jeder GROUP BY-Schlüsselausdruck muss über mindestens einen Verweis auf den Eingabebereich verfügen:  
   
-```  
+```sql  
 SELECT FROM Persons as P  
 GROUP BY Q + P   -- GOOD  
 GROUP BY Q   -- BAD  
@@ -62,11 +62,11 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der GROUP BY-Operator verwendet, um Gruppen anzugeben, in die Objekte von einer Abfrage zurückgegeben werden. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse](../how-to-execute-a-query-that-returns-primitivetype-results.md)zurückgibt.  
+1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse @ no__t-0 zurückgibt.  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   
- [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
+ [!code-sql[DP EntityServices Concepts#GROUPBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#groupby)]  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,19 +2,19 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250934"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833800"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Definiert eine Funktion im Bereich eines Entity SQL-Abfragebefehls.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
 FUNCTION function-name  
 ( [ { parameter_name <type_definition>   
         [ ,...n ]  
@@ -61,19 +61,19 @@ FUNCTION function-name
   
  `A()`  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Ruft eine benutzerdefinierte Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))auf.  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Die benutzerdefinierte Funktion "@ no__t-0" aufzurufen.  
   
  Funktionen können auch im Modell selbst deklariert werden. Im Modell deklarierte Funktionen werden auf die gleiche Weise ausgeführt wie Funktionen, die inline im Befehl deklariert wurden. Weitere Informationen finden Sie unter [benutzerdefinierte Funktionen](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Entity SQL-Befehl definiert eine `Products` -Funktion, die die zurückgegebenen Produkte anhand eines ganzzahligen Werts filtert.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Entity SQL-Befehl definiert eine `StringReturnsCollection` -Funktion, die anhand einer Auflistung von Zeichenfolgen die zurückgegebenen Kontakte filtert.  
   
- [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
+ [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
 ## <a name="see-also"></a>Siehe auch
 

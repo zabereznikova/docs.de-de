@@ -2,20 +2,20 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 993e71e6fee2e18806da789bdb10a488337d030f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250953"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833816"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Gibt die in [Select](select-entity-sql.md) -Anweisungen verwendete Auflistung an.
 
 ## <a name="syntax"></a>Syntax
 
-```
-FROM expression [ ,...n ] as C
+```sql
+FROM expression [ ,...n ] AS C
 ```
 
 ## <a name="arguments"></a>Argumente
@@ -51,7 +51,7 @@ Wenn kein Alias angegeben wird, erzeugt [!INCLUDE[esql](../../../../../../includ
 
 ### <a name="join-from-clause-item"></a>JOIN FROM-Klauselelement
 
-Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Kreuzjoins, innere Joins, linke und rechte äußere Verknüpfungen und vollständige äußere Joins. Alle diese Joins werden ähnlich wie in Transact-SQL unterstützt. Wie bei Transact-SQL `FROM` `JOIN` müssen die beiden Klauseln, die an beteiligt sind, unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.
+Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Kreuzjoins, innere Joins, linke und rechte äußere Verknüpfungen und vollständige äußere Joins. Alle diese Joins werden ähnlich wie in Transact-SQL unterstützt. Wie bei Transact-SQL müssen die beiden `FROM`-Klauselelemente, die an `JOIN` beteiligt sind, unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.
 
 #### <a name="cross-joins"></a>Cross Joins
 
@@ -103,10 +103,10 @@ Das Verhalten von `CROSS APPLY` ähnelt der Verknüpfungsliste. Wenn der rechte 
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> Anders als bei Transact-SQL ist ein expliziter unnest-Schritt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]nicht erforderlich.
+> Anders als bei Transact-SQL ist ein expliziter unschachtelungs Schritt in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht erforderlich.
 
 > [!NOTE]
-> `CROSS`die `OUTER APPLY` Operatoren und wurden in SQL Server 2005 eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich Versionen von SQL Server vor SQL Server 2005, diese Operatoren nicht unterstützen, können solche Abfragen auf diesen Back-End-Anbietern nicht ausgeführt werden.
+> die Operatoren "`CROSS`" und "`OUTER APPLY`" wurden in SQL Server 2005 eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich Versionen von SQL Server vor SQL Server 2005, diese Operatoren nicht unterstützen, können solche Abfragen auf diesen Back-End-Anbietern nicht ausgeführt werden.
 >
 > Typische Szenarios, in denen `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren in der Ausgabeabfrage vorhanden sein können, sind beispielsweise korrelierte Unterabfragen mit Paging, AnyElement über einer korrelierten Unterabfrage oder über einer durch Navigation erzeugten Auflistung, LINQ-Abfragen, die Elementselektoren akzeptierende Gruppierungsmethoden verwenden, Abfragen, für die ein `CROSS APPLY` oder ein `OUTER APPLY` explizit angegeben wurden oder Abfragen, die ein `DEREF`-Konstrukt über einem `REF`-Konstrukt enthalten.
 
@@ -114,7 +114,7 @@ Das Verhalten von `CROSS APPLY` ähnelt der Verknüpfungsliste. Wenn der rechte 
 
 Die `FROM`-Klausel kann mehrere durch Kommas getrennte Auflistungen enthalten. In diesem Fall wird davon ausgegangen, dass die Auflistungen verknüpft sind. Dies ist vergleichbar mit einem n-fachen CROSS JOIN.
 
-Im `C` folgenden Beispiel `D` sindund`C`unabhängige Auflistungen, istjedochvonabhängig.`c.Names`
+Im folgenden Beispiel sind `C` und `D` unabhängige Auflistungen, aber `c.Names` ist von `C` abhängig.
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e
@@ -149,7 +149,7 @@ Die `FROM`-Klausel erzeugt logisch eine Zeilenmultimenge vom Row(c, d, e)-Typ. E
 from (C as c join D as d) cross apply c.Names as e
 ```
 
-In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (im Gegensatz zu Transact-SQL) `FROM` führt die-Klausel nur die Aliase in den Gültigkeitsbereich ein. Alle Verweise auf Spalten (Eigenschaften) dieser Auflistungen müssen mit dem Alias qualifiziert werden.
+In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (im Gegensatz zu Transact-SQL) führt die `FROM`-Klausel nur die Aliase in den Gültigkeitsbereich ein. Alle Verweise auf Spalten (Eigenschaften) dieser Auflistungen müssen mit dem Alias qualifiziert werden.
 
 ## <a name="pulling-up-keys-from-nested-queries"></a>Ausführen von Pull-Vorgängen für Schlüssel aus geschachtelten Abfragen
 

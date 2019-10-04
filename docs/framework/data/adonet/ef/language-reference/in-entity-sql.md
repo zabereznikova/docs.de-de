@@ -2,19 +2,19 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: 5a07ee79d5452da4341d391fae7c997c33b603a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e46db63600b6baa03697615a2f5eb9240f55d15e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250661"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833691"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
 value [ NOT ] IN expression  
 ```  
   
@@ -34,11 +34,11 @@ value [ NOT ] IN expression
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den IN-Operator, um zu bestimmen, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
+1. Befolgen Sie das Verfahren in [gewusst wie: Führen Sie eine Abfrage aus, die die StructuralType-Ergebnisse @ no__t-0 zurückgibt.  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
- [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
+ [!code-sql[DP EntityServices Concepts#IN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#in)]  
   
 ## <a name="see-also"></a>Siehe auch
 
