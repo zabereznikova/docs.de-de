@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Kategorisierung von Breaking Changes in
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: 68cd3580e80305e54b41610f05d939a6aff8b54d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e15b0c566584571440eb09c7fb981874b7517c48
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "69577152"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698456"
 ---
 # <a name="breaking-change-categories"></a>Breaking Change-Kategorien
 
@@ -49,4 +49,4 @@ Die Beibehaltung der Aufwärtskompatibilität ist kein Ziel von .NET Core.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Bewerten von Breaking Changes in .NET Core](index.md)
+- [Bewerten von Breaking Changes in .NET Core](index.md)
