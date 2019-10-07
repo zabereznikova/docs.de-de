@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d9cfdcbe1e533f70cdd37b5d0512c781c6c05d22
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663980"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957357"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
@@ -214,9 +214,7 @@ Standardmäßig werden Erfassungsgruppen durch die Verwendung von Klammern im Mu
 
 Gruppierungskonstrukte werden häufig nur verwendet, um Quantifizierer für mehrere Sprachelemente zu übernehmen, und die erfassten Teilzeichenfolgen sind nicht von Bedeutung. Wenn beispielsweise der reguläre Ausdruck wie folgt lautet:
 
-```
-\b\(?((\w+),?\s?)+[\.!?]\)?
-```
+`\b\(?((\w+),?\s?)+[\.!?]\)?`
 
 sollen nur Sätze mit einem Punkt, Ausrufezeichen oder Fragezeichen am Ende aus einem Dokument extrahiert werden. Nur der resultierende Satz (der durch das <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird) ist von Interesse. Die einzelnen Wörter in der Auflistung sind irrelevant.
 

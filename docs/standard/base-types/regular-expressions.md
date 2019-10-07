@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423781"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736854"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effiziente Methode zur Verarbeitung von Text dar. Durch die umfangreiche Notation regulärer Ausdrücke für den Mustervergleich können folgende Tasks ausgeführt werden: schnelle Analyse großer Textmengen zur Suche nach speziellen Zeichenmustern; Validieren von Text, um sicherzustellen, dass er einem vordefinierten Muster entspricht (z. B. eine E-Mail-Adresse); Extrahieren, Bearbeiten, Ersetzen oder Löschen von Textzeichenfolgen; Hinzufügen der extrahierten Zeichenfolgen zu einer Auflistung, um einen Bericht zu erstellen. Für viele Anwendungen, die mit Zeichenfolgen arbeiten oder große Textblöcke analysieren, sind reguläre Ausdrücke ein unverzichtbares Tool.  
@@ -37,21 +37,21 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
   
 - Das Muster des regulären Ausdrucks, das im Text identifiziert werden soll.  
   
-     In .NET werden Muster für reguläre Ausdrücke durch eine spezielle Syntax oder Sprache definiert, die mit regulären Ausdrücken in Perl 5 kompatibel ist und einige zusätzliche Funktionen wie Mustervergleiche von rechts nach links bietet. Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
+     In .NET werden Muster für reguläre Ausdrücke durch eine spezielle Syntax oder Sprache definiert, die mit regulären Ausdrücken in Perl 5 kompatibel ist und einige zusätzliche Funktionen wie Mustervergleiche von rechts nach links bietet. Weitere Informationen finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md).  
   
 - Der Text, der nach dem Muster des regulären Ausdrucks analysiert werden soll.  
   
  Mit den Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse können Sie die folgenden Vorgänge durchführen:  
   
-- Bestimmen, ob das Muster des regulären Ausdrucks im Eingabetext auftritt, indem die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Ein Beispiel, in dem Text mithilfe der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode überprüft wird, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Bestimmen, ob das Muster des regulären Ausdrucks im Eingabetext auftritt, indem die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Ein Beispiel, in dem Text mithilfe der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode überprüft wird, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](how-to-verify-that-strings-are-in-valid-email-format.md).  
   
 - Abrufen eines oder aller Vorkommen des Texts, die dem Muster des regulären Ausdrucks entsprechen, indem die <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>-Methode oder die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Die erste Methode gibt ein <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>-Objekt zurück, das Informationen über den übereinstimmenden Text bereitstellt. Die zweite Methode gibt ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurück, das ein <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>-Objekt für jede im analysierten Text gefundene Übereinstimmung enthält.  
   
-- Ersetzen von Text, der dem Muster des regulären Ausdrucks entspricht, indem die <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Beispiele, in denen die <xref:System.Text.RegularExpressions.Regex.Replace%2A>-Methode verwendet wird, um Datumsformate zu ändern und ungültige Zeichen aus einer Zeichenfolge zu entfernen, finden Sie unter [Vorgehensweise: Entfernen von ungültigen Zeichen aus einer Zeichenfolge](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) und [Beispiel: Ändern von Datumsformaten](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+- Ersetzen von Text, der dem Muster des regulären Ausdrucks entspricht, indem die <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Beispiele, in denen die <xref:System.Text.RegularExpressions.Regex.Replace%2A>-Methode verwendet wird, um Datumsformate zu ändern und ungültige Zeichen aus einer Zeichenfolge zu entfernen, finden Sie unter [Vorgehensweise: Entfernen von ungültigen Zeichen aus einer Zeichenfolge](how-to-strip-invalid-characters-from-a-string.md) und [Beispiel: Ändern von Datumsformaten](regular-expression-example-changing-date-formats.md).  
   
- Eine Übersicht über das Objektmodell für reguläre Ausdrücke finden Sie unter [Das Objektmodell für reguläre Ausdrücke](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
+ Eine Übersicht über das Objektmodell für reguläre Ausdrücke finden Sie unter [Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md).  
   
- Weitere Informationen über die Sprache für reguläre Ausdrücke finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md). Sie können auch eine der folgenden Broschüren herunterladen und ausdrucken:  
+ Weitere Informationen über die Sprache für reguläre Ausdrücke finden Sie unter [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md). Sie können auch eine der folgenden Broschüren herunterladen und ausdrucken:  
   
  [Kurzübersicht im Word-Format (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Kurzübersicht im PDF-Format (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
@@ -62,16 +62,16 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
 ### <a name="example-1-replacing-substrings"></a>Beispiel 1: Ersetzen von Teilzeichenfolgen  
  Angenommen, eine Mailingliste enthält neben dem Vor- und Nachnamen bei einigen Personen auch Angaben zur Anrede (Mr., Mrs., Miss oder Ms.). Wenn Sie Adressaufkleber aus der Liste generieren, die Anrede dabei jedoch unberücksichtigt lassen möchten, können Sie diese mithilfe eines regulären Ausdrucks entfernen, wie im folgenden Beispiel veranschaulicht wird.  
   
- [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
- [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
+ [!code-csharp[Conceptual.Regex#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
+ [!code-vb[Conceptual.Regex#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
  Das Muster für reguläre Ausdrücke `(Mr\.? |Mrs\.? |Miss |Ms\.? )` entspricht jedem Vorkommen von „Mr “, „Mr. “, „Mrs “, „Mrs. “, „Miss “, „Ms “ oder „Ms. “. Wenn Sie die <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode aufrufen, wird die entsprechende Zeichenfolge durch <xref:System.String.Empty?displayProperty=nameWithType> ersetzt, d. h., die Zeichenfolge wird aus der ursprünglichen Zeichenfolge entfernt.  
   
 ### <a name="example-2-identifying-duplicated-words"></a>Beispiel 2: Identifizieren von doppelten Wörtern  
  Das versehentliche Erstellen doppelter Wörter ist ein Fehler, der häufig von Entwicklern gemacht wird. Mithilfe eines regulären Ausdrucks können Sie doppelte Wörter identifizieren, wie im folgenden Beispiel veranschaulicht wird.  
   
- [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
- [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
+ [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
+ [!code-vb[Conceptual.Regex#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
  Das Muster des regulären Ausdrucks `\b(\w+?)\s\1\b` kann wie folgt interpretiert werden:  
   
@@ -90,8 +90,8 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
 ### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Beispiel 3: Dynamisches Erstellen eines kulturabhängigen regulären Ausdrucks  
  Das folgende Beispiel veranschaulicht die Leistungsfähigkeit regulärer Ausdrücke in Kombination mit der Flexibilität der .NET-Globalisierungsfunktionen. Mit dem <xref:System.Globalization.NumberFormatInfo>-Objekt wird das Format von Währungswerten in der aktuellen Kultur des Systems bestimmt. Anschließend wird anhand dieser Informationen dynamisch ein regulärer Ausdruck erstellt, der Währungswerte aus dem Text extrahiert. Für jede Übereinstimmung wird die Untergruppe extrahiert, die nur die numerische Zeichenfolge enthält. Diese wird in einen <xref:System.Decimal>-Wert konvertiert, und dann wird ein laufender Gesamtbetrag berechnet.  
   
- [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
- [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
+ [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
+ [!code-vb[Conceptual.Regex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
  Im Beispiel wird dynamisch der reguläre Ausdruck `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` auf einem Computer mit der aktuellen Kultur Englisch - USA (en-US) erstellt. Dieses Muster des regulären Ausdrucks kann wie folgt interpretiert werden:  
   
@@ -111,12 +111,12 @@ Der Einsatz regulärer Ausdrücke stellt eine leistungsstarke, flexible und effi
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|  
-|[Das Objektmodell für reguläre Ausdrücke](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Ausführliche Informationen und Codebeispiele, die die Verwendung von Klassen für reguläre Ausdrücke veranschaulichen.|  
-|[Einzelheiten zum Verhalten regulärer Ausdrücke](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Ausführliche Informationen zu den Funktionen und dem Verhalten von regulären Ausdrücken in .NET.|  
-|[Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md)|Codebeispiele, die typische Anwendungen regulärer Ausdrücke veranschaulichen.|  
+|[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|  
+|[Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)|Ausführliche Informationen und Codebeispiele, die die Verwendung von Klassen für reguläre Ausdrücke veranschaulichen.|  
+|[Einzelheiten zum Verhalten regulärer Ausdrücke](details-of-regular-expression-behavior.md)|Ausführliche Informationen zu den Funktionen und dem Verhalten von regulären Ausdrücken in .NET.|  
+|[Beispiele für reguläre Ausdrücke](regular-expression-examples.md)|Codebeispiele, die typische Anwendungen regulärer Ausdrücke veranschaulichen.|  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968585"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957340"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
@@ -44,7 +44,7 @@ Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuers
   
  Dieses Programm zeigt folgenden Text bei der Ausführung an.  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  Wenn das Attribut nicht gefunden wird, initialisiert die **GetCustomAttribute**-Methode `MyAttribute` auf einen Nullwert. In diesem Beispiel wird `MyAttribute` auf eine solche Instanz geprüft und der Benutzer benachrichtigt, wenn kein Attribut gefunden wird. Wenn das `DeveloperAttribute` nicht im Klassenbereich gefunden werden, wird die folgende Meldung in der Konsole angezeigt.  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   
