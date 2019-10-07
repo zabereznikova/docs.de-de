@@ -2,12 +2,12 @@
 title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.date: 02/19/2019
-ms.openlocfilehash: 05a8e14a7c51df685b3ffdf16aab997da0a8036f
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332365"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699956"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -65,7 +65,7 @@ Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein
 - `warnings`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **enabled** (aktiviert).
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
 - `annotations`: Der Nullable-Anmerkungskontext ist **enabled** (aktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
-  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
+  - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
 - `disable`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **disabled** (deaktiviert).
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend), wie in früheren Versionen von C#. Alle NULL-Zulässigkeitswarnungen sind „disabled“ (deaktiviert).
 

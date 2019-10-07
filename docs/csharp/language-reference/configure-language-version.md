@@ -2,12 +2,12 @@
 title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Hier erfahren Sie, wie die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird, und Sie lernen die verschiedenen Werte kennen, die Sie manuell an die Sprachversion anpassen können.
 ms.date: 07/10/2019
-ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040351"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698807"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -15,16 +15,18 @@ Der C#-Compiler bestimmt eine Standardsprachversion, die auf den Zielframeworks 
 
 Die in diesem Artikel aufgeführten Regeln gelten für den Compiler, der im Lieferumfang von Visual Studio 2019 oder dem .NET Core 3.0 SDK enthalten ist. Die C#-Compiler, die Teil der Visual Studio 2017-Installation oder von früheren .NET Core SDK-Versionen sind, sind standardmäßig auf C# 7.0 ausgerichtet. 
 
-## <a name="defaults"></a>der Arbeitszeittabelle
+## <a name="defaults"></a>Standardeinstellungen
 
 Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 
-|Zielframework|Version|C#-Sprachversionsstandard|
+|Zielframework|version|C#-Sprachversionsstandard|
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET-Standard|alle|C# 7.3|
-|.NET Framework|alle|C# 7.3|
+|.NET Standard|2.1|C# 8.0|
+|.NET Standard|2.0|C# 7.3|
+|.NET Standard|1.x|C# 7.3|
+|.NET Framework|alle|C# 7.3|
 
 ## <a name="default-for-previews"></a>Standard für Vorschauversionen
 

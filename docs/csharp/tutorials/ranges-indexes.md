@@ -3,18 +3,18 @@ title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
 description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
 ms.date: 09/20/2019
 ms.custom: mvc
-ms.openlocfilehash: a879601e1358f72e80983992a3cd96ba1fb06a38
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391971"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699935"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
 Bereiche und Indizes bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in einer Sequenz.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 >
@@ -33,7 +33,7 @@ Diese Sprachunterstützung basiert auf zwei neuen Typen und zwei neuen Operatore
 
 Beginnen wir mit den Regeln für Indizes. Betrachten Sie einen Array `sequence`. Der `0`-Index entspricht `sequence[0]`. Der `^0`-Index entspricht `sequence[sequence.Length]`. Beachten Sie, dass `sequence[^0]` genau wie `sequence[sequence.Length]` eine Ausnahme auslöst. Für eine beliebige Zahl `n` ist der Index `^n` identisch mit `sequence[sequence.Length - n]`.
 
-```csharp-interactive
+```csharp
 string[] words = new string[]
 {
                 // index from start    index from end

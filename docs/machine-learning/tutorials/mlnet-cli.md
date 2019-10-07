@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 592f9dc599a22427a2a79047cd9e96f36d2ae429
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5b3b0af5b46774beff9fb7a2a86c37e5399c0dd2
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971999"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957389"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Stimmungsanalyse über die ML.NET-Befehlszeilenschnittstelle
 
@@ -48,7 +48,7 @@ Wir werden ein vorhandenes Dataset verwenden, das für ein Szenario „Standpunk
 1. Laden Sie [die Dataset-ZIP-Datei „UCI Sentiment Labeled Sentences“ (siehe Zitate im folgenden Hinweis)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) herunter, und entzippen Sie sie in einem beliebigen Ordner Ihrer Wahl.
 
     > [!NOTE]
-    > Die in diesem Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et al,. KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
+    > Die in diesem Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et al,. KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science
 
 2. Kopieren Sie die `yelp_labelled.txt`-Datei in einen vorher von Ihnen erstellten Ordner (wie z.B. `/cli-test`).
 
@@ -204,7 +204,7 @@ Die aufgezählten Objekte werden in den folgenden Schritten des Tutorials erläu
 
     Führen Sie die Konsolen-App über die Eingabeaufforderung aus, indem Sie die folgenden Befehle eingeben:
 
-     ```
+     ```bash
      > cd SampleBinaryClassification
      > cd SampleBinaryClassification.ConsoleApp
 
@@ -259,7 +259,7 @@ Es ist interessant, den gewählten Algorithmus und die Pipelinekonfiguration im 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 >
 > - Vorbereiten der Daten für die ausgewählte ML-Aufgabe (zu lösendes Problem)

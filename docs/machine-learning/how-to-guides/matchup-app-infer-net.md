@@ -3,12 +3,12 @@ title: Erstellen einer App für eine Spielerrangliste anhand der Auswertung von 
 description: Finden Sie heraus, wie Sie die probabilistische Programmierung mit Infer.NET verwenden können, um eine App für eine Spielerrangliste anhand der Auswertung von Spielpartien zu erstellen, die auf einer vereinfachten Version von TrueSkill basiert.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: edb747355f2d41d0400c6a989eea37423bbda2b4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117992"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957210"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Erstellen einer App für eine Spielerrangliste anhand der Auswertung von Spielpartien mit Infer.NET und probabilistischer Programmierung
 
@@ -24,7 +24,7 @@ Mit der probabilistischen Programmierung können wir statistische Modelle aus Pr
 
   Für diese Schrittanleitung wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung unter macOS, Windows oder Linux.
 
-## <a name="create-your-app"></a>Erstellen der App
+## <a name="create-your-app"></a>Erstellen Ihrer App
 
 1. Öffnen Sie eine neue Eingabeaufforderung, und führen Sie die folgenden Befehle aus:
 
@@ -138,7 +138,7 @@ dotnet run
 
 Die Ergebnisse sollten den hier dargestellten ähneln:
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50

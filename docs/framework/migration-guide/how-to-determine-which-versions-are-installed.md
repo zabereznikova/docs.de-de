@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen'
+title: 'Gewusst wie: Bestimmen der installierten .NET Framework-Versionen'
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0df5a5be2997958faa43ee67ae64fc37e1998414
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: abfa42be4b8c759da3fb34a2204058143e39689c
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051589"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71956667"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Gewusst wie: Bestimmen der installierten .NET Framework-Versionen
 
 Benutzer können mehrere Versionen von .NET Framework auf einem Computer [installieren](https://docs.microsoft.com/dotnet/framework/install) und ausführen. Wenn Sie eine App entwickeln oder bereitstellen, müssen Sie möglicherweise herausfinden, welche Versionen von .NET Framework auf dem Computer des Benutzers installiert sind.
 
@@ -131,12 +131,6 @@ In diesem Beispiel wird der empfohlenen Vorgehensweise zur Versionsprüfung gefo
 In den folgenden Beispielen wird der Wert des Eintrags **Release** überprüft, um zu bestimmen, ob .NET Framework 4.6.2 oder höher installiert ist. Dieser Code gibt `True` zurück, wenn es installiert ist, und andernfalls `False`.
 
 ```PowerShell
-# PowerShell 5
- Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' |  Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 }
- ```
-
-```PowerShell
-# PowerShell 4
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
@@ -222,6 +216,6 @@ Im folgenden Beispiel wird die Eigenschaft <xref:System.Environment.Version%2A?d
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Gewusst wie: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes](how-to-determine-which-net-framework-updates-are-installed.md)
 - [Installieren von .NET Framework für Entwickler](../install/guide-for-developers.md)
 - [.NET Framework-Versionen und -Abhängigkeiten](versions-and-dependencies.md)

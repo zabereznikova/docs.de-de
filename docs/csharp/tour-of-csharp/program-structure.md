@@ -3,12 +3,12 @@ title: C#-Programmstruktur – Überblick über C#
 description: Lernen Sie die grundlegenden Bausteine eines C#-Programms kennen.
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: e6b3e0d3b91d3dee8cbc8ac530323e23e0ce8b2a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634561"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834155"
 ---
 # <a name="program-structure"></a>Programmstruktur
 
@@ -20,7 +20,7 @@ Das Beispiel deklariert eine Klasse namens `Stack` in einem Namespace namens `Ac
 
 Der vollqualifizierte Name dieser Klasse ist `Acme.Collections.Stack`. Die Klasse enthält mehrere Member: ein Feld mit dem Namen `top`, zwei Methoden mit dem Namen `Push` und `Pop` sowie eine geschachtelte Klasse mit dem Namen `Entry`. Die `Entry`-Klasse enthält weitere drei Member: ein Feld mit dem Namen `next`, ein Feld mit dem Namen `data` und einen Konstruktor. Vorausgesetzt, dass der Quellcode des Beispiels in der Datei `acme.cs` gespeichert wird, kompiliert die Befehlszeile
 
-```
+```console
 csc /t:library acme.cs
 ```
 
@@ -37,13 +37,13 @@ Da eine Assembly eine selbstbeschreibende Funktionseinheit mit Code und Metadate
 
 Wenn das Programm beim Kompilieren von `example.cs` in der Datei `example.cs` gespeichert wird, kann mit der Compileroption „/r“ auf die Assembly „acme.dll“ verwiesen werden:
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 So wird eine ausführbare Assembly mit dem Namen `example.exe` erstellt, die bei Ausführung folgende Ausgabe erzeugt:
 
-```
+```console
 100
 10
 1

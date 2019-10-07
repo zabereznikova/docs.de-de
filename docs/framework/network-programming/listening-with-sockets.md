@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2eb1174c98cdd88cc519559011659a2a277219b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047772"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736780"
 ---
 # <a name="listening-with-sockets"></a>Überwachen mit Sockets
 Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann darauf, dass ein Client eine Verbindung zu diesem Port herstellt. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie ein Remotedienst für ein TCP/IP-Netzwerk erstellt wird.  
@@ -30,13 +30,13 @@ Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann 
  Das folgende Beispiel erstellt eine <xref:System.Net.IPEndPoint> für einen Server, indem die erste IP-Adresse, die die**Dns** für den Hostcomputer zurückgegeben hat, mit einer Portnummer kombiniert wird, die aus dem Bereich der registrierten Portnummern ausgewählt wird.  
   
 ```vb  
-Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
 Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
 Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
 ```  
   
 ```csharp  
-IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
@@ -64,5 +64,5 @@ listener.Listen(100);
 - [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
 - [Verwenden von Clientsockets](using-client-sockets.md)
-- [Vorgehensweise: Erstellen eines Sockets](how-to-create-a-socket.md)
+- [Gewusst wie: Erstellen eines Sockets](how-to-create-a-socket.md)
 - [Sockets](sockets.md)
