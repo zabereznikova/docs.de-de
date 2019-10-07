@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3cd1096a07b1de39d1961fdc8c5add56604804ea
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
+ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151835"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71306359"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -62,8 +62,8 @@ Markdown verwendet Sonderzeichen wie z.B. \*, \`, und \# für die Formatierung. 
 Dateinamen verwenden die folgenden Regeln:
 
 - Es sollten nur Kleinbuchstaben, Zahlen und Bindestriche enthalten sein.
-- Keine Leer- oder Interpunktionszeichen. Trennen Sie Worte und Zahlen im Dateinamen durch Bindestriche.
-- Verwenden Sie Verben, die den Zweck angeben, z.B. develop, buy, build, troubleshoot. Keine auf „-ing“ endenden Worte dürfen verwendet werden.
+- Keine Leer- oder Interpunktionszeichen. Verwenden Sie die Bindestriche zum Trennen von Wörtern und Zahlen im Dateinamen.
+- Verwenden Sie genaue Aktionsverben wie „entwickeln“, „kaufen“, „erstellen“ oder „beheben“. Keine auf „-ing“ endenden Worte dürfen verwendet werden.
 - Keine kurzen Worte wie a, and, the, in, or usw. sind erlaubt.
 - Muss in Markdown geschrieben werden und die Dateierweiterung .md verwenden.
 - Halten Sie Dateinamen einigermaßen kurz. Sie sind Teil der URL für Ihre Artikel.
@@ -76,7 +76,7 @@ Verwenden Sie die übliche Groß-/Kleinschreibung. Schreiben Sie das erste Wort 
 
 In Ihrem Thema **darf** nur eine Überschrift der ersten Ebene (H1) enthalten sein, die als Titel auf der Seite angezeigt wird.
 
-Wenn Ihre Überschrift mit dem Zeichen `#` endet, müssen Sie ein zusätzliches `#`-Zeichen am Ende einfügen, damit der Titel richtig gerendert wird. Beispiel: `# Async Programming in F# #`.
+Wenn Ihre Überschrift mit dem Zeichen `#` endet, müssen Sie ein zusätzliches `#`-Zeichen am Ende einfügen, damit der Titel richtig gerendert wird. Beispielsweise `# Async Programming in F# #`.
 
 Überschriften der zweiten Ebene generieren das Inhaltsverzeichnis auf der Seite, das im Abschnitt „In diesem Artikel“ unterhalb des Titels auf der Seite angezeigt wird.
 
@@ -194,11 +194,11 @@ Beispiele:
     1. Frau Gloria
     1. Professor Bloom
 1. geordnete
-1. list
+1. Liste
 
 ### <a name="unordered-lists"></a>Ungeordnete Listen
 
-- Dieses
+- Dies
 - ist
 - eine
 - Aufzählungs-
@@ -208,7 +208,7 @@ Beispiele:
 
 - Diese
 - Aufzählungs-
-- list
+- Liste
   - Baronin von Porz
   - Reverend Grün
 - enthält
@@ -274,7 +274,7 @@ Verwenden Sie drei Graviszeichen (\`\`\`) + eine Sprachen-ID, um die sprachenspe
 
 #### <a name="supported-languages"></a>Unterstützte Sprachen
 
-|NAME|Markdownbezeichnung|
+|name|Markdownbezeichnung|
 |-----|-------|
 |.NET-Konsole|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|
@@ -288,12 +288,12 @@ Verwenden Sie drei Graviszeichen (\`\`\`) + eine Sprachen-ID, um die sprachenspe
 |C++/WinRT|cppwinrt|
 |C#|csharp|
 |C# im Browser|csharp-interactive|
-|Konsole|console|
+|Konsole|Konsole|
 |CSHTML|cshtml|
 |DAX|dax|
-|Dockerfile|dockerfile|
+|Docker-Datei|dockerfile|
 |F#|fsharp|
-|Go|go|
+|Gehe zu|go|
 |HTML|html|
 |HTTP|http|
 |Java|java|
@@ -310,14 +310,15 @@ Verwenden Sie drei Graviszeichen (\`\`\`) + eine Sprachen-ID, um die sprachenspe
 |PowerShell|powershell|
 |Python|Python|
 |Q#|qsharp|
-|R|r|
+|R|b|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
 |TypeScript|typescript|
-|VB|vb|
+|Visual Basic|vb|
+|VBScript|vbscript|
 |XAML|xaml|
-|XML|Xml|
+|XML|xml|
 
 Der Name `csharp-interactive` gibt die C#-Programmiersprache und die Möglichkeit an, die Beispiele über den Browser auszuführen. Diese Codeausschnitte werden in einem Docker-Container kompiliert und ausgeführt, und die Ergebnisse dieser Programmausführung werden im Browserfenster des Benutzers angezeigt.
 
@@ -430,7 +431,7 @@ Beispiel:
 
 docs.microsoft bietet einige zusätzliche Erweiterungen zu GitHub Flavored Markdown.
 
-### <a name="alerts"></a>Alerts
+### <a name="alerts"></a>Benachrichtigungen
 
 Es ist wichtig, die folgenden Warnstile zu verwenden, damit diese im richtigen Stil auf der Dokumentationsseite gerendert werden. Die Rendering-Engine auf GitHub unterscheidet diese jedoch nicht.
 
@@ -453,7 +454,7 @@ Es ist wichtig, die folgenden Warnstile zu verwenden, damit diese im richtigen S
 
 Und sie werden wie folgt gerendert: ![Warnstile](../images/alerts.png)
 
-### <a name="includes"></a>Umfang
+### <a name="includes"></a>Enthält
 
 Sie können den Markdownteil einer Datei über eine Includeanweisung in eine andere einbetten.
 

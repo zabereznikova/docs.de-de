@@ -1,14 +1,13 @@
 ---
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
-author: richlander
-ms.date: 08/01/2018
-ms.openlocfilehash: ea9253bacf2bcee63430cd45f2a9ed412ce629e7
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.date: 09/17/2019
+ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849138"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71181915"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -24,7 +23,14 @@ ms.locfileid: "70849138"
 
 ## <a name="languages"></a>Sprachen
 
-C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheken für .NET Core zu schreiben. Diese Sprachen können in Ihren bevorzugten Text-Editoren oder Ihre bevorzugten IDEs integriert werden (oder sind es bereits), u.a. [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text und Vim. Diese Integration wird teilweise dank der Projektmitwirkenden von [OmniSharp](https://www.omnisharp.net/) und [Ionide](http://ionide.io) bereitgestellt.
+C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheken für .NET Core zu schreiben. Diese Sprachen können Sie in Ihren bevorzugten Text-Editoren oder integrierten Entwicklungsumgebungen (IDE, Integrated Development Environment) wie den folgenden verwenden:
+
+- [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
+- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- Sublime Text
+- Vim
+ 
+Diese Integration wird teilweise dank der Mitwirkenden von [OmniSharp](https://www.omnisharp.net/) und [Ionide](http://ionide.io) bereitgestellt.
 
 ## <a name="apis"></a>APIs
 
@@ -34,7 +40,7 @@ C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheke
 - Sammlungen, z.B. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Hilfstypen, z.B. <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> und <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Datentypen, z.B. <xref:System.Data.DataSet?displayProperty=nameWithType> und [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Hochleistungstypen, z.B. <xref:System.Numerics.Vector?displayProperty=nameWithType> und [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Hochleistungstypen, z. B. <xref:System.Numerics.Vector?displayProperty=nameWithType> und [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 Durch die Implementierung der [.NET Standard](../standard/net-standard.md)-Spezifikation ist .NET Core mit .NET Framework und Mono-APIs kompatibel.
 
@@ -63,21 +69,21 @@ Die Komponenten sind wie folgt verfügbar:
 
 ### <a name="open-source"></a>Quelle öffnen
 
-[.NET Core](https://github.com/dotnet/core) ist eine Open Source-Plattform ([MIT-Lizenz](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) und wurde von Microsoft im Jahr 2014 zur [.NET Foundation](https://dotnetfoundation.org) hinzugefügt. Es ist jetzt eines der aktivsten .NET-Foundation-Projekte. Es kann kostenlos von Einzelpersonen und Unternehmen, einschließlich persönlicher, wissenschaftlicher oder kommerzieller Zwecke übernommen werden. Mehrere Unternehmen verwenden .NET Core als Teil von Anwendungen, Tools, neuen Plattformen und Hostingdiensten. Einige dieser Unternehmen leisten auf GitHub bedeutende Beiträge zu .NET Core, und bieten eine Anleitung für die Produktentwicklung als Teil der [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) (Technische Steuerungsgruppe).
+[.NET Core](https://github.com/dotnet/core) ist eine Open Source-Plattform ([MIT-Lizenz](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) und wurde von Microsoft im Jahr 2014 zur [.NET Foundation](https://dotnetfoundation.org) hinzugefügt. Es ist jetzt eines der aktivsten .NET-Foundation-Projekte. Es kann von Einzelpersonen und Unternehmen für persönliche, wissenschaftliche oder kommerzielle Zwecke verwendet werden. Mehrere Unternehmen verwenden .NET Core als Teil von Anwendungen, Tools, neuen Plattformen und Hostingdiensten. Einige dieser Unternehmen leisten auf GitHub bedeutende Beiträge zu .NET Core, und bieten eine Anleitung für die Produktentwicklung als Teil der [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome) (Technische Steuerungsgruppe).
 
 ### <a name="designed-for-adaptability"></a>Konzipiert für Anpassungsfähigkeit
 
-.NET Core wurde als sehr ähnliches, aber auch einzigartiges Produkt im Vergleich zu anderen .NET-Produkten erstellt. Es wurde entwickelt, um umfassende Anpassungsfähigkeit auf neuen Plattformen und für neue Workloads zu aktivieren. Es verfügt über mehrere Betriebssysteme und CPU-Ports und kann zu vielen anderen portiert werden.
+.NET Core wurde als sehr ähnliches, aber auch einzigartiges Produkt im Vergleich zu anderen .NET-Produkten erstellt. Das Produkt wurde entwickelt, um eine umfassende Anpassung an neue Plattformen und Arbeitsauslastungen zu ermöglichen. Es verfügt über mehrere Betriebssysteme und CPU-Ports (und kann auf viele weitere portiert werden).
 
 Das Produkt ist in mehrere Teile aufgeteilt, und die verschiedenen Teile können zu unterschiedlichen Zeitpunkten an neue Plattformen angepasst werden. Die Laufzeit und grundlegende plattformspezifische Bibliotheken müssen als eine Einheit portiert werden. Plattformagnostische Bibliotheken sollten wie vorhanden von der Konstruktion auf allen Plattformen funktionieren. Es gibt eine Projektverschiebung zur Verminderung der plattformspezifischen Implementierungen, um die Effizienz der Entwickler zu erhöhen. Wenn ein Algorithmus oder API so vollständig oder teilweise implementiert werden kann, wird ein plattformneutraler C#-Code bevorzugt.
 
-Es wird häufig gefragt, wie .NET Core implementiert wird, um mehrere Betriebssysteme zu unterstützen. Dabei wird meistens gefragt, ob es separate Implementierungen gibt oder die [bedingte Kompilierung](https://en.wikipedia.org/wiki/Conditional_compilation) verwendet wird. Die Antwort lautet: Beide Ansätze werden eingesetzt, aber der Schwerpunkt liegt eindeutig auf der bedingten Kompilierung.
+Häufig wird die Frage gestellt, wie .NET Core so implementiert wird, dass mehrere Betriebssysteme unterstützt werden können. Dabei wird meistens gefragt, ob es separate Implementierungen gibt oder die [bedingte Kompilierung](https://en.wikipedia.org/wiki/Conditional_compilation) verwendet wird. Die Antwort lautet: Beide Ansätze werden eingesetzt, aber der Schwerpunkt liegt eindeutig auf der bedingten Kompilierung.
 
 Im folgenden Diagramm sehen Sie, dass die große Mehrheit der [CoreFX](https://github.com/dotnet/corefx)-Bibliotheken plattformneutralen Code enthalten, der auf allen Plattformen gemeinsam genutzt wird. Ein plattformneutraler Code kann als einzelne, tragbare Assembly implementiert werden, die auf allen Plattformen verwendet wird.
 
 ![CoreFX: Codezeilen pro Plattform](../images/corefx-platforms-loc.png)
 
-Windows- und Unix-Implementierungen haben eine ähnliche Größe. Windows verfügt über eine größere Implementierung, da CoreFX einige Funktionen nur für Windows implementiert, wie z.B. [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry), jedoch noch nicht viele Konzepte nur für Unix implementiert. Außerdem sehen Sie, dass die Mehrheit der Linux- und Mac OS-Implementierungen für mehrere Unix-Implementierungen verwendet werden, während die spezifischen Linux- und Mac OS-Implementierungen ungefähr gleich groß sind.
+Windows- und Unix-Implementierungen haben eine ähnliche Größe. Windows verfügt über eine größere Implementierung, da CoreFX einige Funktionen nur für Windows implementiert, z. B. [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry), jedoch noch nicht viele Konzepte nur für Unix implementiert. Außerdem sehen Sie, dass die Mehrheit der Linux- und Mac OS-Implementierungen für mehrere Unix-Implementierungen verwendet werden, während die spezifischen Linux- und Mac OS-Implementierungen ungefähr gleich groß sind.
 
 Es gibt eine Mischung aus plattformspezifischen und plattformneutralen Bibliotheken in .NET Core. Sie können das Muster in einigen Beispielen sehen:
 
@@ -87,7 +93,7 @@ Es gibt eine Mischung aus plattformspezifischen und plattformneutralen Bibliothe
 
 ## <a name="comparisons-to-other-net-implementations"></a>Vergleiche mit anderen .NET- Implementierungen
 
-Möglicherweise ist es am einfachsten, die Größe und Form von .NET Core durch einen Vergleich mit vorhandenen .NET-Implementierungen zu verstehen.
+Es ist wohl am einfachsten, die Größe und Form von .NET Core durch einen Vergleich mit vorhandenen .NET-Implementierungen zu verstehen.
 
 ### <a name="comparison-with-net-framework"></a>Vergleich mit .NET- Framework
 
@@ -95,9 +101,9 @@ Möglicherweise ist es am einfachsten, die Größe und Form von .NET Core durch 
 
 Die Hauptunterschiede zwischen .NET Core und dem .NET Framework:
 
-- **App-Modelle:** .NET Core unterstützt nicht alle .NET Framework-App-Modelle. Insbesondere unterstützt es weder ASP.NET Web Forms noch ASP.NET MVC, aber es unterstützt ASP.NET Core MVC. Es wurde angekündigt, dass [.NET Core 3 WPF und Windows Forms unterstützen wird](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/).
-- **APIs:** .NET Core enthält viele .NET Framework-Basisklassenbibliotheken mit unterschiedlicher Verarbeitung (die Assemblynamen unterscheiden sich; in Typen bereitgestellte Members unterscheiden sich in wichtigen Fällen). Diese Unterschiede machen es erforderlich, dass die Quelle in einigen Fällen zu .NET Core portiert wird (weitere Informationen unter [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). .NET Core implementiert die [.NET-Standard](../standard/net-standard.md)-API-Spezifikation.
-- **Subsysteme**: .NET Core implementiert eine Teilmenge der Subsysteme in .NET Framework, mit dem Ziel einer einfacheren Implementierung und einem einfacheren Programmiermodell. Code Access Security (CAS) wird z.B. nicht unterstützt, während Reflektion unterstützt wird.
+- **App-Modelle:** .NET Core unterstützt nicht alle .NET Framework-App-Modelle. Insbesondere unterstützt es weder ASP.NET Web Forms noch ASP.NET MVC, aber es unterstützt ASP.NET Core MVC. Ab .NET Core 3.0 unterstützt .NET Core auch WPF und Windows Forms, jedoch nur unter Windows.
+- **APIs:** .NET Core enthält viele .NET Framework-Basisklassenbibliotheken mit unterschiedlicher Verarbeitung (die Assemblynamen unterscheiden sich; in Typen bereitgestellte Members unterscheiden sich in wichtigen Fällen). Diese Unterschiede erfordern gelegentlich Änderungen der Portquelle von .NET Core. Weitere Informationen finden Sie unter [.NET Portability Analyzer](../standard/analyzers/portability-analyzer.md). .NET Core implementiert die [.NET-Standard](../standard/net-standard.md)-API-Spezifikation.
+- **Subsysteme**: .NET Core implementiert eine Teilmenge der Subsysteme in .NET Framework, mit dem Ziel einer einfacheren Implementierung und einem einfacheren Programmiermodell. Code Access Security (CAS) wird z. B. nicht unterstützt, während Reflektion unterstützt wird.
 - **Plattformen**: .NET Framework unterstützt Windows und Windows-Server- während .NET Core auch Mac OS und Linux unterstützt.
 - **Open Source**: .NET Core ist Open Source, während eine [schreibgeschützte Teilmenge von .NET Framework](https://github.com/microsoft/referencesource) Open Source ist.
 
@@ -107,12 +113,22 @@ Da .NET Core die parallele Installation unterstützt und die Runtime vollständi
 
 ### <a name="comparison-with-mono"></a>Vergleich mit Mono
 
-[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende und [Open Source](https://github.com/mono/mono) .NET-Implementierung, die erstmals im Jahr 2004 versendet wurde. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
+[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende Implementierung von .NET. Sie wurde zunächst als [Open-Source-]([open-source](https://github.com/mono/mono))-Alternative zu .NET Framework angeboten und mit zunehmender Beliebtheit von iOS- und Android-Geräten an mobile Geräte angepasst. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
 
 Die Hauptunterschiede zwischen .NET Core und Mono:
 
-- **Anwendungsmodelle**: Mono unterstützt eine Teilmenge der .NET Framework-Anwendungsmodelle (z.B. Windows Forms) und einige zusätzliche (z.B. [Xamarin.iOS](https://www.xamarin.com/platform)) über das Xamarin-Produkt. .NET Core unterstützt diese nicht.
+- **Anwendungsmodelle**: Mono unterstützt eine Teilmenge der .NET Framework-Anwendungsmodelle (z. B. Windows Forms) und einige zusätzliche für die mobile Entwicklung (z. B. [Xamarin.iOS](https://www.xamarin.com/platform)) über das Xamarin-Produkt. Xamarin wird von .NET Core nicht unterstützt.
 - **APIs**: Mono unterstützt eine [große Teilmenge](http://docs.go-mono.com/?link=root%3a%2fclasslib) der .NET Framework-APIs, die die gleichen Assemblynamen und Fakturierung verwenden.
 - **Plattformen**: Mono unterstützt zahlreiche Plattformen und CPUs.
 - **Open Source**: Mono und .NET Core verwenden beide die MIT-Lizenz und sind .NET Foundation-Projekte.
 - **Fokus**: In den letzten Jahren lag der primäre Fokus von Mono auf mobilen Plattformen, während sich .NET Core auf Cloud- und Desktopworkloads konzentriert hat.
+
+## <a name="the-future"></a>Die Zukunft
+
+Es wurde angekündigt, dass .NET 5 das nächste Release von .NET Core sein wird und eine Vereinheitlichung der Plattform darstellt. Mit dem Projekt soll .NET in einigen wesentlichen Punkten verbessert werden:
+
+- Erstellung einer zentralen .NET-Runtime und eines Frameworks, das überall verwendet werden kann, ein einheitliches Laufzeitverhalten aufweist und eine einheitliche Entwicklerumgebung bereitstellt
+- Erweiterung der Funktionen von .NET um die besten Funktionen von .NET Core, .NET Framework, Xamarin und Mono
+- Entwicklung dieses Produkts aus einer einzigen Codebasis, die Entwickler (Microsoft und die Community) gemeinsam bearbeiten und erweitern können und die zu einer Verbesserung aller Szenarios beiträgt
+
+Weitere Informationen zu den Plänen für .NET 5 finden Sie unter [Einführung in .NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/).
