@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erkennen, wenn die EINGABETASTE gedrückt'
+title: 'Vorgehensweise: Erkennen, wenn die EINGABETASTE gedrückt wurde'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Enter key [WPF], detecting
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2337826077c836696937f91541d6d261f1270aa
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051415"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004824"
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>Vorgehensweise: Erkennen, wenn die EINGABETASTE gedrückt
-Dieses Beispiel zeigt, wie Sie feststellen, ob die <xref:System.Windows.Input.Key.Enter> Taste auf der Tastatur gedrückt wird.  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>Vorgehensweise: Erkennen, wenn die EINGABETASTE gedrückt wurde
+Dieses Beispiel zeigt, wie Sie erkennen können, wenn die <xref:System.Windows.Input.Key.Enter>-Taste auf der Tastatur gedrückt wird.  
   
- In diesem Beispiel besteht aus einem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und eine CodeBehind-Datei.  
+ Dieses Beispiel besteht aus einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Datei und einer Code Behind-Datei.  
   
 ## <a name="example"></a>Beispiel  
- Wenn der Benutzer drückt die <xref:System.Windows.Input.Key.Enter> -Schlüssel in der <xref:System.Windows.Controls.TextBox>, die Eingabe in das Textfeld angezeigt wird, in einem anderen Bereich von der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Wenn der Benutzer den <xref:System.Windows.Input.Key.Enter>-Schlüssel im <xref:System.Windows.Controls.TextBox> drückt, wird die Eingabe im Textfeld in einem anderen Bereich des [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] angezeigt.  
   
- Die folgenden [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] erstellt die Benutzeroberfläche besteht aus einem <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.TextBlock>, und ein <xref:System.Windows.Controls.TextBox>.  
+ Der folgende XAML-Code erstellt die Benutzeroberfläche, die aus einer <xref:System.Windows.Controls.StackPanel>, einer <xref:System.Windows.Controls.TextBlock> und einem <xref:System.Windows.Controls.TextBox> besteht.  
   
  [!code-xaml[keydown#KeyDownUI](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- Der folgende Code hinter erstellt die <xref:System.Windows.UIElement.KeyDown> -Ereignishandler.  Wenn der Schlüssel, die gedrückt wird, wird die <xref:System.Windows.Input.Key.Enter> drücken, wird eine Meldung angezeigt, der <xref:System.Windows.Controls.TextBlock>.  
+ Der folgende Code Behind erstellt den <xref:System.Windows.UIElement.KeyDown>-Ereignishandler.  Wenn die gedrückte Taste der <xref:System.Windows.Input.Key.Enter>-Taste ist, wird eine Meldung in der <xref:System.Windows.Controls.TextBlock> angezeigt.  
   
  [!code-csharp[keydown#KeyDownSample](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  

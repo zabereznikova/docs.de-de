@@ -21,42 +21,42 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7df146e09a1d7cd730f4cf539d6823f7ced44bd1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586256"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002532"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, "My", "MyBase" und "MyClass" in Visual Basic
-`Me`, `My`, `MyBase`, und `MyClass` in Visual Basic zu erhalten, ähnliche Namen, aber unterschiedlichen Zwecken. Dieses Thema beschreibt jede dieser Entitäten, um sie voneinander zu unterscheiden.  
+`Me`, `My`, `MyBase` und `MyClass` in Visual Basic haben ähnliche Namen, aber unterschiedliche Zwecke. In diesem Thema werden diese Entitäten beschrieben, um Sie zu unterscheiden.  
   
 ## <a name="me"></a>Me  
- Die `Me` Schlüsselwort bietet eine Möglichkeit zum Verweisen auf die jeweilige Instanz einer Klasse oder Struktur, die in der der Code derzeit ausgeführt wird. `Me` verhält sich wie entweder eine Objektvariable oder eine Strukturvariable, die auf die aktuelle Instanz verweist. Mithilfe von `Me` ist besonders nützlich für die Übergabe von Informationen über die derzeit ausgeführte Instanz einer Klasse oder Struktur an eine Prozedur in einer anderen Klasse, Struktur oder Moduls.  
+ Das Schlüsselwort "`Me`" bietet eine Möglichkeit, auf die jeweilige Instanz einer Klasse oder Struktur zu verweisen, in der der Code gerade ausgeführt wird. `Me` verhält sich wie eine Objekt Variable oder eine Struktur Variable, die auf die aktuelle Instanz verweist. Die Verwendung von `Me` ist besonders nützlich, wenn Informationen über die derzeit ausgeführte Instanz einer Klasse oder Struktur an eine Prozedur in einer anderen Klasse, Struktur oder einem anderen Modul übergeben werden.  
   
- Nehmen wir beispielsweise an, dass Sie das folgende Verfahren in einem Modul verfügen.  
+ Nehmen Sie beispielsweise an, dass Sie das folgende Verfahren in einem Modul ausführen.  
   
-```  
+```vb  
 Sub ChangeFormColor(FormName As Form)  
    Randomize()  
    FormName.BackColor = Color.FromArgb(Rnd() * 256, Rnd() * 256, Rnd() * 256)  
 End Sub  
 ```  
   
- Sie können diese Prozedur aufrufen und übergeben Sie die aktuelle Instanz von der <xref:System.Windows.Forms.Form> Klasse als Argument mithilfe der folgenden Anweisung.  
+ Sie können diese Prozedur aufzurufen und die aktuelle Instanz der <xref:System.Windows.Forms.Form>-Klasse als Argument übergeben, indem Sie die folgende-Anweisung verwenden.  
   
-```  
+```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- Die `My` Funktion bietet einfachen und intuitiven Zugriff auf eine Anzahl von .NET Framework-Klassen des Visual Basic-Benutzers für die Interaktion mit der Computer, Anwendung, Einstellungen, Ressourcen und So weiter.  
+ Das Feature "`My`" bietet einfachen und intuitiven Zugriff auf eine Reihe von .NET Framework Klassen, sodass der Visual Basic Benutzer mit dem Computer, der Anwendung, den Einstellungen, den Ressourcen usw. interagieren kann.  
   
 ## <a name="mybase"></a>MyBase  
- Die `MyBase` -Schlüsselwort verhält sich wie eine Objektvariable verweist auf die Basisklasse der aktuellen Instanz einer Klasse. `MyBase` Member der Basisklasse zuzugreifen, die überschrieben werden, oder in einer abgeleiteten Klasse schattiert wird häufig verwendet werden. `MyBase.New` wird verwendet, um explizit einen Basisklassenkonstruktor aus Konstruktor einer abgeleiteten Klasse aufrufen.  
+ Das `MyBase`-Schlüsselwort verhält sich wie eine Objekt Variable, die auf die Basisklasse der aktuellen Instanz einer Klasse verweist. `MyBase` wird häufig verwendet, um auf Basisklassenmember zuzugreifen, die von einer abgeleiteten Klasse überschrieben oder überschattet werden. `MyBase.New` wird verwendet, um explizit einen Basisklassenkonstruktor aus einem abgeleiteten Klassenkonstruktor aufzurufen.  
   
 ## <a name="myclass"></a>MyClass  
- Die `MyClass` -Schlüsselwort verhält sich wie eine Objektvariable verweist auf die aktuelle Instanz einer Klasse, wie Sie ursprünglich implementiert. `MyClass` ist vergleichbar mit `Me`, aber alle zugehörigen Methodenaufrufe werden so behandelt, als wäre die Methode `NotOverridable`.  
+ Das `MyClass`-Schlüsselwort verhält sich wie eine Objekt Variable, die auf die aktuelle Instanz einer Klasse verweist, die ursprünglich implementiert wurde. `MyClass` ist `Me` ähnlich, aber alle Methodenaufrufe darauf werden so behandelt, als wäre die Methode `NotOverridable`.  
   
 ## <a name="see-also"></a>Siehe auch
 

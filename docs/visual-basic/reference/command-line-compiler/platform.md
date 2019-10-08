@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 21526484b8423f9b366da64307bc44f8fb061fe9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380312"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005293"
 ---
 # <a name="-platform-visual-basic"></a>-Platform (Visual Basic)
 Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabedatei ausführen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
@@ -31,7 +31,7 @@ Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabeda
 |`Itanium`|Kompiliert Ihre Assembly für die Ausführung durch den 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.|  
 |`arm`|Kompiliert Ihre Assembly für die Ausführung auf einem Computer mit einem ARM-Prozessor (Advanced RISC-Computer).|  
 |`anycpu`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird auf 32-Bit-Versionen von Windows als 32-Bit-Anwendung und auf 64-Bit-Versionen von Windows als 64-Bit-Anwendung ausgeführt. Diese Meldung ist der Standardwert.|  
-|`anycpu32bitpreferred`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird als 32-Bit-Anwendung auf 32-Bit- und 64-Bit-Versionen von Windows ausgeführt. Dieses Flag gilt nur für ausführbare Dateien (. EXE-Datei) und erfordert .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird als 32-Bit-Anwendung auf 32-Bit- und 64-Bit-Versionen von Windows ausgeführt. Dieses Flag gilt nur für ausführbare Dateien (. EXE) und erfordert .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie die `-platform`-Option, um den Typ des Zielprozessors für die Ausgabedatei anzugeben.  
@@ -48,7 +48,7 @@ Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabeda
   
 - Verwendet einen Plattformaufruf oder COM-Interop für Komponenten, die nicht auf allen Plattformen vorhanden sind.  
   
- Die **-Plattform** -Option löst einige Probleme, wenn Sie wissen, über die Architektur der Code ausgeführt wird, auf Annahmen getroffen wurde. Dies gilt insbesondere in folgenden Fällen:  
+ Die Option **-Platform** minimiert einige Probleme, wenn Sie wissen, dass Sie Annahmen über die Architektur gemacht haben, in der Ihr Code ausgeführt wird. Dies gilt insbesondere in folgenden Fällen:  
   
 - Wenn Sie sich entscheiden, eine 64-Bit-Plattform anzuzielen und die Anwendung auf einem 32-Bit-Computer ausgeführt wird, wird die Fehlermeldung sehr viel früher angezeigt und ist mehr problemorientiert als eine Fehlermeldung, die auftritt, wenn dieser Switch nicht verwendet wird.  
   
@@ -64,15 +64,15 @@ Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabeda
   
 - Ausführbare Dateien, die mit `-platform:anycpu32bitpreferred` kompiliert werden, werden in der 32-Bit-CLR ausgeführt.  
   
- Weitere Informationen zur Entwicklung einer Anwendung auf einer 64-Bit-Version von Windows ausführen, finden Sie unter [64-Bit-Anwendungen](../../../framework/64-bit-apps.md).  
+ Weitere Informationen zum Entwickeln einer Anwendung, die auf einer 64-Bit-Version von Windows ausgeführt wird, finden Sie unter [64-Bit-Anwendungen](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Festzulegende - Plattform in Visual Studio-IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>So legen Sie-Platform in der Visual Studio-IDE fest  
   
-1. In **Projektmappen-Explorer**, wählen Sie das Projekt, öffnen Sie die **Projekt** , und klicken Sie dann auf **Eigenschaften**.  
+1. Wählen Sie in **Projektmappen-Explorer**das Projekt aus, öffnen Sie das Menü **Projekt** , und klicken Sie dann auf **Eigenschaften**.  
   
-2. Auf der **Kompilieren** Registerkarte aktivieren oder Deaktivieren der **32-Bit bevorzugen** Kontrollkästchen oder im der **Ziel-CPU** Liste, wählen Sie einen Wert.  
+2. Aktivieren bzw. deaktivieren Sie auf der Registerkarte **Kompilieren** das Kontrollkästchen **32-Bit bevorzugen** , oder wählen Sie in der Liste **Ziel-CPU** einen Wert aus.  
   
-     Weitere Informationen finden Sie unter [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Weitere Informationen finden Sie unter [Seite "kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, wie die `-platform`-Compileroption genutzt wird.  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [/target (Visual Basic)](target.md)
+- [/Target (Visual Basic)](target.md)
 - [Visual Basic-Befehlszeilencompiler](index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

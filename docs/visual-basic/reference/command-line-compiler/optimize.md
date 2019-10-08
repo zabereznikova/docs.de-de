@@ -7,19 +7,19 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8daf4a49123623b6470bc3c6281869f1b9b3d0f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788972"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005371"
 ---
 # <a name="-optimize"></a>-optimize
-Aktiviert oder deaktiviert compileroptimierungen.  
+Aktiviert oder deaktiviert Compileroptimierungen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -optimize[ + | - ]  
 ```  
   
@@ -27,21 +27,21 @@ Aktiviert oder deaktiviert compileroptimierungen.
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Dies ist optional. Die `-optimize-` Option deaktiviert compileroptimierungen. Die `-optimize+` Option Optimierungen aktiviert. Optimierungen sind standardmäßig deaktiviert.|  
+|`+` &#124; `-`|Optional. Die Option "`-optimize-`" deaktiviert Compileroptimierungen. Mit der Option "`-optimize+`" werden Optimierungen ermöglicht. Optimierungen sind standardmäßig deaktiviert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Durch Compileroptimierungen wird Ihre Ausgabedatei kleiner, schneller und effizienter. Jedoch, weil Optimierungen führen zu neuanordnungen von Code in die Ausgabedatei `-optimize+` können Sie das Debuggen schwierig.  
+ Durch Compileroptimierungen wird Ihre Ausgabedatei kleiner, schneller und effizienter. Da Optimierungen jedoch dazu führen, dass Code in der Ausgabedatei neu angeordnet wird, kann das Debuggen durch `-optimize+` erschwert werden.  
   
- Alle Module mit generiert `-target:module` für eine Assembly auch verwenden muss `-optimize` Einstellungen wie die Assembly. Weitere Informationen finden Sie unter [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Alle Module, die mit `-target:module` für eine Assembly generiert werden, müssen die gleichen `-optimize`-Einstellungen wie die Assembly verwenden. Weitere Informationen finden Sie unter [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- Sie können kombinieren die `-optimize` und `-debug` Optionen.  
+ Sie können die Optionen `-optimize` und `-debug` kombinieren.  
   
-|Um die set - optimieren Sie, in der integrierten Entwicklungsumgebung von Visual Studio|  
+|So legen Sie "-optimieren" in der integrierten Entwicklungsumgebung von Visual Studio fest|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />     <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern der **Optimierungen aktivieren** Kontrollkästchen.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />     <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern Sie das Kontrollkästchen **Optimierungen aktivieren** .|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `T2.vb` und compileroptimierungen aktiviert.  
+ Der folgende Code kompiliert `T2.vb` und aktiviert Compileroptimierungen.  
   
 ```console
 vbc t2.vb -optimize  
@@ -50,6 +50,6 @@ vbc t2.vb -optimize
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

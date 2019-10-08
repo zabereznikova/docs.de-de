@@ -6,50 +6,50 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: 5471f0783eee5e2c14cf0f140094d5c292a73756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e193a8cb4d4dbc7515c32139bad9dce8b48ed7
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663257"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005619"
 ---
 # <a name="-errorreport"></a>-errorreport
 
-Gibt an, wie interne Compilerfehler von der Visual Basic-Compiler gemeldet werden sollen.
+Gibt an, wie der Visual Basic Compiler interne Compilerfehler melden soll.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 -errorreport:{ prompt | queue | send | none }
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Option bietet eine komfortable Möglichkeit, einen interner Compilerfehler (ICE) von Visual Basic, Visual Basic-Team bei Microsoft. Standardmäßig sendet der Compiler keine Informationen an Microsoft. Allerdings kann diese Option Wenn einen interner Compilerfehler auftritt, Sie den Fehler an Microsoft senden. Diese Informationen helfen Microsoft-Techniker, die die Ursache zu identifizieren und die nächste Version von Visual Basic zu verbessern.
+Diese Option bietet eine bequeme Möglichkeit, dem Visual Basic Team bei Microsoft eine Visual Basic interner Compilerfehler (ICE) zu melden. Standardmäßig sendet der Compiler keine Informationen an Microsoft. Wenn jedoch ein interner Compilerfehler auftritt, können Sie mit dieser Option den Fehler an Microsoft melden. Diese Informationen helfen den Microsoft-Technikern dabei, die Ursache zu identifizieren und die nächste Version von Visual Basic zu verbessern.
 
-Die Fähigkeit eines Benutzers zum Senden von Berichten hängt von Berechtigungen für Richtlinien für Computer und Benutzer.
+Die Fähigkeit eines Benutzers, Berichte zu senden, hängt von den Berechtigungen für Computer-und Benutzerrichtlinien ab.
 
-Der folgenden Tabelle werden die Auswirkungen der `-errorreport` Option.
+In der folgenden Tabelle werden die Auswirkungen der `-errorreport`-Option zusammengefasst.
 
 |Option|Verhalten|
 |---|---|
-|`prompt`|Wenn ein interner Compilerfehler auftritt, wird ein Dialogfeld erscheint, so dass Sie die genauen Daten anzeigen können, die der Compiler erfasst. Sie können ermitteln, ob keine vertraulichen Informationen in den Fehlerbericht und treffen einer Entscheidung, ob sie sich an Microsoft senden. Wenn Sie sie senden möchten, und die Richtlinieneinstellungen für Computer- und zulassen, sendet der Compiler die Daten an Microsoft.|
-|`queue`|Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorberechtigungen anmelden, können Sie Fehler melden, seit dem letzten mit dem Sie angemeldet wurden (Sie werden nicht aufgefordert, Fehlerberichte mehr als einmal alle drei Tage zu senden). Dies ist das Standardverhalten bei der `-errorreport` Option nicht angegeben.|
-|`send`|Wenn ein interner Compilerfehler auftritt, und die Richtlinieneinstellungen für Computer- und zulassen, sendet der Compiler die Daten an Microsoft.<br /><br /> Die Option `-errorreport:send` versucht, automatisch die Fehlerinformationen an Microsoft senden, wenn berichterstellung, indem aktiviert ist die [Windows-Fehlerberichterstattung](/windows/desktop/wer/windows-error-reporting) Systemeinstellungen. |
-|`none`|Wenn ein interner Compilerfehler auftritt, wird es nicht gesammelt oder an Microsoft gesendet.|
+|`prompt`|Wenn ein interner Compilerfehler auftritt, wird ein Dialogfeld angezeigt, in dem Sie die genauen Daten anzeigen können, die der Compiler gesammelt hat. Sie können feststellen, ob vertrauliche Informationen im Fehlerbericht vorliegen, und entscheiden, ob die Informationen an Microsoft gesendet werden sollen. Wenn Sie sich dafür entscheiden, Sie zu senden, und die Computer-und Benutzerrichtlinien Einstellungen dies zulassen, sendet der Compiler die Daten an Microsoft.|
+|`queue`|Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratorrechten anmelden, können Sie alle Fehler melden, die seit der letzten Anmeldung aufgetreten sind (Sie werden nicht mehr als einmal alle drei Tage aufgefordert, Berichte zu Fehlern zu senden). Dies ist das Standardverhalten, wenn die Option "`-errorreport`" nicht angegeben wird.|
+|`send`|Wenn ein interner Compilerfehler auftritt und die Computer-und Benutzerrichtlinien Einstellungen dies zulassen, sendet der Compiler die Daten an Microsoft.<br /><br /> Die Option `-errorreport:send` versucht, automatisch Fehlerinformationen an Microsoft zu senden, wenn die Berichterstellung durch die [Windows-Fehlerberichterstattung](/windows/desktop/wer/windows-error-reporting) Systemeinstellungen aktiviert wird. |
+|`none`|Wenn ein interner Compilerfehler auftritt, wird er nicht gesammelt oder an Microsoft gesendet.|
 
-Der Compiler sendet die Daten, die in der Regel einige Quellcode enthält zum Zeitpunkt des Fehlers, der den Stapel enthält. Wenn `-errorreport` wird zusammen mit den [- Bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) option, und klicken Sie dann die gesamte Quelldatei gesendet wird.
+Der Compiler sendet Daten, die den Stapel zum Zeitpunkt des Fehlers enthalten, der normalerweise den Quellcode enthält. Wenn `-errorreport` mit der Option [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) verwendet wird, wird die gesamte Quelldatei gesendet.
 
-Diese Option wird am besten verwendet, mit der [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) option, da Microsoft-Techniker so leicht den Fehler reproduzieren können.
+Diese Option wird am besten mit der [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) -Option verwendet, da Microsoft-Technikern den Fehler einfacher reproduzieren können.
 
 > [!NOTE]
-> Die `-errorreport` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.
+> Die Option "`-errorreport`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code versucht, kompilieren Sie `T2.vb`, und wenn der Compiler einen interner Compilerfehler auftritt, sie werden aufgefordert, den Fehlerbericht an Microsoft zu senden.
+Der folgende Code versucht, `T2.vb` zu kompilieren. wenn der Compiler auf einen internen Compilerfehler stößt, werden Sie aufgefordert, den Fehlerbericht an Microsoft zu senden.
 
-```
+```console
 vbc -errorreport:prompt t2.vb
 ```
 

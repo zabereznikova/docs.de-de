@@ -7,35 +7,35 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 5523be69f2901851c86f6c0263548e3577507ff9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ee5fb19db6eafeb7e4bed12935d0b950d6368d6
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638245"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005101"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue-Anweisung (Visual Basic)
-Überträgt die Steuerung sofort an die nächste Iteration einer Schleife.  
+Überträgt die Steuerung sofort an die nächste Iterations Schleife.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Continue { Do | For | While }  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können über übertragen innerhalb einer `Do`, `For`, oder `While` Schleife, um der nächsten Iteration der Schleife. Wird sofort in der Schleife Bedingung Tests, die entspricht, für die Übertragung an die Steuerung der `For` oder `While` -Anweisung oder der `Do` oder `Loop` -Anweisung, enthält die `Until` oder `While` Klausel.  
+ Sie können von innerhalb einer `Do`-, `For`-oder `While`-Schleife zur nächsten Iterationen dieser Schleife übertragen. Das Steuerelement wird sofort an den Schleifen Bedingungs Test übergeben, der der Übertragung an die `For`-oder `While`-Anweisung oder an die `Do`-oder `Loop`-Anweisung entspricht, die die `Until`-oder `While`-Klausel enthält.  
   
- Sie können `Continue` an einer beliebigen Position in der Schleife, die Übertragung zulässt. Die Übertragung der Steuerung ermöglichen Regeln sind identisch mit der [GoTo-Anweisung](../../../visual-basic/language-reference/statements/goto-statement.md).  
+ Sie können `Continue` an jeder beliebigen Stelle in der Schleife verwenden, die Übertragungen zulässt. Die Regeln, die die Übertragung der Steuerung zulassen, sind identisch mit der [goto-Anweisung](../../../visual-basic/language-reference/statements/goto-statement.md).  
   
- Z. B. wenn eine Schleife vollständig enthalten ist eine `Try` Block, eine `Catch` Block oder ein `Finally` blockieren, können Sie `Continue` aus der Schleife zu übertragen. Wenn sich dagegen die `Try`... `End Try` Struktur innerhalb der Schleife enthalten ist, können keine `Continue` zum Übergeben der Steuerung aus der `Finally` Block, und verwenden sie zum Übertragen von eine `Try` oder `Catch` blockiert werden, nur, wenn Sie vollständig aus übertragen der `Try`... `End Try` Struktur.  
+ Wenn eine-Schleife z. b. vollständig in einem `Try`-Block, einem `Catch`-Block oder einem `Finally`-Block enthalten ist, können Sie `Continue` zum Übertragen der Schleife verwenden. Wenn andererseits die Struktur `Try`... `End Try` in der Schleife enthalten ist, können Sie `Continue` nicht verwenden, um die Steuerung aus dem `Finally`-Block zu übertragen, und Sie können Sie verwenden, um aus einem `Try`-oder `Catch`-Block nur zu übertragen, wenn Sie vollständig aus dem @no_ _T-6... `End Try`-Struktur.  
   
- Bei geschachtelten Schleifen desselben Typs, z. B. eine `Do` Schleife innerhalb einer anderen `Do` Schleife, einer `Continue Do` überspringt die Anweisung an die nächste Iteration der innersten `Do` Schleife, die es enthält. Sie können keine `Continue` an die nächste Iteration einer Schleife mit desselben Typs zu überspringen.  
+ Wenn Sie über geschachtelte Schleifen desselben Typs verfügen, z. b. eine `Do`-Schleife innerhalb einer anderen `Do`-Schleife, überspringt eine `Continue Do`-Anweisung die nächste Iterations Schleife der innersten `Do`-Schleife, in der Sie enthalten ist. @No__t-0 kann nicht verwendet werden, um zur nächsten Iterations Schleife einer enthaltenden Schleife desselben Typs zu springen.  
   
- Wenn Sie z. B. geschachtelte Schleifen verschiedener Typen haben eine `Do` innerhalb einer Schleife eine `For` Schleife können Sie mit der nächsten Iteration der beiden Schleifen fortfahren, indem Sie entweder `Continue Do` oder `Continue For`.  
+ Wenn Sie geschachtelte Schleifen verschiedener Typen haben, z. b. eine `Do`-Schleife innerhalb einer `For`-Schleife, können Sie mit `Continue Do` oder `Continue For` mit der nächsten Iterationen der beiden Schleifen springen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird die `Continue While` Anweisung, um auf die nächste Spalte mit einem Array zu überspringen, wenn eine Division durch 0 (null) ist. Die `Continue While` befindet sich innerhalb einer `For` Schleife. Wird an die `While col < lastcol` -Anweisung, die die nächste Iteration der innersten ist `While` -Schleife, enthält die `For` Schleife.  
+ Im folgenden Codebeispiel wird die `Continue While`-Anweisung verwendet, um zur nächsten Spalte eines Arrays zu springen, wenn ein Divisor gleich 0 (null) ist. Der `Continue While` befindet sich innerhalb einer `For`-Schleife. Es wird auf die `While col < lastcol`-Anweisung übertragen, bei der es sich um die nächste Iterationen der innersten `While`-Schleife handelt, die die `For`-Schleife enthält.  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   

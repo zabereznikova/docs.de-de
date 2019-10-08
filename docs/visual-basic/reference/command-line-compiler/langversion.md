@@ -1,44 +1,44 @@
 ---
-title: -langversion (Visual Basic)
+title: -Langversion (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /langversion compiler option [Visual Basic]
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: db2cb1eb107973e9ce60ecb0d669c677d4fa2c51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15f334f280c2aca83ba5b628a1137464c31c6282
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793954"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005558"
 ---
-# <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Bewirkt, dass den Compiler nur Syntax akzeptiert, die in der angegebenen Version des Visual Basic-Sprache enthalten ist.  
+# <a name="-langversion-visual-basic"></a>-Langversion (Visual Basic)
+Bewirkt, dass der Compiler nur die Syntax akzeptiert, die in der angegebenen Visual Basic Sprachversion enthalten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -langversion:version  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  `version`  
- Erforderlich. Die Sprachversion, die während der Kompilierung verwendet werden. Gültige Werte sind `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` und `latest`.
+ Erforderlich. Die Sprachversion, die während der Kompilierung verwendet werden soll. Akzeptierte Werte sind "`9`", "`10`", "`11`", "`12`", "`14`", "`15`", "`15.3`", "`15.5`", "`default`"
 
- Die ganze Zahlen kann auch angegeben werden mithilfe von `.0` als Nebenversion, z. B. `11.0`.
+ Alle ganzzahligen Zahlen können auch mit `.0` als neben Version angegeben werden, z. b. `11.0`.
 
- Sie können die Liste aller möglichen Werte anzeigen, indem Sie die Angabe `-langversion:?` in der Befehlszeile.  
+ Sie können die Liste aller möglichen Werte anzeigen, indem Sie `-langversion:?` in der Befehlszeile angeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-langversion` Option gibt an, welche Syntax, die der Compiler akzeptiert. Wenn Sie angeben, dass die Sprachversion 9.0 ist, generiert der Compiler z. B. Fehler für die Syntax, die nur in Version 10.0 und höher ist.  
+ Die Option "`-langversion`" gibt an, welche Syntax der Compiler annimmt. Wenn Sie z. b. angeben, dass die Sprachversion 9,0 ist, generiert der Compiler Fehler für die Syntax, die nur in Version 10,0 und höher gültig ist.  
   
- Sie können diese Option verwenden, wenn Sie Anwendungen, die verschiedene Versionen von .NET Framework abzielen entwickeln. Wenn Sie .NET Framework 3.5 verwenden möchten, können Sie z. B. diese Option verwenden, um sicherzustellen, dass Sie die Syntax von, Sprachversion 10.0 nicht verwenden.  
+ Sie können diese Option verwenden, wenn Sie Anwendungen entwickeln, die auf unterschiedliche Versionen der .NET Framework abzielen. Wenn Sie z. b. .NET Framework 3,5 verwenden, können Sie diese Option verwenden, um sicherzustellen, dass Sie keine Syntax aus Sprachversion 10,0 verwenden.  
   
- Sie können festlegen, `-langversion` direkt nur mithilfe der Befehlszeile aus. Weitere Informationen finden Sie unter [Festlegen einer bestimmten .NET-Framework-Zielversion](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
+ Sie können `-langversion` nur direkt über die Befehlszeile festlegen. Weitere Informationen finden Sie unter [Festlegen einer bestimmten .NET-Framework-Zielversion](/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `sample.vb` für Visual Basic 9.0.  
+ Der folgende Code kompiliert `sample.vb` für Visual Basic 9,0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  

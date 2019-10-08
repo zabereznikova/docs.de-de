@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b86684bab6c552102af7486b2c9ab49ea703a175
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627305"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005696"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
-Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
+WPF-Steuerelemente (Windows Presentation Foundation) können logisch in verschiedene Kategorien eingeteilt werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
   
 ## <a name="layout"></a>Layout  
  Layout-Steuerelemente werden zum Verwalten von Größe, Dimensionen, Position und Anordnung von untergeordneten Elementen verwendet.  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschie
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Schaltflächen  
- Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe in der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
+ Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe im <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis aus, wenn ein Benutzer darauf klickt.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -171,7 +171,7 @@ Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschie
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
 ## <a name="digital-ink"></a>Freihandeingaben  
- Steuerelemente für Freihandeingaben bieten integrierte Unterstützung für [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]-Funktionen wie Anzeigen und Eingeben von Freihandeingaben.  
+ Digitale Freihand-Steuerelemente bieten integrierte Unterstützung für Tablet PC-Features, wie z. b. die Anzeige von frei Hand Eingaben  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   

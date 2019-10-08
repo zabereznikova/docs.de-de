@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4e415576562885c9edbd3d2dddbe2a271e9923
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793925"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005463"
 ---
 # <a name="-libpath"></a>-libpath
-Gibt den Speicherort der Assemblys verwiesen wird.  
+Gibt den Speicherort der referenzierten Assemblys an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -libpath:dirList  
 ```  
   
@@ -26,10 +26,10 @@ Gibt den Speicherort der Assemblys verwiesen wird.
   
 |Begriff|Definition|  
 |---|---|  
-|`dirList`|Erforderlich. Durch Semikolons getrennte Liste von Verzeichnissen, die der Compiler sucht, wenn eine referenzierte Assembly wurde nicht gefunden in entweder das aktuelle Arbeitsverzeichnis (das Verzeichnis, von dem Sie den Compiler aufrufen) oder die common Language Runtime-Systemverzeichnis. Wenn der Name des Verzeichnisses ein Leerzeichen enthält, setzen Sie den Namen in Anführungszeichen ("").|  
+|`dirList`|Erforderlich. Eine durch Semikolons getrennte Liste von Verzeichnissen, in denen der Compiler suchen soll, wenn eine referenzierte Assembly nicht im aktuellen Arbeitsverzeichnis (dem Verzeichnis, von dem Sie den Compiler aufrufen) oder im System Verzeichnis des Common Language Runtime gefunden wurde. Wenn der Verzeichnisname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen ("") einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-libpath` Option gibt an, den Speicherort der Assemblys, die auf die verwiesen wird durch die [-Verweis](../../../visual-basic/reference/command-line-compiler/reference.md) Option.  
+ Die Option "`-libpath`" gibt den Speicherort der Assemblys an, auf die von der Option [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md)  
   
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
   
@@ -37,20 +37,20 @@ Gibt den Speicherort der Assemblys verwiesen wird.
   
 2. Das Verzeichnis des CLR-Systems (Common Language Runtime)  
   
-3. Durch angegebenen Verzeichnisse `/libpath`.  
+3. Von `/libpath` angegebene Verzeichnisse.  
   
 4. Von den LIB-Umgebungsvariablen angegebene Verzeichnisse  
   
- Die `-libpath` -Option ist additiv; Geben sie mehr als einmal an jeden vorherigen Wert angehängt.  
+ Die Option "`-libpath`" ist additiv. Wenn Sie den Wert mehrmals angeben, werden alle vorherigen Werte angehängt.  
   
- Verwendung `-reference` um einen Assemblyverweis anzugeben.  
+ Verwenden Sie `-reference`, um einen Assemblyverweis anzugeben.  
   
-|Zum Festlegen von/LIBPATH in Visual Studio integrierte Entwicklungsumgebung|  
+|So legen Sie/libpath in der integrierten Entwicklungsumgebung von Visual Studio fest|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Verweise**.<br />3.  Klicken Sie auf die **Verweispfade...**  Schaltfläche.<br />4.  In der **Verweispfade** Dialogfeld Geben Sie den Namen des Verzeichnisses, in der **Ordner:** Feld.<br />5.  Klicken Sie auf **Ordner hinzufügen**.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Verweise**.<br />3.  Klicken Sie auf die Schaltfläche **Verweis Pfade...** .<br />4.  Geben Sie im Dialogfeld **Verweis Pfade** den Verzeichnisnamen in das Feld **Ordner:** ein.<br />5.  Klicken Sie auf **Ordner hinzufügen**.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `T2.vb` eine .exe-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis, in das Stammverzeichnis von Laufwerk C: und im Verzeichnis von Laufwerk C: neuen Assemblys nach Assemblyverweisen.  
+ Mit dem folgenden Code wird `T2.vb` kompiliert, um eine exe-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis im Stammverzeichnis des Laufwerks c: und im Verzeichnis neue Assemblys des Laufwerks c: nach Assemblyverweisen.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

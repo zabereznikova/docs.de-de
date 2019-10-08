@@ -5,21 +5,21 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68330996"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004896"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcodes, die vom Entwickler verfügbar gemacht werden um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungs Kommentare sind Eigenschaften im XAML-Quellcode, die von Entwicklern zur Bereitstellung von Regeln und Hinweisen für die Lokalisierung bereitgestellt werden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Lokalisierungskommentare  
- Wenn Entwickler von Markupanwendungen Anforderungen an bestimmte Elemente in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] stellen (wie Einschränkungen hinsichtlich Textlänge, Schriftfamilie oder Schriftgrad), können Sie dem Lokalisierungsexperten diese Informationen über Kommentare im [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Code mitteilen. Das Hinzufügen von Kommentaren zu Quellcode funktioniert wie folgt:  
+ Wenn Markup Anwendungs Autoren Anforderungen für bestimmte Elemente in XAML haben, z. b. Einschränkungen der Textlänge, Schriftfamilie oder Schriftgröße, können Sie diese Informationen an Lokalisierer mit Kommentaren im XAML-Code weiterleiten. Das Hinzufügen von Kommentaren zu Quellcode funktioniert wie folgt:  
   
-1. Anwendungsentwickler fügen dem [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcode Lokalisierungskommentare hinzu.  
+1. Anwendungsentwickler fügen dem XAML-Quellcode Lokalisierungs Kommentare hinzu.  
   
 2. Während des Buildprozesses können Sie in der PROJ-Datei angeben, ob die formfreien Lokalisierungskommentare in der Assembly bleiben oder ob ein Teil der oder alle Kommentare entfernt werden sollen. Die entfernten Kommentare werden in einer separaten Datei abgelegt. Sie geben die Option mit einem `LocalizationDirectivesToLocFile`-Tag an, z.B.:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68330996"
   
 5. Lokalisierungskommentardateien, die nur formfreie Kommentare enthalten, werden zu einem späteren Zeitpunkt in den Lokalisierungsprozess integriert.  
   
- Das folgende Beispiel zeigt, wie einer [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Datei Lokalisierungskommentare hinzugefügt werden.  
+ Im folgenden Beispiel wird gezeigt, wie Sie einer XAML-Datei Lokalisierungs Kommentare hinzufügen.  
   
  `<TextBlock x:Id = "text01"`  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4df4e74fc13c922f51f5b74c3c152bdea28b4431
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639034"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005207"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Gibt einen Namespace für alle Typdeklarationen an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -rootnamespace:namespace  
 ```  
   
@@ -29,19 +29,19 @@ Gibt einen Namespace für alle Typdeklarationen an.
   
 |Begriff|Definition|  
 |---|---|  
-|`namespace`|Der Name des Namespace, in dem alle Typdeklarationen für das aktuelle Projekt zu schließen.|  
+|`namespace`|Der Name des Namespace, in dem alle Typdeklarationen für das aktuelle Projekt eingeschlossen werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie die ausführbare Datei (Devenv.exe) von Visual Studio verwenden, um ein erstelltes Projekt kompilieren in der integrierten Entwicklungsumgebung Visual Studio, verwenden `-rootnamespace` zum Angeben des Werts, der die <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> Eigenschaft. Finden Sie unter [Devenv-Befehlszeilenschalter](/visualstudio/ide/reference/devenv-command-line-switches) für Weitere Informationen.  
+ Wenn Sie die ausführbare Visual Studio-Datei (devenv. exe) verwenden, um ein Projekt zu kompilieren, das in der integrierten Entwicklungsumgebung von Visual Studio erstellt wurde, verwenden Sie `-rootnamespace`, um den Wert der Eigenschaft <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> anzugeben. Weitere Informationen finden Sie unter [devenv-Befehls Zeilenschalter](/visualstudio/ide/reference/devenv-command-line-switches) .  
   
- Verwenden Sie die common Language Runtime MSIL Disassembler (`Ildasm.exe`) um die Namespacenamen in Ihrer Ausgabedatei anzuzeigen.  
+ Verwenden Sie die Common Language Runtime MSIL-Disassembler (`Ildasm.exe`), um die Namespace Namen in der Ausgabedatei anzuzeigen.  
   
-|-Rootnamespace in der integrierten Entwicklungsumgebung von Visual Studio festlegen.|  
+|To Set-RootNamespace in der integrierten Entwicklungsumgebung von Visual Studio|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Anwendung** .<br />3.  Ändern Sie den Wert in der **Stamm-Namespace** Feld.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Anwendung** .<br />3.  Ändern Sie den Wert im Feld Stamm **Namespace** .|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `In.vb` und alle Typdeklarationen im Namespace `mynamespace`.  
+ Der folgende Code kompiliert `In.vb` und schließt alle Typdeklarationen im-Namespace `mynamespace` ein.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  

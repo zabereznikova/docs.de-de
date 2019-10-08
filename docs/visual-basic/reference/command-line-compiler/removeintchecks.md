@@ -9,19 +9,19 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: c086a031d5cef4563a6769e7683dcb1110b8fe49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bea6ca24ea6da9000267e754d52fe0ca152f7d7f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005227"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
-Aktiviert die Überlauf-fehlerüberprüfung für Ganzzahloperationen ein- oder ausschalten.  
+Schaltet die Überlauf Fehlerüberprüfung für ganzzahlige Vorgänge ein oder aus.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -removeintchecks[+ | -]  
 ```  
   
@@ -29,14 +29,14 @@ Aktiviert die Überlauf-fehlerüberprüfung für Ganzzahloperationen ein- oder a
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Dies ist optional. Die `-removeintchecks-` Option veranlasst den Compiler, alle integerberechnungen auf Ganzzahlüberlauf-Fehler zu überprüfen. Die Standardeinstellung ist `-removeintchecks-`.<br /><br /> Angeben von `-removeintchecks` oder `-removeintchecks+` verhindert die Überprüfung von Fehlern und können ganzzahlige Berechnungen zu beschleunigen. Allerdings ohne Überprüfung von Fehlern, und wenn datenkapazitäten auf Typ ist ein Überlauf aufgetreten sind, können falsche Ergebnisse gespeichert werden, ohne dass ein Fehler ausgelöst.|  
+|`+` &#124; `-`|Optional. Die Option `-removeintchecks-` bewirkt, dass der Compiler alle ganzzahligen Berechnungen auf Überlauf Fehler prüft. Die Standardeinstellung ist `-removeintchecks-`.<br /><br /> Wenn Sie `-removeintchecks` oder `-removeintchecks+` angeben, wird die Fehlerüberprüfung verhindert, und ganz Zahl Berechnungen können beschleunigt werden. Ohne Fehlerüberprüfung und bei einem Überlauf der Datentyp Kapazitäten können jedoch falsche Ergebnisse gespeichert werden, ohne dass ein Fehler ausgegeben wird.|  
   
-|-Removeintchecks in der integrierten Entwicklungsumgebung von Visual Studio festlegen.|  
+|Zum Festlegen von "-removeintchecks" in der integrierten Entwicklungsumgebung von Visual Studio|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern Sie den Wert, der die **Überprüfungen auf Ganzzahlüberlauf entfernen** Feld.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern Sie den Wert des Kontrollkästchens **ganzzahlige Überlauf entfernen** .|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `Test.vb` Ganzzahlüberlauf Überprüfung deaktiviert.  
+ Mit dem folgenden Code wird `Test.vb` kompiliert und die ganzzahlige Überlauf Fehlerüberprüfung deaktiviert.  
   
 ```console
 vbc -removeintchecks+ test.vb  

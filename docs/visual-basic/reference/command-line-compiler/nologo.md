@@ -7,30 +7,30 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 07e1718554b158635b9d8b04958834e804e1fe9f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb64a468f67745b80b47b42c4fac18852279035d
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964374"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005424"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Unterdrückt die Anzeige der Copyright Banner und Informationsmeldungen während der Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -nologo  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie angeben `-nologo`, wird vom Compiler kein Copyright Banner angezeigt. In der Standardeinstellung ist `-nologo` nicht aktiv.  
+ Wenn Sie `-nologo` angeben, wird vom Compiler kein Copyright Banner angezeigt. In der Standardeinstellung ist `-nologo` nicht aktiv.  
   
 > [!NOTE]
-> Die `-nologo` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
+> Die Option "`-nologo`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert das `T2.vb` Copyright Banner und zeigt es nicht an.  
+ Mit dem folgenden Code wird `T2.vb` kompiliert, und es wird kein Copyright Banner angezeigt.  
   
 ```console
 vbc -nologo t2.vb  

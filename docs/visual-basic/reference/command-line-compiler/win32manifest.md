@@ -6,19 +6,19 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6eb9d50a3ecd80acb0349f1ba315d9cf8ccc6dc2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cae6b34aadf6698a337e52aa1ea1ce44206836ac
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937238"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004624"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -win32manifest: fileName  
 ```  
   
@@ -38,13 +38,13 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
   
  Die Anwendung unterliegt der Virtualisierung, wenn eine der folgenden Bedingungen zutrifft:  
   
-1. Sie verwenden die `-nowin32manifest` -Option, und Sie geben kein Manifest in einem späteren Buildschritt oder als Teil einer Windows-Ressourcen Datei (. res) an, `-win32resource` indem Sie die-Option verwenden.  
+1. Sie verwenden die Option "`-nowin32manifest`", und Sie geben kein Manifest in einem späteren Buildschritt oder als Teil einer Windows-Ressourcen Datei (. res) mithilfe der Option "`-win32resource`" an.  
   
 2. Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
   
  Visual Studio erstellt eine MANIFEST-Standarddatei und speichert sie zusammen mit der ausführbaren Datei in den Debug- oder Releaseverzeichnissen. Sie können die Standarddatei "App. Manifest" anzeigen oder bearbeiten, indem Sie im Projekt-Designer auf der Registerkarte **Anwendung** auf **UAC-Einstellungen anzeigen** klicken. Weitere Informationen finden Sie unter [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Sie können das Anwendungs Manifest als benutzerdefinierten Postbuildschritt oder als Teil einer Win32-Ressourcen Datei bereitstellen, indem `-nowin32manifest` Sie die Option verwenden. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dadurch wird verhindert, dass der Compiler ein Standard Manifest in die PE-Datei erstellt und einbettet.  
+ Sie können das Anwendungs Manifest als benutzerdefinierten Postbuildschritt oder als Teil einer Win32-Ressourcen Datei bereitstellen, indem Sie die Option `-nowin32manifest` verwenden. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dadurch wird verhindert, dass der Compiler ein Standard Manifest in die PE-Datei erstellt und einbettet.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt das Standard Manifest, das der Visual Basic Compiler in ein PE einfügt.  

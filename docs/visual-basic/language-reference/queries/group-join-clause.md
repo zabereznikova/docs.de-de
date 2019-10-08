@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184077f2689eb64e4373d407913eefcc03b795c2
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945313"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005719"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join-Klausel (Visual Basic)
-Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. Die Join-Operation wird auf Grundlage übereinstimmender Schlüssel.  
+Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. Der Joinvorgang basiert auf übereinstimmenden Schlüsseln.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Group Join element [As type] In collection _  
   On key1 Equals key2 [ And key3 Equals key4 [... ] ] _  
   Into expressionList  
@@ -33,25 +33,25 @@ Group Join element [As type] In collection _
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. Die Steuerelementvariable für die Sammlung verknüpft wird.|  
-|`type`|Dies ist optional. Der `element`-Typ. Wenn kein `type` angegeben ist, den Typ des `element` von hergeleitet `collection`.|  
-|`collection`|Erforderlich. Die Auflistung, die mit der Auflistung, die auf der linken Seite des ist der `Group Join` Operator. Ein `Group Join` Klausel kann geschachtelt werden, einem `Join` Klausel oder in einem anderen `Group Join` Klausel.|  
-|`key1` `Equals` `key2`|Erforderlich. Bezeichnet die Schlüssel für die Auflistungen verknüpft wird. Verwenden Sie die `Equals` Operator zum Vergleichen von Schlüsseln aus den zu verknüpfenden Auflistungen. Sie können den Join-Bedingungen kombinieren, mit der `And` Operator, um mehrere Schlüssel zu identifizieren. Die `key1` -Parameter muss aus der Auflistung auf der linken Seite des sein, dass die `Join` Operator. Die `key2` -Parameter muss aus der Auflistung auf der rechten Seite des sein, dass die `Join` Operator.<br /><br /> Die Schlüssel für die Join-Bedingung können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jedes Schlüssel-Ausdrucks kann jedoch nur die Elemente aus der entsprechenden Auflistung enthalten.|  
-|`expressionList`|Erforderlich. Eine oder mehrere Ausdrücke, die identifizieren, wie die Gruppen von Elementen aus der Auflistung aggregiert werden. Um einen Elementnamen für die gruppierten Ergebnisse zu identifizieren, verwenden Sie die `Group` Schlüsselwort (`<alias> = Group`). Sie können auch Aggregatfunktionen einschließen, die auf die Gruppe angewendet werden sollen.|  
+|`element`|Erforderlich. Die Steuerelement Variable für die Auflistung, die verknüpft wird.|  
+|`type`|Optional. Der `element`-Typ. Wenn keine `type` angegeben wird, wird der Typ von `element` von `collection` abgeleitet.|  
+|`collection`|Erforderlich. Die Auflistung, die mit der Auflistung auf der linken Seite des `Group Join`-Operators kombiniert werden soll. Eine `Group Join`-Klausel kann in einer `Join`-Klausel oder in einer anderen `Group Join`-Klausel eingefügt werden.|  
+|`key1` `Equals` `key2`|Erforderlich. Identifiziert Schlüssel für die Auflistungen, die verknüpft werden. Sie müssen den `Equals`-Operator verwenden, um Schlüssel aus den Auflistungen zu vergleichen, die verknüpft werden. Sie können Joinbedingungen kombinieren, indem Sie den `And`-Operator verwenden, um mehrere Schlüssel zu identifizieren. Der `key1`-Parameter muss sich auf der linken Seite des `Join`-Operators aus der Auflistung befinden. Der `key2`-Parameter muss sich auf der rechten Seite des `Join`-Operators aus der Auflistung befinden.<br /><br /> Die in der Join-Bedingung verwendeten Schlüssel können Ausdrücke sein, die mehr als ein Element aus der Auflistung enthalten. Jeder Schlüssel Ausdruck kann jedoch nur Elemente aus der jeweiligen Auflistung enthalten.|  
+|`expressionList`|Erforderlich. Ein oder mehrere Ausdrücke, die bestimmen, wie die Gruppen von Elementen aus der Auflistung aggregiert werden. Um einen Elementnamen für die gruppierten Ergebnisse zu identifizieren, verwenden Sie das `Group`-Schlüsselwort (`<alias> = Group`). Sie können auch Aggregatfunktionen einschließen, die auf die Gruppe angewendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Group Join` Klausel Fasst zwei Auflistungen, die basierend auf übereinstimmenden Werte aus den zu verknüpfenden Auflistungen zusammen. Die resultierende Auflistung kann es sich um ein Element enthalten, die verweist auf eine Auflistung von Elementen aus der zweiten Auflistung, die den Schlüsselwert aus der ersten Auflistung entsprechen. Sie können auch Aggregatfunktionen für die die gruppierten Elemente aus der zweiten Auflistung angeben. Weitere Informationen zu Aggregatfunktionen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die `Group Join`-Klausel kombiniert zwei Auflistungen basierend auf übereinstimmenden Schlüsselwerten aus den verbundenen Sammlungen. Die resultierende Auflistung kann einen Member enthalten, der auf eine Auflistung von Elementen aus der zweiten Auflistung verweist, die mit dem Schlüsselwert aus der ersten Auflistung zu vergleichen sind. Sie können auch Aggregatfunktionen angeben, die auf die gruppierten Elemente aus der zweiten Auflistung angewendet werden sollen. Weitere Informationen zu Aggregatfunktionen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Betrachten Sie z. B. eine Auflistung von Managern und einer Auflistung von Mitarbeitern. Elemente aus beiden Auflistungen müssen eine ManagerID-Eigenschaft, die die Mitarbeiter identifiziert, die einen bestimmten Manager Bericht erstatten. Die Ergebnisse einer Join-Operation würde es sich um ein Ergebnis für jeden Manager und Mitarbeiter mit einem übereinstimmenden ManagerID-Wert enthalten. Die Ergebnisse aus einer `Group Join` Vorgang würde die vollständige Liste der Manager enthalten. Jedes Ergebnis Manager müsste ein Element, das die Liste der Mitarbeiter auf die verwiesen wird, die eine Übereinstimmung für den bestimmten Manager waren.  
+ Stellen Sie sich z. b. eine Sammlung von Managern und eine Sammlung von Mitarbeitern vor. Elemente aus beiden Auflistungen verfügen über eine ManagerID-Eigenschaft, die die Mitarbeiter identifiziert, die einem bestimmten Manager Berichten. Die Ergebnisse einer Join-Operation enthalten ein Ergebnis für jeden Vorgesetzten und jeden Mitarbeiter mit einem entsprechenden ManagerID-Wert. Die Ergebnisse eines `Group Join`-Vorgangs enthalten die komplette Liste der Manager. Jedes Manager-Ergebnis hätte einen Member, der auf die Liste der Mitarbeiter verwiesen hat, die für den jeweiligen Vorgesetzten eine Entsprechung aufweisen.  
   
- Der Auflistung, die durch eine `Group Join` Vorgang darf eine beliebige Kombination von Werten aus der Auflistung identifiziert, die der `From` -Klausel und die Ausdrücke in identifiziert die `Into` -Klausel der `Group Join` Klausel. Weitere Informationen zu gültigen Ausdrücken für die `Into` -Klausel finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die aus einem `Group Join`-Vorgang resultierende Auflistung kann eine beliebige Kombination von Werten aus der in der `From`-Klausel identifizierten Auflistung und die in der `Into`-Klausel der `Group Join`-Klausel identifizierten Ausdrücke enthalten. Weitere Informationen zu gültigen Ausdrücken für die `Into`-Klausel finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Ein `Group Join` Vorgang werden alle Ergebnisse zurückgeben, aus der Auflistung, die auf der linken Seite des identifiziert die `Group Join` Operator. Dies gilt auch, wenn keine Übereinstimmungen in der Auflistung, die zu verknüpfenden vorhanden sind. Dies ist z. B. eine `LEFT OUTER JOIN` in SQL.  
+ Ein `Group Join`-Vorgang gibt alle Ergebnisse aus der Auflistung zurück, die auf der linken Seite des `Group Join`-Operators identifiziert werden. Dies gilt auch, wenn in der Auflistung keine Übereinstimmungen vorhanden sind. Dies entspricht einem `LEFT OUTER JOIN` in SQL.  
   
- Sie können die `Join` -Klausel, um Auflistungen in einer einzelnen Auflistung zu kombinieren. Dies ist äquivalent zu einer `INNER JOIN` in SQL.  
+ Sie können die `Join`-Klausel verwenden, um Sammlungen in einer einzelnen Auflistung zu kombinieren. Dies entspricht einer `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird joins von zwei Auflistungen mithilfe der `Group Join` Klausel.  
+ Im folgenden Codebeispiel werden zwei Auflistungen mithilfe der `Group Join`-Klausel miteinander verbunden.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   

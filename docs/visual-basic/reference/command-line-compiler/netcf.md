@@ -9,47 +9,47 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268283"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005449"
 ---
 # <a name="-netcf"></a>-netcf
 
-Legt fest, den Compiler an, die .NET Compact Framework.
+Legt den Compiler als Ziel für den .NET Compact Framework fest.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 -netcf
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Die `-netcf` Option bewirkt, dass Visual Basic-Compiler auf .NET Compact Framework statt des vollständigen .NET Framework abzielt. Language-Funktionen, die nur im vollständigen .NET Framework ist deaktiviert.
+Die Option "`-netcf`" bewirkt, dass der Visual Basic Compiler die .NET Compact Framework anstelle der vollständigen .NET Framework als Ziel hat. Sprachfunktionen, die nur in der vollständigen .NET Framework vorhanden sind, sind deaktiviert.
 
-Die `-netcf` Option dient für zu verwendenden [- Sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Die Sprachfunktionen, die deaktiviert `-netcf` sind die gleichen Sprachfunktionen, die nicht vorhanden ist, in den Dateien, die angesprochenen `-sdkpath`.
+Die Option "`-netcf`" ist für die Verwendung mit [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)konzipiert. Die von `-netcf` deaktivierten sprach Features sind die gleichen sprach Features, die in den mit `-sdkpath` vorgesehenen Dateien nicht vorhanden sind.
 
 > [!NOTE]
-> Die `-netcf` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren. Die `-netcf` Option wird festgelegt, wenn ein Gerät Visual Basic-Projekt geladen wird.
+> Die Option "`-netcf`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren. Die Option "`-netcf`" wird festgelegt, wenn ein Visual Basic Geräte Projekt geladen wird.
 
-Die `-netcf` Option ändert die folgenden Sprachfunktionen:
+Mit der Option "`-netcf`" werden die folgenden sprach Features geändert:
 
-- Die [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) -Schlüsselwort, das Ausführung eines Programms beendet wird, ist deaktiviert. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` jedoch ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.
+- Das [End \<-Schlüsselwort > Statement-](../../../visual-basic/language-reference/statements/end-keyword-statement.md) Schlüsselwort, das die Ausführung eines Programms beendet, ist deaktiviert. Das folgende Programm wird ohne `-netcf` kompiliert und ausgeführt, schlägt jedoch zur Kompilierzeit mit `-netcf` fehl.
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 
-- Späte Bindung, in allen Formularen: ist deaktiviert. Kompilierungsfehler werden generiert, wenn bekannte Szenarios für spätes Binden gefunden werden. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` jedoch ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.
+- Spätes Binden ist in allen Formularen deaktiviert. Kompilierzeitfehler werden generiert, wenn erkannte Szenarien mit späterer Bindung erkannt werden. Das folgende Programm wird ohne `-netcf` kompiliert und ausgeführt, schlägt jedoch zur Kompilierzeit mit `-netcf` fehl.
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- Die [automatisch](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), und [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) Modifizierer sind deaktiviert. Die Syntax der [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) Anweisung hat sich ebenfalls geändert `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Der folgende Code zeigt die Auswirkungen der `-netcf` auf eine Kompilierung.
+- Die [Auto](../../../visual-basic/language-reference/modifiers/auto.md)-, [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)-und [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) -modifiziererer sind deaktiviert. Die Syntax der [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) -Anweisung wird auch in `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]` geändert. Der folgende Code zeigt die Auswirkung von `-netcf` auf eine Kompilierung.
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
-- Verwenden von Visual Basic 6.0-Schlüsselwörtern, die von Visual Basic entfernt wurden, generiert einen anderen Fehler bei der `-netcf` verwendet wird. Dies wirkt sich auf, die Fehlermeldungen für die folgenden Schlüsselwörter:
+- Die Verwendung von Visual Basic 6,0-Schlüsselwörtern, die aus Visual Basic entfernt wurden, generiert bei Verwendung von `-netcf` einen anderen Fehler. Dies wirkt sich auf die Fehlermeldungen für die folgenden Schlüsselwörter aus:
 
   - `Open`
 
@@ -85,7 +85,7 @@ Die `-netcf` Option ändert die folgenden Sprachfunktionen:
 
 ## <a name="example"></a>Beispiel
 
-Der folgende code kompiliert `Myfile.vb` mit .NET Compact Framework, mit den Versionen von "mscorlib.dll" und "Microsoft.VisualBasic.dll" finden Sie in das Standardverzeichnis für die Installation von .NET Compact Framework auf dem Laufwerk C. In der Regel verwenden Sie die neueste Version von .NET Compact Framework.
+Mit dem folgenden Code wird `Myfile.vb` mit dem .NET Compact Framework kompiliert. dabei werden die Versionen von "mscorlib. dll" und "Microsoft. VisualBasic. dll" verwendet, die im Standard Installationsverzeichnis der .NET Compact Framework auf Laufwerk C gefunden werden. Normalerweise verwenden Sie die neueste Version der .NET Compact Framework.
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

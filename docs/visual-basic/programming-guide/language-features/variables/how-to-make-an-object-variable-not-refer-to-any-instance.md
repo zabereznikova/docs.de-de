@@ -1,35 +1,35 @@
 ---
-title: 'Vorgehensweise: Einer Objektvariablen verweist nicht auf eine beliebige Instanz (Visual Basic)'
+title: 'Vorgehensweise: Festlegen, dass eine Objekt Variable nicht auf eine Instanz verweist (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 820d4cb9d17bf467d257bfbba5f43f07228c0b4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e647f2f891b06aa1767faac49b01df98ea31ec1c
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663563"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004914"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Vorgehensweise: Einer Objektvariablen verweist nicht auf eine beliebige Instanz (Visual Basic)
-Sie können die Zuordnung einer Objektvariablen von jeder Objektinstanz aufheben, durch Festlegung auf [nichts](../../../../visual-basic/language-reference/nothing.md).  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Vorgehensweise: Festlegen, dass eine Objekt Variable nicht auf eine Instanz verweist (Visual Basic)
+Sie können eine Objekt Variable von einer beliebigen Objektinstanz trennen, indem Sie Sie auf " [Nothing](../../../../visual-basic/language-reference/nothing.md)" festlegen.  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Aufheben der Zuordnung eine Objektvariablen von jeder Objektinstanz  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>So trennen Sie eine Objekt Variable zu einer Objektinstanz  
   
-- Legen Sie die Variable auf `Nothing` in einer zuweisungsanweisung.  
+- Legen Sie die Variable in einer Zuweisungsanweisung auf `Nothing` fest.  
   
-    ```  
+    ```vb  
     ' Assume account is a defined class  
     Dim currentAccount As account  
     currentAccount = Nothing  
     ```  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Wenn Ihr Code versucht, den Zugriff auf einen Member einer Objektvariablen, die festgelegt wurde, `Nothing`, <xref:System.NullReferenceException> auftritt. Wenn Sie eine Objektvariablen auf `Nothing` in vielen Fällen oder wenn es möglich, die die Variable ist nicht initialisiert ist, ist es eine gute Idee, schließen Sie Memberzugriff in einem `Try...Catch...Finally` Block.  
+ Wenn Ihr Code versucht, auf einen Member einer Objektvariablen zuzugreifen, die auf `Nothing` festgelegt wurde, tritt ein <xref:System.NullReferenceException> auf. Wenn Sie eine Objekt Variable häufig auf `Nothing` festlegen, oder wenn es möglich ist, dass die Variable nicht initialisiert ist, empfiehlt es sich, die Member-Zugriffe in einem `Try...Catch...Finally`-Block zu schließen.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Wenn Sie eine Objektvariablen für Objekte, die vertrauliche oder sensible Daten enthalten verwenden, können Sie die Variable festlegen, um `Nothing` Wenn Sie nicht aktiv zuständig sind mit einem dieser Objekte. Dies reduziert die Wahrscheinlichkeit, dass bösartiger Code, um Zugriff auf die Daten.  
+ Wenn Sie eine Objekt Variable für Objekte verwenden, die vertrauliche oder sensible Daten enthalten, können Sie die Variable auf `Nothing` festlegen, wenn Sie nicht aktiv mit einem dieser Objekte arbeiten. Dadurch wird die Wahrscheinlichkeit verringert, dass bösartiger Code Zugriff auf die Daten erhält.  
   
 ## <a name="see-also"></a>Siehe auch
 

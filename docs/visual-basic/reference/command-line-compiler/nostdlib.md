@@ -6,33 +6,33 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 19a70e500f6b75fd003bdb798f242cddb3926935
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 819505df2e7d5f93302f9ed601de856e36ed7124
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964353"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005412"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Bewirkt, dass der Compiler nicht automatisch auf die Standardbibliotheken verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -nostdlib  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Mit `-nostdlib` der-Option wird der automatische Verweis auf die Assembly "System. dll" entfernt und verhindert, dass der Compiler die Datei "Vbc. rsp" liest. Die Datei "Vbc. rsp", die sich im selben Verzeichnis wie die Datei "Vbc. exe" befindet, verweist auf die häufig verwendeten .NET Framework `System` Assemblys und importiert die Namespaces und. `Microsoft.VisualBasic`  
+ Die Option "`-nostdlib`" entfernt den automatischen Verweis auf die Assembly "System. dll" und verhindert, dass der Compiler die Datei "Vbc. rsp" liest. Die Datei "Vbc. rsp", die sich im selben Verzeichnis wie die Datei "Vbc. exe" befindet, verweist auf die häufig verwendeten .NET Framework Assemblys und importiert die Namespaces "`System`" und "`Microsoft.VisualBasic`".  
   
 > [!NOTE]
 > Auf die Assemblys "mscorlib. dll" und "Microsoft. VisualBasic. dll" wird immer verwiesen.  
   
 > [!NOTE]
-> Die `-nostdlib` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
+> Die Option "`-nostdlib`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code wird kompiliert `T2.vb` , ohne auf die Standardbibliotheken zu verweisen. Sie müssen die Konstante `_MYTYPE` für die bedingte Kompilierung auf die Zeichenfolge "Empty" festlegen `My` , um das Objekt zu entfernen.  
+ Der folgende Code kompiliert `T2.vb`, ohne auf die Standardbibliotheken zu verweisen. Sie müssen die `_MYTYPE`-Konstante für bedingte Kompilierung auf die Zeichenfolge "Empty" festlegen, um das `My`-Objekt zu entfernen.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

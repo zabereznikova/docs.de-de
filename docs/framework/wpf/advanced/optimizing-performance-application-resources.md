@@ -9,36 +9,36 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 759d02afe1934d2ace4ed226d5d911db2d676d98
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017942"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005044"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimieren der Leistung: Anwendungsressourcen
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie Ressourcen freigeben, sodass Sie ein konsistentes Erscheinungsbild und Verhalten für Elemente mit ähnlichen Typs unterstützen können. Dieses Thema enthält einige Empfehlungen in diesem Bereich, mit denen Sie können die Leistung Ihrer Anwendungen verbessern.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht Ihnen das Freigeben von Anwendungs Ressourcen, sodass Sie ein konsistentes Aussehen oder Verhalten über ähnlich typisierte Elemente hinweg unterstützen können. Dieses Thema enthält einige Empfehlungen in diesem Bereich, mit denen Sie die Leistung Ihrer Anwendungen verbessern können.  
   
  Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
   
-## <a name="sharing-resources"></a>Gemeinsame Nutzung von Ressourcen  
- Wenn die Anwendung benutzerdefinierte Steuerelemente verwendet und definiert die Ressourcen in eine <xref:System.Windows.ResourceDictionary> (oder XAML-Ressourcen-Knoten), es wird empfohlen, dass Sie entweder die Ressourcen definieren die <xref:System.Windows.Application> oder <xref:System.Windows.Window> Objekt auf, oder definieren sie in das Standarddesign für die Benutzerdefinierte Steuerelemente. Definieren von Ressourcen in eines benutzerdefinierten Steuerelements <xref:System.Windows.ResourceDictionary> erzwingt Auswirkungen auf die Leistung für jede Instanz des Steuerelements. Wenn Sie den für rechenintensive Pinselvorgänge, die als Teil der Ressourcendefinition ein benutzerdefiniertes Steuerelement und viele Instanzen des benutzerdefinierten Steuerelements definiert haben, wird z. B. Workingset der Anwendung erheblich erhöhen.  
+## <a name="sharing-resources"></a>Freigeben von Ressourcen  
+ Wenn Ihre Anwendung benutzerdefinierte Steuerelemente verwendet und Ressourcen in einem <xref:System.Windows.ResourceDictionary>-Knoten (oder XAML-Ressourcen) definiert, empfiehlt es sich, die Ressourcen entweder auf der <xref:System.Windows.Application>-oder <xref:System.Windows.Window>-Objektebene zu definieren oder Sie im Standarddesign für die benutzerdefinierten Steuerelemente zu definieren. Durch Definieren von Ressourcen in der <xref:System.Windows.ResourceDictionary> eines benutzerdefinierten Steuer Elements wird für jede Instanz dieses Steuer Elements eine Leistungs Beeinträchtigung erzielt. Wenn Sie z. b. über Leistungs intensive Pinsel Vorgänge verfügen, die als Teil der Ressourcendefinition eines benutzerdefinierten Steuer Elements und zahlreichen Instanzen des benutzerdefinierten Steuer Elements definiert sind, erhöht sich der Arbeits Satz der Anwendung erheblich.  
   
- Um diesen Punkt verdeutlichen, Folgendes zu beachten. Angenommen, Sie entwickeln eine Karte Spiele mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Für die meisten Kartenspiele benötigen Sie die 52 Karten mit 52 verschiedenen Bildern. Sie entscheiden, um eine benutzerdefinierte Karten-Steuerelement zu implementieren, und definieren Sie 52 Pinsel (jeder ein Kartenbild darstellt) in den Ressourcen des benutzerdefinierten Kartensteuerelements. In der main-Anwendung erstellen Sie zunächst 52 Instanzen dieses benutzerdefinierte Steuerelement der Karte. Jede Instanz des benutzerdefinierten Kartensteuerelements generiert 52 Instanzen von <xref:System.Windows.Media.Brush> -Objekte, die Sie insgesamt 52 * 52 erhalten <xref:System.Windows.Media.Brush> Objekte in der Anwendung. Durch Verschieben der Pinsel aus die Karte benutzerdefiniertes Steuerelementressourcen, um die <xref:System.Windows.Application> oder <xref:System.Windows.Window> Objektebene, oder sie in das Standarddesign für das benutzerdefinierte Steuerelement, definieren Sie das Workingset der Anwendung zu reduzieren, da Sie jetzt die 52 Pinsel freigeben zwischen 52 Instanzen des Kartensteuerelements.  
+ Um diesen Punkt zu veranschaulichen, sollten Sie Folgendes beachten: Nehmen wir an, Sie entwickeln ein Kartenspiel mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bei den meisten Karten spielen benötigen Sie 52 Karten mit 52 unterschiedlichen Gesichtern. Sie beschließen, ein benutzerdefiniertes Karten Steuerelement zu implementieren, und Sie definieren 52 Pinsel (die jeweils ein Karten Gesicht darstellen) in den Ressourcen des benutzerdefinierten Karten Steuer Elements. In ihrer Hauptanwendung erstellen Sie anfänglich 52 Instanzen dieses kartenbenutzer definierten Steuer Elements. Jede Instanz des benutzerdefinierten Karten Steuer Elements generiert 52 Instanzen von <xref:System.Windows.Media.Brush>-Objekten, mit denen Sie insgesamt 52 * 52 <xref:System.Windows.Media.Brush>-Objekte in Ihrer Anwendung erhalten. Wenn Sie die Pinsel aus den benutzerdefinierten Steuerelement Ressourcen auf die Objektebene "<xref:System.Windows.Application>" oder "<xref:System.Windows.Window>" verschieben oder Sie im Standarddesign für das benutzerdefinierte Steuerelement definieren, verringern Sie das Workingset der Anwendung, da Sie nun die 52-Pinsel unter 52 freigeben. Instanzen des Karten Steuer Elements.  
   
-## <a name="sharing-a-brush-without-copying"></a>Freigeben eines Pinsels ohne kopieren  
- Wenn Sie mehrere Elemente, die mit dem gleichen haben <xref:System.Windows.Media.Brush> Objekt, definieren Sie den Pinsel als Ressource und verweisen darauf, statt den Pinsel Inline in definieren [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Diese Methode eine Instanz zu erstellen und erneut verwendet, während das Definieren von Pinseln Inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] erstellt eine neue Instanz für jedes Element.  
+## <a name="sharing-a-brush-without-copying"></a>Freigeben eines Pinsels ohne Kopieren  
+ Wenn Sie über mehrere Elemente verfügen, die dasselbe <xref:System.Windows.Media.Brush>-Objekt verwenden, definieren Sie den Pinsel als Ressource, und verweisen Sie darauf, anstatt den Pinsel Inline in XAML zu definieren. Diese Methode erstellt eine Instanz und verwendet Sie erneut, während die Definition von Pinseln inline in XAML eine neue-Instanz für jedes Element erstellt.  
   
- Im folgenden Markupbeispiel verdeutlicht dies:  
+ Das folgende Markup Beispiel veranschaulicht diesen Punkt:  
   
  [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## <a name="use-static-resources-when-possible"></a>Verwenden Sie statische Ressourcen, wenn möglich  
- Eine statische Ressource stellt einen Wert für ein beliebiges XAML, indem ein Verweis auf einen bereits definierten Ressource gesucht. Das Suchverhalten für diese Ressource ist analog zur Kompilierzeit-Suche.  
+## <a name="use-static-resources-when-possible"></a>Verwenden Sie nach Möglichkeit statische Ressourcen.  
+ Eine statische Ressource stellt einen Wert für jedes XAML-Eigenschafts Attribut bereit, indem Sie einen Verweis auf eine bereits definierte Ressource sucht. Das Suchverhalten für diese Ressource entspricht der Kompilierzeit Suche.  
   
- Eine dynamische Ressource, auf der anderen Seite erstellt einen temporäre Ausdruck während der erstmaligen Kompilierung und Suche nach Ressourcen daher verzögert, bis der Wert für die angeforderte Ressource tatsächlich erforderlich ist, um ein Objekt zu erstellen ist. Das Suchverhalten für diese Ressource ist analog zur Laufzeit-Suche, die Auswirkungen auf die Leistung erzwingt. Verwenden Sie statische Ressourcen möglichst in Ihrer Anwendung, die mithilfe von dynamischer Ressourcen nur bei Bedarf.  
+ Eine dynamische Ressource erstellt hingegen während der anfänglichen Kompilierung einen temporären Ausdruck und verzögert so die Suche nach Ressourcen, bis der angeforderte Ressourcen Wert tatsächlich benötigt wird, um ein Objekt zu erstellen. Das Suchverhalten für diese Ressource entspricht der Lauf Zeit Suche, was zu Leistungseinbußen führt. Verwenden Sie nach Möglichkeit statische Ressourcen in Ihrer Anwendung, und verwenden Sie dynamische Ressourcen nur bei Bedarf.  
   
- Im folgenden Markupbeispiel wird gezeigt, die Verwendung beider Arten von Ressourcen:  
+ Im folgenden Markup Beispiel wird die Verwendung beider Ressourcentypen veranschaulicht:  
   
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   

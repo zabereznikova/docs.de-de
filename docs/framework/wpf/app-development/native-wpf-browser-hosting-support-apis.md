@@ -7,17 +7,17 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 29ff388685c67d06d7c5866a46954d5ade72acb1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0e11f0e5751f6d5cc51c32994dc932fd7d3e9f61
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053367"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003991"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Systemeigene WPF-APIs mit Unterstützung für das Hosten in Browsern
-Das Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Anwendungen in Webbrowsern wird durch einen aktiven Dokument Server (auch als DocObject bezeichnet) ermöglicht, der beim WPF-Host registriert ist. Internet Explorer kann direkt aktiviert und in ein aktives Dokument integriert werden. Zum Hosting von XBAPs und losen XAML-Dokumenten in Mozilla- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Browsern bietet ein NPAPI-Plug-in, das eine ähnliche Hostingumgebung wie in Internet Explorer für den [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aktiven Dokument Server bereitstellt. Die einfachste Möglichkeit zum Hosten von XBAPs-und XAML-Dokumenten in anderen Browsern und eigenständigen Anwendungen ist jedoch das Internet Explorer-Webbrowser-Steuerelement. Das WebBrowser-Steuerelement stellt die komplexe aktive Dokument Server-Hostingumgebung bereit, ermöglicht aber seinen eigenen Host, diese Umgebung anzupassen und zu erweitern und direkt mit dem aktuellen aktiven Dokument Objekt zu kommunizieren.  
+Das Hosten von WPF-Anwendungen in Webbrowsern wird von einem aktiven Dokument Server (auch als DocObject bezeichnet) ermöglicht, der beim WPF-Host registriert ist. Internet Explorer kann direkt aktiviert und in ein aktives Dokument integriert werden. Zum Hosting von XBAPs und losen XAML-Dokumenten in Mozilla-Browsern bietet WPF ein NPAPI-Plug-in, das eine ähnliche Hostingumgebung für den aktiven WPF-Dokument Server wie Internet Explorer bereitstellt. Die einfachste Möglichkeit zum Hosten von XBAPs-und XAML-Dokumenten in anderen Browsern und eigenständigen Anwendungen ist jedoch das Internet Explorer-Webbrowser-Steuerelement. Das WebBrowser-Steuerelement stellt die komplexe aktive Dokument Server-Hostingumgebung bereit, ermöglicht aber seinen eigenen Host, diese Umgebung anzupassen und zu erweitern und direkt mit dem aktuellen aktiven Dokument Objekt zu kommunizieren.  
   
- Der [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aktive Dokument Server implementiert verschiedene gängige Hostingschnittstellen, einschließlich [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [ipersistmoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Wenn Sie im Webbrowser-Steuerelement gehostet werden, können diese Schnittstellen Abfragen aus dem-Objekt sein, das von der [IWebBrowser2::D ocumschlag](https://go.microsoft.com/fwlink/?LinkId=162048) -Eigenschaft zurückgegeben wird.  
+ Der aktive WPF-Dokument Server implementiert verschiedene gängige Hostingschnittstellen, einschließlich [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [ipersistmoniker](https://go.microsoft.com/fwlink/?LinkId=162045)und [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Wenn Sie im Webbrowser-Steuerelement gehostet werden, können diese Schnittstellen Abfragen aus dem-Objekt sein, das von der [IWebBrowser2::D ocumschlag](https://go.microsoft.com/fwlink/?LinkId=162048) -Eigenschaft zurückgegeben wird.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
  Die [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) -Implementierung des aktiven WPF-Dokument Servers unterstützt zahlreiche Navigations bezogene und browserspezifische Befehle der Standard-OLE-Befehlsgruppe (mit einer Befehls Gruppen-GUID mit null). Außerdem wird eine benutzerdefinierte Befehlsgruppe mit dem Namen CGID_PresentationHost erkannt. Zurzeit ist nur ein Befehl innerhalb dieser Gruppe definiert.  

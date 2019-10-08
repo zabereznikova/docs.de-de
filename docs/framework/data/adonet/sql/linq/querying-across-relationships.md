@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: be0aea66f0923b8b353f42cecc9360731efc7bb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792846"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003328"
 ---
 # <a name="querying-across-relationships"></a>Beziehungsübergreifendes Abfragen
 Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsprechen direkt den Fremdschlüsselbeziehungen in der Datenbank. Sie können diese Beziehungen nutzen, wenn Sie eine Abfrage mit der dot-Schreibweise vornehmen, um auf die Beziehungseigenschaften zuzugreifen und von einem Objekt zu einem anderen zu navigieren. Diese Zugriffsoperationen werden in komplexere Joins oder korrelierte Unterabfragen in den entsprechenden SQL-Befehlen übersetzt.  
@@ -33,21 +33,21 @@ Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsp
   
  Um diese Illusion aufrechtzuerhalten, implementiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Technik, die als *Verzögertes Laden*bezeichnet wird. Weitere Informationen finden Sie unter [Verzögertes im Vergleich zu unmittelbarem laden](deferred-versus-immediate-loading.md).  
   
- Beachten Sie die folgende SQL-Abfrage, um eine `CustomerID` Liste von - `OrderID` Paaren zu projizieren:  
+ Beachten Sie die folgende SQL-Abfrage, um eine Liste der Paare `CustomerID` @ no__t-1 @ no__t-2 zu projizieren:  
   
-```  
+```sql
 SELECT t0.CustomerID, t1.OrderID  
 FROM   Customers AS t0 INNER JOIN  
           Orders AS t1 ON t0.CustomerID = t1.CustomerID  
 WHERE  (t0.City = @p0)  
 ```  
   
- Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die gleichen Ergebnisse erzielen möchten, verwenden Sie den `Orders`-Eigenschaftenverweis, der bereits in der `Customer`-Klasse existiert. Der `Orders` Verweis enthält die erforderlichen Informationen zum Ausführen der Abfrage und zum projizieren `CustomerID` der - `OrderID` Paare, wie im folgenden Code:  
+ Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die gleichen Ergebnisse erzielen möchten, verwenden Sie den `Orders`-Eigenschaftenverweis, der bereits in der `Customer`-Klasse existiert. Der `Orders`-Verweis enthält die erforderlichen Informationen, um die Abfrage auszuführen und die `CustomerID` @ no__t-2 @ no__t-3-Paare zu projizieren, wie im folgenden Code:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- Sie können auch umgekehrt vorgehen. In diesem Fall fragen Sie `Orders` (Bestellungen) ab und verwenden den `Customer`-Beziehungsverweis für den Zugriff auf Informationen zum zugehörigen `Customer`-Objekt. Der folgende Code projiziert die gleichen `CustomerID` - `OrderID` Paare wie `Orders` zuvor, aber dieses Mal durch Abfragen anstelle von `Customers`.  
+ Sie können auch umgekehrt vorgehen. In diesem Fall fragen Sie `Orders` (Bestellungen) ab und verwenden den `Customer`-Beziehungsverweis für den Zugriff auf Informationen zum zugehörigen `Customer`-Objekt. Im folgenden Code werden die gleichen `CustomerID` @ no__t-1 @ no__t-2-Paare wie zuvor projiziert, aber dieses Mal durch Abfragen von `Orders` anstelle von `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  

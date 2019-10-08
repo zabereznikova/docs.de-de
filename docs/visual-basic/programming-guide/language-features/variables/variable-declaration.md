@@ -17,70 +17,70 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 726347efc2e12100f7d89348a316037babc785e5
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583393"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003296"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
-Sie deklarieren eine Variable, die den Namen und Eigenschaften angeben. Die deklarationsanweisung für Variablen ist der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Bestimmen sein Speicherort und den Inhalt der Merkmale der Variablen.  
+Sie deklarieren eine Variable, um deren Namen und Merkmale anzugeben. Die Deklarations Anweisung für Variablen ist die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Speicherort und Inhalt bestimmen die Merkmale der Variablen.  
   
- Regeln für Variablennamen und Überlegungen finden Sie unter [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Informationen zu Variablen Benennungs Regeln und-Überlegungen finden Sie unter [deklarierte Element Namen](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-## <a name="declaration-levels"></a>Deklaration von Ebenen  
+## <a name="declaration-levels"></a>Deklarations Stufen  
   
-### <a name="local-and-member-variables"></a>Lokale und Membervariablen  
- Ein *lokale Variable* wird innerhalb einer Prozedur deklariert wird. Ein *Membervariable* ist ein Mitglied einer Visual Basic-Typ; er wird auf Modulebene in einer Klasse, Struktur oder Modul, aber nicht innerhalb einer Prozedur, die für diese Klasse, Struktur oder Modul intern deklariert.  
+### <a name="local-and-member-variables"></a>Lokale Variablen und Element Variablen  
+ Eine *lokale Variable* ist eine, die innerhalb einer Prozedur deklariert wird. Eine *Member-Variable* ist ein Member eines Visual Basic Typs. Sie wird auf Modulebene innerhalb einer Klasse, Struktur oder eines Moduls deklariert, jedoch nicht innerhalb einer Prozedur, die für diese Klasse, Struktur oder dieses Modul intern ist.  
   
 ### <a name="shared-and-instance-variables"></a>Freigegebene und Instanzvariablen  
- In einer Klasse oder Struktur hängt von die Kategorie einer Membervariablen gespeichert, und zwar unabhängig davon, ob er freigegeben ist. Wenn mit dem er deklariert wird die [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) -Schlüsselwort, es ist eine *freigegebene Variable*, und es in eine einzige Kopie von allen Instanzen der Klasse oder Struktur gemeinsam vorhanden ist.  
+ In einer Klasse oder Struktur ist die Kategorie einer Element Variablen davon abhängig, ob Sie freigegeben ist. Wenn Sie mit dem [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) -Schlüsselwort deklariert ist, handelt es sich um eine frei *gegebene Variable*, die in einer einzelnen Kopie vorhanden ist, die von allen Instanzen der Klasse oder Struktur gemeinsam genutzt wird.  
   
- Andernfalls ist es ein *Instanzvariable*, und für jede Instanz der Klasse oder Struktur wird eine separate Kopie erstellt. Eine bestimmte Kopie eine Instanzvariable steht nur für die Instanz der Klasse oder Struktur, die in der es erstellt wurde. Er ist unabhängig von einer Kopie der Instanzvariable in einer anderen Instanz der Klasse oder Struktur.  
+ Andernfalls handelt es sich um eine *Instanzvariable*, und für jede Instanz der Klasse oder Struktur wird eine separate Kopie davon erstellt. Eine bestimmte Kopie einer Instanzvariablen ist nur für die Instanz der Klasse oder Struktur verfügbar, in der Sie erstellt wurde. Es ist unabhängig von einer Kopie der Instanzvariablen in einer anderen Instanz der Klasse oder Struktur.  
   
-## <a name="declaring-data-type"></a>Deklarieren von-Datentyp  
- Die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel in der deklarationsanweisung können Sie den Datentyp oder der Objekttyp der deklarieren Sie Variablen zu definieren. Sie können einen der folgenden Typen für eine Variable angeben:  
+## <a name="declaring-data-type"></a>Deklarierender Datentyp  
+ Mit der [As](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel in der Deklarations Anweisung können Sie den Datentyp oder Objekttyp der Variablen definieren, die Sie deklarieren. Sie können einen der folgenden Typen für eine Variable angeben:  
   
-- Geben Sie ein elementarer Datentyp, z. B. `Boolean`, `Long`, oder `Decimal`  
+- Ein grundlegender Datentyp, z. b. `Boolean`, `Long` oder `Decimal`  
   
-- Einen zusammengesetzten Datentyp, z. B. ein Array oder eine Struktur  
+- Ein zusammengesetzter Datentyp, z. b. ein Array oder eine Struktur.  
   
-- Ein Objekttyp oder die Klasse, die in Ihrer Anwendung oder in einer anderen Anwendung definiert wird  
+- Ein Objekttyp oder eine Klasse, die entweder in der Anwendung oder in einer anderen Anwendung definiert ist.  
   
-- Eine .NET Framework-Klasse, z. B. <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
+- Eine .NET Framework Klasse, z. b. <xref:System.Windows.Forms.Label> oder <xref:System.Windows.Forms.TextBox>  
   
-- Geben Sie eine Schnittstelle, z. B. <xref:System.IComparable> oder <xref:System.IDisposable>  
+- Ein Schnittstellentyp, z. b. <xref:System.IComparable> oder <xref:System.IDisposable>  
   
- Sie können mehrere Variablen in einer Anweisung deklarieren, ohne den Datentyp wiederholen zu müssen. In den folgenden Anweisungen, die Variablen `i`, `j`, und `k` als Typ deklariert sind `Integer`, `l` und `m` als `Long`, und `x` und `y` als `Single`:  
+ Sie können mehrere Variablen in einer Anweisung deklarieren, ohne den Datentyp wiederholen zu müssen. In den folgenden-Anweisungen werden die Variablen `i`, `j` und `k` als Typ `Integer`, `l` und `m` als `Long` und `x` und `y` als `Single` deklariert:  
   
-```  
+```vb  
 Dim i, j, k As Integer  
 ' All three variables in the preceding statement are declared as Integer.  
 Dim l, m As Long, x, y As Single  
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Weitere Informationen zu Datentypen finden Sie unter [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Weitere Informationen zu Objekten finden Sie unter [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Programmieren mit Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Weitere Informationen zu-Datentypen finden Sie unter [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Weitere Informationen zu-Objekten finden Sie unter [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Programmieren mit-Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Lokaler Typrückschluss  
- *Typrückschluss* wird verwendet, um zu bestimmen, die die Datentypen für lokale Variablen deklariert, ohne eine `As` Klausel. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab. Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben. Im folgenden Beispiel beide `num1` und `num2` sind stark typisiert, als ganze Zahlen.  
+ Der *Typrückschluss* wird verwendet, um die Datentypen von lokalen Variablen zu bestimmen, die ohne eine `As`-Klausel deklariert werden. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungs Ausdrucks ab. Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben. Im folgenden Beispiel sind sowohl `num1` als auch `num2` stark als ganze Zahlen typisiert.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
- Wenn Sie mithilfe des lokalen Typrückschlusses, möchten `Option Infer` muss festgelegt werden, um `On`. Weitere Informationen finden Sie unter [Local Type Inference (Lokaler Typrückschluss)](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement (Option Infer-Anweisung)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Wenn Sie den lokalen Typrückschluss verwenden möchten, muss `Option Infer` auf `On` festgelegt werden. Weitere Informationen finden Sie unter [Local Type Inference (Lokaler Typrückschluss)](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) und [Option Infer Statement (Option Infer-Anweisung)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
-## <a name="characteristics-of-declared-variables"></a>Merkmale der deklarierten Variablen  
- Die *Lebensdauer* einer Variablen ist der Zeitraum der sie verwendet werden kann. Im Allgemeinen ist eine Variable vorhanden, solange das Element, das ihn, (z. B. eine Prozedur oder die Zielklasse deklariert) ausgeführt wird, vorhanden sein. Wenn die Variable nicht weiter nach Ablauf der Lebensdauer von ihr enthaltendes Element vorhandenen muss, müssen Sie keine gar nichts Besonderes in der Deklaration. Wenn die Variable länger als ihr enthaltendes Element gespeichert bleiben muss, können Sie enthalten die `Static` oder `Shared` -Schlüsselwort in der `Dim` Anweisung. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+## <a name="characteristics-of-declared-variables"></a>Merkmale von deklarierten Variablen  
+ Die *Lebensdauer* einer Variablen ist der Zeitraum, in dem Sie zur Verwendung verfügbar ist. Im Allgemeinen ist eine Variable vorhanden, solange das Element, das Sie deklariert (z. b. eine Prozedur oder eine Klasse), weiterhin vorhanden ist. Wenn die Variable nicht fortgesetzt werden muss, wenn Sie die Lebensdauer des enthaltenden Elements überschreitet, müssen Sie in der Deklaration nichts Besonderes tun. Wenn die Variable länger vorhanden sein muss als das enthaltende Element, können Sie das `Static`-oder `Shared`-Schlüsselwort in der `Dim`-Anweisung einschließen. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- Die *Bereich* einer Variablen ist die Menge des gesamten Codes, die darauf verweisen kann, ohne Angabe ihres Namens. Der Gültigkeitsbereich einer Variablen wird bestimmt, wo er deklariert wurde. Code befindet sich in einer bestimmten Region können die Variablen, die in dieser Region definiert werden, ohne ihren Namen zu qualifizieren. Weitere Informationen finden Sie unter [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Der Gültigkeits *Bereich* einer Variablen ist der Satz des gesamten Codes, der darauf verweisen kann, ohne den Namen zu qualifizieren. Der Gültigkeitsbereich einer Variablen wird bestimmt, wo Sie deklariert ist. Code, der sich in einer bestimmten Region befindet, kann die Variablen verwenden, die in dieser Region definiert sind, ohne deren Namen qualifizieren zu müssen. Weitere Informationen finden Sie unter [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
- Einer Variablentyps des *Zugriffsebene* wird das Ausmaß der Code mit der Berechtigung, darauf zuzugreifen. Dies richtet sich nach den Zugriffsmodifizierer (wie z. B. [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) oder [Private](../../../../visual-basic/language-reference/modifiers/private.md)), mit denen Sie der `Dim` Anweisung. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Die *Zugriffsebene* einer Variablen ist der Umfang des Codes, der über die entsprechende Zugriffsberechtigung verfügt. Dies wird durch den Zugriffsmodifizierer (z. b. [öffentlich](../../../../visual-basic/language-reference/modifiers/public.md) oder [Privat](../../../../visual-basic/language-reference/modifiers/private.md)) bestimmt, den Sie in der `Dim`-Anweisung verwenden. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen einer neuen Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Vorgehensweise: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Vorgehensweise: Create a New Variable @ no__t-0
+- [Vorgehensweise: Verschieben von Daten in und aus einer Variablen @ no__t-0
 - [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
 - [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)

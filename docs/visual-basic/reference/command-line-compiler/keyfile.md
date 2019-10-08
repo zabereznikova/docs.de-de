@@ -6,19 +6,19 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 30b890cf3d523d1e33b433a1ff6109759bd9a5e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: b17df3cb803cfbef324b74a9dee4394fce70215b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972327"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005542"
 ---
 # <a name="-keyfile"></a>-keyfile
 Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
-``` 
+```console 
 -keyfile:file  
 ```  
   
@@ -29,20 +29,20 @@ Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly e
 ## <a name="remarks"></a>Hinweise  
  Der Compiler fügt den öffentlichen Schlüssel in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel. Geben Sie `sn -k file` in die Befehlszeile ein, um eine Schlüsseldatei zu generieren. Weitere Informationen finden Sie unter [Sn. exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- Wenn Sie mit `-target:module`kompilieren, wird der Name der Schlüsseldatei im Modul gespeichert und in die Assembly integriert, die beim Kompilieren einer Assembly mit [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)erstellt wird.  
+ Wenn Sie mit `-target:module` kompilieren, wird der Name der Schlüsseldatei im Modul gespeichert und in die Assembly integriert, die beim Kompilieren einer Assembly mit [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)erstellt wird.  
   
  Außerdem können Sie Ihre Verschlüsselungsinformationen mit [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) an den Compiler übergeben. Verwenden Sie [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), wenn die Assembly teilweise signiert werden soll.  
   
  Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyKeyFileAttribute>) im Quellcode für ein beliebiges Microsoft Intermediate Language-Modul angeben.  
   
- Für den Fall `-keyfile` , dass sowohl als auch [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) (entweder über eine Befehlszeilenoption oder ein benutzerdefiniertes Attribut) in derselben Kompilierung angegeben ist, versucht der Compiler zunächst, den Schlüssel Container zu erhalten. Wenn dies erfolgreich ist, wird die Assembly mit den Informationen im Schlüsselcontainer signiert. Wenn der Compiler den Schlüssel Container nicht findet, wird versucht, die mit angegebene Datei `-keyfile`zu ermitteln. Wenn dies erfolgreich ist, wird die Assembly mit den Informationen in der Schlüsseldatei signiert, und die Schlüsselinformationen werden im Schlüssel Container installiert (ähnlich wie `sn -i`), sodass der Schlüssel Container bei der nächsten Kompilierung gültig ist.  
+ Für den Fall, dass sowohl `-keyfile` als auch [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) angegeben werden (entweder über die Befehlszeilenoption oder durch ein benutzerdefiniertes Attribut), versucht der Compiler zunächst, den Schlüssel Container zu erhalten. Wenn dies erfolgreich ist, wird die Assembly mit den Informationen im Schlüsselcontainer signiert. Wenn der Compiler den Schlüssel Container nicht findet, wird versucht, die mit `-keyfile` angegebene Datei zu suchen. Wenn dies erfolgreich ist, wird die Assembly mit den Informationen in der Schlüsseldatei signiert, und die Schlüsselinformationen werden im Schlüssel Container installiert (ähnlich wie `sn -i`), sodass der Schlüssel Container bei der nächsten Kompilierung gültig ist.  
   
  Beachten Sie, dass die Schlüsseldatei möglicherweise nur den öffentlichen Schlüssel enthält.  
   
  Weitere Informationen zum Signieren einer Assembly finden [Sie unter Erstellen und verwenden](../../../standard/assembly/create-use-strong-named.md) von Assemblys mit starkem Namen.  
   
 > [!NOTE]
-> Die `-keyfile` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
+> Die Option "`-keyfile`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert die Quelldatei `Input.vb` und gibt eine Schlüsseldatei an.  

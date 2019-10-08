@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: a9c4c9d597f5cc1b172213d49a3dd5b8f1c1f671
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e9ef32912c2afb3c99e46e1e14bb3daa5a2e99af
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991380"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005707"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 Wird von "PresentationHost. exe" aufgerufen, um beim implementieren benutzerdefinierte Status-und Fehlermeldungen vom Host zu erhalten.  
@@ -27,7 +27,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzProgressClassName`  
   
- vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Status-Benutzeroberfläche ist, [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] vorzugsweise <xref:System.Windows.Controls.Page> eine Datei mit dem Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die von `pwzProgressAssemblyName`angegeben wird.  
+ vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Status-Benutzeroberfläche ist, vorzugsweise eine XAML-Datei mit <xref:System.Windows.Controls.Page> ist das Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die durch `pwzProgressAssemblyName` angegeben wird.  
   
  `pwzErrorAssemblyName`  
   
@@ -35,7 +35,7 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  `pwzErrorClassName`  
   
- vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Fehler Benutzeroberfläche ist, vorzugsweise eine XAML <xref:System.Windows.Controls.Page> -Datei mit dem Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die von `pwzErrorAssemblyName`angegeben wird.  
+ vorgenommen Der Name der Klasse, die die vom Host bereitgestellte Fehler Benutzeroberfläche ist, vorzugsweise eine XAML-Datei mit <xref:System.Windows.Controls.Page> ist das Element der obersten Ebene. Diese Klasse befindet sich in der Assembly, die durch `pwzErrorAssemblyName` angegeben wird.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  HRESULT: Ignoriert.  

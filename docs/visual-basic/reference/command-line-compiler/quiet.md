@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: a22773e2e37eb60ab6f1e88305266f41764311e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788842"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005281"
 ---
 # <a name="-quiet"></a>-quiet
 
@@ -22,15 +22,15 @@ Verhindert, dass der Compiler Code für syntaxbezogene Fehler und Warnungen anze
 
 ## <a name="syntax"></a>Syntax
 
-```
+```console
 -quiet
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung ist `-quiet` nicht aktiv. Wenn der Compiler ein syntaxbezogene Fehler oder eine Warnung gemeldet, auch die Zeile aus dem Quellcode ausgegeben. Für Anwendungen, die Compiler-Ausgabe zu analysieren, kann es einfacher für den Compiler an, nur den Text der Diagnose ausgegeben sein.
+In der Standardeinstellung ist `-quiet` nicht aktiv. Wenn der Compiler einen Syntax bezogenen Fehler oder eine Warnung meldet, gibt er auch die Zeile aus dem Quellcode aus. Bei Anwendungen, die die Compilerausgabe analysieren, ist es möglicherweise bequemer, dass der Compiler nur den Text der Diagnose ausgibt.
 
-Im folgenden Beispiel `Module1` gibt einen Fehler aus, die bei der Kompilierung ohne Quellcode enthält `-quiet`.
+Im folgenden Beispiel gibt `Module1` einen Fehler aus, der Quellcode enthält, wenn er ohne `-quiet` kompiliert wird.
 
 ```vb
 Module Module1
@@ -49,20 +49,20 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-Mit kompiliert `-quiet`, der Compiler gibt nur die folgenden:
+Kompiliert mit `-quiet`: der Compiler gibt nur Folgendes aus:
 
-```
+```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> Die `-quiet` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.
+> Die Option "`-quiet`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende code kompiliert `T2.vb` und Code für syntaxbezogene Compilerdiagnose nicht angezeigt:
+Mit dem folgenden Code wird `T2.vb` kompiliert, und es wird kein Code für die Syntax bezogene Compilerdiagnose angezeigt:
 
-```
+```console
 vbc -quiet t2.vb
 ```
 

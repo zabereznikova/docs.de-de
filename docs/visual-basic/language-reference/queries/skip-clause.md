@@ -8,37 +8,37 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945248"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004767"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip-Klausel (Visual Basic)
 Überspringt eine festgelegte Anzahl von Elementen in einer Auflistung und gibt anschließend die übrigen Elemente zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Skip count  
 ```  
   
 ## <a name="parts"></a>Teile  
  `count`  
- Erforderlich. Ein Wert oder ein Ausdruck, der die Anzahl der Elemente der Sequenz zu überspringenden ergibt.  
+ Erforderlich. Ein-Wert oder ein Ausdruck, der die Anzahl der zu über springenden Elemente der Sequenz ergibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Skip` -Klausel bewirkt, dass eine Abfrage Elemente am Anfang einer Ergebnisliste zu umgehen und die übrigen Elemente zurückgegeben. Die Anzahl der zu überspringenden Elemente wird durch identifiziert die `count` Parameter.  
+ Die `Skip`-Klausel bewirkt, dass eine Abfrage Elemente am Anfang einer Ergebnisliste umgeht und die restlichen Elemente zurückgibt. Die Anzahl der zu über springenden Elemente wird durch den `count`-Parameter identifiziert.  
   
- Können Sie die `Skip` -Klausel mit der `Take` -Klausel, um einen Bereich von Daten aus jedem Segment einer Abfrage zurückgeben. Dazu übergeben Sie den Index des ersten Elements des Bereichs, der die `Skip` -Klausel und die Größe des Bereichs, der die `Take` Klausel.  
+ Sie können die `Skip`-Klausel mit der `Take`-Klausel verwenden, um einen Datenbereich aus einem beliebigen Segment einer Abfrage zurückzugeben. Übergeben Sie hierzu den Index des ersten Elements des Bereichs an die `Skip`-Klausel und die Größe des Bereichs an die `Take`-Klausel.  
   
- Bei Verwendung der `Skip` -Klausel in einer Abfrage, Sie müssen auch sicherstellen, dass die Ergebnisse in der Reihenfolge zurückgegeben werden, mit denen die `Skip` -Klausel, um die gewünschten Ergebnisse zu umgehen. Weitere Informationen zum Sortieren von Abfrageergebnissen finden Sie unter [Order By-Klausel](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Wenn Sie die `Skip`-Klausel in einer Abfrage verwenden, müssen Sie möglicherweise auch sicherstellen, dass die Ergebnisse in einer Reihenfolge zurückgegeben werden, die die `Skip`-Klausel zum Umgehen der beabsichtigten Ergebnisse ermöglicht. Weitere Informationen zum Sortieren von Abfrage Ergebnissen finden Sie unter [Order By-Klausel](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Sie können die `SkipWhile` Klausel, um anzugeben, dass nur bestimmte Elemente, je nach einer angegebenen Bedingung ignoriert werden.  
+ Sie können die `SkipWhile`-Klausel verwenden, um anzugeben, dass nur bestimmte Elemente ignoriert werden, abhängig von der angegebenen Bedingung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird die `Skip` -Klausel zusammen mit den `Take` -Klausel zur Rückgabe von Daten aus einer Abfrage in Seiten. Die `GetCustomers` Funktion verwendet die `Skip` -Klausel, um die Kunden in der Liste zu umgehen, bis die angegebenen Wert und verwendet die `Take` -Klausel, um eine Seite mit Kunden, die von diesem Indexwert zurück.  
+ Im folgenden Codebeispiel wird die `Skip`-Klausel in Verbindung mit der `Take`-Klausel verwendet, um Daten aus einer Abfrage in Seiten zurückzugeben. Die `GetCustomers`-Funktion verwendet die `Skip`-Klausel, um die Kunden in der Liste bis zum bereitgestellten Start Index Wert zu umgehen, und verwendet die `Take`-Klausel, um eine Kundenseite zurückzugeben, beginnend mit diesem Indexwert.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788985"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005401"
 ---
 # <a name="-nowarn"></a>-nowarn
 Unterdrückt die Compilerfunktion zum Generieren von Warnungen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -nowarn[:numberList]  
 ```  
   
@@ -26,28 +26,28 @@ Unterdrückt die Compilerfunktion zum Generieren von Warnungen.
   
 |Begriff|Definition|  
 |---|---|  
-|`numberList`|Dies ist optional. Durch Trennzeichen getrennte Liste mit der ID-Warnzahlen, die der Compiler unterdrücken soll. Wenn keine Warnungs-IDs angegeben sind, werden alle Warnungen unterdrückt.|  
+|`numberList`|Optional. Eine durch Trennzeichen getrennte Liste der Warnungs-ID-Nummern, die vom Compiler unterdrückt werden sollen. Wenn die Warnungs-IDs nicht angegeben werden, werden alle Warnungen unterdrückt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-nowarn` Option bewirkt, dass den Compiler keine Warnungen generiert werden. Um eine einzelne Warnung zu unterdrücken, geben Sie die ID der Warnung, die die `-nowarn` Option, die hinter dem Doppelpunkt. Trennen Sie mehrere Warnungsnummern jeweils durch Kommas.  
+ Die Option "`-nowarn`" bewirkt, dass der Compiler keine Warnungen generiert. Um eine einzelne Warnung zu unterdrücken, geben Sie die Warnungs-ID an die `-nowarn`-Option nach dem Doppelpunkt an. Trennen Sie mehrere Warnungs Nummern durch Kommas.  
   
- Sie müssen nur den numerischen Teil des Warnungsbezeichners angeben. Wenn Sie BC42024, die Warnung für nicht verwendete lokale Variablen, unterdrücken möchten, z. B. Geben Sie `-nowarn:42024`.  
+ Sie müssen nur den numerischen Teil des Warnungs Bezeichners angeben. Wenn Sie z. b. BC42024 unterdrücken möchten, geben Sie die Warnung für nicht verwendete lokale Variablen an, `-nowarn:42024`.  
   
- Weitere Informationen zu die Warnung-ID-Nummern, finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Weitere Informationen zu den Warnungs-ID-Nummern finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|-Nowarn in der integrierten Entwicklungsumgebung von Visual Studio festlegen.|  
+|To Set-nowarn in der integrierten Entwicklungsumgebung von Visual Studio|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Wählen Sie die **alle Warnungen deaktivieren** Kontrollkästchen, um alle Warnungen deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie auf **keine** aus der Dropdown-Liste neben der Warnung.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Aktivieren Sie das Kontrollkästchen **alle Warnungen deaktivieren** , um alle Warnungen zu deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie in der Dropdown Liste neben der Warnung auf **keine** .|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `T2.vb` und keine Warnungen angezeigt.  
+ Der folgende Code kompiliert `T2.vb` und zeigt keine Warnungen an.  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `T2.vb` und die Warnungen für nicht verwendete lokale Variablen (42024) nicht angezeigt.  
+ Der folgende Code kompiliert `T2.vb` und zeigt keine Warnungen für nicht verwendete lokale Variablen an (42024).  
   
 ```console
 vbc -nowarn:42024 t2.vb  

@@ -10,43 +10,43 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8ee46b12e84f99629c3a92057fc3a7bb8a3c2e8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712564"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004950"
 ---
 # <a name="order-by-clause-visual-basic"></a>ORDER BY-Klausel (Visual Basic)
-Gibt die Sortierreihenfolge für eine Abfrage an.  
+Gibt die Sortierreihenfolge für ein Abfrageergebnis an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
 ## <a name="parts"></a>Teile  
  `orderExp1`  
- Erforderlich. Ein oder mehrere Felder aus dem aktuellen Abfrageergebnis, die identifizieren, wie Sie die Reihenfolge der zurückgegebenen Werte. Die Feldnamen müssen durch Kommas (,) getrennt werden. Sie können jedes Felds identifizieren, als sortiert in aufsteigender oder absteigender Reihenfolge unter Verwendung der `Ascending` oder `Descending` Schlüsselwörter. Wenn kein `Ascending` oder `Descending` -Schlüsselwort angegeben ist, die die Sortierreihenfolge ist Aufsteigend. Die Felder werden die Rangfolge von links nach rechts angegeben.  
+ Erforderlich. Ein oder mehrere Felder aus dem aktuellen Abfrageergebnis, die die Reihenfolge der zurückgegebenen Werte bestimmen. Die Feldnamen müssen durch Kommas (,) getrennt werden. Sie können jedes Feld in aufsteigender oder absteigender Reihenfolge mithilfe der Schlüsselwörter `Ascending` oder `Descending` identifizieren. Wenn kein `Ascending`-oder `Descending`-Schlüsselwort angegeben ist, ist die Standard Sortierreihenfolge aufsteigend. Die Sortier Reihenfolgen Felder haben Vorrang vor von links nach rechts.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `Order By` -Klausel zum Sortieren der Ergebnisse einer Abfrage. Die `Order By` -Klausel kann nur basierend auf der die Bereichsvariable für den aktuellen Bereich sortieren. Z. B. die `Select` Klausel führt einen neuen Bereich in einem Abfrageausdruck mit neuen Iterationsvariablen für diesen Bereich. Bereichsvariablen, die definiert, bevor eine `Select` -Klausel in einer Abfrage sind nicht verfügbar, nachdem die `Select` Klausel. Aus diesem Grund sollten Sie die Ergebnisse nach einem Feld zu sortieren, die in nicht verfügbar ist die `Select` -Klausel, müssen Sie setzen das `Order By` -Klausel, bevor die `Select` Klausel. Ein Beispiel wenn Sie dazu müssten ist, wenn eine Abfrage nach Feldern zu sortieren, die nicht als Teil des Ergebnisses zurückgegeben werden sollen.  
+ Sie können die `Order By`-Klausel verwenden, um die Ergebnisse einer Abfrage zu sortieren. Die `Order By`-Klausel kann ein Ergebnis nur basierend auf der Bereichs Variablen für den aktuellen Bereich sortieren. Die `Select`-Klausel führt z. b. einen neuen Bereich in einem Abfrage Ausdruck mit neuen Iterations Variablen für diesen Bereich ein. Bereichs Variablen, die vor einer `Select`-Klausel in einer Abfrage definiert sind, sind nach der `Select`-Klausel nicht verfügbar. Wenn Sie also die Ergebnisse nach einem Feld sortieren möchten, das in der `Select`-Klausel nicht verfügbar ist, müssen Sie die `Order By`-Klausel vor der `Select`-Klausel ablegen. Ein Beispiel hierfür wäre, wenn Sie die Abfrage nach Feldern sortieren möchten, die nicht als Teil des Ergebnisses zurückgegeben werden.  
   
- Auf- und absteigender Reihenfolge aus, für ein Feld von der Implementierung der bestimmt wird die <xref:System.IComparable> Schnittstelle für den Datentyp des Felds. Wenn der Datentyp nicht implementiert die <xref:System.IComparable> -Schnittstelle, die Sortierreihenfolge wird ignoriert.  
+ Die aufsteigende und absteigende Reihenfolge für ein Feld wird durch die Implementierung der <xref:System.IComparable>-Schnittstelle für den Datentyp des Felds bestimmt. Wenn der Datentyp die <xref:System.IComparable>-Schnittstelle nicht implementiert, wird die Sortierreihenfolge ignoriert.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `book` für die `books` Auflistung. Die `Order By` -Klausel sortiert das Resultset der Abfrage nach Preis in aufsteigender Reihenfolge (Standard). Bücher mit den gleichen Preis sind nach Titel in aufsteigender Reihenfolge sortiert. Die `Select` -Klausel wählt die `Title` und `Price` Eigenschaften wie die von der Abfrage zurückgegebenen Werte.  
+ Der folgende Abfrage Ausdruck verwendet eine `From`-Klausel, um eine Bereichs Variable `book` für die `books`-Auflistung zu deklarieren. Die `Order By`-Klausel sortiert das Abfrageergebnis nach Preis in aufsteigender Reihenfolge (Standardeinstellung). Bücher mit demselben Preis werden nach Titel in aufsteigender Reihenfolge sortiert. Die `Select`-Klausel wählt die Eigenschaften `Title` und `Price` als die von der Abfrage zurückgegebenen Werte aus.  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrageausdruck verwendet die `Order By` -Klausel, um das Ergebnis der Abfrage nach Preis in absteigender Reihenfolge zu sortieren. Bücher mit den gleichen Preis sind nach Titel in aufsteigender Reihenfolge sortiert.  
+ Der folgende Abfrage Ausdruck verwendet die `Order By`-Klausel, um das Abfrageergebnis nach Preis in absteigender Reihenfolge zu sortieren. Bücher mit demselben Preis werden nach Titel in aufsteigender Reihenfolge sortiert.  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrageausdruck verwendet eine `Select` -Klausel, um Wählen Sie den Titel, Preis, Veröffentlichungsdatum und erstellen. Dann füllt es die `Title`, `Price`, `PublishDate`, und `Author` Felder die Bereichsvariable für den neuen Bereich. Die `Order By` -Klausel sortiert die neue Bereichsvariable, die vom Autorenname, Titel und Preis. Jede Spalte ist in der Standardreihenfolge (in aufsteigender Reihenfolge) sortiert.  
+ Der folgende Abfrage Ausdruck verwendet eine `Select`-Klausel, um den Buchtitel, den Preis, das Veröffentlichungsdatum und den Autor auszuwählen. Anschließend werden die Felder "`Title`", "`Price`", "`PublishDate`" und "`Author`" der Bereichs Variablen für den neuen Bereich aufgefüllt. Die `Order By`-Klausel ordnet die neue Bereichs Variable nach Autor Name, Titel Titel und Preis an. Jede Spalte wird in der Standard Reihenfolge sortiert (aufsteigend).  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   

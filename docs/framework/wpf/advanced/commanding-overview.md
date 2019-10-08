@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 835b06c6107cd44d49c83cfe34102b0c2d2a4bb9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627398"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004600"
 ---
 # <a name="commanding-overview"></a>Befehlsübersicht
 <a name="introduction"></a> Befehle sind ein Eingabemechanismus in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], der Eingabeverarbeitung auf einer höheren Ebene als die Geräteeingabe bereitstellt. Beispiele für Befehle sind die in vielen Programmen enthaltenen Vorgänge **Kopieren**, **Ausschneiden** und **Einfügen**.  
@@ -173,7 +173,7 @@ ms.locfileid: "64627398"
 ## <a name="command-library"></a>Befehlsbibliothek  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vordefinierten Befehlen bereit.  Die Befehlsbibliothek besteht aus den folgenden Klassen: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> und <xref:System.Windows.Input.ComponentCommands>.  Diese Klassen stellen Befehle wie die Folgenden bereit: <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> und <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie z. B. angeben, dass Ihre Anwendung den Kopierbefehl verarbeitet, erhalten Sie automatisch die Tastaturbindung STRG+C. Sie erhalten ebenso Bindungen für andere Eingabegeräte, z.B. Stift-Gesten für [!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)]s und Sprachinformationen.  
+ Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie z. b. angeben, dass die Anwendung den Kopier Befehl verarbeitet, erhalten Sie automatisch die Tastatur Bindung "STRG + C", und Sie erhalten auch Bindungen für andere Eingabegeräte, z. b. Tablet PC-Stift Gesten und Sprachinformationen.  
   
  Wenn Sie in den verschiedenen Bibliotheken mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf Befehle verweisen, können Sie normalerweise den Klassennamen der Bibliotheksklasse weglassen, die die statische Befehlseigenschaft verfügbar macht. In der Regel sind die Befehlsnamen als Zeichenfolgen eindeutig, und die besitzenden Typen sind vorhanden, um eine logische Gruppierung der Befehle bereitzustellen. Zur Mehrdeutigkeitsvermeidung sind sie nicht erforderlich. Sie können z.B. `Command="Cut"` anstelle des ausführlicheren `Command="ApplicationCommands.Cut"` angeben. Dies ist ein benutzerfreundlicher Mechanismus, der in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor für Befehle integriertet ist (genauer gesagt, es ist das Verhalten des Typkonverters <xref:System.Windows.Input.ICommand>, auf den der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor zur Ladezeit verweist).  
   
@@ -192,5 +192,5 @@ ms.locfileid: "64627398"
 - [Übersicht über die Eingabe](input-overview.md)
 - [Übersicht über Routingereignisse](routed-events-overview.md)
 - [Implementieren von ICommandSource](how-to-implement-icommandsource.md)
-- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
+- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem @ no__t-0
 - [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

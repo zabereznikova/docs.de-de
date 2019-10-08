@@ -10,19 +10,19 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639635"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004779"
 ---
 # <a name="from-clause-visual-basic"></a>From-Klausel (Visual Basic)
-Gibt einen oder mehrere Bereichsvariable und eine Abfragesammlung an.  
+Gibt eine oder mehrere Bereichs Variablen und eine abzufragende Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
@@ -31,41 +31,41 @@ From element [ As type ] In collection [ _ ]
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. Ein *Bereichsvariable* verwendet, um das Durchlaufen der Elemente der Auflistung. Eine Bereichsvariable wird verwendet, um auf jedes Element finden Sie unter den `collection` wie die Abfrage durchläuft die `collection`. Muss es sich um ein aufzählbarer Typ sein.|  
-|`type`|Dies ist optional. Der `element`-Typ. Wenn kein `type` angegeben ist, den Typ des `element` von hergeleitet `collection`.|  
-|`collection`|Erforderlich. Bezieht sich auf die Auflistung, die abgefragt werden. Muss es sich um ein aufzählbarer Typ sein.|  
+|`element`|Erforderlich. Eine *Bereichs Variable* , die verwendet wird, um die Elemente der Auflistung zu durchlaufen. Eine Bereichs Variable wird verwendet, um auf die einzelnen Member des `collection` zu verweisen, während die Abfrage den `collection` durchläuft. Muss ein Aufzähl Bare-Typ sein.|  
+|`type`|Optional. Der `element`-Typ. Wenn keine `type` angegeben wird, wird der Typ von `element` von `collection` abgeleitet.|  
+|`collection`|Erforderlich. Verweist auf die Auflistung, die abgefragt werden soll. Muss ein Aufzähl Bare-Typ sein.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `From` -Klausel wird verwendet, identifizieren Sie die Quelldaten für eine Abfrage und die Variablen, die zum Verweisen auf ein Element aus der Auflistung verwendet werden. Diese Variablen heißen *Bereichsvariablen*. Die `From` -Klausel ist erforderlich für eine Abfrage, außer wenn die `Aggregate` -Klausel wird verwendet, um eine Abfrage zu identifizieren, dass gibt nur die Ergebnisse aggregiert. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Die `From`-Klausel wird verwendet, um die Quelldaten für eine Abfrage und die Variablen zu identifizieren, die verwendet werden, um auf ein Element aus der Quell Auflistung zu verweisen. Diese Variablen werden als *Bereichs Variablen*bezeichnet. Die `From`-Klausel ist für eine Abfrage erforderlich, außer wenn die `Aggregate`-Klausel verwendet wird, um eine Abfrage zu identifizieren, die nur aggregierte Ergebnisse zurückgibt. Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Sie können angeben, dass mehrere `From` Klauseln in einer Abfrage zum Identifizieren von mehreren Sammlungen verknüpft werden sollen. Wenn mehrere Sammlungen angegeben werden, sie einzeln durchlaufen werden, oder Sie können diese verknüpfen, wenn diese verknüpft sind. Sie können Sammlungen implizit verknüpfen, indem die `Select` -Klausel, oder explizit durch Verwenden der `Join` oder `Group Join` Klauseln. Als Alternative können Sie mehrere Bereichsvariablen und Sammlungen angeben, in einem einzelnen `From` -Klausel, wobei alle entsprechenden Range-Variable und Sammlungen, die durch ein Komma voneinander getrennt. Im folgenden Codebeispiel wird veranschaulicht, beide Optionen zur Abfragesyntax für die `From` Klausel.  
+ Sie können mehrere `From`-Klauseln in einer Abfrage angeben, um mehrere Sammlungen zu identifizieren, die verknüpft werden sollen. Wenn mehrere Sammlungen angegeben werden, werden Sie unabhängig voneinander durchlaufen, oder Sie können Sie verknüpfen, wenn Sie verknüpft sind. Sie können Auflistungen implizit mit der `Select`-Klausel oder explizit mithilfe der Klauseln `Join` oder `Group Join` verknüpfen. Als Alternative können Sie mehrere Bereichs Variablen und Auflistungen in einer einzigen `From`-Klausel angeben, wobei jede verknüpfte Bereichs Variable und Auflistung durch ein Komma von anderen getrennt werden. Das folgende Codebeispiel zeigt beide Syntax Optionen für die `From`-Klausel.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- Die `From` -Klausel definiert den Bereich einer Abfrage, der in den Bereich der ähnelt einem `For` Schleife. Aus diesem Grund jede `element` Bereichsvariablen im Bereich einer Abfrage muss einen eindeutigen Namen haben. Da es sich bei Angabe mehrerer `From` Klauseln für eine Abfrage, die nachfolgenden `From` Klauseln können Bereichsvariablen in finden Sie unter den `From` -Klausel, oder sie können auf Bereichsvariablen in einem vorherigen verweisen `From` Klausel. Das folgende Beispiel zeigt z. B. eine geschachtelte `From` Klausel, in die Auflistung in der zweiten Klausel auf eine Eigenschaft der Bereichsvariablen in der ersten Klausel basiert.  
+ Die `From`-Klausel definiert den Gültigkeitsbereich einer Abfrage, die dem Bereich einer `For`-Schleife ähnelt. Daher muss jede `element`-Bereichs Variable im Gültigkeitsbereich einer Abfrage einen eindeutigen Namen aufweisen. Da Sie mehrere `From`-Klauseln für eine Abfrage angeben können, können nachfolgende `From`-Klauseln auf Bereichs Variablen in der `From`-Klausel verweisen, oder Sie können in einer früheren `From`-Klausel auf Bereichs Variablen verweisen. Das folgende Beispiel zeigt beispielsweise eine `From`-Klausel, bei der die Auflistung in der zweiten Klausel auf einer Eigenschaft der Bereichs Variablen in der ersten Klausel basiert.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Jede `From` Klausel kann eine beliebige Kombination von zusätzliche Abfrageklauseln, um die Abfrage zu verfeinern folgen. Sie können die Abfrage optimieren, es gibt folgende Möglichkeiten:  
+ Auf jede `From`-Klausel kann eine beliebige Kombination zusätzlicher Abfrage Klauseln folgen, um die Abfrage zu verfeinern. Es gibt folgende Möglichkeiten, um die Abfrage zu verfeinern:  
   
-- Kombinieren Sie mehrere Sammlungen implizit mithilfe der `From` und `Select` -Klauseln, oder explizit durch Verwenden der `Join` oder `Group Join` Klauseln.  
+- Kombinieren Sie mehrere Auflistungen implizit mithilfe der Klauseln `From` und `Select` oder explizit mithilfe der Klauseln `Join` oder `Group Join`.  
   
-- Verwenden der `Where` -Klausel, um das Abfrageergebnis zu filtern.  
+- Verwenden Sie die `Where`-Klausel, um das Abfrageergebnis zu filtern.  
   
-- Sortieren des Ergebnisses mithilfe der `Order By` Klausel.  
+- Sortieren Sie das Ergebnis mithilfe der `Order By`-Klausel.  
   
-- Gruppieren ähnliche Ergebnisse mithilfe der `Group By` Klausel.  
+- Gruppieren Sie ähnliche Ergebnisse mit der `Group By`-Klausel.  
   
-- Verwenden der `Aggregate` -Klausel, um Aggregatfunktionen für das Ergebnis für die gesamte Abfrage ausgewertet werden sollen.  
+- Verwenden Sie die `Aggregate`-Klausel, um Aggregatfunktionen zu identifizieren, die für das gesamte Abfrageergebnis ausgewertet werden sollen.  
   
-- Verwenden der `Let` -Klausel, um eine Iterationsvariable eingeführt, deren Wert durch einen Ausdruck anstatt einer Sammlung festgelegt wird.  
+- Verwenden Sie die `Let`-Klausel, um eine Iterations Variable einzuführen, deren Wert durch einen Ausdruck anstelle einer Auflistung bestimmt wird.  
   
-- Verwenden der `Distinct` -Klausel, um doppelte Abfrageergebnisse ignoriert.  
+- Verwenden Sie die `Distinct`-Klausel, um doppelte Abfrageergebnisse zu ignorieren.  
   
-- Identifizieren Sie Teile des Ergebnisses zurückgegeben mit der `Skip`, `Take`, `Skip While`, und `Take While` Klauseln.  
+- Identifizieren Sie Teile des Ergebnisses, die zurückgegeben werden sollen, indem Sie die `Skip`-, `Take`-, `Skip While`-und `Take While`-Klauseln verwenden.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für jede `Customer` -Objekt in der `customers` Auflistung. Die `Where` -Klausel verwendet die Bereichsvariable, um die Ausgabe auf Kunden aus den angegebenen Bereich zu beschränken. Die `For Each` -Schleife zeigt den Firmennamen für jeden Kunden in den Abfrageergebnissen.  
+ Der folgende Abfrage Ausdruck verwendet eine `From`-Klausel, um eine Bereichs Variable `cust` für jedes `Customer`-Objekt in der `customers`-Auflistung zu deklarieren. Die `Where`-Klausel verwendet die Range-Variable, um die Ausgabe auf Kunden aus dem angegebenen Bereich zu beschränken. Die `For Each`-Schleife zeigt den Firmennamen für jeden Kunden im Abfrageergebnis an.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   

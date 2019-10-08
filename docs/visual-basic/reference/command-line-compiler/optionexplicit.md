@@ -9,36 +9,36 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788946"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005307"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Bewirkt, dass der Compiler Fehler melden, wenn Variablen nicht deklariert werden, bevor sie verwendet werden.  
+Bewirkt, dass der Compiler Fehler meldet, wenn keine Variablen deklariert sind, bevor Sie verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  `+` &#124; `-`  
- Dies ist optional. Geben Sie `-optionexplicit+` explizite Deklaration von Variablen erforderlich ist. Die `-optionexplicit+` Option ist die Standardeinstellung und entspricht dem `-optionexplicit`. Die `-optionexplicit-` Option ermöglicht die implizite Deklaration von Variablen.  
+ Optional. Geben Sie `-optionexplicit+` an, um eine explizite Deklaration von Variablen anzufordern. Die Option "`-optionexplicit+`" ist die Standardeinstellung und entspricht `-optionexplicit`. Die Option `-optionexplicit-` aktiviert die implizite Deklaration von Variablen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Quellcodedatei enthält einen [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md), überschreibt die Anweisung die `-optionexplicit` Befehlszeilencompiler-Einstellung.  
+ Wenn die Quell Code Datei eine [explizite Option-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)enthält, überschreibt die-Anweisung die Befehlszeilen-Compilereinstellung `-optionexplicit`.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit in Visual Studio-IDE festlegen  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>So legen Sie-optionexpliziten in der Visual Studio-IDE fest  
   
 1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
 2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3. Ändern Sie den Wert in der **Option Explicit** Feld.  
+3. Ändern Sie den Wert im Feld **Option explizit** .  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code wird kompiliert, wenn `-optionexplicit-` verwendet wird.  

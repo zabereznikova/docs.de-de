@@ -9,21 +9,25 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: d92b0d08daf660880b648875c67c3b78069143d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dee5384696d543442f3280b9fdb535a7d9b6f863
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924860"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005490"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Erstellt einen Link zu einer verwalteten Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -linkresource:filename[,identifier[,public|private]]  
-' -or-  
+```
+
+oder  
+
+```console
 -linkres:filename[,identifier[,public|private]]  
 ```  
   
@@ -32,24 +36,24 @@ Erstellt einen Link zu einer verwalteten Ressource.
  Erforderlich. Die Ressourcen Datei, die mit der Assembly verknüpft werden soll. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen ("") einschließen.  
   
  `identifier`  
- Optional. Der logische Name der Ressource. Der Name, der zum Laden der Ressource verwendet wird. Der Standardwert ist der Name der Datei. Optional können Sie angeben, ob die Datei im Assemblymanifest öffentlich oder privat ist, z. `-linkres:filename.res,myname.res,public`b.:. Standardmäßig `filename` ist in der Assembly öffentlich.  
+ Optional. Der logische Name der Ressource. Der Name, der zum Laden der Ressource verwendet wird. Der Standardwert ist der Name der Datei. Optional können Sie angeben, ob die Datei im Assemblymanifest öffentlich oder privat ist, z. b.: `-linkres:filename.res,myname.res,public`. Standardmäßig ist `filename` in der Assembly öffentlich.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-linkresource` -Option bettet die Ressourcen Datei nicht in die Ausgabedatei ein. `-resource` verwenden Sie hierfür die-Option.  
+ Mit der Option "`-linkresource`" wird die Ressourcen Datei nicht in die Ausgabedatei eingebettet. Verwenden Sie hierfür die Option `-resource`.  
   
- Die `-linkresource` Option erfordert eine `-target` der anderen Optionen als `-target:module`.  
+ Die Option "`-linkresource`" erfordert eine der `-target`-Optionen außer `-target:module`.  
   
- Wenn `filename` eine .NET Framework Ressourcen Datei ist, die beispielsweise von [Resgen. exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, kann <xref:System.Resources> mit Membern im-Namespace darauf zugegriffen werden. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Wenn Sie zur Laufzeit auf alle anderen Ressourcen zugreifen möchten, verwenden Sie die Methoden `GetManifestResource` , die <xref:System.Reflection.Assembly> mit in der-Klasse beginnen.  
+ Wenn `filename` eine .NET Framework Ressourcen Datei ist, die beispielsweise von [Resgen. exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Wenn Sie zur Laufzeit auf alle anderen Ressourcen zugreifen möchten, verwenden Sie die Methoden, die mit `GetManifestResource` beginnen, in der <xref:System.Reflection.Assembly>-Klasse.  
   
  Der Dateiname kann ein beliebiges Dateiformat aufweisen. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
   
  Die Kurzform von `-linkresource` ist `-linkres`.  
   
 > [!NOTE]
-> Die `-linkresource` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
+> Die Option "`-linkresource`" ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert `in.vb` und verknüpft die Ressourcen Datei. `rf.resource`  
+ Der folgende Code kompiliert `in.vb` und Links zur Ressourcen Datei `rf.resource`.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  

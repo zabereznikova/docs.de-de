@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: a9913cd682e52562422ba140e27187d37c592684
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 95277f532488b0cf56114e5ee94dc3528e3a2e02
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928940"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004545"
 ---
 # <a name="addhandler-statement"></a>AddHandler-Anweisung
 Ordnet ein Ereignis einem Ereignishandler zur Laufzeit zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 AddHandler event, AddressOf eventhandler  
 ```  
   
@@ -32,14 +32,14 @@ AddHandler event, AddressOf eventhandler
 |||
   
 ## <a name="remarks"></a>Hinweise  
- Mit `AddHandler` der `RemoveHandler` -Anweisung und der-Anweisung können Sie die Ereignis Behandlung jederzeit während der Programmausführung starten und Abbrechen.  
+ Die Anweisungen `AddHandler` und `RemoveHandler` ermöglichen das Starten und Abbrechen der Ereignis Behandlung während der Programmausführung.  
   
- Die Signatur `eventhandler` der Prozedur muss mit der Signatur des Ereignisses `event`identisch sein.  
+ Die Signatur der `eventhandler`-Prozedur muss mit der Signatur des Ereignisses `event` identisch sein.  
   
  Mit dem Schlüsselwort `Handles` und der Anweisung `AddHandler` können Sie angeben, dass diese bestimmten Prozeduren bestimmte Ereignisse verarbeiten. Es bestehen jedoch keine Unterschiede. Die Anweisung `AddHandler` verbindet Prozeduren zur Laufzeit mit Ereignissen. Verwenden Sie das Schlüsselwort `Handles`, wenn Sie eine Prozedur definieren, um anzugeben, dass sie ein bestimmtes Ereignis verarbeitet. Weitere Informationen finden Sie unter [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
-> Für benutzerdefinierte Ereignisse ruft `AddHandler` die-Anweisung den- `AddHandler` Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Für benutzerdefinierte Ereignisse ruft die `AddHandler`-Anweisung den `AddHandler`-Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

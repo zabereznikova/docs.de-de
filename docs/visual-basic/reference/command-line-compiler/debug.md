@@ -7,46 +7,50 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2fbe5aa6f0b9ac8c99c9b9ec5cdf0a7d9764ab8
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649737"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002408"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
-Bewirkt, dass der Compiler Debuginformationen generiert, und fügen Sie ihn in den Ausgabedateien.  
+Bewirkt, dass der Compiler Debuginformationen generiert und Sie in der Ausgabedatei (en) platziert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console 
 -debug[+ | -]  
-' -or-  
+```
+
+oder
+
+```console  
 -debug:[full | pdbonly]  
-```  
+```
   
 ## <a name="arguments"></a>Argumente  
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Dies ist optional. Angeben von `+` oder `/debug` bewirkt, dass der Compiler Debuginformationen und platziert diese in eine PDB-Datei. Angeben von `-` hat dieselbe Wirkung wie beim Angeben von nicht `/debug`.|  
-|`full` &#124; `pdbonly`|Dies ist optional. Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Wenn Sie keinen angeben `/debug:pdbonly`, der Standardwert ist `full`, dem Sie einen Debugger an ein ausgeführtes Programm anfügen können. Die `pdbonly` Argument ermöglicht das Debuggen von Quellcode, wenn das Programm im Debugger gestartet wird, es wird jedoch der Assemblersprachcode – nur, wenn das aktive Programm an den Debugger angefügt ist.|  
+|`+` &#124; `-`|Optional. Wenn Sie `+` oder `/debug` angeben, generiert der Compiler Debuginformationen und platziert Sie in einer PDB-Datei. Das Angeben von `-` hat denselben Effekt wie das Angeben von `/debug`.|  
+|`full` &#124; `pdbonly`|Optional. Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Wenn Sie `/debug:pdbonly` nicht angeben, ist der Standardwert `full`, sodass Sie einen Debugger an das laufende Programm anfügen können. Das Argument "`pdbonly`" ermöglicht das Debuggen von Quellcode, wenn das Programm im Debugger gestartet wird. es wird jedoch nur assemblysprachcode angezeigt, wenn das laufende Programm an den Debugger angefügt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn Sie keinen angeben `/debug`, `/debug+`, oder `/debug:full`, Sie werden die Ausgabedatei Ihres Programms nicht debuggen.  
+ Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn Sie `/debug`, `/debug+` oder `/debug:full` nicht angeben, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
   
- In der Standardeinstellung Debuginformationen wird nicht ausgegeben (`/debug-`). Geben Sie Informationen zum Debuggen auszugeben, `/debug` oder `/debug+`.  
+ Standardmäßig werden keine Debuginformationen ausgegeben (`/debug-`). Geben Sie `/debug` oder `/debug+` an, um Debuginformationen auszugeben.  
   
  Informationen zur Konfiguration der Leistung einer Anwendung beim Debuggen finden Sie unter [Erleichtern des Debuggens für ein Image](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
-|Um die set - Debuggen Sie in der integrierten Entwicklungsumgebung von Visual Studio|  
+|So legen Sie-Debug in der integrierten Entwicklungsumgebung von Visual Studio fest|  
 |---|  
-|1.  Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf **Erweiterte Kompilierungsoptionen**.<br />4.  Ändern Sie den Wert in der **Debuginfo generieren** Feld.|  
+|1.  Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf **Erweiterte Kompilierungsoptionen**.<br />4.  Ändern Sie den Wert im Feld **Debuginformationen generieren** .|  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel werden Informationen zum Debuggen in Ausgabedatei `App.exe`.  
+ Im folgenden Beispiel werden Debuginformationen in der Ausgabedatei `App.exe` gespeichert.  
   
-```  
+```console  
 vbc -debug -out:app.exe test.vb  
 ```  
   

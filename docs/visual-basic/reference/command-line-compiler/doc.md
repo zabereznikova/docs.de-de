@@ -6,21 +6,25 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624282"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005647"
 ---
 # <a name="-doc"></a>-doc
 Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -doc[+ | -]  
-' -or-  
+```
+
+oder  
+
+```console
 -doc:file  
 ```  
   
@@ -28,7 +32,7 @@ Verarbeitet Dokumentationskommentare zu einer XML-Datei.
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Dies ist optional. Ein Angeben von + oder einfach `-doc` veranlasst den Compiler, Dokumentationsinformationen zu generieren und diese in eine XML-Datei zu schreiben. Ein Angeben von `-` entspricht dem Fehlen von `-doc`, sodass keine Dokumentationsinformationen erstellt werden.|  
+|`+` &#124; `-`|Optional. Ein Angeben von + oder einfach `-doc` veranlasst den Compiler, Dokumentationsinformationen zu generieren und diese in eine XML-Datei zu schreiben. Ein Angeben von `-` entspricht dem Fehlen von `-doc`, sodass keine Dokumentationsinformationen erstellt werden.|  
 |`file`|Erforderlich, wenn `-doc:` verwendet wird. Gibt die XML-Ausgabedatei an, die mit den Kommentaren aus den Quellcodedateien der Kompilierung aufgefüllt wird. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen (" ") setzen.|  
   
 ## <a name="remarks"></a>Hinweise  

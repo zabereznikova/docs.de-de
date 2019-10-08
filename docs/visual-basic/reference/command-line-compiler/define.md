@@ -9,21 +9,25 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649724"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002380"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definiert Konstanten für die bedingte Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+oder
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
@@ -32,20 +36,20 @@ Definiert Konstanten für die bedingte Kompilierung.
 |Begriff|Definition|  
 |---|---|  
 |`symbol`|Erforderlich. Das zu definierende Symbol.|  
-|`value`|Dies ist optional. Der Wert, der `symbol` zugewiesen werden soll. Wenn `value` ist eine Zeichenfolge, es muss durch den umgekehrten Schrägstrich/Anführungszeichen eingeschlossen sein (\\") anstelle von Anführungszeichen. Wurde kein Wert festgelegt, dann wird er als True angenommen.|  
+|`value`|Optional. Der Wert, der `symbol` zugewiesen werden soll. Wenn `value` eine Zeichenfolge ist, muss Sie anstelle von Anführungszeichen von umgekehrten Schrägstrichen/Anführungszeichen Sequenzen (\\ ") umgeben sein. Wurde kein Wert festgelegt, dann wird er als True angenommen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-define` Option wirkt sich ähnlich wie die Verwendung einer `#Const` -präprozessoranweisung in der Quelldatei, außer diese mit definierten Konstanten `-define` öffentlich sind und auf alle Dateien im Projekt gelten.  
+ Die Option "`-define`" ähnelt der Verwendung einer `#Const`-Präprozessordirektive in der Quelldatei, mit der Ausnahme, dass mit `-define` definierte Konstanten öffentlich sind und für alle Dateien im Projekt gelten.  
   
  Sie können Symbole, die mit dieser Option erstellt wurden, mit der `#If`...`Then`...`#Else`-Anweisung verwenden, um Quelldateien bedingt zu kompilieren.  
   
- `-d` ist die Kurzform der `-define`.  
+ `-d` ist die Kurzform `-define`.  
   
  Sie können mehrere Symbole mit `-define` definieren, wenn Sie kommagetrennte Symboldefinitionen verwenden.  
   
 |So definieren Sie die integrierte Visual Studio-Entwicklungsumgebung|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf **Erweitert**.<br />4.  Ändern Sie den Wert in der **benutzerdefinierte Konstanten** Feld.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf **Erweitert**.<br />4.  Ändern Sie den Wert im Feld **benutzerdefinierte Konstanten** .|  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code definiert zwei konditionelle Compilerkonstanten und verwendet sie anschließend.  

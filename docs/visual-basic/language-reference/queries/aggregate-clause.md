@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50a53cd45cc428541c90fbf82089518be2212fae
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712629"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004808"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
 Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Aggregate element [As type] In collection _  
   [, element2 [As type2] In collection2, [...]]  
   [ clause ]  
@@ -33,88 +33,88 @@ Aggregate element [As type] In collection _
   
 |Begriff|Definition|  
 |---|---|  
-|`element`|Erforderlich. Variable, die zum Durchlaufen der Elemente der Auflistung verwendet werden.|  
-|`type`|Dies ist optional. Der `element`-Typ. Wenn kein Typ angegeben ist, den Typ des `element` von hergeleitet `collection`.|  
-|`collection`|Erforderlich. Bezieht sich auf die zu bearbeitende Auflistung.|  
-|`clause`|Dies ist optional. Eine oder mehrere Abfragen von Klauseln, wie z. B. eine `Where` -Klausel, Optimieren Sie das Ergebnis der Abfrage die aggregate-Klausel oder die Klauseln angewendet.|  
-|`expressionList`|Erforderlich. Eine oder mehrere durch Trennzeichen getrennte Ausdrücke, die eine Aggregatfunktion angewendet auf die Auflistung zu identifizieren. Sie können einen Alias für eine Aggregatfunktion, geben Sie einen Elementnamen für das Abfrageergebnis anwenden. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet. Beispiele finden Sie im Abschnitt zu Aggregatfunktionen weiter unten in diesem Thema.|  
+|`element`|Erforderlich. Variable, mit der die Elemente der Auflistung durchlaufen werden.|  
+|`type`|Optional. Der `element`-Typ. Wenn kein Typ angegeben ist, wird der Typ von `element` von `collection` abgeleitet.|  
+|`collection`|Erforderlich. Verweist auf die Auflistung, die verwendet werden soll.|  
+|`clause`|Optional. Eine oder mehrere Abfrage Klauseln, wie z. b. eine `Where`-Klausel, um das Abfrageergebnis zum Anwenden der Aggregat Klausel oder-Klauseln zu verfeinern.|  
+|`expressionList`|Erforderlich. Mindestens ein durch Trennzeichen getrennter Ausdruck, der eine Aggregatfunktion identifiziert, die auf die Auflistung angewendet werden soll. Sie können einen Alias auf eine Aggregatfunktion anwenden, um einen Elementnamen für das Abfrageergebnis anzugeben. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet. Beispiele finden Sie im Abschnitt zu Aggregatfunktionen weiter unten in diesem Thema.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Aggregate` Klausel kann verwendet werden, um Aggregatfunktionen in Ihren Abfragen. Aggregatfunktionen Ausführen von Überprüfungen und Berechnungen über einen Satz von Werten und einen einzelnen Wert zurückgeben. Sie können die über ein Mitglied der Ergebnistyp der Abfrage den berechneten Wert zugreifen. Die standard-Aggregatfunktionen, die Sie verwenden können, sind die `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, und `Sum` Funktionen. Diese Funktionen sind für Entwickler, die von Aggregaten in SQL vertraut sind, vertraut. Sie werden im folgenden Abschnitt dieses Themas beschrieben.  
+ Die `Aggregate`-Klausel kann verwendet werden, um Aggregatfunktionen in Ihre Abfragen einzubeziehen. Aggregatfunktionen führen Überprüfungen und Berechnungen für einen Satz von Werten aus und geben einen einzelnen Wert zurück. Sie können auf den berechneten Wert zugreifen, indem Sie einen Member des Abfrageergebnis Typs verwenden. Die standardmäßigen Aggregatfunktionen, die Sie verwenden können, sind die `All`-, `Any`-, `Average`-, `Count`-, `LongCount`-, `Max`-, `Min`-und `Sum`-Funktion. Diese Funktionen sind Entwicklern vertraut, die mit Aggregaten in SQL vertraut sind. Diese werden im folgenden Abschnitt dieses Themas beschrieben.  
   
- Das Ergebnis einer Aggregatfunktion ist in das Abfrageergebnis als Feld der Ergebnistyp der Abfrage enthalten. Sie können einen Alias für das Ergebnis der aggregate-Funktion, die den Namen des Elements der Ergebnistyp der Abfrage anzugeben, die den Aggregatwert angeben. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet.  
+ Das Ergebnis einer Aggregatfunktion ist im Abfrageergebnis als Feld des Abfrageergebnis Typs enthalten. Sie können einen Alias für das Aggregat Funktionsergebnis angeben, um den Namen des Members des Abfrageergebnis Typs anzugeben, der den Aggregatwert enthalten soll. Wenn kein Alias angegeben wird, wird der Name der Aggregatfunktion verwendet.  
   
- Die `Aggregate` Klausel kann mit eine Abfrage zu beginnen, oder es kann als eine zusätzliche-Klausel in einer Abfrage enthalten sein. Wenn die `Aggregate` Klausel beginnt, eine Abfrage, die das Ergebnis ist ein einzelner Wert, der das Ergebnis der Aggregatfunktion angegeben, der `Into` Klausel. Wenn mehrere aggregate-Funktion, in angegeben wird der `Into` -Klausel die Abfrage gibt einen einzelnen Typ mit einer separaten Eigenschaft, um das Ergebnis der einzelnen Aggregatfunktionen in verweist die `Into` Klausel. Wenn die `Aggregate` -Klausel einer zusätzlichen Klausel in einer Abfrage enthalten ist der Typ, der in der abfrageauflistung zurückgegeben wird, verfügen über eine separate Eigenschaft auf das Ergebnis der einzelnen Aggregatfunktionen in der `Into` Klausel.  
+ Die `Aggregate`-Klausel kann eine Abfrage beginnen, oder Sie kann als zusätzliche Klausel in eine Abfrage eingeschlossen werden. Wenn die `Aggregate`-Klausel eine Abfrage startet, ist das Ergebnis ein einzelner Wert, der das Ergebnis der Aggregatfunktion ist, die in der `Into`-Klausel angegeben ist. Wenn in der `Into`-Klausel mehr als eine Aggregatfunktion angegeben wird, gibt die Abfrage einen einzelnen Typ mit einer separaten Eigenschaft zurück, um auf das Ergebnis jeder Aggregatfunktion in der `Into`-Klausel zu verweisen. Wenn die `Aggregate`-Klausel als zusätzliche Klausel in einer Abfrage enthalten ist, verfügt der in der Abfrage Auflistung zurückgegebene Typ über eine separate Eigenschaft, um auf das Ergebnis jeder Aggregatfunktion in der `Into`-Klausel zu verweisen.  
   
 ## <a name="aggregate-functions"></a>Aggregatfunktionen
 
-Im folgenden sind die standard-Aggregatfunktionen, die mit verwendet werden können die `Aggregate` Klausel.  
+Die folgenden standardmäßigen Aggregatfunktionen können mit der `Aggregate`-Klausel verwendet werden.  
   
-### <a name="all"></a>Alle
+### <a name="all"></a>All
 
-Gibt `true` , wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen, andernfalls `false`. Im Folgenden finden Sie ein Beispiel dazu:
+Gibt `true` zurück, wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen. Andernfalls wird `false` zurückgegeben. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Beliebig
 
-Gibt `true` wenn jedes Element in der Auflistung eine angegebene Bedingung erfüllt. andernfalls `false`. Im Folgenden finden Sie ein Beispiel dazu:
+Gibt `true` zurück, wenn ein beliebiges Element in der Auflistung eine angegebene Bedingung erfüllt. Andernfalls wird `false` zurückgegeben. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Average
 
-Berechnet den Durchschnitt aller Elemente in der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den Durchschnitt aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Anzahl
 
-Zählt die Anzahl der Elemente in der Auflistung. Sie können angeben, ein optionales `Boolean` Ausdruck, der nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Im Folgenden finden Sie ein Beispiel dazu:
+Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean`-Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Gruppieren
 
-Bezieht sich auf die Ergebnisse der Abfrage, die als Ergebnis des gruppiert sind eine `Group By` oder `Group Join` Klausel. Die `Group` Funktion ist nur in der `Into` -Klausel einer `Group By` oder `Group Join` Klausel. Weitere Informationen und Beispiele finden Sie unter [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md) und [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md).
+Bezieht sich auf Abfrageergebnisse, die als Ergebnis einer `Group By`-oder `Group Join`-Klausel gruppiert sind. Die `Group`-Funktion ist nur in der `Into`-Klausel einer `Group By`-oder `Group Join`-Klausel gültig. Weitere Informationen und Beispiele finden Sie unter [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md) und [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Zählt die Anzahl der Elemente in der Auflistung. Sie können angeben, ein optionales `Boolean` Ausdruck, der nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Gibt das Ergebnis als eine `Long`. Ein Beispiel finden Sie unter den `Count` Aggregatfunktion.
+Zählt die Anzahl der Elemente in der Auflistung. Sie können einen optionalen `Boolean`-Ausdruck angeben, um nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Gibt das Ergebnis als `Long` zurück. Ein Beispiel finden Sie in der `Count`-Aggregatfunktion.
 
 ### <a name="max"></a>Max.
 
-Berechnet den maximalen Wert aus der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den maximalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min.
 
-Berechnet den minimalen Wert aus der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet den minimalen Wert aus der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Summe
 
-Berechnet die Summe aller Elemente in der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
+Berechnet die Summe aller Elemente in der Auflistung oder berechnet einen angegebenen Ausdruck für alle Elemente in der Auflistung. Im Folgenden finden Sie ein Beispiel dazu:
 
  [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Beispiel  
 
-Das folgende Beispiel zeigt, wie Sie mit der `Aggregate` -Klausel, um Aggregatfunktionen auf einem Abfrageergebnis anzuwenden.  
+Im folgenden Beispiel wird gezeigt, wie die `Aggregate`-Klausel zum Anwenden von Aggregatfunktionen auf ein Abfrageergebnis verwendet wird.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Erstellen von benutzerdefinierten Aggregatfunktionen
 
- Sie können eigene benutzerdefinierten Aggregatfunktionen in einem Abfrageausdruck einschließen, durch das Hinzufügen von Erweiterungsmethoden für die <xref:System.Collections.Generic.IEnumerable%601> Typ. Die benutzerdefinierte Methode kann dann ausführen, eine Berechnung oder einen Vorgang auf der zählbaren Auflistung, die aggregate-Funktion verwiesen wurde. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Extension Methods (Erweiterungsmethoden)](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Sie können eigene benutzerdefinierte Aggregatfunktionen in einen Abfrage Ausdruck einschließen, indem Sie dem <xref:System.Collections.Generic.IEnumerable%601>-Typ Erweiterungs Methoden hinzufügen. Die benutzerdefinierte Methode kann dann eine Berechnung oder einen Vorgang für die Aufzähl Bare-Auflistung ausführen, die auf die Aggregatfunktion verwiesen hat. Weitere Informationen zu Erweiterungsmethoden finden Sie unter [Extension Methods (Erweiterungsmethoden)](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
   
- Das folgende Beispiel zeigt z. B. eine benutzerdefinierte Aggregatfunktion, die den Median einer Auflistung von Zahlen berechnet. Es gibt zwei Überladungen der `Median` -Erweiterungsmethode. Die erste Überladung akzeptiert als Eingabe und eine Auflistung vom Typ `IEnumerable(Of Double)`. Wenn die `Median` aggregate-Funktion wird aufgerufen, für ein Feld vom Typ `Double`, wird diese Methode aufgerufen werden. Die zweite Überladung von der `Median` Methode kann generischen Typs übergeben werden. Die generische Überladung von der `Median` Methode nimmt einen zweiten Parameter, die verweist die `Func(Of T, Double)` Lambda-Ausdruck, einen Wert für einen Typ (aus einer Sammlung) als der entsprechende Wert des Typs zu projizieren `Double`. Klicken Sie dann die Berechnung des Medians, die andere Überladung von delegiert die `Median` Methode. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Das folgende Beispiel zeigt beispielsweise eine benutzerdefinierte Aggregatfunktion, die den Medianwert einer Auflistung von Zahlen berechnet. Es gibt zwei über Ladungen der `Median`-Erweiterungsmethode. Die erste Überladung akzeptiert als Eingabe eine Auflistung vom Typ `IEnumerable(Of Double)`. Wenn die `Median`-Aggregatfunktion für ein Abfragefeld vom Typ `Double` aufgerufen wird, wird diese Methode aufgerufen. Der zweiten Überladung der `Median`-Methode können alle generischen Typen übergebenen werden. Die generische Überladung der `Median`-Methode nimmt einen zweiten Parameter an, der auf den Lambda-Ausdruck `Func(Of T, Double)` verweist, um einen Wert für einen Typ (aus einer Auflistung) als entsprechenden Wert des Typs `Double` zu projizieren. Anschließend wird die Berechnung des Median Werts an die andere Überladung der `Median`-Methode delegiert. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- Das folgende Beispiel zeigt Beispiele für Abfragen, die aufgerufen werden die `Median` Aggregatfunktion auf eine Auflistung vom Typ `Integer`, und eine Auflistung vom Typ `Double`. Die Abfrage, die Aufrufe der `Median` Aggregatfunktion in der Auflistung des Typs `Double` Ruft die Überladung der der `Median` Methode, die als Eingabe eine Auflistung vom Typ akzeptiert `Double`. Die Abfrage, die Aufrufe der `Median` Aggregatfunktion in der Auflistung des Typs `Integer` Ruft die generische Überladung von der `Median` Methode.  
+ Das folgende Beispiel zeigt Beispielabfragen, die die `Median`-Aggregatfunktion für eine Auflistung des Typs `Integer` und eine Auflistung des Typs `Double` aufruft. Die Abfrage, die die "`Median`"-Aggregatfunktion für die Auflistung vom Typ "`Double`" aufruft, ruft die Überladung der `Median`-Methode auf, die eine Auflistung vom Typ "`Double`" als Eingabe akzeptiert. Die Abfrage, die die `Median`-Aggregatfunktion für die Auflistung vom Typ `Integer` aufruft, ruft die generische Überladung der `Median`-Methode auf.  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
