@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 53dcbcfdcc9a8d04840bc91a563b6514153b9577
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6d96d14a4d05178a8f90c15edecb1318e8c5a36
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963432"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957200"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 
@@ -59,17 +59,13 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
   
  Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:  
 
-```  
-[*character_group*]  
-```
+`[*character_group*]`
 
  wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
   
-```  
-[firstCharacter-lastCharacter]  
-```  
+`[firstCharacter-lastCharacter]`  
   
  wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *firstCharacter* muss das Zeichen mit dem niedrigeren Codepunkt sein, *lastCharacter* muss das Zeichen mit dem höheren Codepunkt sein.
 
@@ -119,17 +115,13 @@ In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrüc
   
 Die Syntax zum Angeben einer Liste einzelner Zeichen lautet wie folgt:  
 
-```
-[*^character_group*]  
-```
+`[*^character_group*]`
 
  wobei *Zeichen_Gruppe* eine Liste der einzelnen Zeichen ist, die in der Eingabezeichenfolge nicht vorkommen können, damit eine Übereinstimmung vorliegt. *Zeichen_Gruppe* kann aus einer beliebigen Kombination von mindestens einem Literalzeichen, [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) oder Zeichenklassen bestehen.  
   
  Die Syntax zum Angeben eines Zeichenbereichs lautet wie folgt:  
 
-```
-[^*firstCharacter*-*lastCharacter*]  
-```
+`[^*firstCharacter*-*lastCharacter*]`
 
 wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCharacter* das Zeichen, mit dem der Bereich endet. Ein Zeichenbereich besteht aus einer Reihe zusammenhängender Zeichen, der durch Angabe des ersten Zeichens der Reihe, eines Bindestrichs (-) und des letzten Zeichens in der Reihe definiert wird. Zwei Zeichen sind zusammenhängend, wenn sie benachbarte Unicode-Codepunkte aufweisen. *firstCharacter* muss das Zeichen mit dem niedrigeren Codepunkt sein, *lastCharacter* muss das Zeichen mit dem höheren Codepunkt sein.
 
@@ -267,9 +259,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="non-word-character-w"></a>Nicht-Wortzeichen: \W  
  `\W` entspricht einem beliebigen Nichtwortzeichen. Das \W-Sprachelement entspricht der folgenden Zeichenklasse:  
   
-```  
-[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
-```  
+`[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`  
   
  Anders ausgedrückt: Mit Ausnahme der Zeichen, die in den Unicode-Kategorien enthalten sind, die in der folgenden Tabelle aufgelistet werden, liegt eine Übereinstimmung mit jedem Zeichen vor.  
   
