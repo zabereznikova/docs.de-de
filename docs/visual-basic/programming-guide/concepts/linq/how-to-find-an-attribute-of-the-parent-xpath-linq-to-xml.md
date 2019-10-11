@@ -1,25 +1,25 @@
 ---
-title: 'Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)'
+title: 'Vorgehensweise: Suchen eines Attributs des übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8fbb828a5ea8df79f449d50f1d61702a4e3df2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021647"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249926"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="a4d21-102">Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4d21-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="a4d21-103">In diesem Thema wird gezeigt, wie Sie zum übergeordneten Element navigieren und nach einem Attribut dieses übergeordneten Elements suchen können.</span><span class="sxs-lookup"><span data-stu-id="a4d21-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="72f27-102">Vorgehensweise: Suchen eines Attributs des übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72f27-102">How to: Find an Attribute of the Parent (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="72f27-103">In diesem Thema wird gezeigt, wie Sie zum übergeordneten Element navigieren und nach einem Attribut dieses übergeordneten Elements suchen können.</span><span class="sxs-lookup"><span data-stu-id="72f27-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>  
   
- <span data-ttu-id="a4d21-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="a4d21-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="72f27-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="72f27-104">The XPath expression is:</span></span>  
   
  `../@id`  
   
-## <a name="example"></a><span data-ttu-id="a4d21-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a4d21-105">Example</span></span>  
- <span data-ttu-id="a4d21-106">Dieses Beispiel sucht zuerst nach einem `Author`-Element.</span><span class="sxs-lookup"><span data-stu-id="a4d21-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="a4d21-107">Anschließend wird das `id`-Attribut des übergeordneten Elements ermittelt.</span><span class="sxs-lookup"><span data-stu-id="a4d21-107">It then finds the `id` attribute of the parent element.</span></span>  
+## <a name="example"></a><span data-ttu-id="72f27-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="72f27-105">Example</span></span>  
+ <span data-ttu-id="72f27-106">Dieses Beispiel sucht zuerst nach einem `Author`-Element.</span><span class="sxs-lookup"><span data-stu-id="72f27-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="72f27-107">Anschließend wird das `id`-Attribut des übergeordneten Elements ermittelt.</span><span class="sxs-lookup"><span data-stu-id="72f27-107">It then finds the `id` attribute of the parent element.</span></span>  
   
- <span data-ttu-id="a4d21-108">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a4d21-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="72f27-108">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="72f27-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -40,13 +40,13 @@ End If
 Console.WriteLine(att1)  
 ```  
   
- <span data-ttu-id="a4d21-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a4d21-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="72f27-109">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="72f27-109">This example produces the following output:</span></span>  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a4d21-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a4d21-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72f27-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72f27-110">See also</span></span>
 
-- [<span data-ttu-id="a4d21-111">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4d21-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="72f27-111">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72f27-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

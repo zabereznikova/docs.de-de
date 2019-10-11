@@ -1,19 +1,20 @@
 ---
-ms.openlocfilehash: cb0a2f0d95ba166c2d05d7d499b797cfd2dc8fad
+ms.openlocfilehash: 8921dba1395b5720534ee8592a52d4a5b5681f31
 ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956047"
+ms.locfileid: "71956037"
 ---
-> [!div class="op_multi_selector" title1="Von Zielversion" title2="Zu migrierter Version"]
+> [!div class="op_single_selector"]
 >
-> - [(.NET Framework|.NET Core)](~/docs/core/compatibility/framework-core.md)
-> - [(2.2 | 3.0)](~/docs/core/compatibility/2.2-3.0.md)
-> - [(3.0 Vorschau 6| 3.0 Vorschau 7)](~/docs/core/compatibility/3.0.6-3.0.7.md)
-> - [(Preview 7 von Version 3.0 | Preview 8 von Version 3.0)](~/docs/core/compatibility/3.0.7-3.0.8.md)
-> - [(3.0 Vorschau 8| 3.0 Vorschau 9)](~/docs/core/compatibility/3.0.8-3.0.9.md)
-> - [(3.0 Vorschau 9| 3.0)](~/docs/core/compatibility/3.0.9-3.0.md)
+> - [CoreFx](~/docs/core/compatibility/corefx.md)
+> - [Kryptografie](~/docs/core/compatibility/cryptography.md)
+> - [Globalisierung](~/docs/core/compatibility/globalization.md)
+> - [Visual Basic](~/docs/core/compatibility/visualbasic.md)
+> - [Windows Forms](~/docs/core/compatibility/winforms.md)
+> - [ASP.NET Core (auf GitHub)](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
 
 <!--
 

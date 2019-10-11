@@ -2,24 +2,24 @@
 title: 'Vorgehensweise: Filtern nach einem Attribut (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ee90e90e1087ffeeeefb475b637f3307a179bff
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855492"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250024"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="ffa58-102">Vorgehensweise: Filtern nach einem Attribut (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa58-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="ffa58-103">In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmten Namen und mit einem Attribut mit einem bestimmten Wert abrufen können.</span><span class="sxs-lookup"><span data-stu-id="ffa58-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="08e84-102">Vorgehensweise: Filtern nach einem Attribut (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08e84-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="08e84-103">In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmten Namen und mit einem Attribut mit einem bestimmten Wert abrufen können.</span><span class="sxs-lookup"><span data-stu-id="08e84-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="ffa58-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="ffa58-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="08e84-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="08e84-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="ffa58-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ffa58-105">Example</span></span>  
- <span data-ttu-id="ffa58-106">Dieses Beispiel sucht nach allen Nachfolgerelementen mit dem Namen `Address` und dem `Type`-Attribut mit dem Wert <legacyBold>"Shipping"</legacyBold>.</span><span class="sxs-lookup"><span data-stu-id="ffa58-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="08e84-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="08e84-105">Example</span></span>  
+ <span data-ttu-id="08e84-106">Dieses Beispiel sucht nach allen Nachfolgerelementen mit dem Namen `Address` und dem `Type`-Attribut mit dem Wert <legacyBold>"Shipping"</legacyBold>.</span><span class="sxs-lookup"><span data-stu-id="08e84-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="ffa58-107">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ffa58-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="08e84-107">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="08e84-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,9 +45,9 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="ffa58-108">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="ffa58-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="08e84-108">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="08e84-108">This example produces the following output:</span></span>  
   
-```  
+```console
 Results are identical  
 <Address Type="Shipping">  
   <Name>Ellen Adams</Name>  
@@ -75,6 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ffa58-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ffa58-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08e84-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="08e84-109">See also</span></span>
 
-- [<span data-ttu-id="ffa58-110">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffa58-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="08e84-110">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="08e84-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

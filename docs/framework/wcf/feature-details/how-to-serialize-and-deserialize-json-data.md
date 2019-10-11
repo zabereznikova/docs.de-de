@@ -1,29 +1,29 @@
 ---
-title: 'Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten'
+title: 'Gewusst wie: Verwenden von DataContractJsonSerializer'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 0bebdbb3d74d58db093c4ec1e0e88138c7080335
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5e521621dd3ec8e82a860590e66c1c4da95fd3b8
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947893"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180220"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a><span data-ttu-id="32f98-102">Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten</span><span class="sxs-lookup"><span data-stu-id="32f98-102">How to: Serialize and deserialize JSON data</span></span>
-<span data-ttu-id="32f98-103">JSON (JavaScript Object Notation) ist ein effizientes Datencodierungsformat, das einen schnellen Austausch kleiner Datenmengen zwischen Clientbrowsern und AJAX-aktivierten Webdiensten ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="32f98-103">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX-enabled Web services.</span></span>  
+# <a name="how-to-use-datacontractjsonserializer"></a><span data-ttu-id="b4f3c-102">Gewusst wie: Verwenden von DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="b4f3c-102">How to: use DataContractJsonSerializer</span></span>
+<span data-ttu-id="b4f3c-103">JSON (JavaScript Object Notation) ist ein effizientes Datencodierungsformat, das einen schnellen Austausch kleiner Datenmengen zwischen Clientbrowsern und AJAX-aktivierten Webdiensten ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-103">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX-enabled Web services.</span></span>  
   
- <span data-ttu-id="32f98-104">In diesem Artikel wird veranschaulicht, wie .net-Typobjekte in JSON-codierte Daten serialisiert und anschließend Daten im JSON-Format wieder in Instanzen von .NET-Typen deserialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="32f98-104">This article demonstrates how to serialize .NET type objects into JSON-encoded data and then deserialize data in the JSON format back into instances of .NET types.</span></span> <span data-ttu-id="32f98-105">In diesem Beispiel wird ein Datenvertrag verwendet, um die Serialisierung und Deserialisierung eines Benutzer `Person` definierten Typs und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>die Verwendung von zu veranschaulichen.</span><span class="sxs-lookup"><span data-stu-id="32f98-105">This example uses a data contract to demonstrate serialization and deserialization of a user-defined `Person` type and uses <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
+ <span data-ttu-id="b4f3c-104">In diesem Artikel wird veranschaulicht, wie .net-Typobjekte in JSON-codierte Daten serialisiert und anschließend Daten im JSON-Format wieder in Instanzen von .NET-Typen deserialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-104">This article demonstrates how to serialize .NET type objects into JSON-encoded data and then deserialize data in the JSON format back into instances of .NET types.</span></span> <span data-ttu-id="b4f3c-105">In diesem Beispiel wird ein Datenvertrag verwendet, um die Serialisierung und Deserialisierung eines benutzerdefinierten `Person`-Typs zu veranschaulichen und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-105">This example uses a data contract to demonstrate serialization and deserialization of a user-defined `Person` type and uses <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
   
- <span data-ttu-id="32f98-106">Normalerweise werden die JSON-Serialisierung und-Deserialisierung automatisch von Windows Communication Foundation (WCF) verarbeitet, wenn Sie Daten Vertragstypen in Dienst Vorgängen verwenden, die für AJAX-aktivierte Endpunkte verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="32f98-106">Normally, JSON serialization and deserialization are handled automatically by Windows Communication Foundation (WCF) when you use data contract types in service operations that are exposed over AJAX-enabled endpoints.</span></span> <span data-ttu-id="32f98-107">In einigen Fällen müssen Sie jedoch möglicherweise direkt mit JSON-Daten arbeiten.</span><span class="sxs-lookup"><span data-stu-id="32f98-107">However, in some cases you may need to work with JSON data directly.</span></span>   
-  
+ <span data-ttu-id="b4f3c-106">Normalerweise werden die JSON-Serialisierung und-Deserialisierung automatisch von Windows Communication Foundation (WCF) verarbeitet, wenn Sie Daten Vertragstypen in Dienst Vorgängen verwenden, die für AJAX-aktivierte Endpunkte verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-106">Normally, JSON serialization and deserialization are handled automatically by Windows Communication Foundation (WCF) when you use data contract types in service operations that are exposed over AJAX-enabled endpoints.</span></span> <span data-ttu-id="b4f3c-107">In einigen Fällen müssen Sie jedoch möglicherweise direkt mit JSON-Daten arbeiten.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-107">However, in some cases you may need to work with JSON data directly.</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="32f98-108">Wenn während der Serialisierung einer ausgehenden Antwort auf dem Server oder aus einem anderen Grund ein Fehler auftritt, wird er möglicherweise nicht als Fehler an den Client zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="32f98-108">If an error occurs during serialization of an outgoing reply on the server or for some other reason, it may not get returned to the client as a fault.</span></span>  
+> <span data-ttu-id="b4f3c-108">In diesem Artikel geht es um <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-108">This article is about <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span> <span data-ttu-id="b4f3c-109">Für die meisten Szenarien, in denen JSON serialisiert und deserialisiert wird, empfehlen wir die Tools im [System. Text. Json-Namespace](../../../standard/serialization/system-text-json-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b4f3c-109">For most scenarios that involve serializing and deserializing JSON, we recommend the tools in the [System.Text.Json namespace](../../../standard/serialization/system-text-json-overview.md).</span></span> 
   
- <span data-ttu-id="32f98-109">Dieser Artikel basiert auf dem Beispiel für eine [JSON-Serialisierung](../samples/json-serialization.md) .</span><span class="sxs-lookup"><span data-stu-id="32f98-109">This article is based on the [JSON serialization](../samples/json-serialization.md) sample.</span></span>  
+ <span data-ttu-id="b4f3c-110">Dieser Artikel basiert auf dem [Beispiel DataContractJsonSerializer](../samples/json-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="b4f3c-110">This article is based on the [DataContractJsonSerializer sample](../samples/json-serialization.md).</span></span>  
   
-## <a name="to-define-the-data-contract-for-a-person-type"></a><span data-ttu-id="32f98-110">So definieren Sie den Datenvertrag für einen Person-Typ</span><span class="sxs-lookup"><span data-stu-id="32f98-110">To define the data contract for a Person type</span></span> 
+## <a name="to-define-the-data-contract-for-a-person-type"></a><span data-ttu-id="b4f3c-111">So definieren Sie den Datenvertrag für einen Person-Typ</span><span class="sxs-lookup"><span data-stu-id="b4f3c-111">To define the data contract for a Person type</span></span> 
   
-1. <span data-ttu-id="32f98-111">Definieren Sie den Datenvertrag für `Person`, indem Sie das <xref:System.Runtime.Serialization.DataContractAttribute> an die Klasse und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut an die zu serialisierenden Member anhängen.</span><span class="sxs-lookup"><span data-stu-id="32f98-111">Define the data contract for `Person` by attaching the <xref:System.Runtime.Serialization.DataContractAttribute> to the class and <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to the members you want to serialize.</span></span> <span data-ttu-id="32f98-112">Weitere Informationen zu Daten Verträgen finden Sie unter [Entwerfen von Dienstverträgen](../designing-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="32f98-112">For more information about data contracts, see [Designing service contracts](../designing-service-contracts.md).</span></span>  
+1. <span data-ttu-id="b4f3c-112">Definieren Sie den Datenvertrag für `Person`, indem Sie das <xref:System.Runtime.Serialization.DataContractAttribute> an die Klasse und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut an die zu serialisierenden Member anhängen.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-112">Define the data contract for `Person` by attaching the <xref:System.Runtime.Serialization.DataContractAttribute> to the class and <xref:System.Runtime.Serialization.DataMemberAttribute> attribute to the members you want to serialize.</span></span> <span data-ttu-id="b4f3c-113">Weitere Informationen zu Daten Verträgen finden Sie unter [Entwerfen von Dienstverträgen](../designing-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="b4f3c-113">For more information about data contracts, see [Designing service contracts](../designing-service-contracts.md).</span></span>  
   
     ```csharp  
     [DataContract]  
@@ -37,9 +37,12 @@ ms.locfileid: "69947893"
     }  
     ```  
   
-## <a name="to-serialize-an-instance-of-type-person-to-json"></a><span data-ttu-id="32f98-113">So serialisieren Sie eine Instanz des Person-Typs in JSON</span><span class="sxs-lookup"><span data-stu-id="32f98-113">To serialize an instance of type Person to JSON</span></span>  
+## <a name="to-serialize-an-instance-of-type-person-to-json"></a><span data-ttu-id="b4f3c-114">So serialisieren Sie eine Instanz des Person-Typs in JSON</span><span class="sxs-lookup"><span data-stu-id="b4f3c-114">To serialize an instance of type Person to JSON</span></span>  
   
-1. <span data-ttu-id="32f98-114">Erstellen Sie eine Instanz des `Person`-Typs.</span><span class="sxs-lookup"><span data-stu-id="32f98-114">Create an instance of the `Person` type.</span></span>  
+> [!NOTE]
+> <span data-ttu-id="b4f3c-115">Wenn während der Serialisierung einer ausgehenden Antwort auf dem Server oder aus einem anderen Grund ein Fehler auftritt, wird er möglicherweise nicht als Fehler an den Client zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-115">If an error occurs during serialization of an outgoing reply on the server or for some other reason, it may not get returned to the client as a fault.</span></span>  
+
+1. <span data-ttu-id="b4f3c-116">Erstellen Sie eine Instanz des `Person`-Typs.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-116">Create an instance of the `Person` type.</span></span>  
   
     ```csharp  
     var p = new Person();  
@@ -47,20 +50,20 @@ ms.locfileid: "69947893"
     p.age = 42;  
     ```  
   
-2. <span data-ttu-id="32f98-115">Serialisieren Sie `Person` das-Objekt mithilfe der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>in einen Speicherdaten Strom.</span><span class="sxs-lookup"><span data-stu-id="32f98-115">Serialize the `Person` object to a memory stream by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
+2. <span data-ttu-id="b4f3c-117">Serialisieren Sie das `Person`-Objekt in einen Speicherdaten Strom, indem Sie den <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> verwenden.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-117">Serialize the `Person` object to a memory stream by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
   
     ```csharp  
     var stream1 = new MemoryStream();  
     var ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3. <span data-ttu-id="32f98-116">Verwenden Sie die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>-Methode, um JSON-Daten in den Stream zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="32f98-116">Use the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> method to write JSON data to the stream.</span></span>  
+3. <span data-ttu-id="b4f3c-118">Verwenden Sie die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>-Methode, um JSON-Daten in den Stream zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-118">Use the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> method to write JSON data to the stream.</span></span>  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4. <span data-ttu-id="32f98-117">Zeigen Sie die JSON-Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="32f98-117">Show the JSON output.</span></span>  
+4. <span data-ttu-id="b4f3c-119">Zeigen Sie die JSON-Ausgabe an.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-119">Show the JSON output.</span></span>  
   
     ```csharp  
     stream1.Position = 0;  
@@ -69,22 +72,22 @@ ms.locfileid: "69947893"
     Console.WriteLine(sr.ReadToEnd());  
     ```  
   
-## <a name="to-deserialize-an-instance-of-type-person-from-json"></a><span data-ttu-id="32f98-118">So deserialisieren Sie eine Instanz des Person-Typs von JSON</span><span class="sxs-lookup"><span data-stu-id="32f98-118">To deserialize an instance of type Person from JSON</span></span>  
+## <a name="to-deserialize-an-instance-of-type-person-from-json"></a><span data-ttu-id="b4f3c-120">So deserialisieren Sie eine Instanz des Person-Typs von JSON</span><span class="sxs-lookup"><span data-stu-id="b4f3c-120">To deserialize an instance of type Person from JSON</span></span>  
   
-1. <span data-ttu-id="32f98-119">Deserialisieren Sie die JSON-codierten Daten mit der `Person`-Methode des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> in eine neue Instanz von <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="32f98-119">Deserialize the JSON-encoded data into a new instance of `Person` by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> method of the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
+1. <span data-ttu-id="b4f3c-121">Deserialisieren Sie die JSON-codierten Daten mit der `Person`-Methode des <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> in eine neue Instanz von <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-121">Deserialize the JSON-encoded data into a new instance of `Person` by using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> method of the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
   
     ```csharp  
     stream1.Position = 0;  
     var p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2. <span data-ttu-id="32f98-120">Zeigen Sie die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="32f98-120">Show the results.</span></span>  
+2. <span data-ttu-id="b4f3c-122">Zeigen Sie die Ergebnisse an.</span><span class="sxs-lookup"><span data-stu-id="b4f3c-122">Show the results.</span></span>  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
     ```  
   
-## <a name="example"></a><span data-ttu-id="32f98-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32f98-121">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b4f3c-123">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b4f3c-123">Example</span></span>  
   
 ```csharp  
 // Create a User object and serialize it to a JSON stream.  
@@ -117,7 +120,7 @@ public static User ReadToObject(string json)
 ```  
   
 > [!NOTE]
-> <span data-ttu-id="32f98-122">Wie im folgenden Beispiel gezeigt, löst der JSON-Serialisierer eine Serialisierungsausnahme für Datenverträge aus, die mehrere Member mit demselben Namen besitzen:</span><span class="sxs-lookup"><span data-stu-id="32f98-122">The JSON serializer throws a serialization exception for data contracts that have multiple members with the same name, as shown in the following sample code.</span></span>  
+> <span data-ttu-id="b4f3c-124">Wie im folgenden Beispiel gezeigt, löst der JSON-Serialisierer eine Serialisierungsausnahme für Datenverträge aus, die mehrere Member mit demselben Namen besitzen:</span><span class="sxs-lookup"><span data-stu-id="b4f3c-124">The JSON serializer throws a serialization exception for data contracts that have multiple members with the same name, as shown in the following sample code.</span></span>  
   
 ```csharp  
 [DataContract]  
@@ -135,7 +138,7 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="32f98-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32f98-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4f3c-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4f3c-125">See also</span></span>
 
-- [<span data-ttu-id="32f98-124">Eigenständige JSON-Serialisierung</span><span class="sxs-lookup"><span data-stu-id="32f98-124">Stand-alone JSON serialization</span></span>](stand-alone-json-serialization.md)
-- [<span data-ttu-id="32f98-125">Unterstützung für JSON und andere Datenübertragungs Formate</span><span class="sxs-lookup"><span data-stu-id="32f98-125">Support for JSON and other data transfer formats</span></span>](support-for-json-and-other-data-transfer-formats.md)
+- [<span data-ttu-id="b4f3c-126">JSON-Serialisierung in .net</span><span class="sxs-lookup"><span data-stu-id="b4f3c-126">JSON serialization in .NET</span></span>](../../../standard/serialization/system-text-json-overview.md)
+
