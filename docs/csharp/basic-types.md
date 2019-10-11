@@ -3,12 +3,12 @@ title: Grundlegende Typen | C#-Handbuch
 description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, Zeichenfolgen und Objekte) in allen C#-Programmen
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424455"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834247"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -73,7 +73,7 @@ Wie bereits zuvor erläutert, können Sie eine lokale Variable (jedoch keine Kla
   
 In einigen Fällen ist es unpraktisch, einen benannten Typ für einfache Sätze verwandter Werte zu erstellen, die nicht außerhalb von Methodengrenzen gespeichert oder übergeben werden sollen. Sie können für diesen Zweck *anonyme Typen* erstellen. Weitere Informationen finden Sie unter [Anonyme Klassentypen](programming-guide/classes-and-structs/anonymous-types.md).
 
-Es ist üblich, mehr als einen Wert aus einer Methode zurückgeben zu wollen. Sie können *Tupeltypen* erstellen, die mehrere Werte in einem Methodenaufruf zurückgeben. Weitere Informationen finden Sie unter [Tupel](tuples.md)
+Es ist üblich, mehr als einen Wert aus einer Methode zurückgeben zu wollen. Sie können *Tupeltypen* erstellen, die mehrere Werte in einem Methodenaufruf zurückgeben. Weitere Informationen finden Sie unter [Tupel](tuples.md).
 
 ## <a name="the-common-type-system"></a>Das allgemeine Typsystem
 

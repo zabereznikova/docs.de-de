@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)'
+title: 'Vorgehensweise: Suchen eines Attributs des übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8fbb828a5ea8df79f449d50f1d61702a4e3df2
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021647"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249926"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen eines Attributs des übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie zum übergeordneten Element navigieren und nach einem Attribut dieses übergeordneten Elements suchen können.  
   
  Der XPath-Ausdruck lautet:  
@@ -42,7 +42,7 @@ Console.WriteLine(att1)
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Results are identical  
 id="bk101"  
 ```  

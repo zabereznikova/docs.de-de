@@ -2,12 +2,12 @@
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
 ms.date: 02/15/2019
-ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673707"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834563"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
@@ -104,7 +104,7 @@ Daher müssen Sie nach dem Erstellen der Anwendungscontainer in der CI-Pipeline 
 
 Wenn Sie einen einzelnen Host verwenden, können Sie Docker-Befehle wie „docker-compose“ zum Erstellen und Bereitstellen von zugehörigen Containern zum Testen und Überprüfen der Docker-Umgebung auf einem einzelnen virtuellen Computer verwenden. Wenn Sie aber mit einem Orchestratorcluster wie DC/OS, Kubernetes oder Docker Swarm arbeiten, müssen Sie Ihre Container mithilfe eines anderen Mechanismus oder Orchestrators bereitstellen, abhängig von dem gewählten Cluster/Scheduler.
 
-Es folgen verschiedene Arten von Tests, die Sie für Docker-Container ausführen können:
+Im Folgenden finden Sie verschiedene Arten von Tests, die Sie für Docker-Container ausführen können:
 
 - Komponententests für Docker-Container
 

@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 8090e4565a7e55aaa9cc9939e61eb728a169de8d
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167657"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736872"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Erläutern von Modellvorhersagen mit Permutation Feature Importance
 
@@ -18,7 +18,7 @@ Erfahren Sie, wie Sie ML.NET-Vorhersagen für Machine Learning-Modelle erklären
 
 Machine Learning-Modelle werden oft als Blackboxes betrachtet, die aus Eingaben eine Ausgabe generieren. Die Zwischenschritte oder Interaktionen zwischen den Features, die die Ausgabe beeinflussen, werden nur selten verstanden. Da das maschinelle Lernen in immer mehr Bereichen des täglichen Lebens, wie beispielsweise im Gesundheitswesen, zum Einsatz kommt, ist es von größter Bedeutung zu verstehen, warum ein Machine Learning-Modell die Entscheidungen trifft, die es trifft. Wenn die Diagnosen zum Beispiel durch ein Machine Learning-Modell gestellt werden, brauchen die Mediziner eine Möglichkeit, die Faktoren zu untersuchen, die bei der Erstellung dieser Diagnosen berücksichtigt wurden. Die richtige Diagnose könnte einen großen Unterschied machen, ob die Genesung eines Patienten schnell verläuft oder nicht. Je höher also der Grad der Erklärbarkeit in einem Modell ist, desto größer ist das Vertrauen der Mediziner, die die vom Modell getroffenen Entscheidungen akzeptieren oder ablehnen müssen.
 
-Zur Erklärung von Modellen werden verschiedene Techniken verwendet, darunter PFI. PFI ist eine Technik zur Erklärung von Klassifizierungs- und Regressionsmodellen, die von [Leo Breimans *Random Forests*-Paper](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) inspiriert ist (siehe Abschnitt 10). Allgemein funktioniert die Technik so, das Daten für das gesamte Dataset einzeln zufällig gemischt werden und anschließend berechnet wird, wie stark die Leistungsmetrik von Interesse abnimmt. Je größer die Änderung, desto wichtiger ist dieses Feature. 
+Zur Erklärung von Modellen werden verschiedene Techniken verwendet, darunter PFI. PFI ist eine Technik zur Erklärung von Klassifizierungs- und Regressionsmodellen, die von [Leo Breimans Schrift *Random Forests*](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) inspiriert ist (siehe Abschnitt 10). Die grobe Funktionsweise besteht darin, dass nach dem Zufallsprinzip die Daten des gesamten Datasets für jeweils ein Feature vermischt werden und dann berechnet wird, wie stark sich die gewünschte Leistungsmetrik verringert. Je größer die Änderung, desto wichtiger ist dieses Feature. 
 
 Darüber hinaus können sich Modellersteller durch die Hervorhebung der wichtigsten Features auf die Verwendung einer Teilmenge sinnvoller Features konzentrieren, die Rauschen und Trainingszeiten reduzieren können.
 
@@ -26,7 +26,7 @@ Darüber hinaus können sich Modellersteller durch die Hervorhebung der wichtigs
 
 Die Features im Dataset, das für dieses Beispiel verwendet wird, befinden sich in den Spalten 1-12. Das Ziel ist die Vorhersage von `Price`. 
 
-| Spalte | Feature | BESCHREIBUNG 
+| Column | Feature | BESCHREIBUNG 
 | --- | --- | --- |
 | 1 | CrimeRate | Pro-Kopf-Kriminalitätsrate
 | 2 | ResidentialZones | Wohngebiete in der Stadt
@@ -97,7 +97,7 @@ class HousingPriceData
 }
 ```
 
-## <a name="train-the-model"></a>Trainieren des Modells
+## <a name="train-the-model"></a>Modelltraining
 
 Das folgende Codebeispiel veranschaulicht den Prozess des Trainings eines linearen Regressionsmodells zur Vorhersage von Hauspreisen.
 

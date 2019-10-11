@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: c54287ea3e99ff7fe9faf02898b8c322b756e26f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914664"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834439"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -17,7 +17,7 @@ In einer Microservicearchitektur stellt jeder Microservice (in der Regel) mehrer
 
 Es ist möglich, eine Architektur zur direkten Kommunikation zwischen Client und Microservice zu verwenden. Dabei kann eine Client-App, wie in Abbildung 4-12 dargestellt, auf direktem Weg Anforderungen an einige der Microservices senden.
 
-![Diagramm mit der Architektur der direkten Kommunikation zwischen Client und Microservice, in der jede Anwendung direkt mit einzelnen Microservices kommuniziert](./media/image12.png)
+![Das Diagramm zeigt die Architektur für die Kommunikation zwischen Client und Microservice.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
 
 **Abbildung 4-12.** Verwenden einer Architektur zur direkten Kommunikation zwischen Client und Microservice
 
@@ -69,11 +69,11 @@ Daher befindet sich das API-Gateway zwischen den Client-Apps und den Microservic
 
 Abbildung 4-13 zeigt, wie ein benutzerdefiniertes API-Gateway in eine vereinfachte microservicebasierte Architektur mit einigen wenigen Microservices passt.
 
-![Diagramm mit einem API-Gateway, das als benutzerdefinierter Dienst implementiert wurde, sodass Apps eine Verbindung mit einem einzigen Endpunkt herstellen, dem API-Gateway, das so konfiguriert wurde, dass es Anforderungen an einzelne Microservices weiterleitet](./media/image13.png)
+![Das Diagramm zeigt ein API-Gateway, das als benutzerdefinierter Dienst implementiert ist.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **Abbildung 4-13.** Verwenden eines als benutzerdefinierter Dienst implementierten API-Gateways
 
-In diesem Beispiel wird das API-Gateway als benutzerdefinierter ASP.NET Core WebHost-Dienst implementiert, der als Container ausgeführt wird.
+Apps stellen eine Verbindung mit einem einzigen Endpunkt her, dem API-Gateway, das für die Weiterleitung von Anforderungen an einzelne Microservices konfiguriert wurde. In diesem Beispiel wird das API-Gateway als benutzerdefinierter ASP.NET Core WebHost-Dienst implementiert, der als Container ausgeführt wird.
 
 Es sollte hervorgehoben werden, dass in diesem Diagramm ein einziger benutzerdefinierter API-Gatewaydienst verwendet wird, der auf mehrere verschiedene Client-Apps ausgerichtet ist. Dies kann ein wichtiges Risiko darstellen, da ihr API-Gatewaydienst anhand vieler verschiedener Anforderungen aus den Client-Apps größer und weiterentwickelt wird. Aufgrund dieser verschiedenen Anforderungen kann es zu einer Überfrachtung kommen, und letztendlich kann dies einer monolithischen Anwendung oder einem monolithischen Dienst ähneln. Daher wird dringend empfohlen, das API-Gateway in mehrere Dienste oder mehrere kleinere API-Gateways aufzuteilen, z.B. eins pro Client-App-Formfaktor.
 
@@ -83,11 +83,11 @@ Aus diesem Grund sollten die API-Gateways basierend auf Geschäftsbereichsgrenze
 
 Wenn Ihre Anwendung über mehrere Client-Apps verfügt und die API-Gateway-Ebene in mehrere API-Gateways aufgeteilt wird, kann dies ein Hauptaspekt beim Ermitteln der verschiedenen API-Gatewaytypen sein, sodass Sie für die Anforderungen jeder Client-App eine andere Fassade einrichten können. Hier handelt es sich um ein Muster namens „Backend for Frontend“ ([BFF](https://samnewman.io/patterns/architectural/bff/)), in dem jedes API-Gateway eine andere API bereitstellen kann, die auf den jeweiligen Client-App-Typ zugeschnitten ist und möglicherweise sogar auf dem Formfaktor des Clients basiert. Das Muster implementiert einen bestimmten Adaptercode, der im Hintergrund mehrere interne Microservices aufruft, wie in der folgenden Abbildung dargestellt:
 
-![Diagramm mit mehreren benutzerdefinierten API-Gateways, wobei API-Gateways nach Clienttyp getrennt sind – einem für mobile Clients und einem für Webclients Eine herkömmliche Web-App stellt eine Verbindung mit einem MVC-Microservice her, der das Web-API-Gateway verwendet.](./media/image13.1.png)
+![Das Diagramm zeigt mehrere benutzerdefinierte API-Gateways.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
 **Abbildung 4-13.1**. Verwenden von mehreren benutzerdefinierten API-Gateways
 
-Die obige Abbildung zeigt eine vereinfachte Architektur mit mehreren differenzierten API-Gateways. In diesem Fall basieren die Grenzen, die für jedes API-Gateway ermittelt werden, allein auf dem Muster „Backend for Frontend“ ([BFF](https://samnewman.io/patterns/architectural/bff/)) und damit genau auf der API, die pro Client-App benötigt wird. In größeren Anwendungen sollten Sie jedoch einen Schritt weiter gehen zusätzliche API-Gateways erstellen. Dabei verwenden Sie Geschäftsbereichsgrenzen als zweiten Dreh- und Angelpunkt für den Entwurf.
+Abbildung 4-13.1 zeigt API-Gateways, die nach Clienttyp getrennt sind: eines für mobile Clients und eines für Webclients. Eine herkömmliche Web-App stellt eine Verbindung mit einem MVC-Microservice her, der das Web-API-Gateway verwendet. Das Beispiel zeigt eine vereinfachte Architektur mit mehreren differenzierten API-Gateways. In diesem Fall basieren die Grenzen, die für jedes API-Gateway ermittelt werden, allein auf dem Muster „Backend for Frontend“ ([BFF](https://samnewman.io/patterns/architectural/bff/)) und damit genau auf der API, die pro Client-App benötigt wird. In größeren Anwendungen sollten Sie jedoch einen Schritt weiter gehen zusätzliche API-Gateways erstellen. Dabei verwenden Sie Geschäftsbereichsgrenzen als zweiten Dreh- und Angelpunkt für den Entwurf.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Die wichtigsten Funktionen im API-Gatewaymuster
 
@@ -128,11 +128,11 @@ Je nach Implementierung bedienen verschiedene API-Gatewayprodukte viele weitere 
 
 [Azure API Management](https://azure.microsoft.com/services/api-management/) (wie in Abbildung 4-14 gezeigt) erfüllt nicht nur die Anforderungen Ihres API-Gateways, sondern bietet auch Features wie das Sammeln von Erkenntnissen aus Ihren APIs. Wenn Sie eine API-Verwaltungslösung verwenden, macht das API-Gateway nur einen Teil der gesamten Lösung aus.
 
-![Azure API Management löst die Anforderungen von API-Gateway und Management wie Protokollierung, Sicherheit, Messung usw.](./media/api-gateway-azure-api-management.png)
+![Das Diagramm zeigt die Verwendung von Azure API Management als API-Gateway.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **Abbildung 4-14.** Verwenden von Azure API Management für das API-Gateway
 
-In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. 
+Azure API Management löst die Anforderungen von API-Gateway und Management wie Protokollierung, Sicherheit, Messung usw. In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. 
 
 Die API-Gatewayprodukte fungieren in der Regel wie ein Reverseproxy für die eingehende Kommunikation – hier können Sie auch die APIs der internen Microservices filtern und Autorisierungsfunktionen auf die veröffentlichten APIs auf dieser einzelnen Ebene anwenden.
 

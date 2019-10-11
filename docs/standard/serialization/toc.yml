@@ -24,16 +24,18 @@
           href: version-tolerant-serialization.md
         - name: Serialisierungsrichtlinien
           href: serialization-guidelines.md
-        - name: 'Vorgehensweise: Segmentieren serialisierter Daten'
+        - name: 'Gewusst wie: Segmentieren serialisierter Daten'
           href: how-to-chunk-serialized-data.md
-        - name: 'Vorgehensweise: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
+        - name: 'Gewusst wie: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
           href: how-to-determine-if-netstandard-object-is-serializable.md
+        - name: Proben
+          href: serialization-samples-binary.md
     - name: XML- und SOAP-Serialisierung
       href: xml-and-soap-serialization.md
       items:
         - name: Gewusst-wie-Themen zur Serialisierung
           href: serialization-how-to-topics.md
-        - name: 'Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen'
+        - name: 'Gewusst wie: Steuern der Serialisierung abgeleiteter Klassen'
           href: how-to-control-serialization-of-derived-classes.md
         - name: Einführung in die XML-Serialisierung
           href: introducing-xml-serialization.md
@@ -49,9 +51,9 @@
           href: controlling-xml-serialization-using-attributes.md
         - name: Attribute zur Steuerung der XML-Serialisierung
           href: attributes-that-control-xml-serialization.md
-        - name: 'Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream'
+        - name: 'Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream'
           href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-        - name: 'Vorgehensweise: Serialisieren eines Objekts'
+        - name: 'Gewusst wie: Serialisieren eines Objekts'
           href: how-to-serialize-an-object.md
         - name: 'Vorgehensweise: Qualifizieren von XML-Element- und XML-Attributnamen'
           href: how-to-qualify-xml-element-and-xml-attribute-names.md
@@ -73,23 +75,12 @@
           href: add-element-for-schemaimporterextensions.md
         - name: <xmlSerializer>-Element
           href: xmlserializer-element.md
-        - name: Serialisierungstools
+        - name: Tools
           href: serialization-tools.md
           items:
             - name: XML Serializer Generator-Tool (Sgen.exe)
               href: xml-serializer-generator-tool-sgen-exe.md
             - name: XML Schema Definition-Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
-        - name: Serialisierungsbeispiele
-          href: serialization-samples.md
-          items:
-            - name: Technologiebeispiel für einfache Serialisierung
-              href: basic-serialization-technology-sample.md
-            - name: Benutzerdefinierte Serialisierungsreihenfolge mit "XmlSerializer"
-              href: custom-serialization-order-with-xmlserializer.md
-            - name: SchemaImporterExtension-Technologiebeispiel
-              href: schemaimporterextension-technology-sample.md
-            - name: Technologiebeispiel für versionstolerante Serialisierung
-              href: version-tolerant-serialization-technology-sample.md
-            - name: Technologiebeispiel für die Genericsserialisierung in Webdiensten
-              href: web-services-generics-serialization-technology-sample.md
+        - name: Proben
+          href: serialization-samples-xml.md

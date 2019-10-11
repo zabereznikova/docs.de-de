@@ -2,12 +2,12 @@
 title: Verwalten von Docker-Produktionsumgebungen
 description: Lernen Sie die wichtigsten Aspekte beim Verwalten einer containerbasierten Produktionsumgebung kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673467"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834509"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten von Docker-Produktionsumgebungen
 
@@ -34,7 +34,7 @@ Tabelle 6–1 listet gängige Verwaltungstools und ihre Beziehung zu Orchestrato
 
 Eine weitere Möglichkeit für Clusterbereitstellung und -verwaltung ist Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) ist eine Microsoft-Microserviceplattform, die Containerorchestrierung sowie Programmiermodelle für Entwickler enthält, um hochgradig skalierbare Microserviceanwendungen zu erstellen. Service Fabric unterstützt Docker in Linux- und Windows-Containern und kann auf Windows- und Linux-Servern ausgeführt werden.
 
-Die Folgenden sind Verwaltungstools für Service Fabric:
+Im Folgenden finden Sie Verwaltungstools für Service Fabric:
 
 - [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) Vorgänge im Clusterkontext (Erstellen/Aktualisieren/Löschen von Clustern) oder Konfigurieren der Infrastruktur von Clustern (VMs, Load Balancer, Netzwerk usw.)
 

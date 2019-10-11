@@ -1,5 +1,5 @@
 ---
-title: JSON-Serialisierung in .net
+title: Serialisieren und Deserialisieren von JSON C# mit-.net
 author: tdykstra
 ms.author: tdykstra
 ms.date: 09/16/2019
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 6cb45fded220b6123dbf4461f5f1cf1c3556ff69
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083096"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180159"
 ---
-# <a name="json-serialization-in-net"></a>JSON-Serialisierung in .net
+# <a name="json-serialization-in-net---overview"></a>JSON-Serialisierung in .net-Übersicht
 
-Der `System.Text.Json` -Namespace stellt Funktionen zum Serialisieren in und aus JavaScript Object Notation (JSON) bereit.
+Der `System.Text.Json`-Namespace stellt Funktionen zum Serialisieren und Deserialisieren von JavaScript Object Notation (JSON) bereit.
 
 Der Bibliotheks Entwurf hebt eine hohe Leistung und eine geringe Speicher Belegung für eine umfangreiche Featuregruppe hervor. Die integrierte UTF-8-Unterstützung optimiert den Prozess des Lesens und Schreibens von JSON-Text, der als UTF-8 codiert ist. Dies ist die häufigste Codierung für Daten im Web und Dateien auf dem Datenträger.
 
@@ -29,8 +29,8 @@ Die Bibliothek stellt außerdem Klassen zum Arbeiten mit einem Dokument Objektmo
 * Die Bibliothek ist als Teil des gemeinsamen [.net Core 3,0](https://aka.ms/netcore3download) -Frameworks integriert.
 * Installieren Sie das nuget-Paket " [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) " für andere Ziel-Frameworks. Das Paket unterstützt Folgendes:
   * .NET Standard 2,0 und höhere Versionen
-  * .NET Framework 4,61 und höhere Versionen
-  * .Net Core 2,0 und höhere Versionen
+  * .NET Framework 4.6.1 und spätere Versionen
+  * .Net Core 2,0, 2,1 und 2,2
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

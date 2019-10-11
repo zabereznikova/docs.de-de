@@ -4,22 +4,22 @@ description: Dieses Tutorial erläutert, wie Sie mit dem Zeichenfolgeninterpolat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: b2bbab5705d78525ccae6a90b4f4f2a91064a06b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e142c48cd944fd6119c697a299308dc9ce1203ca
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117847"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834137"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 
 Dieses Tutorial erläutert, wie Sie die [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) in C# verwenden, um Werte in eine einzelne Ergebniszeichenfolge einzufügen. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Dieses Tutorial enthält einige Lektionen, in denen Ihnen gezeigt wird, wie Werte in eine Zeichenfolge eingefügt und auf verschiedene Weisen formatiert werden.
 
-Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac oder Windows- oder Linux-PC. Sie können auch die [interaktive Version](interpolated-strings.yml) dieses Tutorials in Ihrem Browser durchführen.
+Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (Hallo Welt in zehn Minuten) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung unter Windows, Linux oder macOS. Sie können auch die [interaktive Version](interpolated-strings.yml) dieses Tutorials in Ihrem Browser durchführen.
 
 ## <a name="create-an-interpolated-string"></a>Erstellen einer interpolierten Zeichenfolge
 
-Erstellen Sie ein Verzeichnis namens **interpolated**. Legen Sie dieses als das aktuelle Verzeichnis fest, und führen Sie folgenden Befehl in einem Konsolenfenster aus:
+Erstellen Sie ein Verzeichnis namens *interpolated*. Legen Sie dieses als das aktuelle Verzeichnis fest, und führen Sie folgenden Befehl in einem Konsolenfenster aus:
 
 ```dotnetcli
 dotnet new console
@@ -27,7 +27,7 @@ dotnet new console
 
 Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung.
 
-Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` durch den folgenden Code, in dem Sie `<name>` durch Ihren Namen ersetzen:
+Öffnen Sie *Program.cs* in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` durch den folgenden Code, in dem Sie `<name>` durch Ihren Namen ersetzen:
 
 ```csharp
 var name = "<name>";

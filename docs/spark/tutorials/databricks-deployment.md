@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f90d0fa4bdefe94dcf8390698e6445fad77a1bc2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117941"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957252"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
 In diesem Tutorial erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Databricks bereitstellen.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 >
 > - Vorbereiten von Microsoft.Spark.Worker
 > - Veröffentlichen einer .NET für Apache Spark-Anwendung
 > - Bereitstellen der App in Databricks
-> - Führen Sie Ihre App aus.
+> - Ausführen der App
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -103,7 +103,7 @@ Der folgende Schritt ist nur einmal für einen Cluster erforderlich.
 
    ![Screenshot mit Skriptaktion](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>Führen Sie Ihre App aus. 
+## <a name="run-your-app"></a>Ausführen der App 
 
 Sie können `set JAR` oder `spark-submit` verwenden, um Ihren Auftrag an Databricks zu übermitteln.
 
@@ -119,11 +119,11 @@ Sie können `set JAR` oder `spark-submit` verwenden, um Ihren Auftrag an Databri
 
 3. Legen Sie die entsprechenden Parameter fest.
 
-   ```
-   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
-   Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
-   ```
- 
+   | Parameter   | Wert                                                |
+   |-------------|------------------------------------------------------|
+   | Hauptklasse  | org.apache.spark.deploy.dotnet.DotnetRunner          |
+   | Argumente   | /dbfs/apps/<Name-Ihrer-App>.zip <Hauptklasse-Ihrer-App> |
+
 4. Konfigurieren Sie den **Cluster**, um auf den vorhandenen Cluster zu verweisen, für den Sie im vorherigen Abschnitt das **Init-Skript** erstellt haben.
 
 #### <a name="publish-and-run-your-app"></a>Veröffentlichen und Ausführen der App

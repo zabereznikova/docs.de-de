@@ -2,12 +2,12 @@
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
-ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673317"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834475"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -31,7 +31,7 @@ Wie in Abbildung 4-18 dargestellt wird, eigent sich die nachrichtenbasierte Komm
 
 Nachdem Sie die nachrichtenbasierte Kommunikation mithilfe von Befehlen oder Ereignissen gestartet haben, sollten Sie sie nicht zusammen mit der synchronen HTTP-Kommunikation verwenden.
 
-![Ein einzelner Microservice empfängt eine asynchrone Nachricht](./media/image18.png)
+![Ein einzelner Microservice empfängt eine asynchrone Nachricht](./media/asynchronous-message-based-communication/single-receiver-message-based-communication.png)
 
 **Abbildung 4-18.** Ein einzelner Microservice empfängt eine asynchrone Nachricht
 
@@ -53,11 +53,11 @@ Wie bereits unter [Challenges and solutions for distributed data management (Her
 
 Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizieren müssen, die für dasselbe Ereignis abonniert sind. Dazu können Sie das Veröffentlichen/Abonnieren-Messaging verwenden, das auf ereignisgesteuerter Kommunikation basiert, wie in Abbildung 4-19 gezeigt wird. Dieser Veröffentlichen/Abonnieren-Mechanismus kann nicht nur für die Microservicearchitektur genutzt werden. Vergleichbar ist die Funktionsweise dieses Ansatzes damit, wie [begrenzte Kontexte](https://martinfowler.com/bliki/BoundedContext.html) in DDD kommunizieren sollte, oder wie Änderungen von der Schreibdatenbank zur Lesedatenbank im Architekturmuster [CQRS (Command and Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) weitergegeben werden. Das Ziel ist letztliche Konsistenz zwischen mehreren Datenquellen im verteilten System.
 
-![Bei der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice Ereignisse auf einem Ereignisbus. Viele Microservices können diesen dann abonnieren, um Benachrichtigungen zu erhalten und damit zu interagieren.](./media/image19.png)
+![Das Diagramm zeigt die asynchrone ereignisgesteuerte Kommunikation.](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **Abbildung 4-19.** Asynchrone ereignisgesteuerte Nachrichtenkommunikation
 
-Die Implementierung bestimmt darüber, welches Protokoll für die ereignisgesteuerte Nachrichtenkommunikation verwendet wird. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) kann dazu beitragen, eine zuverlässige Kommunikation unter Verwendung von Warteschlangen zu gewährleisten.
+Bei der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice Ereignisse auf einem Ereignisbus. Viele Microservices können diesen dann abonnieren, um Benachrichtigungen zu erhalten und damit zu interagieren. Die Implementierung bestimmt darüber, welches Protokoll für die ereignisgesteuerte Nachrichtenkommunikation verwendet wird. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) kann dazu beitragen, eine zuverlässige Kommunikation unter Verwendung von Warteschlangen zu gewährleisten.
 
 Bei der Nutzung eines Ereignisbusses empfiehlt sich eine Abstraktionsebene (beispielsweise eine Ereignisbusschnittstelle), die auf einer zugehörigen Implementierung in Klassen mit Code basiert, der die API eines Nachrichtenbrokers wie [RabbitMQ](https://www.rabbitmq.com/) oder eines Service Busses wie [Azure Service Bus mit Themen](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) verwendet. Alternativ können Sie auch Service Busse auf höherer Ebene wie NServiceBus, MassTransit oder Brighter verwenden, um den Ereignisbus und das Veröffentlichen/Abonnieren-System umzusetzen.
 
@@ -101,7 +101,7 @@ Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Ide
 - **Letztliche Konsistenz** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring für die Dienstbeständigkeit Eine Beurteilung der Kopplung** \
+- **Jimmy Bogard. Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]

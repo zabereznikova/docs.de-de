@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
 ms.date: 10/08/2018
-ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0f6f47dd5f67fb18695715e5cfc9179206ef6bcf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676577"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834367"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -203,7 +203,7 @@ Sie senden einen Befehl an einen einzelnen Empfänger, d.h. Sie veröffentlichen
 
 Ein Befehl ist mit einer Klasse implementiert, die Datenfelder oder Sammlungen mit allen Informationen enthält, die benötigt werden, um diesen Befehl auszuführen. Ein Befehl ist eine besondere Art von Data Transfer Object (DTO), das speziell zum Anfordern von Änderungen oder Transaktionen verwendet wird. Der Befehl selbst basiert auf genau den Informationen, die für die Verarbeitung des Befehls erforderlich sind.
 
-Das folgende Beispiel zeigt die vereinfachte CreateOrderCommand-Klasse. Dies ist ein unveränderlicher-Befehl, der in dem Microservice für Bestellung in eShopOnContainers verwendet wird.
+Das folgende Beispiel zeigt die vereinfachte `CreateOrderCommand`-Klasse. Dies ist ein unveränderlicher-Befehl, der in dem Microservice für Bestellung in eShopOnContainers verwendet wird.
 
 ```csharp
 // DDD and CQRS patterns comment
@@ -215,7 +215,7 @@ Das folgende Beispiel zeigt die vereinfachte CreateOrderCommand-Klasse. Dies ist
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/library/bb383979.aspx
+// https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
@@ -287,7 +287,7 @@ Befehle haben eine zusätzliche Eigenschaft, d.h. sie sind unveränderlich, da e
 
 Beachten Sie, dass zum Durchlaufen des Serialisierungs-/Deserialisierungsprozesses durch Befehle die Eigenschaften den Setter „privat“ und das Attribut `[DataMember]` (oder `[JsonProperty]`) erfordern. Andernfalls kann der Deserialisierer das Zielobjekt nicht mit den notwendigen Werten rekonstruieren.
 
-Die Befehlsklasse zum Erstellen einer Bestellung beispielsweise ist möglicherweise im Hinblick auf Daten der Bestellung ähnlich, die Sie erstellen möchten, aber Sie benötigen wahrscheinlich nicht die gleichen Attribute. Beispielsweise verfügt CreateOrderCommand nicht über eine Bestell-ID, da die Bestellung noch nicht erstellt wurde.
+Die Befehlsklasse zum Erstellen einer Bestellung beispielsweise ist möglicherweise im Hinblick auf Daten der Bestellung ähnlich, die Sie erstellen möchten, aber Sie benötigen wahrscheinlich nicht die gleichen Attribute. Beispielsweise enthält `CreateOrderCommand` keine Bestell-ID, da die Bestellung noch nicht erstellt wurde.
 
 Viele Befehlsklassen können einfach sein und nur wenige Felder über einen Zustand erfordern, der geändert werden muss. Das wäre der Fall, wenn Sie nur den Status einer Bestellung aus „In Bearbeitung“ in „Bezahlt“ oder „Geliefert“ ändern, indem Sie einen Befehl wie den Folgenden verwenden:
 
@@ -335,7 +335,7 @@ Wichtig dabei ist, dass sich die Domänenlogik bei der Verarbeitung eines Befehl
 
 Wenn Befehlshandler komplex werden und mit zu viel Logik einhergehen, kann dies zu schlecht strukturiertem Code führen. Überprüfen Sie sie. Wenn Sie Domänenlogik finden, gestalten Sie den Code um, um dieses Domänenverhalten auf die Methoden der Domänenobjekte (Aggregatstamm und untergeordnete Entität) zu übertragen.
 
-Der folgende Code zeigt als Beispiel einer Befehlshandlerklasse die gleiche CreateOrderCommandHandler-Klasse, die Sie bereits am Anfang des Kapitels gesehen haben. In diesem Fall sollen die Handle-Methode und die Vorgänge mit den Domänenmodellobjekten/Aggregaten hervorgehoben werden.
+Der folgende Code zeigt als Beispiel einer Befehlshandlerklasse die gleiche `CreateOrderCommandHandler`-Klasse, die Sie bereits am Anfang des Kapitels gesehen haben. In diesem Fall sollen die Handle-Methode und die Vorgänge mit den Domänenmodellobjekten/Aggregaten hervorgehoben werden.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -473,14 +473,17 @@ Ein weiterer guter Grund für die Verwendung des Musters wurde von Jimmy Bogard 
 
 > An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Der Aspekt war für uns eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
 
-Betrachten wir zunächst einen WebAPI-Beispielcontroller, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden, müssen Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
+Betrachten wir zunächst einen WebAPI-Beispielcontroller, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden würden, müssten Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
 
 ```csharp
 public class MyMicroserviceController : Controller
 {
     public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
-    // ...
+    {
+        // ...
+    }
+}
 ```
 
 Wie Sie sehen, stellt der Vermittler einen übersichtlichen und schlanken Web-API-Controllerkonstruktor bereit. Darüber hinaus nimmt der Code zum Senden eines Befehls an das Vermittlerobjekt in dem Controllermethoden fast eine Zeile ein:

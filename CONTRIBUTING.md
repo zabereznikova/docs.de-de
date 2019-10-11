@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104634"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71955972"
 ---
 # <a name="contributing"></a>Beitragen
 
 Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation mitzuwirken!
 
-> Wir befassen uns derzeit damit, unsere Richtlinien in ein websiteweites Mitwirkungshandbuch zu überführen. 
+> Wir befassen uns derzeit damit, unsere Richtlinien in ein websiteweites Mitwirkungshandbuch zu überführen.
 > Besuchen Sie die Seite [Leitfaden für Mitwirkende an der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/), um sich den neuen Leitfaden anzuschauen.
 
 Das Dokument beschreibt den Prozess bei der Mitwirkung an den Artikeln und Codebeispielen, die auf der Website [.NET-Dokumentation](https://docs.microsoft.com/dotnet) gehostet werden. Die Beiträge können so einfach wie das Korrigieren von Tippfehlern oder so komplex wie das Verfassen neuer Artikel sein.
@@ -22,18 +22,19 @@ Das Dokument beschreibt den Prozess bei der Mitwirkung an den Artikeln und Codeb
 
 Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die Website „.NET-Dokumentation“ besteht neben diesem Repository aus den folgenden Repositorys:
 
-- [Codebeispiele und -ausschnitte](https://github.com/dotnet/samples)
-- [API-Referenz](https://github.com/dotnet/dotnet-api-docs)
-- [Referenz: .NET Compiler Platform-SDK](https://github.com/dotnet/roslyn-api-docs)
-
-Tickets und Aufgaben für all diese Repositorys werden hier verfolgt.
+- [Codebeispiele und -ausschnitte](https://github.com/dotnet/samples)  
+    Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
+- [.NET-API-Referenz](https://github.com/dotnet/dotnet-api-docs)  
+    Probleme und Aufgaben für dieses Repository werden in [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) nachverfolgt.
+- [Referenz: .NET Compiler Platform-SDK](https://github.com/dotnet/roslyn-api-docs)  
+    Probleme und Aufgaben für dieses Repository werden in [dotnet/docs/issues](https://github.com/dotnet/docs/issues) nachverfolgt.
 
 ## <a name="process-for-contributing"></a>Mitwirkungsprozess
 
 Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.com/activities/hello-world/).
 
 **Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten (wenn Sie beispielsweise einen Tippfehler korrigieren oder sofort einen Pull Request öffnen, um ein Problem zu beheben, das Sie in der Dokumentation finden). Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
-Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
+Der Inhalt im Ordner *docs* ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
 Oder
 
@@ -43,7 +44,7 @@ Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Bei
 
 - **Inhaltsaktualisierungen**. Angesichts des ungeheuren Ausmaßes des Dokumentationssatzes veralten Inhalte schnell und müssen überprüft werden. Darüber hinaus kommen manche Inhalte aus verschiedenen Gründen doppelt oder dreifach vor. Beim Aktualisieren von Inhalten muss sichergestellt werden, dass einzelne Themen aktuell sind oder die Inhalte in einem bestimmten Funktionsbereich überprüft werden, um Duplikate zu entfernen und zu gewährleisten, dass in dem kleineren Dokumentationssatz alle eindeutigen Inhalte erhalten bleiben.
 
-- **Erstellen neuer Inhalte**. Wenn Sie an der Erstellung eines eigenen Themas interessiert sind, werden unter diesen Tickets auch Themen aufgelistet, die wir gerne zu unserem Dokumentationssatz hinzufügen möchten. Informieren Sie uns trotzdem bitte, bevor Sie mit der Arbeit an einem Thema beginnen. Wenn Sie über ein Thema schreiben möchten, das hier nicht aufgeführt ist, eröffnen Sie ein Ticket. 
+- **Erstellen neuer Inhalte**. Wenn Sie an der Erstellung eines eigenen Themas interessiert sind, werden unter diesen Tickets auch Themen aufgelistet, die wir gerne zu unserem Dokumentationssatz hinzufügen möchten. Informieren Sie uns trotzdem bitte, bevor Sie mit der Arbeit an einem Thema beginnen. Wenn Sie über ein Thema schreiben möchten, das hier nicht aufgeführt ist, eröffnen Sie ein Ticket.
 
 Sie können sich auch die Liste [open issues](https://github.com/dotnet/docs/issues) (offene Tickets) anschauen und die Bearbeitung eines Tickets anbieten, das Sie interessiert. Wir verwenden die Bezeichnung [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (zu haben), um Tickets zu kennzeichnen, bei denen eine Mitwirkung möglich ist. 
 
@@ -58,7 +59,7 @@ Wenn es sich um ein neues Thema handelt, können Sie diese [Vorlagendatei](./sty
 Navigieren Sie zu dem Ordner, welcher der Stelle im Inhaltsverzeichnis entspricht, die Sie in Schritt 1 für Ihren Artikel festgelegt haben.
 Dieser Ordner enthält die Markdowndateien für alle Artikel in diesem Abschnitt.
 Erstellen Sie ggf. einen neuen Ordner für die Dateien mit Ihrem Inhalt. Der Hauptartikel für diesen Bereich wird als *index.md* bezeichnet.
-Erstellen Sie in dem Ordner mit Ihrem Artikel für Bilder und andere statische Ressourcen einen Unterordner namens **media** (falls dieser nicht bereits vorhanden ist). Erstellen Sie im Ordner **media** einen Unterordner mit dem Artikelnamen (mit Ausnahme der Indexdatei).
+Erstellen Sie in dem Ordner mit Ihrem Artikel für Bilder und andere statische Ressourcen einen Unterordner namens *media* (falls dieser nicht bereits vorhanden ist). Erstellen Sie im Ordner *media* einen Unterordner mit dem Artikelnamen (mit Ausnahme der Indexdatei).
 Stellen Sie im Stammverzeichnis des Repositorys im Ordner *samples* größere Beispiele bereit.
 
 Achten Sie darauf, die richtige Markdownsyntax einzuhalten. Weitere Informationen finden Sie im [Styleguide](./styleguide/template.md).
@@ -76,7 +77,7 @@ docs
             portability_report.png
 ```
 
-**Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`.
+**Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` oder `dotnet/samples/master`.
 
 Der PR sollte *immer* den Master-Branch zum Ziel haben. Sie sollten *niemals* einen PR öffnen, der den Live-Branch zum Ziel hat.
 

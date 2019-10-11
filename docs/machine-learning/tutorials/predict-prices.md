@@ -1,21 +1,21 @@
 ---
 title: 'Tutorial: Vorhersagen von Preisen per Regression'
 description: In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein Regressionsmodell für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
-ms.date: 05/09/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: c9bf91ce5188a512524337f981366040ec09f6f6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 51617d14e84fa46464d7b44dbdb20afaf196924f
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929448"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957381"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Vorhersagen von Preisen per Regression mit ML.NET
 
 In diesem Tutorial wird veranschaulicht, wie mit ML.NET ein [Regressionsmodell](../resources/glossary.md#regression) für die Vorhersage von Preisen für Taxifahrten in New York City erstellt wird.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
 >
 > * Vorbereiten und Verstehen der Daten
@@ -150,7 +150,7 @@ Fügen Sie die Machine Learning-Aufgabe [FastTreeRegressionTrainer](xref:Microso
 
 [!code-csharp[FastTreeRegressionTrainer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
-## <a name="train-the-model"></a>Trainieren des Modells
+## <a name="train-the-model"></a>Modelltraining
 
 Fügen Sie die folgende Codezeile in der `Train()`-Methode hinzu, um das Modell an die `dataview`-Daten für das Trainieren anzupassen und das trainierte Modell zurückzugeben:
 
@@ -162,7 +162,7 @@ Geben Sie das trainierte Modell mit der folgenden Codezeile in der Methode `Trai
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
-## <a name="evaluate-the-model"></a>Evaluieren des Modells
+## <a name="evaluate-the-model"></a>Auswerten des Modells
 
 Evaluieren Sie als Nächstes die Leistung Ihres Modells mit Ihren Testdaten zur Qualitätssicherung und Validierung. Erstellen Sie mit dem folgenden Code die `Evaluate()`-Methode direkt nach `Train()`:
 
@@ -188,7 +188,7 @@ Laden Sie das Testdataset, indem Sie die [LoadFromTextFile()](xref:Microsoft.ML.
 
 [!code-csharp[LoadTestDataset](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#15 "Load the test dataset")]
 
-Fügen Sie als Nächstes `EvaluateModel()` den folgenden Code hinzu, um die `Test`-Daten zu transformieren:
+Fügen Sie als Nächstes `Evaluate()` den folgenden Code hinzu, um die `Test`-Daten zu transformieren:
 
 [!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#16 "Predict using the Transformer")]
 
@@ -245,7 +245,10 @@ Fügen Sie `TestSinglePrediction()` den folgenden Code hinzu, um mit `Prediction
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
 
-Die [PredictionEngine-Klasse](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine einzelne Instanz der Daten übergeben und dafür dann eine Vorhersage treffen können.
+Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+
+> [!NOTE]
+> Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
 
 Dieses Tutorial verwendet eine Testfahrt innerhalb dieser Klasse. Sie können später weitere Szenarios zum Experimentieren mit dem Beispiel hinzufügen. Fügen Sie eine Fahrt hinzu, um die Kostenvorhersage des trainierten Modells in der `TestSinglePrediction()`-Methode zu testen, indem Sie eine `TaxiTrip`-Instanz erstellen:
 
@@ -267,7 +270,7 @@ Herzlichen Glückwunsch! Hiermit haben Sie ein Machine Learning-Modell erfolgrei
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 
 > [!div class="checklist"]
 >

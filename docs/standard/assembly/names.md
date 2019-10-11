@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 207460bc66c7d19558a69828797408df4ad92d64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972630"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835320"
 ---
 # <a name="assembly-names"></a>Assemblynamen
 Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.  
@@ -30,7 +30,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
   
  Code, der Typen in einer Assembly anfordert, muss einen vollqualifizierten Assemblynamen verwenden. Dies wird als vollqualifizierte Bindung bezeichnet. Die Teilbindung, die nur einen Assemblynamen angibt, ist nicht zulässig, wenn auf Assemblys in .NET Framework verwiesen wird.  
   
- Alles Assemblyverweise auf Assemblys, aus denen .NET Framework besteht, müssen auch einen vollqualifizierten Namen der Assembly enthalten. Der Verweis auf die System.Data-Assembly von .NET Framework würde für Version 1.0 z.B. Folgendes enthalten:  
+ Alles Assemblyverweise auf Assemblys, aus denen .NET Framework besteht, müssen auch den vollqualifizierten Namen der Assembly enthalten. Der Verweis auf die System.Data-Assembly von .NET Framework für Version 1.0 würde beispielsweise Folgendes enthalten:  
   
 ```  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  

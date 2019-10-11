@@ -2,12 +2,12 @@
 title: Resilienz und Hochverfügbarkeit bei Microservices
 description: Microservices müssen so entworfen werden, dass sie vorübergehende Netzwerk- und Abhängigkeitsfehler aushalten. Zudem müssen sie resilient sein, um Hochverfügbarkeit zu gewährleisten.
 ms.date: 09/20/2018
-ms.openlocfilehash: bb1bef0c9cc08e43aed80a29effe89587fb296f6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6c110b0fe7a80842f12779494e5b0bdd29c5fb64
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675057"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834351"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -46,7 +46,7 @@ Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabed
 
 Beim Erstellen einer auf Microservices basierenden Anwendung müssen Sie mit Komplexität umgehen können. Der Umgang mit einem einzelnen Microservice ist natürlich einfach. Aber Dutzende oder Hunderte Arten und Tausende Instanzen von Microservices stellen ein komplexes Problem dar. Dabei geht es nicht nur um die Erstellung der Microservicearchitektur. Gefragt sind auch Hochverfügbarkeit, eine gute Adressierbarkeit, Resilienz, Integrität und Diagnosefunktionen, wenn Sie ein stabiles und kohäsives System erstellen möchten.
 
-![Orchestratoren stellen eine Supportplattform zum Ausführen Ihrer Microservices bereit.](./media/image22.png)
+![Das Diagramm zeigt Cluster, die eine Supportplattform für Microservices bereitstellen.](./media/resilient-high-availability-microservices/microservice-platform.png)
 
 **Abbildung 4-22.** Microserviceplattformen sind für die Integritätsverwaltung einer Anwendung entscheidend
 

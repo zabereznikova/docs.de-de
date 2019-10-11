@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 8e99402752b3fafb486735d56d66737f03ceec30
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972091"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834209"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
 
@@ -49,15 +49,15 @@ Um diese exemplarische Vorgehensweise auszuführen, müssen Microsoft Office Exc
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Verweis hinzufügen**. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.
 
-2. Wählen Sie auf der Seite **Assemblys** in der Liste **Komponentenname** den Eintrag **Microsoft.Office.Interop.Word** aus, und wählen Sie bei gedrückter STRG-Taste **Microsoft.Office.Interop.Excel** aus.  Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Office-Interop-Assemblys](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
+2. Wählen Sie auf der Seite **Assemblys** in der Liste **Komponentenname** den Eintrag **Microsoft.Office.Interop.Word** aus, und wählen Sie bei gedrückter STRG-Taste **Microsoft.Office.Interop.Excel** aus.  Wenn keine Assemblys zu sehen sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden. Weitere Informationen finden Sie unter [How to: Installieren von primären Interopassemblys für Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies).
 
 3. Klicken Sie auf **OK**.
 
 ## <a name="to-add-necessary-using-directives"></a>So fügen Sie erforderliche using-Anweisungen hinzu
 
-1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei **Program.cs** und dann auf **Code anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Datei *Program.cs* und dann auf **Code anzeigen**.
 
-2. Fügen Sie am Anfang der Codedatei die folgenden `using`-Direktiven hinzu.
+2. Fügen Sie am Anfang der Codedatei die folgenden `using`-Anweisungen hinzu:
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 

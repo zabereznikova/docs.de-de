@@ -2,47 +2,44 @@
 title: 'Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 44152f0af73b134218cd975d93e186166b1e57ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3205840da575041b449eb841fc8084e89937fca7
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665309"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031895"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung
-In dieser Aufgabe, Sie erstellen eine leere Windows Presentation Foundation (WPF)-Anwendung mithilfe der WPF-Anwendungsvorlage von Visual Studio-Vorlage und fügen Sie Verweise auf die entsprechenden [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflowassemblys.  
+
+In dieser Aufgabe erstellen Sie eine leere Windows Presentation Foundation (WPF)-Anwendung mithilfe der Visual Studio-Vorlage WPF-Anwendung und fügen Verweise auf die entsprechenden [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflowassemblys hinzu.  
   
-### <a name="to-create-the-wpf-application-project"></a>So erstellen Sie das WPF-Anwendungsprojekt  
-  
-1. Öffnen Sie Visual Studio und klicken Sie auf die **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**.  
-  
-2. In der **neues Projekt** Dialogfeld wählen **Visual C#**  oder **Visual Basic** aus der **installierte Vorlagen** im linken Bereich die Seite des Felds. Wenn die Sprache Ihrer Wahl nicht angezeigt wird, suchen Sie unter **andere Sprachen**.  
-  
-3. Wählen Sie **Windows** in die **installierte Vorlagen** Bereich.  
-  
-4. Im oberen Bereich sicher, dass (Standardwert) **.NET Framework 4** wurde, und wählen Sie dann im Dropdown-Listenfeld ausgewählte **WPF-Anwendung**.  
-  
-5. Legen Sie den Namen des Projekts, das **HostingApplication** am unteren Rand des Fensters.  
-  
-6. Legen Sie den Namen der Projektmappe auf **RehostingTheDesigner**.  
-  
-7. Klicken Sie auf **OK** das Anwendungsprojekt zu erstellen. Visual Studio eine einfache WPF-UI für Ihre Anwendung erstellt und enthält die entsprechende XAML und Code-Behind-Dateien.  
-  
-8. Fügen Sie Verweise auf **WorkflowModel** Assemblys. Klicken Sie hierzu in **Projektmappen-Explorer**, mit der rechten Maustaste die **HostingApplication** Projekt, und wählen **Verweis hinzufügen**.  
-  
-9. In der **Verweis hinzufügen** Dialogfeld klicken Sie auf die **.NET** , halten Sie die STRG-Taste gedrückt, wählen Sie die folgenden Assemblys, und klicken Sie dann auf **OK**:  
-  
-    - System.Activities  
-  
-    - System.Activities.Presentation  
-  
-    - System.Activities.Core.Presentation  
-  
-10. Klicken Sie auf **OK**.  
-  
-11. Finden Sie unter [Aufgabe 2: Hosten des Workflow-Designers](task-2-host-the-workflow-designer.md) erfahren, wie die Workflow-Designer-Entwurfs-Canvas zu hosten.  
-  
+## <a name="to-create-the-wpf-application-project"></a>So erstellen Sie das WPF-Anwendungsprojekt
+
+1. Öffnen Sie Visual Studio, zeigen Sie im Menü **Datei** auf **neu**, und klicken Sie dann auf **Projekt**.
+
+2. Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **installierte Vorlagen** auf der linken Seite des Fensters entweder  **C# Visual** oder **Visual Basic** aus. Wenn die gewünschte Sprache nicht angezeigt wird, suchen Sie unter **andere Sprachen**.
+
+3. Wählen Sie im Bereich **installierte Vorlagen** die Option **Windows** aus.
+
+4. Vergewissern Sie sich im oberen Bereich, dass (der Standardwert) **.NET Framework 4** im Dropdown-Listenfeld ausgewählt wurde, und wählen Sie dann **WPF-Anwendung**aus.
+
+5. Legen Sie den Namen des Projekts im unteren Bereich des Fensters auf **HostingApplication** fest.
+
+6. Legen Sie den Projektmappennamen auf **rehostingder Designer**fest.
+
+7. Klicken Sie auf **OK** , um das Anwendungsprojekt zu erstellen. Visual Studio erstellt eine einfache WPF-Benutzeroberfläche für Ihre Anwendung und enthält die entsprechenden XAML-und Code Behind-Dateien.
+
+8. Fügen Sie Verweise auf **Workflow Model** -Assemblys hinzu. Klicken Sie hierzu in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt **HostingApplication** , und wählen Sie **Verweis hinzufügen**aus.
+
+9. Klicken Sie im Dialogfeld **Verweis hinzufügen** auf die Registerkarte **.net** , halten Sie die STRG-Taste gedrückt, wählen Sie die folgenden Assemblys aus, und klicken Sie dann auf **OK**:
+
+    - System.Activities
+    - System.Activities.Presentation
+    - System.Activities.Core.Presentation
+
+10. Weitere Informationen finden Sie unter [task 2: Hosten Sie den Workflow-Designer @ no__t-0, um zu erfahren, wie Sie den Workflow Designer-Entwurfs Bereich hosten.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
-- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)
+- [aufgabe 2: Hosten des Workflow-Designer @ no__t-0

@@ -2,12 +2,12 @@
 title: Datensouveränität pro Microservice
 description: Datensouveränität pro Microservice gehört zu den Eckpfeilern von Microservices. Jeder Microservice muss der alleinige Besitzer seiner Datenbank sein – sie darf nicht freigegeben werden. Alle Instanzen eines Microservices verbinden sich mit der gleichen hochverfügbaren Datenbank.
 ms.date: 09/20/2018
-ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566202"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834463"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
@@ -19,11 +19,11 @@ Dieses Prinzip ist ähnlich bei [domänengesteuertem Design (DDD)](https://en.wi
 
 Andererseits verfügt der herkömmliche (monolithische Daten-)Ansatz, der in vielen Anwendungen verwendet wird, über eine einzelne zentrale Datenbank oder nur wenige Datenbanken. Dabei handelt es sich häufig um eine normalisierte SQL-Datenbank, die für die gesamte Anwendung und alle ihre interne Subsysteme verwendet wird (s. Abbildung 4-7).
 
-![Der traditionelle Ansatz sieht vor, dass eine einzige Datenbank für alle Dienste gemeinsam genutzt wird, typischerweise in einer mehrstufigen Architektur. Im Rahmen des Microserviceansatzes besitzt jeder Microservice sein eigenes Modell und seine eigenen Daten.](./media/image7.png)
+![Das Diagramm zeigt die beiden Datenbankansätze.](./media/data-sovereignty-per-microservice/data-sovereignty-comparison.png)
 
 **Abbildung 4-7**. Vergleich der Datensouveränität: monolithische Datenbank im Vergleich zu Microservices
 
-Dieser zentralisierte Datenbankansatz sieht anfänglich einfacher aus und scheint die Wiederverwendung von Entitäten in verschiedenen Subsystemen zu ermöglichen, um Konsistenz zu gewährleisten. Doch in Wirklichkeit haben Sie es mit riesigen Tabellen zu tun, die Anforderungen vieler verschiedener Subsysteme erfüllen und Attribute und Spalten enthalten, die in den meisten Fällen nicht nötig sind. Das ist wie der Versuch, dieselbe Karte für eine kurze Wanderung, einen Tagesausflug mit dem Auto und das Erlernen von Topografie zu nutzen.
+Der traditionelle Ansatz sieht vor, dass eine einzige Datenbank für alle Dienste gemeinsam genutzt wird, typischerweise in einer mehrstufigen Architektur. Beim Microserviceansatz besitzt jeder Microservice ein eigenes Modell und eigene Daten. Dieser zentralisierte Datenbankansatz sieht anfänglich einfacher aus und scheint die Wiederverwendung von Entitäten in verschiedenen Subsystemen zu ermöglichen, um Konsistenz zu gewährleisten. Doch in Wirklichkeit haben Sie es mit riesigen Tabellen zu tun, die Anforderungen vieler verschiedener Subsysteme erfüllen und Attribute und Spalten enthalten, die in den meisten Fällen nicht nötig sind. Das ist wie der Versuch, dieselbe Karte für eine kurze Wanderung, einen Tagesausflug mit dem Auto und das Erlernen von Topografie zu nutzen.
 
 Eine monolithische Anwendung, typischerweise mit einer relationalen Datenbank, hat die folgenden wichtigen Vorteile: [ACID-Transaktionen](https://en.wikipedia.org/wiki/ACID) und SQL, die für alle Tabellen und Daten Ihrer Anwendung funktionieren. Dieser Ansatz bietet eine Möglichkeit zum einfachen Schreiben einer Abfrage, die Daten aus mehreren Tabellen kombiniert.
 

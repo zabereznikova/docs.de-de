@@ -2,12 +2,12 @@
 title: Identifizieren von Domänenmodellgrenzen für Microservices
 description: Lernen Sie die wesentlichen Grundlagen der Partitionierung einer großen Anwendung in Microservices kennen, um eine stabile Architektur zu erzielen.
 ms.date: 09/20/2018
-ms.openlocfilehash: aa903e13b20be1084fad60e6fb7bbb1c61403deb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673087"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834420"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identifizieren von Domänenmodellgrenzen für Microservices
 
@@ -27,21 +27,21 @@ Sie wissen, dass Sie die richtigen Grenzen und Größen für die einzelnen Konte
 
 Die vielleicht beste Antwort auf die Frage, wie groß ein Domänenmodell für einzelne Microservices sein muss, ist folgende: Es sollte autonome, möglichst isolierte Kontextgrenzen aufweisen und Ihnen die Arbeit ohne ständiges Wechseln zu anderen Kontexten (Modellen anderer Microservices) ermöglichen. Abbildung 4-10 zeigt, wie für mehrere Microservices (mehrere Kontextgrenzen) je nach Anforderungen der einzelnen, in Ihrer Anwendung identifizierten Domänen eigene Modelle und Entitäten definiert werden können.
 
-![Entitäten in verschiedenen Modellgrenzen (Kontextgrenzen), wobei die gleiche Entität je nach Kontextgrenze als „Benutzer“, „Käufer“, „Zahler“ und „Kunden“ angezeigt wird](./media/image10.png)
+![Das Diagramm zeigt Entitäten in verschiedenen Modellgrenzen.](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **Abbildung 4-10**. Identifizieren von Entitäten und Microservice-Modellgrenzen
 
-In Abbildung 4-10 ist ein Beispielszenario für ein System zur Verwaltung von Onlinekonferenzen dargestellt. Basierend auf Domänen, die Domänenexperten für Sie definiert haben, haben Sie verschiedene Kontextgrenzen identifiziert, die als Microservices implementiert werden können. Wie Sie sehen, sind einige Entitäten nur in einem Microservicemodell vorhanden, wie etwa „Zahlungen“ im Microservice „Zahlungen“. Diese lassen sich einfach implementieren.
+In Abbildung 4-10 ist ein Beispielszenario für ein System zur Verwaltung von Onlinekonferenzen dargestellt. Die gleiche Entität wird je nach Kontextgrenze als „Benutzer“, „Käufer“, „Zahler“ und „Kunden“ angezeigt. Basierend auf Domänen, die Domänenexperten für Sie definiert haben, haben Sie verschiedene Kontextgrenzen identifiziert, die als Microservices implementiert werden können. Wie Sie sehen, sind einige Entitäten nur in einem Microservicemodell vorhanden, wie etwa „Zahlungen“ im Microservice „Zahlungen“. Diese lassen sich einfach implementieren.
 
 Es können jedoch auch Entitäten vorhanden sein, die eine andere Form aufweisen, jedoch dieselbe Identität über die verschiedenen Domänenmodelle aus den verschiedenen Microservices hinweg teilen. So lässt sich beispielsweise die Entität „Benutzer“ im Microservice „Konferenzenmanagement“ identifizieren. Dieser Benutzer mit dieser Identität wird im Microservice „Bestellungen“ als „Käufer“ bzw. im Microservice „Zahlung“ als „Zahlender“ und im Microservice „Kundenservice“ als „Kunde“ bezeichnet. Grund dafür ist, dass ein Benutzer je nach der von den einzelnen Domänenexperten verwendeten [ubiquitären Sprache](https://martinfowler.com/bliki/UbiquitousLanguage.html) eine unterschiedliche Perspektive mit unterschiedlichen Attributen aufweisen kann. Die Benutzerentität im Microservicemodell „Konferenzenmanagement“ enthält möglicherweise die meisten der Attribute mit persönlichen Daten. Dieser Benutzer benötigt als „Zahlender“ im Microservice „Zahlung“ oder als „Kunde“ im Microservice „Kundenservice“ möglicherweise nicht dieselben Attribute.
 
 Ein ähnliches Konzept ist in Abbildung 4-11 dargestellt.
 
-![Wenn Sie in herkömmliches Datenmodell auf verschiedene Kontextgrenzen aufteilen, können Sie verschiedene Entitäten mit der gleichen Identität einrichten (ein Käufer ist gleichzeitig ein Benutzer), die in den einzelnen Kontextgrenzen unterschiedliche Attribute aufweisen.](./media/image11.png)
+![Das Diagramm zeigt die Zerlegung eines Datenmodells in mehrere Domänenmodelle.](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **Abbildung 4-11**. Zerlegen von herkömmlichen Datenmodellen in mehrere Domänenmodelle
 
-Wie Sie sehen, ist der Benutzer im Microservicemodell „Konferenzenmanagement“ als Entität „Benutzer“ und im Microservice „Preise“ als Entität „Käufer“ mit jeweils anderen Attributen oder Details vorhanden. Nicht für jeden Microservice bzw. für jede Kontextgrenze sind alle Daten einer Benutzerentität erforderlich. Welche Daten erforderlich sind, hängt von dem zu lösenden Problem oder vom Kontext ab. Im Microservicemodell „Preise“ werden beispielsweise Adresse und Name des Benutzers nicht benötigt, sondern nur die ID (als Identität) und der Status, was sich bei der Preisgestaltung für die Lizenzen pro Käufer auf Rabatte auswirkt.
+Wenn Sie in herkömmliches Datenmodell auf verschiedene Kontextgrenzen aufteilen, können Sie verschiedene Entitäten mit der gleichen Identität einrichten (ein Käufer ist gleichzeitig ein Benutzer), die in den einzelnen Kontextgrenzen unterschiedliche Attribute aufweisen. Wie Sie sehen, ist der Benutzer im Microservicemodell „Konferenzenmanagement“ als Entität „Benutzer“ und im Microservice „Preise“ als Entität „Käufer“ mit jeweils anderen Attributen oder Details vorhanden. Nicht für jeden Microservice bzw. für jede Kontextgrenze sind alle Daten einer Benutzerentität erforderlich. Welche Daten erforderlich sind, hängt von dem zu lösenden Problem oder vom Kontext ab. Im Microservicemodell „Preise“ werden beispielsweise Adresse und Name des Benutzers nicht benötigt, sondern nur die ID (als Identität) und der Status, was sich bei der Preisgestaltung für die Lizenzen pro Käufer auf Rabatte auswirkt.
 
 Die Entität „Lizenz“ hat zwar in allen Domänenmodellen denselben Namen, weist jedoch unterschiedliche Attribute auf. „Lizenz“ nutzt „Identität“ basierend auf derselben ID wie „Benutzer“ und „Käufer“.
 

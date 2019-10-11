@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8902f9a6f37ab45929e147af5f899ef49c4a42b0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051944"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833656"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -155,7 +155,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
 
 - .NET Framework 4.5, 4.6, 4.7 und deren Punktreleases sowie .NET Framework 4.8 ersetzen .NET Framework 4. Wenn Sie diese Versionen auf einem System mit .NET Framework 4 installieren, werden die Assemblys ersetzt.
 
-- Wenn Sie .NET Framework 4.5, 4.6, 4.7 und deren Punktreleases sowie .NET Framework 4.8 deinstallieren, werden auch vorhandene .NET Framework 4-Dateien gelöscht. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. (Siehe den Artikel zum [Installieren von .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
+- Wenn Sie .NET Framework 4.5, 4.6, 4.7 und deren Punktreleases sowie .NET Framework 4.8 deinstallieren, werden auch vorhandene .NET Framework 4-Dateien gelöscht. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. Weitere Informationen finden Sie in [Installieren von .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
 
 - Sie benötigen Administratoranmeldeinformationen, um .NET Framework 4.5, 4.6, 4.7 und deren Punktreleases sowie .NET Framework 4.8 zu installieren.
 

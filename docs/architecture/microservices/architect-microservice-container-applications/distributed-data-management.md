@@ -2,12 +2,12 @@
 title: Herausforderungen und Lösungen für die verteilte Datenverwaltung
 description: Erfahren Sie, welche Herausforderungen und Lösungen für die verteilte Datenverwaltung in Microservices bestehen.
 ms.date: 09/20/2018
-ms.openlocfilehash: 7733a4523e147591151cd0dda26c43992dbe9a41
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673137"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834455"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung
 
@@ -47,7 +47,7 @@ In einer hypothetischen monolithischen Version dieser Anwendung, könnte das Kat
 
 In einer auf Microservices basierenden Anwendung sind die Produkt- und Warenkorbtabellen jedoch im Besitz der jeweiligen Microservices. Ein Microservice sollte niemals in seinen eigenen Transaktionen oder direkten Abfragen Tabellen/Speicher umfassen, die im Besitz eines anderen Microservices sind (s. Abbildung 4-9).
 
-![Ein Microservice kann nicht direkt auf eine Tabelle in einem anderen Microservice zugreifen. Zur Datensynchronisation muss eine letztliche Konsistenz genutzt werden.](./media/image9.png)
+![Das Diagramm zeigt, dass Daten aus Microservicedatenbanken nicht freigegeben werden können.](./media/distributed-data-management/indepentent-microservice-databases.png)
 
 **Abbildung 4-9.** Ein Microservice kann nicht direkt auf eine Tabelle in einem anderen Microservice zugreifen.
 

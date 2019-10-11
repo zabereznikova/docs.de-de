@@ -2,12 +2,12 @@
 title: Logische und physische Architektur im Vergleich
 description: Unterschiede verstehen zwischen logischer und physischer Architektur
 ms.date: 09/20/2018
-ms.openlocfilehash: c269369e9b5391e8d25ece46e6b08e34a82fbbba
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673057"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834401"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Logische und physische Architektur im Vergleich
 
@@ -25,7 +25,7 @@ Aus diesem Grund handelt es sich bei einem Unternehmensmicroservice oder bei ein
 
 Wie in der Abbildung 4-8 dargestellt, kann der Katalogunternehmensmicroservice ggf. aus mehreren Diensten oder Prozessen bestehen. Dabei kann es sich um mehrere ASP.NET-Web-API-Dienste oder um beliebige Dienste handeln, die HTTP oder ein beliebiges anderes Protokoll verwenden. Vor allem können die Dienste ggf. alle auf dieselben Daten zugreifen, solange sie sich eine Geschäftsdomäne teilen.
 
-![Diagramm des Katalogunternehmensmicroservice, der einen API-Dienst, einen Suchdienst und eine SQL Server-Datenbank enthält.](./media/image8.png)
+![Diagramm des Unternehmensmicroservice für den Katalog mit physischen Servern.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Abbildung 4-8**. Unternehmensmicroservice mit mehreren physischen Diensten
 

@@ -3,12 +3,12 @@ title: Versionierung in C# – Leitfaden für C#
 description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: bfad7abe6b2b5c6a19324656963a79212a317110
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dcfe373312b88c8ddd8587e27c566a90b25e3c13
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926581"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834058"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C\#
 
@@ -25,9 +25,9 @@ Im Idealfall sollten es die Versionsinformationen Ihrer Bibliothek Entwicklern e
 
 Die einfachste Herangehensweise an SemVer ist das Format `MAJOR.MINOR.PATCH` mit drei Komponenten, bei dem:
 
-* `MAJOR` inkrementiert wird, wenn Sie nicht kompatible API-Änderungen durchführen
-* `MINOR` inkrementiert wird, wenn Sie abwärtskompatible Funktionalität hinzufügen
-* `PATCH` inkrementiert wird, wenn Sie abwärtskompatible Fehlerkorrekturen durchführen
+- `MAJOR` inkrementiert wird, wenn Sie nicht kompatible API-Änderungen durchführen
+- `MINOR` inkrementiert wird, wenn Sie abwärtskompatible Funktionalität hinzufügen
+- `PATCH` inkrementiert wird, wenn Sie abwärtskompatible Fehlerkorrekturen durchführen
 
 Es besteht auch die Möglichkeit, andere Szenarios wie Vorabversionen usw. anzugeben, wenn Sie die Versionsinformationen auf Ihre .NET-Bibliothek anwenden.
 
@@ -38,31 +38,31 @@ Bei einer neuen Version Ihrer Bibliothek besteht Quellenkompatibilität mit eine
 
 Folgende Punkte sollten Sie beachten, wenn Sie versuchen die Abwärtskompatibilität mit älteren Versionen ihrer Bibliothek aufrechtzuerhalten:
 
-* Virtuelle Methoden: Wenn Sie eine virtuelle Methode in Ihrer neuen Version in eine nicht-virtuelle Methode umwandeln, bedeutet das, dass die Projekte, die diese Methode außer Kraft setzen, aktualisiert werden müssen. Es handelt sich um eine schwere grundlegende Änderung, von der stark abgeraten wird.
-* Methodensignaturen: Wenn Sie beim Aktualisieren des Verhaltens einer Methode ebenfalls deren Signatur ändern müssen, sollten Sie stattdessen eine Überladung erstellen, damit der Code, der diese Methode aufruft, weiterhin funktioniert.
+- Virtuelle Methoden: Wenn Sie eine virtuelle Methode in Ihrer neuen Version in eine nicht-virtuelle Methode umwandeln, bedeutet das, dass die Projekte, die diese Methode außer Kraft setzen, aktualisiert werden müssen. Es handelt sich um eine schwere grundlegende Änderung, von der stark abgeraten wird.
+- Methodensignaturen: Wenn Sie beim Aktualisieren des Verhaltens einer Methode ebenfalls deren Signatur ändern müssen, sollten Sie stattdessen eine Überladung erstellen, damit der Code, der diese Methode aufruft, weiterhin funktioniert.
 Sie können die alte Methodensignatur immer so ändern, dass sie die neue Methodensignatur aufruft. Dadurch bleibt die Implementierung konsistent.
-* [Obsolete-Attribut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden. Dadurch sind Entwickler, die Ihre Bibliothek verwenden, besser auf grundlegende Änderungen vorbereitet.
-* Optionale Methodenargumente: Wenn sie vorher optionale in obligatorische Methodenargumente umwandeln oder ihren Standardwert ändern, muss der gesamte Code, der diese Argumente nicht bereitstellt, aktualisiert werden.
+- [Obsolete-Attribut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden. Dadurch sind Entwickler, die Ihre Bibliothek verwenden, besser auf grundlegende Änderungen vorbereitet.
+- Optionale Methodenargumente: Wenn sie vorher optionale in obligatorische Methodenargumente umwandeln oder ihren Standardwert ändern, muss der gesamte Code, der diese Argumente nicht bereitstellt, aktualisiert werden.
 
 > [!NOTE]
-> Obligatorische Argumente in optionale Argumente umzuwandeln, sollte nur geringe Auswirkungen haben, besonders, wenn dadurch das Verhalten der Methode nicht geändert wird.
+> Die Umwandlung von obligatorischen Argumenten in optionale sollte nur geringe Auswirkungen haben, besonders, wenn dadurch das Verhalten der Methode nicht geändert wird.
 
 Je leichter Sie es Ihren Benutzern machen, auf die neue Version Ihrer Bibliothek zu aktualisieren, desto früher werden sie dieses Upgrade durchführen.
 
 ### <a name="application-configuration-file"></a>Anwendungskonfigurationsdatei
 
 Als .NET-Entwickler haben Sie sehr wahrscheinlich schon einmal mit [der `app.config`-Datei](../framework/configure-apps/file-schema/index.md) gearbeitet, die in den meisten Projekttypen enthalten ist.
-Diese einfache Konfigurationsdatei kann beim Verbessern der Einführung neuer Updates einen großen Unterschied machen. In der Regel sollten Sie Ihre Bibliotheken so anlegen, dass die Informationen, die sich wahrscheinlich häufiger ändern, in der Datei `app.config` gespeichert werden. Daher muss die Konfigurationsdatei früherer Versionen nur mit der neuen Datei ersetzt werden, wenn solche Informationen aktualisiert werden. Die Bibliothek muss dann nicht mehr neu kompiliert werden.
+Diese einfache Konfigurationsdatei kann beim Verbessern der Einführung neuer Updates einen großen Unterschied machen. In der Regel sollten Sie Ihre Bibliotheken so anlegen, dass die Informationen, die sich wahrscheinlich häufiger ändern, in der Datei `app.config` gespeichert werden. Auf diese Weise muss die Konfigurationsdatei früherer Versionen nur durch die neue Datei ersetzt werden, wenn solche Informationen aktualisiert werden. Eine erneute Kompilierung der Bibliothek ist nicht mehr erforderlich.
 
 ## <a name="consuming-libraries"></a>Verarbeiten von Bibliotheken
 
 Als Entwickler, der .NET-Bibliotheken verarbeitet, die von anderen Entwicklern erstellt wurden, sind Sie sich sicher der Tatsache bewusst, dass eine neue Version einer Bibliothek möglicherweise nicht voll kompatibel mit Ihrem Projekt ist, und Sie Ihren Code oft aktualisieren müssen, um auf diese Änderungen zu reagieren.
 
-Zum Glück gibt es im C# -und .NET-Ökosystem Features und Techniken, mit denen Sie Anwendungen leicht aktualisieren können, damit sie mit neuen Versionen von Bibliotheken funktionieren, mit denen möglicherweise grundlegende Änderungen eingeführt werden.
+Glücklicherweise gibt es in C#-und dem .NET-Ökosystem Features und Techniken, mit denen Sie Apps leicht aktualisieren können, damit sie mit neuen Versionen von Bibliotheken funktionieren, mit denen möglicherweise Breaking Changes eingeführt werden.
 
 ### <a name="assembly-binding-redirection"></a>Assemblybindungsumleitung
 
-Sie können die Datei `app.config` zum Aktualisieren der Version einer von Ihrer Anwendung verwendeten Bibliothek verwenden. Durch Hinzufügen einer sogenannten [*binding redirect*](../framework/configure-apps/redirect-assembly-versions.md) (Bindungsumleitung) können Sie die neue Version der Bibliothek verwenden, ohne dass Sie Ihre Anwendung erneut kompilieren müssen. Im folgenden Beispiel wird gezeigt, wie Sie die Datei `app.config` Ihrer Anwendung aktualisieren, um die Patchversion `1.0.1` von `ReferencedLibrary` zu verwenden und nicht die Version `1.0.0`, mit der sie ursprünglich kompiliert war.
+Sie können die Datei *app.config* zum Aktualisieren der Version einer von Ihrer App verwendeten Bibliothek verwenden. Durch Hinzufügen einer sogenannten [*Bindungsumleitung*](../framework/configure-apps/redirect-assembly-versions.md) können Sie die neue Version der Bibliothek verwenden, ohne dass Sie Ihre App erneut kompilieren müssen. Im folgenden Beispiel wird gezeigt, wie Sie die *app.config*-Datei Ihrer App aktualisieren, um die Patchversion `1.0.1` von `ReferencedLibrary` zu verwenden, statt der Version `1.0.0`, mit der sie ursprünglich kompiliert wurde.
 
 ```xml
 <dependentAssembly>
@@ -81,11 +81,11 @@ Sie können den `new`-Modifizierer verwenden, um geerbte Member einer Basisklass
 
 Betrachten Sie das folgende Beispiel:
 
-[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
 
 **Ausgabe**
 
-```
+```console
 A base method
 A derived method
 ```
@@ -103,12 +103,11 @@ Der `override`-Modifizierer bedeutet, dass eine abgeleitete Implementierung die 
 
 **Ausgabe**
 
-```
+```console
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
 Der `override`-Modifizierer wird beim Kompilieren ausgewertet, und der Compiler löst einen Fehler aus, wenn kein virtueller Member gefunden wird, der außer Kraft gesetzt werden kann.
 
-Ihre Kenntnis der besprochenen Techniken und Ihr Wissen, in welchen Situationen diese angewendet werden, kann einen großen Unterschied beim reibungslosen Übergang zwischen den Versionen einer Bibliothek ausmachen.
- 
+Ihre Kenntnis der besprochenen Techniken und Ihr Wissen, in welchen Situationen diese angewendet werden, wird wesentlich dazu beitragen, den Übergang zwischen den Versionen einer Bibliothek zu erleichtern.

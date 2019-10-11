@@ -1,27 +1,27 @@
 ---
 title: 'Tutorial: Kategorisieren von Supportproblemen (Multiklassenklassifizierung)'
 description: Erfahren Sie hier, wie Sie mit ML.NET in einem Szenario zur Multiklassenklassifizierung GitHub-Issues klassifizieren, um sie einem bestimmten Bereich zuzuweisen.
-ms.date: 07/31/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 1eb56465bb56906df25c3a094126f2496bef684e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: a6d158d51e6775feaed669c678bb9a36984f08f3
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929224"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698985"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Kategorisieren von Supportproblemen unter Verwendung von Multiklassenklassifizierung mit ML.NET
 
 In diesem Beispieltutorial wird veranschaulicht, wie Sie ML.NET zum Erstellen eines Klassifizierers für GitHub-Issues über eine .NET Core-Konsolenanwendung mithilfe von C# in Visual Studio verwenden können, um ein Modell zu trainieren, dass die Bereichsbezeichnung für ein GitHub-Issue klassifiziert und vorhersagt.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
 >
 > * Vorbereiten Ihrer Daten
 > * Transformieren der Daten
-> * Trainieren des Modells
-> * Evaluieren des Modells
+> * Modelltraining
+> * Auswerten des Modells
 > * Vorhersagen treffen mit dem trainierten Modell
 > * Bereitstellen eines geladenen Modells und Vorhersagen mit diesem treffen
 
@@ -204,7 +204,7 @@ Fügen Sie den unten aufgeführten Code als erste Codezeilen in `BuildAndTrainMo
 
 Der [SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) Algorithmus für die Multiklassenklassifizierung. Dieser wird an die `pipeline` angefügt und akzeptiert die mit Features ausgestatteten `Title`- und `Description`-Parameter (`Features`) sowie die `Label`-Eingabeparameter, um aus den historischen Daten zu lernen.
 
-### <a name="train-the-model"></a>Trainieren des Modells
+### <a name="train-the-model"></a>Modelltraining
 
 Fügen Sie den unten aufgeführten Code als nächste Codezeilen in die `BuildAndTrainModel()`-Methode ein, um das Modell an die `splitTrainSet`-Daten anzupassen und das trainierte Modell zurückzugeben:
 
@@ -288,7 +288,7 @@ Verwenden Sie den folgenden Code, um die Metriken anzuzeigen, die Ergebnisse fre
 
 ### <a name="save-the-model-to-a-file"></a>Speichern des Modells in einer Datei
 
-Wenn Sie mit Ihrem Modell zufrieden sind, speichern Sie es in einer Datei, um Vorhersagen zu einem späteren Zeitpunkt oder in einer anderen Anwendung zu treffen. Fügen Sie der `Evaluate` -Methode folgenden Code hinzu. 
+Wenn Sie mit Ihrem Modell zufrieden sind, speichern Sie es in einer Datei, um Vorhersagen zu einem späteren Zeitpunkt oder in einer anderen Anwendung zu treffen. Fügen Sie der `Evaluate` -Methode den folgenden Code hinzu. 
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
@@ -339,7 +339,12 @@ Fügen Sie ein GitHub-Issue hinzu, um die Vorhersage des trainierten Modells in 
 Erstellen Sie wie zuvor eine `PredictionEngine`-Instanz mit dem folgenden Code:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
-  
+
+Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+
+> [!NOTE]
+> Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
+
 Verwenden Sie die `PredictionEngine`, um die GitHub-Bereichsbezeichnung vorherzusagen, indem Sie den folgenden Code zur `PredictIssue`-Methode für die Vorhersage hinzufügen:
 
 [!code-csharp[PredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#PredictIssue)]
@@ -371,13 +376,13 @@ Herzlichen Glückwunsch! Sie haben jetzt erfolgreich ein Machine Learning-Modell
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 >
 > * Vorbereiten Ihrer Daten
 > * Transformieren der Daten
-> * Trainieren des Modells
-> * Evaluieren des Modells
+> * Modelltraining
+> * Auswerten des Modells
 > * Vorhersagen treffen mit dem trainierten Modell
 > * Bereitstellen eines geladenen Modells und Vorhersagen mit diesem treffen
 

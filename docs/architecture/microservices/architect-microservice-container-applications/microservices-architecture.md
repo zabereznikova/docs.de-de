@@ -2,12 +2,12 @@
 title: Microservicearchitektur
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Microservicearchitektur
 ms.date: 09/20/2018
-ms.openlocfilehash: 3cf2a94140042d3cf76b5b63fe4e98638c56dbfe
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672987"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834389"
 ---
 # <a name="microservices-architecture"></a>Microservicearchitektur
 
@@ -19,11 +19,11 @@ Welche Vorteile hat eine Microservicearchitektur? Die Antwort lautet: langfristi
 
 Ein weiterer Vorteil ist, dass Microservices unabhängig voneinander horizontal hochskaliert werden können. Statt einer riesigen monolithischen Anwendung können Sie nur bestimmte Microservices horizontal hochskalieren. So können Sie nur die Funktionsbereiche skalieren, die mehr Verarbeitungsleistung oder Netzwerkbandbreite zum Erfüllen der Nachfrage brauchen, anstatt nicht benötigte Anwendungsbereiche zu erweitern. Dadurch sparen Sie auch Kosten, da Sie weniger Hardware benötigen.
 
-![Im traditionellen monolithischen Ansatz skaliert die Anwendung durch Klonen der gesamten App auf mehrere Server/VMs. Beim Microservicesansatz ist die Funktion in kleinere Dienste unterteilt, sodass jeder Dienst unabhängig skaliert werden kann.](./media/image6.png)
+![Diagramm zu den Unterschieden zwischen den beiden Bereitstellungsmethoden.](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
 **Abbildung 4-6:** Monolithische Bereitstellung im Vergleich zum Microservicesansatz
 
-Wie in Abbildung 4-6 gezeigt, ermöglicht der Microservicesansatz agile Änderungen und eine schnelle Iteration der einzelnen Microservices, da Sie bestimmte kleine Bereiche von großen skalierbaren und komplexen Anwendungen ändern können.
+Wie in Abbildung 4-6 gezeigt, skaliert die Anwendung im traditionellen monolithischen Ansatz durch Klonen der gesamten App auf mehrere Server/VMs. Beim Microservicesansatz ist die Funktion in kleinere Dienste unterteilt, sodass jeder Dienst unabhängig skaliert werden kann. Die Nutzung von Microservices ermöglicht flexible Änderungen und eine schnelle Iteration der einzelnen Microservices, da Sie bestimmte kleine Bereiche von großen skalierbaren und komplexen Anwendungen ändern können.
 
 Das Entwerfen von Anwendungen, die auf präzisen Microservices basieren, ermöglicht eine fortlaufende Integration und kontinuierliche Bereitstellung und beschleunigt die Bereitstellung neuer Funktionen in der Anwendung. Ein präziser Entwurf einer Anwendung ermöglicht es Ihnen außerdem, Microservices isoliert auszuführen und zu testen und sie unabhängig voneinander weiterzuentwickeln und dabei eindeutige Verträge zwischen ihnen beizubehalten. Solange Sie die Schnittstellen oder Verträge nicht ändern, können Sie die interne Implementierung jedes Microservices ändern oder eine neue Funktionalität hinzufügen, ohne dass andere Microservices in ihrer Funktion negativ beeinflusst werden.
 

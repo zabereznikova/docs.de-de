@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Element Namen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 0084f04db5af7b012748b66187e029c77d0cfce5
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710258"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249681"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Vorgehensweise: Suchen nach Nachfolgern mit einem bestimmten Element Namen (Visual Basic)
 Es kann vorkommen, dass Sie alle Nachfolgerelemente mit einem bestimmten Namen ermitteln möchten. Dazu könnten Sie Code schreiben, der alle Nachfolgerelemente durchläuft, einfacher ist es aber, die <xref:System.Xml.Linq.XContainer.Descendants%2A>-Achse zu verwenden.  
@@ -49,7 +49,7 @@ Console.WriteLine(str)
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
@@ -96,7 +96,7 @@ End Module
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   

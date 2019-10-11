@@ -2,12 +2,12 @@
 title: Verarbeiten asynchroner Aufgaben nach Abschluss
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 464e6be108eef86a023a0bad225d2ad12bfb2c3e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926744"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736731"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)
 
@@ -23,25 +23,25 @@ Im folgenden Beispiel wird eine Abfrage verwendet, um eine Auflistung von Aufgab
 Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
 
 > [!TIP]
-> Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich stattdessen die Dateien „MainWindow.xaml.vb“ und „MainWindow.xaml.cs“ am Ende dieses Themas anschauen.
+> Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich stattdessen die Datei *MainWindow.xaml.cs* am Ende dieses Themas ansehen.
 
-1. Extrahieren Sie die heruntergeladenen Dateien aus der ZIP-Datei, und starten Sie dann Visual Studio.
+1. Extrahieren Sie die heruntergeladenen Dateien aus der *ZIP*-Datei, und starten Sie dann Visual Studio.
 
 2. Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
 
-3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen heruntergeladenen Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.
+3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen heruntergeladenen Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (*SLN*) für *AsyncFineTuningCS*/*AsyncFineTuningVB*.
 
 4. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt **ProcessTasksAsTheyFinish** und wählen dann **Als Startprojekt festlegen** aus.
 
-5. Wählen Sie die Taste **F5** aus, um das Programm auszuführen (oder drücken Sie die Tasten **STRG**+**F5**, um das Programm ohne Debuggen auszuführen).
+5. Drücken Sie die Taste <kbd>F5</kbd>, um das Programm mit Debuggen auszuführen, oder drücken Sie die Tasten <kbd>STRG</kbd>+<kbd>F5</kbd>, um das Programm ohne Debuggen auszuführen.
 
 6. Führen Sie das Projekt mehrmals aus, um zu überprüfen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.
 
 ## <a name="create-the-program-yourself"></a>Das Programm selbst erstellen
 
-Dieses Beispiel stellt eine Ergänzung des Codes dar, der in [Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) entwickelt wird, und verwendet die gleiche Benutzeroberfläche.
+Dieses Beispiel stellt eine Ergänzung des Codes dar, der in [Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)](cancel-remaining-async-tasks-after-one-is-complete.md) entwickelt wird, und verwendet die gleiche Benutzeroberfläche.
 
-Um das Beispiel selbst schrittweise zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Herunterladen des Beispiels](./cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), wählen Sie als Startprojekt aber **CancelAfterOneTask** aus. Fügen Sie die Änderungen in diesem Thema zur `AccessTheWebAsync`-Methode in diesem Projekt hinzu. Die Änderungen sind mit Sternchen gekennzeichnet.
+Um das Beispiel selbst schrittweise zu erstellen, befolgen Sie die Anweisungen im Abschnitt [Herunterladen des Beispiels](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example), wählen Sie als Startprojekt aber **CancelAfterOneTask** aus. Fügen Sie die Änderungen in diesem Thema zur `AccessTheWebAsync`-Methode in diesem Projekt hinzu. Die Änderungen sind mit Sternchen gekennzeichnet.
 
 Das Projekt **CancelAfterOneTask** enthält bereits eine Abfrage, die eine Auflistung von Aufgaben erstellt, während sie ausgeführt wird. Jeder Aufruf von `ProcessURLAsync` im folgenden Code gibt <xref:System.Threading.Tasks.Task%601> zurück, wobei `TResult` eine ganze Zahl ist:
 
@@ -49,7 +49,7 @@ Das Projekt **CancelAfterOneTask** enthält bereits eine Abfrage, die eine Aufli
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-Nehmen Sie in der Datei „MainWindow.xaml.cs“ des Projekts die folgenden Änderungen an der `AccessTheWebAsync`-Methode vor.
+Nehmen Sie in der Datei *MainWindow.xaml.cs* des Projekts die folgenden Änderungen an der `AccessTheWebAsync`-Methode vor:
 
 - Führen Sie die Abfrage aus, indem Sie <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anstelle von <xref:System.Linq.Enumerable.ToArray%2A> anwenden.
 
@@ -71,7 +71,7 @@ Nehmen Sie in der Datei „MainWindow.xaml.cs“ des Projekts die folgenden Änd
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. Erwartet `firstFinishedTask`, das durch einen Aufruf von `ProcessURLAsync` zurückgegeben wird. Die Variable `firstFinishedTask` ist eine <xref:System.Threading.Tasks.Task%601>, wobei `TReturn` eine ganze Zahl ist. Die Aufgabe ist bereits abgeschlossen, aber es darauf gewartet, dass von ihr die Länge der heruntergeladenen Website abgerufen wird, wie im folgenden Beispiel dargestellt.
+    3. Erwartet `firstFinishedTask`, das durch einen Aufruf von `ProcessURLAsync` zurückgegeben wird. Die Variable `firstFinishedTask` ist eine <xref:System.Threading.Tasks.Task%601>, wobei `TReturn` eine ganze Zahl ist. Die Aufgabe ist bereits abgeschlossen, aber es darauf gewartet, dass von ihr die Länge der heruntergeladenen Website abgerufen wird, wie im folgenden Beispiel dargestellt. Wenn für die Aufgabe ein Fehler auftritt, löst `await` die erste untergeordnete Ausnahme aus, die in der `AggregateException` gespeichert ist, im Gegensatz zum Lesen der `Result`-Eigenschaft, die die `AggregateException` auslösen würde.
 
         ```csharp
         int length = await firstFinishedTask;
@@ -85,7 +85,7 @@ Führen Sie das Programm mehrmals aus, um zu bestätigen, dass die heruntergelad
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
-Der folgende Code besteht aus dem vollständigen Text der Datei „MainWindow.xaml.cs“ für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden. Beachten Sie ferner, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
+Der folgende Code besteht aus dem vollständigen Text der Datei *MainWindow.xaml.cs* für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden. Beachten Sie ferner, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
 Sie können das Projekt hier herunterladen: [Async Sample: Fine Tuning Your Application (Async-Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
@@ -228,6 +228,6 @@ namespace ProcessTasksAsTheyFinish
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Feinabstimmung der Async-Anwendung (C#)](./fine-tuning-your-async-application.md)
-- [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)
+- [Feinabstimmung der Async-Anwendung (C#)](fine-tuning-your-async-application.md)
+- [Asynchrone Programmierung mit „async“ und „await“ (C#)](index.md)
 - [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

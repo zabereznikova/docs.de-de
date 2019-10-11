@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (Visual Basic)'
+title: 'Vorgehensweise: Suchen nach neben geordneten Knoten (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 673cb3975ae2dc2ed34ba82c806b318ffef75da8
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780392"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250066"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach neben geordneten Knoten (XPath-LINQ to XML) (Visual Basic)
 Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen. Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.  
   
  Der XPath-Ausdruck lautet:  
@@ -44,7 +44,7 @@ Next
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console
 Results are identical  
 <Book id="bk101">  
   <Author>Garghentini, Davide</Author>  

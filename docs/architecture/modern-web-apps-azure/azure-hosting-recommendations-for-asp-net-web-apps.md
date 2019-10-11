@@ -132,25 +132,25 @@ Abbildung 11-1 zeigt ein Beispiel einer Referenzarchitektur. Dieses Diagramm bes
 
 **Ressourcen: Empfehlungen für das Hosting mit Azure**
 
-- Azure-Lösungsarchitekturen
+- Azure-Lösungsarchitekturen\
   <https://azure.microsoft.com/solutions/architecture/>
 
-- Azure-Architektur für einfache Webanwendungen
+- Azure-Architektur für einfache Webanwendungen\
   <https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app>
 
-- Entwurfsmuster für Microservices
+- Entwurfsmuster für Microservices\
   <https://docs.microsoft.com/azure/architecture/microservices/design/patterns>
 
-- Entwicklerleitfaden für Microsoft Azure
+- Entwicklerleitfaden für Microsoft Azure\
   <https://azure.microsoft.com/campaigns/developer-guide/>
 
-- Web-Apps-Übersicht
+- Web-Apps-Übersicht\
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Web-App für Container
+- Web-App für Container\
   <https://azure.microsoft.com/services/app-service/containers/>
 
-- Einführung in Azure Kubernetes Service (AKS)
+- Einführung in Azure Kubernetes Service (AKS)\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]

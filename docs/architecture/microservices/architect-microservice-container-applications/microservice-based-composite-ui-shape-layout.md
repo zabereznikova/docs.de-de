@@ -2,12 +2,12 @@
 title: Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 description: Die Microservicesarchitektur eignet sich nicht nur für das Back-End. Verschaffen Sie sich einen Einblick in der Verwendung für das Front-End.
 ms.date: 09/20/2018
-ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817831"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834374"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 
@@ -15,7 +15,7 @@ Das Fundament einer Microservicesarchitektur ist die serverseitige Verarbeitung 
 
 In Abbildung 4-20 wird das einfachere Modell dargestellt, in dem eine monolithische Clientanwendung Microservices nutzt. Natürlich kann ein ASP.NET MVC-Dienst zwischengeschaltet werden, der den HTML- und JavaScript-Code erzeugt. In der Darstellung wird vereinfacht dargestellt, wie ein einzelner (monolithischer) Client Microservices nutzt, die nur für die Logik und die Daten zuständig sind, nicht die Benutzeroberfläche (HTML und JavaScript).
 
-![Eine monolithische Benutzeroberflächenanwendung, die Verbindungen mit individuellen Microservices herstellt.](./media/image20.png)
+![Diagramm einer monolithischen Benutzeroberflächen-App, die eine Verbindung mit den Microservices herstellt.](./media/microservice-based-composite-ui-shape-layout/monolith-ui-consume-microservices.png)
 
 **Abbildung 4-20:** Eine monolithische Benutzeroberflächenanwendung, die Back-End-Microservices nutzt
 
@@ -25,7 +25,7 @@ Zur Startzeit der Clientanwendung registrieren sich alle Komponenten der Clientb
 
 In Abbildung 4-21 wird ein Beispiel für den Ansatz der zusammengesetzten Benutzeroberfläche gezeigt. Diese Darstellung ist vereinfacht, da Sie möglicherweise über andere Microservices verfügen, die je nach Verfahren wichtige Komponenten zusammenführen. Dies hängt davon ab, ob Sie einen herkömmlichen Webansatz (ASP.NET MVC) oder eine SPA (Single-Page-Webanwendung) erstellen.
 
-![In einer Anwendung mit zusammengesetzter Benutzeroberfläche wird jeder Abschnitt der Benutzeroberfläche von einem Microservice generiert, der wie ein kleines Gateway funktioniert.](./media/image21.png)
+![Diagramm einer zusammengesetzten Benutzeroberfläche, die aus verschiedenen Ansichtsmodellen zusammengesetzt ist.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 
 **Abbildung 4-21:** Beispiel einer Anwendung mit zusammengesetzter Benutzeroberfläche, die von Back-End-Microservices erzeugt wird
 

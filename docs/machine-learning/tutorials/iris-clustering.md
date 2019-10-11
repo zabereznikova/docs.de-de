@@ -2,36 +2,36 @@
 title: 'Tutorial: Kategorisieren von Schwertlilien (k-Means-Algorithmus)'
 description: Hier erfahren Sie, wie Sie ML.NET in einem Clusteringszenario verwenden.
 author: pkulikov
-ms.date: 05/16/2019
+ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: e2aaeb8abc6981b420329f194aa7b82c90cae00a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: e360cf2418e2003f9f40628c714e9e8ebd7c3e40
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929101"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698559"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Tutorial: Kategorisieren von Schwertlilien unter Verwendung eines k-Means-Algorithmus mit ML.NET
 
 Dieses Tutorial zeigt, wie Sie mit ML.NET ein [Clusteringmodell](../resources/tasks.md#clustering) für das [Iris-Dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) erstellen.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
 >
-> - Das Problem verstehen
+> - Verstehen des Problems
 > - Auswählen der entsprechenden Machine Learning-Aufgabe
 > - Vorbereiten der Daten
 > - Laden und Transformieren der Daten
 > - Auswählen eines Lernalgorithmus
-> - Trainieren des Modells
+> - Modelltraining
 > - Verwenden des Modells für Vorhersagen
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
-## <a name="understand-the-problem"></a>Das Problem verstehen
+## <a name="understand-the-problem"></a>Verstehen des Problems
 
 Bei diesem Problem geht es darum, Iris anhand ihrer Blütenmerkmale in unterschiedliche Gruppen einzuteilen. Die entsprechenden Merkmale sind Länge und Breite des Kelchblatts sowie Länge und Breite des Kronblatts. Für dieses Tutorial wird angenommen, dass der Typ jeder Blume unbekannt ist. Sie werden die Struktur eines Datasets basierend auf Merkmalen kennenlernen und vorhersagen können, wie eine Dateninstanz in diese Struktur passt.
 
@@ -133,13 +133,13 @@ Im Rahmen dieses Tutorials umfasst die Pipeline der Clusteraufgabe die zwei folg
 - Verketten geladener Spalten zu einer Spalte **Features**, die von einem Clustertrainer verwendet wird;
 - Verwenden eines <xref:Microsoft.ML.Trainers.KMeansTrainer>-Trainers, um das Modell mithilfe des Clusteralgorithmus k-means++ zu trainieren.
 
-Fügen Sie der `Main`-Methode folgenden Code hinzu:
+Fügen Sie den folgenden Code in die Methode `Main` ein:
 
 [!code-csharp[Create pipeline](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreatePipeline)]
 
 Der Code gibt an, dass das Dataset in drei Cluster aufgeteilt werden soll.
 
-## <a name="train-the-model"></a>Trainieren des Modells
+## <a name="train-the-model"></a>Modelltraining
 
 Die in den vorangegangenen Abschnitten hinzugefügten Schritte haben die Pipeline für das Training vorbereitet, es wurden jedoch keine ausgeführt. Fügen Sie der `Main`-Methode die folgende Zeile hinzu, um das Laden der Daten und das Trainieren des Modells auszuführen:
 
@@ -156,6 +156,11 @@ An diesem Punkt haben Sie ein Modell, das in eine der vorhandenen oder neuen .NE
 Verwenden Sie für Vorhersagen die <xref:Microsoft.ML.PredictionEngine%602>-Klasse, die Instanzen des Eingabetyps über die Transformationspipeline annimmt und Instanzen des Ausgabetyps erzeugt. Fügen Sie der `Main`-Methode die folgende Zeile hinzu, um eine Instanz dieser Klasse zu erstellen:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
+
+Die [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) ist eine Hilfs-API, mit der Sie eine Vorhersage für eine einzelne Instanz der Daten treffen können. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Die Verwendung in Singlethread-oder Prototypumgebungen ist zulässig. Zur Verbesserung der Leistung und Threadsicherheit in Produktionsumgebungen verwenden Sie den `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) aus [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt. Informationen zur [Verwendung von `PredictionEnginePool` in einer ASP.NET Core-Web-API](https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/serve-model-web-api-ml-net#register-predictionenginepool-for-use-in-the-application) finden Sie in dieser Anleitung.
+
+> [!NOTE]
+> Die `PredictionEnginePool`-Diensterweiterung ist derzeit als Vorschauversion verfügbar.
 
 Erstellen Sie die Klasse `TestIrisData`, um Testdateninstanzen unterzubringen:
 
@@ -184,15 +189,15 @@ Herzlichen Glückwunsch! Sie haben erfolgreich ein Machine Learning-Modell für 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 >
-> - Das Problem verstehen
+> - Verstehen des Problems
 > - Auswählen der entsprechenden Machine Learning-Aufgabe
 > - Vorbereiten der Daten
 > - Laden und Transformieren der Daten
 > - Auswählen eines Lernalgorithmus
-> - Trainieren des Modells
+> - Modelltraining
 > - Verwenden des Modells für Vorhersagen
 
 In unserem GitHub-Repository können Sie mit dem Lernen fortfahren und weitere Beispiele finden.

@@ -3,20 +3,20 @@ title: Klassen und Objekte – Tutorial zur Einführung in C#
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 092639e86b3e8e683a7d5f6ecf5b732991581b71
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850733"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834103"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Erkunden der objektorientierten Programmierung mit Klassen und Objekten
 
-Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung auf einem Mac oder Windows- oder Linux-PC. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie im Artikel [Einführung in Entwicklungstools](local-environment.md), der Links zu weiteren Ressourcen enthält.
+Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (Hallo Welt in zehn Minuten) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung unter Windows, Linux oder macOS. Einen schnellen Überblick über die Befehle, die Sie verwenden werden, finden Sie im Artikel [Einführung in Entwicklungstools](local-environment.md), der Links zu weiteren Ressourcen enthält.
 
 ## <a name="create-your-application"></a>Erstellen Ihrer Anwendung
 
-Erstellen Sie in einem Terminalfenster ein Verzeichnis namens **classes**. Dort werden Sie Ihre Anwendung erstellen. Wechseln Sie in dieses Verzeichnis, und geben Sie `dotnet new console` im Konsolenfenster ein. Dieser Befehl erstellt die Anwendung. Öffnen Sie **Program.cs**. Es sollte wie folgt aussehen:
+Erstellen Sie in einem Terminalfenster ein Verzeichnis namens *classes*. Dort werden Sie Ihre Anwendung erstellen. Wechseln Sie in dieses Verzeichnis, und geben Sie `dotnet new console` im Konsolenfenster ein. Dieser Befehl erstellt die Anwendung. Öffnen Sie *Program.cs*. Es sollte wie folgt aussehen:
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-In diesem Tutorial erstellen Sie neue Typen, die ein Bankkonto darstellen. Entwickler definieren jede Klasse in der Regel in einer anderen Textdatei. Dies erleichtert die Verwaltung bei zunehmender Programmgröße.  Erstellen Sie eine neue Datei mit dem Namen **BankAccount.cs** im Verzeichnis **classes**. 
+In diesem Tutorial erstellen Sie neue Typen, die ein Bankkonto darstellen. Entwickler definieren jede Klasse in der Regel in einer anderen Textdatei. Dies erleichtert die Verwaltung bei zunehmender Programmgröße. Erstellen Sie eine neue Datei mit dem Namen *BankAccount.cs* im Verzeichnis *classes*. 
 
 Diese Datei enthält die Definition eines ***Bankkontos***. In der objektorientierten Programmierung wird der Code organisiert, indem Typen in Form von ***Klassen*** erstellt werden. Diese Klassen enthalten den Code, der eine bestimmte Entität darstellt. Die `BankAccount`-Klasse stellt ein Bankkonto dar. Der Code implementiert bestimmte Vorgänge mittels Methoden und Eigenschaften. In diesem Tutorial unterstützt das Bankkonto dieses Verhalten:
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in ***program.cs*** mit der folgenden Zeile (ersetzen Sie `<name>` durch Ihren Namen):
+Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in *Program.cs* durch die folgende Zeile (ersetzen Sie `<name>` durch Ihren Namen):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,15 +119,15 @@ Geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
 Um ordnungsgemäß zu funktionieren, muss Ihre Bankkontoklasse Einzahlungen und Abbuchungen akzeptieren. Einzahlungen und Abbuchungen implementieren Sie, indem Sie eine Erfassung jeder Transaktion für das Konto erstellen. Dies ist vorteilhafter, als den Kontostand bei jeder Transaktion einfachen zu aktualisieren. Der Verlauf kann zum Überwachen aller Transaktionen und Verwalten täglicher Kontostände verwendet werden. Indem der Kontostand ggf. aus dem Verlauf aller Transaktionen berechnet wird, werden etwaige Korrekturen von Fehlern in einer einzelnen Transaktion bei der nächsten Berechnung im Kontostand ordnungsgemäß widergespiegelt.
 
-Zunächst erstellen wir einen neuen Typ, um eine Transaktion darzustellen. Dies ist ein einfacher Typ, der keine Verantwortlichkeiten hat. Er benötigt einige Eigenschaften. Erstellen Sie eine neue Datei mit dem Namen ***Transaction.cs***. Fügen Sie ihr folgenden Code hinzu:
+Zunächst erstellen wir einen neuen Typ, um eine Transaktion darzustellen. Dies ist ein einfacher Typ, der keine Verantwortlichkeiten hat. Er benötigt einige Eigenschaften. Erstellen Sie eine neue Datei mit dem Namen *Transaction.cs*. Fügen Sie ihr folgenden Code hinzu:
 
-[!code-csharp[Transaction](../../../../samples/csharp/classes-quickstart/Transaction.cs "Transaction declaration")]
+[!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
 Nun fügen wir eine <xref:System.Collections.Generic.List%601> von `Transaction`-Objekten der `BankAccount`-Klasse hinzu. Fügen Sie die folgende Deklaration hinzu:
 
-[!code-csharp[TransactionDecl](../../../../samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration "Transaction declaration")]
+[!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-Die <xref:System.Collections.Generic.List%601>-Klasse erfordert, dass Sie einen anderen Namespace importieren. Fügen Sie am Anfang von **BankAccount.cs** Folgendes hinzu:
+Die <xref:System.Collections.Generic.List%601>-Klasse erfordert, dass Sie einen anderen Namespace importieren. Fügen Sie am Anfang von *BankAccount.cs* Folgendes hinzu:
 
 ```csharp
 using System.Collections.Generic;
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 Jetzt ändern wir die Art, in der `Balance` gemeldet wird.  Er kann durch Summierung der Werte aller Transaktionen gefunden werden. Ändern Sie die Deklaration von `Balance` in der `BankAccount`-Klasse folgendermaßen:
 
-[!code-csharp[BalanceComputation](../../../../samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation "Computing the balance")]
+[!code-csharp[BalanceComputation](~/samples/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 Dieses Beispiel zeigt einen wichtigen Aspekt der ***Eigenschaften***. Jetzt berechnen Sie den Kontostand, wenn ein anderer Programmierer den Wert anfordert. Die Berechnung zählt alle Transaktionen auf und gibt die Summe als aktuellen Kontostand zurück.
 
@@ -143,13 +143,13 @@ Implementieren Sie nun die `MakeDeposit`- und `MakeWithdrawal`-Methode. Diese Me
 
 Dies führt das Konzept der ***Ausnahmen*** ein. Standardmäßig wird eine Ausnahme ausgelöst, um anzuzeigen, dass eine Methode ihre Aufgabe nicht erfolgreich ausführen kann. Der Typ der Ausnahme und die zugeordnete Nachricht beschreiben den Fehler. Hier löst die `MakeDeposit`-Methode eine Ausnahme aus, wenn der Einzahlungsbetrag negativ ist. Die `MakeWithdrawal`-Methode löst eine Ausnahme aus, wenn der Abbuchungsbetrag negativ ist, oder wenn aus der Abbuchung ein negativer Kontostand resultiert:
 
-[!code-csharp[DepositAndWithdrawal](../../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
+[!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 Die [`throw`](../../language-reference/keywords/throw.md)-Anweisung **löst** eine Ausnahme aus. Die Ausführung des aktuellen Block wird beendet, und die Steuerung wird an den ersten übereinstimmenden `catch`-Block übertragen, der in der Aufrufliste gefunden wurde. Sie fügen einen `catch`-Block hinzu, um diesen Code etwas später zu testen.
 
 Der Konstruktor sollte so geändert werden, dass er eine anfängliche Transaktion hinzufügt, anstatt den Kontostand direkt zu aktualisieren. Da Sie die `MakeDeposit`-Methode bereits geschrieben haben, rufen Sie sie aus dem Konstruktor auf. Der fertige Konstruktor sollte wie folgt aussehen:
 
-[!code-csharp[Constructor](../../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
+[!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> ist eine Eigenschaft, die das aktuelle Datum und die Uhrzeit zurückgibt. Testen Sie dies durch Hinzufügen von ein paar Einzahlungen und Abbuchungen in Ihrer `Main`-Methode:
 
@@ -196,11 +196,11 @@ Speichern Sie die Datei, und geben Sie `dotnet run` zum Testen ein.
 
 Um dieses Tutorial abzuschließen, können Sie die `GetAccountHistory`-Methode schreiben, die eine Zeichenfolge (`string`) für den Transaktionsverlauf erstellt. Fügen Sie diese Methode dem `BankAccount`-Typ hinzu:
 
-[!code-csharp[History](../../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
+[!code-csharp[History](~/samples/csharp/classes-quickstart/BankAccount.cs#History)]
 
 Hier wird die <xref:System.Text.StringBuilder>-Klasse zum Formatieren einer Zeichenfolge verwendet, die eine Zeile für jede Transaktion enthält. Sie haben den Zeichenfolgen-Formatierungscode in diesen Tutorials bereits gesehen. `\t` ist ein neues Zeichen. Damit wird ein Tabulator zum Formatieren der Ausgabe hinzugefügt.
 
-Fügen Sie diese Zeile **Program.cs** zum Testen hinzu:
+Fügen Sie diese Zeile *Program.cs* zum Testen hinzu:
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());

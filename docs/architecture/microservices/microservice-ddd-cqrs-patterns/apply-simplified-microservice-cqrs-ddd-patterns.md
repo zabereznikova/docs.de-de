@@ -2,12 +2,12 @@
 title: Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die allgemeine Beziehung zwischen CQRS- und DDD-Mustern
 ms.date: 10/08/2018
-ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674377"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834304"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 
@@ -27,9 +27,11 @@ In CQRS gibt es zwei Objekte für einen Lese-/Schreibvorgang, während es in and
 
 Ein Beispiel für diese Art von Dienst ist der Microservice für Bestellungen aus der Referenzanwendung „eShopOnContainers“. Er basiert auf einem vereinfachten CQRS-Ansatz und verwendet eine einzelne Datenquelle oder Datenbank, aber zwei logische Modelle sowie DDD-Muster für die Transaktionsdomäne (s. Abbildung 7-2).
 
-![Der logische Microservice für Bestellungen enthält die Datenbank „Ordering“ (Bestellungen), die sich im selben Docker-Host befinden kann. Es eignet sich für die Entwicklung, aber nicht für die Produktion, wenn sich die Datenbank im selben Docker-Host befindet.](./media/image2.png)
+![Das Diagramm zeigt einen allgemeinen vereinfachten CQRS- und DDD-Microservice.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Abbildung 7-2**. Vereinfachter auf CQRS und DDD basierender Microservice
+
+Der logische Microservice für Bestellungen enthält die Datenbank „Ordering“ (Bestellungen), die sich auf demselben Docker-Host befinden kann. Dies ist jedoch nicht zwingend erforderlich. Es eignet sich für die Entwicklung, aber nicht für die Produktion, wenn sich die Datenbank im selben Docker-Host befindet.
 
 Die Anwendungsebene kann aus der Web-API selbst bestehen. Das Wichtige am Architekturentwurf ist dabei, dass der Microservice die Abfragen und ViewModels (speziell für die Clientanwendungen erstellte Datenmodelle) nach dem CQRS-Muster von den Befehlen, Domänenmodellen und Transaktionen trennt. Dadurch bleiben die Abfragen unabhängig von den Einschränkungen der DDD-Muster, die nur für Transaktionen und Updates sinnvoll sind. Dies wird in späteren Abschnitten erläutert.
 

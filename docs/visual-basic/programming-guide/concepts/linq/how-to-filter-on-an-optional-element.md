@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Filtern nach einem optionalen Element (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 4de8c0b07eebc340a53785e6b932a66cb9d2fec9
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710417"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250000"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Vorgehensweise: Filtern nach einem optionalen Element (Visual Basic)
 Es kann vorkommen, dass Sie nach einem Element filtern möchten, ohne genau zu wissen, ob dieses Element in Ihrem XML-Dokument tatsächlich existiert. Die Suche sollte dann so ausgeführt werden, dass für den Fall, dass das Element das gesuchte untergeordnete Element nicht besitzt, beim Filtern keine Ausnahme wegen eines NULL-Verweises ausgelöst wird. Im folgenden Beispiel besitzt das `Child5`-Element kein untergeordnetes `Type`-Element, dennoch wird die Abfrage korrekt ausgeführt.  
@@ -50,7 +50,7 @@ Next
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -100,7 +100,7 @@ End Module
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 Child One Text  
 Child Two Text  
 Child Four Text  

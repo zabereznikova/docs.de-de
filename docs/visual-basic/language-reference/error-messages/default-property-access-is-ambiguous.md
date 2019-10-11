@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a36cfe8e5496bbfd1941afa8a46086491ae96a2a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512749"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250369"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen den geerbten Schnittstellenmember\<Defaultpropertyname > 'der Schnittstelle'\<schnittstellenname1 >' und '\<Defaultpropertyname > 'der Schnittstelle'\< schnittstellenname2 >'
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-Wenn Sie angeben `testObj(1)`, versucht der Compiler, ihn in die Default-Eigenschaft aufzulösen. Aufgrund der geerbten Schnittstellen gibt es jedoch zwei mögliche Standardeigenschaften, daher signalisiert der Compiler diesen Fehler.
+Wenn Sie `testObj(1)` angeben, versucht der Compiler, ihn in der Default-Eigenschaft aufzulösen. Aufgrund der geerbten Schnittstellen gibt es jedoch zwei mögliche Standardeigenschaften, daher signalisiert der Compiler diesen Fehler.
 
 **Fehler-ID:** BC30686
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-- Vermeiden Sie das Erben von Membern mit dem gleichen Namen. Wenn `testObj` im vorherigen Beispiel keines der Member von `Iface2`benötigt, z. b.,, deklarieren Sie es wie folgt:
+- Vermeiden Sie das Erben von Membern mit dem gleichen Namen. Wenn `testObj` z. b. keines der Member von, z. b. `Iface2`, benötigt, deklarieren Sie es im vorherigen Beispiel wie folgt:
 
   ```vb
   Dim testObj As Iface1
@@ -66,4 +66,4 @@ Wenn Sie angeben `testObj(1)`, versucht der Compiler, ihn in die Default-Eigensc
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Schnittstellen](../../programming-guide/language-features/interfaces/index.md)

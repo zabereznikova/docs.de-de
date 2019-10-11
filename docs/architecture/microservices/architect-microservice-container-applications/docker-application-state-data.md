@@ -2,12 +2,12 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Zustands- und Datenverwaltung in Docker-Anwendungen. Microservice-Instanzen sind erweiterbar, DATEN jedoch NICHT. Wie lässt sich dieser Tatsache mithilfe von Microservices Rechnung tragen?
 ms.date: 09/20/2018
-ms.openlocfilehash: bd0ac007479dcd51f2c639881273b81d1fd8b6d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039577"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834428"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -47,11 +47,11 @@ Volumes können benannt oder anonym sein (letzteres ist die Standardeinstellung)
 
 Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder virtuellen Computer aus auf ein Volume auf einem anderen Hostserver oder virtuellen Computer zugreifen. Anders gesagt: Bei diesen Volumes ist es nicht möglich, Daten zu verwalten, die von auf verschiedenen Docker-Hosts ausgeführten Containern gemeinsam verwendet werden. Dieses Szenario ließe sich allerdings mit einem Volumetreiber umsetzen, der Remotehosts unterstützt.
 
-![Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt.](./media/image5.png)
+![Das Diagramm zeigt Volumes und externe Datenquellen für containerbasierte Anwendungen.](./media/docker-application-state-data/volumes-external-data-sources.png)
 
 **Abbildung 4-5**. Volumes und externe Datenquellen für containerbasierte Anwendungen
 
-Darüber hinaus können Docker-Container möglicherweise zwischen Hosts verschoben werden, wenn sie von einem Orchestrator verwaltet werden. Dies hängt von den vom Cluster durchgeführten Optimierungen ab. Aus diesem Grund wird nicht empfohlen, Datenvolumes für Geschäftsdaten zu verwenden. Dennoch sind sie ein guter Mechanismus zum Arbeiten mit Ablaufverfolgungsdateien, temporären Dateien oder ähnlichen Strukturen, die keine Auswirkung auf die Konsistenz von Geschäftsdaten haben.
+Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt. Darüber hinaus können Docker-Container möglicherweise zwischen Hosts verschoben werden, wenn sie von einem Orchestrator verwaltet werden. Dies hängt von den vom Cluster durchgeführten Optimierungen ab. Aus diesem Grund wird nicht empfohlen, Datenvolumes für Geschäftsdaten zu verwenden. Dennoch sind sie ein guter Mechanismus zum Arbeiten mit Ablaufverfolgungsdateien, temporären Dateien oder ähnlichen Strukturen, die keine Auswirkung auf die Konsistenz von Geschäftsdaten haben.
 
 Tools für **Remotedatenquellen und -caches** wie Azure SQL-Datenbank, Azure Cosmos DB oder ein Remotecache wie Redis können in Containeranwendungen auf die gleiche Weise verwendet werden wie bei der Entwicklung ohne Container. Dies ist eine bewährte Möglichkeit zum Speichern von Geschäftsanwendungsdaten.
 
