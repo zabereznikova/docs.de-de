@@ -29,13 +29,13 @@
         - name: 'Gewusst wie: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
           href: how-to-determine-if-netstandard-object-is-serializable.md
         - name: Proben
-          href: serialization-samples-binary.md
+          href: samples-binary.md
     - name: XML- und SOAP-Serialisierung
       href: xml-and-soap-serialization.md
       items:
         - name: Gewusst-wie-Themen zur Serialisierung
           href: serialization-how-to-topics.md
-        - name: 'Gewusst wie: Steuern der Serialisierung abgeleiteter Klassen'
+        - name: 'Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen'
           href: how-to-control-serialization-of-derived-classes.md
         - name: Einführung in die XML-Serialisierung
           href: introducing-xml-serialization.md
@@ -45,15 +45,15 @@
           href: examples-of-xml-serialization.md
         - name: Das XML Schema Definition-Tool und die XML-Serialisierung
           href: the-xml-schema-definition-tool-and-xml-serialization.md
-        - name: 'Vorgehensweise: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool'
+        - name: 'Gewusst wie: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool'
           href: xml-schema-def-tool-gen.md
         - name: Steuern der XML-Serialisierung mit Attributen
           href: controlling-xml-serialization-using-attributes.md
         - name: Attribute zur Steuerung der XML-Serialisierung
           href: attributes-that-control-xml-serialization.md
-        - name: 'Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream'
+        - name: 'Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream'
           href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-        - name: 'Gewusst wie: Serialisieren eines Objekts'
+        - name: 'Vorgehensweise: Serialisieren eines Objekts'
           href: how-to-serialize-an-object.md
         - name: 'Vorgehensweise: Qualifizieren von XML-Element- und XML-Attributnamen'
           href: how-to-qualify-xml-element-and-xml-attribute-names.md
@@ -83,4 +83,4 @@
             - name: XML Schema Definition-Tool (Xsd.exe)
               href: xml-schema-definition-tool-xsd-exe.md
         - name: Proben
-          href: serialization-samples-xml.md
+          href: samples-xml.md
