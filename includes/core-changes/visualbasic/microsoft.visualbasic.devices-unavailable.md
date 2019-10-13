@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb163d5a6eb3d926a44a83ea79572c3a497bbe8d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: dae4afa92b8833f326b4eacd00b36bb3e1199cc1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181872"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237358"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Typen im Microsoft.VisualBasic.Devices-Namespace nicht verfügbar
 
@@ -14,7 +14,7 @@ Die Typen im <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName>-Names
 
 .NET Core 3.0 Preview 8
 
-#### <a name="details"></a>Details
+#### <a name="change-description"></a>Änderungsbeschreibung
 
 Die Typen im <xref:Microsoft.VisualBasic.Devices?displayProperty=fullName>-Namespace waren in einigen Versionen von .NET Core 3.0 Preview verfügbar. Ab .NET Core 3.0 Preview 9 sind sie nicht mehr verfügbar.
 

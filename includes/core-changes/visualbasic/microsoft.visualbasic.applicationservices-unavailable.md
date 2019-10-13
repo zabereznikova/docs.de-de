@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c3211752282b231e818d9af25322efbb6c93cf78
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 294c077b837899bd714deb2afd1bdff2b3185f38
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181755"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237356"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Typen im Microsoft.VisualBasic.ApplicationServices-Namespace nicht verfügbar
 
@@ -14,7 +14,7 @@ Die Typen im <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=ful
 
 .NET Core 3.0 Preview 8
 
-#### <a name="details"></a>Details
+#### <a name="change-description"></a>Änderungsbeschreibung
 
 Die Typen im <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName>-Namespace waren in einigen Releases von .NET Core 3.0 Preview verfügbar. Ab .NET Core 3.0 Preview 9 sind sie nicht mehr verfügbar.
 
