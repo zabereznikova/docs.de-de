@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 377f22409558c21d1c57f6214c13572dedf9e419
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216948"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237365"
 ---
-### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a><span data-ttu-id="19139-101">JsonEncodedText.Encode-Methoden weisen ein zusätzliches JavaScriptEncoder-Argument auf</span><span class="sxs-lookup"><span data-stu-id="19139-101">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>
+### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a><span data-ttu-id="46393-101">JsonEncodedText.Encode-Methoden weisen ein zusätzliches JavaScriptEncoder-Argument auf</span><span class="sxs-lookup"><span data-stu-id="46393-101">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>
 
-<span data-ttu-id="19139-102">Ab .NET Core 3.0 Vorschau 8 enthalten die <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>-Methoden ein optionales <xref:System.Text.Encodings.Web.JavaScriptEncoder>-Argument.</span><span class="sxs-lookup"><span data-stu-id="19139-102">Starting with .NET Core 3.0 Preview 8, the <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> methods contain an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.</span></span>
+<span data-ttu-id="46393-102">Ab .NET Core 3.0 Vorschau 8 enthalten die <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>-Methoden ein optionales <xref:System.Text.Encodings.Web.JavaScriptEncoder>-Argument.</span><span class="sxs-lookup"><span data-stu-id="46393-102">Starting with .NET Core 3.0 Preview 8, the <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> methods contain an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.</span></span>
 
-#### <a name="details"></a><span data-ttu-id="19139-103">Details</span><span class="sxs-lookup"><span data-stu-id="19139-103">Details</span></span>
+#### <a name="change-description"></a><span data-ttu-id="46393-103">Änderungsbeschreibung</span><span class="sxs-lookup"><span data-stu-id="46393-103">Change description</span></span>
 
-<span data-ttu-id="19139-104">.Net Core 3.0 enthält den neuen Typ: xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="19139-104">.NET Core 3.0 includes a new type, xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="19139-105">Ab .NET Core 3.0 Vorschau 8 wurde die Signatur aller <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>-Methodenüberladungen geändert, um einen optionalen <xref:System.Text.Encodings.Web.JavaScriptEncoder>-Parameter einzubinden.</span><span class="sxs-lookup"><span data-stu-id="19139-105">Starting with .NET Core 3.0 Preview 8, the signature of all <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> method overloads has changed to include an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> parameter.</span></span> <span data-ttu-id="19139-106">Diese Änderung wurde vorgenommen, um einen anderen oder benutzerdefinierten Encoder zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="19139-106">This change was made to allow for a different or custom encoder.</span></span>
+<span data-ttu-id="46393-104">.Net Core 3.0 enthält den neuen Typ: xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="46393-104">.NET Core 3.0 includes a new type, xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="46393-105">Ab .NET Core 3.0 Vorschau 8 wurde die Signatur aller <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>-Methodenüberladungen geändert, um einen optionalen <xref:System.Text.Encodings.Web.JavaScriptEncoder>-Parameter einzubinden.</span><span class="sxs-lookup"><span data-stu-id="46393-105">Starting with .NET Core 3.0 Preview 8, the signature of all <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> method overloads has changed to include an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> parameter.</span></span> <span data-ttu-id="46393-106">Diese Änderung wurde vorgenommen, um einen anderen oder benutzerdefinierten Encoder zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="46393-106">This change was made to allow for a different or custom encoder.</span></span>
 
-<span data-ttu-id="19139-107">Dies ist die Signatur der `Encode`-Methoden in .NET Core 3.0 Vorschau 7:</span><span class="sxs-lookup"><span data-stu-id="19139-107">The signature of the `Encode` methods in .NET Core 3.0 Preview 7 is:</span></span>
+<span data-ttu-id="46393-107">Dies ist die Signatur der `Encode`-Methoden in .NET Core 3.0 Vorschau 7:</span><span class="sxs-lookup"><span data-stu-id="46393-107">The signature of the `Encode` methods in .NET Core 3.0 Preview 7 is:</span></span>
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-<span data-ttu-id="19139-108">Dies ist die Signatur der gleichen `Encode`-Methoden in .NET Core 3.0 Vorschau 8 oder höher:</span><span class="sxs-lookup"><span data-stu-id="19139-108">The signature of the same `Encode` methods in .NET Core 3.0 Preview 8 and later versions is:</span></span>
+<span data-ttu-id="46393-108">Dies ist die Signatur der gleichen `Encode`-Methoden in .NET Core 3.0 Vorschau 8 oder höher:</span><span class="sxs-lookup"><span data-stu-id="46393-108">The signature of the same `Encode` methods in .NET Core 3.0 Preview 8 and later versions is:</span></span>
 
 ```csharp
 namespace System.Text.Json
@@ -42,19 +42,19 @@ namespace System.Text.Json
 }
 ```
 
-#### <a name="version-introduced"></a><span data-ttu-id="19139-109">Eingeführt in Version</span><span class="sxs-lookup"><span data-stu-id="19139-109">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="46393-109">Eingeführt in Version</span><span class="sxs-lookup"><span data-stu-id="46393-109">Version introduced</span></span>
 
-<span data-ttu-id="19139-110">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="19139-110">.NET Core 3.0 Preview 8</span></span>
+<span data-ttu-id="46393-110">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="46393-110">.NET Core 3.0 Preview 8</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="19139-111">Empfohlene Maßnahme</span><span class="sxs-lookup"><span data-stu-id="19139-111">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="46393-111">Empfohlene Maßnahme</span><span class="sxs-lookup"><span data-stu-id="46393-111">Recommended action</span></span>
 
-<span data-ttu-id="19139-112">Dies ist nur ein binärer Breaking Change. Bei einer erneuten Kompilierung für .NET Core 3.0 Vorschau 8 oder eine höhere Version werden alle Laufzeitprobleme behoben.</span><span class="sxs-lookup"><span data-stu-id="19139-112">This is a binary breaking change only; a recompile against .NET Core 3.0 Preview 8 or a later version will fix any runtime issues.</span></span>
+<span data-ttu-id="46393-112">Dies ist nur ein binärer Breaking Change. Bei einer erneuten Kompilierung für .NET Core 3.0 Vorschau 8 oder eine höhere Version werden alle Laufzeitprobleme behoben.</span><span class="sxs-lookup"><span data-stu-id="46393-112">This is a binary breaking change only; a recompile against .NET Core 3.0 Preview 8 or a later version will fix any runtime issues.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="19139-113">Kategorie</span><span class="sxs-lookup"><span data-stu-id="19139-113">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="46393-113">Kategorie</span><span class="sxs-lookup"><span data-stu-id="46393-113">Category</span></span>
 
-<span data-ttu-id="19139-114">CoreFx</span><span class="sxs-lookup"><span data-stu-id="19139-114">CoreFx</span></span>
+<span data-ttu-id="46393-114">CoreFx</span><span class="sxs-lookup"><span data-stu-id="46393-114">CoreFx</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="19139-115">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="19139-115">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="46393-115">Betroffene APIs</span><span class="sxs-lookup"><span data-stu-id="46393-115">Affected APIs</span></span>
 
 <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
 <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
