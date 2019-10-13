@@ -2,21 +2,21 @@
 title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586626"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291571"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
-In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst erkennbar zu machen. Es basiert auf der [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
+In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst auffindbar machen. Es basiert auf dem [selbst](https://go.microsoft.com/fwlink/?LinkId=145523) gehosteter Beispiel.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>So konfigurieren Sie das vorhandene Beispiel unter "Selbst gehostete Dienste" für die Suche  
   
-1. Öffnen Sie die Self-Hosting-Projektmappe in Visual Studio 2012. Das Beispiel befindet sich im Verzeichnis "TechnologySamples\Basic\Service\Hosting\SelfHost".  
+1. Öffnen Sie die Self-Host-Projekt Mappe in Visual Studio 2012. Das Beispiel befindet sich im Verzeichnis "TechnologySamples\Basic\Service\Hosting\SelfHost".  
   
-2. Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Sie möglicherweise eine Fehlermeldung angezeigt "System. ServiceModel.Discovery.dll oder eine ihrer Abhängigkeiten erfordert eine höhere Version von .NET Framework als die im Projekt..." Wenn diese Meldung angezeigt wird, mit der rechten Maustaste in des Projekts im Projektmappen-Explorer, und wählen Sie **Eigenschaften**. In der **Projekteigenschaften** Fenster, stellen Sie sicher, dass die **Zielframework** ist [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Möglicherweise wird eine Fehlermeldung angezeigt, die besagt, dass "System. Service Model. Discovery. dll oder eine ihrer Abhängigkeiten erfordert eine höhere Version des .NET Framework als die im Projekt angegebene... " Wenn diese Meldung angezeigt wird, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**aus. Stellen Sie im **Projekteigenschaften** Fenster sicher, dass das **Ziel Framework** [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ist.  
   
 3. Öffnen Sie die Datei "Service.cs", und fügen Sie die folgende `using`-Anweisung hinzu.  
   
@@ -60,7 +60,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
 2. Fügen Sie einen Verweis auf `System.ServiceModel.dll` und `System.ServiceModel.Discovery.dll` hinzu.  
   
-3. Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Dazu, mit der Maustaste der Dateien in die **Projektmappen-Explorer**Option **Kopie**, und wählen Sie dann die **DiscoveryClientApp** -Projekts mit der rechten Maustaste, und wählen Sie **Einfügen**.  
+3. Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Klicken Sie hierzu mit der rechten Maustaste auf die Dateien im **Projektmappen-Explorer**, wählen Sie **Kopieren**aus, und wählen Sie dann das Projekt **Discoveryclientapp** aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Einfügen**aus.  
   
 4. Öffnen Sie die Datei Program.cs.  
   
@@ -92,7 +92,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
     }  
     ```  
   
-     Diese teilt WCF, die die <xref:System.ServiceModel.Discovery.DiscoveryClient> Klasse sollte den standardmäßigen UDP-suchendpunkt zum Senden und Empfangen von Suchmeldungen verwenden.  
+     Dies weist WCF an, dass die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse den standardmäßigen UDP-Ermittlungs Endpunkt zum Senden und empfangen von Ermittlungs Nachrichten verwenden soll.  
   
 8. Rufen Sie in der nächsten Zeile die <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode auf, und geben Sie eine <xref:System.ServiceModel.Discovery.FindCriteria>-Instanz an, die den zu suchenden Dienstvertrag enthält. Geben Sie in diesem Fall `ICalculator` an.  
   
@@ -124,7 +124,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
      Diese Methode verwendet die von `FindCalculatorServiceAddress` zurückgegebene Endpunktadresse zum Aufrufen des Rechnerdiensts.  
   
-11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird definiert, durch die [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel. Sie wurde mithilfe von "Svcutil.exe" generiert.  
+11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird durch das [Self-Host-](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel definiert. Sie wurde mithilfe von "Svcutil.exe" generiert.  
   
     ```csharp  
     // Create a client  
@@ -196,7 +196,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
 3. Die Ausgabe der Datei "service.exe" sollte der folgenden Ausgabe ähneln.  
   
-    ```Output  
+    ```output  
     Received Add(100,15.99)  
     Return: 115.99  
     Received Subtract(100,15.99)  
@@ -209,7 +209,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
 4. Die Ausgabe der Datei "Discoveryclientapp.exe" sollte der folgenden Ausgabe ähneln.  
   
-    ```Output  
+    ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
     Add(100,15.99) = 115.99  
     Subtract(100,15.99) = 84.01  
@@ -220,7 +220,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
     ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code basiert die [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel nur die geänderten Dateien werden aufgeführt. Weitere Informationen über das Self-Hosting-Beispiel finden Sie unter [Setupanweisungen](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code auf dem [selbst Host](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel basiert, werden nur die geänderten Dateien aufgelistet. Weitere Informationen zum Self-Host-Beispiel finden Sie in den [Installationsanweisungen](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

@@ -2,22 +2,22 @@
 title: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 1fa0548e2d63562ddcb85fc6392bf5c99d67d6c7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916815"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291507"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfiguration eines Teils der WS-AtomicTransaction-Einstellungen auf lokalen und Remotecomputern eingesetzt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]ausführen [!INCLUDE[wxp](../../../includes/wxp-md.md)] , finden Sie das MMC-Snap-in. Navigieren Sie zu **Systemsteuerung**> Verwaltung > Komponenten Dienste >, klicken Sie mit der rechten Maustaste auf **Arbeitsplatz**, und wählen Sie **Eigenschaften**aus. Dort können Sie auch den MSDTC konfigurieren. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
+ Wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen, finden Sie das MMC-Snap-in. Navigieren Sie zu **Systemsteuerung**> Verwaltung > Komponenten Dienste >, klicken Sie mit der rechten Maustaste auf **Arbeitsplatz**, und wählen Sie **Eigenschaften**aus. Dort können Sie auch den MSDTC konfigurieren. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
   
- Wenn [!INCLUDE[lserver](../../../includes/lserver-md.md)]Sie Windows Vista oder ausführen, finden Sie das MMC-Snap-in, indem Sie auf die Schaltfläche **Start** klicken `dcomcnfg.exe` und in das **Suchfeld** eingeben. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
+ Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../includes/lserver-md.md)] ausführen, finden Sie das MMC-Snap-in, indem Sie auf die Schaltfläche **Start** klicken und `dcomcnfg.exe` in das **Suchfeld** eingeben. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.  
   
- Die vorherigen Schritte werden verwendet, um das Snap-In zur Konfiguration eines lokalen Computers zu starten. Wenn Sie einen Remote Computer konfigurieren möchten, sollten Sie den Namen des Remote Computers in der Systemsteuerung > Verwaltung > **Komponenten Dienste**> ausführen und ähnliche Schritte ausführen [!INCLUDE[wxp](../../../includes/wxp-md.md)] , [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]Wenn Sie oder ausführen. Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../includes/lserver-md.md)]ausführen, führen Sie die vorherigen Schritte für Vista und [!INCLUDE[lserver](../../../includes/lserver-md.md)]aus, aber verwenden Sie den Knoten **verteilte transaktionskoordinator\lokale DTC** unter dem Knoten des Remote Computers.  
+ Die vorherigen Schritte werden verwendet, um das Snap-In zur Konfiguration eines lokalen Computers zu starten. Wenn Sie einen Remote Computer konfigurieren möchten, sollten Sie den Namen des Remote Computers in der Systemsteuerung > Verwaltung > **Komponenten Dienste**> ausführen und ähnliche Schritte ausführen, wenn Sie [!INCLUDE[wxp](../../../includes/wxp-md.md)] oder [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ausführen. Wenn Sie Windows Vista oder [!INCLUDE[lserver](../../../includes/lserver-md.md)] ausführen, führen Sie die vorherigen Schritte für Vista und [!INCLUDE[lserver](../../../includes/lserver-md.md)] aus, aber verwenden Sie den Knoten **verteilte transaktionskoordinator\lokale DTC** unter dem Knoten des Remote Computers.  
   
  Zum Verwenden der Benutzeroberfläche des Tools müssen Sie zuerst die Datei WsatUI.dll im folgenden Pfad registrieren:  
   
@@ -25,7 +25,7 @@ Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfigurati
   
  Die Registrierung kann mit folgendem Befehl vorgenommen werden:  
   
-```Output  
+```console
 regasm.exe /codebase WsatUI.dll  
 ```  
   
@@ -63,7 +63,7 @@ regasm.exe /codebase WsatUI.dll
   
  **Autorisierte Konten**  
   
- Durch Klicken auf die Schaltfläche **auswählen** wird der Editor für die Windows-Access Control Liste aufgerufen, in dem Sie den Benutzer oder die Gruppe angeben können, der Teil von WS-Atomic- Transaktionen sein kann, indem Sie das Kontrollkästchen **zulassen** oder **verweigern** in Berechtigungs Gruppe.  
+ Durch Klicken auf die Schaltfläche **auswählen** wird der Editor für die Windows-Access Control Liste aufgerufen, in dem Sie den Benutzer oder die Gruppe angeben können **, der Teil** von WS-Atomic-Transaktionen sein kann, indem Sie das Kontrollkästchen **zulassen** oder **verweigern** in Berechtigungs Gruppe.  
   
  **Autorisierte Zertifikate**  
   
@@ -77,7 +77,7 @@ regasm.exe /codebase WsatUI.dll
   
  Durch Klicken auf die Schaltfläche **Optionen** wird eine Seite aufgerufen, auf der Sie zusätzliche Einstellungen angeben können.  
   
- Mit dem Kombinations Feld für die Ablauf **Verfolgungs Ebene** können Sie einen beliebigen gültigen Wert <xref:System.Diagnostics.TraceLevel> der-Enumeration auswählen. Sie können mit den Kontrollkästchen auch angeben, ob Sie die Ablaufverfolgung oder die Aktivitätspropagierung durchführen oder persönlich identifizierbare Informationen sammeln möchten.  
+ Mit dem Kombinations Feld für die Ablauf **Verfolgungs Ebene** können Sie einen beliebigen gültigen Wert der <xref:System.Diagnostics.TraceLevel>-Enumeration auswählen. Sie können mit den Kontrollkästchen auch angeben, ob Sie die Ablaufverfolgung oder die Aktivitätspropagierung durchführen oder persönlich identifizierbare Informationen sammeln möchten.  
   
  Sie können Protokollierungs Sitzungen auch im Gruppenfeld **Protokollierungs Sitzung** angeben.  
   

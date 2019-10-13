@@ -5,16 +5,16 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: f4096d6441c64499dae8003a63100b59037897ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 92bad8b5ad556d79480a5b4da489d070545701da
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932779"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291404"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie unter [Windows Automation-API: UI-Automatisierung @ no__t-0.  
   
  Durch das Implementieren der folgenden bewährten Methoden in Steuerelementen oder Anwendungen wird die Barrierefreiheit für Personen verbessert, die Hilfstechnologiegeräte verwenden. Viele dieser bewährten Methoden konzentrieren sich auf einen guten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Entwurf. Jede bewährte Methode umfasst Implementierungsinformationen für [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelemente oder -Anwendungen. In vielen Fällen enthalten die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Steuerelemente bereits die Funktionen, um diese bewährten Methoden zu erfüllen.  
   
@@ -24,19 +24,19 @@ ms.locfileid: "69932779"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Aktivieren des programmgesteuerten Zugriffs auf alle Elemente der Benutzeroberfläche und auf Text  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] -Elemente sollten den programmgesteuerten Zugriff ermöglichen. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
+ Benutzeroberflächen Elemente (UI) sollten den programmgesteuerten Zugriff aktivieren. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
   
- Durch Befolgen dieser bewährten Vorgehensweise können hilfstechnologiehersteller [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]Elemente Ihres Produkts identifizieren und bearbeiten.  
+ Durch Befolgen dieser bewährten Vorgehensweise können Hilfstechnologieanbieter Elemente des [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Ihres Produkts identifizieren und bearbeiten.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Platzieren von Namen, Titeln und Beschreibungen auf Benutzeroberflächenobjekte, Frames und Seiten  
- Hilfstechnologien, insbesondere Sprachausgaben, verwenden den Titel, um die Position von Frames, Objekten oder Seiten im Navigationsschema zu verstehen. Aus diesem Grund muss der Titel sehr aussagekräftig sein. Beispielsweise ist der Titel "Microsoft-Webseite" für eine Webseite unbrauchbar, wenn der Benutzer weit in einen bestimmten Bereich vorgedrungen ist. Ein aussagekräftiger Titel ist wichtig für Benutzer, die blind sind und auf Sprachausgaben angewiesen sind. Ebenso sind für [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Steuer <xref:System.Windows.Automation.AutomationProperties.NameProperty> Elemente und <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> für Hilfstechnologiegeräte wichtig.  
+ Hilfstechnologien, insbesondere Sprachausgaben, verwenden den Titel, um die Position von Frames, Objekten oder Seiten im Navigationsschema zu verstehen. Aus diesem Grund muss der Titel sehr aussagekräftig sein. Beispielsweise ist der Titel "Microsoft-Webseite" für eine Webseite unbrauchbar, wenn der Benutzer weit in einen bestimmten Bereich vorgedrungen ist. Ein aussagekräftiger Titel ist wichtig für Benutzer, die blind sind und auf Sprachausgaben angewiesen sind. Ebenso sind bei [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-Steuerelementen <xref:System.Windows.Automation.AutomationProperties.NameProperty> und <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> für Hilfstechnologiegeräte wichtig.  
   
- Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys in Beispiel [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Steuerelementen und-Anwendungen identifizieren und bearbeiten.  
+ Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in Beispiel Steuerelementen und-Anwendungen identifizieren und bearbeiten.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Gewährleisten der Auslösung programmgesteuerter Ereignisse durch alle Aktivitäten auf der Benutzeroberfläche  
- Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys auf Änderungen in [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] lauschen und den Benutzer über diese Änderungen benachrichtigen.  
+ Durch Befolgen dieser bewährten Vorgehensweise können unterstützende Technologys Änderungen in der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] lauschen und den Benutzer über diese Änderungen benachrichtigen.  
   
 <a name="User_Settings"></a>   
 ## <a name="user-settings"></a>Benutzereinstellungen  
@@ -66,7 +66,7 @@ ms.locfileid: "69932779"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Gewährleisten der ordnungsgemäßen Skalierung aller Benutzeroberflächenelemente bei beliebiger DPI-Einstellung  
- Stellen Sie sicher [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , dass alle nach jeder dpi-Einstellung (dpi) ordnungsgemäß skaliert werden können. Stellen Sie außerdem sicher [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , dass die Elemente auf einem Bildschirm von 1024 x 768 mit 120 Punkten pro Zoll (dpi) passen.  
+ Stellen Sie sicher, dass alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] nach jeder dpi-Einstellung (dpi) ordnungsgemäß skaliert werden kann. Stellen Sie außerdem sicher, dass [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente in einen Bildschirm von 1024 x 768 mit 120 Punkten pro Zoll (dpi) passen.  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navigation  
@@ -128,7 +128,7 @@ ms.locfileid: "69932779"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Verwenden von Standardeingabe-APIs mit geräteunabhängigen Aufrufen  
- Geräteunabhängige Aufrufe stellen die Gleichheit von Tastatur-und Mausfunktionen sicher, während Sie Hilfstechnologien mit [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]erforderlichen Informationen über das bereitstellen.  
+ Geräteunabhängige Aufrufe stellen die Gleichheit von Tastatur-und Mausfunktionen sicher, während Sie Hilfstechnologien mit erforderlichen Informationen zum [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bereitstellen.  
   
 ## <a name="see-also"></a>Siehe auch
 

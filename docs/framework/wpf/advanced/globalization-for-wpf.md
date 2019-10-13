@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1ab372f69792a00160edb2542762298114d3f8b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003440"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291462"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme vorgestellt, die beim Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen für den globalen Markt zu beachten sind. Die Globalisierungs Programmier Elemente werden in .net im <xref:System.Globalization>-Namespace definiert.
@@ -143,7 +143,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Multilingual User Interface
- Mi (mehrsprachige Benutzeroberflächen) ist ein Microsoft-Support zum Wechseln von [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] von einer Sprache in eine andere. Eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung verwendet das Assemblymodell zur Unterstützung von MUI. Eine Anwendung enthält sprachneutrale Assemblys sowie sprachabhängige Satellitenressourcenassemblys. Der Einstiegspunkt ist eine verwaltete EXE-Datei in der Hauptassembly.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ressourcen Lader nutzt den Ressourcen-Manager von [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)], um die Ressourcen Suche und den Fallback zu unterstützen. Mehrere Sprachsatellitenassemblys arbeiten mit derselben Hauptassembly. Die Ressourcenassembly, die geladen wird, hängt vom <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> des aktuellen Threads ab.
+ Mehrsprachige Benutzeroberflächen (MUI) sind Microsoft-Unterstützung für den Wechsel von UIs von einer Sprache zu einer anderen. Eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung verwendet das Assemblymodell zur Unterstützung von MUI. Eine Anwendung enthält sprachneutrale Assemblys sowie sprachabhängige Satellitenressourcenassemblys. Der Einstiegspunkt ist eine verwaltete EXE-Datei in der Hauptassembly.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ressourcen Lader nutzt den Ressourcen-Manager von [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)], um die Ressourcen Suche und den Fallback zu unterstützen. Mehrere Sprachsatellitenassemblys arbeiten mit derselben Hauptassembly. Die Ressourcenassembly, die geladen wird, hängt vom <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> des aktuellen Threads ab.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Lokalisierbare Benutzeroberfläche

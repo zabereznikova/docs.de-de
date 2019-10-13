@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: daa69997f70c22a97482fd7e63d42506e7051732
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958648"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291297"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bereitstellen von WPF-Anwendungen (WPF)
 Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müssen Sie bereitgestellt werden. Windows und die .NET Framework umfassen mehrere Bereitstellungs Technologien. Die für die Bereitstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung eingesetzte Technologie ist abhängig vom Anwendungstyp. Dieses Thema bietet eine kurze Übersicht über die einzelnen Bereitstellungstechnologien. Außerdem erfahren Sie, wie diese Bereitstellungstechnologien im Zusammenhang mit den Bereitstellungsvoraussetzungen für die verschiedenen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungstypen verwendet werden.  
@@ -31,7 +31,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 - Es handelt sich um eine unabhängige, in sich geschlossene Anwendung. Der Client muss für die Ausführung nicht aktualisiert werden.  
   
-- Anwendungsdateien müssen zwischen Speicherorten verschoben werden, zum Beispiel vom Ort der Erstellung (lokaler Datenträger, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.) an den Ort der Veröffentlichung (Website, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)]-Dateifreigabe usw.).  
+- Anwendungs Dateien müssen von einem Speicherort zu einem anderen verschoben werden, z. b. von einem Buildspeicherort (lokaler Datenträger, UNC-Dateifreigabe usw.) an einen Veröffentlichungsort (Website, UNC-Dateifreigabe usw.).  
   
 - Die Anwendung erfordert keine Shell-Integration (Verknüpfung im Startmenü, Symbol auf dem Desktop usw.).  
   
@@ -39,7 +39,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- Mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] können Anwendungen als eigenständige ausführbare Dateien gepackt werden, die auf einfache Weise an Clients verteilt und ausgeführt werden können. [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Außerdem wird mit Windows installiert und ermöglicht die Integration mit dem Desktop, dem Startmenü und der Systemsteuerung.  
+ Mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] können Anwendungen als eigenständige ausführbare Dateien gepackt werden, die auf einfache Weise an Clients verteilt und ausgeführt werden können. Außerdem wird [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] mit Windows installiert und ermöglicht die Integration mit dem Desktop, dem Startmenü und der Systemsteuerung.  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] vereinfacht die Installation und Deinstallation von Anwendungen. Es bietet jedoch keine Versionsverwaltung, das heißt, die Möglichkeit sicherzustellen, dass die installierten Anwendungen immer auf dem neuesten Stand sind.  
   
@@ -47,7 +47,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce-Bereitstellung  
- ClickOnce ermöglicht die Bereitstellung von Webanwendungen für nicht-Webanwendungen. Anwendungen werden auf Web- oder Dateiservern veröffentlicht und von dort bereitgestellt. Obwohl ClickOnce nicht den vollständigen Bereich von Client Funktionen [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]unterstützt, die von-installierten Anwendungen unterstützt werden, wird eine Teilmenge unterstützt, die Folgendes umfasst:  
+ ClickOnce ermöglicht die Bereitstellung von Webanwendungen für nicht-Webanwendungen. Anwendungen werden auf Web- oder Dateiservern veröffentlicht und von dort bereitgestellt. Obwohl ClickOnce nicht den vollständigen Bereich von Client Funktionen unterstützt, die @no__t von -0 installierten Anwendungen ausführen, unterstützt er eine Teilmenge, die Folgendes enthält:  
   
 - Einbindung in Startmenü und das Fenster für installierte Software in der Systemsteuerung  
   
@@ -69,15 +69,15 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 - Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Anwendungen  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. installiert haben.  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Bereitstellen von eigenständigen Anwendungen  
- Eigenständige Anwendungen werden entweder mithilfe von ClickOnce [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]oder bereitgestellt. Bei beiden Methoden ist für die Ausführung der eigenständigen Anwendungen volle Vertrauenswürdigkeit erforderlich. Eigenständigen Anwendungen, die mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] bereitgestellt werden, wird die volle Vertrauenswürdigkeit automatisch gewährt. Eigenständige Anwendungen, die mithilfe von ClickOnce bereitgestellt werden, werden nicht automatisch voll vertrauenswürdig eingestuft. Stattdessen zeigt ClickOnce ein Dialogfeld mit einer Sicherheitswarnung an, das Benutzer vor der Installation einer eigenständigen Anwendung akzeptieren müssen. Bei Annahme der Warnung wird die eigenständige Anwendung installiert und erhält volle Vertrauenswürdigkeit. Wird die Warnung abgelehnt, wird die eigenständige Anwendung nicht installiert.  
+ Eigenständige Anwendungen werden entweder mithilfe von ClickOnce oder [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] bereitgestellt. Bei beiden Methoden ist für die Ausführung der eigenständigen Anwendungen volle Vertrauenswürdigkeit erforderlich. Eigenständigen Anwendungen, die mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] bereitgestellt werden, wird die volle Vertrauenswürdigkeit automatisch gewährt. Eigenständige Anwendungen, die mithilfe von ClickOnce bereitgestellt werden, werden nicht automatisch voll vertrauenswürdig eingestuft. Stattdessen zeigt ClickOnce ein Dialogfeld mit einer Sicherheitswarnung an, das Benutzer vor der Installation einer eigenständigen Anwendung akzeptieren müssen. Bei Annahme der Warnung wird die eigenständige Anwendung installiert und erhält volle Vertrauenswürdigkeit. Wird die Warnung abgelehnt, wird die eigenständige Anwendung nicht installiert.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Bereitstellen von Markup-XAML-Anwendungen  
- Nur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Markup-Seiten werden in der Regel auf Webservern veröffentlicht, wie z. b. HTML-Seiten und können mithilfe von Internet Explorer angezeigt werden. Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten werden mit einer teilweise vertrauenswürdigen Sandbox für die Sicherheit und Einschränkungen, die durch den Standardberechtigungssatz für die Internetzone definiert werden, ausgeführt. Dadurch wird eine entsprechende Sicherheits Sandbox für HTML-basierte Webanwendungen bereitgestellt.  
+ Markup-only-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten werden in der Regel auf Webservern veröffentlicht, wie z. b. HTML-Seiten und können mithilfe von Internet Explorer angezeigt werden. Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten werden mit einer teilweise vertrauenswürdigen Sandbox für die Sicherheit und Einschränkungen, die durch den Standardberechtigungssatz für die Internetzone definiert werden, ausgeführt. Dadurch wird eine entsprechende Sicherheits Sandbox für HTML-basierte Webanwendungen bereitgestellt.  
   
  Weitere Informationen zur Sicherheit von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen finden Sie unter [Sicherheit](../security-wpf.md).  
   
@@ -98,7 +98,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
 > [!NOTE]
 > Weitere Informationen zu Anwendungs- und Bereitstellungsmanifesten finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  
   
- Diese Dateien werden erzeugt, wenn eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] erstellt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein neues WPF-Browser](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))-Anwendungsprojekt. Wie nur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Seiten werden in der Regel auf einem Webserver veröffentlicht und mithilfe von Internet Explorer angezeigt.  
+ Diese Dateien werden erzeugt, wenn eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] erstellt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein neues WPF-Browser-Anwendungsprojekt @ no__t-0. @No__t-1 wird in der Regel auf einem Webserver veröffentlicht und mithilfe von Internet Explorer angezeigt. @no__t  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s können mit einer beliebigen Bereitstellungstechnik auf Clients bereitgestellt werden. ClickOnce wird jedoch empfohlen, da es die folgenden Funktionen bietet:  
   
@@ -112,7 +112,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Installieren von .NET Framework  
- Zum Ausführen einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Anwendung muss das Microsoft .NET Framework auf dem Client installiert sein. Internet Explorer erkennt automatisch, ob Clients mit .NET Framework installiert werden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , wenn im Browser gehostete Anwendungen angezeigt werden. Wenn die .NET Framework nicht installiert ist, werden Benutzer von Internet Explorer aufgefordert, Sie zu installieren.  
+ Zum Ausführen einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung muss das Microsoft .NET Framework auf dem Client installiert sein. Internet Explorer erkennt automatisch, ob Clients mit .NET Framework installiert werden, wenn [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Browser gehostete Anwendungen angezeigt werden. Wenn die .NET Framework nicht installiert ist, werden Benutzer von Internet Explorer aufgefordert, Sie zu installieren.  
   
  Um zu ermitteln, ob die .NET Framework installiert ist, enthält Internet Explorer eine Bootstrapperanwendung, die als Fall Back-Multipurpose Internet Mail Extensions (MIME)-Handler für Inhalts Dateien mit den folgenden Erweiterungen registriert ist:. XAML,. XPS,. XBAP und. Application. Wenn Sie zu diesen Dateitypen navigieren und die .NET Framework nicht auf dem Client installiert ist, fordert die Boots Trapper-Anwendung die Berechtigung zur Installation an. Wenn keine Berechtigung bereitgestellt wird, wird weder der .NET Framework noch die Anwendung installiert.  
   

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 0253c57f080705b648d9f416368d0fe974ac83ab
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834673"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291268"
 ---
 # <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
 
-In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen mit lokalisierbaren [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] vorgestellt. In der Vergangenheit war die Lokalisierung einer Benutzeroberfläche ein zeitaufwändiger Prozess. Jede Sprache, für die die Benutzeroberfläche angepasst wurde, erforderte ein Pixel nach Pixel Anpassung. Mit den richtigen Entwurfs-und richtigen Codierungsstandards können [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] erstellt werden, sodass Lokalisierer weniger Größe und Neupositionierung haben. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können, wird als automatisches Layout bezeichnet und kann mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungsdesign erreicht werden.
+In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen mit lokalisierbaren Benutzeroberflächen (User Interface, UIs) vorgestellt. In der Vergangenheit war die Lokalisierung einer Benutzeroberfläche ein zeitaufwändiger Prozess. Jede Sprache, für die die Benutzeroberfläche angepasst wurde, erforderte ein Pixel nach Pixel Anpassung. Heute mit dem richtigen Entwurfs-und richtigen Codierungsstandards kann UIs erstellt werden, sodass lokalisierungssoren weniger Größe und Neupositionierung haben. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können, wird als automatisches Layout bezeichnet und kann mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungsdesign erreicht werden.
 
 <a name="advantages_of_autolayout"></a>
 

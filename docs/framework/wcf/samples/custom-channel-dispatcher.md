@@ -2,18 +2,18 @@
 title: Benutzerdefinierter Kanalverteiler
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: af225a0f31c843f2c3ca949af6d616f89dc83435
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0bd83e068de7cfa9cc531ee6b46b9b51c44c1b1d
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039967"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291540"
 ---
 # <a name="custom-channel-dispatcher"></a>Benutzerdefinierter Kanalverteiler
 In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weise erstellt wird, indem <xref:System.ServiceModel.ServiceHostBase> direkt implementiert wird, und wie ein benutzerdefinierter Kanalverteiler in einer Webhostumgebung erstellt wird. Der Kanalverteiler interagiert mit <xref:System.ServiceModel.Channels.IChannelListener>, um Kanäle zu akzeptieren und ruft Nachrichten aus dem Kanalstapel ab. Dieses Beispiel enthält auch ein einfaches Beispiel zur Veranschaulichung, wie ein Kanalstapel in einer Webhostumgebung mithilfe der <xref:System.ServiceModel.Activation.VirtualPathExtension> erstellt wird.  
   
 ## <a name="custom-servicehostbase"></a>Benutzerdefinierte ServiceHostBase  
- In diesem Beispiel wird der Basistyp <xref:System.ServiceModel.ServiceHostBase> anstelle von <xref:System.ServiceModel.ServiceHost> implementiert, um zu veranschaulichen, wie die Windows Communication Foundation (WCF)-Stapel Implementierung durch eine benutzerdefinierte Meldungs Behandlungs Ebene oberhalb des Kanal Stapels ersetzt wird. Sie überschreiben die virtuelle Methode <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>, um Kanallistener und den Kanalverteiler zu erstellen.  
+ In diesem Beispiel wird der Basistyp <xref:System.ServiceModel.ServiceHostBase> anstelle von <xref:System.ServiceModel.ServiceHost> implementiert, um zu veranschaulichen, wie die Windows Communication Foundation (WCF)-Stapel Implementierung durch eine benutzerdefinierte Meldungs Behandlungs Schicht oberhalb des Kanal Stapels ersetzt wird. Sie überschreiben die virtuelle Methode <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>, um Kanallistener und den Kanalverteiler zu erstellen.  
   
  Um einen im Internet gehosteten Dienst zu implementieren rufen Sie die Diensterweiterung <xref:System.ServiceModel.Activation.VirtualPathExtension> aus der <xref:System.ServiceModel.ServiceHostBase.Extensions%2A>-Auflistung ab, und fügen Sie sie zur <xref:System.ServiceModel.Channels.BindingParameterCollection> hinzu, damit die Transportebene den Kanallistener basierend auf den Hostumgebungseinstellungen, d. h. den Einstellungen für die Internetinformationsdienste (IIS) und den Windows-Prozessaktivierungsdienst (WAS), konfigurieren kann.  
   
@@ -29,12 +29,12 @@ In diesem Beispiel wird gezeigt, wie der Kanalstapel auf benutzerdefinierte Weis
   
  Sie haben das HTTP-GET-Verb in diesem Fall besonders behandelt und eine benutzerdefinierte HTML-Nachricht zurückgegeben, damit Sie den Dienst in einem Browser durchsuchen können, um sicherzustellen, dass er ordnungsgemäß kompiliert wurde. Wenn die SOAP-Aktion nicht richtig ist, senden Sie eine Fehlermeldung zurück, die angibt, dass die Anforderung nicht unterstützt wird.  
   
- Bei dem Client dieses Beispiels handelt es sich um einen normalen WCF-Client, der nicht von dem Dienst ausgeht. Daher ist der Dienst speziell so konzipiert, dass er dem entspricht, was Sie von<xref:System.ServiceModel.ServiceHost> einer normalen WCF-Implementierung erhalten. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
+ Bei dem Client dieses Beispiels handelt es sich um einen normalen WCF-Client, der nicht von dem Dienst ausgeht. Daher ist der Dienst speziell so konzipiert, dass er dem entspricht, was Sie von einer normalen WCF @ no__t-0-Implementierung erhalten. Infolgedessen ist auf dem Client nur ein Dienstvertrag erforderlich.  
   
 ## <a name="using-the-sample"></a>Verwenden des Beispiels  
  Wenn Sie die Clientanwendung ausführen, wird die folgende Ausgabe direkt erzeugt.  
   
-```Output  
+```output  
 Client is talking to a request/reply WCF service.   
 Type what you want to say to the server: Howdy  
 Server replied: You said: Howdy. Message id: 1  
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`
