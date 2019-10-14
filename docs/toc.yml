@@ -580,8 +580,8 @@
           href: csharp/tutorials/exploration/interpolated-strings-local.md
         - name: Erweiterte Szenarios für Zeichenfolgeninterpolation
           href: csharp/tutorials/string-interpolation.md
-        - name: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembern
-          href: csharp/tutorials/default-interface-members-versions.md
+        - name: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmethoden
+          href: csharp/tutorials/default-interface-methods-versions.md
         - name: Erkunden von Indizes und Bereichen
           href: csharp/tutorials/ranges-indexes.md
         - name: 'Arbeiten mit Verweistypen, die Nullwerte zulassen'
@@ -1038,7 +1038,7 @@
             - name: Zugreifen auf Anwendungswebdienste
               href: visual-basic/developing-apps/programming/accessing-application-web-services.md
               items:
-                - name: 'Vorgehensweise: Asynchrones Aufrufen eines Webdiensts'
+                - name: 'Gewusst wie: Asynchrones Aufrufen eines Webdiensts'
                   href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
             - name: Accessing Application Settings
               href: visual-basic/developing-apps/programming/app-settings/index.md
@@ -1160,14 +1160,14 @@
             - name: Zusammengesetzte Datentypen
               href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
               items:
-                - name: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
+                - name: 'Gewusst wie: Ablegen mehrerer Werte in einer Variablen'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
             - name: Generische Typen
               href: visual-basic/programming-guide/language-features/data-types/generic-types.md
               items:
-                - name: 'Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
+                - name: 'Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-                - name: 'Vorgehensweise: Verwenden einer generischen Klasse'
+                - name: 'Gewusst wie: Verwenden einer generischen Klasse'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
             - name: Generische Prozeduren
               href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
@@ -1184,14 +1184,14 @@
                   href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
                 - name: Konvertierungen zwischen Zeichenfolgen und anderen Typen
                   href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
-                - name: 'Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ'
+                - name: 'Gewusst wie: Konvertieren eines Objekts in einen anderen Typ'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
                 - name: Arraykonvertierungen
                   href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
             - name: Strukturen
               href: visual-basic/programming-guide/language-features/data-types/structures.md
               items:
-                - name: 'Gewusst wie: Deklarieren einer Struktur'
+                - name: 'Vorgehensweise: Deklarieren einer Struktur'
                   href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
                 - name: Strukturvariablen
                   href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
@@ -1241,15 +1241,15 @@
       items:
         - name: Einführung in COM-Interop
           href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
-        - name: 'Gewusst wie: Verweisen auf COM-Objekte'
+        - name: 'Vorgehensweise: Verweisen auf COM-Objekte'
           href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
-        - name: 'Gewusst wie: Arbeiten mit ActiveX-Steuerelementen'
+        - name: 'Vorgehensweise: Arbeiten mit ActiveX-Steuerelementen'
           href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
         - name: 'Exemplarische Vorgehensweise: Aufrufen von Windows-APIs'
           href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
         - name: 'Vorgehensweise: Aufrufen von Windows-APIs'
           href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
-        - name: 'Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
+        - name: 'Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert'
           href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
         - name: 'Exemplarische Vorgehensweise: Erstellen von COM-Objekten'
           href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
