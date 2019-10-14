@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: fd5c39bfcb05296a36d94ea64946f8c29ed7e4d6
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925341"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275804"
 ---
 # <a name="c-reference"></a>C#-Referenz
 Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.  
@@ -55,7 +55,7 @@ Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprac
  C# 7.3 ist eine weitere Unterversion, die mehrere kleine Aktualisierungen enthält. Sie können neue Einschränkungen für generische Typparameter verwenden. Weitere Änderungen erleichtern das Arbeiten mit `fixed`-Feldern, einschließlich der Verwendung von [`stackalloc`](./operators/stackalloc.md)-Zuordnungen. Lokale Variablen, die mit dem Schlüsselwort `ref` deklariert wurden, können neu zugewiesen werden, um sich auf neuen Speicher zu beziehen. Sie können Attribute für automatisch implementierte Eigenschaften festlegen, die auf das vom Compiler generierte Sicherungsfeld abzielen. Ausdrucksvariablen können in Initialisierern verwendet werden. Tupel können hinsichtlich ihrer Gleichheit (oder Ungleichheit) verglichen werden. Außerdem wurden einige Verbesserungen an der Überladungsauflösung vorgenommen.
   
  [Vorschläge für die C# 8.0-Spezifikation](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C# 8.0 wird mit .NET Core 3.0 zur Verfügung gestellt. Zu den Features gehören Nullable-Verweistypen, rekursiver Musterabgleich, Standardschnittstellenmember, asynchrone Streams, Bereiche und Indizes, musterbasiertes using und using-Deklarationen, NULL-Sammelzuweisungen sowie schreibgeschützte Instanzmember.
+ C# 8.0 wird mit .NET Core 3.0 zur Verfügung gestellt. Zu den Features gehören Nullable-Verweistypen, rekursiver Musterabgleich, Standardschnittstellenmethoden, asynchrone Streams, Bereiche und Indizes, musterbasierte using-Anweisung und using-Deklarationen, NULL-Sammelzuweisungen sowie schreibgeschützte Instanzmember.
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
