@@ -2,12 +2,12 @@
 title: Migrieren zu Hybridcloudszenarios
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migration zu Hybrid Cloud Szenarios
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 5f0819495080bc29ed1239b4a7ab8af31141881b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373944"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318475"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
@@ -25,7 +25,7 @@ Azure Stack ist eine Hybrid Cloud Plattform, mit der Sie Azure-Dienste aus dem R
 
 Abbildung 4-13 zeigt eine Übersicht über die echte Hybrid Cloud Plattform, die Microsoft bietet.
 
-![Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure](./media/image13.jpg)
+![Diagramm der Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
 

@@ -2,12 +2,12 @@
 title: Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 ms.date: 04/30/2018
-ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cdd7738606b086e980c4a50348166a7e23e15fa5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373955"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318496"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 
@@ -19,7 +19,7 @@ Application Insights ist ein erweiterbarer Application Performance Management (A
 
 In Abbildung 4-10 wird ein Beispiel für die Art und Weise veranschaulicht, wie Application Insights Ihre Anwendung überwacht und wie Sie diese Einblicke auf ein Dashboard überwachen.
 
-![Dashboard für die Application Insights Überwachung](./media/image10.png)
+![Screenshot des Dashboards für die Application Insights Überwachung.](./media/modernize-your-apps-with-monitoring-and-telemetry/application-insights-monitoring-dashboard.png)
 
 **Abbildung 4-10.** Dashboard für die Application Insights Überwachung
 
@@ -43,7 +43,7 @@ Die [Container Überwachungslösung](https://docs.microsoft.com/azure/log-analyt
 
 Abbildung 4-11 zeigt die Beziehungen zwischen verschiedenen Container Hosts und Agents und OMS.
 
-![Log Analytics Container Überwachungslösung](./media/image11.png)
+![Screenshot der Log Analytics-Container Überwachungslösung](./media/modernize-your-apps-with-monitoring-and-telemetry/log-analytics-container-monitoring-solution.png)
 
 **Abbildung 4-11.** Log Analytics Container Überwachungslösung
 
