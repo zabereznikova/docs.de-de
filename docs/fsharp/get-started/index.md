@@ -11,7 +11,7 @@ ms.locfileid: "61935420"
 ---
 # <a name="get-started-with-f"></a>Erste Schritte mit F#\#
 
-Sie können beginnen, mit F# auf Ihrem Computer oder online.
+Sie können mit F# auf Ihrem Computer oder online beginnen.
 
 ## <a name="get-started-on-your-machine"></a>Erste Schritte auf Ihrem Computer
 
