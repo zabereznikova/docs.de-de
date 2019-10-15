@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 77d18d12cd0fabb26906a5b58dc3939da6214a29
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602247"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179933"
 ---
 # <a name="break-c-reference"></a>break (C#-Referenz)
 
@@ -27,12 +27,6 @@ In diesem Beispiel enthält die Bedingungsanweisung einen Indikator, der normale
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird die `break`-Anweisung verwendet, um aus einer inneren geschachtelten Schleife auszubrechen und die Steuerung an die äußere Schleife zurückzugeben.
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>Beispiel
-
 In diesem Beispiel wird die Verwendung von `break` in einer [switch](./switch.md)-Anweisung veranschaulicht.
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
@@ -43,6 +37,18 @@ Bei Eingabe von `4` sähe die Ausgabe wie folgt aus:
 Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird die `break`-Anweisung verwendet, um aus einer inneren geschachtelten Schleife auszubrechen und die Steuerung an die äußere Schleife zurückzugeben. Die Steuerung wird _nur_ auf der nächsthöheren Ebene in den geschachtelten Schleifen zurückgegeben.
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird die `break`-Anweisung nur verwendet, um während jeder Iteration der Schleife aus dem aktuellen Branch auszubrechen. Die-Schleife selbst ist nicht von den Instanzen von `break` betroffen, die zur geschachtelten [switch](./switch.md)-Anweisung gehören.
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

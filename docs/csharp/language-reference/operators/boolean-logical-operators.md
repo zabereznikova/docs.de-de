@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: cc25d4bfd444dc0acb30fc1c6e6c3c9918af537c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698682"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72290943"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
@@ -51,11 +51,11 @@ Für die Operanden der [integralen](../builtin-types/integral-numeric-types.md) 
 
 ## <a name="logical-negation-operator-"></a>Logischer Negationsoperator: !
 
-Der `!`-Operator berechnet die logische Negation des Operanden. Das heißt., er erzeugt `true`, wenn der Operand als `false` ausgewertet wird, und `false`, wenn der Operand als `true` ausgewertet wird:
+Der unäre Präfix-Operator `!` berechnet die logische Negation seines Operanden. Das heißt., er erzeugt `true`, wenn der Operand als `false` ausgewertet wird, und `false`, wenn der Operand als `true` ausgewertet wird:
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-Ab C# 8.0 ist der unäre Postfixoperator `!` ein NULL-toleranter Operator. In einem Kontext, in dem NULL-Werte für Anmerkungen zulässig sind, geben Sie mit diesem Operator an, dass der Ausdruck `x` eines Referenztyps, der NULL-Werte zulässt, nicht NULL ist: `x!`. Weitere Informationen finden Sie unter [Nullable-Verweistypen](../../nullable-references.md).
+Ab C# 8.0 ist der unäre Postfix-Operator `!` ein [NULL-toleranter Operator](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
@@ -117,17 +117,17 @@ Der [logische OR-Operator](#logical-or-operator-) `|` berechnet auch die logisch
 
 Für die `bool?`-Operanden unterstützen die `&`- und `|`-Operatoren die dreiwertige Logik. Die Semantik dieser Operatoren ist in der folgenden Tabelle definiert:  
   
-|x|y|x&y|x&#124;y|  
+|w|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|true|false|false|true|  
-|true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|NULL|  
-|null|true|null|true|  
-|null|false|false|NULL|  
-|null|null|null|null|  
+|true|False|false|true|  
+|true|NULL|NULL|true|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|NULL|False|NULL|  
+|NULL|true|NULL|true|  
+|NULL|False|False|NULL|  
+|NULL|NULL|NULL|NULL|  
 
 Das Verhalten dieser Operatoren unterscheidet sich vom typischen Operatorverhalten bei Typen, die NULL-Werte zulassen. In der Regel kann ein Operator, der für Operanden eines Werttyps definiert ist, auch mit Operanden des entsprechenden Nullable-Typs verwendet werden. Ein solcher Operator erzeugt `null`, wenn einer seiner Operanden `null` ist. Die `&`- und `|`-Operatoren können jedoch Nicht-NULL-Werte erzeugen, auch wenn einer der Operanden `null` ist. Weitere Informationen zum Operatorverhalten bei Typen, die NULL-Werte zulassen, finden Sie im Abschnitt [Operatoren](../../programming-guide/nullable-types/using-nullable-types.md#operators) des Artikels [Verwenden von Nullable-Werttypen](../../programming-guide/nullable-types/using-nullable-types.md).
 
@@ -145,7 +145,7 @@ Bei einem binären Operator `op` entspricht ein Verbundzuweisungsausdruck der Fo
 x op= y
 ```
 
-entspricht
+für die folgende Syntax:
 
 ```csharp
 x = x op y

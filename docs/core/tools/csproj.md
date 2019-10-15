@@ -2,12 +2,12 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 89ab22f0c5e69f29ff31e13d46dce8ba278d08da
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216205"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291233"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -270,7 +270,7 @@ Hier ist die vollständige Liste der [SPDX Lizenzbezeichner](https://spdx.org/li
 
 Die genaue Syntax für die Lizenzausdrücke wird unten in [ABNF](https://tools.ietf.org/html/rfc5234) beschrieben.
 
-```cli
+```abnf
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
 license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
@@ -347,6 +347,12 @@ Gibt die URL für das Repository an, in der sich der Quellcode für das Paket be
 ### <a name="repositorytype"></a>RepositoryType
 
 Gibt den Verzeichnistyp an. Der Standardwert ist „Git“.
+
+### <a name="repositorybranch"></a>RepositoryBranch
+Gibt den Namen des Quellbranch im Repository an. Wenn das Projekt in einem NuGet-Paket gepackt ist, wird es den Paketmetadaten hinzugefügt.
+
+### <a name="repositorycommit"></a>RepositoryCommit
+Optionaler Repositorycommit oder ein Changeset, um anzugeben, für welches Quellpaket die Erstellung erfolgt ist. `RepositoryUrl` muss ebenfalls angegeben werden, damit diese Eigenschaft einbezogen wird. Wenn das Projekt in einem NuGet-Paket gepackt ist, wird dieser Commit oder das Changeset den Paketmetadaten hinzugefügt.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 

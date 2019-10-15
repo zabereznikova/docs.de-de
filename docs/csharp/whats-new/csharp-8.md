@@ -2,19 +2,19 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 09/20/2019
-ms.openlocfilehash: d948db0523684c998425bc22ab6fd245d65a8045
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736699"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275780"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
 C# 8.0 fügt der Sprache C# die folgenden Features und Verbesserungen hinzu:
 
 - [Readonly-Member](#readonly-members)
-- [Standardschnittstellenmember](#default-interface-members)
+- [Standardschnittstellenmethoden](#default-interface-methods)
 - [Verbesserungen am Musterabgleich](#more-patterns-in-more-places):
   - [switch-Ausdrücke](#switch-expressions)
   - [Eigenschaftsmuster](#property-patterns)
@@ -85,11 +85,11 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann.
 
-## <a name="default-interface-members"></a>Standardschnittstellenmember
+## <a name="default-interface-methods"></a>Standardschnittstellenmethoden
 
-Sie können nun Member zu Schnittstellen hinzufügen und eine Implementierung für diese Member bereitstellen. Dieses Sprachfeature ermöglicht es API-Autoren, in späteren Versionen Methoden zu einer Schnittstelle hinzuzufügen, ohne die Quell- oder Binärkompatibilität mit bestehenden Implementierungen dieser Schnittstelle zu beeinträchtigen. Bestehende Implementierungen *erben* die Standardimplementierung. Dieses Feature ermöglicht zudem die Interaktion zwischen C# und APIs, die auf Android oder Swift abzielen und ähnliche Funktionen unterstützen. Standardschnittstellenmember ermöglichen auch Szenarien, die einem „Traits“-Sprachfeature ähneln.
+Sie können nun Member zu Schnittstellen hinzufügen und eine Implementierung für diese Member bereitstellen. Dieses Sprachfeature ermöglicht es API-Autoren, in späteren Versionen Methoden zu einer Schnittstelle hinzuzufügen, ohne die Quell- oder Binärkompatibilität mit bestehenden Implementierungen dieser Schnittstelle zu beeinträchtigen. Bestehende Implementierungen *erben* die Standardimplementierung. Dieses Feature ermöglicht zudem die Interaktion zwischen C# und APIs, die auf Android oder Swift abzielen und ähnliche Funktionen unterstützen. Standardschnittstellenmethoden ermöglichen auch Szenarien, die einem „Traits“-Sprachfeature ähneln.
 
-Standardschnittstellenmember wirken sich auf viele Szenarien und Sprachelemente aus. Unser erstes Tutorial behandelt [die Aktualisierung einer Schnittstelle mit Standardimplementierungen](../tutorials/default-interface-members-versions.md). Weitere Tutorials und Referenzaktualisierungen folgen rechtzeitig zur allgemeinen Veröffentlichung.
+Standardschnittstellenmethoden wirken sich auf viele Szenarien und Sprachelemente aus. Unser erstes Tutorial behandelt [die Aktualisierung einer Schnittstelle mit Standardimplementierungen](../tutorials/default-interface-methods-versions.md). Weitere Tutorials und Referenzaktualisierungen folgen rechtzeitig zur allgemeinen Veröffentlichung.
 
 ## <a name="more-patterns-in-more-places"></a>Weitere Muster an mehr Orten
 

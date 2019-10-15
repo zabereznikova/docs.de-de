@@ -4,12 +4,12 @@ description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereic
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: 4d4bb80c6582facbcb11664309fde230bcfa4e7b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929268"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180177"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -136,7 +136,7 @@ Bei der [Klassifizierung](#classification) steht die Wiedererkennung für eine K
  Die Regularisierung ahndet, wenn ein lineares Modell zu kompliziert ist. Es gibt zwei Arten von Regularisierung:
 
 - $L_1$-Regularisierung setzt die Gewichtungen für unwichtige Features auf Null. Die Größe des gespeicherten Modells kann nach dieser Art der Regularisierung kleiner werden.
-- $L_2$-Regularisierung minimiert den Gewichtungsbereich für unwichtige Features. Dies ist ein allgemeinerer Prozess und weniger anfällig für Ausreißer.
+- $L_2$-Regularisierung minimiert den Gewichtungsbereich für unwichtige Merkmale. Dies ist ein allgemeinerer Prozess, der weniger empfindlich für Ausreißer ist.
 
 ## <a name="regression"></a>Regression
 
