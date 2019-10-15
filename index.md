@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 09/30/2019
-ms.openlocfilehash: a30744ca8831375f9a54f054b226274e273a67a5
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 1446d870a4cae2c5bf385a0089bbc830f932ea08
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736773"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321471"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "71736773"
         <h1>.NET-Dokumentation</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Dokumentation</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
                         <a href="#dotnetguides">.NET-Leitfäden</a>
@@ -88,7 +88,7 @@ ms.locfileid: "71736773"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/dotnet.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-logo-image.svg" alt="Screenshot of the purple .NET logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -114,7 +114,7 @@ ms.locfileid: "71736773"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core/">Leitfaden für .NET Core</a></h3>
                                                 <p><a href="/dotnet/core/get-started">Erste Schritte</a></p>
-                                                <p><a href="/dotnet/core/tutorials/">Lernprogramme</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">Tutorials</a></p>
                                                 <p><a href="/dotnet/core/porting/">Portieren aus .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
                                                 <p><a href="/ef/core/">EF Core</a></p>
@@ -194,7 +194,7 @@ ms.locfileid: "71736773"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp/">F# Guide</a></h3>
+                                                <h3><a href="/dotnet/fsharp/">Leitfaden für F#</a></h3>
                                                 <p><a href="/dotnet/fsharp/get-started/">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">Einführung in F#</a></p>
                                                 <p><a href="/dotnet/fsharp/language-reference/">F#-Sprachreferenz</a></p>
@@ -233,7 +233,7 @@ ms.locfileid: "71736773"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning/">Leitfaden für ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials/">Lernprogramme</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">Tutorials</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/">Ressourcen</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
                                                 <p><a href="/dotnet/api/?view=ml-dotnet">ML.NET-API-Referenz</a></p>
@@ -248,12 +248,12 @@ ms.locfileid: "71736773"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netspark.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netspark-logo-image.svg" alt="Screenshot of the purple .NET for Apache Spark Guide logo." />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/spark/">Leitfaden für .NET für Apache Spark</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials/">Lernprogramme</a></p>
+                                                <p><a href="/dotnet/spark/tutorials/">Tutorials</a></p>
                                                 <p><a href="/dotnet/spark/resources/">Ressourcen</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">API-Referenz zu .NET für Apache Spark</a></p>
                                             </div>
@@ -497,7 +497,7 @@ ms.locfileid: "71736773"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobil</a>
+                        <a href="#mobile">Mobile</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios/">
