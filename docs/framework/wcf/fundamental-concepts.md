@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: eb03a164ce0ff0140c32b3b56bcb502674e5fecd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 9dcaa5f73dd8a4ec1943cb7fc840feee889563b8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990291"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319845"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 
-Dieses Dokument bietet einen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienstanbieter und-Clients finden Sie im [Tutorial zu](../../../docs/framework/wcf/getting-started-tutorial.md)den ersten Schritten. Informationen zur WCF-Programmierung finden Sie unter [grundlegende WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).
+Dieses Dokument bietet einen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienstanbieter und-Clients finden Sie im [Tutorial zu](getting-started-tutorial.md)den ersten Schritten. Informationen zur WCF-Programmierung finden Sie unter [grundlegende WCF-Programmierung](basic-wcf-programming.md).
 
 ## <a name="wcf-fundamentals"></a>Grundlagen von WCF
 
@@ -26,7 +26,7 @@ WCF ist eine Laufzeit und ein Satz von APIs zum Erstellen von Systemen, die Nach
 
 WCF basiert auf dem Konzept der Nachrichten basierten Kommunikation, und alle Elemente, die als Nachricht modelliert werden können (z. b. eine HTTP-Anforderung oder eine Message Queuing (auch bekannt als MSMQ-Nachricht), können im Programmiermodell auf einheitliche Weise dargestellt werden. Dies ermöglicht eine einheitliche API über verschiedene Transportmechanismen hinweg.
 
-Das Modell unterscheidet zwischen _Clients_, bei denen es sich um Anwendungen handelt, von denen die Kommunikation initiiert wird, und von _Diensten_, bei denen es sich um Anwendungen handelt, die auf die Kommunikation zwischen Clients und deren Reaktion warten Eine einzelne Anwendung kann sowohl als Client als auch als Dienst fungieren. Beispiele hierzu finden Sie unter [Duplex Dienste](../../../docs/framework/wcf/feature-details/duplex-services.md) und [Peer-to-Peer-Netzwerke](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).
+Das Modell unterscheidet zwischen _Clients_, bei denen es sich um Anwendungen handelt, von denen die Kommunikation initiiert wird, und von _Diensten_, bei denen es sich um Anwendungen handelt, die auf die Kommunikation zwischen Clients und deren Reaktion warten Eine einzelne Anwendung kann sowohl als Client als auch als Dienst fungieren. Beispiele hierzu finden Sie unter [Duplex Dienste](./feature-details/duplex-services.md) und [Peer-to-Peer-Netzwerke](./feature-details/peer-to-peer-networking.md).
 
 Nachrichten werden zwischen Endpunkten versendet. _Endpunkte_ sind Orte, an denen Nachrichten gesendet oder empfangen werden (oder beides), und Sie definieren alle Informationen, die für den Nachrichtenaustausch benötigt werden. Ein Dienst macht einen oder mehrere Anwendungsendpunkte verfügbar (ebenso wie keinen oder mehrere Infrastrukturendpunkte), und der Client erstellt einen Endpunkt, der mit einem der Endpunkte des Diensts kompatibel ist.
 
@@ -71,7 +71,7 @@ Ein WCF-Dienst wird allgemein als eine Auflistung von Endpunkten verfügbar gema
 **Infrastruktur Endpunkt**  
  Ein Endpunkt, der von der Infrastruktur verfügbar gemacht wird, um Funktionalitäten zu erleichtern, die vom Dienst benötigt oder bereitgestellt werden, der sich nicht auf einen Dienstvertrag bezieht. Ein Dienst könnte z. B. einen Infrastrukturendpunkt aufweisen, der Metadateninformationen bereitstellt.
 
-**Adresse**  
+**Address**  
  Gibt den Speicherort an, an dem Nachrichten empfangen werden. Sie wird als ein Uniform Resource Identifier (URI) angegeben. Der URI-Schemateil benennt den Transportmechanismus, der zum Erreichen der Adresse verwendet wird, z.&#160;B. HTTP und TCP. Der hierarchische Teil des URI enthält einen eindeutigen Ort, dessen Format vom Transportmechanismus abhängt.
 
 Die Endpunktadresse ermöglicht es, für jeden Endpunkt in einem Dienst eindeutige Endpunktadressen zu erstellen oder unter bestimmten Voraussetzungen eine Adresse für mehrere Endpunkte zu verwenden. Im folgenden Beispiel wird veranschaulicht, wie eine Adresse das HTTPS-Protokoll mit einem nicht standardmäßigen Anschluss verwendet:
@@ -81,7 +81,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
 **Bindung**  
- Definiert, wie ein Endpunkt mit der Umgebung kommuniziert. Sie besteht aus einer Reihe von Komponenten namens "Bindungselemente", die als Kommunikationsinfrastruktur aufeinander "gestapelt" werden. Eine Bindung definiert zumindest das Transportprotokoll (z.&#160;B. HTTP oder TCP) und die verwendete Codierung (z.&#160;B. Text oder binär). Eine Bindung kann Bindungselemente enthalten, die Details wie die Sicherheitsmechanismen zum Schützen von Nachrichten oder das von einem Endpunkt verwendete Nachrichtenmuster angeben. Weitere Informationen finden Sie unter [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md).
+ Definiert, wie ein Endpunkt mit der Umgebung kommuniziert. Sie besteht aus einer Reihe von Komponenten namens "Bindungselemente", die als Kommunikationsinfrastruktur aufeinander "gestapelt" werden. Eine Bindung definiert zumindest das Transportprotokoll (z.&#160;B. HTTP oder TCP) und die verwendete Codierung (z.&#160;B. Text oder binär). Eine Bindung kann Bindungselemente enthalten, die Details wie die Sicherheitsmechanismen zum Schützen von Nachrichten oder das von einem Endpunkt verwendete Nachrichtenmuster angeben. Weitere Informationen finden Sie unter [Konfigurieren von Diensten](configuring-services.md).
 
 **Binding-Element**  
  Stellt einen bestimmten Teil der Bindung dar, z. B. einen Transport, eine Codierung, eine Implementierung eines Protokolls auf Infrastrukturebene (z. B. WS-ReliableMessaging) oder eine andere Komponente des Kommunikationsstapels.
@@ -90,7 +90,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Eine Komponente, die verschiedene Laufzeitaspekte eines Diensts, eines Endpunkts, eines bestimmten Vorgangs oder eines Clients steuert. Verhalten werden gemäß ihrem Umfang gruppiert: allgemeine Verhalten, die alle Endpunkte global beeinflussen, Dienstverhalten, die nur dienstbezogene Aspekte beeinflussen, Endpunktverhalten, die nur endpunktbezogene Eigenschaften beeinflussen, und Verhalten auf Vorgangsebene, die bestimmte Vorgänge beeinflussen. Eines der Dienstverhalten ist beispielsweise die Drosselung, die festlegt, wie ein Dienst reagiert, wenn zu viele Nachrichten seine Abwicklungskapazitäten zu überlasten drohen. Ein Endpunktverhalten steuert wiederum nur Aspekte, die für Endpunkte relevant sind, u. a. wie und wo eine Sicherheitsanmeldeinformation zu finden ist.
 
 **Vom System bereitgestellte Bindungen**  
- WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. Beispielsweise ist für <xref:System.ServiceModel.WSHttpBinding> die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-\* Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.
+ WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. Beispielsweise ist die <xref:System.ServiceModel.WSHttpBinding> für die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-\*-Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.
 
 **Konfiguration und Codierung**  
  Eine Anwendung kann entweder über die Codierung, über die Konfiguration oder über eine Kombination aus beidem gesteuert werden. Die Konfiguration bietet den Vorteil, dass auch andere Personen als der Entwickler (z.&#160;B. ein Netzwerkadministrator) die Client- und die Dienstparameter festlegen können, nachdem der Code geschrieben wurde, ohne dass eine neue Kompilierung erforderlich wäre. Die Konfiguration ermöglicht nicht nur das Festlegen von Werten wie Endpunktadressen, sondern auch eine weitere Steuerung durch die Möglichkeit, Endpunkte, Bindungen und Verhalten hinzuzufügen. Die Codierung ermöglicht es dem Entwickler, die genaue Kontrolle über alle Komponenten des Diensts oder Clients zu behalten, und alle Einstellungen, die über die Konfiguration gemacht werden, können überprüft und bei Bedarf vom Code aufgehoben werden.
@@ -128,29 +128,29 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Client Anwendung**  
  Ein Programm, das Nachrichten mit einem oder mehreren Endpunkten austauscht. Die Clientanwendung beginnt mit der Erstellung einer Instanz eines WCF-Clients und dem Aufrufen von Methoden des WCF-Clients. Es sollte beachtet werden, dass eine einzelne Anwendung sowohl ein Client als auch ein Dienst sein kann.
 
-**Channel**  
+**Kanal**  
  Ein konkrete Implementierung eines Bindungselements. Die Bindung stellt die Konfiguration dar, und der Kanal ist die Implementierung, die mit dieser Konfiguration verknüpft ist. Deshalb ist jedem Bindungselement ein Kanal zugeordnet. Kanäle werden übereinander gestapelt, um die konkrete Implementierung der Bindung zu erstellen: den Kanalstapel.
 
 **WCF-Client**  
  Ein Client Anwendungs Konstrukt, das die Dienst Vorgänge als Methoden verfügbar macht (in der .NET Framework Programmiersprache Ihrer Wahl, z. b. Visual Basic C#oder Visual). Jede Anwendung kann einen WCF-Client hosten, einschließlich einer Anwendung, die einen Dienst hostet. Deshalb ist es möglich, einen Dienst zu erstellen, der WCF-Clients anderer Dienste einschließt.
 
-Ein WCF-Client kann automatisch mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert und auf einen laufenden Dienst verwiesen werden, der Metadaten veröffentlicht.
+Ein WCF-Client kann automatisch mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) generiert und auf einen laufenden Dienst verwiesen werden, der Metadaten veröffentlicht.
 
 **Metadaten**  
- In einem Dienst werden von Metadaten die Merkmale des Diensts beschrieben, die eine externe Entität zur Kommunikation mit dem Dienst verstehen muss. Metadaten können vom [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) genutzt werden, um einen WCF-Client und eine begleitende Konfiguration zu generieren, die eine Client Anwendung für die Interaktion mit dem Dienst verwenden kann.
+ In einem Dienst werden von Metadaten die Merkmale des Diensts beschrieben, die eine externe Entität zur Kommunikation mit dem Dienst verstehen muss. Metadaten können vom [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) genutzt werden, um einen WCF-Client und eine begleitende Konfiguration zu generieren, die eine Client Anwendung für die Interaktion mit dem Dienst verwenden kann.
 
 Zu den vom Dienst verfügbar gemachten Metadaten gehören XML-Schemadokumente, die den Datenvertrag des Diensts definieren, und WSDL-Dokumente, die die Methoden des Diensts beschreiben.
 
 Bei Aktivierung werden die Metadaten für den Dienst automatisch von WCF erstellt, indem der Dienst und seine Endpunkte überprüft werden. Zum Veröffentlichen von Metadaten von einem Dienst aus müssen Sie das Metadatenverhalten explizit aktivieren.
 
 **Sicherheit**  
- In WCF enthält Vertraulichkeit (Verschlüsselung von Nachrichten zum Verhindern von lausch Angriffen), Integrität (die Mittel für die Erkennung von Manipulationen bei der Nachricht), Authentifizierung (die Methode zur Validierung von Servern und Clients) und Autorisierung (Kontrolle des Zugriffs auf Ressourcen). Diese Funktionen werden entweder durch die Nutzung vorhandener Sicherheitsmechanismen (z. b. TLS über HTTP (auch als HTTPS bezeichnet) oder durch Implementieren einer oder mehrerer der verschiedenen WS\* -Sicherheitsspezifikationen bereitgestellt.
+ In WCF enthält Vertraulichkeit (Verschlüsselung von Nachrichten zum Verhindern von lausch Angriffen), Integrität (die Mittel für die Erkennung von Manipulationen bei der Nachricht), Authentifizierung (die Methode zur Validierung von Servern und Clients) und Autorisierung (Kontrolle des Zugriffs auf Ressourcen). Diese Funktionen werden entweder durch die Nutzung vorhandener Sicherheitsmechanismen (z. b. TLS über HTTP (auch als HTTPS bezeichnet) oder durch Implementieren einer oder mehrerer der verschiedenen WS-\*-Sicherheitsspezifikationen bereitgestellt.
 
 **Transport Sicherheitsmodus**  
  Legt fest, dass Vertraulichkeit, Integrität und Authentifizierung über die Transportschichtmechanismen (wie HTTPS) gewährleistet werden. Bei Nutzung eines Transports wie HTTPS hat dieser Modus den Vorteil, dass er effizient und aufgrund seiner weiten Verbreitung im Internet gut verständlich ist. Der Nachteil ist, dass diese Art von Sicherheit auf jeden Hop im Kommunikationspfad einzeln angewendet wird, was die Kommunikation anfällig für einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) macht.
 
 **Nachrichten Sicherheitsmodus**  
- Gibt an, dass die Sicherheit bereitgestellt wird, indem eine oder mehrere Sicherheitsspezifikationen implementiert werden, z [. b. die Spezifikation mit dem Namen Webdienstesicherheit: SOAP-Nachrichten](https://go.microsoft.com/fwlink/?LinkId=94684)Sicherheit. Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht werden, ist es auch möglich, mehrere Arten von Anmelde Informationen mit der Nachricht aufzunehmen (diese werden als _Ansprüche_bezeichnet). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.
+ Gibt an, dass die Sicherheit bereitgestellt wird, indem eine oder mehrere Sicherheitsspezifikationen implementiert werden, z. b. die Spezifikation mit dem Namen [Webdienstesicherheit: SOAP-Nachrichten Sicherheit](https://go.microsoft.com/fwlink/?LinkId=94684). Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht werden, ist es auch möglich, mehrere Arten von Anmelde Informationen mit der Nachricht aufzunehmen (diese werden als _Ansprüche_bezeichnet). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.
 
 **Transport mit Nachrichten Anmelde Informationen-Sicherheitsmodus**  
  Gibt die Verwendung der Transportschicht an, um Vertraulichkeit, Authentifizierung und Integrität der Nachrichten sicherzustellen, während jede der Nachrichten mehrere Anmeldeinformationen (Ansprüche) enthalten kann, die von den Empfängern der Nachricht benötigt werden.
@@ -160,5 +160,5 @@ Bei Aktivierung werden die Metadaten für den Dienst automatisch von WCF erstell
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
-- [Windows Communication Foundation-Architektur](../../../docs/framework/wcf/architecture.md)
+- [Was ist die Windows Communication Foundation?](whats-wcf.md)
+- [Windows Communication Foundation-Architektur](architecture.md)

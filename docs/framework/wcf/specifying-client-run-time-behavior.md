@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645184"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321409"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Angeben des Clientlaufzeitverhaltens
-Windows Communication Foundation (WCF)-Clients, wie Windows Communication Foundation (WCF)-Dienste können konfiguriert werden, um das Laufzeitverhalten die Clientanwendung entsprechend zu ändern. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Windows Communication Foundation (WCF)-Clients, wie Windows Communication Foundation (WCF)-Dienste, können so konfiguriert werden, dass das Laufzeitverhalten an die Client Anwendung angepasst wird. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [angeben des Dienst Lauf Zeit Verhaltens](specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Verwenden des CallbackBehaviorAttribute  
  Sie können das Ausführungsverhalten einer Rückrufvertragsimplementierung in einer Clientanwendung mit der <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse konfigurieren oder erweitern. Dieses Attribut führt eine ähnliche Funktion für die Rückrufklasse wie die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Klasse aus, das Instanziieren von Verhaltens- und Transaktionseinstellungen ausgenommen.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF)-Clients, wie Windows Communication Founda
   
 - Führen Sie diesen Vorgang nur in gesteuerten Debugszenarien aus.  
   
- Im folgenden Codebeispiel wird ein Client-Konfigurationsdatei WCF weist an, die Informationen zu verwalteten Ausnahmen von einem Client-Rückrufobjekt in SOAP-Nachrichten zurück, die veranschaulicht.  
+ Im folgenden Codebeispiel wird eine Client Konfigurationsdatei gezeigt, die WCF anweist, verwaltete Ausnahme Informationen von einem Client Rückruf Objekt in SOAP-Nachrichten zurückzugeben.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
@@ -45,4 +45,4 @@ Windows Communication Foundation (WCF)-Clients, wie Windows Communication Founda
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Angeben des Dienstlaufzeitverhaltens](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Angeben des Dienstlaufzeitverhaltens](specifying-service-run-time-behavior.md)

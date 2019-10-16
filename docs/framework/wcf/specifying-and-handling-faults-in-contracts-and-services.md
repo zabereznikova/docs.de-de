@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: de12097f018e17b11a2beac663e0b0c51c7a2a17
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bbc1ca97c8887ebdfbe30f7dd76549572367efbe
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038390"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321113"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Angeben und Behandeln von Fehlern in Verträgen und Diensten
 
@@ -37,22 +37,22 @@ Außerdem können WCF-Clients und-Dienste nicht deklarierte SOAP-Fehler zu Debug
 
 Der erste Schritt bei der Definition eines Verfahrens zur Behandlung von Fehlerbedingungen besteht darin zu entscheiden, unter welchen Bedingungen eine Clientanwendung über Fehler informiert werden sollte. Die Fehlerbedingungen mancher Vorgänge werden von ihrer Funktionalität bestimmt. Ein `PurchaseOrder`-Vorgang könnte z.&#160;B. bestimmte Informationen an Kunden zurückgeben, denen es nicht mehr erlaubt ist, eine Bestellung zu tätigen. In anderen Fällen, etwa einem `Calculator`-Dienst, könnte ein allgemeinerer `MathFault`-SOAP-Fehler ausreichen, um alle Fehlerbedingungen für den gesamten Dienst zu beschreiben. Nachdem die Fehlerbedingungen der Clients Ihres Diensts identifiziert wurden, kann ein benutzerdefinierter SOAP-Fehler erstellt und der Vorgang dafür gekennzeichnet werden, dass er den SOAP-Fehler zurückgibt, wenn die entsprechende Fehlerbedingung eintritt.
 
-Weitere Informationen zu diesem Schritt bei der Entwicklung von Dienst oder Client finden Sie unter [definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md).
+Weitere Informationen zu diesem Schritt bei der Entwicklung von Dienst oder Client finden Sie unter [definieren und Angeben von Fehlern](defining-and-specifying-faults.md).
 
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Clients und Dienste behandeln SOAP-Fehler als Ausnahmen
 
 Der erste Schritt bei der erfolgreichen Fehlerbehandlung in WCF-Anwendungen ist die Identifizierung von Vorgangs Fehlerbedingungen, das Definieren benutzerdefinierter SOAP-Fehler und das Markieren dieser Vorgänge als Rückgabe dieser Fehler. Der nächste Schritt besteht darin, das Senden und Empfangen dieser Fehler korrekt zu implementieren. In der Regel werden Fehler von Diensten gesendet, um ihre Clientanwendungen über Fehlerbedingungen zu informieren. Duplexclients können jedoch selbst auch SOAP-Fehler an Dienste senden.
 
-Weitere Informationen finden Sie unter [senden und empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md).
+Weitere Informationen finden Sie unter [senden und empfangen von Fehlern](sending-and-receiving-faults.md).
 
 ## <a name="undeclared-soap-faults-and-debugging"></a>Undeklarierte SOAP-Fehler und Debuggen
 
-Deklarierte SOAP-Fehler sind äußerst nützlich zur Erstellung interoperabler, verteilter Anwendungen. In manchen Fällen ist es jedoch für einen Dienst (oder einen Duplexclient) nützlich, einen undeklarierten SOAP-Fehler zu senden, also einen, der in der Web Services Description Language (WSDL) für diesen Vorgang nicht erwähnt ist. Bei der Entwicklung eines Diensts können beispielsweise unerwartete Situationen eintreten, in denen es für Debuggingzwecke sinnvoll sein kann, Information an den Client zurückzusenden. Darüber hinaus können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaft oder die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaft auf `true` festlegen, um WCF-Clients das Abrufen von Informationen über interne Dienst Vorgangs Ausnahmen zu gestatten. Das Senden einzelner Fehler und das Festlegen der Eigenschaften des Debugverhaltens werden unter [senden und empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md)beschrieben.
+Deklarierte SOAP-Fehler sind äußerst nützlich zur Erstellung interoperabler, verteilter Anwendungen. In manchen Fällen ist es jedoch für einen Dienst (oder einen Duplexclient) nützlich, einen undeklarierten SOAP-Fehler zu senden, also einen, der in der Web Services Description Language (WSDL) für diesen Vorgang nicht erwähnt ist. Bei der Entwicklung eines Diensts können beispielsweise unerwartete Situationen eintreten, in denen es für Debuggingzwecke sinnvoll sein kann, Information an den Client zurückzusenden. Außerdem können Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft oder die Eigenschaft <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` festlegen, um WCF-Clients das Abrufen von Informationen über interne Dienst Vorgangs Ausnahmen zu gestatten. Das Senden einzelner Fehler und das Festlegen der Eigenschaften des Debugverhaltens werden unter [senden und empfangen von Fehlern](sending-and-receiving-faults.md)beschrieben.
 
 > [!IMPORTANT]
-> Da von verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> können <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> , `true` kann das Festlegen von oder auf es WCF-Clients ermöglichen, Informationen zu internen Dienst Vorgangs Ausnahmen, einschließlich persönlich, abzurufen. identifizierbare oder andere vertrauliche Informationen.
+> Da von verwalteten Ausnahmen interne Anwendungsinformationen verfügbar gemacht werden können, kann das Festlegen von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` ermöglichen, dass WCF-Clients Informationen zu internen Dienst Vorgangs Ausnahmen, einschließlich persönlich identifizierbarer oder anderer sensibler, abrufen können. Informationen.
 >
-> Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.ServiceModel.ExceptionDetail>. Clients müssen die Möglichkeit eines unbekannten SOAP-Fehlers erwarten (zurückgegeben an WCF- <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> Clients als Objekte), um die Debuginformationen ordnungsgemäß abzurufen.
+> Daher wird die Festlegung von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> auf `true` nur für das vorübergehende Debuggen einer Dienstanwendung empfohlen. Außerdem beinhaltet die WSDL für eine Methode, die nicht behandelte verwaltete Ausnahmen auf diese Weise zurückgibt, keinen Vertrag für die <xref:System.ServiceModel.FaultException%601> vom Typ <xref:System.ServiceModel.ExceptionDetail>. Clients müssen die Möglichkeit eines unbekannten SOAP-Fehlers erwarten (zurückgegeben an WCF-Clients als <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte), um die Debuginformationen ordnungsgemäß abzurufen.
 
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>Anpassen der Fehlerbehandlung mit IErrorHandler
 
@@ -76,4 +76,4 @@ Beim Deserialisieren eines Fehlervertrags versucht WCF zunächst, den Namen des 
 - <xref:System.ServiceModel.FaultException.Reason%2A>
 - <xref:System.ServiceModel.FaultCode.SubCode%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
-- [Definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [Definieren und Angeben von Fehlern](defining-and-specifying-faults.md)

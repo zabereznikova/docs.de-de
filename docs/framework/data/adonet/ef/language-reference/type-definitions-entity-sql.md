@@ -2,12 +2,12 @@
 title: Typdefinitionen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248951"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319247"
 ---
 # <a name="type-definitions-entity-sql"></a>Typdefinitionen (Entity SQL)
 Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Inlinefunktion verwendet.  
@@ -23,7 +23,7 @@ Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../..
   
 - Das `COLLECTION`-Schlüsselwort, das von einer anderen Typdefinition in Klammern gefolgt wird (z. B. "Collection(AdventureWorks.Order)").  
   
-- Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschafts Definitionen haben ein Format wie z`identifier type_definition`. `identifier type_definition`b. ",,...".  
+- Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschafts Definitionen haben ein Format wie z. b. "`identifier type_definition`, `identifier type_definition`,...".  
   
 - Das vom Typ des Bezeichners in Klammern (z. B. "Ref(AdventureWorks.Order)") gefolgte REF-Schlüsselwort. Der REF-Typdefinitionsoperator erfordert einen Entitätstyp als Argument. Sie können keinen primitiven Typ als Argument angeben.  
   
@@ -31,7 +31,7 @@ Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../..
   
  Die Typdefinitionsoptionen lauten folgendermaßen:  
   
-- `IdentifierName supported_type`, oder  
+- `IdentifierName supported_type` oder  
   
 - `IdentifierName` COLLECTION(`type_definition`) oder  
   
@@ -48,7 +48,7 @@ Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../..
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache Typdefinition dargestellt.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 EDM.Decimal) AS (  
    Round(p1)  
@@ -58,7 +58,7 @@ MyRound(CAST(1.7 as EDM.Decimal))
   
  Dies ist ein Beispiel für eine COLLECTION-Typdefinition.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Collection(EDM.Decimal)) AS (  
    Select Round(p1) from p1  
@@ -68,7 +68,7 @@ MyRound({CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Decimal)})
   
  Dies ist ein Beispiel für eine ROW-Typdefinition.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function MyRound(p1 Row(x EDM.Decimal)) AS (  
    Round(p1.x)  
@@ -78,7 +78,7 @@ select MyRound(row(a as x)) from {CAST(1.7 as EDM.Decimal), CAST(2.7 as EDM.Deci
   
  Dies ist ein Beispiel für eine REF-Typdefinition.  
   
-```  
+```sql  
 USING Microsoft.Samples.Entity  
 Function UnReference(p1 Ref(AdventureWorks.Order)) AS (  
    Deref(p1)  

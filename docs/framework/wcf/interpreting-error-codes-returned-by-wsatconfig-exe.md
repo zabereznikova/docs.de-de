@@ -2,12 +2,12 @@
 title: Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959843"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321037"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe) generierten Fehlercodes und die empfohlenen Maßnahmen aufgelistet.  
@@ -35,16 +35,16 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |17|Die Konfiguration von http.sys ist fehlgeschlagen. Die Bindung des SSL-Zertifikats an den vorherigen Anschluss kann nicht aufgehoben werden.|Verwenden Sie den zurückgegebenen Fehlercode in der Fehlermeldung zum Zuweisen des entsprechenden Systemfehlers. Falls notwendig können Sie httpcfg.exe oder netsh.exe verwenden, um die falschen Anschlussreservierungen zu entfernen.|  
 |18|Die Konfiguration von http.sys ist fehlgeschlagen. Das angegebene Zertifikat kann nicht an den Anschluss gebunden werden, da eine vorherige SSL-Bindung bereits vorhanden ist.|Eine andere Anwendung ist bereits im Besitz des bestimmten Anschlusses. Ändern Sie den Anschluss, deinstallieren Sie die aktuelle Anwendung, oder konfigurieren Sie sie neu.|  
 |19|Das Neustarten von MSDTC ist fehlgeschlagen.|Starten Sie MSDTC manuell neu, falls notwendig. Wenden Sie sich an Microsoft, wenn das Problem weiterhin auftritt.|  
-|20|"WinFX" ist auf dem Remotecomputer nicht installiert oder nicht ordnungsgemäß installiert ist.|Installieren Sie WinFX wird auf dem Computer.|  
+|20|WinFX ist nicht auf dem Remote Computer installiert oder nicht ordnungsgemäß installiert.|Installieren Sie WinFX auf dem Computer.|  
 |21|Die Remotekonfiguration ist aufgrund eines Vorgangstimeouts fehlgeschlagen.|Der Aufruf zur Konfiguration von WS-AT auf dem Remotecomputer sollte nicht länger als 90 Sekunden dauern.|  
-|22|"WinFX" ist auf dem Remotecomputer nicht installiert oder nicht ordnungsgemäß installiert ist.|Installieren Sie WinFX wird auf dem Computer.|  
+|22|WinFX ist nicht auf dem Remote Computer installiert oder nicht ordnungsgemäß installiert.|Installieren Sie WinFX auf dem Computer.|  
 |23|Die Remotekonfiguration ist aufgrund einer Ausnahme auf dem Remotecomputer fehlgeschlagen.|Überprüfen Sie die Fehlermeldung auf Elemente, die Aktionen erfordern.|  
 |26|Ein ungültiges Argument wurde an WsatConfig.exe übergeben.|Überprüfen Sie die Befehlszeile auf Fehler.|  
 |27|Die `-accounts`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `accounts`-Befehlszeilenoption, um ein Benutzerkonto ordnungsgemäß anzugeben.|  
 |28|Die `-network`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-network`-Befehlszeilenoption, um "enable" oder "disable" ordnungsgemäß anzugeben.|  
 |29|Die `-maxTimeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-maxTimeout`-Befehlszeilenoption wie angegeben.|  
 |30|Die `-timeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-timeout`-Befehlszeilenoption wie angegeben.|  
-|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Deaktiviert<br />-Fehler<br />- Kritisch<br />-Warnung<br />– Informationen<br />-Verbose<br />– Alle|  
+|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Aus<br />-Fehler<br />- Kritisch<br />-Warnung<br />-Informationen<br />-Verbose<br />-Alle|  
 |32|Die `-traceActivity`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceActivity`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |33|Die `-traceProp`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceProp`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |34|Die `-tracePII`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-tracePII`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
@@ -52,10 +52,10 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |38|Der Prozess oder der Benutzer hat keine ausreichenden Berechtigungen, die Firewallkonfiguration zu ändern.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
 |39|In WsatConfig.exe ist ein Fehler während der Aktualisierung der Firewallkonfiguration aufgetreten.|Überprüfen Sie die Fehlermeldung auf Elemente, die Aktionen erfordern.|  
 |40|WsatConfig.exe kann MSDTC keinen Lesezugriff auf die Privatschlüsseldatei des Zertifikats bieten.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
-|41|Keine Installation von WinFX wurde gefunden, oder die Version finden, was das Tool konfiguriert werden nicht übereinstimmt.|Stellen Sie sicher, dass WinFX ordnungsgemäß installiert ist und nur das WsatConfig.exe-Tool, das im Lieferumfang dieser Version von WinFX WS-AT konfigurieren.|  
+|41|Entweder konnte keine WinFX-Installation gefunden werden, oder die gefundene Version entspricht nicht den Anforderungen, die das Tool konfigurieren kann.|Stellen Sie sicher, dass WinFX ordnungsgemäß installiert ist, und verwenden Sie nur das Tool wsatConfig. exe, das in dieser Version von WinFX zur Konfiguration von WS-AT geliefert wurde.|  
 |42|Ein Argument wurde mehr als einmal in der Befehlszeile angegeben.|Geben Sie jedes Argument nur einmal an, wenn Sie WsatConfig.exe ausführen.|  
 |43|WsatConfig.exe kann keine WS-AT-Einstellungen aktualisieren, wenn WS-AT nicht aktiviert ist.|Geben Sie `-network:enable` als zusätzliches Befehlszeilenargument an.|  
-|44|Ein erforderlicher Hotfix fehlt, und WS-AT kann erst konfiguriert werden, wenn der Hotfix installiert ist.|Sehen Sie die Versionshinweise für den Anweisungen zum Installieren von erforderlichen Hotfix "WinFX".|  
+|44|Ein erforderlicher Hotfix fehlt, und WS-AT kann erst konfiguriert werden, wenn der Hotfix installiert ist.|Anweisungen zum Installieren des erforderlichen Hotfixes finden Sie in den Anmerkungen zu dieser Version von WinFX.|  
 |45|Die `-virtualServer`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-virtualServer`-Befehlszeilenoption durch Angabe des Netzwerknamens der Clusterressource, in der die Konfiguration vorgenommen werden soll.|  
 |46|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Verwenden Sie den zurückgegebenen Fehlercode zum Zuweisen des entsprechenden Systemfehlers.|  
 |47|Der Prozess oder der Benutzer hat keine ausreichenden Berechtigungen zum Aktivieren der ETW-Ablaufverfolgungssitzung.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
@@ -69,4 +69,4 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

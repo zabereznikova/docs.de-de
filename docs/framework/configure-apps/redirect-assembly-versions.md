@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971559"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319736"
 ---
 # <a name="redirecting-assembly-versions"></a>Umleiten von Assemblyversionen
 
@@ -65,11 +65,11 @@ Wenn ein anderes Projekt in Ihrer App auf die Version 1.0.0.0 der gleichen Assem
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ältere Versionen der .NET Framework abzielt. Sie können dieses Standardverhalten überschreiben, indem Sie in der app. config-Datei für jede Assembly Informationen zur Bindungs Umleitung angeben oder indem Sie die Funktion für die Bindungs Umleitung ausschalten. Informationen dazu, wie Sie diese Funktion aktivieren oder deaktivieren, finden [Sie unter Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](how-to-enable-and-disable-automatic-binding-redirection.md).
+Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ältere Versionen der .NET Framework abzielt. Sie können dieses Standardverhalten überschreiben, indem Sie in der app. config-Datei für jede Assembly Informationen zur Bindungs Umleitung angeben oder indem Sie die Funktion für die Bindungs Umleitung ausschalten. Informationen dazu, wie Sie diese Funktion aktivieren oder deaktivieren, finden Sie unter Gewusst [wie: Aktivieren und Deaktivieren der automatischen Bindungs Umleitung](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Umgehen der Herausgeberrichtlinie
- Falls erforderlich, können Sie Herausgeberrichtlinien in der App-Konfigurationsdatei überschreiben. So können zum Beispiel neue Versionen von Assemblys, die als abwärts kompatibel gelten, eine Anwendung trotzdem lahmlegen. Wenn Sie die Herausgeber Richtlinie umgehen möchten, fügen Sie dem [ \<Element dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) in der APP-Konfigurationsdatei ein [ \<publisherPolicy->](./file-schema/runtime/publisherpolicy-element.md) Element hinzu, und legen Sie das Attribut **Apply** auf **No**fest. überschreibt alle vorherigen **Yes** -Einstellungen.
+ Falls erforderlich, können Sie Herausgeberrichtlinien in der App-Konfigurationsdatei überschreiben. So können zum Beispiel neue Versionen von Assemblys, die als abwärts kompatibel gelten, eine Anwendung trotzdem lahmlegen. Wenn Sie die Herausgeber Richtlinie umgehen möchten, fügen Sie dem [\<dependentassembly->](./file-schema/runtime/dependentassembly-element.md) Element in der APP-Konfigurationsdatei das [>-Element \<publisherpolicy](./file-schema/runtime/publisherpolicy-element.md) hinzu, und legen Sie das Attribut **Apply** auf **No**fest, das alle vorherige **Ja** -Einstellungen.
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Angeben der Assemblybindung in Konfigurationsdateien
- Beim Festlegen von Bindungsumleitungen verwenden Sie in sämtlichen Dateien – in der App-Konfigurationsdatei, der Computer-Konfigurationsdatei oder der Herausgeberrichtliniendatei - das gleiche XML-Format. Verwenden Sie das [ \<bindingRedirect->](./file-schema/runtime/bindingredirect-element.md) -Element, um eine Assemblyversion zu einer anderen umzuleiten. Mit dem **oldVersion** -Attribut kann sowohl eine einzelne Assemblyversion als auch ein Bereich von Versionen angegeben werden. Mit dem `newVersion` -Attribut sollte nur eine einzige Version angegeben werden.  Beispielsweise wird durch `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` angegeben, dass die Common Language Runtime die Version 2.0.0.0 statt der Assemblyversionen zwischen 1.1.0.0 und 1.2.0.0 verwenden soll.
+ Beim Festlegen von Bindungsumleitungen verwenden Sie in sämtlichen Dateien – in der App-Konfigurationsdatei, der Computer-Konfigurationsdatei oder der Herausgeberrichtliniendatei - das gleiche XML-Format. Um eine Assemblyversion zu einer anderen umzuleiten, verwenden Sie das [>-Element \<bindingredirect](./file-schema/runtime/bindingredirect-element.md) . Mit dem **oldVersion** -Attribut kann sowohl eine einzelne Assemblyversion als auch ein Bereich von Versionen angegeben werden. Mit dem `newVersion` -Attribut sollte nur eine einzige Version angegeben werden.  Beispielsweise wird durch `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` angegeben, dass die Common Language Runtime die Version 2.0.0.0 statt der Assemblyversionen zwischen 1.1.0.0 und 1.2.0.0 verwenden soll.
 
  Im folgenden Codebeispiel werden die unterschiedlichsten Szenarien von Bindungsumleitungen gezeigt. In diesem Beispiel wird für `myAssembly`eine Umleitung für einen Bereich von Versionen und für `mySecondAssembly`eine einzelne Bindungsumleitung angegeben. Außerdem wird festgelegt, dass die Herausgeberrichtliniendatei nicht die Bindungsumleitungen für `myThirdAssembly`überschreiben soll.
 
- Zum Binden einer Assembly müssen Sie die Zeichenfolge "urn: Schemas-Microsoft-com: ASM. v1" mit dem **xmlns** -Attribut im [ \<assemblyBinding->](./file-schema/runtime/assemblybinding-element-for-runtime.md) Tag angeben.
+ Zum Binden einer Assembly müssen Sie die Zeichenfolge "urn: Schemas-Microsoft-com: ASM. v1" mit dem **xmlns** -Attribut im [\<assemblybinding->](./file-schema/runtime/assemblybinding-element-for-runtime.md) Tag angeben.
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Einschränken von Assemblybindungen auf eine bestimmte Version
- Mithilfe des **appliesTo** -Attributs für das [ \<assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) -Element > in einer APP-Konfigurationsdatei können Sie Assemblybindungsverweise zu einer bestimmten Version des .NET Framework umleiten. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md)-Element für alle Versionen von .NET Framework.
+ Sie können das **appliesTo** -Attribut für das [\<assemblybinding->](./file-schema/runtime/assemblybinding-element-for-runtime.md) Element in einer APP-Konfigurationsdatei verwenden, um Assemblybindungsverweise zu einer bestimmten Version der .NET Framework umzuleiten. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md)-Element für alle Versionen von .NET Framework.
 
  Um zum Beispiel die Assemblybindung einer .NET Framework 3.5-Assembly umzuleiten, müssten Sie den folgenden XML-Code in die App-Konfigurationsdatei einfügen:
 
@@ -154,8 +154,8 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<bindingRedirect-> Element](./file-schema/runtime/bindingredirect-element.md)
+- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [\<bindingredirect-> Element](./file-schema/runtime/bindingredirect-element.md)
 - [Sicherheitsberechtigung für die Umleitung der Assemblybindung](assembly-binding-redirection-security-permission.md)
 - [Assemblys in .NET](../../standard/assembly/index.md)
 - [Programmieren mit Assemblys](../../standard/assembly/program.md)
@@ -163,4 +163,4 @@ Sie können die automatische Bindungs Umleitung aktivieren, wenn Ihre APP auf ä
 - [Konfigurieren von Apps](index.md)
 - [Schema für Laufzeiteinstellungen](./file-schema/runtime/index.md)
 - [Konfigurationsdateischema](./file-schema/index.md)
-- [Vorgehensweise: Erstellen einer Herausgeber Richtlinie](how-to-create-a-publisher-policy.md)
+- [Gewusst wie: Erstellen einer Herausgeberrichtlinie](how-to-create-a-publisher-policy.md)

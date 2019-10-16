@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 8123a504e83164f2ae842755da8ff4d8850141d2
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046030"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320704"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor-Tool (SvcConfigEditor.exe)
 
@@ -61,20 +61,20 @@ Die Service Configuration Editor-Benutzeroberfläche ist in die folgenden Bereic
 
 ### <a name="opening-a-configuration-file"></a>Öffnen einer Konfigurationsdatei
 
-1. Starten Sie den Dienstkonfigurations-Editor mithilfe eines Befehls Fensters, um zum WCF-Installationsverzeichnis zu navigieren `SvcConfigEditor.exe`, und geben Sie dann ein.
+1. Starten Sie den Dienstkonfigurations-Editor, indem Sie in einem Befehlsfenster zum WCF-Installations Speicherort navigieren, und geben Sie dann `SvcConfigEditor.exe` ein.
 
 2. Wählen Sie im Menü **Datei** die Option **Öffnen** aus, und klicken Sie auf den Dateityp, den Sie verwalten möchten.
 
 3. Navigieren Sie im Dialogfeld **Öffnen** zu der Datei, die Sie verwalten möchten, und doppelklicken Sie darauf.
 
-Der Viewer folgt dem Pfad für den Konfigurationsmerge automatisch und erstellt eine Ansicht der zusammengeführten Konfiguration. So ist zum Beispiel die tatsächliche Konfiguration eines nicht gehosteten Diensts eine Kombination von Machine.config und App.config. Änderungen werden für die aktive Datei in SvcConfigEditor übernommen. Wenn Sie eine bestimmte Datei im Pfad für den Konfigurationsmerge bearbeiten möchten, öffnen Sie diese Datei direkt.
+Der Viewer folgt dem Pfad für den Konfigurationsmerge automatisch und erstellt eine Ansicht der zusammengeführten Konfiguration. Die tatsächliche Konfiguration eines nicht gehosteten Dienstanbieter ist beispielsweise eine Kombination aus "Machine. config" und "App. config". Alle Änderungen werden auf die aktive Datei im SvcConfigEditor angewendet. Wenn Sie eine bestimmte Datei im Pfad für den Konfigurationsmerge bearbeiten möchten, öffnen Sie diese Datei direkt.
 
 > [!NOTE]
 > Configuration Editor lädt die gerade geöffnete Konfigurationsdatei erneut, wenn sie außerhalb des Editors geändert wurde. Wenn dies geschieht, gehen alle Änderungen verloren, die nicht dauerhaft im Editor gespeichert wurden. Wenn das erneute Laden häufig auftritt, liegt dies meist an einem Dienst, der kontinuierlich auf die Konfigurationsdatei zugreift, z. B. eine im Hintergrund ausgeführte Antivirensoftware. Um dies zu beheben, müssen Sie sicherstellen, dass Configuration Editor der einzige Prozess ist, der auf die Datei zugreifen kann, wenn sie geöffnet ist.
 
 ### <a name="services"></a>Dienste
 
-Der Knoten **Dienste** zeigt alle Dienste an, die zurzeit in der Konfigurationsdatei zugewiesen sind. Jeder unter Knoten in der Struktur entspricht einem Unterelement des <`services`>-Elements in der Konfigurationsdatei.
+Der Knoten **Dienste** zeigt alle Dienste an, die zurzeit in der Konfigurationsdatei zugewiesen sind. Jeder unter Knoten in der Struktur entspricht einem Unterelement des < `services` >-Elements in der Konfigurationsdatei.
 
 Wenn Sie auf den Knoten **Dienste** klicken, können Sie auf der Seite Dienst Zusammenfassung im **Detail** Bereich Aufgaben anzeigen oder ausführen.
 
@@ -82,7 +82,7 @@ Wenn Sie auf den Knoten **Dienste** klicken, können Sie auf der Seite Dienst Zu
 
 Sie können eine neue Dienstkonfiguration auf folgende Weise erstellen:
 
-- Verwenden eines Assistenten: Klicken Sie auf den Link **neuen Dienst erstellen...** im Aufgabenbereich oder auf der Zusammenfassungs Seite, um den Assistenten zu starten. Sie können dies auch im Menü **Datei** > **Neues Element hinzufügen**.
+- Mithilfe eines Assistenten: Klicken Sie auf den Link **neuen Dienst erstellen...** im Aufgabenbereich oder auf der Zusammenfassungs Seite, um den Assistenten zu starten. Sie können dies auch im Menü **Datei** > **Neues Element hinzufügen**.
 
 - Manuell erstellen: Sie können mit der rechten Maustaste auf den Knoten **Dienste** klicken und **neuer Dienst**auswählen.
 
@@ -92,7 +92,7 @@ Sie können eine neue Dienstendpunkt-Konfiguration auf folgende Weise erstellen:
 
 - Erstellen mithilfe eines Assistenten: Klicken Sie auf den Link **neuen Dienst Endpunkt erstellen...** im Aufgabenbereich oder auf der Zusammenfassungs Seite, um den Assistenten zu starten. Sie können dies auch im Menü **Datei** > **Neues Element hinzufügen**.
 
-- Manuell erstellen: Nachdem Sie einen Dienst erstellt haben, können Sie mit der rechten Maustaste auf den Knoten **Endpunkte** klicken und "**neuer Dienst Endpunkt**" auswählen.
+- Manuelles Erstellen: Nachdem Sie einen Dienst erstellt haben, können Sie mit der rechten Maustaste auf den Knoten **Endpunkte** klicken und dann "**neuer Dienst Endpunkt**" auswählen.
 
 #### <a name="editing-a-service-configuration"></a>Bearbeiten einer Dienstkonfiguration
 
@@ -117,11 +117,11 @@ Sie können eine neue Dienstendpunkt-Konfiguration auf folgende Weise erstellen:
 4. Klicken Sie auf **OK**.
 
 > [!NOTE]
-> Sie können den Wert von [ \<"baseadresssspree fixfilters](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) " nicht in diesem Tool > bearbeiten. Um dieses Element hinzuzufügen oder zu ändern, sollten Sie einen Text-Editor oder Visual Studio verwenden.
+> Sie können den Wert von [\<baseadresssedifixfilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) in diesem Tool nicht bearbeiten. Um dieses Element hinzuzufügen oder zu ändern, sollten Sie einen Text-Editor oder Visual Studio verwenden.
 
 ### <a name="client"></a>Client
 
-Der **Client** Knoten zeigt alle Client Endpunkte in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement des <`client`>-Elements in der Konfigurationsdatei.
+Der **Client** Knoten zeigt alle Client Endpunkte in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement des < `client` >-Elements in der Konfigurationsdatei.
 
 Wenn Sie auf den **Client** Knoten klicken, können Sie auf der **Seite Client Zusammenfassung** im **Detail**Bereich Aufgaben anzeigen oder ausführen.
 
@@ -129,7 +129,7 @@ Wenn Sie auf den **Client** Knoten klicken, können Sie auf der **Seite Client Z
 
 Sie können eine neue Clientendpunkt-Konfiguration auf folgende Weise erstellen:
 
-- Create by-Assistent: Klicken Sie auf den Link **neuen Client erstellen...** im **Aufgaben** Bereich links unten im Fenster oder auf der **Zusammenfassungs Seite** , um den Assistenten zu starten. Sie können dies auch im Menü **Datei** > **Neues Element hinzufügen**. Der Assistent fordert Sie auf, auf den Speicherort der Dienstkonfiguration zu zeigen, über den die Clientkonfiguration generiert wird. Sie können dann den Dienstendpunkt auswählen, mit dem eine Verbindung hergestellt werden soll.
+- Create by Wizard: Klicken Sie auf den Link **neuen Client erstellen...** im **Aufgaben** Bereich links unten im Fenster oder auf der **Zusammenfassungs Seite** , um den Assistenten zu starten. Sie können dies auch im Menü **Datei** > **Neues Element hinzufügen**. Der Assistent fordert Sie auf, auf den Speicherort der Dienstkonfiguration zu zeigen, über den die Clientkonfiguration generiert wird. Sie können dann den Dienstendpunkt auswählen, mit dem eine Verbindung hergestellt werden soll.
 
 - Manuell erstellen: Klicken Sie mit der rechten Maustaste auf den Knoten **Endpunkte** unter **Client**, und wählen Sie **neuer Client Endpunkt**aus.
 
@@ -143,7 +143,7 @@ Sie können eine neue Clientendpunkt-Konfiguration auf folgende Weise erstellen:
 
 Standardendpunkte sind spezialisierte Endpunkte, bei denen einer oder mehrere Aspekte der Adresse, des Vertrags und des Bindungssatzes auf die Standardwerte festgelegt sind.
 
-Diese Konfigurationseinstellungen werden im **Standard Endpunkt** -Knoten gespeichert. Der Knoten **Standard Endpunkt** zeigt alle Standard Endpunkt Einstellungen in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement im `<standardEndpoints>` -Element in der Konfigurationsdatei.
+Diese Konfigurationseinstellungen werden im **Standard Endpunkt** -Knoten gespeichert. Der Knoten **Standard Endpunkt** zeigt alle Standard Endpunkt Einstellungen in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement im `<standardEndpoints>`-Element in der Konfigurationsdatei.
 
 Wenn Sie auf den **Standard Endpunkt** -Knoten klicken, können Sie auf der Seite Standard-Endpunkt **Zusammenfassung** im **Detail**Bereich Aufgaben anzeigen oder ausführen.
 
@@ -175,13 +175,13 @@ Sie können eine Standardendpunktkonfiguration auf folgende Weise löschen:
 
 - Klicken Sie auf den Knoten **Standard Endpunkt** . Klicken Sie im **Aufgaben** Bereich auf **Standard Endpunkt Konfiguration löschen**.
 
-Wenn der Standard Endpunkt verwendet wird, wird eine Warnmeldung angezeigt, wenn Sie versuchen, Sie zu löschen: **Der Standard Endpunkt wird verwendet. Wenn er jetzt gelöscht wird, müssen Sie sicherstellen, dass alle dazugehörigen Verweise an anderen Stellen der Konfiguration (z. B. im Dienstendpunkt oder Clientendpunkt) ebenfalls gelöscht werden. Andernfalls ist die Konfiguration ungültig und kann nächstes Mal nicht geöffnet werden. Möchten Sie den Standard Endpunkt wirklich löschen? "**
+Wenn der Standard Endpunkt verwendet wird, wird eine Warnmeldung angezeigt, wenn Sie versuchen, Sie zu löschen: **der Standard Endpunkt wird verwendet. Wenn Sie Sie jetzt löschen, achten Sie darauf, alle Verweise in anderen Teilen der Konfiguration zu löschen (z. b. im Dienst Endpunkt oder Client Endpunkt). Andernfalls ist die Konfiguration ungültig und kann nicht das nächste Mal geöffnet werden. Möchten Sie den Standard Endpunkt wirklich löschen? "**
 
 ### <a name="binding"></a>Bindung
 
 Bindungskonfigurationen werden zum Konfigurieren von Bindungen auf Endpunkten verwendet. Diese Konfigurationseinstellungen werden im **Bindungs** Knoten gespeichert. Endpunkte verweisen anhand des Namens auf Bindungskonfigurationen, und mehrere Endpunkte können auf eine einzelne Bindungskonfiguration verweisen.
 
-Der Knoten **Bindungen** zeigt alle Bindungs Einstellungen in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement im <`bindings`>-Element in der Konfigurationsdatei.
+Der Knoten **Bindungen** zeigt alle Bindungs Einstellungen in der Konfigurationsdatei an. Jeder unter Knoten in der Struktur entspricht einem Unterelement im < `bindings`-> Element in der Konfigurationsdatei.
 
 Wenn Sie auf den Knoten **Bindungen** klicken, können Sie auf der **Seite Bindungs Zusammenfassung** im **Detail**Bereich Aufgaben anzeigen oder ausführen.
 
@@ -225,7 +225,7 @@ Eine benutzerdefinierte Bindung ist eine Auflistung von Bindungselementen, die e
 
 ### <a name="diagnostics"></a>Diagnose
 
-Der **Diagnose** Knoten zeigt alle Diagnose Einstellungen in der Konfigurationsdatei an. Sie ermöglicht es Ihnen, Leistungsindikatoren ein-oder auszuschalten, Windows-Verwaltungsinstrumentation (WMI) zu aktivieren oder deaktivieren, die WCF-Ablauf Verfolgung zu konfigurieren und die WCF-Nachrichten Protokollierung zu konfigurieren. Die Einstellungen im **Diagnose** Knoten entsprechen dem Abschnitt <`system.diagnostics`> und `<diagnostics>` im Abschnitt `<system.serviceModel>` in der Konfigurationsdatei.
+Der **Diagnose** Knoten zeigt alle Diagnose Einstellungen in der Konfigurationsdatei an. Sie ermöglicht es Ihnen, Leistungsindikatoren ein-oder auszuschalten, Windows-Verwaltungsinstrumentation (WMI) zu aktivieren oder deaktivieren, die WCF-Ablauf Verfolgung zu konfigurieren und die WCF-Nachrichten Protokollierung zu konfigurieren. Die Einstellungen im **Diagnose** Knoten entsprechen dem Abschnitt < `system.diagnostics` > und `<diagnostics>` im `<system.serviceModel>` in der Konfigurationsdatei.
 
 Wenn Sie auf den **Diagnose** Knoten klicken, können Sie im **Detail**Bereich auf der Seite "Diagnose **Zusammenfassung** " Aufgaben anzeigen oder ausführen.
 
@@ -233,7 +233,7 @@ Wenn Sie auf den **Diagnose** Knoten klicken, können Sie im **Detail**Bereich a
 
 1. Klicken Sie auf den Knoten **Diagnose** .
 
-2. Klicken Sie auf **Leistungsindikatoren umschalten**. Der Leistungs Leistungs-Leistungs-Leistungs-Leistungs-Leistungsdaten Off (Standard), ServiceOnly und all. Wenn Sie auf den Link klicken, wird diese Einstellung auf einen der drei Zustände festgelegt.
+2. Klicken Sie auf **Leistungsindikatoren umschalten**. Der Leistungsindikator verfügt über drei Zustände: Aus (Standard), ServiceOnly und Alles. Wenn Sie auf den Link klicken, wird diese Einstellung auf einen der drei Zustände festgelegt.
 
 #### <a name="configuring-wmi-provider"></a>Konfigurieren eines WMI-Anbieters
 
@@ -249,7 +249,7 @@ Sie können eine WCF-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen 
 
 2. Klicken Sie auf Ablauf **Verfolgung aktivieren**.
 
-3. Klicken Sie auf den Link Ablauf **Verfolgungs Ebene** , um die Ablauf Verfolgungs Ebene anzupassen. Es gibt sechs Ablauf Verfolgungs Ebenen: Off, Critical, Error, Warning, Information und Verbose. Mithilfe der Option **Aktivitäts Ablauf Verfolgung** und **Aktivität propagieren** können Sie die Funktion für die WCF-Aktivitäts Ablauf Verfolgung verwenden.
+3. Klicken Sie auf den Link Ablauf **Verfolgungs Ebene** , um die Ablauf Verfolgungs Ebene anzupassen. Es gibt sechs Ablaufverfolgungsebenen: Off, Critical, Error, Warning, Information und Verbose. Mithilfe der Option **Aktivitäts Ablauf Verfolgung** und **Aktivität propagieren** können Sie die Funktion für die WCF-Aktivitäts Ablauf Verfolgung verwenden.
 
 4. Klicken Sie auf den Namen des Ablaufverfolgungslisteners, um die Ablaufverfolgungsdatei und die Optionen festzulegen.
 
@@ -261,20 +261,20 @@ Sie können eine WCF-Ablaufverfolgungsdatei mit Standardeigenschaften erstellen 
 
 2. Klicken Sie auf **Nachrichten Protokollierung aktivieren**.
 
-3. Klicken Sie auf den Link **Protokollebene** , um die Protokollebene anzupassen. Es gibt drei Protokoll Ebenen: Falsch formatiert, Dienst und Transport.
+3. Klicken Sie auf den Link **Protokollebene** , um die Protokollebene anzupassen. Es gibt drei Protokollebenen: Fehlerhaft, Dienst und Transport.
 
 4. Klicken Sie auf den Namen des Listeners, um die Protokolldatei und die Optionen festzulegen.
 
 > [!NOTE]
 > Wenn Sie möchten, dass die Ablauf Verfolgungs-und Nachrichten Protokolle automatisch geleert werden, wenn die Anwendung geschlossen wird, aktivieren Sie die Option **Auto Flush** .
 
-Auf der Seite " **Diagnose** **Zusammenfassung** " können Sie die gängigsten Aufgaben beim Konfigurieren der Diagnose ausführen. Wenn Sie jedoch die Listener-und Quellen Einstellungen manuell bearbeiten möchten, müssen Sie den **Diagnose** Knoten erweitern und die Einstellungen im Knoten **Nachrichten Protokollierung**, Listener und **Quellen** bearbeiten.
+Auf der Seite " **Diagnose** **Zusammenfassung** " können Sie die gängigsten Aufgaben beim Konfigurieren der Diagnose ausführen. Wenn Sie jedoch die **Listener-und** Quellen Einstellungen manuell bearbeiten möchten, müssen Sie den **Diagnose** Knoten erweitern und die Einstellungen im Knoten **Nachrichten Protokollierung**, Listener und **Quellen** bearbeiten.
 
 #### <a name="enabling-wcf-custom-tracing-or-message-logging"></a>Aktivieren von benutzerdefinierter WCF-Ablaufverfolgung oder Nachrichtenprotokollierung
 
 1. Klicken Sie auf den **Diagnose** Knoten, und erweitern Sie ihn.
 
-2. Klicken Sie mit der rechten Maustaste auf den Knoten Listener, und wählen Sie **neuer Listener**
+2. Klicken Sie **mit der rechten** Maustaste auf den Knoten Listener, und wählen Sie **neuer Listener**
 
 3. Geben Sie den Namen der Ablauf Verfolgungs Datei im **initdata** -Feld ein. Sie können auf die "..." , um zu einem Pfad zu navigieren.
 
@@ -374,7 +374,7 @@ Eine Möglichkeit zum Erstellen einer neuen Konfigurationsdatei ist die Verwendu
 
 #### <a name="creating-a-configuration-file"></a>Erstellen einer Konfigurationsdatei
 
-1. Starten Sie den Dienstkonfigurations-Editor mithilfe eines Befehls Fensters, um zum WCF-Installationsverzeichnis zu navigieren `SvcConfigEditor.exe`, und geben Sie dann ein.
+1. Starten Sie den Dienstkonfigurations-Editor, indem Sie in einem Befehlsfenster zum WCF-Installations Speicherort navigieren, und geben Sie dann `SvcConfigEditor.exe` ein.
 
 2. Wählen Sie im Menü **Datei** die Option **Öffnen** aus, und klicken Sie abhängig vom Typ der Konfigurationsdatei, die Sie erstellen möchten, auf **ausführbare Datei**, **com+-Dienst**oder **webgehosteter Dienst**.
 
@@ -389,13 +389,13 @@ Eine Möglichkeit zum Erstellen einer neuen Konfigurationsdatei ist die Verwendu
 
 ## <a name="configuring-com"></a>Konfigurieren von COM+
 
-Mit dem Service Configuration Editor können Sie eine neue Konfigurationsdatei für eine vorhandene COM+-Anwendung erstellen oder eine vorhandene COM+-Konfiguration bearbeiten. Der **com-Vertrags** Knoten ist nur sichtbar, wenn`comContract`der Abschnitt < > in der Konfigurationsdatei vorhanden ist.
+Mit dem Service Configuration Editor können Sie eine neue Konfigurationsdatei für eine vorhandene COM+-Anwendung erstellen oder eine vorhandene COM+-Konfiguration bearbeiten. Der **com-Vertrags** Knoten ist nur sichtbar, wenn der < `comContract` > Abschnitt in der Konfigurationsdatei vorhanden ist.
 
 ### <a name="creating-a-new-com-configuration"></a>Erstellen einer neuen COM+-Konfigurationsdatei
 
 Stellen Sie vor dem Erstellen einer neuen COM+-Konfiguration sicher, dass die COM+-Anwendung in den Komponentendiensten installiert und im globalen Assemblycache (GAC) registriert ist.
 
-1. Wählen Sie das Menü **Datei** aus, >**com+-Anwendung** **integrieren** -> . Hierdurch wird die gerade geöffnete Datei geschlossen. Wenn die Datei noch nicht gespeicherte Daten enthält, wird ein Dialogfeld zum Speichern angezeigt. Anschließend wird der **com+-Integrations-Assistent** gestartet.
+1. Wählen Sie das Menü **Datei** aus, >  -> **com+-Anwendung** **integrieren**. Hierdurch wird die gerade geöffnete Datei geschlossen. Wenn die Datei noch nicht gespeicherte Daten enthält, wird ein Dialogfeld zum Speichern angezeigt. Anschließend wird der **com+-Integrations-Assistent** gestartet.
 
 2. Wählen Sie auf der ersten Seite die COM+-Anwendung in der Struktur. Wenn die COM+-Anwendung nicht in der Struktur angezeigt wird, überprüfen Sie, ob sie in den Komponentendiensten installiert und im globalen Assemblycache (GAC) registriert ist.
 
@@ -409,7 +409,7 @@ Stellen Sie vor dem Erstellen einer neuen COM+-Konfiguration sicher, dass die CO
 
 ### <a name="editing-an-existing-com-configuration"></a>Bearbeiten einer vorhandenen COM+-Konfiguration
 
-1. Wählen Sie das Menü **Datei** aus, > Sie den**com+-Dienst** **Öffnen** -> ...
+1. Menü " **Datei** auswählen" >  -> **com+-Dienst** **Öffnen**...
 
 2. Wählen Sie den zu bearbeitenden COM+-Dienst aus der Liste aus.
 
@@ -420,6 +420,6 @@ Stellen Sie vor dem Erstellen einer neuen COM+-Konfiguration sicher, dass die CO
 
 ## <a name="security"></a>Sicherheit
 
-Eine durch den Configuration Editor generierte Dienstkonfigurationsdatei ist nicht garantiert sicher. Informationen zum Sichern Ihrer WCF-Dienste finden Sie in der Dokumentation zur [Sicherheit](../../../docs/framework/wcf/feature-details/security.md) .
+Eine durch den Configuration Editor generierte Dienstkonfigurationsdatei ist nicht garantiert sicher. Informationen zum Sichern Ihrer WCF-Dienste finden Sie in der Dokumentation zur [Sicherheit](./feature-details/security.md) .
 
 Außerdem kann der Configuration Editor nur verwendet werden, um gültige WCF-Konfigurationselemente zu lesen und zu schreiben. Das Tool ignoriert schemakompatible, benutzerdefinierte Elemente. Es versucht außerdem nicht, diese Elemente aus der Konfigurationsdatei zu entfernen oder die Auswirkungen auf die bekannten WCF-Elemente zu ermitteln. Es ist die Aufgabe des Benutzers, zu ermitteln, ob diese Elemente eine Bedrohung für die Anwendung oder das System darstellen.

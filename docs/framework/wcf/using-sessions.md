@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 671e650a494d314ec1da1957eaae91e2d1811213
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aea26c3a814a34c9d2985bb1bf02dbb80d32ef12
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952840"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320286"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* eine Gruppe von Nachrichten in eine Konversation. WCF-Sitzungen unterscheiden sich von dem in ASP.NET-Anwendungen verfügbaren Sitzungs Objekt, unterstützen unterschiedliche Verhaltensweisen und werden auf unterschiedliche Weise gesteuert. In diesem Thema werden die Funktionen beschrieben, die Sitzungen in WCF-Anwendungen aktivieren und wie Sie verwendet werden.  
@@ -30,7 +30,7 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
   
 - Einer WCF-Sitzung ist kein allgemeiner Datenspeicher zugeordnet.  
   
- Wenn Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse in ASP.NET-Anwendungen und der von ihr bereitgestellten Funktionalität vertraut sind, werden Sie möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen bemerken:  
+ Wenn Sie mit der <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>-Klasse in ASP.NET-Anwendungen und der von ihr bereitgestellten Funktionalität vertraut sind, werden Sie möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen bemerken:  
   
 - ASP.NET-Sitzungen werden immer vom Server initiiert.  
   
@@ -49,7 +49,7 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
 - Verstehen und Steuern der Erstellung und Beendigung einer Sitzung sowie der Beziehung zwischen der Sitzung und der Dienstinstanz  
   
 ## <a name="default-execution-behavior-using-sessions"></a>Standardausführungsverhalten mit Sitzungen  
- Eine Bindung, die eine Sitzung zu initiieren versucht, wird als *sitzungsbasierte* Bindung bezeichnet. Dienstverträge geben an, dass sie sitzungsbasierte Bindungen erfordern, zulassen oder verweigern, indem sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft in der Dienstvertragschnittstelle (oder -klasse) auf einen der <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> -Enumerationswerte festlegen. Standardmäßig ist <xref:System.ServiceModel.SessionMode.Allowed>der Wert dieser Eigenschaft. Dies bedeutet, dass der Dienst die bereitgestellte Sitzung aufbaut und verwendet, wenn ein Client eine Sitzungs basierte Bindung mit einer WCF-Dienst Implementierung verwendet.  
+ Eine Bindung, die eine Sitzung zu initiieren versucht, wird als *sitzungsbasierte* Bindung bezeichnet. Dienstverträge geben an, dass sie sitzungsbasierte Bindungen erfordern, zulassen oder verweigern, indem sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft in der Dienstvertragschnittstelle (oder -klasse) auf einen der <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> -Enumerationswerte festlegen. Standardmäßig ist der Wert dieser Eigenschaft <xref:System.ServiceModel.SessionMode.Allowed>. Dies bedeutet, dass der Dienst die bereitgestellte Sitzung aufbaut und verwendet, wenn ein Client eine Sitzungs basierte Bindung mit einer WCF-Dienst Implementierung verwendet.  
   
  Wenn ein WCF-Dienst eine Client Sitzung akzeptiert, sind die folgenden Funktionen standardmäßig aktiviert:  
   
@@ -62,13 +62,13 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
   
  WCF bietet die folgenden Typen von Sitzungs basiertem Anwendungsverhalten:  
   
-- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. Weitere Informationen finden Sie unter [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> -Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> unterstützt sicherheitsbasierte Sitzungen, bei denen sich beide Kommunikationspartner auf eine bestimmte sichere Konversation verständigen. Weitere Informationen finden Sie unter [Sichern von Diensten](securing-services.md). Die <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> -Bindung, bei der sowohl Sicherheitssitzungen als auch zuverlässige Sitzungen unterstützt werden, verwendet z.&#160;B. standardmäßig nur eine sichere Sitzung, die Nachrichten digital verschlüsselt und signiert.  
   
 - Die <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> -Bindung unterstützt TCP/IP-basierte Sitzungen, um sicherzustellen, dass alle Nachrichten von der Verbindung auf Socketebene miteinander in Beziehung gesetzt werden.  
   
-- Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> -Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+- Das <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> -Element, das die WS-ReliableMessaging-Spezifikation implementiert, bietet Unterstützung für zuverlässige Sitzungen, in denen Nachrichten so konfiguriert werden können, dass sie der Reihenfolge nach und genau einmal zugestellt werden, sodass der Empfang von Nachrichten sichergestellt wird, auch wenn sich diese während der Konversation durch mehrere Knoten bewegen. Weitere Informationen finden Sie unter [zuverlässige Sitzungen](./feature-details/reliable-sessions.md).  
   
-- Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> -Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+- Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> -Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](./feature-details/queues-in-wcf.md).  
   
  Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird nicht der vom Vertrag angeforderte Typ der Sitzung angegeben, sondern nur, dass eine Sitzung erforderlich ist.  
   
@@ -108,7 +108,7 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
 > [!NOTE]
 > Das Standardverhalten ist lokalen Konstruktoren und Destruktoren ähnlich, aber eben nur ähnlich. Jeder WCF-Dienst Vorgang kann ein Initiierungs-oder Beendigungs Vorgang oder beides gleichzeitig sein. Außerdem können Initiierungsvorgänge im Standardfall beliebig oft in einer beliebigen Reihenfolge aufgerufen werden, nachdem der erste Vorgang aufgerufen wurde. Es werden keine zusätzlichen Sitzungen erstellt, sobald die Sitzung aufgebaut und einer Instanz zugeordnet wurde, es sei denn, Sie steuern die Lebensdauer der Dienstinstanz explizit (durch Bearbeiten des <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekts). Der Zustand wird schließlich der Sitzung zugeordnet, nicht dem Dienstobjekt.  
   
- Der `ICalculatorSession` im vorhergehenden Beispiel verwendete Vertrag erfordert beispielsweise, dass das WCF-Client Objekt zuerst den `Clear` Vorgang vor allen anderen Vorgängen aufruft und dass die Sitzung mit diesem WCF-Client Objekt beendet wird, wenn aufgerufen wird.`Equals` Vorgang. Das folgende Codebeispiel zeigt einen Vertrag, der diese Anforderungen erzwingt. `Clear` muss zuerst aufgerufen werden, um eine Sitzung zu initiieren. Diese Sitzung endet, wenn `Equals` aufgerufen wird.  
+ Beispielsweise erfordert der `ICalculatorSession`-Vertrag, der im vorhergehenden Beispiel verwendet wird, dass das WCF-Client Objekt zuerst den `Clear`-Vorgang vor allen anderen Vorgängen aufruft und dass die Sitzung mit diesem WCF-Client Objekt beendet wird, wenn der `Equals`-Vorgang aufgerufen wird. Das folgende Codebeispiel zeigt einen Vertrag, der diese Anforderungen erzwingt. `Clear` muss zuerst aufgerufen werden, um eine Sitzung zu initiieren. Diese Sitzung endet, wenn `Equals` aufgerufen wird.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
@@ -117,7 +117,7 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
   
 - <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
   
-- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>auf dem WCF-Client Objekt, das vom [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wurde.  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> für das WCF-Client Objekt, das vom [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)generiert wurde.  
   
 - Ein initiierender Vorgang für beide Typen von WCF-Client Objekten (Standardmäßig werden alle Vorgänge initiiert). Wenn der erste Vorgang aufgerufen wird, öffnet das WCF-Client Objekt den Kanal automatisch und initiiert eine Sitzung.  
   
@@ -125,22 +125,22 @@ In Windows Communication Foundation (WCF)-Anwendungen korreliert eine *Sitzung* 
   
 - <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
   
-- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>auf dem WCF-Client Objekt, das von Svcutil. exe generiert wurde.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> für das von Svcutil. exe generierte WCF-Client Objekt.  
   
 - Ein Beendender Vorgang für beide Typen von WCF-Client Objekten (Standardmäßig werden keine Vorgänge beendet; der Vertrag muss explizit einen Beendigungs Vorgang angeben). Wenn der erste Vorgang aufgerufen wird, öffnet das WCF-Client Objekt den Kanal automatisch und initiiert eine Sitzung.  
   
- Beispiele hierzu finden Sie unter [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) sowie unter [Standarddienstverhalten](../../../docs/framework/wcf/samples/default-service-behavior.md) und [Instanziierung](../../../docs/framework/wcf/samples/instancing.md).  
+ Beispiele finden Sie unter [How to: Create a Service That Requires Sessions](./feature-details/how-to-create-a-service-that-requires-sessions.md) sowie unter [Default Service Behavior](./samples/default-service-behavior.md) und [Instancing](./samples/instancing.md) .  
   
- Weitere Informationen zu Clients und Sitzungen finden Sie unter [zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Weitere Informationen zu Clients und Sitzungen finden Sie unter [zugreifen auf Dienste mithilfe eines WCF-Clients](./feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Interaktion von Sitzungen und InstanceContext-Einstellungen  
- Zwischen der <xref:System.ServiceModel.SessionMode> -Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. Weitere Informationen finden Sie unter [Sitzungen, Instanziierung und](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)Parallelität.  
+ Zwischen der <xref:System.ServiceModel.SessionMode> -Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. Weitere Informationen finden Sie unter [Sitzungen, Instanziierung und](./feature-details/sessions-instancing-and-concurrency.md)Parallelität.  
   
 ### <a name="sharing-instancecontext-objects"></a>Freigeben von InstanceContext-Objekten  
  Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. 
   
 ## <a name="sessions-and-streaming"></a>Sitzungen und Streaming  
- Wenn Sie über eine große Datenmenge verfügen, ist der Streamingübertragungsmodus in WCF eine mögliche Alternative zum Standardverhalten, bei dem Nachrichten im Arbeitsspeicher vollständig gepuffert und verarbeitet werden. Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients über eine sitzungsbasierte Bindung Streamingaufrufe an das gleiche Dienstobjekt senden und der Parallelitätsmodus des Dienstobjekts auf "single" und sein Instanzkontextmodus auf `PerSession`festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den `InstanceContextMode` des Dienstobjekts auf `PerCall` oder die Parallelität auf "multiple" festlegen.  
+ Wenn Sie über eine große Datenmenge verfügen, ist der Streamingübertragungsmodus in WCF eine mögliche Alternative zum Standardverhalten, bei dem Nachrichten im Arbeitsspeicher vollständig gepuffert und verarbeitet werden. Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients über eine sitzungsbasierte Bindung Streamingaufrufe an das gleiche Dienstobjekt senden und der Parallelitätsmodus des Dienstobjekts auf "single" und sein Instanzkontextmodus auf `PerSession`festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Für mindestens einen Client kann ein Timeout auftreten. Sie können dieses Problem umgehen, indem Sie entweder die `InstanceContextMode` des Dienst Objekts auf `PerCall` oder Parallelität auf "Multiple" festlegen.  
   
 > [!NOTE]
 > MaxConcurrentSessions hat in diesem Fall keine Auswirkungen, da nur eine Sitzung verfügbar ist.  
