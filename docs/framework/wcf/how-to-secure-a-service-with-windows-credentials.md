@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen'
+title: 'Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 19ac9da94ce6e405632293a7d569698c9d866bef
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d02e697b23b6c745a59f3c9c37dd9c565f2f710e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856062"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320920"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
 
-In diesem Thema wird gezeigt, wie die Transportsicherheit für einen Windows Communication Foundation (WCF)-Dienst aktiviert wird, der sich in einer Windows-Domäne befindet und von Clients in derselben Domäne aufgerufen wird. Weitere Informationen zu diesem Szenario finden Sie unter [Transport Sicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine Beispielanwendung finden Sie im [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) -Beispiel.
+In diesem Thema wird gezeigt, wie die Transportsicherheit für einen Windows Communication Foundation (WCF)-Dienst aktiviert wird, der sich in einer Windows-Domäne befindet und von Clients in derselben Domäne aufgerufen wird. Weitere Informationen zu diesem Szenario finden Sie unter [Transport Sicherheit mit Windows-Authentifizierung](./feature-details/transport-security-with-windows-authentication.md). Eine Beispielanwendung finden Sie im [WSHttpBinding](./samples/wshttpbinding.md) -Beispiel.
 
 In diesem Thema wird vorausgesetzt, dass Sie über eine vorhandene Vertragsschnittstelle verfügen und die Implementierung bereits definiert wurde, da hier auf diese beiden Punkte aufgebaut wird. Sie können auch einen vorhandenen Dienst und Client ändern.
 
@@ -47,13 +47,13 @@ Die erste Prozedur führt Sie durch die Schritte zum Erstellen und Konfigurieren
 
 ### <a name="using-the-binding-in-a-service"></a>Verwenden der Bindung in einem Dienst
 
-Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht. Weitere Informationen zu Hostingdiensten finden Sie unter [Hosting-Dienste](../../../docs/framework/wcf/hosting-services.md).
+Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung in einem selbst gehosteten Dient veranschaulicht. Weitere Informationen zu Hostingdiensten finden Sie unter [Hosting-Dienste](hosting-services.md).
 
 ##### <a name="to-use-a-binding-in-a-service"></a>So verwenden Sie eine Bindung in einem Dienst
 
 1. Fügen Sie den Code dieser Prozedur nach dem Code der vorherigen Prozedur ein.
 
-2. Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu. Wenn Sie Visual Basic verwenden, verwenden `GetType` Sie den-Operator C#; Wenn Sie `typeof` verwenden, verwenden Sie das-Schlüsselwort.
+2. Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu. Wenn Sie Visual Basic verwenden, verwenden Sie den `GetType`-Operator. Verwenden Sie C#das Schlüsselwort `typeof`, wenn Sie verwenden.
 
 3. Erstellen Sie eine zweite <xref:System.Type>-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.
 
@@ -70,15 +70,15 @@ Dies ist die zweite Prozedur; in dieser Prozedur wird die Verwendung der Bindung
 
 ### <a name="using-the-binding-in-a-client"></a>Verwenden der Bindung in einem Client
 
-Diese Prozedur zeigt die Generierung eines Proxys, der mit dem Dienst kommuniziert. Der Proxy wird mit dem Service [Model Metadata Utility-Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert, das die Dienst Metadaten zum Erstellen des Proxys verwendet.
+Diese Prozedur zeigt die Generierung eines Proxys, der mit dem Dienst kommuniziert. Der Proxy wird mit dem Service [Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) generiert, das die Dienst Metadaten zum Erstellen des Proxys verwendet.
 
 Durch diese Prozedur wird auch eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse erstellt, um mit dem Dienst zu kommunizieren. Anschließend wird der Dienst aufgerufen.
 
 In diesem Beispiel wird zum Erstellen des Clients nur Code verwendet. Alternativ können Sie eine Konfigurationsdatei verwenden. Dies wird im Abschnitt nach dieser Prozedur veranschaulicht.
 
-##### <a name="to-use-a-binding-in-a-client-with-code"></a>So verwenden Sie eine Bindung in einem Client mit Code
+#### <a name="to-use-a-binding-in-a-client-with-code"></a>So verwenden Sie eine Bindung in einem Client mit Code
 
-1. Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)-Client. Der generierte Proxy Code erbt von der <xref:System.ServiceModel.ClientBase%601> -Klasse, wodurch sichergestellt wird, dass jeder Client über die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem WCF-Dienst verfügt. In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.
+1. Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen eines Clients](how-to-create-a-wcf-client.md). Der generierte Proxy Code erbt von der <xref:System.ServiceModel.ClientBase%601>-Klasse, wodurch sichergestellt wird, dass jeder Client über die erforderlichen Konstruktoren, Methoden und Eigenschaften für die Kommunikation mit einem WCF-Dienst verfügt. In diesem Beispiel enthält der generierte Code die `CalculatorClient`-Klasse, die die `ICalculator`-Schnittstelle für die Kompatibilität mit dem Dienstcode implementiert.
 
 2. Der Code dieser Prozedur wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.
 
@@ -99,22 +99,22 @@ In diesem Beispiel wird zum Erstellen des Clients nur Code verwendet. Alternativ
 
 Anstelle der Erstellung der Bindung mithilfe von prozeduralem Code können Sie auch den folgenden Code für den Bindungsabschnitt der Konfigurationsdatei verwenden.
 
-Wenn Sie noch keinen Dienst definiert haben, finden Sie weitere Informationen unter [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)und [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md).
+Wenn Sie noch keinen Dienst definiert haben, finden Sie weitere Informationen unter [Entwerfen und Implementieren von Diensten](designing-and-implementing-services.md)und [Konfigurieren von Diensten](configuring-services.md).
 
 > [!NOTE]
 > Dieser Konfigurations Code wird sowohl in den Dienst-als auch in den Client Konfigurationsdateien verwendet.
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>So aktivieren Sie mit der Konfiguration Übertragungssicherheit für einen Dienst in einer Windows-Domäne
 
-1. Fügen [Sie dem\<Bindungs >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element-Abschnitt der Konfigurationsdatei ein [ \<WSHttpBinding->](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element hinzu.
+1. Fügen Sie dem [\<binding > Element-](../configure-apps/file-schema/wcf/bindings.md) Abschnitt der Konfigurationsdatei ein [>-Element \<wshttpbinding](../configure-apps/file-schema/wcf/wshttpbinding.md) hinzu.
 
-2. Fügen Sie dem`binding`<`WSHttpBinding`> Element ein < >-Element hinzu, `configurationName` und legen Sie das-Attribut auf einen für Ihre Anwendung geeigneten Wert fest.
+2. Fügen Sie dem < @no__t Element >-1 ein < `binding` >-Element hinzu, und legen Sie das `configurationName`-Attribut auf einen für Ihre Anwendung geeigneten Wert fest.
 
-3. Fügen Sie ein`security`< > Element hinzu, `mode` und legen Sie das-Attribut auf Message fest.
+3. Fügen Sie ein < `security` >-Element hinzu, und legen Sie das `mode`-Attribut auf Message fest.
 
-4. Fügen Sie ein`message`< > Element hinzu, `clientCredentialType` und legen Sie das-Attribut auf Windows fest.
+4. Fügen Sie ein < `message` >-Element hinzu, und legen Sie das `clientCredentialType`-Attribut auf Windows fest.
 
-5. Ersetzen Sie in der Konfigurationsdatei des Diensts den `<bindings>`-Abschnitt durch den folgenden Code. Wenn Sie nicht bereits über eine Dienst Konfigurationsdatei verfügen, finden Sie weitere Informationen unter [Verwenden von Bindungen zum Konfigurieren von Diensten und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).
+5. Ersetzen Sie in der Konfigurationsdatei des Diensts den `<bindings>`-Abschnitt durch den folgenden Code. Wenn Sie nicht bereits über eine Dienst Konfigurationsdatei verfügen, finden Sie weitere Informationen unter [Verwenden von Bindungen zum Konfigurieren von Diensten und Clients](using-bindings-to-configure-services-and-clients.md).
 
     ```xml
     <bindings>
@@ -130,13 +130,13 @@ Wenn Sie noch keinen Dienst definiert haben, finden Sie weitere Informationen un
 
 ### <a name="using-the-binding-in-a-client"></a>Verwenden der Bindung in einem Client
 
-In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei. Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &amp;#8211; der dritten Datei, die auf dem Client verwendet wird.
+In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei. Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &#8211; der dritten Datei, die auf dem Client verwendet wird.
 
-##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>So verwenden Sie eine Bindung für einen Client mit Konfiguration
+#### <a name="to-use-a-binding-in-a-client-with-configuration"></a>So verwenden Sie eine Bindung für einen Client mit Konfiguration
 
-1. Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode und die Konfigurationsdatei aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)-Client.
+1. Verwenden Sie das SvcUtil.exe-Tool, um den Proxycode und die Konfigurationsdatei aus den Metadaten des Diensts zu generieren. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen eines Clients](how-to-create-a-wcf-client.md).
 
-2. Ersetzen Sie den [ \<Abschnitt Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) der generierten Konfigurationsdatei durch den Konfigurations Code aus dem vorherigen Abschnitt.
+2. Ersetzen Sie den [\<-Bindungen >](../configure-apps/file-schema/wcf/bindings.md) Abschnitt der generierten Konfigurationsdatei durch den Konfigurations Code aus dem vorherigen Abschnitt.
 
 3. Prozeduraler Code wird am Anfang der `Main`-Methode des Clientprogramms eingefügt.
 
@@ -158,7 +158,7 @@ In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Pr
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.WSHttpBinding>
-- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
-- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Vorgehensweise: Erstellen eines Clients](how-to-create-a-wcf-client.md)
+- [Sichern von Diensten](securing-services.md)
+- [Übersicht über die Sicherheit](./feature-details/security-overview.md)

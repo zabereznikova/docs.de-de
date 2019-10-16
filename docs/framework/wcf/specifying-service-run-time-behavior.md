@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875994"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321375"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
-Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der Service-Anwendung finden Sie unter [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
+Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der-Dienst Anwendung finden Sie unter [Konfigurieren von Diensten](configuring-services.md).  
   
 ## <a name="overview"></a>Übersicht  
  Der Vertrag definiert die Eingaben, Ausgaben, Datentypen und Fähigkeiten eines Diensts dieses Typs. Durch die Implementierung eines Dienstvertrags wird eine Klasse erstellt, die den durch sie implementierten Vertrag erfüllt, wenn sie mit einer Bindung an einer Adresse konfiguriert wird. Der Vertrag kennt Vertrags-, Bindungs- und Adressinformationen. Ohne sie kann der Client den Dienst nicht nutzen.  
   
- Aber Vorgangseinzelheiten, z.&#160;B. Threadingprobleme oder Instanzenverwaltung, sind für Clients nicht transparent. Nachdem ein Dienstvertrag implementiert wurde, können Sie mithilfe von *Verhalten*eine Vielzahl von Vorgangseigenschaften konfigurieren. Verhalten sind die Objekte, die die Windows Communication Foundation (WCF)-Laufzeit zu ändern, indem eine Laufzeiteigenschaft festgelegt oder ein Anpassungstyp in die Laufzeit eingefügt. Weitere Informationen zur Änderung des Laufzeitmoduls durch benutzerdefinierte Verhalten finden Sie unter [Erweitern von ServiceHost und der Dienstmodellebene](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Aber Vorgangseinzelheiten, z.&#160;B. Threadingprobleme oder Instanzenverwaltung, sind für Clients nicht transparent. Nachdem ein Dienstvertrag implementiert wurde, können Sie mithilfe von *Verhalten*eine Vielzahl von Vorgangseigenschaften konfigurieren. Verhalten sind Objekte, die die Windows Communication Foundation (WCF)-Laufzeit ändern, indem eine Lauf Zeit Eigenschaft festgelegt oder ein Anpassungstyp in die Laufzeit eingefügt wird. Weitere Informationen zum Ändern der Laufzeit durch Erstellen benutzerdefinierter Verhalten finden Sie unter [Erweitern von Service Host und der Dienstmodell Ebene](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
  Das <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> -Attribut und das <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> -Attribute sind die Verhalten, die am häufigsten verwendet werden, und sie machen die am häufigsten angeforderten Vorgangsfunktionen verfügbar. Weil es sich um Attribute handelt, wenden Sie sie auf die Dienst- oder Vorgangsimplementierung an. Andere Verhalten, wie z.&#160;B. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, werden in der Regel mithilfe einer Anwendungskonfigurationsdatei angewendet, obwohl sie auch im Code verwendet werden können.  
   
- Dieses Thema enthält eine Übersicht über die <xref:System.ServiceModel.ServiceBehaviorAttribute> und <xref:System.ServiceModel.OperationBehaviorAttribute> Attribute, beschreibt die verschiedenen Bereiche, die auf das Verhalten ausgeführt werden können, und enthält Kurzbeschreibungen vieler vom System bereitgestellten Verhalten die verschiedenen Bereiche, die möglicherweise für WCF-Entwickler relevant.  
+ Dieses Thema enthält eine Übersicht über die Attribute <xref:System.ServiceModel.ServiceBehaviorAttribute> und <xref:System.ServiceModel.OperationBehaviorAttribute>, beschreibt die verschiedenen Bereiche, in denen Verhaltensweisen funktionieren können, und bietet eine kurze Beschreibung vieler der vom System bereitgestellten Verhalten in den verschiedenen Bereichen, die für WCF von Interesse sein können. Anbietern.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute und OperationBehaviorAttribute  
  Die wichtigsten Verhalten sind das <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut und das <xref:System.ServiceModel.OperationBehaviorAttribute> -Attribut, mit denen Sie Folgendes steuern können:  
@@ -61,7 +61,7 @@ Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../.
   
  Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienstimplementierungstyp schwer zu erstellen ist (wenn er z.&#160;B. keinen öffentlichen parameterlosen Standardkonstruktor implementiert).  
   
- Beachten Sie, wenn ein Objekt an diesen Konstruktor angegeben wird, einige Features beziehen, die Windows Communication Foundation (WCF) Instanziierungsverhaltens unterschiedlich funktionieren. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine bekannte Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Die <xref:System.ServiceModel.ServiceHost> -Klasse verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
+ Beachten Sie Folgendes: Wenn ein Objekt für diesen Konstruktor bereitgestellt wird, funktionieren einige Funktionen im Zusammenhang mit dem Windows Communication Foundation-Instanziierungsverhalten (WCF) unterschiedlich. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine bekannte Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Die <xref:System.ServiceModel.ServiceHost> -Klasse verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Andere Dienst-, Endpunkt-, Vertrags- und Vorgangsverhalten  
  Dienstverhalten, z.&#160;B. das <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut, wirken sich auf den gesamten Dienst aus. Wenn Sie beispielsweise die <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> -Eigenschaft auf <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> -festlegen, müssen Sie Threadsynchronisierungsprobleme in jedem Vorgang innerhalb des betreffenden Diensts selbst behandeln. Endpunktverhalten operieren über einen Endpunkt. Viele der vom System bereitgestellten Endpunktverhalten beeinflussen die Clientfunktionalität. Vertragsverhalten operieren auf Vertragsebene, und Vorgangsverhalten ändern die Vorgangszustellung.  
@@ -77,50 +77,50 @@ Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../.
 ### <a name="service-behaviors"></a>Dienstverhalten  
  Die folgenden Verhalten wirken sich auf Dienste aus.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Angewendet auf einen WCF-Dienst, um anzugeben, ob dieser Dienst im ASP.NET-Kompatibilitätsmodus ausgeführt werden kann.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> Wird auf einen WCF-Dienst angewendet, um anzugeben, ob dieser Dienst im ASP.NET-Kompatibilitätsmodus ausgeführt werden kann.  
   
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Steuert, wie der Dienst Clientansprüche autorisiert.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Steuert, wie der Dienst Clientansprüche autorisiert.  
   
-- <xref:System.ServiceModel.Description.ServiceCredentials>. Konfiguriert Dienstanmeldeinformationen. Verwenden Sie diese Klasse, um die Anmeldeinformationen für den Dienst anzugeben, beispielsweise ein X.509-Zertifikat.  
+- <xref:System.ServiceModel.Description.ServiceCredentials> Konfiguriert Dienstanmeldeinformationen. Verwenden Sie diese Klasse, um die Anmeldeinformationen für den Dienst anzugeben, beispielsweise ein X.509-Zertifikat.  
   
-- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Aktiviert Debugging- und Hilfeinformationsfunktionen für einen WCF-Dienst.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior> Aktiviert Debugging-und Hilfe Informationsfunktionen für einen WCF-Dienst.  
   
-- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Steuert die Veröffentlichung von Dienstmetadaten und zugehörigen Informationen.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Steuert die Veröffentlichung von Dienstmetadaten und zugehörigen Informationen.  
   
-- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Legt das Überwachungsverhalten für Sicherheitsereignisse fest.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> Legt das Überwachungsverhalten für Sicherheitsereignisse fest.  
   
-- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Konfiguriert Laufzeitdurchsatzeinstellungen, die es Ihnen ermöglichen, die Dienstleistung zu optimieren.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Konfiguriert Laufzeitdurchsatzeinstellungen, die es Ihnen ermöglichen, die Dienstleistung zu optimieren.  
   
 ### <a name="endpoint-behaviors"></a>Endpunktverhalten  
  Die folgenden Verhalten wirken sich auf Endpunkte aus. Viele dieser Verhalten werden in Clientanwendungen verwendet.  
   
-- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Konfiguriert eine Rückrufdienstimplementierung in einer Duplexclientanwendung.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute> Konfiguriert eine Rückrufdienstimplementierung in einer Duplexclientanwendung.  
   
-- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Aktiviert das dienstdebugging für ein WCF-Rückrufobjekt.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior> Aktiviert das Dienst Debugging für ein WCF-Rückruf Objekt.  
   
-- <xref:System.ServiceModel.Description.ClientCredentials>. Ermöglicht es dem Benutzer, die Client- und Dienstanmeldeinformationen sowie die auf dem Client zu verwendenden Authentifizierungseinstellungen für die Dienstanmeldeinformationen zu konfigurieren.  
+- <xref:System.ServiceModel.Description.ClientCredentials> Ermöglicht es dem Benutzer, die Client- und Dienstanmeldeinformationen sowie die auf dem Client zu verwendenden Authentifizierungseinstellungen für die Dienstanmeldeinformationen zu konfigurieren.  
   
-- <xref:System.ServiceModel.Description.ClientViaBehavior>. Wird von Clients verwendet, um den URI (Uniform Resource Identifier) anzugeben, für den der Transportkanal erstellt werden soll.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior> Wird von Clients verwendet, um den URI (Uniform Resource Identifier) anzugeben, für den der Transportkanal erstellt werden soll.  
   
-- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Weist WCF an, deaktivieren Sie die `MustUnderstand` verarbeiten.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior> Weist WCF an, die `MustUnderstand`-Verarbeitung zu deaktivieren.  
   
-- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Weist das Laufzeitmodul an, für Kanäle einen synchronen Empfangsprozess zu verwenden.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> Weist das Laufzeitmodul an, für Kanäle einen synchronen Empfangsprozess zu verwenden.  
   
-- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Optimiert die Empfangsvorgänge für Transporte, die transaktionale Empfangsprozesse unterstützen.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior> Optimiert die Empfangsvorgänge für Transporte, die transaktionale Empfangsprozesse unterstützen.  
   
 ### <a name="contract-behaviors"></a>Vertragsverhalten  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Gibt die Feature-Anforderungen an, die Bindungen für die Dienst- oder Client-Implementierung liefern müssen.  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute> Gibt die Feature-Anforderungen an, die Bindungen für die Dienst- oder Client-Implementierung liefern müssen.  
   
 ### <a name="operation-behaviors"></a>Vorgangsverhalten  
  Die folgenden Vorgangsverhalten geben die Serialisierungs- und Transaktionssteuermechanismen für Vorgänge an.  
   
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Stellt das Laufzeitverhalten des <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>dar.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Stellt das Laufzeitverhalten des <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>dar.  
   
-- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Steuert das Laufzeitverhalten vom `XmlSerializer` und ordnet es einem Vorgang zu.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> Steuert das Laufzeitverhalten vom `XmlSerializer` und ordnet es einem Vorgang zu.  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute>. Gibt die Ebene an, auf der ein Dienstvorgang einen Transaktionsheader akzeptiert.  
+- <xref:System.ServiceModel.TransactionFlowAttribute> Gibt die Ebene an, auf der ein Dienstvorgang einen Transaktionsheader akzeptiert.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md)
-- [Vorgehensweise: Steuern der Dienstinstanzierung](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Konfigurieren von Diensten](configuring-services.md)
+- [Vorgehensweise: Steuern der Dienstinstanzerstellung](./feature-details/how-to-control-service-instancing.md)

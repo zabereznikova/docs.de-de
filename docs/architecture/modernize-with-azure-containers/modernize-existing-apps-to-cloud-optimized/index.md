@@ -2,12 +2,12 @@
 title: Modernisieren vorhandener .NET-Apps in cloudoptimierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
 ms.date: 04/28/2018
-ms.openlocfilehash: 92dc0cde11bb35797fe3c4e8442a2a6514a27e08
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cd7e2886b135eb89c381965a327b6e62baa39736
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374060"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318608"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernisieren vorhandener .NET-Apps in cloudoptimierte Anwendungen
 
@@ -17,7 +17,7 @@ Um die Vorteile der Cloud und neuer Technologien wie Container nutzen zu können
 
 Die teilweise Modernisierung einer App bedeutet nicht zwangsläufig eine vollständige Migration und Neustrukturierung. Sie können Ihre vorhandenen Anwendungen anfänglich mit einer wichtigen, aber leicht durchzuführenden Modernisierung modernisieren. Sie können Ihre aktuelle Codebasis, die in vorhandenen .NET Framework-Versionen geschrieben wurde, mit allen Windows- und IIS-Abhängigkeiten pflegen. Abbildung 4-1 zeigt, wie Anwendungen, die cloudoptimiert sind, in den Reifegradmodellen der Azure-Anwendungsmodernisierung positioniert werden.
 
-![Positionierung cloudoptimierter Anwendungen](./media/image1.png)
+![Diagramm der Positionierung von cloudoptimierten Anwendungen](./media/index/position-cloud-optimized-application.png)
 
 **Abbildung 4-1.** Positionierung cloudoptimierter Anwendungen
 

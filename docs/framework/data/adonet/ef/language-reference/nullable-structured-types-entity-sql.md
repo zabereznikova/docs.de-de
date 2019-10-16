@@ -2,12 +2,12 @@
 title: Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249803"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319484"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
 Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhanden ist. Dies unterscheidet sich von einer vorhandenen Instanz, in der alle Eigenschaften den Wert `null` haben.  
@@ -28,46 +28,46 @@ Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhan
   
 - `null` als strukturierten Typ formen:  
   
-    ```  
+    ```sql  
     TREAT (NULL AS StructuredType)  
     ```  
   
 - Umwandeln eines Basistyps in einen abgeleiteten Typ:  
   
-    ```  
+    ```sql  
     TREAT (BaseType AS DerivedType)  
     ```  
   
 - "Outer join on false"-Bedingung:  
   
-    ```  
+    ```sql  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --oder  
   
-    ```  
+    ```sql  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
      --oder  
   
-    ```  
+    ```sql  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
 - Dereferenzierung eines `null`-Verweises:  
   
-    ```  
+    ```sql  
     DEREF(NullRef)  
     ```  
   
 - Abrufen von ANYELEMENT aus einer leeren Auflistung:  
   
-    ```  
+    ```sql  
     ANYELEMENT(EmptyCollection)  
     ```  
   

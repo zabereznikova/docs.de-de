@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Listen Sie aller Knoten in einer Struktur (Visual Basic auf)'
+title: 'Gewusst wie: Auflisten aller Knoten in einer Struktur (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c736f7e3a92e8aa92ac91ef4c32141128eff5db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021621"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320548"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Vorgehensweise: Listen Sie aller Knoten in einer Struktur (Visual Basic auf)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Gewusst wie: Auflisten aller Knoten in einer Struktur (Visual Basic)
 Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten. Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt. Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.  
   
  Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist nicht besonders hilfreich. XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen sind deutlich leistungsfähiger. Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.  
@@ -39,7 +39,7 @@ Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten
   
  Es folgt die Liste der in der oben erwähnten XML-Struktur vorhandenen Knoten, ausgedrückt als XPath-Ausdrücke:  
   
-```  
+```console
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -265,4 +265,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Erweiterte Abfrage Techniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

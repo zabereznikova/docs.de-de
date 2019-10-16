@@ -2,12 +2,12 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916790"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320484"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte Projekt-und Element Vorlagen, die Sie in Visual Studio verwenden können, um schnell WCF-Dienste und umgebende Anwendungen zu erstellen.  
@@ -27,12 +27,12 @@ Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte
 - Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei stellt die grundlegenden Elemente eines WCF-Dienst Modells mit einer sicheren HTTP-Bindung bereit. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
   
 > [!NOTE]
-> Visual Studio ist so konfiguriert, dass die Datei app. config als Konfigurationsdatei für das Projekt erkannt wird, wenn es mit dem [WCF-Dienst Host (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)ausgeführt wird. Dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
+> Visual Studio ist so konfiguriert, dass die Datei app. config als Konfigurationsdatei für das Projekt erkannt wird, wenn es mit dem [WCF-Dienst Host (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md)ausgeführt wird. Dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
   
 ### <a name="wcf-service-application-template"></a>Vorlage für WCF-Dienstanwendungen  
  Die Vorlage WCF-Dienst Anwendung steht im Dialogfeld Neues Projekt unter  **C#Visual \WCF** und **Visual Basic\WCF**zur Verfügung.  
   
- Wenn Sie ein neues Projekt mit der WCF-Webanwendungs- **Dienst** Vorlage erstellen, enthält das Projekt die folgenden vier Dateien:  
+ Wenn Sie ein neues Projekt mit der **WCF-Webanwendungs-Dienst** Vorlage erstellen, enthält das Projekt die folgenden vier Dateien:  
   
 - Diensthostdatei ("service1.svc").  
   
@@ -59,17 +59,17 @@ Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte
  Eine Diensthostdatei (service1.svc) wird auch dann erstellt, wenn das vorhandene Projekt ein Webprojekt ist.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF-WF-Dienstprojektvorlage und Elementvorlage.  
- Diese Vorlagen erstellen WCF-Dienste, die einen Workflow Dienst hosten. dabei handelt es sich um einen Workflow, auf den wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflow Typen finden [Sie unter Gewusst wie: Erstellen Sie einen](../windows-workflow-foundation/how-to-create-a-workflow.md)Workflow. Weitere Informationen zum Erstellen von Workflow Projekten finden Sie unter [Erstellen von Legacy Workflow Projekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Diese Vorlagen erstellen WCF-Dienste, die einen Workflow Dienst hosten. dabei handelt es sich um einen Workflow, auf den wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflow Typen finden Sie unter Vorgehens [Weise: Erstellen eines Workflows](../windows-workflow-foundation/how-to-create-a-workflow.md). Weitere Informationen zum Erstellen von Workflow Projekten finden Sie unter [Erstellen von Legacy Workflow Projekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Der Visual Studio-Designer reagiert besser, wenn XOML-typworkflows anstelle von Code basierten Workflows verwendet werden. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Vorlage für WCF/Syndication-Dienstbibliotheken  
- Mit dieser Vorlage können Sie Ihren Feed im RSS-oder Atom-Format als WCF-Dienst verfügbar machen. Weitere Informationen finden Sie unter [WCF-Syndikation](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Mit dieser Vorlage können Sie Ihren Feed im RSS-oder Atom-Format als WCF-Dienst verfügbar machen. Weitere Informationen finden Sie unter [WCF-Syndikation](./feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Ändern der Adresse des Feeds  
  Die Syndication-Vorlage verwendet während der Ausführung Internet Explorer. Wenn Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt klicken, wählen Sie **Eigenschaften**aus, und wählen Sie dann die Registerkarte **Debuggen** , um die Standardadresse der Vorlage anzuzeigen. Internet Explorer versucht, den Feed unter dieser Adresse zu öffnen.  
   
- Wenn Sie die Adresse des Feeds ändern, müssen Sie auch die Adresse auf der Registerkarte " **Debuggen** " ändern. Andernfalls versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und dieser Versuch scheitert.  
+ Wenn Sie die Adresse des Feeds ändern, müssen Sie auch die Adresse auf der Registerkarte " **Debuggen** " ändern. Wenn Sie dies nicht tun, versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und schlägt fehl.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX-aktivierte WCF-Dienstelementvorlage  
  Diese Vorlage stellt ein AJAX-Steuerelement als WCF-Dienst zur Verfügung. Weitere Informationen zu AJAX-Steuerelementen finden Sie in der [Dokumentation zu AJAX-Steuer](https://go.microsoft.com/fwlink/?LinkId=96717)Elementen.  
@@ -84,5 +84,5 @@ Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF-Testclient (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

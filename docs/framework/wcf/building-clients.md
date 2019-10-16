@@ -5,25 +5,25 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16eaafe6b95b1e5142d055c2c95b52ba27cd2514
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608865"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320737"
 ---
 # <a name="building-clients"></a>Erstellen von Clients
-In die Themen in diesem Abschnitt veranschaulichen das Erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client.  
+In den Themen in diesem Abschnitt wird veranschaulicht, wie ein Windows Communication Foundation (WCF)-Client erstellt und verwendet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über den WCF-Client](../../../docs/framework/wcf/wcf-client-overview.md)  
- Bietet einen Überblick über WCF-Clients und deren Funktionsweise.  
+ [Übersicht über den WCF-Client](wcf-client-overview.md)  
+ Bietet einen Überblick über WCF-Clients und ihre Funktionsweise.  
   
- [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Beschreibt die grundlegende Methode zum Erstellen eines WCF-Clientobjekts für die Verwendung in einer Clientanwendung.  
+ [Zugreifen auf Dienste mithilfe eines WCF-Clients](accessing-services-using-a-wcf-client.md)  
+ Beschreibt die grundlegende Methode zum Erstellen eines WCF-Client Objekts zur Verwendung in einer Client Anwendung.  
   
- [Sichern von Clients](../../../docs/framework/wcf/securing-clients.md)  
- Beschreibt das Konfigurieren der Sicherheit für WCF-Clients.  
+ [Sichern von Clients](securing-clients.md)  
+ Hier wird beschrieben, wie die Sicherheit für WCF-Clients konfiguriert wird.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel.ClientBase%601>  
@@ -41,6 +41,6 @@ In die Themen in diesem Abschnitt veranschaulichen das Erstellen und verwenden S
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hosting-Dienste](../../../docs/framework/wcf/hosting-services.md)  
+ [Hosting-Dienste](hosting-services.md)  
   
- [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)
+ [Entwerfen und Implementieren von Diensten](designing-and-implementing-services.md)

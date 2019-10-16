@@ -2,12 +2,12 @@
 title: Migrieren zu Hybridcloudszenarios
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migration zu Hybrid Cloud Szenarios
 ms.date: 04/30/2018
-ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373944"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394543"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
@@ -25,7 +25,7 @@ Azure Stack ist eine Hybrid Cloud Plattform, mit der Sie Azure-Dienste aus dem R
 
 Abbildung 4-13 zeigt eine Übersicht über die echte Hybrid Cloud Plattform, die Microsoft bietet.
 
-![Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure](./media/image13.jpg)
+![Diagramm der Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure.](./media/migrate-to-hybrid-cloud-scenarios/microsoft-hybrid-cloud-platform.png)
 
 **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
 
@@ -66,5 +66,5 @@ Microsoft Azure Stack Development Kit ist eine Bereitstellung von Azure Stack mi
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
->[Zurück](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Zurück](life-cycle-ci-cd-pipelines-devops-tools.md)
 >[Weiter](../walkthroughs-technical-get-started-overview.md)

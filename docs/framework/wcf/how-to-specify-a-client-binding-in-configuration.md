@@ -2,25 +2,25 @@
 title: 'Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 0757dac4cdcffc7c3550432a71fe45b587327660
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b16f4b062f7f97a5855b06bdcf348911ee0497d2
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990219"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320859"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration
 In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechnerdienst zu nutzen, und die Bindung dieses Clients wird deklarativ in der Konfiguration angegeben. Der Client greift auf den `CalculatorService` zu, der die `ICalculator`-Schnittstelle implementiert, und sowohl der Dienst als auch der Client verwenden die Klasse <xref:System.ServiceModel.BasicHttpBinding>.  
   
- In der umrissenen Prozedur wird davon ausgegangen, dass der Rechnerdienst ausgeführt wird. Weitere Informationen zum Erstellen des Dienstanbieter finden [Sie unter Gewusst wie: Geben Sie eine Dienst Bindung in](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)der Konfiguration an. Außerdem wird das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) verwendet, das Windows Communication Foundation (WCF) bereitstellt, um die Client Komponenten automatisch zu generieren. Das Tool generiert den Clientcode und die Konfiguration zum Zugreifen auf den Dienst.  
+ In der umrissenen Prozedur wird davon ausgegangen, dass der Rechnerdienst ausgeführt wird. Weitere Informationen zum Erstellen des Dienstanbieter finden Sie unter Gewusst [wie: Angeben einer Dienst Bindung in der Konfiguration](how-to-specify-a-service-binding-in-configuration.md). Außerdem wird das [Service Model Metadata Utility-Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) verwendet, das Windows Communication Foundation (WCF) bereitstellt, um die Client Komponenten automatisch zu generieren. Das Tool generiert den Clientcode und die Konfiguration zum Zugreifen auf den Dienst.  
   
  Der Client wird in zwei Schritten erstellt. Svcutil.exe generiert den `ClientCalculator`, der die `ICalculator`-Schnittstelle implementiert. Diese Clientanwendung wird dann durch das Erstellen einer Instanz von `ClientCalculator` erstellt.  
   
  Normalerweise ist es die bewährte Methode, die Bindung anzugeben und die Informationen deklarativ in der Konfiguration anzusprechen anstatt imperativ im Code. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Allgemeiner gesagt ist es durch die Trennung von Bindungs- und Adressierungsinformationen vom Code möglich, diese zu ändern, ohne die Anwendung neu kompilieren oder erneut bereitstellen zu müssen.  
   
- Mit dem [Konfigurations-Editor-Tool (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)können Sie alle folgenden Konfigurationsschritte ausführen.  
+ Mit dem [Konfigurations-Editor-Tool (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md)können Sie alle folgenden Konfigurationsschritte ausführen.  
   
- Die Quell Kopie dieses Beispiels finden Sie im Beispiel " [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md) ".  
+ Die Quell Kopie dieses Beispiels finden Sie im Beispiel " [BasicBinding](./samples/basicbinding.md) ".  
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>Eine Clientbindung in einer Konfiguration angeben  
   
@@ -40,7 +40,7 @@ In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechner
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4. Svcutil.exe generiert auch die Konfiguration für den Client, der die <xref:System.ServiceModel.BasicHttpBinding>-Klasse verwendet. Wenn Sie Visual Studio verwenden, benennen Sie diese Datei "App. config". Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
+4. Svcutil.exe generiert auch die Konfiguration für den Client, der die <xref:System.ServiceModel.BasicHttpBinding>-Klasse verwendet. Wenn Sie Visual Studio verwenden, benennen Sie diese Datei "App. config". Beachten Sie, dass die Adress-und Bindungs Informationen nicht an einer beliebigen Stelle in der Implementierung des Dienstanbieter angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             
@@ -52,4 +52,4 @@ In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechner
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](using-bindings-to-configure-services-and-clients.md)

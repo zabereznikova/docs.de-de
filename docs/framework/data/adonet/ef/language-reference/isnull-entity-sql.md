@@ -2,19 +2,19 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250554"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319729"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -31,7 +31,7 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie `IS NULL`, um zu ermitteln, ob das Element einer äußeren Verknüpfung den Wert NULL hat:  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,7 +40,7 @@ select c
   
  Verwenden Sie `IS NULL`, um zu ermitteln, ob ein Member über einen tatsächlichen Wert verfügt:  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -57,13 +57,13 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Löst einen Fehler aus.|  
   
 ## <a name="example"></a>Beispiel  
- In der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] folgenden-Abfrage wird der is not NULL-Operator verwendet, um zu bestimmen, ob ein Abfrage Ausdruck nicht NULL ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+ In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage wird der is not NULL-Operator verwendet, um zu bestimmen, ob ein Abfrage Ausdruck nicht NULL ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
 ## <a name="see-also"></a>Siehe auch
 

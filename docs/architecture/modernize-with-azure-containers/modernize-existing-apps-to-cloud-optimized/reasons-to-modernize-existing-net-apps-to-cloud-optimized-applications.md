@@ -2,12 +2,12 @@
 title: Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373934"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318542"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 
@@ -41,7 +41,7 @@ In der folgenden Liste werden die wichtigsten Grundsätze oder Methoden für clo
 
 In Abbildung 4-2 werden die wesentlichen optionalen Säulen einer cloudoptimierten Anwendung veranschaulicht. Die weiteren von Ihnen implementierten Säulen, der readier, den Ihre Anwendung bei der Erfüllung der Erwartungen ihrer Kunden unterstützen wird.
 
-![Hauptpfeiler einer cloudoptimierten Anwendung](./media/image2.png)
+![Diagramm, das die Hauptpfeiler einer cloudoptimierten Anwendung benennt.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
 
 **Abbildung 4-2**. Hauptpfeiler einer cloudoptimierten Anwendung
 

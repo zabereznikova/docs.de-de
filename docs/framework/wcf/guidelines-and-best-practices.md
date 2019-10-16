@@ -8,30 +8,30 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929336"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319812"
 ---
 # <a name="guidelines-and-best-practices"></a>Richtlinien und empfohlene Vorgehensweisen
-Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen.  
+Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen bereitstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Bewährte Methoden: Versionsverwaltung von Datenverträgen](best-practices-data-contract-versioning.md)  
  Erläutert, wie und wann Datenverträge zu erstellen sind, die auch mit zukünftigen Versionen verwendet werden können.  
   
- [Dienstversionsverwaltung](../../../docs/framework/wcf/service-versioning.md)  
- Erläutert Überlegungen zur versionsverwaltung in WCF. Nach der Bereitstellung müssen Dienste (und die durch sie verfügbar gemachten Endpunkte) eventuell angepasst werden, um neuen Geschäfts- oder IT-Anforderungen zu begegnen oder Probleme zu beheben. Jede Änderung führt zu einer neuen Version des Diensts.  
+ [Dienstversionsverwaltung](service-versioning.md)  
+ Erläutert, wie Sie die Versionsverwaltung in WCF in Erwägung gezogen. Nach der Bereitstellung müssen Dienste (und die durch sie verfügbar gemachten Endpunkte) eventuell angepasst werden, um neuen Geschäfts- oder IT-Anforderungen zu begegnen oder Probleme zu beheben. Jede Änderung führt zu einer neuen Version des Diensts.  
   
- [Lastenausgleich](../../../docs/framework/wcf/load-balancing.md)  
+ [Lastenausgleich](load-balancing.md)  
  Führt Richtlinien für den Lastenausgleich bei einer Webfarm auf.  
   
- [Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
+ [Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung](controlling-resource-consumption-and-improving-performance.md)  
  Beschreibt die Eigenschaften, die Ihnen dabei helfen sollen, einen unnötigen Ressourcenverbrauch zu vermeiden und die Sicherheit zu verbessern. Außerdem enthält dieses Thema Verweise auf detaillierte Informationen zur Verwendung dieser Eigenschaften.  
   
- [Bereitstellen von WCF-Anwendungen mit ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ [Bereitstellen von WCF-Anwendungen mit ClickOnce](deploying-wcf-applications-with-clickonce.md)  
  Erläutert notwendige Überlegungen bei der Verwendung von ClickOnce-Funktionen.  
   
 ## <a name="reference"></a>Referenz  
@@ -40,13 +40,13 @@ Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Comm
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Konzeptionelle Übersicht](conceptual-overview.md)  
   
- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Einfache WCF-Programmierung](basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
+- [Was ist die Windows Communication Foundation?](whats-wcf.md)
 - [Windows Communication Foundation (WCF)-Beispiele](./samples/index.md)
-- [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
-- [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)
+- [Konzeptionelle Übersicht](conceptual-overview.md)
+- [Erstellen von Clients](building-clients.md)

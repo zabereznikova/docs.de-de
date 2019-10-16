@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6cfd084055d59d3292b49897ff710f14f92737
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928803"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320872"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Vorgehensweise: Angeben einer Dienstbindung im Code
 In diesem Beispiel wird ein `ICalculator`-Vertrag für einen Rechnerdienst definiert, der Dienst wird in der `CalculatorService`-Klasse implementiert, und der Endpunkt wird im Code definiert. Dort ist angegeben, dass die <xref:System.ServiceModel.BasicHttpBinding>-Klasse vom Dienst verwendet werden muss.  
   
  Normalerweise ist es die bewährte Methode, die Bindung anzugeben und die Informationen deklarativ in der Konfiguration anzusprechen anstatt imperativ im Code. Die Definition von Endpunkten im Code ist normalerweise nicht geeignet, da die Bindungen und Adressen für einen bereitgestellten Dienst sich in der Regel von denen unterscheiden, die während der Entwicklung des Diensts verwendet werden. Allgemeiner gesagt ist es durch die Trennung von Bindungs- und Adressierungsinformationen vom Code möglich, diese zu ändern, ohne die Anwendung neu kompilieren oder erneut bereitstellen zu müssen.  
   
- Eine Beschreibung des Diensts mit Konfigurationselementen anstelle von Code zu konfigurieren, finden Sie unter [Vorgehensweise: Angeben eine Dienstbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+ Eine Beschreibung der Konfiguration dieses Dienstanbieter mithilfe von Konfigurationselementen anstelle von Code finden Sie unter Gewusst [wie: Angeben einer Dienst Bindung in der Konfiguration](how-to-specify-a-service-binding-in-configuration.md).  
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>So geben Sie im Code die Verwendung der BasicHttpBinding für den Dienst an  
   
@@ -50,5 +50,5 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen Rechnerdienst defin
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](using-bindings-to-configure-services-and-clients.md)
+- [Angeben einer Endpunktadresse](specifying-an-endpoint-address.md)

@@ -6,35 +6,35 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882185"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318692"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
-Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
+Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Wenn Sie eine Anwendung mit Windows Communication Foundation (WCF), Version 3,0, erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet keine Informationen von Ihrer Anwendung an Microsoft, es sei denn, Sie oder der Endbenutzer haben diese an uns gesendet.  
   
 ## <a name="wcf-in-brief"></a>WCF in Kürze  
- WCF ist ein verteiltes Messagingframework, das mithilfe von Microsoft .NET Framework, die Entwickler verteilte Anwendungen erstellen kann. Zwischen zwei Anwendungen übermittelte Nachrichten enthalten Header- und Textinformationen.  
+ WCF ist ein verteiltes Messaging Framework, das das Microsoft .NET Framework verwendet, das Entwicklern das Erstellen verteilter Anwendungen ermöglicht. Zwischen zwei Anwendungen übermittelte Nachrichten enthalten Header- und Textinformationen.  
   
- Header können je nach von der Anwendung verwendeten Diensten unter anderem Meldungsrouting, Sicherheitsinformationen und Transaktionen enthalten. Nachrichten werden in der Regel standardmäßig verschlüsselt. Eine Ausnahme ist die Verwendung der `BasicHttpBinding`, die für nicht gesicherte, ältere Webdienste konzipiert wurde. Als Anwendungs-Designer sind Sie für den abschließenden Entwurf verantwortlich. Nachrichten in der SOAP-Text enthalten anwendungsspezifische Daten; Allerdings können diese Daten, z. B. Anwendung definierte persönliche Daten gesichert werden, mithilfe von verschlüsselungs- oder vertraulichkeitsfunktionen WCF-Funktionen. In den folgenden Abschnitten werden die Funktionen beschrieben, die sich auf den Datenschutz auswirken können.  
+ Header können je nach von der Anwendung verwendeten Diensten unter anderem Meldungsrouting, Sicherheitsinformationen und Transaktionen enthalten. Nachrichten werden in der Regel standardmäßig verschlüsselt. Eine Ausnahme ist die Verwendung der `BasicHttpBinding`, die für nicht gesicherte, ältere Webdienste konzipiert wurde. Als Anwendungs-Designer sind Sie für den abschließenden Entwurf verantwortlich. Nachrichten im SOAP-Text enthalten anwendungsspezifische Daten. Allerdings können diese Daten, z. b. Anwendungs definierte persönliche Informationen, mithilfe von WCF-Verschlüsselungs-oder Vertraulichkeits Features gesichert werden. In den folgenden Abschnitten werden die Funktionen beschrieben, die sich auf den Datenschutz auswirken können.  
   
 ## <a name="messaging"></a>Messaging  
- Jede WCF-Nachricht besitzt einen Adressheader, der angibt, das Ziel der Nachricht und, in dem die Antwort.  
+ Jede WCF-Nachricht verfügt über einen Adress Header, der das Nachrichten Ziel angibt, und wo die Antwort gesendet werden soll.  
   
  Die Adresskomponente einer Endpunktadresse ist ein URI (Uniform Resource Identifier), der den Endpunkt identifiziert. Die Adresse kann eine Netzwerkadresse oder eine logische Adresse sein. Die Adresse kann den Computernamen (Hostname, vollqualifizierter Domänenname) und eine IP-Adresse einschließen. Die Endpunktadresse kann außerdem eine GUID (Globally Unique Identifier) oder eine Auflistung von GUIDs für die temporäre Adressierung zum Ermitteln jeder Adresse enthalten. Jede Nachricht enthält eine Nachrichten-ID, die eine GUID ist. Dieses Feature folgt dem WS-Addressierungs-Verweisstandard.  
   
- Der WCF-Messagingebene schreibt keine persönlichen Informationen nicht auf dem lokalen Computer. Sie kann jedoch persönliche Daten auf der Netzwerkebene weitergeben, wenn ein Diensteentwickler einen Dienst erstellt hat, der solche Informationen verfügbar macht (z. B. durch das Verwenden des Namens einer Person in einem Endpunktnamen oder durch das Aufnehmen persönlicher Daten in die WSDL des Endpunkts, ohne dass Clients zum Zugriff auf die WSDL HTTPS verwenden müssen). Auch wenn ein Entwickler ausgeführt wird. die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool gegen einen Endpunkt, die persönlichen Daten, die Ausgabe des Tools verfügbar macht, kann diese Informationen enthalten, und in die Ausgabedatei geschrieben der lokale Festplatte.  
+ Die WCF-Messaging Schicht schreibt keine persönlichen Informationen auf den lokalen Computer. Sie kann jedoch persönliche Daten auf der Netzwerkebene weitergeben, wenn ein Diensteentwickler einen Dienst erstellt hat, der solche Informationen verfügbar macht (z. B. durch das Verwenden des Namens einer Person in einem Endpunktnamen oder durch das Aufnehmen persönlicher Daten in die WSDL des Endpunkts, ohne dass Clients zum Zugriff auf die WSDL HTTPS verwenden müssen). Wenn ein Entwickler außerdem das [Service Model Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool für einen Endpunkt ausführt, der persönliche Informationen verfügbar macht, könnte die Ausgabe des Tools diese Informationen enthalten, und die Ausgabedatei wird auf die lokale Festplatte geschrieben.  
   
 ## <a name="hosting"></a>Hosting  
- Die Hostingfunktion in WCF ermöglicht Anwendungen, um bei Bedarf starten oder Aktivieren der Anschlussfreigabe zwischen mehreren Anwendungen. Eine WCF-Anwendung kann in IIS (Internetinformationsdienste), ähnlich wie ASP.NET gehostet werden.  
+ Das Hosting-Feature in WCF ermöglicht es Anwendungen, bei Bedarf zu starten oder die Port Freigabe zwischen mehreren Anwendungen zu aktivieren. Eine WCF-Anwendung kann in Internetinformationsdienste (IIS) gehostet werden, ähnlich wie ASP.net.  
   
  Das Hosting macht keine spezifischen Informationen im Netzwerk verfügbar und behält keine Daten auf dem Computer bei.  
   
 ## <a name="message-security"></a>Nachrichtensicherheit  
- WCF-Sicherheit stellt die Sicherheitsfunktionen für Messaginganwendungen bereit. Die bereitgestellten Sicherheitsfunktionen bieten Authentifizierung und Autorisierung.  
+ WCF-Sicherheit stellt die Sicherheitsfunktionen für Messaging Anwendungen bereit. Die bereitgestellten Sicherheitsfunktionen bieten Authentifizierung und Autorisierung.  
   
  Die Authentifizierung wird ausgeführt, indem Anmeldeinformationen zwischen den Clients und Diensten übergeben werden. Die Authentifizierung kann entweder durch Sicherheit auf Transportebene oder durch SOAP-Sicherheit auf Nachrichtenebene erfolgen:  
   
@@ -47,7 +47,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 |Daten|Speicher|  
 |----------|-------------|  
 |Präsentationsanmeldeinformationen, z. B. Benutzername, X.509-Zertifikate, Kerberos-Token und Verweise auf Anmeldeinformationen.|Standardmäßige Windows-Verwaltungsmechanismen für Anmeldeinformationen, z. B. der Windows-Zertifikatspeicher.|  
-|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|ASP.NET-Anbieter für Mitgliedschaft.|  
+|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|ASP.net-Mitgliedschafts Anbieter.|  
 |Identitätsinformationen über den Dienst zum Authentifizieren des Diensts gegenüber Clients.|Endpunktadresse des Diensts.|  
 |Aufruferdaten.|Überwachungsprotokolle.|  
   
@@ -57,7 +57,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Bei der Überwachung werden Daten auch dann aufgezeichnet, wenn der Administrator die Konfiguration der Nachrichtenprotokollierung ändert (aktiviert oder deaktiviert), da bei der Nachrichtenprotokollierung anwendungsspezifische Daten im Header und Text erfasst werden können. In [!INCLUDE[wxp](../../../includes/wxp-md.md)] wird ein Datensatz im Anwendungsereignisprotokoll protokolliert. In [!INCLUDE[wv](../../../includes/wv-md.md)] und [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] wird ein Datensatz im Sicherheitsereignisprotokoll protokolliert.  
   
 ## <a name="transactions"></a>Transaktionen  
- Die Transaktionsfunktion stellt Transaktionsdienste für eine WCF-Anwendung bereit.  
+ Die Transaktions Funktion stellt Transaktionsdienste für eine WCF-Anwendung bereit.  
   
  Bei der Transaktionsweitergabe verwendete Transaktionsheader enthalten möglicherweise Transaktions-IDs oder Eintragung-IDs, die GUIDs sind.  
   
@@ -66,36 +66,36 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Die Transaktionsfunktion implementiert die Standards WS-Coordination und WS-Atomic-Transaktion.  
   
 ## <a name="reliable-sessions"></a>Zuverlässige Sitzungen  
- Zuverlässige Sitzungen in WCF bieten die Übertragung von Nachrichten an, wenn Transport- oder Vermittler Fehler auftreten. Sie bieten auch dann genau eine Übertragung von Nachrichten, wenn die Verbindung zum zugrunde liegenden Transport unterbrochen wird (z. B. eine TCP-Verbindung in einem drahtlosen Netzwerk) oder eine Nachricht verloren geht (ein HTTP-Proxy verwirft eine aus- oder eingehende Nachricht). Zuverlässige Sitzungen heben außerdem die Neuordnung von Nachrichten auf (z. B. beim Multipfad-Routing), wodurch die Reihenfolge beibehalten wird, in der die Nachrichten gesendet wurden.  
+ Zuverlässige Sitzungen in WCF ermöglichen die Übertragung von Nachrichten, wenn Transport-oder Vermittler Fehler auftreten. Sie bieten auch dann genau eine Übertragung von Nachrichten, wenn die Verbindung zum zugrunde liegenden Transport unterbrochen wird (z. B. eine TCP-Verbindung in einem drahtlosen Netzwerk) oder eine Nachricht verloren geht (ein HTTP-Proxy verwirft eine aus- oder eingehende Nachricht). Zuverlässige Sitzungen heben außerdem die Neuordnung von Nachrichten auf (z. B. beim Multipfad-Routing), wodurch die Reihenfolge beibehalten wird, in der die Nachrichten gesendet wurden.  
   
  Zuverlässige Sitzungen werden mit dem WS-RM (WS-ReliableMessaging)-Protokoll implementiert. Sie fügen WS-RM-Header hinzu, die Sitzungsinformationen enthalten, die zum Identifizieren aller einer bestimmten zuverlässigen Sitzung zugeordneten Nachrichten verwendet werden. Jede WS-RM-Sitzung hat einen Bezeichner, der eine GUID ist.  
   
  Auf dem Computer des Endbenutzers werden keine persönlichen Informationen beibehalten.  
   
 ## <a name="queued-channels"></a>In der Warteschlange stehende Kanäle  
- Warteschlangen speichern Nachrichten von einer sendenden Anwendung für eine empfangende Anwendung und leiten sie später an die empfangende Anwendung weiter. Sie sichern die Nachrichtenübertragung von sendenden Anwendungen an empfangende Anwendungen, wenn z. B. die empfangende Anwendung flüchtig ist. WCF bietet Unterstützung für Warteschlangenvorgänge durch die Nutzung von Microsoft Message Queuing (MSMQ) als Transport.  
+ Warteschlangen speichern Nachrichten von einer sendenden Anwendung für eine empfangende Anwendung und leiten sie später an die empfangende Anwendung weiter. Sie sichern die Nachrichtenübertragung von sendenden Anwendungen an empfangende Anwendungen, wenn z. B. die empfangende Anwendung flüchtig ist. WCF bietet Unterstützung für Warteschlangen mithilfe von Microsoft Message Queuing (MSMQ) als Transport.  
   
  Das Feature für in der Warteschlange stehende Kanäle fügt einer Nachricht keine Header hinzu. Es erstellt stattdessen eine Message Queuing-Nachricht mit entsprechenden Einstellungen und ruft Message Queuing-Methoden zum Platzieren der Nachricht in die Message Queuing-Warteschlange auf. Message Queuing ist eine in Windows enthaltene optionale Komponente.  
   
  Durch diese Funktion werden auf dem Computer des Endbenutzers keine Informationen beibehalten, da es Message Queuing als Warteschlangeninfrastruktur verwendet.  
   
 ## <a name="com-integration"></a>COM+-Integration  
- Diese Funktion schließt vorhandene COM- und COM+-Funktionen zum Erstellen von Diensten, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer des Endbenutzers bei.  
+ Diese Funktion umschließt vorhandene com-und com+-Funktionen, um Dienste zu erstellen, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer des Endbenutzers bei.  
   
 ## <a name="com-service-moniker"></a>COM-Dienstmoniker  
- Dies bietet einen nicht verwalteten Wrapper um einem standard-WCF-Client. Dieses Feature verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer bei.  
+ Dadurch wird ein nicht verwalteter Wrapper für einen WCF-Standard Client bereitstellt. Dieses Feature verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer bei.  
   
 ## <a name="peer-channel"></a>Peerkanal  
- Ein Peerkanal ermöglicht die Entwicklung von mehrparteienanwendungen mithilfe von WCF. Mehrparteienmessaging tritt im Kontext eines Netzes auf. Netze werden mit einem Namen identifiziert, den Knoten verknüpfen können. Jeder Knoten im Peerkanal erstellt einen TCP-Listener an einem vom Benutzer angegebenen Anschluss und stellt Verbindungen mit anderen Knoten im Netz her, um die Flexibilität zu sichern. Für diese Verbindungen tauschen Knoten auch bestimmte Daten wie die Listeneradresse und die IP-Adresse des Computers mit anderen Knoten im Netz aus. Innerhalb des Netzes gesendete Nachrichten können Sicherheitsinformationen enthalten, die sich auf den Absender beziehen, um Nachrichtenspoofing und -manipulation zu verhindern.  
+ Ein Peerkanal ermöglicht die Entwicklung von Anwendungen mit mehreren Parteien mithilfe von WCF. Mehrparteienmessaging tritt im Kontext eines Netzes auf. Netze werden mit einem Namen identifiziert, den Knoten verknüpfen können. Jeder Knoten im Peerkanal erstellt einen TCP-Listener an einem vom Benutzer angegebenen Anschluss und stellt Verbindungen mit anderen Knoten im Netz her, um die Flexibilität zu sichern. Für diese Verbindungen tauschen Knoten auch bestimmte Daten wie die Listeneradresse und die IP-Adresse des Computers mit anderen Knoten im Netz aus. Innerhalb des Netzes gesendete Nachrichten können Sicherheitsinformationen enthalten, die sich auf den Absender beziehen, um Nachrichtenspoofing und -manipulation zu verhindern.  
   
  Auf dem Computer des Endbenutzers werden keine persönlichen Informationen gespeichert.  
   
 ## <a name="it-professional-experience"></a>Arbeit von IT-Fachleuten  
   
 ### <a name="tracing"></a>Ablaufverfolgung  
- Die Diagnosefunktion der WCF-Infrastruktur protokolliert Nachrichten, die über den Transport und Dienstebenen Ausführen-Modell, und die Aktivitäten und Ereignisse im Zusammenhang mit diesen Nachrichten übergeben. Diese Funktion ist standardmäßig deaktiviert. Mithilfe der Anwendungskonfigurationsdatei aktiviert und Verhalten für die Ablaufverfolgung kann mithilfe des WCF WMI-Anbieters zur Laufzeit geändert werden. Wenn das Feature aktiviert ist, gibt die Ablaufverfolgungsinfrastruktur eine Diagnoseablaufverfolgung mit Nachrichten, Aktivitäten und Verarbeitungsereignissen an konfigurierte Listener aus. Format und Speicherort der Ausgabe werden durch die Listener-Konfigurationsauswahl des Administrators bestimmt; normalerweise ist es eine Datei im XML-Format. Der Administrator ist verantwortlich für das Festlegen der Zugriffssteuerungsliste (ACL) für die Ablaufverfolgungsdateien. Insbesondere beim Hosten durch WAS (Windows Activation System) muss der Administrator sicherstellen, dass die Dateien nicht im öffentlichen virtuellen Stammverzeichnis befinden, falls dies nicht gewünscht ist.  
+ Das Diagnose Feature der WCF-Infrastruktur protokolliert Nachrichten, die die Transport-und Dienstmodell Schichten durchlaufen, sowie die Aktivitäten und Ereignisse, die diesen Nachrichten zugeordnet sind. Diese Funktion ist standardmäßig deaktiviert. Sie wird mithilfe der Konfigurationsdatei der Anwendung aktiviert, und das Ablauf Verfolgungs Verhalten kann mithilfe des WCF-WMI-Anbieters zur Laufzeit geändert werden. Wenn das Feature aktiviert ist, gibt die Ablaufverfolgungsinfrastruktur eine Diagnoseablaufverfolgung mit Nachrichten, Aktivitäten und Verarbeitungsereignissen an konfigurierte Listener aus. Format und Speicherort der Ausgabe werden durch die Listener-Konfigurationsauswahl des Administrators bestimmt; normalerweise ist es eine Datei im XML-Format. Der Administrator ist verantwortlich für das Festlegen der Zugriffssteuerungsliste (ACL) für die Ablaufverfolgungsdateien. Insbesondere beim Hosten durch WAS (Windows Activation System) muss der Administrator sicherstellen, dass die Dateien nicht im öffentlichen virtuellen Stammverzeichnis befinden, falls dies nicht gewünscht ist.  
   
- Es gibt zwei Typen von Ablaufverfolgung: Die nachrichtenprotokollierung und Dienstmodell-diagnoseablaufverfolgung Ablaufverfolgung, die im folgenden Abschnitt beschrieben. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
+ Es gibt zwei Typen von Ablaufverfolgung, Nachrichtenprotokollierung und Dienstmodell-Diagnoseablaufverfolgung, die im folgenden Abschnitt beschrieben werden. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
   
 ### <a name="message-logging"></a>Nachrichtenprotokollierung  
  Die Ablaufverfolgungsquelle für die Nachrichtenprotokollierung (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) ermöglicht einem Administrator das Protokollieren der Nachrichten, die das System durchlaufen. Über die Konfiguration kann der Benutzer entscheiden, ob ganze Nachrichten oder nur Nachrichtenheader protokolliert werden, ob die Protokollierung auf der Transport- und/oder der Dienstmodellebene erfolgt und ob falsch formatierte Nachrichten erfasst werden. Außerdem kann der Benutzer die Filterung konfigurieren, um einzuschränken, welche Nachrichten protokolliert werden.  
@@ -116,24 +116,24 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Auf dieser Ebene protokollierte Nachrichten werden entschlüsselt, auch wenn sie für die Übertragung gesichert und verschlüsselt wurden.  
   
  Protokollierung falsch formatierter Nachrichten  
- Protokolliert Meldungen, die die WCF-Infrastruktur zu verstehen oder verarbeitet werden kann.  
+ Protokolliert Meldungen, die von der WCF-Infrastruktur nicht verstanden oder verarbeitet werden können.  
   
  Nachrichten werden unverändert protokolliert, d. h. verschlüsselt oder nicht verschlüsselt.  
   
- Wenn Meldungen, in protokolliert werden entfernt entschlüsselter oder unverschlüsselter Form standardmäßig WCF Sicherheitsschlüssel und mögliche persönliche Informationen aus den Nachrichten vor dem protokollieren. In den nächsten Abschnitten wird beschrieben, welche Informationen wann entfernt werden. Der Computeradministrator und der Anwendungsbereitsteller müssen bestimmte Konfigurationsschritte durchführen, um das Standardverhalten so zu ändern, dass Schlüssel und mögliche persönliche Informationen protokolliert werden.  
+ Wenn Nachrichten in entschlüsselter oder unverschlüsselter Form protokolliert werden, entfernt WCF standardmäßig Sicherheitsschlüssel und potenziell persönliche Informationen aus den Nachrichten, bevor diese protokolliert werden. In den nächsten Abschnitten wird beschrieben, welche Informationen wann entfernt werden. Der Computeradministrator und der Anwendungsbereitsteller müssen bestimmte Konfigurationsschritte durchführen, um das Standardverhalten so zu ändern, dass Schlüssel und mögliche persönliche Informationen protokolliert werden.  
   
 #### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a>Aus Nachrichtenheadern bei der Protokollierung entschlüsselter/unverschlüsselter Nachrichten entfernte Informationen  
- Wenn Nachrichten in entschlüsselter/unverschlüsselter Form protokolliert werden, werden standardmäßig vor dem Protokollieren Sicherheitsschlüssel und mögliche persönliche Informationen aus Nachrichtenheadern und Nachrichtentext entfernt. Die folgende Liste zeigt die WCF-Schlüssel und mögliche persönliche Informationen betrachtet.  
+ Wenn Nachrichten in entschlüsselter/unverschlüsselter Form protokolliert werden, werden standardmäßig vor dem Protokollieren Sicherheitsschlüssel und mögliche persönliche Informationen aus Nachrichtenheadern und Nachrichtentext entfernt. In der folgenden Liste wird gezeigt, was WCF Schlüssel und potenziell persönliche Informationen berücksichtigt.  
   
  Schlüssel, die entfernt werden:  
   
- \- Für Xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" und Xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- für xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- für xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,15 +141,15 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Mögliche persönliche Informationen, die entfernt werden:  
   
- \- Für Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und Xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- für xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \- Für xmlns = "Urn: Oasis: Namen: Tc: SAML:1.0:assertion" werden die Objekte in Fettschrift angezeigt (siehe unten) entfernt:  
+ \- für xmlns: SAML = "urn: Oasis: names: TC: SAML: 1.0: Assert": die fett formatierten Elemente (unten) werden entfernt:  
   
- \<Assertion  
+ \<assert  
   
  MajorVersion="1"  
   
@@ -163,41 +163,41 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<conditions NotBefore = "[DateTime]" NotOnOrAfter = "[DateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<audiencerestrictioncondition >  
   
- \<Zielgruppe > [Uri]\</Audience > +  
+ \<audience > [URI] \</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</audiencerestrictioncondition > *  
   
- \<DoNotCacheCondition />*  
+ \<donotcachecondition/> *  
   
- <\!--abstrakten Basistyp.  
+ < @ no__t-1--abstrakter Basistyp  
   
- \<Bedingung / > *  
+ \<condition/> *  
   
  -->  
   
- \</Conditions>?  
+ \</Bedingungen >?  
   
- \<Advice>  
+ \<advice >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<assertionidreferenzierung > [ID] \</assertionidreferenzierung > *  
   
- \<Assertion > [Assertion]\</Assertion > *  
+ \<assert > [Assert] \</Assert > *  
   
  [any]*  
   
- \</Advice>?  
+ \</Ratschläge >?  
   
- <\!--Abstrakter Basistypen  
+ < @ no__t-1--abstrakte Basis Typen  
   
- \<Anweisung / > *  
+ \<statement/> *  
   
- \<SubjectStatement>  
+ \<subjetstatement >  
   
- \<Betreff >  
+ \<subject >  
   
  `<NameIdentifier`  
   
@@ -211,23 +211,23 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<subjetconfirmation >  
   
- \<ConfirmationMethod > [AnyUri]\</ConfirmationMethod > +  
+ \<confirmationmethod > [anyURI] \</ConfirmationMethod > +  
   
- \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
+ \<subjetconfirmationdata > [any] \</subjetconfirmationdata >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: KeyInfo >... \</DS: KeyInfo >?  
   
- \</SubjectConfirmation>?  
+ \</subjetconfirmation >?  
   
- \</Subject>  
+ \</Betreff >  
   
- \</SubjectStatement>*  
+ \</subjetstatement > *  
   
  -->  
   
- \<AuthenticationStatement  
+ \<authenticationstatement  
   
  AuthenticationMethod="[uri]"  
   
@@ -245,7 +245,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `/>?`  
   
- <AuthorityBinding  
+ < Autorität Bindung  
   
  AuthorityKind="[QName]"  
   
@@ -255,13 +255,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<attributestatement >  
   
  [Subject]  
   
- \<Attribut  
+ \<-Attribut  
   
  AttributeName="[string]"  
   
@@ -271,40 +271,40 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</Attribut > +  
   
- \</AttributeStatement>*  
+ \</attributestatement > *  
   
- \<AuthorizationDecisionStatement  
+ \<authorizationdecisionstatement  
   
  Resource="[uri]"  
   
- Entscheidung = "[zulassen&#124;Verweigern&#124;unbestimmten]"  
+ Decision = "[deny&#124;&#124;unbestimmt zulassen]"  
   
  >  
   
  [Subject]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<action Namespace = "[URI]" > [String] \</Action > +  
   
- \<Beweise >  
+ \<evidence >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<assertionidreferenzierung > [ID] \</assertionidreferenzierung > +  
   
- \<Assertion > [Assertion]\</Assertion > +  
+ \<assert > [Assert] \</Assertion > +  
   
- \</Evidence>?  
+ \</Beweis >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</authorizationdecisionstatement > *  
   
- \</Assertion>  
+ \</Assertionen >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Aus Nachrichtentext bei der Protokollierung entschlüsselter/unverschlüsselter Nachrichten entfernte Informationen  
- Wie zuvor beschrieben, WCF entfernt Schlüssel und bekannte mögliche persönliche Informationen aus Nachrichtenheadern für Protokollierung entschlüsselter/unverschlüsselter Nachrichten. Darüber hinaus entfällt WCF Schlüssel und bekannte mögliche persönliche Informationen aus Nachrichtentext für die Textelemente und Aktionen in der folgenden Liste, die sicherheitsmeldungen beim Schlüsselaustausch beschreiben.  
+ Wie bereits beschrieben, entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Headern für protokollierte entschlüsselte/unverschlüsselte Nachrichten. Außerdem entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Textteilen für die Textelemente und Aktionen in der folgenden Liste, in denen die an den Schlüsselaustausch beteiligten Sicherheitsmeldungen beschrieben werden.  
   
  Für die folgenden Namespaces:  
   
- Xmlns:WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und Xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (z. B., wenn keine Aktion verfügbar ist)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (z. b. wenn keine Aktion verfügbar ist)  
   
  Informationen werden für diese Textelemente entfernt, die Schlüsselaustausch einschließen:  
   
@@ -357,7 +357,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 - `http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend`
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Aus anwendungsspezifischen Headern und Textdaten werden keine Informationen entfernt.  
- WCF verfolgt keine persönlichen Informationen in anwendungsspezifischen Headern (z. B. Abfragezeichenfolgen) oder Textdaten (z. B. Kreditkartennummer).  
+ WCF verfolgt keine persönlichen Informationen in anwendungsspezifischen Headern (z. b. Abfrage Zeichenfolgen) oder Textdaten (z. b. Kreditkartennummer).  
   
  Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern und Textdaten unter Umständen in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Protokolldateien verantwortlich. Er kann auch die Protokollierung deaktivieren, wenn diese Informationen nicht sichtbar sein sollen, oder diese Informationen aus den Protokolldateien herausfiltern.  
   
@@ -372,26 +372,26 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Sowohl für die Nachrichtenprotokollierung als auch die Ablaufverfolgung kann ein benutzerdefinierter Ablaufverfolgungslistener konfiguriert werden, der Ablaufverfolgungen und Nachrichten überträgt, z. B. an eine Remotedatenbank. Der Anwendungsbereitsteller ist für das Konfigurieren benutzerdefinierter Listener oder das Ermöglichen dieser Aktion durch Benutzer verantwortlich. Er ist außerdem für am Remotespeicherort verfügbar gemachte persönliche Informationen und für die korrekte Anwendung von ACLs auf diesen Speicherort verantwortlich.  
   
 ### <a name="other-features-for-it-professionals"></a>Andere Features für IT-Fachleute  
- WCF bietet es sich um einen WMI-Anbieter, der die Konfigurationsinformationen des WCF-Infrastruktur über WMI (im Lieferumfang von Windows enthalten) verfügbar macht. Standardmäßig steht die WMI-Schnittstelle Administratoren zur Verfügung.  
+ WCF verfügt über einen WMI-Anbieter, der die Konfigurationsinformationen der WCF-Infrastruktur über WMI (ausgeliefert in Windows) verfügbar macht. Standardmäßig steht die WMI-Schnittstelle Administratoren zur Verfügung.  
   
- WCF-Konfiguration verwendet die .NET Framework-Konfigurationsverfahren. Die Konfigurationsdateien werden auf dem Computer gespeichert. Der Anwendungsentwickler und der Administrator erstellen die Konfigurationsdateien und die ACL für jede Anwendungsanforderung. Eine Konfigurationsdatei kann Endpunktadressen und Links zu Zertifikaten im Zertifikatspeicher enthalten. Mithilfe der Zertifikate können Anwendungsdaten zum Konfigurieren verschiedener Eigenschaften der von der Anwendung verwendeten Funktionen bereitgestellt werden.  
+ Die WCF-Konfiguration verwendet den .NET Framework Konfigurations Mechanismus. Die Konfigurationsdateien werden auf dem Computer gespeichert. Der Anwendungsentwickler und der Administrator erstellen die Konfigurationsdateien und die ACL für jede Anwendungsanforderung. Eine Konfigurationsdatei kann Endpunktadressen und Links zu Zertifikaten im Zertifikatspeicher enthalten. Mithilfe der Zertifikate können Anwendungsdaten zum Konfigurieren verschiedener Eigenschaften der von der Anwendung verwendeten Funktionen bereitgestellt werden.  
   
- WCF verwendet auch die prozesssicherungsfunktionalität von .NET Framework durch Aufrufen der <xref:System.Environment.FailFast%2A> Methode.  
+ WCF verwendet auch die .NET Framework Prozess-dumpfunktion, indem die <xref:System.Environment.FailFast%2A>-Methode aufgerufen wird.  
   
 ### <a name="it-pro-tools"></a>Tools für IT-Fachleute  
- WCF bietet auch die folgenden IT professionelle Tools, die im Windows SDK ausgeliefert.  
+ WCF stellt außerdem die folgenden IT-Experten bereit, die im Windows SDK ausgeliefert werden.  
   
 #### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
- Der Viewer zeigt die WCF-Ablaufverfolgungsdateien. Der Viewer zeigt an, welche Daten in den Ablaufverfolgungen enthalten sind.  
+ Der Viewer zeigt WCF-Ablauf Verfolgungs Dateien an. Der Viewer zeigt an, welche Daten in den Ablaufverfolgungen enthalten sind.  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- Der Editor ermöglicht den Benutzer zum Erstellen und Bearbeiten von WCF-Konfigurationsdateien. Der Editor zeigt an, welche Daten in den Konfigurationsdateien enthalten sind. Für die gleiche Aufgabe kann auch ein Text-Editor verwendet werden.  
+ Der Editor ermöglicht dem Benutzer das Erstellen und Bearbeiten von WCF-Konfigurationsdateien. Der Editor zeigt an, welche Daten in den Konfigurationsdateien enthalten sind. Für die gleiche Aufgabe kann auch ein Text-Editor verwendet werden.  
   
-#### <a name="servicemodelreg"></a>ServiceModel_Reg  
- Mit diesem Tool kann der Benutzer ServiceModel-Installationen auf einem Computer verwalten. Das Tool zeigt statusmeldungen in einem Konsolenfenster ein, wenn es ausgeführt wird und in den Prozess möglicherweise Informationen zur Konfiguration der WCF-Installation angezeigt.  
+#### <a name="servicemodel_reg"></a>ServiceModel_Reg  
+ Mit diesem Tool kann der Benutzer ServiceModel-Installationen auf einem Computer verwalten. Das Tool zeigt die Statusmeldungen bei der Ausführung in einem Konsolenfenster an und zeigt möglicherweise Informationen zur Konfiguration der WCF-Installation an.  
   
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe und WSATUI.dll  
- Mit diesen Tools können IT-Experten interoperable WS-AtomicTransaction Netzwerkunterstützung in WCF zu konfigurieren. Mithilfe der Tools kann der Benutzer die Werte der in der Registrierung gespeicherten am häufigsten verwendeten WS-AtomicTransaction-Einstellungen anzeigen und ändern.  
+ Diese Tools ermöglichen es IT-Spezialisten, eine interoperable WS-AtomicTransaction-Netzwerkunterstützung in WCF zu konfigurieren. Mithilfe der Tools kann der Benutzer die Werte der in der Registrierung gespeicherten am häufigsten verwendeten WS-AtomicTransaction-Einstellungen anzeigen und ändern.  
   
 ## <a name="cross-cutting-features"></a>Querschnittliche Funktionen  
  Die folgenden Features sind querschnittliche Features. Das heißt, sie können mit allen vorangehenden Funktionen zusammengesetzt werden.  
@@ -404,4 +404,4 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Communication Foundation](index.md)
-- [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)
+- [Sicherheit](./feature-details/security.md)

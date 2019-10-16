@@ -4,36 +4,36 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593324"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320650"
 ---
 # <a name="configuring-wcf-services"></a>Konfigurieren von WCF-Diensten
 
 Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie den Dienst konfigurieren. An diesem Punkt nehmen Sie die Definition und Anpassung vor, wie der Dienst für Clients offengelegt werden soll. Dazu gehört das Angeben der Adresse, unter der der Dienst zugänglich ist, die Transportart und Nachrichtenverschlüsselung, die der Dienst zum Senden und Empfangen von Nachrichten verwendet, sowie der erforderliche Sicherheitstyp.  
   
- Die Konfiguration enthält bei dieser Verwendungsweise alle Möglichkeiten, die Sie zum Definieren und Anpassen der verschiedenen Aspekte eines Diensts verwenden können, ob imperativ im Code oder mithilfe einer Konfigurationsdatei. Dazu gehört auch das Angeben seiner Endpunktadressen, der verwendeten Transportarten und seiner Sicherheitsschemas. In der Praxis ist das Schreiben einer Konfiguration einem wesentlichen Teil der WCF-Anwendungen zu programmieren.  
+ Die Konfiguration enthält bei dieser Verwendungsweise alle Möglichkeiten, die Sie zum Definieren und Anpassen der verschiedenen Aspekte eines Diensts verwenden können, ob imperativ im Code oder mithilfe einer Konfigurationsdatei. Dazu gehört auch das Angeben seiner Endpunktadressen, der verwendeten Transportarten und seiner Sicherheitsschemas. In der Praxis ist das Schreiben von Konfigurationen ein wesentlicher Bestandteil der Programmierung von WCF-Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)  
- Beginnend mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF enthält ein neues Standard-Konfigurationsmodell, das WCF-konfigurationsanforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime automatisch Ihren Dienst mit Standardendpunkten, Bindungen und Verhaltensweisen.  
+ [Vereinfachte Konfiguration](simplified-configuration.md)  
+ Ab [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standard Endpunkten, Bindungen und Verhaltensweisen.  
   
- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Ein Windows Communication Foundation (WCF)-Dienst kann mithilfe der .NET Framework Configuration-Technologie konfiguriert werden. In den meisten Fällen werden die XML-Elemente in die Datei "Web.config" für eine Website (Internet Information Services, IIS) hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
+ [Konfigurieren von Diensten mit Konfigurationsdateien](configuring-services-using-configuration-files.md)  
+ Ein Windows Communication Foundation (WCF)-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden XML-Elemente der Datei "Web. config" für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
   
- [Bindungen](../../../docs/framework/wcf/bindings.md)  
- Darüber hinaus werden WCF mehrere vom System bereitgestellte Allgemeine Konfigurationen in Form von Bindungen, mit denen Sie schnell auswählen, die die grundlegenden Features für die Kommunikation Client und Dienst zwischen, z. B. die Transporte, Sicherheit und Codierungen verwendet.  
+ [Bindungen](bindings.md)  
+ Außerdem umfasst WCF mehrere vom System bereitgestellte allgemeine Konfigurationen in Form von Bindungen, mit denen Sie schnell die grundlegendsten Features für die Kommunikation zwischen Client und Dienst auswählen können, wie z. b. die verwendeten Transporte, Sicherheit und Nachrichten Codierungen.  
   
- [Endpunkte](../../../docs/framework/wcf/endpoints.md)  
- Die gesamte Kommunikation mit einem WCF-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte enthalten den Vertrag, die Konfigurationsinformationen, die in den Bindungen angegeben sind, und die Adressen, die angeben, wo sich der Dienst befindet bzw. wo Informationen zum Dienst verfügbar sind.  
+ [Endpunkte](endpoints.md)  
+ Die gesamte Kommunikation mit einem WCF-Dienst erfolgt über die *Endpunkte* des Dienstanbieter. Endpunkte enthalten den Vertrag, die Konfigurationsinformationen, die in den Bindungen angegeben sind, und die Adressen, die angeben, wo sich der Dienst befindet bzw. wo Informationen zum Dienst verfügbar sind.  
   
- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)  
- Verwenden von WCF und vorhandene Sicherheitsmechanismen, Sie können die Vertraulichkeit, Integrität, Authentifizierung und Autorisierung in jeden Dienst implementieren. Sie können auch eine Überprüfung auf Sicherheitserfolge und -misserfolge durchführen.  
+ [Sichern von Diensten](securing-services.md)  
+ Mithilfe von WCF und vorhandenen Sicherheitsmechanismen können Sie Vertraulichkeit, Integrität, Authentifizierung und Autorisierung in beliebige Dienste implementieren. Sie können auch eine Überprüfung auf Sicherheitserfolge und -misserfolge durchführen.  
   
- [Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten](./creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Die Anforderungen zum Verwenden eines Dienstes, der über die Interoperabilität mit Diensten und Clients auf beliebigen anderen Plattformen oder Betriebssystemen verfügt, sind in der WS-I Basic Profile 1.1-Spezifikation beschrieben.  
   
 ## <a name="reference"></a>Referenz  
@@ -44,20 +44,20 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grundlegender Programmierlebenszyklus](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ [Grundlegender Programmierlebenszyklus](basic-programming-lifecycle.md)  
   
- [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Entwerfen und Implementieren von Diensten](designing-and-implementing-services.md)  
   
- [Hosting-Dienste](../../../docs/framework/wcf/hosting-services.md)  
+ [Hosting-Dienste](hosting-services.md)  
   
- [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)  
+ [Erstellen von Clients](building-clients.md)  
   
- [Einführung in die Erweiterbarkeit](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ [Einführung in die Erweiterbarkeit](introduction-to-extensibility.md)  
   
- [Verwaltung und Diagnose](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Verwaltung und Diagnose](./diagnostics/index.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
-- [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md)
+- [Einfache WCF-Programmierung](basic-wcf-programming.md)
+- [Konzeptionelle Übersicht](conceptual-overview.md)
+- [Details zur WCF-Funktion](./feature-details/index.md)

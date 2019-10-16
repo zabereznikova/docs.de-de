@@ -90,7 +90,6 @@ val isOdd : x:int -> bool
 > isOdd 12;;
 val it : bool = false
 ```
-
 Im obigen Beispiel wird eine neue Funktion `isOdd` definiert, die eine `int`-Funktion annimmt und überprüft, ob diese ungerade ist. Diese Funktion kann mit unterschiedlichen Eingaben aufgerufen werden, um zu sehen, was sie zurückgibt. Sie können Funktionen innerhalb von Funktionsaufrufen aufrufen:
 
 ```console

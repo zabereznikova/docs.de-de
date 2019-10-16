@@ -2,12 +2,12 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .net-apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: d48acbb2e1c4858bf3146318f70dd7b8a7b62918
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926490"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318655"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -51,7 +51,7 @@ Bedeutende Verbesserungen bei Agilität, Portabilität und Kontrolle führen let
 
 [Docker](https://www.docker.com/) ist ein [Open Source-Projekt](https://github.com/docker/docker) , das die Bereitstellung von Anwendungen als Portier Bare, eigenständige Container, die in der Cloud oder lokal ausgeführt werden können, automatisiert. Docker ist außerdem ein [Unternehmen](https://www.docker.com/), das diese Technologie weiterentwickelt. Das Unternehmen arbeitet in Zusammenarbeit mit Cloud-, Linux-und Windows-Anbietern, einschließlich Microsoft.
 
-![Docker stellt Container auf allen Ebenen der hybriden Cloud bereit](./media/image6.png)
+![Diagramm, das zeigt, wie docker Container in der Hybrid Cloud bereitstellt.](./media/deploy-existing-net-apps-as-windows-containers/docker-deploys-containers-all-layers.png)
 
 **Abbildung 4-6.** Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
@@ -83,7 +83,7 @@ Für Linux sind mehrere Distributionen (z.B. Debian) verfügbar und werden in of
 
 In Abbildung 4-7 werden Betriebssystemversionen angezeigt, die Sie als Ziel für die App-Version der .NET Framework ausrichten können.
 
-![Zu zielende Betriebssysteme basierend auf .NET Framework Version](./media/image7.png)
+![Diagramm, das anzeigt, welches Betriebssystem basierend auf .NET Framework Version ausgerichtet werden soll.](./media/deploy-existing-net-apps-as-windows-containers/dotnet-framework-operating-systems.png)
 
 **Abbildung 4-7.** Zu zielende Betriebssysteme basierend auf .NET Framework Version
 
@@ -129,7 +129,7 @@ Das Ausführen eines Containers unter Windows mit oder ohne Hyper-V-Isolation is
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
-- **Infografik Microsoft und Container**
+- **infographic: Microsoft und Container @ no__t-0
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -138,15 +138,15 @@ Das Ausführen eines Containers unter Windows mit oder ohne Hyper-V-Isolation is
 In den vorherigen Abschnitten wurde erläutert, was die Vorteile von Docker-Containern und Details zu den spezifischen Container Images für .NET-Anwendungen sind. Alle allgemeinen Informationen sind grundlegend, um eine Anwendung zu entwickeln oder in Container zu packen.
 Wenn Sie sich jedoch über die Produktions Bereitstellungs Umgebung oder sogar über QA-und Entwicklungs-/Testumgebungen Gedanken machen, bietet Microsoft Azure eine offene und große Vielfalt von Optionen, ein vollständiges containerökosystem in der Cloud (siehe Abbildung unten). Abhängig von den Anforderungen ihrer jeweiligen Anwendung sollten Sie ein oder ein anderes Azure-Produkt auswählen.
 
-![Das containerökosystem in Azure](./media/image7.5.png)
+![Diagramm des containerökosystems in Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 
 **Abbildung 4-7.5.** Das containerökosystem in Azure
 
 Über das containerökosystem in Azure unterstützen die folgenden Produkte Container, die als Infrastruktur angesehen werden:
 
 - **Azure Container Instances (ACI)**
-- **Azure-Virtual Machines** (Mit Unterstützung für Container)
-- **Azure-Virtual Machine Scale Sets** (Mit Unterstützung für Container)
+- **Azure-Virtual Machines** (mit Unterstützung für Container)
+- **Azure-Virtual Machine Scale Sets** (mit Unterstützung für Container)
 
 Von diesen drei Vorteilen bietet ACI einen großen Vorteil, d. h., Sie müssen nicht das zugrunde liegende Betriebssystem verwalten, Sie müssen kein Upgrade/Patch durchführen, sondern es ist immer noch auf der Infrastruktur Ebene positioniert, was in den bevorstehenden Abschnitten dieses Buchs besser erläutert wird.
 
