@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 076b5d628dfe83decdbbe2f5e74c50e08262c580
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ac3fc157543f2990c7c9f9917140b35f8948108e
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700684"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395477"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next-Methode
 
@@ -41,22 +41,21 @@ HRESULT Next (
 
 ## <a name="parameters"></a>Parameter
 
- `celt`  
- in Die Anzahl der abzurufenden `ICorDebugCode`-Instanzen.
+`celt`  
+in Die Anzahl der abzurufenden `ICorDebugCode`-Instanzen.
 
- `values`  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugCode`-Objekt zeigt.
+`values`  
+vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugCode`-Objekt zeigt.
 
- `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugCode`-Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.
+`pceltFetched`  
+vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugCode`-Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
- **Header:** Cordebug. idl, Cordebug. h
+**Header:** CorDebug.idl, CorDebug.h
 
- **Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
- 
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

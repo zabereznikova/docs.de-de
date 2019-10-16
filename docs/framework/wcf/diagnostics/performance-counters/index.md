@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a13cc98a88ff81afd478eaa3e40286169811233a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
-ms.translationtype: HT
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320305"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395890"
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
 Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsindikatoren, die Ihnen helfen, die Leistung Ihrer Anwendung zu messen.  
@@ -118,19 +118,16 @@ config.Save();
 > Sind in einem Vertrag Vorgangsnamen doppelt vorhanden, wird nur eine Indikatorinstanz für beide Vorgänge ausgegeben.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Programmieren der WCF-Leistungsindikatoren  
- Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Programm gesteuert auf die WCF-Leistungsindikatoren zugreifen können. Diese Dateien werden wie folgt aufgelistet.  
+
+Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Programm gesteuert auf die WCF-Leistungsindikatoren zugreifen können. Diese Dateien werden wie folgt aufgelistet:
   
-- _ServiceModelEndpointPerfCounters.vrg  
+- *@no__t -1Service Model endpointperfcounters. VRG*
+- *@no__t -1Service Model operationperfcounters. VRG*
+- *@no__t -1Service Model Service PerfCounters. VRG*  
+- *@no__t -1smsvchostperfcounters. VRG*
+- *@no__t -1transaktionbridgeperfcounters. VRG*
   
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](https://go.microsoft.com/fwlink/?LinkId=95179).  
+Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
 ## <a name="see-also"></a>Siehe auch
 

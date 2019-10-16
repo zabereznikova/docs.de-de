@@ -2,15 +2,15 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911774"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395713"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
-In diesem Abschnitt wird die WCF-Nachrichten <xref:System.ServiceModel.NetMsmqBinding>Sicherheit bei Verwendung von erörtert.  
+In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von <xref:System.ServiceModel.NetMsmqBinding> erläutert.  
   
 > [!NOTE]
 > Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md)zu lesen.  
@@ -19,7 +19,7 @@ In diesem Abschnitt wird die WCF-Nachrichten <xref:System.ServiceModel.NetMsmqBi
   
  die Konzepte der Transportsicherheit erläutert.  
   
- ![Anwendungs Diagramm in der Warteschlange](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlange: Abbildung")  
+ ![Anwendungs Diagramm in der Warteschlange](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Verteilte Warteschlangen (Abbildung)")  
   
  Beim Senden von Nachrichten in der Warteschlange mithilfe von WCF wird die WCF-Nachricht als Text der MSMQ-Nachricht (Message Queuing) angefügt. Mit der Transportsicherheit wird die gesamte MSMQ-Nachricht gesichert, mit der Nachrichtensicherheit (oder SOAP-Sicherheit) hingegen wird nur der Textkörper der MSMQ-Nachricht gesichert.  
   
@@ -52,7 +52,7 @@ In diesem Abschnitt wird die WCF-Nachrichten <xref:System.ServiceModel.NetMsmqBi
   
  Wenn dieser Anmeldeinformationstyp verwendet wird, muss der Dienst unter dem SERVICE-Konto ausgeführt werden.  
   
- Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet. Weitere Informationen finden Sie unter unter [Suchen von Kerberos, dem Protokoll für verteilte Sicherheit in Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet.
   
 ### <a name="username-password"></a>Benutzernamenkennwort (Username Password)  
  Mit dieser Eigenschaft kann sich der Client beim Server durch Angabe eines Benutzernamenkennworts im Sicherheitsheader der Nachricht authentifizieren.  

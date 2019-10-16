@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush-Methode (System.Data.SqlTypes)
+title: SqlStreamChars. Flush-Methode (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634336"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395624"
 ---
-# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush-Methode
+# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars. Flush-Methode
 
-Löscht beim Überschreiben in einer abgeleiteten Klasse alle Puffer für diesen Stream und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät. Die Assembly mit dieser Methode hat eine Friend-Beziehung SQLAccess.dll. Es ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken Hostingmechanismus, die von dieser Datenbank bereitgestellt werden.
+Löscht beim Überschreiben in einer abgeleiteten Klasse alle Puffer für diesen Stream und veranlasst die Ausgabe aller gepufferten Daten an das zugrunde liegende Gerät. Die Assembly, die diese Methode enthält, hat eine Friend-Beziehung mit SQLAccess. dll. Sie ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken den von dieser Datenbank bereitgestellten Hostingmechanismus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> Die `SqlStreamChars.Flush` Methode privat ist und nicht direkt in Ihrem Code verwendet werden soll.
+> Die `SqlStreamChars.Flush`-Methode ist privat und sollte nicht direkt im Code verwendet werden.
 >
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System.Data (in "System.Data.dll")
+**Assembly:** System. Data (in "System. Data. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

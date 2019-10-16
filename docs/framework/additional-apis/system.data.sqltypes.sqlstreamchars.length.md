@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Length-Eigenschaft (System.Data.SqlTypes)
+title: SqlStreamChars. length-Eigenschaft (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634453"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395604"
 ---
-# <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length-Eigenschaft
+# <a name="sqlstreamcharslength-property"></a>SqlStreamChars. length (Eigenschaft)
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Länge des aktuellen Streams ab. Die Assembly, die diese Eigenschaft enthält, verfügt über eine Friend-Beziehung SQLAccess.dll. Es ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken Hostingmechanismus, die von dieser Datenbank bereitgestellt werden.
+Ruft beim Überschreiben in einer abgeleiteten Klasse die Länge des aktuellen Streams ab. Die Assembly, die diese Eigenschaft enthält, hat eine Friend-Beziehung mit SQLAccess. dll. Sie ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken den von dieser Datenbank bereitgestellten Hostingmechanismus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +30,7 @@ Ruft beim Überschreiben in einer abgeleiteten Klasse ruft die Länge des aktuel
 public abstract long Length { get; }
 ```
 
-## <a name="property-value"></a>Eigenschaftswert
+## <a name="property-value"></a>Eigenschafts Wert
 
 <xref:System.Int64>\
 Die Länge des Streams.
@@ -38,14 +38,14 @@ Die Länge des Streams.
 ## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> Die `SqlStreamChars.Length` -Eigenschaft ist privat und nicht direkt in Ihrem Code verwendet werden soll.
+> Die `SqlStreamChars.Length`-Eigenschaft ist privat und sollte nicht direkt im Code verwendet werden.
 >
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Eigenschaft in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System.Data (in "System.Data.dll")
+**Assembly:** System. Data (in "System. Data. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

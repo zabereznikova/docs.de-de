@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701056"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396010"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 
 Erweiterungs Methoden ermöglichen es Entwicklern, Datentypen, die bereits definiert sind, benutzerdefinierte Funktionen hinzuzufügen, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungs Methoden ermöglichen das Schreiben einer Methode, die aufgerufen werden kann, als ob es sich um eine Instanzmethode des vorhandenen Typs handelt.
-  
+
 ## <a name="remarks"></a>Hinweise
 
 Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. Alle Erweiterungs Methoden müssen mit dem Erweiterungs Attribut `<Extension>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace gekennzeichnet werden und müssen in einem [Modul](../../../language-reference/statements/module-statement.md)definiert werden. Wenn eine Erweiterungsmethode außerhalb eines Moduls definiert ist, generiert der Visual Basic-Compiler den Fehler [BC36551](../../../misc/bc36551.md), "Erweiterungs Methoden können nur in Modulen definiert werden".
@@ -29,7 +29,7 @@ Das `Extension`-Attribut kann nur auf eine Visual Basic [`Module`](../../../lang
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel wird eine `Print`-Erweiterung für den <xref:System.String>-Datentyp definiert. Die Methode verwendet `Console.WriteLine`, um eine Zeichenfolge anzuzeigen. Durch den `Print`-Parameter der `aString`-Methode wird festgelegt, dass die <xref:System.String>-Klasse von der Methode erweitert wird.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Beachten Sie, dass die Definition der Erweiterungsmethode mit dem Erweiterungsattribut `<Extension()>` markiert ist. Die Markierung des Moduls, in dem die Methode definiert ist, ist optional, aber jede Erweiterungsmethode muss markiert werden. Zum Zugriff auf das Erweiterungsattribut muss <xref:System.Runtime.CompilerServices> importiert werden.
@@ -45,7 +45,6 @@ Das nächste Beispiel, `PrintAndPunctuate`, ist auch eine Erweiterung für <xref
 Die Methode wird aufgerufen, indem ein Zeichenfolgenargument für `punc` gesendet wird: `example.PrintAndPunctuate(".")`
 
 Im folgenden Beispiel werden `Print` und `PrintAndPunctuate` definiert und aufgerufen. <xref:System.Runtime.CompilerServices> wird in das Definitionsmodul importiert, um den Zugriff auf das Erweiterungsattribut zu ermöglichen.
-
 
 ```vb
 Imports System.Runtime.CompilerServices
