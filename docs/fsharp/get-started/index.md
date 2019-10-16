@@ -15,7 +15,7 @@ Sie können mit F# auf Ihrem Computer oder online beginnen.
 
 ## <a name="get-started-on-your-machine"></a>Erste Schritte auf Ihrem Computer
 
-Es gibt mehrere Anleitungen zum erstmaligen Installieren und Verwenden von F#, auf Ihrem Computer.  Sie können die folgende Tabelle verwenden, um zu entscheiden, welche Anleitung Sie verwenden wollen:
+Es gibt mehrere Anleitungen zum erstmaligen Installieren und Verwenden von F# auf Ihrem Computer. Sie können die folgende Tabelle verwenden, um zu entscheiden, welche Anleitung Sie verwenden wollen:
 
 | Betriebssystem | Bevorzugen Sie Visual Studio | Bevorzugen Sie Visual Studio-Code | Über die Befehlszeile bevorzugen |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
@@ -23,11 +23,11 @@ Es gibt mehrere Anleitungen zum erstmaligen Installieren und Verwenden von F#, a
 | macOS | [Erste Schritte mit Visual Studio für Mac](get-started-with-visual-studio-for-mac.md) | [Erste Schritte mit Visual Studio Code und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
 | Linux | Nicht zutreffend | [Erste Schritte mit Visual Studio Code und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
 
-Es gibt im Allgemeinen keine spezielle Anletung, die besser als der Rest ist. Es wird empfohlen, alle Möglichkeiten zum Verwenden von F# auf Ihrem Computer auszuprobieren, um festzustellen, welches für Sie die beste ist!
+Es gibt im Allgemeinen keine spezielle Anleitung, die besser als der Rest ist. Es wird empfohlen, alle Möglichkeiten zum Verwenden von F# auf Ihrem Computer auszuprobieren, um festzustellen, welche für Sie die beste ist!
 
 ## <a name="get-started-online"></a>Beginnen Sie online
 
 Wenn Sie F# und .NET nicht auf dem Computer installieren möchten, können Sie auch in F# in Ihrem Browser einsteigen:
 
-* [Einführung in die F# für Azure-Notebooks](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb) ist eine [Jupyter-Notebook](https://jupyter.org/) auf dem kostenlosen Azure Notebooks-Dienst. Melden Sie sich mit einem Microsoft-Konto an und Sie können sofort direkt im Browser loshacken!
-* [Die REPL Fable](https://fable.io/repl/) ist eine interaktives in-browser REPL, das [Fable](https://fable.io/) verwendet um  F#-Code in JavaScript zu übersetzen. Sehen Sie sich die zahlreichen Beispiele zu grundlegenden F#-Funktionen bis hin zu einem vollwertigen Videospiel an, und all das in Ihrem Browser!
+* [Einführung in F# für Azure Notebooks](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb) ist ein [Jupyter-Notebook](https://jupyter.org/) auf dem kostenlosen Azure Notebooks-Dienst. Melden Sie sich mit einem Microsoft-Konto an, und legen Sie direkt in Ihrem Browser los.
+* [Die Fable-REPL](https://fable.io/repl/) ist eine interaktives browserinterne REPL, die [Fable](https://fable.io/) verwendet, um F#-Code in JavaScript zu übersetzen. Sehen Sie sich die zahlreichen Beispiele in Ihrem Browser zu grundlegenden F#-Funktionen bis hin zu einem vollwertigen Videospiel an.
