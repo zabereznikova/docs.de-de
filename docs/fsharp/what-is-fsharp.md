@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332731"
 ---
-# <a name="what-is-f"></a>Was ist F @ no__t-0
+# <a name="what-is-f"></a>Was ist F#
 
 F# ist eine funktionale Programmiersprache, die das Schreiben von korrektem und verwaltbarem Code erleichtert.
 
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#Funktionen sind ebenfalls die erste Klasse, d. h., Sie können als Parameter und von anderen Funktionen zurückgegeben werden.
+F#-Funktionen sind ebenfalls Funktionen erster Klasse, d. h., Sie können als Parameter und von anderen Funktionen zurückgegeben werden.
 
 ## <a name="functions-to-define-operations-on-objects"></a>Funktionen zum Definieren von Vorgängen für Objekte
 
-F#bietet vollständige Unterstützung für-Objekte, bei denen es sich um nützliche Datentypen handelt, wenn Sie Daten und Funktionen mischen müssen. F#-Funktionen werden verwendet, um-Objekte zu bearbeiten.
+F# bietet vollständige Unterstützung für Objekte. Dies ist nützlich, wenn Sie Daten und Funktionen mischen müssen. F#-Funktionen werden verwendet, um Objekte zu bearbeiten.
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
