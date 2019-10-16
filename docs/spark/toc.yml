@@ -3,6 +3,8 @@
 - name: Übersicht
   expanded: true
   items:
+    - name: Was ist Apache Spark?
+      href: what-is-spark.md
     - name: Was ist .NET für Apache Spark?
       href: what-is-apache-spark-dotnet.md
 - name: Tutorials
