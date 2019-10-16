@@ -3,14 +3,14 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 author: sdmaclea
 ms.author: stmaclea
-ms.date: 08/05/2019
+ms.date: 10/14/2019
 ms.topic: overview
-ms.openlocfilehash: f107d15fa5584bb5a4834b5f11f1096bec7eb749
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: c0a45a1bfe866ad42890db576b5dd5098b1dbc3d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974148"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318346"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -18,11 +18,28 @@ Software verhält sich nicht immer erwartungsgemäß, .NET Core verfügt jedoch 
 
 Dieser Artikel hilft Ihnen bei der Suche nach den verschiedenen Tools, die Sie benötigen.
 
-## <a name="managed-debuggersmanaged-debuggersmd"></a>[Verwaltete Debugger](managed-debuggers.md)
-Verwaltete Debugger ermöglichen Ihnen die Interaktion mit dem Programm. Durch Anhalten, das inkrementelle Ausführen, Untersuchen und Fortsetzen erhalten Sie Erkenntnisse über das Verhalten Ihres Codes. Ein Debugger ist die erste Wahl für die Diagnose funktionaler Probleme, die leicht reproduziert werden können.
+## <a name="managed-debuggers"></a>Verwaltete Debugger
 
-## <a name="logging-and-tracinglogging-tracingmd"></a>[Protokollierung und Ablaufverfolgung](logging-tracing.md)
-Die Protokollierung und Ablaufverfolgung sind verwandte Techniken. Sie beziehen sich auf das Instrumentieren von Code zum Erstellen von Protokolldateien. In den Dateien werden die Details eines Programms aufgezeichnet. Diese Details können zur Diagnose der kompliziertesten Probleme verwendet werden. In Kombination mit Zeitstempeln sind diese Techniken auch für Leistungsuntersuchungen von Bedeutung.
+[Verwaltete Debugger](managed-debuggers.md) ermöglichen Ihnen die Interaktion mit dem Programm. Durch Anhalten, das inkrementelle Ausführen, Untersuchen und Fortsetzen erhalten Sie Erkenntnisse über das Verhalten Ihres Codes. Ein Debugger ist die erste Wahl für die Diagnose funktionaler Probleme, die leicht reproduziert werden können.
 
-## <a name="unit-testingtestingindexmd"></a>[Komponententests](../testing/index.md)
-Komponententests sind eine wichtige Komponente von Continuous Integration und der Bereitstellung hochwertiger Software. Komponententests sollen Sie früh warnen, wenn Sie etwas unterbrechen.
+## <a name="logging-and-tracing"></a>Protokollierung und Nachverfolgung
+
+Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Techniken. Sie beziehen sich auf das Instrumentieren von Code zum Erstellen von Protokolldateien. In den Dateien werden die Details eines Programms aufgezeichnet. Diese Details können zur Diagnose der kompliziertesten Probleme verwendet werden. In Kombination mit Zeitstempeln sind diese Techniken auch für Leistungsuntersuchungen von Bedeutung.
+
+## <a name="unit-testing"></a>Komponententest
+
+[Komponententests](../testing/index.md) sind eine wichtige Komponente von Continuous Integration und der Bereitstellung hochwertiger Software. Komponententests sollen Sie früh warnen, wenn Sie etwas unterbrechen.
+
+## <a name="net-core-dotnet-diagnostic-global-tools"></a>Globale .NET Core-dotnet-Diagnosetools
+
+### <a name="dotnet-counters"></a>dotnet-counters
+
+[dotnet-counters](dotnet-counters.md) ist ein Tool zur Leistungsüberwachung der Integrität auf erster Ebene und zur Leistungsuntersuchung. Es überwacht die Werte des Leistungsindikators, die über die <xref:System.Diagnostics.Tracing.EventCounter>-API veröffentlicht wurden. Sie können beispielsweise den CPU-Verbrauch oder die Anzahl ausgelöster Ausnahmen in Ihrer .NET Core-Anwendung überwachen.
+
+### <a name="dotnet-dump"></a>dotnet-dump
+
+Mit dem Tool [dotnet-dump](dotnet-dump.md) können Sie Windows- und Linux-Kernspeicherabbilder ohne nativen Debugger erfassen und analysieren.
+
+### <a name="dotnet-trace"></a>dotnet-trace
+
+.NET Core schließt `EventPipe` ein, worüber Diagnosedaten bereitgestellt werden. Mit dem Tool [dotnet-trace](dotnet-trace.md) können Sie relevante Daten für die Profilerstellung in Ihrer App nutzen. Diese können hilfreich sein, wenn Sie die Ursache für langsame Apps ermitteln müssen.
