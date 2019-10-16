@@ -118,7 +118,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Anstatt objektorientierten Code zu schreiben, werden Sie in F# Code schreiben, der Objekte wie einen weiteren Datentyp behandelt, der durch Funktionen bearbeitet wird. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objekt Ausdrücke](./language-reference/object-expressions.md) und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F#-Programmen verwendet.
+Anstatt objektorientierten Code zu schreiben, werden Sie in F# Code schreiben, der Objekte wie einen weiteren Datentyp behandelt, der durch Funktionen bearbeitet wird. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objektausdrücke](./language-reference/object-expressions.md) und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F#-Programmen verwendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
