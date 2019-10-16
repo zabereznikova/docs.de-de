@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca466af71f62ef72e021753b132afdc847f75d76
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608774"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320692"
 ---
 # <a name="configuring-client-behaviors"></a>Konfigurieren von Clientverhalten
-Windows Communication Foundation (WCF) konfiguriert Verhaltensweisen auf zwei Arten: entweder durch das Verweisen auf verhaltenskonfigurationen – die definiert sind die `<behavior>` Abschnitt einer Konfigurationsdatei für den Client-Anwendung – oder programmgesteuert in der aufrufenden die Anwendung. In diesem Abschnitt werden beide Ansätze beschrieben.  
+Windows Communication Foundation (WCF) konfiguriert Verhalten auf zwei Arten: entweder durch den Verweis auf Verhaltens Konfigurationen, die im Abschnitt "`<behavior>`" einer Client Anwendungs Konfigurationsdatei definiert sind – oder Programm gesteuert in der aufrufenden Anwendung. In diesem Abschnitt werden beide Ansätze beschrieben.  
   
  Bei Verwendung einer Konfigurationsdatei ist die Verhaltenskonfiguration eine benannte Auflistung von Konfigurationseinstellungen. Der Name jeder Verhaltenskonfiguration muss eindeutig sein. Diese Zeichenfolge wird im `behaviorConfiguration`-Attribut einer Endpunktkonfiguration zum Verknüpfen des Endpunkts mit dem Verhalten verwendet.  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) konfiguriert Verhaltensweisen auf zwei Ar
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Programmgesteuertes Verwenden von Verhaltensweisen  
- Können Sie auch konfigurieren oder Programmgesteuertes Einfügen von Verhalten dazu sucht er die entsprechende `Behaviors` -Eigenschaft für das Windows Communication Foundation (WCF)-Clientobjekt oder auf die clientkanalfactory-Objekt vor dem Öffnen des Clients.  
+ Sie können Verhaltensweisen auch Programm gesteuert konfigurieren oder einfügen, indem Sie die entsprechende `Behaviors`-Eigenschaft für das Windows Communication Foundation (WCF)-Client Objekt oder das clientkanalfactoryobjekt vor dem Öffnen des Clients suchen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird das programmgesteuerte Einfügen eines Verhaltens durch Zugreifen auf die <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft auf dem <xref:System.ServiceModel.Description.ServiceEndpoint> veranschaulicht, der vor der Erstellung des Kanalobjekts von der <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>-Eigenschaft zurückgegeben wurde:  
@@ -53,4 +53,4 @@ Windows Communication Foundation (WCF) konfiguriert Verhaltensweisen auf zwei Ar
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [\<-Verhalten >](../configure-apps/file-schema/wcf/behaviors.md)

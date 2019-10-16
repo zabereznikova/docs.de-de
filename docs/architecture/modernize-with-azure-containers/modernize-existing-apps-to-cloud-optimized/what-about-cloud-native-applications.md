@@ -2,12 +2,12 @@
 title: Was gilt für cloudnative Anwendungen?
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Wie sieht es mit cloudbasierten Anwendungen aus?
 ms.date: 04/28/2018
-ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373922"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318436"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
@@ -15,7 +15,7 @@ Obwohl sich die [cloudbasierten](https://azure.microsoft.com/overview/cloudnativ
 
 In Abbildung 4-3 werden Native Cloud-apps in den Fälligkeits Stufen der Anwendungs Modernisierung positioniert:
 
-![Positionieren von Cloud-native Anwendungen](./media/image3.png)
+![Diagramm, das zeigt, wie Native Cloud-Anwendungen positioniert werden.](./media/what-about-cloud-native-applications/positioning-cloud-native-applications.png)
 
 **Abbildung 4-3.** Positionieren von Cloud-native Anwendungen
 
@@ -25,7 +25,7 @@ Die Hauptpfeiler der cloudbasierten Anwendungen basieren auf microservices-Archi
 
 Abbildung 4-4 zeigt die Hauptmerkmale des cloudbasierten Modells.
 
-![Native Cloud-Merkmale sind mikrodienste, Container, cloudrobust, orchestratoren und Server lose](./media/image4.png)
+![Diagramm, in dem die Hauptmerkmale der Cloud aufgeführt sind.](./media/what-about-cloud-native-applications/cloud-native-characteristics.png)
 
 **Abbildung 4-4.** In der Cloud Native Merkmale
 
@@ -41,7 +41,7 @@ Die [zwölfstufige App](https://12factor.net/) (eine Sammlung von Mustern, die e
 
 Die [Cloud Native Computing Foundation (cncf)](https://www.cncf.io/) ist ein primärer Förderer der cloudbasierten Prinzipien. Microsoft ist [Mitglied von cncf](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Eine Beispiel Definition und weitere Informationen zu den Merkmalen von cloudbasierten Anwendungen finden Sie im Gartner [-Artikel entwerfen und Entwerfen von cloudbasierten Anwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Spezifische Anleitungen von Microsoft zur Implementierung einer cloudbasierten Anwendung finden [Sie unter .NET-Funktionen: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
+Eine Beispiel Definition und weitere Informationen zu den Merkmalen von cloudbasierten Anwendungen finden Sie im Gartner [-Artikel entwerfen und Entwerfen von cloudbasierten Anwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Eine spezielle Anleitung von Microsoft zur Implementierung einer Cloud-systemeigenen Anwendung finden Sie unter [.net-mikrodienste: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
 
 Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudbasierten Modell zu berücksichtigen ist, besteht darin, dass Sie eine Architektur in einer auf microservices basierenden Architektur entwickeln müssen. Dies erfordert aufgrund des großen Umgestaltungs Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeits Stufen und langfristige Agilität benötigen. Aber Sie könnten mit der Umstellung auf die Cloud-Native beginnen, indem Sie für ein paar neue Szenarios die folgenden Funktionen hinzufügen und die Anwendung dann vollständig als "mikroservices" umgestalten. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option ist.
 
@@ -55,7 +55,7 @@ Allerdings sind die-mikrodienste für keine neue oder moderne Anwendung obligato
 
 Die microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf microservices basierenden Architektur wird eine Anwendung als eine Sammlung von Diensten erstellt, die unabhängig entwickelt, getestet, versioniert, bereitgestellt und skaliert werden können. Dies kann jede zugehörige, autonome Datenbank pro mikroservice einschließen.
 
-Einen detaillierten Einblick in eine microservicearchitektur, die Sie mithilfe von .net Core implementieren können, finden Sie in der herunterladbaren [PDF-e-book .net-microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch ist auch [Online](../../microservices/index.md)verfügbar.
+Einen detaillierten Einblick in eine microservicearchitektur, die Sie mithilfe von .net Core implementieren können, finden Sie in der herunterladbaren PDF-e-book-[.net microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch ist auch [Online](../../microservices/index.md)verfügbar.
 
 Aber auch in Szenarios, in denen die Funktionen von Mikro Diensten eine leistungsstarke, unabhängige Bereitstellung, starke subsystemgrenzen und Technologie Vielfalt bieten, sind auch viele neue Herausforderungen zu meistern. Die Herausforderungen beziehen sich auf die Entwicklung verteilter Anwendungen, wie z. b. fragmentierte und unabhängige Datenmodelle. erreichen robuster Kommunikation zwischen den-und-Diensten der Bedarf an letztlicher Konsistenz; und betriebliche Komplexität. Im Vergleich zu herkömmlichen monolithischen Anwendungen führt der-Dienst zu einem höheren Komplexitäts Grad.
 

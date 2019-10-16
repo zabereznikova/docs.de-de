@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5ef785f476b795a9c53e511d51b2683b99e6da05
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: e476039ff9c8d33f54a2f7e4371dc09a3be557c7
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182000"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237357"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>„Microsoft.VisualBasic.Constants.vbNewLine“ ist veraltet
 
@@ -12,9 +12,9 @@ Die Konstante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fu
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
-.NET Core 3.0 Preview 8
+3.0 Preview 8
 
-#### <a name="details"></a>Details
+#### <a name="change-description"></a>Änderungsbeschreibung
 
 Ab .NET Core 3.0 Preview 8 wird das Attribut [Veraltet](xref:System.ObsoleteAttribute) auf die Konstante <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> angewendet. Die Verwendung der Konstante führt zu einer Compilerwarnung. In früheren Releases von .NET Core und .NET Framework war sie nicht als veraltet gekennzeichnet.
 
@@ -40,5 +40,4 @@ Visual Basic
 
 - `F:Microsoft.VisualBasic.Constants.vbNewLine`
 
--- >
-
+-->

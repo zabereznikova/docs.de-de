@@ -2,16 +2,16 @@
 title: Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 description: Die Microservicesarchitektur eignet sich nicht nur für das Back-End. Verschaffen Sie sich einen Einblick in der Verwendung für das Front-End.
 ms.date: 09/20/2018
-ms.openlocfilehash: 60e0e6d59738f3f1fec31226cb842ceb1af303e4
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834374"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275741"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 
-Das Fundament einer Microservicesarchitektur ist die serverseitige Verarbeitung von Daten und Logik. Sie können jedoch auch die Benutzeroberfläche Ihrer Anwendung mit Microservices entwerfen. Dies wird als „zusammengesetzte Benutzeroberfläche“ bezeichnet, da sie von Microservices erzeugt wird, statt dass eine monolithische Client-App einfach die Microservices auf dem Server nutzt. Bei diesem Ansatz können die von Ihnen erstellten Microservices sowohl durch Logik als auch durch die visuelle Darstellung ergänzt werden.
+Die Microservicesarchitektur beginnt häufig mit der serverseitigen Verarbeitung von Daten und Logik, aber in vielen Fällen wird die Benutzeroberfläche immer noch als Monolith behandelt. Sie können jedoch auch die Benutzeroberfläche Ihrer Anwendung mit Microservices entwerfen. Dieser erweiterte Ansatz wird als [Micro-Front-Ends](https://martinfowler.com/articles/micro-frontends.html) bezeichnet. Dies wird als „zusammengesetzte Benutzeroberfläche“ bezeichnet, da sie von Microservices erzeugt wird, statt dass eine monolithische Client-App einfach die Microservices auf dem Server nutzt. Bei diesem Ansatz können die von Ihnen erstellten Microservices sowohl durch Logik als auch durch die visuelle Darstellung ergänzt werden.
 
 In Abbildung 4-20 wird das einfachere Modell dargestellt, in dem eine monolithische Clientanwendung Microservices nutzt. Natürlich kann ein ASP.NET MVC-Dienst zwischengeschaltet werden, der den HTML- und JavaScript-Code erzeugt. In der Darstellung wird vereinfacht dargestellt, wie ein einzelner (monolithischer) Client Microservices nutzt, die nur für die Logik und die Daten zuständig sind, nicht die Benutzeroberfläche (HTML und JavaScript).
 
@@ -39,19 +39,25 @@ Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Composite UI using ASP.NET (Particular’s Workshop) (Zusammengesetzte Benutzeroberfläche mit ASP.NET (Particular-Workshop))**  \
+- **Micro Frontends (Blog von Martin Fowler)**  
+  <https://martinfowler.com/articles/micro-frontends.html>
+  
+- **Micro Frontends (Website von Michael Gezer)**  
+  <https://micro-frontends.org/>
+  
+- **Composite UI using ASP.NET (Particular’s Workshop) (Zusammengesetzte Benutzeroberfläche mit ASP.NET (Particular-Workshop))**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservicesarchitektur)**  \
+- **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservicesarchitektur)**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. The secret of better UI composition (Das Geheimnis besserer Benutzeroberflächenzusammenstellung)**  \
+- **Mauro Servienti. The secret of better UI composition (Das Geheimnis eines besseren Benutzeroberflächenentwurfs)**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Including Front-End Web Components Into Microservices (Einschließen von Front-End-Webkomponenten in Microservices)**  \
+- **Viktor Farcic. Including Front-End Web Components Into Microservices (Einschließen von Front-End-Webkomponenten in Microservices)**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture (Verwalten des Front-Ends in der Microservicesarchitektur)**  \
+- **Managing Frontend in the Microservices Architecture (Verwalten des Front-Ends in der Microservicesarchitektur)**  
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]

@@ -2,12 +2,12 @@
 title: Permanente Duplexkorrelation
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: f2f5fe557f1f8754758d0dd9b4042cacc62cc61f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efc647b8a39f419f2165fe355529ba145663b753
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856602"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291575"
 ---
 # <a name="durable-duplex-correlation"></a>Permanente Duplexkorrelation
 Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wird, ist nützlich, wenn für einen Workflowdienst eine Anforderung besteht, einen Rückruf an den ursprünglichen Aufrufer zu senden. Im Gegensatz zu WCF-Duplex kann der Rückruf jederzeit in der Zukunft geschehen und ist nicht an den gleichen Kanal bzw. die Kanallebensdauer gebunden. Die einzige Anforderung besteht darin, dass der Aufrufer über einen aktiven Endpunkt verfügt, der die Rückrufnachricht überwacht. Auf diese Weise können zwei Workflowdienste eine lange Konversation führen. Dieses Thema bietet eine Übersicht über die permanente Duplexkorrelation.  
@@ -16,7 +16,7 @@ Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wi
  Um die permanente Duplexkorrelation zu verwenden, müssen die beiden Dienste eine kontextfähige Bindung verwenden, die bidirektionale Vorgänge unterstützt, z. B. <xref:System.ServiceModel.NetTcpContextBinding> oder <xref:System.ServiceModel.WSHttpContextBinding>. Der aufrufende Dienst registriert eine <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> mit der gewünschten Bindung auf dem <xref:System.ServiceModel.Endpoint> des Clients. Der empfangende Dienst empfängt diese Daten mit dem ersten Aufruf und verwendet diese dann auf seinem eigenen <xref:System.ServiceModel.Endpoint> in der <xref:System.ServiceModel.Activities.Send>-Aktivität, die den Rückruf zum aufrufenden Dienst ausführt. In diesem Beispiel kommunizieren zwei Dienste miteinander. Der erste Dienst ruft eine Methode auf dem zweiten Dienst auf und wartet dann auf eine Antwort. Der zweite Dienst kennt den Namen der Rückrufmethode, aber der Endpunkt des Diensts, der diese Methode implementiert, ist zur Entwurfszeit nicht bekannt.  
   
 > [!NOTE]
-> Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird. Ist dies nicht der Fall, wird eine <xref:System.InvalidOperationException> Ausnahme mit der folgenden Meldung ausgelöst: "Die Nachricht enthält einen rückrufkontextheader mit einem Endpunktverweis für [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Rückrufkontext kann nur übertragen werden, wenn AddressingVersion mit 'WSAddressing10' konfiguriert ist.
+> Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird. Wenn dies nicht der Fall ist, wird eine <xref:System.InvalidOperationException>-Ausnahme mit der folgenden Meldung ausgelöst: "Die Nachricht enthält einen Rückruf Kontext Header mit einem Endpunkt Verweis für [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Der Rückruf Kontext kann nur übertragen werden, wenn AddressingVersion mit "WSAddressing10" konfiguriert ist.
   
  Im folgenden Beispiel wird ein Workflowdienst gehostet, der mithilfe von <xref:System.ServiceModel.Endpoint> einen <xref:System.ServiceModel.WSHttpContextBinding> für den Rückruf erstellt.  
   
@@ -186,7 +186,7 @@ Activity wf = new Sequence
   
  Wenn die `StartOrder`-Methode für den ersten Workflow aufgerufen wird, wird die folgende Ausgabe angezeigt. Die Ausgabe verdeutlicht den Ausführungsfluss durch die beiden Workflows.  
   
-```Output  
+```output  
 Service1 waiting at: http://localhost:8080/Service1  
 Service2 waiting at: http://localhost:8081/Service2  
 Press enter to exit.   

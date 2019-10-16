@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018738"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291630"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer
 Asymmetrische private Schlüssel sollten in keinem Fall in vollem Wortlaut oder in Klartext auf dem lokalen Computer gespeichert werden. Wenn ein privater Schlüssel gespeichert werden muss, sollten Sie einen Schlüsselcontainer verwenden. Weitere Informationen zu Schlüsselcontainern finden Sie unter [RSA-Schlüsselcontainer auf Computerebene und Benutzerebene](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>So erstellen Sie einen asymmetrischen Schlüssel und speichern ihn in einem Schlüsselcontainer  
   
-1. Erstellen Sie eine neue Instanz der ein <xref:System.Security.Cryptography.CspParameters> Klasse und übergeben Sie den Namen, die den Schlüsselcontainer an aufgerufen werden soll die <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> Feld.  
+1. Erstellen Sie eine neue Instanz einer <xref:System.Security.Cryptography.CspParameters>-Klasse, und übergeben Sie den Namen, den Sie als Schlüssel Container abrufen möchten, an das Feld <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>.  
   
-2. Erstellen Sie eine neue Instanz der eine abgeleitete Klasse die <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse (in der Regel **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte  **CspParameters** -Objekt an deren Konstruktor.  
+2. Erstellen Sie eine neue Instanz einer Klasse, die von der <xref:System.Security.Cryptography.AsymmetricAlgorithm>-Klasse abgeleitet ist (normalerweise **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte **CspParameters** -Objekt an den Konstruktor.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>So löschen Sie den Schlüssel aus einem Schlüsselcontainer  
   
@@ -212,7 +212,7 @@ public class StoreKey
 }  
 ```  
   
-```Output  
+```console  
 Key added to container:  
 <RSAKeyValue> Key Information A</RSAKeyValue>  
 Key retrieved from container :  

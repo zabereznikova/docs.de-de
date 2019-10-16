@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba6c46116d809e2881eee37b080e1952e2eb6a0
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895272"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180191"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 
@@ -176,7 +176,7 @@ Vor dem Start einer Garbage Collection werden alle verwalteten Threads bis auf d
 
 Die folgende Abbildung zeigt einen Thread, der eine Garbage Collection auslöst und eine Unterbrechung der Ausführung anderer Threads verursacht.
 
-![Garbage Collection, die durch einen Thread ausgelöst wird](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered") Garbage Collection, die durch einen Thread ausgelöst wird
+![Garbage Collection, die durch einen Thread ausgelöst wird](../../../docs/standard/garbage-collection/media/gc-triggered.png "Garbage Collection, die durch einen Thread ausgelöst wird")
 
 [Zurück nach oben](#top)
 
@@ -208,7 +208,7 @@ Der Garbage Collector optimiert sich selbst und kann in einer Vielzahl von Szena
 
 Die folgende Abbildung zeigt die dedizierten Threads an, die die Garbage Collection auf einem Server ausführen.
 
-![Garbage Collection-Threads auf dem Server](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server") Garbage Collection-Threads auf dem Server
+![Garbage Collection-Threads auf dem Server](../../../docs/standard/garbage-collection/media/gc-server.png "Garbage Collection-Threads auf dem Server")
 
 ### <a name="configuring-garbage-collection"></a>Konfigurieren der Garbage Collection
 
@@ -262,7 +262,7 @@ Die gleichzeitige Garbage Collection hat ein etwas größeres Workingset (vergli
 
 Die folgende Abbildung zeigt eine parallele Garbage Collection für einen separaten dedizierten Thread.
 
-![Threads für parallele Garbage Collection](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent") Threads für parallele Garbage Collection
+![Gleichzeitige Garbage Collection-Threads auf dem Server](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Gleichzeitige Garbage Collection-Threads auf dem Server")
 
 [Zurück nach oben](#top)
 
@@ -283,7 +283,7 @@ Die Garbage Collection im Hintergrund beseitigt die von der gleichzeitigen Garba
 
 Die folgende Abbildung zeigt eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einer Arbeitsstation:
 
-![Abbildung zur Garbage Collection auf Arbeitsstationen im Hintergrund.](./media/fundamentals/background-workstation-garbage-collection.png)
+![Abbildung, die Garbage Collection der Arbeitsstation im Hintergrund zeigt.](./media/fundamentals/background-workstation-garbage-collection.png "Abbildung, die Garbage Collection der Arbeitsstation im Hintergrund zeigt.")
 
 [Zurück nach oben](#top)
 
@@ -295,7 +295,7 @@ Ab .NET Framework 4.5 ist Garbage Collection im Hintergrund der Standardmodus f�
 
 Die folgende Abbildung zeigt eine Garbage Collection im Hintergrund für einen separaten dedizierten Thread auf einem Server:
 
-![Abbildung zur Garbage Collection auf dem Server im Hintergrund.](./media/fundamentals/background-server-garbage-collection.png)
+![Abbildung, die Garbage Collection auf dem Server im Hintergrund zeigt.](./media/fundamentals/background-server-garbage-collection.png "Abbildung, die Garbage Collection auf dem Server im Hintergrund zeigt.")
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET für Ap
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 004256a2fe369b026b15151dfc72ae379da0be8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928485"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250323"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -67,7 +67,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 1. Laden Sie das [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases)-Release von der GitHub-Releaseseite für .NET für Apache Spark auf Ihren lokalen Computer herunter. Beispielsweise können Sie für den Download der Datei den Pfad `c:\bin\Microsoft.Spark.Worker\` verwenden.
 
-2. Erstellen Sie eine [neue Umgebungsvariable](https://www.java.com/en/download/help/path.xml) mit dem Namen `DotnetWorkerPath`, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte **Microsoft.Spark.Worker**-Datei befindet. Beispielsweise `c:\bin\Microsoft.Spark.Worker`.
+2. Erstellen Sie eine [neue Umgebungsvariable](https://www.java.com/en/download/help/path.xml) mit dem Namen `DOTNET_WORKER_DIR`, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte **Microsoft.Spark.Worker**-Datei befindet. Beispielsweise `c:\bin\Microsoft.Spark.Worker`.
 
 ## <a name="clone-the-net-for-apache-spark-github-repo"></a>Klonen des GitHub-Repositorys von .NET für Apache Spark
 

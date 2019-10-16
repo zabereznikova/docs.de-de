@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Analysieren der Stimmung: binäre Klassifikation'
 description: Dieses Tutorial zeigt Ihnen, wie Sie eine Razor Pages-Anwendung erstellen, die die Stimmung in Websitekommentaren klassifiziert und die entsprechenden Maßnahmen ergreift. Die binäre Standpunktklassifizierung verwendet den Modell-Generator in Visual Studio.
-ms.date: 09/30/2019
+ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: ce64f0d11b1da65e460235fdabc2b07e05ffcbe4
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700911"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72180273"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analysieren der Stimmung von Websitekommentaren in einer Webanwendung mit dem Modell-Generator von ML.NET
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie die Stimmung in Kommentaren in Echtzeit in einer Webanwend
 
 Dieses Tutorial zeigt Ihnen, wie Sie eine ASP.NET Core Razor Pages-Anwendung erstellen, die die Stimmung in Websitekommentaren in Echtzeit klassifiziert.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
 >
@@ -27,7 +27,7 @@ In diesem Tutorial lernen Sie Folgendes:
 > - Vorbereiten und Verstehen der Daten
 > - Auswählen eines Szenarios
 > - Laden der Daten
-> - Modelltraining
+> - Trainieren des Modells
 > - Evaluieren des Modells
 > - Verwenden des Modells für Vorhersagen
 
@@ -58,7 +58,7 @@ Laden Sie das [Wikipedia-detox-Dataset](https://raw.githubusercontent.com/dotnet
 
 Jede Zeile im Dataset *wikipedia-detox-250-line-data.tsv* stellt einen anderen Kommentar dar, der von einem Benutzer auf Wikipedia verfasst wurde. Die erste Spalte stellt die Stimmung des Texts dar (0 ist nicht toxisch, 1 ist toxisch), und die zweite Spalte stellt den Kommentar dar, den der Benutzer hinterlassen hat. Die Spalten werden durch TAB getrennt. Die Daten sehen folgendermaßen aus:
 
-| Stimmung | SentimentText |
+| Standpunkt | SentimentText |
 | :---: | :---: |
 1 | ==RUDE== Dude, you are rude upload that carl picture back, or else.
 1 | == OK! ==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!
@@ -83,9 +83,9 @@ Der Modell-Generator akzeptiert Daten aus zwei Quellen: aus einer SQL Server-Dat
 1. Behalten Sie die Standardwerte in der Dropdownliste **Eingabespalten (Features)** bei.
 1. Wählen Sie den Link **Trainieren** aus, um zum nächsten Schritt im Modell-Generator-Tool zu gelangen.
 
-## <a name="train-the-model"></a>Modelltraining
+## <a name="train-the-model"></a>Trainieren des Modells
 
-Die in diesem Tutorial zum Trainieren des Preisvorhersagemodells verwendete Machine Learning-Aufgabe ist die binäre Klassifizierung. Während des Modelltrainings trainiert der Modell-Generator einzelne Modelle mit verschiedenen Algorithmen und Einstellungen für binäre Klassifizierung, um das leistungsfähigste Modell für Ihr Dataset zu finden.
+Die in diesem Tutorial zum Trainieren des Stimmungsanalysemodells verwendete Machine Learning-Aufgabe ist die binäre Klassifizierung. Während des Modelltrainings trainiert der Modell-Generator einzelne Modelle mit verschiedenen Algorithmen und Einstellungen für binäre Klassifizierung, um das leistungsfähigste Modell für Ihr Dataset zu finden.
 
 Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional zur Datenmenge. Der Modell-Generator legt automatisch einen Standardwert für **Time to train (seconds)** (Trainingszeit (Sekunden)) basierend auf der Größe der Datenquelle fest.
 
@@ -101,7 +101,7 @@ Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional z
 
 1. Wählen Sie nach Abschluss des Trainings den Link **Evaluieren** aus, um mit dem nächsten Schritt fortzufahren.
 
-## <a name="evaluate-the-model"></a>Auswerten des Modells
+## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
 Das Ergebnis des Schritts „Trainieren“ ist ein Modell mit der besten Leistung. Der Schritt „Evaluieren“ des Modellgeneratortools, der Ausgabebereich, enthält den Algorithmus, der vom leistungsfähigsten Modell im Eintrag **Bestes Modell** verwendet wird, sowie Metriken in **Beste Modellgenauigkeit**. Außerdem finden Sie hier eine Übersichtstabelle mit den fünf besten Modellen und deren Metriken.
 
@@ -287,18 +287,18 @@ Wenn Sie zu einem späteren Zeitpunkt innerhalb einer anderen Projektmappe auf d
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > - Erstellen einer ASP.NET Core Razor Pages-Anwendung
 > - Vorbereiten und Verstehen der Daten
 > - Auswählen eines Szenarios
 > - Laden der Daten
-> - Modelltraining
+> - Trainieren des Modells
 > - Evaluieren des Modells
 > - Verwenden des Modells für Vorhersagen
 
-### <a name="additional-resources"></a>Weitere Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 Weitere Informationen zu den in diesem Tutorial erwähnten Themen finden Sie in den folgenden Ressourcen:
 

@@ -2,12 +2,12 @@
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
 ms.date: 10/02/2018
-ms.openlocfilehash: 0a741fca84f456d635e1790d6be1c72e70345a24
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675837"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291283"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -192,7 +192,7 @@ services:
 
 Zum Testen von Funktionen und Integrationen müssen Sie also zunächst diesen Befehl aus dem Testordner der Projektmappe ausführen:
 
-``` console
+```console
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 

@@ -15,6 +15,7 @@ Sie können mit F# auf Ihrem Computer oder online beginnen.
 
 ## <a name="get-started-on-your-machine"></a>Erste Schritte auf Ihrem Computer
 
+
 Es gibt mehrere Anleitungen zum erstmaligen Installieren und Verwenden von F# auf Ihrem Computer. Sie können die folgende Tabelle verwenden, um zu entscheiden, welche Anleitung Sie verwenden wollen:
 
 | Betriebssystem | Bevorzugen Sie Visual Studio | Bevorzugen Sie Visual Studio-Code | Über die Befehlszeile bevorzugen |

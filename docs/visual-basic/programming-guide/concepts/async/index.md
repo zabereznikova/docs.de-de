@@ -2,14 +2,14 @@
 title: Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9632ee7d275e6641bcd334aa12cded44920d2fda
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505956"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291657"
 ---
-# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))
+# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Asynchrone Programmierung mit Async und warten (Visual Basic)
 
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.
 
@@ -37,42 +37,41 @@ Wenn Sie asynchrone Methoden verwenden, reagiert die Anwendung weiterhin auf die
 
 Durch den auf Asynchronie basierenden Ansatz wird eine Entsprechung für die automatische Übertragung an die Liste der Optionen hinzugefügt, die beim Entwerfen von asynchronen Vorgängen zur Auswahl stehen. Sie erhalten also alle Vorteile der herkömmlichen asynchronen Programmierung, der Aufwand des Entwicklers ist jedoch wesentlich geringer.
 
-## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Async-Methoden sind einfacher zu schreiben
+## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Asynchrone Methoden sind einfacher zu schreiben
 
 Die Schlüsselwörter [Async](../../../../visual-basic/language-reference/modifiers/async.md) und [Await](../../../../visual-basic/language-reference/operators/await-operator.md) in Visual Basic sind der Kern der asynchronen Programmierung. Wenn Sie diese beiden Schlüsselwörter verwenden, können Sie eine asynchrone Methode mithilfe von Ressourcen in .NET Framework oder Windows-Runtime fast genauso einfach erstellen wie eine synchrone Methode. Asynchrone Methoden, die Sie unter Verwendung von `Async` und `Await` definieren, werden als async-Methoden bezeichnet.
 
 Das folgende Beispiel zeigt eine Async-Methode. Fast der gesamte Code sollte Ihnen bekannt vorkommen. Die Kommentare rufen die von Ihnen hinzugefügten Funktionen auf, um die Asynchronie zu erstellen.
 
-Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
+Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
 
 ```vb
-' Three things to note in the signature:
-'  - The method has an Async modifier.
-'  - The return type is Task or Task(Of T). (See "Return Types" section.)
-'    Here, it is Task(Of Integer) because the return statement returns an integer.
-'  - The method name ends in "Async."
+' Three things to note about writing an Async Function:
+'  - The function has an Async modifier. 
+'  - Its return type is Task or Task(Of T). (See "Return Types" section.)
+'  - As a matter of convention, its name ends in "Async".
 Async Function AccessTheWebAsync() As Task(Of Integer)
-
-    ' You need to add a reference to System.Net.Http to declare client.
-    Dim client As HttpClient = New HttpClient()
-
-    ' GetStringAsync returns a Task(Of String). That means that when you await the
-    ' task you'll get a string (urlContents).
-    Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")
-
-    ' You can do work here that doesn't rely on the string from GetStringAsync.
-    DoIndependentWork()
-
-    ' The Await operator suspends AccessTheWebAsync.
-    '  - AccessTheWebAsync can't continue until getStringTask is complete.
-    '  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-    '  - Control resumes here when getStringTask is complete.
-    '  - The Await operator then retrieves the string result from getStringTask.
-    Dim urlContents As String = Await getStringTask
-
-    ' The return statement specifies an integer result.
-    ' Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-    Return urlContents.Length
+    Using client As New HttpClient()
+        ' Call and await separately. 
+        '  - AccessTheWebAsync can do other things while GetStringAsync is also running.
+        '  - getStringTask stores the task we get from the call to GetStringAsync. 
+        '  - Task(Of String) means it is a task which returns a String when it is done.
+        Dim getStringTask As Task(Of String) =
+            client.GetStringAsync("https://docs.microsoft.com/dotnet")
+        ' You can do other work here that doesn't rely on the string from GetStringAsync.
+        DoIndependentWork()
+        ' The Await operator suspends AccessTheWebAsync.
+        '  - AccessTheWebAsync does not continue until getStringTask is complete.
+        '  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+        '  - Control resumes here when getStringTask is complete.
+        '  - The Await operator then retrieves the String result from getStringTask.
+        Dim urlContents As String = Await getStringTask
+        ' The Return statement specifies an Integer result.
+        ' A method which awaits AccessTheWebAsync receives the Length value.
+        Return urlContents.Length
+        
+    End Using
+    
 End Function
 ```
 
@@ -82,18 +81,14 @@ Wenn für `AccessTheWebAsync` zwischen dem Aufrufen von `GetStringAsync` und dem
 Dim urlContents As String = Await client.GetStringAsync()
 ```
 
- Die folgenden Eigenschaften fassen zusammen, wodurch das vorherige Beispiel sich als eine asynchrone Methode auszeichnet.
+ Die folgenden Eigenschaften fassen zusammen, wie das vorherige Beispiel zu einer asynchronen Methode führt:
 
 - Die Methodensignatur enthält einen `Async`-Modifizierer.
-
 - Der Name einer Async-Methode endet mit dem Suffix "Async".
-
 - Der Rückgabetyp ist einer der folgenden Typen:
 
   - <xref:System.Threading.Tasks.Task%601>, wenn die Methode über eine return-Anweisung verfügt, in der der Operand dem Typ "TResult" angehört.
-
   - <xref:System.Threading.Tasks.Task>, wenn die Methode keine return-Anweisung hat oder eine return-Anweisung ohne Operanden hat.
-
   - [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md), wenn Sie einen asynchronen Ereignishandler schreiben.
 
   Weitere Informationen finden Sie unter „Rückgabetypen und Parameter“ weiter unten in diesem Thema.
@@ -104,15 +99,15 @@ In Asynch-Methoden verwenden Sie die bereitgestellten Schlüsselwörter und Type
 
 Weitere Informationen zur Asynchronität in vorherigen .NET Framework-Versionen finden Sie unter [TPL und herkömmliche asynchrone Programmierung in .NET Framework](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).
 
-## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Was geschieht in einer asynchronen Methode?
+## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>Was geschieht in einer Async-Methode?
 
-Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt.
+Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt:
 
 ![Diagramm, das die Nachverfolgung eines asynchronen Programms zeigt.](./media/index/navigation-trace-async-program.png)
 
-Die Zahlen im Diagramm entsprechen den folgenden Schritten.
+Die Zahlen im Diagramm entsprechen den folgenden Schritten:
 
-1. Ein Ereignishandler ruft die Async-Methode `AccessTheWebAsync` auf und wartet auf sie.
+1. Ein Ereignishandler ruft die Async-Methode `AccessTheWebAsync` auf und wartet auf Sie.
 
 2. `AccessTheWebAsync` erstellt eine <xref:System.Net.Http.HttpClient>-Instanz und ruft die asynchrone Methode <xref:System.Net.Http.HttpClient.GetStringAsync%2A> auf, um den Inhalt einer Website als Zeichenfolge herunterzuladen.
 
@@ -139,21 +134,21 @@ Die Zahlen im Diagramm entsprechen den folgenden Schritten.
 
 Wenn die asynchrone Programmierung für Sie neu ist, nehmen Sie sich einen Moment Zeit, um den Unterschied zwischen synchronem und asynchronem Verhalten zu untersuchen. Eine synchrone Methode kehrt zum Aufrufer zurück, wenn ihre Arbeit abgeschlossen ist (Schritt 5). Eine asynchrone Methode hingegen gibt einen Aufgabenwert zurück, wenn die Verarbeitung angehalten wird (Schritt 3 und 6). Wenn die asynchrone Methode schließlich ihre Arbeit abgeschlossen hat, wird die Aufgabe als abgeschlossen markiert und das Ergebnis ggf. in der Aufgabe gespeichert.
 
-Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in asynchronen Programmen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).
+Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in asynchronen Programmen (Visual Basic)](control-flow-in-async-programs.md).
 
 ## <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden
 
-Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher enthält viele Member, die mit `Async` und `Await` funktionieren. Sie können diese Member durch das Suffix "Async" erkennen, das dem Membernamen und dem Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> angefügt wird. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.
+Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. Der .NET Framework 4,5 oder höher enthält viele Member, die mit `Async` und `Await` funktionieren. Sie können diese Member mit dem Suffix "Async", das an den Elementnamen angefügt ist, und dem Rückgabetyp "<xref:System.Threading.Tasks.Task>" oder "<xref:System.Threading.Tasks.Task%601>" erkennen. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.
 
-Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `Async` und `Await` in Windows-Apps verwenden können. Weitere Informationen und Beispielmethoden finden Sie unter [Aufrufen von asynchronen APIs in C# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [asynchrone Programmierung (Windows-Runtime-apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), und ["whenany": Für die Überbrückung zwischen .NET Framework und die Windows-Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)).
+Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `Async` und `Await` in Windows-Apps verwenden können. Weitere Informationen und Beispiel Methoden finden Sie unter [Abrufen von asynchronen APIs C# in oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [asynchronen Programming (Windows-Runtime-Apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))und [any: Bridging zwischen dem .NET Framework und dem Windows-Runtime @ no__t-0.
 
 ## <a name="BKMK_Threads"></a> Threads
 
-Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `Await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der abgewartete Task ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.
+Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `Await`-Ausdruck in einer Async-Methode blockiert den aktuellen Thread nicht, während die erwartete Aufgabe ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.
 
 Durch die Schlüsselwörter `Async` und `Await` werden keine zusätzlichen Threads erstellt. Async-Methoden erfordern kein Multithreading, da eine Async-Methode nicht in einem eigenen Thread ausgeführt wird. Die Methode wird im aktuellen Synchronisierungskontext ausgeführt und verwendet Zeit im Thread nur, wenn sie aktiv ist. Sie können <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> zur Verschiebung CPU-gebundener Arbeit in einen Hintergrundthread verwenden, aber ein Hintergrundthread nützt nichts bei einem Prozess, der wartet, dass Ergebnisse zur Verfügung gestellt werden.
 
-Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhandenen Ansätzen in nahezu jedem Fall vorzuziehen. Dieser Ansatz ist besser als <xref:System.ComponentModel.BackgroundWorker> für e/A-gebundene Vorgänge daran, dass der Code einfacher ist und nicht zum Schutz vor Racebedingungen. In Kombination mit <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> eignet sich asynchrone Programmierung besser für CPU-gebundene Vorgänge als <xref:System.ComponentModel.BackgroundWorker>, da die asynchrone Programmierung Koordinationsdetails der Ausführung des Codes von der Arbeit trennt, die `Task.Run` an den Threadpool überträgt.
+Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhandenen Ansätzen in nahezu jedem Fall vorzuziehen. Diese Vorgehensweise ist insbesondere für e/a-gebundene Vorgänge besser als <xref:System.ComponentModel.BackgroundWorker>, da der Code einfacher ist und Sie sich nicht vor Racebedingungen schützen müssen. In Kombination mit <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> eignet sich asynchrone Programmierung besser für CPU-gebundene Vorgänge als <xref:System.ComponentModel.BackgroundWorker>, da die asynchrone Programmierung Koordinationsdetails der Ausführung des Codes von der Arbeit trennt, die `Task.Run` an den Threadpool überträgt.
 
 ## <a name="BKMK_AsyncandAwait"></a> Async und Await
 
@@ -161,16 +156,15 @@ Wenn Sie angeben, dass eine Methode eine Async-Methode ist, indem Sie einen [Asy
 
 - Die markierte Async-Methode kann [Await](../../../../visual-basic/language-reference/operators/await-operator.md) verwenden, um Unterbrechungspunkte festzulegen. Der await-Operator informiert den Compiler, dass die Async-Methode erst über diesen Punkt hinaus fortgesetzt werden kann, wenn der abgewartete asynchrone Prozess abgeschlossen ist. In der Zwischenzeit kehrt die Steuerung zum Aufrufer der Async-Methode zurück.
 
-  Die Unterbrechung einer async-Methode an einem `Await`-Ausdruck stellt keine Beendigung der Methode dar, und `Finally`-Blöcke werden nicht ausgeführt.
+  Die Unterbrechung einer Async-Methode an einem `Await`-Ausdruck stellt keine Beendigung der Methode dar, und `Finally`-Blöcke werden nicht ausgeführt.
 
 - Auf die markierte Async-Methode können auch Methoden warten, die sie aufrufen.
 
-Eine async-Methode enthält in der Regel eine oder mehrere Vorkommen eines `Await`-Operators, die Abwesenheit von `Await`-Ausdrücken verursacht jedoch keinen Compilerfehler. Wenn eine async-Methode keinen `Await`-Operator verwendet, um einen Unterbrechungspunkt zu markieren, wird die Methode ungeachtet des `Async`-Modifizierers wie eine synchrone Methode ausgeführt. Der Compiler gibt eine Warnung für solche Methoden aus.
+Eine Async-Methode enthält in der Regel mindestens ein Vorkommen eines `Await`-Operators, aber das Fehlen von `Await`-Ausdrücken führt nicht zu einem Compilerfehler. Wenn eine asynchrone Methode keinen `Await`-Operator verwendet, um einen Unterbrechungs Punkt zu markieren, wird die Methode trotz des `Async`-Modifizierers als synchrone Methode ausgeführt. Der Compiler gibt eine Warnung für solche Methoden aus.
 
 `Async` und `Await` sind kontextbezogene Schlüsselwörter. Weitere Informationen und Beispiele finden Sie unter den folgenden Themen:
 
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-
 - [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Rückgabetypen und Parameter
@@ -181,7 +175,7 @@ Sie geben <xref:System.Threading.Tasks.Task%601> als Rückgabetyp an, wenn die M
 
 Sie verwenden `Task` als Rückgabetyp, wenn die Methode keine return-Anweisung hat oder über eine return-Anweisung verfügt, die keinen Operanden zurückgibt.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Methode deklarieren und aufrufen, die <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> zurückgibt.
+Im folgenden Beispiel wird gezeigt, wie Sie eine Methode deklarieren und aufzurufen, die einen <xref:System.Threading.Tasks.Task%601> oder einen <xref:System.Threading.Tasks.Task> zurückgibt:
 
 ```vb
 ' Signature specifies Task(Of Integer)
@@ -217,111 +211,49 @@ Jede zurückgegebene Aufgabe stellt derzeit ausgeführte Arbeit dar. Eine Aufgab
 
 Eine asynchrone Methode kann auch eine `Sub`-Methode sein. Dieser Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, bei denen ein Rückgabetyp erforderlich ist. Asynchrone Ereignishandler dienen häufig als Ausgangspunkt für asynchrone Programme.
 
-Eine asynchrone Methode, bei der es sich um eine `Sub`-Prozedur handelt, kann nicht abgewartet werden, und der Aufrufer kann keine Ausnahmen erfassen, die die Methode auswirft.
+Auf eine asynchrone Methode, die eine `Sub`-Prozedur ist, kann nicht gewartet werden, und der Aufrufer kann keine Ausnahmen abfangen, die die Methode auslöst
 
 Mit einer asynchronen Methode können keine [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)-Parameter deklariert, jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.
 
-Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md). Weitere Informationen zum Auffangen von Ausnahmen in async-Methoden finden Sie unter [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally-Anweisung).
+Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen (Visual Basic)](async-return-types.md). Weitere Informationen zum Auffangen von Ausnahmen in async-Methoden finden Sie unter [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally-Anweisung).
 
 Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden Rückgabetypen auf, die Tasks ähnlich sind:
 
 - <xref:Windows.Foundation.IAsyncOperation%601>, was <xref:System.Threading.Tasks.Task%601> entspricht.
-
 - <xref:Windows.Foundation.IAsyncAction>, was <xref:System.Threading.Tasks.Task> entspricht.
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
-Weitere Informationen und ein Beispiel finden Sie unter [aufrufen asynchroner APIs in c# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).
+Weitere Informationen und ein Beispiel finden Sie unter [Abrufen von asynchronen APIs C# in oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).
 
 ## <a name="BKMK_NamingConvention"></a> Benennungskonvention
 
 Gemäß der Konvention fügen Sie die Zeichenfolge „Async“ an die Namen von Methoden an, die einen `Async`-Modifizierer besitzen.
 
-Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder ein Schnittstellenvertrag einen anderen Namen vorsieht. Beispielsweise sollten Sie allgemeine Ereignishandler wie `Button1_Click` nicht umbenennen.
+Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder ein Schnittstellenvertrag einen anderen Namen vorsieht. Beispielsweise sollten Sie keine allgemeinen Ereignishandler umbenennen, wie z. b. `Button1_Click`.
 
 ## <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele (Visual Studio)
 
 |Titel|Beschreibung|Beispiel|
 |-----------|-----------------|------------|
-|[Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Asynchrones Beispiel: Exemplarische Vorgehensweise für den Zugriff auf das Web)|
-|[Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Fügt der vorherigen exemplarischen Vorgehensweise <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> hinzu. Bei Verwendung von `WhenAll` werden alle Downloads gleichzeitig gestartet.||
-|[Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Veranschaulicht, wie mehrere Aufgaben gleichzeitig gestartet werden.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Asynchrones Beispiel: Paralleles Erstellen mehrerer Webanforderungen)|
-|[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))|Veranschaulicht die Typen, die Async-Methoden zurückgeben können und erklärt, wann die einzelnen Typen geeignet sind.||
-|[Ablaufsteuerung in asynchronen Programmen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|Verfolgt die Ablaufsteuerung ausführlich durch eine Reihenfolge von await-Ausdrücken in einem asynchronen Programm.|[Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen)|
-|[Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))|Zeigt, wie die folgenden Funktionen der asynchronen Lösung hinzugefügt werden:<br /><br /> - [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (Visual Basic))<br />- [Cancel Async Tasks after a Period of Time (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md) (Asynchrone Aufgaben nach einer Zeitperiode abbrechen (Visual Basic))<br />- [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) (Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (Visual Basic))<br />- [Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md) (Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (Visual Basic))|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)|
-|[Ablauf des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|Zeigt, wie Fälle gehandhabt werden, in denen ein aktiver asynchroner Vorgang neu gestartet wird, während er ausgeführt wird.||
-|[WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Zeigt, wie zwischen Aufgabentypen in .NET Framework "und" IAsyncOperations in der Windows-Runtime, damit Sie verwenden können, <xref:System.Threading.Tasks.Task.WhenAny%2A> mit einer Windows-Runtime-Methode.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)) (Asynchrones Beispiel: Überbrückung zwischen .NET und Windows-Runtime [„AsTask“ und „WhenAny“])|
-|Asynchroner Abbruch: Überbrückung zwischen .NET Framework und Windows-Runtime|Zeigt, wie zwischen Aufgabentypen in .NET Framework "und" IAsyncOperations in der Windows-Runtime, damit Sie verwenden können, <xref:System.Threading.CancellationTokenSource> mit einer Windows-Runtime-Methode.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3) (Asynchrones Beispiel: Überbrückung zwischen .NET und Windows-Runtime [„AsTask“ und „Cancellation“])|
-|[Using Async for File Access (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md) (Verwenden von Async für Dateizugriff (Visual Basic))|Listet die Vorteile der Verwendung von "async" und "await" für den Zugriff auf Dateien auf und veranschaulicht sie.||
+|[Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und warten (Visual Basic) ](walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Asynchrones Beispiel: Exemplarische Vorgehensweise für den Zugriff auf das Web)|
+|[Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mithilfe von Task. alle (Visual Basic) ](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Fügt der vorherigen exemplarischen Vorgehensweise <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> hinzu. Bei Verwendung von `WhenAll` werden alle Downloads gleichzeitig gestartet.||
+|[Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und warten (Visual Basic) ](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Veranschaulicht, wie mehrere Aufgaben gleichzeitig gestartet werden.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Asynchrones Beispiel: Paralleles Erstellen mehrerer Webanforderungen)|
+|[Async Return Types (Visual Basic)](async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))|Veranschaulicht die Typen, die Async-Methoden zurückgeben können und erklärt, wann die einzelnen Typen geeignet sind.||
+|[Ablaufsteuerung in asynchronen Programmen (Visual Basic)](control-flow-in-async-programs.md)|Verfolgt die Ablaufsteuerung ausführlich durch eine Reihenfolge von await-Ausdrücken in einem asynchronen Programm.|[Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen)|
+|[Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))|Zeigt, wie die folgenden Funktionen der asynchronen Lösung hinzugefügt werden:<br /><br /> - [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Eine asynchrone Aufgabe oder Aufgabenliste abbrechen (Visual Basic))<br />- [Cancel Async Tasks after a Period of Time (Visual Basic)](cancel-async-tasks-after-a-period-of-time.md) (Asynchrone Aufgaben nach einer Zeitperiode abbrechen (Visual Basic))<br />- [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) (Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (Visual Basic))<br />- [Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md) (Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (Visual Basic))|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)|
+|[Ablauf des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)](handling-reentrancy-in-async-apps.md)|Zeigt, wie Fälle behandelt werden, in denen ein aktiver asynchroner Vorgang während der Ausführung neu gestartet wird.||
+|[WhenAny: Überbrückung zwischen .NET Framework und Windows-Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Zeigt, wie zwischen Tasktypen in .NET Framework und IAsyncOperations in der Windows-Runtime überbrückt wird, sodass Sie <xref:System.Threading.Tasks.Task.WhenAny%2A> mit einer Windows-Runtime-Methode verwenden können.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)) (Asynchrones Beispiel: Überbrückung zwischen .NET und Windows-Runtime [„AsTask“ und „WhenAny“])|
+|Asynchroner Abbruch: Überbrückung zwischen .NET Framework und Windows-Runtime|Zeigt, wie zwischen Tasktypen in .NET Framework und IAsyncOperations in der Windows-Runtime überbrückt wird, sodass Sie <xref:System.Threading.CancellationTokenSource> mit einer Windows-Runtime-Methode verwenden können.|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3) (Asynchrones Beispiel: Überbrückung zwischen .NET und Windows-Runtime [„AsTask“ und „Cancellation“])|
+|[Using Async for File Access (Visual Basic)](using-async-for-file-access.md) (Verwenden von Async für Dateizugriff (Visual Basic))|Listet die Vorteile der Verwendung von "async" und "await" für den Zugriff auf Dateien auf und veranschaulicht sie.||
 |[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)|Beschreibt ein neues Muster für Asynchronie in .NET Framework. Das Muster basiert auf den <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Typen.||
 |[Videos zur asynchronen Programmierung auf Channel 9](https://channel9.msdn.com/search?term=async+&type=All)|Stellt Links zu einer Vielzahl von Videos über die asynchrone Programmierung bereit.||
 
 ## <a name="BKMK_CompleteExample"></a> Vollständiges Beispiel
 
-Bei dem folgenden Code handelt es sich um die Datei „MainWindow.xaml.vb“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
+Bei dem folgenden Code handelt es sich um die Datei „MainWindow.xaml.vb“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
 
-```vb
-' Add an Imports statement and a reference for System.Net.Http
-Imports System.Net.Http
-
-Class MainWindow
-
-    ' Mark the event handler with async so you can use Await in it.
-    Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
-
-        ' Call and await separately.
-        'Task<int> getLengthTask = AccessTheWebAsync();
-        '' You can do independent work here.
-        'int contentLength = await getLengthTask;
-
-        Dim contentLength As Integer = Await AccessTheWebAsync()
-
-        ResultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
-    End Sub
-
-    ' Three things to note in the signature:
-    '  - The method has an Async modifier.
-    '  - The return type is Task or Task(Of T). (See "Return Types" section.)
-    '    Here, it is Task(Of Integer) because the return statement returns an integer.
-    '  - The method name ends in "Async."
-    Async Function AccessTheWebAsync() As Task(Of Integer)
-
-        ' You need to add a reference to System.Net.Http to declare client.
-        Dim client As HttpClient = New HttpClient()
-
-        ' GetStringAsync returns a Task(Of String). That means that when you await the
-        ' task you'll get a string (urlContents).
-        Dim getStringTask As Task(Of String) = client.GetStringAsync("https://msdn.microsoft.com")
-
-        ' You can do work here that doesn't rely on the string from GetStringAsync.
-        DoIndependentWork()
-
-        ' The Await operator suspends AccessTheWebAsync.
-        '  - AccessTheWebAsync can't continue until getStringTask is complete.
-        '  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-        '  - Control resumes here when getStringTask is complete.
-        '  - The Await operator then retrieves the string result from getStringTask.
-        Dim urlContents As String = Await getStringTask
-
-        ' The return statement specifies an integer result.
-        ' Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-        Return urlContents.Length
-    End Function
-
-    Sub DoIndependentWork()
-        ResultsTextBox.Text &= "Working . . . . . . ." & vbCrLf
-    End Sub
-End Class
-
-' Sample Output:
-
-' Working . . . . . . .
-
-' Length of the downloaded string: 41763.
-```
+[!code-vb[async](~/samples/async/async-and-await/vb/MainWindow.xaml.vb)]
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Modernisieren Sie den Lebenszyklus Ihrer APP mit CI/CD-Pipelines und devops-Tools in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 4e4436ac4a622a82cc990b977b03eeae95ca9368
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1aa2e156e87cafe99fb994233786f67bf7a81a1
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181904"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396254"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernisieren des Lebenszyklus Ihrer App mit CI-/CD-Pipelines und DevOps-Tools in der Cloud
 
@@ -27,7 +27,7 @@ Um die Flexibilität der Bereitstellung weiterhin zu vereinfachen, bieten diese 
 
 In Abbildung 4-12 wird eine Continuous Deployment Pipeline gezeigt, die in Azure Container Service in einem Kubernetes-Cluster bereitgestellt wird.
 
-![Azure DevOps Services Continuous Deployment Pipeline, Bereitstellung in einem Kubernetes-Cluster](./media/image12.png)
+![Screenshot der Azure DevOps Services Bereitstellung in einem Kubernetes-Cluster.](./media/life-cycle-ci-cd-pipelines-devops-tools/deploy-mvc-app-container-kubernetes.png)
 
 **Abbildung 4-12.** Azure DevOps Services Continuous Deployment Pipeline, Bereitstellung in einem Kubernetes-Cluster
 

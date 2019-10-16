@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Projektieren eines anonymen Typs (Visual Basic)'
+title: 'Gewusst wie: Projizieren eines anonymen Typs (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-ms.openlocfilehash: cc8e59ac1037fc173cb44d8c8ff344374c5766ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a4498913cdcff0f813f184be18816e4dc5179b1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644310"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321496"
 ---
-# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Vorgehensweise: Projektieren eines anonymen Typs (Visual Basic)
+# <a name="how-to-project-an-anonymous-type-visual-basic"></a>Gewusst wie: Projizieren eines anonymen Typs (Visual Basic)
 Es gibt Fälle, in denen Sie eine Abfrage in einen neuen Typ projizieren möchten, obwohl Sie wissen, dass dieser Typ nur für kurze Zeit verwendet werden wird. Das Erstellen eines neuen Typs für die Verwendung in der Projektion bedeutet viel Zusatzarbeit. Effizienter wäre es in diesem Fall, eine Projektion in einen anonymen Typ vorzunehmen. Mit anonymen Typen können Sie eine Klasse definieren und dann ein Objekt dieser Klasse deklarieren und initialisieren, ohne der Klasse dazu einen Namen geben zu müssen.  
   
- Anonyme Typen stellen die C#-Implementierung des mathematischen Konzepts eines *Tupels* dar. Der mathematische Begriff „Tupel“ bzw. „n-Tupel“ (englisch „Tuple“) leitet sich aus dem englischen Wortbestandteil „-(t)uple“ für „-fach“ (z. B. „quadruple“ für „vierfach“ und „quintuple“ für „fünffach“) ab. Er steht für eine endliche Abfolge von Objekten, die alle von einem bestimmten Typ sind. Mitunter wird dies als Liste von Name/Wert-Paaren bezeichnet. Die Inhalte einer Adresse im XML-Dokument [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) könnten z. B. folgendermaßen ausgedrückt werden:  
+ Anonyme Typen stellen die C#-Implementierung des mathematischen Konzepts eines *Tupels* dar. Der mathematische Begriff „Tupel“ bzw. „n-Tupel“ (englisch „Tuple“) leitet sich aus dem englischen Wortbestandteil „-(t)uple“ für „-fach“ (z. B. „quadruple“ für „vierfach“ und „quintuple“ für „fünffach“) ab. Er steht für eine endliche Abfolge von Objekten, die alle von einem bestimmten Typ sind. Mitunter wird dies als Liste von Name/Wert-Paaren bezeichnet. So könnte z.B. der Inhalt einer Adresse im XML-Dokument in [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) wie folgt ausgedrückt werden:  
   
 ```  
 Name: Ellen Adams  
@@ -46,7 +46,7 @@ Next
   
  Dieser Code erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

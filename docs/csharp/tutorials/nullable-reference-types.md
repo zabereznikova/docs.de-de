@@ -3,16 +3,16 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 914a1eeee2d3d1843bf597f94761e39d16331b5c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: e58f2bac23fabf734df93aa2a643106f1c1bd5f3
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956652"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291388"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
-C# 8 führt **Verweistypen, die NULL-Werte zulassen** ein, die Verweistypen auf die gleiche Weise ergänzen, wie NULL-Werte zulassenden Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen  *kann ein Wert fehlen*.
+C# 8.0 führt [Nullable-Verweistypen](../nullable-references.md) ein, die Verweistypen auf die gleiche Weise ergänzen, wie Nullable-Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen  *kann ein Wert fehlen*.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -25,7 +25,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8-Compiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8.0-Compiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -37,7 +37,7 @@ Der Code, den Sie für dieses Beispiel schreiben, drückt diese Absicht aus, und
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Erstellen der Anwendung und Aktivieren der Verweistypen, die NULL-Werte zulassen
 
-Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie angeben, dass das gesamte Projekt in einem `enabled` **Kontext kompiliert wird, in dem NULL-Werte für Anmerkungen zulässig sind**. Öffnen Sie die `csproj`-Datei, und fügen Sie dem `Nullable`-Element ein `PropertyGroup`-Element hinzu. Legen Sie den Wert der Eigenschaft auf `enabled`fest. Auch in C# 8-Projekten müssen Sie das Feature für **Verweistypen, die NULL-Werte zulassen** abonnieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise spiegelt sie nicht genau Ihre ursprüngliche Entwurfsabsicht wider.
+Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie angeben, dass das gesamte Projekt in einem aktivierten **Nullable-Anmerkungskontext** kompiliert wird. Öffnen Sie die *CSPROJ*-Datei, und fügen Sie dem `PropertyGroup`-Element ein `Nullable`-Element hinzu. Legen Sie den Wert der Eigenschaft auf `enable`fest. Selbst in C# 8.0-Projekten müssen Sie das Feature für **Nullable-Verweistypen** aktivieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise spiegelt sie nicht genau Ihre ursprüngliche Entwurfsabsicht wider.
 
 ```xml
 <Nullable>enable</Nullable>
@@ -84,7 +84,7 @@ namespace NullableIntroduction
 }
 ```
 
-Der Compiler interpretiert jede Verweistyp-Variablendeklaration als Verweistyp, der **NULL-Werte nicht zulässt**, für Code in einem NULL-Werte zulassenden Kontext. Sie können Ihre erste Warnung sehen, indem Sie Eigenschaften für den Fragetext und die Art der Frage hinzufügen, wie im folgenden Code gezeigt:
+Der Compiler interpretiert jede Verweistyp-Variablendeklaration für Code in einem aktivierten Nullable-Anmerkungskontext als **Nicht-Nullable-Verweistyp**. Sie können Ihre erste Warnung sehen, indem Sie Eigenschaften für den Fragetext und die Art der Frage hinzufügen, wie im folgenden Code gezeigt:
 
 ```csharp
 namespace NullableIntroduction
@@ -134,7 +134,7 @@ Wechseln Sie in Ihrem Editor zu *Program.cs*, und ersetzen Sie den Inhalt von `M
 
 [!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Da das gesamte Projekt in einem NULL-Werte zulassenden Kontext aktiviert ist, erhalten Sie Warnungen, wenn Sie `null` in Erwartung eines NULL-Werte nicht zulassenden Verweistyps an eine Methode übergeben. Probieren Sie es aus, indem Sie die folgende Zeile zu `Main` hinzufügen:
+Da sich das gesamte Projekt in einem aktivierten Nullable-Anmerkungskontext befindet, erhalten Sie Warnungen, wenn Sie `null` in Erwartung eines Nicht-Nullable-Verweistyps an eine Methode übergeben. Probieren Sie es aus, indem Sie die folgende Zeile zu `Main` hinzufügen:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);

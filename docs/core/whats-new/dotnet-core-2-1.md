@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: ace8c644fd5aa13e29961b7eb44e923556571c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834259"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031853"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -213,7 +213,7 @@ Das <xref:System.IO.Compression.BrotliStream>-Verhalten entspricht dem von <xref
 
 - Die statische <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType>-Methode füllt eine <xref:System.Span%601> mit Zufallswerten.
 
-- Die <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>-Methode wird jetzt auf Linux und maxOS unterstützt.
+- Die <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>-Methode wird jetzt unter Linux und macOS unterstützt.
 
 - Elliptic-Curve Diffie-Hellman (ECDH) steht jetzt in der <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>-Klassenfamilie zur Verfügung. Der Oberflächenbereich ist mit dem von .NET Framework identisch.
 

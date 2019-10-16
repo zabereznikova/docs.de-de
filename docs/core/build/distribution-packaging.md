@@ -2,14 +2,14 @@
 title: Verpacken einer Verteilung von .NET Core
 description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, benennen und mit einer Versionsnummer versehen.
 author: tmds
-ms.date: 03/02/2018
+ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: d72677cba1e7685f8e05cf479ec508683dd77b55
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394158"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250142"
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
@@ -23,37 +23,37 @@ Da .NET Core auf immer mehr Plattformen verfügbar wird, ist es hilfreich zu erf
 .NET Core besteht aus mehreren Komponenten, die im Dateisystem folgendermaßen angeordnet sind:
 
 ```
-.
+{dotnet_root}                                     (*)
 ├── dotnet                       (1)
 ├── LICENSE.txt                  (8)
 ├── ThirdPartyNotices.txt        (8)
-├── host
-│   └── fxr
+├── host                                          (*)
+│   └── fxr                                       (*)
 │       └── <fxr version>        (2)
-├── sdk
+├── sdk                                           (*)
 │   ├── <sdk version>            (3)
-│   └── NuGetFallbackFolder      (4)
-├── packs
-│   ├── Microsoft.AspNetCore.App.Ref
+│   └── NuGetFallbackFolder      (4)              (*)
+├── packs                                         (*)
+│   ├── Microsoft.AspNetCore.App.Ref              (*)
 │   │   └── <aspnetcore ref version>     (11)
-│   ├── Microsoft.NETCore.App.Ref
+│   ├── Microsoft.NETCore.App.Ref                 (*)
 │   │   └── <netcore ref version>        (12)
-│   ├── Microsoft.NETCore.App.Host.<rid>
+│   ├── Microsoft.NETCore.App.Host.<rid>          (*)
 │   │   └── <apphost version>            (13)
-│   ├── Microsoft.WindowsDesktop.App.Ref
+│   ├── Microsoft.WindowsDesktop.App.Ref          (*)
 │   │   └── <desktop ref version>        (14)
-│   └── NETStandard.Library.Ref
+│   └── NETStandard.Library.Ref                   (*)
 │       └── <netstandard version>        (15)
-├── shared
-│   ├── Microsoft.NETCore.App
+├── shared                                        (*)
+│   ├── Microsoft.NETCore.App                     (*)
 │   │   └── <runtime version>     (5)
-│   ├── Microsoft.AspNetCore.App
+│   ├── Microsoft.AspNetCore.App                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   ├── Microsoft.AspNetCore.All
+│   ├── Microsoft.AspNetCore.All                  (*)
 │   │   └── <aspnetcore version>  (6)
-│   └── Microsoft.WindowsDesktop.App
+│   └── Microsoft.WindowsDesktop.App              (*)
 │       └── <desktop app version> (7)
-└── templates
+└── templates                                     (*)
 │   └── <templates version>      (17)
 /
 ├── etc/dotnet
@@ -94,9 +94,11 @@ Der Ordner **shared** enthält Frameworks. Ein gemeinsames (shared) Framework st
 
 - (15) **NETStandard.Library.Ref** beschreibt die NetStandard-API `x.y`. Diese Dateien werden beim Kompilieren für dieses Ziel verwendet.
 
-- (16) **/etc/dotnet/install_location** ist eine Datei, die den vollständigen Pfad zu dem Ordner enthält, der die `dotnet`-Hostbinärdatei enthält. Der Pfad kann mit einem Zeilenumbruch gelöscht werden. Es ist nicht erforderlich, diese Datei hinzuzufügen, wenn `/usr/share/dotnet` das Stammverzeichnis ist.
+- (16) **/etc/dotnet/install_location** ist eine Datei, die den vollständigen Pfad für `{dotnet_root}` enthält. Der Pfad kann mit einem Zeilenvorschubzeichen enden. Es ist nicht erforderlich, diese Datei hinzuzufügen, wenn `/usr/share/dotnet` das Stammverzeichnis ist.
 
 - (17) **templates** enthält die Vorlagen, die vom SDK verwendet werden. Beispielsweise ermittelt `dotnet new` Projektvorlagen in diesem Ordner.
+
+Die mit `(*)` markierten Ordner werden von mehreren Paketen verwendet. Einige Paketformate (z.B. `rpm`) erfordern eine besondere Verarbeitung solcher Ordner. Der Paketmaintainer muss dafür Sorge tragen.
 
 ## <a name="recommended-packages"></a>Empfohlene Pakete
 
@@ -113,7 +115,7 @@ Im Folgenden werden die empfohlenen Pakete aufgeführt:
   - **Version:** \<runtime version>
   - **Beispiel:** dotnet-sdk-2.1
   - **Enthält:** (3), (4)
-  - **Abhängigkeiten:** `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
+  - **Abhängigkeiten:** `dotnet-runtime-[major].[minor]`, `aspnetcore-runtime-[major].[minor]`, `dotnet-targeting-pack-[major].[minor]`, `aspnetcore-targeting-pack-[major].[minor]`, `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`, `dotnet-apphost-pack-[major].[minor]`, `dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: installiert eine spezifische ASP.NET Core-Runtime.
   - **Version:** \<aspnetcore runtime version>
@@ -130,13 +132,13 @@ Im Folgenden werden die empfohlenen Pakete aufgeführt:
   - **Version:** \<runtime version>
   - **Beispiel:** dotnet-runtime-2.1
   - **Enthält:** (5)
-  - **Abhängigkeiten:** `dotnet-hostfxr:<runtime version>+`, `dotnet-runtime-deps-[major].[minor]`
+  - **Abhängigkeiten:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
-- `dotnet-hostfxr`: Abhängigkeit
+- `dotnet-hostfxr-[major].[minor]`: Abhängigkeit
   - **Version:** \<runtime version>
-  - **Beispiel:** dotnet-hostfxr
+  - **Beispiel:** dotnet-hostfxr-3.0
   - **Enthält:** (2)
-  - **Abhängigkeiten:** `host:<runtime version>+`
+  - **Abhängigkeiten:** `dotnet-host`
 
 - `dotnet-host`: Abhängigkeit
   - **Version:** \<runtime version>
@@ -155,7 +157,7 @@ Im Folgenden werden die empfohlenen Pakete aufgeführt:
   - **Version:** \<aspnetcore runtime version>
   - **Enthält:** (11)
 
-- `netstandard-targeting-pack-[major].[minor]`: ermöglicht eine NetStandard-Zielversion
+- `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: ermöglicht eine NetStandard-Zielversion
   - **Version:** \<sdk version>
   - **Enthält:** (15)
 
@@ -163,11 +165,11 @@ Im Folgenden werden die empfohlenen Pakete aufgeführt:
   - **Version:** \<sdk version>
   - **Enthält:** (15)
 
-Für `dotnet-runtime-deps-[major].[minor]` sind Kenntnisse der _Abhängigkeiten für spezifische Verteilungen_ erforderlich. Da das Buildsystem der Verteilung dies möglicherweise automatisch ableiten kann, ist das Paket optional. In diesem Falle werden diese Abhängigkeiten direkt zum `dotnet-runtime-[major].[minor]`-Paket hinzugefügt.
+Für `dotnet-runtime-deps-[major].[minor]` ist ein Verständnis der _distributionsspezifischen Abhängigkeiten_ erforderlich. Da das Buildsystem der Verteilung dies möglicherweise automatisch ableiten kann, ist das Paket optional. In diesem Falle werden diese Abhängigkeiten direkt zum `dotnet-runtime-[major].[minor]`-Paket hinzugefügt.
 
-Wenn Paketinhalte sich in einem Ordner mit Versionsangabe befinden, stimmt der Paketname `[major].[minor]` mit der Ordnernamen mit Versionsangabe überein. Für alle Pakete (außer `netstandard-targeting-pack-[major].[minor]`) stimmt dieser auch mit der .NET Core-Version überein.
+Wenn Paketinhalte sich in einem Ordner mit Versionsangabe befinden, stimmt der Paketname `[major].[minor]` mit der Ordnernamen mit Versionsangabe überein. Für alle Pakete (außer `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`) stimmt dieser auch mit der .NET Core-Version überein.
 
-Abhängigkeiten zwischen Paketen sollten eine _identische oder höhere_ erforderliche Version verwenden. `dotnet-sdk-2.2:2.2.401` erfordert beispielsweise `aspnetcore-runtime-2.2 >= 2.2.6`. Dies ermöglicht dem Benutzer, für ihre Installation ein Upgrade mithilfe eines Stammpakets (z. B. `dnf update dotnet-sdk-2.2`) durchzuführen.
+Abhängigkeiten zwischen Paketen sollten eine _identische oder höhere_ erforderliche Version verwenden. `dotnet-sdk-2.2:2.2.401` erfordert beispielsweise `aspnetcore-runtime-2.2 >= 2.2.6`. Dies ermöglicht es dem Benutzer, für seine Installation ein Upgrade mithilfe eines Stammpakets (z.B. `dnf update dotnet-sdk-2.2`) durchzuführen.
 
 Für die meisten Verteilungen müssen alle Artefakte aus der Quelle erstellt werden. Dies wirkt sich auf die Pakete aus:
 

@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abrufen des Shallow-Werts eines Elements (Visual Basic)'
+title: 'Gewusst wie: Abrufen des flachen Werts eines Elements (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 730a6670-fb8c-41fc-8a1b-eb97a837e432
-ms.openlocfilehash: 69e85c3b87ef1052bbb3eab832f93774fa35066f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184186a92865b022118b9989633a97c75274e7f4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918085"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320434"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Vorgehensweise: Abrufen des Shallow-Werts eines Elements (Visual Basic)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a>Gewusst wie: Abrufen des flachen Werts eines Elements (Visual Basic)
 
 In diesem Thema wird gezeigt, wie Sie den flachen Wert eines Elements abrufen. Der flache Wert ist ausschließlich der Wert des jeweiligen Elements, im Gegensatz zum tiefen Wert, der die Werte aller Nachfolgerelemente enthält, die zu einer einzelnen Zeichenkette verkettet werden.
 
@@ -69,7 +69,7 @@ End Module
 
 Dieses Beispiel erzeugt die folgende Ausgabe:
 
-```
+```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
 Column  Name="Name"         =Customer.Name.Heading
 Column  Name="CustomerId"   =Customer.CustomerId

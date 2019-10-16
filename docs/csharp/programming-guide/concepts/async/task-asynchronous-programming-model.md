@@ -2,12 +2,12 @@
 title: Das aufgabenbasierte asynchrone Programmiermodell (TAP) mit Async und Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167901"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291339"
 ---
 # <a name="task-asynchronous-programming-model"></a>Aufgabenbasiertes asynchrones Programmiermodell
 
@@ -42,22 +42,31 @@ Die Schlüsselwörter [async](../../../language-reference/keywords/async.md) und
 
 Das folgende Beispiel zeigt eine Async-Methode. Fast der gesamte Code sollte Ihnen bekannt vorkommen.
 
-Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
+Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Sie am Ende dieses Themas, und Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{
+{ 
     // You need to add a reference to System.Net.Http to declare client.
-    using (HttpClient client = new HttpClient())
-    {
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
+    var client = new HttpClient();
 
-        DoIndependentWork();
+    // GetStringAsync returns a Task<string>. That means that when you await the
+    // task you'll get a string (urlContents).
+    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com/dotnet");
 
-        string urlContents = await getStringTask;
+    // You can do work here that doesn't rely on the string from GetStringAsync.
+    DoIndependentWork();
 
-        return urlContents.Length;
-    }
+    // The await operator suspends AccessTheWebAsync.
+    //  - AccessTheWebAsync can't continue until getStringTask is complete.
+    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
+    //  - Control resumes here when getStringTask is complete. 
+    //  - The await operator then retrieves the string result from getStringTask.
+    string urlContents = await getStringTask;
+
+    // The return statement specifies an integer result.
+    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
+    return urlContents.Length;
 }
 ```
 
@@ -75,23 +84,18 @@ Die return-Anweisung gibt ein ganzzahliges Ergebnis an. Alle Methoden, die auf `
 Wenn für `AccessTheWebAsync` zwischen dem Aufrufen von `GetStringAsync` und dem Warten auf die Beendigung keine Arbeit ansteht, können Sie den Code durch Aufrufen und Warten in der folgenden Anweisung vereinfachen.
 
 ```csharp
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
+string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dotnet");
 ```
 
-Die folgenden Eigenschaften fassen zusammen, wodurch das vorherige Beispiel sich als eine asynchrone Methode auszeichnet.
+Die folgenden Merkmale fassen zusammen, wodurch das vorherige Beispiel sich als asynchrone Methode auszeichnet:
 
 - Die Methodensignatur enthält einen `async`-Modifizierer.
-
 - Der Name einer Async-Methode endet mit dem Suffix "Async".
-
 - Der Rückgabetyp ist einer der folgenden Typen:
 
   - <xref:System.Threading.Tasks.Task%601>, wenn die Methode über eine return-Anweisung verfügt, in der der Operand dem Typ `TResult` angehört.
-
   - <xref:System.Threading.Tasks.Task>, wenn die Methode keine return-Anweisung hat oder eine return-Anweisung ohne Operanden hat.
-
   - `void`, wenn Sie einen asynchronen Ereignishandler schreiben.
-
   - Jeder andere Typ, der über eine `GetAwaiter`-Methode verfügt (ab C# 7.0).
 
   Weitere Informationen finden Sie im Abschnitt [Rückgabetypen und Parameter](#BKMK_ReturnTypesandParameters).
@@ -104,13 +108,13 @@ Weitere Informationen zur Asynchronität in vorherigen .NET Framework-Versionen 
 
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Was geschieht in einer asynchronen Methode?
 
-Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt.
+Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt:
 
 ![Asynchrones Programm verfolgen](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
 
 Die Zahlen im Diagramm entsprechen den folgenden Schritten, die beim Klicken auf die Schaltfläche „Start“ durch den Benutzer initiiert werden.
 
-1. Ein Ereignishandler ruft die Async-Methode `AccessTheWebAsync` auf und wartet auf sie.
+1. Ein Ereignishandler ruft die asynchrone Methode `AccessTheWebAsync` auf und wartet auf sie.
 
 2. `AccessTheWebAsync` erstellt eine <xref:System.Net.Http.HttpClient>-Instanz und ruft die asynchrone Methode <xref:System.Net.Http.HttpClient.GetStringAsync%2A> auf, um den Inhalt einer Website als Zeichenfolge herunterzuladen.
 
@@ -136,17 +140,17 @@ Die Zahlen im Diagramm entsprechen den folgenden Schritten, die beim Klicken auf
 8. Wenn `AccessTheWebAsync` über das Zeichenfolgenergebnis verfügt, kann die Methode die Länge der Zeichenfolge berechnen. Dann ist die Arbeit von `AccessTheWebAsync` auch abgeschlossen, und der wartende Ereignishandler kann fortfahren. Im vollständigen Beispiel am Ende des Themas können Sie überprüfen, ob der Ereignishandler den Wert des Längenergebnisses abruft und druckt.
 Wenn die asynchrone Programmierung für Sie neu ist, nehmen Sie sich einen Moment Zeit, um den Unterschied zwischen synchronem und asynchronem Verhalten zu untersuchen. Eine synchrone Methode kehrt zum Aufrufer zurück, wenn ihre Arbeit abgeschlossen ist (Schritt 5). Eine asynchrone Methode hingegen gibt einen Aufgabenwert zurück, wenn die Verarbeitung angehalten wird (Schritt 3 und 6). Wenn die asynchrone Methode schließlich ihre Arbeit abgeschlossen hat, wird die Aufgabe als abgeschlossen markiert und das Ergebnis ggf. in der Aufgabe gespeichert.
 
-Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in asynchronen Programmen (C#)](./control-flow-in-async-programs.md).
+Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in asynchronen Programmen (C#)](control-flow-in-async-programs.md).
 
 ## <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden
 
-Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher und .NET Core enthalten viele Member, die mit `async` und `await` funktionieren. Sie können sie durch das Suffix „Async“ erkennen, das dem Membernamen und dem Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> angefügt wird. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.
+Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher und .NET Core enthalten viele Member, die mit `async` und `await` funktionieren. Sie können sie am Suffix „Async“ erkennen, das an den Membernamen angefügt wird, sowie am Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601>. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.
 
 Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen finden Sie unter [Threading and async programming](/windows/uwp/threading-async/) (Threading und asynchrone Programmierung) für die UWP-Entwicklung, [Asynchronous programming (Windows Store apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) (Asynchrone Programmierung für Windows Store-Apps) und [Quickstart: Calling asynchronous APIs in C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) (Schnellstart: Aufrufen von asynchronen APIs in C# oder Visual Basic), wenn Sie frühere Versionen der Windows-Runtime verwenden.
 
 ## <a name="BKMK_Threads"></a> Threads
 
-Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der abgewartete Task ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.
+Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der Task, auf den gewartet wurde, ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.
 
 Durch die Schlüsselwörter `async` und `await` werden keine zusätzlichen Threads erstellt. Async-Methoden erfordern kein Multithreading, da eine Async-Methode nicht in einem eigenen Thread ausgeführt wird. Die Methode wird im aktuellen Synchronisierungskontext ausgeführt und verwendet Zeit im Thread nur, wenn sie aktiv ist. Sie können <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> zur Verschiebung CPU-gebundener Arbeit in einen Hintergrundthread verwenden, aber ein Hintergrundthread nützt nichts bei einem Prozess, der wartet, dass Ergebnisse zur Verfügung gestellt werden.
 
@@ -158,16 +162,15 @@ Wenn Sie angeben, dass eine Methode eine asynchrone Methode ist, indem Sie den [
 
 - Die markierte async-Methode kann [await](../../../language-reference/operators/await.md) verwenden, um Unterbrechungspunkte festzulegen. Der `await`-Operator informiert den Compiler, dass die Async-Methode erst über diesen Punkt hinaus fortgesetzt werden kann, wenn der abgewartete asynchrone Prozess abgeschlossen ist. In der Zwischenzeit kehrt die Steuerung zum Aufrufer der Async-Methode zurück.
 
-     Die Unterbrechung einer async-Methode an einem `await`-Ausdruck stellt keine Beendigung der Methode dar, und `finally`-Blöcke werden nicht ausgeführt.
+     Die Unterbrechung einer async-Methode bei einem `await`-Ausdruck stellt keine Beendigung der Methode dar, und `finally`-Blöcke werden nicht ausgeführt.
 
 - Auf die markierte Async-Methode können auch Methoden warten, die sie aufrufen.
 
-Eine async-Methode enthält in der Regel eine oder mehrere Vorkommen eines `await`-Operators, die Abwesenheit von `await`-Ausdrücken verursacht jedoch keinen Compilerfehler. Wenn eine async-Methode keinen `await`-Operator verwendet, um einen Unterbrechungspunkt zu markieren, wird die Methode ungeachtet des `async`-Modifizierers wie eine synchrone Methode ausgeführt. Der Compiler gibt eine Warnung für solche Methoden aus.
+Eine asynchrone Methode enthält in der Regel mindestens ein Vorkommen eines `await`-Operators, die Abwesenheit von `await`-Ausdrücken verursacht jedoch keinen Compilerfehler. Wenn eine asynchrone Methode keinen `await`-Operator verwendet, um einen Unterbrechungspunkt zu markieren, wird die Methode ungeachtet des `async`-Modifizierers wie eine synchrone Methode ausgeführt. Der Compiler gibt eine Warnung für solche Methoden aus.
 
 `async` und `await` sind kontextbezogene Schlüsselwörter. Weitere Informationen und Beispiele finden Sie unter den folgenden Themen:
 
 - [async](../../../language-reference/keywords/async.md)
-
 - [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a> Rückgabetypen und Parameter
@@ -180,7 +183,7 @@ Sie verwenden <xref:System.Threading.Tasks.Task> als Rückgabetyp, wenn die Meth
 
 Ab C# 7.0 können Sie auch andere Rückgabetypen angeben, vorausgesetzt, der Typ enthält eine `GetAwaiter`-Methode. Ein Beispiel eines solchen Typs ist <xref:System.Threading.Tasks.ValueTask%601>. Er ist im NuGet-Paket [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) verfügbar.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Methode deklarieren und aufrufen, die <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> zurückgibt.
+Im folgenden Beispiel wird gezeigt, wie Sie eine Methode deklarieren und aufrufen, die <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> zurückgibt:
 
 ```csharp
 // Signature specifies Task<TResult>
@@ -216,7 +219,7 @@ Jede zurückgegebene Aufgabe stellt derzeit ausgeführte Arbeit dar. Eine Aufgab
 
 Eine asynchrone Methode kann auch den Rückgabetyp `void` aufweisen. Dieser Rückgabetyp wird hauptsächlich zum Definieren von Ereignishandlern verwendet, wobei ein `void`-Rückgabetyp erforderlich ist. Asynchrone Ereignishandler dienen häufig als Ausgangspunkt für asynchrone Programme.
 
-Eine async-Methode, die eine `void`-Rückgabetyp aufweist, kann nicht abgewartet werden, und der Aufrufer einer Methode zur Rückgabe von „void“ kann keine Ausnahmen abfangen, die von der Methode ausgelöst werden.
+Auf eine asynchrone Methode, die einen `void`-Rückgabetyp aufweist, kann nicht gewartet werden, und der Aufrufer einer Methode, die „void“ zurückgibt, kann keine Ausnahmen abfangen, die von der Methode ausgelöst werden.
 
 Eine asynchrone Methode kann keine [in](../../../language-reference/keywords/in-parameter-modifier.md)-, [ref](../../../language-reference/keywords/ref.md)- oder [out](../../../language-reference/keywords/out-parameter-modifier.md)-Parameter deklarieren. Die Methode kann jedoch Methoden aufrufen, die solche Parameter aufweisen. Genauso kann eine async-Methode keinen Wert nach Verweis zurückgeben, obwohl sie Methoden mit ref-Rückgabewerten aufrufen kann.
 
@@ -225,11 +228,8 @@ Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen 
 Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden Rückgabetypen auf, die Tasks ähnlich sind:
 
 - <xref:Windows.Foundation.IAsyncOperation%601>, was <xref:System.Threading.Tasks.Task%601> entspricht.
-
 - <xref:Windows.Foundation.IAsyncAction>, was <xref:System.Threading.Tasks.Task> entspricht.
-
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
-
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
 ## <a name="BKMK_NamingConvention"></a> Benennungskonvention
@@ -257,88 +257,9 @@ Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder 
 
 ## <a name="BKMK_CompleteExample"></a> Vollständiges Beispiel
 
-Beim folgenden Code handelt es sich um die Datei „MainWindow.xaml.cs“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
+Beim folgenden Code handelt es sich um die Datei *MainWindow.xaml.cs* aus der WPF-Anwendung, die in diesem Artikel behandelt wird. Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
 
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http;
-using System.Net.Http;
-
-namespace AsyncFirstExample
-{
-    public partial class MainWindow : Window
-    {
-        // Mark the event handler with async so you can use await in it.
-        private async void StartButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Call and await separately.
-            //Task<int> getLengthTask = AccessTheWebAsync();
-            //// You can do independent work here.
-            //int contentLength = await getLengthTask;
-
-            int contentLength = await AccessTheWebAsync();
-
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-
-        // Three things to note in the signature:
-        //  - The method has an async modifier.
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)
-        //    Here, it is Task<int> because the return statement returns an integer.
-        //  - The method name ends in "Async."
-        async Task<int> AccessTheWebAsync()
-        {
-            // You need to add a reference to System.Net.Http to declare client.
-            using (HttpClient client = new HttpClient())
-            {
-                    // GetStringAsync returns a Task<string>. That means that when you await the
-                    // task you'll get a string (urlContents).
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");
-
-                    // You can do work here that doesn't rely on the string from GetStringAsync.
-                    DoIndependentWork();
-
-                    // The await operator suspends AccessTheWebAsync.
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-                    //  - Control resumes here when getStringTask is complete.
-                    //  - The await operator then retrieves the string result from getStringTask.
-                    string urlContents = await getStringTask;
-
-                    // The return statement specifies an integer result.
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.
-                    return urlContents.Length;
-            }
-        }
-
-        void DoIndependentWork()
-        {
-            resultsTextBox.Text += "Working . . . . . . .\r\n";
-        }
-    }
-}
-
-// Sample Output:
-
-// Working . . . . . . .
-
-// Length of the downloaded string: 25035.
-```
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
 
 ## <a name="see-also"></a>Siehe auch
 

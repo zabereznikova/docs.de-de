@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 9e9e443be9ea51d214e95c676fc28f0d8790af8b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f9ae32c44e5648eb74d7eab9fa5aa6cc2f17b9a1
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117258"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72237367"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>Gebietsschema „C“ wird dem invarianten Gebietsschema zugeordnet
 
 .NET Core 2.2 und frühere Versionen hängen von dem ICU-Standardverhalten ab, das das Gebietsschema „C“ zum Gebietsschema „en_US_POSIX“ zuordnet. Das Gebietsschema „en_US_POSIX“ weist ein unerwünschtes Sortierverhalten auf, da es keine Zeichenfolgenvergleiche ohne Berücksichtigung der Groß-/Kleinschreibung unterstützt. Da einige Linux-Verteilungen das Gebietsschema „C“ als Standardgebietsschema festlegen, kam es bei einigen Benutzern zu unerwartetem Verhalten. 
 
-#### <a name="details"></a>Details
+#### <a name="change-description"></a>Änderungsbeschreibung
 
 Die Zuordnung des Gebietsschemas „C“ wurde ab .NET Core 3.0 geändert, sodass das invariante Gebietsschema anstelle von „en_US_POSIX“ verwendet wird. Die Zuordnung des Gebietsschemas „C“ zum invarianten Gebietsschema wird zur Gewährleistung der Konsistenz auch auf Windows angewendet.
 
@@ -18,13 +18,13 @@ Die Zuordnung von „C“ zu „en_US_POSIX“ sorgte bei Kunden für Verwirrung
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
-.NET Core 3.0
+3.0
 
 ### <a name="recommended-action"></a>Empfohlene Maßnahme
 
 Es ist keine spezifische Maßnahme erforderlich. Sie sollten lediglich über die Änderung informiert sein. Diese Änderung wirkt sich nur auf Anwendungen aus, die die Zuordnung des Gebietsschemas „C“ verwenden.
 
-### <a name="category"></a>Category (Kategorie)
+### <a name="category"></a>Kategorie
 
 Globalisierung 
 

@@ -1,0 +1,66 @@
+- name: .NET Framework – Leitfaden
+  href: index.md
+- name: Neues
+  href: whats-new/
+- name: Erste Schritte
+  href: get-started/
+- name: Installationshandbuch
+  href: install/
+- name: Migrationshandbuch
+  href: migration-guide/
+- name: Entwicklungshandbuch
+  href: development-guide.md
+  items:
+    - name: Anwendungsdomänen und Assemblys
+      href: app-domains/
+    - name: Ressourcen in Desktop-Apps
+      href: resources/
+    - name: Zugriff
+      href: ui-automation/
+    - name: Daten und Modellierung
+      href: data/
+    - name: Clientanwendungen
+      href: develop-client-apps.md
+      items:
+        - name: Windows Presentation Foundation
+          href: wpf/
+        - name: Windows Forms
+          href: winforms/
+    - name: Dienstorientierte Anwendungen mit WCF
+      href: wcf/
+    - name: Windows Workflow Foundation
+      href: windows-workflow-foundation/
+    - name: Windows-Dienstanwendungen
+      href: windows-services/
+    - name: 64-Bit-Anwendungen
+      href: 64-bit-apps.md
+    - name: Webanwendungen mit ASP.NET
+      href: develop-web-apps-with-aspnet.md
+    - name: Netzwerkprogrammierung in .NET Framework
+      href: network-programming/
+    - name: Konfigurieren von Apps
+      href: configure-apps/
+    - name: Kompilieren von Anwendungen mit .NET Native
+      href: net-native/
+    - name: Windows Identity Foundation
+      href: security/
+    - name: 'Debuggen, Ablaufverfolgung und Profilerstellung'
+      href: debug-trace-profile/
+    - name: Bereitstellung
+      href: deployment/
+    - name: Leistung
+      href: performance/
+    - name: Dynamische Programmierung
+      href: reflection-and-codedom/
+    - name: Managed Extensibility Framework (MEF)
+      href: mef/
+    - name: Interoperation mit nicht verwaltetem Code
+      href: interop/
+    - name: Referenz zur nicht verwalteten API
+      href: unmanaged-api/
+    - name: XAML-Dienste
+      href: xaml-services/
+- name: Tools
+  href: tools/
+- name: Zusätzliche Klassenbibliotheken und APIs
+  href: additional-apis/

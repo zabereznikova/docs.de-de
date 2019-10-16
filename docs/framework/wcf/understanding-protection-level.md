@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 4ebb93d3ed325c115dcf311c821b014532dffc11
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 896b75d3dfb5ebace9bef0c410e4a86dfb765bd8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663944"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321527"
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 
-Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. In diesem Thema wird erläutert, die Windows Communication Foundation (WCF)-Funktion und wie es funktioniert.
+Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. In diesem Thema werden die Funktionen des Windows Communication Foundation (WCF) und ihre Funktionsweise erläutert.
 
-Anweisungen zum Festlegen der Schutzebene finden Sie [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).
+Anweisungen zum Festlegen der Schutz Ebene finden Sie unter Gewusst [wie: Festlegen der](how-to-set-the-protectionlevel-property.md)Schutzmaß-Eigenschaft.
 
 > [!NOTE]
 > Schutzebenen können nur im Code, nicht in der Konfiguration festgelegt werden.
@@ -30,19 +30,19 @@ Um die Schutzebenenfunktion zu verstehen, sind die folgenden grundlegenden Anwei
 
 - Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:
 
-  - `None`.
+  - `None`
 
-  - `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.
+  - `Sign` Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.
 
-  - `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.
+  - `EncryptAndSign` Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.
 
-- Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit diesem Feature. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.
+- Mit dieser Funktion können Sie Schutzanforderungen nur für *Anwendungsdaten* festlegen. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.
 
 - Wenn der Sicherheitsmodus auf `Transport` festgelegt wird, wird die ganze Nachricht vom Transportmechanismus geschützt. Deshalb hat das Festlegen einer separaten Schutzebene für andere Teile einer Nachricht keine Auswirkungen.
 
-- Die `ProtectionLevel` ist eine Möglichkeit für Entwickler zum Festlegen der *Mindestebene* , die eine Bindung mit erfüllen muss. Beim Bereitstellen eines Diensts kann die tatsächliche in der Konfiguration angegebene Bindung die Mindestebene unterstützen oder nicht. Standardmäßig stellt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse keine Sicherheit bereit (diese kann allerdings aktiviert werden). Die Verwendung dieser Klasse in Verbindung mit einem Vertrag, der eine andere Einstellung als `None` hat, löst eine Ausnahme aus.
+- Der `ProtectionLevel` ist eine Möglichkeit für den Entwickler, die *minimale Ebene* festzulegen, die eine Bindung erfüllen muss. Beim Bereitstellen eines Diensts kann die tatsächliche in der Konfiguration angegebene Bindung die Mindestebene unterstützen oder nicht. Standardmäßig stellt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse keine Sicherheit bereit (diese kann allerdings aktiviert werden). Die Verwendung dieser Klasse in Verbindung mit einem Vertrag, der eine andere Einstellung als `None` hat, löst eine Ausnahme aus.
 
-- Wenn der Dienst erfordert, dass die minimale `ProtectionLevel` ist für alle Nachrichten `Sign`, ein Client (z. B. durch eine nicht-WCF-Technologie erstellt) kann verschlüsseln und signieren Sie alle Nachrichten (Dies ist mehr als das Minimum erforderlich). WCF in diesem Fall wird eine Ausnahme nicht ausgelöst, da der Client mehr als das Minimum durchgeführt hat. Beachten Sie jedoch, dass WCF-Anwendungen (Dienste oder Clients) nicht übermäßig, einen Teil der Nachricht, wenn möglich schützen, sondern die Mindestebene einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.
+- Wenn der Dienst erfordert, dass die minimale `ProtectionLevel` für alle Nachrichten `Sign` ist, kann ein Client (möglicherweise durch eine nicht-WCF-Technologie erstellt) alle Nachrichten verschlüsseln und signieren (was mehr als der erforderliche Mindestwert ist). In diesem Fall löst WCF keine Ausnahme aus, da der Client mehr als das minimale erreicht hat. Beachten Sie jedoch, dass WCF-Anwendungen (Dienste oder Clients) einen Nachrichten Teil nach Möglichkeit nicht über sichern, aber die Mindeststufe einhalten. Außerdem ist zu beachten, dass der Transport den Nachrichtenstrom bei Verwendung von `Transport` als Sicherheitsmodus übermäßig schützt, da in diesem Fall ein Schutz auf niedrigerer Ebene nicht möglich ist.
 
 - Wenn Sie `ProtectionLevel` ausdrücklich entweder auf `Sign` oder `EncryptAndSign` festlegen, müssen Sie eine Bindung mit aktivierter Sicherheit verwenden. Andernfalls wird eine Ausnahme ausgelöst.
 
@@ -74,18 +74,18 @@ Durch Festlegen von `ProtectionLevel` auf der obersten API wird die Ebene für a
 
 ## <a name="programming-protectionlevel"></a>Programmieren von ProtectionLevel
 
-Zum Programmieren von `ProtectionLevel` an einem beliebigen Punkt der Hierarchie legen Sie die Eigenschaft beim Anwenden des Attributs einfach auf einen entsprechenden Wert fest. Beispiele hierzu finden Sie unter [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).
+Zum Programmieren von `ProtectionLevel` an einem beliebigen Punkt der Hierarchie legen Sie die Eigenschaft beim Anwenden des Attributs einfach auf einen entsprechenden Wert fest. Beispiele finden Sie unter Gewusst [wie: Festlegen der Schutzlevel-Eigenschaft](how-to-set-the-protectionlevel-property.md).
 
 > [!NOTE]
-> Um die Eigenschaft für Fehler- und Nachrichtenverträge festlegen zu können, müssen Sie die Funktionsweise dieser Funktionen verstehen. Weitere Informationen finden Sie unter [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) und [Verwenden von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md).
+> Um die Eigenschaft für Fehler- und Nachrichtenverträge festlegen zu können, müssen Sie die Funktionsweise dieser Funktionen verstehen. Weitere Informationen finden Sie unter Gewusst [wie: Festlegen der Schutzlevel-Eigenschaft](how-to-set-the-protectionlevel-property.md) und [Verwenden von Nachrichten Verträgen](./feature-details/using-message-contracts.md).
 
 ## <a name="ws-addressing-dependency"></a>WS-Adressierungsabhängigkeit
 
-In den meisten Fällen verwenden die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren eines Clients gewährleistet, dass die Client- und Dienstverträge identisch sind. Scheinbar identische Verträge können jedoch den Client veranlassen, eine Ausnahme auszulösen. Dies ist der Fall, wenn eine Bindung die WS-Adressierungsspezifikation nicht unterstützt und mehrere Schutzebenen für den Vertrag festgelegt sind. Beispielsweise unterstützt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse die Spezifikation nicht oder wenn Sie eine benutzerdefinierte Bindung erstellen, die die WS-Adressierung nicht unterstützt. Die `ProtectionLevel`-Funktion ist von der WS-Adressierungsspezifikation abhängig, um andere Schutzebenen für einen einzelnen Vertrag zu aktivieren. Wenn die Bindung die WS-Adressierungsspezifikation nicht unterstützt, werden alle Ebenen auf dieselbe Schutzebene festgelegt. Die effektive Schutzebene für alle Bereiche des Vertrags wird auf die höchste Schutzebene festgelegt, die für den Vertrag verwendet wird.
+In den meisten Fällen wird durch die Verwendung des [Service Model Metadata Utility Tool (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren eines Clients sichergestellt, dass die Client-und Dienstverträge identisch sind. Scheinbar identische Verträge können jedoch den Client veranlassen, eine Ausnahme auszulösen. Dies ist der Fall, wenn eine Bindung die WS-Adressierungsspezifikation nicht unterstützt und mehrere Schutzebenen für den Vertrag festgelegt sind. Beispielsweise unterstützt die <xref:System.ServiceModel.BasicHttpBinding>-Klasse die Spezifikation nicht oder wenn Sie eine benutzerdefinierte Bindung erstellen, die die WS-Adressierung nicht unterstützt. Die `ProtectionLevel`-Funktion ist von der WS-Adressierungsspezifikation abhängig, um andere Schutzebenen für einen einzelnen Vertrag zu aktivieren. Wenn die Bindung die WS-Adressierungsspezifikation nicht unterstützt, werden alle Ebenen auf dieselbe Schutzebene festgelegt. Die effektive Schutzebene für alle Bereiche des Vertrags wird auf die höchste Schutzebene festgelegt, die für den Vertrag verwendet wird.
 
 Dies verursacht möglicherweise ein Problem, das auf den ersten Blick schwer zu debuggen ist. Es ist möglich, einen Dienstvertrag (eine Schnittstelle) zu erstellen, der Methoden für mehrere Dienste umfasst, d. h. dieselbe Schnittstelle wird zum Erstellen eines Clients verwendet, der mit vielen Diensten kommuniziert, und die einzelne Schnittstelle umfasst Methoden für alle Dienste. Der Entwickler muss in diesem seltenen Fall darauf achten, nur die Methoden aufzurufen, die für die einzelnen Dienste gelten. Wenn die Bindung die <xref:System.ServiceModel.BasicHttpBinding>-Klasse ist, können mehrere Schutzebenen nicht unterstützt werden. Ein auf den Client antwortender Dienst kann jedoch auf einen Client mit einer niedrigeren Schutzebene als erforderlich reagieren. In diesem Fall löst der Client eine Ausnahme aus, da er eine höhere Schutzebene erwartet.
 
-Im folgenden Codebeispiel wird dieses Problem veranschaulicht. Das folgende Beispiel zeigt einen Dienst- und einen Clientvertrag. Wird davon ausgegangen, dass die Bindung der [ \<BasicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element. Deshalb haben alle Vorgänge im Rahmen eines Vertrags die gleiche Schutzebene. Diese einheitliche Schutzebene wird als maximale Schutzebene für alle Vorgänge bestimmt.
+Im folgenden Codebeispiel wird dieses Problem veranschaulicht. Das folgende Beispiel zeigt einen Dienst- und einen Clientvertrag. Nehmen Sie an, dass die Bindung das [> Element \<basichttpbinding](../configure-apps/file-schema/wcf/basichttpbinding.md) ist. Deshalb haben alle Vorgänge im Rahmen eines Vertrags die gleiche Schutzebene. Diese einheitliche Schutzebene wird als maximale Schutzebene für alle Vorgänge bestimmt.
 
 Der Dienstvertrag lautet:
 
@@ -108,7 +108,7 @@ Wenn der Client die `Price`-Methode aufruft, wird eine Ausnahme ausgelöst, soba
 - <xref:System.ServiceModel.MessageHeaderAttribute>
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
-- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
-- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Verwenden von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Sichern von Diensten](securing-services.md)
+- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](how-to-set-the-protectionlevel-property.md)
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](specifying-and-handling-faults-in-contracts-and-services.md)
+- [Verwenden von Nachrichtenverträgen](./feature-details/using-message-contracts.md)

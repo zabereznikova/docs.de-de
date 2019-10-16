@@ -1,6 +1,6 @@
 ---
 title: Was ist F#
-description: Erfahren Sie, was der F#-Programmiersprache und F#-Programmierung wie. Hier finden Sie Informationen zu umfangreichen Datentypen, Funktionen und deren Anpassung.
+description: Erfahren Sie, was die F#-Programmiersprache ausmacht und wie in F# programmiert wird. Hier finden Sie Informationen zu umfangreichen Datentypen, Funktionen und deren Anpassung.
 ms.date: 08/03/2018
 ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
 ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
@@ -11,9 +11,9 @@ ms.locfileid: "71332731"
 ---
 # <a name="what-is-f"></a>Was ist F @ no__t-0
 
-F#ist eine funktionale Programmiersprache, die das Schreiben von korrekter und verwalbbarem Code erleichtert.
+F# ist eine funktionale Programmiersprache, die das Schreiben von korrektem und verwaltbarem Code erleichtert.
 
-F#die Programmierung umfasst hauptsächlich das Definieren von Typen und Funktionen, die vom Typ abgeleitet und automatisch generalisiert werden. Dies ermöglicht es Ihnen, sich auf die Problemdomäne zu konzentrieren und die Daten zu bearbeiten, statt die Programmier Details zu bearbeiten.
+Die F#-Programmierung umfasst hauptsächlich das Definieren von Typen und Funktionen, die vom Typ abgeleitet und automatisch generalisiert werden. Dies ermöglicht es Ihnen, sich auf die Problemdomäne zu konzentrieren und die Daten zu bearbeiten, statt um die Details der Programmierung.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-F#verfügt über zahlreiche Features, einschließlich:
+F# verfügt über zahlreiche Features, einschließlich:
 
 * Lightweight-Syntax
-* Standardmäßig unveränderlich
+* Standardmäßig Unveränderliche
 * Typrückschluss und automatische Generalisierung
 * Funktionen erster Klasse
 * Leistungsstarke Datentypen
 * Musterabgleich
 * Asynchrone Programmierung
 
-Ein vollständiger Satz von Funktionen ist in der [ F# Sprachreferenz](./language-reference/index.md)dokumentiert.
+Ein vollständiger Satz von Funktionen ist in der [ F# Sprachreferenz](./language-reference/index.md) dokumentiert.
 
 ## <a name="rich-data-types"></a>Rich-Datentypen
 
-Mit Datentypen wie [Datensätzen](./language-reference/records.md) und Unterscheidungs- [Unions](./language-reference/discriminated-unions.md) können Sie komplexe Daten und Domänen darstellen.
+Mit Datentypen wie [Datensätzen](./language-reference/records.md) und Unterscheidungs-[Unions](./language-reference/discriminated-unions.md) können Sie komplexe Daten und Domänen darstellen.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#Datensätze und Unterscheidungs-Unions sind nicht NULL, unveränderlich und standardmäßig vergleichbar, sodass Sie sehr einfach zu verwenden sind.
+F#-Datensätze und Unterscheidungs-Unions sind nicht NULL, unveränderlich und standardmäßig vergleichbar, sodass Sie sehr einfach zu verwenden sind.
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Erzwingen der Richtigkeit mit Funktionen und Musterabgleich
 
-F#Funktionen sind in der Praxis leicht zu deklarieren und leistungsfähig. Wenn Sie mit [Muster](./language-reference/pattern-matching.md)Abgleich kombiniert werden, können Sie das Verhalten definieren, dessen Richtigkeit durch den Compiler erzwungen wird.
+F#-Funktionen sind in der Praxis leicht zu deklarieren und leistungsfähig. Wenn Sie mit [Muster](./language-reference/pattern-matching.md)-Abgleich kombiniert werden, können Sie das Verhalten definieren, dessen Richtigkeit durch den Compiler erzwungen wird.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -118,8 +118,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objekt Ausdrücke](./language-reference/object-expressions.md)und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F# Programmen verwendet.
+Anstatt objektorientierten Code zu schreiben, werden Sie in F# Code schreiben, der Objekte wie einen weiteren Datentyp behandelt, der durch Funktionen bearbeitet wird. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objektausdrücke](./language-reference/object-expressions.md) und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F#-Programmen verwendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu einer größeren Anzahl von F# Features finden Sie in der [ F# Tour](tour.md).
+Weitere Informationen zu einer größeren Anzahl von F#-Features finden Sie in der [ F# Tour](tour.md).

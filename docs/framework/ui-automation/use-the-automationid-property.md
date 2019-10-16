@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 1699d39f5f456fe08b043e5b6a687d4c59d28e89
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7a172db8bcb626d78a24b546147b4e32f20f5d83
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040339"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291342"
 ---
 # <a name="use-the-automationid-property"></a>Verwenden der AutomationID-Eigenschaft
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] finden Sie unter [Windows Automation-API: UI-Automatisierung @ no__t-0.  
   
  Dieses Thema enthält Szenarien und Codebeispiele zum Veranschaulichen, wie und wann Sie die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> verwenden können, um ein Element in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur zu suchen.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71040339"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Suchen eines bestimmten Elements in der Benutzeroberflächenautomatisierungs-Struktur anhand einer eindeutigen und erkennbaren AutomationID  
   
-- Verwenden Sie ein Tool wie [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] , um die <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elements zu ermitteln, an dem Sie interessiert sind. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
+- Verwenden Sie ein Tool wie "UI Spy", um den <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eines relevanten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elements zu melden. Diesen Wert können Sie dann kopieren und in einer Clientanwendung (z. B. ein Testskript für spätere automatisierte Tests) einfügen. Mit dieser Vorgehensweise lässt sich der Code verringern und vereinfachen, der erforderlich ist, um ein Element zur Laufzeit zu identifizieren und zu suchen.  
   
 > [!CAUTION]
 > Grundsätzlich sollten Sie nur versuchen, direkt untergeordnete Elemente des Elements abzurufen, das von der <xref:System.Windows.Automation.AutomationElement.RootElement%2A>-Eigenschaft angegeben wird. Eine Suche nach Nachfolgerelementen kann hunderte oder sogar tausende Elemente durchlaufen und möglicherweise einen Stapelüberlauf verursachen. Wenn Sie versuchen, ein bestimmtes Element auf einer niedrigeren Ebene abzurufen, sollten Sie die Suche aus dem Anwendungsfenster oder aus einem Container auf niedrigerer Ebene starten.  

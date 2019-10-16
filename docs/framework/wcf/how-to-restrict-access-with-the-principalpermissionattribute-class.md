@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951014"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320937"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse
-Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren gehört zu den grundlegenden Sicherheitsaufgaben. So sollten zum Beispiel nur bestimmte Benutzer vertrauliche Daten wie Lohnlisten anzeigen können. In diesem Thema wird erklärt, wie Sie den Zugriff auf eine Methode beschränken können, indem Sie es zur Voraussetzung machen, dass die entsprechenden Benutzer einer vordefinierten Gruppe angehören. Ein funktionierendes Beispiel finden Sie unter [Autorisierungs Zugriff auf Dienst Vorgänge](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren gehört zu den grundlegenden Sicherheitsaufgaben. So sollten zum Beispiel nur bestimmte Benutzer vertrauliche Daten wie Lohnlisten anzeigen können. In diesem Thema wird erklärt, wie Sie den Zugriff auf eine Methode beschränken können, indem Sie es zur Voraussetzung machen, dass die entsprechenden Benutzer einer vordefinierten Gruppe angehören. Ein funktionierendes Beispiel finden Sie unter [Autorisierungs Zugriff auf Dienst Vorgänge](./samples/authorizing-access-to-service-operations.md).  
   
  Diese Aufgabe umfasst zwei separate Schritte. Zuerst wird die Gruppe erstellt und mit Benutzern gefüllt. Anschließend wird in einem zweiten Schritt die <xref:System.Security.Permissions.PrincipalPermissionAttribute>-Klasse angewendet, um die Gruppe anzugeben.  
   
@@ -39,7 +39,7 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
   
 ### <a name="to-demand-user-membership"></a>So fordern Sie die Benutzermitgliedschaft an  
   
-1. Öffnen Sie die Windows Communication Foundation (WCF)-Codedatei, die den implementierten Dienstvertrags Code enthält. Weitere Informationen zum Implementieren eines Vertrags finden Sie unter [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Öffnen Sie die Windows Communication Foundation (WCF)-Codedatei, die den implementierten Dienstvertrags Code enthält. Weitere Informationen zum Implementieren eines Vertrags finden Sie unter [Implementieren von Dienstverträgen](implementing-service-contracts.md).  
   
 2. Wenden Sie das <xref:System.Security.Permissions.PrincipalPermissionAttribute>-Attribut auf jede Methode an, die nur für eine bestimmte Gruppe zugelassen werden soll. Legen Sie für die <xref:System.Security.Permissions.SecurityAttribute.Action%2A>-Eigenschaft den Wert <xref:System.Security.Permissions.SecurityAction.Demand> fest, und setzen Sie die <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>-Eigenschaft auf den Namen der Gruppe. Beispiel:  
   
@@ -52,7 +52,7 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Steuern des Zugriffs auf eine Methode mithilfe eines Zertifikats  
  Sie können mit der `PrincipalPermissionAttribute`-Klasse auch dann den Zugriff auf eine Methode steuern, wenn es sich bei den Clientanmeldeinformationen um ein Zertifikat handelt. Hierfür müssen Sie den Antragsteller und den Fingerabdruck des Zertifikats kennen.  
   
- Informationen zum Überprüfen eines Zertifikats für die zugehörigen [Eigenschaften finden Sie unter Gewusst wie: Anzeigen von Zertifikaten mit dem MMC-Snap](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)-in. Informationen zum Ermitteln des Fingerabdruck Werts [finden Sie unter Gewusst wie: Rufen Sie den Fingerabdruck eines Zertifikats](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)ab.  
+ Informationen zum Überprüfen eines Zertifikats für die zugehörigen Eigenschaften finden Sie unter Gewusst [wie: Anzeigen von Zertifikaten mit dem MMC-Snap-in](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Informationen zum Ermitteln des Fingerabdruck Werts finden Sie unter Gewusst [wie: Abrufen des Fingerabdrucks eines Zertifikats](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>So steuern Sie den Zugriff mithilfe eines Zertifikats  
   
@@ -89,6 +89,6 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
-- [Zugriffsautorisierung für Dienstvorgänge](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Zugriffsautorisierung für Dienstvorgänge](./samples/authorizing-access-to-service-operations.md)
+- [Übersicht über die Sicherheit](./feature-details/security-overview.md)
+- [Implementieren von Dienstverträgen](implementing-service-contracts.md)
