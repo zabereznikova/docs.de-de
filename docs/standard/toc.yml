@@ -1,0 +1,145 @@
+- name: Leitfaden für .NET Standard
+  href: index.md
+- name: Erste Schritte mit .NET
+  href: get-started.md
+- name: Einführung in .NET
+  href: tour.md
+- name: .NET-Architekturkomponenten
+  href: components.md
+- name: .NET-Standard
+  href: net-standard.md
+  items:
+    - name: Neuerungen im .NET Standard
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: Zielframeworks
+  href: frameworks.md
+- name: .NET-Glossar
+  href: glossary.md
+- name: Leitfaden für die Open Source-Bibliothek
+  href: library-guidance/
+- name: Wahl zwischen .NET Core und .NET Framework für Server-Apps
+  href: choosing-core-framework-server.md
+- name: Was ist „verwalteter Code“?
+  href: managed-code.md
+  items:
+    - name: Automatic Memory Management
+      href: automatic-memory-management.md
+- name: Common Language Runtime (CLR)
+  href: clr.md
+- name: Sprachunabhängigkeit
+  href: language-independence.md
+  items:
+    - name: Sprachenunabhängigkeit und sprachunabhängige Komponenten
+      href: language-independence-and-language-independent-components.md
+- name: Frameworkbibliotheken
+  href: framework-libraries.md
+  items:
+    - name: Übersicht über die Klassenbibliothek
+      href: class-library-overview.md
+    - name: Basistypen
+      href: base-types/
+- name: .NET-Klassenbibliotheken
+  href: class-libraries.md
+- name: Analyzer
+  href: analyzers/index.md
+  items:
+    - name: API-Analysetool
+      href: analyzers/api-analyzer.md
+    - name: Portability Analyzer
+      href: analyzers/portability-analyzer.md
+    - name: Framework Analyzer
+      href: analyzers/framework-analyzer.md
+- name: Behandeln und Auslösen von Ausnahmen
+  href: exceptions/
+- name: Assemblys in .NET
+  href: assembly/
+- name: Garbage Collection
+  href: garbage-collection/
+- name: Generische Typen
+  href: generics.md
+- name: Delegaten und Lambdas
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: Allgemeines Typsystem und Common Language Specification
+  href: common-type-system.md
+- name: 'Parallelverarbeitung, Parallelität und Async'
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: Asynchrone Programmierung
+      href: async.md
+      items:
+        - name: Ausführliche Informationen zur asynchronen Programmierung
+          href: async-in-depth.md
+        - name: Muster für die asynchrone Programmierung
+          href: asynchronous-programming-patterns/
+    - name: Parallele Programmierung
+      href: parallel-programming/
+    - name: Threading
+      href: threading/
+- name: Memory- und Span-bezogene Typen
+  href: memory-and-spans/index.md
+  items:
+    - name: Leitfaden zur Verwendung von Memory<T> und Span<T>
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: Native Interoperabilität
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: Marshalling von Typen
+      href: native-interop/type-marshaling.md
+    - name: Anpassen des Marshallings für Strukturen
+      href: native-interop/customize-struct-marshaling.md
+    - name: Anpassen des Marshallings für Parameter
+      href: native-interop/customize-parameter-marshaling.md
+    - name: Leitfaden zur Interoperabilität
+      href: native-interop/best-practices.md
+    - name: Zeichensätze und Marshalling
+      href: native-interop/charset.md
+    - name: COM-Interop
+      href: native-interop/cominterop.md
+      items:
+        - name: COM-Wrapper
+          href: native-interop/com-wrappers.md
+          items:
+            - name: Runtime Callable Wrapper (RCW)
+              href: native-interop/runtime-callable-wrapper.md
+            - name: COM Callable Wrapper (CCW)
+              href: native-interop/com-callable-wrapper.md
+        - name: Qualifizieren von .NET-Typen für die COM-Interoperation
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: Anwenden von Interop-Attributen
+      href: native-interop/apply-interop-attributes.md
+- name: Auflistungen und Datenstrukturen
+  href: collections/
+- name: Numerische Ausdrücke in .NET
+  href: numerics.md
+- name: 'Datumsangaben, Uhrzeiten und Zeitzonen'
+  href: datetime/
+- name: Ereignisse
+  href: events/
+- name: Verwalteter Ausführungsprozess
+  href: managed-execution-process.md
+- name: Metadaten und selbstbeschreibende Komponenten
+  href: metadata-and-self-describing-components.md
+- name: Erstellen von Konsolenanwendungen
+  href: building-console-apps.md
+- name: Grundlagen der Anwendung
+  href: application-essentials.md
+- name: Datei- und Stream-E/A
+  href: io/index.md
+- name: Globalisierung und Lokalisierung
+  href: globalization-localization/
+- name: Attribute
+  href: attributes/
+- name: Frameworkentwurfsrichtlinien
+  href: design-guidelines/
+- name: XML-Dokumente und XML-Daten
+  href: data/xml/
+- name: Sicherheit
+  href: security/
+- name: Serialisierung
+  href: serialization/
+- name: Entwickeln für mehrere Plattformen
+  href: cross-platform/
