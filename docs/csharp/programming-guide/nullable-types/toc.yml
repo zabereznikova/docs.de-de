@@ -1,7 +1,0 @@
-- name: Auf NULL festlegbare Werttypen
-  href: index.md
-  items:
-    - name: 'Verwenden von Werttypen, die Nullwerte zulassen'
-      href: using-nullable-types.md
-    - name: 'Vorgehensweise: Identifizieren eines Werttyps, der Nullwerte zulässt'
-      href: how-to-identify-a-nullable-type.md
