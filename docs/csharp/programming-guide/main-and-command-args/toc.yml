@@ -1,9 +1,0 @@
-- name: Main() und Befehlszeilenargumente
-  href: index.md
-  items:
-    - name: Befehlszeilenargumente
-      href: command-line-arguments.md
-    - name: 'Vorgehensweise: Anzeigen von Befehlszeilenargumenten'
-      href: how-to-display-command-line-arguments.md
-    - name: Main()-Rückgabewerte
-      href: main-return-values.md
