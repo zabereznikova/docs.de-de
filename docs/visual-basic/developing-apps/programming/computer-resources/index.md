@@ -6,17 +6,17 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eb240b23d255987e96c58fefc7007c8030c6502
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662687"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524403"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Zugreifen auf Computerressourcen (Visual Basic)
 
-Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet Zugriff auf Informationen und häufig verwendete Funktionen. `My.Computer` bietet Methoden, Eigenschaften und Ereignisse für den Zugriff auf den Computer, auf dem die Anwendung ausgeführt wird. Es enthält folgende Objekte:  
-  
+Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet Zugriff auf Informationen und häufig verwendete Funktionen. `My.Computer` bietet Methoden, Eigenschaften und Ereignisse für den Zugriff auf den Computer, auf dem die Anwendung ausgeführt wird. Es enthält folgende Objekte:
+
 - <xref:Microsoft.VisualBasic.Devices.Audio>
 - Zwischenablage (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
 - <xref:Microsoft.VisualBasic.Devices.Clock>
@@ -27,29 +27,29 @@ Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - Registrierung (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
-  
+
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Wiedergabe von Sound](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)   
+[Wiedergabe von Sound](../../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Audio` auf wie die Wiedergabe eines Sounds im Hintergrund.
 
-[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)   
+[Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Clipboard` auf wie das Lesen von Daten aus oder das Schreiben von Daten in die Zwischenablage.
 
-[Abrufen von Informationen über den Computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)   
+[Abrufen von Informationen über den Computer](../../../../visual-basic/developing-apps/programming/computer-resources/getting-information-about-the-computer.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Info` auf wie das Bestimmen des vollständigen Namens oder der IP-Adressen eines Computers.
 
-[Zugreifen auf die Tastatur](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)   
+[Zugreifen auf die Tastatur](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Keyboard` auf wie das Bestimmen, ob die FESTSTELLTASTE aktiviert ist.
 
-[Zugreifen auf die Maus](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)   
+[Zugreifen auf die Maus](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Mouse` auf wie das Bestimmen, ob eine Maus vorhanden ist.
 
-[Durchführen von Netzwerkvorgängen](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)   
+[Durchführen von Netzwerkvorgängen](../../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Network` auf wie das Hochladen oder Herunterladen von Dateien.
 
-[Zugreifen auf die Anschlüsse des Computers](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)   
+[Zugreifen auf die Anschlüsse des Computers](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Ports` auf wie das Anzeigen der verfügbaren seriellen Anschlüsse oder das Senden von Zeichenfolgen an serielle Anschlüsse.
 
-[Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+[Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
 Führt Aufgaben im Zusammenhang mit `My.Computer.Registry` auf wie das Lesen von Daten aus oder das Schreiben von Daten an Registrierungsschlüssel.

@@ -4,12 +4,12 @@ description: Application Insights ist eine Server lose Diagnoseplattform, mit de
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577723"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522746"
 ---
 # <a name="telemetry-with-application-insights"></a>Telemetrie mit Application Insights
 
@@ -19,12 +19,12 @@ ms.locfileid: "69577723"
 
 Das Hinzufügen von Application Insights zu vorhandenen apps ist so einfach wie das Hinzufügen eines Instrumentierungs Schlüssels zu den Einstellungen Ihrer Anwendung. Mit Application Insights können Sie folgende Aktionen ausführen:
 
-* Erstellen von benutzerdefinierten Diagrammen und Warnungen auf der Grundlage von Metriken, wie z. b. der Anzahl von Funktionsaufrufen, der zum Ausführen einer Funktion benötigte Zeit und Ausnahmen
-* Analysieren von Fehlern und Server Ausnahmen
-* Führen Sie einen Drilldown für die Leistung durch, und Messen Sie die Zeit, die zum Aufrufen von Drittanbieter Abhängigkeiten
-* Überwachen der CPU-Auslastung, des Arbeitsspeichers und der Raten auf allen Servern, auf denen ihre Funktionen-apps
-* Einen Livestream mit Metriken anzeigen, einschließlich der Anforderungs Anzahl und Latenz für ihre Funktionen-apps
-* Verwenden von [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) zum Durchsuchen, Abfragen und Erstellen von benutzerdefinierten Diagrammen über die Funktionsdaten
+- Erstellen von benutzerdefinierten Diagrammen und Warnungen auf der Grundlage von Metriken, wie z. b. der Anzahl von Funktionsaufrufen, der zum Ausführen einer Funktion benötigte Zeit und Ausnahmen
+- Analysieren von Fehlern und Server Ausnahmen
+- Führen Sie einen Drilldown für die Leistung durch, und Messen Sie die Zeit, die zum Aufrufen von Drittanbieter Abhängigkeiten
+- Überwachen der CPU-Auslastung, des Arbeitsspeichers und der Raten auf allen Servern, auf denen ihre Funktionen-apps
+- Einen Livestream mit Metriken anzeigen, einschließlich der Anforderungs Anzahl und Latenz für ihre Funktionen-apps
+- Verwenden von [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) zum Durchsuchen, Abfragen und Erstellen von benutzerdefinierten Diagrammen über die Funktionsdaten
 
 ![Metrik-Explorer](./media/metrics-explorer.png)
 

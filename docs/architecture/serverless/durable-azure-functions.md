@@ -4,12 +4,12 @@ description: Durable Azure Functions erweitert die Azure Functions Laufzeit, um 
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577513"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522861"
 ---
 # <a name="durable-azure-functions"></a>Durable Functions (Azure)
 
@@ -27,7 +27,7 @@ Zustands behaftete Workflows in Durable Functions können in zwei systeminterne 
 
 Orchestrierungen sind im Vergleich zu anderen Arten von ausgelösten Vorgängen in Azure Functions eindeutig. Durable Functions ermöglicht die Ausführung von Funktionen, die mehrere Stunden oder sogar Tage dauern können. Diese Art von Verhalten besteht darin, dass es möglich ist, den Status einer laufenden Orchestrierung, die präemptiv Beendigung oder das Senden von Benachrichtigungen externer Ereignisse zu überprüfen.
 
-In solchen Fällen stellt die Durable Functions-Erweiterung die `DurableOrchestrationClient` Klasse bereit, die Ihnen die Interaktion mit orchestrierten Funktionen ermöglicht. Sie erhalten Zugriff auf den Orchestrierungs Client, indem Sie `OrchestrationClientAttribute` die-Bindung verwenden. Im allgemeinen würden Sie dieses Attribut mit einem anderen auslösertyp einschließen, `HttpTrigger` z `ServiceBusTrigger`. b. oder. Nachdem die Quell Funktion ausgelöst wurde, kann der Orchestrierungs Client zum Starten einer orchestratorfunktion verwendet werden.
+In solchen Fällen stellt die Durable Functions-Erweiterung die `DurableOrchestrationClient`-Klasse bereit, die Ihnen die Interaktion mit orchestrierten Funktionen ermöglicht. Sie erhalten Zugriff auf den Orchestrierung-Client, indem Sie die `OrchestrationClientAttribute`-Bindung verwenden. Im allgemeinen würden Sie dieses Attribut mit einem anderen auslösertyp einschließen, z. b. einem `HttpTrigger` oder `ServiceBusTrigger`. Nachdem die Quell Funktion ausgelöst wurde, kann der Orchestrierungs Client zum Starten einer orchestratorfunktion verwendet werden.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Hinzufügen einer Anmerkung zu einer Funktion mit dem orchestrationtriggerattribute in Azure Functions Markierungen, die als orchestratorfunktion fungieren. Er ist für die Verwaltung der verschiedenen Aktivitäten verantwortlich, die ihren Zustands behafteten Workflow bilden.
 
-Orchestratorfunktionen können keine anderen Bindungen als das orchestrationtriggerattribute verwenden. Dieses Attribut kann nur mit dem Parametertyp durableorchestrationcontext verwendet werden. Es können keine weiteren Eingaben verwendet werden, da die Deserialisierung von Eingaben in der Funktions Signatur nicht unterstützt wird. Zum Aufrufen von Eingaben, die vom Orchestrierungs Client bereitgestellt werden,\<muss\> die GetInput T-Methode verwendet werden.
+Orchestratorfunktionen können keine anderen Bindungen als das orchestrationtriggerattribute verwenden. Dieses Attribut kann nur mit dem Parametertyp durableorchestrationcontext verwendet werden. Es können keine weiteren Eingaben verwendet werden, da die Deserialisierung von Eingaben in der Funktions Signatur nicht unterstützt wird. Zum Aufrufen von Eingaben, die vom Orchestrierungs Client bereitgestellt werden, muss die GetInput @ no__t-0t @ no__t-1-Methode verwendet werden.
 
 Außerdem müssen die Rückgabe Typen von Orchestrierungs Funktionen entweder "void", "Task" oder ein serialisierbarer JSON-Wert sein.
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Mehrere Instanzen einer Orchestrierung können gleichzeitig gestartet und ausgeführt werden. Wenn Sie `StartNewAsync` die-Methode `DurableOrchestrationClient` für den aufrufen, wird eine neue Instanz der Orchestrierung gestartet. Die-Methode gibt `Task<string>` einen zurück, der abgeschlossen wird, wenn die Orchestrierung gestartet wurde. Eine Ausnahme vom Typ `TimeoutException` wird ausgelöst, wenn die Orchestrierung nicht innerhalb von 30 Sekunden gestartet wurde.
+Mehrere Instanzen einer Orchestrierung können gleichzeitig gestartet und ausgeführt werden. Wenn Sie die `StartNewAsync`-Methode für den `DurableOrchestrationClient` aufrufen, wird eine neue Instanz der Orchestrierung gestartet. Die-Methode gibt eine `Task<string>` zurück, die abgeschlossen wird, wenn die Orchestrierung gestartet wurde. Eine Ausnahme vom Typ "`TimeoutException`" wird ausgelöst, wenn die Orchestrierung nicht innerhalb von 30 Sekunden gestartet wurde.
 
-Der abgeschlossene `Task<string>` aus `StartNewAsync` sollte die eindeutige ID der Orchestrierungs Instanz enthalten. Diese Instanz-ID kann verwendet werden, um Vorgänge für diese bestimmte Orchestrierung aufzurufen. Die Orchestrierung kann für den Status oder die gesendeten Ereignis Benachrichtigungen abgefragt werden.
+Der abgeschlossene `Task<string>` von `StartNewAsync` sollte die eindeutige ID der Orchestrierungs Instanz enthalten. Diese Instanz-ID kann verwendet werden, um Vorgänge für diese bestimmte Orchestrierung aufzurufen. Die Orchestrierung kann für den Status oder die gesendeten Ereignis Benachrichtigungen abgefragt werden.
 
 ### <a name="the-activity-functions"></a>Die Aktivitäts Funktionen
 
 Aktivitäts Funktionen sind die diskreten Vorgänge, die in einer Orchestrierungs Funktion zusammengesetzt werden, um den Workflow zu erstellen. Hier finden Sie den größten Teil der eigentlichen Arbeit. Sie stellen die Geschäftslogik, Prozesse mit langer Ausführungszeit und die Rätsel Teile für eine größere Lösung dar.
 
-Wird verwendet, um einen Funktionsparameter vom Typ `DurableActivityContext`zu kommentieren. `ActivityTriggerAttribute` Mithilfe der-Anmerkung wird der Laufzeit mitgeteilt, dass die-Funktion als Aktivitäts Funktion verwendet werden soll. Eingabewerte für Aktivitäts Funktionen werden mithilfe der `GetInput<T>` -Methode `DurableActivityContext` des-Parameters abgerufen.
+Der `ActivityTriggerAttribute` wird verwendet, um einen Funktionsparameter des Typs `DurableActivityContext` zu kommentieren. Mithilfe der-Anmerkung wird der Laufzeit mitgeteilt, dass die-Funktion als Aktivitäts Funktion verwendet werden soll. Eingabewerte für Aktivitäts Funktionen werden mit der `GetInput<T>`-Methode des Parameters "`DurableActivityContext`" abgerufen.
 
 Ähnlich wie bei Orchestrierungs Funktionen müssen die Rückgabe Typen von Aktivitäts Funktionen entweder "void", "Task" oder ein serialisierbarer JSON-Wert sein.
 
-Alle nicht behandelten Ausnahmen, die innerhalb von Aktivitäts Funktionen ausgelöst werden, werden an die aufrufende orchestratorfunktion gesendet und als `TaskFailedException`dargestellt. An diesem Punkt kann der Fehler abgefangen und in Orchestrator protokolliert werden, und die Aktivität kann wiederholt werden.
+Alle nicht behandelten Ausnahmen, die innerhalb von Aktivitäts Funktionen ausgelöst werden, werden an die aufrufende orchestratorfunktion gesendet und als `TaskFailedException` dargestellt. An diesem Punkt kann der Fehler abgefangen und in Orchestrator protokolliert werden, und die Aktivität kann wiederholt werden.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-* [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Bindungen für Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Verwalten von Instanzen in Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Bindungen für Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Verwalten von Instanzen in Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[Zurück](event-grid.md)

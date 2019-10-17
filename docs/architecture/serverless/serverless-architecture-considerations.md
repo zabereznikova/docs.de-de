@@ -4,12 +4,12 @@ description: Informieren Sie sich über die Herausforderungen der Architektur vo
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ecbffbbd435b4926608e4def519fdaddddab688d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577433"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522425"
 ---
 # <a name="serverless-architecture-considerations"></a>Überlegungen zur serverlosen Architektur
 
@@ -21,9 +21,9 @@ Server lose Funktionen, wie z. b. die allgemeinen Funktionen, sind standardmäß
 
 Es gibt mehrere Lösungen, um den Status zu übernehmen, ohne die Vorteile von Server losen zu gefährden. Zu den beliebtesten Lösungen gehören:
 
-* Verwenden eines temporären Datenspeichers oder verteilter Caches wie redis
-* Speichern des Zustands in einer Datenbank, wie z. b. SQL oder cosmosdb
-* Handle des Zustands durch eine Workflow-Engine wie Durable Functions
+- Verwenden eines temporären Datenspeichers oder verteilter Caches wie redis
+- Speichern des Zustands in einer Datenbank, wie z. b. SQL oder cosmosdb
+- Handle des Zustands durch eine Workflow-Engine wie Durable Functions
 
 Die untere Zeile besteht darin, dass Sie die Notwendigkeit einer Zustands Verwaltung in Prozessen beachten sollten, die Sie mit Server losen Implementierung in Erwägung ziehen.
 
@@ -37,9 +37,9 @@ Es gibt einige Ausnahmen und Lösungen. Eine Lösung kann darin bestehen, den Pr
 
 Ein mögliches Problem bei Server losen Implementierungen ist die Startzeit. Um Ressourcen zu sparen, erstellen viele Server lose Anbieter die Infrastrukturbedarfs gesteuert. Wenn nach einer bestimmten Zeitspanne eine Server lose Funktion ausgelöst wird, müssen möglicherweise die Ressourcen zum Hosten der Funktion erstellt oder neu gestartet werden. In einigen Fällen kann es zu Verzögerungen bei einem Kaltstart kommen, die mehrere Sekunden dauern. Die Startzeit variiert je nach Anbieter und Dienst Ebene. Es gibt einige Ansätze zum Beheben der Startzeit, wenn es wichtig ist, den Erfolg der APP zu minimieren.
 
-* Einige Anbieter ermöglichen es Benutzern, Service Levels zu zahlen, die die Infrastruktur "Always on" garantieren.
-* Implementieren Sie einen Keep-Alive-Mechanismus (Pingen Sie den Endpunkt, um die Sicherheit zu gewährleisten).
-* Verwenden Sie eine Orchestrierung wie Kubernetes mit einem Ansatz für eine containerisierte Funktion (der Host wird bereits ausgeführt, sodass das Einrichten neuer Instanzen äußerst schnell ist).
+- Einige Anbieter ermöglichen es Benutzern, Service Levels zu zahlen, die die Infrastruktur "Always on" garantieren.
+- Implementieren Sie einen Keep-Alive-Mechanismus (Pingen Sie den Endpunkt, um die Sicherheit zu gewährleisten).
+- Verwenden Sie eine Orchestrierung wie Kubernetes mit einem Ansatz für eine containerisierte Funktion (der Host wird bereits ausgeführt, sodass das Einrichten neuer Instanzen äußerst schnell ist).
 
 ## <a name="database-updates-and-migrations"></a>Datenbankaktualisierungen und-Migrationen
 

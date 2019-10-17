@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926299"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522910"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
@@ -39,30 +39,30 @@ Mehr Informationen zu Unittests in .NET Core-Projekten:
 
 .NET Core-Komponententestprojekte werden für folgende Programmiersprachen unterstützt:
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 Sie können außerdem zwischen folgenden Frameworks wählen:
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 In den folgenden exemplarischen Vorgehensweisen erfahren Sie mehr:
 
-* Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
-* Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
-* Erstellen von Komponententests mit [*MSTest* und *C#* mit der .NET Core-CLI](unit-testing-with-mstest.md).
-* Erstellen von Komponententests mit [*xUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-dotnet-test.md).
-* Erstellen von Komponententests mit [*NUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-nunit.md).
-* Erstellen von Komponententests mit [*MSTest* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-mstest.md).
-* Erstellen von Komponententests mit [*xUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-dotnet-test.md).
-* Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
-* Erstellen von Komponententests mit [*MSTest* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-mstest.md).
+- Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
+- Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
+- Erstellen von Komponententests mit [*MSTest* und *C#* mit der .NET Core-CLI](unit-testing-with-mstest.md).
+- Erstellen von Komponententests mit [*xUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-dotnet-test.md).
+- Erstellen von Komponententests mit [*NUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-nunit.md).
+- Erstellen von Komponententests mit [*MSTest* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-mstest.md).
+- Erstellen von Komponententests mit [*xUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-dotnet-test.md).
+- Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
+- Erstellen von Komponententests mit [*MSTest* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-mstest.md).
 
 In den folgenden Artikeln erfahren Sie mehr:
 
-* Visual Studio Enterprise bietet nützliche Testtools für .NET Core. Weitere Informationen finden Sie in den Artikel zu [Live Unit Testing](/visualstudio/test/live-unit-testing) und [Codeabdeckung](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Weitere Informationen zum Durchführen selektiver Komponententests finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) und [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
-* [Verwenden von XUnit mit .NET Core und Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- Visual Studio Enterprise bietet nützliche Testtools für .NET Core. Weitere Informationen finden Sie in den Artikel zu [Live Unit Testing](/visualstudio/test/live-unit-testing) und [Codeabdeckung](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
+- Weitere Informationen zum Durchführen selektiver Komponententests finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) und [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
+- [Verwenden von XUnit mit .NET Core und Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html)

@@ -4,12 +4,12 @@ description: Informieren Sie sich über die Vielzahl von Szenarien, die von Serv
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577193"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522350"
 ---
 # <a name="serverless-design-examples"></a>Beispiele für serverloses Design
 
@@ -77,16 +77,16 @@ Ein API-Gateway bietet einen einzigen Einstiegspunkt für Clients und leitet dan
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für verteilte Datenverwaltung)](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [Entwerfen von-Webdiensten: Ermitteln von Grenzen von Grenzen](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [Muster für Ereignis Beschaffung](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [Implementing the Circuit Breaker pattern (Implementieren des Schaltkreisunterbrechermusters)](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Arbeiten mit der Unterstützung von Änderungs Feeds in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für verteilte Datenverwaltung)](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [Entwerfen von-Webdiensten: Ermitteln von Grenzen von Grenzen](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Muster für Ereignis Beschaffung](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Implementing the Circuit Breaker pattern (Implementieren des Schaltkreisunterbrechermusters)](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Arbeiten mit der Unterstützung von Änderungs Feeds in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Zurück](serverless-architecture-considerations.md)
