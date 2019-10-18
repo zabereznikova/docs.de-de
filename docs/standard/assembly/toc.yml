@@ -17,6 +17,8 @@
       href: file-format.md
     - name: "Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET\_Core"
       href: unloadability.md
+    - name: Verweisassemblys
+      href: reference-assemblies.md
     - name: Auflösen von Assemblyladevorgängen
       href: resolve-loads.md
     - name: Programmieren mit Assemblys
@@ -54,13 +56,13 @@
         - name: Friend-Assemblys
           href: friend.md
           items:
-            - name: 'Vorgehensweise: Erstellen von unsignierten Friend-Assemblys'
+            - name: 'Gewusst wie: Erstellen von unsignierten Friend-Assemblys'
               href: create-unsigned-friend.md
             - name: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys'
               href: create-signed-friend.md
         - name: 'Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist'
           href: identify.md
-        - name: 'Vorgehensweise: Laden und Entladen von Assemblys'
+        - name: 'Gewusst wie: Laden und Entladen von Assemblys'
           href: load-unload.md
         - name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio'
           href: embed-types-visual-studio.md
