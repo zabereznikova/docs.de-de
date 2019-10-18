@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38549b2fcce0740b2b9cfd42d950e56b343e7a30
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940815"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524675"
 ---
-# <a name="remarks-visual-basic"></a>\<remarks> (Visual Basic)
-Gibt einen Abschnitt "Hinweise" für das Element an.  
+# <a name="remarks-visual-basic"></a>\<remarks > (Visual Basic)
+Gibt einen Abschnitt mit Hinweisen für den Member an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,14 +26,14 @@ Gibt einen Abschnitt "Hinweise" für das Element an.
  Eine Beschreibung des Members  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<remarks>` Tag, das Hinzufügen von Informationen zu einem Typ, die mit angegebene Informationen ergänzen [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Verwenden Sie das `<remarks>`-Tag, um Informationen zu einem Typ hinzuzufügen, und ergänzen Sie die mit [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md)angegebenen Informationen.  
   
- Diese Informationen werden im Objektkatalog angezeigt. Weitere Informationen zu den Objektkatalog, finden Sie unter [Anzeigen der Codestruktur](/visualstudio/ide/viewing-the-structure-of-code).  
+ Diese Informationen werden in der Objektkatalog angezeigt. Weitere Informationen zum Objektkatalog finden Sie unter [Anzeigen der Code Struktur](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<remarks>` -Tag erläutert, was die `UpdateRecord` Methode.  
+ In diesem Beispiel wird das `<remarks>`-Tag verwendet, um zu erläutern, was die `UpdateRecord` Methode bewirkt.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

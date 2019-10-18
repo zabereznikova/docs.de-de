@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic'
+title: 'Gewusst wie: Verweisen auf COM-Objekte aus Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8e502dc9a279d9271a61fd2cf7a6afb564f09125
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ea0e1d9b0ae9f151d901c425512508ba7bc05343
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351995"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524357"
 ---
-# <a name="how-to-reference-com-objects-from-visual-basic"></a>Vorgehensweise: Verweisen auf COM-Objekte aus Visual Basic
+# <a name="how-to-reference-com-objects-from-visual-basic"></a>Gewusst wie: Verweisen auf COM-Objekte aus Visual Basic
 In Visual Basic erfordert das Hinzufügen von Verweisen auf COM-Objekte, die über Typbibliotheken verfügen, das Erstellen einer Interop-Assembly für die com-Bibliothek. Verweise auf die Member des COM-Objekts werden an die Interop-Assembly weitergeleitet und dann an das tatsächliche com-Objekt weitergeleitet. Antworten aus dem COM-Objekt werden an die Interop-Assembly weitergeleitet und an Ihre .NET Framework Anwendung weitergeleitet.  
   
- Sie können auf ein COM-Objekt verweisen, ohne eine Interopassembly zu verwenden, indem Sie die Typinformationen für das COM-Objekt in eine .NET-Assembly einbetten. Zum Einbetten von Typinformationen legen Sie die `Embed Interop Types`-Eigenschaft für den Verweis auf das COM-Objekt auf `True` fest. Wenn Sie mithilfe des Befehlszeilen Compilers kompilieren, verwenden Sie die Option "`/link`", um auf die com-Bibliothek zu verweisen. Weitere Informationen finden Sie unter [/Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
+ Sie können auf ein COM-Objekt verweisen, ohne eine Interopassembly zu verwenden, indem Sie die Typinformationen für das COM-Objekt in eine .NET-Assembly einbetten. Zum Einbetten von Typinformationen legen Sie die `Embed Interop Types`-Eigenschaft auf `True` für den Verweis auf das COM-Objekt fest. Wenn Sie mithilfe des Befehlszeilen Compilers kompilieren, verwenden Sie die Option `/link`, um auf die com-Bibliothek zu verweisen. Weitere Informationen finden Sie unter [Link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   
  Visual Basic erstellt automatisch Interop-Assemblys, wenn Sie einen Verweis auf eine Typbibliothek aus der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) hinzufügen. Wenn Sie von der Befehlszeile aus arbeiten, können Sie das Hilfsprogramm Tlbimp verwenden, um Interop-Assemblys manuell zu erstellen.  
   
@@ -28,7 +28,7 @@ In Visual Basic erfordert das Hinzufügen von Verweisen auf COM-Objekte, die üb
   
 2. Wählen Sie die Komponente aus der Liste der COM-Objekte aus, die Sie verwenden möchten.  
   
-3. Fügen Sie am Anfang der Klasse oder des Moduls, in dem Sie das COM-Objekt verwenden, eine `Imports`-Anweisung hinzu, um den Zugriff auf die Interop-Assembly zu vereinfachen. Im folgenden Codebeispiel wird z. b. der-Namespace `INKEDLib` für Objekte importiert, auf die in der `Microsoft InkEdit Control 1.0`-Bibliothek verwiesen wird.  
+3. Fügen Sie am Anfang der Klasse oder des Moduls, in dem Sie das COM-Objekt verwenden werden, eine `Imports`-Anweisung hinzu, um den Zugriff auf die Interop-Assembly zu vereinfachen. Im folgenden Codebeispiel wird beispielsweise der Namespace `INKEDLib` für Objekte importiert, auf die in der `Microsoft InkEdit Control 1.0`-Bibliothek verwiesen wird.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   

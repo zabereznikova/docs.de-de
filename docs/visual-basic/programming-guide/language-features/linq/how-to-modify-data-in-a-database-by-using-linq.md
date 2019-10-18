@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)'
+title: 'Gewusst wie: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,154 +12,155 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf0ed1be8d74b60b7e626db996e7cefb1c01131
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594217"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524510"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Vorgehensweise: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)
-Language Integrated Query (LINQ) Abfragen erleichtern Ihnen den Zugriff auf Informationen und Ändern von Werten in der Datenbank.  
-  
- Das folgende Beispiel zeigt wie Sie eine neue Anwendung erstellen, die abruft und Informationen zu Softwareupdates in einer SQL Server-Datenbank.  
-  
- In die Beispielen in diesem Thema verwenden die Beispieldatenbank Northwind. Wenn Sie diese Datenbank nicht auf dem Entwicklungscomputer gespeichert haben, können Sie es aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
-  
-### <a name="to-create-a-connection-to-a-database"></a>Um eine Verbindung mit einer Datenbank zu erstellen.  
-  
-1. Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** durch Klicken auf die **Ansicht** Menü, und wählen Sie dann **fürServer-Explorer** / **Datenbank-Explorer**.  
-  
-2. Mit der rechten Maustaste **Datenverbindungen** in **Server-Explorer**/**Datenbank-Explorer**, und klicken Sie auf **Verbindung hinzufügen**.  
-  
-3. Geben Sie eine gültige Verbindung mit der Beispieldatenbank Northwind.  
-  
-### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Ein Projekt mit einer LINQ to SQL-Datei hinzufügen  
-  
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms-Anwendung** als Projekttyp.  
-  
-2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die **LINQ to SQL-Klassen** Elementvorlage.  
-  
-3. Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der Object Relational Designer (O/R Designer) wird geöffnet, für die `northwind.dbml` Datei.  
-  
-### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Zum Hinzufügen von Tabellen zum Abfragen und ändern in den designer  
-  
-1. In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung zur Northwind-Datenbank. Erweitern Sie die **Tabellen** Ordner.  
-  
-     Wenn Sie den O/R-Designer geschlossen haben, können Sie es öffnen, durch Doppelklicken auf die `northwind.dbml` -Datei, die Sie zuvor hinzugefügt haben.  
-  
-2. Klicken Sie auf der Customers-Tabelle aus, und ziehen Sie es in den linken Bereich des Designers.  
-  
-     Der Designer erstellt ein neues Customer-Objekt, für das Projekt.  
-  
-3. Speichern Sie die Änderungen zu und schließen Sie den Designer.  
-  
-4. Speichern Sie das Projekt.  
-  
-### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Zum Hinzufügen von Code zum Ändern der Datenbank und die Ergebnisse anzeigen  
-  
-1. Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement auf das Standard-Windows-Formular für das Projekt, Form1.  
-  
-2. Wenn Sie Tabellen in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt eine <xref:System.Data.Linq.DataContext> Objekt, das Ihr Projekt. Dieses Objekt enthält Code, mit denen Sie Zugriff auf die Customers-Tabelle. Sie enthält auch Code, ein lokales Kundenobjekt und eine Sammlung "Kunden" für die Tabelle definiert. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit dem Namen wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt mit dem Namen `northwindDataContext`.  
-  
-     Sie können eine Instanz von erstellen die <xref:System.Data.Linq.DataContext> Objekt in Ihrem Code und die Abfrage aus, und ändern Sie die Sammlung "Kunden" durch den O/R-Designer angegeben. Änderungen, die Sie für die Sammlung "Kunden" machen, werden nicht in der Datenbank wiedergegeben, bis Sie sie durch Aufrufen von übermitteln der <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Methode der <xref:System.Data.Linq.DataContext> Objekt.  
-  
-     Doppelklicken Sie auf das Windows Form, Form1, um zum Hinzufügen von Code die <xref:System.Windows.Forms.Form.Load> Ereignis, um die Abfrage, die Customers-Tabelle als eine Eigenschaft verfügbar gemacht wird Ihre <xref:System.Data.Linq.DataContext>. Fügen Sie den folgenden Code hinzu:  
-  
-    ```vb  
-    Private db As northwindDataContext  
-  
-    Private Sub Form1_Load(ByVal sender As System.Object,   
-                           ByVal e As System.EventArgs  
-                          ) Handles MyBase.Load  
-      db = New northwindDataContext()  
-  
-      RefreshData()  
-    End Sub  
-  
-    Private Sub RefreshData()  
-      Dim customers = From cust In db.Customers   
-                      Where cust.City(0) = "W"   
-                      Select cust  
-  
-      DataGridView1.DataSource = customers  
-    End Sub  
-    ```  
-  
-3. Von der **Toolbox**, ziehen Sie drei <xref:System.Windows.Forms.Button> Steuerelemente auf das Formular. Wählen Sie die erste `Button` Steuerelement. In der **Eigenschaften** legen die `Name` von der `Button` die Steuerung an `AddButton` und `Text` zu `Add`. Wählen Sie die zweite Schaltfläche, und legen die `Name` Eigenschaft `UpdateButton` und `Text` Eigenschaft `Update`. Wählen Sie die dritte Schaltfläche, und legen die `Name` Eigenschaft `DeleteButton` und `Text` Eigenschaft `Delete`.  
-  
-4. Doppelklicken Sie auf die **hinzufügen** Schaltfläche Hinzufügen von Code, dessen `Click` Ereignis. Fügen Sie den folgenden Code hinzu:  
-  
-    ```vb  
-    Private Sub AddButton_Click(ByVal sender As System.Object,   
-                                ByVal e As System.EventArgs  
-                               ) Handles AddButton.Click  
-      Dim cust As New Customer With {   
-        .City = "Wellington",   
-        .CompanyName = "Blue Yonder Airlines",   
-        .ContactName = "Jill Frank",   
-        .Country = "New Zealand",   
-        .CustomerID = "JILLF"}  
-  
-      db.Customers.InsertOnSubmit(cust)  
-  
-      Try  
-        db.SubmitChanges()  
-      Catch  
-        ' Handle exception.  
-      End Try  
-  
-      RefreshData()  
-    End Sub  
-    ```  
-  
-5. Doppelklicken Sie auf die **Update** Schaltfläche Hinzufügen von Code, dessen `Click` Ereignis. Fügen Sie den folgenden Code hinzu:  
-  
-    ```vb  
-    Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
-                                   ByVal e As System.EventArgs  
-                                  ) Handles UpdateButton.Click  
-      Dim updateCust = (From cust In db.Customers   
-                        Where cust.CustomerID = "JILLF").ToList()(0)  
-  
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Gewusst wie: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)
+
+LINQ-Abfragen (Language-Integrated Query) erleichtern den Zugriff auf Datenbankinformationen und das Ändern von Werten in der Datenbank.
+
+Im folgenden Beispiel wird gezeigt, wie Sie eine neue Anwendung erstellen, die Informationen in einer SQL Server-Datenbank abruft und aktualisiert.
+
+In den Beispielen in diesem Thema wird die Beispieldatenbank Northwind verwendet. Wenn Sie diese Datenbank nicht auf Ihrem Entwicklungs Computer gespeichert haben, können Sie Sie aus dem Microsoft Download Center herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+
+### <a name="to-create-a-connection-to-a-database"></a>So erstellen Sie eine Verbindung mit einer Datenbank
+
+1. Öffnen Sie in Visual Studio **Server-Explorer** /**Datenbank-Explorer** , indem Sie auf das Menü **Ansicht** und dann auf **Server-Explorer** /**Datenbank-Explorer**klicken.
+
+2. Klicken Sie in **Server-Explorer** /**Datenbank-Explorer**mit der rechten Maustaste auf **Datenverbindungen** , und klicken Sie auf **Verbindung hinzufügen**.
+
+3. Geben Sie eine gültige Verbindung mit der Northwind-Beispieldatenbank an.
+
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>So fügen Sie ein Projekt mit einer LINQ to SQL Datei hinzu
+
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.
+
+2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.
+
+3. Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der objektrelationaler Designer (O/R-Designer) wird für die `northwind.dbml`-Datei geöffnet.
+
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>So fügen Sie Tabellen zum Abfragen und Ändern des Designers hinzu
+
+1. Erweitern Sie in **Server-Explorer** /**Datenbank-Explorer**die Verbindung mit der Northwind-Datenbank. Erweitern Sie den Ordner **Tabellen** .
+
+     Wenn Sie den O/R-Designer geschlossen haben, können Sie ihn erneut öffnen, indem Sie auf die `northwind.dbml` Datei doppelklicken, die Sie zuvor hinzugefügt haben.
+
+2. Klicken Sie auf die Tabelle Customers, und ziehen Sie Sie in den linken Bereich des Designers.
+
+     Der Designer erstellt ein neues Customer-Objekt für das Projekt.
+
+3. Speichern Sie die Änderungen, und schließen Sie den Designer.
+
+4. Speichern Sie das Projekt.
+
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>So fügen Sie Code hinzu, um die Datenbank zu ändern und die Ergebnisse anzuzeigen
+
+1. Ziehen Sie aus der **Toolbox**ein <xref:System.Windows.Forms.DataGridView>-Steuerelement auf das standardmäßige Windows Form für Ihr Projekt, Form1.
+
+2. Wenn Sie dem O/R-Designer Tabellen hinzugefügt haben, hat der Designer dem Projekt ein <xref:System.Data.Linq.DataContext> Objekt hinzugefügt. Dieses Objekt enthält Code, den Sie für den Zugriff auf die Customers-Tabelle verwenden können. Sie enthält auch Code, der ein lokales Kunden Objekt und eine Kunden Auflistung für die Tabelle definiert. Das <xref:System.Data.Linq.DataContext>-Objekt für das Projekt wird basierend auf dem Namen der DBML-Datei benannt. Für dieses Projekt wird das <xref:System.Data.Linq.DataContext> Objekt `northwindDataContext` benannt.
+
+     Sie können eine Instanz des <xref:System.Data.Linq.DataContext> Objekts im Code erstellen und die vom O/R-Designer angegebene Kunden Auflistung Abfragen und ändern. Änderungen, die Sie an der Customers-Sammlung vornehmen, werden erst dann in der Datenbank wiedergegeben, wenn Sie Sie durch Aufrufen der <xref:System.Data.Linq.DataContext.SubmitChanges%2A>-Methode des <xref:System.Data.Linq.DataContext>-Objekts übermitteln.
+
+     Doppelklicken Sie auf das Windows Form Form1, um dem <xref:System.Windows.Forms.Form.Load>-Ereignis Code zum Abfragen der Customers-Tabelle hinzuzufügen, die als Eigenschaft ihrer <xref:System.Data.Linq.DataContext> verfügbar gemacht wird. Fügen Sie den folgenden Code hinzu:
+
+    ```vb
+    Private db As northwindDataContext
+
+    Private Sub Form1_Load(ByVal sender As System.Object,
+                           ByVal e As System.EventArgs
+                          ) Handles MyBase.Load
+      db = New northwindDataContext()
+
+      RefreshData()
+    End Sub
+
+    Private Sub RefreshData()
+      Dim customers = From cust In db.Customers
+                      Where cust.City(0) = "W"
+                      Select cust
+
+      DataGridView1.DataSource = customers
+    End Sub
+    ```
+
+3. Ziehen Sie aus der **Toolbox**drei <xref:System.Windows.Forms.Button>-Steuerelemente auf das Formular. Wählen Sie das erste `Button` Steuerelement aus. Legen Sie im Fenster **Eigenschaften** die `Name` des `Button` Steuer Elements auf `AddButton` und die `Text` auf `Add` fest. Wählen Sie die zweite Schaltfläche aus, und legen Sie die `Name`-Eigenschaft auf `UpdateButton` und die Eigenschaft `Text` auf `Update` fest. Wählen Sie die dritte Schaltfläche aus, und legen Sie die `Name`-Eigenschaft auf `DeleteButton` und die Eigenschaft `Text` auf `Delete` fest.
+
+4. Doppelklicken Sie auf die Schaltfläche **Hinzufügen** , um dem `Click` Ereignis Code hinzuzufügen. Fügen Sie den folgenden Code hinzu:
+
+    ```vb
+    Private Sub AddButton_Click(ByVal sender As System.Object,
+                                ByVal e As System.EventArgs
+                               ) Handles AddButton.Click
+      Dim cust As New Customer With {
+        .City = "Wellington",
+        .CompanyName = "Blue Yonder Airlines",
+        .ContactName = "Jill Frank",
+        .Country = "New Zealand",
+        .CustomerID = "JILLF"}
+
+      db.Customers.InsertOnSubmit(cust)
+
+      Try
+        db.SubmitChanges()
+      Catch
+        ' Handle exception.
+      End Try
+
+      RefreshData()
+    End Sub
+    ```
+
+5. Doppelklicken Sie auf die Schaltfläche **Aktualisieren** , um dem `Click` Ereignis Code hinzuzufügen. Fügen Sie den folgenden Code hinzu:
+
+    ```vb
+    Private Sub UpdateButton_Click(ByVal sender As System.Object, _
+                                   ByVal e As System.EventArgs
+                                  ) Handles UpdateButton.Click
+      Dim updateCust = (From cust In db.Customers
+                        Where cust.CustomerID = "JILLF").ToList()(0)
+
       updateCust.ContactName = "Jill Shrader"
       updateCust.Country = "Wales"
       updateCust.CompanyName = "Red Yonder Airlines"
       updateCust.City = "Cardiff"
-  
-      Try  
-        db.SubmitChanges()  
-      Catch  
-        ' Handle exception.  
-      End Try  
-  
-      RefreshData()  
-    End Sub  
-    ```  
-  
-6. Doppelklicken Sie auf die **löschen** Schaltfläche Hinzufügen von Code, dessen `Click` Ereignis. Fügen Sie den folgenden Code hinzu:  
-  
-    ```vb  
-    Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
-                                   ByVal e As System.EventArgs  
-                                  ) Handles DeleteButton.Click  
-      Dim deleteCust = (From cust In db.Customers   
-                        Where cust.CustomerID = "JILLF").ToList()(0)  
-  
-      db.Customers.DeleteOnSubmit(deleteCust)  
-  
-      Try  
-        db.SubmitChanges()  
-      Catch  
-        ' Handle exception.  
-      End Try  
-  
-      RefreshData()  
-    End Sub  
-    ```  
-  
-7. Drücken Sie F5, um das Projekt auszuführen. Klicken Sie auf **hinzufügen** um einen neuen Datensatz hinzuzufügen. Klicken Sie auf **Update** so ändern Sie den neuen Datensatz. Klicken Sie auf **löschen** auf den neuen Datensatz zu löschen.  
-  
+
+      Try
+        db.SubmitChanges()
+      Catch
+        ' Handle exception.
+      End Try
+
+      RefreshData()
+    End Sub
+    ```
+
+6. Doppelklicken Sie auf die Schaltfläche **Löschen** , um dem `Click` Ereignis Code hinzuzufügen. Fügen Sie den folgenden Code hinzu:
+
+    ```vb
+    Private Sub DeleteButton_Click(ByVal sender As System.Object, _
+                                   ByVal e As System.EventArgs
+                                  ) Handles DeleteButton.Click
+      Dim deleteCust = (From cust In db.Customers
+                        Where cust.CustomerID = "JILLF").ToList()(0)
+
+      db.Customers.DeleteOnSubmit(deleteCust)
+
+      Try
+        db.SubmitChanges()
+      Catch
+        ' Handle exception.
+      End Try
+
+      RefreshData()
+    End Sub
+    ```
+
+7. Drücken Sie F5, um das Projekt auszuführen. Klicken Sie auf **Add** , um einen neuen Datensatz hinzuzufügen. Klicken Sie auf **Aktualisieren** , um den neuen Datensatz zu ändern. Klicken Sie auf **Löschen** , um den neuen Datensatz zu löschen.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664192"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524719"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Definiert einen Namen und eine Beschreibung an.  
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+Definiert einen Parameternamen und eine Beschreibung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -23,24 +23,24 @@ Definiert einen Namen und eine Beschreibung an.
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- Der Name eines Methodenparameters. Setzen Sie den Namen in doppelte Anführungszeichen (" ").  
+ Der Name eines Methodenparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   
  `description`  
  Eine Beschreibung für den Parameter  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<param>` -Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um einen der Parameter für die Methode zu beschreiben.  
+ Das `<param>`-Tag sollte im Kommentar für eine Methoden Deklaration verwendet werden, um einen der Parameter für die-Methode zu beschreiben.  
   
- Der Text für die `<param>` Tag wird in den folgenden Speicherorten angezeigt:  
+ Der Text für das `<param>`-Tag wird an den folgenden Speicherorten angezeigt:  
   
-- ParameterInfo von IntelliSense. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense).  
+- Parameter Informationen von IntelliSense. Weitere Informationen finden Sie unter [Verwenden von IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Objekt-Browser. Weitere Informationen finden Sie unter [Anzeigen der Codestruktur](/visualstudio/ide/viewing-the-structure-of-code).  
+- Objektkatalog. Weitere Informationen finden Sie unter [Anzeigen der Codestruktur](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<param>` Tag zum Beschreiben der `id` Parameter.  
+ In diesem Beispiel wird das `<param>`-Tag verwendet, um den `id`-Parameter zu beschreiben.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

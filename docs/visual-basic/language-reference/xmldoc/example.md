@@ -5,15 +5,15 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f28dbf19bc03cb9d91323e9fa43a7081c1990db
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772501"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524003"
 ---
-# <a name="example-visual-basic"></a>\<Beispiel > (Visual Basic)
-Gibt ein Beispiel für das Element an.  
+# <a name="example-visual-basic"></a>\<example > (Visual Basic)
+Gibt ein Beispiel für den Member an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,12 +26,12 @@ Gibt ein Beispiel für das Element an.
  Eine Beschreibung des Codebeispiels.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<example>` -Tag können Sie ein Beispiel zur Verwendung einer Methode oder anderen Bibliothekmembers angegeben. Dies schließt im Allgemeinen die Verwendung des [\<code](../../../visual-basic/language-reference/xmldoc/code.md)-Tags ein.  
+ Mithilfe des `<example>`-Tags können Sie ein Beispiel für die Verwendung einer Methode oder eines anderen Bibliotheks Members angeben. Dies schließt im Allgemeinen die Verwendung des [\<code](../../../visual-basic/language-reference/xmldoc/code.md)-Tags ein.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<example>` Tag enthalten ein Beispiel für die Verwendung der `ID` Feld.  
+ In diesem Beispiel wird das `<example>`-Tag verwendet, um ein Beispiel für die Verwendung des `ID` Felds einzuschließen.  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   

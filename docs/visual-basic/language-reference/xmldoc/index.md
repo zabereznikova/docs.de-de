@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 2d6519af8ca1a0e2d59131eec4d63646dce7318b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7830db136e9b900458496b36df5bc37f76661129
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913502"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523965"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Empfohlene XML-Tags für Dokumentationskommentare (Visual Basic)
 Der Visual Basic-Compiler kann Dokumentations Kommentare in Ihrem Code in eine XML-Datei verarbeiten. Sie können zusätzliche Tools verwenden, um die XML-Datei in die Dokumentation zu verarbeiten.  
@@ -28,19 +28,19 @@ Der Visual Basic-Compiler kann Dokumentations Kommentare in Ihrem Code in eine X
 ||||  
 |---|---|---|  
 |[\<c>](../../../visual-basic/language-reference/xmldoc/c.md)|[\<code>](../../../visual-basic/language-reference/xmldoc/code.md)|[\<example>](../../../visual-basic/language-reference/xmldoc/example.md)|  
-|Ausnahme > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/exception.md)|[\<include>](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<list>](../../../visual-basic/language-reference/xmldoc/list.md)|  
-|[\<para>](../../../visual-basic/language-reference/xmldoc/para.md)|param > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/param.md)|[\<paramref>](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
-|Berechtigung > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/permission.md)|[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
-|siehe > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/see.md)|seeauch > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/seealso.md)|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
-|typeparam-> <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/typeparam.md)|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
+|[\<exception >](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[\<include >](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<list>](../../../visual-basic/language-reference/xmldoc/list.md)|  
+|[\<para>](../../../visual-basic/language-reference/xmldoc/para.md)|[\<param >](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref>](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
+|[\<permission >](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
+|[\<see >](../../../visual-basic/language-reference/xmldoc/see.md) <sup>1</sup>|[\<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
+|[\<typeparam >](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
   
  (<sup>1</sup> der Compiler überprüft die Syntax.)  
   
 > [!NOTE]
-> Wenn spitzen Klammern im Text eines Dokumentations Kommentars angezeigt werden sollen, verwenden `&lt;` Sie und. `&gt;` Die Zeichenfolge `"&lt;text in angle brackets&gt;"` wird z. b. `<text in angle brackets>`als angezeigt.  
+> Wenn Sie möchten, dass im Text eines Dokumentations Kommentars spitzen Klammern angezeigt werden, verwenden Sie `&lt;` und `&gt;`. Beispielsweise wird die Zeichenfolge `"&lt;text in angle brackets&gt;"` als `<text in angle brackets>` angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [Vorgehensweise: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Gewusst wie: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

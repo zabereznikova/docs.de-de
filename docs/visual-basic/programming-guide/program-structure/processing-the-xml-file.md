@@ -4,44 +4,44 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 91583612940282b05ebbf38bd5f0a59d6af5bbcd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586748"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524449"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Verarbeiten der XML-Datei (Visual Basic)
-Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen dazu, wie Code mit Tags versehen werden, finden Sie unter [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Die ID-Zeichenfolge können Programme, die die XML-Datei verarbeitet die entsprechende .NET Framework-Metadaten/Reflektionselement identifizieren.  
+Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Informationen zum Markieren Ihres Codes finden Sie unter XML- [Kommentar Tags](../../../visual-basic/language-reference/xmldoc/index.md).) Mit der ID-Zeichenfolge wird das Konstrukt eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können die ID-Zeichenfolge verwenden, um die entsprechenden .NET Framework Metadata/Reflection-Element zu identifizieren.  
   
- Die XML-Datei ist nicht über eine hierarchische Darstellung des Codes; Es ist eine flache Liste mit einer generierten ID für jedes Element.  
+ Die XML-Datei ist keine hierarchische Darstellung des Codes. Es handelt sich um eine flache Liste mit einer generierten ID für jedes Element.  
   
  Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:  
   
 - In der Zeichenfolge wird kein Leerraum platziert.  
   
-- Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Membertypen werden verwendet.  
+- Der erste Teil der ID-Zeichenfolge kennzeichnet die Art des zu identifizierenden Members durch ein einzelnes Zeichen, gefolgt von einem Doppelpunkt. Die folgenden Elementtypen werden verwendet.  
   
 |Zeichen|Beschreibung|  
 |---|---|  
-|N|namespace<br /><br /> Ein Namespace können keine Dokumentationskommentare hinzugefügt, Sie können jedoch CREF-Verweise hinzugefügt, wenn dies unterstützt wird.|  
+|N|namespace<br /><br /> Sie können einem Namespace keine Dokumentations Kommentare hinzufügen. Sie können jedoch auch Verweise auf diese erstellen, sofern dies unterstützt wird.|  
 |T|Typ: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
 |F|Feld: `Dim`|  
-|P|Eigenschaft: `Property` (einschließlich Eigenschaften)|  
-|M|Methode: `Sub`, `Function`, `Declare`, `Operator`|  
+|P|Property: `Property` (einschließlich der Standardeigenschaften)|  
+|M|Methode: `Sub`, `Function` `Declare`, `Operator`|  
 |E|Ereignis: `Event`|  
-|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Visual Basic-Compiler generiert die Fehlerinformationen für Links, die nicht aufgelöst werden kann.|  
+|!|Fehlerzeichenfolge<br /><br /> Der verbleibende Teil der Zeichenfolge enthält Fehlerinformationen. Der Visual Basic-Compiler generiert Fehlerinformationen für Links, die nicht aufgelöst werden können.|  
   
-- Der zweite Teil der `String` ist der vollqualifizierte Name des Elements im Stammverzeichnis des Namespace ab. Der Name des Elements, seiner einschließenden Typen und den Namespace sind durch Punkte getrennt. Wenn der Name des Elements selbst Punkte enthält, werden sie ersetzt durch ein Nummernzeichen (#). Es wird vorausgesetzt, dass kein Element mit einem Nummernzeichen direkt im Namen hat. Z. B. den vollqualifizierten Namen des der `String` Konstruktor wäre `System.String.#ctor`.  
+- Der zweite Teil des `String` ist der voll qualifizierte Name des Elements, beginnend mit dem Stamm des Namespace. Der Name des Elements, der einschließende Typ (en) und der Namespace werden durch Punkte getrennt. Wenn der Name des Elements selbst Zeiträume enthält, werden diese durch das Nummern Zeichen (#) ersetzt. Es wird davon ausgegangen, dass kein Element direkt in seinem Namen über ein Nummern Zeichen verfügt. Beispielsweise wäre der voll qualifizierte Name des `String` Konstruktors `System.String.#ctor`.  
   
-- Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung jedes Arguments erfolgt genauso wie es in einer .NET Framework-Signatur codiert wird.  
+- Wenn es sich bei Eigenschaften und Methoden um Argumente der Methode handelt, folgt die in Klammern eingeschlossene Argumentliste. Wenn keine Argumente vorhanden sind, werden keine Klammern verwendet. Die Argumente werden durch Kommas voneinander getrennt. Die Codierung der einzelnen Argumente erfolgt direkt nach dem Codieren in einer .NET Framework Signatur.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie die ID für eine Klasse Zeichenfolgen und ihre Member generiert werden.  
+ Der folgende Code zeigt, wie die ID-Zeichen folgen für eine Klasse und ihre Member generiert werden.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [Vorgehensweise: Erstellen von XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [Gewusst wie: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 4e2f441863d6a8677593a257cdb2cc841634d47c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16ffb4f6b57dabb3650376c913a7d7608a00646d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940919"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523921"
 ---
-# <a name="exception-visual-basic"></a>\<Ausnahme > (Visual Basic)
+# <a name="exception-visual-basic"></a>\<exception > (Visual Basic)
 Gibt an, welche Ausnahmen ausgelöst werden können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,12 +29,12 @@ Gibt an, welche Ausnahmen ausgelöst werden können.
  Steht für eine Beschreibung.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<exception>` Tag angeben, welche Ausnahmen ausgelöst werden können. Dieses Tag wird auf eine Methodendefinition angewendet.  
+ Verwenden Sie das `<exception>`-Tag, um anzugeben, welche Ausnahmen ausgelöst werden können. Dieses Tag wird auf eine Methodendefinition angewendet.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<exception>` Tag, um eine Ausnahme zu beschreiben, die die `IntDivide` Funktion auslösen kann.  
+ In diesem Beispiel wird das `<exception>`-Tag verwendet, um eine Ausnahme zu beschreiben, die die `IntDivide`-Funktion auslösen kann.  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
