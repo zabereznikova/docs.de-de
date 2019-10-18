@@ -1,0 +1,40 @@
+- name: "Entwurfsspezifikationen für C#\_6.0"
+  items:
+    - name: Einführung
+      href: ../../../../_csharplang/spec/introduction.md
+    - name: Lexikalische Struktur
+      href: ../../../../_csharplang/spec/lexical-structure.md
+    - name: Grundlegende Konzepte
+      href: ../../../../_csharplang/spec/basic-concepts.md
+    - name: Typen
+      href: ../../../../_csharplang/spec/types.md
+    - name: Variablen
+      href: ../../../../_csharplang/spec/variables.md
+    - name: Konvertierungen
+      href: ../../../../_csharplang/spec/conversions.md
+    - name: Ausdrücke
+      href: ../../../../_csharplang/spec/expressions.md
+    - name: Anweisungen
+      href: ../../../../_csharplang/spec/statements.md
+    - name: Namespaces
+      href: ../../../../_csharplang/spec/namespaces.md
+    - name: Klassen
+      href: ../../../../_csharplang/spec/classes.md
+    - name: Strukturen
+      href: ../../../../_csharplang/spec/structs.md
+    - name: Arrays
+      href: ../../../../_csharplang/spec/arrays.md
+    - name: Schnittstellen
+      href: ../../../../_csharplang/spec/interfaces.md
+    - name: Enumerationen
+      href: ../../../../_csharplang/spec/enums.md
+    - name: Delegaten
+      href: ../../../../_csharplang/spec/delegates.md
+    - name: Ausnahmen
+      href: ../../../../_csharplang/spec/exceptions.md
+    - name: Attribute
+      href: ../../../../_csharplang/spec/attributes.md
+    - name: Unsicherer Code
+      href: ../../../../_csharplang/spec/unsafe-code.md
+    - name: Dokumentationskommentare
+      href: ../../../../_csharplang/spec/documentation-comments.md
