@@ -2,60 +2,60 @@
 title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: f8a081ed7c525b4346908f0419f0bb1ebf43683a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: fce7d2babdf05cb55c287b4c29e642a7dd16f76f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662639"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321246"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 
-Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie zum Starten von Visual Studio-Debugger (F5), um automatisch zu hosten und Testen einen Dienst, den Sie implementiert haben. Anschließend können Sie den Dienst mithilfe von WCF-Testclient (WcfTestClient.exe) oder Ihre eigenen-Clients zum Suchen und beheben potenzielle Fehler testen.
+Mit Windows Communication Foundation (WCF)-Dienst Host (WcfSvcHost. exe) können Sie den Visual Studio-Debugger (F5) starten, um automatisch einen von Ihnen implementierten Dienst zu hosten und zu testen. Anschließend können Sie den Dienst mit dem WCF-Test Client (WcfTestClient. exe) oder Ihrem eigenen Client testen, um potenzielle Fehler zu finden und zu beheben.
 
 ## <a name="wcf-service-host"></a>WCF-Diensthost
 
-WCF-Diensthost listet die Dienste in einem WCF-Dienst-Projekt, lädt die Projektkonfiguration und instanziiert einen Host für die einzelnen Dienste, die es findet. Das Tool ist über die WCF-Dienstvorlage in Visual Studio integriert und wird aufgerufen, wenn Sie damit beginnen, das Debuggen des Projekts.
+Der WCF-Dienst Host listet die Dienste in einem WCF-Dienstprojekt auf, lädt die Konfiguration des Projekts und instanziiert einen Host für jeden gefundenen Dienst. Das Tool ist über die WCF-Dienst Vorlage in Visual Studio integriert und wird aufgerufen, wenn Sie mit dem Debuggen des Projekts beginnen.
 
-Verwenden Sie WCF-Diensthost, können Sie einen WCF-Dienst (in einem WCF-Dienstbibliotheksprojekt) hosten, ohne zusätzlichen Code schreiben oder einen bestimmten Host bei der Entwicklung.
+Mithilfe des WCF-Dienst Hosts können Sie einen WCF-Dienst (in einem WCF-Dienst Bibliotheksprojekt) hosten, ohne zusätzlichen Code schreiben oder einen bestimmten Host während der Entwicklung ausführen zu müssen.
 
 > [!NOTE]
-> WCF-Diensthost unterstützt teilweiser Vertrauenswürdigkeit nicht. Wenn Sie einen WCF-Dienst bei teilweiser Vertrauenswürdigkeit verwenden möchten, verwenden Sie nicht die WCF-Dienstbibliotheksprojekt-Vorlage in Visual Studio zur Erstellung des Diensts. Erstellen Sie stattdessen eine neue WebSite in Visual Studio durch Auswählen der Vorlage für WCF-Service-WebSite, die der Dienst auf einem WebServer hosten kann auf denen WCF teilweise Vertrauenswürdigkeit unterstützt wird.
+> Der WCF-Dienst Host unterstützt keine teilweise Vertrauenswürdigkeit. Wenn Sie einen WCF-Dienst mit teilweiser Vertrauenswürdigkeit verwenden möchten, verwenden Sie nicht die WCF-Dienst Bibliothek-Projektvorlage in Visual Studio, um den Dienst zu erstellen. Erstellen Sie stattdessen eine neue Website in Visual Studio, indem Sie die Vorlage WCF-Dienst Website auswählen, die den Dienst auf einem Webserver hosten kann, auf dem eine teilweise vertrauenswürdige WCF-Funktion unterstützt wird.
 
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Vom WCF-Diensthost gehostete Projekttypen
 
-WCF-Diensthost kann die folgenden WCF-Dienst-Bibliothek Projekttypen hosten: WCF-Dienstbibliothek, sequenzielle Workflowdienstbibliothek, Zustandsautomat-Workflowdienstbibliothek und Syndication-Dienstbibliothek. WCF-Diensthost kann auch hosten, die Dienste, die einem Dienstbibliotheksprojekt mit hinzugefügt werden können die **Element hinzufügen** Funktionalität. Dies schließt die WCF-Dienst, WF-Zustandsautomatdienst, Sequenzieller WF-Dienst, XAML-WF-Zustandsautomatdienst und sequenzieller XAML-WF-Dienst.
+Der WCF-Dienst Host kann die folgenden WCF-Dienst Bibliotheksprojekt Typen hosten: WCF-Dienst Bibliothek, sequenzielle Workflow Dienst Bibliothek, Zustands Automat-Workflow Dienst Bibliothek und Syndizierungs Dienst Bibliothek. Der WCF-Dienst Host kann auch diese Dienste hosten, die einem Dienst Bibliotheksprojekt mithilfe der Funktion " **Element hinzufügen** " hinzugefügt werden können. Dies schließt den WCF-Dienst, den WF-zustandsautomatdienst, den sequenziellen WF-Dienst, den XAML-WF-zustandsautomatdienst und den sequenziellen
 
 Beachten Sie jedoch, dass Sie mit dem Tool den Host nicht konfigurieren können. Zur Konfiguration müssen Sie die Datei App.config manuell bearbeiten. Mit dem Tool können Sie auch nicht benutzerdefinierte Konfigurationsdateien validieren.
 
 > [!CAUTION]
-> Sie sollten nicht WCF-Diensthost zum Hosten von Diensten in einer produktionsumgebung verwenden, da es nicht für diesen Zweck konzipiert wurde.  WCF-Diensthost unterstützt nicht die Zuverlässigkeit, Sicherheit und verwaltbarkeit von Anforderungen für eine solche Umgebung. Verwenden Sie stattdessen den IIS, da er über optimale Zuverlässigkeit und Überwachungsfunktionen verfügt und die bevorzugte Lösung für Hostdienste ist. Nach der Entwicklung der Dienste abgeschlossen ist, sollten Sie die Dienste von WCF-Diensthosts in IIS migrieren.
+> Der WCF-Dienst Host sollte nicht zum Hosten von Diensten in einer Produktionsumgebung verwendet werden, da er nicht zu diesem Zweck entwickelt wurde.  Der WCF-Dienst Host unterstützt nicht die Anforderungen an Zuverlässigkeit, Sicherheit und Verwaltbarkeit einer solchen Umgebung. Verwenden Sie stattdessen den IIS, da er über optimale Zuverlässigkeit und Überwachungsfunktionen verfügt und die bevorzugte Lösung für Hostdienste ist. Nachdem die Entwicklung der Dienste fertiggestellt wurde, sollten Sie die Dienste vom WCF-Dienst Host zu IIS migrieren.
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Szenarien für die Verwendung des WCF-Diensthosts in Visual Studio
 
-Die folgende Tabelle enthält alle Parameter in der **Befehlszeilenargumente** gefunden werden kann, mit der rechten Maustaste in das Projekt im Dialogfeld **Projektmappen-Explorer** in Visual Studio auswählen **Eigenschaften**, wählen Sie dann die **Debuggen** Registerkarte und auf **Startprojekt**. Diese Parameter sind nützlich bei der Konfiguration von WCF-Diensthost.
+In der folgenden Tabelle sind alle Parameter im Dialogfeld **Befehlszeilenargumente** aufgeführt. Sie finden diese, indem Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt klicken, **Eigenschaften**auswählen und dann das **Debuggen auswählen.** und klicken Sie auf **Projekt starten**. Diese Parameter sind nützlich beim Konfigurieren des WCF-Dienst Hosts.
 
 |Parameter|Bedeutung|
 |---------------|-------------|
-|`/client`|Ein optionaler Parameter, der den Pfad zu einer EXE-Datei bestimmt, die nach dem Hosten der Dienste ausgeführt werden soll. Dadurch wird die WCF-Testclient nach dem hosten.|
+|`/client`|Ein optionaler Parameter, der den Pfad zu einer EXE-Datei bestimmt, die nach dem Hosten der Dienste ausgeführt werden soll. Dadurch wird der WCF-Test Client nach dem Hosting gestartet.|
 |`/clientArg`|Legt eine Zeichenfolge als Argument fest, das an die benutzerdefinierte Clientanwendung geleitet wird.|
 |`/?`|Zeigt die Hilfe an.|
 
 #### <a name="using-wcf-test-client"></a>Verwenden des WCF-Testclients
 
-Nach dem Erstellen eines neuen WCF-Dienst-Projekts und drücken Sie F5, um den Debugger zu starten, startet WCF-Diensthost mit dem Hosten aller Dienste, die sie in Ihrem Projekt findet. WCF-Testclient öffnet automatisch und zeigt eine Liste der in der Konfigurationsdatei definierten Dienstendpunkte. Vom Hauptfenster aus können Sie die Parameter testen und den Dienst aufrufen.
+Nachdem Sie ein neues WCF-Dienstprojekt erstellt und F5 drücken, um den Debugger zu starten, beginnt der WCF-Dienst Host mit dem Hosten aller Dienste, die im Projekt gefunden werden. Der WCF-Test Client wird automatisch geöffnet, und es wird eine Liste der in der Konfigurationsdatei definierten Dienst Endpunkte angezeigt. Vom Hauptfenster aus können Sie die Parameter testen und den Dienst aufrufen.
 
-Um sicherzustellen, dass WCF-Testclient verwendet wird, klicken Sie in Ihrem Projekt aus, in **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte. Klicken Sie auf **Startprojekt** und stellen Sie sicher, dass der folgende, in angezeigt der **Befehlszeilenargumente** Dialogfeld.
+Um sicherzustellen, dass der WCF-Test Client verwendet wird, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und** **Wählen Sie dann die Registerkarte Debuggen aus. Befehlszeilenargumente** (Dialogfeld).
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Verwenden eines benutzerdefinierten Clients
 
-Um eine benutzerdefinierte Clienteinstellung verwenden zu können, klicken Sie in Ihr Projekt aus, in **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte. Klicken Sie auf **Startprojekt** und Bearbeiten der `/client` Parameter in der **Befehlszeilenargumente** im Dialogfeld, um auf den benutzerdefinierten Client zu verweisen, wie im folgenden Beispiel angegeben.
+Wenn Sie einen benutzerdefinierten Client verwenden möchten, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus, **@no__t und wählen** Sie dann die Registerkarte **Debuggen** aus., um auf den benutzerdefinierten Client zu verweisen, wie im folgenden Beispiel gezeigt.
 
 `/client:"path/CustomClient.exe"`
 
-Beim Drücken von F5, um den Dienst erneut starten, beginnt der WCF-Diensthost automatisch den benutzerdefinierten Client, wenn Sie den Debugger starten.
+Wenn Sie F5 drücken, um den Dienst erneut zu starten, startet der WCF-Dienst Host automatisch den benutzerdefinierten Client, wenn Sie den Debugger starten.
 
 Mit dem `/clientArg:`-Parameter können Sie auch eine Zeichenfolge als Argument festlegen, das an die benutzerdefinierte Clientanwendung geleitet wird, wie im folgenden Beispiel gezeigt.
 
@@ -67,51 +67,51 @@ So können Sie beispielsweise bei Verwendung der Vorlage für die Syndication-Di
 
 #### <a name="specifying-no-client"></a>Keine Angabe des Clients
 
-Um anzugeben, dass kein Client nach dem WCF-Dienst gehostet wird, klicken Sie in Ihrem Projekt aus, in **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte. Klicken Sie auf **Startprojekt** und lassen Sie die **Befehlszeilenargumente** Dialogfeld ist leer.
+Klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**aus **, und wählen Sie dann** die Registerkarte **Debuggen** aus, um anzugeben, dass nach dem Hosting des WCF-Diensts kein Client verwendet werden soll.das Dialogfeld "Zeilen Argumente" ist leer.
 
 #### <a name="using-a-custom-host"></a>Verwenden eines benutzerdefinierten Hosts
 
-Um einen benutzerdefinierten Host zu verwenden, klicken Sie in Ihrem Projekt aus, in **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte. Klicken Sie auf **externes Startprogramm** , und geben Sie den vollständigen Pfad zum benutzerdefinierten Host. Sie können auch die **Befehlszeilenargumente** -Dialogfelds Argumente an den Host übergeben werden soll.
+Um einen benutzerdefinierten Host zu verwenden, klicken Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt, wählen Sie **Eigenschaften**und dann die Registerkarte **Debuggen** aus. Klicken Sie auf **externes Programm starten** , und geben Sie den vollständigen Pfad Sie können auch das Dialogfeld **Befehlszeilenargumente** verwenden, um Argumente anzugeben, die an den Host übermittelt werden sollen.
 
 ## <a name="wcf-service-host-user-interface"></a>WCF-Diensthost-Benutzeroberfläche
 
-Wenn Sie anfänglich aufrufen, WCF-Diensthost (durch Drücken von F5 in Visual Studio), die **WCF-Diensthost** Fenster automatisch geöffnet wird. Wenn WCF-Diensthost ausgeführt wird, wird das Symbol des Programms im Infobereich der Taskleiste angezeigt. Doppelklicken Sie auf das Symbol zum Öffnen der **WCF-Diensthost** Fenster
+Wenn Sie den WCF-Dienst Host anfänglich aufrufen (durch Drücken von F5 in Visual Studio), wird das Fenster **WCF-Dienst Host** automatisch geöffnet. Wenn der WCF-Dienst Host ausgeführt wird, wird das Programmsymbol im Benachrichtigungsbereich angezeigt. Doppelklicken Sie auf das Symbol, um das Fenster **WCF-Dienst Host** zu öffnen.
 
-Wenn Fehler auftreten, während der Dienst gehostet wird, wird WCF-Diensthost-Dialogfeld geöffnet, um relevante Informationen anzuzeigen.
+Wenn beim Hosten des Diensts Fehler auftreten, wird das Dialogfeld WCF-Dienst Host geöffnet, in dem relevante Informationen angezeigt werden.
 
-Die **WCF-Diensthost** Hauptfenster umfasst zwei Menüs:
+Das Hauptfenster des **WCF-Dienst Hosts** enthält zwei Menüs:
 
-- **Datei**: Enthält die **schließen** und **beenden** Befehle. Beim Klicken auf **schließen**, **WCF-Diensthost** Dialogfeld wird geschlossen, aber der Dienst wird weiterhin gehostet werden. Beim Klicken auf **beenden**, WCF-Diensthost wird heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.
+- **File**: enthält die Befehle **Close** und **Exit** . Wenn Sie auf **Schließen**klicken, wird das Dialogfeld **WCF-Dienst Host** geschlossen, aber die Dienste werden weiterhin gehostet. Wenn Sie auf **Beenden**klicken, wird auch der WCF-Dienst Host heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.
 
-- **Hilfe**: Enthält die **zu** -Befehl, der Versionsinformationen enthält. Es enthält auch die **Hilfe** -Befehl, der eine Hilfedatei öffnen kann.
+- **Help**: **enthält den Info** -Befehl, der Versionsinformationen enthält. Sie enthält auch den **Hilfe** Befehl, mit dem eine Hilfedatei geöffnet werden kann.
 
-Die Main **WCF-Diensthost** umfasst zwei Bereiche:
+Das Hauptfenster des **WCF-Dienst Hosts** enthält zwei Bereiche:
 
-- Der erste Bereich ist **Service**. Er enthält eine Liste mit grundlegenden Informationen zu allen Diensten. Zu diesen Informationen zählen:
+- Der erste Bereich ist " **Service**". Er enthält eine Liste mit grundlegenden Informationen zu allen Diensten. Zu diesen Informationen zählen:
 
-  - **Dienst:** Listet alle Dienste an.
+  - **Dienst**: Listet alle Dienste auf.
 
-  - **Status:** Listet den Status des Diensts. Gültige Werte sind "Gestartet", "Beendet" und "Error".
+  - **Status**: Listet den Status des Dienstanbieter auf. Gültige Werte sind "Started", "beendet" und "Error".
 
-  - **Metadatenadresse**: Zeigt die Adresse der Metadaten der Dienste.
+  - **Metadatenadresse**: zeigt die Metadatenadresse der Dienste an.
 
-- Der zweite Bereich ist **Zusatzinformationen**. Eine ausführliche Erläuterung der Status angezeigt, wenn die entsprechende dienstzeile im ausgewählt ist die **Service** Bereich. Wenn der Status auf Fehler gesetzt ist, können Sie am Bildschirm die vollständige Fehlermeldung anzeigen.
+- Der zweite Bereich stellt **zusätzliche Informationen**dar. Es wird eine ausführliche Erläuterung des Dienststatus angezeigt, wenn die jeweilige Dienst Zeile im **Dienst** Bereich ausgewählt ist. Wenn der Status auf Fehler gesetzt ist, können Sie am Bildschirm die vollständige Fehlermeldung anzeigen.
 
 ## <a name="stopping-wcf-service-host"></a>Beenden des WCF-Diensthostes
 
-Sie können WCF-Diensthost in der folgenden vier Wege Herunterfahren:
+Der WCF-Dienst Host kann auf vier Arten heruntergefahren werden:
 
-- Beenden Sie die Debugsitzung in Visual Studio.
+- Beendet die Debugsitzung in Visual Studio.
 
-- Wählen Sie **beenden** aus der **Datei** im Menü der **WCF-Diensthost** Fenster.
+- Wählen Sie im Fenster für den WCF- **Dienst Host** aus dem Menü **Datei** die Option **Beenden** aus.
 
-- Wählen Sie **beenden** im Kontextmenü des WCF-Diensthost-Taskleistensymbols im systembenachrichtigungsbereich.
+- Wählen Sie im Kontextmenü des WCF-Dienst Host-Task leisten Symbols im System Benachrichtigungsbereich die Option **Beenden** aus.
 
-- WCF-Testclient zu beenden, wenn sie verwendet wird.
+- Beenden Sie den WCF-Test Client, wenn er verwendet wird.
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Verwenden des Diensthosts ohne Administratorberechtigung
 
-Um Benutzer ohne Administratorrechte zum Entwickeln von WCF-Dienste zu aktivieren, wird eine ACL (Access Control List) erstellt, für den Namespace "http://+:8731/Design_Time_Addresses" während der Installation von Visual Studio. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können hinzufügen oder Benutzer aus dieser ACL entfernen oder zusätzliche Ports öffnen. Mit dieser ACL können Benutzer die WCF-Dienst-Auto-Host (wcfSvcHost.exe) zu verwenden, ohne ihnen Administratorrechte zu gewähren.
+Um Benutzern ohne Administratorrechte die Entwicklung von WCF-Diensten zu ermöglichen, wird während der Installation von Visual Studio eine ACL (Access Control Liste) für den Namespace "http://+:8731/Design_Time_Addresses" erstellt. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können dieser ACL Benutzer hinzufügen oder aus dieser ACL entfernen oder zusätzliche Ports öffnen. Diese ACL ermöglicht es Benutzern, den automatischen WCF-Dienst Host (WcfSvcHost. exe) zu verwenden, ohne Ihnen Administratorrechte zu erteilen.
 
 Mit dem Tool netsh.exe in [!INCLUDE[wv](../../../includes/wv-md.md)] unter dem erweiterten Administratorkonto können Sie die Zugriffsberechtigung ändern. Das folgende Beispiel veranschaulicht die Verwendung des Tools netsh.exe.
 
@@ -119,8 +119,8 @@ Mit dem Tool netsh.exe in [!INCLUDE[wv](../../../includes/wv-md.md)] unter dem e
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Weitere Informationen zum netsh.exe, finden Sie unter "[wie mit dem Netsh.exe-Tool und die Befehlszeilenoptionen](https://go.microsoft.com/fwlink/?LinkId=97877)".
+Weitere Informationen zu "Netsh. exe" finden Sie unter "Gewusst[wie: Verwenden des Tools" Netsh. exe "und Befehls Zeilenschalter](https://go.microsoft.com/fwlink/?LinkId=97877).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [WCF-Testclient (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

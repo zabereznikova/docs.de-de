@@ -2,12 +2,12 @@
 title: Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 ms.date: 04/28/2018
-ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373934"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522941"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für das modernisieren vorhandener .net-apps in cloudoptimierten Anwendungen
 
@@ -21,7 +21,7 @@ Wenn eine Organisation Anwendungen erstellt und verwaltet, die in der Cloud opti
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierte anwendungsprinzipien und-Mandanten 
 
-Verbesserungen in der Cloud konzentrieren sich größtenteils auf die Erfüllung zweier Ziele: Senken Sie die Kosten, und verbessern Sie das Geschäftswachstum, indem Sie Diese Ziele werden erreicht, indem Sie Prozesse vereinfachen und die Reibung verringern, wenn Sie Anwendungen freigeben und versenden.
+Verbesserungen in der Cloud sind hauptsächlich darauf ausgerichtet, zwei Ziele zu erreichen: senken Sie die Kosten, und verbessern Sie das Geschäftswachstum durch Diese Ziele werden erreicht, indem Sie Prozesse vereinfachen und die Reibung verringern, wenn Sie Anwendungen freigeben und versenden.
 
 Ihre Anwendung ist in der Cloud optimiert, wenn Sie Ihre APP auf agile Weise von anderen lokalen Apps aus entwickeln und dann Ihre APP in der Cloud veröffentlichen, bereitstellen, automatisch skalieren, überwachen und Probleme beheben können.
 
@@ -41,7 +41,7 @@ In der folgenden Liste werden die wichtigsten Grundsätze oder Methoden für clo
 
 In Abbildung 4-2 werden die wesentlichen optionalen Säulen einer cloudoptimierten Anwendung veranschaulicht. Die weiteren von Ihnen implementierten Säulen, der readier, den Ihre Anwendung bei der Erfüllung der Erwartungen ihrer Kunden unterstützen wird.
 
-![Hauptpfeiler einer cloudoptimierten Anwendung](./media/image2.png)
+![Diagramm, das die Hauptpfeiler einer cloudoptimierten Anwendung benennt.](./media/main-pillars-cloud-optimized-application.png)
 
 **Abbildung 4-2**. Hauptpfeiler einer cloudoptimierten Anwendung
 

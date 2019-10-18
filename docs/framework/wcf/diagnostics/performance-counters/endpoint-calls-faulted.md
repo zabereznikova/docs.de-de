@@ -1,20 +1,20 @@
 ---
-title: 'Endpunkt: Fehlerhafte Aufrufe'
+title: 'Endpunkt: Aufrufe haben einen Fehler verursacht'
 ms.date: 03/30/2017
 ms.assetid: 271e6284-9c4b-465f-b619-069e1555a5e4
-ms.openlocfilehash: e46ca3034c69e46f0fef510f9035d2e1544fd72c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 149dc46d9dab1f7b04879d93776a2e9a192c0d83
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797266"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319964"
 ---
-# <a name="endpoint-calls-faulted"></a>Endpunkt: Fehlerhafte Aufrufe
-Indikatorname: Fehlerhafte Aufrufe.  
+# <a name="endpoint-calls-faulted"></a>Endpunkt: Aufrufe haben einen Fehler verursacht
+Indikatorname: Aufrufe haben einen Fehler verursacht.  
   
 ## <a name="description"></a>Beschreibung  
- Die Anzahl der Aufrufe dieses Endpunkts, die Fehler zurückgegeben haben. In Windows Communication Foundation (WCF)-Anwendungen kommunizieren Dienstmethoden Verarbeitung Fehlerinformationen mit SOAP-Fehlernachrichten. SOAP-Fehler sind Meldungstypen, die in den Metadaten für einen Dienstvorgang enthalten sind und daher einen Fehlervertrag erstellen, den Clients nutzen können, um ihre Ausführung robuster oder interaktiver zu gestalten. Da SOAP-Fehler gegenüber Clients in XML-Form ausgedrückt werden, sind sie sehr interoperabel.  
+ Die Anzahl der Aufrufe dieses Endpunkts, die Fehler zurückgegeben haben. In Windows Communication Foundation (WCF)-Anwendungen übermitteln Dienst Methoden Verarbeitungsfehler Informationen mithilfe von SOAP-Fehlermeldungen. SOAP-Fehler sind Meldungstypen, die in den Metadaten für einen Dienstvorgang enthalten sind und daher einen Fehlervertrag erstellen, den Clients nutzen können, um ihre Ausführung robuster oder interaktiver zu gestalten. Da SOAP-Fehler gegenüber Clients in XML-Form ausgedrückt werden, sind sie sehr interoperabel.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../specifying-and-handling-faults-in-contracts-and-services.md)

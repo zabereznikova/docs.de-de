@@ -1,7 +1,0 @@
-- name: Namespaces
-  href: index.md
-  items:
-    - name: Verwenden von Namespaces
-      href: using-namespaces.md
-    - name: 'Gewusst wie: Verwenden des My-Namespaces'
-      href: how-to-use-the-my-namespace.md

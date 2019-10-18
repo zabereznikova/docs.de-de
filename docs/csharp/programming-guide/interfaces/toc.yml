@@ -1,9 +1,0 @@
-- name: Schnittstellen
-  href: index.md
-  items:
-    - name: Explizite Schnittstellenimplementierung
-      href: explicit-interface-implementation.md
-    - name: 'Vorgehensweise: Explizites Implementieren von Schnittstellenmembern'
-      href: how-to-explicitly-implement-interface-members.md
-    - name: 'Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen'
-      href: how-to-explicitly-implement-members-of-two-interfaces.md

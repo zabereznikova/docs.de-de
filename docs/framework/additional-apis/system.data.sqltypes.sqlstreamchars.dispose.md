@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Dispose(Boolean)-Methode (System.Data.SqlTypes)
+title: SqlStreamChars. verworfen (Boolean)-Methode (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 2cad6015c1c4d72300d8413b7accead12f79a0be
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44dc97835b8a7141064e8de4d2d5325c40be5a34
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634301"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395769"
 ---
-# <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars.Dispose(Boolean)-Methode
+# <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars. verwerfen (Boolean)-Methode
 
-Ruft beim Überschreiben in einer abgeleiteten Klasse gibt die vom Datenstrom verwendeten Ressourcen frei. Die Assembly mit dieser Methode hat eine Friend-Beziehung SQLAccess.dll. Es ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken Hostingmechanismus, die von dieser Datenbank bereitgestellt werden.
+Gibt beim Überschreiben in einer abgeleiteten Klasse die vom Stream verwendeten Ressourcen frei. Die Assembly, die diese Methode enthält, hat eine Friend-Beziehung mit SQLAccess. dll. Sie ist für die Verwendung durch SQL Server vorgesehen. Verwenden Sie für andere Datenbanken den von dieser Datenbank bereitgestellten Hostingmechanismus.
 
 ```csharp
 protected virtual void Dispose (bool disposing);
@@ -35,14 +35,14 @@ protected virtual void Dispose (bool disposing);
 ## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> Die `SqlStreamChars.Dispose` Methode privat ist und nicht direkt in Ihrem Code verwendet werden soll.
+> Die `SqlStreamChars.Dispose`-Methode ist privat und sollte nicht direkt im Code verwendet werden.
 >
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Data.SqlTypes>
 
-**Assembly:** System.Data (in "System.Data.dll")
+**Assembly:** System. Data (in "System. Data. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

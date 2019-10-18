@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: e8b02d9b2175b4663e665db1a5a40a9bf3c44d10
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216261"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250164"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
@@ -34,7 +34,7 @@ Im ersten Schritt erstellen Sie die Anwendung:
     dotnet new console -o AppWithPlugin
     ```
 
-2. Erstellen Sie eine Visual Studio-Projektmappendatei, um das Erstellen des Projekts zu vereinfachen. Führen Sie im selben Ordner den folgenden Befehl aus:
+2. Erstellen Sie eine Visual Studio-Projektmappendatei im gleichen Ordner, um das Erstellen des Projekts zu vereinfachen. Führen Sie den folgenden Befehl aus:
 
     ```dotnetcli
     dotnet new sln

@@ -2,19 +2,19 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: f3310274766ff3619604e30bfb5f5ca437cb1acd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249753"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319447"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zurückgegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```sql  
 [ ORDER BY   
    {  
       order_by_expression [SKIP n] [LIMIT n]  
@@ -52,16 +52,18 @@ Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zu
  Jeder Ausdruck in der ORDER BY-Klausel muss zu einem Typ ausgewertet werden, der bzgl. geordneter Ungleichheit ("kleiner als", "größer als" usw.) verglichen werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. "RowTypes" vergleichbarer Typen sind ebenfalls in der Reihenfolge vergleichbar.  
   
  Wenn Code eine geordnete Menge durchläuft, wird, anders als bei einer Projektion in der obersten Ebene, die Reihenfolge bei der Ausgabe möglicherweise nicht erhalten.  
-  
-```  
--- In the following sample, order is guaranteed to be preserved:  
+
+Im folgenden Beispiel wird die Reihenfolge garantiert beibehalten:
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query ordering of the nested query is ignored.  
+
+In der folgenden Abfrage wird die Reihenfolge der Abfrage ignoriert:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -70,7 +72,7 @@ SELECT C2.FirstName, C2.LastName
   
  Verwenden Sie folgendes Muster, um eine geordnete UNION, UNION ALL, EXCEPT oder INTERSECT-Operation durchzuführen:  
   
-```  
+```sql  
 SELECT ...  
 FROM ( UNION/EXCEPT/INTERSECT operation )  
 ORDER BY ...  
@@ -99,16 +101,18 @@ ORDER BY ...
   
 ## <a name="ordering-nested-queries"></a>Reihenfolge geschachtelter Abfragen  
  In Entity Framework kann ein geschachtelter Ausdruck an jeder Stelle in der Abfrage verwendet werden. Die Reihenfolge einer geschachtelten Abfrage wird nicht beibehalten.  
-  
-```  
--- The following query will order the results by the last name.  
+
+Mit der folgenden Abfrage werden die Ergebnisse nach dem Nachnamen sortiert:  
+
+```sql  
 SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
         ORDER BY C1.LastName  
 ```  
-  
-```  
--- In the following query, ordering of the nested query is ignored.  
+
+In der folgenden Abfrage wird die Reihenfolge der Abfrage ignoriert:  
+
+```sql  
 SELECT C2.FirstName, C2.LastName  
     FROM (SELECT C1.FirstName, C1.LastName  
         FROM AdventureWorks.Contact as C1  
@@ -118,11 +122,11 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Beispiel  
  In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage wird der ORDER BY-Operator verwendet, um die für von der SELECT-Anweisung zurückgegebene Objekte zu verwendende Sortierreihenfolge anzugeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
- [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
+ [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
 ## <a name="see-also"></a>Siehe auch
 

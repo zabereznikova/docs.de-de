@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8c3939e9bd5d79e91ce44146a8c36b28d4470406
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956642"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002692"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -40,7 +40,7 @@ Die wichtigsten Features von C# 1.0 umfassten:
 - [Strukturen](../programming-guide/classes-and-structs/structs.md)
 - [Schnittstellen](../programming-guide/interfaces/index.md)
 - [Ereignisse](../events-overview.md)
-- [Properties](../properties.md)
+- [Eigenschaften](../properties.md)
 - [Delegaten](../delegates-overview.md)
 - [Ausdrücke](../programming-guide/statements-expressions-operators/expressions.md)
 - [Anweisungen](../programming-guide/statements-expressions-operators/statements.md)
@@ -132,7 +132,7 @@ Die eigentlichen Stars dieser Version sind aber `async` und `await`. Als diese F
 
 ## <a name="c-version-60"></a>C# Version 6.0
 
-Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In der Version 6.0, die mit Visual Studio 2013 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier einige Beispiele:
+Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In der Version 6.0, die mit Visual Studio 2013 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
 
 - [Statische Importe](./csharp-6.md#using-static)
 - [Ausnahmefilter](./csharp-6.md#exception-filters)

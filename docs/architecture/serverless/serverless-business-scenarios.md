@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie sich mit einem praktischen Ansatz vertraut ma
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834299"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522385"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
@@ -55,7 +55,7 @@ Die Anwendung verwendet die Proxys von Azure Functions, um das Refactoring eines
 
 Der Proxy stellt einen einzelnen API-Endpunkt bereit, der aktualisiert wird, um einzelne Anforderungen umzuleiten, wenn Sie in Server lose Funktionen verschoben werden.
 
-Sie können sich ein Video ansehen, das die gesamte Migration durchläuft: [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102). Greifen Sie auf den Beispielcode zu: [Bringen Sie Ihre eigene APP](https://github.com/JeremyLikness/bring-own-app-connect-17)ein.
+Sie können sich ein Video ansehen, das die gesamte Migration durchläuft: [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102). Greifen Sie auf den Beispielcode zu: [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Eine CSV-Datei analysieren und in eine Datenbank einfügen
 
@@ -77,7 +77,7 @@ Sie können dann ein Power BI Dashboard erstellen, um Einblicke in die gesammelt
 
 ![Power BI Beispiel](./media/power-bi-example.png)
 
-Das vollständige Link-verkürzer-Repository mit Anweisungen finden Sie hier: [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+Das vollständige Link-verkürzer-Repository mit Anweisungen finden Sie hier: [Server Loses URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener). Informationen zu einer vereinfachten Version finden Sie hier: [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Überprüfen der Geräte Konnektivität per Ping
 
@@ -87,15 +87,15 @@ Weitere Informationen finden Sie unter [Azure IOT Hub Ping](https://azure.micros
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-* [Azure Functions Photo-Mosaik Generator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Azure IOT Hub Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV-Import-Lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Event Grid-Kleber](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener)
+- [Azure Functions Photo-Mosaik Generator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Azure IOT Hub Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Storage für Server lose .net-apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Bring your own App](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [CSV-Import-Lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Event Grid-Kleber](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Implementieren einer einfachen Azure-Funktion mit einem xamarin. Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Lift & Shift mit Server losen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Server loser URL-Kürzel](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Zurück](orchestration-patterns.md)

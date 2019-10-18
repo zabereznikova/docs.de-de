@@ -4,12 +4,12 @@ description: Untersuchung verschiedener Architekturen und apps, die von Server l
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577353"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522407"
 ---
 # <a name="serverless-architecture"></a>Serverlose Architektur
 
@@ -27,12 +27,12 @@ Einige Projekte können von einem "All-in"-Ansatz für Server lose genutzt werde
 
 Das vollständige Server lose Back-End eignet sich ideal für verschiedene Arten von Szenarien, insbesondere bei der Erstellung von neuen oder "grünen field"-Anwendungen. Eine Anwendung mit einem großen Oberflächen Bereich von APIs kann davon profitieren, jede API als Server lose Funktion zu implementieren. Apps, die auf der microservices-Architektur basieren, sind ein weiteres Beispiel, das als vollständiges Server Loses Back-End implementiert werden kann. Die-Webdienste kommunizieren untereinander über verschiedene Protokolle. Zu den spezifischen Szenarien zählen:
 
-* API-basierte SaaS-Produkte (Beispiel: Finanzzahlungen-Prozessor).
-* Nachrichten gesteuerte Anwendungen (Beispiel: Geräte Überwachungslösung).
-* Apps, die sich auf die Integration zwischen Diensten konzentrieren (Beispiel: Anwendung für die Fluggesellschaft).
-* Prozesse, die regelmäßig ausgeführt werden (z. b. Zeit Geber basiertes Bereinigen der Datenbank).
-* Apps, die sich auf die Datentransformation konzentrieren (Beispiel: Import ausgelöst durch Datei Upload).
-* Extrahieren Sie Prozesse zum Transformieren und laden (ETL).
+- API-basierte SaaS-Produkte (Beispiel: Finanzzahlungen-Prozessor).
+- Nachrichten gesteuerte Anwendungen (Beispiel: Geräte Überwachungslösung).
+- Apps, die sich auf die Integration zwischen Diensten konzentrieren (Beispiel: Anwendung für die Fluggesellschaft).
+- Prozesse, die regelmäßig ausgeführt werden (z. b. Zeit Geber basiertes Bereinigen der Datenbank).
+- Apps, die sich auf die Datentransformation konzentrieren (Beispiel: Import ausgelöst durch Datei Upload).
+- Extrahieren Sie Prozesse zum Transformieren und laden (ETL).
 
 Es gibt weitere, spezifischere Anwendungsfälle, die später in diesem Dokument behandelt werden.
 
@@ -42,7 +42,7 @@ Eine gängige Herausforderung besteht darin, eine vorhandene monolithische Anwen
 
 ![Migration von Server losen monolithischen](./media/serverless-monolith-migration.png)
 
-Weitere Informationen zu diesem Ansatz finden Sie im Video: [Bringen Sie Ihre APP mit Server losem Azure Functions in die Cloud](https://channel9.msdn.com/Events/Connect/2017/E102).
+Weitere Informationen zu diesem Ansatz finden Sie im Video: [bringen Sie Ihre APP in die Cloud mit Server losem Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Web-Apps
 
@@ -66,10 +66,10 @@ IOT bezieht sich auf physische Objekte, die miteinander vernetzt sind. Sie werde
 
 Die schiere Menge von Geräten und Informationen ist häufig eine ereignisgesteuerte Architektur zum Weiterleiten und Verarbeiten von Nachrichten. Serverless ist aus verschiedenen Gründen eine ideale Lösung:
 
-* Ermöglicht die Skalierung, wenn sich die Menge der Geräte und Daten erhöht.
-* Ermöglicht das Hinzufügen neuer Endpunkte zur Unterstützung neuer Geräte und Sensoren.
-* Ermöglicht die unabhängige Versionsverwaltung, damit Entwickler die Geschäftslogik für ein bestimmtes Gerät aktualisieren können, ohne dass das gesamte System bereitgestellt werden muss.
-* Resilienz und weniger Ausfallzeiten.
+- Ermöglicht die Skalierung, wenn sich die Menge der Geräte und Daten erhöht.
+- Ermöglicht das Hinzufügen neuer Endpunkte zur Unterstützung neuer Geräte und Sensoren.
+- Ermöglicht die unabhängige Versionsverwaltung, damit Entwickler die Geschäftslogik für ein bestimmtes Gerät aktualisieren können, ohne dass das gesamte System bereitgestellt werden muss.
+- Resilienz und weniger Ausfallzeiten.
 
 Die pervasiativität von IOT führte zu mehreren Server losen Produkten, die sich speziell auf IOT-Probleme konzentrieren, wie z. b. [Azure IOT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatisiert Aufgaben wie z. b. Geräteregistrierung, Richtlinien Erzwingung, Nachverfolgung und sogar Bereitstellung von Code auf Geräten im *Edge*-Bereich. Der Edge bezieht sich auf Geräte wie Sensoren und Server, die mit dem Internet verbunden sind, aber nicht aktiv sind.
 

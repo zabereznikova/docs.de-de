@@ -2,22 +2,22 @@
 title: Befehl „dotnet restore“
 description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0d138e31f8cd5b447c75bffda5164d92ce8eb5a2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
+ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117594"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72275749"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 <!-- markdownlint-disable MD025 -->
 
@@ -137,7 +137,7 @@ Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu v
 
 `--verbosity <LEVEL>`
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `minimal`sein.
 
 `--interactive`
 
@@ -183,7 +183,7 @@ Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu v
 
 `--verbosity <LEVEL>`
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Die Standardeinstellung ist `minimal`.
 
 ---
 
@@ -205,6 +205,6 @@ Wiederherstellen der Abhängigkeiten und Tools für das Projekt im aktuellen Ver
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
-Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis und nur Anzeige von nur minimaler Ausgabe:
+Wiederherstellen von Abhängigkeiten und Tools für das Projekt im aktuellen Verzeichnis mit detaillierter Ausgabe:
 
-`dotnet restore --verbosity minimal`
+`dotnet restore --verbosity detailed`

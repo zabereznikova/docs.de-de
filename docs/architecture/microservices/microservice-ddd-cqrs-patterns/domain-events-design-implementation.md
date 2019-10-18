@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: 46341bbc3ee3e5713707cc6a18b678d51102b64d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926546"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031840"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -84,7 +84,7 @@ Wie Abbildung 7-15 zeigt, können Sie ausgehend vom selben Domänenereignis mehr
 
 Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
 
-Wenn Sie eine offene Anzahl von Handlern pro Domänenereignis haben, können Sie beliebig viele Domänenregeln hinzufügen, ohne dass der aktuelle Code beeinträchtigt wird. Das Implementieren der folgenden Geschäftsregel kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen Ereignishandlern oder auch nur einem Ereignishandler:
+Wenn Sie eine offene Anzahl von Handlern pro Domänenereignis verwenden, können Sie beliebig viele Domänenregeln hinzufügen, ohne dass der aktuelle Code beeinträchtigt wird. Das Implementieren der folgenden Geschäftsregel kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen Ereignishandlern oder auch nur einem Ereignishandler:
 
 > Wenn der im Rahmen einen beliebigen Anzahl von Bestellungen von einem Kunden im Store für Einkäufe ausgegebene Gesamtbetrag 6.000 Euro überschreitet, wird ein Rabatt von 10 % auf jede neue Bestellung angewendet, und der Kunde wird per E-Mail über diesen Rabatt für zukünftige Bestellungen benachrichtigt.
 

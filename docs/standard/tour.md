@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415922"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291596"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -55,7 +55,7 @@ Im folgenden Beispiel löst die Runtime eine `InvalidIndexException`-Ausnahme au
 
 Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Ressourcen sind Ressourcen, die nicht automatisch von der .NET-Runtime verwaltet werden. Ein Dateihandle ist z.B. eine nicht verwaltete Ressource. Ein <xref:System.IO.FileStream>-Objekt ist ein verwaltetes Objekt, aber es verweist auf ein Dateihandle, das nicht verwaltet ist. Wenn Sie mit <xref:System.IO.FileStream> fertig sind, müssen Sie das Dateihandle freigeben.
 
-In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die <xref:System.IDisposable>-Schnittstelle. Wenn Sie mit dem Objekt fertig sind, können Sie die <xref:System.IDisposable.Dispose>-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist. .NET-Sprachen stellen wie im folgenden Beispiel gezeigt eine praktische `using`-Syntax für solche Objekte bereit:
+In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die <xref:System.IDisposable>-Schnittstelle. Wenn Sie mit dem Objekt fertig sind, können Sie die <xref:System.IDisposable.Dispose>-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist. .NET-Sprachen stellen wie im folgenden Beispiel gezeigt eine praktische [`using`-Anweisung](../csharp/language-reference/keywords/using.md) für solche Objekte bereit:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 

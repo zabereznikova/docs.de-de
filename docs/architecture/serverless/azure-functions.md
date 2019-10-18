@@ -4,12 +4,12 @@ description: Azure Functions bietet Server lose Funktionen in mehreren Sprachen 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577603"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522866"
 ---
 # <a name="azure-functions"></a>Überprüfung auf
 
@@ -23,11 +23,11 @@ Weitere Informationen finden Sie unter [Azure Functions-Dokumentation](https://d
 
 ## <a name="functions-v1-vs-v2"></a>Functions v1 und v2
 
-Es gibt zwei Versionen der Azure Functions Laufzeit: 1. x und 2. x. Version 1. x ist allgemein verfügbar (GA). Es unterstützt die .net-Entwicklung im Portal oder auf Windows-Computern und verwendet die .NET Framework. 1. x unter C#stützt, JavaScript und F#und bietet experimentelle Unterstützung für python, PHP, typescript, Batch, bash und PowerShell.
+Es gibt zwei Versionen der Azure Functions Runtime: 1. x und 2. x. Version 1. x ist allgemein verfügbar (GA). Es unterstützt die .net-Entwicklung im Portal oder auf Windows-Computern und verwendet die .NET Framework. 1. x unter C#stützt, JavaScript und F#und bietet experimentelle Unterstützung für python, PHP, typescript, Batch, bash und PowerShell.
 
 [Version 2. x ist jetzt auch allgemein verfügbar](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Es nutzt .net Core und unterstützt die plattformübergreifende Entwicklung auf Windows-, macOS-und Linux-Computern. 2. x bietet erstklassige Unterstützung für Java, bietet aber noch keine direkte Unterstützung für die experimentellen Sprachen. Version 2. x verwendet ein neues Modell für die Bindungs Erweiterbarkeit, das Erweiterungen von Drittanbietern für die Plattform, unabhängige Versionsverwaltung von Bindungen und eine optimierte Ausführungsumgebung ermöglicht.
 
-> **In 1. x ist ein bekanntes Problem mit der [Unterstützung für die Bindungs Umleitung](https://github.com/Azure/azure-functions-host/issues/992)aufgetreten.** Das Problem ist spezifisch für die .net-Entwicklung. Projekte mit Abhängigkeiten von Bibliotheken, die eine andere Version als die Bibliotheken enthalten, die in der Laufzeit enthalten sind, sind betroffen. Das Functions-Team hat sich verpflichtet, konkrete Statusinformationen zu dem Problem zu treffen. Das Team adressiert Bindungs Umleitungen in 2. x, bevor es in die allgemeine Verfügbarkeit übergeht. Die offizielle Team Anweisung mit den empfohlenen Korrekturen und Problem Umgehungen finden Sie hier: Assemblyauflösung [in Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **In 1. x ist ein bekanntes Problem mit der [Unterstützung für die Bindungs Umleitung](https://github.com/Azure/azure-functions-host/issues/992)aufgetreten.** Das Problem ist spezifisch für die .net-Entwicklung. Projekte mit Abhängigkeiten von Bibliotheken, die eine andere Version als die Bibliotheken enthalten, die in der Laufzeit enthalten sind, sind betroffen. Das Functions-Team hat sich verpflichtet, konkrete Statusinformationen zu dem Problem zu treffen. Das Team adressiert Bindungs Umleitungen in 2. x, bevor es in die allgemeine Verfügbarkeit übergeht. Die offizielle Team Anweisung mit den empfohlenen Korrekturen und Problem Umgehungen finden Sie hier: [Assemblyauflösung in Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Weitere Informationen finden Sie unter [Vergleichen von 1. x und 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -37,9 +37,9 @@ Die folgenden Sprachen werden entweder in allgemeiner Verfügbarkeit (GA), Vorsc
 
 |Sprache      |1. x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |GAS          |Vorschau  |
-|**JavaScript**|GAS          |Vorschau  |
-|**F#**        |GAS          |         |
+|**C#**        |Gas          |Vorschau  |
+|**JavaScript**|Gas          |Vorschau  |
+|**F#**        |Gas          |         |
 |**Java**      |            |Vorschau  |
 |**Python**    |Experimentell|         |
 |**PHP**       |Experimentell|         |
@@ -48,7 +48,7 @@ Die folgenden Sprachen werden entweder in allgemeiner Verfügbarkeit (GA), Vorsc
 |**Verschlüsselt**      |Experimentell|         |
 |**PowerShell**|Experimentell|         |
 
-Weitere Informationen finden Sie unter [Sprach- und Regionsunterstützung für die Textanalyse-API](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+Weitere Informationen finden Sie [unter Unterstützte Sprachen](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
 ## <a name="app-service-plans"></a>App Service-Pläne
 
@@ -60,9 +60,9 @@ Weitere Informationen finden Sie unter [App Service-Pläne](https://docs.microso
 
 Es gibt drei gängige Methoden, um Funktions-apps zu erstellen.
 
-* Skriptfunktionen im Portal.
-* Erstellen Sie die erforderlichen Ressourcen mithilfe der Azure-Befehlszeilenschnittstelle (CLI).
-* Erstellen Sie Funktionen lokal mithilfe Ihrer bevorzugten IDE, und veröffentlichen Sie Sie in Azure.
+- Skriptfunktionen im Portal.
+- Erstellen Sie die erforderlichen Ressourcen mithilfe der Azure-Befehlszeilenschnittstelle (CLI).
+- Erstellen Sie Funktionen lokal mithilfe Ihrer bevorzugten IDE, und veröffentlichen Sie Sie in Azure.
 
 Weitere Informationen zum Erstellen einer Skriptfunktion im Portal finden [Sie unter Erstellen Ihrer ersten Funktion in der Azure-Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
 
@@ -72,20 +72,20 @@ Informationen zum Erstellen einer Funktion aus Visual Studio finden Sie unter [E
 
 ## <a name="understand-triggers-and-bindings"></a>Grundlegendes zu Triggern und Bindungen
 
-Funktionen werden von einem- Aufruf aufgerufen und können über genau einen verfügen. Zusätzlich zum Aufrufen der Funktion dienen bestimmte Trigger auch als Bindungen. Zusätzlich zum-Vorgang können auch mehrere Bindungen definiert werden. *Bindungen* bieten eine deklarative Möglichkeit, um Daten mit Ihrem Code zu verbinden. Sie können an (Eingabe) oder empfangende Daten (Ausgabe) übermittelt werden. Trigger und Bindungen erleichtern das Arbeiten mit Funktionen. Bindungen entfernen den Aufwand für das manuelle Erstellen von Datenbank-oder Dateisystem Verbindungen. Alle Informationen, die für die Bindungen benötigt werden, sind in einer speziellen Datei " *Functions. JSON* " für Skripts enthalten oder mit Attributen im Code deklariert.
+Funktionen werden von einem-Aufruf aufgerufen und können über *genau einen verfügen* . Zusätzlich zum Aufrufen der Funktion dienen bestimmte Trigger auch als Bindungen. Zusätzlich zum-Vorgang können auch mehrere Bindungen definiert werden. *Bindungen* bieten eine deklarative Möglichkeit, um Daten mit Ihrem Code zu verbinden. Sie können an (Eingabe) oder empfangende Daten (Ausgabe) übermittelt werden. Trigger und Bindungen erleichtern das Arbeiten mit Funktionen. Bindungen entfernen den Aufwand für das manuelle Erstellen von Datenbank-oder Dateisystem Verbindungen. Alle Informationen, die für die Bindungen benötigt werden, sind in einer speziellen Datei " *Functions. JSON* " für Skripts enthalten oder mit Attributen im Code deklariert.
 
 Einige gängige Trigger sind:
 
-* BLOB Storage: Rufen Sie Ihre Funktion auf, wenn eine Datei oder ein Ordner im Speicher hochgeladen oder geändert wird.
-* HTTP: Rufen Sie Ihre Funktion wie eine Rest-API auf.
-* Queue: Rufen Sie die Funktion auf, wenn Elemente in einer Warteschlange vorhanden sind.
-* Timer: Rufen Sie Ihre Funktion in einem regulären Rhythmus auf.
+- BLOB Storage: Rufen Sie Ihre Funktion auf, wenn eine Datei oder ein Ordner im Speicher hochgeladen oder geändert wird.
+- HTTP: Rufen Sie Ihre Funktion wie eine Rest-API auf.
+- Queue: Rufen Sie die Funktion auf, wenn Elemente in einer Warteschlange vorhanden sind.
+- Timer: Rufen Sie Ihre Funktion in einem regulären Rhythmus auf.
 
 Beispiele für Bindungen sind:
 
-* Cosmosdb: Stellen Sie problemlos eine Verbindung mit der Datenbank her, um Dateien zu laden oder zu speichern.
-* Table Storage: Arbeiten Sie mit dem Schlüssel-Wert-Speicher von ihrer Funktionen-app.
-* Queue Storage: problemlos Elemente aus einer Warteschlange abrufen oder neue Elemente in der Warteschlange platzieren.
+- Cosmosdb: Stellen Sie problemlos eine Verbindung mit der Datenbank her, um Dateien zu laden oder zu speichern.
+- Table Storage: Arbeiten Sie mit dem Schlüssel-Wert-Speicher von ihrer Funktionen-app.
+- Queue Storage: problemlos Elemente aus einer Warteschlange abrufen oder neue Elemente in der Warteschlange platzieren.
 
 Die folgende Beispieldatei " *Functions. JSON* " definiert einen-und eine-Bindung:
 
@@ -111,7 +111,7 @@ Die folgende Beispieldatei " *Functions. JSON* " definiert einen-und eine-Bindun
 }
 ```
 
-In diesem Beispiel wird die Funktion durch eine Änderung des BLOB-Speichers im `images` Container ausgelöst. Die Informationen für die Datei werden an die Datei übertragen, sodass der-Triggerwert auch als Bindung fungiert. Eine weitere Bindung besteht darin, Informationen in eine Warte `images`Schlange mit dem Namen einzufügen.
+In diesem Beispiel wird die Funktion durch eine Änderung am BLOB-Speicher im `images`-Container ausgelöst. Die Informationen für die Datei werden an die Datei übertragen, sodass der-Triggerwert auch als Bindung fungiert. Eine weitere Bindung besteht darin, Informationen in eine Warteschlange namens "`images`" einzufügen.
 
 Hier ist das C# Skript für die-Funktion:
 
@@ -131,17 +131,17 @@ Eine vollständige Liste der Trigger und Bindungen finden Sie unter [Azure Funct
 
 Proxys stellen Umleitungs Funktionen für Ihre Anwendung bereit. Proxys machen einen Endpunkt verfügbar und ordnen diesen Endpunkt einer anderen Ressource zu. Mit Proxys können Sie folgende Aktionen ausführen:
 
-* Leitet eine eingehende Anforderung an einen anderen Endpunkt um.
-* Ändern Sie die eingehende Anforderung, bevor Sie weitergeleitet wird.
-* Ändern oder Bereitstellen einer Antwort.
+- Leitet eine eingehende Anforderung an einen anderen Endpunkt um.
+- Ändern Sie die eingehende Anforderung, bevor Sie weitergeleitet wird.
+- Ändern oder Bereitstellen einer Antwort.
 
 Proxys werden für folgende Szenarien verwendet:
 
-* Vereinfachen, verkürzen oder Ändern der URL.
-* Bereitstellen eines konsistenten API-Präfixes für mehrere Back-End-Dienste.
-* Simulieren einer Antwort auf einen Endpunkt, der entwickelt wird.
-* Bereitstellen einer statischen Antwort auf einen bekannten Endpunkt
-* Halten Sie einen API-Endpunkt konsistent, während das Back-End verschoben oder migriert wird.
+- Vereinfachen, verkürzen oder Ändern der URL.
+- Bereitstellen eines konsistenten API-Präfixes für mehrere Back-End-Dienste.
+- Simulieren einer Antwort auf einen Endpunkt, der entwickelt wird.
+- Bereitstellen einer statischen Antwort auf einen bekannten Endpunkt
+- Halten Sie einen API-Endpunkt konsistent, während das Back-End verschoben oder migriert wird.
 
 Proxys werden als JSON-Definitionen gespeichert. Im Folgenden ein Beispiel:
 
@@ -169,13 +169,13 @@ Proxys werden als JSON-Definitionen gespeichert. Im Folgenden ein Beispiel:
 }
 ```
 
-Der `Domain Redirect` Proxy nimmt eine verkürzte Route an und ordnet Sie der längeren Funktions Ressource zu. Die Transformation sieht wie folgt aus:
+Der `Domain Redirect`-Proxy nimmt eine verkürzte Route an und ordnet Sie der längeren Funktions Ressource zu. Die Transformation sieht wie folgt aus:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-Der `Root` Proxy übernimmt alle Elemente, die an die Stamm`https://--shorturl--/`-URL () gesendet werden, und leitet Sie an die Dokumentations Website um.
+Der `Root`-Proxy nimmt alles an die Stamm-URL (`https://--shorturl--/`) an und leitet es an die Dokumentations Website um.
 
-Ein Beispiel für die Verwendung von Proxys finden [Sie im Video Azure: Bringen Sie Ihre APP mit Server losem Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)in die Cloud. In Echtzeit wird eine ASP.net Core Anwendung, die auf dem lokalen SQL Server ausgeführt wird, in die Azure-Cloud migriert. Proxys dienen zum Umgestalten eines herkömmlichen Web-API-Projekts für die Verwendung von Funktionen.
+Ein Beispiel für die Verwendung von Proxys finden [Sie im Video Azure: bringen Sie Ihre APP in die Cloud mit Server losem Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102). In Echtzeit wird eine ASP.net Core Anwendung, die auf dem lokalen SQL Server ausgeführt wird, in die Azure-Cloud migriert. Proxys dienen zum Umgestalten eines herkömmlichen Web-API-Projekts für die Verwendung von Funktionen.
 
 Weitere Informationen zu Proxys finden Sie unter [Arbeiten mit Azure-Funktionsproxys](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 

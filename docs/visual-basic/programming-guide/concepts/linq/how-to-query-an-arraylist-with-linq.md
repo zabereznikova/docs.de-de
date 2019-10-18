@@ -1,25 +1,25 @@
 ---
-title: 'Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)'
+title: 'Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9cc86c6f74c8edc628050c911474bf515784180
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908166"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320312"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)
-Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Angenommen, Sie haben eine <xref:System.Collections.ArrayList> von `Student` Objekte Ihre [From-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md) sollte wie folgt aussehen:  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Gewusst wie: Abfragen von ArrayList mit LINQ (Visual Basic)
+Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Wenn Sie z. b. eine <xref:System.Collections.ArrayList> von `Student`-Objekten haben, sollte die [from-Klausel](../../../../visual-basic/language-reference/queries/from-clause.md) wie folgt aussehen:  
   
-```  
+```vb  
 Dim query = From student As Student In arrList   
-...  
+'...  
 ```  
   
  Indem Sie den Typ der Bereichsvariablen angeben, wandeln Sie jedes Element in der <xref:System.Collections.ArrayList> in ein `Student` um.  
   
- Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn bei der Umwandlung ein Fehler auftritt. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. Sie müssen explizit aufrufen, in Visual Basic die <xref:System.Linq.Enumerable.Cast%2A> Methode für die Datenquelle aus, um einen bestimmten Bereichsvariablentyp sicherzustellen. Weitere Informationen finden Sie unter [Typbeziehungen in Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ Die Verwendung einer explizit typisierten Bereichsvariablen in einem Abfrageausdruck entspricht dem Aufrufen der <xref:System.Linq.Enumerable.Cast%2A>-Methode. <xref:System.Linq.Enumerable.Cast%2A> löst eine Ausnahme aus, wenn bei der Umwandlung ein Fehler auftritt. <xref:System.Linq.Enumerable.Cast%2A> und <xref:System.Linq.Enumerable.OfType%2A> sind zwei Standardabfrageoperator-Methoden, die mit nicht generischen <xref:System.Collections.IEnumerable>-Typen arbeiten. In Visual Basic müssen Sie explizit die <xref:System.Linq.Enumerable.Cast%2A>-Methode für die Datenquelle aufzurufen, um einen bestimmten Bereichs Variablentyp sicherzustellen. Weitere Informationen finden Sie unter [Typbeziehungen in Abfrage Vorgängen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine einfache Abfrage von <xref:System.Collections.ArrayList> veranschaulicht. Beachten Sie, dass in diesem Beispiel Objektinitialisierer verwendet werden, wenn der Code die <xref:System.Collections.ArrayList.Add%2A>-Methode aufruft, aber dies ist keine Voraussetzung.  

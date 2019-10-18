@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Suchen des direkten vorangegangenen nebengeordneten (XPath-LINQ to XML) (Visual Basic)'
+title: 'Gewusst wie: Suchen des unmittelbar vorhergehenden neben geordneten Elements (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc54239d2ddaafcc46413ed13c274449daaba0c7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61854996"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320603"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen des direkten vorangegangenen nebengeordneten (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Gewusst wie: Suchen des unmittelbar vorhergehenden neben geordneten Elements (XPath-LINQ to XML) (Visual Basic)
 Es kann passieren, dass Sie den unmittelbar vorhergehenden nebengeordneten Knoten eines Knotens ermitteln möchten. Aufgrund des semantischen Unterschieds bei Positionsprädikaten für die Achsen vorhergehender nebengeordneter Knoten in XPath im Vergleich zu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist dies einer der interessanteren Vergleiche.  
   
 ## <a name="example"></a>Beispiel  
@@ -43,7 +43,7 @@ Console.WriteLine(el1)
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console
 Results are identical  
 <Child3 />  
 ```  

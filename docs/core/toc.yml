@@ -1,0 +1,331 @@
+- name: Leitfaden für .NET Core
+  href: index.md
+- name: Weitere Informationen zu .NET Core
+  href: about.md
+- name: Erste Schritte
+  href: get-started.md
+  items:
+    - name: 'Erste Schritte mit C# und Visual Studio Code'
+      href: tutorials/with-visual-studio-code.md
+    - name: 'Erstellen einer „Hallo Welt“-App in C# mit .NET Core in Visual Studio 2017'
+      href: tutorials/with-visual-studio.md
+    - name: Erstellen einer „Hallo Welt“-App in Visual Basic mit .NET Core in Visual Studio 2017
+      href: tutorials/vb-with-visual-studio.md
+    - name: 'Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017'
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
+      href: tutorials/publishing-with-visual-studio.md
+    - name: 'Erstellen einer .NET Standard-Bibliothek mit C# und .NET Core in Visual Studio 2017'
+      href: tutorials/library-with-visual-studio.md
+    - name: Erstellen einer .NET Standard-Bibliothek mit Visual Basic und .NET Core in Visual Studio 2017
+      href: tutorials/vb-library-with-visual-studio.md
+    - name: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
+      href: tutorials/consuming-library-with-visual-studio.md
+- name: Erforderliche Komponenten für Windows
+  href: windows-prerequisites.md
+- name: Erforderliche Komponenten für macOS
+  href: macos-prerequisites.md
+- name: Erforderliche Komponenten für Linux
+  href: linux-prerequisites.md
+- name: Neuigkeiten in .NET Core
+  items:
+    - name: Neuerungen in .NET Core 3.0
+      href: whats-new/dotnet-core-3-0.md
+    - name: Neuerungen in .NET Core 2.2
+      href: whats-new/dotnet-core-2-2.md
+    - name: Neuigkeiten in .NET Core 2.1
+      href: whats-new/dotnet-core-2-1.md
+    - name: Neuigkeiten in .NET Core 2.0
+      href: whats-new/dotnet-core-2-0.md
+- name: Anwendungskompatibilität
+  href: compatibility/
+- name: Tutorials
+  href: tutorials/index.md
+  items:
+    - name: Vorlagen für die CLI
+      items:
+        - name: 1. Erstellen einer Elementvorlage
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2. Erstellen einer Projektvorlage
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3. Erstellen eines Vorlagenpakets
+          href: tutorials/cli-templates-create-template-pack.md
+    - name: Erste Schritte mit .NET Core unter macOS
+      href: tutorials/using-on-macos.md
+    - name: Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
+      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Erste Schritte mit .NET Core unter Verwendung der CLI-Tools
+      href: tutorials/using-with-xplat-cli.md
+    - name: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
+      href: tutorials/testing-with-cli.md
+    - name: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
+      href: tutorials/libraries.md
+    - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
+      href: tutorials/creating-app-with-plugin-support.md
+    - name: Entwickeln von ASP.NET Core-Anwendungen
+      href: tutorials/aspnet-core.md
+    - name: Hosten von .NET Core aus nativem Code
+      href: tutorials/netcore-hosting.md
+- name: Native Interoperabilität
+  items:
+    - name: Verfügbarmachen von .NET Core-Komponenten in COM
+      href: native-interop/expose-components-to-com.md
+- name: 'Pakete, Metapakete und Frameworks'
+  href: packages.md
+- name: Änderungen in CLI – Übersicht
+  href: tools/cli-msbuild-architecture.md
+  items:
+    - name: Abhängigkeitsverwaltung
+      href: tools/dependencies.md
+    - name: Erweiterungen des CSPROJ-Formats
+      href: tools/csproj.md
+- name: Migration
+  items:
+    - name: .NET Core 2.0 bis 2.1
+      href: migration/20-21.md
+    - name: Migrieren über „project.json“
+      href: migration/index.md
+    - name: Die Zuordnung zwischen project.json und csproj
+      href: tools/project-json-to-csproj.md
+    - name: Migrieren über DNX
+      href: migration/from-dnx.md
+- name: Anwendungsbereitstellung
+  href: deploying/index.md
+  items:
+    - name: Bereitstellen von Apps mit CLI-Tools
+      href: deploying/deploy-with-cli.md
+    - name: Bereitstellen von Apps mit Visual Studio
+      href: deploying/deploy-with-vs.md
+    - name: Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools
+      href: deploying/creating-nuget-packages.md
+    - name: Rollforward der eigenständigen Runtimebereitstellung
+      href: deploying/runtime-patch-selection.md
+    - name: Laufzeitpaketspeicher
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: Einführung zu .NET und Docker
+      href: docker/introduction.md
+    - name: Containerisieren einer .NET Core-App
+      href: docker/build-container.md
+    - name: Containertools in Visual Studio
+      href: /visualstudio/containers/overview
+- name: Diagnosetools
+  items:
+    - name: Übersicht
+      href: diagnostics/index.md
+    - name: Verwaltete Debugger
+      href: diagnostics/managed-debuggers.md
+    - name: Protokollierung und Nachverfolgung
+      href: diagnostics/logging-tracing.md
+    - name: Globale .NET Core-CLI-Tools
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+- name: Unittests
+  href: testing/index.md
+  items:
+    - name: Bewährte Methoden für Komponententests
+      href: testing/unit-testing-best-practices.md
+    - name: 'Komponententests in C# mit xUnit'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'Komponententests in C# mit NUnit'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'Komponententests in C# mit MSTest'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'Komponententests in F# mit xUnit'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'Komponententests in F# mit NUnit'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'Komponententests in F# mit MSTest'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: Komponententests in VB mit xUnit
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: Komponententests in VB mit NUnit
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: Komponententests in VB mit MSTest
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: Ausführen von selektiven Komponententests
+      href: testing/selective-unit-tests.md
+    - name: Veröffentlichte Ausgabe von Komponententests
+      href: testing/unit-testing-published-output.md
+    - name: Live-Komponententests von .NET Core-Projekten mit Visual Studio
+      href: /visualstudio/test/live-unit-testing-start
+- name: Continuous Integration
+  href: tools/using-ci-with-cli.md
+- name: Versionskontrolle
+  href: versions/index.md
+  items:
+    - name: .NET Core-Versionsauswahl
+      href: versions/selection.md
+    - name: Entfernen von veralteten Runtimes und SDKs
+      href: versions/remove-runtime-sdk-versions.md
+- name: Runtime-ID-Katalog (RID)
+  href: rid-catalog.md
+- name: .NET Core SDK – Übersicht
+  href: sdk.md
+- name: .NET Core-CLI
+  items:
+    - name: Übersicht
+      href: tools/index.md
+    - name: Tools
+      expanded: true
+      items:
+        - name: Globale Tools
+          expanded: true
+          items:
+            - name: Übersicht
+              href: tools/global-tools.md
+            - name: Erstellen eines globalen Tools
+              href: tools/global-tools-how-to-create.md
+        - name: Problembehandlung bei Problemen mit der Toolnutzung
+          href: tools/troubleshoot-usage-issues.md
+    - name: Erhöhte Zugriffsrechte
+      href: tools/elevated-access.md
+    - name: Erweiterbarkeitsmodell
+      href: tools/extensibility.md
+    - name: Benutzerdefinierte Vorlagen
+      href: tools/custom-templates.md
+    - name: Aktivieren der Vervollständigung mit der TAB-TASTE
+      href: tools/enable-tab-autocomplete.md
+    - name: Telemetrie
+      href: tools/telemetry.md
+    - name: 'global.json: Übersicht'
+      href: tools/global-json.md
+    - name: Referenz
+      items:
+        - name: dotnet
+          href: tools/dotnet.md
+        - name: dotnet build
+          href: tools/dotnet-build.md
+        - name: dotnet build-server
+          href: tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: tools/dotnet-clean.md
+        - name: dotnet help
+          href: tools/dotnet-help.md
+        - name: dotnet migrate
+          href: tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: tools/dotnet-pack.md
+        - name: dotnet publish
+          href: tools/dotnet-publish.md
+        - name: dotnet restore
+          href: tools/dotnet-restore.md
+        - name: dotnet run
+          href: tools/dotnet-run.md
+        - name: dotnet sln
+          href: tools/dotnet-sln.md
+        - name: dotnet store
+          href: tools/dotnet-store.md
+        - name: dotnet test
+          href: tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: tools/dotnet-vstest.md
+        - name: Dotnet-Installationsskripts
+          href: tools/dotnet-install-script.md
+        - name: Projektverweisbefehle
+          items:
+            - name: dotnet add reference
+              href: tools/dotnet-add-reference.md
+            - name: dotnet list reference
+              href: tools/dotnet-list-reference.md
+            - name: dotnet remove reference
+              href: tools/dotnet-remove-reference.md
+        - name: Projektpaketbefehle
+          items:
+            - name: dotnet add package
+              href: tools/dotnet-add-package.md
+            - name: dotnet list package
+              href: tools/dotnet-list-package.md
+            - name: dotnet remove package
+              href: tools/dotnet-remove-package.md
+- name: Zusätzliche Tools für .NET Core
+  href: additional-tools/index.md
+  items:
+    - name: WCF Web Service Reference-Anbieter
+      href: additional-tools/wcf-web-service-reference-guide.md
+    - name: dotnet-svcutil
+      href: additional-tools/dotnet-svcutil-guide.md
+    - name: dotnet-svcutil.xmlserializer
+      href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
+    - name: XML Serializer Generator
+      href: additional-tools/xml-serializer-generator.md
+- name: Portieren aus .NET Framework
+  href: porting/index.md
+  items:
+    - name: '.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind'
+      href: porting/net-framework-tech-unavailable.md
+    - name: Analysieren der Abhängigkeiten von Drittanbietern
+      href: porting/third-party-deps.md
+    - name: Portieren von Bibliotheken
+      href: porting/libraries.md
+    - name: Organisieren von Projekten für .NET Core
+      href: porting/project-structure.md
+    - name: Tools für das Portieren zu .NET Core
+      href: porting/tools.md
+    - name: Verwenden von Windows Compatibility Pack
+      href: porting/windows-compat-pack.md
+    - name: Portieren von Windows Forms-Projekten
+      href: porting/winforms.md
+    - name: Portieren von WPF-Projekten
+      href: porting/wpf.md
+- name: Laden von Abhängigkeiten
+  items:
+    - name: Übersicht
+      href: dependency-loading/overview.md
+    - name: Grundlegendes zu AssemblyLoadContext
+      href: dependency-loading/understanding-assemblyloadcontext.md
+    - name: Laden von Details
+      items:
+        - name: Suchen der Standardabhängigkeit
+          href: dependency-loading/default-probing.md
+        - name: Laden verwalteter Assemblys
+          href: dependency-loading/loading-managed.md
+        - name: Laden von Satellitenassemblys
+          href: dependency-loading/loading-resources.md
+        - name: Laden nicht verwalteter Bibliotheken
+          href: dependency-loading/loading-unmanaged.md
+    - name: Tutorials
+      items:
+        - name: Erstellen einer .NET Core-Anwendung mit Plug-Ins
+          href: tutorials/creating-app-with-plugin-support.md
+        - name: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
+          href: ../standard/assembly/unloadability-howto.md
+- name: Erstellen von .NET Core aus einer Quelle
+  href: build/index.md
+  items:
+    - name: Verpacken einer Verteilung von .NET Core
+      href: build/distribution-packaging.md
+- name: VS 2015/project.json-Dokumentation
+  href: ../project-json.md

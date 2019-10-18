@@ -2,12 +2,12 @@
 title: Bekannte Probleme in SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 18e3ad59af4014086bd475815011b6008bcb5052
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854550"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395518"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -36,19 +36,19 @@ In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framew
 - Eine Abfrage, die über ein DEREF-Konstrukt über einem REF-Konstrukt verfügt.  
   
 ## <a name="skip-operator"></a>SKIP-Operator  
- Wenn Sie SQL Server 2000 verwenden, werden bei Verwendung von Skip mit Order by für nicht Schlüssel Spalten möglicherweise falsche Ergebnisse zurückgegeben. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Dies liegt daran, wie Skip für SQL Server 2000 übersetzt wird. In der folgenden Abfrage können z. b. mehr als fünf Zeilen übersprungen werden, `E.NonKeyColumn` wenn über doppelte Werte verfügt:  
+ Wenn Sie SQL Server 2000 verwenden, werden bei Verwendung von Skip mit Order by für nicht Schlüssel Spalten möglicherweise falsche Ergebnisse zurückgegeben. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Dies liegt daran, wie Skip für SQL Server 2000 übersetzt wird. In der folgenden Abfrage können z. b. mehr als fünf Zeilen übersprungen werden, wenn `E.NonKeyColumn` doppelte Werte aufweist:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Verwenden der richtigen SQL Server-Version  
- Der Entity Framework auf die Transact-SQL-Abfrage basiert auf der SQL Server-Version, die im `ProviderManifestToken` -Attribut des Schema-Elements in der Speichermodell Datei (SSDL) angegeben ist. Diese Version unterscheidet sich möglicherweise von der tatsächlichen SQL Server-Version, mit der Sie verbunden sind. Wenn Sie z. b. SQL Server 2005 verwenden, Ihr `ProviderManifestToken` Attribut jedoch auf 2008 festgelegt ist, wird die generierte Transact-SQL-Abfrage möglicherweise nicht auf dem Server ausgeführt. Beispielsweise wird eine Abfrage, in der die in SQL Server 2008 eingeführten neuen Datums-/Zeittypen verwendet werden, nicht auf früheren Versionen von SQL Server ausgeführt. Wenn Sie SQL Server 2005 verwenden, Ihr `ProviderManifestToken` Attribut jedoch auf 2000 festgelegt ist, ist die generierte Transact-SQL-Abfrage möglicherweise weniger optimiert, oder Sie erhalten eine Ausnahme, die besagt, dass die Abfrage nicht unterstützt wird. Weitere Informationen finden Sie oben im Abschnitt über die CROSS- und OUTER APPLY-Operatoren.  
+ Der Entity Framework auf die Transact-SQL-Abfrage basiert, die auf der SQL Server-Version basiert, die im `ProviderManifestToken`-Attribut des Schema-Elements in der Speichermodell Datei (SSDL) angegeben ist. Diese Version unterscheidet sich möglicherweise von der tatsächlichen SQL Server-Version, mit der Sie verbunden sind. Wenn Sie z. b. SQL Server 2005 verwenden, Ihr `ProviderManifestToken`-Attribut jedoch auf 2008 festgelegt ist, wird die generierte Transact-SQL-Abfrage möglicherweise nicht auf dem Server ausgeführt. Beispielsweise wird eine Abfrage, in der die in SQL Server 2008 eingeführten neuen Datums-/Zeittypen verwendet werden, nicht auf früheren Versionen von SQL Server ausgeführt. Wenn Sie SQL Server 2005 verwenden, Ihr `ProviderManifestToken`-Attribut jedoch auf 2000 festgelegt ist, ist die generierte Transact-SQL-Abfrage möglicherweise weniger optimiert, oder Sie erhalten eine Ausnahme, die besagt, dass die Abfrage nicht unterstützt wird. Weitere Informationen finden Sie oben im Abschnitt über die CROSS- und OUTER APPLY-Operatoren.  
   
- Bestimmte Datenbankverhaltensweisen hängen vom festgelegten Kompatibilitätsgrad der Datenbank ab. Wenn das `ProviderManifestToken` Attribut auf 2005 festgelegt ist und die SQL Server Version 2005 ist, aber der Kompatibilitäts Grad einer Datenbank auf "80" (SQL Server 2000) festgelegt ist, wird die generierte Transact-SQL-Datenbank auf SQL Server 2005 ausgerichtet, aber möglicherweise nicht erwartungsgemäß ausgeführt, weil die Einstellung für den Kompatibilitäts Grad. Zum Beispiel geht möglicherweise die Sortierung verloren, wenn ein Spaltenname in der ORDER BY-Liste einem Spaltennamen im Selektor entspricht.  
+ Bestimmte Datenbankverhaltensweisen hängen vom festgelegten Kompatibilitätsgrad der Datenbank ab. Wenn Ihr `ProviderManifestToken`-Attribut auf 2005 festgelegt ist und die SQL Server Version 2005 ist, aber der Kompatibilitäts Grad einer Datenbank auf "80" (SQL Server 2000) festgelegt ist, wird die generierte Transact-SQL-Datenbank auf SQL Server 2005 ausgerichtet, aber möglicherweise nicht erwartungsgemäß ausgeführt, weil die Einstellung für den Kompatibilitäts Grad. Zum Beispiel geht möglicherweise die Sortierung verloren, wenn ein Spaltenname in der ORDER BY-Liste einem Spaltennamen im Selektor entspricht.  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
- Geschachtelte Abfragen in einer Projektionsklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Auf einigen Back-End-Servern, einschließlich SLQ-Server, kann dies dazu führen, dass die tempdb-Tabelle sehr groß wird. Dies kann die Serverleistung beeinträchtigen.  
+ Geschachtelte Abfragen in einer Projektionsklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Auf einigen Back-End-Servern, einschließlich SQL Server, kann dies dazu führen, dass die tempdb-Tabelle sehr groß wird. Dies kann die Serverleistung beeinträchtigen.  
   
  Im Folgenden sehen Sie ein Beispiel für eine geschachtelte Abfrage in einer Projektionsklausel:  
   

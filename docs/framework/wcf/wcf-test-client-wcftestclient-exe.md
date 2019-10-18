@@ -2,17 +2,17 @@
 title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: e637a2bb26bd0cc4bea653155c2a85ef5af19fd9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038353"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321186"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Windows Communication Foundation (WCF)-Test Client (WcfTestClient. exe) ist ein GUI-Tool, mit dem Benutzer Testparameter eingeben, die Eingabe an den Dienst senden und die vom Dienst zurück gesendete Antwort anzeigen können. Diese Funktion bietet eine nahtlose Dienst Testfunktion, wenn Sie mit dem WCF-Dienst Host kombiniert wird.
 
-Der WCF-Test Client (WcfTestClient. exe) befindet sich in der Regel am folgenden Speicherort:-Community kann je nach installierter Ebene von Visual Studio eine der folgenden Werte sein: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` "Enterprise", "Professional" oder "Community".
+Der WCF-Test Client (WcfTestClient. exe) befindet sich in der Regel am folgenden Speicherort: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-Community kann je nach installierter Ebene von Visual Studio "Enterprise", "Professional" oder "Community" lauten.
 
 ## <a name="scenarios-for-using-test-client"></a>Szenarien für das Verwenden des Testclients
 
@@ -32,7 +32,7 @@ Sie können auch den WCF-Test Client verwenden, um ein Dienstprojekt zu debuggen
 
 Sie können auch den WCF-Test Client (WcfTestClient. exe) außerhalb von Visual Studio aufrufen, um einen beliebigen Dienst im Internet zu testen. Das Tool befindet sich im folgenden Verzeichnis:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(wobei die Community abhängig davon, welche Ebene von Visual Studio auf dem Computer installiert ist, eine "Enterprise", "Professional" oder "Community" sein kann)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (wobei Community in Abhängigkeit davon, welche Ebene von Visual Studio auf dem Computer installiert ist, "Enterprise", "Professional" oder "Community" sein kann)
 
 Doppelklicken Sie zum Verwenden des Tools auf den Dateinamen, um das Tool von dessen Verzeichnis aus zu öffnen, oder starten Sie das Tool mithilfe einer Befehlszeile.
 
@@ -56,11 +56,11 @@ Im linken Bereich werden auch die Clientkonfigurationsdateien aufgeführt. Doppe
 
 ### <a name="entering-test-parameters"></a>Eingeben der Testparameter
 
-Doppelklicken Sie zur Anzeige der Testparameter auf einen Vorgang, um ihn im rechten Bereich zu öffnen. Die Parameter werden standardmäßig in der formatierten Ansicht angezeigt, und Sie können beliebige Werte für die Parameter eingeben, um den Dienst zu testen.
+Doppelklicken Sie zur Anzeige der Testparameter auf einen Vorgang, um ihn im rechten Bereich zu öffnen. Die Parameter werden standardmäßig in der **formatierten** Ansicht angezeigt, und Sie können beliebige Werte für die Parameter eingeben, um den Dienst zu testen.
 
 Um den XML-Code der Nachricht anzuzeigen, klicken Sie auf **XML**. Klicken Sie auf **aufrufen**, um Sie an den Dienst zu senden.
 
-Für einen Datasetparameter klicken Sie auf **...** Schaltfläche neben **Bearbeiten..** . , um Sie in einem neuen Fenster zu bearbeiten, das das DataGrid anzeigt. Beachten Sie die Darstellung der Schaltflächen **DataSet kopieren** und **DataSet einfügen** . Wenn das Schema des DataSet-Objekts bei der ersten Bearbeitung unbekannt ist, ist das DataGrid leer. Sie müssen ein DataSet-Objekt mit dem gleichen Schema in das aktuelle Objekt im DataGrid einfügen. (Beachten Sie, dass Sie das Schema vor dem Einfügevorgang an anderer Stelle kopieren müssen.) Sie können auch ein DataSet-Objekt zur späteren Verwendung kopieren, indem Sie auf die Schaltfläche **DataSet kopieren** klicken.
+Für einen Datasetparameter klicken Sie auf **...** Schaltfläche neben **Bearbeiten..** . , um Sie in einem neuen Fenster zu bearbeiten, das das DataGrid anzeigt. Beachten Sie die Darstellung der Schaltflächen **DataSet kopieren** und **DataSet einfügen** . Wenn das Schema des DataSet-Objekts bei der ersten Bearbeitung unbekannt ist, ist das DataGrid leer. Sie müssen ein DataSet-Objekt mit dem gleichen Schema in das aktuelle Objekt im DataGrid einfügen. (Beachten Sie, dass Sie das Schema vor dem Einfügevorgang von einem anderen Speicherort kopieren müssen.) Sie können auch ein DataSet-Objekt zur späteren Verwendung kopieren, indem Sie auf die Schaltfläche **DataSet kopieren** klicken.
 
 Die Antwort des Dienstes wird unter den Testparametern angezeigt.
 
@@ -103,7 +103,7 @@ Während der Proxy Generierung, Binär Kompilierung oder Dienst Aufruf werden Me
 
 #### <a name="persist-client-configuration"></a>Beibehalten der Clientkonfiguration
 
--> Die Registerkarte Extras Optionen Client Konfiguration enthält die Option Konfiguration beim Starten von Diensten immer neu generieren, die standardmäßig aktiviert ist.-> Diese Option gibt an, dass jedes Mal, wenn der WCF-Test Client einen Dienst lädt, eine Konfigurationsdatei auf der Grundlage der aktuellen Dienstvertrags-und Dienst-app. config-Dateien erneut generiert wird.
+Die **Tools**->-**Optionen**->-Registerkarte**Client Konfiguration** enthält die Option **Konfiguration beim Starten von Diensten immer neu generieren** , die standardmäßig aktiviert ist. Diese Option gibt an, dass jedes Mal, wenn der WCF-Test Client einen Dienst lädt, eine Konfigurationsdatei auf der Grundlage der aktuellen Dienstvertrags-und Dienst-app. config-Dateien erneut generiert wird.
 
 Wenn Sie die Client Konfiguration für den WCF-Dienst bearbeitet haben und diese aktualisierte Datei immer zum Debuggen des diensdienstanbieter verwenden möchten, können Sie die Option neu **generieren** deaktivieren. Auf diese Weise können Sie die Datei "Client. dll. config", selbst wenn Sie den Dienst aktualisieren und den WCF-Test Client erneut öffnen, anstelle eines erneuten generierten Dienstanbieter aktualisieren.
 
@@ -112,7 +112,7 @@ Die Konfigurationsdatei muss jedoch möglicherweise bearbeitet werden, um sie mi
 > [!CAUTION]
 > Für den Fall, dass Sie die Clientkonfigurationsdatei geändert haben und später wieder verwenden möchten, finden Sie die Datei im folgenden Verzeichnis:
 >
-> \Dokumente und Einstellungen\\[Benutzerkonto] \Eigene documents\testclientprojekte.
+> \Documents and Settings @ no__t-0 [Benutzerkonto] \Eigene documents\testclientprojekte.
 >
 > Aktualisierte Anmeldeinformationen, die in der Clientkonfigurationsdatei gespeichert sind, sind durch die Zugriffsteuerungsliste (Access Control List, ACL) dieses Ordners geschützt.
 
@@ -144,7 +144,7 @@ Menüelemente, die das Aktualisieren eines Diensts unterstützen, sind während 
 
 Standardmäßig speichert der WCF-Test Client generierten Client Code und die Konfigurationsdateien im Ordner "%APPDATA%\Local\temp\Test Client Projects". Dieser Ordner wird gelöscht, nachdem der WCF-Test Client beendet wurde. Wenn eine Konfigurationsdatei im WCF-Test Client geändert wird und die Option **Konfiguration beim Starten von Diensten immer neu generieren** deaktiviert ist, wird die geänderte Datei in den Ordner "cachedconfig" unter "eigene Dateien\Test Client Projects" mit einer Zuordnung kopiert ( die XML-Datei "Metadata-Address-to-File-Name" als Index.
 
-Sie können den WCF-Test Client auch in einer Befehlszeile starten, `/ProjectPath` den Schalter verwenden, um einen neuen gewünschten Pfad zum Speichern generierter Dateien anzugeben `/RestoreProjectPath` , oder den-Schalter verwenden, um den Standard Speicherort wiederherzustellen. Die Syntax lautet wie folgt:
+Sie können den WCF-Test Client auch in einer Befehlszeile starten. verwenden Sie den `/ProjectPath`-Schalter, um einen neuen gewünschten Pfad zum Speichern generierter Dateien anzugeben, oder verwenden Sie den Schalter `/RestoreProjectPath`, um den Standard Speicherort wiederherzustellen. Die Syntax lautet wie folgt:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
@@ -154,7 +154,7 @@ Beim Ausführen dieses Befehls wird der WCF-Test Client nicht geöffnet. Nur der
 
 Im folgenden finden Sie eine Liste der Funktionen, die vom WCF-Test Client unterstützt werden:
 
-- Dienst Aufruf: Anforderungs-/Antwort-und unidirektionale Nachricht.
+- Dienstaufruf: Anforderung/Antwort und unidirektionale Nachricht.
 
 - Bindungen: alle von Svcutil.exe unterstützten Bindungen.
 
@@ -174,7 +174,7 @@ Im folgenden finden Sie eine Liste der Funktionen, die nicht vom WCF-Test Client
 
 - Sicherheit: CardSpace, Zertifikat und Benutzername/Kennwort.
 
-- Land WSFederationbinding, beliebige Kontext Bindungen und HTTPS-Bindung, WebHttpBinding (Unterstützung für JSON-Antwort Nachrichten).
+- Bindungen: WSFederationbinding, beliebige Kontextbindungen und HTTPS-Bindung, WebHttpbinding (Unterstützung von JSON-Antwortnachrichten).
 
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients
 
@@ -186,4 +186,4 @@ Sie können den WCF-Test Client auf folgende Weise schließen:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

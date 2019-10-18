@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291462"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395839"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme vorgestellt, die beim Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen für den globalen Markt zu beachten sind. Die Globalisierungs Programmier Elemente werden in .net im <xref:System.Globalization>-Namespace definiert.
@@ -23,7 +23,7 @@ In diesem Thema werden Probleme vorgestellt, die beim Schreiben von [!INCLUDE[TL
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Zeichenverweise
-Ein Zeichen Verweis gibt die UTF16-Code Einheit des bestimmten [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]-Zeichens, das es darstellt, entweder in Dezimal oder hexadezimal. Das folgende Beispiel zeigt eine dezimale Zeichenreferenz für den kopalen Großbuchstaben Hori oder ' Ϩ ':
+Ein Zeichen Verweis gibt die UTF16-Code Einheit des bestimmten Unicode-Zeichens, das es darstellt, entweder in Dezimal oder hexadezimal. Das folgende Beispiel zeigt eine dezimale Zeichenreferenz für den kopalen Großbuchstaben Hori oder ' Ϩ ':
 
 ```
 &#1000;
@@ -37,7 +37,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
 <a name="encoding"></a>
 ### <a name="encoding"></a>Codierung
- Die von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] unterstützte Codierung sind ASCII-, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]-UTF-16-und UTF-8-Codierung. Die Encoding-Anweisung befindet sich am Anfang [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dokuments. Wenn kein Codierungsattribut und keine Bytereihenfolge vorhanden ist, wird der Parser automatisch auf UTF-8 festgelegt. UTF-8 und UTF-16 sind die bevorzugten Codierungen. UTF-7 wird nicht unterstützt. Im folgenden Beispiel wird veranschaulicht, wie eine UTF-8-Codierung in einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei angegeben wird.
+ Die von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] unterstützten Codierungen sind ASCII, Unicode UTF-16 und UTF-8. Die Encoding-Anweisung befindet sich am Anfang [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dokuments. Wenn kein Codierungsattribut und keine Bytereihenfolge vorhanden ist, wird der Parser automatisch auf UTF-8 festgelegt. UTF-8 und UTF-16 sind die bevorzugten Codierungen. UTF-7 wird nicht unterstützt. Im folgenden Beispiel wird veranschaulicht, wie eine UTF-8-Codierung in einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei angegeben wird.
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 ### <a name="language-attribute"></a>Sprachattribut
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] verwendet [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) , um das sprach Attribut eines Elements darzustellen.  Um die <xref:System.Globalization.CultureInfo>-Klasse zu nutzen, muss der Wert des sprach Attributs einer der von <xref:System.Globalization.CultureInfo> vordefinierten Kultur Namen sein. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) ist in der Elementstruktur vererbbar (durch XML-Regeln, nicht unbedingt wegen der Vererbung einer Abhängigkeitseigenschaft) und sein Standardwert ist eine leere Zeichenfolge, wenn sie nicht explizit zugeordnet wurde.
 
- Das Sprachattribut ist für die Angabe von Dialekten sehr nützlich. Französisch verfügt z.B. über Schreibweisen, Vokabular und Aussprache, die in Frankreich, Quebec, Belgien und der Schweiz unterschiedlich sein können. Außerdem teilen Chinesisch, Japanisch und Koreanisch Code Punkte in [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], aber die ideografischen Formen sind unterschiedlich und verwenden vollkommen unterschiedliche Schriftarten.
+ Das Sprachattribut ist für die Angabe von Dialekten sehr nützlich. Französisch verfügt z.B. über Schreibweisen, Vokabular und Aussprache, die in Frankreich, Quebec, Belgien und der Schweiz unterschiedlich sein können. Außerdem teilen Chinesisch, Japanisch und Koreanisch Code Punkte in Unicode, aber die ideografischen Formen sind unterschiedlich und verwenden vollkommen unterschiedliche Schriftarten.
 
  Im folgenden Beispiel [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] wird das sprach Attribut `fr-CA` verwendet, um Französisch (Kanada) anzugeben.
 
@@ -57,7 +57,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] unterstützt alle [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]-Features einschließlich Surrogates. Solange der Zeichensatz [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] zugeordnet werden kann, wird er unterstützt. Z.B. führt GB18030 einige Zeichen, die der Erweiterung A und B von Chinesisch, Japanisch und Koreanisch (CFK) zugeordnet sind, und Ersatzpaare ein. Daher wird es vollständig unterstützt. Eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung kann <xref:System.Globalization.StringInfo> verwenden, um Zeichen folgen zu bearbeiten, ohne zu verstehen, ob Sie Ersatzpaare haben oder Zeichen miteinander kombinieren.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] unterstützt alle Unicode-Features einschließlich Surrogates. Solange der Zeichensatz Unicode zugeordnet werden kann, wird er unterstützt. Z.B. führt GB18030 einige Zeichen, die der Erweiterung A und B von Chinesisch, Japanisch und Koreanisch (CFK) zugeordnet sind, und Ersatzpaare ein. Daher wird es vollständig unterstützt. Eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung kann <xref:System.Globalization.StringInfo> verwenden, um Zeichen folgen zu bearbeiten, ohne zu verstehen, ob Sie Ersatzpaare haben oder Zeichen miteinander kombinieren.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Entwerfen einer internationalen Benutzeroberfläche mit XAML
@@ -125,7 +125,7 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
  Alle Schreibsystem-Engines unterstützen OpenType-Schriftarten. OpenType-Schriftarten können die OpenType-Layouttabellen enthalten, die es Schriftart Entwicklern ermöglichen, bessere internationale und High-End-typografische Schriftarten zu entwerfen. Die OpenType-Schriftart Layout-Tabellen enthalten Informationen über Symbol Ersetzungen, Symbol Positionierung, Begründung und Baseline-Positionierung, sodass Textverarbeitungsanwendungen das Text Layout verbessern können.
 
- OpenType-Schriftarten ermöglichen die Handhabung von großen Glyphe-Sätzen mithilfe [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]-Codierung. Diese Codierung gewährleistet eine umfassende internationale Unterstützung sowie typografische Symbolvarianten.
+ OpenType-Schriftarten ermöglichen die Verarbeitung großer Glyphe mithilfe der Unicode-Codierung. Diese Codierung gewährleistet eine umfassende internationale Unterstützung sowie typografische Symbolvarianten.
 
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Text Rendering wird von der Microsoft ClearType-subpixeltechnologie unterstützt, die die Unabhängigkeit der Lösung unterstützt. Dies verbessert die Lesbarkeit erheblich und bietet die Möglichkeit der Unterstützung für hochwertige Dokumente im Magazinstil für alle Skripts.
 

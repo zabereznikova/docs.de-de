@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: edd54c93207456156ef2520a00ad567cd087d89c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791481"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321370"
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation-Tools
-Microsoft Windows Communication Foundation (WCF)-Tools dienen, die Sie erstellen, bereitstellen und Verwalten von WCF-Anwendungen zu erleichtern. In diesem Abschnitt werden die Tools detailliert beschrieben. Beachten Sie, dass die Tools nicht unterstützt werden.  
+Die Tools von Microsoft Windows Communication Foundation (WCF) erleichtern das Erstellen, bereitstellen und Verwalten von WCF-Anwendungen. In diesem Abschnitt werden die Tools detailliert beschrieben. Beachten Sie, dass die Tools nicht unterstützt werden.  
   
  Sie können alle Tools von der Befehlszeile aus ausführen.  
   
@@ -21,17 +21,17 @@ Microsoft Windows Communication Foundation (WCF)-Tools dienen, die Sie erstellen
   
 |Tool|Beschreibung|  
 |----------|-----------------|  
-|[ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|Generiert Service Model-Code aus Metadatendokumenten und Metadatendokumente aus Service Model-Code.|  
-|[Find Private Key-Tool (FindPrivateKey.exe)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|Ruft den privaten Schlüssel aus einem angegebenen Speicher ab.|  
-|[ServiceModel Registration-Tool (ServiceModelReg.exe)](../../../docs/framework/wcf/servicemodelreg-exe.md)|Verwaltet die Registrierung und das Aufheben der Registrierung von ServiceModel auf einem einzelnen Computer.|  
-|[COM+ Service Model Configuration-Tool (ComSvcConfig.exe)](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|Konfiguriert COM+-Schnittstellen, die als Webdienste verfügbar gemacht werden sollen.|  
-|[Configuration Editor-Tool (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|Erstellt und ändert Konfigurationseinstellungen für WCF-Dienste.|  
-|[Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)|Dient zum Einsehen, Gruppieren und Filtern von Ablaufverfolgungsnachrichten, sodass Sie alle Probleme mit WCF-Diensten diagnostizieren, reparieren und prüfen können.|  
-|[WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem Befehlszeilentool.|  
-|[WS-AtomicTransaction-Konfiguration-MMC-Snap-In](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem MMC-Snap-In.|  
-|[Registrierungstool für Workflow Services (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Registriert einen Windows Workflow-Dienst.|  
-|[WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|WCF-Dienste hostet enthalten in Bibliotheken-Dateien (*.dll)|  
-|[WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Ein GUI-Tool, mit dem Sie Parameter beliebiger Typen eingeben, die Eingabe an den Dienst senden und die zurückgesendete Antwort des Diensts anzeigen können.|  
-|[Vertrag zuerst-Tool](../../../docs/framework/wcf/contract-first-tool.md)|Eine Visual Studio-Buildaufgabe, die Codeklassen aus XSD-Datenverträgen erstellt.|  
+|[ServiceModel Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)|Generiert Service Model-Code aus Metadatendokumenten und Metadatendokumente aus Service Model-Code.|  
+|[Find Private Key-Tool (FindPrivateKey.exe)](find-private-key-tool-findprivatekey-exe.md)|Ruft den privaten Schlüssel aus einem angegebenen Speicher ab.|  
+|[ServiceModel Registration-Tool (ServiceModelReg.exe)](servicemodelreg-exe.md)|Verwaltet die Registrierung und das Aufheben der Registrierung von ServiceModel auf einem einzelnen Computer.|  
+|[COM+ Service Model Configuration-Tool (ComSvcConfig.exe)](com-service-model-configuration-tool-comsvcconfig-exe.md)|Konfiguriert COM+-Schnittstellen, die als Webdienste verfügbar gemacht werden sollen.|  
+|[Configuration Editor-Tool (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)|Erstellt und ändert Konfigurationseinstellungen für WCF-Dienste.|  
+|[Service Trace Viewer-Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)|Dient zum Einsehen, Gruppieren und Filtern von Ablaufverfolgungsnachrichten, sodass Sie alle Probleme mit WCF-Diensten diagnostizieren, reparieren und prüfen können.|  
+|[WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem Befehlszeilentool.|  
+|[WS-AtomicTransaction-Konfiguration-MMC-Snap-In](ws-atomictransaction-configuration-mmc-snap-in.md)|Konfiguriert grundlegende WS-AtomicTransaction-Unterstützungseinstellungen mit einem MMC-Snap-In.|  
+|[Registrierungstool für Workflow Services (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md)|Registriert einen Windows Workflow-Dienst.|  
+|[WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)|Hostet WCF-Dienste, die in Bibliotheksdateien (*. dll) enthalten sind.|  
+|[WCF-Testclient (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)|Ein GUI-Tool, mit dem Sie Parameter beliebiger Typen eingeben, die Eingabe an den Dienst senden und die zurückgesendete Antwort des Diensts anzeigen können.|  
+|[Vertrag zuerst-Tool](contract-first-tool.md)|Eine Visual Studio-Buildaufgabe, die Codeklassen aus XSD-Datenverträgen erstellt.|  
   
  Alle vorangegangenen Tools außer ServiceModelReg.exe, WsatConfig.exe und ComSvcConfig.exe werden mit Windows SDK geliefert. Dies befindet sich unter folgendem Pfad: C:\Programme\Microsoft SDKs\Windows\v6.0\Bin.  Die 3 genannten Tools befinden sich unter C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.

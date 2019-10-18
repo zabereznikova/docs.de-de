@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: a9bddcbd907e37d9bdf757b1999946c99e10440c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855627"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395890"
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
 Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsindikatoren, die Ihnen helfen, die Leistung Ihrer Anwendung zu messen.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsi
   
  Das `performanceCounters`-Attribut kann dafür festgelegt werden, dass ein bestimmter Typ von Leistungsindikatoren aktiviert wird. Folgende Werte sind gültig:  
   
-- Allen Alle Kategorieindikatoren (Service Model Service, Service Model Endpoint und Service Model Operation) werden aktiviert.  
+- All: Alle Kategorieindikatoren (ServiceModelService, ServiceModelEndpoint und ServiceModelOperation) werden aktiviert.  
   
-- ServiceOnly: Es sind nur Leistungsindikatoren der Kategorie Service Model Service aktiviert. Dies ist der Standardwert.  
+- ServiceOnly: Nur ServiceModelService-Kategorieindikatoren werden aktiviert. Dies ist der Standardwert.  
   
-- Abgeschrieben Service Model *-Leistungsindikatoren sind deaktiviert.  
+- Off: ServiceModel*-Leistungsindikatoren werden deaktiviert.  
   
  Wenn Sie Leistungsindikatoren für alle WCF-Anwendungen aktivieren möchten, können Sie die Konfigurationseinstellungen in der Datei Machine. config platzieren.  Weitere Informationen zum Konfigurieren von ausreichendem Arbeitsspeicher für Leistungsindikatoren auf dem Computer finden Sie unten im Abschnitt erhöhen der Arbeitsspeicher **Größe für Leistungsindikatoren** .  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Anzeigen von Leistungsdaten  
- Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie zu **Start**wechseln und dann auf **Ausführen** klicken und im Dialogfeld eingeben `perfmon.exe` .  
+ Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie auf "ausführen" klicken und **dann auf "** **Ausführen** " klicken und im Dialogfeld `perfmon.exe` eingeben.  
   
 > [!NOTE]
 > Leistungsindikatorinstanzen werden möglicherweise freigegeben, bevor die letzten Nachrichten vom Endpunktverteiler verarbeitet wurden. Dies kann dazu führen, dass Leistungsdaten für einige Nachrichten nicht erfasst werden.  
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren  
  WCF verwendet separaten freigegebenen Speicher für die Leistungs Indikatorenkategorien.  
   
- Standardmäßig wird separater freigegebener Arbeitsspeicher auf ein Viertel der Größe des globalen Leistungsindikator-Arbeitsspeichers festgelegt. Der standardmäßige globale Leistungsindikator-Arbeitsspeicher besitzt eine Größe von 524.288 Byte. Daher haben die drei WCF-Leistungs Indikatorenkategorien eine Standardgröße von jeweils ungefähr 128 KB. Abhängig von den Lauf Zeit Merkmalen der WCF-Anwendungen auf einem Computer ist der Leistungsdaten Speicher möglicherweise erschöpft. In diesem Fall schreibt WCF einen Fehler in das Anwendungs Ereignisprotokoll. Der Inhalt des Fehlers gibt an, dass ein Leistungswert nicht geladen wurde, und der Eintrag enthält die Ausnahme "System. InvalidOperationException: Nicht genügend Arbeitsspeicher für die Ansicht der benutzerdefinierten Leistungsindikatoren. " Wird die Ablaufverfolgung auf Fehlerebene aktiviert, wird dieser Fehler ebenfalls nachverfolgt. Wenn der Leistungsindikator Speicher erschöpft ist, kann die Ausführung Ihrer WCF-Anwendungen mit aktivierten Leistungsindikatoren zu Leistungseinbußen führen. Der zuständige Administrator sollte den Computer für das Zuordnen von ausreichendem Arbeitsspeicher konfigurieren, damit die maximale Anzahl der Leistungsindikatoren, die jederzeit vorhanden sein können, unterstützt wird.  
+ Standardmäßig wird separater freigegebener Arbeitsspeicher auf ein Viertel der Größe des globalen Leistungsindikator-Arbeitsspeichers festgelegt. Der standardmäßige globale Leistungsindikator-Arbeitsspeicher besitzt eine Größe von 524.288 Byte. Daher haben die drei WCF-Leistungs Indikatorenkategorien eine Standardgröße von jeweils ungefähr 128 KB. Abhängig von den Lauf Zeit Merkmalen der WCF-Anwendungen auf einem Computer ist der Leistungsdaten Speicher möglicherweise erschöpft. In diesem Fall schreibt WCF einen Fehler in das Anwendungs Ereignisprotokoll. Der Inhaltsfehler gibt an, dass ein Leistungsindikator nicht geladen wurde, und der Eintrag beinhaltet die Ausnahme "System.InvalidOperationException: Nicht genügend Arbeitsspeicher zum Anzeigen der benutzerdefinierten Indikatordatei." Wird die Ablaufverfolgung auf Fehlerebene aktiviert, wird dieser Fehler ebenfalls nachverfolgt. Wenn der Leistungsindikator Speicher erschöpft ist, kann die Ausführung Ihrer WCF-Anwendungen mit aktivierten Leistungsindikatoren zu Leistungseinbußen führen. Der zuständige Administrator sollte den Computer für das Zuordnen von ausreichendem Arbeitsspeicher konfigurieren, damit die maximale Anzahl der Leistungsindikatoren, die jederzeit vorhanden sein können, unterstützt wird.  
   
  Sie können die Menge des Leistungs indikatorenspeichers für WCF-Kategorien in der Registrierung ändern. Dazu muss den drei folgenden Speicherorten ein neuer DWORD-Wert mit der Bezeichnung `FileMappingSize` hinzugefügt und auf den gewünschten Wert in Byte festgelegt werden. Starten Sie den Computer neu, damit diese Änderungen wirksam werden.  
   
@@ -72,17 +72,17 @@ config.Save();
  Wenn eine große Anzahl von Objekten (z. B. ServiceHost) verworfen wird, die automatische Speicherbereinigung jedoch noch aussteht, registriert der `PrivateBytes`-Leistungsindikator eine ungewöhnlich hohe Anzahl. Zum Beheben dieses Problems können Sie entweder eigene anwendungsspezifische Indikatoren hinzufügen oder mithilfe des `performanceCounters`-Attributs nur Indikatoren auf Dienstebene aktivieren.  
   
 ## <a name="types-of-performance-counters"></a>Leistungsindikatortypen  
- Leistungsindikatoren gelten für drei verschiedene Ebenen: Dienst, Endpunkt und Vorgang.  
+ Leistungsindikatoren werden für drei verschiedene Ebenen festgelegt: Dienst, Endpunkt und Vorgang.  
   
  Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Ein auf ein Objekt angewendeter  
   
-- Der Instanzname des Dienst Indikators kann über die "CounterInstanceName"-Eigenschaft der WMI- [Dienst](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) Instanz abgerufen werden.  
+- Der Instanzname des Dienst Indikators kann über die "CounterInstanceName"-Eigenschaft der WMI- [Dienst](../wmi/service.md) Instanz abgerufen werden.  
   
-- Der Instanzname des Endpunkt Indikators kann über die "CounterInstanceName"-Eigenschaft der WMI- [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) Instanz abgerufen werden.  
+- Der Instanzname des Endpunkt Indikators kann über die "CounterInstanceName"-Eigenschaft der WMI- [Endpunkt](../wmi/endpoint.md) Instanz abgerufen werden.  
   
-- Der Instanzname des Vorgangs Indikators kann über die "GetOperationCounterInstanceName"-Methode der WMI- [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) Instanz abgerufen werden.  
+- Der Instanzname des Vorgangs Indikators kann über die "GetOperationCounterInstanceName"-Methode der WMI- [Endpunkt](../wmi/endpoint.md) Instanz abgerufen werden.  
   
- Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Dienstleistungsindikatoren  
  Mit Dienst-Leistungsindikatoren wird das Dienstverhalten insgesamt gemessen und die Leistung des gesamten Diensts geprüft. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden nach dem folgenden Schema benannt:  
@@ -118,20 +118,17 @@ config.Save();
 > Sind in einem Vertrag Vorgangsnamen doppelt vorhanden, wird nur eine Indikatorinstanz für beide Vorgänge ausgegeben.  
   
 ## <a name="programming-the-wcf-performance-counters"></a>Programmieren der WCF-Leistungsindikatoren  
- Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Programm gesteuert auf die WCF-Leistungsindikatoren zugreifen können. Diese Dateien werden wie folgt aufgelistet.  
+
+Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Programm gesteuert auf die WCF-Leistungsindikatoren zugreifen können. Diese Dateien werden wie folgt aufgelistet:
   
-- _ServiceModelEndpointPerfCounters.vrg  
+- *@no__t -1Service Model endpointperfcounters. VRG*
+- *@no__t -1Service Model operationperfcounters. VRG*
+- *@no__t -1Service Model Service PerfCounters. VRG*  
+- *@no__t -1smsvchostperfcounters. VRG*
+- *@no__t -1transaktionbridgeperfcounters. VRG*
   
-- _ServiceModelOperationPerfCounters.vrg  
-  
-- _ServiceModelServicePerfCounters.vrg  
-  
-- _SMSvcHostPerfCounters.vrg  
-  
-- _TransactionBridgePerfCounters.vrg  
-  
- Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](https://go.microsoft.com/fwlink/?LinkId=95179).  
+Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Verwaltung und Diagnose](../index.md)

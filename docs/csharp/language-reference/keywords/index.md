@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f325d8ba09e3c3d1c1b3436f758e8fc1696c7f49
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 2bdaa2f4cdb19d01948effd599177f68859cb82c
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167853"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291060"
 ---
 # <a name="c-keywords"></a>C#-Schlüsselwörter
 
@@ -59,8 +59,9 @@ Bei Schlüsselwörtern handelt es sich um vordefinierte reservierte Bezeichner, 
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[partial (Typ)](partial-type.md)|[partial (Methode)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[value](value.md)|[var](var.md)|[when (Filterbedingung)](when.md)|
-|[where (Einschränkung eines generischen Typs)](where-generic-type-constraint.md)|[where (Abfrageklausel)](where-clause.md)|[yield](yield.md)|
+|[unmanaged (Einschränkung eines generischen Typs)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
+|[when (Filterbedingung)](when.md)|[where (Einschränkung eines generischen Typs)](where-generic-type-constraint.md)|[where (Abfrageklausel)](where-clause.md)|
+|[yield](yield.md)| | |
   
 ## <a name="see-also"></a>Siehe auch
 

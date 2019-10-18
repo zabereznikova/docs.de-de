@@ -1,5 +1,0 @@
-- name: Zeichenfolgen
-  href: index.md
-  items:
-    - name: 'Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt'
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md

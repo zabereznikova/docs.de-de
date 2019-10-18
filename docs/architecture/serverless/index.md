@@ -4,12 +4,12 @@ description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 148a79e39c047897719e4f97efd84676b1b92636
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70294928"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522843"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
 
@@ -63,10 +63,10 @@ Teilnehmer und Prüfer:
 
 Durch die [serverlose Architektur](https://azure.microsoft.com/solutions/serverless/) entwickeln sich Cloudplattformen in Richtung von cloudnativem Code weiter. Dadurch kommen Entwickler der Geschäftslogik näher, während sie diese von Infrastrukturproblemen isolieren. Dieses Muster impliziert nicht, dass kein Server mehr vorhanden ist, sondern dass weniger Server vorhanden sind. Serverloser Code ist ereignisgesteuert. Code kann beispielsweise von einer HTTP-Webanforderung für einen Timer oder vom Ergebnis eines Dateiuploads ausgelöst werden. Mithilfe der serverlosen Architektur kann eine sofortige Skalierung durchgeführt werden, um elastischen Anforderungen nachzukommen. Außerdem bietet sie Microbilling, sodass Sie nur das bezahlen, was Sie auch nutzen. Die serverlose Architektur erfordert eine neue Denkweise und Herangehensweise bei der Anwendungserstellung. Sie ist aber keineswegs die Universallösung für jedes Problem. Als Entwickler müssen Sie Folgendes entscheiden:
 
-* Was sind die Vor- und Nachteile der serverlosen Architektur?
-* Warum sollten Sie die serverlose Architektur für Ihre eigenen Anwendungen in Betracht ziehen?
-* Wie können Sie Ihren serverlosen Code erstellen, testen, bereitstellen und verwalten?
-* Wo ergibt es Sinn, Code in vorhandenen Anwendungen zu einer serverlosen Architektur zu migrieren, und wie können Sie diesen Umstieg am besten durchführen?
+- Was sind die Vor- und Nachteile der serverlosen Architektur?
+- Warum sollten Sie die serverlose Architektur für Ihre eigenen Anwendungen in Betracht ziehen?
+- Wie können Sie Ihren serverlosen Code erstellen, testen, bereitstellen und verwalten?
+- Wo ergibt es Sinn, Code in vorhandenen Anwendungen zu einer serverlosen Architektur zu migrieren, und wie können Sie diesen Umstieg am besten durchführen?
 
 ## <a name="about-this-guide"></a>Über diesen Leitfaden
 
@@ -82,31 +82,31 @@ Die serverlose Architektur ist der krönende Abschluss der Iterationen von Cloud
 
 Vor der Cloud gab es eine deutliche Grenze zwischen der Entwicklung und dem Betrieb. Die Bereitstellung und Anwendungen erforderten die Beantwortung unzähliger Fragen, wie z.B.:
 
-* Welche Hardware soll installiert werden?
-* Wie wird der physische Zugriff auf den Computer geschützt?
-* Erfordert das Rechenzentrum eine unterbrechungsfreie Stromversorgung?
-* Wohin werden Sicherungskopien des Arbeitsspeichers gesendet?
-* Sollte redundante Stromversorgung vorhanden sein?
+- Welche Hardware soll installiert werden?
+- Wie wird der physische Zugriff auf den Computer geschützt?
+- Erfordert das Rechenzentrum eine unterbrechungsfreie Stromversorgung?
+- Wohin werden Sicherungskopien des Arbeitsspeichers gesendet?
+- Sollte redundante Stromversorgung vorhanden sein?
 
 Das ist nur eine Auswahl der Fragen, die im Vorhinein geklärt werden mussten. Der Aufwand war einfach enorm. IT-Abteilungen mussten oft sehr viel Verschwendung in Kauf nehmen. Diese entstand z.B. durch die Zuweisung von unverhältnismäßig vielen Servern als Sicherungsserver für die Notfallwiederherstellung und als Standbyserver, um die horizontale Skalierung zu ermöglichen. Die Einführung der Virtualisierungstechnologie (z.B. [Hyper-V](/virtualization/hyper-v-on-windows/about/)) mit virtuellen Computern (VMs) hat dann jedoch den Weg für Infrastructure-as-a-Service (IaaS) geebnet. Durch die virtuelle Infrastruktur konnte die Betriebsabteilung Standardserver als Backbone einrichten, wodurch eine flexible Umgebung ermöglicht wurde, die „bedarfsgesteuert“ eindeutige Server bereitstellen konnte. Darüber hinaus war die Virtualisierung die Grundlage für die Verwendung der Cloud und ermöglichte so die Bereitstellung virtueller Computer „as-a-Service“. Unternehmen mussten sich von da an keine Sorgen mehr um die redundante Stromversorgung oder um physische Computer machen. Stattdessen konnten sie sich auf die virtuelle Umgebung konzentrieren.
 
 Für IaaS ist noch immer ein hoher Aufwand erforderlich, da der Betrieb noch immer für unterschiedliche Aufgaben verantwortlich ist. Diese Aufgaben sind:
 
-* Das Patchen und die Sicherungen von Servern
-* Das Installieren von Paketen
-* Das Betriebssystem auf dem neuesten Stand halten
-* Die Überwachung der Anwendung
+- Das Patchen und die Sicherungen von Servern
+- Das Installieren von Paketen
+- Das Betriebssystem auf dem neuesten Stand halten
+- Die Überwachung der Anwendung
 
 Im nächsten Schritt wurde der Aufwand durch Bereitstellung von Platform-as-a-Service (PaaS) reduziert. Mit PaaS kann der Cloudanbieter Betriebssysteme, Sicherheitspatches und sogar die erforderlichen Pakete bereistellen, um eine bestimmte Plattform zu unterstützen. Statt der Erstellung einer VM und dem anschließenden Konfigurieren von .NET Framework und der Verwendung der Internetinformationsdienste (IIS) wählen Entwickler ganz einfach ein „Plattformziel“ aus, z.B. „Webanwendung“ oder „API-Endpunkt“, und stellen den Code direkt bereit. Die Fragen zur Infrastruktur sind nun weniger geworden:
 
-* Wie groß müssen die Dienste sein?
-* Wie können die Dienste horizontal hochskaliert werden (bzw. wie können mehr Server oder Knoten hinzugefügt werden)?
-* Wie werden die Dienste zentral hochskaliert (wie kann die Kapazität von Hostingservern oder -knoten erhöht werden)?
+- Wie groß müssen die Dienste sein?
+- Wie können die Dienste horizontal hochskaliert werden (bzw. wie können mehr Server oder Knoten hinzugefügt werden)?
+- Wie werden die Dienste zentral hochskaliert (wie kann die Kapazität von Hostingservern oder -knoten erhöht werden)?
 
 Der serverlose Code abstrahiert die Server weiter durch Konzentration auf den ereignisgesteuerten Code. Statt auf Plattformen können sich Entwickler nun auf einen Microservice konzentrieren, der nur einen Vorgang ausführt. Die beiden wichtigsten Fragen zum Erstellen des serverlosen Codes sind:
 
-* Was löst den Code aus?
-* Was macht dieser Code?
+- Was löst den Code aus?
+- Was macht dieser Code?
 
 Mit serverlosem Code wird die Infrastruktur abstrahiert. In einigen Fällen muss sich der Entwickler überhaupt keine Sorgen mehr über den Host machen. Der Entwickler konzentriert sich auf einen HTTP-Trigger, egal ob für die Verwaltung einer Webanforderungen eine IIS-, Kestrel- oder Apache-Instanz oder ein ganz anderer Webserver ausgeführt wird. Der Trigger stellt die standardmäßige plattformübergreifende Nutzlast für die Anforderung bereit. Die Nutzlast vereinfacht nicht nur den Bereitstellungsvorgang, sondern vereinfacht auch in einigen Fällen das Testen, wodurch Code einfach plattformübergreifend portierbar ist.
 
@@ -118,16 +118,16 @@ In diesem Leitfaden wird auf die Architekturansätze und Entwurfsmuster eingegan
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/)
-* [Bewährte Methode für Cloudanwendungen](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/)
+- [Bewährte Methode für Cloudanwendungen](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Zielgruppe dieses Leitfadens
 
 Dieser Leitfaden wurde für Entwickler und Lösungsarchitekten verfasst, die Unternehmensanwendungen mit .NET erstellen möchten, welche serverlose Komponentenlokal oder in der Cloud verwenden können. Er ist hilfreich für Entwickler, Architekten und technische Entscheidungsträger, die an Folgendem interessiert sind:
 
-* Vor- und Nachteile der serverlosen Entwicklung
-* Entwerfen einer serverlosen Architektur
-* Beispielimplementierungen von serverlosen Apps
+- Vor- und Nachteile der serverlosen Entwicklung
+- Entwerfen einer serverlosen Architektur
+- Beispielimplementierungen von serverlosen Apps
 
 ## <a name="how-to-use-the-guide"></a>So verwenden Sie diesen Leitfaden
 
