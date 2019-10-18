@@ -2,21 +2,21 @@
 title: Tutorials für .NET für Apache Spark
 description: Erkunden Sie die Tutorials für .NET für Apache Spark, um zu erfahren, wie Sie Apache Spark in Ihre .NET-Anwendungen integrieren können.
 ms.date: 05/17/2019
-ms.openlocfilehash: 856de5086f63e163dff6a510a4e804a5176c91b0
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "69620062"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583497"
 ---
 # <a name="net-for-apache-spark-tutorials"></a>Tutorials für .NET für Apache Spark
 
 Folgende Tutorials unterstützen Sie dabei, [.NET für Apache Spark](../index.yml) für das Erstellen von benutzerdefinierten Big Data-Lösungen mit Apache Spark und deren Integration in Ihre .NET-Anwendungen zu verwenden:
 
-- [Einstieg:](get-started.md) veranschaulicht die Erstellung und Ausführung einer einfachen .NET für Apache Spark-Anwendung
-- [Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight:](hdinsight-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Azure HDInsight
-- [Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark:](amazon-emr-spark-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Amazon EMR Spark
-- [Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks:](databricks-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Databricks
+* [Einstieg:](get-started.md) veranschaulicht die Erstellung und Ausführung einer einfachen .NET für Apache Spark-Anwendung
+* [Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight:](hdinsight-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Azure HDInsight
+* [Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark:](amazon-emr-spark-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Amazon EMR Spark
+* [Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks:](databricks-deployment.md) veranschaulicht die Bereitstellung Ihrer .NET für Apache Spark-Anwendung in Databricks
 
 ## <a name="next-steps"></a>Nächste Schritte
 
