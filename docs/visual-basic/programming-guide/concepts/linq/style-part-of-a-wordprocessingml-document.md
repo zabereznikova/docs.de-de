@@ -1,13 +1,13 @@
 ---
-title: Absatzformatteil ein WordprocessingML-Document2
+title: Formatvorlagen Teil eines WordprocessingML-document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907854"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582886"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Absatzformatteil eines WordprocessingML-Dokuments
 In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XML-WordprocessingML-Dokuments gezeigt.  
@@ -17,7 +17,7 @@ In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XM
   
  Das Standardabsatzformat verfügt über ein Element mit dem folgenden Starttag:  
   
-```  
+```xml  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
@@ -142,4 +142,4 @@ In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XM
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Details eines Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Details zu Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

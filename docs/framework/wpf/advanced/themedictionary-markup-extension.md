@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 7fa729d600f25b73028bae0dd6d9248b5839dd4c
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133861"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582321"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary-Markuperweiterung
 Bietet Autoren von benutzerdefinierten Steuerelementen oder Anwendungen, die Steuerelemente von Drittanbietern integrieren, eine Möglichkeit, designspezifische Ressourcenverzeichnisse für das Formatieren der Steuerelemente zu verwenden.  
@@ -38,18 +38,18 @@ Bietet Autoren von benutzerdefinierten Steuerelementen oder Anwendungen, die Ste
   
 |||  
 |-|-|  
-|`assemblyUri`|Die [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] der Assembly, die Designinformationen enthält. In der Regel ist dies eine Paket-URI, die auf eine Assembly in dem größeren Paket verweist. Assemblyressourcen und Paket-URIs vereinfachen die Bereitstellung. Weitere Informationen finden Sie unter [Paket-URIs in WPF](../app-development/pack-uris-in-wpf.md).|  
+|`assemblyUri`|Der URI (Uniform Resource Identifier) der Assembly, die Design Informationen enthält. In der Regel ist dies eine Paket-URI, die auf eine Assembly in dem größeren Paket verweist. Assemblyressourcen und Paket-URIs vereinfachen die Bereitstellung. Weitere Informationen finden Sie unter [Paket-URIs in WPF](../app-development/pack-uris-in-wpf.md).|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Erweiterung soll nur einen bestimmten Eigenschafts Wert ausfüllen: einen Wert für <xref:System.Windows.ResourceDictionary.Source%2A?displayProperty=nameWithType>.  
   
  Mit dieser Erweiterung können Sie eine einzelne nur-Ressource-Assembly angeben, die einige Formate enthält, die nur verwendet werden, wenn das Windows Aero-Design auf das System des Benutzers angewendet wird, andere Stile nur, wenn das Luna-Design aktiv ist usw. Durch die Verwendung dieser Erweiterung kann der Inhalt eines steuerelementspezifischen Ressourcenverzeichnisses automatisch ungültig gemacht und erneut geladen werden, sodass er bei Bedarf für ein anderes Design angegeben werden kann.  
   
- Die `assemblyUri` Zeichenfolge<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> (Eigenschafts Wert) bildet die Grundlage einer Benennungs Konvention, die identifiziert, welches Wörterbuch für ein bestimmtes Design gilt. Die <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Logik für `ThemeDictionary` schließt die Konvention ab, indem [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] eine erstellt wird, die auf eine bestimmte Design Dictionary-Variante zeigt, wie Sie in einer vorkompilierten Ressourcenassembly enthalten ist. Diese Konvention und die Designinteraktionen mit allgemeinen Formatierungen von Steuerelementen und Formatierungen auf Seiten-/Anwendungsebene als Konzept werden hier nicht im Detail behandelt. Das grundlegende Szenario für `ThemeDictionary` die Verwendung von ist <xref:System.Windows.ResourceDictionary.Source%2A> das Angeben der `ResourceDictionary` -Eigenschaft einer, die auf der Anwendungsebene deklariert ist. Wenn Sie einen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die Assembly über eine `ThemeDictionary`-Erweiterung und nicht direkt als [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bereitstellen, bietet die Erweiterungslogik eine Ungültigkeitslogik, die bei Änderungen des Systemdesigns gültig wird.  
+ Die `assemblyUri` Zeichenfolge (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>-Eigenschafts Wert) bildet die Grundlage einer Benennungs Konvention, die identifiziert, welches Wörterbuch für ein bestimmtes Design gilt. Die <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> Logik für `ThemeDictionary` schließt die Konvention ab, indem ein URI (Uniform Resource Identifier) erstellt wird, der auf eine bestimmte Design Dictionary-Variante verweist, die in einer vorkompilierten Ressourcenassembly enthalten ist. Diese Konvention und die Designinteraktionen mit allgemeinen Formatierungen von Steuerelementen und Formatierungen auf Seiten-/Anwendungsebene als Konzept werden hier nicht im Detail behandelt. Das grundlegende Szenario für die Verwendung von `ThemeDictionary` besteht darin, die <xref:System.Windows.ResourceDictionary.Source%2A>-Eigenschaft einer `ResourceDictionary` anzugeben, die auf der Anwendungsebene deklariert ist. Wenn Sie einen URI für die Assembly über eine `ThemeDictionary` Erweiterung anstelle eines direkten URIs bereitstellen, stellt die Erweiterungs Logik eine invalidierungslogik bereit, die immer dann angewendet wird, wenn das Systemdesign geändert wird.  
   
  Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax. Das Zeichenfolgentoken, das auf die `ThemeDictionary`-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>-Wert der zugrunde liegenden <xref:System.Windows.ThemeDictionaryExtension>-Erweiterungsklasse zugeordnet.  
   
- `ThemeDictionary` kann auch in der Objektelementsyntax verwendet werden. In diesem Fall ist die Angabe des Werts <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> der-Eigenschaft erforderlich.  
+ `ThemeDictionary` kann auch in der Objektelementsyntax verwendet werden. In diesem Fall muss der Wert der <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>-Eigenschaft angegeben werden.  
   
  `ThemeDictionary` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.Markup.StaticExtension.Member%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
@@ -59,7 +59,7 @@ Bietet Autoren von benutzerdefinierten Steuerelementen oder Anwendungen, die Ste
   
  Die ausführliche Verwendung ist häufig hilfreich, wenn für eine Erweiterung mehr als eine Eigenschaft festgelegt werden kann oder wenn bestimmte Eigenschaften optional sind. Da für `ThemeDictionary` nur eine (erforderliche) Eigenschaft festgelegt werden kann, ist diese ausführliche Verwendung unüblich.  
   
- In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor Implementierung wird die Handhabung dieser Markup Erweiterung durch die <xref:System.Windows.ThemeDictionaryExtension> -Klasse definiert.  
+ In der Implementierung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessors wird die Behandlung dieser Markup Erweiterung durch die <xref:System.Windows.ThemeDictionaryExtension>-Klasse definiert.  
   
  `ThemeDictionary` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die Zeichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in der Attributsyntax. Dies ist die Konvention, anhand der ein XAML-Prozessor erkennt, dass das Attribut von einer Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   

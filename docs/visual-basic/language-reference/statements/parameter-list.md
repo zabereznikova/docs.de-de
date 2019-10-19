@@ -10,82 +10,86 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: e58d80896d11b4154c7197d4cdaf73a536fdd5e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dded7fd68256b9b9de8ebe4b48073eb40696c12
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583547"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582178"
 ---
 # <a name="parameter-list-visual-basic"></a>Parameterliste (Visual Basic)
-Gibt die Parameter, die eine Prozedur erwartet wird, wenn sie aufgerufen wird. Mehrere Parameter werden durch Kommas getrennt. Folgendes ist die Syntax für einen Parameter.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
-parametername[( )] [ As parametertype ] [ = defaultvalue ]  
-```  
-  
-## <a name="parts"></a>Teile  
- `attributelist`  
- Dies ist optional. Liste der Attribute, die an diesen Parameter angewendet werden. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").  
-  
- `Optional`  
- Dies ist optional. Gibt an, dass dieser Parameter nicht erforderlich ist, wenn die Prozedur aufgerufen wird.  
-  
- `ByVal`  
- Dies ist optional. Gibt an, dass die Prozedur kann nicht ersetzt oder neuzuweisung der zugrunde liegenden das entsprechende Argument im aufrufenden Code Variable-Element.  
-  
- `ByRef`  
- Dies ist optional. Gibt an, dass die Prozedur den zugrunde liegenden Variable-Element im aufrufenden Code die gleiche Weise ändern kann, die können der aufrufende Code selbst.  
-  
- `ParamArray`  
- Dies ist optional. Gibt an, dass der letzte Parameter in der Parameterliste ein optionales Array von Elementen des Typs angegebenen Daten. Dadurch wird den aufrufenden Code eine beliebige Anzahl von Argumenten an die Prozedur übergeben.  
-  
- `parametername`  
- Erforderlich. Der Name der lokalen Variablen, die Parameter darstellt.  
-  
- `parametertype`  
- Erforderlich, wenn `Option Strict` ist `On`. Der Datentyp der lokalen Variablen, die Parameter darstellt.  
-  
- `defaultvalue`  
- Erforderlich für `Optional` Parameter. Ein konstanter oder Konstante Ausdruck, der den Datentyp des Parameters ergibt. Wenn der Typ ist `Object`, oder eine Klasse, Schnittstelle, Array oder eine Struktur, der Standardwert kann nur `Nothing`.  
-  
-## <a name="remarks"></a>Hinweise  
- Parameter sind in Klammern gesetzt und durch Kommas getrennt. Ein Parameter kann mit allen Datentypen deklariert werden. Wenn Sie keinen angeben `parametertype`, wird standardmäßig `Object`.  
-  
- Wenn der aufrufende Code die Prozedur aufruft, übergibt ein *Argument* an jeden erforderlichen Parameter. Weitere Informationen finden Sie unter [Unterschiede zwischen Parametern und Argumenten](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
-  
- Das Argument, das der aufrufende Code auf jeden Parameter übergibt, ist ein Zeiger auf eine zugrunde liegende Element im aufrufenden Code. Wenn dieses Element ist *nicht variables* (eine Konstante, Literal, Enumeration oder Ausdruck), es ist nicht möglich, für jeden Code, um ihn zu ändern. Ist dies ein *Variable* Element (eine deklarierte Variable, Feld, Eigenschaft, Arrayelement oder Structure-Element), der aufrufende Code ändern kann. Weitere Informationen finden Sie unter [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).  
-  
- Wenn ein Variable-Element übergeben wird `ByRef`, das Verfahren können sie auch ändern. Weitere Informationen finden Sie unter [Unterschiede zwischen Argumentübergabe nach Wert "und" By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).  
-  
-## <a name="rules"></a>Regeln  
-  
-- **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie ihn in Klammern setzen. Wenn keine Parameter vorhanden sind, können Sie weiterhin umschließendes Klammerpaar eine leere Liste. Dies verbessert die Lesbarkeit des Codes befassen, dass das Element eine Prozedur ist.  
-  
-- **Optionale Parameter.** Bei Verwendung der `Optional` Modifizierer für Parameter, alle nachfolgenden Parameter in der Liste muss ebenfalls optional und werden deklariert, indem die `Optional` Modifizierer.  
-  
-     Jeder Deklaration optionale Parameter muss angeben, die `defaultvalue` Klausel.  
-  
-     Weitere Informationen finden Sie unter [optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
-  
-- **Parameterarrays.** Sie müssen angeben, `ByVal` für eine `ParamArray` Parameter.  
-  
-     Sie können nicht beide verwenden `Optional` und `ParamArray` in derselben Parameterliste.  
-  
-     Weitere Informationen finden Sie unter [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
-  
-- **Übergabemechanismus.** Ist der Standardmechanismus für jedes Argument `ByVal`, was bedeutet, dass die Prozedur kann nicht geändert werden die zugrunde liegende Variable-Element. Allerdings ist das Element einen Verweistyp handelt, kann die Prozedur den Inhalt oder die Member des zugrunde liegenden Objekts ändern, obwohl sie nicht ersetzen oder das Objekt selbst zuweisen.  
-  
-- **Parameternamen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie die `parametername` sofort mit Klammern. Weitere Informationen zu Parameternamen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine `Function` Prozedur, die zwei Parameter definiert.  
-  
- [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
-  
+
+Gibt die Parameter an, die eine Prozedur beim Aufrufen erwartet. Mehrere Parameter werden durch Kommas getrennt. Im folgenden finden Sie die Syntax für einen Parameter.
+
+## <a name="syntax"></a>Syntax
+
+```vb
+[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]
+parametername[( )] [ As parametertype ] [ = defaultvalue ]
+```
+
+## <a name="parts"></a>Teile
+
+`attributelist`  
+Dies ist optional. Liste der Attribute, die auf diesen Parameter angewendet werden. Sie müssen die [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`" und "`>`") einschließen.
+
+`Optional`  
+Dies ist optional. Gibt an, dass dieser Parameter nicht erforderlich ist, wenn die Prozedur aufgerufen wird.
+
+`ByVal`  
+Dies ist optional. Gibt an, dass die Prozedur das Variablen Element, das dem entsprechenden Argument im aufrufenden Code zugrunde liegt, nicht ersetzen oder neu zuweisen kann.
+
+`ByRef`  
+Dies ist optional. Gibt an, dass die Prozedur das zugrunde liegende Variablen Element im aufrufenden Code auf dieselbe Weise wie der Aufruf Code selbst ändern kann.
+
+`ParamArray`  
+Dies ist optional. Gibt an, dass der letzte Parameter in der Parameterliste ein optionales Array von Elementen des angegebenen Datentyps ist. Dadurch kann der aufrufende Code eine beliebige Anzahl von Argumenten an die Prozedur übergeben.
+
+`parametername`  
+Erforderlich. Der Name der lokalen Variablen, die den Parameter darstellt.
+
+`parametertype`  
+Erforderlich, wenn `Option Strict` `On` ist. Datentyp der lokalen Variablen, die den Parameter darstellt.
+
+`defaultvalue`  
+Erforderlich für `Optional` Parameter. Jeder Konstante oder konstanter Ausdruck, der den Datentyp des Parameters ergibt. Wenn der Typ `Object` oder eine Klasse, eine Schnittstelle, ein Array oder eine Struktur ist, kann der Standardwert nur `Nothing` werden.
+
+## <a name="remarks"></a>Hinweise
+
+Parameter werden in Klammern eingeschlossen und durch Kommas getrennt. Ein Parameter kann mit einem beliebigen Datentyp deklariert werden. Wenn Sie `parametertype` nicht angeben, wird standardmäßig `Object` verwendet.
+
+Wenn der aufrufende Code die Prozedur aufruft, übergibt er ein *Argument* an jeden erforderlichen Parameter. Weitere Informationen finden Sie [unter Unterschiede zwischen Parametern und Argumenten](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+
+Das Argument, das der aufrufende Code an jeden Parameter übergibt, ist ein Zeiger auf ein zugrunde liegendes Element im aufrufenden Code. Wenn dieses Element *nicht variabel* ist (eine Konstante, ein Literalwert, eine Enumeration oder ein Ausdruck), ist es für Code nicht möglich, ihn zu ändern. Wenn es sich um ein *Variablen* Element (eine deklarierte Variable, ein Feld, eine Eigenschaft, ein Array Element oder ein Strukturelement) handelt, kann der Aufruf Code diese ändern. Weitere Informationen finden Sie [unter Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+
+Wenn ein Variablen Element `ByRef` übermittelt wird, kann es auch durch die Prozedur geändert werden. Weitere Informationen finden Sie [unter Unterschiede zwischen dem übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
+
+## <a name="rules"></a>Regeln
+
+- **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie Sie in Klammern einschließen. Wenn keine Parameter vorhanden sind, können Sie weiterhin Klammern verwenden, die eine leere Liste einschließen. Dies verbessert die Lesbarkeit des Codes, indem klargestellt wird, dass das Element eine Prozedur ist.
+
+- **Optionale Parameter.** Wenn Sie den `Optional` Modifizierer für einen Parameter verwenden, müssen alle nachfolgenden Parameter in der Liste ebenfalls optional sein und mit dem `Optional`-Modifizierer deklariert werden.
+
+     Jede optionale Parameter Deklaration muss die `defaultvalue`-Klausel angeben.
+
+     Weitere Informationen finden Sie unter [optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+
+- **Parameter Arrays.** Sie müssen `ByVal` für einen `ParamArray` Parameter angeben.
+
+     Sie können nicht sowohl `Optional` als auch `ParamArray` in derselben Parameterliste verwenden.
+
+     Weitere Informationen finden Sie unter [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+
+- **Übergabe Mechanismus.** Der Standardmechanismus für jedes Argument ist `ByVal`. Dies bedeutet, dass die Prozedur das zugrunde liegende Variablen Element nicht ändern kann. Wenn das Element jedoch ein Verweistyp ist, kann die Prozedur die Inhalte oder Member des zugrunde liegenden Objekts ändern, auch wenn das Objekt nicht ersetzt oder neu zugewiesen werden kann.
+
+- **Parameter Namen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie `parametername` unmittelbar nach Klammern aus. Weitere Informationen zu Parameternamen finden Sie unter [deklarierte Element Namen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine `Function` Prozedur gezeigt, die zwei Parameter definiert.
+
+[!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
@@ -95,4 +99,4 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 - [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

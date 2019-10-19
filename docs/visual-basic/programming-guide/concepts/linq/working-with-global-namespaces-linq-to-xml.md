@@ -2,15 +2,15 @@
 title: Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 93c7c654e43b579456633dea90ba6a362ff095f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710386"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582358"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
-Eines der wichtigsten Features von XML-Literalen in Visual Basic ist die Funktion zum Deklarieren von XML-Namespaces `Imports` mithilfe der-Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
+Eines der wichtigsten Features von XML-Literalen in Visual Basic ist die Funktion zum Deklarieren von XML-Namespaces mithilfe der `Imports`-Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
   
  Diese Möglichkeit erweist sich in zwei Situationen als hilfreich: Zum einen werden in XML-Literalen deklarierte Namespaces nicht in eingebettete Ausdrücke übertragen. Durch das Deklarieren globaler Namespaces verringert sich der Arbeitsaufwand, der erforderlich ist, wenn Sie eingebettete Ausdrücke mit Namespaces verwenden. Zum anderen müssen Sie globale Namespaces deklarieren, um Namespaces mit XML-Eigenschaften zu verwenden.  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  Diesem Beispiel zufolge gibt es keine `Child`-Elemente. Es erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  Diesem Beispiel zufolge gibt es genau ein `Child`-Element. Es erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,7 +193,7 @@ End Module
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   

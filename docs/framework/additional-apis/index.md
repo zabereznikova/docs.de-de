@@ -1,6 +1,6 @@
 ---
 title: Zusätzliche Klassenbibliotheken und APIs
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395660"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579119"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
@@ -57,20 +57,21 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 * [System. Data. SqlTypes. SqlStreamChars. SetLength-Methode](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write-Methode](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .net. Connection-Klasse](connection.md)
-* [System .net. Connection. m @ no__t-1schreitelist-Feld](m_writelist.md)
+* [@No__t_1WriteList Feld "System .net. Connection. m"](m_writelist.md)
 * [System .net. connectiongroup-Klasse](connectiongroup.md)
-* [System .net. connectiongroup. m @ no__t-1connectionlist-Feld](m_connectionlist.md)
+* [@No__t_1ConnectionList Feld "System .net. connectiongroup. m"](m_connectionlist.md)
 * [System .net. coreresponabdata-Klasse](coreresponsedata.md)
-* [System .net. coreresponabdata. m @ no__t-1response Headers-Feld](coreresponsedata_m_responseheaders.md)
-* [System .net. coreresponsedata. m @ no__t-1Status Code-Feld](coreresponsedata_m_statuscode.md)
-* [System .net. HttpWebRequest. \_autoreumleitungen-Feld](_autoredirects.md)
-* [System .net. HttpWebRequest. \_coreresponse-Feld](httpwebrequest__coreresponse.md)
-* [System .net. HttpWebRequest. \_httpresponse-Feld](_httpresponse.md)
-* [System .net. Service Point. m @ no__t-1connectiongrouplist-Feld](m_connectiongrouplist.md)
-* [System .net. ServicePointManager. s @ no__t-1servicepoint\feld](s_servicepointtable.md)
-* [System. Windows. Diagnostics. visualdiagnostics. s @ no__t-1isdebuggercheckdisabledfortesttargets-Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [@No__t_1ResponseHeaders Feld "System .net. coreresponabdata. m"](coreresponsedata_m_responseheaders.md)
+* [@No__t_1StatusCode Feld "System .net. coreresponabdata. m"](coreresponsedata_m_statuscode.md)
+* [System .net. HttpWebRequest. \_AutoRedirects-Feld](_autoredirects.md)
+* [System .net. HttpWebRequest. \_CoreResponse-Feld](httpwebrequest__coreresponse.md)
+* [System .net. HttpWebRequest. \_HttpResponse-Feld](_httpresponse.md)
+* [@No__t_1ConnectionGroupList Feld "System .net. Service Point. m"](m_connectiongrouplist.md)
+* [Feld "System .net. ServicePointManager. s \_ServicePointTable"](s_servicepointtable.md)
+* [System. Windows. Diagnostics. visualdiagnostics. s \_isDebuggerCheckDisabledForTestPurposes Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor-Klasse](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. datamemberlisteditor-Klasse](datamemberlisteditor-class.md)
+* [System. Xml. XmlReader. kreatesqlreader-Methode](system.xml.xmlreader.createsqlreader.md)
 * [ADODB. Verbindungsschnittstelle](adodb.connection.md)
 * [ADODB. Eventreason-Aufzählung](adodb.eventreasonenum.md)
 * [ADODB. EventStatus-Aufzählung](adodb.eventstatusenum.md)

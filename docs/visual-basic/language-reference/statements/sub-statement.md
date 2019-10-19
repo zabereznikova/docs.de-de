@@ -29,20 +29,20 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7dc0ea1f1b30f5ffb0db8917538adf440c5ef891
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751175"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583192"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub-Anweisung (Visual Basic)
 
-Deklariert den Namen, Parameter und Code, definieren eine `Sub` Verfahren.
+Deklariert den Namen, die Parameter und den Code, die eine `Sub` Prozedur definieren.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
 Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -55,11 +55,11 @@ End Sub
 
 - `attributelist`
 
-  Dies ist optional. Finden Sie unter [Liste](attribute-list.md).
+  Dies ist optional. Siehe [Attribut Liste](attribute-list.md).
 
 - `Partial`
 
-  Dies ist optional. Gibt die Definition einer partiellen Methode. Finden Sie unter [partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
+  Dies ist optional. Gibt die Definition einer partiellen Methode an. Siehe [partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md).
 
 - `accessmodifier`
 
@@ -83,7 +83,7 @@ End Sub
 
   Dies ist optional. Einer der folgenden Werte ist möglich:
 
-  - [Overloads](../modifiers/overloads.md)
+  - [Überladungen](../modifiers/overloads.md)
 
   - [Overrides](../modifiers/overrides.md)
 
@@ -99,31 +99,31 @@ End Sub
 
 - `Shared`
 
-  Dies ist optional. Finden Sie unter [freigegebene](../modifiers/shared.md).
+  Dies ist optional. Siehe [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Dies ist optional. Finden Sie unter [Shadows](../modifiers/shadows.md).
+  Dies ist optional. Siehe [Shadows](../modifiers/shadows.md).
 
 - `Async`
 
-  Dies ist optional. Finden Sie unter [Async](../modifiers/async.md).
+  Dies ist optional. Siehe [Async](../modifiers/async.md).
 
 - `name`
 
-  Erforderlich. Der Name der Prozedur. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Um eine Konstruktorprozedur für eine Klasse zu erstellen, legen Sie den Namen des eine `Sub` Vorgehensweise die `New` Schlüsselwort. Weitere Informationen finden Sie unter [Object Lifetime: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+  Erforderlich. Der Name der Prozedur. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Wenn Sie eine konstruktorprozedur für eine Klasse erstellen möchten, legen Sie den Namen einer `Sub` Prozedur auf das `New`-Schlüsselwort fest. Weitere Informationen finden Sie unter [Objekt Lebensdauer: Erstellen und zerstören von Objekten](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 - `typeparamlist`
 
-  Dies ist optional. Liste der Parameter vom Typ für eine generische Prozedur. Finden Sie unter [Liste](type-list.md).
+  Dies ist optional. Liste der Typparameter für eine generische Prozedur. Siehe [Typliste](type-list.md).
 
 - `parameterlist`
 
-  Dies ist optional. Liste der Namen lokaler Variablen, die die Parameter dieser Prozedur darstellt. Finden Sie unter [Parameterliste](parameter-list.md).
+  Dies ist optional. Liste der Namen der lokalen Variablen, die die Parameter dieser Prozedur darstellen. Siehe [Parameter Liste](parameter-list.md).
 
 - `Implements`
 
-  Dies ist optional. Gibt an, dass diese Prozedur, eine oder mehrere implementiert `Sub` Prozeduren, die jeweils in einer Schnittstelle implementiert, die von dieser Prozedur enthaltenen Klasse oder Struktur definiert. Finden Sie unter [Anweisung implementiert](implements-statement.md).
+  Dies ist optional. Gibt an, dass diese Prozedur mindestens eine `Sub` Prozeduren implementiert, die in einer Schnittstelle definiert sind, die von der enthaltenden Klasse oder Struktur dieser Prozedur implementiert wird. Siehe [implementierende Anweisung](implements-statement.md).
 
 - `implementslist`
 
@@ -137,16 +137,16 @@ End Sub
 
   |Segment|Beschreibung|
   |---|---|
-  |`interface`|Erforderlich. Name einer Schnittstelle implementiert, die von dieser Prozedur der enthaltenden Klasse oder Struktur.|
+  |`interface`|Erforderlich. Der Name einer Schnittstelle, die von der enthaltenden Klasse oder Struktur dieser Prozedur implementiert wird.|
   |`definedname`|Erforderlich. Name, wodurch die Prozedur in `interface` definiert ist.|
 
 - `Handles`
 
-  Dies ist optional. Gibt an, dass dieses Verfahren auf eine oder mehrere bestimmte Ereignisse verarbeiten kann. Finden Sie unter [behandelt](handles-clause.md).
+  Dies ist optional. Gibt an, dass diese Prozedur ein oder mehrere bestimmte Ereignisse verarbeiten kann. Siehe [Handles](handles-clause.md).
 
 - `eventlist`
 
-  Erforderlich, wenn `Handles` angegeben wird. Liste der Ereignisse, die diese Prozedur verarbeitet.
+  Erforderlich, wenn `Handles` angegeben wird. Die Liste der Ereignisse, die von dieser Prozedur behandelt werden.
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -156,34 +156,34 @@ End Sub
 
   |Segment|Beschreibung|
   |---|---|
-  |`eventvariable`|Erforderlich. Die Objektvariable deklariert mit dem Datentyp der Klasse oder Struktur, die das Ereignis auslöst.|
-  |`event`|Erforderlich. Der Name des Ereignisses, die diese Prozedur verarbeitet.|
+  |`eventvariable`|Erforderlich. Objekt Variable, die mit dem Datentyp der Klasse oder Struktur deklariert wurde, die das Ereignis auslöst.|
+  |`event`|Erforderlich. Der Name des Ereignisses, das diese Prozedur behandelt.|
 
 - `statements`
 
-  Dies ist optional. Der Block von Anweisungen, die in dieser Prozedur ausgeführt.
+  Dies ist optional. Block von-Anweisungen, die in dieser Prozedur ausgeführt werden sollen.
 
 - `End Sub`
 
-  Beendet die Definition dieses Verfahrens.
+  Beendet die Definition dieser Prozedur.
 
 ## <a name="remarks"></a>Hinweise
 
-Der gesamte ausführbarer Code muss innerhalb einer Prozedur sein. Verwenden einer `Sub` Prozedur, wenn Sie keinen Wert an den aufrufenden Code zurückgeben möchten. Verwenden einer `Function` Prozedur, wenn einen Wert zurückgegeben werden soll.
+Der gesamte ausführbare Code muss sich in einer Prozedur befinden. Verwenden Sie eine `Sub` Prozedur, wenn Sie keinen Wert an den aufrufenden Code zurückgeben möchten. Verwenden Sie eine `Function` Prozedur, wenn Sie einen Wert zurückgeben möchten.
 
-## <a name="defining-a-sub-procedure"></a>Definieren eine Sub-Prozedur
+## <a name="defining-a-sub-procedure"></a>Definieren einer unter Prozedur
 
-Sie können definieren, eine `Sub` Prozedur nur auf Modulebene. Der Deklarationskontext für eine Sub-Prozedur, daher muss eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle und eine Quelldatei, einem Namespace, eine Prozedur oder einen Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).
+Sie können eine `Sub` Prozedur nur auf Modulebene definieren. Der Deklarations Kontext für eine unter Prozedur muss daher eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle sein, und es darf sich nicht um eine Quelldatei, einen Namespace, eine Prozedur oder einen Block handeln. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).
 
-`Sub` Prozeduren standardmäßig öffentlichen Zugriff auf. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.
+`Sub` Prozeduren werden standardmäßig öffentlich zugänglich. Sie können Ihre Zugriffsebenen anpassen, indem Sie die Zugriffsmodifizierer verwenden.
 
-Wenn die Prozedur verwendet die `Implements` -Schlüsselwort, die enthaltende Klasse oder Struktur benötigen eine `Implements` Anweisung sofort nach der `Class` oder `Structure` Anweisung. Die `Implements` -Anweisung muss jede Schnittstelle, die im angegebenen enthalten `implementslist`. Jedoch den Namen, die mit dem eine Schnittstelle definiert die `Sub` (in `definedname`) verfügt nicht über mit dem Namen dieses Verfahrens übereinstimmen (im `name`).
+Wenn die Prozedur das `Implements`-Schlüsselwort verwendet, muss die enthaltende Klasse oder Struktur über eine `Implements` Anweisung verfügen, die direkt auf die `Class`-oder `Structure`-Anweisung folgt. Die `Implements`-Anweisung muss jede in `implementslist` angegebene Schnittstelle enthalten. Der Name, mit dem eine Schnittstelle die `Sub` definiert (in `definedname`), muss jedoch nicht mit dem Namen dieser Prozedur (in `name`) identisch sein.
 
-## <a name="returning-from-a-sub-procedure"></a>Zurückgeben aus eine Sub-Prozedur
+## <a name="returning-from-a-sub-procedure"></a>Zurückgeben aus einer unter Prozedur
 
-Wenn eine `Sub` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgesetzt, mit der Anweisung nach der Anweisung, die diese aufgerufen.
+Wenn eine `Sub` Prozedur an den aufrufenden Code zurückgegeben wird, wird die Ausführung mit der Anweisung nach der Anweisung fortgesetzt, die Sie aufgerufen hat.
 
-Das folgende Beispiel zeigt eine Rückgabe aus einer `Sub` Verfahren.
+Das folgende Beispiel zeigt eine Rückgabe einer `Sub` Prozedur.
 
 ```vb
 Sub mySub(ByVal q As String)
@@ -191,46 +191,46 @@ Sub mySub(ByVal q As String)
 End Sub
 ```
 
-Die `Exit Sub` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung aus einem `Sub` Verfahren. Eine beliebige Anzahl von `Exit Sub` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Sub` und `Return` Anweisungen.
+Die Anweisungen `Exit Sub` und `Return` führen zu einem sofortigen Beenden einer `Sub` Prozedur. Eine beliebige Anzahl von `Exit Sub`-und `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können `Exit Sub`-und `Return`-Anweisungen mischen.
 
-## <a name="calling-a-sub-procedure"></a>Aufrufen einer Subprozedur
+## <a name="calling-a-sub-procedure"></a>Aufrufen einer unter Prozedur
 
-Rufen Sie eine `Sub` Verfahren verwenden den Namen der Prozedur in einer Anweisung, und klicken Sie dann nach diesem Namen mit der Liste der Argumente in Klammern. Sie können die Klammern weglassen, nur, wenn Sie Argumente angeben. Allerdings ist der Code besser lesbar, wenn Sie immer die Klammern einschließen.
+Sie führen eine `Sub` Prozedur aus, indem Sie den Prozedur Namen in einer-Anweisung verwenden und dann den Namen mit seiner Argumentliste in Klammern befolgen. Sie können die Klammern nur weglassen, wenn Sie keine Argumente angeben. Der Code ist jedoch besser lesbar, wenn Sie immer die Klammern einschließen.
 
-Ein `Sub` Prozedur und ein `Function` Prozedur über Parameter und eine Reihe von Anweisungen ausführen. Allerdings eine `Function` Prozedur gibt einen Wert und einen `Sub` Prozedur nicht. Aus diesem Grund können keine `Sub` Prozedur in einem Ausdruck.
+Eine `Sub` Prozedur und eine `Function` Prozedur können über Parameter verfügen und eine Reihe von-Anweisungen ausführen. Eine `Function` Prozedur gibt jedoch einen Wert zurück, und eine `Sub` Prozedur ist nicht. Daher können Sie keine `Sub` Prozedur in einem Ausdruck verwenden.
 
-Können Sie die `Call` Schlüsselwort beim Aufrufen einer `Sub` Prozedur, aber dieses Schlüsselwort wird nicht empfohlen, für die meisten Verwendungen. Weitere Informationen finden Sie unter [Call-Anweisung](call-statement.md).
+Sie können das `Call`-Schlüsselwort verwenden, wenn Sie eine `Sub` Prozedur aufzurufen, aber dieses Schlüsselwort wird für die meisten Verwendungen nicht empfohlen. Weitere Informationen finden Sie unter [callananweisung](call-statement.md).
 
-Visual Basic werden manchmal neu angeordnet, arithmetische Ausdrücke, um die interne Effizienz steigern. Aus diesem Grund Ihrer Typargumentliste Ausdrücke enthält, die anderen Prozeduren aufgerufen werden sollte nicht Sie davon ausgehen, dass diese Ausdrücke in einer bestimmten Reihenfolge aufgerufen werden.
+Visual Basic ordnet arithmetische Ausdrücke manchmal neu an, um die interne Effizienz zu erhöhen. Wenn Ihre Argumentliste Ausdrücke enthält, die andere Prozeduren aufrufen, sollten Sie daher nicht davon ausgehen, dass diese Ausdrücke in einer bestimmten Reihenfolge aufgerufen werden.
 
-## <a name="async-sub-procedures"></a>Async Sub-Prozeduren
+## <a name="async-sub-procedures"></a>Async-unter Prozeduren
 
-Mithilfe der Async-Funktion zu verwenden, können Sie die asynchrone Funktionen aufrufen, ohne explizite Rückrufe oder den Code manuell über mehrere Funktionen oder Lambdaausdrücke teilen.
+Mithilfe der Async-Funktion können Sie asynchrone Funktionen aufrufen, ohne explizite Rückrufe zu verwenden oder den Code manuell über mehrere Funktionen oder Lambda-Ausdrücke aufzuteilen.
 
-Wenn Sie eine Prozedur mit kennzeichnen die [Async](../modifiers/async.md) Modifizierer verwenden, können Sie die ["await"](../../../visual-basic/language-reference/operators/await-operator.md) Operator in der Prozedur. Wenn Steuerung erreicht eine `Await` Ausdruck in der `Async` Prozedur die Steuerung an den Aufrufer zurückgegeben und Ausführung der Prozedur wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann in der Prozedur die Ausführung fortgesetzt.
+Wenn Sie eine Prozedur mit dem [Async](../modifiers/async.md) -Modifizierer markieren, können Sie den [Erwartungs Operator in](../../../visual-basic/language-reference/operators/await-operator.md) der Prozedur verwenden. Wenn das Steuerelement einen `Await` Ausdruck in der `Async` Prozedur erreicht, wird die Steuerung an den Aufrufer zurückgegeben, und der Status der Prozedur wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe vollständig ist, kann die Ausführung in der Prozedur fortgesetzt werden.
 
 > [!NOTE]
-> Ein `Async` Prozedur zurückgibt, an den Aufrufer, wenn entweder das erste erwartete Objekt, das noch nicht abgeschlossen ist, erreicht wird oder das Ende der `Async` Prozedur erreicht wird, welches Ereignis zuerst eintritt.
+> Eine `Async` Prozedur wird an den Aufrufer zurückgegeben, wenn entweder das erste erwartete Objekt, das noch nicht abgeschlossen ist, gefunden wird oder das Ende der `Async` Prozedur erreicht wird, je nachdem, welcher Wert zuerst auftritt.
 
-Sie können auch Markieren einer [Function-Anweisung](function-statement.md) mit der `Async` Modifizierer. Ein `Async` Funktion kann einen Rückgabetyp haben <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task>. Ein Beispiel weiter unten in diesem Thema wird gezeigt, eine `Async` Funktion, die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task%601>.
+Sie können auch eine [Function-Anweisung](function-statement.md) mit dem `Async` Modifizierer markieren. Eine `Async` Funktion kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> haben. Ein Beispiel weiter unten in diesem Thema zeigt eine `Async` Funktion mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>.
 
-`Async` `Sub` Prozeduren werden in erster Linie für Ereignishandler verwendet, in dem ein Wert kann nicht zurückgegeben werden. Ein `Async` `Sub` Prozedur kann nicht abgewartet werden, und der Aufrufer eine `Async` `Sub` Prozedur keine Ausnahmen auffangen, die die `Sub` Prozedur löst.
+`Async` `Sub` Prozeduren werden hauptsächlich für Ereignishandler verwendet, bei denen ein Wert nicht zurückgegeben werden kann. Eine `Async` `Sub` Prozedur kann nicht erwartet werden, und der Aufrufer einer `Async` `Sub` Prozedur kann keine Ausnahmen abfangen, die von der `Sub` Prozedur ausgelöst werden.
 
-Ein `Async` Prozedur kann nicht deklariert keine [ByRef](../modifiers/byref.md) Parameter.
+Ein `Async` Prozedur kann keine [ByRef](../modifiers/byref.md) -Parameter deklarieren.
 
-Weitere Informationen zu `Async` Verfahren finden Sie [asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), und [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+Weitere Informationen zu `Async` Prozeduren finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md), [Ablauf Steuerung in](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)asynchronen Programmen und asynchronen [Rückgabe Typen](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die `Sub` -Anweisung für die Definition der Name, Parameter und Code, der den Text der form einer `Sub` Verfahren.
+Im folgenden Beispiel wird die `Sub`-Anweisung verwendet, um den Namen, die Parameter und den Code zu definieren, die den Hauptteil einer `Sub` Prozedur bilden.
 
 [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel `DelayAsync` ist ein `Async` `Function` , die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `Return` -Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund der Deklaration der `DelayAsync` müssen einen Rückgabetyp von `Task(Of Integer)`. Da der Rückgabetyp ist `Task(Of Integer)`, die Auswertung der `Await` Ausdruck in `DoSomethingAsync` erzeugt eine ganze Zahl, wie in der folgenden Anweisung dargestellt: `Dim result As Integer = Await delayTask`.
+Im folgenden Beispiel ist `DelayAsync` eine `Async` `Function`, die den Rückgabetyp <xref:System.Threading.Tasks.Task%601> hat. `DelayAsync` enthält eine `Return`-Anweisung, die eine ganze Zahl zurückgibt. Daher muss die Funktionsdeklaration von `DelayAsync` den Rückgabetyp `Task(Of Integer)` haben. Da der Rückgabetyp `Task(Of Integer)` ist, erzeugt die Auswertung des `Await` Ausdrucks in `DoSomethingAsync` eine ganze Zahl, wie die folgende Anweisung zeigt: `Dim result As Integer = Await delayTask`.
 
-Die `startButton_Click` Verfahren ist ein Beispiel für eine `Async Sub` Verfahren. Da `DoSomethingAsync` ist ein `Async` -Funktion, die Aufgabe für den Aufruf von `DoSomethingAsync` gewartet werden muss, wie in der folgenden Anweisung dargestellt: `Await DoSomethingAsync()`. Die `startButton_Click` `Sub` Prozedur muss definiert werden, mit der `Async` Modifizierer, da sie verfügt über eine `Await` Ausdruck.
+Das `startButton_Click`-Verfahren ist ein Beispiel für eine `Async Sub` Prozedur. Da `DoSomethingAsync` eine `Async` Funktion ist, muss die Aufgabe für den `DoSomethingAsync`-erwartet werden, wie die folgende-Anweisung zeigt: `Await DoSomethingAsync()`. Die `startButton_Click` `Sub` Prozedur muss mit dem `Async`-Modifizierer definiert werden, da Sie einen `Await` Ausdruck aufweist.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -243,6 +243,6 @@ Die `startButton_Click` Verfahren ist ein Beispiel für eine `Async Sub` Verfahr
 - [Call-Anweisung](call-statement.md)
 - [Of](of-clause.md)
 - [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
-- [Vorgehensweise: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Gewusst wie: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Problembehandlung bei Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
 - [Partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

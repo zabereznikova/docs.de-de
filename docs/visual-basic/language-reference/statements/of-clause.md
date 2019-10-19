@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784149"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583509"
 ---
 # <a name="of-clause-visual-basic"></a>Of-Klausel (Visual Basic)
-Führt eine `Of` -Klausel, die identifiziert eine *Typparameter* auf eine *generische* -Klasse, Struktur, Schnittstelle, Delegat oder Prozedur. Weitere Informationen zu generischen Typen finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Führt eine `Of`-Klausel ein, die einen *Typparameter* für eine *generische* Klasse, Struktur, Schnittstelle, einen Delegaten oder eine Prozedur bezeichnet. Informationen zu generischen Typen finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Mit dem Schlüsselwort  
- Im folgenden Codebeispiel wird die `Of` Schlüsselwort, um den Umriss einer Klasse zu definieren, die zwei Typparameter erhält. Es *schränkt* der `keyType` Parameter durch die <xref:System.IComparable> Schnittstelle, d. h., geben Sie der konsumierenden Code muss ein Typargument, das implementiert <xref:System.IComparable>. Dies ist erforderlich, damit die `add` Prozedur aufrufen kann die <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> Methode. Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Verwenden des of-Schlüssel Worts  
+ Im folgenden Codebeispiel wird das `Of`-Schlüsselwort verwendet, um die Gliederung einer Klasse zu definieren, die zwei Typparameter annimmt. Dadurch wird der `keyType` Parameter durch die <xref:System.IComparable> Schnittstelle *eingeschränkt* , was bedeutet, dass der verarbeitende Code ein Typargument bereitstellen muss, das <xref:System.IComparable> implementiert. Dies ist erforderlich, damit die `add` Prozedur die <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>-Methode aufgerufen werden kann. Weitere Informationen über Einschränkungen finden Sie unter [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,11 +42,11 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Wenn Sie die vorherigen Klassendefinition abgeschlossen haben, können Sie eine Vielzahl von erstellen `dictionary` Klassen aus. Die Typen, die Sie, um angeben `entryType` und `keyType` bestimmt, welche Art von Eintrag die Klasse enthält, und welche Art von Schlüssel mit dem jeder Eintrag wird. Aufgrund der Einschränkung müssen Sie angeben `keyType` ein Typ, der implementiert <xref:System.IComparable>.  
+ Wenn Sie die vorherige Klassendefinition Fertigstellen, können Sie eine Vielzahl von `dictionary` Klassen daraus erstellen. Die Typen, die Sie angeben, um `entryType` und `keyType` bestimmen, welche Art von Eintrag die Klasse enthält und welche Art von Schlüssel Sie den einzelnen Einträgen zuordnet. Aufgrund der-Einschränkung müssen Sie angeben, um einen Typ `keyType`, der <xref:System.IComparable> implementiert.  
   
- Das folgende Codebeispiel erstellt ein Objekt, das enthält `String` Einträge und ordnet eine `Integer` jeweils Schlüssel. `Integer` implementiert <xref:System.IComparable> und erfüllt daher die Einschränkung auf `keyType`.  
+ Im folgenden Codebeispiel wird ein-Objekt erstellt, das `String` Einträge enthält und jedem ein `Integer` Schlüssel zuordnet. `Integer` implementiert <xref:System.IComparable> und erfüllt daher die Einschränkung für `keyType`.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: a02c482db81d9d76752cfe66a292dc57c48b2acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 660cebadc78d260350f2849f7f4926f9cef7c8d2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698901"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582184"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Erweiterungsindexereigenschaft (Visual Basic)
 Bietet Zugriff auf einzelne Elemente in einer Auflistung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 object(index)  
 ```  
   
@@ -29,25 +29,25 @@ object(index)
   
 |Begriff|Definition|  
 |---|---|  
-|`object`|Erforderlich. Eine abfragbare Auflistung. D. h. einer Auflistung mit Implementierung <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601>.|  
-|(|Erforderlich. Kennzeichnet den Anfang der Indexereigenschaft.|  
-|`index`|Erforderlich. Ein ganzzahliger Ausdruck, der die nullbasierte Position eines Elements der Auflistung angibt.|  
-|)|Erforderlich. Kennzeichnet das Ende der Indexereigenschaft.|  
+|`object`|Erforderlich. Eine abfragbare Auflistung. Das heißt, eine Auflistung, die <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> implementiert.|  
+|(|Erforderlich. Gibt den Anfang der Indexer-Eigenschaft an.|  
+|`index`|Erforderlich. Ein ganzzahliger Ausdruck, der die null basierte Position eines Elements der Auflistung angibt.|  
+|)|Erforderlich. Bezeichnet das Ende der Indexer-Eigenschaft.|  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Objekt aus der angegebenen Position in der Auflistung oder `Nothing` Wenn der Index außerhalb des gültigen Bereichs liegt.  
+ Das-Objekt aus der angegebenen Position in der Auflistung oder `Nothing`, wenn der Index außerhalb des gültigen Bereichs liegt.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die Erweiterungseigenschaft für Indexer verwenden, Zugriff auf einzelne Elemente in einer Auflistung. Diese Indexereigenschaft wird in der Regel für die Ausgabe der XML-Achseneigenschaften verwendet. Die XML-untergeordneten und untergeordnete XML-Achseneigenschaften Auflistungen von zurückgeben <xref:System.Xml.Linq.XElement> Objekte oder einen Attributwert.  
+ Mit der Eigenschaft Erweiterungsindexer können Sie auf einzelne Elemente in einer Auflistung zugreifen. Diese Indexer-Eigenschaft wird in der Regel in der Ausgabe von XML-Achsen Eigenschaften verwendet. Die Eigenschaften der untergeordneten XML-und XML-Nachfolger Achse geben Auflistungen von <xref:System.Xml.Linq.XElement> Objekten oder einem Attribut Wert zurück.  
   
- Visual Basic-Compiler konvertiert die Erweiterungseigenschaften für Indexer in Aufrufe an die `ElementAtOrDefault` Methode. Im Gegensatz zu einem Arrayindexer der `ElementAtOrDefault` Methodenrückgabe `Nothing` Wenn der Index außerhalb des gültigen Bereichs liegt. Dies ist hilfreich, wenn Sie einfach die Anzahl der Elemente in einer Auflistung nicht bestimmen können.  
+ Der Visual Basic-Compiler konvertiert Erweiterungs Indexer-Eigenschaften in Aufrufe der `ElementAtOrDefault`-Methode. Anders als bei einem Arrayindexer gibt die `ElementAtOrDefault`-Methode `Nothing` zurück, wenn der Index außerhalb des gültigen Bereichs liegt. Dieses Verhalten ist nützlich, wenn Sie die Anzahl der Elemente in einer Auflistung nicht einfach ermitteln können.  
   
- Diese Indexereigenschaft wird wie eine Erweiterungseigenschaft für Auflistungen, implementieren <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601>: Es wird nur verwendet, wenn die Auflistung nicht über einen Indexer oder eine Default-Eigenschaft verfügt.  
+ Diese Indexer-Eigenschaft entspricht einer Erweiterungs Eigenschaft für Auflistungen, die <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IQueryable%601> implementieren: Sie wird nur verwendet, wenn die Auflistung keinen Indexer oder keine Standard Eigenschaft aufweist.  
   
- Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XAttribute> Objekte aufweist, können Sie den XML-Code `Value` Eigenschaft. Weitere Informationen finden Sie unter [XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Um auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement>-oder <xref:System.Xml.Linq.XAttribute> Objekten zuzugreifen, können Sie die XML-`Value`-Eigenschaft verwenden. Weitere Informationen finden Sie unter [XML-Wert Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der Erweiterungsindexer auf den zweiten untergeordneten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Die Auflistung erfolgt mithilfe einer untergeordneten Achseneigenschaft, in dem alle untergeordneten Elemente, die mit dem Namen abgerufen werden, `phone` in die `contact` Objekt.  
+ Im folgenden Beispiel wird gezeigt, wie der Erweiterungsindexer zum Zugreifen auf den zweiten untergeordneten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement>-Objekten verwendet wird. Der Zugriff auf die Auflistung erfolgt mithilfe der untergeordneten Achsen Eigenschaft, die alle untergeordneten Elemente mit dem Namen `phone` im `contact`-Objekt abruft.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   

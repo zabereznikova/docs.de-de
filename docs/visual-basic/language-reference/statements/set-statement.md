@@ -10,19 +10,19 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: fb51dfbae4d9c4ef205e67ac15c5027e62a9a938
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb0dc76d110f3e6a3ea3e74cc0bfb5a669b35396
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663200"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583236"
 ---
 # <a name="set-statement-visual-basic"></a>Set-Anweisung (Visual Basic)
-Deklariert eine `Set` Eigenschaftenprozedur, mit einer Eigenschaft einen Wert zuweisen.  
+Deklariert eine `Set`-Eigenschaften Prozedur, mit der einer Eigenschaft ein Wert zugewiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 [ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
     [ statements ]  
 End Set  
@@ -30,10 +30,10 @@ End Set
   
 ## <a name="parts"></a>Teile  
  `attributelist`  
- Dies ist optional. Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Dies ist optional. Siehe [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Optional Klicken Sie auf höchstens die `Get` und `Set` Anweisungen in dieser Eigenschaft. Einer der folgenden Werte ist möglich:  
+ Optional für höchstens eine der `Get`-und `Set` Anweisungen in dieser Eigenschaft. Einer der folgenden Werte ist möglich:  
   
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -46,44 +46,44 @@ End Set
  Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Erforderlich. Parameter, der den neuen Wert für die Eigenschaft enthält.  
+ Erforderlich. -Parameter, der den neuen Wert für die Eigenschaft enthält.  
   
  `datatype`  
- Erforderlich, wenn `Option Strict` ist `On`. Typ der `value` Parameter. Der angegebene Datentyp muss den Datentyp der Eigenschaft identisch sein, in denen dies `Set` -Anweisung deklariert wird.  
+ Erforderlich, wenn `Option Strict` `On` ist. Der Datentyp des `value`-Parameters. Der angegebene Datentyp muss mit dem Datentyp der Eigenschaft übereinstimmen, in der diese `Set` Anweisung deklariert ist.  
   
  `statements`  
- Dies ist optional. Eine oder mehrere Anweisungen, die beim Ausführen der `Set` -Eigenschaftenprozedur aufgerufen.  
+ Dies ist optional. Eine oder mehrere-Anweisungen, die ausgeführt werden, wenn die `Set`-Eigenschaften Prozedur aufgerufen wird.  
   
  `End Set`  
- Erforderlich. Beendet die Definition der `Set` Eigenschaftenprozedur.  
+ Erforderlich. Beendet die Definition der `Set`-Eigenschaften Prozedur.  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Eigenschaft müssen einen `Set` Eigenschaftenprozedur, wenn die Eigenschaft markiert ist `ReadOnly`. Die `Set` Verfahren dient zum Festlegen des Werts der Eigenschaft.  
+ Jede Eigenschaft muss über eine `Set`-Eigenschaften Prozedur verfügen, es sei denn, die Eigenschaft ist `ReadOnly` markiert. Die `Set` Prozedur wird verwendet, um den Wert der-Eigenschaft festzulegen.  
   
- Visual Basic automatisch ruft einer Eigenschaft des `Set` Prozedur, wenn eine zuweisungsanweisung einen Wert in der Eigenschaft gespeichert werden bereitstellt.  
+ Visual Basic automatisch die `Set` Prozedur einer Eigenschaft aufruft, wenn eine Zuweisungsanweisung einen Wert bereitstellt, der in der-Eigenschaft gespeichert werden soll.  
   
- Visual Basic übergibt einen Parameter für die `Set` Prozedur während der eigenschaftenzuweisungen. Wenn Sie keine Parameter für angeben `Set`, die integrierte Entwicklungsumgebung (IDE) verwendet einen impliziten Parameter mit dem Namen `value`. Der Parameter enthält den Wert der Eigenschaft zugewiesen werden soll. In der Regel diesen Wert in einer privaten lokalen Variable speichern und zurückgeben immer die `Get` Prozedur aufgerufen wird.  
+ Visual Basic übergibt einen Parameter an die `Set` Prozedur während der Eigenschaften Zuweisungen. Wenn Sie keinen Parameter für `Set` bereitstellen, verwendet die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) einen impliziten Parameter mit dem Namen `value`. Der-Parameter enthält den Wert, der der-Eigenschaft zugewiesen werden soll. In der Regel speichern Sie diesen Wert in einer privaten lokalen Variable und geben ihn zurück, wenn die `Get` Prozedur aufgerufen wird.  
   
- Der Hauptteil der Deklaration der Eigenschaft darf nur der Eigenschaft des `Get` und `Set` Prozeduren zwischen der [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) und `End Property` Anweisung. Es kann nicht als diese Prozeduren gespeichert werden. Insbesondere kann nicht der aktuelle Eigenschaftswert speichern. Sie müssen diesen Wert außerhalb der Eigenschaft speichern, da Wenn Sie es in einer der Eigenschaftenprozeduren speichern, die andere Eigenschaftenprozedur nicht darauf zugreifen kann. Der übliche Ansatz ist zum Speichern des Werts in einem [Private](../../../visual-basic/language-reference/modifiers/private.md) Variable, die auf derselben Ebene wie die Eigenschaft deklariert. Definieren Sie eine `Set` -Prozedur in der Eigenschaft, die auf die es angewendet.  
+ Der Text der Eigenschafts Deklaration darf nur die `Get`-und `Set` Prozeduren der Eigenschaft zwischen der [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md) und der `End Property`-Anweisung enthalten. Es kann nichts anderes als diese Prozeduren speichern. Insbesondere kann der aktuelle Wert der Eigenschaft nicht gespeichert werden. Sie müssen diesen Wert außerhalb der-Eigenschaft speichern, denn wenn Sie ihn in einer der Eigenschaften Prozeduren speichern, kann die andere Eigenschaften Prozedur nicht darauf zugreifen. Die übliche Vorgehensweise besteht darin, den Wert in einer [privaten](../../../visual-basic/language-reference/modifiers/private.md) Variable zu speichern, die auf derselben Ebene wie die-Eigenschaft deklariert ist. Sie müssen eine `Set` Prozedur innerhalb der Eigenschaft definieren, auf die Sie angewendet wird.  
   
- Die `Set` Prozedur standardmäßig auf die Zugriffsebene der enthaltenden Eigenschaft auf, es sei denn, Sie verwenden `accessmodifier` in die `Set` Anweisung.  
+ Die `Set` Prozedur verwendet standardmäßig die Zugriffsebene der enthaltenden Eigenschaft, es sei denn, Sie verwenden `accessmodifier` in der `Set`-Anweisung.  
   
 ## <a name="rules"></a>Regeln  
   
-- **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert ist `Friend`, Sie können deklarieren, die `Set` Prozedur `Private`, aber nicht `Public`.  
+- **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene für die `Get` oder die `Set` Prozedur angeben, jedoch nicht für beide. Wenn Sie dies tun, muss die Prozedur Zugriffsebene restriktiver sein als die Zugriffsebene der Eigenschaft. Wenn die Eigenschaft beispielsweise als `Friend` deklariert ist, können Sie die `Set` Prozedur `Private` deklarieren, jedoch nicht `Public`.  
   
-     Wenn Sie definieren eine `WriteOnly` -Eigenschaft, die `Set` Prozedur darstellt, die gesamte Eigenschaft. Sie können nicht deklarieren eine andere Zugriffsebene für `Set`, da hierdurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
+     Wenn Sie eine `WriteOnly`-Eigenschaft definieren, stellt die `Set` Prozedur die gesamte-Eigenschaft dar. Sie können für `Set` keine andere Zugriffsebene deklarieren, da dadurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Zurückgeben einer Eigenschaftenprozedur.** Wenn die `Set` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, nach der Anweisung, die den zu speichernde Wert bereitgestellt.  
+- **Zurückgeben von einer Eigenschaften Prozedur.** Wenn die `Set` Prozedur an den aufrufenden Code zurückgegeben wird, wird die Ausführung nach der Anweisung fortgesetzt, die den zu speichernden Wert bereitgestellt hat.  
   
-     `Set` Property-Prozeduren können entweder Zurückgeben der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set`-Eigenschaften Prozeduren können entweder mithilfe der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder der [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)zurückgegeben werden.  
   
-     Die `Exit Property` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung einer Eigenschaftenprozedur. Eine beliebige Anzahl von `Exit Property` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Property` und `Return` Anweisungen.  
+     Die Anweisungen `Exit Property` und `Return` führen zu einem sofortigen Beenden einer Eigenschaften Prozedur. Eine beliebige Anzahl von `Exit Property`-und `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können `Exit Property`-und `Return`-Anweisungen mischen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Set` Anweisung, um den Wert einer Eigenschaft festzulegen.  
+ Im folgenden Beispiel wird die `Set`-Anweisung verwendet, um den Wert einer Eigenschaft festzulegen.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   

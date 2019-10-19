@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 519ff6f40ea303b64864683db222b55c6e5a23aa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964811"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582500"
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
 <a name="introduction"></a>Windows Presentation Foundation (WPF) ist ein Präsentations Framework, das zum Entwickeln der folgenden Anwendungs Typen verwendet werden kann:  
   
 - Eigenständige Anwendungen (herkömmliche Windows-Stil Anwendungen, die als ausführbare Assemblys erstellt und vom Client Computer ausgeführt werden).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](Anwendungen, die sich aus Navigations Seiten zusammensetzen, die als ausführbare Assemblys erstellt und von Webbrowsern wie Microsoft Internet Explorer oder Mozilla Firefox gehostet werden).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (Anwendungen, die aus Navigations Seiten bestehen, die als ausführbare Assemblys erstellt und von Webbrowsern wie Microsoft Internet Explorer oder Mozilla Firefox gehostet werden).  
   
 - Benutzerdefinierte Steuerelementbibliotheken: Nicht ausführbare Assemblys mit wiederverwendbaren Steuerelementen.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "69964811"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]erweitert die kernunterstützung im Microsoft .NET Framework für eingebettete Ressourcen mit Unterstützung für drei Arten von nicht ausführbaren Datendateien: Ressource, Inhalt und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erweitert die kernunterstützung im Microsoft .NET Framework für eingebettete Ressourcen und unterstützt drei Arten von nicht ausführbaren Datendateien: Ressourcen, Inhalte und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md).  
   
- Ein wesentlicher Faktor der Unterstützung von nicht ausführbaren WPF-Datendateien ist die Möglichkeit, diese mit einem eindeutigen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zu identifizieren und zu laden. Weitere Informationen finden Sie unter [Paket-URI in WPF](pack-uris-in-wpf.md).  
+ Ein wichtiger Bestandteil der Unterstützung für nicht ausführbare WPF-Datendateien ist die Möglichkeit, diese mithilfe eines eindeutigen URIs zu identifizieren und zu laden. Weitere Informationen finden Sie unter [Paket-URI in WPF](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Fenster und Dialogfelder  
@@ -74,7 +74,7 @@ ms.locfileid: "69964811"
   
  <xref:System.Windows.Window> unterstützt die Erstellung einer besonderen Art von Fenster, nämlich von Dialogfeldern. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
   
- Der Benutzerfreundlichkeit und die Vorteile der Wiederverwendbarkeit und der konsistenten Benutzerfreundlichkeit bei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] allen Anwendungen macht drei der allgemeinen Windows-Dialog <xref:Microsoft.Win32.OpenFileDialog>Felder <xref:Microsoft.Win32.SaveFileDialog>verfügbar: <xref:System.Windows.Controls.PrintDialog>, und.  
+ Der Benutzerfreundlichkeit und die Vorteile der Wiederverwendbarkeit und der konsistenten Benutzerfreundlichkeit bei allen Anwendungen stellt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] drei der allgemeinen Windows-Dialogfelder zur Verfügung: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> und <xref:System.Windows.Controls.PrintDialog>.  
   
  Ein Meldungsfeld ist eine besondere Art von Dialogfeld, in dem Benutzern wichtige Informationen angezeigt und einfache Ja/Nein/OK/Abbrechen-Fragen gestellt werden. Sie verwenden die <xref:System.Windows.MessageBox>-Klasse zum Erstellen und Anzeigen von Meldungsfeldern.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69964811"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]kann in Microsoft Internet Explorer oder Firefox gehostet werden. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] können in Microsoft Internet Explorer oder Firefox gehostet werden. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Erstellen und Bereitstellen  
@@ -127,4 +127,4 @@ ms.locfileid: "69964811"
 |[Hosting](hosting-wpf-applications.md)|Enthält allgemeine Informationen zu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Erstellen und Bereitstellen](building-and-deploying-wpf-applications.md)|Hier wird beschrieben, wie Sie die WPF-Anwendung erstellen und bereitstellen.|  
 |[Einführung in WPF in Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Hier werden die wichtigsten Funktionen von WPF beschrieben.|  
-|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie eine WPF-Anwendung mit Seitennavigation, Layout, Steuerelementen, Bildern, Stilen und Bindung erstellen.|
+|[Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie eine WPF-Anwendung mit Seitennavigation, Layout, Steuerelementen, Bildern, Stilen und Bindung erstellen.|

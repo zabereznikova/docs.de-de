@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583516"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581585"
 ---
 # <a name="option-compare-statement"></a>Option Compare-Anweisung
 Deklariert die Standardvergleichsmethode, die beim Vergleichen von Zeichenfolgendaten verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Wenn eine Option Compare-Anweisung nicht vorhanden ist  
- Wenn der Quellcode kein `Option Compare` -Anweisung, die **Option Compare** festlegen auf die [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) wird verwendet. Wenn Sie den Befehlszeilencompiler verwenden, wird die Einstellung angegeben, durch die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption verwendet wird.  
+ Wenn der Quellcode keine `Option Compare`-Anweisung enthält, wird die **Option Compare** -Einstellung auf der [Seite "kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet. Wenn Sie den Befehlszeilen Compiler verwenden, wird die durch die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption angegebene Einstellung verwendet.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -69,13 +69,13 @@ Option Compare { Binary | Text }
   
 2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3. Legen Sie den Wert der **Option Compare** Feld.  
+3. Legen Sie den Wert im Feld **options Vergleich** fest.  
   
- Wenn Sie ein Projekt erstellen der **Option Compare** festlegen auf der **Kompilieren** auf die Registerkarte "festgelegt ist die **Option Compare** festlegen in der **Optionen** Das Dialogfeld. So ändern Sie diese Einstellung die **Tools** Menü klicken Sie auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB Defaults** ist **binäre**.  
+ Wenn Sie ein Projekt erstellen, wird die **Option Compare** -Einstellung auf der Registerkarte **Kompilieren** auf die **Option Compare** -Einstellung im Dialogfeld **Optionen** festgelegt. Klicken Sie **im Menü Extras** auf **Optionen**, um diese Einstellung zu ändern. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB-Standardeinstellungen** ist **Binär**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Festlegen der Option Compare in der Befehlszeile  
   
-- Enthalten die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption in der **Vbc** Befehl.  
+- Fügen Sie die [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) -Compileroption in den **vbc** -Befehl ein.  
   
 ## <a name="example"></a>Beispiel  
  Das folgenden Beispiel verwendet die `Option Compare`-Anweisung, um den binären Vergleich als die Standardzeichenfolgenvergleichsmethode festzulegen. Um diesen Code zu verwenden, heben Sie die Auskommentierung der `Option Compare Binary`-Anweisung auf und positionieren Sie sie am Anfang der Quelldatei.  
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Vergleichsoperatoren](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Vergleichsoperatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Vergleichs Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like-Operator](../../../visual-basic/language-reference/operators/like-operator.md)
 - [String-Funktionen](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

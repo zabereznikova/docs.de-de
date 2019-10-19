@@ -28,20 +28,20 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 3a6184164fdc6f2517caf45f7b5e1455c9299666
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 046a3a7d50d15cd3e59205998554a4c330d4552c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754720"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581849"
 ---
 # <a name="function-statement-visual-basic"></a>Function-Anweisung (Visual Basic)
 
-Deklariert den Namen, Parameter und Code, definieren eine `Function` Verfahren.
+Deklariert den Namen, die Parameter und den Code, die eine `Function` Prozedur definieren.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]
 Function name [ (Of typeparamlist) ] [ (parameterlist) ] [ As returntype ] [ Implements implementslist | Handles eventlist ]
     [ statements ]
@@ -54,7 +54,7 @@ End Function
 
 - `attributelist`
 
-  Dies ist optional. Finden Sie unter [Liste](attribute-list.md).
+  Dies ist optional. Siehe [Attribut Liste](attribute-list.md).
 
 - `accessmodifier`
 
@@ -78,7 +78,7 @@ End Function
 
   Dies ist optional. Einer der folgenden Werte ist möglich:
 
-  - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+  - [Überladungen](../../../visual-basic/language-reference/modifiers/overloads.md)
 
   - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 
@@ -94,19 +94,19 @@ End Function
 
 - `Shared`
 
-  Dies ist optional. Finden Sie unter [freigegebene](../../../visual-basic/language-reference/modifiers/shared.md).
+  Dies ist optional. Siehe [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  Dies ist optional. Finden Sie unter [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Dies ist optional. Siehe [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Async`
 
-  Dies ist optional. Finden Sie unter [Async](../../../visual-basic/language-reference/modifiers/async.md).
+  Dies ist optional. Siehe [Async](../../../visual-basic/language-reference/modifiers/async.md).
 
 - `Iterator`
 
-  Dies ist optional. Finden Sie unter [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+  Dies ist optional. Siehe [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
@@ -114,19 +114,19 @@ End Function
 
 - `typeparamlist`
 
-  Dies ist optional. Liste der Parameter vom Typ für eine generische Prozedur. Finden Sie unter [Liste](type-list.md).
+  Dies ist optional. Liste der Typparameter für eine generische Prozedur. Siehe [Typliste](type-list.md).
 
 - `parameterlist`
 
-  Dies ist optional. Liste der Namen lokaler Variablen, die die Parameter dieser Prozedur darstellt. Finden Sie unter [Parameterliste](parameter-list.md).
+  Dies ist optional. Liste der Namen der lokalen Variablen, die die Parameter dieser Prozedur darstellen. Siehe [Parameter Liste](parameter-list.md).
 
 - `returntype`
 
-  Erforderlich, wenn `Option Strict` ist `On`. Der Datentyp des von dieser Prozedur zurückgegebenen Werts.
+  Erforderlich, wenn `Option Strict` `On` ist. Datentyp des Werts, der von dieser Prozedur zurückgegeben wird.
 
 - `Implements`
 
-  Dies ist optional. Gibt an, dass diese Prozedur, eine oder mehrere implementiert `Function` Prozeduren, die jeweils in einer Schnittstelle implementiert, die von dieser Prozedur enthaltenen Klasse oder Struktur definiert. Finden Sie unter [Anweisung implementiert](implements-statement.md).
+  Dies ist optional. Gibt an, dass diese Prozedur mindestens eine `Function` Prozeduren implementiert, die in einer Schnittstelle definiert sind, die von der enthaltenden Klasse oder Struktur dieser Prozedur implementiert wird. Siehe [implementierende Anweisung](implements-statement.md).
 
 - `implementslist`
 
@@ -140,16 +140,16 @@ End Function
 
   |Segment|Beschreibung|
   |---|---|
-  |`interface`|Erforderlich. Name einer Schnittstelle implementiert, die von dieser Prozedur der enthaltenden Klasse oder Struktur.|
+  |`interface`|Erforderlich. Der Name einer Schnittstelle, die von der enthaltenden Klasse oder Struktur dieser Prozedur implementiert wird.|
   |`definedname`|Erforderlich. Name, wodurch die Prozedur in `interface` definiert ist.|
 
 - `Handles`
 
-  Dies ist optional. Gibt an, dass dieses Verfahren auf eine oder mehrere bestimmte Ereignisse verarbeiten kann. Finden Sie unter [behandelt](handles-clause.md).
+  Dies ist optional. Gibt an, dass diese Prozedur ein oder mehrere bestimmte Ereignisse verarbeiten kann. Siehe [Handles](handles-clause.md).
 
 - `eventlist`
 
-  Erforderlich, wenn `Handles` angegeben wird. Liste der Ereignisse, die diese Prozedur verarbeitet.
+  Erforderlich, wenn `Handles` angegeben wird. Die Liste der Ereignisse, die von dieser Prozedur behandelt werden.
 
   `eventspecifier [ , eventspecifier ... ]`
 
@@ -159,108 +159,108 @@ End Function
 
   |Segment|Beschreibung|
   |---|---|
-  |`eventvariable`|Erforderlich. Die Objektvariable deklariert mit dem Datentyp der Klasse oder Struktur, die das Ereignis auslöst.|
-  |`event`|Erforderlich. Der Name des Ereignisses, die diese Prozedur verarbeitet.|
+  |`eventvariable`|Erforderlich. Objekt Variable, die mit dem Datentyp der Klasse oder Struktur deklariert wurde, die das Ereignis auslöst.|
+  |`event`|Erforderlich. Der Name des Ereignisses, das diese Prozedur behandelt.|
 
 - `statements`
 
-  Dies ist optional. Der Block von Anweisungen, die in diesem Verfahren ausgeführt werden.
+  Dies ist optional. Block von-Anweisungen, die innerhalb dieser Prozedur ausgeführt werden sollen.
 
 - `End Function`
 
-  Beendet die Definition dieses Verfahrens.
+  Beendet die Definition dieser Prozedur.
 
 ## <a name="remarks"></a>Hinweise
 
-Der gesamte ausführbarer Code muss innerhalb einer Prozedur sein. Jede Prozedur, wird im Gegenzug deklariert, innerhalb einer Klasse, eine Struktur oder ein Modul, das als die enthaltende Klasse, Struktur oder Modul bezeichnet wird.
+Der gesamte ausführbare Code muss sich in einer Prozedur befinden. Die einzelnen Prozeduren werden wiederum innerhalb einer Klasse, einer Struktur oder eines Moduls deklariert, das als enthaltende Klasse, Struktur oder Modul bezeichnet wird.
 
-Verwenden, um einen Wert an den aufrufenden Code zurückgeben, eine `Function` Prozedur; verwenden Sie andernfalls eine `Sub` Verfahren.
+Um einen Wert an den aufrufenden Code zurückzugeben, verwenden Sie eine `Function` Prozedur. Verwenden Sie andernfalls eine `Sub` Prozedur.
 
 ## <a name="defining-a-function"></a>Definieren einer Funktion
 
-Sie können definieren, eine `Function` Prozedur nur auf Modulebene. Aus diesem Grund muss der Deklarationskontext für eine Funktion eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle und eine Quelldatei, einem Namespace, eine Prozedur oder einen Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).
+Sie können eine `Function` Prozedur nur auf Modulebene definieren. Daher muss der Deklarations Kontext für eine Funktion eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle sein, und es kann sich nicht um eine Quelldatei, einen Namespace, eine Prozedur oder einen Block handeln. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](declaration-contexts-and-default-access-levels.md).
 
-`Function` Prozeduren standardmäßig öffentlichen Zugriff auf. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.
+`Function` Prozeduren werden standardmäßig öffentlich zugänglich. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen.
 
-Ein `Function` Prozedur deklariert den Datentyp des Werts, der die Prozedur zurückgibt. Sie können einen beliebigen Datentyp aufweisen oder den Namen der eine Enumeration, eine Struktur, eine Klasse oder einer Schnittstelle angeben. Wenn Sie nicht angeben der `returntype` -Parameter der Prozedur zurückgegebene `Object`.
+Eine `Function` Prozedur kann den Datentyp des Werts deklarieren, den die Prozedur zurückgibt. Sie können einen beliebigen Datentyp oder den Namen einer Enumeration, einer Struktur, einer Klasse oder einer Schnittstelle angeben. Wenn Sie den `returntype`-Parameter nicht angeben, gibt die Prozedur `Object` zurück.
 
-Wenn die Prozedur verwendet die `Implements` -Schlüsselwort, die enthaltende Klasse oder Struktur müssen Sie auch eine `Implements` Anweisung sofort nach der `Class` oder `Structure` Anweisung. Die `Implements` -Anweisung muss jede Schnittstelle, die im angegebenen enthalten `implementslist`. Jedoch den Namen, die mit dem eine Schnittstelle definiert die `Function` (in `definedname`) muss nicht mit den Namen dieses Verfahrens übereinstimmen (im `name`).
+Wenn in dieser Prozedur das `Implements`-Schlüsselwort verwendet wird, muss die enthaltende Klasse oder Struktur auch über eine `Implements` Anweisung verfügen, die direkt auf die `Class`-oder `Structure`-Anweisung folgt. Die `Implements`-Anweisung muss jede in `implementslist` angegebene Schnittstelle enthalten. Der Name, mit dem eine Schnittstelle die `Function` definiert (in `definedname`), muss jedoch nicht mit dem Namen dieser Prozedur (in `name`) identisch sein.
 
 > [!NOTE]
-> Sie können Lambda-Ausdrücke verwenden, Funktion Ausdrücke Inline definieren. Weitere Informationen finden Sie unter [Funktionsausdruck](../../../visual-basic/language-reference/operators/function-expression.md) und [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+> Sie können Lambda-Ausdrücke verwenden, um Funktions Ausdrücke Inline zu definieren. Weitere Informationen finden Sie unter [Funktions Ausdruck](../../../visual-basic/language-reference/operators/function-expression.md) und [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-## <a name="returning-from-a-function"></a>Zurückgeben aus einer Funktion
+## <a name="returning-from-a-function"></a>Zurückgeben von einer Funktion
 
-Wenn die `Function` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgesetzt, mit der Anweisung, die die Anweisung folgt, die die Prozedur aufgerufen.
+Wenn die `Function` Prozedur an den aufrufenden Code zurückgegeben wird, wird die Ausführung mit der Anweisung fortgesetzt, die der Anweisung folgt, die die Prozedur aufgerufen hat.
 
-Um einen Wert aus einer Funktion zurückgeben, Sie können den Namen der Funktion den Wert zuweisen oder nehmen Sie diese in einem `Return` Anweisung.
+Wenn Sie einen Wert aus einer Funktion zurückgeben möchten, können Sie den Wert entweder dem Funktionsnamen zuweisen oder ihn in eine `Return` Anweisung einschließen.
 
-Die `Return` Anweisung gleichzeitig weist den Rückgabewert und beendet die Funktion, wie im folgenden Beispiel gezeigt wird.
+Die `Return`-Anweisung weist gleichzeitig den Rückgabewert zu und beendet die Funktion, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-Im folgende Beispiel weist den zurückgegeben Wert den Namen der Funktion `myFunction` und verwendet dann die `Exit Function` -Anweisung zurückgegeben.
+Im folgenden Beispiel wird der Rückgabewert dem Funktionsnamen `myFunction` zugewiesen und dann die `Exit Function`-Anweisung verwendet, um zurückzugeben.
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
-Die `Exit Function` und `Return` Anweisungen bewirken, dass eine sofortige Beendigung aus einem `Function` Verfahren. Eine beliebige Anzahl von `Exit Function` und `Return` Anweisungen können an beliebiger Stelle in der Prozedur, und Sie können kombinieren `Exit Function` und `Return` Anweisungen.
+Die Anweisungen `Exit Function` und `Return` führen zu einem sofortigen Beenden einer `Function` Prozedur. Eine beliebige Anzahl von `Exit Function`-und `Return` Anweisungen kann an beliebiger Stelle in der Prozedur angezeigt werden, und Sie können `Exit Function`-und `Return`-Anweisungen mischen.
 
-Bei Verwendung von `Exit Function` ohne Zuweisen eines Werts zur `name`, die Prozedur gibt zurück, der Standardwert für den Datentyp, der im angegebenen `returntype`. Wenn `returntype` nicht angegeben ist, gibt die Prozedur `Nothing`, dies ist der Standardwert für `Object`.
+Wenn Sie `Exit Function` verwenden, ohne `name` einen Wert zuzuweisen, gibt die Prozedur den Standardwert für den Datentyp zurück, der in `returntype` angegeben ist. Wenn `returntype` nicht angegeben wird, gibt die Prozedur `Nothing` zurück. Dies ist der Standardwert für `Object`.
 
 ## <a name="calling-a-function"></a>Aufrufen einer Funktion
 
-Rufen Sie eine `Function` Verfahren mit den Prozedurnamen, gefolgt von der Argumentliste in Klammern ein, in einem Ausdruck. Sie können die Klammern weglassen, nur dann, wenn Sie Argumente angeben, werden nicht. Allerdings ist der Code besser lesbar, wenn Sie immer die Klammern einschließen.
+Sie können eine `Function` Prozedur mit dem Prozedur Namen, gefolgt von der Argumentliste in Klammern, in einem Ausdruck aufzurufen. Sie können die Klammern nur weglassen, wenn Sie keine Argumente angeben. Der Code ist jedoch besser lesbar, wenn Sie immer die Klammern einschließen.
 
-Rufen Sie eine `Function` Prozedur, die die gleiche Weise, dass Sie eine beliebige Bibliothek aufrufen, wie z. B. Funktion `Sqrt`, `Cos`, oder `ChrW`.
+Sie können eine `Function` Prozedur auf die gleiche Weise wie eine beliebige Bibliotheksfunktion (z. b. `Sqrt`, `Cos` oder `ChrW`) aufzurufen.
 
-Sie können auch eine Funktion aufrufen, mit der `Call` Schlüsselwort. In diesem Fall wird der Rückgabewert ignoriert. Verwenden der `Call` Schlüsselwort wird nicht in den meisten Fällen empfohlen. Weitere Informationen finden Sie unter [Call-Anweisung](call-statement.md).
+Sie können eine Funktion auch mit dem `Call`-Schlüsselwort abrufen. In diesem Fall wird der Rückgabewert ignoriert. Die Verwendung des `Call`-Schlüssel Worts wird in den meisten Fällen nicht empfohlen. Weitere Informationen finden Sie unter [callananweisung](call-statement.md).
 
-Visual Basic werden manchmal neu angeordnet, arithmetische Ausdrücke, um die interne Effizienz steigern. Aus diesem Grund sollten Sie nicht verwenden eine `Function` Prozedur in einem arithmetischen Ausdruck, wenn die Funktion den Wert der Variablen im selben Ausdruck geändert wird.
+Visual Basic ordnet arithmetische Ausdrücke manchmal neu an, um die interne Effizienz zu erhöhen. Aus diesem Grund sollten Sie keine `Function` Prozedur in einem arithmetischen Ausdruck verwenden, wenn die Funktion den Wert von Variablen im gleichen Ausdruck ändert.
 
-## <a name="async-functions"></a>Asynchrone Funktionen
+## <a name="async-functions"></a>Async-Funktionen
 
-Die *Async* Feature können Sie zum Aufrufen von asynchroner Funktionen ohne explizite Rückrufe oder den Code manuell über mehrere Funktionen oder Lambdaausdrücke teilen.
+Mit der *Async* -Funktion können Sie asynchrone Funktionen aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Funktionen oder Lambda Ausdrücke aufteilen zu müssen.
 
-Wenn Sie eine Funktion mit kennzeichnen die [Async](../../../visual-basic/language-reference/modifiers/async.md) Modifizierer verwenden, können Sie die ["await"](../../../visual-basic/language-reference/operators/await-operator.md) Operator in der Funktion. Wenn Steuerung erreicht eine `Await` Ausdruck in der `Async` -Funktion, die Steuerung an den Aufrufer zurückgegeben und Ausführung der Funktion wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Funktion fortgesetzt.
+Wenn Sie eine Funktion mit dem [Async](../../../visual-basic/language-reference/modifiers/async.md) -Modifizierer markieren, können Sie den [Erwartungs Operator in](../../../visual-basic/language-reference/operators/await-operator.md) der Funktion verwenden. Wenn die Steuerung einen `Await` Ausdruck in der `Async`-Funktion erreicht, wird die Steuerung an den Aufrufer zurückgegeben, und der Fortschritt in der Funktion wird angehalten, bis die erwartete Aufgabe abgeschlossen Wenn die Aufgabe vollständig ist, kann die Ausführung in der Funktion fortgesetzt werden.
 
 > [!NOTE]
-> Ein `Async` Prozedur an den Aufrufer zurückgegeben, wenn entweder das erste erwartete Objekt gefunden wird, die noch nicht abgeschlossen ist, oder es Ruft ab, an das Ende der `Async` Verfahren, welches Ereignis zuerst eintritt.
+> Eine `Async` Prozedur wird an den Aufrufer zurückgegeben, wenn Sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen ist, oder bis zum Ende der `Async` Prozedur, je nachdem, welcher Wert zuerst auftritt.
 
-Ein `Async` Funktion kann einen Rückgabetyp haben <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task>. Ein Beispiel für eine `Async` Funktion, die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task%601> finden Sie weiter unten.
+Eine `Async` Funktion kann den Rückgabetyp <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.Task> haben. Im folgenden finden Sie ein Beispiel für eine `Async` Funktion mit dem Rückgabetyp <xref:System.Threading.Tasks.Task%601>.
 
-Ein `Async` Funktion kann nicht deklariert keine [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Parameter.
+Eine `Async` Funktion kann keine [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) -Parameter deklarieren.
 
-Ein [Sub-Anweisung](sub-statement.md) können auch markiert werden, mit der `Async` Modifizierer. Dies wird hauptsächlich für Ereignishandler verwendet, in dem ein Wert kann nicht zurückgegeben werden. Ein `Async` `Sub` Prozedur kann nicht abgewartet werden, und der Aufrufer eine `Async` `Sub` Prozedur kann keine Ausnahmen auffangen, die ausgelöst werden, indem die `Sub` Verfahren.
+Eine [Sub-Anweisung](sub-statement.md) kann auch mit dem `Async`-Modifizierer gekennzeichnet werden. Dies wird hauptsächlich für Ereignishandler verwendet, bei denen kein Wert zurückgegeben werden kann. Eine `Async` `Sub` Prozedur kann nicht erwartet werden, und der Aufrufer einer `Async` `Sub` Prozedur kann keine Ausnahmen abfangen, die von der `Sub` Prozedur ausgelöst werden.
 
-Weitere Informationen zu `Async` -Funktionen finden Sie unter [asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Ablaufsteuerung in asynchronen Programmen](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), und [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+Weitere Informationen zu `Async` Funktionen finden Sie unter [asynchrone Programmierung mit Async und warten](../../../visual-basic/programming-guide/concepts/async/index.md), [Ablauf Steuerung in](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)asynchronen Programmen und asynchronen [Rückgabe Typen](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="iterator-functions"></a>Iteratorfunktionen
 
-Ein *Iterator* Funktion führt eine benutzerdefinierte Iteration durch eine Auflistung, z. B. eine Liste oder ein Array. Eine Iteratorfunktion verwendet die [Yield](yield-statement.md) Anweisung, um jedes Element einzeln nacheinander zurückzugeben. Wenn eine [Yield](yield-statement.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Eine *Iteratorfunktion* führt eine benutzerdefinierte iterierung für eine Auflistung aus, z. b. eine Liste oder ein Array. Eine Iteratorfunktion verwendet die [Yield](yield-statement.md) -Anweisung, um jedes Element einzeln zurückzugeben. Wenn eine [Yield](yield-statement.md) -Anweisung erreicht wird, wird die aktuelle Position im Code gespeichert. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
-Sie rufen einen Iterator im Clientcode mithilfe einer [für jede... Nächste](for-each-next-statement.md) Anweisung.
+Sie verwenden einen Iterator aus dem Client Code, indem Sie eine [for each-... Next](for-each-next-statement.md) -Anweisung.
 
-Der Rückgabetyp einer Funktion Iterator möglich <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, oder <xref:System.Collections.Generic.IEnumerator%601>.
+Der Rückgabetyp einer Iteratorfunktion kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.
 
 Weitere Informationen finden Sie unter [Iteratoren](../../programming-guide/concepts/iterators.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die `Function` -Anweisung zum Deklarieren der Name, Parameter und Code, der den Text der form einer `Function` Verfahren. Die `ParamArray` -Modifizierer kann die Funktion, die eine Variable Anzahl von Argumenten akzeptiert.
+Im folgenden Beispiel werden die `Function`-Anweisung verwendet, um den Namen, die Parameter und den Code zu deklarieren, die den Hauptteil einer `Function` Prozedur bilden. Der `ParamArray` Modifizierer ermöglicht der Funktion, eine Variable Anzahl von Argumenten zu akzeptieren.
 
 [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Funktion, die im vorherigen Beispiel deklariert.
+Im folgenden Beispiel wird die Funktion aufgerufen, die im vorherigen Beispiel deklariert wurde.
 
 [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel `DelayAsync` ist ein `Async` `Function` , die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task%601>. `DelayAsync` enthält eine `Return` -Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund der Deklaration der `DelayAsync` muss einen Rückgabetyp von `Task(Of Integer)`. Da der Rückgabetyp ist `Task(Of Integer)`, die Auswertung der `Await` Ausdruck in `DoSomethingAsync` erzeugt eine ganze Zahl. Dies wird in dieser Anweisung veranschaulicht: `Dim result As Integer = Await delayTask`.
+Im folgenden Beispiel ist `DelayAsync` eine `Async` `Function`, die den Rückgabetyp <xref:System.Threading.Tasks.Task%601> hat. `DelayAsync` enthält eine `Return`-Anweisung, die eine ganze Zahl zurückgibt. Daher muss die Funktionsdeklaration von `DelayAsync` den Rückgabetyp `Task(Of Integer)` haben. Da der Rückgabetyp `Task(Of Integer)` ist, erzeugt die Auswertung des `Await` Ausdrucks in `DoSomethingAsync` eine ganze Zahl. Dies wird in dieser Anweisung veranschaulicht: `Dim result As Integer = Await delayTask`.
 
-Die `startButton_Click` Verfahren ist ein Beispiel für eine `Async Sub` Verfahren. Da `DoSomethingAsync` ist ein `Async` -Funktion, die Aufgabe für den Aufruf von `DoSomethingAsync` muss gewartet werden, wie die folgende Anweisung veranschaulicht: `Await DoSomethingAsync()`. Die `startButton_Click` `Sub` Prozedur muss definiert werden, mit der `Async` Modifizierer, da sie verfügt über eine `Await` Ausdruck.
+Das `startButton_Click`-Verfahren ist ein Beispiel für eine `Async Sub` Prozedur. Da `DoSomethingAsync` eine `Async` Funktion ist, muss die Aufgabe für den `DoSomethingAsync`-aufrufsvorgang erwartet werden, wie die folgende Anweisung veranschaulicht: `Await DoSomethingAsync()`. Die `startButton_Click` `Sub` Prozedur muss mit dem `Async`-Modifizierer definiert werden, da Sie einen `Await` Ausdruck aufweist.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
@@ -273,7 +273,7 @@ Die `startButton_Click` Verfahren ist ein Beispiel für eine `Async Sub` Verfahr
 - [Call-Anweisung](call-statement.md)
 - [Of](of-clause.md)
 - [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
-- [Vorgehensweise: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Gewusst wie: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Problembehandlung bei Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
 - [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Function Expression](../../../visual-basic/language-reference/operators/function-expression.md)

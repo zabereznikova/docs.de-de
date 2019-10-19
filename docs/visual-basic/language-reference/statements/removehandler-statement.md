@@ -9,19 +9,19 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 3a839a7d05d05066f6c0f774a683c8fc83c19643
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 47f35bd76d7734878e7b5b206b4aecd856276593
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957725"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582019"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler-Anweisung
 Entfernt die Zuordnung zwischen einem Ereignis und einem Ereignishandler.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
@@ -33,10 +33,10 @@ RemoveHandler event, AddressOf eventhandler
 |`eventhandler`|Der Name der Prozedur, die das Ereignis momentan behandelt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Mit `AddHandler` der `RemoveHandler` -Anweisung und der-Anweisung können Sie die Ereignis Behandlung für ein bestimmtes Ereignis zu einem beliebigen Zeitpunkt während der Programmausführung starten und Abbrechen.  
+ Die Anweisungen `AddHandler` und `RemoveHandler` ermöglichen das Starten und Abbrechen der Ereignis Behandlung für ein bestimmtes Ereignis während der Programmausführung.  
   
 > [!NOTE]
-> Für benutzerdefinierte Ereignisse ruft `RemoveHandler` die-Anweisung den- `RemoveHandler` Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Für benutzerdefinierte Ereignisse ruft die `RemoveHandler`-Anweisung den `RemoveHandler` Accessor des Ereignisses auf. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

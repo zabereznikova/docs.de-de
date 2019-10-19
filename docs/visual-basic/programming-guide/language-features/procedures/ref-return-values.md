@@ -1,47 +1,47 @@
 ---
-title: REF-Rückgabewerte (Visual Basic)
+title: Ref-Rückgabewerte (Visual Basic)
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: d0600f7d9030324160343e800c37e0f5e68bff61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7401fdd0fa876d21a87dbe9faf9d979e6b3bdc5c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791806"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581123"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Unterstützung für verweisrückgabewerte (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Unterstützung für Verweis Rückgabewerte (Visual Basic)
 
-Beginnend mit C# 7.0 die C# Abfragesprache unterstützt die *verweisen auf Rückgabewerte*. Eine Möglichkeit, verweisrückgabewerte zu verstehen ist, dass sie das Gegenteil von Argumenten, die durch einen Verweis auf eine Methode übergeben werden. Wenn ein Argument als Verweis übergeben wird, geändert wird, werden die Änderungen der Aufrufer im Wert der Variablen angezeigt. Wenn eine Methode ein verweisrückgabewert an einem Aufrufer bereitstellt, werden Änderungen an der verweisrückgabewert vom Aufrufer in der aufgerufenen Methode Daten wiedergegeben.
+Ab C# 7,0 unterstützt die C# Sprache *Verweis Rückgabewerte*. Eine Möglichkeit, Verweis Rückgabewerte zu verstehen, besteht darin, dass Sie das Gegenteil von Argumenten sind, die als Verweis an eine Methode übergebenen werden. Wenn ein als Verweis übergebener Argument geändert wird, werden die Änderungen im Wert der Variablen für den Aufrufer widergespiegelt. Wenn eine Methode einen Verweis Rückgabewert für einen Aufrufer bereitstellt, werden Änderungen, die am Verweis Rückgabewert des Aufrufers vorgenommen werden, in den Daten der aufgerufenen Methode widergespiegelt.
 
-Visual Basic erlaubt nicht, Sie zum Erstellen von Methoden mit verweisrückgabewerten Werte zurückgeben, aber es lässt Sie verweisrückgabewerte verarbeiten. Das heißt, können Sie eine Methode mit einem verweisrückgabewert aufrufen und ändern Sie diesen Rückgabewert, und Änderungen an der verweisrückgabewert werden in der aufgerufenen Methode Daten wiedergegeben.
+In Visual Basic können keine Methoden mit Verweis Rückgabe Werten erstellt werden, Sie können jedoch Verweis Rückgabewerte verwenden. Anders ausgedrückt: Sie können eine Methode mit einem Verweis Rückgabewert aufrufen und den Rückgabewert ändern, und Änderungen am Verweis Rückgabewert werden in den Daten der aufgerufenen Methode widergespiegelt.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Den Ref-Rückgabewert ändern direkt
+## <a name="modifying-the-ref-return-value-directly"></a>Direktes Ändern des ref-Rückgabewerts
 
-Für Methoden, die immer erfolgreich sein und verfügen über keine `ByRef` Parameter, Sie können der verweisrückgabewert direkt ändern. Dazu müssen Sie die Ausdrücke, die der verweisrückgabewert gibt den neuen Wert zuweisen. 
+Bei Methoden, die immer erfolgreich sind und über keine `ByRef` Parameter verfügen, können Sie den Verweis Rückgabewert direkt ändern. Dies erreichen Sie, indem Sie den Ausdrücken, die den Verweis Rückgabewert zurückgeben, den neuen Wert zuweisen.
 
-Die folgenden C# Beispiel definiert eine `NumericValue.IncrementValue` Rückgabewert der Methode, die einen internen Wert inkrementiert und wird als Verweis zurückgegeben werden. 
+Im folgenden C# Beispiel wird eine `NumericValue.IncrementValue` Methode definiert, die einen internen Wert Inkremente und als Verweis Rückgabewert zurückgibt.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-Der Verweis zurückgeben, dass ein Wert vom Aufrufer in der folgenden Visual Basic wird anschließend geändert werden. Beachten Sie, dass die Zeile mit der `NumericValue.IncrementValue` Methodenaufruf weist keinen Wert an die Methode. Stattdessen weist es einen Wert, der von der Methode zurückgegebenen verweisrückgabewert.
+Der Verweis Rückgabewert wird dann vom Aufrufer im folgenden Visual Basic Beispiel geändert. Beachten Sie, dass die Zeile mit dem `NumericValue.IncrementValue`-Methodenaufrufe der-Methode keinen Wert zuweist. Stattdessen wird dem Verweis Rückgabewert, der von der-Methode zurückgegeben wird, ein Wert zugewiesen.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Mittels einer Hilfsmethode
+## <a name="using-a-helper-method"></a>Verwenden einer Hilfsmethode
 
-In anderen Fällen kann der verweisrückgabewert eines Methodenaufrufs direkt ändern nicht immer wünschenswert sein. Beispielsweise kann eine Search-Methode, die eine Zeichenfolge zurückgibt, nicht immer eine Übereinstimmung gefunden werden. Sie möchten in diesem Fall der verweisrückgabewert nur ändern, wenn die Suche erfolgreich ist.
+In anderen Fällen ist es möglicherweise nicht immer wünschenswert, den Verweis Rückgabewert eines Methoden Aufrufes direkt zu ändern. Beispielsweise findet eine Suchmethode, die eine Zeichenfolge zurückgibt, möglicherweise nicht immer eine Entsprechung. In diesem Fall möchten Sie den Verweis Rückgabewert nur ändern, wenn die Suche erfolgreich war.
 
-Die folgenden C# Beispiel veranschaulicht dieses Szenario. Definiert eine `Sentence` in geschriebenen Klasse C# umfasst eine `FindNext` Methode, die das nächste Wort im Satz gefunden wird, die mit einer angegebenen Teilzeichenfolge beginnt. Die Zeichenfolge wird als Verweisrückgabewert zurückgegeben, und eine vom Verweis an die Methode übergebene `Boolean`-Variable gibt an, ob die Suche Erfolg hatte. Der Verweis-Rückgabewert gibt an, dass der Aufrufer den zurückgegebenen Wert nicht nur lesen kann; er oder sie können auch ändern, es, und diese Änderung wirkt sich die Daten intern in der `Sentence` Klasse.
+Dieses Szenario C# wird im folgenden Beispiel veranschaulicht. Er definiert eine `Sentence` Klasse, die C# in geschrieben ist, enthält eine `FindNext` Methode, die das nächste Wort in einem Satz findet, der mit einer angegebenen Teil Zeichenfolge beginnt. Die Zeichenfolge wird als Verweisrückgabewert zurückgegeben, und eine vom Verweis an die Methode übergebene `Boolean`-Variable gibt an, ob die Suche Erfolg hatte. Der Verweis Rückgabewert gibt an, dass der Aufrufer den zurückgegebenen Wert nicht nur lesen kann. Sie kann Sie auch ändern, und diese Änderung wird in den Daten widergespiegelt, die intern in der `Sentence`-Klasse enthalten sind.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Direktes Ändern des Verweis ist der Rückgabewert in diesem Fall nicht zuverlässig, da der Aufruf der Methode möglicherweise keine Übereinstimmung gefunden, und geben Sie das erste Wort im Satz zurück. In diesem Fall wird der Aufrufer nicht versehentlich das erste Wort des Satzes ändern. Dies kann verhindert werden, durch den Aufrufer zurückgeben einer `null` (oder `Nothing` in Visual Basic). Aber in diesem Fall versucht, eine Zeichenfolge, deren Wert `Nothing` löst eine <xref:System.NullReferenceException>. Wenn auch durch den Aufrufer zurückgeben verhindert werden könnte <xref:System.String.Empty?displayProperty=nameWithType>, aber dies erfordert, dass der Aufrufer eine String-Variable definieren, deren Wert <xref:System.String.Empty?displayProperty=nameWithType>. Während der Aufrufer diese Zeichenfolge nicht ändern kann, dient die Änderung selbst keinen Zweck, da die geänderte Zeichenfolge keine Beziehung zu den Wörtern in den Satz von gespeichert hat die `Sentence` Klasse.
+Das direkte Ändern des Verweis Rückgabewerts in diesem Fall ist nicht zuverlässig, da der Methodenaufrufe möglicherweise keine Entsprechung findet und das erste Wort im Satz zurückgibt. In diesem Fall wird der Aufrufer versehentlich das erste Wort des Satzes ändern. Dies kann durch den Aufrufer verhindert werden, der eine `null` zurückgibt (oder `Nothing` in Visual Basic). In diesem Fall wird beim Versuch, eine Zeichenfolge zu ändern, deren Wert `Nothing` ist, ein <xref:System.NullReferenceException> ausgelöst. Wenn auch vom Aufrufer verhindert werden kann, der <xref:System.String.Empty?displayProperty=nameWithType> zurückgibt, erfordert dies jedoch, dass der Aufrufer eine Zeichen folgen Variable definiert, deren Wert <xref:System.String.Empty?displayProperty=nameWithType> ist. Der Aufrufer kann diese Zeichenfolge ändern, aber die Änderung selbst ist nicht zweckmäßig, da die geänderte Zeichenfolge keine Beziehung zu den Wörtern in dem Satz hat, der von der `Sentence`-Klasse gespeichert wird.
 
-Die beste Methode zum Behandeln dieses Szenarios ist der verweisrückgabewert als Verweis an eine Hilfsmethode zu übergeben. Die Hilfsmethode enthält die Logik, um zu bestimmen, ob der Methodenaufruf erfolgreich war, und wenn dies der Fall ist, zum Ändern der verweisrückgabewert. Im folgenden Beispiel wird eine mögliche Implementierung.
+Die beste Möglichkeit zur Handhabung dieses Szenarios besteht darin, den Verweis Rückgabewert als Verweis an eine Hilfsmethode zu übergeben. Die-Hilfsmethode enthält dann die Logik, um zu bestimmen, ob der Methodenaufrufe erfolgreich war, und, wenn dies der Fall war, um den Verweis Rückgabewert zu ändern. Im folgenden Beispiel wird eine mögliche Implementierung bereitstellt.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 

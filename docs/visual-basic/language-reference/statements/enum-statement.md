@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 0a761c39b51a8d71919a84cbbbf6739fc1f5bcea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be1780b00b4d58964e1de5ec199cb80dc0f9dba5
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754620"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583404"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum-Anweisung (Visual Basic)
 
@@ -24,7 +24,7 @@ Deklariert eine Enumeration und definiert die Werte ihrer Member.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```vb
 [ <attributelist> ] [ accessmodifier ]  [ Shadows ]
 Enum enumerationname [ As datatype ]
    memberlist
@@ -35,9 +35,9 @@ End Enum
 
 - `attributelist`
 
-  Dies ist optional. Liste der Attribute, die auf diese Enumeration anwenden. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`"und"`>`").
+  Dies ist optional. Liste der Attribute, die auf diese Enumeration angewendet werden. Sie müssen die [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern ("`<`" und "`>`") einschließen.
 
-  Die <xref:System.FlagsAttribute> -Attribut gibt an, dass der Wert einer Instanz der Enumeration mehrere Enumerationsmember enthalten kann und jedes Element ein Bit-Feld in der Enumerationswert darstellt.
+  Das <xref:System.FlagsAttribute>-Attribut gibt an, dass der Wert einer Instanz der-Enumeration mehrere Enumerationsmember enthalten kann und dass jeder Member ein Bitfeld im Enumerationswert darstellt.
 
 - `accessmodifier`
 
@@ -57,26 +57,26 @@ End Enum
 
 - `Shadows`
 
-  Dies ist optional. Gibt an, dass diese Enumeration wird ausgeblendet, ein identisch benanntes Programmierelement oder einen Satz überladener Elemente in einer Basisklasse erneut deklariert. Sie können angeben, [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) nur auf die Enumeration selbst, nicht auf einem ihrer Member.
+  Dies ist optional. Gibt an, dass diese Enumeration ein identisch benanntes Programmier Element oder einen Satz überladener Elemente in einer Basisklasse erneut deklariert und verbirgt. Sie können Shadowing [nur für](../../../visual-basic/language-reference/modifiers/shadows.md) die Enumeration selbst angeben, nicht für Member.
 
 - `enumerationname`
 
-  Erforderlich. Der Name der Enumeration. Weitere Informationen zu gültigen Namen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Erforderlich. Der Name der Enumeration. Informationen zu gültigen Namen finden Sie unter [deklarierte Element Namen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `datatype`
 
-  Dies ist optional. Der Datentyp der Enumeration und allen zugehörigen Membern.
+  Dies ist optional. Datentyp der Enumeration und aller zugehörigen Member.
 
 - `memberlist`
 
-  Erforderlich. Liste der Memberkonstanten, die in dieser Anweisung deklariert wird. Mehrere Elemente, die auf einzelne Quellcodezeilen angezeigt werden.
+  Erforderlich. Liste der Element Konstanten, die in dieser Anweisung deklariert werden. Mehrere Elemente werden in einzelnen Quell Codezeilen angezeigt.
 
-  Jede `member` hat die folgende Syntax und Bestandteile: `[<attribute list>] member name [ = initializer ]`
+  Jede `member` weist die folgende Syntax und Teile auf: `[<attribute list>] member name [ = initializer ]`
 
   |Segment|Beschreibung|
   |---|---|
-  |`membername`|Erforderlich. Der Name des Elements.|
-  |`initializer`|Dies ist optional. Ein Ausdruck, der zur Kompilierzeit ausgewertet und auf diesen Member zugewiesen.|
+  |`membername`|Erforderlich. Der Name dieses Members.|
+  |`initializer`|Dies ist optional. Ausdruck, der zum Zeitpunkt der Kompilierung ausgewertet und diesem Member zugewiesen wird.|
 
 - `End` `Enum`
 
@@ -84,103 +84,103 @@ End Enum
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen Satz von unveränderlichen Werten, die logisch miteinander verknüpft sind verfügen, können Sie diese zusammen in einer Enumeration definieren. Dadurch aussagekräftige Namen für die Enumeration und ihre Member, die leichter merken als ihre Werte sind. Sie können dann ein Member der Enumeration an vielen Stellen in Ihrem Code verwenden.
+Wenn Sie über eine Reihe von unveränderlichen Werten verfügen, die logisch miteinander verknüpft sind, können Sie diese in einer Enumeration definieren. Dies stellt aussagekräftige Namen für die Enumeration und ihre Member bereit, die leichter zu merken sind als ihre Werte. Sie können dann die Enumerationsmember an vielen Stellen in Ihrem Code verwenden.
 
-Die Vorteile der Verwendung von Enumerationen umfassen Folgendes:
+Zu den Vorteilen der Verwendung von Enumerationen zählen die folgenden:
 
-- Fehler aufgrund eines Transponieren oder falsch eingegebene Zahlen wird reduziert.
+- Reduziert Fehler, die durch das übertragen oder falsch formatiping von Zahlen verursacht werden
 
-- Erleichtert die Werte in der Zukunft ändern.
+- Erleichtert das Ändern von Werten in der Zukunft.
 
-- Macht Code einfacher zu lesen, was bedeutet, dass es weniger wahrscheinlich ist, dass Fehler eingeführt werden.
+- Erleichtert das Lesen von Code, was bedeutet, dass es weniger wahrscheinlich ist, dass Fehler eingeführt werden.
 
-- Stellt Aufwärtskompatibilität sicher. Bei Verwendung von Enumerationen ist der Code weniger wahrscheinlich fehlschlägt, wenn in der Zukunft jemand die Namen der entsprechenden Werte ändert.
+- Gewährleistet die Vorwärtskompatibilität. Wenn Sie Enumerationen verwenden, ist es wahrscheinlich, dass Ihr Code fehlschlägt, wenn Sie in der Zukunft die Werte ändern, die den Elementnamen entsprechen.
 
-Eine Enumeration verfügt über einen Namen, einen zugrunde liegenden Datentyp und eine Menge von Elementen. Jedes Element stellt eine Konstante dar.
+Eine Enumeration verfügt über einen Namen, einen zugrunde liegenden Datentyp und einen Satz von Membern. Jeder Member stellt eine Konstante dar.
 
-Eine Enumeration, die auf die Klasse, Struktur, Modul oder Schnittstellenebene außerhalb einer Prozedur, deklariert ist eine *von Memberenumeration*. Es ist ein Mitglied der Klasse, Struktur, Modul oder Schnittstelle, die es deklariert wird.
+Eine Enumeration, die auf Klassen-, Struktur-, Modul-oder Schnittstellen Ebene, außerhalb einer Prozedur deklariert wurde, ist eine *Member-Enumeration*. Es ist ein Member der Klasse, der Struktur, des Moduls oder der Schnittstelle, die ihn deklariert.
 
-Memberenumerationen können von überall innerhalb ihrer Klasse, Struktur, Modul oder Schnittstelle zugegriffen werden. Code außerhalb einer Klasse, einer Struktur oder eines Moduls muss ein der Memberenumeration den Namen durch den Namen dieser Klasse, Struktur oder Modul qualifizieren. Sie können vermeiden, müssen vollqualifizierte Namen verwenden, durch das Hinzufügen einer [Importe](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) Anweisung, um die Quelldatei.
+Auf Member-Enumerationen kann von überall in ihrer Klasse, Struktur, Modul oder Schnittstelle zugegriffen werden. Code außerhalb einer Klasse, Struktur oder eines Moduls muss den Namen einer Member-Enumeration mit dem Namen der Klasse, Struktur oder des Moduls qualifizieren. Sie können verhindern, dass voll qualifizierte Namen verwendet werden, indem Sie der Quelldatei eine [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) -Anweisung hinzufügen.
 
-Eine Enumeration, die auf Namespace-Ebene, außerhalb jeder Klasse, Struktur, Modul oder Schnittstelle, deklariert ist, ein Mitglied der Namespace, in dem er angezeigt wird.
+Eine Enumeration, die auf Namespace Ebene, außerhalb einer Klasse, Struktur, eines Moduls oder einer Schnittstelle deklariert wurde, ist ein Member des Namespace, in dem Sie angezeigt wird.
 
-Die *Deklarationskontext* für eine Enumeration, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und keine Prozedur sein. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+Der *Deklarations Kontext* für eine Enumeration muss eine Quelldatei, ein Namespace, eine Klasse, eine Struktur, ein Modul oder eine Schnittstelle sein, und es darf sich nicht um eine Prozedur handeln. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
 
-Sie können Attribute auf eine Enumeration als Ganzes, aber nicht auf ihre Member einzeln anwenden. Ein Attribut fügt Informationen an den Metadaten der Assembly.
+Sie können Attribute auf eine Enumeration als Ganzes anwenden, jedoch nicht auf die zugehörigen Elemente einzeln. Ein Attribut trägt Informationen zu den Metadaten der Assembly bei.
 
 ## <a name="data-type"></a>Datentyp
 
-Die `Enum` -Anweisung kann den Datentyp einer Enumeration deklarieren. Jedes Element hat den Enumerationstyp Daten. Sie können angeben, `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, oder `UShort`.
+Die `Enum`-Anweisung kann den Datentyp einer Enumeration deklarieren. Jeder Member nimmt den Datentyp der Enumeration an. Sie können `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong` oder `UShort` angeben.
 
-Wenn Sie keinen angeben `datatype` für die Enumeration nimmt jedes Element den Datentyp des seine `initializer`. Wenn Sie beide angeben `datatype` und `initializer`, der Datentyp des `initializer` müssen konvertierbar sein `datatype`. Wenn weder `datatype` noch `initializer` vorhanden ist, geben Sie die Daten standardmäßig `Integer`.
+Wenn Sie `datatype` für die-Enumeration nicht angeben, nimmt jedes Element den Datentyp seines `initializer` an. Wenn Sie sowohl `datatype` als auch `initializer` angeben, muss der Datentyp von `initializer` in `datatype` konvertiert werden können. Wenn weder `datatype` noch `initializer` vorhanden ist, wird der Datentyp standardmäßig `Integer`.
 
 ## <a name="initializing-members"></a>Initialisieren von Membern
 
-Die `Enum` -Anweisung kann den Inhalt der ausgewählten Elemente in initialisieren `memberlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der das Element zugewiesen werden soll.
+Die `Enum`-Anweisung kann den Inhalt ausgewählter Elemente in `memberlist` initialisieren. Mit `initializer` können Sie einen Ausdruck angeben, der dem Member zugewiesen werden soll.
 
-Wenn Sie keinen angeben `initializer` für einen Member, Visual Basic initialisiert es entweder auf 0 (null) (ist dies die erste `member` in `memberlist`), oder auf einen Wert, der um eins größer als der, der unmittelbar vorhergehende `member`.
+Wenn Sie `initializer` für ein Element nicht angeben, wird es von Visual Basic entweder mit 0 (null) initialisiert (wenn es sich um die erste `member` in `memberlist`) oder um einen Wert, der größer als der unmittelbar vorangehende `member` ist.
 
-Der Ausdruck, der in jeder bereitgestellten `initializer` kann eine beliebige Kombination aus Literalen, andere Konstanten, die bereits definiert sind und Enumerationsmember, der bereits definiert wurden, einschließlich der einen früheren Member dieser Enumeration sein. Sie können arithmetische und logische Operatoren verwenden, zur Kombination dieser Elemente.
+Der in jedem `initializer` angegebene Ausdruck kann eine beliebige Kombination von Literalen, anderen Konstanten sein, die bereits definiert sind, und Enumerationsmembern, die bereits definiert sind, einschließlich eines vorherigen Members dieser Enumeration. Sie können arithmetische und logische Operatoren verwenden, um solche Elemente zu kombinieren.
 
-Sie können keine Variablen oder Funktionen in `initializer`. Sie können jedoch Konvertierungsschlüsselwörter wie z. B. `CByte` und `CShort`. Sie können auch `AscW` Aufruf mit einer Konstanten `String` oder `Char` -Argument, das zum Zeitpunkt der Kompilierung ausgewertet werden können.
+In `initializer` können keine Variablen oder Funktionen verwendet werden. Sie können jedoch Konvertierungs Schlüsselwörter verwenden, z. b. `CByte` und `CShort`. Sie können auch `AscW` verwenden, wenn Sie ihn mit einer Konstanten `String` oder einem `Char` Argument aufzurufen, da dieser zur Kompilierzeit ausgewertet werden kann.
 
-Enumerationen dürfen keine Gleitkommawerte haben. Wenn ein Member ein Gleitkommawerts zugewiesen ist und `Option Strict` auf festgelegt ist, tritt ein Compilerfehler auf. Wenn `Option Strict` deaktiviert ist, wird automatisch konvertierte Wert der `Enum` Typ.
+Enumerationen dürfen keine Gleit Komma Werte aufweisen. Wenn einem Element ein Gleit Komma Wert zugewiesen wird und `Option Strict` auf ON festgelegt ist, tritt ein Compilerfehler auf. Wenn `Option Strict` deaktiviert ist, wird der Wert automatisch in den `Enum`-Typ konvertiert.
 
-Wenn der Wert eines Members des zulässigen Bereichs für den zugrunde liegenden Daten überschreitet oder Member, der zulässige Höchstwert von den zugrunde liegenden Datentyp initialisiert, meldet der Compiler einen Fehler aus.
+Wenn der Wert eines Members den zulässigen Bereich des zugrunde liegenden Datentyps überschreitet oder wenn Sie ein beliebiges Element mit dem maximalen Wert initialisieren, der durch den zugrunde liegenden Datentyp zulässig ist, meldet der Compiler einen Fehler.
 
 ## <a name="modifiers"></a>Modifizierer
 
-Klasse, Struktur, Modul und Schnittstelle Member standardmäßig öffentlichen Zugriff auf Enumerationen. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Namespace Members Enumerationen standardmäßig Friend-Zugriff. Sie können ihre Zugriffsebenen auf öffentliche, aber nicht auf private oder geschützte anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Klassen-, Struktur-, Modul-und Schnittstellenmember-Enumerationen werden standardmäßig auf Public Access eingestellt. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Namespace-Member-Enumerationen werden standardmäßig auf Friend-Zugriff. Sie können Ihre Zugriffsebenen an Public, aber nicht an private oder geschützte Einstellungen anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-Alle Enumerationsmember verfügen über öffentlichen Zugriff und können keine Zugriffsmodifizierer auf diesen. Wenn die Enumeration selbst eine restriktivere Zugriffsebene verfügt, hat die Zugriffsebene für die angegebene Enumeration jedoch Vorrang vor.
+Alle Enumerationsmember haben öffentlichen Zugriff, und Sie können keine Zugriffsmodifizierer verwenden. Wenn jedoch die Enumeration selbst über eine eingeschränktere Zugriffsebene verfügt, hat die angegebene enumerationszugriffsebene Vorrang.
 
-Standardmäßig sind alle Enumerationen Typen und deren Felder sind Konstanten. Aus diesem Grund die `Shared`, `Static`, und `ReadOnly` Schlüsselwörter können nicht verwendet werden, wenn Sie eine Enumeration oder der entsprechenden Member deklarieren.
+Standardmäßig sind alle Enumerationen Typen, und ihre Felder sind Konstanten. Daher können die Schlüsselwörter `Shared`, `Static` und `ReadOnly` beim Deklarieren einer Enumeration oder ihrer Member nicht verwendet werden.
 
 ## <a name="assigning-multiple-values"></a>Zuweisen von mehreren Werten
 
-Enumerationen stellen in der Regel sich gegenseitig ausschließende Werte dar. Durch Einschließen der <xref:System.FlagsAttribute> -Attribut in der `Enum` Deklaration, Sie können stattdessen weisen mehrere Werte mit einer Instanz der Enumeration. Die <xref:System.FlagsAttribute> Attribut gibt an, dass die Enumeration als Bitfeld, d. h. einen Satz von Flags behandelt werden. Diese heißen *bitweise* Enumerationen.
+Enumerationen stellen in der Regel gegenseitig ausschließende Werte dar. Indem Sie das <xref:System.FlagsAttribute>-Attribut in die `Enum` Deklaration einschließen, können Sie einer Instanz der-Enumeration stattdessen mehrere Werte zuweisen. Das <xref:System.FlagsAttribute>-Attribut gibt an, dass die Enumeration als Bitfeld, d. h. als ein Satz von Flags, behandelt werden soll. Diese werden als *bitweise* Enumerationen bezeichnet.
 
-Wenn Sie eine Enumeration deklarieren, indem die <xref:System.FlagsAttribute> -Attribut, es wird empfohlen, dass Sie die Potenzen von 2, das, 1, 2, 4, 8, 16 und So weiter, für die Werte verwenden. Außerdem wird empfohlen, dass "None" der Name eines Members, dessen Wert 0 ist. Zusätzliche Richtlinien finden Sie unter <xref:System.FlagsAttribute> und <xref:System.Enum>.
+Wenn Sie eine Enumeration mit dem <xref:System.FlagsAttribute>-Attribut deklarieren, empfiehlt es sich, für die-Werte die Kräfte 2, d. h. 1, 2, 4, 8, 16 usw., zu verwenden. Wir empfehlen auch, dass "None" der Name eines Members ist, dessen Wert 0 ist. Weitere Richtlinien finden Sie unter <xref:System.FlagsAttribute> und <xref:System.Enum>.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie die Anweisung `Enum` verwenden. Beachten Sie, die das Element als bezeichnet `EggSizeEnum.Medium`, und nicht als `Medium`.
+Im folgenden Beispiel wird veranschaulicht, wie Sie die Anweisung `Enum` verwenden. Beachten Sie, dass der Member als `EggSizeEnum.Medium` und nicht als `Medium` bezeichnet wird.
 
 [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]
 
 ## <a name="example"></a>Beispiel
 
-Die Methode im folgenden Beispiel befindet sich außerhalb der `Egg` Klasse. Aus diesem Grund `EggSizeEnum` ist als vollqualifizierte `Egg.EggSizeEnum`.
+Die-Methode im folgenden Beispiel befindet sich außerhalb der `Egg`-Klasse. Daher ist `EggSizeEnum` voll qualifiziert als `Egg.EggSizeEnum`.
 
 [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die `Enum` Anweisung, um eine zusammengehörige Gruppe von definieren benannte Konstanten. In diesem Fall sind die Werte, Farben, die Sie auswählen können, um Dateneingabeformulare für eine Datenbank entwerfen.
+Im folgenden Beispiel wird die `Enum`-Anweisung verwendet, um einen verknüpften Satz benannter konstanter Werte zu definieren. In diesem Fall sind die Werte Farben, die Sie zum Entwerfen von Dateneingabe Formularen für eine Datenbank auswählen können.
 
 [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Werte, die positive und negative Zahlen enthalten.
+Das folgende Beispiel zeigt Werte, die positive und negative Zahlen enthalten.
 
 [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel eine `As` -Klausel wird verwendet, an die `datatype` einer Enumeration.
+Im folgenden Beispiel wird eine `As`-Klausel verwendet, um die `datatype` einer Enumeration anzugeben.
 
 [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie eine bitweise Enumeration verwendet wird. Eine Instanz einer Enumeration bitweise können mehrere Werte zugewiesen werden. Die `Enum` Deklaration enthält die <xref:System.FlagsAttribute> -Attribut, das gibt an, dass die Enumeration als ein Satz von Flags behandelt werden kann.
+Im folgenden Beispiel wird gezeigt, wie eine bitweise-Enumeration verwendet wird. Einer Instanz einer bitweisen Enumeration können mehrere Werte zugewiesen werden. Die `Enum`-Deklaration enthält das <xref:System.FlagsAttribute>-Attribut, das angibt, dass die Enumeration als ein Satz von Flags behandelt werden kann.
 
 [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel durchläuft eine Enumeration ab. Er verwendet die <xref:System.Enum.GetNames%2A> Methode, um ein Array von Namen aus der Enumeration abzurufen und <xref:System.Enum.GetValues%2A> um ein Array von Memberwerten abzurufen.
+Das folgende Beispiel durchläuft eine-Enumeration. Er verwendet die <xref:System.Enum.GetNames%2A>-Methode, um ein Array mit Elementnamen aus der-Enumeration abzurufen, und <xref:System.Enum.GetValues%2A>, um ein Array von Element Werten abzurufen.
 
 [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]
 

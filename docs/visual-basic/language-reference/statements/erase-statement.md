@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638187"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583385"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase-Anweisung (Visual Basic)
-Zum Freigeben von Arrayvariablen und Freigeben des Speicherplatzes, der für ihre Elemente verwendet.  
+Wird zum Freigeben von Array Variablen und zum Freigeben des für ihre Elemente verwendeten Speichers verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 Erase arraylist  
 ```  
   
 ## <a name="parts"></a>Teile  
  `arraylist`  
- Erforderlich. Liste der Arrayvariablen gelöscht werden soll. Mehrere Variablen werden durch Kommas voneinander getrennt.  
+ Erforderlich. Liste der zu löschenden Array Variablen. Mehrere Variablen werden durch Kommas voneinander getrennt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Erase` Anweisung kann nur auf Prozedurebene angezeigt werden. Dies bedeutet, dass Sie Arrays innerhalb einer Prozedur, aber nicht auf Klassen-oder Modulebene freigeben können.  
+ Die `Erase`-Anweisung kann nur auf Prozedur Ebene angezeigt werden. Dies bedeutet, dass Sie Arrays innerhalb einer Prozedur freigeben können, jedoch nicht auf Klassen-oder Modulebene.  
   
- Die `Erase` -Anweisung ist identisch mit der Zuweisung `Nothing` jedes Array-Variable.  
+ Die `Erase`-Anweisung entspricht der Zuweisung von `Nothing` zu jeder Array Variablen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Erase` Anweisung, um zwei Arrays gelöscht und deren Speicher freigeben (1000 und 100 Speicherelemente, bzw.). Die `ReDim` Anweisung dann weist eine neue Arrayinstanz, auf das dreidimensionale Array.  
+ Im folgenden Beispiel werden die `Erase`-Anweisung verwendet, um zwei Arrays zu löschen und Ihren Arbeitsspeicher (1000 bzw. 100 Speicherelemente) freizugeben. Die `ReDim`-Anweisung weist dann dem dreidimensionalen Array eine neue Array Instanz zu.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

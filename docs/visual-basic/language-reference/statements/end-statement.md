@@ -14,41 +14,41 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66dba1df125a08b8ae05519a0c66edb6da15ceaa
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944469"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583415"
 ---
 # <a name="end-statement"></a>End Statement
 Beendet die Ausführung sofort.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```vb  
 End  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `End` -Anweisung an einer beliebigen Stelle in einer Prozedur platzieren, um die Ausführung der gesamten Anwendung zu erzwingen. `End`schließt alle Dateien, die mit `Open` einer-Anweisung geöffnet wurden, und löscht alle Variablen der Anwendung. Die Anwendung wird geschlossen, sobald keine anderen Programme Verweise auf Ihre Objekte enthalten und der zugehörige Code nicht mehr ausgeführt wird.  
+ Sie können die `End`-Anweisung an beliebiger Stelle in einer Prozedur platzieren, um die Ausführung der gesamten Anwendung zu erzwingen. `End` schließt alle Dateien, die mit einer `Open`-Anweisung geöffnet wurden, und löscht alle Variablen der Anwendung. Die Anwendung wird geschlossen, sobald keine anderen Programme Verweise auf Ihre Objekte enthalten und der zugehörige Code nicht mehr ausgeführt wird.  
   
 > [!NOTE]
-> Die `End` -Anweisung beendet die Codeausführung abrupt und ruft weder die `Dispose` - `Finalize` Methode noch die-Methode oder andere Visual Basic Code auf. Objekt Verweise, die von anderen Programmen gehalten werden, werden für ungültig erklärt. Wenn eine `End` -Anweisung in einem `Try` -oder `Catch` -Block gefunden wird, wird das-Steuer `Finally` Element nicht an den entsprechenden-Block übergeben.  
+> Die `End`-Anweisung beendet die Codeausführung abrupt und ruft nicht die `Dispose`-oder `Finalize`-Methode oder einen anderen Visual Basic Code auf. Objekt Verweise, die von anderen Programmen gehalten werden, werden für ungültig erklärt. Wenn eine `End`-Anweisung in einem `Try`-oder `Catch`-Block gefunden wird, wird die Steuerung nicht an den entsprechenden `Finally` Block übergeben.  
   
- Die `Stop` -Anweisung hält die Ausführung an, `End`aber im Gegensatz dazu schließt Sie keine Dateien oder löscht Variablen, es sei denn, Sie findet in einer kompilierten ausführbaren Datei (. exe).  
+ Die `Stop`-Anweisung hält die Ausführung an, aber im Gegensatz zu `End` schließt Sie keine Dateien oder löscht Variablen, sofern Sie nicht in einer kompilierten ausführbaren Datei (. exe) gefunden wird.  
   
- Da `End` Ihre Anwendung beendet, ohne dass Sie an Ressourcen teilnimmt, die möglicherweise geöffnet sind, sollten Sie versuchen, die Anwendung ordnungsgemäß zu schließen, bevor Sie Sie verwenden. Wenn für Ihre Anwendung z. b. Formulare geöffnet sind, sollten Sie diese schließen, bevor die `End` Steuerung die-Anweisung erreicht.  
+ Da `End` Ihre Anwendung beendet, ohne sich an Ressourcen zu wenden, die möglicherweise geöffnet sind, sollten Sie versuchen, die Anwendung ordnungsgemäß zu schließen, bevor Sie Sie verwenden. Wenn für Ihre Anwendung z. b. Formulare geöffnet sind, sollten Sie diese schließen, bevor die Steuerung die `End` Anweisung erreicht.  
   
- Sie sollten nur `End` sparsam und nur dann verwenden, wenn Sie sofort beenden müssen. Die normalen Methoden zum Beenden einer Prozedur ([Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) und [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)) schließen die Prozedur nicht nur ordnungsgemäß, sondern geben dem aufrufenden Code auch die Möglichkeit, sauber zu schließen. Eine Konsolenanwendung kann z. b. einfach `Return` aus der `Main` Prozedur entfernt werden.  
+ Sie sollten `End` sparsam und nur dann verwenden, wenn Sie sofort beenden müssen. Die normalen Methoden zum Beenden einer Prozedur ([Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) und [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md)) schließen die Prozedur nicht nur ordnungsgemäß, sondern geben dem aufrufenden Code auch die Möglichkeit, sauber zu schließen. Eine Konsolenanwendung kann z. b. einfach aus dem `Main` Verfahren `Return`.  
   
 > [!IMPORTANT]
-> Die `End` -Anweisung ruft <xref:System.Environment.Exit%2A> die-Methode <xref:System.Environment> <xref:System> der-Klasse im-Namespace auf. <xref:System.Environment.Exit%2A>erfordert, dass Sie `UnmanagedCode` über die-Berechtigung verfügen. Andernfalls tritt ein <xref:System.Security.SecurityException> Fehler auf.  
+> Die `End`-Anweisung ruft die <xref:System.Environment.Exit%2A>-Methode der <xref:System.Environment>-Klasse im <xref:System>-Namespace auf. <xref:System.Environment.Exit%2A> erfordert, dass Sie über `UnmanagedCode` Berechtigung verfügen. Wenn dies nicht der Fall ist, tritt ein <xref:System.Security.SecurityException> Fehler auf.  
   
- Wenn ein zusätzliches Schlüsselwort folgt, [wird \<das End-Schlüsselwort > Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) das Ende der Definition der entsprechenden Prozedur bzw. des entsprechenden Blocks verstreicht. `End Function` Beendet beispielsweise die Definition einer `Function` Prozedur.  
+ Wenn ein zusätzliches Schlüsselwort folgt, wird die End [\<keyword >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) das Ende der Definition der entsprechenden Prozedur bzw. des entsprechenden Blocks verstreicht. Beispielsweise beendet `End Function` die Definition einer `Function` Prozedur.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `End` -Anweisung verwendet, um die Codeausführung zu beenden, wenn der Benutzer sie anfordert.  
+ Im folgenden Beispiel wird die Codeausführung mithilfe der `End`-Anweisung beendet, wenn der Benutzer sie anfordert.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
@@ -59,4 +59,4 @@ End
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Stop-Anweisung](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [End \<-Schlüsselwort > Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<keyword >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

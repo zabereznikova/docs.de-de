@@ -2,12 +2,12 @@
 title: Bereich von Standardnamespaces in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710358"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581885"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Bereich von Standardnamespaces in Visual Basic
 Standardnamespaces, wie sie in der XML-Struktur dargestellt werden, befinden sich bei Abfragen nicht innerhalb des gültigen Bereichs. Bei XML, das sich in einem Standardnamespace befindet, müssen Sie weiterhin eine <xref:System.Xml.Linq.XNamespace>-Variable deklarieren und diese Variable mit dem lokalen Namen kombinieren, um einen qualifizierten Namen zu erhalten, der in der Abfrage verwendet werden kann.  
@@ -50,7 +50,7 @@ End Module
 ### <a name="comments"></a>Kommentare  
  Dieses Beispiel liefert das folgende Ergebnis:  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
@@ -91,7 +91,7 @@ End Module
 ### <a name="comments"></a>Kommentare  
  Dieses Beispiel liefert das folgende Ergebnis:  
   
-```  
+```console  
 Result set follows:  
 1  
 2  

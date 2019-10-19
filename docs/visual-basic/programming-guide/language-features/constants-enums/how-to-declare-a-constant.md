@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deklarieren einer Konstante (Visual Basic)'
+title: 'Gewusst wie: Deklarieren einer Konstante (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,45 +23,45 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b84ab5e8edebba3048c5cddf723198cf3f28858
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610596"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579922"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Vorgehensweise: Deklarieren einer Konstante (Visual Basic)
-Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie dessen Wert. Durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen auf einen Wert an. Nachdem eine Konstante deklariert wird, nicht geändert oder einen neuer Wert zugewiesen.  
+# <a name="how-to-declare-a-constant-visual-basic"></a>Gewusst wie: Deklarieren einer Konstante (Visual Basic)
+Verwenden Sie die `Const`-Anweisung, um eine Konstante zu deklarieren und ihren Wert festzulegen. Durch das Deklarieren einer Konstanten weisen Sie einem Wert einen aussagekräftigen Namen zu. Nachdem eine Konstante deklariert wurde, kann Sie nicht geändert werden, oder es kann kein neuer Wert zugewiesen werden.  
   
- Deklarieren von Konstanten in einer Prozedur oder im Deklarationsabschnitt der Module, Klasse oder Struktur. Klasse oder Struktur auf Konstanten sind `Private` standardmäßig aber auch als deklariert werden, kann `Public`, `Friend`, `Protected`, oder `Protected Friend` für die entsprechende Zugriffsebene Code.  
+ Sie deklarieren eine Konstante innerhalb einer Prozedur oder im Deklarations Abschnitt eines Moduls, einer Klasse oder einer Struktur. Konstanten auf Klassen-oder Struktur Ebene werden standardmäßig `Private`, können aber auch als `Public`, `Friend`, `Protected` oder `Protected Friend` für die entsprechende Ebene des Code Zugriffs deklariert werden.  
   
- Die Konstante benötigen einen gültigen symbolischen Namen (die Regeln sind identisch mit denen zum Erstellen von Namen von variabler) und einen Ausdruck aus der numerischen oder Zeichenfolgenausdruck Konstanten und Operatoren (aber keine Funktionsaufrufe).  
+ Die Konstante muss einen gültigen symbolischen Namen aufweisen (die Regeln sind identisch mit denen für das Erstellen von Variablennamen), und ein Ausdruck, der aus numerischen oder Zeichen folgen Konstanten und Operatoren besteht (aber keine Funktionsaufrufe).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>Um eine Konstante zu deklarieren.  
+### <a name="to-declare-a-constant"></a>So deklarieren Sie eine Konstante  
   
-- Schreiben Sie eine Deklaration, Zugriffsspezifizierer hat, enthält, die `Const` -Schlüsselwort und in einem Ausdruck, wie in den folgenden Beispielen:  
+- Schreiben Sie eine Deklaration, die einen Zugriffsspezifizierer, das `Const`-Schlüsselwort und einen Ausdruck enthält, wie in den folgenden Beispielen gezeigt:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     Wenn [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) ist `Off` und [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ist `On`, Sie müssen eine Konstante explizit deklarieren, indem Sie einen Datentyp angeben (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, oder `String`).  
+     Wenn die [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) `Off` und [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On` ist, müssen Sie eine Konstante explizit deklarieren, indem Sie einen Datentyp angeben (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal` `Double`, 0 , 1, 2, 3 oder 4).  
   
-     Wenn `Option Infer` ist `On` oder `Option Strict` ist `Off`, Deklarieren einer Konstante können Sie ohne Angabe von einem Datentyp mit einer `As` Klausel. Der Compiler bestimmt den Typ der Konstante vom Typ des Ausdrucks. Weitere Informationen finden Sie unter [Konstanten und Literale Datentypen](constant-and-literal-data-types.md).  
+     Wenn `Option Infer` `On` oder `Option Strict` `Off` ist, können Sie eine Konstante deklarieren, ohne einen-Datentyp mit einer `As`-Klausel anzugeben. Der Compiler bestimmt den Typ der Konstante vom Typ des Ausdrucks. Weitere Informationen finden Sie unter [Constant-und literaldatentypen](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Um eine Konstante zu deklarieren, die einen explizit angegebenen Datentyp verfügt  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>So deklarieren Sie eine Konstante, die über einen explizit angegebenen Datentyp verfügt  
   
-- Schreiben Sie eine Deklaration, enthält die `As` -Schlüsselwort und einen expliziten Datentyp eingeben, wie in den folgenden Beispielen:  
+- Schreiben Sie eine Deklaration, die das `As`-Schlüsselwort und einen expliziten Datentyp enthält, wie in den folgenden Beispielen gezeigt:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     Sie können mehrere Konstanten in einer einzelnen Zeile deklariert, obwohl der Code besser lesbar ist, wenn Sie nur einen einzelnen Konstanten pro Zeile deklarieren. Wenn Sie mehrere Konstanten in einer einzelnen Zeile deklarieren, sie müssen alle haben die gleiche Zugriffsebene (`Public`, `Private`, `Friend`, `Protected`, oder `Protected Friend`).  
+     Sie können mehrere Konstanten in einer einzelnen Zeile deklarieren, obwohl der Code besser lesbar ist, wenn Sie nur eine einzelne Konstante pro Zeile deklarieren. Wenn Sie mehrere Konstanten in einer einzelnen Zeile deklarieren, müssen diese alle die gleiche Zugriffsebene (`Public`, `Private`, `Friend`, `Protected` oder `Protected Friend`) aufweisen.  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>Um mehrere Konstanten in einer einzelnen Zeile deklariert werden.  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>So deklarieren Sie mehrere Konstanten in einer einzelnen Zeile  
   
-- Trennen Sie die Deklarationen, durch ein Komma und ein Leerzeichen, wie im folgenden Beispiel gezeigt:  
+- Trennen Sie die Deklarationen durch ein Komma und ein Leerzeichen, wie im folgenden Beispiel gezeigt:  
   
-    ```  
+    ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
@@ -70,21 +70,21 @@ Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie
 - [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Konstanten und literale Datentypen](constant-and-literal-data-types.md)
 - [Übersicht über Konstanten](constants-overview.md)
-- [Vorgehensweise: Deklarieren einer Konstante](how-to-declare-a-constant.md)
+- [Gewusst wie: Deklarieren einer Konstante](how-to-declare-a-constant.md)
 - [Benutzerdefinierte Konstanten](user-defined-constants.md)
 - [Konstanten und literale Datentypen](constant-and-literal-data-types.md)
-- [Vorgehensweise: Gruppieren verwandter konstanter Werte](how-to-group-related-constant-values-together.md)
+- [Gewusst wie: Gruppieren verwandter konstanter Werte](how-to-group-related-constant-values-together.md)
 - [Übersicht über Enumerationen](enumerations-overview.md)
-- [Vorgehensweise: Deklarieren einer Enumeration](how-to-declare-enumerations.md)
-- [Vorgehensweise: Finden Sie in einen Enumerationsmember](how-to-refer-to-an-enumeration-member.md)
+- [Gewusst wie: Deklarieren einer Enumeration](how-to-declare-enumerations.md)
+- [Gewusst wie: Verweisen auf einen Enumerationsmember](how-to-refer-to-an-enumeration-member.md)
 - [Enumerationen und Namensqualifikation](enumerations-and-name-qualification.md)
-- [Vorgehensweise: Durchlaufen einer Enumeration](how-to-iterate-through-an-enumeration.md)
-- [Vorgehensweise: Bestimmen der einem Enumerationswert zugeordneten Zeichenfolge](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Gewusst wie: Durchlaufen einer Enumeration](how-to-iterate-through-an-enumeration.md)
+- [Gewusst wie: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge](how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Situationen für die Verwendung von Enumerationen](when-to-use-an-enumeration.md)
 
 - [Übersicht über Enumerationen](enumerations-overview.md)
 - [Übersicht über Konstanten](constants-overview.md)
-- [Vorgehensweise: Deklarieren einer Enumeration](how-to-declare-enumerations.md)
+- [Gewusst wie: Deklarieren einer Enumeration](how-to-declare-enumerations.md)
 - [Enumerationen und Namensqualifikation](enumerations-and-name-qualification.md)
 - [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)

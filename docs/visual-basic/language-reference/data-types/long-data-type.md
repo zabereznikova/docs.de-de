@@ -20,39 +20,39 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 7b4226c83f25807e013823031820d58790bb6db2
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: efbe54c2495d05e8fe215690f60ba3c7ea9cfef6
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912789"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582525"
 ---
 # <a name="long-data-type-visual-basic"></a>Long-Datentyp (Visual Basic)
 
-Speichert signierte 64-Bit (8 Byte) ganze Zahlen im Bereich zwischen -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18).  
-  
+Enthält signierte 64-Bit-Ganzzahlen (8 Byte) mit einem Wert von-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807 (9.2... E + 18).
+
 ## <a name="remarks"></a>Hinweise
 
- Verwenden der `Long` -Datentyp, um ganze Zahlen enthalten, die zu groß für die `Integer` -Datentyp.  
-  
- Der Standardwert von `Long` lautet 0.
+Verwenden Sie den `Long`-Datentyp, um ganzzahlige Zahlen zu enthalten, die zu groß für den `Integer` Datentyp sind.
 
-## <a name="literal-assignments"></a>Zuweisung von literalen 
+Der Standardwert von `Long` lautet 0.
 
-Sie können deklarieren und initialisieren eine `Long` Variable, indem Sie ihm ein dezimales Literal, ein hexadezimales Literal ein oktales Literal, zuweisen oder (beginnend mit Visual Basic 2017) ein binäres Literal. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Long` befindet – sprich, wenn es kleiner als <xref:System.Int64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
+## <a name="literal-assignments"></a>Literalzuweisungen
+
+Sie können eine `Long` Variable deklarieren und initialisieren, indem Sie Ihr ein dezimales Literalzeichen, ein hexadezimales Literalzeichen, ein Oktalliterale oder (beginnend mit Visual Basic 2017) ein binäres Literalzeichen zuweisen. Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `Long` befindet – sprich, wenn es kleiner als <xref:System.Int64.MinValue?displayProperty=nameWithType> oder größer als <xref:System.Int64.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf.
 
 Im folgenden Beispiel werden Ganzzahlen wie 4294967296, die als dezimale, hexadezimale und binäre Literale dargestellt werden, den `Long`-Werten zugewiesen.
-  
-[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]  
+
+[!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Long)]
 
 > [!NOTE]
-> Sie verwenden das Präfix `&h` oder `&H` um anzugeben, ein hexadezimales Literal, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix anzugeben `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+> Sie verwenden das Präfix `&h` oder `&H`, um eine hexadezimale Literale anzugeben, das Präfix `&b` oder `&B`, um ein binäres Literal anzugeben, und das Präfix `&o` oder `&O`, um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
 
-Starten Visual Basic 2017, Sie können auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel gezeigt.
+Ab Visual Basic 2017 können Sie auch den Unterstrich (`_`) als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Ab Visual Basic 15.5 können Sie können auch den Unterstrich (`_`) als vorangestelltes Trennzeichen zwischen Präfix und die Ziffern hexadezimalen, Binär- oder Oktalziffern. Zum Beispiel:
+Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich (`_`) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -60,21 +60,21 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Numerische Literale können auch einschließen, die `L` [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) zur Angabe der `Long` -Datentyp, wie im folgenden Beispiel gezeigt.
+Numerische Literale können auch das `L` [Type-Zeichen](../../programming-guide/language-features/data-types/type-characters.md) enthalten, um den `Long` Datentyp anzugeben, wie im folgenden Beispiel gezeigt.
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
 ```
 
-## <a name="programming-tips"></a>Tipps für die Programmierung
+## <a name="programming-tips"></a>Programmiertipps
 
-- **Interop-Überlegungen.** Wenn die Komponenten, die nicht für die .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschrieben verbunden ist, beachten Sie, dass `Long` verfügt über eine andere Datenbreite (32 Bit) in anderen Umgebungen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Integer` anstelle von `Long` im neuen Visual Basic-Code.  
-  
-- **Erweiternde.** Die `Long` -Datentyp wird zu `Decimal`, `Single`, oder `Double`. Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.  
-  
-- **Typzeichen.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.  
-  
-- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.  
+- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), denken Sie daran, dass `Long` in anderen Umgebungen eine andere Daten Breite (32 Bits) aufweist. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie es als `Integer`, anstatt `Long` im neuen Visual Basic Code zu verwenden.
+
+- **Tet.** Der `Long`-Datentyp wird zu `Decimal`, `Single` oder `Double` erweitert. Dies bedeutet, dass Sie `Long` in einen dieser Typen konvertieren können, ohne dass ein <xref:System.OverflowException?displayProperty=nameWithType>-Fehler auftritt.
+
+- **Geben Sie Zeichen ein.** Durch Anhängen des Literaltypzeichens `L` an ein Literal wird der `Long`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `&` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Long`-Datentyp erzwungen.
+
+- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.Int64?displayProperty=nameWithType>-Struktur.
 
 ## <a name="see-also"></a>Siehe auch
 

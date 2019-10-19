@@ -1,21 +1,21 @@
 ---
-title: Refactoring mit reiner Funktion (Visual Basic)
+title: Refactoring mithilfe einer reinen Funktion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 96e8534280d560502b04b1880273cf7254f36e20
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 361aef2baa2102f4f942b5ddd37ed8a9704fbf19
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666091"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582676"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring mit reiner Funktion (Visual Basic)
-Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), um eine reine Funktion In diesem Beispiel ist der Code zum Suchen der Text eines Absatzes in die reine statische Methode verschoben`ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring mithilfe einer reinen Funktion (Visual Basic)
+Im folgenden Beispiel wird das vorherige Beispiel, [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), umgestaltet, um in diesem Beispiel eine reine Funktion zu verwenden. der Code für die Suche nach dem Text eines Absatzes wird in die reine statische Methode `ParagraphText` verschoben.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Der umgestaltete Code wird im Code durch entsprechende Kommentare gekennzeichnet.  
   
- Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie unter [Erstellen des Quell-Office Open-XML-Dokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -149,7 +149,7 @@ End Module
   
  Dieses Beispiel erzeugt dieselbe Ausgabe wie vor der Umgestaltung:  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel wird gezeigt, wie Sie XML in eine andere Form projizieren können:  
   
-- [Projektieren von XML in eine andere Form (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Projizieren von XML in eine andere Form (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

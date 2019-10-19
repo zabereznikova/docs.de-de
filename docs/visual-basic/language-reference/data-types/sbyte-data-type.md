@@ -14,39 +14,39 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: f4e95aacc8e7063cbac8f9ed8e117137836f08bd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a962200195002858257b92e92e0dd1383d4fb2d2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647029"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582514"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte-Datentyp (Visual Basic)
 
-Speichert signierte 8-Bit (1-Byte) ganze Zahlen, die im Bereich zwischen-128 und 127 liegen.  
-  
+Enthält signierte 8-Bit-Ganzzahlen (1 Byte), die den Wert von-128 bis 127 über liegen.
+
 ## <a name="remarks"></a>Hinweise
 
-Verwenden der `SByte` -Datentyp, um ganzzahlige Werte enthalten, die nicht die gesamten Datenbreite des erfordern `Integer` oder sogar die Hälfte Datenbreite des `Short`. In einigen Fällen die common Language Runtime kann in der Lage, Packen Ihrer `SByte` Variablen, die eng zusammen und Arbeitsspeicher belegt.
+Verwenden Sie den `SByte`-Datentyp, um ganzzahlige Werte zu enthalten, die nicht die vollständige Daten Breite von `Integer` oder sogar die halbe Daten Breite `Short` benötigen. In einigen Fällen können die Common Language Runtime ihre `SByte` Variablen eng zusammenpacken und den Speicherverbrauch verbrauchen.
 
 Der Standardwert von `SByte` lautet 0.
 
-## <a name="literal-assignments"></a>Zuweisung von literalen
-  
-Sie können deklarieren und initialisieren eine `SByte` Variable, indem Sie ihm ein dezimales Literal, ein hexadezimales Literal ein oktales Literal, zuweisen oder (beginnend mit Visual Basic 2017) ein binäres Literal.
+## <a name="literal-assignments"></a>Literalzuweisungen
 
-Im folgenden Beispiel werden Ganzzahlen wie 102, die als dezimale, hexadezimale Werte dargestellt werden und binäre Literale werden zugewiesen, `SByte` Werte. Dieses Beispiel erfordert, dass Sie die Kompilierung mit der `/removeintchecks` Compilerschalter.
+Sie können eine `SByte` Variable deklarieren und initialisieren, indem Sie Ihr ein dezimales Literalzeichen, ein hexadezimales Literalzeichen, ein Oktalliterale oder (beginnend mit Visual Basic 2017) ein binäres Literalzeichen zuweisen.
 
-[!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]  
+Im folgenden Beispiel werden Ganzzahlen von-102, die als Dezimale, hexadezimale und binäre Literale dargestellt werden, `SByte` Werten zugewiesen. Für dieses Beispiel ist es erforderlich, dass Sie mit dem `/removeintchecks`-Compilerschalter kompilieren.
 
-> [!NOTE] 
-> Sie verwenden das Präfix `&h` oder `&H` um anzugeben, ein hexadezimales Literal, das Präfix `&b` oder `&B` um ein binäres Literal und das Präfix anzugeben `&o` oder `&O` um ein oktales Literal zu kennzeichnen. Dezimale Literale haben kein Präfix.
+[!code-vb[SByte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByte)]
 
-Starten Visual Basic 2017, Sie können auch den Unterstrich, `_`, als Zifferntrennzeichen zum Verbessern der Lesbarkeit, wie im folgenden Beispiel gezeigt.
+> [!NOTE]
+> Sie verwenden das Präfix `&h` oder `&H`, um eine hexadezimale Literale anzugeben, das Präfix `&b` oder `&B`, um ein binäres Literal anzugeben, und das Präfix `&o` oder `&O`, um ein Oktalliteral anzugeben. Dezimale Literale haben kein Präfix.
 
-[!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+Ab Visual Basic 2017 können Sie auch den Unterstrich (`_`) als Ziffern Trennzeichen verwenden, um die Lesbarkeit zu verbessern, wie im folgenden Beispiel gezeigt.
 
-Ab Visual Basic 15.5 können Sie können auch den Unterstrich (`_`) als vorangestelltes Trennzeichen zwischen Präfix und die Ziffern hexadezimalen, Binär- oder Oktalziffern. Zum Beispiel:
+[!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
+
+Beginnend mit Visual Basic 15,5 können Sie auch den Unterstrich (`_`) als führendes Trennzeichen zwischen dem Präfix und den hexadezimalen, binären oder oktalen Ziffern verwenden. Beispiel:
 
 ```vb
 Dim number As SByte = &H_F9
@@ -54,24 +54,24 @@ Dim number As SByte = &H_F9
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `SByte` befindet – sprich, wenn es kleiner als <xref:System.SByte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.SByte.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf. Wenn ein Ganzzahlliteral kein Suffix besitzt eine [Ganzzahl](integer-data-type.md) abgeleitet wird. Ist das Ganzzahlliteral außerhalb des Bereichs von der `Integer` Typ eine [lange](long-data-type.md) abgeleitet wird. Das bedeutet, dass in den vorherigen Beispielen, die die numerischen Literale `0x9A` und `0b10011010` werden als 32-Bit-Ganzzahlen mit Vorzeichen mit einem Wert von 156, überschreitet interpretiert <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Um Code wie den folgenden zu kompilieren, die eine nicht-Dezimalzahlen ganze Zahl, und weist eine `SByte`, führen Sie einen der folgenden:
+Wenn Sich das Ganzzahlliteral außerhalb des Bereichs von `SByte` befindet – sprich, wenn es kleiner als <xref:System.SByte.MinValue?displayProperty=nameWithType> oder größer als <xref:System.SByte.MaxValue?displayProperty=nameWithType> ist – tritt ein Kompilierfehler auf. Wenn ein Ganzzahlliteral kein Suffix aufweist, wird eine [ganze](integer-data-type.md) Zahl abgeleitet. Wenn das ganzzahlige Literale außerhalb des Bereichs des `Integer` Typs liegt, wird eine [lange](long-data-type.md) abgeleitet. Dies bedeutet, dass in den vorherigen Beispielen die numerischen Literale `0x9A` und `0b10011010` als 32-Bit-Ganzzahlen mit Vorzeichen mit einem Wert von 156 interpretiert werden, der <xref:System.SByte.MaxValue?displayProperty=nameWithType> überschreitet. Zur erfolgreichen Kompilierung von Code wie diesem, der einer `SByte` eine nicht dezimale Ganzzahl zuweist, können Sie eine der folgenden Aktionen ausführen:
 
-- Deaktivieren Sie die Grenzen Überprüfung ganzer Zahlen durch die Kompilierung mit der `/removeintchecks` Compilerschalter.
+- Deaktivieren Sie Überprüfungen der ganzzahligen Grenzen, indem Sie die Kompilierung mit dem `/removeintchecks`
 
-- Verwenden einer [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) , den literalen Wert explizit zu definieren, die Sie zuweisen möchten die `SByte`. Das folgende Beispiel weist ein negatives Literal `Short` -Werts in einen `SByte`. Beachten Sie, dass für negative Zahlen, das höchstwertige Bit von das höherwertige Wort des numerischen Literals muss festgelegt werden. Bei unserem Beispiel ist dies bit 15 des Literals `Short` Wert.
+- Verwenden Sie ein [Typzeichen](../../programming-guide/language-features/data-types/type-characters.md) , um den Literalwert, den Sie dem `SByte` zuweisen möchten, explizit zu definieren. Im folgenden Beispiel wird einem `SByte` ein negativer Literal`Short` Wert zugewiesen. Beachten Sie, dass für negative Zahlen das höchst wertige Bit des großen Worts des numerischen Literals festgelegt werden muss. Im vorliegenden Beispiel ist dies Bit 15 des literalen `Short` Werts.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
-## <a name="programming-tips"></a>Tipps für die Programmierung
-  
-- **CLS-Kompatibilität.** Die `SByte` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.
+## <a name="programming-tips"></a>Programmiertipps
 
-- **Erweiternde.** Die `SByte` -Datentyp wird zu `Short`, `Integer`, `Long`, `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `SByte` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.
-  
-- **Typzeichen.** `SByte` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
-  
-- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.SByte?displayProperty=nameWithType>-Struktur.
-  
+- **CLS-Kompatibilität.** Der `SByte`-Datentyp ist nicht Teil des [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS). Daher kann CLS-kompatibler Code keine Komponente verwenden, die ihn verwendet.
+
+- **Tet.** Der `SByte`-Datentyp wird auf `Short`, `Integer`, `Long`, `Decimal`, `Single` und `Double` erweitert. Dies bedeutet, dass Sie `SByte` in einen dieser Typen konvertieren können, ohne dass <xref:System.OverflowException?displayProperty=nameWithType> Fehler auftreten.
+
+- **Geben Sie Zeichen ein.** `SByte` hat kein Literaltyp Zeichen oder Bezeichnertyp Zeichen.
+
+- **Frameworktyp.** Der entsprechende Typ in .NET Framework ist die <xref:System.SByte?displayProperty=nameWithType>-Struktur.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.SByte?displayProperty=nameWithType>
