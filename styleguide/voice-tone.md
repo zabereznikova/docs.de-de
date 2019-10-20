@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0bad5c7944a06527cd71606c686762656f33c925
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 2692a83ff351557889d4d573b6f7cddfe6739983
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929179"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523947"
 ---
 # <a name="voice-and-tone-guidelines"></a>Richtlinien zu Sprache und Schreibstil
 
@@ -23,22 +23,28 @@ Beispiele hierfür finden Sie in diesen Stilvorgaben. Beim Schreiben dieser Stil
 ## <a name="details-on-each-guideline"></a>Details zu den einzelnen Richtlinien
 
 ### <a name="use-a-conversational-tone"></a>Verwenden Sie einen umgangssprachlichen Ton
+
 #### <a name="appropriate-style"></a>Angemessener Stil:
+
 Wir möchten, dass unsere Dokumentation in einem umgangssprachlichen Ton verfasst wird. Beim Lesen der Tutorials und Erläuterungen muss für Sie als Leser der Eindruck entstehen, Sie würden sich mit dem Autor unterhalten.
 Der Text sollte informell, locker und informativ geschrieben sein. Für die Leser sollte der Eindruck entstehen, Sie würden zuhören, wie der Autor die Konzepte erläutert.
 
 #### <a name="inappropriate-style"></a>Unangemessener Stil:
-Der Gegensatz zwischen einem umgangssprachlichen Ton und dem Ton, in dem wissenschaftliche Abhandlungen über technische Themen verfasst sind, ist leicht zu erkennen. Keine Frage, diese Ressourcen sind sehr hilfreich. Jedoch haben die Autoren diese Artikel im Vergleich zu unserer Dokumentation in einem völlig anderen Stil geschrieben. Wissenschaftliche Zeitschriften werden in einem völlig anderen Ton und Schreibstil verfasst.
-Dem Leser werden trockene Beschreibungen trockener Themen präsentiert.  
 
-Im ersten Abschnitt wurden die Empfehlungen für einen umgangssprachlichen Ton befolgt. Im zweiten ein eher wissenschaftlicher Ton. Der Unterschied ist sofort zu erkennen. 
+Der Gegensatz zwischen einem umgangssprachlichen Ton und dem Ton, in dem wissenschaftliche Abhandlungen über technische Themen verfasst sind, ist leicht zu erkennen. Keine Frage, diese Ressourcen sind sehr hilfreich. Jedoch haben die Autoren diese Artikel im Vergleich zu unserer Dokumentation in einem völlig anderen Stil geschrieben. Wissenschaftliche Zeitschriften werden in einem völlig anderen Ton und Schreibstil verfasst.
+Dem Leser werden trockene Beschreibungen trockener Themen präsentiert.
+
+Im ersten Abschnitt wurden die Empfehlungen für einen umgangssprachlichen Ton befolgt. Im zweiten ein eher wissenschaftlicher Ton. Der Unterschied ist sofort zu erkennen.
 
 ### <a name="write-in-second-person"></a>Schreiben Sie in der zweiten Person
+
 #### <a name="appropriate-style"></a>Angemessener Stil:
+
 Schreiben Sie Ihre Artikel so, als würden Sie direkt mit dem Leser sprechen. Verwenden Sie so oft wie möglich die zweite Person (so wie in diesen beiden Sätzen). 2\. Person bedeutet nicht immer, dass Sie das Wort „Sie“ verwenden. Sprechen Sie den Leser direkt an. Schreiben Sie Aufforderungssätze.
 Teilen Sie Ihren Lesern mit, was Sie ihnen beibringen möchten.
 
-#### <a name="inappropriate-style"></a>Unangemessener Stil: 
+#### <a name="inappropriate-style"></a>Unangemessener Stil:
+
 Ein Autor kann auch in der dritten Person schreiben. Dabei muss er ein Pronomen oder Nomen suchen, mit dem er sich auf den Leser bezieht. Für den Leser ist dieser Schreibstil in der dritten Person meist weniger ansprechend und weniger unterhaltsam zu lesen.
 
 Im ersten Abschnitt wurden unsere Stilempfehlungen befolgt. Im zweiten wurde die dritte Person verwendet. Bitte schreiben Sie in der zweiten Person. Sie fanden diesen Abschnitt bestimmt viel einfacher zu lesen.
@@ -63,10 +69,12 @@ Mit Ihren Artikeln erreichen Sie eine international Zielgruppe. Denken Sie daran
 
 Dennoch schreiben Sie für technische Experten. Sie können davon ausgehen, dass Ihre Leser über Programmierkenntnisse verfügen und spezifische Programmierterminologie beherrschen. Objektorientierte Programmierung, Klasse und Objekt, Funktion und Methode sind bekannte Begriffe. Aber nicht jeder Leser Ihrer Artikel verfügt über einen formalen Abschluss in Informatik. Ausdrücke wie „idempotent“ sollten vor der Verwendung besser erläutert werden:
 
->Die Close()-Methode ist idempotent, d.h. dass Sie sie zwar mehrmals aufrufen können, der Effekt jedoch derselbe ist, als wenn Sie sie nur einmal aufrufen würden.
+> Die Close()-Methode ist idempotent, d.h. dass Sie sie zwar mehrmals aufrufen können, der Effekt jedoch derselbe ist, als wenn Sie sie nur einmal aufrufen würden.
 
 ### <a name="avoid-future-tense"></a>Vermeiden Sie die Verwendung des Futurs
+
 In einigen nicht-englischen Sprachen ist das Konzept des Futurs nicht dasselbe wie im Englischen. Durch Verwendung des Futurs können Ihre Dokumente schwerer lesbar werden. Außerdem stellt sich die offensichtliche Frage, wann das Futur verwendet werden sollte. Wenn Sie also schreiben „Das Erlernen von PowerShell wird gut für Sie sein“ stellt sich die offensichtliche Frage für den Leser, wann das genau der Fall sein wird. Schreiben Sie stattdessen einfach „Das Erlernen von PowerShell ist gut für Sie“.
 
 ### <a name="what-is-it---so-what"></a>Was ist es, und wozu ist es gut?
-Wenn Sie dem Leser ein neues Konzept vorstellen, definieren Sie das Konzept und erklären erst anschließend, warum es nützlich ist. Es ist wichtig, dass der Leser versteht, was etwas ist, bevor er die Vorteile verstehen kann (oder die Nachteile). 
+
+Wenn Sie dem Leser ein neues Konzept vorstellen, definieren Sie das Konzept und erklären erst anschließend, warum es nützlich ist. Es ist wichtig, dass der Leser versteht, was etwas ist, bevor er die Vorteile verstehen kann (oder die Nachteile).

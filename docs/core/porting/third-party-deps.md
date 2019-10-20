@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie externe Abhängigkeiten analysieren können, 
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904331"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521470"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analysieren Ihrer Abhängigkeiten zum Portieren von Code zu .NET Core
 
@@ -20,8 +20,8 @@ Um den Code zu .NET Core oder .NET Standard portieren zu können, müssen Sie Ih
 Wenn Sie in Ihrem Projekt auf NuGet-Pakete verweisen, müssen Sie überprüfen, ob diese mit .NET Core kompatibel sind.
 Es gibt zwei Möglichkeiten, dies zu erreichen:
 
-* [Verwenden der NuGet-Paket-Explorer-App](#analyze-nuget-packages-using-nuget-package-explorer)
-* [Verwenden der Website nuget.org](#analyze-nuget-packages-using-nugetorg)
+- [Verwenden der NuGet-Paket-Explorer-App](#analyze-nuget-packages-using-nuget-package-explorer)
+- [Verwenden der Website nuget.org](#analyze-nuget-packages-using-nugetorg)
 
 Wenn sich bei der Analyse herausstellt, dass die Pakete nicht mit .NET Core sondern nur mit .NET Framework kompatibel sind, können Sie prüfen, ob der [.NET Framework-Kompatibilitätsmodus](#net-framework-compatibility-mode) Ihnen beim Portieren helfen kann.
 

@@ -4,12 +4,12 @@ description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das F
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c6eb17ca6cd4ce920cd358a87d2a4a6759dc3439
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 49b0579c284af74d270cac04d302ce231dcb9357
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117256"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522830"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
 
@@ -28,19 +28,19 @@ Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio ve
 
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
-* Ihr bevorzugter Code-Editor
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
+- Ihr bevorzugter Code-Editor
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
-* [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
-* Ihr bevorzugter Code-Editor
+- [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
+- Ihr bevorzugter Code-Editor
 
 ---
 
 ## <a name="getting-started"></a>Erste Schritte
 
-Das folgende Beispiel führt Sie durch die erforderlichen Schritte zum Hinzufügen eines Webdienstverweises zu einem .NET Core- Webprojekt und Aufrufen des Diensts. Sie erstellen eine .NET Core-Webanwendung mit dem Namen _HelloSvcutil_ und fügen einen Verweis auf einen Webdienst hinzu, der folgenden Vertrag implementiert:
+Das folgende Beispiel führt Sie durch die erforderlichen Schritte zum Hinzufügen eines Webdienstverweises zu einem .NET Core- Webprojekt und Aufrufen des Diensts. Sie erstellen eine .NET Core-Webanwendung mit dem Namen *HelloSvcutil* und fügen einen Verweis auf einen Webdienst hinzu, der folgenden Vertrag implementiert:
 
 ```csharp
 [ServiceContract]
@@ -154,7 +154,7 @@ Die generierte Datei wird als _HelloSvcutil/ServiceReference/Reference.cs_ gespe
 
 6. Navigieren Sie in Ihrem Webbrowser zu der URL, die in der Konsole aufgelistet ist, (z.B. `http://localhost:5000`).
 
-Die folgende Ausgabe wird angezeigt. „Hello dotnet-svcutil!“
+Die folgende Ausgabe wird angezeigt: „Hello dotnet-svcutil!“
 
 Um eine ausführliche Beschreibung der Parameter des `dotnet-svcutil`-Tools zu erhalten, rufen Sie das Tool wie folgt mit Übergabe des Hilfeparameters auf:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
@@ -175,10 +175,10 @@ dotnet svcutil --help
 
 Wenn Sie Fragen haben oder uns Feedback geben möchten, [öffnen Sie ein Problem auf GitHub](https://github.com/dotnet/wcf/issues/new). Sie können außerdem bereits vorhandene Fragen oder Probleme [im WCF-Repository auf GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling) überprüfen.
 
-## <a name="release-notes"></a>Versionshinweise
+## <a name="release-notes"></a>Anmerkungen zu diesem Release
 
-* Aktualisierte Informationen zu den einzelnen Versionen, einschließlich bekannter Probleme, finden Sie in den [Anmerkungen zu den jeweiligen Versionen](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md).
+- Aktualisierte Informationen zu den einzelnen Versionen, einschließlich bekannter Probleme, finden Sie in den [Anmerkungen zu den jeweiligen Versionen](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md).
 
 ## <a name="information"></a>Information
 
-* [dotnet-svcutil-NuGet-Paket](https://nuget.org/packages/dotnet-svcutil)
+- [dotnet-svcutil-NuGet-Paket](https://nuget.org/packages/dotnet-svcutil)

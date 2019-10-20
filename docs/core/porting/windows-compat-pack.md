@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Windows Compatibility Pack und die Verwendu
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202566"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521281"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 
@@ -25,23 +25,23 @@ Bei diesem Paket handelt es sich um eine logische [Erweiterung von .NET Standard
 
 Es werden über 20.000 APIs aus folgenden Technologiebereichen bereitgestellt, darunter befinden sich sowohl Windows-APIs als auch plattformübergreifende APIs:
 
-* Codepages
-* CodeDom
-* Konfiguration
-* Verzeichnisdienste
-* Zeichnung
-* ODBC
-* Berechtigungen
-* Ports
-* Windows-Zugriffssteuerungslisten (Access Control List, ACL)
-* Windows Communication Foundation (WCF)
-* Windows-Kryptografie
-* Windows-EventLog
-* Windows Management Instrumentation (WMI)
-* Windows-Leistungsindikatoren
-* Windows-Registrierung
-* Zwischenspeichern von Windows-Runtime
-* Windows-Dienste
+- Codepages
+- CodeDom
+- Konfiguration
+- Verzeichnisdienste
+- Zeichnung
+- ODBC
+- Berechtigungen
+- Ports
+- Windows-Zugriffssteuerungslisten (Access Control List, ACL)
+- Windows Communication Foundation (WCF)
+- Windows-Kryptografie
+- Windows-EventLog
+- Windows Management Instrumentation (WMI)
+- Windows-Leistungsindikatoren
+- Windows-Registrierung
+- Zwischenspeichern von Windows-Runtime
+- Windows-Dienste
 
 Weitere Informationen finden Sie in den Angaben zum [Windows Compatibility Pack](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

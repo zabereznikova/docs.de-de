@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Änderungen an „dotnet publish“ fü
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656296"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522092"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Rollforward der eigenständigen Runtimebereitstellung
 
@@ -28,8 +28,8 @@ ms.locfileid: "53656296"
 
 Das Ausführen von `restore` als Teil des `publish`-Vorgangs kann für Ihr Szenario unangebracht sein. Führen Sie die folgenden Schritte aus, um `restore` während `publish` beim Erstellen eigenständiger Anwendungen zu vermeiden:
 
-* Legen Sie die Eigenschaft `RuntimeIdentifiers` auf eine durch Semikolons getrennte Liste aller zu veröffentlichenden [RIDs](../rid-catalog.md) fest.
-* Legen Sie die `TargetLatestRuntimePatch` -Eigenschaft auf `true`fest.
+- Legen Sie die Eigenschaft `RuntimeIdentifiers` auf eine durch Semikolons getrennte Liste aller zu veröffentlichenden [RIDs](../rid-catalog.md) fest.
+- Legen Sie die `TargetLatestRuntimePatch` -Eigenschaft auf `true`fest.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>No-restore-Argument mit dotnet publish-Optionen
 

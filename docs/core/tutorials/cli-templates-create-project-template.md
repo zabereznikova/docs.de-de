@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3455720d729f813d9b6f32e433adffa4dc40dce4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926139"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318275"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Erstellen einer Projektvorlage
 
@@ -159,7 +159,7 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Testen der Projektvorlage
 
-Testen Sie als Nächstes Ihre installierte Elementvorlage. Navigieren Sie zum Ordner _test_, und erstellen Sie mithilfe des Befehls `dotnet new console` eine neue Konsolenanwendung. Dadurch wird ein funktionierendes Projekt generiert, das Sie mühelos mit dem Befehl `dotnet run` testen können.
+Testen Sie als Nächstes Ihre installierte Elementvorlage. Navigieren Sie zum Ordner _test_, und erstellen Sie mithilfe des Befehls `dotnet new consoleasync` eine neue Konsolenanwendung. Dadurch wird ein funktionierendes Projekt generiert, das Sie mühelos mit dem Befehl `dotnet run` testen können.
 
 ```console
 C:\test> dotnet new consoleasync

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie .NET Core für die Verteilung verpacken, bene
 author: tmds
 ms.date: 10/09/2019
 ms.custom: seodec18
-ms.openlocfilehash: 3c41ce8a4a9ac1a914de2535a9b2423a7ddfa2cf
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250142"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393580"
 ---
 # <a name="net-core-distribution-packaging"></a>Verpacken einer Verteilung von .NET Core
 
@@ -72,7 +72,7 @@ Es gibt nur einen Host, die meisten anderen Komponenten befinden sich jedoch in 
 
 - (3) **sdk/\<sdk version>** : Das SDK (auch bekannt als „die Tools“) ist ein Satz verwalteter Tools, die zum Schreiben und Erstellen von .NET Core-Bibliotheken und -Anwendungen verwendet werden. Das SDK enthält die .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI), die verwalteten Sprachencompiler, MSBuild und zugeordnete Buildaufgaben und Ziele, NuGet, neue Projektvorlagen usw.
 
-- (4) **sdk/NuGetFallbackFolder** enthält einen Cache der NuGet-Pakete, die von einem SDK während der Wiederherstellung verwendet werden, etwa bei der Ausführung von `dotnet restore` oder `dotnet build /t:Restore`. Dieser Ordner wird nur vor .NET Core 3.0 verwendet. Er kann nicht aus der Quelle erstellt werden, da er vorgefertigte binäre Ressourcen aus `nuget.org` enthält.
+- (4) **sdk/NuGetFallbackFolder** enthält einen Cache der NuGet-Pakete, die von einem SDK während der Wiederherstellung verwendet werden, etwa bei der Ausführung von `dotnet restore` oder `dotnet build`. Dieser Ordner wird nur vor .NET Core 3.0 verwendet. Er kann nicht aus der Quelle erstellt werden, da er vorgefertigte binäre Ressourcen aus `nuget.org` enthält.
 
 Der Ordner **shared** enthält Frameworks. Ein gemeinsames (shared) Framework stellt einen Satz Bibliotheken an einem zentralen Speicherort bereit, sodass diese von verschiedenen Anwendungen verwendet werden können.
 
