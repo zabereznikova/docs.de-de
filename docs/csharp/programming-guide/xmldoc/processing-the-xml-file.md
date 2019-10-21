@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587855"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523374"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
 
@@ -86,5 +86,5 @@ Die folgenden Beispiele zeigen, wie die ID-Zeichenfolgen für eine Klasse und ih
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [/doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML-Dokumentationskommentare](./index.md)

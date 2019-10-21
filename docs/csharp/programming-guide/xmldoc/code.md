@@ -9,12 +9,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: e73f79eedff9001f2b186fb7d3924837e3353021
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588155"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523520"
 ---
 # <a name="code-c-programming-guide"></a>\<code> (C#-Programmierleitfaden)
 ## <a name="syntax"></a>Syntax  
@@ -30,7 +30,7 @@ ms.locfileid: "69588155"
 ## <a name="remarks"></a>Anmerkungen  
  Die \<code>-Tag ermöglicht es, mehrere Zeilen als Code anzugeben. Mit [\<c>](./code-inline.md) wird angegeben, dass Text in einer Beschreibung als Code gekennzeichnet werden soll.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel zur Verwendung des \<code>-Tags finden Sie unter dem Thema [\<example>](./example.md).  

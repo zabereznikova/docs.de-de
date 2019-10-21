@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Verwenden der XML-Dokumentationsfeatures – C#-Programmierhandbuch'
+title: 'Vorgehensweise: Verwenden der XML-Dokumentationsfeatures – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834175"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523452"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Vorgehensweise: Verwenden der XML-Dokumentationsfeatures
 
@@ -135,7 +135,7 @@ XML-Dokumentation beginnt mit ///. Wenn Sie ein neues Projekt erstellen, fügt d
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [/doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C#-Compileroptionen)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML-Dokumentationskommentare](./index.md)
 - [DocFX-Dokumentationsprozessor](https://dotnet.github.io/docfx/)
 - [Sandcastle-Dokumentationsprozessor](https://github.com/EWSoftware/SHFB)

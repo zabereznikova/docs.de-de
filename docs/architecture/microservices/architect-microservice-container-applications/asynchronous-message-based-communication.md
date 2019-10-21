@@ -2,12 +2,12 @@
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
-ms.openlocfilehash: 109737a04eac8cfc30c746d283ca71c697f5b29d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834475"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522758"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -77,14 +77,14 @@ Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur f
 
 - Verwenden des [Musters „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
-- Verwenden des [Musters „Postausgang“](http://gistlabs.com/2014/05/the-outbox/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
+- Verwenden des [Musters „Postausgang“](http://www.kamilgrzybek.com/design/the-outbox-pattern/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
 
 Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Idempotenz und die Deduplizierung von Nachrichten berücksichtigt werden. Diese Themen werden an anderer Stelle in diesem Leitfaden unter [Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignissen)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) behandelt.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Event Driven Messaging (Ereignisgesteuertes Messaging)**  \
-  <http://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Publish/Subscribe Channel (Veröffentlichungs-/Abonnementkanal)**  \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
