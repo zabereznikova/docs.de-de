@@ -4,104 +4,104 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fdca36e47d0b1234a8964d7475354a726a61f085
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348490"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524577"
 ---
 # <a name="tuples-visual-basic"></a>Tupel (Visual Basic)
 
-Starten Visual Basic 2017, Visual Basic-Sprache bietet integrierte Unterstützung für Tupel, mit der, Tupel erstellen und den Zugriff auf die Elemente der Tupel einfacher. Ein Tupel ist eine einfache Datenstruktur, die eine bestimmte Anzahl und die Sequenz von Werten verfügt. Wenn Sie das Tupel instanziieren, definieren Sie die Anzahl und den Datentyp der einzelnen Wert (oder Element). Ein 2-Tupel (oder ein Paar) enthält beispielsweise zwei Elemente auf. Die erste ist möglicherweise eine `Boolean` Wert, während die zweite ist ein `String`. Da Tupel zum Speichern mehrerer Werte in einem einzelnen Objekt erleichtern, werden sie häufig als eine einfache Möglichkeit, mehrere Werte aus einer Methode zurückgeben verwendet.
+Ab Visual Basic 2017 bietet die Visual Basic Sprache integrierte Unterstützung für Tupel, die das Erstellen von Tupeln und den Zugriff auf die Elemente von Tupeln vereinfachen. Ein Tupel ist eine vereinfachte Datenstruktur, die über eine bestimmte Anzahl und Sequenz von Werten verfügt. Wenn Sie das Tupel instanziieren, definieren Sie die Zahl und den Datentyp der einzelnen Werte (oder Elemente). Ein 2-Tupel (oder-Paar) verfügt beispielsweise über zwei-Elemente. Der erste Wert ist möglicherweise ein `Boolean` Wert, während der zweite ein `String` ist. Da Tupel die Speicherung mehrerer Werte in einem einzelnen Objekt vereinfachen, werden diese häufig als einfache Methode zum Zurückgeben mehrerer Werte aus einer Methode verwendet.
 
 > [!IMPORTANT]
-> Unterstützung für Tupel erfordert die <xref:System.ValueTuple> Typ. Wenn es sich bei .NET Framework 4.7 nicht installiert ist, müssen Sie das NuGet-Paket hinzufügen `System.ValueTuple`, das im NuGet-Katalog verfügbar ist. Ohne dieses Paket erhalten Sie möglicherweise einen Kompilierungsfehler ähnelt "Vordefinierte Typ 'ValueTuple(Of,,,)' nicht definiert oder importiert werden."
+> Unterstützung für Tupel erfordert den <xref:System.ValueTuple> Typ. Wenn die .NET Framework 4,7 nicht installiert ist, müssen Sie das nuget-Paket `System.ValueTuple` hinzufügen, das im nuget-Katalog verfügbar ist. Ohne dieses Paket erhalten Sie möglicherweise einen Kompilierungsfehler ähnlich dem folgenden: "der vordefinierte Typ" valuetuple (of,,,) "ist nicht definiert oder importiert."
 
-## <a name="instantiating-and-using-a-tuple"></a>Instanziieren und verwenden ein Tupel
+## <a name="instantiating-and-using-a-tuple"></a>Instanziieren und Verwenden eines Tupels
 
-Sie instanziieren ein Tupel, indem Sie die durch Trennzeichen getrennte Werte Im Klammern einschließen. Jeder dieser Werte wird dann ein Feld des Tupels. Z. B. der folgende Code definiert eine Triple (oder 3-Tupel) mit einem `Date` als ersten Wert ein `String` als den zweiten, und ein `Boolean` als den dritten.
+Sie instanziieren ein Tupel durch das Einschließen der durch Trennzeichen getrennten Werte in Klammern. Jeder dieser Werte wird dann zu einem Feld des Tupels. Im folgenden Code wird z. b. ein Triple (oder ein 3-Tupel) mit einem `Date` als ersten Wert definiert, ein `String` als zweiter Wert und ein `Boolean` als Dritter.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-Wird standardmäßig der Name der einzelnen Felder in einem Tupel besteht aus der Zeichenfolge `Item` zusammen mit 1-basierte Position der Felder im Tupel. Für diese 3-Tupel die `Date` Feld `Item1`, wird die `String` Feld ist `Item2`, und die `Boolean` Feld `Item3`. Das folgende Beispiel zeigt die Werte der Felder des Tupels in der vorherigen Codezeile instanziiert
+Standardmäßig besteht der Name jedes Felds in einem Tupel aus der Zeichenfolge `Item` zusammen mit der einbasierten Position des Felds im Tupel. Bei diesem 3-Tupel ist das `Date` Feld `Item1`, das Feld `String` `Item2`, und das `Boolean` Feld ist `Item3`. Im folgenden Beispiel werden die Werte der Felder des Tupels angezeigt, die in der vorherigen Codezeile instanziiert wurden.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
-Die Felder eines Tupels Visual Basic sind Lese-/ Schreibzugriff. Nachdem Sie ein Tupel instanziiert haben, können Sie die Werte ändern. Im folgenden Beispiel ändert, zwei der drei Felder des Tupels im vorherigen Beispiel erstellt und das Ergebnis wird angezeigt.
+Die Felder eines Visual Basic Tupels sind Lese-/Schreibzugriff. Nachdem Sie ein Tupel instanziiert haben, können Sie seine Werte ändern. Im folgenden Beispiel werden zwei der drei Felder des Tupels geändert, das im vorherigen Beispiel erstellt wurde, und das Ergebnis wird angezeigt.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#3)]
 
-## <a name="instantiating-and-using-a-named-tuple"></a>Instanziierung und Verwendung eines benannten Tupels
+## <a name="instantiating-and-using-a-named-tuple"></a>Instanziieren und Verwenden eines benannten Tupels
 
-Statt die Standardnamen für des Tupels Felder, instanziieren Sie ein *benannter Tupel* durch Ihre eigenen Namen zuweisen, um Elemente des Tupels. Des Tupels Felder können dann durch ihre zugewiesenen Namen zugegriffen werden *oder* durch ihre Standardnamen. Das folgende Beispiel instanziiert die gleichen 3-Tupel wie zuvor, außer dass es explizit auf das erste Feld benennt `EventDate`, die zweite `Name`, und der dritte `IsHoliday`. Klicken Sie dann die Feldwerte angezeigt, geändert und die Feldwerte erneut angezeigt.
+Anstatt Standardnamen für die Felder eines Tupels zu verwenden, können Sie ein *benanntes Tupel* instanziieren, indem Sie den Elementen des Tupels eigene Namen zuweisen. Auf die Felder des Tupels kann dann über ihre zugewiesenen Namen *oder* über deren Standardnamen zugegriffen werden. Im folgenden Beispiel wird das gleiche 3-Tupel wie zuvor instanziiert, mit der Ausnahme, dass es explizit das erste Feld `EventDate`, den zweiten `Name` und den dritten `IsHoliday` benennt. Anschließend werden die Feldwerte angezeigt, Sie werden geändert, und die Feldwerte werden erneut angezeigt.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
 ## <a name="inferred-tuple-element-names"></a>Abgeleitete Tupelelementnamen
 
-Ab Visual Basic 15.3, kann Visual Basic die Namen der Elemente des Tupels ableiten, Sie müssen keinen explizit zuweisen. Abgeleitete tupelnamen sind nützlich, wenn Sie ein Tupel aus einer Reihe von Variablen initialisieren, und der tupelelementname mit den Namen der Variablen identisch sein. 
+Ab Visual Basic 15,3 können Visual Basic die Namen der Tupelelemente ableiten. Sie müssen Sie nicht explizit zuweisen. Abherzustellende tupelnamen sind hilfreich, wenn Sie ein Tupel aus einem Satz von Variablen initialisieren und der tupelelementname dem Variablennamen entsprechen soll.
 
-Das folgende Beispiel erstellt eine `stateInfo` Tupel, das drei explizit enthält benannte Elemente, `state`, `stateName`, und `capital`. Beachten Sie, dass bei der Benennung der Elemente, die Anweisung zum Initialisieren der Tupel einfach die benannten Elemente weist die Werte der Variablen mit dem gleichen Namen.
+Im folgenden Beispiel wird ein `stateInfo` Tupel erstellt, das drei explizit benannte Elemente, `state`, `stateName` und `capital` enthält. Beachten Sie, dass die tupelinitialisierungs-Anweisung beim Benennen der Elemente einfach die benannten Elemente den Werten der identisch benannten Variablen zuweist.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
- 
-Da Elemente und Variablen den gleichen Namen haben, kann von Visual Basic-Compiler den Namen der Felder, wie im folgenden Beispiel gezeigt abgeleitet werden.
+
+Da Elemente und Variablen denselben Namen haben, kann der Visual Basic Compiler die Namen der Felder ableiten, wie im folgenden Beispiel gezeigt.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Um abgeleitete tupelelementnamen zu aktivieren, müssen Sie die Version von Visual Basic-Compiler in Visual Basic-Projekt mit definieren (\*.vbproj) Datei: 
+Sie müssen die Version der Visual Basic-compilerin definieren, die in der Visual Basic Project-Datei (\*. vbproj) verwendet werden soll, um herabherzuordnenden tupelelementnamen zu aktivieren:
 
-```xml 
-<PropertyGroup> 
-  <LangVersion>15.3</LangVersion> 
-</PropertyGroup> 
+```xml
+<PropertyGroup>
+  <LangVersion>15.3</LangVersion>
+</PropertyGroup>
 ```
 
-Die Versionsnummer kann jede Version von Visual Basic-Compiler ab Version 15.3 sein. Sie können anstatt einer hartcodierung einer bestimmten Compilerversion, auch "Latest" angeben, als der Wert des `LangVersion` kompilieren Sie mit der neuesten Version von Visual Basic-Compiler auf Ihrem System installiert.
+Die Versionsnummer kann eine beliebige Version des Visual Basic Compilers sein, beginnend mit 15,3. Anstatt eine bestimmte Compilerversion hart zu codieren, können Sie auch "Latest" als Wert von `LangVersion` angeben, der mit der neuesten Version des Visual Basic Compilers kompiliert werden soll, die auf Ihrem System installiert ist.
 
-Weitere Informationen finden Sie unter [Festlegen der Sprache Visual Basic-Version](../../../language-reference/configure-language-version.md).
+Weitere Informationen finden Sie unter [Festlegen der Visual Basic Sprachversion](../../../language-reference/configure-language-version.md).
 
-In einigen Fällen kann Visual Basic-Compiler nicht ableiten der tupelelementname vom Namen Kandidaten aus, und das tupelfeld darf nur verwiesen werden mit den Standardnamen wie `Item1`, `Item2`usw. Dazu gehören:
+In einigen Fällen kann der Visual Basic-Compiler den tupelelementnamen nicht aus dem Kandidaten Namen ableiten, und auf das tupelfeld kann nur mithilfe seines Standard namens verwiesen werden, z. b. `Item1`, `Item2` usw. Hierzu gehören:
 
-- Namen des Kandidaten ist identisch mit den Namen eines Members Tupel, z. B. `Item3`, `Rest`, oder `ToString`.
+- Der Kandidaten Name ist identisch mit dem Namen eines tupelmembers, z. b. `Item3`, `Rest` oder `ToString`.
 
-- Namen des Kandidaten wird in das Tupel dupliziert.
- 
-Feld die Ableitung von Namen schlägt fehl, Visual Basic generiert einen Compilerfehler keine, noch ist eine Ausnahme, die zur Laufzeit ausgelöst. Stattdessen Tupelfeldern müssen verwiesen werden durch ihre vordefinierten Namen, z. B. `Item1` und `Item2`. 
-  
+- Der Kandidaten Name wird im Tupel dupliziert.
+
+Wenn der Rückschluss von Feld Namen fehlschlägt, generiert Visual Basic weder einen Compilerfehler noch eine Ausnahme, die zur Laufzeit ausgelöst wird. Stattdessen müssen auf tupelfelder durch ihre vordefinierten Namen verwiesen werden, z. b. `Item1` und `Item2`.
+
 ## <a name="tuples-versus-structures"></a>Tupel im Vergleich zu Strukturen
 
-Ein Visual Basic-Tupel ist ein Werttyp, der eine Instanz einer von der eine **System.ValueTuple** generische Typen. Z. B. die `holiday` im vorherigen Beispiel definierte Tupel ist eine Instanz der <xref:System.ValueTuple%603> Struktur. Es ist ein einfacher Container für Daten werden soll. Da das Tupel zielt darauf ab, um ein Objekt mit mehreren Datenelementen erstellen erleichtern, verfügt nicht über die sie einige der Features, die möglicherweise eine benutzerdefinierte Struktur. Dazu gehören:
+Ein Visual Basic Tupel ist ein Werttyp, bei dem es sich um eine Instanz eines der generischen **System. valuetuple** -Typen handelt. Beispielsweise ist das `holiday` Tupel, das im vorherigen Beispiel definiert wurde, eine Instanz der <xref:System.ValueTuple%603> Struktur. Es ist als Lightweight-Container für Daten konzipiert. Da das Tupel darauf abzielt, ein Objekt mit mehreren Datenelementen zu erstellen, fehlen einige der Features, die eine benutzerdefinierte Struktur aufweisen kann. Dazu gehören:
 
-- Benutzerdefinierte Elemente. Sie können keine eigenen Eigenschaften, Methoden oder Ereignisse für ein Tupel definieren.
+- Benutzerdefinierte Member. Sie können keine eigenen Eigenschaften, Methoden oder Ereignisse für ein Tupel definieren.
 
-- Die Überprüfung. Sie können nicht Feldern zugewiesenen Daten überprüfen.
+- Validierungs. Die den Feldern zugewiesenen Daten können nicht überprüft werden.
 
-- Unveränderlichkeit. Visual Basic-Tupel sind änderbar. Im Gegensatz dazu kann eine benutzerdefinierte Struktur Sie steuern, ob eine Instanz änderbare oder unveränderlich ist.
+- Unveränderlichkeit. Visual Basic Tupel sind änderbar. Im Gegensatz dazu können Sie mit einer benutzerdefinierten Struktur steuern, ob eine Instanz änderbar oder unveränderlich ist.
 
-Wenn Sie benutzerdefinierte Elemente, die Eigenschaft und die Überprüfung oder die Unveränderlichkeit wichtig sind, verwenden Sie die Visual Basic [Struktur](../../../language-reference/statements/structure-statement.md) Anweisung, um einen benutzerdefinierten Typ definieren.
+Wenn benutzerdefinierte Member, die Validierung von Eigenschaften und Feldern oder Unveränderlichkeit wichtig sind, sollten Sie die Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) -Anweisung verwenden, um einen benutzerdefinierten Werttyp zu definieren.
 
-Ein Visual Basic-Tupel erbt die Member der **ValueTuple** Typ. Zusätzlich zu den Feldern gehören die folgenden Methoden:
+Ein Visual Basic Tupel erbt die Member seines **valuetuple** -Typs. Zusätzlich zu den zugehörigen Feldern umfassen diese die folgenden Methoden:
 
 | Member | Beschreibung |
 | ---|---|
-| CompareTo | Vergleicht das aktuelle Tupel in einer anderen Tupel mit der gleichen Anzahl von Elementen an. |
-| gleich | Bestimmt, ob das aktuelle Tupel gleich einem anderen Tupel oder ein Objekt ist. |
+| CompareTo | Vergleicht das aktuelle Tupel mit einem anderen Tupel mit der gleichen Anzahl von Elementen. |
+| gleich | Bestimmt, ob das aktuelle Tupel einem anderen Tupel oder Objekt entspricht. |
 | GetHashCode | Berechnet den Hashcode für die aktuelle Instanz. |
-| ToString | Gibt eine Zeichenfolgendarstellung dieses Tupels, im Format `(Item1, Item2...)`, wobei `Item1` und `Item2` stellen die Werte des Tupels Felder. |
+| ToString | Gibt die Zeichen folgen Darstellung dieses Tupels zurück, die das Formular `(Item1, Item2...)` annimmt, wobei `Item1` und `Item2` die Werte der Felder des Tupels darstellen. |
 
-Darüber hinaus die **ValueTuple** Typen implementieren <xref:System.Collections.IStructuralComparable> und <xref:System.Collections.IStructuralEquatable> Schnittstellen, die Sie definieren Kunden vergleichen können.
+Außerdem implementieren die **valuetuple** -Typen <xref:System.Collections.IStructuralComparable> und <xref:System.Collections.IStructuralEquatable> Schnittstellen, die es Ihnen ermöglichen, Kunden Vergleiche zu definieren.
 
 ## <a name="assignment-and-tuples"></a>Zuweisung und Tupel
 
-Visual Basic unterstützt die Zuweisung zwischen Tupeltypen, die die gleiche Anzahl von Feldern aufweisen. Die Feldtypen können konvertiert werden, wenn eine der folgenden Aussagen zutrifft:
+Visual Basic unterstützt die Zuweisung zwischen Tupeltypen, die über die gleiche Anzahl von Feldern verfügen. Die Feldtypen können konvertiert werden, wenn eine der folgenden Punkte zutrifft:
 
-- Die Quelle und Ziel-Feld sind vom gleichen Typ.
+- Das Quell-und Zielfeld weisen denselben Typ auf.
 
-- Eine erweiternde (oder implizite) Konvertierung des Quelltyps in den Zieltyp definiert ist. 
+- Eine erweiternde (oder implizite) Konvertierung des Quell Typs in den Zieltyp ist definiert.
 
-- `Option Strict` ist `On`, und eine einschränkende (oder explizite) Konvertierung des Quelltyps in den Zieltyp definiert ist. Diese Konvertierung kann eine Ausnahme auslösen, wenn der Quellwert außerhalb des Bereichs des Zieltyps liegt.
+- `Option Strict` ist `On`, und eine einschränkende (oder explizite) Konvertierung des Quell Typs in den Zieltyp ist definiert. Diese Konvertierung kann eine Ausnahme auslösen, wenn der Quellwert außerhalb des Bereichs des Zieltyps liegt.
 
 Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
 
@@ -109,19 +109,19 @@ Berücksichtigen Sie diese Variablen, die in den folgenden Beispielen verwendet 
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-Die ersten zwei Variablen, `unnamed` und `anonymous`, haben keine semantische Namen für die Felder bereitgestellt. Die Feldnamen werden standardmäßig `Item1` und `Item2`. Die letzten zwei Variablen, `named` und `differentName` semantische Namen haben. Beachten Sie, dass diese zwei Tupel unterschiedliche Namen für die Felder besitzen.
+Die ersten beiden Variablen, `unnamed` und `anonymous`, haben keine semantischen Namen für die Felder bereitgestellt. Die Feldnamen sind die Standard `Item1` und `Item2`. Die letzten beiden Variablen, `named` und `differentName` haben semantische Feldnamen. Beachten Sie, dass diese zwei Tupel unterschiedliche Namen für die Felder besitzen.
 
-Alle vier dieser Tupel haben die gleiche Anzahl von Feldern (als "Arity" bezeichnet), und die Typen dieser Felder sind identisch. Daher funktionieren alle Zuweisungen:
+Alle vier dieser Tupel haben die gleiche Anzahl von Feldern (als "Stelligkeit" bezeichnet), und die Typen dieser Felder sind identisch. Daher funktionieren alle Zuweisungen:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
 Beachten Sie, dass die Namen der Tupel nicht zugewiesen sind. Die Werte der Felder werden nach der Reihenfolge der Felder im Tupel zugewiesen.
 
-Beachten Sie außerdem, dass wir zuweisen können die `named` das Tupel mit den `conversion` Tupel, obwohl das erste Feld der `named` ist ein `Integer`, und das erste Feld der `conversion` ist eine `Long`. Diese Zuweisung ist erfolgreich, da es sich bei Konvertierung einer `Integer` auf eine `Long` eine erweiternde Konvertierung ist.
+Beachten Sie schließlich, dass wir das `named` Tupel dem `conversion` Tupel zuweisen können, obwohl das erste Feld von `named` ein `Integer` ist und das erste Feld von `conversion` ein `Long` ist. Diese Zuweisung ist erfolgreich, da das Konvertieren einer `Integer` in eine `Long` eine erweiternde Konvertierung ist.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tupel mit einer unterschiedlichen Anzahl von Feldern sind nicht zuweisbar:
+Tupel mit unterschiedlicher Anzahl von Feldern können nicht zugewiesen werden:
 
 ```vb
 ' Does not compile.
@@ -133,41 +133,41 @@ named = differentShape
 
 ## <a name="tuples-as-method-return-values"></a>Tupel als Methodenrückgabewert
 
-Eine Methode kann nur einen einzelnen Wert zurückgeben. In vielen Fällen jedoch, soll den Aufruf einer Methode mehrere Werte zurückgeben. Es gibt mehrere Möglichkeiten, diese Einschränkung zu umgehen:
+Eine Methode kann nur einen einzelnen Wert zurückgeben. Häufig ist es jedoch ein Methoden aufzurufen, mehrere Werte zurückzugeben. Es gibt mehrere Möglichkeiten, diese Einschränkung zu umgehen:
 
-- Sie können eine benutzerdefinierte Klasse oder Struktur, dessen Eigenschaften oder Felder darstellen, von der Methode zurückgegebenen Werte. Daher ist eine schwierige Lösung. Es ist erforderlich, dass Sie einen benutzerdefinierten Typ definieren, deren einziger Zweck ist, um Werte aus einem Methodenaufruf abzurufen.
+- Sie können eine benutzerdefinierte Klasse oder Struktur erstellen, deren Eigenschaften oder Felder Werte darstellen, die von der-Methode zurückgegeben werden. Daher ist eine Lösung mit Schwergewicht. Es erfordert, dass Sie einen benutzerdefinierten Typ definieren, dessen einziger Zweck das Abrufen von Werten aus einem Methoden aufzurufen ist.
 
-- Sie können einen einzelnen Wert zurückgeben, von der Methode und die verbleibenden Werte durch Übergabe als Verweis auf die Methode zurück. Dies umfasst den Aufwand für das Instanziieren einer Variablen und Risiken, die unabsichtlich überschrieben den Wert der Variablen, die Sie als Verweis übergeben.
+- Sie können einen einzelnen Wert aus der-Methode zurückgeben und die verbleibenden Werte zurückgeben, indem Sie Sie als Verweis an die-Methode übergeben. Dies umfasst den mehr Aufwand für die Instanziierung einer Variablen und die Risiken, die versehentlich den Wert der Variablen überschreiben, die Sie als Verweis übergeben.
 
-- Sie können ein Tupel, bietet eine einfache Lösung für das Abrufen von mehreren Rückgabewerten.
+- Sie können ein Tupel verwenden, das eine Lightweight-Lösung zum Abrufen mehrerer Rückgabewerte bereitstellt.
 
-Z. B. die **TryParse** Methoden in .NET Rückgabe einer `Boolean` Wert, der angibt, ob der Analysevorgang erfolgreich war. Das Ergebnis des Analysevorgangs wird in einer Variablen, die als Verweis an die Methode übergeben wird zurückgegeben. In der Regel einen Aufruf der einer Analysemethode, z. B. <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> sieht wie folgt aus:
+Die **tryanalyse** -Methoden in .net geben z. b. einen `Boolean` Wert zurück, der angibt, ob der Analyse Vorgang erfolgreich war. Das Ergebnis des-Vorgangs wird in einer Variablen zurückgegeben, die als Verweis an die-Methode ausgegeben wird. In der Regel sieht ein aufrufungs Methode, z. b. <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>, wie folgt aus:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-Wir können ein Tupel in den Analysevorgang zurückgeben, wenn wir den Aufruf umschließen der <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> -Methode in unserer eigenen Methode. Im folgenden Beispiel `NumericLibrary.ParseInteger` Aufrufe der <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> Methode und gibt Sie einen benannten Tupel mit zwei Elementen zurück. 
+Wir können ein Tupel aus dem Verarbeitungsvorgang zurückgeben, wenn wir den Aufrufen der <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>-Methode in unserer eigenen Methode einschließen. Im folgenden Beispiel ruft `NumericLibrary.ParseInteger` die <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>-Methode auf und gibt ein benanntes Tupel mit zwei-Elementen zurück.
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-Sie können dann die Methode mit Code wie folgt aufrufen:
+Anschließend können Sie die-Methode mit Code wie dem folgenden aufzurufen:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic-Tupel und Tupel in .NET Framework
+## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic Tupel und Tupel in der .NET Framework
 
-Ein Visual Basic-Tupel ist eine Instanz einer von der **System.ValueTuple** generischen Typen, die in .NET Framework 4.7 eingeführt wurden. .NET Framework enthält auch eine Reihe von generischen **System.Tuple** Klassen. Diese Klassen, unterscheiden sich jedoch von Visual Basic-Tupeln und **System.ValueTuple** generische Typen in eine Reihe von Möglichkeiten:
+Ein Visual Basic Tupel ist eine Instanz eines der generischen **System. valuetuple** -Typen, die in der .NET Framework 4,7 eingeführt wurden. Die .NET Framework enthält auch einen Satz generischer **System. Tuple** -Klassen. Diese Klassen unterscheiden sich jedoch von Visual Basic Tupeln und den generischen **System. valuetuple** -Typen auf verschiedene Weise:
 
-- Die Elemente der **Tupel** Klassen sind Eigenschaften, die mit dem Namen `Item1`, `Item2`und so weiter. In Visual Basic-Tupeln und **ValueTuple** Typen, Elemente des Tupels Felder sind.
+- Die Elemente der **tupelklassen** sind Eigenschaften mit dem Namen `Item1`, `Item2` usw. In Visual Basic Tupel und den **valuetuple** -Typen sind Tupelelemente Felder.
 
-- Sie können keine aussagekräftige Namen zuweisen, auf die Elemente der ein **Tupel** Instanz oder eine **ValueTuple** Instanz. Visual Basic können Sie Namen zuweisen, die die Bedeutung der Felder zu kommunizieren.
+- Sie können den Elementen einer **tupelinstanz** oder einer **valuetuple** -Instanz keine aussagekräftigen Namen zuweisen. Mit Visual Basic können Sie Namen zuweisen, die die Bedeutung der Felder übermitteln.
 
-- Die Eigenschaften einer **Tupel** Instanz schreibgeschützt sind, die Tupel sind unveränderlich. In Visual Basic-Tupeln und **ValueTuple** Typen Tupelfeldern sind Lese-/ Schreibzugriff; die Tupel sind änderbar.
+- Die Eigenschaften einer **tupelinstanz** sind schreibgeschützt. die Tupel sind unveränderlich. In Visual Basic Tupel und den **valuetuple** -Typen werden tupelfelder mit Lese-/Schreibzugriff. die Tupel sind änderbar.
 
-- Die generische **Tupel** -Typen sind Referenztypen. Mit diesen **Tupel** -Typen bedeutet, dass Objekte. Auf dem langsamsten Pfad kann das einen messbaren Einfluss auf die Leistung Ihrer Anwendungen haben. Visual Basic-Tupel und dem **ValueTuple** Typen sind Werttypen.
+- Die generischen **Tupeltypen** sind Verweis Typen. Die Verwendung dieser **Tupeltypen** bedeutet das Zuweisen von Objekten. Auf dem langsamsten Pfad kann das einen messbaren Einfluss auf die Leistung Ihrer Anwendungen haben. Visual Basic Tupel und die **valuetuple** -Typen sind Werttypen.
 
-Erweiterungsmethoden in den <xref:System.TupleExtensions> Klasse erleichtern Ihnen die Konvertierung zwischen Tupel von Visual Basic und .NET **Tupel** Objekte. Die **ToTuple** -Methode konvertiert ein Visual Basic-Tupel in einer .NET **Tupel** -Objekt, und die **ToValueTuple** -Methode konvertiert ein .NET **Tupel** ein Visual Basic-Tupel-Objekt.
+Erweiterungs Methoden in der <xref:System.TupleExtensions>-Klasse erleichtern das Konvertieren zwischen Visual Basic Tupeln und .net- **tupelobjekten** . Die Methode " **detuple** " konvertiert ein Visual Basic Tupel in ein .net- **tupelobjekt** , und die Methode " **devaluetuple** " konvertiert ein .net **Tupel** -Objekt in ein Visual Basic Tupel.
 
-Das folgende Beispiel erstellt ein Tupel, konvertiert es in einer .NET **Tupel** -Objekt, und konvertiert sie in ein Visual Basic-Tupel zurück. Das Beispiel vergleicht dann dieses Tupels mit der ursprünglichen um sicherzustellen, dass sie gleich sind.
+Im folgenden Beispiel wird ein Tupel erstellt, in ein .net- **tupelobjekt** konvertiert und wieder in ein Visual Basic Tupel konvertiert. Im Beispiel wird dann dieses Tupel mit dem ursprünglichen verglichen, um sicherzustellen, dass Sie gleich sind.
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbd99997fed33c192a2160fb45a739addbae254a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940750"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524618"
 ---
-# <a name="typeparam-visual-basic"></a>\<Typeparam > (Visual Basic)
-Definiert einen Typparametername und Beschreibung.  
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
+Definiert einen Typparameter Namen und eine Beschreibung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,12 +29,12 @@ Definiert einen Typparametername und Beschreibung.
  Eine Beschreibung des Typparameters.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<typeparam>` Tag im Kommentar für einen generischen Typ oder generische Memberdeklaration, um einen der Typparameter zu beschreiben.  
+ Verwenden Sie das `<typeparam>`-Tag im Kommentar für einen generischen Typ oder eine generische Element Deklaration, um einen der Typparameter zu beschreiben.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<typeparam>` Tag zum Beschreiben der `id` Parameter.  
+ In diesem Beispiel wird das `<typeparam>`-Tag verwendet, um den `id`-Parameter zu beschreiben.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

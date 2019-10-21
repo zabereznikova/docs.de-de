@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 516ff6ba534478d066b8ca06baee46bdd4b35265
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940737"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524601"
 ---
-# <a name="value-visual-basic"></a>\<Wert > (Visual Basic)
-Gibt die Beschreibung einer Eigenschaft.  
+# <a name="value-visual-basic"></a>\<value > (Visual Basic)
+Gibt die Beschreibung einer Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,12 +26,12 @@ Gibt die Beschreibung einer Eigenschaft.
  Eine Beschreibung der Eigenschaft  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<value>` Tag, um eine Eigenschaft beschreiben. Beachten Sie, dass wenn Sie eine Eigenschaft mit dem Code-Assistenten in der Entwicklungsumgebung von Visual Studio hinzufügen, wird es Hinzufügen einer [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md) Tag für die neue Eigenschaft. Sie sollten dann manuell hinzufügen einer `<value>` Tag, um den Wert zu beschreiben, die die Eigenschaft darstellt.  
+ Verwenden Sie das `<value>`-Tag, um eine Eigenschaft zu beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mithilfe des Code-Assistenten in der Visual Studio-Entwicklungsumgebung eine [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md) -Tag für die neue Eigenschaft hinzugefügt wird. Sie sollten dann manuell ein `<value>`-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
   
- Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
+ Kompilieren Sie mit [-doc](../../../visual-basic/reference/command-line-compiler/doc.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<value>` Tag beschrieben, welchen Wert die `Counter` Eigenschaft enthält.  
+ In diesem Beispiel wird das `<value>`-Tag verwendet, um den Wert zu beschreiben, den die `Counter` Eigenschaft enthält.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
