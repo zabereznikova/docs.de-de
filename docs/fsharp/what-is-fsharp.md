@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332731"
 ---
-# <a name="what-is-f"></a>Was ist F#
+# <a name="what-is-f"></a>Was ist F @ no__t-0
 
 F# ist eine funktionale Programmiersprache, die das Schreiben von korrektem und verwaltbarem Code erleichtert.
 
