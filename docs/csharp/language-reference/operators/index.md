@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 766da517d247361f747591c3758e8610927866a9
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116105"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579206"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
 
@@ -63,8 +63,8 @@ Die folgende Tabelle listen die C#-Operatoren auf, und zwar von der höchsten zu
 
 Wenn Operatoren die gleiche Rangfolge aufweisen, legt die Assoziativität der Operatoren die Reihenfolge fest, in der Vorgänge durchgeführt werden:
 
-- *Linksassoziative* Operatoren werden von links nach rechts ausgewertet. Mit Ausnahme der [Zuweisungsoperatoren](assignment-operator.md) und des [NULL-Sammeloperators `??`](null-coalescing-operator.md) sind alle binären Operatoren linksassoziativ. `a + b - c` wird beispielsweise als `(a + b) - c` ausgewertet.
-- *Rechtsassoziative* Operatoren werden von rechts nach links ausgewertet. Die Zuweisungsoperatoren, der NULL-Sammeloperator `??` und der [bedingte Operator `?:`](conditional-operator.md) sind rechtsassoziativ. `x = y = z` wird beispielsweise als `x = (y = z)` ausgewertet.
+- *Linksassoziative* Operatoren werden von links nach rechts ausgewertet. Mit Ausnahme der [Zuweisungsoperatoren](assignment-operator.md) und des [NULL-Sammeloperators ](null-coalescing-operator.md)sind alle binären Operatoren linksassoziativ. `a + b - c` wird beispielsweise als `(a + b) - c` ausgewertet.
+- *Rechtsassoziative* Operatoren werden von rechts nach links ausgewertet. Die Zuweisungsoperatoren, die NULL-Sammeloperatoren und der [bedingte Operator `?:`](conditional-operator.md) sind rechtsassoziativ. `x = y = z` wird beispielsweise als `x = (y = z)` ausgewertet.
 
 Verwenden Sie Klammern, um die Reihenfolge der Auswertung zu ändern, die durch die Operatorassoziativität festgelegt ist:
 
@@ -78,14 +78,14 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 Unabhängig von der Operatorrangfolge und -assoziativität werden die Operanden in einem Ausdruck von links nach rechts ausgewertet. Die folgenden Beispiele veranschaulichen die Reihenfolge, in der Operatoren und Operanden ausgewertet werden:
 
-| Ausdruck | Reihenfolge der Auswertung |
+| expression | Reihenfolge der Auswertung |
 | ---------- | ------------------- |
 |`a + b`|a, b, +|
 |`a + b * c`|a, b, c, *, +|
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatoren werten Operanden bedingt aus. Das heißt, der Wert des ersten Operanden eines solchen Operators definiert, ob (oder welche) andere(n) Operanden ausgewertet werden sollen. Diese Operatoren sind die bedingten logischen Operatoren [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) und [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), der [NULL-Sammeloperator `??`](null-coalescing-operator.md), die [NULL-bedingten Operatoren `?.` und `?[]`](member-access-operators.md#null-conditional-operators--and-) sowie der [bedingte Operator `?:`](conditional-operator.md). Weitere Einzelheiten finden Sie in der Beschreibung jedes Operators.
+In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatoren werten Operanden bedingt aus. Das heißt, der Wert des ersten Operanden eines solchen Operators definiert, ob (oder welche) andere(n) Operanden ausgewertet werden sollen. Diese Operatoren sind die bedingten logischen Operatoren [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) und [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), die [NULL-Sammeloperatoren `??` und `??=`](null-coalescing-operator.md), die [NULL-bedingten Operatoren `?.` und `?[]`](member-access-operators.md#null-conditional-operators--and-) sowie der [bedingte Operator `?:`](conditional-operator.md). Weitere Einzelheiten finden Sie in der Beschreibung jedes Operators.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
