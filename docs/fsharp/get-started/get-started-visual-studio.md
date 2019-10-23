@@ -21,7 +21,7 @@ Eines der grundlegendsten Projekte in Visual Studio ist die Konsolenanwendung.  
 
 1. Zeigen Sie im Menü **Datei** auf **neu**, und wählen Sie dann **Projekt** aus.
 
-2. Im Dialogfeld Neues Projekt unter **Vorlagen**sollte **Visualisierung F#** angezeigt werden.  Wählen Sie diese Option aus F# , um die Vorlagen anzuzeigen.
+2. Im Dialogfeld "Neues Projekt" unter **Vorlagen** sollte **Visualisierung F#** angezeigt werden.  Wählen Sie diese Option aus, um die F#-Vorlagen anzuzeigen.
 
 3. Wählen Sie entweder **Konsolen-App (.NET Core)** oder **Konsolen-App (.NET Framework)** aus.
 
@@ -39,11 +39,11 @@ Im vorherigen Codebeispiel wurde eine Funktion `square` definiert, die eine Eing
 val square: x:int -> int
 ```
 
-Dies wird als Typsignatur der Funktion bezeichnet.  Sie kann wie folgt gelesen werden: "Square ist eine Funktion, die eine ganze Zahl mit dem Namen" x "annimmt und eine ganze Zahl erstellt.  Beachten Sie, dass der `square` Compiler `int` den Typ für den Moment erteilt hat. Dies liegt daran, dass die Multiplikation nicht für *alle* Typen generisch ist, sondern für einen geschlossenen Satz von Typen generisch ist.  Der F# Compiler hat `int` an dieser Stelle gewählt, aber er passt die Typsignatur an, wenn `square` Sie mit einem `float`anderen Eingabetyp, z. b., aufruft.
+Dies wird als Typsignatur der Funktion bezeichnet.  Sie kann wie folgt gelesen werden: "Square ist eine Funktion, die eine ganze Zahl mit dem Namen "x" annimmt und eine ganze Zahl zurückgibt."  Beachten Sie, dass für diesen Moment der Compiler `square` den Typ `int` zugewiesen hat. Dies liegt daran, dass die Multiplikation nicht für *alle* Typen generisch ist, aber für eine geschlossene Gruppe von Typen.  Der F#-Compiler hat `int` an dieser Stelle ausgewählt. Er passt die Typsignatur aber an, wenn Sie `square` mit einem anderen Eingabetyp, z. B. `float`, aufrufen.
 
 Eine weitere Funktion `main` ist definiert und wurde mit dem `EntryPoint`-Attribut versehen, um dem F#-Compiler mitzuteilen, dass die Programmausführung hier gestartet werden soll.  Der Ausdruck folgt derselben Konvention wie andere [Programmiersprachen im C-Stil](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), bei denen Befehlszeilenargumente an diese Funktion übermittelt werden können, und ein ganzzahliger Code (in der Regel `0`) zurück gegeben wird.
 
-In dieser Funktion wird die `square` Funktion mit einem Argument von `12`aufgerufen.  Der F# Compiler weist dann den Typ von `square` zu `int -> int` , d. h. eine Funktion, die einen `int` annimmt und einen `int`erzeugt.  Der-Befehl ist eine formatierte Druckfunktion, die eine Format Zeichenfolge verwendet, ähnlich wie Programmiersprachen im C-Stil, Parameter, die den in der Format Zeichenfolge angegebenen entsprechen, und dann das Ergebnis und eine neue Zeile ausgibt. `printfn`
+In dieser Funktion wird die `square`-Funktion mit dem Argument `12` aufgerufen.  Der F#-Compiler weist dann `square` den Typ `int -> int` zu, d. h. eine Funktion, die einen `int` annimmt und einen `int` zurückgibt.  Der `printfn`-Befehl ist eine formatierte Druckfunktion, die eine formatierte Zeichenfolge verwendet, ähnlich wie andere Programmiersprachen im C-Stil. Übergebene Parameter werden der formatierten Zeichenfolge entsprechen formatiert, dann werden das Ergebnis und eine neue Zeile ausgegeben.
 
 ## <a name="running-your-code"></a>Ausführen des Codes
 

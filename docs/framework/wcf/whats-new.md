@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: a50db521e986972e864ac60c8b84a63d3d1de69b
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0a065676d81b36f32729bb08c23025825e94d3bc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834880"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320459"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Neues in Windows Communication Foundation 4.5
 
@@ -18,11 +18,11 @@ In diesem Thema werden die neuen Features von Windows Communication Foundation (
 
 ## <a name="wcf-simplification-features"></a>WCF-Vereinfachungsfunktionen
 
-Es wurde viel unternommen, um die Entwicklung und Verwaltung von WCF 4.5-Anwendungen zu vereinfachen. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](../../../docs/framework/wcf/wcf-simplification-features.md).
+Es wurde viel unternommen, um die Entwicklung und Verwaltung von WCF 4.5-Anwendungen zu vereinfachen. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](wcf-simplification-features.md).
 
 ### <a name="task-based-async-support"></a>Aufgabenbasierte asynchrone Unterstützung
 
-Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).
+Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md).
 
 ### <a name="simplified-generated-configuration-files"></a>Vereinfachte generierte Konfigurationsdateien
 
@@ -36,19 +36,19 @@ WCF unterstützt jetzt die Vertrag zuerst-Entwicklung. Die Datei "Svcutil. exe" 
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises aus einem Projekt für die portable Teilmenge
 
-Projekte für portable Teilmengen ermöglichen es Programmierern von .NET-Assemblys, eine einzelne Quellstruktur zu verwalten und das System mit Unterstützung mehrerer .NET-Plattformen (Desktop, Silverlight, Windows Phone und XBOX) aufzubauen. Projekte für Portable Teilmengen verweisen nur auf Portable .NET-Bibliotheken, bei denen es sich um eine .NET Framework-Assembly handelt, die auf einer beliebigen .NET-Plattform verwendet Die Entwicklererfahrung ist identisch mit dem Hinzufügen eines Dienstverweises innerhalb einer beliebigen anderen WCF-Clientanwendung. Weitere Informationen finden Sie unter [Dienstverweis hinzufügen in einem Projekt für eine Portable Teilmenge](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).
+Projekte für portable Teilmengen ermöglichen es Programmierern von .NET-Assemblys, eine einzelne Quellstruktur zu verwalten und das System mit Unterstützung mehrerer .NET-Plattformen (Desktop, Silverlight, Windows Phone und XBOX) aufzubauen. Projekte für Portable Teilmengen verweisen nur auf Portable .NET-Bibliotheken, bei denen es sich um eine .NET Framework-Assembly handelt, die auf einer beliebigen .NET-Plattform verwendet Die Entwicklererfahrung ist identisch mit dem Hinzufügen eines Dienstverweises innerhalb einer beliebigen anderen WCF-Clientanwendung. Weitere Informationen finden Sie unter [Dienstverweis hinzufügen in einem Projekt für eine Portable Teilmenge](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Geänderter Standard für den ASP.NET-Kompatibilitätsmodus
 
-WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Um diesen Modus zu verwenden, müssen Sie das `aspNetCompatibilityEnabled`-Attribut im Abschnitt [\<servicehoststingenvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) von "Web. config" auf "true" festlegen. Außerdem muss die `RequirementsMode`-Eigenschaft für jeden Dienst in dieser appDomain für <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> festgelegt sein. Standardmäßig ist <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jetzt auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> festgelegt. Weitere Informationen finden Sie unter [Neues in Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) und WCF- [Diensten und ASP.net](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben von WCF-Diensten vollständigen Zugriff auf die Funktionen in der ASP.NET-HTTP-Pipeline gewährt. Wenn Sie diesen Modus verwenden möchten, müssen Sie das `aspNetCompatibilityEnabled`-Attribut im Abschnitt [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) von Web. config auf true festlegen. Außerdem muss für jeden Dienst in dieser AppDomain die `RequirementsMode`-Eigenschaft in der <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> oder <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> festgelegt sein. Standardmäßig ist <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> jetzt auf <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> festgelegt. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
-Um die Konfiguration zu vereinfachen, wurden einige Standardwerte der Transporteigenschaft geändert. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](../../../docs/framework/wcf/wcf-simplification-features.md).
+Um die Konfiguration zu vereinfachen, wurden einige Standardwerte der Transporteigenschaft geändert. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](wcf-simplification-features.md).
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas> enthält konfigurierbare Kontingentwerte für XML-Wörterbuchreader, die den Arbeitsspeicher begrenzen, der beim Erstellen einer Nachricht von einem Encoder verwendet wird. Diese Kontingente sind konfigurierbar, allerdings wurden die Standardwerte geändert, um die Wahrscheinlichkeit zu verringern, dass sie von einem Entwickler explizit festgelegt werden müssen. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](../../../docs/framework/wcf/wcf-simplification-features.md).
+<xref:System.Xml.XmlDictionaryReaderQuotas> enthält konfigurierbare Kontingentwerte für XML-Wörterbuchreader, die den Arbeitsspeicher begrenzen, der beim Erstellen einer Nachricht von einem Encoder verwendet wird. Diese Kontingente sind konfigurierbar, allerdings wurden die Standardwerte geändert, um die Wahrscheinlichkeit zu verringern, dass sie von einem Entwickler explizit festgelegt werden müssen. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](wcf-simplification-features.md).
 
 ### <a name="wcf-configuration-validation"></a>WCF-Konfigurationsvalidierung
 
@@ -60,7 +60,7 @@ Um neuen und bereits erfahrenen Entwicklern von WCF-Diensten die Konfiguration z
 
 ## <a name="streaming-improvements"></a>Verbesserungen beim Streaming
 
-Es wurde Unterstützung für echtes asynchrones Streaming hinzugefügt, bei dem die Senderseite keine Threads blockiert, wenn die Empfängerseite keine Nachrichten liest bzw. Nachrichten langsam liest. Dies erhöht die Skalierbarkeit. Die Einschränkung des Nachrichtenpuffers, die gilt, wenn ein Client eine gestreamte Nachricht an einen von IIS gehosteten WCF-Dienst sendet, wurde aufgehoben. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](../../../docs/framework/wcf/wcf-simplification-features.md).
+Es wurde Unterstützung für echtes asynchrones Streaming hinzugefügt, bei dem die Senderseite keine Threads blockiert, wenn die Empfängerseite keine Nachrichten liest bzw. Nachrichten langsam liest. Dies erhöht die Skalierbarkeit. Die Einschränkung des Nachrichtenpuffers, die gilt, wenn ein Client eine gestreamte Nachricht an einen von IIS gehosteten WCF-Dienst sendet, wurde aufgehoben. Weitere Informationen finden Sie unter [WCF-Vereinfachungs Funktionen](wcf-simplification-features.md).
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>Einfacheres Verfügbarmachen eines Endpunkts über HTTPS mit IIS
 
@@ -72,7 +72,7 @@ WSDL-Verarbeitungsstapel einiger Drittanbieter sind nicht in der Lage, WSDL-Doku
 
 ## <a name="websocket-support"></a>WebSocket-Unterstützung
 
-WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>. Weitere Informationen finden Sie unter folgenden Themen: Vom [System bereitgestellte Bindungen](../../../docs/framework/wcf/system-provided-bindings.md).
+WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>. Weitere Informationen finden Sie unter folgenden Themen: Vom [System bereitgestellte Bindungen](system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
@@ -82,9 +82,9 @@ Anhand der folgenden Tabelle erfahren Sie, welche Einstellungen geändert wurden
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 Sekunden|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Anzahl der Prozessoren für den Transport<br /><br /> 4 \* Anzahl der Prozessoren für "SMSvcHost. exe"|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Konfigurieren des net. TCP-Port Freigabe diensdienstanbieter](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Anzahl der Prozessoren für den Transport<br /><br /> 4 \* Anzahl der Prozessoren für "SMSvcHost. exe"|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Konfigurieren des net. TCP-Port Freigabe diensdienstanbieter](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30 Sekunden|[Konfigurieren des Net.TCP-Portfreigabediensts](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|receiveTimeout|SMSvcHost.exe|30 Sekunden|[Konfigurieren des Net.TCP-Portfreigabediensts](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML-Editor-QuickInfos
 
@@ -92,7 +92,7 @@ Um neuen und bereits erfahrenen Entwicklern von WCF-Diensten die Konfiguration z
 
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
 
-Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithilfe von Konfigurationsdateien oder Code zu konfigurieren. Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht Ihnen außerdem das Konfigurieren von Diensten im Code. In früheren Versionen von WCF (4,0 und früher) war das Konfigurieren von Diensten im Code in selbstgeh osteten Szenarien <xref:System.ServiceModel.ServiceHost> ganz einfach. mit der-Klasse haben Sie die Möglichkeit, Endpunkte und Verhaltensweisen vor dem Aufrufen von Service Host. Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4,5 bietet WCF eine einfachere Möglichkeit, selbstgeh ostete und im Internet gehostete Dienste im Code zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Diensten im Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF) ermöglicht es Entwicklern, Dienste mithilfe von Konfigurationsdateien oder Code zu konfigurieren. Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht Ihnen außerdem das Konfigurieren von Diensten im Code. In früheren Versionen von WCF (4,0 und früher) war das Konfigurieren von Diensten im Code in selbstgeh osteten Szenarien ganz einfach. mit der <xref:System.ServiceModel.ServiceHost>-Klasse haben Sie die Möglichkeit, Endpunkte und Verhaltensweisen vor dem Aufrufen von Service Host. Open zu konfigurieren. In webgehosteten Szenarien haben Sie jedoch keinen Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4,5 bietet WCF eine einfachere Möglichkeit, selbstgeh ostete und im Internet gehostete Dienste im Code zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von WCF-Diensten im Code](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>ChannelFactory-Caching
 
@@ -106,7 +106,7 @@ WCF-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601
 
 4. Freigeben von Ressourcen
 
-Um den Mehraufwand zu minimieren, kann WCF Kanalfactorys zwischenspeichern, wenn Sie einen WCF-Clientproxy verwenden. Weitere Informationen finden Sie unter [Kanalfactory und Caching](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md).
+Um den Mehraufwand zu minimieren, kann WCF Kanalfactorys zwischenspeichern, wenn Sie einen WCF-Clientproxy verwenden. Weitere Informationen finden Sie unter [Kanalfactory und Caching](./feature-details/channel-factory-and-caching.md).
 
 ## <a name="compression-and-the-binary-encoder"></a>Komprimierung und binärer Encoder
 
@@ -122,7 +122,7 @@ Es werden jetzt mehrere Authentifizierungsmodi, so wie von IIS unterstützt, fü
 
 ## <a name="idn-support"></a>IDN-Unterstützung
 
-Unterstützung für WCF-Dienste mit IDNs (Internationalized Domain Names) wurde hinzugefügt. Weitere Informationen finden Sie unter [WCF und internationalisierte Domänen Namen](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).
+Unterstützung für WCF-Dienste mit IDNs (Internationalized Domain Names) wurde hinzugefügt. Weitere Informationen finden Sie unter [WCF und internationalisierte Domänen Namen](./feature-details/wcf-and-internationalized-domain-names.md).
 
 ## <a name="httpclient"></a>HttpClient
 
@@ -138,7 +138,7 @@ WCF-Elemente und-Attribute verfügen jetzt über Quick Infos im XML-Editor, um d
 
 ## <a name="paste-data-as-classes"></a>Einfügen von Daten als Klassen
 
-In einem WCF-Projekt können die in XML definierten Datentypen (die in einem Dienst verfügbar gemacht sind) direkt in eine Codepage eingefügt werden. Der XML-Typ wird als CLR-Typ eingefügt. Weitere Informationen finden Sie [unter Erstellen von Datentyp Klassen aus XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) .
+In einem WCF-Projekt können die in XML definierten Datentypen (die in einem Dienst verfügbar gemacht sind) direkt in eine Codepage eingefügt werden. Der XML-Typ wird als CLR-Typ eingefügt. Weitere Informationen finden Sie [unter Erstellen von Datentyp Klassen aus XML](generating-data-type-classes-from-xml.md) .
 
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost und Standardendpunkte
 
