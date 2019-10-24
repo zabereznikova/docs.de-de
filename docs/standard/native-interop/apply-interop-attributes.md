@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1a8cc80db9e17000880c006ac1d7c1bd12fec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631494"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775283"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
@@ -30,7 +30,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 ## <a name="design-time-attributes"></a>Entwurfszeitattribute  
  Sie können das Ergebnis des Konvertierungsvorgangs von COM-Interop-Tools und -APIs mithilfe von Entwurfszeitattributen anpassen. Die folgende Tabelle beschreibt die Attribute, die Sie auf dem verwalteten Quellcode anwenden können. COM-Interop-Tools wenden möglicherweise auch die in dieser Tabelle beschriebenen Attribute an.  
   
-|Attribut|BESCHREIBUNG|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Gibt an, ob der Typ mithilfe des Automation-Marshallers oder eines benutzerdefinierten Proxys und Stubs gemarshallt werden soll.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Steuert den Typ der für eine Klasse generierten Schnittstelle.|  
@@ -40,7 +40,8 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|Identifiziert Schnittstellen, die Ereignisquellen für die Klasse sind.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|Gibt an, dass eine Methode aufgerufen werden soll, wenn die Assembly nicht in COM registriert ist, damit vom Benutzer erstellter Code während des Prozesses ausgeführt werden kann.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Macht Typen für COM unsichtbar, wenn der Attributwert **FALSE** ist. Dieses Attribut kann für eine gesamte Assembly oder einen einzelnen Typ angewendet werden, um die COM-Sichtbarkeit zu steuern. Standardmäßig sind alle verwalteten, öffentlichen Typen angezeigt. Das Attribut ist nicht erforderlich, um sie sichtbar zu machen.|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|Gibt die COM-Dispatch-ID (DISPID) einer Methode oder eines Felds an. Dieses Attribut enthält die DISPID für die Methode, das Feld oder die Eigenschaft, die es beschreibt.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|Gibt die COM-Dispatch-ID (DISPID) einer Methode oder eines Felds an. Dieses Attribut enthält die DISPID für die Methode, das Feld oder die Eigenschaft, die es beschreibt.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.| 
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Gibt die Standardschnittstelle für eine in .net implementierte com-Klasse an.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Gibt die physische Position jedes Felds innerhalb einer Klasse an, wenn **StructLayoutAttribute** verwendet und **LayoutKind** auf explizit festgelegt ist.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Gibt den Globally Unique Identifier (GUID) einer Klasse, Schnittstelle oder einer ganzen Typbibliothek an. Das Format der Zeichenfolge, die an das Attribut übergeben wird, muss ein zulässiges Konstruktorargument für den Typ **System.Guid** darstellen.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch**-Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  
@@ -57,7 +58,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 ## <a name="conversion-tool-attributes"></a>Attribute des Konvertierungstools  
  Die folgende Tabelle beschreibt die Attribute, die COM-Interop-Tools während des Konvertierungsvorgangs anwenden. Diese Attribute werden nicht zur Entwurfszeit angewendet.  
   
-|Attribut|BESCHREIBUNG|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Gibt den COM-Alias für einen Parameter oder Feldtyp an. Kann verwendet werden, um Parameter und Felder zuzuordnen oder Werte zurückzugeben.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Gibt den Informationsverlust zu einer Klasse oder Schnittstelle an, als diese aus einer Typbibliothek in eine Assembly importiert wurden.|  

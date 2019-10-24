@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582629"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775460"
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie unter [lokaler Typrückschluss](../../../visual
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Wenn eine Option Infer-Anweisung nicht vorhanden ist
 
-Wenn der Quellcode keine `Option Infer`-Anweisung enthält, wird die Einstellung **Option Infer** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet. Wenn der Befehlszeilen Compiler verwendet wird, wird die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption verwendet.
+Wenn der Quellcode keine `Option Infer`-Anweisung enthält, wird die Einstellung **Option Infer** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet. Wenn der Befehlszeilen Compiler verwendet wird, wird die [-optioninfer-Compileroption](../../../visual-basic/reference/command-line-compiler/optioninfer.md) verwendet.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Festlegen der Option Infer in der IDE
 
@@ -76,7 +76,7 @@ Wenn Sie ein neues Projekt erstellen, wird die Einstellung **Option Infer** auf 
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Festlegen der Option Infer in der Befehlszeile.
 
-Fügen Sie die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption in den **vbc** -Befehl ein.
+Schließen Sie die [-optioninfer-](../../../visual-basic/reference/command-line-compiler/optioninfer.md) Compileroption in den **vbc** -Befehl ein.
 
 ## <a name="default-data-types-and-values"></a>Standarddatentypen und -werte
 
@@ -109,5 +109,5 @@ Das folgende Beispiel veranschaulicht, dass der Laufzeittyp abweichen kann, wenn
 - [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
