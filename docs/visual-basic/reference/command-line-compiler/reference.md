@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 552fbcf920be609de83708a995a87761f6080220
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8f144dbd9376f15ac92e283472dac786a6972045
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005273"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775603"
 ---
 # <a name="-reference-visual-basic"></a>-Verweis (Visual Basic)
 Bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys zur Verfügung stellt, die für das aktuell kompilierte Projekt verfügbar sind.  
@@ -38,7 +38,7 @@ oder
 |`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Dateien, die Sie importieren, müssen Assemblymetadaten enthalten. Nur öffentliche Typen sind außerhalb der Assembly sichtbar. Die [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) -Option importiert Metadaten aus einem Modul.  
+ Die Dateien, die Sie importieren, müssen Assemblymetadaten enthalten. Nur öffentliche Typen sind außerhalb der Assembly sichtbar. Die Option [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importiert Metadaten aus einem Modul.  
   
  Wenn Sie auf eine Assembly (Assembly a) verweisen, die selbst auf eine andere Assembly (Assembly b) verweist, müssen Sie auf die Assembly b verweisen, wenn Folgendes gilt:  
   
@@ -55,7 +55,7 @@ oder
  Die Kurzform von `-reference` ist `/r`.  
   
 ## <a name="example"></a>Beispiel  
- Mit dem folgenden Befehl werden Quelldatei `Input.vb` und Verweisassemblys aus `Metad1.dll` und `Metad2.dll` kompiliert, um `Out.exe` zu erstellen.  
+ Mit dem folgenden Befehl werden Quelldatei `Input.vb` und Verweisassemblys aus `Metad1.dll` kompiliert und `Metad2.dll`, um `Out.exe` zu erstellen.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -66,5 +66,5 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Öffentlich](../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

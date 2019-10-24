@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: bbe9341b1fb50985c235bd7f34961f1718f46bc0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045228"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774289"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 
@@ -26,7 +26,7 @@ Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der 
 
 ## <a name="viewing-certificates"></a>Anzeigen von Zertifikaten
 
-Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap](how-to-view-certificates-with-the-mmc-snap-in.md)-in.
+Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [How to: View Certificates with the MMC Snap-in (Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In)](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 ## <a name="certificate-stores"></a>Zertifikatspeicher
 
@@ -57,13 +57,13 @@ Die Auswahl des Speichers für ein Zertifikat hängt davon ab, wie und wann der 
 
 ### <a name="accessing-stores"></a>Zugreifen auf Speicher
 
-Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Wenn Sie einen von Internetinformationsdienste (IIS) gehosteten Dienst erstellen, wird der ASP.NET-Prozess unter dem ASP.NET-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Informationen zum Ändern der Zugriffsliste mit dem WinHttpCertConfig. exe-Tool finden [Sie unter Gewusst wie: Erstellen Sie temporäre Zertifikate für die Verwendung](how-to-create-temporary-certificates-for-use-during-development.md)während der Entwicklung. Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).
+Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Wenn Sie einen von Internetinformationsdienste (IIS) gehosteten Dienst erstellen, wird der ASP.NET-Prozess unter dem ASP.NET-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Unter [How to: Create Temporary Certificates for Use During Development (Vorgehensweise: Erstellen temporärer Zertifikate zur Verwendung während der Entwicklung)](how-to-create-temporary-certificates-for-use-during-development.md) erfahren Sie, wie Sie die Zugriffsliste mit dem Tool „WinHttpCertConfig.exe“ bearbeiten.
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Vertrauensketten und Zertifizierungsstellen
 
 Zertifikate werden in einer Hierarchie erstellt, in der jedes einzelne Zertifikat mit der Zertifizierungsstelle verknüpft ist, von der es ausgestellt wurde. Dieser Link verweist auf das Zertifikat der Zertifizierungsstelle. Das Zertifikat der Zertifizierungsstelle wird dann mit der Zertifizierungsstelle verknüpft, von der das Zertifikat der ursprünglichen Zertifizierungsstelle ausgestellt wurde. Dieser Prozess wird wiederholt, bis das Zertifikat der Stammzertifizierungsstelle erreicht wird. Das Zertifikat der Stammzertifizierungsstelle ist grundsätzlich vertrauenswürdig.
 
-Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikat Ketten für eine Zertifizierungsstelle finden [Sie unter Gewusst wie: Geben Sie die Zertifikat Kette der Zertifizierungsstelle an,](specify-the-certificate-authority-chain-verify-signatures-wcf.md)mit der Signaturen überprüft werden.
+Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Mit dem MMC-Snap-in können Sie die Kette eines Zertifikats anzeigen, indem Sie auf ein beliebiges Zertifikat doppelklicken und dann auf die Registerkarte **Zertifikat Pfad** klicken. Weitere Informationen zum Importieren von Zertifikat Ketten für eine Zertifizierungsstelle finden Sie unter Gewusst [wie: Angeben der Zertifizierungsstellen Zertifikatskette, die zum Überprüfen von Signaturen verwendet wird](specify-the-certificate-authority-chain-verify-signatures-wcf.md).
 
 > [!NOTE]
 > Sie können jeden Aussteller zu einer vertrauenswürdigen Stammzertifizierungsstelle machen, indem Sie das Zertifikat des Ausstellers im Zertifikatspeicher der Stammzertifizierungsstelle ablegen.
@@ -72,7 +72,7 @@ Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zerti
 
 Wenn Sie einen neuen Dienst erstellen, verwenden Sie möglicherweise ein Zertifikat, das nicht von einer vertrauenswürdigen Stammzertifizierungsstelle ausgegeben wurde, oder das ausstellende Zertifikat befindet sich nicht im Speicher vertrauenswürdiger Stammzertifizierungsstellen. Sie können die Überprüfung der Kette von Vertrauensstellungen für ein Zertifikat in Entwicklungsumgebungen vorübergehend deaktivieren. Legen Sie dazu die `CertificateValidationMode`-Eigenschaft auf entweder `PeerTrust` oder `PeerOrChainTrust` fest. Durch den jeweiligen Modus wird angegeben, dass das Zertifikat entweder selbst ausgegeben (Peervertrauenszertifikat) oder Teil einer Kette von Vertrauensstellungen ist. Die Eigenschaft kann auf eine der folgenden Klassen festgelegt werden:
 
-|Klasse|Eigenschaft|
+|Klasse|property|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -105,7 +105,7 @@ Mit dem PowerShell-Cmdlet "New-selfsignedcertificate" werden X. 509-Zertifikate 
 
 3. Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.
 
-4. Schritt-für-Schritt-Anweisungen finden [Sie unter Gewusst wie: Erstellen Sie temporäre Zertifikate für die Verwendung](how-to-create-temporary-certificates-for-use-during-development.md)während der Entwicklung.
+4. Anweisungen finden Sie unter [How to: Create Temporary Certificates for Use During Development (Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung)](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="which-certificate-to-use"></a>Welches Zertifikat soll verwendet werden?
 
@@ -113,9 +113,9 @@ Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat
 
 ### <a name="service-certificates"></a>Dienstzertifikate
 
-Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u.a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn beispielsweise der URI des Dienstes ist `http://www.contoso.com/endpoint/` , muss das **Betrefffeld** auch den Wert `www.contoso.com`enthalten.
+Dienstzertifikate werden in erster Linie zur Authentifizierung von Servern gegenüber Clients verwendet. Bei der Authentifizierung eines Servers durch einen Client wird u.a. zunächst überprüft, ob der Wert im Feld **Antragsteller** mit dem Uniform Resource Identifier (URI) übereinstimmt, der zum Herstellen der Verbindung mit dem Dienst verwendet wird: das DNS von Client und Server muss übereinstimmen. Wenn der URI des Dienstanbieter beispielsweise `http://www.contoso.com/endpoint/` ist, muss das Feld **Betreff** auch den Wert `www.contoso.com` enthalten.
 
-Das Feld kann mehrere Werte enthalten, denen jeweils eine Initialisierung zur Angabe des Werts vorangeht. In den meisten Fällen ist die Initialisierung "CN" (allgemeiner Name), z `CN = www.contoso.com`. b. Das Feld **Antragsteller** kann auch leer sein. In diesem Fall kann das Feld **Alternativer Antragstellername** den Wert **DNS-Name** enthalten.
+Das Feld kann mehrere Werte enthalten, denen jeweils eine Initialisierung zur Angabe des Werts vorangeht. In den meisten Fällen ist die Initialisierung "CN" (allgemeiner Name), z. b. `CN = www.contoso.com`. Das Feld **Antragsteller** kann auch leer sein. In diesem Fall kann das Feld **Alternativer Antragstellername** den Wert **DNS-Name** enthalten.
 
 Der Wert des Felds **Beabsichtigte Zwecke** des Zertifikats sollte einen entsprechenden Wert enthalten, z.B. „Serverauthentifizierung“ oder „Clientauthentifizierung“.
 
