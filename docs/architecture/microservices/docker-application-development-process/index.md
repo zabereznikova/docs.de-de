@@ -2,12 +2,12 @@
 title: Entwicklungsprozess für auf Docker-basierende Anwendungen
 description: Verschaffen Sie sich einen Überblick über die Möglichkeiten bei der Entwicklung von Docker-basierten Anwendungen. Sie haben die Wahl zwischen Visual Studio für Windows, Visual Studio für Mac oder Visual Studio Code für die Unterstützung mehrerer Plattformen (Windows, Mac und Linux).
 ms.date: 09/27/2018
-ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6299d67299948dce1081a211b350e657b2c1b951
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295138"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770136"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Entwicklungsprozess für auf Docker-basierende Anwendungen
 
@@ -37,7 +37,7 @@ Durch Installation von [Docker Desktop Community Edition (CE)](https://hub.docke
 
 - **Docker Desktop für Windows Community Edition (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-  
+
 - **Docker Desktop für Mac Community Edition (CE)**  \
   [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 

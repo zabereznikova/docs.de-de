@@ -3,12 +3,12 @@ title: .NET Core-Migration über „project.json“
 description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 167f0707bbaf34ce12a1c56ee2320e7cc4f48bd3
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698917"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773898"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrieren von .NET Core-Projekten über „project.json“
 
@@ -40,7 +40,7 @@ Die ausgewählten Projekte werden von Visual Studio automatisch migriert. Wenn S
 Dateien, die migriert wurden (*project.json*, *global.json*, die *XPROJ*-Datei und die Projektmappendatei), werden in einen *Sicherungsordner* verschoben. Für die migrierte Projektmappendatei wird ein Upgrade auf Visual Studio 2017 oder Visual Studio 2019 durchgeführt, und Sie können diese Projektmappe nicht mehr in Visual Studio 2015 oder früheren Versionen öffnen. Eine Datei namens *UpgradeLog.htm*, die einen Migrationsbericht enthält, wird ebenfalls gespeichert und automatisch geöffnet.
 
 > [!IMPORTANT]
-> Sie können Ihre Projekte nicht mithilfe von Visual Studio 2015 migrieren.
+> In Visual Studio 2019 Version 16.3 und höher können Sie ein *XPROJ*-Datei nicht laden oder migrieren. Zusätzlich ist in Visual Studio 2015 die Funktion zum Migrieren einer *XPROJ*-Datei nicht verfügbar. Wenn Sie eine dieser beiden Visual Studio-Versionen verwenden, installieren Sie entweder die passende Visual Studio-Version, oder verwenden Sie das Befehlszeilenmigrationstool, das als nächstes erklärt wird.
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -49,17 +49,17 @@ Im Befehlszeilenszenario können Sie den Befehl [`dotnet migrate`](../tools/dotn
 Dateien, die migriert wurden (*project.json*, *global.json* und *XPROJ*-Dateien), werden in einen *Sicherungsordner* verschoben.
 
 > [!NOTE]
-> Bei Verwendung von Visual Studio Code ändert der Befehl `dotnet migrate` Visual Studio Code-spezifische Dateien wie z.B. `tasks.json` nicht. Diese Dateien müssen manuell geändert werden.
-> Dies gilt auch, wenn Sie Project Ryder oder einen anderen Editor oder eine andere Integrierte Entwicklungsumgebung (IDE) als Visual Studio verwenden.
+> Bei Verwendung von Visual Studio Code ändert der Befehl `dotnet migrate` Visual Studio Code-spezifische Dateien wie z. B. *tasks.json* nicht. Diese Dateien müssen manuell geändert werden.
+> Dies gilt auch, wenn Sie einen anderen Editor oder eine andere Integrierte Entwicklungsumgebung (IDE) als Visual Studio verwenden.
 
-Einen Vergleich der Formate project.json und csproj finden Sie unter [Die Zuordnung zwischen project.json und csproj-Eigenschaften](../tools/project-json-to-csproj.md).
+Einen Vergleich der Formate *project.json* und *csproj* finden Sie unter [Die Zuordnung zwischen project.json und csproj-Eigenschaften](../tools/project-json-to-csproj.md).
 
-### <a name="common-issues"></a>Häufig auftretende Probleme
+Wenn Sie folgende Fehlermeldung erhalten:
 
-- Wenn Sie folgende Fehlermeldung erhalten: „No executable found matching command dotnet-migrate“ (Keine ausführbare Datei gefunden, die mit dem Befehl dotnet-migrate übereinstimmt):
+> „No executable found matching command dotnet-migrate“ (Keine ausführbare Datei gefunden, die mit dem Befehl dotnet-migrate übereinstimmt):
 
-Führen Sie `dotnet --version` aus, um zu sehen, welche Version Sie verwenden. [`dotnet migrate`](../tools/dotnet-migrate.md) erfordert .NET Core-CLI RC3 oder höher.
-Sie erhalten diese Fehlermeldung, wenn sich eine *global.json*-Datei im aktuellen oder übergeordneten Verzeichnis befindet und die `sdk`-Version auf eine ältere Version festgelegt ist.
+Führen Sie `dotnet --version` aus, um zu sehen, welche Version Sie verwenden. [`dotnet migrate`](../tools/dotnet-migrate.md) wurde in .NET Core SDK 1.0.0 eingeführt und in Version 3.0.100 entfernt.
+Sie erhalten diese Fehlermeldung, wenn sich eine *global.json*-Datei im aktuellen oder übergeordneten Verzeichnis befindet und die angegebene `sdk`-Version außerhalb dieses Bereichs liegt.
 
 ## <a name="migration-from-dnx-to-csproj"></a>Migration von DNX zu csproj
 

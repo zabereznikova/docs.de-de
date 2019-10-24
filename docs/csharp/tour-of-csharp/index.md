@@ -3,12 +3,12 @@ title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105651"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774073"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -26,15 +26,15 @@ Um sicherzustellen, dass C#-Programme und -Bibliotheken im Lauf der Zeit kompati
 
 Das Programm „Hello, World“ wird für gewöhnlich zur Einführung einer Programmiersprache verwendet. Hier ist es in C#:
 
-[!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
+[!code-csharp[Hello World](~/samples/snippets/csharp/tour/hello/Program.cs)]
 
-C#-Quelldateien weisen in der Regel die Dateierweiterung `.cs` auf. Unter der Annahme, dass das Programm „Hello, World“ in der Datei `hello.cs` gespeichert ist, kann das Programm möglicherweise über die Befehlszeile kompiliert werden:
+C#-Quelldateien weisen in der Regel die Dateierweiterung `.cs` auf. Unter der Annahme, dass das Programm „Hello, World“ in der Datei *hello.cs* gespeichert ist, kann das Programm möglicherweise über die Befehlszeile kompiliert werden:
 
 ```console
 csc hello.cs
 ```
 
-Dadurch wird eine ausführbare Assembly mit der Bezeichnung „hello.exe“ generiert. Die Ausgabe, die von dieser Anwendung generiert wird, wenn sie ausgeführt wird:
+Dadurch wird eine ausführbare Assembly mit der Bezeichnung *hello.exe* generiert. Die Ausgabe, die von dieser Anwendung generiert wird, wenn sie ausgeführt wird:
 
 ```console
 Hello, World
@@ -49,7 +49,7 @@ Die `Hello`-Klasse, die vom Programm „Hello, World“ deklariert wird, verfüg
 
 Die Ausgabe des Programms wird anhand der `WriteLine`-Methode der `Console`-Klasse im `System`-Namespace generiert. Diese Klasse wird anhand der Standardklassenbibliotheken bereitgestellt, auf die standardmäßig automatisch vom Compiler verwiesen wird.
 
-Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine Übersicht über die Elemente der C#-Sprache. Diese Übersichten bieten grundlegende Informationen zu allen Elementen der Sprache und die erforderlichen Informationen zum tieferen Eintauchen in die Elemente der C#-Sprache:
+Es gibt noch viel mehr über C# zu erfahren. Die folgenden Themen bieten eine Übersicht über die Elemente der C#-Sprache. Diese Übersichten bieten grundlegende Informationen zu allen Elementen der Sprache und die erforderlichen Informationen zum tieferen Eintauchen in die Elemente der C#-Sprache:
 
 - [Programmstruktur](program-structure.md)
   - Lernen Sie die organisatorischen Schlüsselkonzepte in der C#-Sprache kennen: ***Programme***, ***Namespaces***, ***Typen***, ***Member*** und ***Assemblys***.
