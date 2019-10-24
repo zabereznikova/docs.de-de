@@ -2,12 +2,12 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Lernen Sie die verfügbare Option zum Speichern des Status in containerbasierten Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673557"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394644"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -47,7 +47,7 @@ Volumes können benannt oder anonym sein (letzteres ist die Standardeinstellung)
 
 Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder einer VM auf ein Volume zugreifen. Anders gesagt: Bei diesen Volumes ist es nicht möglich, Daten zu verwalten, die von auf verschiedenen Docker-Hosts ausgeführten Containern gemeinsam verwendet werden. Dieses Szenario ließe sich allerdings mit einem Volumetreiber umsetzen, der Remotehosts unterstützt.
 
-![Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt. ](./media/image5.png)
+![Abbildung, die die Docker-Volumes zeigt, die außerhalb von Containern gespeichert sind.](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **Abbildung 4-5**. Volumes und externe Datenquellen für containerbasierte Anwendungen
 

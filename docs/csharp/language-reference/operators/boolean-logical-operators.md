@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: f711bd04aeadb584eac1ecb0b644a36e2e496d08
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: e355a89e27ea5bd6e4335b39c4e669610c4b0553
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290943"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319105"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
@@ -55,7 +55,7 @@ Der unäre Präfix-Operator `!` berechnet die logische Negation seines Operanden
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-Ab C# 8.0 ist der unäre Postfix-Operator `!` ein [NULL-toleranter Operator](null-forgiving.md).
+Ab C# 8.0 ist der unäre Postfix-Operator `!` der [NULL-tolerante Operator](null-forgiving.md).
 
 ## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 

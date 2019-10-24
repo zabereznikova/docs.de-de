@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835247"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581963"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -26,34 +26,49 @@ Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 16.0](#v
 
 ## <a name="previous-versions"></a>Frühere Versionen
 
-Visual Basic 15.8/Visual Studio 2017, Version 15.8. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
+Die aktuelle Version ist Visual Basic 15.8/Visual Studio 2017, Version 15.8.  
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15.5/Visual Studio 2017, Version 15.5. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155).
+Visual Basic 15.5/Visual Studio 2017 Version 15.5  
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15.3/Visual Studio 2017, Version 15.3. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153).
+Visual Basic 15.3/Visual Studio 2017 Version 15.3  
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 2017/Visual Studio 2017  
+Informationen zu neuen Features finden Sie unter [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015. Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 14](#visual-basic-14).
+Visual Basic/Visual Studio 2015  
+Informationen zu neuen Features finden Sie unter [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013. Technologievorschau von .NET Compiler Platform („Roslyn“).
+Visual Basic/Visual Studio 2013  
+Technologievorschau von .NET Compiler Platform („Roslyn“)
 
-Visual Basic/Visual Studio 2012. Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute.
+Visual Basic/Visual Studio 2012  
+Die Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute
 
-Visual Basic, Visual Studio 2010. Automatisch implementierte Eigenschaften, Auflistungsinitialisierer, implizite Zeilenfortsetzung, dynamische, generische Ko-/Kontravarianz, Zugriff auf globalen Namespace.
+Visual Basic, Visual Studio 2010  
+Automatisch implementierte Eigenschaften, Auflistungsinitialisierer, implizite Zeilenfortsetzung, dynamische, generische Ko-/Kontravarianz, Zugriff auf globalen Namespace
 
-Visual Basic/Visual Studio 2008. Language Integrated Query (LINQ), XML-Literale, lokaler Typrückschluss, Objektinitialisierer, anonyme Typen, Erweiterungsmethoden, lokaler `var`-Typrückschluss, Lambda-Ausdrücke, `if`-Operator, partielle Methoden, auf NULL festlegbare Werttypen.
+Visual Basic/Visual Studio 2008  
+Language Integrated Query (LINQ), XML-Literale, lokaler Typrückschluss, Objektinitialisierer, anonyme Typen, Erweiterungsmethoden, lokaler `var`-Typrückschluss, Lambda-Ausdrücke, `if`-Operator, partielle Methoden, auf NULL festlegbare Werttypen
 
-Visual Basic/Visual Studio 2005. Der `My`-Typ und Hilfstypen (Zugriff auf App, Computer, Dateisystem, Netzwerk).
+Visual Basic/Visual Studio 2005  
+Der `My`-Typ und Hilfstypen (Zugriff auf App, Computer, Dateisystem, Netzwerk)
 
-Visual Basic/Visual Studio .NET 2003. Bitschiebeoperatoren, Deklaration von Schleifenvariablen.
+Visual Basic / Visual Studio .NET 2003  
+Bitschiebeoperatoren, Deklaration von Schleifenvariablen
 
-Visual Basic/Visual Studio .NET 2002. Die erste Version von Visual Basic .NET.
+Visual Basic / Visual Studio .NET 2002  
+Die erste Version von Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
-Bei Visual Basic 16.0 liegt der Fokus darauf, weitere Features der Visual Basic-Laufzeit (microsoft.visualbasic.dll) für .NET Core bereitzustellen, und ist die erste Version von Visual Basic, die auf .NET Core ausgelegt ist. Viele Teile der Visual Basic-Laufzeit sind von WinForms abhängig und werden in einer späteren Version von Visual Basic hinzugefügt. 
 
-**Kommentare sind an weiteren Stellen innerhalb von Anweisungen zulässig:** In Visual Basic 15.8 und früheren Versionen sind Kommentare nur in leeren Zeilen, am Ende von Anweisungen oder an bestimmten Stellen in einer Anweisung zulässig, an denen implizite Zeilenfortsetzungen erlaubt sind. Ab Visual Basic 16.0 sind Kommentare auch nach expliziten Zeilenfortsetzungen und innerhalb von Anweisungen in Zeilen zulässig, die mit einem Leerzeichen gefolgt von einem Unterstrich beginnen.
+Bei Visual Basic 16.0 liegt der Fokus darauf, weitere Features der Visual Basic-Laufzeit (microsoft.visualbasic.dll) für .NET Core bereitzustellen, und ist die erste Version von Visual Basic, die auf .NET Core ausgelegt ist. Viele Teile der Visual Basic-Laufzeit sind von WinForms abhängig und werden in einer späteren Version von Visual Basic hinzugefügt.
+
+**Kommentare sind an weiteren Stellen innerhalb von Anweisungen zulässig**
+
+In Visual Basic 15.8 und früheren Versionen sind Kommentare nur in leeren Zeilen, am Ende von Anweisungen oder an bestimmten Stellen in einer Anweisung zulässig, an denen implizite Zeilenfortsetzungen erlaubt sind. Ab Visual Basic 16.0 sind Kommentare auch nach expliziten Zeilenfortsetzungen und innerhalb von Anweisungen in Zeilen zulässig, die mit einem Leerzeichen gefolgt von einem Unterstrich beginnen.
 
 ```vb
 Public Sub Main()

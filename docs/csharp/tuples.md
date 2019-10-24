@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 00330af38044b07128551b7dc74c7d831c7a5626
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 7e5df8c20dbbddbe84a56883a6d2a027f32d8ff7
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105895"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319758"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen
 
@@ -282,6 +282,20 @@ if (("Althea", "Goodwin") == p)
 ```
 
 Die Methode `Deconstruct` kann das `Person`-Objekt `p` in ein Tupel konvertieren, das zwei Zeichenfolgen enthält. Dieses gilt jedoch nicht im Kontext von Gleichheitstests.
+
+## <a name="tuples-as-out-parameters"></a>Tupel als out-Parameter
+
+Tupel können *selbst* als out-Parameter verwendet werden. Dies sollte nicht mit einer Mehrdeutigkeit verwechselt werden, die zuvor im Abschnitt [Dekonstruktion ](#deconstruction) erwähnt wurde. In einem Methodenaufruf müssen Sie nur die Form des Tupels beschreiben:
+
+[!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
+
+Alternativ können Sie ein [_unbenanntes_](#named-and-unnamed-tuples) Tupel verwenden und auf seine Felder als `Item1` und `Item2` verweisen:
+
+```csharp
+dict.TryGetValue(2, out (int, string) pair);
+// ...
+Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+```
 
 ## <a name="conclusion"></a>Schlussbemerkung 
 

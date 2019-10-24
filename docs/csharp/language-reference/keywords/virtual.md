@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925372"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395146"
 ---
 # <a name="virtual-c-reference"></a>virtual (C#-Referenz)
 
@@ -38,9 +38,9 @@ Sie können den Modifizierer `virtual` nicht mit den Modifizierern `static`, `ab
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Virtuelle Eigenschaften verhalten sich wie abstrakte Methoden – sie unterscheiden sich lediglich in der Deklarations- und Aufrufsyntax.
+Virtuelle Eigenschaften verhalten sich wie virtuelle Methoden – sie unterscheiden sich lediglich in der Deklarations- und Aufrufsyntax.
 
-- Es ist unzulässig, den `virtual`-Modifizierer für eine statische Eigenschaft zu verwenden.
+- Es ist ein unzulässig, den `virtual`-Modifizierer für eine statische Eigenschaft zu verwenden.
 
 - Eine virtuelle vererbte Eigenschaft kann in einer abgeleiteten Klasse mithilfe der Eigenschaftendeklaration, die den Modifizierer `override` verwendet, außer Kraft gesetzt werden.
 

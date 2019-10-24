@@ -2,12 +2,12 @@
 title: Docker-Container, -Images und -Registrierungen
 description: Lernen Sie die Schlüsselrolle kennen, die Registrierungen überall in der Docker-Methode zum Bereitstellen von Anwendungen spielen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673517"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394609"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen
 
@@ -19,9 +19,11 @@ Sie speichern Images in einer Registrierung, die als Katalog für Images fungier
 
 In Abbildung 1–4 wird dargestellt, wie Images und Registrierungen in Docker mit anderen Komponenten in Beziehung stehen. Die Angebote verschiedener Anbieter für Registrierungen werden ebenfalls dargestellt.
 
-![Grundlegende Taxonomie in Docker: Die Registrierung funktioniert wie ein Bücherregal, in dem Images gespeichert und für den Abruf zum Erstellen von Containern verfügbar sind, in denen Dienste oder Web-Apps ausgeführt werden. Private Docker-Registrierungen gibt es lokal und in der öffentlichen Cloud. Docker Hub ist eine öffentliche Registrierung, die von Docker betrieben wird, die Docker Trusted Registry ist eine für Unternehmen geeignete Lösung, und Azure bietet die Azure Container Registry an. AWS, Google und andere verfügen ebenfalls über Containerregistrierungen.](./media/image4.png)
+![Abbildung, die die grundlegende Taxonomie in Docker zeigt.](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
 **Abbildung 1-4.** Taxonomie der Docker-Begriffe und -Konzepte
+
+Die Registrierung funktioniert wie ein Bücherregal, in dem Images gespeichert und für den Abruf zum Erstellen von Containern verfügbar sind, in denen Dienste oder Web-Apps ausgeführt werden. Private Docker-Registrierungen gibt es lokal und in der öffentlichen Cloud. Docker Hub ist eine öffentliche Registrierung, die von Docker betrieben wird, die Docker Trusted Registry ist eine für Unternehmen geeignete Lösung, und Azure bietet die Azure Container Registry an. AWS, Google und andere verfügen ebenfalls über Containerregistrierungen.
 
 Durch das Einfügen von Images in eine Registrierung können Sie statische und unveränderliche Komponenten der Anwendung speichern, einschließlich aller Abhängigkeiten auf Frameworkebene. Diese Images können dann mit einer Versionsangabe versehen und in mehreren Umgebungen bereitgestellt werden. Dadurch steht eine konsistente Bereitstellungseinheit zur Verfügung.
 

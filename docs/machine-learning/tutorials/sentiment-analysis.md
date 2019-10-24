@@ -4,25 +4,25 @@ description: Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendu
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6b9d51a8ab91b4365c909993211f11ab3436808
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: e241ae8c0d39e6573b40c69611985f7095114629
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700860"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320143"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Standpunktanalyse für Websitekommentare mit binärer Klassifikation in ML.NET
 
 Dieses Tutorial zeigt Ihnen, wie Sie eine .NET Core-Konsolenanwendung erstellen, die den Standpunkt in Websitekommentaren klassifiziert und die entsprechenden Maßnahmen ergreift. Die binäre Standpunktklassifizierung verwendet C# in Visual Studio 2017.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > - Erstellen einer Konsolenanwendung
 > - Vorbereiten von Daten
 > - Laden der Daten
 > - Erstellen und Trainieren des Modells
-> - Auswerten des Modells
+> - Evaluieren des Modells
 > - Verwenden des Modells für Vorhersagen
 > - Anzeigen der Ergebnisse
 
@@ -47,7 +47,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 ## <a name="prepare-your-data"></a>Vorbereiten Ihrer Daten
 
 > [!NOTE]
-> Die für dieses Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et. al., KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science
+> Die für dieses Tutorial verwendeten Datasets stammen aus „From Group to Individual Labels using Deep Features“, Kotzias et. al., KDD 2015, und werden im UCI Machine Learning Repository – Dua, D. und Karra Taniskidou, E. gehostet. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 1. Laden Sie die ZIP-Datei des [Datasets „UCI Sentiment Labeled Sentences“](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) herunter, und entzippen Sie sie.
 
@@ -61,26 +61,21 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
-2. Erstellen Sie zwei globale Felder zum Speichern des gerade heruntergeladenen Datasetdateipfads und des gespeicherten Modelldateipfads:
-
-    - `_dataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
-    - `_modelPath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
-
-3. Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
+1. Fügen Sie den folgenden Code in der Zeile direkt über der `Main`-Methode hinzu, um ein Feld zu erstellen, das den Dateipfad des zuletzt heruntergeladenen Datasets enthält:
 
     [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-4. Erstellen Sie anschließend Klassen für Ihre Eingabedaten und Vorhersagen. Fügen Sie dem Projekt eine neue Klasse hinzu:
+1. Erstellen Sie anschließend Klassen für Ihre Eingabedaten und Vorhersagen. Fügen Sie dem Projekt eine neue Klasse hinzu:
 
     - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie dann **Hinzufügen** > **Neues Element** aus.
 
     - Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *SentimentData.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
 
-5. Die Datei *SentimentData.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *SentimentData.cs* die folgende `using`-Anweisung hinzu:
+1. Die Datei *SentimentData.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *SentimentData.cs* die folgende `using`-Anweisung hinzu:
 
     [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
-6. Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Code mit den beiden Klassen `SentimentData` und `SentimentPrediction` der Datei *SentimentData.cs* hinzu:
+1. Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Code mit den beiden Klassen `SentimentData` und `SentimentPrediction` der Datei *SentimentData.cs* hinzu:
 
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
@@ -197,7 +192,7 @@ Fügen Sie den unten aufgeführten Code als nächste Codezeilen in `BuildAndTrai
 
 [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) ist Ihr Klassifizierungsalgorithmus für das Training. Dieser wird an den `estimator` angefügt, und akzeptiert den mit Features ausgestatteten `SentimentText` (`Features`) und die `Label`-Eingabeparameter, um aus den historischen Daten zu lernen.
 
-### <a name="train-the-model"></a>Modelltraining
+### <a name="train-the-model"></a>Trainieren des Modells
 
 Fügen Sie den unten aufgeführten Code als nächste Codezeilen in die `BuildAndTrainModel()`-Methode ein, um das Modell an die `splitTrainSet`-Daten anzupassen und das trainierte Modell zurückzugeben:
 
@@ -211,7 +206,7 @@ Mit der [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Micr
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
 
-## <a name="evaluate-the-model"></a>Auswerten des Modells
+## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
 Verwenden Sie nach dem Training Ihres Modells Ihre Testdaten, um die Leistung Ihres Modells zu validieren.
 
@@ -385,14 +380,14 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie Folgendes gelernt:
+In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > - Erstellen einer Konsolenanwendung
 > - Vorbereiten von Daten
 > - Laden der Daten
 > - Erstellen und Trainieren des Modells
-> - Auswerten des Modells
+> - Evaluieren des Modells
 > - Verwenden des Modells für Vorhersagen
 > - Anzeigen der Ergebnisse
 

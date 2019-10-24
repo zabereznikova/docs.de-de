@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 246c1d25a99e61d7e2f69f1b65ae3534d22571ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a3979d792b4cfd1f7949a3c8e14c6f856e9e3e21
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054003"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320120"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -29,14 +29,14 @@ Sobald Sie Ihr Projekt für Ihre Zielplattform (z.B. .NET Core) konvertiert habe
 
 Laden Sie .NET Portability Analyzer in Visual Studio zunächst von [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) herunter, um mit der Verwendung dieser Erweiterung zu beginnen. Er wird in Visual Studio 2017 und älteren Versionen unterstützt. Sie können ihn in Visual Studio über **Analyze** > **Portability Analyzer Settings** (Analysieren/Portability Analyzer-Einstellungen) konfigurieren und Ihre Zielplattformen, also die .NET-Plattformen/Versionen auswählen, für die Sie Portabilitätslücken im Vergleich zu der Plattform/Version analysieren möchten, mit der Ihre aktuelle Assembly erstellt wurde.
 
-![Screenshot zur Portabilität](./media/portability-analyzer/portability-screenshot.png)
+![Screenshot von Portability Analyzer.](./media/portability-analyzer/portability-screenshot.png)
 
 Sie können auch die ApiPort-Konsolenanwendung verwenden. Laden Sie sie aus dem [ApiPort-Repository](https://aka.ms/apiportdownload) herunter. Sie können die Befehlsoption `listTargets` verwenden, um die Liste mit verfügbaren Zielen anzuzeigen. Anschließend wählen Sie Zielplattformen aus, indem Sie die Befehlsoption `-t` oder `--target` angeben. 
 
 ### <a name="analyze-portability"></a>Analysieren der Portabilität
 Um das gesamte Projekt in Visual Studio zu analysieren, klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf Ihr Projekt, und wählen Sie **Assemblyportabilität analysieren** aus. Wechseln Sie andernfalls zum Menü **Analysieren**, und wählen Sie **Assemblyportabilität analysieren**. Wählen Sie dort die ausführbare Datei oder DLL-Datei des Projekts aus.
 
-![Portability Analyzer im Projektmappen-Explorer](./media/portability-analyzer/portability-solution-explorer.png)
+![Screenshot von Portability Analyzer aus dem Projektmappen-Explorer.](./media/portability-analyzer/portability-solution-explorer.png)
 
 Sie können auch die [ApiPort-Konsolenanwendung](https://aka.ms/apiportdownload) verwenden. 
 
@@ -52,13 +52,13 @@ Im Bericht werden nur die APIs angegeben, die von einer Zielplattform nicht unte
 
 #### <a name="portability-summary"></a>Zusammenfassung zur Portabilität 
 
-![Zusammenfassung zur Portabilität](./media/portability-analyzer/portabilitysummary.png)
+![Screenshot der Zusammenfassung zur Portabilität.](./media/portability-analyzer/api-catalog-portablility-summary.png)
 
 Im Berichtsabschnitt mit der Portabilitätszusammenfassung wird für jede in der Ausführung enthaltene Assembly der Portabilitätsprozentsatz angezeigt. Im vorherigen Beispiel sind 71,24 Prozent der in der App `svcutil` verwendeten .NET Framework-APIs in .NET Core und Plattformerweiterungen verfügbar. Wenn Sie das Tool .NET Portability Analyzer für mehrere Assemblys ausführen, gibt es im Bericht „Zusammenfassung zur Portabilität“ für jede Assembly eine Zeile.
 
 #### <a name="details"></a>Details
 
-![Details zur Portabilität](./media/portability-analyzer/portabilitydetails.png)
+![Screenshot der Portabilitätsdetails.](./media/portability-analyzer/api-catalog-portablility-details.png)
 
 Im Abschnitt **Details** des Berichts werden die APIs aufgeführt, die in einer der **Zielplattformen** fehlen. 
 
@@ -70,7 +70,7 @@ Im Abschnitt **Details** des Berichts werden die APIs aufgeführt, die in einer 
 
 #### <a name="missing-assemblies"></a>Fehlende Assemblys
 
-![Details zur Portabilität](./media/portability-analyzer/missingassemblies.png)
+![Screenshot der fehlenden Assemblys.](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
 Ihr Bericht enthält möglicherweise einen Abschnitt mit der Überschrift „Fehlende Assemblys“. In diesem Abschnitt wird Ihnen mitgeteilt, dass die Assemblys in der Liste von Ihren analysierten Assemblys referenziert werden, aber nicht analysiert wurden. Wenn es sich um eine Assembly in Ihrem Besitz handelt, beziehen Sie sie in die Ausführung von API Portability Analyzer ein, sodass Sie dafür die im Portabilitätsbericht angegebene API-Ebene erhalten. Wenn es sich um die Bibliothek eines Drittanbieters handelt, erkundigen Sie sich, ob es eine neuere Version gibt, die Ihre Zielplattform unterstützt. Ist dies der Fall, sollten Sie zur neueren Version wechseln. Letztlich soll diese Liste alle Assemblys von Drittanbietern enthalten, von denen Ihre Anwendung abhängig ist, und diese müssen nachweislich eine Version aufweisen, die Ihre Zielplattform unterstützt.  
 

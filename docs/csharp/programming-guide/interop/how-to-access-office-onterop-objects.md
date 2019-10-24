@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834209"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523565"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
 
@@ -95,7 +95,7 @@ Um diese exemplarische Vorgehensweise auszuführen, müssen Microsoft Office Exc
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die Compileroption [/link](../../language-reference/compiler-options/link-compiler-option.md) auf die Assembly verweist, oder wenn die Excel-Eigenschaft **Interop-Typen einbetten** auf TRUE festgelegt ist. Der Standardwert für diese Eigenschaft ist "True".
+     C# 4 und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die Compileroption [-link](../../language-reference/compiler-options/link-compiler-option.md) auf die Assembly verweist, oder wenn die Excel-Eigenschaft **Interop-Typen einbetten** auf TRUE festgelegt ist. Der Standardwert für diese Eigenschaft ist "True".
 
 ## <a name="to-run-the-project"></a>So führen Sie das Projekt aus
 
@@ -149,7 +149,7 @@ Um diese exemplarische Vorgehensweise auszuführen, müssen Microsoft Office Exc
 
 3. Wenn Sie das Fenster **Eigenschaften** nicht sehen, drücken Sie **F4**.
 
-4. Suchen Sie in der Liste der Eigenschaften nach **Interop-Typen einbetten**, und ändern Sie dessen Wert in **FALSE**. Gleichermaßen können Sie die Kompilierung durchführen, wenn Sie an einer Eingabeaufforderung die [/reference](../../language-reference/compiler-options/reference-compiler-option.md)-Compileroption anstelle von [/link](../../language-reference/compiler-options/link-compiler-option.md) verwenden.
+4. Suchen Sie in der Liste der Eigenschaften nach **Interop-Typen einbetten**, und ändern Sie dessen Wert in **FALSE**. Gleichermaßen können Sie die Kompilierung durchführen, wenn Sie an einer Eingabeaufforderung die [-reference](../../language-reference/compiler-options/reference-compiler-option.md)-Compileroption anstelle von [-link](../../language-reference/compiler-options/link-compiler-option.md) verwenden.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>So fügen Sie der Tabelle zusätzliche Formatierungen hinzu
 

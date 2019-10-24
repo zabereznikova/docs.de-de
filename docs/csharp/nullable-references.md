@@ -1,13 +1,13 @@
 ---
 title: Nullwerte zulassende Verweistypen
-description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
+description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.date: 02/19/2019
-ms.openlocfilehash: 213f0e3d9ad84628dab02a1dc483513783b2ad6e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699956"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319053"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -35,13 +35,11 @@ string? name;
 
 Bei jeder Variable, bei der `?` nicht an den Typnamen angefügt ist, handelt es sich um einen **Nicht-Nullable-Verweistyp**. Dies umfasst alle Verweistypvariablen in vorhandenem Code, wenn Sie dieses Feature aktiviert haben.
 
-Der Compiler verwendet die statische Analyse, um zu bestimmen, ob ein Nullable-Verweis nicht NULL ist. Der Compiler warnt Sie, falls Sie einen Nullable-Verweis dereferenzieren, wenn dieser möglicherweise NULL ist. Sie können dieses Verhalten überschreiben, indem Sie den **NULL-toleranten Operator** (`!`) gefolgt von einem Variablennamen verwenden. Wenn Sie beispielsweise wissen, dass die Variable `name` nicht NULL ist, der Compiler aber eine Warnung ausgibt, können Sie folgenden Code schreiben, um die Compileranalyse zu überschreiben:
+Der Compiler verwendet die statische Analyse, um zu bestimmen, ob ein Nullable-Verweis nicht NULL ist. Der Compiler warnt Sie, falls Sie einen Nullable-Verweis dereferenzieren, wenn dieser möglicherweise NULL ist. Sie können dieses Verhalten überschreiben, indem Sie den [NULL-toleranten Operator](language-reference/operators/null-forgiving.md) (`!`) gefolgt von einem Variablennamen verwenden. Wenn Sie beispielsweise wissen, dass die Variable `name` nicht NULL ist, der Compiler aber eine Warnung ausgibt, können Sie folgenden Code schreiben, um die Compileranalyse zu überschreiben:
 
 ```csharp
 name!.Length;
 ```
-
-Weitere Informationen zu diesem Operator finden Sie im Spezifikationssvorschlag zu [Nullable-Verweistypen (Entwurf)](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) auf GitHub.
 
 ## <a name="nullability-of-types"></a>NULL-Zulässigkeit von Typen
 
@@ -49,14 +47,14 @@ Jeder beliebige Verweistyp kann über eine von vier *NULL-Zulässigkeiten* verf�
 
 - *Nonnullable* (Nicht-Nullable): Variablen dieses Typs kann NULL nicht zugewiesen werden. Variablen dieses Typs müssen vor der Dereferenzierung nicht auf NULL überprüft werden.
 - *Nullable*: Variablen dieses Typs kann NULL zugewiesen werden. Wenn Variablen dieses Typs dereferenziert werden, ohne dass zuvor auf `null` überprüft wurde, wird eine Warnung ausgegeben.
-- *Oblivious* (Nichtbeachtend): Dies ist der Zustand vor C# 8. Variablen dieses Typs können ohne Warnungen dereferenziert oder zugewiesen werden.
+- *Oblivious* (Nichtbeachtend): Dies ist der Zustand vor C# 8.0. Variablen dieses Typs können ohne Warnungen dereferenziert oder zugewiesen werden.
 - *Unknown* (Unbekannt): Diese NULL-Zulässigkeit ist im Allgemeinen für Typparameter gedacht, bei denen der Compiler von Einschränkungen nicht erfährt, dass der Typ *nullable* oder *nicht-nullable* sein muss.
 
 Die NULL-Zulässigkeit eines Typs in einer Variablendeklaration wird durch den *Nullable-Kontext* gesteuert, in der die Variable deklariert wird.
 
 ## <a name="nullable-contexts"></a>Nullable-Kontexte
 
-Nullable-Kontexte ermöglichen eine differenzierte Steuerung der Interpretation von Verweistypvariablen durch den Compiler. Der **Nullable-Anmerkungskontext** jeder beliebigen Quellzeile ist `enabled` oder `disabled`. Der Compiler vor C# 8 hat all Ihren Code in einem `disabled`-Nullable-Kontext kompiliert: Alle Verweistypen sind möglicherweise NULL. Der **Nullable-Warnungskontext** wird möglicherweise auf `enabled` oder `disabled` festgelegt. Der Nullable-Warnungskontext gibt die vom Compiler generierten Warnungen mithilfe der Flussanalyse an.
+Nullable-Kontexte ermöglichen eine differenzierte Steuerung der Interpretation von Verweistypvariablen durch den Compiler. Der **Nullable-Anmerkungskontext** jeder beliebigen Quellzeile ist aktiviert oder deaktiviert. Der Compiler vor C# 8.0 hat Ihren gesamten Code in einem deaktivierten Nullable-Kontext kompiliert: Jeder Verweistyp kann NULL sein. Der **Kontext „nullable warnings“** (Nullable-Warnungen) kann ebenfalls aktiviert oder deaktiviert sein. Der Nullable-Warnungskontext gibt die vom Compiler generierten Warnungen mithilfe der Flussanalyse an.
 
 Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein Projekt festgelegt werden, indem Sie das `Nullable`-Element in Ihrer *CSPROJ*-Datei verwenden. Dieses Element konfiguriert, wie der Compiler die NULL-Zulässigkeit von Typen interpretiert und welche Warnungen generiert werden. Gültige Einstellungen sind folgende:
 
@@ -81,7 +79,7 @@ Sie können auch Anweisungen verwenden, um diese Kontexte überall in Ihrem Proj
 - `#nullable enable annotations`: Legt den Nullable-Anmerkungskontext auf **enabled** (aktiviert) fest.
 - `#nullable restore annotations`: Stellt die Projekteinstellungen für den Anmerkungswarnungskontext wieder her.
 
-Die Standardeinstellung für den Nullable-Anmerkungskontext und -Warnungskontext ist `disabled`. Diese Entscheidung bedeutet, dass Ihr vorhandener Code ohne Änderungen und ohne Warnungen kompiliert wird.
+Standardmäßig sind die Nullable-Anmerkungs- und -Warnungskontexte **deaktiviert**. Dies bedeutet, dass Ihr vorhandener Code ohne Änderungen und ohne Warnungen kompiliert wird.
 
 ## <a name="nullable-annotation-context"></a>Nullable-Anmerkungskontext
 
@@ -110,10 +108,10 @@ Der Nullable-Warnungskontext unterscheidet sich vom Nullable-Anmerkungskontext. 
 1. Die Variable wurde definitiv einem Wert ungleich NULL zugewiesen.
 1. Die Variable oder der Ausdruck wurde vor der Dereferenzierung auf NULL überprüft.
 
-Der Compiler generiert Warnungen, wenn Sie eine Variable oder einen Ausdruck im Zustand **maybe null** (vielleicht NULL) dereferenzieren und der Nullable-Warnungskontext `enabled` ist. Darüber hinaus werden Warnungen generiert, wenn eine Variable oder ein Ausdruck im Zustand **maybe null** (vielleicht NULL) einem Nicht-Nullable-Verweistyp zugewiesen wird und der Nullable-Anmerkungskontext `enabled` ist.
+Der Compiler generiert Warnungen, wenn Sie eine Variable oder einen Ausdruck im Zustand **maybe null** (vielleicht NULL) dereferenzieren und der Nullable-Warnungskontext aktiviert ist. Darüber hinaus werden Warnungen generiert, wenn eine Variable oder ein Ausdruck im Zustand **maybe null** (vielleicht NULL) einem Nicht-Nullable-Verweistyp zugewiesen wird und der Nullable-Anmerkungskontext aktiviert ist.
 
-## <a name="learn-more"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Draft Nullable reference specification (Entwurf: Spezifikation zu Nullable-Verweisen)](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Entwurf der Spezifikation für Nullable-Verweistypen](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen](tutorials/nullable-reference-types.md)
 - [Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](tutorials/upgrade-to-nullable-references.md)

@@ -2,18 +2,18 @@
 title: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
 description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory verarbeiten können.
 ms.date: 01/07/2019
-ms.openlocfilehash: d5e0b6c830422990aaf1a5e3b6ae257eb3dae99c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696900"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318408"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
 Für Wiederholungen mit exponentiellem Backoff wird empfohlen, fortgeschrittenere .NET-Bibliotheken wie die Open Source-Bibliothek [Polly](https://github.com/App-vNext/Polly) zu verwenden.
 
-Polly ist eine .NET-Bibliothek, die Funktionen für die Flexibilität und die Behandlung von vorübergehenden Fehlern bereitstellt. Sie können diese Funktionen implementieren, indem Sie Polly-Richtlinien wie „Retry“, „Circuit Breaker“, „Bulkhead Isolation“, „Timeout“, und „Fallback“ anwenden. Polly ist auf .NET 4.x und die .NET Standard-Bibliothek 1.0 (die .NET Core unterstützt) ausgelegt.
+Polly ist eine .NET-Bibliothek, die Funktionen für die Flexibilität und die Behandlung von vorübergehenden Fehlern bereitstellt. Sie können diese Funktionen implementieren, indem Sie Polly-Richtlinien wie „Retry“, „Circuit Breaker“, „Bulkhead Isolation“, „Timeout“, und „Fallback“ anwenden. Polly unterstützt .NET Framework 4.x und .NET Standard 1.0, 1.1 und 2.0 (unterstützt .NET Core).
 
 Das Schreiben eines eigenen benutzerdefinierten Codes zur Verwendung der Polly-Bibliothek mit HttpClient kann jedoch sehr komplex sein. In der ursprünglichen Version von eShopOnContainers war der Baustein [ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) enthalten, der auf Polly basierte. Mit dem Release von [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md) wurde die Implementierung von robuster HTTP-Kommunikation mit Polly wesentlich einfacher, sodass dieser Baustein von eShopOnContainers nun als veraltet markiert wurde. 
 

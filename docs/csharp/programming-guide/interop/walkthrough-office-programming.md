@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 0f14cc6486e53cad8c3cbadc404d22d7e5458e84
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991271"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523574"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 
@@ -114,7 +114,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Diese Ergänzungen veranschaulichen eine weitere Funktion in C#: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist oder gleichermaßen wenn die [/link](../../language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in C# 3.0 und in früheren Sprachversionen erforderliche explizite Umwandlung.
+     Diese Ergänzungen veranschaulichen eine weitere Funktion in C#: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist, und ebenfalls, wenn die [-link](../../language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in C# 3.0 und in früheren Sprachversionen erforderliche explizite Umwandlung.
 
      `excelApp.Columns[1]` gibt z.B.`Object` zurück, und `AutoFit` ist eine [Range](<xref:Microsoft.Office.Interop.Excel.Range>)-Methode von Excel. Ohne `dynamic` müssen Sie das von `excelApp.Columns[1]` zurückgegebene Objekt als eine Instanz von `Range` umwandeln, bevor Sie die Methode `AutoFit` aufrufen.
 

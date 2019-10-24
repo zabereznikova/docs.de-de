@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 4141c64ff6dbbec60b53a41862a4273df6ef51ab
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aef64f538aecb0fc5dadec850020d7c01d02ccbd
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588349"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523554"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Verwenden des Typs „dynamic“ (C#-Programmierhandbuch)
 
@@ -66,7 +66,7 @@ Die Dynamic Language Runtime (DLR) ist eine neue API in .NET Framework 4. Sie 
 
 C# 4 enthält mehrere Features, die die Interoperabilität mit COM-APIs wie den Automatisierungs-APIs in Office verbessern. Zu diesen Verbesserungen gehören die Verwendung des Typs `dynamic` und von [benannten und optionalen Argumenten](../classes-and-structs/named-and-optional-arguments.md).
 
-Viele COM-Methoden ermöglichen die Variation von Argument- und Rückgabetypen durch Festlegen der Typen als `object`. Dadurch wird das explizite Umwandeln der Werte für die Koordination mit stark typisierten Variablen in C# notwendig. Wenn Sie mit der Option [/link (C#-Compileroptionen)](../../language-reference/compiler-options/link-compiler-option.md) kompilieren, ermöglicht es Ihnen die Einführung des Typs `dynamic`, das Vorkommen von `object` in COM-Signaturen so zu behandeln, als wäre es vom Typ `dynamic`. Dadurch können Sie einen Großteil der Umwandlung umgehen. Die folgenden Anweisungen unterscheiden z.B., wie Sie auf eine Zelle in einem Arbeitsblatt von Microsoft Office Excel mit dem Typ `dynamic` und ohne den Typ `dynamic` zugreifen.
+Viele COM-Methoden ermöglichen die Variation von Argument- und Rückgabetypen durch Festlegen der Typen als `object`. Dadurch wird das explizite Umwandeln der Werte für die Koordination mit stark typisierten Variablen in C# notwendig. Wenn Sie mit der Option [-link (C#-Compileroptionen)](../../language-reference/compiler-options/link-compiler-option.md) kompilieren, ermöglicht Ihnen die Einführung des Typs `dynamic`, die Vorkommen von `object` in COM-Signaturen so zu behandeln, als wären sie vom Typ `dynamic`. Dadurch können Sie einen Großteil der Umwandlung umgehen. Die folgenden Anweisungen unterscheiden z.B., wie Sie auf eine Zelle in einem Arbeitsblatt von Microsoft Office Excel mit dem Typ `dynamic` und ohne den Typ `dynamic` zugreifen.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 

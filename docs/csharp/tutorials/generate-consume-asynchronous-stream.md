@@ -3,12 +3,12 @@ title: Generieren und Nutzen asynchroner Datenströme
 description: In diesem fortgeschrittenen Tutorial werden Szenarien dargestellt, in denen das Generieren und Nutzen asynchroner Datenströme eine natürlichere Möglichkeit zur Arbeit mit Datensequenzen bietet, die asynchron generiert werden können.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 04c4fe1c7e33138273c5b49c6985efc60767a724
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 6c013d1b589367b77c6f77f88334317a6f3bc657
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216556"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579216"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0
 
@@ -135,7 +135,7 @@ Sie können den Code für das abgeschlossene Tutorial aus dem Repository [dotnet
 
 ## <a name="run-the-finished-application"></a>Ausführen der fertig gestellten Anwendung
 
-Führen Sie die Anwendung erneut aus. Vergleichen Sie deren Verhalten mit dem Verhalten der Startanwendung. Die erste Seite mit Ergebnissen wird aufgelistet, sobald sie verfügbar ist. Es gibt eine wahrnehmbare Pause, wenn eine neue Seite angefordert und abgerufen wird, und dann werden die Ergebnisse der nächsten Seite schnell aufgelistet. Der `try` / `catch`-Block ist zur Verarbeitung eines Abbruchs nicht erforderlich: Der Aufrufer kann das Auflisten der Sammlung beenden. Der Fortschritt wird deutlich gemeldet, weil der asynchrone Datenstrom die Ergebnisse generiert, während die einzelnen Seiten heruntergeladen werden.
+Führen Sie die Anwendung erneut aus. Vergleichen Sie deren Verhalten mit dem Verhalten der Startanwendung. Die erste Seite mit Ergebnissen wird aufgelistet, sobald sie verfügbar ist. Es gibt eine wahrnehmbare Pause, wenn eine neue Seite angefordert und abgerufen wird, und dann werden die Ergebnisse der nächsten Seite schnell aufgelistet. Der `try` / `catch`-Block ist zur Verarbeitung eines Abbruchs nicht erforderlich: Der Aufrufer kann das Auflisten der Sammlung beenden. Der Fortschritt wird deutlich gemeldet, weil der asynchrone Datenstrom die Ergebnisse generiert, während die einzelnen Seiten heruntergeladen werden. Der Status jedes zurückgegebenen Problems ist nahtlos in der `await foreach`-Schleife enthalten. Sie benötigen kein Rückrufobjekt, um den Fortschritt nachzuverfolgen.
 
 Sie können Verbesserungen in der Arbeitsspeichernutzung erkennen, indem Sie den Code untersuchen. Sie müssen eine Sammlung nicht mehr zuordnen, um alle Ergebnisse zu speichern, bevor sie aufgelistet werden. Der Aufrufer kann festlegen, wie die Ergebnisse genutzt werden und ob eine Speichersammlung erforderlich ist.
 

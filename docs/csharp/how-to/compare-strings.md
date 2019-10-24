@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58759871"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395453"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
@@ -29,19 +29,19 @@ Wenn Sie Zeichenfolgen vergleichen, definieren Sie für diese eine Reihenfolge. 
 
 ## <a name="default-ordinal-comparisons"></a>Standardordinalvergleich
 
-Die gängigsten Vorgänge sind:
+Standardmäßig gilt für die gängigsten Vorgänge Folgendes:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> und <xref:System.String.op_Inequality%2A?displayProperty=nameWithType> (d.h. [equality-Operatoren `==` bzw. `!=` ](../language-reference/operators/equality-operators.md#string-equality))
 
-ein Ordinalvergleich, ein Vergleich unter Berücksichtigung der Groß/-Kleinschreibung und Verwenden der aktuellen Kultur. Die Ergebnisse der jeweiligen Vorgänge sind im folgenden Beispiel dargestellt:
+führen einen Ordinalvergleich unter Berücksichtigung der Groß/-Kleinschreibung aus und verwenden die aktuelle Kultur, wenn erforderlich. Dies wird im folgenden Beispiel veranschaulicht:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-Bei dem Standardordinalvergleich werden keine linguistischen Regeln berücksichtigt, wenn Zeichenfolgen verglichen werden. In ihm wird der binäre Wert jedes <xref:System.Char>-Objekts in zwei Zeichenfolgen verglichen. Dies bedingt, dass im Standardordinalvergleich ebenfalls die Groß-/Kleinschreibung beachtet wird. 
+Bei dem Standardordinalvergleich werden keine linguistischen Regeln berücksichtigt, wenn Zeichenfolgen verglichen werden. In ihm wird der binäre Wert jedes <xref:System.Char>-Objekts in zwei Zeichenfolgen verglichen. Dies bedingt, dass im Standardordinalvergleich ebenfalls die Groß-/Kleinschreibung beachtet wird.
 
-Beachten Sie, dass der Test auf Gleichheit mit <xref:System.String.Equals%2A?displayProperty=nameWithType> und <xref:System.String.op_Equality%2A?displayProperty=nameWithType> sich von einem Zeichenfolgenvergleich mit den Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType> und <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> unterscheidet. Während in den Tests auf Gleichheit ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung ausgeführt wird, wird in der Vergleichsmethode ein Vergleich mit Beachtung der Groß-/Kleinschreibung und der aktuellen Kultur ausgeführt. Weil die Standardvergleichsmethoden häufig unterschiedliche Arten von Vergleichen ausführen, sollten Sie die Absicht Ihres Codes immer verdeutlichen, indem Sie eine Überladung aufrufen, in der die Art des auszuführenden Vergleichs explizit angegeben ist.
+Beachten Sie, dass sich der Test auf Gleichheit mit <xref:System.String.Equals%2A?displayProperty=nameWithType> und den Operatoren `==` und `!=` von einem Zeichenfolgenvergleich mit den Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType> und <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> unterscheidet. Während in den Tests auf Gleichheit ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung ausgeführt wird, wird in den Vergleichsmethoden ein Vergleich unter Beachtung der Groß-/Kleinschreibung und der aktuellen Kultur ausgeführt. Weil die Standardvergleichsmethoden häufig unterschiedliche Arten von Vergleichen ausführen, sollten Sie die Absicht Ihres Codes immer verdeutlichen, indem Sie eine Überladung aufrufen, in der die Art des auszuführenden Vergleichs explizit angegeben ist.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung
 

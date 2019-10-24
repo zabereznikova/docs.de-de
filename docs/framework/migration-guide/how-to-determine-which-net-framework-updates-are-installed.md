@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c69d4bb370087dddafbfed41cbfb1fef229677c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790065"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318971"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes
 
@@ -29,7 +29,7 @@ In diesem Artikel wird gezeigt, wie Sie die auf einem Computer installierten .NE
 
 Die auf einem Computer installierten Sicherheitsupdates und Hotfixes für jede Version von .NET Framework werden in der Windows-Registrierung aufgeführt. Sie können diese Informationen mit dem Registrierungs-Editor (*regedit.exe*) anzeigen.
 
-1. Öffnen Sie das Programm **regedit.exe**. Klicken Sie in Windows 8 und höheren Versionen mit der rechten Maustaste auf **Start** ![Windows-Lo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo"), und klicken Sie dann auf **Ausführen**. Geben Sie im Feld **Öffnen** den Namen **regedit.exe** ein, und klicken Sie auf **OK**.
+1. Öffnen Sie das Programm **regedit.exe**. Klicken Sie in Windows 8 und höheren Versionen mit der rechten Maustaste auf **Start** ![Screenshot des Logos der WINDOWS-TASTE.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo"), und klicken Sie dann auf **Ausführen**. Geben Sie im Feld **Öffnen** den Namen **regedit.exe** ein, und klicken Sie auf **OK**.
 
 2. Öffnen Sie im Registrierungs-Editor den folgenden Unterschlüssel:
 

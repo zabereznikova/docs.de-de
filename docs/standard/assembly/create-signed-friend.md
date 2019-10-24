@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972810"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523885"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
@@ -132,7 +132,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
 - [Assemblys in .NET](index.md)
 - [Friend-Assemblys](friend.md)
 - [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys](create-unsigned-friend.md)
-- [/keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (Strong Name-Tool)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](create-use-strong-named.md)

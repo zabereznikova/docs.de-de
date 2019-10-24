@@ -5,12 +5,12 @@ ms.date: 09/12/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abd8588aa314b630c995e0c78b5869ec00a89df
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 31169116abdda7308ed216902b335a6b77fbcfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179376"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321277"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Bereitstellen des Modells für Azure Functions
 
@@ -75,7 +75,7 @@ Erstellen Sie eine Klasse, um den Standpunkt vorherzusagen. Fügen Sie dem Proje
     ```csharp
     public class AnalyzeSentiment
     {
-    
+
     }
     ```
 
@@ -85,7 +85,7 @@ Sie müssen einige Klassen für die Eingabedaten und Vorhersagen erstellen. Füg
 
 1. Erstellen Sie ein Verzeichnis mit dem Namen *DataModels* in Ihrem Projekt, um Ihre Datenmodelle zu speichern: Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen > Neuer Ordner** aus. Geben Sie „DataModels“ ein, und drücken Sie die EINGABETASTE.
 2. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das *DataModels*-Verzeichnis, und wählen Sie **Hinzufügen > Neues Element** aus.
-3. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *SentimentData.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus. 
+3. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *SentimentData.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
 
     Die Datei *SentimentData.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *SentimentData.cs* die folgende using-Anweisung hinzu:
 
@@ -113,7 +113,7 @@ Um eine einzelne Vorhersage zu treffen, müssen Sie eine [`PredictionEngine`](xr
 Unter dem folgenden Link finden Sie weitere Informationen zur [Abhängigkeitsinjektion](https://en.wikipedia.org/wiki/Dependency_injection).
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie dann **Hinzufügen** > **Neues Element** aus.
-1. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *Startup.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus. 
+1. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *Startup.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
 
     Die Datei *Startup.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *Startup.cs* die folgende using-Anweisung hinzu:
 
@@ -141,13 +141,13 @@ Unter dem folgenden Link finden Sie weitere Informationen zur [Abhängigkeitsinj
     }
     ```
 
-Auf hoher Ebene initialisiert dieser Code die Objekte und Dienste bei Anforderung automatisch für eine spätere Verwendung, sodass dies nicht manuell durchgeführt werden muss. 
+Auf hoher Ebene initialisiert dieser Code die Objekte und Dienste bei Anforderung automatisch für eine spätere Verwendung, sodass dies nicht manuell durchgeführt werden muss.
 
-Machine Learning-Modelle sind nicht statisch. Wenn neue Trainingsdaten verfügbar werden, wird das Modell erneut trainiert und erneut bereitgestellt. Eine Möglichkeit, die neueste Version des Modells in Ihre Anwendung zu integrieren, besteht darin, die gesamte Anwendung erneut bereitzustellen. Dies führt jedoch zu Ausfallzeiten der Anwendung. Der `PredictionEnginePool`-Dienst bietet einen Mechanismus zum erneuten Laden eines aktualisierten Modells, ohne dass die Anwendung ausfällt. 
+Machine Learning-Modelle sind nicht statisch. Wenn neue Trainingsdaten verfügbar werden, wird das Modell erneut trainiert und erneut bereitgestellt. Eine Möglichkeit, die neueste Version des Modells in Ihre Anwendung zu integrieren, besteht darin, die gesamte Anwendung erneut bereitzustellen. Dies führt jedoch zu Ausfallzeiten der Anwendung. Der `PredictionEnginePool`-Dienst bietet einen Mechanismus zum erneuten Laden eines aktualisierten Modells, ohne dass die Anwendung ausfällt.
 
 Legen Sie den `watchForChanges`-Parameter auf `true` fest. Der `PredictionEnginePool` startet dann einen [`FileSystemWatcher`](xref:System.IO.FileSystemWatcher), der auf Änderungsbenachrichtigungen des Dateisystems lauscht und Ereignisse auslöst, wenn die Datei geändert wird. Dadurch wird der `PredictionEnginePool` aufgefordert, das Modell automatisch erneut zu laden.
 
-Das Modell wird durch den Parameter `modelName` identifiziert, sodass bei der Änderung mehrere Modelle pro Anwendung erneut geladen werden können. 
+Das Modell wird durch den Parameter `modelName` identifiziert, sodass bei der Änderung mehrere Modelle pro Anwendung erneut geladen werden können.
 
 > [!TIP]
 > Alternativ können Sie beim Arbeiten mit Modellen, die remote gespeichert sind, die `FromUri`-Methode verwenden. Anstatt auf Dateiänderungsereignisse zu warten, fragt `FromUri` den Remotespeicherort nach Änderungen ab. Das Abruf Intervall beträgt standardmäßig 5 Minuten. Sie können das Abrufintervall basierend auf den Anforderungen Ihrer Anwendung vergrößern oder verkleinern. Im folgenden Codebeispiel fragt der `PredictionEnginePool` das am angegebenen URI gespeicherte Modell jede Minute ab.
@@ -209,7 +209,7 @@ Nachdem alles eingerichtet ist, ist es Zeit, die Anwendung zu testen:
     ```
 
     Bei erfolgreicher Ausführung sollte die Ausgabe dem folgenden Text ähneln:
-    
+
     ```powershell
     Negative
     ```

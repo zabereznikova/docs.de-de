@@ -1,16 +1,16 @@
 ---
 title: using-Anweisung – C#-Referenz
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632897"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579184"
 ---
 # <a name="using-statement-c-reference"></a>using-Anweisung (C#-Referenz)
 
@@ -22,6 +22,10 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie die Anweisung `using` verwen
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
+Ab C# 8,0 können Sie die folgende alternative Syntax für die `using`-Anweisung verwenden, die keine geschweiften Klammern erfordert:
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
 ## <a name="remarks"></a>Anmerkungen
 
 <xref:System.IO.File> und <xref:System.Drawing.Font> sind Beispiele für verwaltete Typen, die auf nicht verwaltete Ressourcen zugreifen (in diesem Fall Dateihandles und Gerätekontexte). Es gibt viele andere Arten von nicht verwalteten Ressourcen und Klassenbibliothekstypen, die sie einschließen. Alle Typen dieser Art müssen die <xref:System.IDisposable>-Schnittstelle implementieren.
@@ -32,11 +36,17 @@ Mit der Anweisung `using` wird sichergestellt, dass <xref:System.IDisposable.Dis
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
+Die neuere Syntax der `using`-Anweisung wird in sehr ähnlichen Code übersetzt. Der `try`-Block wird geöffnet, in dem die Variable deklariert wird. Der `finally`-Block wird am Ende des einschließenden Blocks hinzugefügt, in der Regel am Ende einer Methode.
+
 Weitere Informationen über die Anweisung `try`-`finally` finden Sie im Artikel zu [try-finally](try-finally.md).
 
 Wie im folgenden Beispiel gezeigt, können mehrere Instanzen eines Typs in einer `using`-Anweisung deklariert werden:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+Sie können auch mehrere Deklarationen desselben Typs mithilfe der neuen Syntax kombinieren, die mit C# 8 eingeführt wurde. Dies wird im folgenden Beispiel gezeigt:
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
 Sie können das Ressourcenobjekt instanziieren und die Variable an die `using`-Anweisung übergeben; dies wird jedoch nicht empfohlen. In diesem Fall verbleibt das Objekt im Gültigkeitsbereich, nachdem das Steuerelement den `using`-Block verlassen hat, obwohl es wahrscheinlich keinen Zugriff auf dessen nicht verwaltete Ressourcen hat. Das heißt, dass es nicht mehr vollständig initialisiert wird. Wenn Sie versuchen, das Objekt außerhalb des `using`-Blocks zu verwenden, riskieren Sie, dass eine Ausnahme ausgelöst wird. Aus diesem Grund ist es im Allgemeinen besser, das Objekt in der `using`-Anweisung zu instanziieren und dessen Bereich auf den `using`-Block zu begrenzen.
 
@@ -57,3 +67,4 @@ Weitere Informationen finden Sie unter [Die using-Anweisung](~/_csharplang/spec/
 - [Garbage Collection](../../../standard/garbage-collection/index.md)
 - [Verwenden von Objekten, die IDisposable implementieren](../../../standard/garbage-collection/using-objects.md)
 - [IDisposable-Schnittstelle](xref:System.IDisposable)
+- [using-Anweisung in C# 8.0](~/_csharplang/proposals/csharp-8.0/using.md)

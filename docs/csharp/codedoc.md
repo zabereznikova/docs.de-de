@@ -3,12 +3,12 @@ title: Dokumentieren von Code mit XML-Kommentaren
 description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationskommentaren und zum Erstellen einer XML-Dokumentationsdatei zum Zeitpunkt der Kompilierung.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 048546407dbf94f274dd8c9c39e83c103efd75e1
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104772"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521170"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -34,7 +34,7 @@ Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folge
 
 - Wenn Sie eine Anwendung mit Visual Studio entwickeln, klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus. Wählen Sie im Eigenschaftendialogfeld die Registerkarte **Erstellen** aus, und aktivieren Sie das Kontrollkästchen bei **XML-Dokumentationsdatei**. Sie können auch den Speicherort ändern, an den der Compiler die Datei schreibt.
 
-- Wenn Sie eine .NET Framework-Anwendung über die Befehlszeile kompilieren, fügen Sie beim Kompilieren die [/doc-Compileroption](language-reference/compiler-options/doc-compiler-option.md) hinzu.  
+- Wenn Sie eine .NET Framework-Anwendung über die Befehlszeile kompilieren, fügen Sie beim Kompilieren die [-doc-Compileroption](language-reference/compiler-options/doc-compiler-option.md) hinzu.  
 
 XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Beispiel:
 

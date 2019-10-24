@@ -2,12 +2,12 @@
 title: Monolithische Anwendungen
 description: Verstehen der grundlegenden Konzepte für das Containerisieren monolithischer Anwendungen.
 ms.date: 02/15/2019
-ms.openlocfilehash: a67015452fb1245ef4b24a8dc50a4b33d3f9f32e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1d4b54017e431bd9775bf2aee8c88f56e0489367
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673597"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394720"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
@@ -17,11 +17,11 @@ Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um 
 
 Dem Prinzip folgend, dass ein Container nur eine Aufgabe und das in einem Prozess ausführt, steht das monolithische Muster im Konflikt. Sie können mehrere Komponenten/Bibliotheken oder interne Schichten in jeden Container einschließen, wie in Abbildung 4–1 dargestellt.
 
-![Eine monolithische Anwendung hat ihre Funktionalität ganz oder zum größten Teil innerhalb eines einzelnen Prozesses oder Containers und weist interne Schichten oder Bibliotheken als Komponenten auf.](./media/image1.png)
+![Abbildung, die eine monolithische App zeigt, die durch Klonen der App horizontal hochskaliert wird.](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **Abbildung 4-1.** Beispiel für eine monolithische Anwendungsarchitektur
 
-Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. In den meisten Fällen sind jedoch nur einige Teile der Anwendung Engpässe, die Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
+Eine monolithische Anwendung hat ihre Funktionalität ganz oder zum größten Teil innerhalb eines einzelnen Prozesses oder Containers und weist interne Schichten oder Bibliotheken als Komponenten auf. Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. In den meisten Fällen sind jedoch nur einige Teile der Anwendung Engpässe, die Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
 
 Wenn Sie das gewöhnliche eCommerce-Beispiel verwenden, müssen Sie sehr wahrscheinlich die Komponente für die Produktinformationen skalieren. Viele Kunden suchen Produkte erst und kaufen sie anschließend. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Und Sie haben möglicherweise nur eine Handvoll Mitarbeiter in einer bestimmten Region, die den Inhalt und die Marketingkampagnen verwalten müssen. Wenn der monolithische Entwurf skaliert wird, wird der gesamte Code mehrmals bereitgestellt.
 
@@ -31,7 +31,7 @@ Der monolithische Ansatz wird häufig verwendet, und viele Organisationen entwic
 
 Aus Sicht der Infrastruktur kann jeder Server, wie in Abbildung 4-2 dargestellt, viele Anwendungen innerhalb desselben Hosts ausführen und ein akzeptables Effizienzverhältnis in Ihrer Ressourcenverwendung haben.
 
-![Ein einzelner Host kann mehrere Apps in separaten Containern ausführen.](./media/image2.png)
+![Abbildung, die einen Host mit mehreren Apps in separaten Containern zeigt.](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **Abbildung 4-2**. Ein Host, der mehrere Apps/Container ausführt
 
@@ -43,9 +43,9 @@ Sie können auch [Azure App Services](https://azure.microsoft.com/services/app-s
 
 Sie können mehrere VMs als Docker-Hosts bereitstellen und eine beliebige Anzahl von Containern pro VM ausführen. Dann können Sie mithilfe eines Azure Load Balancers die Skalierung verwalten, wie in Abbildung 4–3 dargestellt.
 
-![Eine monolithische App kann horizontal auf verschiedene Hosts skaliert werden, von denen jeder die App in Containern ausführt.](./media/image3.png)
+![Abbildung, die eine monolithische App zeigt, die auf verschiedene Hosts horizontal hochskaliert ist.](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**Abbildung 4-3**. Mehrere Hosts zur horizontalen Skalierung einer einzelnen Docker-Anwendung in Apps/Containern
+**Abbildung 4-3**. Mehrere Hosts, die eine einzelne Docker-Anwendung horizontal hochskalieren
 
 Die Verwaltung der Hosts selbst kann mithilfe herkömmlicher Bereitstellungsverfahren erfolgen.
 
@@ -71,7 +71,7 @@ Die Verwendung von Azure App Service ist intuitiv, und Sie sind aufgrund der her
 
 Jetzt haben Sie, wie in Abbildung 4–4 dargestellt, bei der Verwendung von Visual Studio 2017 dank der Containerunterstützung in Azure App Service die Möglichkeit, Ihre App-Umgebung um beliebige Zusätze zu erweitern. Wenn Sie Ihrer App eine Abhängigkeit hinzugefügt haben, haben Sie die Möglichkeit, diese Abhängigkeiten in Ihr Dockerfile oder Ihr Docker-Image einzuschließen, da Sie Ihre App in einem Container ausführen.
 
-![Ansicht des Visual Studio-Assistenten zum Veröffentlichen in einem Azure App Service mit hervorgehobener Auswahl für die Containerregistrierung.](./media/image4.png)
+![Screenshot des Dialogfelds „App Service erstellen“ mit einer Containerregistrierung.](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **Abbildung 4-4**. Veröffentlichen eines Containers in Azure App Service aus Visual Studio-Apps/Containern
 

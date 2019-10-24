@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291692"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395938"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72291692"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>Von System.IO.Pipelines gelöste Probleme
+
 <!-- corner case doesn't MT (machine translate)   -->
 Apps, die Streamingdaten analysieren, bestehen aus Codebausteinen, die über viele spezialisierte und ungewöhnliche Codeflows verfügen. Die Codebausteine und der Sonderfallcode sind komplex und schwer zu verwalten.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -55,13 +56,13 @@ Um die oben beschriebenen Probleme zu beheben, sind die folgenden Änderungen er
 
 * Puffern der eingehenden Daten, bis eine neue Zeile gefunden wird.
 * Analysieren aller zurückgegebenen Zeilen im Puffer.
-* Es ist möglich, dass die Zeile größer als 1 KB (1.024 Bytes) ist. Der Code muss die Größe des Eingabepuffers ändern, wenn eine vollständige Zeile gefunden wird.
+* Es ist möglich, dass die Zeile größer als 1 KB (1.024 Bytes) ist. Der Code muss die Größe des Eingabepuffers ändern, bis das Trennzeichen gefunden wird, damit die gesamte Zeile in den Puffer passt.
 
   * Wenn die Größe des Puffers geändert wird, werden mehr Pufferkopien erstellt, weil in der Eingabe längere Zeilen vorhanden sind.
   * Um unnötigen Speicherplatz zu sparen, komprimieren Sie den Puffer, der zum Lesen von Zeilen verwendet wird.
 
 * Verwenden Sie ggf. Pufferpools, um zu vermeiden, dass wiederholt Speicher zugeteilt wird.
-* Im folgenden Code werden einige dieser Probleme behandelt:
+* Der folgende Code behandelt einige dieser Probleme:
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
@@ -97,7 +98,7 @@ In der zweiten Schleife verarbeitet `PipeReader` die von `PipeWriter` geschriebe
 * Er gibt ein <xref:System.IO.Pipelines.ReadResult> zurück, das zwei wichtige Informationen enthält:
 
   * Die gelesenen Daten in Form von `ReadOnlySequence<byte>`.
-  * Einen boolescher Wert `IsCompleted`, der angibt, ob das Ende der Daten (EOF) erreicht wurde. 
+  * Einen boolescher Wert `IsCompleted`, der angibt, ob das Ende der Daten (EOF) erreicht wurde.
 
 Nachdem das Zeilenende-Trennzeichen (EOL) gefunden und die Zeile analysiert wurde, geschieht Folgendes:
 
@@ -304,7 +305,7 @@ Beim Schreiben von Hilfsprogrammen, die den Puffer lesen, sollte jede zurückgeg
 
 ## <a name="pipewriter"></a>PipeWriter
 
-<xref:System.IO.Pipelines.PipeWriter> verwaltet Puffer zum Schreiben im Auftrag des Aufrufers. `PipeWriter` implementiert [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` ermöglicht es, Zugriff auf Puffer zu erhalten, um Schreibvorgänge ohne zusätzliche Pufferkopien auszuführen.
+<xref:System.IO.Pipelines.PipeWriter> verwaltet Puffer zum Schreiben im Auftrag des Aufrufers. `PipeWriter` implementiert [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` ermöglicht es, Zugriff auf Puffer zu erhalten, um Schreibvorgänge ohne zusätzliche Pufferkopien auszuführen.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

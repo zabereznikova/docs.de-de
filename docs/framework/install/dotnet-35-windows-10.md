@@ -4,12 +4,12 @@ description: Informationen zum Installieren von .NET Framework 3.5 auf Windows 1
 author: rlander
 ms.author: mairaw
 ms.date: 07/16/2018
-ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 949f73febe2eb2ad7155bddd2b7b7514eddfe6c9
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515194"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319114"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
@@ -19,7 +19,7 @@ Möglicherweise wird .NET Framework 3.5 zum Ausführen einer App auf Windows 10,
 
 Wenn Sie versuchen, eine App auszuführen, die .NET Framework 3.5 erfordert, wird möglicherweise das folgende Konfigurationsdialogfeld angezeigt. Wählen Sie **Feature installieren** aus, um .NET Framework 3.5 zu aktivieren. Für diese Option ist eine Internetverbindung erforderlich.
 
-![Dialogfeld für die Installation .NET Framework](./media/dotnet-framework-installation-dialog.jpg)
+![Screenshot des Dialogfelds für die Installation von .NET Framework.](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>Warum wird mir dieses Popup angezeigt?
 
@@ -29,17 +29,17 @@ Wenn Sie versuchen, eine App auszuführen, die .NET Framework 3.5 erfordert, wir
 
 Sie können .NET Framework 3.5 auch über die Systemsteuerung aktivieren. Für diese Option ist eine Internetverbindung erforderlich.
 
-1. Drücken Sie die Windows-Taste ![Windows-Logo](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) auf der Tastatur, geben Sie „Windows-Funktionen“ ein, und drücken Sie EINGABETASTE. Das Dialogfeld **Windows-Funktionen ein- oder ausschalten** erscheint.
+1. Drücken Sie die WINDOWS-TASTE ![Screenshot des Logos der Windows-Taste.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) auf der Tastatur, geben Sie „Windows-Funktionen“ ein, und drücken Sie die EINGABETASTE. Das Dialogfeld **Windows-Funktionen ein- oder ausschalten** erscheint.
 
-2. Aktivieren Sie das Kontrollkästchen **.NET Framework 3.5 (umfasst .NET 2.0 und 3.0)**, klicken Sie auf **OK**, und starten Sie den Computer neu, wenn Sie dazu aufgefordert werden.
+2. Aktivieren Sie das Kontrollkästchen **.NET Framework 3.5 (umfasst .NET 2.0 und 3.0)** , klicken Sie auf **OK**, und starten Sie den Computer neu, wenn Sie dazu aufgefordert werden.
 
-   ![Installieren von .NET über die Systemsteuerung](./media/dotnet-control-panel.png)
+   ![Screenshot, der die Installation von .NET mit der Systemsteuerung zeigt.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
    Sie müssen die untergeordneten Elemente für die **HTTP-Aktivierung von Windows Communication Foundation (WCF)** und die **Nicht-HTTP-Aktivierung von Windows Communication Foundation (WCF)** nicht auswählen, es sei denn, Sie sind ein Entwickler oder Serveradministrator und benötigen diese Funktionen.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Problembehandlung bei der Installation von .NET Framework 3.5
 
-Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907, 0x800f081f oder 0x800F0922 auf. In diesem Fall finden Sie unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) Informationen zur Problemlösung.
+Während der Installation tritt möglicherweise der Fehler 0x800f0906, 0x800f0907, 0x800f081f oder 0x800F0922 auf. In diesem Fall verwenden Sie die Informationen unter [.NET Framework 3.5-Installationsfehler: 0x800f0906, 0x800f0907 oder 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09), um zu erfahren, wie Sie diese Probleme beheben können.
 
 Wenn Sie das Installationsproblem weiterhin nicht lösen können oder keine Internetverbindung zur Verfügung steht, können Sie versuchen, die Installation über Ihr Windows-Installationsmedium durchzuführen. Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework 3.5 mit der Abbildverwaltung für die Bereitstellung (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Wenn keine Installationsmedien vorhanden sind, lesen Sie [Erstellen eines Installationsmediums für Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
 

@@ -2,12 +2,12 @@
 title: Das aufgabenbasierte asynchrone Programmiermodell (TAP) mit Async und Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 3ced168bada4167418bf27861c5b8666b02aa70e
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 644830ac62a4df23f22d8f91e9b3c768dd611451
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291339"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395693"
 ---
 # <a name="task-asynchronous-programming-model"></a>Aufgabenbasiertes asynchrones Programmiermodell
 
@@ -46,7 +46,7 @@ Eine vollständige WPF-Beispieldatei (Windows Presentation Foundation) finden Si
 
 ```csharp
 async Task<int> AccessTheWebAsync()
-{ 
+{
     // You need to add a reference to System.Net.Http to declare client.
     var client = new HttpClient();
 
@@ -60,7 +60,7 @@ async Task<int> AccessTheWebAsync()
     // The await operator suspends AccessTheWebAsync.
     //  - AccessTheWebAsync can't continue until getStringTask is complete.
     //  - Meanwhile, control returns to the caller of AccessTheWebAsync.
-    //  - Control resumes here when getStringTask is complete. 
+    //  - Control resumes here when getStringTask is complete.
     //  - The await operator then retrieves the string result from getStringTask.
     string urlContents = await getStringTask;
 
@@ -110,7 +110,7 @@ Weitere Informationen zur Asynchronität in vorherigen .NET Framework-Versionen 
 
 Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt:
 
-![Asynchrones Programm verfolgen](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
+![ Ablaufverfolgung eines asynchronen Programms](./media/task-asynchronous-programming-model/navigation-trace-async-program.png "NavigationTrace")
 
 Die Zahlen im Diagramm entsprechen den folgenden Schritten, die beim Klicken auf die Schaltfläche „Start“ durch den Benutzer initiiert werden.
 
@@ -259,7 +259,7 @@ Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder 
 
 Beim folgenden Code handelt es sich um die Datei *MainWindow.xaml.cs* aus der WPF-Anwendung, die in diesem Artikel behandelt wird. Sie können das Beispiel hier herunterladen: [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) (Asynchrones Beispiel aus der asynchronen Programmierung mit „async“ und „await“).
 
-[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)] 
+[!code-csharp[async](~/samples/async/async-and-await/cs/MainWindow.xaml.cs)]
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -267,4 +267,3 @@ Beim folgenden Code handelt es sich um die Datei *MainWindow.xaml.cs* aus der WP
 - [await](../../../language-reference/operators/await.md)
 - [Asynchrone Programmierung](../../../async.md)
 - [Async (Übersicht)](../../../../standard/async.md)
- 

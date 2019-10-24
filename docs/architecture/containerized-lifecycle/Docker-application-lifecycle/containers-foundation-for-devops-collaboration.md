@@ -2,18 +2,18 @@
 title: Container als Grundlage für die Zusammenarbeit mit DevOps
 description: Verstehen der Schlüsselrolle von Containern bei der Optimierung von DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672767"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72394815"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
 Aufgrund der Natur von Containern und der Docker-Technologie können Entwickler ihre Software und Abhängigkeiten komfortabel mit dem IT-Betrieb und Produktionsumgebungen teilen und zugleich die typische Entschuldigung „auf meinem Computer funktioniert es“ hinter sich lassen. Containers lösen Anwendungskonflikte zwischen verschiedenen Umgebungen. Indirekt bringen Container und Docker Entwickler und IT-Ops näher zusammen, was ihnen die effektive Zusammenarbeit erleichtert. Die Einführung der Containerworkflow bietet vielen Kunden die DevOps-Kontinuität, die sie angestrebt haben, aber bisher mit weit komplexeren Konfigurationen für Release- und Buildpipelines implementieren mussten. Container vereinfachen die Build-/Test-/Bereitstellungspipelines in DevOps.
 
-![Docker unterstützt das Bauen von Brücken zwischen Entwicklern und Architekten in der Entwicklungs-/Entwurfsworkload und dem IT-Betrieb in der Ausführen-/Überwachen-/Verwaltenworkload](./media/image1.png)
+![Abbildung, die den Besitz des Lebenszyklus einer Docker-App zeigt.](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **Abbildung 2-1.** Hauptworkloads nach „Personas“ im Lebenszyklus von in Containern verpackten Docker-Anwendungen
 
@@ -57,7 +57,7 @@ Wenn Sie alle diese Fragen beantworten, sind Sie besser darauf vorbereitet, Ihre
 
 Abbildung 2–2 stellt einen detaillierteren Workflow für einen Docker-Anwendungslebenszyklus dar, in dieser Instanz mit dem Schwerpunkt auf bestimmten DevOps-Aktivitäten und -Ressourcen.
 
-![Dieses Diagramm zeigt die „äußere Schleife“ von DevOps. Wenn Code per Push an das Repository übertragen wird, beginnt die CD-Pipeline, in der die Anwendung bereitgestellt wird. Aus bereitgestellten Anwendungen gesammelte Metriken werden in die Entwicklungsworkload rückgekoppelt, in der die „innere Schleife“ stattfindet, sodass die Entwicklungsteams über reale Daten verfügen, mit denen sie auf Benutzer- und Geschäftsanforderungen reagieren können.](./media/image2.png)
+![Abbildung, die den generischen End-to-End-Lebenszyklus einer Docker-App zeigt.](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **Abbildung 2–2.** Allgemeiner Workflow für den Lebenszyklus von in Containern verpackten Docker-Anwendungen
 

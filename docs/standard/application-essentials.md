@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567574"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320017"
 ---
 # <a name="net-framework-application-essentials"></a>Grundlagen der .NET Framework-Anwendung
 Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über grundlegende Anwendungsentwicklungsaufgaben in .NET Framework.  
@@ -21,11 +21,11 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
  [Basistypen](../../docs/standard/base-types/index.md)  
  Erläutert die Formatierung und Analyse von Basisdatentypen und die Verwendung regulärer Ausdrücke zur Verarbeitung von Text.  
   
- [Auflistungen und Datenstrukturen](../../docs/standard/collections/index.md)  
+ [Sammlungen und Datenstrukturen](../../docs/standard/collections/index.md)  
  Erläutert die unterschiedlichen Auflistungstypen, die in .NET Framework verfügbar sind, z. B. Stapel, Warteschlangen, Listen, Arrays und Strukturen.  
   
- [Generika](../../docs/standard/generics/index.md)  
- Beschreibt das Generikafunktion, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET Framework bereitgestellt werden. Enthält Links zur Funktionsdokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.  
+ [Generics](../../docs/standard/generics/index.md)  
+ Beschreibt das Genericsfeature, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET Framework bereitgestellt werden. Enthält Links zur Funktionsdokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.  
   
  [Numerische Ausdrücke](../../docs/standard/numerics.md)  
  Beschreibt die numerischen Typen in .NET Framework.  
@@ -54,8 +54,7 @@ Dieser Abschnitt der .NET Framework-Dokumentation enthält Informationen über g
  [Globalisierung und Lokalisierung](../../docs/standard/globalization-localization/index.md)  
  Enthält Informationen, die Ihnen beim Entwurf und der Entwicklung weltweit einsetzbarer Anwendungen helfen.  
   
- Zugriff  
- Enthält Informationen über die Microsoft-Benutzeroberflächenautomatisierung. Hierbei handelt es sich um ein Framework für die Barrierefreiheit, das den Anforderungen von Hilfstechnologieprodukten und automatisierten Test-Frameworks begegnet, indem der programmgesteuerte Zugriff auf Informationen zur Benutzeroberfläche bereitgestellt wird.  
+ [Barrierefreiheit](../../docs/framework/ui-automation/index.md): Enthält Informationen zur Microsoft-Benutzeroberflächenautomatisierung. Hierbei handelt es sich um ein Framework für die Barrierefreiheit, das den Anforderungen von Hilfstechnologieprodukten und automatisierten Testframeworks begegnet, indem der programmgesteuerte Zugriff auf Informationen zur Benutzeroberfläche (UI) bereitgestellt wird.  
   
  [Attribute](../../docs/standard/attributes/index.md)  
  Beschreibt, wie Attribute zur Anpassung von Metadaten verwendet werden können.  
