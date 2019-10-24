@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252305"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773928"
 ---
-# <a name="supportportability-element"></a>\<supportabilitäts > Element
+# <a name="supportportability-element"></a>\<supportPortability >-Element
 Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Framework durch das Deaktivieren des Standardverhaltens, das die Assemblys zu Anwendungsportabilitätszwecken als gleich behandelt, auf die gleiche Assembly verweisen kann.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<supportportabili>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp; &nbsp; &nbsp; &nbsp; **&nbsp; &nbsp; \<supportPortability >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |PKT|Erforderliches Attribut.<br /><br /> Gibt das öffentliche Schlüsseltoken der betreffenden Assembly als Zeichenfolge an.|  
-|aktiviert|Optionales Attribut.<br /><br /> Gibt an, ob Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly aktiviert werden soll.|  
+|enabled|Optionales Attribut.<br /><br /> Gibt an, ob Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly aktiviert werden soll.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Aktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dies ist die Standardeinstellung.|  
-|false|Deaktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dadurch kann die Anwendung Verweise auf mehrere Implementierungen besitzen.|  
+|False|Deaktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dadurch kann die Anwendung Verweise auf mehrere Implementierungen besitzen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
 
@@ -84,5 +84,5 @@ Das folgende Beispiel ermöglicht einer Anwendung, über Verweise sowohl auf die
   
 ## <a name="see-also"></a>Siehe auch
 
-- [/AppConfig (C# Compileroptionen)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-appconfig (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Übersicht über .NET Framework Assemblyvereinheitlichung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

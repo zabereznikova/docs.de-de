@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: c6fc7e9dcfbce938ad75b0f357c2bfa9cd10703a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775621"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
@@ -28,13 +28,13 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
   
 |Begriff|Definition|  
 |---|---|  
-|`+` &#124; `-`|Optional. Geben Sie `-optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `-optioninfer-` zu blockieren. Die `-optioninfer` -Option ohne angegebenen Wert entspricht dem `-optioninfer+`. Der Standardwert, wenn die `-optioninfer` Switch nicht vorhanden ist, ist auch `-optioninfer+`. Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.|  
+|`+` &#124; `-`|Dies ist optional. Geben Sie `-optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `-optioninfer-` zu blockieren. Die `-optioninfer` -Option ohne angegebenen Wert entspricht dem `-optioninfer+`. Der Standardwert, wenn die `-optioninfer` Switch nicht vorhanden ist, ist auch `-optioninfer+`. Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.|  
   
 > [!NOTE]
 > Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `-optioninfer-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Quell Code Datei eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)enthält, überschreibt die-Anweisung die Befehlszeilen-Compilereinstellung `-optioninfer`.  
+ Wenn die Quell Code Datei eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)enthält, überschreibt die-Anweisung die `-optioninfer` Befehlszeilen-Compilereinstellung.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>So legen Sie-optioninfer in der Visual Studio-IDE fest  
   
@@ -60,5 +60,5 @@ vbc -optioninfer+ test.vb
 - [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

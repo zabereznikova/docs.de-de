@@ -1,5 +1,5 @@
 ---
-title: Der Name '<namespacename>' im Stammnamespace '<fullnamespacename>' ist nicht CLS-kompatibel.
+title: Der Name "<namespacename>" im Stammnamespace "<fullnamespacename>" ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40039
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 821044d3ee359a052fa6a763e9c5a89da5d6f607
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592022"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775581"
 ---
-# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Namen \<Namespacename > im Stammnamespace \<Fullnamespacename > ist nicht CLS-kompatibel.
-Eine Assembly ist als markiert `<CLSCompliant(True)>`, aber ein Element von der stammnamespacename beginnt mit einem Unterstrich (`_`).  
+# <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Der Name \<namespacename im Stamm Namespace >, \<fullnamespacename > nicht CLS-kompatibel ist.
+Eine Assembly wird als `<CLSCompliant(True)>` gekennzeichnet, aber ein Element des Stamm Namespace namens beginnt mit einem Unterstrich (`_`).  
   
- Ein Programmierelement kann ein oder mehrere Unterstriche enthalten, jedoch werden zur Einhaltung der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), es muss nicht mit einem Unterstrich beginnen. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Ein Programmier Element kann ein oder mehrere Unterstriche enthalten, aber damit es mit der [Sprachunabhängigkeit und sprachunabhängigen Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS) kompatibel ist, darf es nicht mit einem Unterstrich beginnen. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  Wenn Sie das <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant` -Parameter des Attributs auf `True` oder `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben. Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
@@ -29,15 +29,15 @@ Eine Assembly ist als markiert `<CLSCompliant(True)>`, aber ein Element von der 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Wenn Sie CLS-Kompatibilität benötigen, ändern Sie den Stammnamespace-Name, sodass keines ihrer Elemente mit einem Unterstrich beginnt.  
+- Wenn Sie CLS-Konformität benötigen, ändern Sie den Stamm Namespace Namen, damit keines seiner Elemente mit einem Unterstrich beginnt.  
   
-- Wenn Sie benötigen, dass der Namespacename unverändert bleiben, entfernen Sie die <xref:System.CLSCompliantAttribute> aus der Assembly oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`.  
+- Wenn der Namespace Name unverändert bleiben muss, entfernen Sie die <xref:System.CLSCompliantAttribute> aus der Assembly, oder markieren Sie Sie als `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
+- [-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Benennungs Konventionen für Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
