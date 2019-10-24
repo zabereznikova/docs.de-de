@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo-Methode
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781517"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774257"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="afe8e-102">IMetaDataTables::GetColumnInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="afe8e-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="afe8e-103">Ruft Daten über die angegebene Spalte in der angegebenen Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="afe8e-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="5bebc-102">IMetaDataTables::GetColumnInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="5bebc-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="5bebc-103">Ruft Daten über die angegebene Spalte in der angegebenen Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="5bebc-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afe8e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="afe8e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5bebc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5bebc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetColumnInfo (   
@@ -40,35 +40,63 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="afe8e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="afe8e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5bebc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5bebc-105">Parameters</span></span>
+=======
+
  `ixTbl`  
- <span data-ttu-id="afe8e-106">[in] Der Index der gewünschten Tabelle.</span><span class="sxs-lookup"><span data-stu-id="afe8e-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="5bebc-106">in Der Index der gewünschten Tabelle.</span><span class="sxs-lookup"><span data-stu-id="5bebc-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="afe8e-107">[in] Der Index der gewünschten Spalte.</span><span class="sxs-lookup"><span data-stu-id="afe8e-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="5bebc-107">in Der Index der gewünschten Spalte.</span><span class="sxs-lookup"><span data-stu-id="5bebc-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="afe8e-108">[out] Ein Zeiger auf den Offset der Spalte in der Zeile.</span><span class="sxs-lookup"><span data-stu-id="afe8e-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="5bebc-108">vorgenommen Ein Zeiger auf den Offset der Spalte in der Zeile.</span><span class="sxs-lookup"><span data-stu-id="5bebc-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="afe8e-109">[out] Ein Zeiger auf die Größe der Spalte in Bytes.</span><span class="sxs-lookup"><span data-stu-id="afe8e-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="5bebc-109">vorgenommen Ein Zeiger auf die Größe der Spalte in Bytes.</span><span class="sxs-lookup"><span data-stu-id="5bebc-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="afe8e-110">[out] Ein Zeiger auf den Typ der Werte in der Spalte.</span><span class="sxs-lookup"><span data-stu-id="afe8e-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="5bebc-110">vorgenommen Ein Zeiger auf den Typ der Werte in der Spalte.</span><span class="sxs-lookup"><span data-stu-id="5bebc-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="afe8e-111">[out] Ein Zeiger auf einen Zeiger auf den Namen der Spalte.</span><span class="sxs-lookup"><span data-stu-id="afe8e-111">[out] A pointer to a pointer to the column name.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="afe8e-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="afe8e-112">Requirements</span></span>  
- <span data-ttu-id="afe8e-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="afe8e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="afe8e-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="afe8e-114">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="afe8e-115">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="afe8e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
-  
- <span data-ttu-id="afe8e-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afe8e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="afe8e-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="afe8e-117">See also</span></span>
+ <span data-ttu-id="5bebc-111">vorgenommen Ein Zeiger auf einen Zeiger auf den Spaltennamen.</span><span class="sxs-lookup"><span data-stu-id="5bebc-111">[out] A pointer to a pointer to the column name.</span></span>  
+ 
+## <a name="remarks"></a><span data-ttu-id="5bebc-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5bebc-112">Remarks</span></span>
 
-- [<span data-ttu-id="afe8e-118">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="afe8e-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="afe8e-119">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="afe8e-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+<span data-ttu-id="5bebc-113">Der zurückgegebene Spaltentyp liegt innerhalb eines Wertebereichs:</span><span class="sxs-lookup"><span data-stu-id="5bebc-113">The returned column type falls within a range of values:</span></span>
+
+| <span data-ttu-id="5bebc-114">pType</span><span class="sxs-lookup"><span data-stu-id="5bebc-114">pType</span></span>                    | <span data-ttu-id="5bebc-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5bebc-115">Description</span></span>   | <span data-ttu-id="5bebc-116">Hilfsfunktion</span><span class="sxs-lookup"><span data-stu-id="5bebc-116">Helper function</span></span>                   |
+|--------------------------|---------------|-----------------------------------|
+| <span data-ttu-id="5bebc-117">`0`.. `iRidMax`</span><span class="sxs-lookup"><span data-stu-id="5bebc-117">`0`..`iRidMax`</span></span><br><span data-ttu-id="5bebc-118">(0.. 63)</span><span class="sxs-lookup"><span data-stu-id="5bebc-118">(0..63)</span></span>   | <span data-ttu-id="5bebc-119">Gesagt</span><span class="sxs-lookup"><span data-stu-id="5bebc-119">Rid</span></span>           | <span data-ttu-id="5bebc-120">**Isridtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-120">**IsRidType**</span></span><br><span data-ttu-id="5bebc-121">**Isridortoken**</span><span class="sxs-lookup"><span data-stu-id="5bebc-121">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="5bebc-122">`iCodedToken`.. `iCodedTokenMax`</span><span class="sxs-lookup"><span data-stu-id="5bebc-122">`iCodedToken`..`iCodedTokenMax`</span></span><br><span data-ttu-id="5bebc-123">(64.. 95)</span><span class="sxs-lookup"><span data-stu-id="5bebc-123">(64..95)</span></span> | <span data-ttu-id="5bebc-124">Codiertes Token</span><span class="sxs-lookup"><span data-stu-id="5bebc-124">Coded token</span></span> | <span data-ttu-id="5bebc-125">**Iscodeddekentype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-125">**IsCodedTokenType**</span></span> <br><span data-ttu-id="5bebc-126">**Isridortoken**</span><span class="sxs-lookup"><span data-stu-id="5bebc-126">**IsRidOrToken**</span></span> |
+| <span data-ttu-id="5bebc-127">`iSHORT` (96)</span><span class="sxs-lookup"><span data-stu-id="5bebc-127">`iSHORT` (96)</span></span>            | <span data-ttu-id="5bebc-128">Int16</span><span class="sxs-lookup"><span data-stu-id="5bebc-128">Int16</span></span>         | <span data-ttu-id="5bebc-129">**Isfixedtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-129">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="5bebc-130">`iUSHORT` (97)</span><span class="sxs-lookup"><span data-stu-id="5bebc-130">`iUSHORT` (97)</span></span>           | <span data-ttu-id="5bebc-131">UInt16</span><span class="sxs-lookup"><span data-stu-id="5bebc-131">UInt16</span></span>        | <span data-ttu-id="5bebc-132">**Isfixedtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-132">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="5bebc-133">`iLONG` (98)</span><span class="sxs-lookup"><span data-stu-id="5bebc-133">`iLONG` (98)</span></span>             | <span data-ttu-id="5bebc-134">Int32</span><span class="sxs-lookup"><span data-stu-id="5bebc-134">Int32</span></span>         | <span data-ttu-id="5bebc-135">**Isfixedtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-135">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="5bebc-136">`iULONG` (99)</span><span class="sxs-lookup"><span data-stu-id="5bebc-136">`iULONG` (99)</span></span>            | <span data-ttu-id="5bebc-137">UInt32</span><span class="sxs-lookup"><span data-stu-id="5bebc-137">UInt32</span></span>        | <span data-ttu-id="5bebc-138">**Isfixedtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-138">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="5bebc-139">`iBYTE` (100)</span><span class="sxs-lookup"><span data-stu-id="5bebc-139">`iBYTE` (100)</span></span>            | <span data-ttu-id="5bebc-140">Byte</span><span class="sxs-lookup"><span data-stu-id="5bebc-140">Byte</span></span>          | <span data-ttu-id="5bebc-141">**Isfixedtype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-141">**IsFixedType**</span></span>                   |
+| <span data-ttu-id="5bebc-142">`iSTRING` (101)</span><span class="sxs-lookup"><span data-stu-id="5bebc-142">`iSTRING` (101)</span></span>          | <span data-ttu-id="5bebc-143">Zeichenfolge</span><span class="sxs-lookup"><span data-stu-id="5bebc-143">String</span></span>        | <span data-ttu-id="5bebc-144">**Isheaptype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-144">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="5bebc-145">`iGUID` (102)</span><span class="sxs-lookup"><span data-stu-id="5bebc-145">`iGUID` (102)</span></span>            | <span data-ttu-id="5bebc-146">GUID</span><span class="sxs-lookup"><span data-stu-id="5bebc-146">Guid</span></span>          | <span data-ttu-id="5bebc-147">**Isheaptype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-147">**IsHeapType**</span></span>                    |
+| <span data-ttu-id="5bebc-148">`iBLOB` (103)</span><span class="sxs-lookup"><span data-stu-id="5bebc-148">`iBLOB` (103)</span></span>            | <span data-ttu-id="5bebc-149">Blob</span><span class="sxs-lookup"><span data-stu-id="5bebc-149">Blob</span></span>          | <span data-ttu-id="5bebc-150">**Isheaptype**</span><span class="sxs-lookup"><span data-stu-id="5bebc-150">**IsHeapType**</span></span>                    |
+
+<span data-ttu-id="5bebc-151">Werte, die im *Heap* gespeichert sind (d. h. `IsHeapType == true`), können mithilfe von gelesen werden:</span><span class="sxs-lookup"><span data-stu-id="5bebc-151">Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:</span></span>
+
+- <span data-ttu-id="5bebc-152">`iSTRING`: **IMetadataTables. GetString**</span><span class="sxs-lookup"><span data-stu-id="5bebc-152">`iSTRING`: **IMetadataTables.GetString**</span></span>
+- <span data-ttu-id="5bebc-153">`iGUID`: **IMetadataTables. GetGuid**</span><span class="sxs-lookup"><span data-stu-id="5bebc-153">`iGUID`: **IMetadataTables.GetGUID**</span></span>
+- <span data-ttu-id="5bebc-154">`iBLOB`: **IMetadataTables. getBlob**</span><span class="sxs-lookup"><span data-stu-id="5bebc-154">`iBLOB`: **IMetadataTables.GetBlob**</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="5bebc-155">Um die in der obigen Tabelle definierten Konstanten zu verwenden, schließen Sie die-Direktive `#define _DEFINE_META_DATA_META_CONSTANTS` ein, die von der *Cor. h* -Header Datei bereitgestellt wird</span><span class="sxs-lookup"><span data-stu-id="5bebc-155">To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="5bebc-156">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5bebc-156">Requirements</span></span>  
+ <span data-ttu-id="5bebc-157">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5bebc-157">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="5bebc-158">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="5bebc-158">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="5bebc-159">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="5bebc-159">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="5bebc-160">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bebc-160">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="5bebc-161">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5bebc-161">See also</span></span>
+
+- [<span data-ttu-id="5bebc-162">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5bebc-162">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="5bebc-163">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5bebc-163">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
