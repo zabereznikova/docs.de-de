@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579119"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847079"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
@@ -57,18 +57,22 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 * [System. Data. SqlTypes. SqlStreamChars. SetLength-Methode](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write-Methode](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .net. Connection-Klasse](connection.md)
-* [@No__t_1WriteList Feld "System .net. Connection. m"](m_writelist.md)
+* [System .net. Connection. m\_beschreitelist-Feld](m_writelist.md)
 * [System .net. connectiongroup-Klasse](connectiongroup.md)
-* [@No__t_1ConnectionList Feld "System .net. connectiongroup. m"](m_connectionlist.md)
+* [System .net. connectiongroup. m\_connectionlist-Feld](m_connectionlist.md)
+* [System .net. connectstream. Connection-Eigenschaft](system.net.connectstream.connection.md)
 * [System .net. coreresponabdata-Klasse](coreresponsedata.md)
-* [@No__t_1ResponseHeaders Feld "System .net. coreresponabdata. m"](coreresponsedata_m_responseheaders.md)
-* [@No__t_1StatusCode Feld "System .net. coreresponabdata. m"](coreresponsedata_m_statuscode.md)
-* [System .net. HttpWebRequest. \_AutoRedirects-Feld](_autoredirects.md)
-* [System .net. HttpWebRequest. \_CoreResponse-Feld](httpwebrequest__coreresponse.md)
-* [System .net. HttpWebRequest. \_HttpResponse-Feld](_httpresponse.md)
-* [@No__t_1ConnectionGroupList Feld "System .net. Service Point. m"](m_connectiongrouplist.md)
-* [Feld "System .net. ServicePointManager. s \_ServicePointTable"](s_servicepointtable.md)
-* [System. Windows. Diagnostics. visualdiagnostics. s \_isDebuggerCheckDisabledForTestPurposes Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [System .net. coreresponabdata. m\_Response Headers-Feld](coreresponsedata_m_responseheaders.md)
+* [System .net. coreresponsedata. m\_Feld "Statuscode"](coreresponsedata_m_statuscode.md)
+* [System .net. HttpWebRequest.\_autoreumleitungen-Feld](_autoredirects.md)
+* [Feld "System .net. HttpWebRequest.\_coreresponse"](httpwebrequest__coreresponse.md)
+* [Feld "System .net. HttpWebRequest.\_HttpResponse"](_httpresponse.md)
+* [System .net. pooledstream. NetworkStream (Eigenschaft)](system.net.pooledstream.networkstream.md)
+* [System .net. Service Point. m\_connectiongrouplist-Feld](m_connectiongrouplist.md)
+* [Feld "System .net. ServicePointManager. s\_servicepoin\"](s_servicepointtable.md)
+* [System .net. tlsstream. m_Worker-Feld](system.net.tlsstream.m_worker.md)
+* [System .net. Security. sslstate. SslProtocol (Eigenschaft)](system.net.security.sslstate.sslprotocol.md)
+* [System. Windows. Diagnostics. visualdiagnostics. s\_isdebuggercheckdisabledfortesttargets-Feld](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor-Klasse](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. datamemberlisteditor-Klasse](datamemberlisteditor-class.md)
 * [System. Xml. XmlReader. kreatesqlreader-Methode](system.xml.xmlreader.createsqlreader.md)

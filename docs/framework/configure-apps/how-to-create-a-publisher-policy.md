@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Herausgeberrichtlinie'
+title: 'Gewusst wie: Erstellen einer Herausgeberrichtlinie'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5484dfeb8cf5292fb43393bb39b9878114119d29
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991197"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846836"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Vorgehensweise: Erstellen einer Herausgeberrichtlinie
+# <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
 
 Anbieter von Assemblys können angeben, dass Anwendungen eine neuere Version einer Assembly verwenden sollen, indem Sie eine Herausgeber Richtlinien Datei mit der aktualisierten Assembly einschließen. Die Herausgeber Richtlinien Datei gibt die Assemblyumleitung und die Code Basis Einstellungen an und verwendet das gleiche Format wie eine Anwendungs Konfigurationsdatei. Die Herausgeber Richtlinien Datei wird in eine Assembly kompiliert und in den globalen Assemblycache eingefügt.
 
@@ -26,7 +26,7 @@ Zum Erstellen einer Herausgeber Richtlinie sind drei Schritte erforderlich:
 
 3. Fügen Sie die Herausgeber Richtlinien-Assembly dem globalen Assemblycache hinzu
 
-Das Schema für die Herausgeber Richtlinie wird unter [umleiten](redirect-assembly-versions.md)von Assemblyversionen beschrieben. Das folgende Beispiel zeigt eine Herausgeber Richtlinien Datei, die eine Version `myAssembly` von zu einer anderen umleitet.
+Das Schema für die Herausgeber Richtlinie wird unter [umleiten](redirect-assembly-versions.md)von Assemblyversionen beschrieben. Das folgende Beispiel zeigt eine Herausgeber Richtlinien Datei, die eine Version von `myAssembly` zu einer anderen umleitet.
 
 ```xml
 <configuration>
@@ -55,7 +55,7 @@ Verwenden Sie den [Assembly Linker (Al. exe)](../tools/al-exe-assembly-linker.md
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
-**Al/Link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keypaardatei* **/Platform:** *ProcessorArchitecture*
+**Al/Link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keypaarfile* **/Platform:** *ProcessorArchitecture*
 
 In diesem Befehl:
 
@@ -63,7 +63,7 @@ In diesem Befehl:
 
 - Das *publisherPolicyAssemblyFile* -Argument ist der Name der Herausgeber Richtlinienassembly, die sich aus diesem Befehl ergibt. Der Assemblydateiname muss das folgende Format aufweisen:
 
-  **Policy.** *majornumber* **.** *minornumber* **.** *mainAssemblyName* **.dll**
+  **Policy.** *majornumber* **.** *minornumber* **.** *MainAssemblyName* **. dll**
 
 - Das *keypairren File* -Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly-und Herausgeber richtlinienassembly mit demselben Schlüsselpaar signieren.
 
@@ -72,13 +72,13 @@ In diesem Befehl:
   > [!NOTE]
   > Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar.
 
-Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu bezeichnen `policy.1.0.myAssembly` `pub.config`, ist ab .NET Framework 2.0 verfügbar. mit dem folgenden Befehl wird eine Herausgeber richtlinienassembly erstellt, die von einer Herausgeber Richtlinien Datei namens erstellt wird. die Assembly, die das Schlüsselpaar in `sgKey.snk` der Datei verwendet, und gibt an, dass die Assembly auf die x86-Prozessorarchitektur abzielt.
+Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar. Der folgende Befehl erstellt eine Herausgeber richtlinienassembly namens `policy.1.0.myAssembly` aus einer Herausgeber Richtlinien Datei namens `pub.config`, weist der Assembly einen starken Namen zu, indem das Schlüsselpaar in der `sgKey.snk` Datei verwendet wird, und gibt an, dass die Assembly auf den x86-Prozessor ausgerichtet Architektur.
 
 ```
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-Die Herausgeber richtlinienassembly muss der Prozessorarchitektur der Assembly entsprechen, auf die Sie angewendet wird. Wenn die Assembly also den <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> <xref:System.Reflection.ProcessorArchitecture.MSIL>Wert hat, muss die Herausgeber richtlinienassembly für diese Assembly mit `/platform:anycpu`erstellt werden. Sie müssen für jede prozessorspezifische Assembly eine separate Herausgeber richtlinienassembly bereitstellen.
+Die Herausgeber richtlinienassembly muss der Prozessorarchitektur der Assembly entsprechen, auf die Sie angewendet wird. Wenn die Assembly also den <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> Wert <xref:System.Reflection.ProcessorArchitecture.MSIL>aufweist, muss die Herausgeber richtlinienassembly für diese Assembly mit `/platform:anycpu`erstellt werden. Sie müssen für jede prozessorspezifische Assembly eine separate Herausgeber richtlinienassembly bereitstellen.
 
 Eine Folge dieser Regel besteht darin, dass Sie die Haupt-oder neben Komponente der Versionsnummer ändern müssen, damit Sie eine neue Herausgeber richtlinienassembly mit der richtigen Prozessorarchitektur bereitstellen können, um die Prozessorarchitektur für eine Assembly zu ändern. Die alte Herausgeber richtlinienassembly kann die Assembly nicht bedienen, wenn die Assembly über eine andere Prozessorarchitektur verfügt.
 
@@ -92,9 +92,9 @@ Verwenden Sie das [Global Assembly Cache-Tool (Gacutil. exe)](../tools/gacutil-e
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
-**Gacutil/i** *PublisherPolicyAssemblyFile*
+**gacutil/i**  *publisherPolicyAssemblyFile*
 
-Der folgende Befehl fügt `policy.1.0.myAssembly.dll` dem globalen Assemblycache hinzu.
+Der folgende Befehl fügt dem globalen Assemblycache `policy.1.0.myAssembly.dll` hinzu.
 
 ```
 gacutil /i policy.1.0.myAssembly.dll
