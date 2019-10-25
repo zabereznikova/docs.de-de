@@ -3,12 +3,12 @@ title: Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 description: Informieren Sie sich über allgemeine Probleme beim Ausführen von .NET Core-Tools sowie über mögliche Lösungen.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: eb769550493e5a25d4380cd543a3bbec880b38e9
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332950"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318288"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 
@@ -19,7 +19,7 @@ Beim Installieren oder Ausführen eines globalen oder lokalen .NET Core-Tools k�
 Wenn die Ausführung eines .NET Core-Tools fehlschlägt, ist sehr wahrscheinlich eines der folgenden Probleme aufgetreten:
 
 * Die ausführbare Datei für das Tool wurde nicht gefunden.
-* Die richtige Version der .NET Core-Runtime wurde nicht gefunden. 
+* Die richtige Version der .NET Core-Runtime wurde nicht gefunden.
 
 ### <a name="executable-file-not-found"></a>Ausführbare Datei nicht gefunden
 
@@ -58,18 +58,18 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
   * Wenn Sie macOS 10.14 „Mojave“ oder frühere Versionen verwenden und das .NET Core SDK mit *TAR.GZ*-Dateien statt mit *PKG*-Dateien installiert haben.
   * Wenn Sie das .NET Core 3.0 SDK installiert und die Umgebungsvariable `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` auf `false` festgelegt haben.
   * Wenn Sie .NET Core 2.2 SDK oder frühere Versionen installiert und die Umgebungsvariable `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` auf `true` festgelegt haben.
-  
+
   Weitere Informationen über globale Tools finden Sie unter [Übersicht über globale .NET Core-Tools](global-tools.md).
 
 * Lokale Tools
 
   Prüfen Sie beim Ausführen eines lokalen Tools, ob im aktuellen Verzeichnis oder in einem der übergeordneten Verzeichnisse eine Manifestdatei mit dem Namen *dotnet-tools.json* vorhanden ist. Diese Datei kann sich auch in einem Ordner mit dem Namen *CONFIG* in der Projektordnerhierarchie statt im Stammverzeichnis befinden. Wenn *dotnet-tools.json* vorhanden ist, öffnen Sie die Datei und überprüfen Sie, ob das Tool enthalten ist, das Sie ausführen möchten. Wenn die Datei keinen Eintrag für `"isRoot": true` enthält, suchen Sie weiter oben in der Dateihierarchie nach weiteren Manifestdateien des Tools.
 
-    Beim Ausführen eines .NET Core-Tools, das mit einem angegebenen Pfad installiert wurde, müssen Sie bei Verwendung des Tools diesen Pfad angeben. Beispiel für die Verwendung eines mit einem Toolpfad installierten Tools:
+  Beim Ausführen eines .NET Core-Tools, das mit einem angegebenen Pfad installiert wurde, müssen Sie bei Verwendung des Tools diesen Pfad angeben. Beispiel für die Verwendung eines mit einem Toolpfad installierten Tools:
 
-   ```console
-   ..\<toolDirectory>\dotnet-<toolName>
-    ```
+  ```console
+  ..\<toolDirectory>\dotnet-<toolName>
+  ```
 
 ### <a name="runtime-not-found"></a>Runtime nicht gefunden
 
@@ -146,7 +146,7 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 Wenn Sie ein NuGet-Paket installieren, bei dem es sich nicht um ein .NET Core-Tool, sondern um ein normales NuGet-Paket handelt, wird eine Fehlermeldung angezeigt, die in etwa wie folgt lautet:
 
-`NU1212: Invalid project-package combination for `<ToolName>`. DotnetToolReference project style can only contain references of the DotnetTool type.`
+> NU1212: Ungültige Projekt-/Paket-Kombination für `<ToolName>`. Der DotnetToolReference-Projektstil darf nur Verweise vom Typ „DotnetTool“ enthalten.
 
 ### <a name="nuget-feed-cant-be-accessed"></a>Auf den NuGet-Feed kann nicht zugegriffen werden
 
@@ -161,4 +161,5 @@ Für die Installation des Tools muss jedoch auf den NuGet-Feed zugegriffen werde
 Eine häufige Ursache für Fehler ist ein fehlerhafter Toolname. Ursache hierfür kann ein Tippfehler oder die Tatsache sein, dass das Tool verschoben wurde oder als veraltet gilt. Bei Tools auf NuGet.org können Sie sicherstellen, dass der Name stimmt, indem Sie unter NuGet.org nach dem Tool suchen und den Installationsbefehl kopieren.
 
 ## <a name="see-also"></a>Siehe auch
+
 * [Übersicht über globale .NET Core-Tools](global-tools.md)

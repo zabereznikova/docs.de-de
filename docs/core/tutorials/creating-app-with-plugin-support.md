@@ -3,26 +3,26 @@ title: Erstellen einer .NET Core-Anwendung mit Plug-Ins
 description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-Ins unterstützt.
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: 54f616a7b2b20b7682963e9f5d503878bb512c90
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.date: 10/16/2019
+ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250164"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579505"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
-In diesem Tutorial lernen Sie:
+In diesem Tutorial erfahren Sie, wie Sie einen benutzerdefinierten <xref:System.Runtime.Loader.AssemblyLoadContext> zum Laden von Plug-Ins erstellen. Ein <xref:System.Runtime.Loader.AssemblyDependencyResolver> wird verwendet, um die Abhängigkeiten des Plug-Ins aufzulösen. Das Tutorial isoliert die Plug-In-Abhängigkeiten ordnungsgemäß von der Hostanwendung. Sie lernen, die folgende Aufgaben auszuführen:
 
 - Strukturieren eines Projekts zur Unterstützung von Plug-Ins
 - Erstellen einer benutzerdefinierten <xref:System.Runtime.Loader.AssemblyLoadContext>-Klasse zum Laden jedes Plug-Ins
-- Verwenden des Typs `System.Runtime.Loader.AssemblyDependencyResolver` zum Ermöglichen von Abhängigkeiten für Plug-Ins
+- Verwenden des Typs <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> zum Ermöglichen von Abhängigkeiten für Plug-Ins
 - Schreiben von Plug-Ins, die mühelos durch Kopieren der Buildartefakte bereitgestellt werden können
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Installieren Sie [.NET Core 3.0](https://dotnet.microsoft.com/download) oder eine neuere Version.
+- Installieren Sie das [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
@@ -213,7 +213,7 @@ static Assembly LoadPlugin(string relativePath)
 
 Aufgrund der verschiedenen `PluginLoadContext`-Instanzen für jedes Plug-In können die Plug-Ins problemlos verschiedene oder sogar in Konflikt stehende Abhängigkeiten aufweisen.
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>Erstellen eines einfachen Plug-Ins ohne Abhängigkeiten
+## <a name="simple-plugin-with-no-dependencies"></a>Einfaches Plug-In ohne Abhängigkeiten
 
 Führen Sie folgende Schritte im Stammverzeichnis aus:
 
@@ -256,19 +256,19 @@ Fügen Sie die folgenden Elemente zwischen den `<Project>`-Tags ein:
 </ItemGroup>
 ```
 
-Das Element `<Private>false</Private>` ist sehr wichtig. Es weist MSBuild dazu an, die *PluginBase.dll* nicht in das Ausgabeverzeichnis für „HelloPlugin“ zu kopieren. Wenn die Assembly *PluginBase.dll* im Ausgabeverzeichnis enthalten ist, findet `PluginLoadContext` die Assembly dort und lädt sie, wenn die Assembly *HelloPlugin.dll* geladen wird. An diesem Punkt implementiert der Typ `HelloPlugin.HelloCommand` die `ICommand`-Schnittstelle aus der *PluginBase.dll* in das Ausgabeverzeichnis des `HelloPlugin`-Projekts und nicht die `ICommand`-Schnittstelle, die in den Standardladekontext geladen wurde. Da die Runtime die beiden Typen als verschiedene Typen aus verschiedenen Assemblys erkennt, findet die Methode `AppWithPlugin.Program.CreateCommands` die Befehle nicht. Daher sind die `<Private>false</Private>`-Metadaten für den Verweis auf die Assembly erforderlich, die die Plug-In-Schnittstellen enthält.
+Das Element `<Private>false</Private>` ist wichtig. Es weist MSBuild dazu an, die *PluginBase.dll* nicht in das Ausgabeverzeichnis für „HelloPlugin“ zu kopieren. Wenn die Assembly *PluginBase.dll* im Ausgabeverzeichnis enthalten ist, findet `PluginLoadContext` die Assembly dort und lädt sie, wenn die Assembly *HelloPlugin.dll* geladen wird. An diesem Punkt implementiert der Typ `HelloPlugin.HelloCommand` die `ICommand`-Schnittstelle aus der *PluginBase.dll* in das Ausgabeverzeichnis des `HelloPlugin`-Projekts und nicht die `ICommand`-Schnittstelle, die in den Standardladekontext geladen wurde. Da die Runtime die beiden Typen als verschiedene Typen aus verschiedenen Assemblys erkennt, findet die `AppWithPlugin.Program.CreateCommands`-Methode die Befehle nicht. Daher sind die `<Private>false</Private>`-Metadaten für den Verweis auf die Assembly erforderlich, die die Plug-In-Schnittstellen enthält.
 
 Nach Fertigstellung des `HelloPlugin`-Projekts sollten Sie das `AppWithPlugin`-Projekt aktualisieren, um in Erfahrung zu bringen, wo sich das `HelloPlugin`-Plug-In befindet. Fügen Sie `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` als ein Element des `pluginPaths`-Arrays nach dem Kommentar `// Paths to plugins to load` hinzu.
 
-## <a name="create-a-plugin-with-library-dependencies"></a>Erstellen eines Plug-Ins mit Bibliotheksabhängigkeiten
+## <a name="plugin-with-library-dependencies"></a>Plug-In mit Bibliotheksabhängigkeiten
 
-Fast alle Plug-Ins sind komplexer als eine einfaches „Hallo Welt“-Programm, und viele Plug-Ins weisen Abhängigkeiten von anderen Bibliotheken auf. Im Beispiel veranschaulichen die Plug-In-Projekte `JsonPlugin` und `OldJson` zwei verschiedene Plug-Ins mit NuGet-Paketabhängigkeiten von `Newtonsoft.Json`. Die Projektdateien selbst enthalten keine speziellen Informationen für die Projektverweise, und die Plug-Ins werden (nachdem die Plug-In-Pfade zum `pluginPaths`-Array hinzugefügt wurden) problemlos ausgeführt, auch wenn sie in derselben Ausführung der AppWithPlugin-App ausgeführt werden. Diese Projekte kopieren die Assemblys, auf die verwiesen wird, jedoch nicht in ihr Ausgabeverzeichnis, weshalb die Assemblys auf dem Computer der Benutzers vorhanden sein müssen, damit die Plug-Ins funktionieren. Es gibt zwei Möglichkeiten, dieses Problem zu umgehen. Die erste Option ist die Verwendung des Befehls `dotnet publish`, um die Klassenbibliothek zu veröffentlichen. Wenn Sie die Ausgabe von `dotnet build` für Ihr Plug-In verwenden möchten, können Sie alternativ die Eigenschaft `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` zwischen den `<PropertyGroup>`-Tags in der Projektdatei des Plug-Ins einfügen. Ein Beispiel hierfür ist das Plug-In-Projekt `XcopyablePlugin`.
+Fast alle Plug-Ins sind komplexer als eine einfaches „Hallo Welt“-Programm, und viele Plug-Ins weisen Abhängigkeiten von anderen Bibliotheken auf. Im Beispiel veranschaulichen die Plug-In-Projekte `JsonPlugin` und `OldJson` zwei verschiedene Plug-Ins mit NuGet-Paketabhängigkeiten von `Newtonsoft.Json`. Die Projektdateien selbst enthalten keine speziellen Informationen für die Projektverweise, und die Plug-Ins werden (nachdem die Plug-In-Pfade dem `pluginPaths`-Array hinzugefügt wurden) problemlos ausgeführt, auch wenn sie in derselben Ausführung der AppWithPlugin-App ausgeführt werden. Diese Projekte kopieren die Assemblys, auf die verwiesen wird, jedoch nicht in ihr Ausgabeverzeichnis. Daher müssen die Assemblys auf dem Computer der Benutzers vorhanden sein, damit die Plug-Ins funktionieren. Es gibt zwei Möglichkeiten, dieses Problem zu umgehen. Die erste Option ist die Verwendung des Befehls `dotnet publish`, um die Klassenbibliothek zu veröffentlichen. Wenn Sie die Ausgabe von `dotnet build` für Ihr Plug-In verwenden möchten, können Sie alternativ die Eigenschaft `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>` zwischen den `<PropertyGroup>`-Tags in der Projektdatei des Plug-Ins einfügen. Ein Beispiel hierfür ist das Plug-In-Projekt `XcopyablePlugin`.
 
-## <a name="other-plugin-examples-in-the-sample"></a>Andere-Plug-In-Beispiele in diesem Beispiel
+## <a name="other-examples-in-the-sample"></a>Andere Beispiele in diesem Beispiel
 
 Den vollständigen Quellcode für dieses Tutorial finden Sie im [Repository dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Das vollständige Beispiel enthält einige weitere Beispiele für das `AssemblyDependencyResolver`-Verhalten. Zum Beispiel kann das `AssemblyDependencyResolver`-Objekt auch in NuGet-Paketen enthaltene native Bibliotheken und lokalisierte Satellitenassemblys auflösen. Das `UVPlugin` und `FrenchPlugin` im Beispielrepository veranschaulichen diese Szenarios.
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Verweisen auf eine in einem NuGet-Paket definierte Assembly für Plug-In-Schnittstellen
+## <a name="reference-a-plugin-from-a-nuget-package"></a>Verweisen auf ein Plug-In aus einem NuGet-Paket
 
 Angenommen, die App „A“ verfügt über eine Plug-In-Schnittstelle, die in einem NuGet-Paket mit dem Namen `A.PluginBase` definiert ist. Wie verweisen Sie in Ihrem Plug-In-Projekt ordnungsgemäß auf das Paket? Für Projektverweise verhindern die `<Private>false</Private>`-Metadaten im `ProjectReference`-Element in der Projektdatei, dass die DLL-Datei in die Ausgabe kopiert wird.
 

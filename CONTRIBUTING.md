@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955972"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315870"
 ---
 # <a name="contributing"></a>Beitragen
 
@@ -42,7 +42,7 @@ Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Bei
 
 - **Wartung**. Diese Kategorie enthält recht einfache Beiträge, wie z. B. Korrigieren unterbrochener oder fehlerhafter Links, Hinzufügen fehlender Codebeispiele oder Beheben von Problemen mit eingeschränkten Inhalten. In einigen Fällen können sich diese Probleme auf eine große Anzahl von Dateien beziehen. In diesem Fall sollten Sie uns vor Arbeitsbeginn wissen lassen, woran Sie arbeiten möchten.
 
-- **Inhaltsaktualisierungen**. Angesichts des ungeheuren Ausmaßes des Dokumentationssatzes veralten Inhalte schnell und müssen überprüft werden. Darüber hinaus kommen manche Inhalte aus verschiedenen Gründen doppelt oder dreifach vor. Beim Aktualisieren von Inhalten muss sichergestellt werden, dass einzelne Themen aktuell sind oder die Inhalte in einem bestimmten Funktionsbereich überprüft werden, um Duplikate zu entfernen und zu gewährleisten, dass in dem kleineren Dokumentationssatz alle eindeutigen Inhalte erhalten bleiben.
+- **Inhaltsaktualisierungen**. Angesichts des ungeheuren Ausmaßes des Dokumentationssatzes veralten Inhalte schnell und müssen überprüft werden. Darüber hinaus treten einige Inhalte aus verschiedenen Gründen doppelt oder dreifach auf. Beim Aktualisieren von Inhalten muss sichergestellt werden, dass einzelne Themen aktuell sind oder die Inhalte in einem bestimmten Funktionsbereich überprüft werden, um Duplikate zu entfernen und zu gewährleisten, dass in dem kleineren Dokumentationssatz alle eindeutigen Inhalte erhalten bleiben.
 
 - **Erstellen neuer Inhalte**. Wenn Sie an der Erstellung eines eigenen Themas interessiert sind, werden unter diesen Tickets auch Themen aufgelistet, die wir gerne zu unserem Dokumentationssatz hinzufügen möchten. Informieren Sie uns trotzdem bitte, bevor Sie mit der Arbeit an einem Thema beginnen. Wenn Sie über ein Thema schreiben möchten, das hier nicht aufgeführt ist, eröffnen Sie ein Ticket.
 

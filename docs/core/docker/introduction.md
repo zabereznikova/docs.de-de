@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799356"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523002"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -52,27 +52,27 @@ Microsoft stellt Images bereit, die auf bestimmte Szenarien zugeschnitten sind. 
 
 Verschiedene Azure-Dienste unterstützen Container. Sie erstellen ein Docker-Image für Ihre Anwendung und stellen es für einen der folgenden Dienste bereit:
 
-* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Skalieren und orchestrieren Sie Linux-Container mit Kubernetes.
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Stellen Sie Web-Apps und APIs mithilfe von Linux-Containern in einer PaaS-Umgebung bereit.
 
-* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+- [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
 Hosten Sie Ihren Container in der Cloud ohne übergeordnete Verwaltungsdienste.
 
-* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+ [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Führen Sie sich wiederholende Computeaufträge mit Containern aus.
 
-* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
 Optimieren, verschieben und modernisieren Sie .NET-Anwendungen in Microservices mithilfe von Windows Server-Containern.
 
-* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 Speichern und verwalten Sie Containerimages für alle Typen von Azure-Bereitstellungen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Bereitstellen einer .NET Core-Anwendung im Container](build-docker-netcore-container.md)
-* [Bereitstellen einer ASP.NET Core-Anwendung im Container.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-* [Tutorial zu ASP.NET Core-Microservices](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Informationen zu Containertools in Visual Studio](/visualstudio/containers/overview)
+- [Bereitstellen einer .NET Core-Anwendung im Container](build-docker-netcore-container.md)
+- [Bereitstellen einer ASP.NET Core-Anwendung im Container.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [Tutorial zu ASP.NET Core-Microservices](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Informationen zu Containertools in Visual Studio](/visualstudio/containers/overview)

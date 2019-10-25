@@ -4,12 +4,12 @@ description: Hier erhalten Sie Informationen zu den Breaking Changes in den vers
 ms.date: 08/12/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc057c41850a4cc0c0806af607990c7dcae51fdc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 94dd59865afbde73c82f6e1b61a2f054cc188c72
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216435"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393635"
 ---
 # <a name="net-core-breaking-changes"></a>Breaking Changes in .NET Core
 
@@ -17,9 +17,9 @@ Die folgende Versionsauswahl enthält eine gefilterte Liste mit Breaking Changes
 
 Sie können auch einzelne Issues anzeigen, in denen die mit .NET Core 3.0 eingeführten Breaking Changes in den folgenden GitHub-Repositorys ausführlich erläutert werden:
 
-- Für .NET Core das [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)-Repository.
-- Für ASP.NET Core das [aspnet/AspNetCore](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)-Repository.
-- Für Entity Framework Core das [ aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)-Repository.
+- Für .NET Core im [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)-Repository.
+- Für ASP.NET Core im [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)-Repository.
+- Für Entity Framework Core im [aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)-Repository.
 
 ## <a name="breaking-changes-by-version"></a>Breaking Changes nach Version
 

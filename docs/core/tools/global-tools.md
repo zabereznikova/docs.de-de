@@ -4,12 +4,12 @@ description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI
 author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332020"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72318306"
 ---
 # <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
 
@@ -31,13 +31,12 @@ Wenn Sie ein globales .NET Core-Tool verwenden möchten:
 
 ## <a name="find-a-net-core-global-tool"></a>Finden eines globalen .NET Core-Tools
 
-Derzeit gibt es kein Suchfeature für globale Tools in der .NET Core-CLI (Befehlszeilenschnittstelle).
+Derzeit gibt es kein Suchfeature für globale Tools in der .NET Core-CLI (Befehlszeilenschnittstelle). Im Folgenden finden Sie einige Empfehlungen zum Ermitteln der Tools:
 
-Sie können globale .NET Core-Tools auf [NuGet](https://www.nuget.org) finden. Allerdings können Sie auf der NuGet-Website nicht spezifisch nach globalen .NET Core-Tools suchen.
-
-Empfehlungen von Tools können Sie auch in Blogbeiträgen oder im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) finden.
-
-Sie können sich auch den Quellcode für die vom ASP.NET-Team erstellten globalen Tools im GitHub-Repository [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) ansehen.
+* Sie können globale .NET Core-Tools auf [NuGet](https://www.nuget.org) finden. Allerdings können Sie auf der NuGet-Website nicht spezifisch nach globalen .NET Core-Tools suchen.
+* Empfehlungen für Tools finden Sie in Blogbeiträgen oder im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
+* Sie können sich den Quellcode für die vom ASP.NET-Team erstellten globalen Tools im GitHub-Repository [aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) ansehen.
+* Weitere Informationen zu Diagnosetools finden Sie unter [Globale .NET Core-dotnet-Diagnosetools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Überprüfen des Autors und der Statistiken
 

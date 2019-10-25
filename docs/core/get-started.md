@@ -4,12 +4,12 @@ description: Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendunge
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 7dc134696e7dacf531fa6c7f4d84b63eb785ef25
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9dbc3ebc8d43fe2570a90f4e10fd155a5b114351
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151509"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521625"
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
@@ -28,7 +28,7 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Die folgende Ausgabe wird angezeigt.
+Die folgende Ausgabe wird angezeigt:
 
 ```console
 Hello World!
@@ -36,7 +36,7 @@ Hello World!
 
 Herzlichen Glückwunsch! Sie haben eine einfache .NET Core-Anwendung erstellt. Sie können auch [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio](tutorials/with-visual-studio.md) (nur Windows) oder [Visual Studio für Mac](tutorials/using-on-mac-vs.md) (nur macOS) verwenden, um eine .NET Core-Anwendung zu erstellen.
 
-## <a name="tutorials"></a>Lernprogramme
+## <a name="tutorials"></a>Tutorials
 
 Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
 
@@ -44,45 +44,34 @@ Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwick
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-* [Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md)
-
-* [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md)
-
-* [Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md)
-
-* [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md)  
-
-* Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio Code und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) an.
-
-* Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio 2017 und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/) an.
-
-* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+- [Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017](./tutorials/with-visual-studio.md)
+- [Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017](./tutorials/library-with-visual-studio.md)
+- [Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017](./tutorials/vb-with-visual-studio.md)
+- [Erstellen einer Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md)  
+- Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio Code und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) an.
+- Sehen Sie sich ein Video zum [Installieren und Verwenden von Visual Studio 2017 und .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/) an.
+- [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
 
 Eine Liste der unterstützten Windows-Versionen finden Sie unter [Voraussetzungen für .NET Core unter Windows](windows-prerequisites.md).
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
+Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen:
 
-* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
-
-* Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) an.
+- [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+- Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) an.
 
 Eine Liste der unterstützten Linux-Versionen finden Sie unter [Voraussetzungen für .NET Core unter Linux](linux-prerequisites.md).
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen.
+Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwickeln von .NET Core-Anwendungen:
 
-* Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) an.
-
-* [Erste Schritte mit .NET Core unter Mac OS](tutorials/using-on-macos.md)
-
-* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
-
-* [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs.md)
-
-* [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs-full-solution.md)
+- Sehen Sie sich ein Video zu den [ersten Schritte mit Visual Studio Code mit C# und .NET Core unter macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac) an.
+- [Erste Schritte mit .NET Core unter Mac OS](tutorials/using-on-macos.md)
+- [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
+- [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs.md)
+- [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](tutorials/using-on-mac-vs-full-solution.md)
 
 Eine Liste der unterstützten macOS-Versionen finden Sie unter [Voraussetzungen für .NET Core unter OS X/macOS](macos-prerequisites.md).
 

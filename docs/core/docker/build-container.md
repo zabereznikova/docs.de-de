@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie eine .NET Core-Anwendung m
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5e05fd2a38770ce348fbbfcfaa88267217b806bf
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116560"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521884"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerisieren einer .NET Core-App
 
@@ -19,10 +19,10 @@ Es werden die folgenden Themen abgedeckt:
 
 > [!div class="checklist"]
 >
-> * Erstellen und Veröffentlichen einer einfachen .NET Core-App
-> * Erstellen und Konfigurieren einer Dockerfile-Datei für .NET Core
-> * Erstellen eines Docker-Images
-> * Erstellen und Ausführen eines Docker-Containers
+> - Erstellen und Veröffentlichen einer einfachen .NET Core-App
+> - Erstellen und Konfigurieren einer Dockerfile-Datei für .NET Core
+> - Erstellen eines Docker-Images
+> - Erstellen und Ausführen eines Docker-Containers
 
 Hier erfahren Sie mehr über die Aufgaben für das Erstellen und Bereitstellen von Docker-Containern für eine .NET Core-Anwendung. Die *Docker-Plattform* verwendet die *Docker-Engine*, um Pakete schnell als *Docker-Images* zu erstellen und zu packen. Diese Images werden im *Dockerfile*-Format geschrieben, um in einem mehrstufigen Container bereitgestellt und ausgeführt zu werden.
 
@@ -30,16 +30,16 @@ Hier erfahren Sie mehr über die Aufgaben für das Erstellen und Bereitstellen v
 
 Die folgenden Komponenten müssen installiert sein:
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 Wenn Sie .NET Core installiert haben, verwenden Sie den Befehl `dotnet --info`, um festzustellen, welches SDK Sie verwenden.
 
-* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-* Ein temporärer Arbeitsordner für das *Dockerfile* und eine .NET Core-Beispiel-App. In diesem Tutorial hat der Arbeitsordner den Namen `docker-working`.
+- Ein temporärer Arbeitsordner für das *Dockerfile* und eine .NET Core-Beispiel-App. In diesem Tutorial hat der Arbeitsordner den Namen `docker-working`.
 
 ### <a name="use-sdk-version-22"></a>Verwenden der SDK-Version 2.2
 
-Wenn Sie ein neueres SDK als 3.0 verwenden, stellen Sie sicher, dass Ihre App gezwungen ist, das SDK 2.2 zu verwenden. Erstellen Sie eine Datei mit dem Namen `global.json` in Ihrem Arbeitsordner, und fügen Sie den folgenden JSON-Code ein:
+Wenn Sie ein neueres SDK als 3.0 verwenden, stellen Sie sicher, dass Ihre App gezwungen ist, das SDK 2.2 zu verwenden. Erstellen Sie eine Datei mit dem Namen *global.json* in Ihrem Arbeitsordner, und fügen Sie den folgenden JSON-Code ein:
 
 ```json
 {
@@ -49,11 +49,11 @@ Wenn Sie ein neueres SDK als 3.0 verwenden, stellen Sie sicher, dass Ihre App ge
 }
 ```
 
-Speichern Sie diese Datei. Dies zwingt .NET Core, Version 2.2 für jeden `dotnet`-Befehl zu verwenden, der aus diesem Ordner oder einem Unterordner aufgerufen wird.
+Speichern Sie die Datei. Dies zwingt .NET Core, Version 2.2 für jeden `dotnet`-Befehl zu verwenden, der aus diesem Ordner oder einem Unterordner aufgerufen wird.
 
-## <a name="create-net-core-app"></a>Erstellen einer .NET Core-App
+## <a name="create-net-core-app"></a>Erstellen der .NET Core-App
 
-Sie benötigen eine.NET Core-App, die der Docker-Container ausführen kann. Öffnen Sie Ihr Terminal, erstellen Sie einen Arbeitsordner, falls noch nicht geschehen, und geben Sie den Ordnernamen ein. Führen Sie im Arbeitsordner den folgenden Befehl aus, um ein neues Projekt in einem Unterverzeichnis namens „app“ zu erstellen:
+Sie benötigen eine.NET Core-App, die der Docker-Container ausführen kann. Öffnen Sie Ihr Terminal, erstellen Sie einen Arbeitsordner, falls noch nicht geschehen, und geben Sie den Ordnernamen ein. Führen Sie im Arbeitsordner den folgenden Befehl aus, um ein neues Projekt im Unterverzeichnis *app* zu erstellen:
 
 ```dotnetcli
 dotnet new console -o app -n myapp
@@ -83,7 +83,7 @@ docker-working
 Hello World!
 ```
 
-Die Standardvorlage erstellt eine App, die über das Terminal druckt und dann beendet wird. Für dieses Tutorial verwenden Sie eine App, die auf unbestimmte Zeit ausgeführt wird. Öffnen Sie die Datei **Program.cs** in einem Text-Editor. Diese sollte derzeit wie der folgende Code aussehen:
+Die Standardvorlage erstellt eine App, die über das Terminal druckt und dann beendet wird. Für dieses Tutorial verwenden Sie eine App, die auf unbestimmte Zeit ausgeführt wird. Öffnen Sie die Datei *Program.cs* in einem Text-Editor. Diese sollte derzeit wie der folgende Code aussehen:
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ namespace myapp
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
-            while(max == -1 || counter < max)
+            while (max == -1 || counter < max)
             {
                 counter++;
                 Console.WriteLine($"Counter: {counter}");
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Speichern Sie die Datei, und testen Sie das Programm erneut mit `dotnet run`. Denken Sie daran, dass diese App auf unbestimmte Zeit ausgeführt wird. Verwenden Sie zum Beenden den Befehl „Abbrechen“ <kbd>STRG + C</kbd>. Die folgende Ausgabe wird angezeigt:
+Speichern Sie die Datei, und testen Sie das Programm erneut mit `dotnet run`. Denken Sie daran, dass diese App auf unbestimmte Zeit ausgeführt wird. Verwenden Sie zum Beenden den Abbruchbefehl <kbd>STRG</kbd>+<kbd>C</kbd>. Die folgende Ausgabe wird angezeigt:
 
 ```console
 > dotnet run
@@ -144,15 +144,15 @@ Wenn Sie eine Zahl auf der Kommandozeile an die App übergeben, zählt sie nur b
 
 Bevor Sie Ihre .NET Core-App zum Docker-Image hinzufügen, veröffentlichen Sie sie. Sie sollten sich vergewissern, dass der Container die veröffentlichte Version der App ausführt, wenn er gestartet wird.
 
-Geben Sie im Arbeitsordner den Ordner **app** mit dem exemplarischen Quellcode ein, und führen Sie den folgenden Befehl aus:
+Geben Sie im Arbeitsordner den Ordner *app* mit dem exemplarischen Quellcode ein, und führen Sie den folgenden Befehl aus:
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-Dieser Befehl kompiliert Ihre App in den Ordner **publish**. Der Pfad zum Ordner **publish** aus dem Arbeitsordner sollte wie folgt lauten: `.\app\bin\Release\netcoreapp2.2\publish\`
+Dieser Befehl kompiliert Ihre App in den Ordner *publish*. Der Pfad zum Ordner *publish* aus dem Arbeitsordner sollte wie folgt lauten: `.\app\bin\Release\netcoreapp2.2\publish\`
 
-Rufen Sie eine Verzeichnisliste des Veröffentlichungsordners ab, um sicherzustellen, dass die Datei **myapp.dll** erstellt wurde. Führen Sie im Ordner **app** einen der folgenden Befehle aus:
+Rufen Sie eine Verzeichnisliste des Veröffentlichungsordners ab, um sicherzustellen, dass die Datei *myapp.dll* erstellt wurde. Führen Sie im Ordner *app* einen der folgenden Befehle aus:
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
@@ -229,7 +229,7 @@ COPY app/bin/Release/netcoreapp2.2/publish/ app/
 ENTRYPOINT ["dotnet", "app/myapp.dll"]
 ```
 
-Der Befehl `COPY` weist Docker an, den angegebenen Ordner auf Ihrem Computer in einen Ordner im Container zu kopieren. In diesem Beispiel wird der Ordner **publish** in einen Ordner mit dem Namen **app** im Container kopiert.
+Der Befehl `COPY` weist Docker an, den angegebenen Ordner auf Ihrem Computer in einen Ordner im Container zu kopieren. In diesem Beispiel wird der Ordner *publish* in einen Ordner mit dem Namen *app* im Container kopiert.
 
 Der nächste Befehl, `ENTRYPOINT`, weist Docker an, den Container so zu konfigurieren, dass er als ausführbare Datei ausgeführt wird. Wenn der Container gestartet wird, wird die `ENTRYPOINT`-Befehl ausgeführt. Wenn dieser Befehl beendet wird, wird der Container automatisch beendet.
 
@@ -289,7 +289,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 0e8f3c2ca32c        myimage             "dotnet app/myapp.dll"   7 minutes ago       Up 8 seconds           boring_matsumoto
 ```
 
-In ähnlicher Weise beendet der Befehl `docker stop` den Container. Das folgende Beispiel verwendet den Befehl `docker stop`, um den Container zu beenden, und verwendet dann den Befehl `docker ps`, um anzuzeigen, dass keine Container ausgeführt werden.
+In ähnlicher Weise beendet der Befehl `docker stop` den Container. Im folgenden Beispiel wird der Befehl `docker stop` verwendet, um den Container zu beenden, und dann der Befehl `docker ps`, um anzuzeigen, dass keine Container ausgeführt werden:
 
 ```console
 > docker stop boring_matsumoto
@@ -370,7 +370,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 Mit dem Befehl `docker run` können Sie auch den Befehl `ENTRYPOINT` aus der *Dockerfile* ändern und etwas anderes ausführen, jedoch nur für diesen Container. Verwenden Sie beispielsweise den folgenden Befehl, um `bash` oder `cmd.exe` auszuführen. Bearbeiten Sie den Befehl nach Bedarf.
 
 #### <a name="windows"></a>Windows
-In diesem Beispiel wird `ENTRYPOINT` in `cmd.exe` geändert. <kbd>STRG + C</kbd> wird gedrückt, um den Prozess, zu beenden und den Container anzuhalten.
+
+In diesem Beispiel wird `ENTRYPOINT` in `cmd.exe` geändert. <kbd>STRG</kbd>+<kbd>C</kbd> wird gedrückt, um den Prozess zu beenden und den Container anzuhalten.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -411,13 +412,13 @@ exit
 
 Docker hat viele verschiedene Befehle, die behandeln, was Sie mit Ihrem Container und Ihren Images machen wollen. Diese Docker-Befehle sind für die Verwaltung Ihrer Container unerlässlich:
 
-* [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-* [docker run](https://docs.docker.com/engine/reference/commandline/run/)
-* [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
-* [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
-* [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
-* [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
-* [docker image](https://docs.docker.com/engine/reference/commandline/image/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker run](https://docs.docker.com/engine/reference/commandline/run/)
+- [docker ps](https://docs.docker.com/engine/reference/commandline/ps/)
+- [docker stop](https://docs.docker.com/engine/reference/commandline/stop/)
+- [docker rm](https://docs.docker.com/engine/reference/commandline/rm/)
+- [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
@@ -455,7 +456,7 @@ Verwenden Sie den Befehl `docker images`, um eine Liste der installierten Images
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Schauen Sie sich das Tutorial zu ASP.NET Core-Microservices an.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [Überprüfen Sie die Azure-Dienste, die Container unterstützen.](https://azure.microsoft.com/overview/containers/)
-* [Erfahren Sie mehr über Dockerfile-Befehle.](https://docs.docker.com/engine/reference/builder/)
-* [Containertools in Visual Studio](/visualstudio/containers/overview)
+- [Schauen Sie sich das Tutorial zu ASP.NET Core-Microservices an.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Überprüfen Sie die Azure-Dienste, die Container unterstützen.](https://azure.microsoft.com/overview/containers/)
+- [Erfahren Sie mehr über Dockerfile-Befehle.](https://docs.docker.com/engine/reference/builder/)
+- [Containertools in Visual Studio](/visualstudio/containers/overview)

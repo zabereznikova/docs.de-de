@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181915"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395185"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -113,7 +113,7 @@ Da .NET Core die parallele Installation unterstützt und die Runtime vollständi
 
 ### <a name="comparison-with-mono"></a>Vergleich mit Mono
 
-[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende Implementierung von .NET. Sie wurde zunächst als [Open-Source-]([open-source](https://github.com/mono/mono))-Alternative zu .NET Framework angeboten und mit zunehmender Beliebtheit von iOS- und Android-Geräten an mobile Geräte angepasst. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
+[Mono](https://www.mono-project.com/) ist die ursprüngliche plattformübergreifende Implementierung von .NET. Sie wurde zunächst als [Open-Source](https://github.com/mono/mono)-Alternative zu .NET Framework angeboten und mit zunehmender Beliebtheit von iOS- und Android-Geräten an mobile Geräte angepasst. Sie kann als Community-Klon des .NET Frameworks betrachtet werden. Das Mono-Projektteam griff auf die offenen [.NET-Standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (insbesondere ECMA 335) zurück, die von Microsoft veröffentlicht wurden, um eine kompatible Implementierung bereitzustellen.
 
 Die Hauptunterschiede zwischen .NET Core und Mono:
 
