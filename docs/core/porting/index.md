@@ -1,54 +1,52 @@
 ---
-title: Portieren von Code von .NET Framework auf .NET Core
+title: Portieren von .NET Framework zu .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
-ms.date: 09/13/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522988"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798807"
 ---
-# <a name="port-your-code-from-net-framework-to-net-core"></a>Portieren Ihres Codes von .NET Framework auf .NET Core
+# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Übersicht über den Vorgang der Portierung von .NET Framework zu .NET Core
 
-Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht daran interessiert, Ihren Code auch auf .NET Core auszuführen. Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die beim Portieren Ihres Codes auf .NET Core hilfreich sein können.
+Möglicherweise verfügen Sie über Code, der zurzeit im .NET Framework ausgeführt wird und den Sie zu .NET Core portieren möchten. Dieser Artikel enthält Folgendes:
+
+* Übersicht über den Portiervorgang.
+* Eine Liste der Tools, die beim Portieren Ihres Codes zu .NET Core nützlich sein können.
 
 ## <a name="overview-of-the-porting-process"></a>Übersicht über den Portiervorgang
 
-Dies ist die Vorgehensweise, die wir zur Portierung Ihres Projekts auf .NET Core empfehlen. Jeder Schritt in dieser Vorgehensweise wird in weiteren Artikeln genauer erläutert.
+Wir empfehlen die folgende Vorgehensweise, um Ihr Projekt zu .NET Core zu portieren:
 
-1. Identifizieren Sie sich und weisen Sie sich für Ihre Drittanbieter-Abhängigkeiten aus.
-
-   Dieser Schritt beinhaltet das Verständnis, welche Drittanbieterkomponenten erforderlich sind, welche Abhängigkeiten von diesen Komponenten bestehen, wie Sie überprüfen können, ob die Komponenten auch auf .NET Core ausgeführt werden können, und welche Maßnahmen Sie ergreifen können, falls dem nicht so ist. Darüber hinaus wird erläutert, wie Sie erforderliche Komponenten zum Format [PackageReference](/nuget/consume-packages/package-references-in-project-files) migrieren können, das in .NET Core verwendet wird.
-
-2. Legen Sie für alle zu portierenden Projekte .NET Framework 4.7.2 oder höher als neues Ziel fest.
+1. Legen Sie für alle zu portierenden Projekte .NET Framework 4.7.2 oder höher als neues Ziel fest.
 
    Durch diesen Schritt wird sichergestellt, dass Sie API-Alternativen für bestimmte .NET Framework-Ziele verwenden können, falls .NET Core eine bestimmte API nicht unterstützt.
 
-3. Verwenden Sie das [Analysetool für .NET-Portierbarkeit](../../standard/analyzers/portability-analyzer.md), um Ihre Assemblys zu analysieren, und um einen Plan zum Portieren auf Grundlage der Ergebnisse zu entwickeln.
+2. Verwenden Sie den [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md), um Ihre Assemblys zu analysieren und zu ermitteln, ob sie zu .NET Core portiert werden können.
 
-   Das API Portability Analyzer-Tool analysiert Ihre kompilierten Assemblys und generiert einen Bericht, der eine allgemeine Zusammenfassung zur Portabilität und eine Aufschlüsselung zu jeder verwendeten API anzeigt, die nicht für die öffentliche Oberfläche der .NET Core-Zielplattform verfügbar ist. Sie können diesen Bericht zusammen mit einer Analyse Ihrer Codebase verwenden, um einen Plan zum Portieren Ihres Codes zu entwickeln.
+   Das API Portability Analyzer-Tool analysiert Ihre kompilierten Assemblys und generiert einen Bericht. Dieser Bericht zeigt eine allgemeine Übersicht über die Portierbarkeit und eine Aufschlüsselung nach allen von Ihnen verwendeten APIs, die in .NET Core nicht verfügbar sind.
 
-4. Nachdem Sie die Projektdatei in Ihre .NET Core-Zielversion konvertiert haben, können Sie mit dem Roslyn-basierten [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md) APIs ermitteln, die auf einigen Plattformen <xref:System.PlatformNotSupportedException> sowie einige andere potenzielle Kompatibilitätsprobleme auslösen.
+3. Installieren Sie das [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md) in Ihren Projekten, um APIs zu identifizieren, die eine <xref:System.PlatformNotSupportedException> für einige Plattformen auslösen, und weitere potenzielle Kompatibilitätsprobleme zu ermitteln.
 
-5. Portieren Sie Ihre Testcodes.
+   Dieses Tool ähnelt dem Portability Analyzer, analysiert jedoch nicht, ob Elemente in .NET Core kompiliert werden können, sondern, ob Sie eine API auf eine Weise verwenden, die zur Laufzeit eine <xref:System.PlatformNotSupportedException> auslöst. Wenn Sie von .NET Framework 4.7.2 oder höher wechseln, ist dies zwar nicht häufig der Fall, aber eine Überprüfung ist dennoch eine gute Idee.
 
-   Die Portierung auf .NET Core stellt eine erhebliche Änderung Ihrer Codebase dar, deshalb wird dringend empfohlen, Ihre Tests zu portieren. Auf diese Weise können Sie Tests ausführen, wenn Sie Ihren Code portieren. MSTest, xUnit und NUnit bieten Unterstützung für .NET Core.
+4. Konvertieren Sie alle `packages.config`-Abhängigkeiten mit dem [Konvertierungstool in Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference) in das [PackageReference](/nuget/consume-packages/package-references-in-project-files)-Format.
 
-6. Führen Sie Ihren Plan zum Portieren aus!
+   Zu diesem Schritt gehört auch die Konvertierung von Abhängigkeiten aus dem `packages.config`-Legacyformat. `packages.config` funktioniert in .NET Core nicht, daher ist diese Konvertierung notwendig, wenn Paketabhängigkeiten vorhanden sind.
 
-Die folgende Liste enthält Tools, die während der Portierung nützlich sein könnten:
+5. Erstellen Sie neue Projekte für .NET Core, und kopieren Sie die Quelldateien, oder versuchen Sie, Ihre vorhandene Projektdatei mithilfe eines Tools zu konvertieren.
 
-- .NET Portability Analyzer: [Befehlszeilentool](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Mit diesem Tool kann ein Bericht generiert werden, der Aufschluss über die Portierbarkeit Ihres Codes von .NET Framework auf Ihre .NET Core-Zielplattform gibt. In diesem Bericht werden der Typ und die APIs, die auf der .NET Core-Zielplattform fehlen, nach Assembly aufgeschlüsselt. Weitere Informationen finden Sie unter [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md). Es wird empfohlen, .NET Portability Analyzer vor dem Portieren auszuführen, um eventuelle Lücken bei den fehlenden APIs auf bestimmten öffentlichen Oberflächen der .NET-Zielplattform zu finden.
-- .NET API-Analysetool: Hierbei handelt es sich um ein Roslyn-Analysetool, das die .NET Standard-API, die auf einigen Plattformen <xref:System.PlatformNotSupportedException> auslöst, Aufrufe von veralteten APIs und potenzielle Kompatibilitätsrisiken für C#-APIs auf verschiedenen Plattformen erkennt. Weitere Informationen finden Sie unter [.NET API-Analysetool](../../standard/analyzers/api-analyzer.md). Dieses Analysetool ist hilfreich, um Unterschiede beim Laufzeitverhalten auf den verschiedenen Plattformen zu ermitteln, nachdem Sie bereits Ihr .NET Core-Projekt erstellt haben.
-- Reverse Package Search – ein [nützlicher Webdienst](https://packagesearch.azurewebsites.net), mit dem Sie einen Typ suchen können und Pakete finden können, die diesen Typ enthalten.
+   .NET Core verwendet ein einfacheres (und anderes) [Projektdateiformat](../tools/csproj.md) als .NET Framework. Sie müssen Ihre Projektdateien in dieses Format konvertieren, um sie weiter nutzen zu können.
 
-Darüber hinaus können Sie mit dem Tool [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) versuchen, kleinere Lösungen oder einzelne Projekte auf das .NET Core-Projektdateiformat zu portieren.
+6. Portieren Sie Ihren Testcode.
 
-> [!WARNING]
-> CsprojToVs2017 ist ein Drittanbietertool. Es kann nicht garantiert werden, dass das Tool für all Ihre Projekte funktioniert, und es kann zu subtilen Änderungen bei Verhalten kommen, von dem Sie abhängig sind. CsprojToVs2017 sollte als _Ausgangspunkt_ verwendet werden, um grundlegende Elemente zu automatisieren. Es handelt sich nicht um ein garantierte Lösung zum Migrieren von Projektdateiformaten.
+   Die Portierung auf .NET Core stellt eine erhebliche Änderung Ihrer Codebase dar, deshalb wird dringend empfohlen, Ihre Tests zu portieren. Auf diese Weise können Sie Tests ausführen, wenn Sie Ihren Code portieren. MSTest, xUnit und NUnit funktionieren in .NET Core.
+
+Darüber hinaus können Sie versuchen, kleinere Lösungen oder einzelne Projekte mit dem Tool [dotnet try-convert](https://github.com/dotnet/try-convert) in einem einzigen Vorgang in das .NET Core-Projektdateiformat zu portieren. Es kann nicht garantiert werden, dass `dotnet try-convert` für all Ihre Projekte funktioniert, und es kann zu leichten Abweichungen bei Verhalten kommen, das Sie unbedingt benötigen. Das Tool sollte als _Ausgangspunkt_ verwendet werden, um grundlegende Elemente zu automatisieren, die sich für eine Automatisierung eignen. Es ist keine garantierte Lösung zum Migrieren eines Projekts.
 
 >[!div class="step-by-step"]
 >[Nächste](net-framework-tech-unavailable.md)

@@ -21,9 +21,9 @@ Mit Visual Basic können Sie Bedingungen testen und abhängig von den Ergebnisse
   
  In der folgenden Abbildung wird eine Entscheidungsstruktur dargestellt, die überprüft, ob eine Bedingung wahr ist, und abhängig davon, ob Sie true oder false ist, verschiedene Aktionen unternimmt.  
   
- ![Ein Flussdiagramm einer if... Dann... Else-Konstruktion.](./media/decision-structures/if-then-else-construction.gif)  
+ ![Ein Flussdiagramm einer If...Then...Else-Konstruktion.](./media/decision-structures/if-then-else-construction.gif)  
   
-## <a name="ifthenelse-construction"></a>Wenn... Dann... Else-Konstruktion  
+## <a name="ifthenelse-construction"></a>If...Then...Else-Konstruktion  
  `If...Then...Else`mit-Konstruktionen können Sie eine oder mehrere Bedingungen testen und abhängig von den einzelnen Bedingungen eine oder mehrere-Anweisungen ausführen. Es gibt folgende Möglichkeiten, um Bedingungen zu testen und Aktionen auszuführen:  
   
 - Führen Sie eine oder mehrere Anweisungen aus, wenn eine Bedingung ist.`True`  
@@ -34,12 +34,12 @@ Mit Visual Basic können Sie Bedingungen testen und abhängig von den Ergebnisse
   
 - Testen einer zusätzlichen Bedingung, wenn eine vorherige Bedingung ist`False`  
   
- Die Steuerelement Struktur, die alle diese Möglichkeiten bietet, ist der [If... Dann... Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sie können eine einzeilige Version verwenden, wenn Sie nur einen Test und eine Anweisung ausführen müssen. Wenn Sie einen komplexeren Satz von Bedingungen und Aktionen haben, können Sie die mehrzeilige Version verwenden.  
+ Die Steuerelement Struktur, die alle diese Möglichkeiten bietet, ist der [If...Then...Else-Anweisung](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Sie können eine einzeilige Version verwenden, wenn Sie nur einen Test und eine Anweisung ausführen müssen. Wenn Sie einen komplexeren Satz von Bedingungen und Aktionen haben, können Sie die mehrzeilige Version verwenden.  
   
-## <a name="selectcase-construction"></a>Wählen Sie... Fall Konstruktion  
- Die `Select...Case` Konstruktion ermöglicht Ihnen das einmalige Auswerten eines Ausdrucks und das Ausführen verschiedener Sätze von Anweisungen basierend auf anderen möglichen Werten. Weitere Informationen finden Sie unter [SELECT... Case-Anweisung](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Select...Case Konstruktion  
+ Die `Select...Case` Konstruktion ermöglicht Ihnen das einmalige Auswerten eines Ausdrucks und das Ausführen verschiedener Sätze von Anweisungen basierend auf anderen möglichen Werten. Weitere Informationen finden Sie unter [Select...Case-Anweisung](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
-## <a name="trycatchfinally-construction"></a>Try... Catch... Schließlich erstellen  
+## <a name="trycatchfinally-construction"></a>Try...Catch...Finally Konstruktion  
  `Try...Catch...Finally`mit-Konstruktionen können Sie eine Reihe von-Anweisungen in einer Umgebung ausführen, die die Steuerung beibehält, wenn eine der Anweisungen eine Ausnahme auslöst. Sie können verschiedene Aktionen für verschiedene Ausnahmen durchführen. Sie können optional einen Codeblock angeben, der ausgeführt wird, bevor Sie die `Try...Catch...Finally` gesamte Konstruktion beenden, unabhängig davon, was passiert. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
