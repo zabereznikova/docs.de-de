@@ -2,12 +2,12 @@
 title: Slices (F#)
 description: Erfahren Sie, wie Sie Slices für vorhandene F# Datentypen verwenden und wie Sie eigene Slices für andere Datentypen definieren.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627148"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798910"
 ---
 # <a name="slices"></a>Slices
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Die F# Core-Bibliothek definiert `GetSlice`nicht für 3D-Arrays. Wenn Sie diese oder andere Arrays weiterer Dimensionen segmentieren möchten, müssen Sie den `GetSlice` Member selbst definieren.
+Die F# Core-Bibliothek definiert keine`GetSlice`für 3D-Arrays. Wenn Sie diese oder andere Arrays weiterer Dimensionen segmentieren möchten, müssen Sie das `GetSlice` Member selbst definieren.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definieren von Slices für andere Datenstrukturen
 
 Die F# Core-Bibliothek definiert Slices für einen begrenzten Satz von Typen. Wenn Sie Slices für weitere Datentypen definieren möchten, können Sie dies entweder in der Typdefinition selbst oder in einer Typerweiterung tun.
 
-So können Sie z. b. Slices für die <xref:System.ArraySegment%601> -Klasse definieren, um eine bequeme Datenbearbeitung zu ermöglichen:
+So können Sie z. b. Slices für die <xref:System.ArraySegment%601>-Klasse definieren, um eine bequeme Datenbearbeitung zu ermöglichen:
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Verwenden Sie Inlining, um bei Bedarf Boxing zu vermeiden.
 
-Wenn Sie Slices für einen Typ definieren, der eigentlich eine Struktur ist, empfehlen wir Ihnen `inline` , den `GetSlice` Member zu definieren. Der F# Compiler optimiert die optionalen Argumente, wobei Heap Zuordnungen aufgrund der slizierung vermieden werden. Dies ist besonders wichtig für aufteilen-Konstrukte <xref:System.Span%601> , z. b., die nicht auf dem Heap zugeordnet werden können.
+Wenn Sie Slices für einen Typ definieren, der eigentlich eine Struktur ist, wird empfohlen, dass Sie den `GetSlice` Member `inline`. Der F# Compiler optimiert die optionalen Argumente, wobei Heap Zuordnungen aufgrund der slizierung vermieden werden. Dies ist für aufteilen-Konstrukte, z. b. <xref:System.Span%601>, die nicht auf dem Heap zugeordnet werden können, äußerst wichtig.
 
 ```fsharp
 open System

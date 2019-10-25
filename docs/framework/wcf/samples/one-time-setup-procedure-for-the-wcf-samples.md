@@ -2,12 +2,12 @@
 title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 4fe77455c26393455c66c24c74691a335ad8cb1b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7c07f39ebff0caf97a9561f08826a0c95ac81140
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039182"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72799027"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 
@@ -37,15 +37,15 @@ Das virtuelle Verzeichnis **Service Model Samples** wird zum entwickeln und Ausf
     ```
 
     > [!WARNING]
-    > Wenn Sie den `aspnet_regiis –i –enable` Befehl ausführen, wird der Standard Anwendungs Pool [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]mit ausgeführt. Dies kann zu Inkompatibilitäts Problemen bei anderen Anwendungen auf demselben Computer führen.
+    > Wenn Sie den Befehl `aspnet_regiis –i –enable` ausführen, wird der Standard-App-Pool mithilfe von [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]ausgeführt, was zu Inkompatibilitäts Problemen für andere Anwendungen auf demselben Computer führen kann.
 
 5. Befolgen Sie die Anweisungen in der [Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md) , um die von den Beispielen verwendeten Ports zu aktivieren.
 
-6. Überprüfen Sie das folgende Standardverzeichnis: \<InstallDrive >: **\WF_WCF_Samples**. Wenn die Beispiele bereits installiert wurden, ist dies das Standardverzeichnis.
+6. Suchen Sie nach dem folgenden Standardverzeichnis: \<InstallDrive >: **\WF_WCF_Samples**. Wenn die Beispiele bereits installiert wurden, ist dies das Standardverzeichnis.
 
-7. Wenn die Beispiele nicht installiert sind, installieren Sie Sie über den Download Speicherort der Beispiele für [Visual C# ](https://go.microsoft.com/fwlink/?LinkId=190939) oder [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).
+7. Wenn die Beispiele nicht installiert sind, installieren Sie Sie über den Download Speicherort [C#](https://go.microsoft.com/fwlink/?LinkId=190939)für Beispiele für.
 
-8. Nachdem Sie die Beispiele installiert haben, wechseln Sie zu: \<InstallDrive>: **\WF_WCF_Samples\WCF\Setup\\**
+8. Nachdem Sie die Beispiele installiert haben, wechseln Sie zu: \<InstallDrive >: **\WF_WCF_Samples\WCF\Setup\\**
 
 9. Führen Sie die Batchdatei **Setupvroot. bat** aus. Die folgenden Schritte werden ausgeführt:
 
@@ -63,9 +63,9 @@ Das virtuelle Verzeichnis **Service Model Samples** wird zum entwickeln und Ausf
     > [!NOTE]
     > Wenn dieser Schritt nicht ausgeführt wird, lässt sich keines der von IIS gehosteten Beispiele erstellen. Legen Sie die Berechtigungen unbedingt richtig fest, oder führen Sie die SDK-Eingabeaufforderung und Visual Studio-Eingabeaufforderung (2012) als Administrator aus.
 
-11. Erstellen Sie das Verzeichnis C:\logs auf dem Computer. Möglicherweise wird es bei einigen Beispielen vorausgesetzt. Stellen Sie sicher, dass das entsprechende Konto Schreibzugriff auf diesen Ordner hat. Für Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]und Windows Server 2008 R2 ist dieses Konto **Network Service**. Unter [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ist es das Konto NT-Autorität\Netzwerkdienst. Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lautet das Konto ASPNET.
+11. Erstellen Sie das Verzeichnis C:\logs auf dem Computer. Möglicherweise wird es bei einigen Beispielen vorausgesetzt. Stellen Sie sicher, dass das entsprechende Konto Schreibzugriff auf diesen Ordner hat. Für Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]und Windows Server 2008 R2 ist dieses Konto **Netzwerkdienst**. Unter [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ist es das Konto NT-Autorität\Netzwerkdienst. Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] lautet das Konto ASPNET.
 
-12. Führen Sie die Datei "Setupcerttool.bat" aus. Diese Datei befindet sich im \<Ordner InstallPath > \WF_WCF_Samples\WCF\Setup\.  Mit diesem Skript werden folgende Aufgaben ausgeführt:
+12. Führen Sie die Datei "Setupcerttool.bat" aus. Diese Datei befindet sich im Ordner "\<InstallPath > \WF_WCF_Samples\WCF\Setup\".  Mit diesem Skript werden folgende Aufgaben ausgeführt:
 
     - Erstellen des Tools FindPrivateKey
 

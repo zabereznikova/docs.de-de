@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971819"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798900"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -71,9 +71,9 @@ ms.locfileid: "70971819"
 |-----------------------------------|-----------------|  
 |`Action`|Ruft eine Sicherheitsaktion ab oder legt diese fest. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
 |`AllowBlankPassword`|Aktiviert oder deaktiviert die Verwendung von leeren Kennwörtern in einer Verbindungszeichenfolge. Gültige Werte sind `true` (zum Aktivieren der Verwendung von leeren Kennwörtern) und `false` (zum Deaktivieren der Verwendung von leeren Kennwörtern). Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis**:  Die Verbindungszeichenfolge darf keine Benutzer-ID und kein Kennwort enthalten. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungs Zeichenfolgen werden im Formular  *\<Parameter Name > =* identifiziert. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis**:  Wenn Sie keine `KeyRestrictions` angeben, die `KeyRestrictionBehavior`-Eigenschaft aber auf `AllowOnly` oder `PreventUsage` festlegen, sind keine zusätzlichen Verbindungszeichenfolgenparameter zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). `AllowOnly`der Standardwert ist. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis:**  Fügen Sie keine Benutzer-ID oder ein Kennwort in die Verbindungs Zeichenfolge ein. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungs Zeichenfolgen werden in der Form *\<Parameter Name > =* identifiziert. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis:**  Wenn Sie `KeyRestrictions`nicht angeben, aber `KeyRestrictionBehavior`-Eigenschaft auf `AllowOnly` oder `PreventUsage`festlegen, sind keine zusätzlichen Parameter für die Verbindungs Zeichenfolge zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). Standardmäßig ist `AllowOnly` festgelegt. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`TypeID`|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Wird von <xref:System.Attribute> geerbt.|  
 |`Unrestricted`|Gibt an, ob für die Ressource uneingeschränkte Berechtigungen deklariert wurden. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "70971819"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>Syntax von "KeyRestrictions"  
- Im folgenden Beispiel wird dieselbe Verbindungs Zeichenfolge aktiviert, die Verwendung `Encrypt` der Verbindungs Zeichen folgen Optionen und `Packet Size` aktiviert, aber die Verwendung anderer Verbindungs Zeichen folgen Optionen wird eingeschränkt.  
+ Im folgenden Beispiel wird dieselbe Verbindungs Zeichenfolge aktiviert, die Verwendung der Optionen `Encrypt` und `Packet Size` der Verbindungs Zeichenfolge aktiviert, aber die Verwendung anderer Optionen für Verbindungs Zeichenfolgen wird eingeschränkt.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971819"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Aktivieren einer teilweisen Vertrauenswürdigkeit mit einem benutzerdefinierten Berechtigungssatz  
- Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Um z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einem <xref:System.Security.Policy.Zone> von `LocalIntranet`einzuschließen, könnte ein Systemadministrator den Berechtigungs Satz `LocalIntranet`für kopieren, ihn in "CustomLocalIntranet" Umbenennen <xref:System.Data.SqlClient> , die Berechtigungen hinzufügen, importieren der CustomLocalIntranet-Berechtigungs Satz mit [Caspol. exe (Code Access Security Policy-Tool)](../../tools/caspol-exe-code-access-security-policy-tool.md), und legt den Berechtigungs Satz von `LocalIntranet_Zone` auf CustomLocalIntranet fest.  
+ Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Wenn Sie z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einer <xref:System.Security.Policy.Zone> von `LocalIntranet`einschließen möchten, kann ein Systemadministrator den Berechtigungs Satz für `LocalIntranet`kopieren, ihn in "CustomLocalIntranet" umbenennen, die <xref:System.Data.SqlClient> Berechtigungen hinzufügen, "CustomLocalIntranet" importieren. Berechtigungs Satz mithilfe von [Caspol. exe (Code Zugriffs-Sicherheitsrichtlinien Tool)](../../tools/caspol-exe-code-access-security-policy-tool.md), und legen Sie den Berechtigungs Satz `LocalIntranet_Zone` auf CustomLocalIntranet fest.  
   
 ### <a name="sample-permission-set"></a>Beispielberechtigungssatz  
  Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Weitere Informationen zum Erstellen von benutzerdefinierten Berechtigungs Sätzen finden [Sie unter Konfigurieren von Berechtigungs Sätzen mit Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -192,7 +192,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
  Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../interop/index.md).  
   
- .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Advanced COM Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Advanced COM Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
 ## <a name="see-also"></a>Siehe auch
 
