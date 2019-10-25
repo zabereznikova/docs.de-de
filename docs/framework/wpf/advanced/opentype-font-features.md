@@ -195,7 +195,7 @@ Dieses Thema enthält eine Übersicht über einige der wichtigsten Features der 
   
  Im folgenden Text werden verschiedene Symbole im alternativen Stil in der Schriftart Pericles gezeigt.  
   
- ![Text mit alternativen OpenType-Symbolen für die Schriftart "Pericles"](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Text mit alternativen OpenType-Symbolen für die Schriftart "Pericles"")
+ ![Text mit alternativen OpenType-Symbolen für die Schriftart Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Text mit alternativen OpenType-Symbolen für die Schriftart Pericles")
 
  Im folgenden Markupbeispiel wird veranschaulicht, wie diese zusätzlichen Stilvarianten von Symbolen definiert werden.  
   
