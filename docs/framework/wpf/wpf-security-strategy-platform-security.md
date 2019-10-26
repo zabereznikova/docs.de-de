@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774745"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920373"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitstellt, nutzt es auch die Sicherheitsfunktionen der zugrunde liegenden Plattform, die das Betriebssystem, die CLR und Internet Explorer umfasst. Im Zusammenspiel stellen diese Ebenen für [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ein leistungsfähiges Modell für tiefgreifende, vorbeugende Sicherheitsmaßnahmen (Defense-in-Depth-Modell) bereit, das eine einzelne Fehlerquelle zu vermeiden sucht, wie aus der folgenden Abbildung hervorgeht:  
@@ -165,7 +165,7 @@ WPF-Benutzer unter Windows Vista profitieren von den zusätzlichen Sicherheitser
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce-Bereitstellung  
- ClickOnce ist eine umfassende Bereitstellungs Technologie, die in .NET Framework enthalten ist und in [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] integriert ist (Weitere Informationen finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) ). Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Anwendungen können mithilfe von ClickOnce bereitgestellt werden, während im Browser gehostete Anwendungen mit ClickOnce bereitgestellt werden müssen.  
+ ClickOnce ist eine umfassende Bereitstellungs Technologie, die in .NET Framework enthalten ist und in Visual Studio integriert ist (Weitere Informationen finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) ). Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Anwendungen können mithilfe von ClickOnce bereitgestellt werden, während im Browser gehostete Anwendungen mit ClickOnce bereitgestellt werden müssen.  
   
  Anwendungen, die mit ClickOnce bereitgestellt werden, erhalten über die Code Zugriffssicherheit (CAS) eine zusätzliche Sicherheitsschicht. im wesentlichen fordern ClickOnce-Anwendungen, die Sie benötigen, die erforderlichen Berechtigungen an. Diese Berechtigungen werden nur gewährt, wenn sie nicht höher sind als die Berechtigungen im Berechtigungssatz für die Zone, von der die Anwendung bereitgestellt wird. Durch die Reduzierung des Berechtigungs Satzes auf die benötigten Berechtigungen, selbst wenn Sie niedriger sind als die des Berechtigungs Satzes der Start Zone, wird die Anzahl der Ressourcen, auf die die Anwendung zugreifen kann, auf ein Minimum reduziert. Dadurch wird der mögliche Schaden für den Clientcomputer reduziert, falls die Anwendung gehackt wird.  
   

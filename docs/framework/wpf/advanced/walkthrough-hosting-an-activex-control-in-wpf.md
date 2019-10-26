@@ -8,30 +8,30 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859940"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920198"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines ActiveX-Steuerelements in WPF
-Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie Microsoft ActiveX-Steuerelemente in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendung. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie hosten können die [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] als ein Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite.
+Um eine verbesserte Interaktion mit Browsern zu ermöglichen, können Sie Microsoft-ActiveX-Steuerelemente in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung verwenden. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] als Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite hosten können.
 
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
 - Erstellen des Projekts.
 
-- Erstellen das ActiveX-Steuerelement.
+- Das ActiveX-Steuerelement wird erstellt.
 
-- Hosten das ActiveX-Steuerelement auf einer WPF-Seite.
+- Hosting des ActiveX-Steuer Elements auf einer WPF-Seite.
 
- Wenn Sie diese exemplarische Vorgehensweise abgeschlossen haben, wissen Sie, wie mit Microsoft ActiveX-Steuerelemente in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendung.
+ Wenn Sie diese exemplarische Vorgehensweise abgeschlossen haben, erfahren Sie, wie Sie Microsoft-ActiveX-Steuerelemente in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] installiert auf dem Computer, auf dem Visual Studio installiert ist.
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] auf dem Computer installiert, auf dem Visual Studio installiert ist.
 
 - Visual Studio 2010.
 
@@ -39,66 +39,66 @@ Um verbesserte Interaktion mit Browsern zu aktivieren, können Sie Microsoft Act
 
 ### <a name="to-create-and-set-up-the-project"></a>So erstellen und richten Sie das Projekt ein
 
-1. Erstellen einer WPF-Anwendungsprojekt mit dem Namen `HostingAxInWpf`.
+1. Erstellen Sie ein WPF-Anwendungsprojekt mit dem Namen `HostingAxInWpf`.
 
-2. Hinzufügen ein Windows Forms-Steuerelementbibliothek-Projekts zur Projektmappe, und nennen Sie das Projekt `WmpAxLib`.
+2. Fügen Sie ein Windows Forms-Steuerelement Bibliothek-Projekt zur Projekt Mappe hinzu, und benennen Sie das Projekt `WmpAxLib`.
 
-3. Fügen Sie einen Verweis auf die Windows Media Player-Assembly, mit die Namen wmp.dll WmpAxLib im Projekt hinzu.
+3. Fügen Sie im wmpxlib-Projekt einen Verweis auf die Windows Media Player-Assembly mit dem Namen "WMP. dll" hinzu.
 
-4. Öffnen der **Toolbox**.
+4. Öffnen Sie die **Toolbox**.
 
-5. Mit der rechten Maustaste den **Toolbox**, und klicken Sie dann auf **Elemente auswählen**.
+5. Klicken Sie mit der rechten Maustaste in die **Toolbox**, und klicken Sie dann auf **Elemente auswählen**.
 
-6. Klicken Sie auf die **COM-Komponenten** Registerkarte die **Windows Media Player** steuern, und klicken Sie dann auf **OK**.
+6. Klicken Sie auf die Registerkarte **com-Komponenten** , wählen Sie das **Fenster Windows Media Player** aus, und klicken Sie dann auf **OK**
 
-     Das Windows Media Player-Steuerelement wird hinzugefügt, um die **Toolbox**.
+     Das Windows Media Player-Steuerelement wird der **Toolbox**hinzugefügt.
 
-7. Klicken Sie im Projektmappen-Explorer mit der Maustaste der **"UserControl1"** Datei, und klicken Sie dann auf **umbenennen**.
+7. Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf die Datei **UserControl1** , und klicken Sie dann auf **Umbenennen**.
 
-8. Ändern Sie den Namen in `WmpAxControl.vb` oder `WmpAxControl.cs`, je nach Sprache.
+8. Ändern Sie den Namen abhängig von der Sprache in `WmpAxControl.vb` oder `WmpAxControl.cs`.
 
 9. Wenn Sie aufgefordert werden, alle Verweise umzubenennen, klicken Sie auf **Ja**.
 
-## <a name="creating-the-activex-control"></a>Erstellen das ActiveX-Steuerelement
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] generiert automatisch ein <xref:System.Windows.Forms.AxHost> Wrapperklasse für ein Microsoft ActiveX-Steuerelement, wenn das Steuerelement, einer Entwurfsoberfläche hinzugefügt wird. Die folgende Prozedur erstellt eine verwaltete Assembly mit dem Namen AxInterop.WMPLib.dll.
+## <a name="creating-the-activex-control"></a>Erstellen des ActiveX-Steuer Elements
+Visual Studio generiert automatisch eine <xref:System.Windows.Forms.AxHost> Wrapper Klasse für ein Microsoft ActiveX-Steuerelement, wenn das Steuerelement einer Entwurfs Oberfläche hinzugefügt wird. Mit der folgenden Prozedur wird eine verwaltete Assembly mit dem Namen "AxInterop. WMPLib. dll" erstellt.
 
-### <a name="to-create-the-activex-control"></a>Beim Erstellen des ActiveX-Steuerelements
+### <a name="to-create-the-activex-control"></a>So erstellen Sie das ActiveX-Steuerelement
 
-1. Öffnen Sie WmpAxControl.vb oder WmpAxControl.cs im Windows Forms-Designer an.
+1. Öffnen Sie wmpxcontrol. vb oder WmpAxControl.cs im Windows Forms-Designer.
 
-2. Von der **Toolbox**, fügen Sie das Windows Media Player-Steuerelement, auf die Entwurfsoberfläche.
+2. Fügen Sie der Entwurfs Oberfläche aus der **Toolbox**das Windows Media Player-Steuerelement hinzu.
 
-3. Legen Sie im Eigenschaftenfenster den Wert des Windows Media Player-Steuerelements <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.
+3. Legen Sie in der Eigenschaftenfenster den Wert der Eigenschaft <xref:System.Windows.Forms.Control.Dock%2A> des Windows Media Player-Steuer Elements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.
 
-4. Erstellen Sie das WmpAxLib Steuerelementbibliothek-Projekt.
+4. Erstellen Sie das wmpxlib-Steuerelement Bibliothek-Projekt.
 
-## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hosten das ActiveX-Steuerelement auf einer WPF-Seite
+## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hosting des ActiveX-Steuer Elements auf einer WPF-Seite
 
-### <a name="to-host-the-activex-control"></a>Zum Hosten des ActiveX-Steuerelements
+### <a name="to-host-the-activex-control"></a>Zum Hosten des ActiveX-Steuer Elements
 
-1. Fügen Sie einen Verweis auf die generierte Assembly der ActiveX-Interoperabilität in HostingAxInWpf-Projekt hinzu.
+1. Fügen Sie im Projekt "hustingaxinwpf" einen Verweis auf die generierte ActiveX-Interoperabilitäts-Assembly hinzu.
 
-     Diese Assembly ist mit dem Namen AxInterop.WMPLib.dll und wurde dem Debugordner des Projekts WmpAxLib hinzugefügt, wenn Sie das Windows Media Player-Steuerelement importiert.
+     Diese Assembly heißt "AxInterop. WMPLib. dll" und wurde beim Importieren des Windows Media Player-Steuer Elements zum Ordner "Debug" des Projekts "wmpxlib" hinzugefügt.
 
-2. Fügen Sie einen Verweis auf die Assembly "WindowsFormsIntegration", mit die Namen WindowsFormsIntegration.dll hinzu.
+2. Fügen Sie einen Verweis auf die WindowsFormsIntegration-Assembly mit dem Namen "WindowsFormsIntegration. dll" hinzu.
 
-3. Hinzufügen eines Verweises auf die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Assembly, die mit dem Namen "System.Windows.Forms.dll".
+3. Fügen Sie einen Verweis auf die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Assembly mit dem Namen "System. Windows. Forms. dll" hinzu.
 
-4. Öffnen Sie "MainWindow.xaml" im WPF-Designer.
+4. Öffnen Sie die Datei "MainWindow. XAML" im WPF-Designer.
 
-5. Name der <xref:System.Windows.Controls.Grid> Element `grid1`.
+5. Benennen Sie das <xref:System.Windows.Controls.Grid> Element `grid1`.
 
      [!code-xaml[HostingAxInWpf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]
 
-6. Wählen Sie in der Entwurfsansicht oder XAML-Ansicht der <xref:System.Windows.Window> Element.
+6. Wählen Sie in Designansicht-oder XAML-Ansicht das <xref:System.Windows.Window> Element aus.
 
-7. Klicken Sie im Eigenschaftenfenster auf die **Ereignisse** Registerkarte.
+7. Klicken Sie im Eigenschaftenfenster auf die Registerkarte **Ereignisse** .
 
-8. Doppelklicken Sie auf die <xref:System.Windows.FrameworkElement.Loaded> Ereignis.
+8. Doppelklicken Sie auf das <xref:System.Windows.FrameworkElement.Loaded> Ereignis.
 
-9. Fügen Sie den folgenden Code zum Behandeln der <xref:System.Windows.FrameworkElement.Loaded> Ereignis.
+9. Fügen Sie den folgenden Code ein, um das <xref:System.Windows.FrameworkElement.Loaded>-Ereignis zu behandeln.
 
-     Dieser Code erstellt eine Instanz der <xref:System.Windows.Forms.Integration.WindowsFormsHost> steuern und fügt eine Instanz des der `AxWindowsMediaPlayer` Steuerelement als untergeordnetes Element.
+     Mit diesem Code wird eine Instanz des <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Steuer Elements erstellt und eine Instanz des `AxWindowsMediaPlayer` Steuer Elements als untergeordnetes Element hinzugefügt.
 
      [!code-csharp[HostingAxInWpf#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  

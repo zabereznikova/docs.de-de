@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie ein InkCanvas-Steuerelement in einer WPF-app in Visual Studio
+title: Erstellen eines InkCanvas in einer WPF-App in Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753004"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920252"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>Erste Schritte mit Freihandeingaben in WPF
+# <a name="get-started-with-ink-in-wpf"></a>Ersten Einstieg in WPF
 
-Windows Presentation Foundation (WPF) ist ein Freihand-Feature, das es einfach macht, Freihandeingaben in Ihre app zu integrieren.
+Windows Presentation Foundation (WPF) verfügt über eine Ink-Funktion, die das Integrieren von digitalem frei Hand Eingaben in Ihre APP erleichtert.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
-Um die folgenden Beispiele verwenden zu können, installieren Sie zunächst [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben. Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Wenn Sie die folgenden Beispiele verwenden möchten, installieren Sie zunächst [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Außerdem ist es hilfreich zu wissen, wie Sie grundlegende WPF-apps schreiben können. Hilfe zu den ersten Schritten mit WPF finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Schnellstart
 
-In diesem Abschnitt können Sie eine einfache WPF-Anwendung zu schreiben, die Freihandeingaben erfasst.
+Dieser Abschnitt unterstützt Sie beim Schreiben einer einfachen WPF-Anwendung, die frei Hand Eingaben sammelt.
 
-### <a name="got-ink"></a>Erfasst Freihandeingabe?
+### <a name="got-ink"></a>Sie haben Freihand?
 
-Zum Erstellen einer WPF-app, die Freihandeingaben unterstützt:
+So erstellen Sie eine WPF-App, die frei Hand Eingaben unterstützt
 
 1. Öffnen Sie Visual Studio.
 
-2. Erstellen Sie ein neues **WPF-App**.
+2. Erstellen Sie eine neue **WPF-App**.
 
-   In der **neues Projekt** Dialogfeld erweitern Sie die **installiert** > **Visual C#-** oder **Visual Basic**  >   **Windows-Desktop** Kategorie. Wählen Sie dann die **WPF-App ((.NET Framework)** -app-Vorlage. Geben Sie einen Namen ein, und wählen Sie dann **OK**.
+   Erweitern Sie im Dialogfeld **Neues Projekt** die Kategorie **installierter** >  **C# Visual** oder **Visual Basic** > **Windows-Desktop** . Wählen Sie dann die APP-Vorlage **WPF-App (.NET Framework)** aus. Geben Sie einen Namen ein, und klicken Sie dann auf **OK**.
 
-   Visual Studio erstellt das Projekt, und *"MainWindow.xaml"* im Designer geöffnet.
+   Visual Studio erstellt das Projekt, und *MainWindow. XAML* wird im Designer geöffnet.
 
-3. Typ `<InkCanvas/>` zwischen der `<Grid>` Tags.
+3. Geben Sie `<InkCanvas/>` zwischen den `<Grid>`-Tags ein.
 
-   ![XAML-Designer mit InkCanvas-Steuerelement-tag](./media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![XAML-Designer mit InkCanvas-Tag](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. Drücken Sie **F5** auf die Anwendung im Debugger zu starten.
+4. Drücken Sie **F5** , um die Anwendung im Debugger zu starten.
 
-5. Schreiben Sie mit einem Stift oder der Maus **Hallo Welt** im Fenster.
+5. Schreiben Sie mit einem **Tablettstift** oder einer Maus im Fenster "Hello World".
 
-Sie haben die Freihand-Entsprechung einer "Hello World"-Anwendung mit nur 12 Tastatureingaben geschrieben.
+Sie haben die Ink-Entsprechung einer "Hello World"-Anwendung mit nur 12 Keystrokes geschrieben!
 
-### <a name="spice-up-your-app"></a>Darstellungsschichten interessanter zu gestalten Sie Ihre App
+### <a name="spice-up-your-app"></a>Hochskalieren der APP
 
-Lassen Sie uns einige Funktionen von WPF nutzen. Ersetzen Sie alles zwischen den öffnenden und schließenden \<Fenster >-Tags mit folgendem Markup:
+Wir nutzen einige Features von WPF. Ersetzen Sie alles zwischen dem öffnenden und dem schließenden \<Fenster > Tags durch das folgende Markup:
 
 ```xaml
 <Page>
@@ -68,45 +68,45 @@ Lassen Sie uns einige Funktionen von WPF nutzen. Ersetzen Sie alles zwischen den
 </Page>
 ```
 
-Dieses XAML erstellt einen Farbverlaufspinsel-Hintergrund für die Freihandoberfläche.
+Dieser XAML-Code erstellt einen Hintergrund für den Farbverlaufs Pinsel auf der Eingangs Oberfläche.
 
-![Verlaufsfarben auf Freihand-Oberfläche in WPF-app](./media/getting-started-with-ink/gradient-colors.png)
+![Farbverlaufs Farben auf der Erstellungs Oberfläche in der WPF-App](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>Hinzufügen von Code hinter der XAML
+### <a name="add-some-code-behind-the-xaml"></a>Code hinter dem XAML hinzufügen
 
-Während der XAML sehr Entwerfen der Benutzeroberfläche erleichtert, muss jeder reale Anwendung Code hinzufügen, um Ereignisse zu behandeln. Hier ist ein einfaches Beispiel, das auf die Freihandeingabe in Reaktion auf eine mit der rechten Maustaste in eine Maus vergrößert.
+Obwohl XAML das Entwerfen der Benutzeroberfläche vereinfacht, muss jede reale Anwendung Code zum Behandeln von Ereignissen hinzufügen. Im folgenden finden Sie ein einfaches Beispiel, das als Reaktion auf einen Rechtsklick mit der Maus auf die frei Hand Eingabe zoomt.
 
-1. Legen Sie die `MouseRightButtonUp` Ereignishandler in Ihrem XAML:
+1. Legen Sie den `MouseRightButtonUp` Handler in Ihrem XAML-Code fest:
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. In **Projektmappen-Explorer**, erweitern Sie "MainWindow.xaml", und öffnen Sie die CodeBehind-Datei ("MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb"). Fügen Sie den folgenden Ereignishandlercode hinzu:
+1. Erweitern Sie in **Projektmappen-Explorer**den Eintrag MainWindow. XAML, und öffnen Sie die Code Behind-Datei (MainWindow.XAML.cs oder MainWindow. XAML. vb). Fügen Sie den folgenden Ereignishandlercode hinzu:
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. Führen Sie die Anwendung aus. Einige Freihandeingaben, und klicken Sie dann mit der rechten Maustaste, oder führen Sie ein Äquivalent drücken und halten mit einem Stift.
+1. Führen Sie die Anwendung aus. Fügen Sie frei Hand Eingaben hinzu, klicken Sie dann mit der rechten Maustaste auf die Maus, oder führen Sie eine Press-and-Hold-Entsprechung mit einem Tablettstift
 
-   Die Anzeige vergrößert jedes Mal, wenn Sie mit der rechten Maustaste klicken.
+   Wenn Sie mit der rechten Maustaste klicken, wird die Anzeige vergrößert.
 
-### <a name="use-procedural-code-instead-of-xaml"></a>Prozeduralen Code statt XAML verwenden
+### <a name="use-procedural-code-instead-of-xaml"></a>Verwenden von prozeduralem Code anstelle von XAML
 
-Sie können alle WPF-Funktionen aus prozeduralen Code zugreifen. Um eine "Hello Freihand-World"-Anwendung für WPF erstellen, die alle XAML überhaupt nicht verwendet, gehen Sie wie folgt vor.
+Sie können auf alle WPF-Funktionen über prozeduralen Code zugreifen. Führen Sie die folgenden Schritte aus, um eine "Hello Ink World"-Anwendung für WPF zu erstellen, die überhaupt kein XAML verwendet.
 
-1. Erstellen Sie ein neues Konsolenanwendungsprojekt in Visual Studio.
+1. Erstellen Sie in Visual Studio ein neues Konsolen Anwendungsprojekt.
 
-   In der **neues Projekt** Dialogfeld erweitern Sie die **installiert** > **Visual C#-** oder **Visual Basic**  >   **Windows-Desktop** Kategorie. Wählen Sie dann die **Konsolen-App ((.NET Framework)** -app-Vorlage. Geben Sie einen Namen ein, und wählen Sie dann **OK**.
+   Erweitern Sie im Dialogfeld **Neues Projekt** die Kategorie **installierter** >  **C# Visual** oder **Visual Basic** > **Windows-Desktop** . Wählen Sie dann die APP-Vorlage für **Konsolen-app (.NET Framework)** aus. Geben Sie einen Namen ein, und klicken Sie dann auf **OK**.
 
-1. Fügen Sie den folgenden Code in der Datei Program.cs oder Program.vb-Datei ein:
+1. Fügen Sie den folgenden Code in die Datei Program.cs oder Program. vb ein:
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, indem Sie mit der rechten Maustaste auf **Verweise** in **Projektmappen-Explorer** und **VerweisHinzufügen**.
+1. Fügen Sie Verweise auf die Assemblys PresentationCore, presentationframework und WindowsBase hinzu, indem Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise** klicken und **Verweis hinzufügen**auswählen.
 
-   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![Verweis-Manager mit "PresentationCore" und "PresentationFramework"](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. Erstellen Sie die Anwendung durch Drücken von **F5**.
+1. Erstellen Sie die Anwendung, indem Sie **F5**drücken.
 
 ## <a name="see-also"></a>Siehe auch
 

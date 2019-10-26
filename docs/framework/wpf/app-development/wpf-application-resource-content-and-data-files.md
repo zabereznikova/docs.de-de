@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581730"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920366"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Anwendungen sind häufig von Dateien abhängig, die nicht ausführbare Daten enthalten, z. b. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audiodaten. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das konfigurieren, identifizieren und Verwenden dieser Daten Dateitypen, die als Anwendungs Datendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
@@ -55,7 +55,7 @@ ms.locfileid: "72581730"
 > Die in diesem Abschnitt beschriebenen Ressourcen Dateien unterscheiden sich von den in [XAML-Ressourcen](../advanced/xaml-resources.md) beschriebenen Ressourcen Dateien und unterscheiden sich von den in [Verwalten von Anwendungs Ressourcen (.net)](/visualstudio/ide/managing-application-resources-dotnet)beschriebenen eingebetteten oder verknüpften Ressourcen.  
   
 ### <a name="configuring-resource-files"></a>Konfigurieren von Ressourcendateien  
- In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] handelt es sich bei einer Ressourcen Datei um eine Datei, die in einem MSBuild-Projekt (Microsoft Build Engine) als `Resource` Element enthalten ist.  
+ In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]handelt es sich bei einer Ressourcen Datei um eine Datei, die in einem MSBuild-Projekt (Microsoft Build Engine) als `Resource` Element enthalten ist.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,7 +68,7 @@ ms.locfileid: "72581730"
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] erstellen Sie eine Ressourcen Datei, indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `Resource` festlegen.  
+> In Visual Studio erstellen Sie eine Ressourcen Datei, indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `Resource`festlegen.  
   
  Wenn das Projekt erstellt wird, kompiliert MSBuild die Ressource in die Assembly.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "72581730"
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] fügen Sie einem Projekt eine neue <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> oder <xref:System.Windows.ResourceDictionary> hinzu. die `Build Action` für die Markup Datei wird standardmäßig `Page`.  
+> In Visual Studio fügen Sie einem Projekt eine neue <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>oder <xref:System.Windows.ResourceDictionary> hinzu. die `Build Action` für die Markup Datei wird standardmäßig auf `Page`.  
   
  Wenn ein Projekt mit `Page` Elementen kompiliert wird, werden die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Elemente in das Binärformat konvertiert und in die zugehörige Assembly kompiliert. Folglich können diese Dateien auf die gleiche Weise verwendet werden wie typische Ressourcendateien.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72581730"
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] erstellen Sie eine Inhalts Datei, indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `Content` festlegen. Legen Sie dessen `Copy to Output Directory` auf `Copy always` (identisch mit `Always`) und `Copy if newer` (identisch mit `PreserveNewest`) fest.  
+> In Visual Studio erstellen Sie eine Inhalts Datei, indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `Content`festlegen und die `Copy to Output Directory` auf `Copy always` (identisch mit `Always`) und `Copy if newer` (identisch mit `PreserveNewest`) festlegen.  
   
  Wenn das Projekt erstellt wird, wird ein <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Attribut in die Metadaten der Assembly für jede Inhalts Datei kompiliert.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "72581730"
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Die Schemas „file:///“ und „http://“ erfordern jedoch volle Vertrauenswürdigkeit der Anwendung. Wenn es sich bei Ihrer Anwendung um eine [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] handelt, die über das Internet oder Intranet gestartet wurde, und nur den Berechtigungs Satz anfordert, der für Anwendungen zulässig ist, die von diesen Orten aus gestartet werden, können lose Dateien nur aus der Ursprungs Site der Anwendung geladen werden (Start Speicherort). Solche Dateien werden als Dateien *der Ursprungs Site* bezeichnet.  
+ Die Schemas „file:///“ und „http://“ erfordern jedoch volle Vertrauenswürdigkeit der Anwendung. Wenn es sich bei Ihrer Anwendung um eine [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] handelt, die über das Internet oder Intranet gestartet wurde, und nur den Berechtigungs Satz anfordert, der für Anwendungen zulässig ist, die von diesen Orten aus gestartet werden, können lose Dateien nur aus der Ursprungs Site der Anwendung geladen werden ( Startposition). Solche Dateien werden als Dateien *der Ursprungs Site* bezeichnet.  
   
  Dateien der Ursprungssite stellen für teilweise vertrauenswürdige Anwendungen die einzige Option dar, obwohl sie nicht auf letztere beschränkt sind. Anwendungen mit voller Vertrauenswürdigkeit müssen ggf. Anwendungsdatendateien laden, die sie zur Buildzeit nicht kennen. Obwohl Anwendungen mit voller Vertrauenswürdigkeit „file:///“ verwenden könnten, ist anzunehmen, dass die Anwendungsdatendateien im selben Ordner oder in einem Unterordner der Anwendungsassembly installiert werden. In einem solchen Fall gestaltet sich die Verwendung des Verweises auf die Ursprungssite einfacher als die Verwendung von „file:///“, da die Verwendung von „file:///“ von Ihnen erfordert, den vollständigen Pfad zur Datei auszuarbeiten.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "72581730"
 ```  
   
 > [!NOTE]
-> In [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] erstellen Sie eine Datei vom Typ "Site of Origin", indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `None` festlegen.  
+> In Visual Studio erstellen Sie eine Website der Ursprungs Datei, indem Sie einem Projekt eine Datei hinzufügen und deren `Build Action` auf `None`festlegen.  
   
  Wenn das Projekt erstellt wird, kopiert MSBuild die angegebenen Dateien in den Buildausgabeordner.  
   

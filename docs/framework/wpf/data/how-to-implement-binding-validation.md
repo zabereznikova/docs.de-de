@@ -1,42 +1,48 @@
 ---
-title: 'Vorgehensweise: Implementieren der Bindungsvalidierung'
+title: 'Gewusst wie: Implementieren der Bindungsvalidierung'
 ms.date: 03/30/2017
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a1a8df78a785066992472c7de37f958ae3467f1
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010331"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920157"
 ---
-# <a name="how-to-implement-binding-validation"></a>Vorgehensweise: Implementieren der Bindungsvalidierung
-Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> und ein Formattriggers zum Bereitstellen von visuellen Feedback, um den Benutzer zu informieren, wenn ein ungültiger Wert eingegeben wird, auf Grundlage einer benutzerdefinierten Validierungsregel.  
+# <a name="how-to-implement-binding-validation"></a>Gewusst wie: Implementieren der Bindungsvalidierung
+
+In diesem Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> und ein Formatvorlagen-Auslösers verwendet werden, um den Benutzer zu informieren, wenn ein ungültiger Wert auf der Grundlage einer benutzerdefinierten Validierungs Regel eingegeben wird.
+
+## <a name="example"></a>Beispiel
+
+Der Text Inhalt der <xref:System.Windows.Controls.TextBox> im folgenden Beispiel ist an die `Age`-Eigenschaft (vom Typ "int") eines Bindungs Quell Objekts mit dem Namen `ods`gebunden. Die Bindung ist so eingerichtet, dass die Validierungsregel mit `AgeRangeRule` verwendet wird. Wenn der Benutzer ein nicht numerisches Zeichen oder einen Wert kleiner als 21 oder größer als 130 eingibt, werden neben dem Textfeld ein rotes Ausrufezeichen und eine QuickInfo mit einer Fehlermeldung angezeigt, sobald der Mauszeiger über das Textfeld bewegt wird.
+
+[!code-xaml[BindValidation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]
+
+Das folgende Beispiel zeigt die Implementierung von `AgeRangeRule`, die von <xref:System.Windows.Controls.ValidationRule> erbt und die <xref:System.Windows.Controls.ValidationRule.Validate%2A>-Methode überschreibt. Die `Int32.Parse`-Methode wird für den-Wert aufgerufen, um sicherzustellen, dass Sie keine ungültigen Zeichen enthält. Die <xref:System.Windows.Controls.ValidationRule.Validate%2A>-Methode gibt eine <xref:System.Windows.Controls.ValidationResult> zurück, die angibt, ob der Wert gültig ist, je nachdem, ob eine Ausnahme während der Verarbeitung abgefangen wird und ob der Alters Wert außerhalb der unteren und oberen Begrenzungen liegt.
+
+[!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]
+[!code-vb[BindValidation#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindValidation/VisualBasic/AgeRangeRule.vb#3)]
+
+Das folgende Beispiel zeigt die benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> `validationTemplate`, die ein rotes Ausrufezeichen erstellt, um den Benutzer über einen Validierungs Fehler zu benachrichtigen. Steuerelementvorlagen werden verwendet, um die Darstellung eines Steuerelements neu zu definieren.
+
+[!code-xaml[BindValidation#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]
+
+Wie im folgenden Beispiel gezeigt, wird der <xref:System.Windows.Controls.ToolTip>, der die Fehlermeldung anzeigt, mit dem Format "`textBoxInError`" erstellt. Wenn der Wert <xref:System.Windows.Controls.Validation.HasError%2A> `true`ist, legt der-Fehler die QuickInfo des aktuellen <xref:System.Windows.Controls.TextBox> auf den ersten Validierungs Fehler fest. Der <xref:System.Windows.Data.Binding.RelativeSource%2A> wird auf <xref:System.Windows.Data.RelativeSourceMode.Self>festgelegt, was auf das aktuelle Element verweist.
+
+[!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]
+
+Das komplette Beispiel finden Sie unter Beispiel für die [Bind-Validierung](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/BindValidation).
   
-## <a name="example"></a>Beispiel  
- Der Textinhalt von der <xref:System.Windows.Controls.TextBox> im folgenden Beispiel an gebunden ist die `Age` -Eigenschaft (vom Typ "Int") von einem mit dem Namen Bindungsquellen-Objekts `ods`. Die Bindung ist so eingerichtet, dass die Validierungsregel mit `AgeRangeRule` verwendet wird. Wenn der Benutzer ein nicht numerisches Zeichen oder einen Wert kleiner als 21 oder größer als 130 eingibt, werden neben dem Textfeld ein rotes Ausrufezeichen und eine QuickInfo mit einer Fehlermeldung angezeigt, sobald der Mauszeiger über das Textfeld bewegt wird.  
-  
- [!code-xaml[BindValidation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
-  
- Das folgende Beispiel zeigt die Implementierung der `AgeRangeRule`, erbt von <xref:System.Windows.Controls.ValidationRule> und überschreibt die <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode. Die Int32.Parse()-Methode wird für den Wert aufgerufen, um sicherzustellen, dass keine ungültigen Zeichen enthalten sind. Die <xref:System.Windows.Controls.ValidationRule.Validate%2A> Methode gibt eine <xref:System.Windows.Controls.ValidationResult> die angibt, ob der Wert gültig ist, basierend auf gibt an, ob eine Ausnahme abgefangen wird, während der Analyse und gibt an, ob der Alterswert außerhalb der unter- und Obergrenzen ist.  
-  
- [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
-  
- Das folgende Beispiel zeigt die benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` erstellt ein rotes Ausrufezeichen zur Benachrichtigung des Benutzers eines Validierungsfehlers. Steuerelementvorlagen werden verwendet, um die Darstellung eines Steuerelements neu zu definieren.  
-  
- [!code-xaml[BindValidation#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
-  
- Wie im folgenden Beispiel gezeigt die <xref:System.Windows.Controls.ToolTip> , die zeigt die Fehlermeldung wird erstellt, mit dem Stil, die mit dem Namen `textBoxInError`. Wenn der Wert des <xref:System.Windows.Controls.Validation.HasError%2A> ist `true`, des Triggers legt die QuickInfo des aktuellen <xref:System.Windows.Controls.TextBox> zu den ersten Validierungsfehler. Die <xref:System.Windows.Data.Binding.RelativeSource%2A> nastaven NA hodnotu <xref:System.Windows.Data.RelativeSourceMode.Self>, bezieht sich auf das aktuelle Element.  
-  
- [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
-  
- Das vollständige Beispiel finden Sie unter [Beispiel für Bindungsvalidierung](https://go.microsoft.com/fwlink/?LinkID=159972).  
-  
- Beachten Sie, dass Sie keine benutzerdefinierte bereitstellen <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> Standardwert wird durch die zum Bereitstellen von visuellem Feedback, die dem Benutzer, wenn ein Überprüfungsfehler vorliegt. Weitere Informationen finden Sie unter „Datenvalidierung“ in [Übersicht über die Datenbindung](data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet außerdem eine integrierte Validierungsregel, die die während der Aktualisierung der Bindungsquelleneigenschaft ausgelöste Ausnahmen abfängt. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ExceptionValidationRule>.  
-  
+Beachten Sie Folgendes: Wenn Sie keine benutzerdefinierte <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bereitstellen, wird die Standardfehler Vorlage angezeigt, um dem Benutzer beim Auftreten eines Validierungs Fehlers visuelles Feedback zu geben. Weitere Informationen finden Sie unter „Datenvalidierung“ in [Übersicht über die Datenbindung](data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet außerdem eine integrierte Validierungsregel, die die während der Aktualisierung der Bindungsquelleneigenschaft ausgelöste Ausnahmen abfängt. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ExceptionValidationRule>.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht zur Datenbindung](data-binding-overview.md)

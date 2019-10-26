@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden an einen Webdienst'
+title: 'Gewusst wie: Erstellen einer Bindung an einen Webdienst'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954283"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920143"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Vorgehensweise: Binden an einen Webdienst
-Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiensts-Methode zurückgegeben wird.  
+# <a name="how-to-bind-to-a-web-service"></a>Gewusst wie: Erstellen einer Bindung an einen Webdienst
+Dieses Beispiel zeigt, wie Sie eine Bindung an Objekte herstellen, die von Webdienst Methoden aufrufen zurückgegeben werden.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die [MSDN/TechNet Publishing System (MTPS) Inhaltsdiensts](https://go.microsoft.com/fwlink/?LinkId=95677) zum Abrufen der Liste der Sprachen, die von einem angegebenen Dokument unterstützt.  
+ In diesem Beispiel wird der [Inhalts Dienst MSDN/TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) verwendet, um die Liste der Sprachen abzurufen, die von einem bestimmten Dokument unterstützt werden.  
   
- Bevor Sie einen Webdienst aufrufen, müssen Sie einen Verweis darauf erstellen. Erstellen Sie einen Webverweis auf den Dienst mit MTPS [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], befolgen Sie die folgenden Schritte aus:  
+ Bevor Sie einen Webdienst aufzurufen, müssen Sie einen Verweis darauf erstellen. Um einen Webverweis auf den MTPS-Dienst mithilfe von Visual Studio zu erstellen, führen Sie die folgenden Schritte aus:  
   
-1. Öffnen Sie Ihr [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]-Projekt.  
+1. Öffnen Sie Ihr Projekt in Visual Studio.  
   
-2. Von der **Projekt** Menü klicken Sie auf **Webverweis hinzufügen**.  
+2. Klicken Sie im Menü **Projekt** auf **Webverweis hinzufügen**.  
   
-3. Legen Sie im Dialogfeld die **URL** zu [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. Legen Sie im Dialogfeld die **URL** auf [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)fest.  
   
-4. Drücken Sie **wechseln** und dann **Verweis hinzufügen**.  
+4. Drücken Sie die Taste **go** und dann **Verweis hinzufügen**.  
   
- Anschließend rufen Sie die Webdienstmethode und legen Sie die <xref:System.Windows.FrameworkElement.DataContext%2A> des entsprechenden Steuerelements oder des Fenster auf das zurückgegebene Objekt. Die **GetContent** -Methode des Diensts MTPS akzeptiert einen Verweis auf die **GetContentRequest** Objekt. Aus diesem Grund legt im folgenden Beispiel wird zuerst ein Anforderungsobjekt fest:  
+ Als nächstes wird die Webdienst Methode aufgerufen und die <xref:System.Windows.FrameworkElement.DataContext%2A> des entsprechenden Steuer Elements oder Fensters auf das zurückgegebene Objekt festgelegt. Die **getContent** -Methode des MTPS-Dienstanbieter nimmt einen Verweis auf das **getContentRequest** -Objekt an. Im folgenden Beispiel wird daher zuerst ein Anforderungs Objekt eingerichtet:  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- Nach der <xref:System.Windows.FrameworkElement.DataContext%2A> -Element festgelegt wurde, können Sie Bindungen für die Eigenschaften des Objekts erstellen, die die <xref:System.Windows.FrameworkElement.DataContext%2A> auf festgelegt wurde. In diesem Beispiel die <xref:System.Windows.FrameworkElement.DataContext%2A> nastaven NA hodnotu der **getContent** zurückgegebenes Objekt der **GetContent** Methode. Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl> bindet an und zeigt die **Gebietsschema** Werte **AvailableVersionsAndLocales** von **getContent**.  
+ Nachdem die <xref:System.Windows.FrameworkElement.DataContext%2A> festgelegt wurde, können Sie Bindungen zu den Eigenschaften des Objekts erstellen, auf das der <xref:System.Windows.FrameworkElement.DataContext%2A> festgelegt wurde. In diesem Beispiel wird der <xref:System.Windows.FrameworkElement.DataContext%2A> auf das **getContentResponse** -Objekt festgelegt, das von der **getContent** -Methode zurückgegeben wird. Im folgenden Beispiel bindet der <xref:System.Windows.Controls.ItemsControl> an und zeigt die Gebiets Schema **Werte von** **availableversionsandlocale** von **getContentResponse**an.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Informationen zur Struktur von **getContent**, finden Sie unter [Dokumentation zu Content Service](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ Weitere Informationen zur Struktur von **getContentResponse**finden Sie in der [Dokumentation zum Inhalts Dienst](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Siehe auch
 

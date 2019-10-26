@@ -13,25 +13,28 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: e428939253065a5f66ca13f3d9f8a3321f3666ec
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660330"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920043"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Erstellen eines Steuerelements mit einer anpassbaren Darstellung
 
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Ihnen die Möglichkeit zum Erstellen eines Steuerelements, dessen Darstellung angepasst werden kann. Sie können z. B. Ändern der Darstellung von einem <xref:System.Windows.Controls.CheckBox> über welche Einstellung tun, als Eigenschaften werden durch Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate>. Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet den Standardwert <xref:System.Windows.Controls.ControlTemplate> und <xref:System.Windows.Controls.CheckBox> , verwendet eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate>.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Ihnen die Möglichkeit, ein Steuerelement zu erstellen, dessen Darstellung angepasst werden kann. Beispielsweise können Sie das Erscheinungsbild eines <xref:System.Windows.Controls.CheckBox> ändern, das über die Durchsetzung der Einstellungs Eigenschaften hinausgeht, indem Sie eine neue <xref:System.Windows.Controls.ControlTemplate>erstellen. Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox>, die eine Standard <xref:System.Windows.Controls.ControlTemplate> und eine <xref:System.Windows.Controls.CheckBox> verwendet, die ein benutzerdefiniertes <xref:System.Windows.Controls.ControlTemplate>verwendet.
 
-![Kontrollkästchen mit der Standardsteuerelementvorlage. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault") ein Kontrollkästchen, das die Standardsteuerelementvorlage verwendet
+![Kontrollkästchen mit der Standardsteuerelementvorlage.](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")
+Ein Kontrollkästchen, das die Standardsteuerelementvorlage verwendet
 
-![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom") ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwendet
+![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage.](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")
+Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwendet
 
-Befolgen Sie das Modell Teile und Zustände, wenn Sie ein Steuerelement erstellen, wird die Darstellung des Steuerelements angepasst werden. Designer-Tools wie Microsoft Expression Blend unterstützt das Modell Teile und Zustände aus, damit bei diesem Modell folgen, können Sie das Steuerelement kann in diese Arten von Anwendungen angepasst werden.  In diesem Thema wird erläutert, das Modell Teile und Zustände und es führen bei der Erstellung eigener Steuerelemente. In diesem Thema wird ein Beispiel für ein benutzerdefiniertes Steuerelement `NumericUpDown`, um die Philosophie dieses Modells zu veranschaulichen.  Die `NumericUpDown` Steuerelement zeigt einen numerischen Wert, der ein Benutzer kann zu erhöhen oder verringern, indem Sie durch Klicken auf die Schaltflächen des Steuerelements.  Die folgende Abbildung zeigt die `NumericUpDown` -Steuerelement, das in diesem Thema erläutert wird.
+Wenn Sie das Modell "Teile und Zustände" befolgen, wenn Sie ein Steuerelement erstellen, kann die Darstellung des Steuer Elements angepasst werden. Designer Tools, wie z. b. Blend für Visual Studio, unterstützen das Modell "Teile und Zustände". Wenn Sie also diesem Modell folgen, kann Ihr Steuerelement in diesen Anwendungs Typen angepasst werden.  In diesem Thema werden das Modell der Teile und Zustände erläutert und erläutert, wie es befolgt wird, wenn Sie ein eigenes Steuerelement erstellen. In diesem Thema wird ein Beispiel für ein benutzerdefiniertes Steuerelement (`NumericUpDown`) verwendet, um die Philosophie dieses Modells zu veranschaulichen.  Das `NumericUpDown` Steuerelement zeigt einen numerischen Wert an, den ein Benutzer erhöhen oder verringern kann, indem er auf die Schaltflächen des Steuer Elements klickt.  Die folgende Abbildung zeigt das `NumericUpDown` Steuerelement, das in diesem Thema erläutert wird.
 
-![Benutzerdefiniertes NumericUpDown-Steuerelement. ](./media/ndp-numericupdown.png "NDP_NumericUPDown") ein benutzerdefiniertes NumericUpDown-Steuerelement
+![Benutzerdefiniertes NumericUpDown-Steuerelement.](./media/ndp-numericupdown.png "NDP_NumericUPDown")
+Ein benutzerdefiniertes NumericUpDown-Steuerelement
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -39,166 +42,166 @@ Dieses Thema enthält folgende Abschnitte:
 
 - [Teile und Zustände-Modell](#parts_and_states_model)
 
-- [Definieren die visuelle Struktur und das visuelle Verhalten eines Steuerelements in einer ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)
+- [Definieren der visuellen Struktur und des visuellen Verhaltens eines Steuer Elements in einer ControlTemplate](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)
 
-- [Verwendung von Teilen der ControlTemplate in Code](#using_parts_of_the_controltemplate_in_code)
+- [Verwenden von Teilen der ControlTemplate im Code](#using_parts_of_the_controltemplate_in_code)
 
-- [Bereitstellen des Steuerelementvertrags](#providing_the_control_contract)
+- [Bereitstellen des Steuerungs Vertrags](#providing_the_control_contract)
 
-- [Vollständiges Beispiel](#complete_example)
+- [Vervollständigen eines Beispiels](#complete_example)
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Voraussetzungen
 
-In diesem Thema wird davon ausgegangen, dass Sie wissen, wie zum Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate> für ein vorhandenes Steuerelement an, wie die Elemente in einem Steuerelementvertrag sind, vertraut sind und Verstehen der Konzepte, die in beschriebenen [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Sie eine neue <xref:System.Windows.Controls.ControlTemplate> für ein vorhandenes Steuerelement erstellen, mit den Elementen in einem Steuerelement Vertrag vertraut sind und die Konzepte verstehen, die unter [Anpassen der Darstellung eines vorhandenen Steuer Elements durch Erstellen eines ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
 > [!NOTE]
-> Um ein Steuerelement zu erstellen, die dessen Darstellung angepasst werden können, müssen Sie ein Steuerelement, das von erbt erstellen die <xref:System.Windows.Controls.Control> Klasse oder eine ihrer Unterklassen außer <xref:System.Windows.Controls.UserControl>.  Ein Steuerelement, das von erbt <xref:System.Windows.Controls.UserControl> ist ein Steuerelement, das schnell erstellt werden kann, aber es verwendet keine <xref:System.Windows.Controls.ControlTemplate> und seine Darstellung nicht anpassen.
+> Um ein Steuerelement zu erstellen, dessen Darstellung angepasst werden kann, müssen Sie ein Steuerelement erstellen, das von der <xref:System.Windows.Controls.Control>-Klasse oder einer ihrer Unterklassen außer <xref:System.Windows.Controls.UserControl>erbt.  Ein Steuerelement, das von <xref:System.Windows.Controls.UserControl> erbt, ist ein Steuerelement, das schnell erstellt werden kann, aber keinen <xref:System.Windows.Controls.ControlTemplate> verwendet, und Sie können seine Darstellung nicht anpassen.
 
 <a name="parts_and_states_model"></a>
 
 ## <a name="parts-and-states-model"></a>Teile und Zustände-Modell
 
-Das Modell Teile und Zustände gibt an, wie die visuelle Struktur und das visuelle Verhalten eines Steuerelements zu definieren. Um das Modell Teile und Zustände zu folgen, sollten Sie Folgendes tun:
+Das Modell Parts and States gibt an, wie die visuelle Struktur und das visuelle Verhalten eines Steuer Elements definiert werden. Gehen Sie folgendermaßen vor, um das Modell für Teile und Zustände zu befolgen:
 
-- Definieren Sie die visuelle Struktur und das visuelle Verhalten in der <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements.
+- Definieren der visuellen Struktur und des visuellen Verhaltens in der <xref:System.Windows.Controls.ControlTemplate> eines Steuer Elements.
 
-- Führen Sie die bestimmte best Practices, wenn die Logik des Steuerelements mit Teilen der Steuerelementvorlage interagiert.
+- Befolgen Sie bestimmte bewährte Methoden, wenn die Logik des Steuer Elements mit Teilen der Steuerelement Vorlage interagiert.
 
-- Geben Sie einen Steuerelementvertrag angeben, was in enthalten sein sollen die <xref:System.Windows.Controls.ControlTemplate>.
+- Geben Sie einen Steuerungs Vertrag an, um anzugeben, was in der <xref:System.Windows.Controls.ControlTemplate>enthalten sein soll.
 
-Wenn Sie definieren die visuelle Struktur und das visuelle Verhalten in der <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements, Anwendungsentwickler können ändern, die visuelle Struktur und das visuelle Verhalten des Steuerelements durch Erstellen eines neuen <xref:System.Windows.Controls.ControlTemplate> statt Code zu schreiben.   Müssen Sie angeben, ein Steuerelementvertrag, der Anwendung weist Autoren die <xref:System.Windows.FrameworkElement> Objekte und Zustände in definiert werden die <xref:System.Windows.Controls.ControlTemplate>. Befolgen Sie einige bewährten Methoden beim Interagieren mit den Teilen in die <xref:System.Windows.Controls.ControlTemplate> , damit das Steuerelement ordnungsgemäß ein unvollständiges behandelt <xref:System.Windows.Controls.ControlTemplate>.  Wenn Sie diese drei Grundsätzen folgen, Anwendungsentwickler werden zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für Ihr Steuerelement ebenso leicht wie können für die Steuerelemente, die im Lieferumfang [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Im folgende Abschnitt werden alle diese Empfehlungen im Detail beschrieben.
+Wenn Sie die visuelle Struktur und das visuelle Verhalten in der <xref:System.Windows.Controls.ControlTemplate> eines Steuer Elements definieren, können Anwendungs Autoren die visuelle Struktur und das visuelle Verhalten Ihres Steuer Elements ändern, indem Sie eine neue <xref:System.Windows.Controls.ControlTemplate> erstellen, anstatt Code zu schreiben.   Sie müssen einen Steuerungs Vertrag bereitstellen, der Anwendungs Autoren mitteilt, welche <xref:System.Windows.FrameworkElement> Objekte und Zustände im <xref:System.Windows.Controls.ControlTemplate>definiert werden sollen. Beachten Sie einige bewährte Methoden, wenn Sie mit den Teilen in der <xref:System.Windows.Controls.ControlTemplate> interagieren, damit das Steuerelement eine unvollständige <xref:System.Windows.Controls.ControlTemplate>ordnungsgemäß behandelt.  Wenn Sie diese drei Prinzipien befolgen, können Anwendungs Autoren eine <xref:System.Windows.Controls.ControlTemplate> für Ihr Steuerelement genauso einfach wie für die Steuerelemente erstellen, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ausgeliefert werden.  Diese Empfehlungen werden im folgenden Abschnitt ausführlich erläutert.
 
 <a name="defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate"></a>
 
-## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Definieren die visuelle Struktur und das visuelle Verhalten eines Steuerelements in einer ControlTemplate
+## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Definieren der visuellen Struktur und des visuellen Verhaltens eines Steuer Elements in einer ControlTemplate
 
-Wenn Sie Ihr benutzerdefinierte Steuerelement erstellen, mit dem Modell Teile und Zustände, definieren Sie visuelle Struktur des Steuerelements und das visuelle Verhalten in seiner <xref:System.Windows.Controls.ControlTemplate> anstelle von in ihrer Logik.  Die visuelle Struktur eines Steuerelements ist die Zusammensetzung der <xref:System.Windows.FrameworkElement> Objekte, die das Steuerelement bilden.  Das visuelle Verhalten ist die Möglichkeit, die das Steuerelement, das angezeigt wird, wenn es in einem bestimmten Zustand befindet.   Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> die visuelle Struktur und das visuelle Verhalten eines Steuerelements, der angibt, finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Wenn Sie das benutzerdefinierte Steuerelement mithilfe des Modells Teile und Zustände erstellen, definieren Sie die visuelle Struktur und das visuelle Verhalten des Steuer Elements in dessen <xref:System.Windows.Controls.ControlTemplate> und nicht in seiner Logik.  Die visuelle Struktur eines Steuer Elements ist die Zusammensetzung von <xref:System.Windows.FrameworkElement>-Objekten, die das-Steuerelement bilden.  Das visuelle Verhalten ist die Methode, mit der das Steuerelement angezeigt wird, wenn es sich in einem bestimmten Zustand befindet.   Weitere Informationen zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, die die visuelle Struktur und das visuelle Verhalten eines Steuer Elements angibt, finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuer Elements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
-Im Beispiel für die `NumericUpDown` -Steuerelement, die visuelle Struktur enthält zwei <xref:System.Windows.Controls.Primitives.RepeatButton> Steuerelemente und ein <xref:System.Windows.Controls.TextBlock>.  Wenn Sie diese Steuerelemente im Code hinzufügen, die `NumericUpDown` Steuerelement – in seinem Konstruktor, z. B. – die Positionen der diese Steuerelemente unveränderbar sein würde.  Anstatt die visuelle Struktur und visuelle Verhalten des Steuerelements in seinem Code, definieren Sie ihn in das <xref:System.Windows.Controls.ControlTemplate>.  Klicken Sie dann ein Anwendungsentwickler, um die Position der Schaltflächen anzupassen und <xref:System.Windows.Controls.TextBlock> , und geben Sie das Verhalten tritt auf, wenn `Value` negativ ist da die <xref:System.Windows.Controls.ControlTemplate> ersetzt werden.
+Im Beispiel für das `NumericUpDown` Steuerelement enthält die visuelle Struktur zwei <xref:System.Windows.Controls.Primitives.RepeatButton> Steuerelemente und eine <xref:System.Windows.Controls.TextBlock>.  Wenn Sie diese Steuerelemente im Code des `NumericUpDown`-Steuer Elements hinzufügen, z. b. in Ihrem Konstruktor, können die Positionen dieser Steuerelemente unveränderlich sein.  Anstatt die visuelle Struktur und das visuelle Verhalten des Steuer Elements im Code zu definieren, sollten Sie es im <xref:System.Windows.Controls.ControlTemplate>definieren.  Anschließend können Anwendungsentwickler die Position der Schaltflächen und <xref:System.Windows.Controls.TextBlock> anpassen und angeben, welches Verhalten auftritt, wenn `Value` negativ ist, da der <xref:System.Windows.Controls.ControlTemplate> ersetzt werden kann.
 
-Das folgende Beispiel zeigt die visuelle Struktur des der `NumericUpDown` -Steuerelement, das enthält eine <xref:System.Windows.Controls.Primitives.RepeatButton> erhöhen `Value`, <xref:System.Windows.Controls.Primitives.RepeatButton> verringern `Value`, und ein <xref:System.Windows.Controls.TextBlock> anzuzeigende `Value`.
+Das folgende Beispiel zeigt die visuelle Struktur des `NumericUpDown`-Steuer Elements, das eine <xref:System.Windows.Controls.Primitives.RepeatButton> zur Erhöhung `Value`, eine <xref:System.Windows.Controls.Primitives.RepeatButton> zum Verringern der `Value`und eine <xref:System.Windows.Controls.TextBlock> zum Anzeigen `Value`enthält.
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-Das visuelle Verhalten von der `NumericUpDown` Steuerelement ist, dass der Wert in roter Schrift ist, wenn sie negativ ist.  Wenn Sie ändern die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> in code die `Value` negativ ist, die `NumericUpDown` zeigen daraufhin immer einen roten negativen Wert. Geben Sie das visuelle Verhalten des Steuerelements in der <xref:System.Windows.Controls.ControlTemplate> durch Hinzufügen von <xref:System.Windows.VisualState> Objekte die <xref:System.Windows.Controls.ControlTemplate>.  Das folgende Beispiel zeigt die <xref:System.Windows.VisualState> von Objekten für die `Positive` und `Negative` Zustände.  `Positive` und `Negative` sind sich gegenseitig ausschließende (das Steuerelement ist stets in genau einem der beiden), damit das Beispiel setzt die <xref:System.Windows.VisualState> Objekte in einem einzelnen <xref:System.Windows.VisualStateGroup>.  Wenn das Steuerelement wechselt in die `Negative` Zustand der <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.  Wenn das Steuerelement ist der `Positive` Zustand der <xref:System.Windows.Controls.TextBlock.Foreground%2A> gibt, die auf den ursprünglichen Wert zurück.  Definieren von <xref:System.Windows.VisualState> Objekte in einem <xref:System.Windows.Controls.ControlTemplate> Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Ein visuelles Verhalten des `NumericUpDown` Steuer Elements besteht darin, dass sich der Wert in einer roten Schriftart befindet, wenn er negativ ist.  Wenn Sie die <xref:System.Windows.Controls.TextBlock.Foreground%2A> des <xref:System.Windows.Controls.TextBlock> im Code ändern, wenn die `Value` negativ ist, zeigt der `NumericUpDown` immer einen roten negativen Wert an. Sie geben das visuelle Verhalten des Steuer Elements in der <xref:System.Windows.Controls.ControlTemplate> an, indem Sie dem <xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.VisualState> Objekte hinzufügen.  Im folgenden Beispiel werden die <xref:System.Windows.VisualState>-Objekte für die Zustände `Positive` und `Negative` gezeigt.  `Positive` und `Negative` schließen sich gegenseitig aus (das Steuerelement ist immer in genau einem der beiden), sodass die <xref:System.Windows.VisualState> Objekte in einem einzigen <xref:System.Windows.VisualStateGroup>abgelegt werden.  Wenn das Steuerelement in den `Negative` Zustand wechselt, wird der <xref:System.Windows.Controls.TextBlock.Foreground%2A> des <xref:System.Windows.Controls.TextBlock> rot.  Wenn sich das Steuerelement im `Positive` Zustand befindet, wird der <xref:System.Windows.Controls.TextBlock.Foreground%2A> auf seinen ursprünglichen Wert zurückgegeben.  Die Definition von <xref:System.Windows.VisualState> Objekten in einem <xref:System.Windows.Controls.ControlTemplate> wird unter [Anpassen der Darstellung eines vorhandenen Steuer Elements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)ausführlicher erläutert.
 
 > [!NOTE]
-> Werden Sie sicher, dass die <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> angefügte Eigenschaft im Stammelement <xref:System.Windows.FrameworkElement> von der <xref:System.Windows.Controls.ControlTemplate>.
+> Stellen Sie sicher, dass Sie die <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> angefügte-Eigenschaft für die Stamm <xref:System.Windows.FrameworkElement> der <xref:System.Windows.Controls.ControlTemplate>festlegen.
 
 [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]
 
 <a name="using_parts_of_the_controltemplate_in_code"></a>
 
-## <a name="using-parts-of-the-controltemplate-in-code"></a>Verwendung von Teilen der ControlTemplate in Code
+## <a name="using-parts-of-the-controltemplate-in-code"></a>Verwenden von Teilen der ControlTemplate im Code
 
-Ein <xref:System.Windows.Controls.ControlTemplate> Autor kann weglassen <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.VisualState> Objekte, die absichtlich oder versehentlich, aber die Logik des Steuerelements möglicherweise die Teile ordnungsgemäß funktioniert. Teile und Zustände Modell gibt an, dass das Steuerelement gegen sollte eine <xref:System.Windows.Controls.ControlTemplate> , die fehlt <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.VisualState> Objekte.  Das Steuerelement sollte keine Ausnahme oder ein Bericht einen Fehler auslösen Wenn eine <xref:System.Windows.FrameworkElement>, <xref:System.Windows.VisualState>, oder <xref:System.Windows.VisualStateGroup> fehlt in der <xref:System.Windows.Controls.ControlTemplate>. In diesem Abschnitt wird beschrieben, die empfohlenen Methoden für die Interaktion mit <xref:System.Windows.FrameworkElement> Objekte und Verwalten von Zuständen.
+Ein <xref:System.Windows.Controls.ControlTemplate> Autor kann <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.VisualState> Objekte entweder absichtlich oder versehentlich weglassen, aber die Logik des Steuer Elements benötigt möglicherweise diese Teile, um ordnungsgemäß zu funktionieren. Das Teile-und Status Modell gibt an, dass das Steuerelement für eine <xref:System.Windows.Controls.ControlTemplate>, die <xref:System.Windows.FrameworkElement>-oder <xref:System.Windows.VisualState>-Objekten fehlt, widerstandsfähig sein sollte.  Das Steuerelement sollte keine Ausnahme auslösen oder einen Fehler melden, wenn ein <xref:System.Windows.FrameworkElement>, <xref:System.Windows.VisualState>oder <xref:System.Windows.VisualStateGroup> in der <xref:System.Windows.Controls.ControlTemplate>fehlt. In diesem Abschnitt werden die empfohlenen Vorgehensweisen für die Interaktion mit <xref:System.Windows.FrameworkElement> Objekten und das Verwalten von Zuständen beschrieben.
 
-### <a name="anticipate-missing-frameworkelement-objects"></a>Erwarten Sie fehlende FrameworkElement-Objekte
+### <a name="anticipate-missing-frameworkelement-objects"></a>Fehlende FrameworkElement-Objekte erwarten
 
-Beim Definieren von <xref:System.Windows.FrameworkElement> Objekte in der <xref:System.Windows.Controls.ControlTemplate>, die Logik des Steuerelements muss möglicherweise mit einigen von ihnen zu interagieren.  Z. B. die `NumericUpDown` Steuerelement abonniert der Schaltflächen <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis vergrößern oder verkleinern `Value` und legt sie fest der <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft der <xref:System.Windows.Controls.TextBlock> zu `Value`. Wenn eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> lässt die <xref:System.Windows.Controls.TextBlock> oder Schaltflächen, es ist akzeptabel, dass das Steuerelement verloren, einen Teil der Funktionen hat, aber Sie achten darauf sollten, dass das Steuerelement keinen Fehler verursacht. Z. B. wenn ein <xref:System.Windows.Controls.ControlTemplate> enthält nicht die Schaltflächen zum Ändern `Value`, `NumericUpDown` verliert, Funktionalität, aber eine Anwendung, verwendet der <xref:System.Windows.Controls.ControlTemplate> wird weiterhin ausgeführt.
+Wenn Sie <xref:System.Windows.FrameworkElement> Objekte im <xref:System.Windows.Controls.ControlTemplate>definieren, muss die Logik des Steuer Elements ggf. mit einigen interagieren.  Beispielsweise abonniert das `NumericUpDown`-Steuerelement das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis der Schaltflächen, um `Value` zu vergrößern oder zu verringern, und legt die <xref:System.Windows.Controls.TextBlock.Text%2A>-Eigenschaft des <xref:System.Windows.Controls.TextBlock> auf `Value`fest. Wenn ein benutzerdefiniertes <xref:System.Windows.Controls.ControlTemplate> die <xref:System.Windows.Controls.TextBlock> oder Schaltflächen auslässt, ist es akzeptabel, dass das Steuerelement einige seiner Funktionen verliert, Sie sollten jedoch sicherstellen, dass das Steuerelement keinen Fehler verursacht. Wenn eine <xref:System.Windows.Controls.ControlTemplate> z. b. die Schaltflächen zum Ändern `Value`nicht enthält, verliert der `NumericUpDown` diese Funktionalität, aber eine Anwendung, die die <xref:System.Windows.Controls.ControlTemplate> verwendet, wird weiterhin ausgeführt.
 
-Die folgenden Methoden werden sichergestellt, dass das Steuerelement ordnungsgemäß mit fehlendem reagiert <xref:System.Windows.FrameworkElement> Objekte:
+Mit den folgenden Vorgehensweisen wird sichergestellt, dass das Steuerelement ordnungsgemäß auf fehlende <xref:System.Windows.FrameworkElement> Objekte antwortet:
 
-1. Legen Sie die `x:Name` Attribut für die einzelnen <xref:System.Windows.FrameworkElement> , die Sie im Code verweisen müssen.
+1. Legen Sie für jede <xref:System.Windows.FrameworkElement>, auf die Sie im Code verweisen müssen, das `x:Name`-Attribut fest.
 
-2. Definieren Sie für jede private Eigenschaften <xref:System.Windows.FrameworkElement> , die Sie benötigen für die Interaktion mit.
+2. Definieren Sie für jede <xref:System.Windows.FrameworkElement> private Eigenschaften, mit denen Sie interagieren müssen.
 
-3. Abonnieren und abbestellen von Ereignisse, die das Steuerelement behandelt den <xref:System.Windows.FrameworkElement> Eigenschaft des set-Accessor.
+3. Abonnieren und kündigen Sie alle Ereignisse an, die Ihr Steuerelement im Set-Accessor der <xref:System.Windows.FrameworkElement>-Eigenschaft behandelt.
 
-4. Legen Sie die <xref:System.Windows.FrameworkElement> Eigenschaften, die Sie definiert haben, in Schritt 2 in der <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> Methode. Dies ist der früheste Zeitpunkt, die die <xref:System.Windows.FrameworkElement> in die <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement verfügbar ist. Verwenden der `x:Name` von der <xref:System.Windows.FrameworkElement> zum Abrufen von der <xref:System.Windows.Controls.ControlTemplate>.
+4. Legen Sie die <xref:System.Windows.FrameworkElement> Eigenschaften fest, die Sie in Schritt 2 in der <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>-Methode definiert haben. Dies ist der früheste, dass die <xref:System.Windows.FrameworkElement> in der <xref:System.Windows.Controls.ControlTemplate> für das-Steuerelement verfügbar ist. Verwenden Sie den `x:Name` des <xref:System.Windows.FrameworkElement>, um ihn aus dem <xref:System.Windows.Controls.ControlTemplate>zu erhalten.
 
-5. Überprüfen Sie, ob die <xref:System.Windows.FrameworkElement> nicht `null` vor dem Zugriff auf ihre Mitglieder.  Ist dies `null`, keinen Fehler melden.
+5. Überprüfen Sie, ob der <xref:System.Windows.FrameworkElement> vor dem Zugriff auf seine Member nicht `null` wird.  Wenn Sie `null`, melden Sie keinen Fehler.
 
-Die folgenden Beispiele zeigen die `NumericUpDown` Steuerelement interagiert mit <xref:System.Windows.FrameworkElement> Objekte gemäß den Empfehlungen in der vorangehenden Liste aufgeführt.
+In den folgenden Beispielen wird veranschaulicht, wie das `NumericUpDown`-Steuerelement mit <xref:System.Windows.FrameworkElement> Objekten in Übereinstimmung mit den Empfehlungen in der vorangehenden Liste interagiert.
 
-Im Beispiel, das die visuelle Struktur des definiert die `NumericUpDown` steuern, der <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.Controls.Primitives.RepeatButton> erhöht sich dadurch `Value` hat seine `x:Name` -Attributsatz auf `UpButton`.  Das folgende Beispiel deklariert eine Eigenschaft namens `UpButtonElement` darstellt, die die <xref:System.Windows.Controls.Primitives.RepeatButton> , deklariert ist, der <xref:System.Windows.Controls.ControlTemplate>. Die `set` Accessor zuerst kündigt das Abonnement auf der Schaltfläche <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis wenn `UpDownElement` nicht `null`, dann legt die Eigenschaft fest, und klicken Sie dann abonniert die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis. Es gibt auch eine Eigenschaft definiert, aber hier nicht angezeigt, für die anderen <xref:System.Windows.Controls.Primitives.RepeatButton>namens `DownButtonElement`.
+In dem Beispiel, in dem die visuelle Struktur des `NumericUpDown`-Steuer Elements im <xref:System.Windows.Controls.ControlTemplate>definiert ist, wird für die <xref:System.Windows.Controls.Primitives.RepeatButton>, die vergrößert wird `Value` das `x:Name`-Attribut auf `UpButton`festgelegt.  Im folgenden Beispiel wird eine Eigenschaft mit dem Namen `UpButtonElement` deklariert, die die im <xref:System.Windows.Controls.ControlTemplate>deklarierte <xref:System.Windows.Controls.Primitives.RepeatButton> darstellt. Wenn `UpDownElement` nicht `null`ist, wird vom `set` Accessor zuerst das Abonnieren des <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisses der Schaltfläche übernommen, dann wird die-Eigenschaft festgelegt, und anschließend wird das <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis abonniert. Es ist auch eine Eigenschaft definiert, die hier nicht für den anderen <xref:System.Windows.Controls.Primitives.RepeatButton>, `DownButtonElement`aufgerufen wird.
 
 [!code-csharp[VSMCustomControl#UpButtonProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#upbuttonproperty)]
 [!code-vb[VSMCustomControl#UpButtonProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#upbuttonproperty)]
 
-Das folgende Beispiel zeigt die <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> für die `NumericUpDown` Steuerelement.  Im Beispiel wird die <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> -Methode zum Abrufen der <xref:System.Windows.FrameworkElement> Objekte aus der <xref:System.Windows.Controls.ControlTemplate>.  Beachten Sie, die im Beispiel für schützt Fälle, in denen <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> sucht nach einem <xref:System.Windows.FrameworkElement> mit dem angegebenen Namen, die nicht den erwarteten Typ ist. Es ist auch eine bewährte Methode, die Elemente zu ignorieren, die dem angegebenen `x:Name` jedoch den falschen Typ.
+Das folgende Beispiel zeigt die <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> für das `NumericUpDown`-Steuerelement.  Im Beispiel wird die <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>-Methode verwendet, um die <xref:System.Windows.FrameworkElement> Objekte aus der <xref:System.Windows.Controls.ControlTemplate>zu erhalten.  Beachten Sie, dass das Beispiel vor Fällen schützt, in denen <xref:System.Windows.FrameworkElement.GetTemplateChild%2A> eine <xref:System.Windows.FrameworkElement> mit dem angegebenen Namen findet, der nicht den erwarteten Typ hat. Es ist auch eine bewährte Vorgehensweise, Elemente zu ignorieren, die die angegebenen `x:Name` haben, jedoch den falschen Typ aufweisen.
 
 [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
 [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]
 
-Befolgen Sie die Methoden, die in den vorherigen Beispielen angezeigt werden, Sie stellen Sie sicher, dass das Steuerelement weiter ausgeführt werden, wenn die <xref:System.Windows.Controls.ControlTemplate> fehlt eine <xref:System.Windows.FrameworkElement>.
+Indem Sie die in den vorherigen Beispielen gezeigten Verfahren befolgen, stellen Sie sicher, dass das Steuerelement weiterhin ausgeführt wird, wenn der <xref:System.Windows.Controls.ControlTemplate> ein <xref:System.Windows.FrameworkElement>fehlt.
 
-### <a name="use-the-visualstatemanager-to-manage-states"></a>Verwenden der VisualStateManager Zustände verwalten
+### <a name="use-the-visualstatemanager-to-manage-states"></a>Verwenden von VisualStateManager zum Verwalten von Zuständen
 
-Die <xref:System.Windows.VisualStateManager> verfolgt den Zuständen eines Steuerelements und führt die erforderliche Logik zum Übergang zwischen Zuständen. Beim Hinzufügen <xref:System.Windows.VisualState> Objekte die <xref:System.Windows.Controls.ControlTemplate>, fügen Sie die Objekte einer <xref:System.Windows.VisualStateGroup> und Hinzufügen der <xref:System.Windows.VisualStateGroup> auf die <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> angefügte Eigenschaft, damit die <xref:System.Windows.VisualStateManager> hat Zugriff auf diese.
+Der <xref:System.Windows.VisualStateManager> verfolgt die Zustände eines Steuer Elements nach und führt die erforderliche Logik für den Übergang zwischen Zuständen aus. Wenn Sie <xref:System.Windows.VisualState> Objekte zum <xref:System.Windows.Controls.ControlTemplate>hinzufügen, fügen Sie diese einem <xref:System.Windows.VisualStateGroup> hinzu und fügen den <xref:System.Windows.VisualStateGroup> der angefügten-Eigenschaft des <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> hinzu, damit der <xref:System.Windows.VisualStateManager> darauf zugreifen kann.
 
-Im folgende Beispiel wird im vorherige Beispiel, das zeigt, wiederholt der <xref:System.Windows.VisualState> Objekte, die entsprechen, den `Positive` und `Negative` Zustände des Steuerelements. Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative` <xref:System.Windows.VisualState> aktiviert die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.   Wenn die `NumericUpDown` Steuerelement befindet sich in der `Negative` -Status befindet, handelt es sich bei das Storyboard in der `Negative` Zustand beginnt.  Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative` Zustand beendet wird, wenn das Steuerelement zurückgegeben der `Positive` Zustand.  Die `Positive` <xref:System.Windows.VisualState> muss nicht enthalten eine <xref:System.Windows.Media.Animation.Storyboard> da bei der <xref:System.Windows.Media.Animation.Storyboard> für die `Negative` beendet wird, die <xref:System.Windows.Controls.TextBlock.Foreground%2A> an seine ursprüngliche Farbe zurückgegeben.
+Im folgenden Beispiel wird das vorherige Beispiel wiederholt, das die <xref:System.Windows.VisualState>-Objekte zeigt, die den `Positive`-und `Negative` Zuständen des-Steuer Elements entsprechen. Der <xref:System.Windows.Media.Animation.Storyboard> im `Negative`<xref:System.Windows.VisualState> die <xref:System.Windows.Controls.TextBlock.Foreground%2A> des <xref:System.Windows.Controls.TextBlock> rot.   Wenn sich das `NumericUpDown` Steuerelement im `Negative` Zustand befindet, beginnt das Storyboard im `Negative` Zustand.  Anschließend wird der <xref:System.Windows.Media.Animation.Storyboard> im `Negative` Zustand beendet, wenn das Steuerelement wieder in den Zustand `Positive` zurückkehrt.  Die `Positive`<xref:System.Windows.VisualState> muss keine <xref:System.Windows.Media.Animation.Storyboard> enthalten, da die `Negative` die ursprüngliche Farbe zurückgibt, wenn der <xref:System.Windows.Media.Animation.Storyboard> für die <xref:System.Windows.Controls.TextBlock.Foreground%2A> angehalten wird.
 
 [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]
 
-Beachten Sie, dass die <xref:System.Windows.Controls.TextBlock> erhält einen Namen, aber die <xref:System.Windows.Controls.TextBlock> befindet sich nicht in den Steuerelementvertrag für `NumericUpDown` , da die Logik des Steuerelements niemals verweist auf die <xref:System.Windows.Controls.TextBlock>.  Elemente, auf die verweist, die <xref:System.Windows.Controls.ControlTemplate> Namen haben, müssen jedoch nicht Teil des Steuerelementvertrags sein, da eine neue <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement möglicherweise nicht auf dieses Element verweisen muss.  Z. B. eine Person, ein neues erstellt <xref:System.Windows.Controls.ControlTemplate> für `NumericUpDown` ggf. nicht angeben, dass `Value` negativ ist, durch Ändern der <xref:System.Windows.Controls.Control.Foreground%2A>.  In diesem Fall weder den Code noch die <xref:System.Windows.Controls.ControlTemplate> Verweise der <xref:System.Windows.Controls.TextBlock> anhand des Namens.
+Beachten Sie, dass dem <xref:System.Windows.Controls.TextBlock> ein Name zugewiesen ist, der <xref:System.Windows.Controls.TextBlock> sich aber nicht im Steuerelement Vertrag für `NumericUpDown` befindet, da die Logik des Steuer Elements nie auf die <xref:System.Windows.Controls.TextBlock>verweist.  Elemente, auf die in der <xref:System.Windows.Controls.ControlTemplate> verwiesen wird, müssen jedoch nicht Teil des Steuerelement Vertrags sein, da eine neue <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement möglicherweise nicht auf dieses Element verweisen muss.  Beispielsweise kann eine Person, die eine neue <xref:System.Windows.Controls.ControlTemplate> für `NumericUpDown` erstellt, nicht angeben, dass `Value` negativ ist, indem die <xref:System.Windows.Controls.Control.Foreground%2A>geändert wird.  In diesem Fall verweist weder der Code noch der <xref:System.Windows.Controls.ControlTemplate> auf die <xref:System.Windows.Controls.TextBlock> nach dem Namen.
 
-Die Logik des Steuerelements ist verantwortlich für den Zustand des Steuerelements zu ändern. Das folgende Beispiel zeigt, dass die `NumericUpDown` kontrollaufrufe der <xref:System.Windows.VisualStateManager.GoToState%2A> Methode näher betrachten die `Positive` Zustand über, wenn `Value` ist 0 oder größer ist, und die `Negative` Zustand über, wenn `Value` ist kleiner als 0.
+Die Logik des Steuer Elements ist dafür verantwortlich, den Zustand des Steuer Elements zu ändern. Das folgende Beispiel zeigt, dass das `NumericUpDown`-Steuerelement die <xref:System.Windows.VisualStateManager.GoToState%2A>-Methode aufruft, um in den `Positive`-Zustand zu wechseln, wenn `Value` 0 oder größer ist, und der `Negative` Zustand, wenn `Value` kleiner als 0 ist.
 
 [!code-csharp[VSMCustomControl#ValueStateChange](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#valuestatechange)]
 [!code-vb[VSMCustomControl#ValueStateChange](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#valuestatechange)]
 
-Die <xref:System.Windows.VisualStateManager.GoToState%2A> Methode führt die erforderliche Logik zum Starten und Beenden des Storyboards. Wenn ein Steuerelement ruft <xref:System.Windows.VisualStateManager.GoToState%2A> so ändern Sie seinen Status, der die <xref:System.Windows.VisualStateManager> bewirkt Folgendes:
+Die <xref:System.Windows.VisualStateManager.GoToState%2A>-Methode führt die erforderliche Logik aus, um die Storyboards entsprechend zu starten und zu unterbinden. Wenn ein Steuerelement <xref:System.Windows.VisualStateManager.GoToState%2A> aufruft, um seinen Zustand zu ändern, führt der <xref:System.Windows.VisualStateManager> Folgendes aus:
 
-- Wenn die <xref:System.Windows.VisualState> hat, dass das Steuerelement, wird eine <xref:System.Windows.Media.Animation.Storyboard>, beginnt das Storyboard. Wenn danach die <xref:System.Windows.VisualState> , das Steuerelement stammt verfügt über eine <xref:System.Windows.Media.Animation.Storyboard>, das Storyboard beendet.
+- Wenn die <xref:System.Windows.VisualState>, zu der das Steuerelement <xref:System.Windows.Media.Animation.Storyboard>wird, beginnt das Storyboard. Wenn der <xref:System.Windows.VisualState>, von dem das Steuerelement stammt, über eine <xref:System.Windows.Media.Animation.Storyboard>verfügt, wird das Storyboard beendet.
 
-- Wenn das Steuerelement bereits im Zustand, die angegeben wird ist, <xref:System.Windows.VisualStateManager.GoToState%2A> führt keine Aktion aus und gibt `true`.
+- Wenn sich das Steuerelement bereits im angegebenen Zustand befindet, <xref:System.Windows.VisualStateManager.GoToState%2A> keine Aktion durch und gibt `true`zurück.
 
-- Wenn angegebene Zustand im nicht vorhanden. die <xref:System.Windows.Controls.ControlTemplate> von `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> führt keine Aktion aus und gibt `false`.
+- Wenn der angegebene Status nicht im <xref:System.Windows.Controls.ControlTemplate> `control`vorhanden ist, führt <xref:System.Windows.VisualStateManager.GoToState%2A> keine Aktion aus und gibt `false`zurück.
 
-#### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Bewährte Methoden für die Arbeit mit der VisualStateManager
+#### <a name="best-practices-for-working-with-the-visualstatemanager"></a>Bewährte Methoden für die Arbeit mit dem visualstatus Manager
 
-Es wird empfohlen, dass Sie Folgendes ein, um die Verwaltung der Zustände Ihres Steuerelements ausführen:
+Es wird empfohlen, dass Sie die folgenden Schritte ausführen, um die Zustände Ihres Steuer Elements beizubehalten:
 
-- Verwenden Sie Eigenschaften, um seinen Status zu nachzuverfolgen.
+- Verwenden Sie die Eigenschaften, um den Status zu verfolgen.
 
-- Erstellen Sie eine Hilfsmethode zum Wechseln zwischen Zuständen.
+- Erstellen Sie eine Hilfsmethode, um zwischen Zuständen zu wechseln.
 
-Die `NumericUpDown` -Steuerelement verwendet die `Value` Eigenschaft, um nachzuverfolgen, ob es in der `Positive` oder `Negative` Zustand.  Die `NumericUpDown` Steuerelement definiert auch die `Focused` und `UnFocused` angibt, welche verfolgt die <xref:System.Windows.UIElement.IsFocused%2A> Eigenschaft. Wenn Sie Zustände, die nicht auf natürliche Weise an eine Eigenschaft des Steuerelements entsprechen verwenden, können Sie eine private Eigenschaft zum Nachverfolgen des Status definieren.
+Das `NumericUpDown`-Steuerelement verwendet seine `Value`-Eigenschaft, um zu verfolgen, ob es sich im `Positive` oder `Negative` Zustand befindet.  Das `NumericUpDown`-Steuerelement definiert auch die `Focused` und `UnFocused` Zustände, die die <xref:System.Windows.UIElement.IsFocused%2A>-Eigenschaft nachverfolgt. Wenn Sie Zustände verwenden, die nicht auf natürliche Weise einer Eigenschaft des Steuer Elements entsprechen, können Sie eine private Eigenschaft definieren, um den Status zu verfolgen.
 
-Eine einzelne Methode, die alle Status aktualisiert zentralisiert die Aufrufe an die <xref:System.Windows.VisualStateManager> und hält Sie Ihren Code überschaubar. Das folgende Beispiel zeigt die `NumericUpDown` Hilfsprogramm-Methode des Steuerelements `UpdateStates`. Wenn `Value` ist größer als oder gleich 0 (null) der <xref:System.Windows.Controls.Control> befindet sich in der `Positive` Zustand.  Wenn `Value` ist kleiner als 0 ist, das Steuerelement ist der `Negative` Zustand.  Bei <xref:System.Windows.UIElement.IsFocused%2A> ist `true`, das Steuerelement befindet sich in der `Focused` Status; andernfalls ist es der `Unfocused` Zustand.  Rufen Sie das Steuerelement kann `UpdateStates` muss jedes Mal, wenn ändert seinen Status, unabhängig davon, welcher Zustand sich ändert.
+Eine einzelne Methode, die alle Zustände aktualisiert, zentralisiert Aufrufe des <xref:System.Windows.VisualStateManager> und sorgt dafür, dass Ihr Code verwaltbar ist. Das folgende Beispiel zeigt die-Hilfsmethode des `NumericUpDown`-Steuer Elements, `UpdateStates`. Wenn `Value` größer oder gleich 0 ist, befindet sich der <xref:System.Windows.Controls.Control> im `Positive` Zustand.  Wenn `Value` kleiner als 0 ist, befindet sich das Steuerelement im `Negative` Zustand.  Wenn <xref:System.Windows.UIElement.IsFocused%2A> `true`ist, befindet sich das Steuerelement im `Focused` Zustand. Andernfalls befindet er sich im `Unfocused` Zustand.  Das Steuerelement kann `UpdateStates` immer dann aufzurufen, wenn der Zustand geändert werden muss, unabhängig davon, welcher Zustand geändert wird.
 
 [!code-csharp[VSMCustomControl#UpdateStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#updatestates)]
 [!code-vb[VSMCustomControl#UpdateStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#updatestates)]
 
-Wenn Sie einen Statusnamen übergeben <xref:System.Windows.VisualStateManager.GoToState%2A> Wenn das Steuerelement bereits in diesem Status wird <xref:System.Windows.VisualStateManager.GoToState%2A> nichts, weshalb Sie nicht für den aktuellen Zustand des Steuerelements zu überprüfen.  Z. B. wenn `Value` ändert sich von der eine negative Zahl in eine andere negative Zahl ist, das Storyboard für die `Negative` Zustand nicht unterbrochen, und dem Benutzer eine Änderung im Steuerelement nicht angezeigt.
+Wenn Sie einen Zustands Amen an <xref:System.Windows.VisualStateManager.GoToState%2A> übergeben, wenn sich das Steuerelement bereits in diesem Zustand befindet, <xref:System.Windows.VisualStateManager.GoToState%2A> nichts bewirkt, müssen Sie nicht auf den aktuellen Zustand des Steuer Elements überprüfen.  Wenn `Value` z. b. von einer negativen Zahl in eine andere negative Zahl wechselt, wird das Storyboard für den `Negative` Zustand nicht unterbrochen, und dem Benutzer wird keine Änderung im Steuerelement angezeigt.
 
-Die <xref:System.Windows.VisualStateManager> verwendet <xref:System.Windows.VisualStateGroup> Objekte, um zu bestimmen, welcher Zustand beendet wird, wenn Sie aufrufen <xref:System.Windows.VisualStateManager.GoToState%2A>. Das Steuerelement ist immer in einem Status für jeden <xref:System.Windows.VisualStateGroup> , definiert ist, dessen <xref:System.Windows.Controls.ControlTemplate> und lässt nur einen Status aus, wenn er in einen anderen Zustand, aus der gleichen wechselt <xref:System.Windows.VisualStateGroup>. Z. B. die <xref:System.Windows.Controls.ControlTemplate> von der `NumericUpDown` -Steuerelement definiert die `Positive` und `Negative` <xref:System.Windows.VisualState> Objekte in einem <xref:System.Windows.VisualStateGroup> und `Focused` und `Unfocused` <xref:System.Windows.VisualState> Objekte in einer anderen. (Sehen Sie die `Focused` und `Unfocused` <xref:System.Windows.VisualState> in definiert die [vollständiges Beispiel](#complete_example) in diesem Thema, wenn das Steuerelement aus wechselt die `Positive` Zustand der `Negative` Zustand, oder umgekehrt, die Steuerung bleibt, entweder in der `Focused` oder `Unfocused` Zustand.
+Der <xref:System.Windows.VisualStateManager> verwendet <xref:System.Windows.VisualStateGroup> Objekte, um zu bestimmen, welcher Zustand beim Abrufen von <xref:System.Windows.VisualStateManager.GoToState%2A>beendet werden soll. Das-Steuerelement ist für jedes <xref:System.Windows.VisualStateGroup>, das in seiner <xref:System.Windows.Controls.ControlTemplate> definiert ist, immer in einem Zustand und verlässt nur einen Status, wenn es vom gleichen <xref:System.Windows.VisualStateGroup>in einen anderen Zustand wechselt. Beispielsweise definiert der <xref:System.Windows.Controls.ControlTemplate> des `NumericUpDown` Steuer Elements die `Positive` und `Negative`<xref:System.Windows.VisualState> Objekte in einer <xref:System.Windows.VisualStateGroup> und die `Focused`-und `Unfocused`Objekte in einer anderen<xref:System.Windows.VisualState>. (Die `Focused` und `Unfocused`<xref:System.Windows.VisualState> im Abschnitt " [Complete example](#complete_example) " in diesem Thema definiert, wenn das Steuerelement vom `Positive` Zustand in den Zustand "`Negative`" wechselt (oder umgekehrt), verbleibt das Steuerelement entweder im `Focused` oder `Unfocused` Land.
 
-Es gibt drei typische stellen, in denen der Zustand eines Steuerelements ändern können:
+Es gibt drei typische Orte, an denen sich der Zustand eines Steuer Elements ändern kann:
 
-- Wenn die <xref:System.Windows.Controls.ControlTemplate> gilt, an die <xref:System.Windows.Controls.Control>.
+- Wenn der <xref:System.Windows.Controls.ControlTemplate> auf die <xref:System.Windows.Controls.Control>angewendet wird.
 
-- Wenn sich eine Eigenschaft ändert.
+- Wenn eine Eigenschaft geändert wird.
 
-- Wenn ein Ereignis eintritt.
+- Wenn ein Ereignis auftritt.
 
-Die folgenden Beispiele veranschaulichen, aktualisieren den Status der `NumericUpDown` -Steuerelement in diesen Fällen.
+In den folgenden Beispielen wird veranschaulicht, wie der Status des `NumericUpDown`-Steuer Elements in diesen Fällen aktualisiert wird.
 
-Aktualisieren Sie den Zustand des Steuerelements in der <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> Methode, damit das Steuerelement angezeigt wird, den richtigen Zustand über, wenn die <xref:System.Windows.Controls.ControlTemplate> angewendet wird. Im folgenden Beispiel wird `UpdateStates` in <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> um sicherzustellen, dass das Steuerelement im entsprechenden Zustand befindet.  Nehmen wir beispielsweise an, dass Sie erstellen eine `NumericUpDown` steuern, und legen Sie dessen <xref:System.Windows.Controls.Control.Foreground%2A> in Grün und `Value` -5.  Wenn Sie nicht aufrufen `UpdateStates` bei der <xref:System.Windows.Controls.ControlTemplate> gilt für die `NumericUpDown` -Steuerelement, das Steuerelement ist nicht in der `Negative` Status und der Wert ist Grün anstatt Rot.  Rufen Sie `UpdateStates` zum Platzieren des Steuerelements der `Negative` Zustand.
+Sie sollten den Zustand des Steuer Elements in der <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>-Methode aktualisieren, damit das Steuerelement im richtigen Zustand angezeigt wird, wenn der <xref:System.Windows.Controls.ControlTemplate> angewendet wird. Im folgenden Beispiel wird `UpdateStates` in <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> aufgerufen, um sicherzustellen, dass sich das Steuerelement in den entsprechenden Zuständen befindet.  Nehmen Sie beispielsweise an, dass Sie ein `NumericUpDown`-Steuerelement erstellen und dann seine <xref:System.Windows.Controls.Control.Foreground%2A> auf grün und `Value` auf-5 festlegen.  Wenn Sie `UpdateStates` nicht aufzurufen, wenn die <xref:System.Windows.Controls.ControlTemplate> auf das `NumericUpDown`-Steuerelement angewendet wird, befindet sich das Steuerelement nicht im `Negative` Zustand, und der Wert ist grün anstelle von rot.  Sie müssen `UpdateStates` abrufen, um das Steuerelement in den `Negative` Zustand zu versetzen.
 
 [!code-csharp[VSMCustomControl#ApplyTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#applytemplate)]
 [!code-vb[VSMCustomControl#ApplyTemplate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#applytemplate)]
 
-Häufig müssen Sie den Zuständen eines Steuerelements bei Änderung einer Eigenschaft zu aktualisieren. Das folgende Beispiel zeigt die gesamte `ValueChangedCallback` Methode. Da `ValueChangedCallback` wird aufgerufen, wenn `Value` geändert wird, ruft die Methode `UpdateStates` bei `Value` positiv, negativ oder umgekehrt geändert. Es ist akzeptabel, rufen Sie `UpdateStates` beim `Value` geändert, jedoch bleibt positiv oder negativ sein, da in diesem Fall das Steuerelement den Zustand nicht verändert wird.
+Sie müssen häufig die Zustände eines Steuer Elements aktualisieren, wenn sich eine Eigenschaft ändert. Das folgende Beispiel zeigt die gesamte `ValueChangedCallback`-Methode. Da `ValueChangedCallback` bei `Value` Änderungen aufgerufen wird, ruft die-Methode `UpdateStates` auf, falls `Value` von positiv in negativ oder umgekehrt geändert wurde. Es ist zulässig, `UpdateStates` aufzurufen, wenn `Value` sich ändert, aber positiv oder negativ bleibt, da das Steuerelement in diesem Fall den Status nicht ändert.
 
 [!code-csharp[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#entirevaluechangedcallback)]
 [!code-vb[VSMCustomControl#EntireValueChangedCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#entirevaluechangedcallback)]
 
-Sie sollten auch die Status zu aktualisieren, wenn ein Ereignis auftritt. Das folgende Beispiel zeigt, dass die `NumericUpDown` Aufrufe `UpdateStates` auf die <xref:System.Windows.Controls.Control> , behandeln die <xref:System.Windows.UIElement.GotFocus> Ereignis.
+Möglicherweise müssen Sie auch die Zustände aktualisieren, wenn ein Ereignis auftritt. Das folgende Beispiel zeigt, dass der `NumericUpDown` `UpdateStates` auf dem <xref:System.Windows.Controls.Control> aufruft, um das <xref:System.Windows.UIElement.GotFocus>-Ereignis zu behandeln.
 
 [!code-csharp[VSMCustomControl#OnGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#ongotfocus)]
 [!code-vb[VSMCustomControl#OnGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#ongotfocus)]
 
-Die <xref:System.Windows.VisualStateManager> hilft Ihnen beim Verwalten Ihres Steuerelements Zustände. Mithilfe der <xref:System.Windows.VisualStateManager>, Sie stellen Sie sicher, dass das Steuerelement ordnungsgemäß zwischen den Zuständen wechselt.  Wenn Sie in den Empfehlungen in diesem Abschnitt für die Arbeit mit folgen der <xref:System.Windows.VisualStateManager>, Ihres Steuerelements Code lesbarer und leichter verwaltbar bleiben.
+Der <xref:System.Windows.VisualStateManager> unterstützt Sie bei der Verwaltung der Zustände Ihres Steuer Elements. Wenn Sie die <xref:System.Windows.VisualStateManager>verwenden, stellen Sie sicher, dass das Steuerelement ordnungsgemäß zwischen den Zuständen übergeht.  Wenn Sie die Empfehlungen befolgen, die in diesem Abschnitt zum Arbeiten mit dem <xref:System.Windows.VisualStateManager>beschrieben werden, bleibt der Code des Steuer Elements lesbar und wartungsfähig.
 
 <a name="providing_the_control_contract"></a>
 
-## <a name="providing-the-control-contract"></a>Bereitstellen des Steuerelementvertrags
+## <a name="providing-the-control-contract"></a>Bereitstellen des Steuerungs Vertrags
 
-Sie stellen einen Steuerelementvertrag bereit, damit <xref:System.Windows.Controls.ControlTemplate> Autoren weiß, was in der Vorlage eingefügt. Ein Steuerelementvertrag besteht aus drei Elementen:
+Sie stellen einen Steuerungs Vertrag bereit, damit <xref:System.Windows.Controls.ControlTemplate> Autoren wissen, was in die Vorlage eingefügt werden muss. Ein Steuerelementvertrag besteht aus drei Elementen:
 
 - Den visuellen Elementen, die die Logik des Steuerelements verwenden.
 
@@ -206,33 +209,33 @@ Sie stellen einen Steuerelementvertrag bereit, damit <xref:System.Windows.Contro
 
 - Den öffentlichen Eigenschaften, die die visuelle Darstellung des Steuerelements beeinflussen.
 
-Eine Person, die eine neue erstellt <xref:System.Windows.Controls.ControlTemplate> muss wissen, was <xref:System.Windows.FrameworkElement> Objekte, die die Logik des Steuerelements verwendet werden, was jeder Objekttyp werden und was ihr Name ist. Ein <xref:System.Windows.Controls.ControlTemplate> Autor muss auch wissen, den Namen der jedem möglichen Status, die das Steuerelement in sein kann und welche <xref:System.Windows.VisualStateGroup> der Zustand befindet.
+Eine Person, die eine neue <xref:System.Windows.Controls.ControlTemplate> erstellt, muss wissen, welche <xref:System.Windows.FrameworkElement> Objekte von der Logik des Steuer Elements verwendet werden, welchen Typ jedes Objekt hat und wie der Name ist. Ein <xref:System.Windows.Controls.ControlTemplate> Autor muss auch den Namen jedes möglichen Zustands, in dem sich das Steuerelement befinden kann, und den <xref:System.Windows.VisualStateGroup>, in dem sich der Zustand befindet, kennen.
 
-Zum Zurückgeben der `NumericUpDown` beispielsweise erwartet, dass das Steuerelement die <xref:System.Windows.Controls.ControlTemplate> über die folgenden <xref:System.Windows.FrameworkElement> Objekte:
+Wenn Sie zum `NumericUpDown` Beispiel zurückkehren, erwartet das Steuerelement, dass die <xref:System.Windows.Controls.ControlTemplate> über die folgenden <xref:System.Windows.FrameworkElement> Objekte verfügen:
 
-- Ein <xref:System.Windows.Controls.Primitives.RepeatButton> namens `UpButton`.
+- Eine <xref:System.Windows.Controls.Primitives.RepeatButton> mit dem Namen `UpButton`.
 
-- Ein <xref:System.Windows.Controls.Primitives.RepeatButton> aufgerufen `DownButton.`
+- Eine <xref:System.Windows.Controls.Primitives.RepeatButton> mit dem Namen `DownButton.`
 
  Das Steuerelement kann die folgenden Zustände aufweisen:
 
-- In der `ValueStates`<xref:System.Windows.VisualStateGroup>
+- Im `ValueStates`<xref:System.Windows.VisualStateGroup>
 
   - `Positive`
 
   - `Negative`
 
-- In der `FocusStates`<xref:System.Windows.VisualStateGroup>
+- Im `FocusStates`<xref:System.Windows.VisualStateGroup>
 
   - `Focused`
 
   - `Unfocused`
 
-Um anzugeben, welcher <xref:System.Windows.FrameworkElement> Objekte erwartet, dass das Steuerelement, das Sie verwenden die <xref:System.Windows.TemplatePartAttribute>, die angibt, den Namen und Typ der erwarteten Elemente.  Um die möglichen Zustände eines Steuerelements anzugeben, verwenden Sie die <xref:System.Windows.TemplateVisualStateAttribute>, der angibt, der den Namen des Zustands und der <xref:System.Windows.VisualStateGroup> es gehört.  Platzieren der <xref:System.Windows.TemplatePartAttribute> und <xref:System.Windows.TemplateVisualStateAttribute> auf die Definition der Klasse des Steuerelements.
+Um anzugeben, welche <xref:System.Windows.FrameworkElement> Objekte das Steuerelement erwartet, verwenden Sie das <xref:System.Windows.TemplatePartAttribute>, das den Namen und den Typ der erwarteten Elemente angibt.  Um die möglichen Zustände eines Steuer Elements anzugeben, verwenden Sie den <xref:System.Windows.TemplateVisualStateAttribute>, der den Namen des Zustands angibt und <xref:System.Windows.VisualStateGroup>, zu dem er gehört.  Fügen Sie die <xref:System.Windows.TemplatePartAttribute> und <xref:System.Windows.TemplateVisualStateAttribute> in die Klassendefinition des-Steuer Elements ein.
 
-Eine beliebige öffentliche Eigenschaft, die die Darstellung Ihres Steuerelements wirkt sich auf ist auch ein Teil des Steuerelementvertrags.
+Jede öffentliche Eigenschaft, die sich auf die Darstellung des Steuer Elements auswirkt, ist auch Bestandteil des Steuerelement Vertrags.
 
-Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement> Objekt und die Zustände für die `NumericUpDown` Steuerelement.
+Im folgenden Beispiel werden das <xref:System.Windows.FrameworkElement> Objekt und die Zustände für das `NumericUpDown` Steuerelement angegeben.
 
 [!code-csharp[VSMCustomControl#ControlContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controlcontract)]
 [!code-vb[VSMCustomControl#ControlContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controlcontract)]
@@ -241,11 +244,11 @@ Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement> Objekt und
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
-Im folgende Beispiel wird die gesamte <xref:System.Windows.Controls.ControlTemplate> für die `NumericUpDown` Steuerelement.
+Im folgenden Beispiel wird die gesamte <xref:System.Windows.Controls.ControlTemplate> für das `NumericUpDown`-Steuerelement dargestellt.
 
 [!code-xaml[VSMCustomControl#NUDTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/themes/generic.xaml#nudtemplate)]
 
-Das folgende Beispiel zeigt die Logik für die `NumericUpDown`.
+Das folgende Beispiel zeigt die Logik für das `NumericUpDown`.
 
 [!code-csharp[VSMCustomControl#ControlLogic](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
 [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]
