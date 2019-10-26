@@ -6,45 +6,41 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97933a9d014a54d5b6e333090cddccace99fcc3c
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014193"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960942"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Anpassen von Projekten und Erweitern von "My" mit Visual Basic
-Sie können anpassen, Projektvorlagen, geben Sie zusätzliche `My` Objekte. Dies erleichtert die für andere Entwickler zu suchen und Ihre Objekte verwenden.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Extending the My Namespace in Visual Basic (Erweitern des Namespaces „My“ in Visual Basic)](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
- Beschreibt, wie Sie benutzerdefinierte Member hinzufügen und die Werte der `My` Namespaces in Visual Basic.  
-  
- [Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
- Beschreibt das Veröffentlichen von benutzerdefinierten `My` Namespaceerweiterungen mithilfe von Visual Studio-Vorlagen.  
-  
- [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
- Beschreibt, wie Sie eigene Erweiterungen in das Anwendungsmodell geben an, indem das Überschreiben von Membern der der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Klasse.  
-  
- [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Beschreibt, wie zu bestimmen, welche `My` Objekte werden durch Festlegen des Projekts aktiviert \_MYTYPE-Konstante für bedingte Kompilierung.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Entwicklung mit „My“](../../../visual-basic/developing-apps/development-with-my/index.md)  
- Beschreibt, die `My` Objekte sind in verschiedenen Projekttypen standardmäßig verfügbar.  
-  
- [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Beschreibt Visual Basic Modell zur Steuerung des Verhaltens von Windows Forms-Anwendungen.  
-  
- [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- Beschreibt, die `My` Objekte sind in verschiedenen Projekttypen standardmäßig verfügbar.  
-  
- [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- Erläutert, wie der Compiler bedingte Kompilierung verwendet, um bestimmte Abschnitte des Codes zum Kompilieren und Ausschließen von anderen Bereichen auszuwählen.  
-  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- Beschreibt die `My` Objekt, das Eigenschaften, Methoden und Ereignisse bereitstellt, die sich auf die aktuelle Anwendung beziehen.  
-  
+
+Sie können Projektvorlagen anpassen, um zusätzliche `My` Objekte bereitzustellen. Dies erleichtert es anderen Entwicklern, Ihre Objekte zu finden und zu verwenden.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+- [Extending the My Namespace in Visual Basic (Erweitern des Namespaces „My“ in Visual Basic)](extending-the-my-namespace.md)  
+ Beschreibt das Hinzufügen von benutzerdefinierten Membern und Werten zum `My`-Namespace in Visual Basic.
+- [Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen](packaging-and-deploying-custom-my-extensions.md)  
+ Beschreibt, wie benutzerdefinierte `My`-Namespace Erweiterungen mithilfe von Visual Studio-Vorlagen veröffentlicht werden.
+- [Erweitern des Visual Basic-Anwendungsmodells](extending-the-visual-basic-application-model.md)  
+ Beschreibt, wie Sie Ihre eigenen Erweiterungen für das Anwendungsmodell angeben, indem Sie Member der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>-Klasse überschreiben.
+- [Anpassen der verfügbaren Objekte in „My“](customizing-which-objects-are-available-in-my.md)  
+ Beschreibt, wie Sie steuern können, welche `My` Objekte aktiviert werden, indem Sie die \_MyType bedingte Kompilierungs Konstante Ihres Projekts festlegen.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+- [Entwicklung mit „My“](../development-with-my/index.md)  
+ Beschreibt, welche `My` Objekte standardmäßig in unterschiedlichen Projekttypen verfügbar sind.
+- [Übersicht über das Visual Basic-Anwendungsmodell](../development-with-my/overview-of-the-visual-basic-application-model.md)  
+ Beschreibt Visual Basic Modell zum Steuern des Verhaltens von Windows Forms Anwendungen.
+- [Merkmale von "My" auf Grundlage des Projekttyps](../development-with-my/how-my-depends-on-project-type.md)  
+ Beschreibt, welche `My` Objekte standardmäßig in unterschiedlichen Projekttypen verfügbar sind.
+- [Bedingte Kompilierung](../../programming-guide/program-structure/conditional-compilation.md)  
+ Erläutert, wie der Compiler bedingte Kompilierung verwendet, um bestimmte Code Abschnitte auszuwählen und andere Abschnitte auszuschließen.
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ Beschreibt das `My` Objekt, das Eigenschaften, Methoden und Ereignisse bereitstellt, die mit der aktuellen Anwendung verknüpft sind.
+
 ## <a name="see-also"></a>Siehe auch
 
-- [Entwickeln von Anwendungen mit Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Entwickeln von Anwendungen mit Visual Basic](../index.md)
