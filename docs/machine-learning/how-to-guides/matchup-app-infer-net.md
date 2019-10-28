@@ -3,12 +3,12 @@ title: Erstellen einer App für eine Spielerrangliste anhand der Auswertung von 
 description: Finden Sie heraus, wie Sie die probabilistische Programmierung mit Infer.NET verwenden können, um eine App für eine Spielerrangliste anhand der Auswertung von Spielpartien zu erstellen, die auf einer vereinfachten Version von TrueSkill basiert.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957210"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774541"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Erstellen einer App für eine Spielerrangliste anhand der Auswertung von Spielpartien mit Infer.NET und probabilistischer Programmierung
 
@@ -24,7 +24,7 @@ Mit der probabilistischen Programmierung können wir statistische Modelle aus Pr
 
   Für diese Schrittanleitung wird vorausgesetzt, dass Sie über einen Computer verfügen, den Sie für die Entwicklung nutzen können. Im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) finden Sie eine Anleitung zum Einrichten Ihrer lokalen Entwicklungsumgebung unter macOS, Windows oder Linux.
 
-## <a name="create-your-app"></a>Erstellen Ihrer App
+## <a name="create-your-app"></a>Erstellen der App
 
 1. Öffnen Sie eine neue Eingabeaufforderung, und führen Sie die folgenden Befehle aus:
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Entwerfen des Modells
 
-Das Beispiel verwendet Tischtennis- oder Fußballspiele, die im Büro ausgetragen wurden. Sie kennen die Teilnehmer und das Ergebnis jedes Spiels.  Aus diesen Daten möchten Sie die Fähigkeiten jedes Spielers ableiten. Wir nehmen an, dass die latenten Fähigkeiten jedes Spielers normal verteilt sind und dass die Leistung in einem bestimmten Spiel eine abweichende Version dieser Fähigkeiten darstellt. Die Daten legen nahe, dass die Leistung des Gewinners besser ist als die Leistung des Verlierers. Dies ist eine vereinfachte Version des beliebten [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/)-Modells, das auch Teams, Unentschieden und andere Erweiterungen unterstützt. Eine [erweiterte Version](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) dieses Modells wird für die Spielergebnisse in den sehr erfolgreichen Spielen „Halo“ und „Gears of War“ verwendet.
+Das Beispiel verwendet Tischtennis- oder Fußballspiele, die im Büro ausgetragen wurden. Sie kennen die Teilnehmer und das Ergebnis jedes Spiels.  Aus diesen Daten möchten Sie die Fähigkeiten jedes Spielers ableiten. Wir nehmen an, dass die latenten Fähigkeiten jedes Spielers normal verteilt sind und dass die Leistung in einem bestimmten Spiel eine abweichende Version dieser Fähigkeiten darstellt. Die Daten legen nahe, dass die Leistung des Gewinners besser ist als die Leistung des Verlierers. Dies ist eine vereinfachte Version des beliebten [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/)-Modells, das auch Teams, Unentschieden und andere Erweiterungen unterstützt. Eine [erweiterte Version](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) dieses Modells wird für die Spielergebnisse in den sehr erfolgreichen Spielen „Halo“ und „Gears of War“ verwendet.
 
 Sie müssen die abgeleiteten Fähigkeiten jedes Spielers sowie die Varianz auflisten – das Maß für Ungewissheit in Bezug auf die Fähigkeiten.
 
