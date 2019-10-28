@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 880e8c0b733afbf5c09f543e06a5a4a858d2b456
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606062"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771848"
 ---
 # <a name="bool-c-reference"></a>bool (C#-Referenz)
 
@@ -57,5 +57,3 @@ In diesem Beispiel geben Sie ein Zeichen über die Tastatur ein, und das Program
 - [C#-Schlüsselwörter](./index.md)
 - [Integrale Typen](../builtin-types/integral-numeric-types.md)
 - [Tabelle integrierter Typen](./built-in-types-table.md)
-- [Tabelle für implizite numerische Konvertierungen](./implicit-numeric-conversions-table.md)
-- [Tabelle für explizite numerische Konvertierungen](./explicit-numeric-conversions-table.md)

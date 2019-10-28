@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609941"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771722"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bitweise und Schiebeoperatoren: C#-Referenz
 
@@ -158,7 +158,7 @@ Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden
 
 ## <a name="shift-count-of-the-shift-operators"></a>Anzahl für die Verschiebung durch Schiebeoperatoren
 
-Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden [int](../builtin-types/integral-numeric-types.md) lauten oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../keywords/implicit-numeric-conversions-table.md) in `int` aufweist.
+Für die Schiebeoperatoren `<<` und `>>` muss der Typ des rechten Operanden [int](../builtin-types/integral-numeric-types.md) lauten oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) in `int` aufweist.
 
 Für die Ausdrücke `x << count` und `x >> count` hängt die tatsächliche Verschiebungsanzahl wie folgt vom Typ von `x` ab:
 

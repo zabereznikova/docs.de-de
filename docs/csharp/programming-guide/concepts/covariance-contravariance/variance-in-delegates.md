@@ -2,12 +2,12 @@
 title: Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a65b2fb84e2eae57eecaf5307ca76fbce412d44c
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924380"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772043"
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
 Mit .NET Framework 3.5 wurde die Unterstützung von Varianz eingeführt, um Methodensignaturen und Delegattypen in allen Delegaten in C# vergleichen zu können. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
@@ -25,7 +25,7 @@ public delegate R SampleGenericDelegate<A, R>(A a);
   
 ```csharp  
 // Matching signature.  
-public static First ASecondRFirst(Second first)  
+public static First ASecondRFirst(Second second)  
 { return new First(); }  
   
 // The return type is more derived.  

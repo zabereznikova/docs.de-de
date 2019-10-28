@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605818"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771866"
 ---
 # <a name="enum-c-reference"></a>enum (C#-Referenz)
 
@@ -101,6 +101,4 @@ Wenn Sie `Flags`entfernen, werden im Beispiel die folgenden Werte angezeigt:
 - [C#-Schlüsselwörter](index.md)
 - [Integrale Typen](../builtin-types/integral-numeric-types.md)
 - [Tabelle integrierter Typen](built-in-types-table.md)
-- [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)
-- [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)
 - [Benennungskonventionen für Enumerationen](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
