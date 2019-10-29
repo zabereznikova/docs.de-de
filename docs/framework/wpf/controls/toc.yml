@@ -22,7 +22,7 @@
               href: how-to-create-a-button-that-has-an-image.md
         - name: Kalender
           href: calendar.md
-        - name: Canvas
+        - name: Zeichenbereich
           href: canvas.md
           items:
             - name: Gewusst wie-Themen
@@ -497,7 +497,7 @@
         - name: 'Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Erstellen einer Schaltfläche mit Microsoft Expression Blend
+            - name: Erstellen einer Schaltfläche mit Blend
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
             - name: Erstellen einer Schaltfläche mit XAML
               href: walkthrough-create-a-button-by-using-xaml.md
