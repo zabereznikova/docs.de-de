@@ -8,364 +8,326 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd4a4699f115c5b134ea60e703607ff36c229a78
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046494"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040583"
 ---
-# <a name="garbage-collection-etw-events"></a><span data-ttu-id="fc9d7-102">Garbage Collection-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="fc9d7-102">Garbage Collection ETW Events</span></span>
-<a name="top"></a> <span data-ttu-id="fc9d7-103">Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-103">These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="fc9d7-104">Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>  
-  
- <span data-ttu-id="fc9d7-105">Diese Kategorie umfasst die folgenden Ereignisse:</span><span class="sxs-lookup"><span data-stu-id="fc9d7-105">This category consists of the following events:</span></span>  
-  
-- [<span data-ttu-id="fc9d7-106">GCStart_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-106">GCStart_V1 Event</span></span>](#gcstart_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-107">GCEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-107">GCEnd_V1 Event</span></span>](#gcend_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-108">GCHeapStats_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-108">GCHeapStats_V1 Event</span></span>](#gcheapstats_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-109">GCCreateSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-109">GCCreateSegment_V1 Event</span></span>](#gccreatesegment_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-110">GCFreeSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-110">GCFreeSegment_V1 Event</span></span>](#gcfreesegment_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-111">GCRestartEEBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-111">GCRestartEEBegin_V1 Event</span></span>](#gcrestarteebegin_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-112">GCRestartEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-112">GCRestartEEEnd_V1 Event</span></span>](#gcrestarteeend_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-113">GCSuspendEE_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-113">GCSuspendEE_V1 Event</span></span>](#gcsuspendee_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-114">GCSuspendEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-114">GCSuspendEEEnd_V1 Event</span></span>](#gcsuspendeeend_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-115">GCAllocationTick_V2-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-115">GCAllocationTick_V2 Event</span></span>](#gcallocationtick_v2_event)  
-  
-- [<span data-ttu-id="fc9d7-116">GCFinalizersBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-116">GCFinalizersBegin_V1 Event</span></span>](#gcfinalizersbegin_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-117">GCFinalizersEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-117">GCFinalizersEnd_V1 Event</span></span>](#gcfinalizersend_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-118">GCCreateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-118">GCCreateConcurrentThread_V1 Event</span></span>](#gccreateconcurrentthread_v1_event)  
-  
-- [<span data-ttu-id="fc9d7-119">GCTerminateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-119">GCTerminateConcurrentThread_V1 Event</span></span>](#gcterminateconcurrentthread_v1_event)  
-  
-<a name="gcstart_v1_event"></a>   
-## <a name="gcstart_v1-event"></a><span data-ttu-id="fc9d7-120">GCStart_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-120">GCStart_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-121">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-121">The following table shows the keyword and level.</span></span> <span data-ttu-id="fc9d7-122">(Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-122">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
-  
-|<span data-ttu-id="fc9d7-123">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-123">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-124">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-124">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-125">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-125">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-126">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-126">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-127">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-127">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-128">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-128">Event</span></span>|<span data-ttu-id="fc9d7-129">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-129">Event ID</span></span>|<span data-ttu-id="fc9d7-130">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-130">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCStart_V1`|<span data-ttu-id="fc9d7-131">1</span><span class="sxs-lookup"><span data-stu-id="fc9d7-131">1</span></span>|<span data-ttu-id="fc9d7-132">Eine Garbage Collection gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-132">A garbage collection has started.</span></span>|  
-  
- <span data-ttu-id="fc9d7-133">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-133">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-134">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-134">Field name</span></span>|<span data-ttu-id="fc9d7-135">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-135">Data type</span></span>|<span data-ttu-id="fc9d7-136">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-136">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-137">Anzahl</span><span class="sxs-lookup"><span data-stu-id="fc9d7-137">Count</span></span>|<span data-ttu-id="fc9d7-138">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-138">win:UInt32</span></span>|<span data-ttu-id="fc9d7-139">Die *N*-te Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-139">The *n*th garbage collection.</span></span>|  
-|<span data-ttu-id="fc9d7-140">Tiefe</span><span class="sxs-lookup"><span data-stu-id="fc9d7-140">Depth</span></span>|<span data-ttu-id="fc9d7-141">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-141">win:UInt32</span></span>|<span data-ttu-id="fc9d7-142">Die erfasste Generation.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-142">The generation that is being collected.</span></span>|  
-|<span data-ttu-id="fc9d7-143">Grund</span><span class="sxs-lookup"><span data-stu-id="fc9d7-143">Reason</span></span>|<span data-ttu-id="fc9d7-144">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-144">win:UInt32</span></span>|<span data-ttu-id="fc9d7-145">Grund für die Auslösung der Garbage Collection:</span><span class="sxs-lookup"><span data-stu-id="fc9d7-145">Why the garbage collection was triggered:</span></span><br /><br /> <span data-ttu-id="fc9d7-146">0x0 – Zuordnung für kleinen Objektheap.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-146">0x0 - Small object heap allocation.</span></span><br /><br /> <span data-ttu-id="fc9d7-147">0x1 – Induziert.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-147">0x1 - Induced.</span></span><br /><br /> <span data-ttu-id="fc9d7-148">0x2 – Wenig Arbeitsspeicher</span><span class="sxs-lookup"><span data-stu-id="fc9d7-148">0x2 - Low memory.</span></span><br /><br /> <span data-ttu-id="fc9d7-149">0x3 – Leer.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-149">0x3 - Empty.</span></span><br /><br /> <span data-ttu-id="fc9d7-150">0x4 – Zuordnung für großen Objektheap.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-150">0x4 - Large object heap allocation.</span></span><br /><br /> <span data-ttu-id="fc9d7-151">0x5 – Nicht genug Speicherplatz (für kleinen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="fc9d7-151">0x5 - Out of space (for small object heap).</span></span><br /><br /> <span data-ttu-id="fc9d7-152">0x6 – Nicht genügend Speicherplatz (für großen Objektheap)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-152">0x6 - Out of space (for large object heap).</span></span><br /><br /> <span data-ttu-id="fc9d7-153">0x7 – Induziert, aber nicht als blockierend erzwungen.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-153">0x7 - Induced but not forced as blocking.</span></span>|  
-|<span data-ttu-id="fc9d7-154">Typ</span><span class="sxs-lookup"><span data-stu-id="fc9d7-154">Type</span></span>|<span data-ttu-id="fc9d7-155">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-155">win:UInt32</span></span>|<span data-ttu-id="fc9d7-156">0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-156">0x0 - Blocking garbage collection occurred outside background garbage collection.</span></span><br /><br /> <span data-ttu-id="fc9d7-157">0x1 – Garbage Collection im Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-157">0x1 - Background garbage collection.</span></span><br /><br /> <span data-ttu-id="fc9d7-158">0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-158">0x2 - Blocking garbage collection occurred during background garbage collection.</span></span>|  
-|<span data-ttu-id="fc9d7-159">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-159">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-160">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-160">win:UInt16</span></span>|<span data-ttu-id="fc9d7-161">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-161">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-162">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-162">Back to top</span></span>](#top)  
-  
-<a name="gcend_v1_event"></a>   
-## <a name="gcend_v1-event"></a><span data-ttu-id="fc9d7-163">GCEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-163">GCEnd_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-164">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-164">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-165">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-165">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-166">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-166">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-167">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-167">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-168">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-168">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-169">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-169">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-170">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-170">Event</span></span>|<span data-ttu-id="fc9d7-171">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-171">Event ID</span></span>|<span data-ttu-id="fc9d7-172">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-172">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCEnd_V1`|<span data-ttu-id="fc9d7-173">2</span><span class="sxs-lookup"><span data-stu-id="fc9d7-173">2</span></span>|<span data-ttu-id="fc9d7-174">Die Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-174">The garbage collection has ended.</span></span>|  
-  
- <span data-ttu-id="fc9d7-175">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-175">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-176">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-176">Field name</span></span>|<span data-ttu-id="fc9d7-177">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-177">Data type</span></span>|<span data-ttu-id="fc9d7-178">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-178">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-179">Anzahl</span><span class="sxs-lookup"><span data-stu-id="fc9d7-179">Count</span></span>|<span data-ttu-id="fc9d7-180">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-180">win:UInt32</span></span>|<span data-ttu-id="fc9d7-181">Die *N*-te Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-181">The *n*th garbage collection.</span></span>|  
-|<span data-ttu-id="fc9d7-182">Tiefe</span><span class="sxs-lookup"><span data-stu-id="fc9d7-182">Depth</span></span>|<span data-ttu-id="fc9d7-183">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-183">win:UInt32</span></span>|<span data-ttu-id="fc9d7-184">Die Generation, die erfasst wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-184">The generation that was collected.</span></span>|  
-|<span data-ttu-id="fc9d7-185">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-185">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-186">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-186">win:UInt16</span></span>|<span data-ttu-id="fc9d7-187">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-187">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-188">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-188">Back to top</span></span>](#top)  
-  
-<a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstats_v1-event"></a><span data-ttu-id="fc9d7-189">GCHeapStats_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-189">GCHeapStats_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-190">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-190">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-191">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-191">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-192">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-192">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-193">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-193">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-194">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-194">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-195">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-195">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-196">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-196">Event</span></span>|<span data-ttu-id="fc9d7-197">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-197">Event ID</span></span>|<span data-ttu-id="fc9d7-198">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-198">Description</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCHeapStats_V1`|<span data-ttu-id="fc9d7-199">4</span><span class="sxs-lookup"><span data-stu-id="fc9d7-199">4</span></span>|<span data-ttu-id="fc9d7-200">Zeigt die Heapstatistik am Ende jeder Garbage Collection an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-200">Shows the heap statistics at the end of each garbage collection.</span></span>|  
-  
- <span data-ttu-id="fc9d7-201">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-201">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-202">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-202">Field name</span></span>|<span data-ttu-id="fc9d7-203">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-203">Data type</span></span>|<span data-ttu-id="fc9d7-204">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-204">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-205">GenerationSize0</span><span class="sxs-lookup"><span data-stu-id="fc9d7-205">GenerationSize0</span></span>|<span data-ttu-id="fc9d7-206">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-206">win:UInt64</span></span>|<span data-ttu-id="fc9d7-207">Die Größe des Arbeitsspeichers der Generation 0 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-207">The size, in bytes, of generation 0 memory.</span></span>|  
-|<span data-ttu-id="fc9d7-208">TotalPromotedSize0</span><span class="sxs-lookup"><span data-stu-id="fc9d7-208">TotalPromotedSize0</span></span>|<span data-ttu-id="fc9d7-209">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-209">win:UInt64</span></span>|<span data-ttu-id="fc9d7-210">Die Anzahl der Bytes, die von Generation 0 zu Generation 1 höher gestuft werden.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-210">The number of bytes that are promoted from generation 0 to generation 1.</span></span>|  
-|<span data-ttu-id="fc9d7-211">GenerationSize1</span><span class="sxs-lookup"><span data-stu-id="fc9d7-211">GenerationSize1</span></span>|<span data-ttu-id="fc9d7-212">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-212">win:UInt64</span></span>|<span data-ttu-id="fc9d7-213">Die Größe des Arbeitsspeichers der Generation 1 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-213">The size, in bytes, of generation 1 memory.</span></span>|  
-|<span data-ttu-id="fc9d7-214">TotalPromotedSize1</span><span class="sxs-lookup"><span data-stu-id="fc9d7-214">TotalPromotedSize1</span></span>|<span data-ttu-id="fc9d7-215">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-215">win:UInt64</span></span>|<span data-ttu-id="fc9d7-216">Die Anzahl der Bytes, die von Generation 1 zu Generation 2 höher gestuft werden.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-216">The number of bytes that are promoted from generation 1 to generation 2.</span></span>|  
-|<span data-ttu-id="fc9d7-217">GenerationSize2</span><span class="sxs-lookup"><span data-stu-id="fc9d7-217">GenerationSize2</span></span>|<span data-ttu-id="fc9d7-218">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-218">win:UInt64</span></span>|<span data-ttu-id="fc9d7-219">Die Größe des Arbeitsspeichers der Generation 2 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-219">The size, in bytes, of generation 2 memory.</span></span>|  
-|<span data-ttu-id="fc9d7-220">TotalPromotedSize2</span><span class="sxs-lookup"><span data-stu-id="fc9d7-220">TotalPromotedSize2</span></span>|<span data-ttu-id="fc9d7-221">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-221">win:UInt64</span></span>|<span data-ttu-id="fc9d7-222">Die Anzahl der Bytes, die nach der letzten Garbage Collection in Generation 2 noch vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-222">The number of bytes that survived in generation 2 after the last collection.</span></span>|  
-|<span data-ttu-id="fc9d7-223">GenerationSize3</span><span class="sxs-lookup"><span data-stu-id="fc9d7-223">GenerationSize3</span></span>|<span data-ttu-id="fc9d7-224">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-224">win:UInt64</span></span>|<span data-ttu-id="fc9d7-225">Die Größe des großen Objektheaps in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-225">The size, in bytes, of the large object heap.</span></span>|  
-|<span data-ttu-id="fc9d7-226">TotalPromotedSize3</span><span class="sxs-lookup"><span data-stu-id="fc9d7-226">TotalPromotedSize3</span></span>|<span data-ttu-id="fc9d7-227">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-227">win:UInt64</span></span>|<span data-ttu-id="fc9d7-228">Die Anzahl der Bytes, die nach der letzten Garbage Collection im großen Objektheap noch vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-228">The number of bytes that survived in the large object heap after the last collection.</span></span>|  
-|<span data-ttu-id="fc9d7-229">FinalizationPromotedSize</span><span class="sxs-lookup"><span data-stu-id="fc9d7-229">FinalizationPromotedSize</span></span>|<span data-ttu-id="fc9d7-230">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-230">win:UInt64</span></span>|<span data-ttu-id="fc9d7-231">Die Gesamtgröße der Objekte in Bytes, die auf einen Abschluss warten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-231">The total size, in bytes, of the objects that are ready for finalization.</span></span>|  
-|<span data-ttu-id="fc9d7-232">FinalizationPromotedCount</span><span class="sxs-lookup"><span data-stu-id="fc9d7-232">FinalizationPromotedCount</span></span>|<span data-ttu-id="fc9d7-233">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-233">win:UInt64</span></span>|<span data-ttu-id="fc9d7-234">Die Anzahl der Objekte, die auf einen Abschluss warten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-234">The number of objects that are ready for finalization.</span></span>|  
-|<span data-ttu-id="fc9d7-235">PinnedObjectCount</span><span class="sxs-lookup"><span data-stu-id="fc9d7-235">PinnedObjectCount</span></span>|<span data-ttu-id="fc9d7-236">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-236">win:UInt32</span></span>|<span data-ttu-id="fc9d7-237">Die Anzahl der fixierten (unverschiebbaren) Objekte.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-237">The number of pinned (unmovable) objects.</span></span>|  
-|<span data-ttu-id="fc9d7-238">SinkBlockCount</span><span class="sxs-lookup"><span data-stu-id="fc9d7-238">SinkBlockCount</span></span>|<span data-ttu-id="fc9d7-239">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-239">win:UInt32</span></span>|<span data-ttu-id="fc9d7-240">Die Anzahl der verwendeten Synchronisierungsblöcke.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-240">The number of synchronization blocks in use.</span></span>|  
-|<span data-ttu-id="fc9d7-241">GCHandleCount</span><span class="sxs-lookup"><span data-stu-id="fc9d7-241">GCHandleCount</span></span>|<span data-ttu-id="fc9d7-242">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-242">win:UInt32</span></span>|<span data-ttu-id="fc9d7-243">Die Anzahl der verwendeten Garbage Collection-Handles.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-243">The number of garbage collection handles in use.</span></span>|  
-|<span data-ttu-id="fc9d7-244">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-244">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-245">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-245">win:UInt16</span></span>|<span data-ttu-id="fc9d7-246">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-246">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-247">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-247">Back to top</span></span>](#top)  
-  
-<a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegment_v1-event"></a><span data-ttu-id="fc9d7-248">GCCreateSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-248">GCCreateSegment_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-249">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-249">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-250">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-250">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-251">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-251">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-252">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-252">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-253">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-253">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-254">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-254">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-255">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-255">Event</span></span>|<span data-ttu-id="fc9d7-256">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-256">Event ID</span></span>|<span data-ttu-id="fc9d7-257">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-257">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCCreateSegment_V1`|<span data-ttu-id="fc9d7-258">5</span><span class="sxs-lookup"><span data-stu-id="fc9d7-258">5</span></span>|<span data-ttu-id="fc9d7-259">Neues Garbage Collection-Segment wurde erstellt.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-259">A new garbage collection segment has been created.</span></span> <span data-ttu-id="fc9d7-260">Darüber hinaus wird dieses Ereignis für jedes vorhandene Segment ausgelöst, wenn die Ablaufverfolgung für einen Prozess aktiviert ist, der bereits ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-260">In addition, when tracing is enabled on a process that is already running, this event is raised for each existing segment.</span></span>|  
-  
- <span data-ttu-id="fc9d7-261">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-261">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-262">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-262">Field name</span></span>|<span data-ttu-id="fc9d7-263">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-263">Data type</span></span>|<span data-ttu-id="fc9d7-264">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-264">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-265">Adresse</span><span class="sxs-lookup"><span data-stu-id="fc9d7-265">Address</span></span>|<span data-ttu-id="fc9d7-266">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-266">win:UInt64</span></span>|<span data-ttu-id="fc9d7-267">Die Adresse des Segments.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-267">The address of the segment.</span></span>|  
-|<span data-ttu-id="fc9d7-268">Größe</span><span class="sxs-lookup"><span data-stu-id="fc9d7-268">Size</span></span>|<span data-ttu-id="fc9d7-269">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-269">win:UInt64</span></span>|<span data-ttu-id="fc9d7-270">Die Größe des Segments.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-270">The size of the segment.</span></span>|  
-|<span data-ttu-id="fc9d7-271">Typ</span><span class="sxs-lookup"><span data-stu-id="fc9d7-271">Type</span></span>|<span data-ttu-id="fc9d7-272">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-272">win:UInt32</span></span>|<span data-ttu-id="fc9d7-273">0x0 – Kleiner Objektheap.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-273">0x0 - Small object heap.</span></span><br /><br /> <span data-ttu-id="fc9d7-274">0x1 – Großer Objektheap.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-274">0x1 - Large object heap.</span></span><br /><br /> <span data-ttu-id="fc9d7-275">0x2 – Schreibgeschützter Heap.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-275">0x2 - Read-only heap.</span></span>|  
-|<span data-ttu-id="fc9d7-276">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-276">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-277">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-277">win:UInt16</span></span>|<span data-ttu-id="fc9d7-278">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-278">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- <span data-ttu-id="fc9d7-279">Beachten Sie, dass die Größe der Segmente, die vom Garbage Collector zugeordnet werden, implementierungsspezifisch ist und jederzeit, auch in regelmäßigen Updates, geändert werden kann.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-279">Note that the size of segments allocated by the garbage collector is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="fc9d7-280">Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-280">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>  
-  
- [<span data-ttu-id="fc9d7-281">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-281">Back to top</span></span>](#top)  
-  
-<a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegment_v1-event"></a><span data-ttu-id="fc9d7-282">GCFreeSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-282">GCFreeSegment_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-283">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-283">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-284">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-284">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-285">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-285">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-286">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-286">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-287">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-287">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-288">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-288">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-289">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-289">Event</span></span>|<span data-ttu-id="fc9d7-290">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-290">Event ID</span></span>|<span data-ttu-id="fc9d7-291">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-291">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCFreeSegment_V1`|<span data-ttu-id="fc9d7-292">6</span><span class="sxs-lookup"><span data-stu-id="fc9d7-292">6</span></span>|<span data-ttu-id="fc9d7-293">Ein Garbage Collection-Segment freigegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-293">A garbage collection segment has been released.</span></span>|  
-  
- <span data-ttu-id="fc9d7-294">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-294">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-295">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-295">Field name</span></span>|<span data-ttu-id="fc9d7-296">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-296">Data type</span></span>|<span data-ttu-id="fc9d7-297">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-297">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-298">Adresse</span><span class="sxs-lookup"><span data-stu-id="fc9d7-298">Address</span></span>|<span data-ttu-id="fc9d7-299">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-299">win:UInt64</span></span>|<span data-ttu-id="fc9d7-300">Die Adresse des Segments.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-300">The address of the segment.</span></span>|  
-|<span data-ttu-id="fc9d7-301">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-301">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-302">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-302">win:UInt16</span></span>|<span data-ttu-id="fc9d7-303">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-303">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-304">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-304">Back to top</span></span>](#top)  
-  
-<a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebegin_v1-event"></a><span data-ttu-id="fc9d7-305">GCRestartEEBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-305">GCRestartEEBegin_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-306">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-306">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-307">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-307">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-308">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-308">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-309">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-309">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-310">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-310">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-311">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-311">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-312">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-312">Event</span></span>|<span data-ttu-id="fc9d7-313">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-313">Event ID</span></span>|<span data-ttu-id="fc9d7-314">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-314">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCRestartEEBegin_V1`|<span data-ttu-id="fc9d7-315">7</span><span class="sxs-lookup"><span data-stu-id="fc9d7-315">7</span></span>|<span data-ttu-id="fc9d7-316">Die Wiederaufnahme der Common Language Runtime-Unterbrechung begonnen hat.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-316">Resumption from common language runtime suspension has begun.</span></span>|  
-  
- <span data-ttu-id="fc9d7-317">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-317">No event data.</span></span>  
-  
- [<span data-ttu-id="fc9d7-318">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-318">Back to top</span></span>](#top)  
-  
-<a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeend_v1-event"></a><span data-ttu-id="fc9d7-319">GCRestartEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-319">GCRestartEEEnd_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-320">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-320">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-321">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-321">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-322">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-322">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-323">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-323">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-324">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-324">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-325">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-325">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-326">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-326">Event</span></span>|<span data-ttu-id="fc9d7-327">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-327">Event Id</span></span>|<span data-ttu-id="fc9d7-328">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-328">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCRestartEEEnd_V1`|<span data-ttu-id="fc9d7-329">3</span><span class="sxs-lookup"><span data-stu-id="fc9d7-329">3</span></span>|<span data-ttu-id="fc9d7-330">Die Wiederaufnahme der Common Language Runtime-Unterbrechung beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-330">Resumption from common language runtime suspension has ended.</span></span>|  
-  
- <span data-ttu-id="fc9d7-331">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-331">No event data.</span></span>  
-  
- [<span data-ttu-id="fc9d7-332">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-332">Back to top</span></span>](#top)  
-  
-<a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendee_v1-event"></a><span data-ttu-id="fc9d7-333">GCSuspendEE_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-333">GCSuspendEE_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-334">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-334">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-335">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-335">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-336">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-336">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-337">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-337">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-338">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-338">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-339">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-339">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-340">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-340">Event</span></span>|<span data-ttu-id="fc9d7-341">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-341">Event ID</span></span>|<span data-ttu-id="fc9d7-342">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-342">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCSuspendEE_V1`|<span data-ttu-id="fc9d7-343">9</span><span class="sxs-lookup"><span data-stu-id="fc9d7-343">9</span></span>|<span data-ttu-id="fc9d7-344">Die Unterbrechung der Ausführungs-Engine für die Garbage Collection gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-344">Start of suspension of the execution engine for garbage collection.</span></span>|  
-  
- <span data-ttu-id="fc9d7-345">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-345">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-346">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-346">Field name</span></span>|<span data-ttu-id="fc9d7-347">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-347">Data type</span></span>|<span data-ttu-id="fc9d7-348">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-348">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-349">Grund</span><span class="sxs-lookup"><span data-stu-id="fc9d7-349">Reason</span></span>|<span data-ttu-id="fc9d7-350">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-350">win:UInt16</span></span>|<span data-ttu-id="fc9d7-351">0x0 – Andere.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-351">0x0 - Other.</span></span><br /><br /> <span data-ttu-id="fc9d7-352">0x1 – Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-352">0x1 - Garbage collection.</span></span><br /><br /> <span data-ttu-id="fc9d7-353">0x2 – Herunterfahren der Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-353">0x2 - Application domain shutdown.</span></span><br /><br /> <span data-ttu-id="fc9d7-354">0x3 – Codepitching.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-354">0x3 - Code pitching.</span></span><br /><br /> <span data-ttu-id="fc9d7-355">0x4 – Herunterfahren.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-355">0x4 - Shutdown.</span></span><br /><br /> <span data-ttu-id="fc9d7-356">0x5 – Debugger.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-356">0x5 - Debugger.</span></span><br /><br /> <span data-ttu-id="fc9d7-357">0x6 – Vorbereitung auf Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-357">0x6 - Preparation for garbage collection.</span></span>|  
-|<span data-ttu-id="fc9d7-358">Anzahl</span><span class="sxs-lookup"><span data-stu-id="fc9d7-358">Count</span></span>|<span data-ttu-id="fc9d7-359">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-359">win:UInt32</span></span>|<span data-ttu-id="fc9d7-360">Die Anzahl der GCs zu diesem Zeitpunkt.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-360">The GC count at the time.</span></span> <span data-ttu-id="fc9d7-361">Normalerweise würde Ihnen danach ein nachfolgender GC-Start angezeigt werden. Diese Anzahl würde dabei um 1 erhöht werden, da der GC-Index während der Garbage Collection erhöht wird.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-361">Usually, you would see a subsequent GC Start event after this, and its Count would be this Count + 1 as we increase the GC index during a garbage collection.</span></span>|  
-|<span data-ttu-id="fc9d7-362">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-362">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-363">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-363">win:UInt16</span></span>|<span data-ttu-id="fc9d7-364">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-364">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-365">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-365">Back to top</span></span>](#top)  
-  
-<a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeend_v1-event"></a><span data-ttu-id="fc9d7-366">GCSuspendEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-366">GCSuspendEEEnd_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-367">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="fc9d7-367">The following table shows the keyword and level:</span></span>  
-  
-|<span data-ttu-id="fc9d7-368">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-368">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-369">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-369">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-370">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-370">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-371">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-371">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-372">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="fc9d7-372">The following table shows the event information:</span></span>  
-  
-|<span data-ttu-id="fc9d7-373">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-373">Event</span></span>|<span data-ttu-id="fc9d7-374">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-374">Event ID</span></span>|<span data-ttu-id="fc9d7-375">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-375">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCSuspendEEEnd_V1`|<span data-ttu-id="fc9d7-376">8</span><span class="sxs-lookup"><span data-stu-id="fc9d7-376">8</span></span>|<span data-ttu-id="fc9d7-377">Die Unterbrechung der Ausführungs-Engine für die Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-377">End of suspension of the execution engine for garbage collection.</span></span>|  
-  
- <span data-ttu-id="fc9d7-378">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-378">No event data.</span></span>  
-  
- [<span data-ttu-id="fc9d7-379">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-379">Back to top</span></span>](#top)  
-  
-<a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtick_v2-event"></a><span data-ttu-id="fc9d7-380">GCAllocationTick_V2-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-380">GCAllocationTick_V2 Event</span></span>  
- <span data-ttu-id="fc9d7-381">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-381">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-382">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-382">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-383">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-383">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-384">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-384">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-385">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-385">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-386">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-386">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-387">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-387">Event</span></span>|<span data-ttu-id="fc9d7-388">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-388">Event ID</span></span>|<span data-ttu-id="fc9d7-389">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-389">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCAllocationTick_V2`|<span data-ttu-id="fc9d7-390">10</span><span class="sxs-lookup"><span data-stu-id="fc9d7-390">10</span></span>|<span data-ttu-id="fc9d7-391">Jedes Mal werden ungefähr 100 KB zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-391">Each time approximately 100 KB is allocated.</span></span>|  
-  
- <span data-ttu-id="fc9d7-392">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-392">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-393">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-393">Field name</span></span>|<span data-ttu-id="fc9d7-394">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-394">Data type</span></span>|<span data-ttu-id="fc9d7-395">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-395">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-396">AllocationAmount</span><span class="sxs-lookup"><span data-stu-id="fc9d7-396">AllocationAmount</span></span>|<span data-ttu-id="fc9d7-397">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-397">win:UInt32</span></span>|<span data-ttu-id="fc9d7-398">Die Zuordnungsgröße in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-398">The allocation size, in bytes.</span></span> <span data-ttu-id="fc9d7-399">Dieser Wert ist für Zuordnungen präzise, die kleiner als die Länge von ULONG sind (4.294.967.295 Bytes).</span><span class="sxs-lookup"><span data-stu-id="fc9d7-399">This value is accurate for allocations that are less than the length of a ULONG (4,294,967,295 bytes).</span></span> <span data-ttu-id="fc9d7-400">Wenn die Zuordnung größer ist, enthält dieses Feld einen abgeschnittenen Wert.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-400">If the allocation is greater, this field contains a truncated value.</span></span> <span data-ttu-id="fc9d7-401">Verwenden Sie `AllocationAmount64` für sehr große Zuordnungen.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-401">Use `AllocationAmount64` for very large allocations.</span></span>|  
-|<span data-ttu-id="fc9d7-402">AllocationKind</span><span class="sxs-lookup"><span data-stu-id="fc9d7-402">AllocationKind</span></span>|<span data-ttu-id="fc9d7-403">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-403">win:UInt32</span></span>|<span data-ttu-id="fc9d7-404">0x0 – Kleine Objektzuordnung (Zuordnung erfolgt im kleinen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="fc9d7-404">0x0 - Small object allocation (allocation is in small object heap).</span></span><br /><br /> <span data-ttu-id="fc9d7-405">0x1 – Große Objektzuordnung (Zuordnung erfolgt im großen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="fc9d7-405">0x1 - Large object allocation (allocation is in large object heap).</span></span>|  
-|<span data-ttu-id="fc9d7-406">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-406">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-407">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-407">win:UInt16</span></span>|<span data-ttu-id="fc9d7-408">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-408">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-|<span data-ttu-id="fc9d7-409">AllocationAmount64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-409">AllocationAmount64</span></span>|<span data-ttu-id="fc9d7-410">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="fc9d7-410">win:UInt64</span></span>|<span data-ttu-id="fc9d7-411">Die Zuordnungsgröße in Bytes.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-411">The allocation size, in bytes.</span></span> <span data-ttu-id="fc9d7-412">Dieser Wert ist für sehr große Zuordnungen präzise.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-412">This value is accurate for very large allocations.</span></span>|  
-|<span data-ttu-id="fc9d7-413">TypeId</span><span class="sxs-lookup"><span data-stu-id="fc9d7-413">TypeId</span></span>|<span data-ttu-id="fc9d7-414">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="fc9d7-414">win:Pointer</span></span>|<span data-ttu-id="fc9d7-415">Die Adresse der Methodentabelle.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-415">The address of the MethodTable.</span></span> <span data-ttu-id="fc9d7-416">Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies die Adresse der Methodentabelle, die dem zuletzt zugeordneten Objekt (das Objekt, das den Schwellenwert von 100 KB überschritten hat) entspricht.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-416">When there are several types of objects that were allocated during this event, this is the address of the MethodTable that corresponds to the last object allocated (the object that caused the 100 KB threshold to be exceeded).</span></span>|  
-|<span data-ttu-id="fc9d7-417">TypeName</span><span class="sxs-lookup"><span data-stu-id="fc9d7-417">TypeName</span></span>|<span data-ttu-id="fc9d7-418">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="fc9d7-418">win:UnicodeString</span></span>|<span data-ttu-id="fc9d7-419">Der Name des zugeordneten Typs.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-419">The name of the type that was allocated.</span></span> <span data-ttu-id="fc9d7-420">Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).</span><span class="sxs-lookup"><span data-stu-id="fc9d7-420">When there are several types of objects that were allocated during this event, this is the type of the last object allocated (the object that caused the 100 KB threshold to be exceeded).</span></span>|  
-|<span data-ttu-id="fc9d7-421">HeapIndex</span><span class="sxs-lookup"><span data-stu-id="fc9d7-421">HeapIndex</span></span>|<span data-ttu-id="fc9d7-422">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-422">win:UInt32</span></span>|<span data-ttu-id="fc9d7-423">Der Heap, auf dem das Objekt zugeordnet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-423">The heap where the object was allocated.</span></span> <span data-ttu-id="fc9d7-424">Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-424">This value is 0 (zero) when running with workstation garbage collection.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-425">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-425">Back to top</span></span>](#top)  
-  
-<a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbegin_v1-event"></a><span data-ttu-id="fc9d7-426">GCFinalizersBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-426">GCFinalizersBegin_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-427">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-427">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-428">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-428">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-429">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-429">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-430">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-430">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-431">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-431">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-432">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-432">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-433">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-433">Event</span></span>|<span data-ttu-id="fc9d7-434">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-434">Event ID</span></span>|<span data-ttu-id="fc9d7-435">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-435">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCFinalizersBegin_V1`|<span data-ttu-id="fc9d7-436">14</span><span class="sxs-lookup"><span data-stu-id="fc9d7-436">14</span></span>|<span data-ttu-id="fc9d7-437">Die Ausführung von Finalizern gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-437">The start of running finalizers.</span></span>|  
-  
- <span data-ttu-id="fc9d7-438">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-438">No event data.</span></span>  
-  
- [<span data-ttu-id="fc9d7-439">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-439">Back to top</span></span>](#top)  
-  
-<a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersend_v1-event"></a><span data-ttu-id="fc9d7-440">GCFinalizersEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-440">GCFinalizersEnd_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-441">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-441">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-442">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-442">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-443">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-443">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-444">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-444">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-445">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-445">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-446">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-446">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-447">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-447">Event</span></span>|<span data-ttu-id="fc9d7-448">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-448">Event ID</span></span>|<span data-ttu-id="fc9d7-449">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-449">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCFinalizersEnd_V1`|<span data-ttu-id="fc9d7-450">13</span><span class="sxs-lookup"><span data-stu-id="fc9d7-450">13</span></span>|<span data-ttu-id="fc9d7-451">Die Ausführung von Finalizern beendet wird.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-451">The end of running finalizers.</span></span>|  
-  
- <span data-ttu-id="fc9d7-452">Die folgende Tabelle zeigt die Ereignisdaten an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-452">The following table shows the event data.</span></span>  
-  
-|<span data-ttu-id="fc9d7-453">Feldname</span><span class="sxs-lookup"><span data-stu-id="fc9d7-453">Field name</span></span>|<span data-ttu-id="fc9d7-454">Datentyp</span><span class="sxs-lookup"><span data-stu-id="fc9d7-454">Data type</span></span>|<span data-ttu-id="fc9d7-455">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc9d7-455">Description</span></span>|  
-|----------------|---------------|-----------------|  
-|<span data-ttu-id="fc9d7-456">Anzahl</span><span class="sxs-lookup"><span data-stu-id="fc9d7-456">Count</span></span>|<span data-ttu-id="fc9d7-457">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="fc9d7-457">win:UInt32</span></span>|<span data-ttu-id="fc9d7-458">Die Anzahl der ausgeführten Finalizer.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-458">The number of finalizers that were run.</span></span>|  
-|<span data-ttu-id="fc9d7-459">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-459">ClrInstanceID</span></span>|<span data-ttu-id="fc9d7-460">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="fc9d7-460">win:UInt16</span></span>|<span data-ttu-id="fc9d7-461">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-461">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
-  
- [<span data-ttu-id="fc9d7-462">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-462">Back to top</span></span>](#top)  
-  
-<a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthread_v1-event"></a><span data-ttu-id="fc9d7-463">GCCreateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-463">GCCreateConcurrentThread_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-464">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-464">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-465">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-465">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-466">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-466">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-467">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-467">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-468">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-468">Informational (4)</span></span>|  
-|<span data-ttu-id="fc9d7-469">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-469">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="fc9d7-470">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-470">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-471">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-471">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-472">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-472">Event</span></span>|<span data-ttu-id="fc9d7-473">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-473">Event ID</span></span>|<span data-ttu-id="fc9d7-474">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-474">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCCreateConcurrentThread_V1`|<span data-ttu-id="fc9d7-475">11</span><span class="sxs-lookup"><span data-stu-id="fc9d7-475">11</span></span>|<span data-ttu-id="fc9d7-476">Thread für parallele Garbage Collection erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-476">Concurrent garbage collection thread was created.</span></span>|  
-  
- <span data-ttu-id="fc9d7-477">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-477">No event data.</span></span>  
-  
- [<span data-ttu-id="fc9d7-478">Zurück nach oben</span><span class="sxs-lookup"><span data-stu-id="fc9d7-478">Back to top</span></span>](#top)  
-  
-<a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthread_v1-event"></a><span data-ttu-id="fc9d7-479">GCTerminateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="fc9d7-479">GCTerminateConcurrentThread_V1 Event</span></span>  
- <span data-ttu-id="fc9d7-480">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-480">The following table shows the keyword and level.</span></span>  
-  
-|<span data-ttu-id="fc9d7-481">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="fc9d7-481">Keyword for raising the event</span></span>|<span data-ttu-id="fc9d7-482">Ebene</span><span class="sxs-lookup"><span data-stu-id="fc9d7-482">Level</span></span>|  
-|-----------------------------------|-----------|  
-|<span data-ttu-id="fc9d7-483">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-483">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="fc9d7-484">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-484">Informational (4)</span></span>|  
-|<span data-ttu-id="fc9d7-485">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-485">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="fc9d7-486">Information (4)</span><span class="sxs-lookup"><span data-stu-id="fc9d7-486">Informational (4)</span></span>|  
-  
- <span data-ttu-id="fc9d7-487">Die folgende Tabelle zeigt die Ereignisinformationen an.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-487">The following table shows the event information.</span></span>  
-  
-|<span data-ttu-id="fc9d7-488">event</span><span class="sxs-lookup"><span data-stu-id="fc9d7-488">Event</span></span>|<span data-ttu-id="fc9d7-489">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="fc9d7-489">Event ID</span></span>|<span data-ttu-id="fc9d7-490">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="fc9d7-490">Raised when</span></span>|  
-|-----------|--------------|-----------------|  
-|`GCTerminateConcurrentThread_V1`|<span data-ttu-id="fc9d7-491">12</span><span class="sxs-lookup"><span data-stu-id="fc9d7-491">12</span></span>|<span data-ttu-id="fc9d7-492">Thread für parallele Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-492">Concurrent garbage collection thread was terminated.</span></span>|  
-  
- <span data-ttu-id="fc9d7-493">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="fc9d7-493">No event data.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fc9d7-494">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc9d7-494">See also</span></span>
+# <a name="garbage-collection-etw-events"></a><span data-ttu-id="2e8c6-102">Garbage Collection-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="2e8c6-102">Garbage Collection ETW Events</span></span>
 
-- [<span data-ttu-id="fc9d7-495">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="fc9d7-495">CLR ETW Events</span></span>](clr-etw-events.md)
+<span data-ttu-id="2e8c6-103">Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-103">These events collect information pertaining to garbage collection.</span></span> <span data-ttu-id="2e8c6-104">Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-104">They help in diagnostics and debugging, including determining how many times garbage collection was performed, how much memory was freed during garbage collection, and so on.</span></span>
+
+<span data-ttu-id="2e8c6-105">Diese Kategorie umfasst die folgenden Ereignisse:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-105">This category consists of the following events:</span></span>
+
+- [<span data-ttu-id="2e8c6-106">GCStart_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-106">GCStart_V1 Event</span></span>](#gcstart_v1-event)
+- [<span data-ttu-id="2e8c6-107">GCEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-107">GCEnd_V1 Event</span></span>](#gcend_v1-event)
+- [<span data-ttu-id="2e8c6-108">GCHeapStats_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-108">GCHeapStats_V1 Event</span></span>](#gcheapstats_v1-event)
+- [<span data-ttu-id="2e8c6-109">GCCreateSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-109">GCCreateSegment_V1 Event</span></span>](#gccreatesegment_v1-event)
+- [<span data-ttu-id="2e8c6-110">GCFreeSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-110">GCFreeSegment_V1 Event</span></span>](#gcfreesegment_v1-event)
+- [<span data-ttu-id="2e8c6-111">GCRestartEEBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-111">GCRestartEEBegin_V1 Event</span></span>](#gcrestarteebegin_v1-event)
+- [<span data-ttu-id="2e8c6-112">GCRestartEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-112">GCRestartEEEnd_V1 Event</span></span>](#gcrestarteeend_v1-event)
+- [<span data-ttu-id="2e8c6-113">GCSuspendEE_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-113">GCSuspendEE_V1 Event</span></span>](#gcsuspendee_v1-event)
+- [<span data-ttu-id="2e8c6-114">GCSuspendEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-114">GCSuspendEEEnd_V1 Event</span></span>](#gcsuspendeeend_v1-event)
+- [<span data-ttu-id="2e8c6-115">GCAllocationTick_V2-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-115">GCAllocationTick_V2 Event</span></span>](#gcallocationtick_v2-event)
+- [<span data-ttu-id="2e8c6-116">GCFinalizersBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-116">GCFinalizersBegin_V1 Event</span></span>](#gcfinalizersbegin_v1-event)
+- [<span data-ttu-id="2e8c6-117">GCFinalizersEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-117">GCFinalizersEnd_V1 Event</span></span>](#gcfinalizersend_v1-event)
+- [<span data-ttu-id="2e8c6-118">GCCreateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-118">GCCreateConcurrentThread_V1 Event</span></span>](#gccreateconcurrentthread_v1-event)
+- [<span data-ttu-id="2e8c6-119">GCTerminateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-119">GCTerminateConcurrentThread_V1 Event</span></span>](#gcterminateconcurrentthread_v1-event)
+
+## <a name="gcstart_v1-event"></a><span data-ttu-id="2e8c6-120">GCStart_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-120">GCStart_V1 Event</span></span>  
+
+<span data-ttu-id="2e8c6-121">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-121">The following table shows the keyword and level.</span></span> <span data-ttu-id="2e8c6-122">Weitere Informationen finden Sie unter [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-122">For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).</span></span>
+
+|<span data-ttu-id="2e8c6-123">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-123">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-124">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-124">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-125">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-125">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-126">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-126">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-127">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-127">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-128">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-128">Event</span></span>|<span data-ttu-id="2e8c6-129">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-129">Event ID</span></span>|<span data-ttu-id="2e8c6-130">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-130">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCStart_V1`|<span data-ttu-id="2e8c6-131">1</span><span class="sxs-lookup"><span data-stu-id="2e8c6-131">1</span></span>|<span data-ttu-id="2e8c6-132">Eine Garbage Collection gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-132">A garbage collection has started.</span></span>|
+
+<span data-ttu-id="2e8c6-133">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-133">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-134">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-134">Field name</span></span>|<span data-ttu-id="2e8c6-135">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-135">Data type</span></span>|<span data-ttu-id="2e8c6-136">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-136">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-137">Anzahl</span><span class="sxs-lookup"><span data-stu-id="2e8c6-137">Count</span></span>|<span data-ttu-id="2e8c6-138">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-138">win:UInt32</span></span>|<span data-ttu-id="2e8c6-139">Die *N*-te Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-139">The *n*th garbage collection.</span></span>|
+|<span data-ttu-id="2e8c6-140">Tiefe</span><span class="sxs-lookup"><span data-stu-id="2e8c6-140">Depth</span></span>|<span data-ttu-id="2e8c6-141">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-141">win:UInt32</span></span>|<span data-ttu-id="2e8c6-142">Die erfasste Generation.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-142">The generation that is being collected.</span></span>|
+|<span data-ttu-id="2e8c6-143">Grund</span><span class="sxs-lookup"><span data-stu-id="2e8c6-143">Reason</span></span>|<span data-ttu-id="2e8c6-144">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-144">win:UInt32</span></span>|<span data-ttu-id="2e8c6-145">Grund für die Auslösung der Garbage Collection:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-145">Why the garbage collection was triggered:</span></span><br /><br /> <span data-ttu-id="2e8c6-146">0x0 – Zuordnung für kleinen Objektheap.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-146">0x0 - Small object heap allocation.</span></span><br /><br /> <span data-ttu-id="2e8c6-147">0x1 – Induziert.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-147">0x1 - Induced.</span></span><br /><br /> <span data-ttu-id="2e8c6-148">0x2 – Wenig Arbeitsspeicher</span><span class="sxs-lookup"><span data-stu-id="2e8c6-148">0x2 - Low memory.</span></span><br /><br /> <span data-ttu-id="2e8c6-149">0x3 – Leer.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-149">0x3 - Empty.</span></span><br /><br /> <span data-ttu-id="2e8c6-150">0x4 – Zuordnung für großen Objektheap.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-150">0x4 - Large object heap allocation.</span></span><br /><br /> <span data-ttu-id="2e8c6-151">0x5 – Nicht genug Speicherplatz (für kleinen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-151">0x5 - Out of space (for small object heap).</span></span><br /><br /> <span data-ttu-id="2e8c6-152">0x6 – Nicht genügend Speicherplatz (für großen Objektheap)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-152">0x6 - Out of space (for large object heap).</span></span><br /><br /> <span data-ttu-id="2e8c6-153">0x7 – Induziert, aber nicht als blockierend erzwungen.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-153">0x7 - Induced but not forced as blocking.</span></span>|
+|<span data-ttu-id="2e8c6-154">Geben Sie Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-154">Type</span></span>|<span data-ttu-id="2e8c6-155">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-155">win:UInt32</span></span>|<span data-ttu-id="2e8c6-156">0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-156">0x0 - Blocking garbage collection occurred outside background garbage collection.</span></span><br /><br /> <span data-ttu-id="2e8c6-157">0x1 – Garbage Collection im Hintergrund.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-157">0x1 - Background garbage collection.</span></span><br /><br /> <span data-ttu-id="2e8c6-158">0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-158">0x2 - Blocking garbage collection occurred during background garbage collection.</span></span>|
+|<span data-ttu-id="2e8c6-159">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-159">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-160">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-160">win:UInt16</span></span>|<span data-ttu-id="2e8c6-161">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-161">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="gcend_v1-event"></a><span data-ttu-id="2e8c6-162">GCEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-162">GCEnd_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-163">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-163">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-164">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-164">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-165">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-165">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-166">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-166">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-167">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-167">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-168">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-168">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-169">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-169">Event</span></span>|<span data-ttu-id="2e8c6-170">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-170">Event ID</span></span>|<span data-ttu-id="2e8c6-171">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-171">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCEnd_V1`|<span data-ttu-id="2e8c6-172">2</span><span class="sxs-lookup"><span data-stu-id="2e8c6-172">2</span></span>|<span data-ttu-id="2e8c6-173">Die Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-173">The garbage collection has ended.</span></span>|
+
+<span data-ttu-id="2e8c6-174">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-174">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-175">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-175">Field name</span></span>|<span data-ttu-id="2e8c6-176">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-176">Data type</span></span>|<span data-ttu-id="2e8c6-177">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-177">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-178">Anzahl</span><span class="sxs-lookup"><span data-stu-id="2e8c6-178">Count</span></span>|<span data-ttu-id="2e8c6-179">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-179">win:UInt32</span></span>|<span data-ttu-id="2e8c6-180">Die *N*-te Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-180">The *n*th garbage collection.</span></span>|
+|<span data-ttu-id="2e8c6-181">Tiefe</span><span class="sxs-lookup"><span data-stu-id="2e8c6-181">Depth</span></span>|<span data-ttu-id="2e8c6-182">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-182">win:UInt32</span></span>|<span data-ttu-id="2e8c6-183">Die Generation, die erfasst wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-183">The generation that was collected.</span></span>|
+|<span data-ttu-id="2e8c6-184">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-184">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-185">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-185">win:UInt16</span></span>|<span data-ttu-id="2e8c6-186">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-186">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="gcheapstats_v1-event"></a><span data-ttu-id="2e8c6-187">GCHeapStats_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-187">GCHeapStats_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-188">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-188">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-189">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-189">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-190">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-190">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-191">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-191">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-192">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-192">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-193">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-193">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-194">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-194">Event</span></span>|<span data-ttu-id="2e8c6-195">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-195">Event ID</span></span>|<span data-ttu-id="2e8c6-196">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-196">Description</span></span>|
+|-----------|--------------|-----------------|
+|`GCHeapStats_V1`|<span data-ttu-id="2e8c6-197">4</span><span class="sxs-lookup"><span data-stu-id="2e8c6-197">4</span></span>|<span data-ttu-id="2e8c6-198">Zeigt die Heapstatistik am Ende jeder Garbage Collection an.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-198">Shows the heap statistics at the end of each garbage collection.</span></span>|
+
+<span data-ttu-id="2e8c6-199">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-199">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-200">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-200">Field name</span></span>|<span data-ttu-id="2e8c6-201">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-201">Data type</span></span>|<span data-ttu-id="2e8c6-202">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-202">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-203">GenerationSize0</span><span class="sxs-lookup"><span data-stu-id="2e8c6-203">GenerationSize0</span></span>|<span data-ttu-id="2e8c6-204">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-204">win:UInt64</span></span>|<span data-ttu-id="2e8c6-205">Die Größe des Arbeitsspeichers der Generation 0 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-205">The size, in bytes, of generation 0 memory.</span></span>|
+|<span data-ttu-id="2e8c6-206">TotalPromotedSize0</span><span class="sxs-lookup"><span data-stu-id="2e8c6-206">TotalPromotedSize0</span></span>|<span data-ttu-id="2e8c6-207">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-207">win:UInt64</span></span>|<span data-ttu-id="2e8c6-208">Die Anzahl der Bytes, die von Generation 0 zu Generation 1 höher gestuft werden.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-208">The number of bytes that are promoted from generation 0 to generation 1.</span></span>|
+|<span data-ttu-id="2e8c6-209">GenerationSize1</span><span class="sxs-lookup"><span data-stu-id="2e8c6-209">GenerationSize1</span></span>|<span data-ttu-id="2e8c6-210">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-210">win:UInt64</span></span>|<span data-ttu-id="2e8c6-211">Die Größe des Arbeitsspeichers der Generation 1 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-211">The size, in bytes, of generation 1 memory.</span></span>|
+|<span data-ttu-id="2e8c6-212">TotalPromotedSize1</span><span class="sxs-lookup"><span data-stu-id="2e8c6-212">TotalPromotedSize1</span></span>|<span data-ttu-id="2e8c6-213">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-213">win:UInt64</span></span>|<span data-ttu-id="2e8c6-214">Die Anzahl der Bytes, die von Generation 1 zu Generation 2 höher gestuft werden.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-214">The number of bytes that are promoted from generation 1 to generation 2.</span></span>|
+|<span data-ttu-id="2e8c6-215">GenerationSize2</span><span class="sxs-lookup"><span data-stu-id="2e8c6-215">GenerationSize2</span></span>|<span data-ttu-id="2e8c6-216">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-216">win:UInt64</span></span>|<span data-ttu-id="2e8c6-217">Die Größe des Arbeitsspeichers der Generation 2 in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-217">The size, in bytes, of generation 2 memory.</span></span>|
+|<span data-ttu-id="2e8c6-218">TotalPromotedSize2</span><span class="sxs-lookup"><span data-stu-id="2e8c6-218">TotalPromotedSize2</span></span>|<span data-ttu-id="2e8c6-219">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-219">win:UInt64</span></span>|<span data-ttu-id="2e8c6-220">Die Anzahl der Bytes, die nach der letzten Garbage Collection in Generation 2 noch vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-220">The number of bytes that survived in generation 2 after the last collection.</span></span>|
+|<span data-ttu-id="2e8c6-221">GenerationSize3</span><span class="sxs-lookup"><span data-stu-id="2e8c6-221">GenerationSize3</span></span>|<span data-ttu-id="2e8c6-222">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-222">win:UInt64</span></span>|<span data-ttu-id="2e8c6-223">Die Größe des großen Objektheaps in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-223">The size, in bytes, of the large object heap.</span></span>|
+|<span data-ttu-id="2e8c6-224">TotalPromotedSize3</span><span class="sxs-lookup"><span data-stu-id="2e8c6-224">TotalPromotedSize3</span></span>|<span data-ttu-id="2e8c6-225">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-225">win:UInt64</span></span>|<span data-ttu-id="2e8c6-226">Die Anzahl der Bytes, die nach der letzten Garbage Collection im großen Objektheap noch vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-226">The number of bytes that survived in the large object heap after the last collection.</span></span>|
+|<span data-ttu-id="2e8c6-227">FinalizationPromotedSize</span><span class="sxs-lookup"><span data-stu-id="2e8c6-227">FinalizationPromotedSize</span></span>|<span data-ttu-id="2e8c6-228">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-228">win:UInt64</span></span>|<span data-ttu-id="2e8c6-229">Die Gesamtgröße der Objekte in Bytes, die auf einen Abschluss warten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-229">The total size, in bytes, of the objects that are ready for finalization.</span></span>|
+|<span data-ttu-id="2e8c6-230">FinalizationPromotedCount</span><span class="sxs-lookup"><span data-stu-id="2e8c6-230">FinalizationPromotedCount</span></span>|<span data-ttu-id="2e8c6-231">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-231">win:UInt64</span></span>|<span data-ttu-id="2e8c6-232">Die Anzahl der Objekte, die auf einen Abschluss warten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-232">The number of objects that are ready for finalization.</span></span>|
+|<span data-ttu-id="2e8c6-233">PinnedObjectCount</span><span class="sxs-lookup"><span data-stu-id="2e8c6-233">PinnedObjectCount</span></span>|<span data-ttu-id="2e8c6-234">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-234">win:UInt32</span></span>|<span data-ttu-id="2e8c6-235">Die Anzahl der fixierten (unverschiebbaren) Objekte.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-235">The number of pinned (unmovable) objects.</span></span>|
+|<span data-ttu-id="2e8c6-236">SinkBlockCount</span><span class="sxs-lookup"><span data-stu-id="2e8c6-236">SinkBlockCount</span></span>|<span data-ttu-id="2e8c6-237">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-237">win:UInt32</span></span>|<span data-ttu-id="2e8c6-238">Die Anzahl der verwendeten Synchronisierungsblöcke.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-238">The number of synchronization blocks in use.</span></span>|
+|<span data-ttu-id="2e8c6-239">GCHandleCount</span><span class="sxs-lookup"><span data-stu-id="2e8c6-239">GCHandleCount</span></span>|<span data-ttu-id="2e8c6-240">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-240">win:UInt32</span></span>|<span data-ttu-id="2e8c6-241">Die Anzahl der verwendeten Garbage Collection-Handles.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-241">The number of garbage collection handles in use.</span></span>|
+|<span data-ttu-id="2e8c6-242">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-242">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-243">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-243">win:UInt16</span></span>|<span data-ttu-id="2e8c6-244">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-244">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+  
+## <a name="gccreatesegment_v1-event"></a><span data-ttu-id="2e8c6-245">GCCreateSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-245">GCCreateSegment_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-246">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-246">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-247">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-247">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-248">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-248">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-249">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-249">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-250">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-250">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-251">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-251">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-252">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-252">Event</span></span>|<span data-ttu-id="2e8c6-253">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-253">Event ID</span></span>|<span data-ttu-id="2e8c6-254">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-254">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCCreateSegment_V1`|<span data-ttu-id="2e8c6-255">5</span><span class="sxs-lookup"><span data-stu-id="2e8c6-255">5</span></span>|<span data-ttu-id="2e8c6-256">Neues Garbage Collection-Segment wurde erstellt.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-256">A new garbage collection segment has been created.</span></span> <span data-ttu-id="2e8c6-257">Darüber hinaus wird dieses Ereignis für jedes vorhandene Segment ausgelöst, wenn die Ablaufverfolgung für einen Prozess aktiviert ist, der bereits ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-257">In addition, when tracing is enabled on a process that is already running, this event is raised for each existing segment.</span></span>|
+
+<span data-ttu-id="2e8c6-258">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-258">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-259">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-259">Field name</span></span>|<span data-ttu-id="2e8c6-260">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-260">Data type</span></span>|<span data-ttu-id="2e8c6-261">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-261">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-262">Adresse</span><span class="sxs-lookup"><span data-stu-id="2e8c6-262">Address</span></span>|<span data-ttu-id="2e8c6-263">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-263">win:UInt64</span></span>|<span data-ttu-id="2e8c6-264">Die Adresse des Segments.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-264">The address of the segment.</span></span>|
+|<span data-ttu-id="2e8c6-265">Größe</span><span class="sxs-lookup"><span data-stu-id="2e8c6-265">Size</span></span>|<span data-ttu-id="2e8c6-266">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-266">win:UInt64</span></span>|<span data-ttu-id="2e8c6-267">Die Größe des Segments.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-267">The size of the segment.</span></span>|
+|<span data-ttu-id="2e8c6-268">Geben Sie Folgendes ein:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-268">Type</span></span>|<span data-ttu-id="2e8c6-269">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-269">win:UInt32</span></span>|<span data-ttu-id="2e8c6-270">0x0 – Kleiner Objektheap.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-270">0x0 - Small object heap.</span></span><br /><br /> <span data-ttu-id="2e8c6-271">0x1 – Großer Objektheap.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-271">0x1 - Large object heap.</span></span><br /><br /> <span data-ttu-id="2e8c6-272">0x2 – Schreibgeschützter Heap.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-272">0x2 - Read-only heap.</span></span>|
+|<span data-ttu-id="2e8c6-273">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-273">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-274">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-274">win:UInt16</span></span>|<span data-ttu-id="2e8c6-275">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-275">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+<span data-ttu-id="2e8c6-276">Beachten Sie, dass die Größe der Segmente, die vom Garbage Collector zugeordnet werden, implementierungsspezifisch ist und jederzeit, auch in regelmäßigen Updates, geändert werden kann.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-276">Note that the size of segments allocated by the garbage collector is implementation-specific and is subject to change at any time, including in periodic updates.</span></span> <span data-ttu-id="2e8c6-277">Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-277">Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.</span></span>
+
+## <a name="gcfreesegment_v1-event"></a><span data-ttu-id="2e8c6-278">GCFreeSegment_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-278">GCFreeSegment_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-279">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-279">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-280">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-280">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-281">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-281">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-282">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-282">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-283">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-283">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-284">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-284">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-285">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-285">Event</span></span>|<span data-ttu-id="2e8c6-286">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-286">Event ID</span></span>|<span data-ttu-id="2e8c6-287">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-287">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCFreeSegment_V1`|<span data-ttu-id="2e8c6-288">6</span><span class="sxs-lookup"><span data-stu-id="2e8c6-288">6</span></span>|<span data-ttu-id="2e8c6-289">Ein Garbage Collection-Segment freigegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-289">A garbage collection segment has been released.</span></span>|
+
+<span data-ttu-id="2e8c6-290">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-290">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-291">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-291">Field name</span></span>|<span data-ttu-id="2e8c6-292">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-292">Data type</span></span>|<span data-ttu-id="2e8c6-293">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-293">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-294">Adresse</span><span class="sxs-lookup"><span data-stu-id="2e8c6-294">Address</span></span>|<span data-ttu-id="2e8c6-295">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-295">win:UInt64</span></span>|<span data-ttu-id="2e8c6-296">Die Adresse des Segments.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-296">The address of the segment.</span></span>|
+|<span data-ttu-id="2e8c6-297">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-297">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-298">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-298">win:UInt16</span></span>|<span data-ttu-id="2e8c6-299">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-299">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="gcrestarteebegin_v1-event"></a><span data-ttu-id="2e8c6-300">GCRestartEEBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-300">GCRestartEEBegin_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-301">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-301">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-302">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-302">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-303">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-303">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-304">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-304">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-305">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-305">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-306">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-306">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-307">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-307">Event</span></span>|<span data-ttu-id="2e8c6-308">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-308">Event ID</span></span>|<span data-ttu-id="2e8c6-309">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-309">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCRestartEEBegin_V1`|<span data-ttu-id="2e8c6-310">7</span><span class="sxs-lookup"><span data-stu-id="2e8c6-310">7</span></span>|<span data-ttu-id="2e8c6-311">Die Wiederaufnahme der Common Language Runtime-Unterbrechung begonnen hat.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-311">Resumption from common language runtime suspension has begun.</span></span>|
+
+<span data-ttu-id="2e8c6-312">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-312">No event data.</span></span>
+
+## <a name="gcrestarteeend_v1-event"></a><span data-ttu-id="2e8c6-313">GCRestartEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-313">GCRestartEEEnd_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-314">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-314">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-315">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-315">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-316">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-316">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-317">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-317">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-318">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-318">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-319">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-319">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-320">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-320">Event</span></span>|<span data-ttu-id="2e8c6-321">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-321">Event Id</span></span>|<span data-ttu-id="2e8c6-322">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-322">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCRestartEEEnd_V1`|<span data-ttu-id="2e8c6-323">3</span><span class="sxs-lookup"><span data-stu-id="2e8c6-323">3</span></span>|<span data-ttu-id="2e8c6-324">Die Wiederaufnahme der Common Language Runtime-Unterbrechung beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-324">Resumption from common language runtime suspension has ended.</span></span>|
+
+<span data-ttu-id="2e8c6-325">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-325">No event data.</span></span>
+
+## <a name="gcsuspendee_v1-event"></a><span data-ttu-id="2e8c6-326">GCSuspendEE_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-326">GCSuspendEE_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-327">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-327">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-328">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-328">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-329">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-329">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-330">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-330">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-331">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-331">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-332">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-332">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-333">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-333">Event</span></span>|<span data-ttu-id="2e8c6-334">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-334">Event ID</span></span>|<span data-ttu-id="2e8c6-335">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-335">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCSuspendEE_V1`|<span data-ttu-id="2e8c6-336">9</span><span class="sxs-lookup"><span data-stu-id="2e8c6-336">9</span></span>|<span data-ttu-id="2e8c6-337">Die Unterbrechung der Ausführungs-Engine für die Garbage Collection gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-337">Start of suspension of the execution engine for garbage collection.</span></span>|
+
+<span data-ttu-id="2e8c6-338">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-338">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-339">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-339">Field name</span></span>|<span data-ttu-id="2e8c6-340">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-340">Data type</span></span>|<span data-ttu-id="2e8c6-341">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-341">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-342">Grund</span><span class="sxs-lookup"><span data-stu-id="2e8c6-342">Reason</span></span>|<span data-ttu-id="2e8c6-343">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-343">win:UInt16</span></span>|<span data-ttu-id="2e8c6-344">0x0 – Andere.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-344">0x0 - Other.</span></span><br /><br /> <span data-ttu-id="2e8c6-345">0x1 – Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-345">0x1 - Garbage collection.</span></span><br /><br /> <span data-ttu-id="2e8c6-346">0x2 – Herunterfahren der Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-346">0x2 - Application domain shutdown.</span></span><br /><br /> <span data-ttu-id="2e8c6-347">0x3 – Codepitching.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-347">0x3 - Code pitching.</span></span><br /><br /> <span data-ttu-id="2e8c6-348">0x4 – Herunterfahren.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-348">0x4 - Shutdown.</span></span><br /><br /> <span data-ttu-id="2e8c6-349">0x5 – Debugger.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-349">0x5 - Debugger.</span></span><br /><br /> <span data-ttu-id="2e8c6-350">0x6 – Vorbereitung auf Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-350">0x6 - Preparation for garbage collection.</span></span>|
+|<span data-ttu-id="2e8c6-351">Anzahl</span><span class="sxs-lookup"><span data-stu-id="2e8c6-351">Count</span></span>|<span data-ttu-id="2e8c6-352">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-352">win:UInt32</span></span>|<span data-ttu-id="2e8c6-353">Die Anzahl der GCs zu diesem Zeitpunkt.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-353">The GC count at the time.</span></span> <span data-ttu-id="2e8c6-354">Normalerweise würde Ihnen danach ein nachfolgender GC-Start angezeigt werden. Diese Anzahl würde dabei um 1 erhöht werden, da der GC-Index während der Garbage Collection erhöht wird.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-354">Usually, you would see a subsequent GC Start event after this, and its Count would be this Count + 1 as we increase the GC index during a garbage collection.</span></span>|
+|<span data-ttu-id="2e8c6-355">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-355">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-356">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-356">win:UInt16</span></span>|<span data-ttu-id="2e8c6-357">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-357">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="gcsuspendeeend_v1-event"></a><span data-ttu-id="2e8c6-358">GCSuspendEEEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-358">GCSuspendEEEnd_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-359">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-359">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-360">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-360">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-361">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-361">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-362">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-362">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-363">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-363">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-364">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-364">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-365">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-365">Event</span></span>|<span data-ttu-id="2e8c6-366">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-366">Event ID</span></span>|<span data-ttu-id="2e8c6-367">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-367">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCSuspendEEEnd_V1`|<span data-ttu-id="2e8c6-368">8</span><span class="sxs-lookup"><span data-stu-id="2e8c6-368">8</span></span>|<span data-ttu-id="2e8c6-369">Die Unterbrechung der Ausführungs-Engine für die Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-369">End of suspension of the execution engine for garbage collection.</span></span>|
+
+<span data-ttu-id="2e8c6-370">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-370">No event data.</span></span>
+
+## <a name="gcallocationtick_v2-event"></a><span data-ttu-id="2e8c6-371">GCAllocationTick_V2-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-371">GCAllocationTick_V2 Event</span></span>
+
+<span data-ttu-id="2e8c6-372">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-372">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-373">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-373">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-374">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-374">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-375">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-375">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-376">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-376">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-377">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-377">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-378">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-378">Event</span></span>|<span data-ttu-id="2e8c6-379">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-379">Event ID</span></span>|<span data-ttu-id="2e8c6-380">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-380">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCAllocationTick_V2`|<span data-ttu-id="2e8c6-381">10</span><span class="sxs-lookup"><span data-stu-id="2e8c6-381">10</span></span>|<span data-ttu-id="2e8c6-382">Jedes Mal werden ungefähr 100 KB zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-382">Each time approximately 100 KB is allocated.</span></span>|
+
+<span data-ttu-id="2e8c6-383">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-383">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-384">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-384">Field name</span></span>|<span data-ttu-id="2e8c6-385">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-385">Data type</span></span>|<span data-ttu-id="2e8c6-386">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-386">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-387">AllocationAmount</span><span class="sxs-lookup"><span data-stu-id="2e8c6-387">AllocationAmount</span></span>|<span data-ttu-id="2e8c6-388">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-388">win:UInt32</span></span>|<span data-ttu-id="2e8c6-389">Die Zuordnungsgröße in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-389">The allocation size, in bytes.</span></span> <span data-ttu-id="2e8c6-390">Dieser Wert ist für Zuordnungen präzise, die kleiner als die Länge von ULONG sind (4.294.967.295 Bytes).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-390">This value is accurate for allocations that are less than the length of a ULONG (4,294,967,295 bytes).</span></span> <span data-ttu-id="2e8c6-391">Wenn die Zuordnung größer ist, enthält dieses Feld einen abgeschnittenen Wert.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-391">If the allocation is greater, this field contains a truncated value.</span></span> <span data-ttu-id="2e8c6-392">Verwenden Sie `AllocationAmount64` für sehr große Zuordnungen.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-392">Use `AllocationAmount64` for very large allocations.</span></span>|
+|<span data-ttu-id="2e8c6-393">AllocationKind</span><span class="sxs-lookup"><span data-stu-id="2e8c6-393">AllocationKind</span></span>|<span data-ttu-id="2e8c6-394">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-394">win:UInt32</span></span>|<span data-ttu-id="2e8c6-395">0x0 – Kleine Objektzuordnung (Zuordnung erfolgt im kleinen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-395">0x0 - Small object allocation (allocation is in small object heap).</span></span><br /><br /> <span data-ttu-id="2e8c6-396">0x1 – Große Objektzuordnung (Zuordnung erfolgt im großen Objektheap).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-396">0x1 - Large object allocation (allocation is in large object heap).</span></span>|
+|<span data-ttu-id="2e8c6-397">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-397">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-398">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-398">win:UInt16</span></span>|<span data-ttu-id="2e8c6-399">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-399">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+|<span data-ttu-id="2e8c6-400">AllocationAmount64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-400">AllocationAmount64</span></span>|<span data-ttu-id="2e8c6-401">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="2e8c6-401">win:UInt64</span></span>|<span data-ttu-id="2e8c6-402">Die Zuordnungsgröße in Bytes.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-402">The allocation size, in bytes.</span></span> <span data-ttu-id="2e8c6-403">Dieser Wert ist für sehr große Zuordnungen präzise.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-403">This value is accurate for very large allocations.</span></span>|
+|<span data-ttu-id="2e8c6-404">TypeId</span><span class="sxs-lookup"><span data-stu-id="2e8c6-404">TypeId</span></span>|<span data-ttu-id="2e8c6-405">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="2e8c6-405">win:Pointer</span></span>|<span data-ttu-id="2e8c6-406">Die Adresse der Methodentabelle.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-406">The address of the MethodTable.</span></span> <span data-ttu-id="2e8c6-407">Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies die Adresse der Methodentabelle, die dem zuletzt zugeordneten Objekt (das Objekt, das den Schwellenwert von 100 KB überschritten hat) entspricht.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-407">When there are several types of objects that were allocated during this event, this is the address of the MethodTable that corresponds to the last object allocated (the object that caused the 100 KB threshold to be exceeded).</span></span>|
+|<span data-ttu-id="2e8c6-408">TypeName</span><span class="sxs-lookup"><span data-stu-id="2e8c6-408">TypeName</span></span>|<span data-ttu-id="2e8c6-409">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="2e8c6-409">win:UnicodeString</span></span>|<span data-ttu-id="2e8c6-410">Der Name des zugeordneten Typs.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-410">The name of the type that was allocated.</span></span> <span data-ttu-id="2e8c6-411">Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).</span><span class="sxs-lookup"><span data-stu-id="2e8c6-411">When there are several types of objects that were allocated during this event, this is the type of the last object allocated (the object that caused the 100 KB threshold to be exceeded).</span></span>|
+|<span data-ttu-id="2e8c6-412">HeapIndex</span><span class="sxs-lookup"><span data-stu-id="2e8c6-412">HeapIndex</span></span>|<span data-ttu-id="2e8c6-413">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-413">win:UInt32</span></span>|<span data-ttu-id="2e8c6-414">Der Heap, auf dem das Objekt zugeordnet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-414">The heap where the object was allocated.</span></span> <span data-ttu-id="2e8c6-415">Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-415">This value is 0 (zero) when running with workstation garbage collection.</span></span>|
+
+## <a name="gcfinalizersbegin_v1-event"></a><span data-ttu-id="2e8c6-416">GCFinalizersBegin_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-416">GCFinalizersBegin_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-417">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-417">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-418">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-418">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-419">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-419">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-420">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-420">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-421">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-421">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-422">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-422">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-423">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-423">Event</span></span>|<span data-ttu-id="2e8c6-424">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-424">Event ID</span></span>|<span data-ttu-id="2e8c6-425">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-425">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCFinalizersBegin_V1`|<span data-ttu-id="2e8c6-426">14</span><span class="sxs-lookup"><span data-stu-id="2e8c6-426">14</span></span>|<span data-ttu-id="2e8c6-427">Die Ausführung von Finalizern gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-427">The start of running finalizers.</span></span>|
+
+<span data-ttu-id="2e8c6-428">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-428">No event data.</span></span>
+
+## <a name="gcfinalizersend_v1-event"></a><span data-ttu-id="2e8c6-429">GCFinalizersEnd_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-429">GCFinalizersEnd_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-430">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-430">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-431">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-431">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-432">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-432">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-433">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-433">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-434">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-434">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-435">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-435">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-436">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-436">Event</span></span>|<span data-ttu-id="2e8c6-437">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-437">Event ID</span></span>|<span data-ttu-id="2e8c6-438">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-438">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCFinalizersEnd_V1`|<span data-ttu-id="2e8c6-439">13</span><span class="sxs-lookup"><span data-stu-id="2e8c6-439">13</span></span>|<span data-ttu-id="2e8c6-440">Die Ausführung von Finalizern beendet wird.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-440">The end of running finalizers.</span></span>|
+
+<span data-ttu-id="2e8c6-441">Die folgende Tabelle zeigt die Ereignisdaten an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-441">The following table shows the event data:</span></span>
+
+|<span data-ttu-id="2e8c6-442">Feldname</span><span class="sxs-lookup"><span data-stu-id="2e8c6-442">Field name</span></span>|<span data-ttu-id="2e8c6-443">Datentyp</span><span class="sxs-lookup"><span data-stu-id="2e8c6-443">Data type</span></span>|<span data-ttu-id="2e8c6-444">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e8c6-444">Description</span></span>|
+|----------------|---------------|-----------------|
+|<span data-ttu-id="2e8c6-445">Anzahl</span><span class="sxs-lookup"><span data-stu-id="2e8c6-445">Count</span></span>|<span data-ttu-id="2e8c6-446">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2e8c6-446">win:UInt32</span></span>|<span data-ttu-id="2e8c6-447">Die Anzahl der ausgeführten Finalizer.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-447">The number of finalizers that were run.</span></span>|
+|<span data-ttu-id="2e8c6-448">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-448">ClrInstanceID</span></span>|<span data-ttu-id="2e8c6-449">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="2e8c6-449">win:UInt16</span></span>|<span data-ttu-id="2e8c6-450">Eindeutige ID für die Instanz von CLR oder CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-450">Unique ID for the instance of CLR or CoreCLR.</span></span>|
+
+## <a name="gccreateconcurrentthread_v1-event"></a><span data-ttu-id="2e8c6-451">GCCreateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-451">GCCreateConcurrentThread_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-452">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-452">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-453">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-453">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-454">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-454">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-455">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-455">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-456">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-456">Informational (4)</span></span>|
+|<span data-ttu-id="2e8c6-457">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-457">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="2e8c6-458">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-458">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-459">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-459">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-460">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-460">Event</span></span>|<span data-ttu-id="2e8c6-461">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-461">Event ID</span></span>|<span data-ttu-id="2e8c6-462">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-462">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCCreateConcurrentThread_V1`|<span data-ttu-id="2e8c6-463">11</span><span class="sxs-lookup"><span data-stu-id="2e8c6-463">11</span></span>|<span data-ttu-id="2e8c6-464">Thread für parallele Garbage Collection erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-464">Concurrent garbage collection thread was created.</span></span>|
+
+<span data-ttu-id="2e8c6-465">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-465">No event data.</span></span>
+
+## <a name="gcterminateconcurrentthread_v1-event"></a><span data-ttu-id="2e8c6-466">GCTerminateConcurrentThread_V1-Ereignis</span><span class="sxs-lookup"><span data-stu-id="2e8c6-466">GCTerminateConcurrentThread_V1 Event</span></span>
+
+<span data-ttu-id="2e8c6-467">Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-467">The following table shows the keyword and level:</span></span>
+
+|<span data-ttu-id="2e8c6-468">Schlüsselwort zum Auslösen des Ereignisses</span><span class="sxs-lookup"><span data-stu-id="2e8c6-468">Keyword for raising the event</span></span>|<span data-ttu-id="2e8c6-469">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e8c6-469">Level</span></span>|
+|-----------------------------------|-----------|
+|<span data-ttu-id="2e8c6-470">`GCKeyword` (0x1)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-470">`GCKeyword` (0x1)</span></span>|<span data-ttu-id="2e8c6-471">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-471">Informational (4)</span></span>|
+|<span data-ttu-id="2e8c6-472">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-472">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="2e8c6-473">Information (4)</span><span class="sxs-lookup"><span data-stu-id="2e8c6-473">Informational (4)</span></span>|
+
+<span data-ttu-id="2e8c6-474">Die folgende Tabelle zeigt die Ereignisinformationen an:</span><span class="sxs-lookup"><span data-stu-id="2e8c6-474">The following table shows the event information:</span></span>
+
+|<span data-ttu-id="2e8c6-475">event</span><span class="sxs-lookup"><span data-stu-id="2e8c6-475">Event</span></span>|<span data-ttu-id="2e8c6-476">Ereignis-ID</span><span class="sxs-lookup"><span data-stu-id="2e8c6-476">Event ID</span></span>|<span data-ttu-id="2e8c6-477">Wird ausgelöst, wenn</span><span class="sxs-lookup"><span data-stu-id="2e8c6-477">Raised when</span></span>|
+|-----------|--------------|-----------------|
+|`GCTerminateConcurrentThread_V1`|<span data-ttu-id="2e8c6-478">12</span><span class="sxs-lookup"><span data-stu-id="2e8c6-478">12</span></span>|<span data-ttu-id="2e8c6-479">Thread für parallele Garbage Collection beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-479">Concurrent garbage collection thread was terminated.</span></span>|
+
+<span data-ttu-id="2e8c6-480">Keine Ereignisdaten.</span><span class="sxs-lookup"><span data-stu-id="2e8c6-480">No event data.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2e8c6-481">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2e8c6-481">See also</span></span>
+
+- [<span data-ttu-id="2e8c6-482">CLR-ETW-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="2e8c6-482">CLR ETW Events</span></span>](clr-etw-events.md)
