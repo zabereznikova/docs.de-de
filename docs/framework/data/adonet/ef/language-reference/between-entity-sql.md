@@ -2,19 +2,19 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 41036e629837bd5861368df545bed9423eac5b23
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 611e90f362bbc0eac521e1e1998fb85200169c19
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251284"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039947"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
 Ermittelt, ob der Ergebniswert eines Ausdrucks in einem angegebenen Bereich liegt. Der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] between-Ausdruck verfügt über die gleiche Funktionalität wie der between-Ausdruck von Transact-SQL.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```csharp  
 expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
@@ -43,7 +43,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der BETWEEN-Operator verwendet, um zu ermitteln, ob der Ergebniswert einer Abfrage in einem angegebenen Bereich liegt. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   

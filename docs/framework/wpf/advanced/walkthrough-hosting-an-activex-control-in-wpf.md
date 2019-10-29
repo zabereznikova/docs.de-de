@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 395081640815f00ce4ae8e83f25b37de567adc01
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 959bc7942eaae91c0a7a72124f6ab1ab92a3553f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920198"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040824"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines ActiveX-Steuerelements in WPF
-Um eine verbesserte Interaktion mit Browsern zu ermöglichen, können Sie Microsoft-ActiveX-Steuerelemente in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung verwenden. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] als Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite hosten können.
+Um eine verbesserte Interaktion mit Browsern zu ermöglichen, können Sie Microsoft-ActiveX-Steuerelemente in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung verwenden. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die Microsoft Windows-Media Player als Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite hosten können.
 
  In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
@@ -31,7 +31,7 @@ Um eine verbesserte Interaktion mit Browsern zu ermöglichen, können Sie Micros
 ## <a name="prerequisites"></a>Erforderliche Voraussetzungen
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
-- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] auf dem Computer installiert, auf dem Visual Studio installiert ist.
+- Microsoft Windows Media Player auf dem Computer installiert, auf dem Visual Studio installiert ist.
 
 - Visual Studio 2010.
 

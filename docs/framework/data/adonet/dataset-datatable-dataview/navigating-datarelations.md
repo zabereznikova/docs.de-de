@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784361"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040345"
 ---
 # <a name="navigating-datarelations"></a>Navigieren in "DataRelations"
-Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Auf diese Weise können Sie <xref:System.Data.DataRow> alle verknüpften Objekte in einer **Daten** Tabelle abrufen, wenn Sie eine einzelne **DataRow** aus einer verknüpften **Daten**Tabelle erhalten. Nachdem Sie z. b. eine **DataRelations** zwischen einer Tabelle mit Kunden und einer Tabelle mit Bestellungen eingerichtet haben, können Sie mithilfe von **GetChildRows**alle Auftragszeilen für eine bestimmte Kunden Zeile abrufen.  
+Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, die Navigation von einer <xref:System.Data.DataTable> zu einer anderen innerhalb eines <xref:System.Data.DataSet> zu ermöglichen. Auf diese Weise können Sie alle verknüpften <xref:System.Data.DataRow> Objekte in einer **Daten** Tabelle abrufen, wenn Sie eine einzelne **DataRow** aus einer verknüpften **Daten**Tabelle erhalten. Nachdem Sie z. b. eine **DataRelations** zwischen einer Tabelle mit Kunden und einer Tabelle mit Bestellungen eingerichtet haben, können Sie mithilfe von **GetChildRows**alle Auftragszeilen für eine bestimmte Kunden Zeile abrufen.  
   
  Im folgenden Codebeispiel wird eine **DataRelations** zwischen der **Customers** -Tabelle und der **Orders** -Tabelle eines **DataSets** erstellt und alle Bestellungen für jeden Kunden zurückgegeben.  
   
@@ -24,11 +24,11 @@ Eine der Hauptfunktionen einer <xref:System.Data.DataRelation> besteht darin, di
   
  Das erweiterte Beispiel gibt auch die Werte aus den Tabellen **Order Details** und **Products** zurück. Die **Orders** -Tabelle bezieht sich auf die **Order Details** -Tabelle mithilfe von **OrderID** , um für jeden Kundenauftrag festzustellen, welche Produkte und Mengen sortiert wurden. Da die **Order Details** -Tabelle nur die **ProductID** eines bestellten Produkts enthält, steht **Order Details** im Zusammenhang mit **Produkten** , die **ProductID** verwenden, um **ProductName**zurückzugeben. In dieser Beziehung ist die Tabelle " **Products** " das übergeordnete Element, und die Tabelle " **Order Details** " ist das untergeordnete Element. Daher wird beim Durchlaufen der **Order Details** -Tabelle **getparameentrow** aufgerufen, um den zugehörigen **ProductName** -Wert abzurufen.  
   
- Beachten Sie, dass bei der Erstellung der **DataRelations** -Tabelle für die **Customers** -und **Orders** -Tabelle kein Wert für das Flag "" vom Typ " **anateconstraints** " angegeben wird (Standardwert: **true**). Dabei wird davon ausgegangen, dass alle Zeilen in der **Orders** -Tabelle einen **CustomerID-** Wert aufweisen, der in der übergeordneten **Customers** -Tabelle vorhanden ist. Wenn eine **CustomerID** in der **Orders** -Tabelle vorhanden ist, die in der **Customers** -Tabelle nicht <xref:System.Data.ForeignKeyConstraint> vorhanden ist, wird eine Ausnahme ausgelöst.  
+ Beachten Sie, dass bei der Erstellung der **DataRelations** -Tabelle für die **Customers** -und **Orders** -Tabelle kein Wert für das Flag "" vom Typ " **anateconstraints** " angegeben wird (Standardwert: **true**). Dabei wird davon ausgegangen, dass alle Zeilen in der **Orders** -Tabelle einen **CustomerID-** Wert aufweisen, der in der übergeordneten **Customers** -Tabelle vorhanden ist. Wenn eine **CustomerID** in der **Orders** -Tabelle vorhanden ist, die in der **Customers** -Tabelle nicht vorhanden ist, wird ein <xref:System.Data.ForeignKeyConstraint> bewirkt, dass eine Ausnahme ausgelöst wird.  
   
  Wenn die untergeordnete Spalte Werte enthalten kann, die in der übergeordneten Spalte nicht enthalten sind, legen Sie beim Hinzufügen von **DataRelations**das Flag " **kreateconstraints** " auf " **false** " fest. In dem Beispiel wird das Flag " **kreateconstraints** " für " **DataRelations** " zwischen der Tabelle " **Orders** " und der Tabelle " **Order Details** " auf " **false** " festgelegt. Dadurch kann die Anwendung alle Datensätze aus der Tabelle **Order Details** und nur eine Teilmenge der Datensätze aus der Tabelle **Orders** zurückgeben, ohne eine Lauf Zeit Ausnahme zu erzeugen. Im erweiterten Beispiel wird die Ausgabe im folgenden Format generiert:  
   
-```  
+```output  
 Customer ID: NORTS  
   Order ID: 10517  
         Order Date: 4/24/1997 12:00:00 AM  

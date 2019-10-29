@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042523"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039445"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Diese Übersicht enthält Steuerelementmuster für Benutzeroberflächenautomatisierungs-Clients. Es sind Informationen dazu enthalten, wie ein Benutzeroberflächenautomatisierungs-Client Steuerelementmuster nutzen kann, um auf Informationen über die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] zugreifen zu können.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "71042523"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Abrufen von Eigenschaften in Steuerelementmustern  
- Clients können die Eigenschaftswerte in Steuerelementmustern durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> abrufen und das zurückgegebene Objekt in einen geeigneten Typ umwandeln. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
+ Clients können die Eigenschaftswerte in Steuerelementmustern durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> abrufen und das zurückgegebene Objekt in einen geeigneten Typ umwandeln. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie unter [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](ui-automation-properties-for-clients.md).  
   
- Zusätzlich zu den `GetPropertyValue` -Methoden können Eigenschaftswerte über die Common Language Runtime (CLR)-Accessoren abgerufen werden, um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] auf die Eigenschaften eines Musters zuzugreifen.  
+ Zusätzlich zu den `GetPropertyValue`-Methoden können Eigenschaftswerte über die Common Language Runtime (CLR)-Accessoren abgerufen werden, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften eines Musters zuzugreifen.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Steuerelemente mit Variablenmustern  
- Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird. Beispiele für Steuerelemente mit Variablenmustern sind Listenansichten (Miniaturansichten, Kacheln, Symbole, Liste, Details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)]-Diagramme (Kreisdiagramm, Liniendiagramm, Balkendiagramm, Zellwert mit einer Formel), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]-Dokumentbereich (Normal, Weblayout, Gliederung, Seitenlayout, Seitenansicht) und [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]-Designs.  
+ Einige Steuerelementtypen unterstützen unterschiedliche Muster, abhängig vom entsprechenden Status oder der Art und Weise, wie das Steuerelement verwendet wird. Beispiele für Steuerelemente, die über Variablen Muster verfügen können, sind Listen Sichten (Miniaturansichten, Kacheln, Symbole, Liste, Details), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] Diagramme (Kreis, Linie, Balken, Zellwert mit einer Formel), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]Dokumentbereich (normal, Weblayout, Gliederung, Druck Layout, Druckvorschau) und Microsoft Windows Media Player Skins.  
   
  Steuerelemente, die benutzerdefinierte Steuerelementtypen implementieren, können über einen beliebigen Satz von Steuerelementmustern verfügen, die zur Darstellung der entsprechenden Funktionalität erforderlich sind.  
   

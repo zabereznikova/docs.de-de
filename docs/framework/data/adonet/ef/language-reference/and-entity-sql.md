@@ -1,22 +1,26 @@
 ---
-title: '&amp;&amp;Immer (Entity SQL)'
+title: '&amp;&amp; (und) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251313"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039955"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp;Immer (Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (und) (Entity SQL)
 Gibt `true` zurück, wenn beide Ausdrücke `true`sind, andernfalls `false` oder `NULL`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-boolean_expression AND boolean_expression  
-or  
+```csharp  
+boolean_expression AND boolean_expression
+```
+ 
+oder  
+
+```csharp
 boolean_expression && boolean_expression  
 ```  
   
@@ -38,7 +42,7 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird die Verwendung des AND-Operators veranschaulicht. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die StructuralType-Ergebnisse](../how-to-execute-a-query-that-returns-structuraltype-results.md)zurückgibt.  
+1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   

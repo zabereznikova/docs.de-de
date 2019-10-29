@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785683"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040179"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
 In früheren Versionen von ADO.net erfolgte die Kompilierzeit Überprüfung von Verbindungs Zeichenfolgen mit verketteten Zeichen folgen Werten nicht, sodass zur Laufzeit ein falsches Schlüsselwort einen <xref:System.ArgumentException>generiert hat. Jeder .NET Framework Datenanbieter unterstützte eine andere Syntax für Verbindungs Zeichenfolgen-Schlüsselwörter, die das Erstellen gültiger Verbindungs Zeichenfolgen erschweren, wenn dies manuell geschehen ist. Um dieses Problem zu beheben, führte ADO.NET 2,0 neue Verbindungs Zeichenfolgen-Generatoren für jeden .NET Framework Datenanbieter ein. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die .NET Framework-Datenanbieter und ihre jeweiligen ConnectionStringBuilder-Klassen aufgelistet.  
@@ -48,7 +48,7 @@ Console.WriteLine(builder.ConnectionString);
   
  Die Ausgabe zeigt, dass der <xref:System.Data.SqlClient.SqlConnectionStringBuilder> diesen Zusatzwert korrekt behandelt hat, indem er ihn in doppelte Anführungszeichen gesetzt und damit maskiert hat, statt ihn als neues Schlüssel/Wert-Paar an die Verbindungszeichenfolge anzuhängen.  
   
-```  
+```output  
 data source=(local);Integrated Security=True;  
 initial catalog="AdventureWorks;NewValue=Bad"  
 ```  

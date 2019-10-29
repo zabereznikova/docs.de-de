@@ -2,12 +2,12 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854499"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040491"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -29,7 +29,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die von der Entity Framework ausgelöst werden, wenn Ausnahmen durch die Anbieter Interaktion auftreten:  
   
-|Problem|Ausnahme|  
+|Problem|-Ausnahme|  
 |-----------|---------------|  
 |Der Anbieter unterstützt GetProviderManifest in DbProviderServices nicht.|ProviderIncompatibleException|  
 |Fehlendes Anbietermanifest: Beim Versuch, das Anbietermanifest abzurufen, gibt der Anbieter `null` zurück.|ProviderIncompatibleException|  
@@ -54,7 +54,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
-- Eine Liste von Anbieter Typen, ausgedrückt in EDM-Begriffen und Definieren der Zuordnung für beide Richtungen: EDM-zu-Anbieter und Anbieter-zu-EDM.  
+- Eine Liste von Anbietertypen in EDM-Begriffen sowie eine Definition der Zuordnung in beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
   
 - Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
@@ -68,7 +68,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ### <a name="provider-manifest-token"></a>Anbietermanifesttoken  
  Beim Öffnen einer Datenspeicherverbindung kann der Anbieter Informationen abfragen, um das richtige Manifest zurückzugeben. Dies kann in Offlineszenarien unmöglich sein, in denen entweder die Verbindungsinformationen nicht zur Verfügung stehen oder keine Verbindung mit dem Datenspeicher hergestellt werden kann. Identifizieren Sie das Manifest mit dem `ProviderManifestToken`-Attribut des `Schema`-Elements in der SSDL-Datei. Es gibt kein erforderliches Format für dieses Attribut. Der Anbieter wählt die Mindestinformationen aus, die erforderlich sind, um ein Manifest zu identifizieren, ohne eine Verbindung mit dem Speicher zu öffnen.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -83,7 +83,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
   
 #### <a name="using-a-data-store-connection"></a>Verwenden einer Datenspeicherverbindung  
- Wenn die Datenspeicher Verbindung verfügbar ist, wird <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> aufgerufen, um das an die <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> -Methode übergebenen Token zurückzugeben <xref:System.Data.Common.DbProviderManifest>, das zurückgibt. Diese Methode delegiert an die-Implementierung des Anbieters `GetDbProviderManifestToken`von.  
+ Wenn die Datenspeicher Verbindung verfügbar ist, wird <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> aufgerufen, um das an die <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>-Methode übergebenen Token zurückzugeben, das <xref:System.Data.Common.DbProviderManifest>zurückgibt. Diese Methode delegiert an die Implementierung von `GetDbProviderManifestToken`des Anbieters.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Verwenden eines Anbietermanifesttokens  
  Für das Offlineszenario wird das Token der SSDL-Darstellung ausgewählt. Die SSDL ermöglicht Ihnen das Angeben eines ProviderManifestToken (Weitere Informationen finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ). Wenn beispielsweise eine Verbindung nicht geöffnet werden kann, verfügt SSDL über ein Anbietermanifesttoken, das Informationen über das Manifest angibt.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -248,17 +248,17 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Um diese Typinformationen im Anbietermanifest auszudrücken, muss jede TypeInformation-Deklaration mehrere Facetbeschreibungen für die einzelnen Typen definieren:  
   
-|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|n/v|Anbieterspezifischer Datentypname|  
+|-Name|Zeichenfolge|Ja|n/v|Anbieterspezifischer Datentypname|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Ja|n/v|EDM-Typenname|  
   
 ###### <a name="function-node"></a>Funktionsknoten  
  Jede Funktion definiert eine einzelne, über den Anbieter verfügbare Funktion.  
   
-|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|n/v|Bezeichner/Name der Funktion|  
+|-Name|Zeichenfolge|Ja|n/v|Bezeichner/Name der Funktion|  
 |ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
 |Aggregat|Boolesch|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
 |BuiltIn|Boolesch|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
@@ -270,14 +270,14 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Jede Funktion verfügt über eine Auflistung von einem oder mehreren Parameterknoten.  
   
-|Attributname|Datentyp|Required|Standardwert|Beschreibung|  
+|Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
-|Typ|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  
+|-Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
+|Geben Sie Folgendes ein:|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  
 |Modus|Parameter<br /><br /> Richtung|Ja|n/v|Richtung des Parameters:<br /><br /> -in<br />-Out<br />-INOUT|  
   
 ##### <a name="namespace-attribute"></a>Namespace-Attribut  
- Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SQLServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
+ Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SqlServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch
 

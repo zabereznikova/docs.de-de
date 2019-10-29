@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 26b7e3a287c00f103129632ae8b0db882d468ef3
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a634667ec8d963ef52abbdbe517a57d10e4a60fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352975"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040219"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -35,23 +35,23 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
  ![Wahrheitstabelle](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>Informationen zur ANSI_NULLS-Option  
- Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+,-, \*,/,%), bitweise Operatoren (~, &, \|) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente NULL ist, mit Ausnahme der-Eigenschaft `IsNull`.  
+ Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+,-, \*,/,%), bitweise Operatoren (~, &, \|) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente NULL ist, mit Ausnahme der Eigenschaften `IsNull`.  
   
  Der ANSI SQL-92-Standard unterstützt *ColumnName* = NULL in einer WHERE-Klausel nicht. In SQL Server steuert die ANSI_NULLS-Option die Fähigkeit, in der Standardeinstellung NULL-Werte in der Datenbank zuzulassen sowie die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS aktiviert ist (Standardeinstellung), muss der IS NULL-Operator beim Testen auf NULL-Werte in Ausdrücken verwendet werden. Der folgende Vergleich ergibt z. B. immer "Unknown", wenn ANSI_NULLS aktiviert ist:  
   
-```  
+```sql
 colname > NULL  
 ```  
   
  Der Vergleich mit einer Variablen, die einen NULL-Wert enthält, ergibt auch "Unknown":  
   
-```  
+```sql
 colname > @MyVariable  
 ```  
   
  Verwenden Sie zum Testen auf einen NULL-Wert das IS NULL-Prädikat oder das IS NOT NULL-Prädikat. Dies kann die Komplexität der WHERE-Klausel erhöhen. Die TerritoryID-Spalte in der AdventureWorks Customer-Tabelle lässt z. B. NULL-Werte zu. Wenn eine SELECT-Anweisung zusätzlich zu anderen Werten auf NULL-Werte getestet werden soll, muss sie ein IS NULL-Prädikat enthalten:  
   
-```  
+```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
 FROM AdventureWorks.Sales.Customer  
 WHERE TerritoryID IN (1, 2, 3)  
@@ -112,7 +112,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  In diesem Beispiel werden die folgenden Ergebnisse angezeigt:  
   
-```  
+```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
   
  Der Code erzeugt die folgende Ausgabe:  
   
-```  
+```output
 SqlString.Equals shared/static method:  
   Two nulls=Null  
   

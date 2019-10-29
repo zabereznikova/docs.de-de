@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784805"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040401"
 ---
 # <a name="annotating-typed-datasets"></a>Hinzufügen von Anmerkungen zu typisierten "DataSets"
 Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisierten <xref:System.Data.DataSet>, ohne das zugrunde liegende Schema ändern zu müssen. Wenn Sie die Namen der Elemente im zugrunde liegenden Schema ändern, verweist das typisierte **DataSet** auf Objekte, die in der Datenquelle nicht vorhanden sind, und Sie verlieren einen Verweis auf die Objekte, die in der Datenquelle vorhanden sind.  
   
- Mit Anmerkungen können Sie die Namen von Objekten in Ihrem typisierten **DataSet** mit aussagekräftigeren Namen anpassen, sodass der Code besser lesbar ist und das typisierte **DataSet** für Clients einfacher zu verwenden ist, während das zugrunde liegende Schema intakt bleibt. Das folgende Schema Element für die **Customers** -Tabelle der **Northwind** -Datenbank würde z. b. den Namen des **DataRow** -Objekts **CustomersRow** und <xref:System.Data.DataRowCollection> einen benannten **Kunden**ergeben.  
+ Mit Anmerkungen können Sie die Namen von Objekten in Ihrem typisierten **DataSet** mit aussagekräftigeren Namen anpassen, sodass der Code besser lesbar ist und das typisierte **DataSet** für Clients einfacher zu verwenden ist, während das zugrunde liegende Schema intakt bleibt. Das folgende Schema Element für die **Customers** -Tabelle der **Northwind** -Datenbank würde z. b. den Namen des **DataRow** -Objekts **CustomersRow** und eine <xref:System.Data.DataRowCollection> mit dem Namen **Customers**ergeben.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -47,9 +47,9 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 |----------------|-----------------|  
 |**typedName**|Name des Objekts.|  
 |**typedPlural**|Name einer Auflistung von Objekten.|  
-|**typedParent**|Name des Objekts, wenn in einer übergeordneten Beziehung darauf verwiesen wird.|  
-|**typedChildren**|Name der Methode zum Zurückgeben von Objekten aus einer untergeordneten Beziehung.|  
-|**nullValue**|Wert, wenn der zugrunde liegende Wert **DBNull**ist. In der folgenden Tabelle finden Sie Informationen zu **NullValue** -Anmerkungen. Der Standardwert ist **_throw**.|  
+|**typedparent**|Name des Objekts, wenn in einer übergeordneten Beziehung darauf verwiesen wird.|  
+|**typedchildren**|Name der Methode zum Zurückgeben von Objekten aus einer untergeordneten Beziehung.|  
+|**NullValue**|Wert, wenn der zugrunde liegende Wert **DBNull**ist. In der folgenden Tabelle finden Sie Informationen zu **NullValue** -Anmerkungen. Der Standardwert ist **_throw**.|  
   
  In der folgenden Tabelle sind die Werte aufgeführt, die für die **NullValue** -Anmerkung angegeben werden können.  
   
@@ -69,14 +69,14 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Eigenschaft**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |Untergeordnetes Element Accessor|GetChildTableNameRows|typedChildren|  
 |Über **geordnetes** Element Accessor|TableNameRow|typedParent|  
 |**DataSet** Fall|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Um typisierte **datasetanmerkungen** verwenden zu können, müssen Sie den folgenden **xmlns** -Verweis in das XSD-Schema (XML Schema Definition Language) einschließen. Informationen zum Erstellen einer XSD aus Datenbanktabellen <xref:System.Data.DataSet.WriteXmlSchema%2A> finden Sie unter oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Um typisierte **datasetanmerkungen** verwenden zu können, müssen Sie den folgenden **xmlns** -Verweis in das XSD-Schema (XML Schema Definition Language) einschließen. Informationen zum Erstellen einer XSD aus Datenbanktabellen finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Im folgenden Codebeispiel wird ein stark typisiertes **DataSet** verwendet, das aus dem Beispiel Schema erstellt wurde. Er verwendet einen <xref:System.Data.SqlClient.SqlDataAdapter> zum Auffüllen der **Customers** -Tabelle und einen <xref:System.Data.SqlClient.SqlDataAdapter> anderen zum Auffüllen der **Orders** -Tabelle. Das **DataSet** mit starker Typisierung definiert die **DataRelations**.  
+ Im folgenden Codebeispiel wird ein stark typisiertes **DataSet** verwendet, das aus dem Beispiel Schema erstellt wurde. Er verwendet eine <xref:System.Data.SqlClient.SqlDataAdapter>, um die Tabelle **Customers** aufzufüllen, und eine weitere <xref:System.Data.SqlClient.SqlDataAdapter>, um die Tabelle **Orders** aufzufüllen. Das **DataSet** mit starker Typisierung definiert die **DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

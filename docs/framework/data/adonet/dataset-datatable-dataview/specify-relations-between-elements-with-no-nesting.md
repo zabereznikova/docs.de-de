@@ -2,12 +2,12 @@
 title: Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: d6cd6f04a9fdeafe7c419b40023af6c71d553ac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784277"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040054"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
 Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt. Mithilfe der msdata: Relationship-Anmerkung können Sie jedoch explizit Beziehungen zwischen Elementen angeben, die nicht mit der **msdata: Relationship** -Anmerkung versehen sind.  
@@ -53,9 +53,9 @@ Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erste
 </xs:schema>  
 ```  
   
- Der XSD (XML Schema Definition Language)-Schema Mapping-Prozess <xref:System.Data.DataSet> erstellt eine mit den Tabellen **Order** und **OrderDetail** und eine Beziehung, die zwischen diesen beiden Tabellen angegeben ist, wie unten gezeigt.  
+ Der XSD-Schema Mapping-Prozess (XML Schema Definition Language) erstellt eine <xref:System.Data.DataSet> mit den Tabellen **Order** und **OrderDetail** und eine Beziehung, die zwischen diesen beiden Tabellen angegeben ist, wie unten gezeigt.  
   
-```  
+```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
 ParentColumns: OrderNumber   

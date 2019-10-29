@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: fc0ae67c0ebc11a0428ffc18c8db103b619e27ec
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: aaf5a95edb9cba9726163be3925b006a7641597c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524808"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040856"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
@@ -43,7 +43,7 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-In der Regel enthält eine durch das `Async`-Schlüsselwort geänderte Methode mindestens einen [Erwartungs Ausdruck oder eine-](../../../visual-basic/language-reference/modifiers/async.md) Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await`-Ausdruck oder keine Await-Anweisung enthält, wird die Methode nicht angehalten und wie eine synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter [Compilerfehler](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).
+In der Regel enthält eine durch das `Async`-Schlüsselwort geänderte Methode mindestens einen [Erwartungs Ausdruck oder eine-](../../../visual-basic/language-reference/modifiers/async.md) Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await` Ausdruck oder eine Anweisung enthält, wird die Methode nicht angehalten und wird als synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter [Compilerfehler](../error-messages/bc42358.md).
 
 Das Schlüsselwort `Async` ist ein nicht reserviertes Schlüsselwort. Es ist ein Schlüsselwort, wenn eine Methode oder ein Lambdaausdruck geändert wird. In allen anderen Kontexten wird es als Bezeichner interpretiert.
 

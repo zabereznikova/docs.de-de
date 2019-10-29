@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ccfe40f218e3f09de53d6cb596a31b2520d9ff9b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783473"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039823"
 ---
 # <a name="oracle-and-adonet"></a>Oracle und ADO.NET
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "70783473"
   
  Der .NET Framework Datenanbieter für Oracle ermöglicht den Zugriff auf eine Oracle-Datenbank mithilfe von OCI (Oracle callinterface), wie von der Oracle-Client Software bereitgestellt. Die Funktionalität des Datenanbieters ist so konzipiert, dass Sie mit der .NET Framework Datenanbieter für SQL Server, OLE DB und ODBC vergleichbar ist.  
   
- Um die .NET Framework Datenanbieter für Oracle zu verwenden, muss eine Anwendung wie <xref:System.Data.OracleClient> folgt auf den-Namespace verweisen:  
+ Um die .NET Framework Datenanbieter für Oracle zu verwenden, muss eine Anwendung wie folgt auf den <xref:System.Data.OracleClient> Namespace verweisen:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -32,7 +32,7 @@ using System.Data.OracleClient;
   
  Außerdem müssen Sie beim Kompilieren des Codes einen Verweis auf die DLL-Datei hinzufügen. Wenn Sie z. B. ein C#-Programm kompilieren, muss Ihre Befehlszeile Folgendes beinhalten:  
   
-```  
+```console
 csc /r:System.Data.OracleClient.dll  
 ```  
   

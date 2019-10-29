@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“'
+title: 'Gewusst wie: Generieren von Modell- und Zuordnungsdateien mit "EdmGen.exe"'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 04606e23cffd03dea956076a07bb6cf2fadb4c9c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c74f9344891d43f21034a48ac51723fa7441744d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854570"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040311"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Gewusst wie: Generieren von Modell- und Zuordnungsdateien mit "EdmGen.exe"
 In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) verwendet wird, um die folgenden Dateien auf der Grundlage der Datenbank "School" zu generieren:  
   
 - Ein konzeptionelles Modell (eine CSDL-Datei).  
@@ -24,10 +24,10 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
   
  Wenn das Tool EdmGen.exe mit dem Befehl /mode:FullGeneration aufgerufen wird, werden die oben aufgeführten Dateien generiert. Weitere Informationen zu "EdmGen. exe"-Befehlen finden Sie unter [EDM Generator (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
- Wenn Sie "EdmGen. exe" verwenden, um die Modell-und Zuordnungsdateien zu generieren, müssen Sie das Visual Studio-Projekt für die Verwendung des Entity Framework konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))Projekts.  
+ Wenn Sie "EdmGen. exe" verwenden, um die Modell-und Zuordnungsdateien zu generieren, müssen Sie das Visual Studio-Projekt für die Verwendung des Entity Framework konfigurieren. Weitere Informationen finden Sie unter Vorgehens [Weise: Manuelles Konfigurieren eines Entity Framework Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   
 > [!NOTE]
-> Ein mithilfe von EdmGen.exe erstelltes konzeptionelles Modell enthält alle Objekte der Datenbank. Sie können mithilfe des Entity Data Model-Assistenten ein konzeptionelles Modell erstellen, das nur bestimmte Objekte enthält. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden Sie den Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))-Assistenten.  
+> Ein mithilfe von EdmGen.exe erstelltes konzeptionelles Modell enthält alle Objekte der Datenbank. Sie können mithilfe des Entity Data Model-Assistenten ein konzeptionelles Modell erstellen, das nur bestimmte Objekte enthält. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden des Entity Data Model-Assistenten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>So erstellen Sie mithilfe von 'EdmGen.exe' das Modell 'School' für ein Visual Basic-Projekt  
   
@@ -35,7 +35,7 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
   
 2. Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
     /c:"Data Source=%datasourceserver%; Initial Catalog=School; Integrated Security=SSPI"   
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
@@ -47,7 +47,7 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
   
 2. Führen Sie an der Eingabeaufforderung den folgenden Befehl ohne Zeilenumbrüche aus:  
   
-    ```  
+    ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration   
     /c:"Data Source=%datasourceserver%; Initial Catalog=School; Integrated Security=SSPI"   
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
@@ -57,6 +57,6 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
 
 - [Modellieren und Zuordnen](modeling-and-mapping.md)
 - [Vorgehensweise: Manuelles Konfigurieren eines Entity Framework Projekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [Vorgehensweise: Vorab Generieren von Sichten, um die Abfrageleistung zu verbessern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Gewusst wie: Vorgenerieren von Ansichten zur Verbesserung der Abfrageleistung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [ADO.NET-Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Vorgehensweise: Verwenden von EdmGen. exe zum Überprüfen von Modell-und Zuordnungsdateien](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Vorgehensweise: Überprüfen von Modell- und Zuordnungsdateien mit „EdmGen.exe“](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

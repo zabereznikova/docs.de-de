@@ -2,12 +2,12 @@
 title: Generieren von SQL aus Befehlsstrukturen – Best Practices
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855004"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039999"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 
@@ -31,7 +31,7 @@ Eine mögliche Übersetzung einer Abfragebefehlsstruktur in eine SQL SELECT-Anwe
 
 Beachten Sie als Beispiel die folgende Abfragebefehlsstruktur
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Eine Möglichkeit, mehrere Knoten in einer SQL SELECT-Anweisung zu aggregieren, 
 
 Linke Joinelemente (Joins, die als linke untergeordnete Elemente eines anderen Joins angezeigt werden) können einfacher in einer einzelnen SQL SELECT-Anweisung vereinfacht werden. Beachten Sie als Beispiel die folgende Abfragebefehlsstruktur:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 Wenn es sich nicht um linke Joinelemente handelt, ist die Vereinfachung komplizierter und sollte daher nicht versucht werden. Beachten Sie z. B. die Joins in der folgenden Abfragebefehlsstruktur:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -145,7 +145,7 @@ Ausdrücke können in der vom Entity Framework übergebenen Abfrage Befehlsstruk
 
 ## <a name="mapping-primitive-types"></a>Zuordnen von primitiven Typen
 
-Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die nicht für viele Vorgänge verwendet werden können, wie z. b. `ntext` BLOB-Typen (z. b. in SQL Server).
+Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die nicht für viele Vorgänge verwendet werden können, wie z. b. BLOB-Typen (z. b. `ntext` in SQL Server).
 
 ## <a name="see-also"></a>Siehe auch
 

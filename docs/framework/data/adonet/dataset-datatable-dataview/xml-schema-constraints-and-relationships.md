@@ -2,12 +2,12 @@
 title: XML-Schemaeinschränkungen und -beziehungen
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784184"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040034"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML-Schemaeinschränkungen und -beziehungen
 In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkungen (Unique-, Key-und keyref-Einschränkungen) und Beziehungen (mithilfe der **msdata: Relationship** -Anmerkung) angeben. In diesem Thema wird erklärt, wie die in einem XML-Schema angegebenen Einschränkungen und Beziehungen zum Generieren des <xref:System.Data.DataSet> interpretiert werden.  
@@ -15,7 +15,7 @@ In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkunge
  Im Allgemeinen geben Sie in einem XML-Schema die **msdata: Relationship** -Anmerkung an, wenn Sie nur Beziehungen im **DataSet**generieren möchten. Weitere Informationen finden Sie unter [Erstellen von DataSet-Beziehungen aus dem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Sie geben Einschränkungen (Unique, Key und keyref) an, wenn Sie Einschränkungen im **DataSet**generieren möchten. Beachten Sie, dass die Schlüsseleinschränkung und die keyref-Einschränkung auch zum Generieren von Beziehungen verwendet werden. Informationen hierzu erhalten Sie weiter unten in diesem Thema.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Generieren einer Beziehung aus Schlüsseleinschränkungen und "keyref"-Einschränkungen  
- Anstatt die **msdata: Relationship** -Anmerkung anzugeben, können Sie Schlüssel-und keyref-Einschränkungen angeben, die während der XML-Schema Zuordnung verwendet werden, um nicht nur die Einschränkungen, sondern auch die Beziehung im **DataSet**zu generieren. Wenn Sie jedoch im `msdata:ConstraintOnly="true"` **keyref** -Element angeben, enthält das **DataSet** nur die Einschränkungen und schließt die Beziehung nicht ein.  
+ Anstatt die **msdata: Relationship** -Anmerkung anzugeben, können Sie Schlüssel-und keyref-Einschränkungen angeben, die während der XML-Schema Zuordnung verwendet werden, um nicht nur die Einschränkungen, sondern auch die Beziehung im **DataSet**zu generieren. Wenn Sie jedoch `msdata:ConstraintOnly="true"` im **keyref** -Element angeben, enthält das **DataSet** nur die Einschränkungen und schließt die Beziehung nicht ein.  
   
  Im folgenden Beispiel wird ein XML-Schema dargestellt, das die Elemente **Order** und **OrderDetail** enthält, die nicht in einem scht sind. In dem Schema sind auch die Schlüsseleinschränkung und die keyref-Einschränkung angegeben.  
   
@@ -61,7 +61,7 @@ In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkunge
   
  Das **DataSet** , das während der XML-Schema Zuordnung generiert wird, umfasst die Tabellen **Order** und **Order Detail** . Außerdem enthält das **DataSet** Beziehungen und Einschränkungen. Im folgenden Beispiel werden diese Beziehungen und Einschränkungen dargestellt. Beachten Sie, dass das Schema die **msdata: Relationship** -Anmerkung nicht angibt. Stattdessen werden die Schlüssel-und keyref-Einschränkungen verwendet, um die Beziehung zu generieren.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ In einem XSD-Schema (XML Schema Definition Language) können Sie Einschränkunge
   
  Das **DataSet** , das sich aus dem XML-Schema Mapping-Prozess ergibt, umfasst zwei Tabellen:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  Das **DataSet** enthält auch die beiden Beziehungen (eines basierend auf der **msdata: Relationship** -Anmerkung und das andere auf der Grundlage der Schlüssel-und keyref-Einschränkungen) und verschiedene Einschränkungen. Im folgenden Beispiel werden die Beziehungen und Einschränkungen dargestellt.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

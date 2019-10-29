@@ -2,19 +2,19 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c16270babe4daa8e703b24b27211c6fd6f53677d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039921"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Konvertiert einen Ausdruck von einem Datentyp in einen anderen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```csharp
 CAST ( expression AS data_type )  
 ```  
   
@@ -31,7 +31,7 @@ CAST ( expression AS data_type )
 ## <a name="remarks"></a>Hinweise  
  Der Umwandlungs Ausdruck hat eine ähnliche Semantik wie der Transact-SQL-Konvertierungs Ausdruck. Der CAST-Ausdruck wird zum Konvertieren eines Werts von einem Typ in einen Wert von einem anderen Typ verwendet.  
   
-```  
+```csharp
 CAST( e as T )  
 ```  
   
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Beispiel  
  In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage wird der CAST-Operator zum Umwandeln des Datentyps eines Ausdrucks in einen anderen verwendet. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Befolgen Sie das Verfahren [unter Gewusst wie: Führen Sie eine Abfrage aus, die PrimitiveType-Ergebnisse](../how-to-execute-a-query-that-returns-primitivetype-results.md)zurückgibt.  
+1. Befolgen Sie das Verfahren unter Gewusst [wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   

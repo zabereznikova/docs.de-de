@@ -6,18 +6,18 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 4a88cf077c061746f9bc9f4aa0122d2f09b6fbd7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042277"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040545"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheit-Framework für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Es ist für alle Betriebssysteme verfügbar, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]unterstützen.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheits Framework für Microsoft Windows, das auf allen Betriebssystemen verfügbar ist, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]unterstützen.  
   
  Die[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stellt programmgesteuerten Zugriff auf die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] auf dem Desktop zur Verfügung, sodass Hilfstechnologieprodukte, z. B. die Bildschirmsprachausgabe, Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] für die Endbenutzer bereitstellen und die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] mit anderen Verfahren als Standardeingaben ändern können. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht außerdem die Interaktion von automatisierten Testskripts mit der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -39,18 +39,18 @@ Die Benutzeroberflächen Automatisierung bietet vollständige Funktionalität f�
 |Anbieter-API (UIAutomationProvider. dll und UIAutomationTypes. dll)|Eine Reihe von Schnittstellendefinitionen, die von Benutzeroberflächenautomatisierungs-Anbietern implementiert werden, sowie Objekte, die Informationen über [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente bereitstellen und auf Programmeingaben reagieren.|  
 |Client-API (UIAutomationClient.dll und UIAutomationTypes.dll)|Eine Reihe von Typen für verwalteten Code, der es Benutzeroberflächenautomatisierungs-Clientanwendungen ermöglicht, Informationen über [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] abzurufen und Eingaben an Steuerelemente zu senden.|  
 |UiAutomationCore.dll|Der zugrunde liegende Code (gelegentlich als [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Code bezeichnet), der die Kommunikation zwischen Anbietern und Clients verwaltet.|  
-|UIAutomationClientsideProviders.dll|Ein Satz von Benutzeroberflächenautomatisierungs-Anbietern für Standard-Legacysteuerelemente. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente verfügen über systemeigene Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Diese Unterstützung steht Clientanwendungen automatisch zur Verfügung.|  
+|UIAutomationClientsideProviders.dll|Ein Satz von Benutzeroberflächenautomatisierungs-Anbietern für Standard-Legacysteuerelemente. ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente verfügen über systemeigene Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].) Diese Unterstützung ist für Client Anwendungen automatisch verfügbar.|  
   
  Aus Sicht des Softwareentwicklers gibt es zwei Möglichkeiten zum Verwenden von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: entweder kann eine Unterstützung für benutzerdefinierte Steuerelemente mithilfe der Anbieter-API erstellt werden oder Anwendungen, die den [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern verwenden, um mit [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elementen mithilfe der Client-API zu kommunizieren. Abhängig von Ihren Schwerpunkten sollten Sie auf verschiedene Teile der Dokumentation zugreifen. In den folgenden Abschnitten können Sie mehr über die Konzepte erfahren und sich praktisches Wissen aneignen.  
   
-|Abschnitt|Inhalt|Zielgruppe|  
+|Bereich|Inhalt|Zielgruppe|  
 |-------------|--------------------|--------------|  
-|[Grundlagen](index.md) der Oberflächen Automatisierung (dieser Abschnitt)|Allgemeine Übersichten über die Konzepte.|Alle|  
+|[Grundlagen der Benutzeroberflächen Automatisierung](index.md) (dieser Abschnitt)|Allgemeine Übersichten über die Konzepte.|Alle|  
 |[Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](ui-automation-providers-for-managed-code.md)|Übersichten und Hilfethemen zum Verwenden der Anbieter-API.|Entwickler von Steuerelementen.|  
 |[Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](ui-automation-clients-for-managed-code.md)|Übersichten und Hilfethemen zum Verwenden der Client-API.|Entwickler von Clientanwendungen.|  
 |[Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns.md)|Informationen zum Implementieren von Steuerelementmustern durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|Alle|  
 |[Textmuster zur Benutzeroberflächenautomatisierung](ui-automation-text-pattern.md)|Informationen zum Implementieren des Text-Steuerelementmusters durch Anbieter und den Funktionalitäten, die Clients zur Verfügung stehen.|Alle|  
-|[UI Automation Control Types](ui-automation-control-types.md)|Informationen über die Eigenschaften und Steuerelementmuster, die von verschiedenen Steuerelementtypen unterstützt werden.|Alle|  
+|[Steuerelementtypen der Benutzeroberflächenautomatisierung](ui-automation-control-types.md)|Informationen über die Eigenschaften und Steuerelementmuster, die von verschiedenen Steuerelementtypen unterstützt werden.|Alle|  
   
  In der folgenden Tabelle werden [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Namespaces, die DLLs, die sie enthalten, und die sie verwendende Zielgruppe, aufgelistet.  
   

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: a88046868a26c3da29712ffd6a231505ba64f9af
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 99909f29e3228e7bc140ebdc888d4663bcbca0b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846879"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040533"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Microsoft Active Accessibility war die frühere Lösung, mit der Anwendungen zugänglich gemacht werden konnten. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Zugriffsmodell für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] und richtet sich an die Bedürfnisse von Hilfstechnologieprodukten und automatisierte Testtools. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet viele Verbesserungen gegenüber Active Accessibility.  
+ Microsoft Active Accessibility war die frühere Lösung, mit der Anwendungen zugänglich gemacht werden konnten. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheits Modell für Microsoft Windows und soll den Anforderungen von Hilfstechnologieprodukten und automatisierten Testtools gerecht werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet viele Verbesserungen gegenüber Active Accessibility.  
   
  Dieses Thema enthält die wichtigsten Features von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] und erläutert, wie sich diese Features von Active Accessibility unterscheiden.  
   

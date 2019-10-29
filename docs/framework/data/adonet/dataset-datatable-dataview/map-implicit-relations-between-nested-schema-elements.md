@@ -2,12 +2,12 @@
 title: Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784437"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040388"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen
 Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, die ineinander geschachtelt sind. In diesem Fall wendet der Zuordnungsprozess die Standardzuordnung an und erstellt folgende Elemente im <xref:System.Data.DataSet>:  
@@ -58,14 +58,14 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
   
 - Eine **Bestellung** und eine **Order Detail** -Tabelle.  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
 - Eine Unique-Einschränkung für die **Order** -Tabelle. Beachten Sie, dass die **IsPrimaryKey** -Eigenschaft auf **true**festgelegt ist.  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -75,7 +75,7 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
   
 - Eine FOREIGN KEY-Einschränkung für die **Order Detail** -Tabelle.  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -86,7 +86,7 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
   
 - Eine Beziehung zwischen der **Order** -Tabelle und der **Order Detail** -Tabelle. Die Eigenschaft " **schsted** " für diese Beziehung wird auf " **true** " festgelegt, da die Elemente **Order** und **Order Detail** im Schema scht sind.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  

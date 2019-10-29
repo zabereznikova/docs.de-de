@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2898d804f7a351045b2fbce42042f9fd322ebb0a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf2b06b14252f152c1eece6f9c0d317482a24b27
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049743"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039512"
 ---
-# <a name="genericparameter-element-net-native"></a>\<Genericparameter-> Element (.net Native)
+# <a name="genericparameter-element-net-native"></a>\<genericparameter >-Element (.net Native)
 Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,7 +27,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
                   XmlSerializer="policy_type"  
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
-                  MarshalStructure="policy_type"  
+                  MarshalStructure="policy_type" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -89,7 +89,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
 ## <a name="see-also"></a>Siehe auch
 
 - [\<Method> Element (Element <Method>)](method-element-net-native.md)
-- [\<Type >-Element](type-element-net-native.md)
+- [\<Typ > Element](type-element-net-native.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

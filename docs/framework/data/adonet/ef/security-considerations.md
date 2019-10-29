@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 1865afb384cfff41ede953c00f01cc96aea9a080
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854250"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039867"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwicklung, Bereitstellung und Ausführung von Entity Framework-Anwendungen spezifisch sind. Außerdem sollten Sie die Empfehlungen zum Erstellen von sicheren .NET Framework-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../security-overview.md).  
@@ -46,7 +46,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
   
 - Verwenden Sie Verbindungszeichenfolgen-Generatoren, wenn Sie Verbindungen dynamisch erstellen.  
   
-     Wenn Sie Verbindungszeichenfolgen zur Laufzeit erstellen müssen, verwenden Sie die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse. Diese Zeichenfolgen-Generator-Klasse hilft durch Überprüfen und Versehen von ungültigen Eingabeinformationen mit Escapezeichen, Angriffe durch Einschleusen von Verbindungszeichenfolgen zu verhindern. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie eine EntityConnection-](how-to-build-an-entityconnection-connection-string.md)Verbindungs Zeichenfolge. Verwenden Sie auch die entsprechende String Builder-Klasse, um die Datenquellen-Verbindungs Zeichenfolge zu erstellen, die Teil der Entity Framework Verbindungs Zeichenfolge ist. Informationen zu Verbindungs Zeichenfolgen-Generatoren für ADO.NET-Anbieter finden Sie unter [Verbindungs Zeichenfolgen](../connection-string-builders.md)-Generatoren.  
+     Wenn Sie Verbindungszeichenfolgen zur Laufzeit erstellen müssen, verwenden Sie die <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse. Diese Zeichenfolgen-Generator-Klasse hilft durch Überprüfen und Versehen von ungültigen Eingabeinformationen mit Escapezeichen, Angriffe durch Einschleusen von Verbindungszeichenfolgen zu verhindern. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer EntityConnection-Verbindungs Zeichenfolge](how-to-build-an-entityconnection-connection-string.md). Verwenden Sie auch die entsprechende String Builder-Klasse, um die Datenquellen-Verbindungs Zeichenfolge zu erstellen, die Teil der Entity Framework Verbindungs Zeichenfolge ist. Informationen zu Verbindungs Zeichenfolgen-Generatoren für ADO.NET-Anbieter finden Sie unter [Verbindungs Zeichenfolgen](../connection-string-builders.md)-Generatoren.  
   
  Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../protecting-connection-information.md).  
   
@@ -73,7 +73,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
   
 - <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>, um Ausnahmen mithilfe der <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle zu serialisieren.  
   
-- Berechtigung zum Öffnen einer Datenbankverbindung und zum Ausführen <xref:System.Data.SqlClient.SqlClientPermission> von Befehlen für die Datenbank, z. b. für eine SQL Server Datenbank.  
+- Berechtigung zum Öffnen einer Datenbankverbindung und Ausführen von Befehlen für die Datenbank, z. b. <xref:System.Data.SqlClient.SqlClientPermission> für eine SQL Server Datenbank.  
   
  Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](../code-access-security.md).  
   
@@ -81,9 +81,9 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
  Der Entity Framework erzwingt keine Sicherheits Berechtigungen und ruft jeden vom Benutzer bereitgestellten Datenobjekt Code im Prozess auf, unabhängig davon, ob er vertrauenswürdig ist. Stellen Sie sicher, dass die Authentifizierung und die Autorisierung des Clients durch den Datenspeicher und Ihre Anwendung erfolgen.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Schränken Sie den Zugriff auf alle Konfigurationsdateien ein.  
- Ein Administrator muss den Schreibzugriff auf alle Dateien beschränken, die die Konfiguration für eine Anwendung angeben, einschließlich der Dateien "enterprisesec. config", "Security. config", " \<Machine. conf" und der Anwendungs Konfigurationsdatei- *Anwendungs*>. exe. config.  
+ Ein Administrator muss den Schreibzugriff auf alle Dateien beschränken, die die Konfiguration für eine Anwendung angeben, einschließlich der Dateien "enterprisesec. config", "Security. config", "Machine. conf" und der Anwendungs Konfigurationsdatei \<*Anwendungs*>. exe. config.  
   
- Der invariante Name des Anbieters kann in app.config geändert werden. Die Clientanwendung ist für den Zugriff auf den zugrunde liegenden Anbieter über das Anbieterfactory-Standardmodell unter Verwendung eines starken Namens zuständig.  
+ Der invariante Name des Anbieters kann in der Datei "App. config" geändert werden. Die Client Anwendung muss die Verantwortung für den Zugriff auf den zugrunde liegenden Anbieter über das standardanbieterfactory-Modell mit einem starken Namen übernehmen.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Schränken Sie die Zugriffsberechtigungen auf die Modell- und Zuordnungsdateien ein.  
  Ein Administrator muss den Schreibzugriff auf die Modell- und Zuordnungsdateien (EDMX-, CSDL-, SSDL- und MSL-Dateien) auf die Benutzer beschränken, die das Modell oder die Zuordnungen ändern. Der Entity Framework benötigt zur Laufzeit nur Lesezugriff auf diese Dateien. Ein Administrator sollte auch den Zugriff auf Objektebene und vorkompilierte Quell Code Dateien der Ansicht einschränken, die von den Entity Data Model Tools generiert werden.  
@@ -102,7 +102,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
   
 - LINQ to Entities Injection-Angriffe:  
   
-     Obwohl die Abfrage Komposition in LINQ to Entities möglich ist, wird Sie über die Objektmodell-API ausgeführt. Im [!INCLUDE[esql](../../../../../includes/esql-md.md)] Gegensatz zu-Abfragen werden LINQ to Entities Abfragen nicht mithilfe von Zeichen folgen Bearbeitung oder-Verkettung erstellt, und Sie sind nicht anfällig für herkömmliche Einschleusung von SQL-Befehlen.  
+     Obwohl die Abfrage Komposition in LINQ to Entities möglich ist, wird Sie über die Objektmodell-API ausgeführt. Im Gegensatz zu [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen werden LINQ to Entities Abfragen nicht mithilfe von Zeichen folgen Bearbeitung oder-Verkettung erstellt, und Sie sind nicht anfällig für herkömmliche Einschleusung von SQL-Befehlen.  
   
 #### <a name="prevent-very-large-result-sets"></a>Verhindern Sie sehr umfangreiche Resultsets.  
  Ein sehr umfangreiches Resultset kann dazu führen, dass das Clientsystem heruntergefahren wird, wenn der Client Vorgänge ausführt, die Ressourcen proportional zum Umfang des Resultsets ausführt. Unerwartet große Resultsets können unter den folgenden Bedingungen auftreten:  
@@ -113,18 +113,18 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
   
 - In geschachtelten [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfragen.  
   
- Wenn Sie Benutzereingaben akzeptieren, müssen Sie sicherstellen, dass die Eingaben keine Resultsets verursachen können, die umfangreicher sind als die Datenmengen, die das System verarbeiten kann. Sie können auch die <xref:System.Linq.Queryable.Take%2A> -Methode in LINQ to Entities oder den [Limit](./language-reference/limit-entity-sql.md) -Operator [!INCLUDE[esql](../../../../../includes/esql-md.md)] in verwenden, um die Größe des Resultsets einzuschränken.  
+ Wenn Sie Benutzereingaben akzeptieren, müssen Sie sicherstellen, dass die Eingaben keine Resultsets verursachen können, die umfangreicher sind als die Datenmengen, die das System verarbeiten kann. Sie können auch die <xref:System.Linq.Queryable.Take%2A>-Methode in LINQ to Entities oder den [Limit](./language-reference/limit-entity-sql.md) -Operator in [!INCLUDE[esql](../../../../../includes/esql-md.md)] verwenden, um die Größe des Resultsets einzuschränken.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Vermeiden Sie es, IQueryable-Ergebnisse zurückzugeben, wenn Sie Methoden für potenziell nicht vertrauenswürdige Aufrufer verfügbar machen.  
  Vermeiden Sie es aus den folgenden Gründen, <xref:System.Linq.IQueryable%601>-Typen von Methoden zurückzugeben, die für potenziell nicht vertrauenswürdige Aufrufer verfügbar gemacht wurden:  
   
 - Der Consumer einer Abfrage, die einen <xref:System.Linq.IQueryable%601>-Typ verfügbar macht, könnte mit dem Ergebnis Methoden aufrufen, die sichere Daten verfügbar machen oder die Größe des Resultsets erhöhen. Betrachten Sie beispielsweise die folgende Methodensignatur:  
   
-    ```  
+    ```csharp  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     Ein Consumer dieser Abfrage könnte `.Include("Orders")` für den zurückgegebenen `IQueryable<Customer>` aufrufen, um Daten abrufen, die durch die Abfrage nicht verfügbar gemacht werden sollten. Dies kann vermieden werden, indem der Rückgabetyp der Methode in <xref:System.Collections.Generic.IEnumerable%601> geändert und eine Methode aufgerufen wird (beispielsweise `.ToList()`), die die Ergebnisse materialisiert.  
+    Ein Consumer dieser Abfrage könnte `.Include("Orders")` für den zurückgegebenen `IQueryable<Customer>` aufrufen, um Daten abrufen, die durch die Abfrage nicht verfügbar gemacht werden sollten. Dies kann vermieden werden, indem der Rückgabetyp der Methode in <xref:System.Collections.Generic.IEnumerable%601> geändert und eine Methode aufgerufen wird (beispielsweise `.ToList()`), die die Ergebnisse materialisiert.  
   
 - Da <xref:System.Linq.IQueryable%601>-Abfragen ausgeführt werden, während die Ergebnisse durchlaufen werden, könnte der Consumer einer Abfrage, die einen <xref:System.Linq.IQueryable%601>-Typ verfügbar macht, eventuell ausgelöste Ausnahmen abfangen. Ausnahmen könnten Informationen enthalten, die nicht für den Consumer bestimmt sind.  
   
@@ -145,13 +145,13 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
 Beachten Sie Folgendes, wenn Sie mit Pfaden in ASP.NET-Anwendungen arbeiten.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Überprüfen Sie, ob der Host Pfadprüfungen ausführt.  
- Wenn die `|DataDirectory|` Ersetzungs Zeichenfolge (in pipesymbolen eingeschlossen) verwendet wird, überprüft ADO.net, ob der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung zum Auflösen des Webanwendungs-`~`Stamm Operators () wird vom Prozess ausgeführt, der ASP.net gehostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine Entity Framework Anwendung bereitstellen.  
+ Wenn die Ersetzungs Zeichenfolge des `|DataDirectory|` (in Pipe-Symbole eingeschlossen) verwendet wird, überprüft ADO.net, ob der aufgelöste Pfad unterstützt wird. Beispielsweise ist ".." hinter `DataDirectory` nicht zulässig. Dieselbe Überprüfung zum Auflösen des Webanwendungs-Stamm Operators (`~`) erfolgt durch den Prozess, der ASP.net gehostet. IIS führt diese Überprüfung aus. Andere Hosts als IIS können möglicherweise nicht überprüfen, ob der aufgelöste Pfad unterstützt wird. Sie sollten das Verhalten des Hosts kennen, auf dem Sie eine Entity Framework Anwendung bereitstellen.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Gehen Sie nicht von Annahmen über aufgelöste Pfadnamen aus.  
- Obwohl die Werte, auf die der Stamm Operator`~`() und `DataDirectory` die Ersetzungs Zeichenfolge aufgelöst werden, während der Laufzeit der Anwendung konstant bleiben müssen, schränkt der Entity Framework den Host nicht durch das Ändern dieser Werte ein.  
+ Obwohl die Werte, auf die der Stamm Operator (`~`) und die `DataDirectory` Ersetzungs Zeichenfolge auflösen, während der Laufzeit der Anwendung konstant bleiben, schränkt der Entity Framework den Host nicht auf das Ändern dieser Werte ein.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Überprüfen Sie die Pfadlänge vor der Bereitstellung.  
- Bevor Sie eine Entity Framework Anwendung bereitstellen, sollten Sie sicherstellen, dass die Werte des Stamm Operators ( `DataDirectory` ~) und der Ersetzungs Zeichenfolge nicht die Grenzwerte für die Pfadlänge im Betriebssystem überschreiten. ADO.NET-Datenanbieter stellen nicht sicher, dass die Pfadlänge innerhalb gültiger Limits liegt.  
+ Bevor Sie eine Entity Framework Anwendung bereitstellen, sollten Sie sicherstellen, dass die Werte des root-Operators (~) und `DataDirectory` Ersetzungs Zeichenfolge nicht die Grenzwerte für die Pfadlänge im Betriebssystem überschreiten. ADO.NET-Datenanbieter stellen nicht sicher, dass die Pfadlänge innerhalb gültiger Limits liegt.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Sicherheitsaspekte für ADO.NET-Metadaten  
  Wenn Sie Modell- und Zuordnungsdateien erzeugen und mit ihnen arbeiten, berücksichtigen Sie Folgendes hinsichtlich der Sicherheit:  

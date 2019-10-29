@@ -2,21 +2,22 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 34ba198de33ae4aa1882d13f74bd2d538999a0c9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bd6aeb32e0994bceb9e56bcb1c6267f4cb64a5a4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919787"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039147"
 ---
-# <a name="bindingextensions"></a>\<bindingextensions->
-Dieser Abschnitt aktiviert die Verwendung einer benutzerdefinierten Bindung für eine Computer- oder Anwendungskonfigurationsdatei. Sie können eine benutzerdefinierte Bindung zur Auflistung hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf eine benutzerdefinierte Bindung sowie das `name`-Attribut auf den Namen der benutzerdefinierten Bindung festlegen.  
-  
- Bindungserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Bindungen als Teil einer Endpunktkonfiguration zu erstellen. Eine Bindungserweiterung ist ein Typ, der die abstrakte Klasse <xref:System.ServiceModel.Channels.Binding> implementiert.  
-  
- Im folgenden Beispiel werden das `add`-Element sowie das `name`-Attribut zum Hinzufügen einer Bindungserweiterung zum `bindingElementExtensions`-Abschnitt der Konfigurationsdatei verwendet.  
-  
-```xml  
+# <a name="bindingextensions"></a>\<bindingextensions >
+
+Dieser Abschnitt aktiviert die Verwendung einer benutzerdefinierten Bindung für eine Computer- oder Anwendungskonfigurationsdatei. Sie können eine benutzerdefinierte Bindung zur Auflistung hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf eine benutzerdefinierte Bindung sowie das `name`-Attribut auf den Namen der benutzerdefinierten Bindung festlegen.
+
+Bindungserweiterungen ermöglichen es dem Benutzer, benutzerdefinierte Bindungen als Teil einer Endpunktkonfiguration zu erstellen. Eine Bindungserweiterung ist ein Typ, der die abstrakte Klasse <xref:System.ServiceModel.Channels.Binding> implementiert.
+
+Im folgenden Beispiel wird das `add`-Element sowie das `name`-Attribut verwendet, um dem `bindingExtensions`-Abschnitt der Konfigurationsdatei eine Bindungs Erweiterung hinzuzufügen:
+
+```xml
 <system.serviceModel>
   <extensions>
     <bindingExtensions>
@@ -26,21 +27,21 @@ Dieser Abschnitt aktiviert die Verwendung einer benutzerdefinierten Bindung für
     </bindingExtensions>
   </extensions>
 </system.serviceModel>
-```  
-  
- Zum Hinzufügen von Konfigurationsmöglichkeiten zum Element, muss der Benutzer ein `bindingSection`-Element schreiben und registrieren. Weitere Informationen dazu finden Sie in der <xref:System.Configuration>-Dokumentation.  
-  
- Nachdem das Element und sein Konfigurationstyp definiert wurden, kann die Erweiterung wie im folgenden Beispiel dargestellt als Teil eines Endpunkts verwendet werden.  
-  
-```xml  
+```
+
+Zum Hinzufügen von Konfigurationsmöglichkeiten zum Element, muss der Benutzer ein `bindingSection`-Element schreiben und registrieren. Weitere Informationen dazu finden Sie in der <xref:System.Configuration>-Dokumentation.
+
+Nachdem das-Element und sein Konfigurationstyp definiert wurden, kann die Erweiterung als Teil eines Endpunkts verwendet werden, wie im folgenden Beispiel gezeigt:
+
+```xml
 <services>
   <service name="MyService">
     <endpoint address="myAddress"
               binding="MyBinding" />
   </service>
 </services>
-```  
-  
+```
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)

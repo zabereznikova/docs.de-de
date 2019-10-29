@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38bdfc974a6942596e9778cabb87b275f1e51db8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049677"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039525"
 ---
-# <a name="impliestype-element-net-native"></a>\<Impliestype-> Element (.net Native)
+# <a name="impliestype-element-net-native"></a>\<impliestype-> Element (.net Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -99,13 +99,13 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
- Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich zum Beispiel eine generische `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` Methode vor, auf die eine bestimmte Bibliothek zusammen mit den <xref:System.Collections.Generic.List%601> zugehörigen <xref:System.Array> -und-Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
+ Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich z. b. eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` vor, auf die eine bestimmte Bibliothek zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601> und <xref:System.Array> Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
   
 ```xml  
 <Type Name="MyType">  
     <Method Name="MakeEnumerable{T}" Signature="(System.String, T)" Dynamic="Included">  
         <ImpliesType Name="T[]" Dynamic="Public" />  
-        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public">  
+        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public" />  
     </Method>  
 </Type>  
 ```  

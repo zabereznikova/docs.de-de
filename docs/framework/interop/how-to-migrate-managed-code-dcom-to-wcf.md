@@ -1,17 +1,17 @@
 ---
-title: 'Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF'
+title: 'Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6fdd5c9b285bdc948af876c72e85590500dd41c8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833627"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039592"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
   
 - Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
@@ -165,6 +165,7 @@ public class CustomerService: ICustomerManager
                 address="http://localhost:8083/CustomerManager"   
                 binding="basicHttpBinding"   
                 contract="Shared.ICustomerManager"/>  
+    </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
@@ -322,7 +323,7 @@ public class SessionBoundFactory : ISessionBoundFactory
     }  
 ```  
   
-### <a name="step-3-configure-and-start-the-wcf-services"></a>Schritt 3: Konfigurieren und Starten der WCF-Dienste  
+### <a name="step-3-configure-and-start-the-wcf-services"></a>Schritt 3: Konfigurieren und Starten Sie der WCF-Dienste  
  Damit diese Dienste gehostet werden können, müssen Sie die folgenden Erweiterungen in die Konfigurationsdatei (web.config) des Servers einfügen.  
   
 1. Fügen Sie einen `<client>`-Abschnitt hinzu, in dem der Endpunkt für das sitzungsbasierte Objekts beschrieben wird.  In diesem Szenario fungiert der Server auch als Client und muss konfiguriert werden, um dies zu ermöglichen.  

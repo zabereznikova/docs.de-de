@@ -1,13 +1,13 @@
 ---
 title: Musterabgleich
-description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
-ms.date: 05/16/2016
-ms.openlocfilehash: 0e14fa00103742bbf5f054f8c04a7669ed767e63
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+description: Erfahren Sie, wie Muster in F# verwendet werden, um Daten mit logischen Strukturen zu vergleichen, Daten in Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.
+ms.date: 10/27/2019
+ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216799"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041014"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -15,9 +15,9 @@ Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets v
 
 ## <a name="remarks"></a>Hinweise
 
-Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [Let](./functions/let-bindings.md)-Bindungen [, Lambda-Ausdrücke: Das `fun` Schlüssel](./functions/lambda-expressions-the-fun-keyword.md)Wort und[Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
+Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [let-Bindungen](./functions/let-bindings.md), [Lambda-Ausdrücke: das `fun` Schlüsselwort](./functions/lambda-expressions-the-fun-keyword.md)und [Ausnahmen: der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
-Im `match` Ausdruck ist das *Muster* z. b. das, was dem Pipe-Symbol folgt.
+Im `match` Ausdruck ist das *Muster* z. b. das Symbol, das auf das Pipe-Symbol folgt.
 
 ```fsharp
 match expression with
@@ -29,7 +29,7 @@ Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausd
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
-|name|Beschreibung|Beispiel|
+|-Name|Beschreibung|Beispiel|
 |----|-----------|-------|
 |Konstantenmuster|Ein beliebiges numerisches Literal, Zeichenliteral oder Zeichenfolgenliteral, eine Enumerationskonstante oder ein definierter Literalbezeichner.|`1.0`, `"test"`, `30`, `Color.Red`|
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
@@ -42,10 +42,10 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |Arraymuster|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Muster in Klammern|( *Muster* )|`( a )`|
 |Tupelmuster|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|Datensatzmuster|{ *Bezeichner1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
+|Datensatzmuster|{ *Bezeichner1* = *pattern_1*;...; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |Platzhaltermuster|_|`_`|
 |Muster zusammen mit Typanmerkung|*Pattern* : *Type*|`a : int`|
-|Typtestmuster|:? *Typ* [ *Bezeichner* ]|`:? System.DateTime as dt`|
+|Typtestmuster|:? *Type* [as *Identifier* ]|`:? System.DateTime as dt`|
 |NULL-Muster|NULL|`null`|
 
 ## <a name="constant-patterns"></a>Konstantenmuster
@@ -103,7 +103,7 @@ match shape with
 
 Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen zu aktiven Mustern finden Sie unter [aktive Muster](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Mustervergleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Mustervergleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung finden Sie unter [Ausnahmen: der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 
@@ -133,7 +133,7 @@ Das OR-Muster wird im folgenden Beispiel veranschaulicht.
 
 Das AND-Muster erfordert, dass die Eingabe mit zwei Mustern übereinstimmt. Die Typen beider Seiten des AND-Musters müssen kompatibel sein.
 
-Das folgende Beispiel ist ähnlich `detectZeroTuple` wie im Abschnitt [tupelmuster](https://msdn.microsoft.com/library/#tuple) weiter unten in diesem Thema dargestellt. hier werden `var1` jedoch `var2` sowohl als auch Werte mithilfe des-Musters und des-Musters abgerufen.
+Das folgende Beispiel ähnelt `detectZeroTuple` im Abschnitt [tupelmuster](https://msdn.microsoft.com/library/#tuple) weiter unten in diesem Thema. hier werden jedoch sowohl `var1` als auch `var2` mit dem Muster und als Werte abgerufen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
@@ -192,6 +192,20 @@ Das Typtestmuster wird verwendet, um die Eingabe anhand eines Typs zu vergleiche
 Das Typtestmuster wird im folgenden Beispiel veranschaulicht.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+
+Wenn Sie nur überprüfen, ob es sich bei einem Bezeichner um einen bestimmten abgeleiteten Typ handelt, benötigen Sie den `as identifier` Teil des Musters nicht, wie im folgenden Beispiel gezeigt:
+
+```fsharp
+type A() = class end
+type B() = inherit A()
+type C() = inherit A()
+
+let m (a: A) =
+    match a with
+    | :? B -> printfn "It's a B"
+    | :? C -> printfn "It's a C"
+    | _ -> ()
+```
 
 ## <a name="null-pattern"></a>NULL-Muster
 

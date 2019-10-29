@@ -2,18 +2,18 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251720"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040021"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 
 Das SQL-Generierungs Modul im [Beispiel Anbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird als Besucher für die Ausdrucks Baumstruktur implementiert, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.
 
-Die Knoten der Struktur werden von unten nach oben verarbeitet. Zuerst wird eine zwischen Struktur erstellt: Sqlselectstatement oder sqlbuilder, beide implementieren isqlfragment. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:
+Die Knoten der Struktur werden von unten nach oben verarbeitet. Zuerst wird eine Zwischenstruktur erzeugt: SqlSelectStatement oder SqlBuilder, die beide ISqlFragment implementieren. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:
 
 - Logisch wird eine SQL SELECT-Anweisung der Reihenfolge nach gefüllt. Auf die Knoten, die in der FROM-Klausel verwendet werden, wird vor den Knoten zugegriffen, die in den WHERE-, GROUP BY- und ORDER BY-Klauseln verwendet werden.
 
@@ -57,7 +57,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 
 #### <a name="sqlselectstatement"></a>SqlSelectStatement
 
-Sqlselectstatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... VON.. WHERE... GRUPPIEREN NACH... ORDER BY ".
+Sqlselectstatement stellt eine kanonische SQL SELECT-Anweisung der Form "SELECT... Von.. WHERE... Gruppieren nach... Order by ".
 
 Jede der SQL-Klauseln wird durch einen StringBuilder dargestellt. Außerdem überwacht es, ob "Distinct" angegeben wurde und es sich um die Anweisung auf oberster Ebene handelt. Wenn es sich nicht um die Anweisung auf oberster Ebene handelt, wird die ORDER BY-Klausel weggelassen, es sei denn, die Anweisung verfügt auch über eine TOP-Klausel.
 
@@ -229,13 +229,13 @@ Die Eingabealiasumleitung erfolgt mithilfe der Symboltabelle.
 
 Informationen zum Erläutern der Umleitung von Alias Eingaben finden Sie im ersten Beispiel unter [Erstellen von SQL aus Befehlsstrukturen-bewährte Methoden](generating-sql-from-command-trees-best-practices.md).  Dort musste "a" in der Projektion zu "b" umgeleitet werden.
 
-Wenn ein SqlSelectStatement-Objekt erstellt wird, wird der Block, der als Eingabe für den Knoten dient, in die From-Eigenschaft des SqlSelectStatements eingefügt. Ein Symbol (\<symbol_b >) wird auf Grundlage des Eingabe Bindungs namens ("b") erstellt, um diesen Block darzustellen, und "as \<" + symbol_b > wird an die from-Klausel angefügt.  Das Symbol wird außerdem der FromExtents-Eigenschaft hinzugefügt.
+Wenn ein SqlSelectStatement-Objekt erstellt wird, wird der Block, der als Eingabe für den Knoten dient, in die From-Eigenschaft des SqlSelectStatements eingefügt. Ein Symbol (\<> symbol_b) wird auf Grundlage des Eingabe Bindungs namens ("b") erstellt, um diesen Block darzustellen, und "as" + \<symbol_b > die an die from-Klausel angefügt wird.  Das Symbol wird außerdem der FromExtents-Eigenschaft hinzugefügt.
 
-Das Symbol wird auch zur Symboltabelle hinzugefügt, um den Eingabe Bindungs Namen damit zu verknüpfen ("b" \<, symbol_b >).
+Das Symbol wird auch zur Symboltabelle hinzugefügt, um den Eingabe Bindungs Namen damit zu verknüpfen ("b", \<symbol_b >).
 
 Wenn ein nachfolgender Knoten dieses SqlSelectStatement wiederverwendet, fügt es der Symboltabelle einen Eintrag hinzu, um seinen Eingabebindungsnamen mit diesem Symbol zu verknüpfen. In unserem Beispiel würde der DbProjectExpression mit dem Eingabe Bindungs Namen "a" das sqlselectstatement wieder verwenden und ("a", \< symbol_b >) der Tabelle hinzufügen.
 
-Wenn Ausdrücke auf den Eingabebindungsnamen des Knotens verweisen, der das SqlSelectStatement wiederverwendet, wird dieser Verweis mithilfe der Symboltabelle in das richtige umgeleitete Symbol aufgelöst. Wenn "a" von "a. x" beim Aufrufen von "DbVariableReferenceExpression", das "a" darstellt, aufgelöst wird, \<wird es in das Symbol symbol_b > aufgelöst.
+Wenn Ausdrücke auf den Eingabebindungsnamen des Knotens verweisen, der das SqlSelectStatement wiederverwendet, wird dieser Verweis mithilfe der Symboltabelle in das richtige umgeleitete Symbol aufgelöst. Wenn "a" von "a. x" beim Aufrufen von "DbVariableReferenceExpression", das "a" darstellt, aufgelöst wird, wird es in das Symbol \<symbol_b > aufgelöst.
 
 ### <a name="join-alias-flattening"></a>Joinaliasvereinfachung
 
@@ -243,9 +243,9 @@ Im Abschnitt mit dem Titel "DbPropertyExpression" wird beschrieben, wie beim Zug
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Spaltennamen- und Blockaliasumbenennung
 
-Das Problem des Umbenennens von Spaltenname und Block Alias wird mithilfe von Symbolen adressiert, die in der zweiten Phase der Generierung, die im Abschnitt Second Phase der SQL-Generierung beschrieben wird, nur durch Aliase ersetzt werden: Der Zeichen folgen Befehl wird erzeugt.
+Das Problem der Spaltennamen- und Blockaliasumbenennung wird durch die Verwendung von Symbolen gelöst, die erst in der zweiten Phase der Generierung durch Aliase ersetzt werden, wie im Abschnitt mit dem Titel "Zweite Phase der SQL-Generierung: Generieren des Zeichenfolgenbefehls" beschrieben wird.
 
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Erste Phase der SQL-Generierung: Aufrufen der Ausdrucks Baumstruktur
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Erste Phase der SQL-Generierung: Zugriff auf die Ausdrucksbaumstruktur
 
 In diesem Abschnitt wird die erste Phase der SQL-Generierung beschrieben, wenn auf den Ausdruck zugegriffen wird, der die Abfrage darstellt, und eine Zwischenstruktur (entweder ein SqlSelectStatement oder ein SqlBuilder) erzeugt wird.
 
@@ -345,7 +345,7 @@ Die Set-Vorgänge DbUnionAllExpression, DbExceptExpression und DbIntersectExpres
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-Where \<leftsqlselectstatement > und \<rightqlselectstatement > sind sqlselectstatements, die durch den Zugriff auf die einzelnen Eingaben \<abgerufen werden, und "Top >" ist der entsprechende Vorgang (z. b. Union all).
+Dabei sind \<leftsqlselectstatement-> und \<rightqlselectstatement-> sqlselectstatements, die durch den Besuch der einzelnen Eingaben abgerufen werden, und \<Top-> ist der entsprechende Vorgang (z. b. Union all).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -375,9 +375,9 @@ Wenn die Rückgabe von DbNewInstanceExpression vom Typ Auflistung ist und eine n
 
 - Wenn DbElementExpression das einzige Argument von DbNewInstanceExpression ist, wird er wie folgt übersetzt:
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 Wenn DbNewInstanceExpression über keine Argumente verfügt (eine leere Tabelle darstellt), wird DbNewInstanceExpression übersetzt in:
 
@@ -409,9 +409,9 @@ Die Methode, die auf DbElementExpression zugreift, wird nur für den Zugriff auf
 
 ### <a name="dbquantifierexpression"></a>DbQuantifierExpression
 
-Abhängig vom Ausdruckstyp (Any oder All) wird DbQuantifierExpression folgendermaßen übersetzt:
+Je nach Ausdruckstyp (Any oder all) wird DbQuantifierExpression wie folgt übersetzt:
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
@@ -420,7 +420,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 
 In einigen Fällen ist es möglich, die Übersetzung von DbNotExpression mit seinem Eingabeausdruck zu reduzieren. Beispiel:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,11 +431,11 @@ Der Grund für die zweite Reduzierung besteht darin, dass beim Übersetzen von D
 
 DbIsEmptyExpression wird folgendermaßen übersetzt:
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Zweite Phase der SQL-Generierung: Der Zeichen folgen Befehl wird erzeugt.
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Zweite Phase der SQL-Generierung: Generieren des Zeichenfolgenbefehls
 
 Beim Generieren eines SQL-Zeichenfolgenbefehls erzeugt das SqlSelectStatement tatsächliche Aliase für die Symbole. Damit wird das Problem der Umbenennung von Spaltennamen und Blockaliasen gelöst.
 
@@ -443,7 +443,7 @@ Die Blockaliasumbenennung erfolgt beim Schreiben des SqlSelectStatement-Objekts 
 
 Die Umbenennung von Spalten erfolgt beim Schreiben eines Symbol-Objekts in eine Zeichenfolge. AddDefaultColumns hat in der ersten Phase festgestellt, ob ein bestimmtes Spaltensymbol umbenannt werden muss. In der zweiten Phase wird nur die Umbenennung vorgenommen, um sicherzustellen, dass kein Konflikt zwischen dem erzeugten Namen und einem in AllColumnNames verwendeten Namen auftritt.
 
-Um eindeutige Namen sowohl für Block Aliase als auch für Spalten zu erhalten \<, verwenden Sie existing_name > _N, wobei n der kleinste Alias ist, der noch nicht verwendet wurde. Die globale Liste aller Aliase erhöht den Bedarf an wiederholten Umbenennungen.
+Um eindeutige Namen sowohl für Block Aliase als auch für Spalten zu erhalten, verwenden Sie \<existing_name > _N, wobei n der kleinste Alias ist, der noch nicht verwendet wurde. Die globale Liste aller Aliase erhöht den Bedarf an wiederholten Umbenennungen.
 
 ## <a name="see-also"></a>Siehe auch
 

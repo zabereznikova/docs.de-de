@@ -2,12 +2,12 @@
 title: Einrichtung der Massenkopierbeispiele
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: ac09ed85315aee7c6b29952916088ebe6e301eb9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794418"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040255"
 ---
 # <a name="bulk-copy-example-setup"></a>Einrichtung der Massenkopierbeispiele
 Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Daten nur in SQL Server-Tabellen geschrieben werden. In den in diesem Thema gezeigten Codebeispielen wird die SQL Server-Beispieldatenbank **AdventureWorks**verwendet. Um Änderungen an den vorhandenen Tabellen zu vermeiden, schreiben die Codebeispiele in Tabellen, die zunächst erstellt werden müssen.  
@@ -22,7 +22,7 @@ Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Daten nur in SQL
 ## <a name="table-setup"></a>Einrichten der Tabellen  
  Zum Erstellen der Tabellen, die für das ordnungsgemäße Ausführen der Codebeispiele erforderlich sind, müssen Sie die folgenden Transact-SQL-Anweisungen in einer SQL Server-Datenbank ausführen:  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   

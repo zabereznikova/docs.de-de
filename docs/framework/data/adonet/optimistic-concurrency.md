@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794680"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039816"
 ---
 # <a name="optimistic-concurrency"></a>Optimistische Nebenläufigkeit
 In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update von Daten in einer Datenbank: das Modell der vollständigen Parallelität und das Modell der eingeschränkten Parallelität. Das <xref:System.Data.DataSet>-Objekt unterstützt die Verwendung der vollständigen Parallelität für lange Aktivitäten, wie bei der Datenfernverarbeitung und der Interaktion mit Daten.  
@@ -67,13 +67,13 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
   
  Beim zweiten Testverfahren, mit dem eine Verletzung der vollständigen Parallelität festgestellt werden kann, wird überprüft, ob alle ursprünglichen Spaltenwerte einer Zeile mit denen in der Datenbank übereinstimmen. Betrachten Sie z. B. folgende Abfrage:  
   
-```  
+```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
  Wenn Sie beim Aktualisieren einer Zeile in **Table1**auf eine Verletzung der vollständigen Parallelität testen möchten, geben Sie die folgende Update-Anweisung aus:  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
               Set Col2 = @NewCol2Value,  
               Set Col3 = @NewCol3Value  
@@ -88,7 +88,7 @@ WHERE Col1 = @OldCol1Value AND
   
  Wenn in einer Spalte Ihrer Datenquelle NULL-Werte zulässig sind, müssen Sie Ihre WHERE-Klausel erweitern, um nach einem entsprechenden NULL-Verweis in Ihrer lokalen Tabelle und in der Datenquelle zu suchen. Die folgende UPDATE-Anweisung prüft z. B., ob ein NULL-Verweis in der lokalen Zeile noch mit einem NULL-Verweis in der Datenquelle übereinstimmt oder ob der Wert in der lokalen Zeile noch mit dem Wert in der Datenquelle übereinstimmt.  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
@@ -96,7 +96,7 @@ UPDATE Table1 Set Col1 = @NewVal1
  Sie können bei einem Modell der vollständigen Parallelität auch weniger strenge Kriterien anwenden. Wenn Sie z. B. nur die Primärschlüsselspalten in der WHERE-Klausel verwenden, werden die Daten unabhängig davon überschrieben, ob die anderen Spalten seit der letzten Abfrage aktualisiert wurden oder nicht. Zudem besteht die Möglichkeit, eine WHERE-Klausel auf spezifische Spalten anzuwenden, sodass die Daten überschrieben werden, sofern nicht bestimmte Felder seit deren letzten Abfrage aktualisiert wurden.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Das "DataAdapter.RowUpdated"-Ereignis  
- Das **rowaktualisierte** -Ereignis des <xref:System.Data.Common.DataAdapter> -Objekts kann zusammen mit den oben beschriebenen Techniken verwendet werden, um die Anwendung von Verletzungen der vollständigen Parallelität zu benachrichtigen. **Rowupdate** erfolgt nach jedem Versuch, eine **geänderte** Zeile aus einem **DataSet**zu aktualisieren. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Das <xref:System.Data.Common.RowUpdatedEventArgs> -Objekt gibt eine **recordsaffzierte** -Eigenschaft zurück, die die Anzahl der Zeilen enthält, die von einem bestimmten Update-Befehl für eine geänderte Zeile in einer Tabelle betroffen sind. Wenn Sie den Update-Befehl so festlegen, dass die vollständige Parallelität getestet wird, gibt die **recordsaffzierte** -Eigenschaft als Ergebnis den Wert 0 zurück, wenn eine Verletzung der vollständigen Parallelität aufgetreten ist, da keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Das Ereignis **rowaktualisierte** ermöglicht es Ihnen, dieses Vorkommen zu behandeln und die Ausnahme zu vermeiden, indem Sie einen entsprechenden **RowUpdatedEventArgs. Status** -Wert festlegen, z. b. **UpdateStatus. SkipCurrentRow**. Weitere Informationen zum **rowaktualisierte** -Ereignis finden Sie unter [Handling DataAdapter-Ereignisse](handling-dataadapter-events.md).  
+ Das **rowaktualisierte** -Ereignis des <xref:System.Data.Common.DataAdapter> Objekts kann in Verbindung mit den oben beschriebenen Techniken verwendet werden, um die Anwendung von Verletzungen der vollständigen Parallelität zu benachrichtigen. **Rowupdate** erfolgt nach jedem Versuch, eine **geänderte** Zeile aus einem **DataSet**zu aktualisieren. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Das <xref:System.Data.Common.RowUpdatedEventArgs>-Objekt gibt eine **recordsafffiziert** -Eigenschaft zurück, die die Anzahl der Zeilen enthält, die von einem bestimmten Update-Befehl für eine geänderte Zeile in einer Tabelle betroffen sind. Wenn Sie den Update-Befehl so festlegen, dass die vollständige Parallelität getestet wird, gibt die **recordsaffzierte** -Eigenschaft als Ergebnis den Wert 0 zurück, wenn eine Verletzung der vollständigen Parallelität aufgetreten ist, da keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Das Ereignis **rowaktualisierte** ermöglicht es Ihnen, dieses Vorkommen zu behandeln und die Ausnahme zu vermeiden, indem Sie einen entsprechenden **RowUpdatedEventArgs. Status** -Wert festlegen, z. b. **UpdateStatus. SkipCurrentRow**. Weitere Informationen zum **rowaktualisierte** -Ereignis finden Sie unter [Handling DataAdapter-Ereignisse](handling-dataadapter-events.md).  
   
  Optional können Sie **DataAdapter. ContinueUpdateOnError** auf **true**festlegen, bevor Sie **Update**aufrufen, und auf die Fehlerinformationen reagieren, die in der **RowError** -Eigenschaft einer bestimmten Zeile gespeichert sind, wenn das **Update** abgeschlossen ist. Weitere Informationen finden Sie unter [Zeilen Fehlerinformationen](./dataset-datatable-dataview/row-error-information.md).  
   

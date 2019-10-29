@@ -17,15 +17,15 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 77f3c519308f39f83dac399aef395d5d36a7195e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920366"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040925"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] Anwendungen sind häufig von Dateien abhängig, die nicht ausführbare Daten enthalten, z. b. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audiodaten. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das konfigurieren, identifizieren und Verwenden dieser Daten Dateitypen, die als Anwendungs Datendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
+Microsoft Windows-Anwendungen sind häufig von Dateien abhängig, die nicht ausführbare Daten enthalten, z. b. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audiodaten. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das konfigurieren, identifizieren und Verwenden dieser Daten Dateitypen, die als Anwendungs Datendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
   
 - **Ressourcen Dateien**: Datendateien, die entweder in eine ausführbare Datei oder eine Bibliothek [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly kompiliert werden.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846836"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040189"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
 
@@ -55,26 +55,28 @@ Verwenden Sie den [Assembly Linker (Al. exe)](../tools/al-exe-assembly-linker.md
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
-**Al/Link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keypaarfile* **/Platform:** *ProcessorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 In diesem Befehl:
 
-- Das *publisherPolicyFile* -Argument ist der Name der Herausgeber Richtlinien Datei.
+- Das `publisherPolicyFile`-Argument ist der Name der Herausgeber Richtlinien Datei.
 
-- Das *publisherPolicyAssemblyFile* -Argument ist der Name der Herausgeber Richtlinienassembly, die sich aus diesem Befehl ergibt. Der Assemblydateiname muss das folgende Format aufweisen:
+- Das `publisherPolicyAssemblyFile`-Argument ist der Name der Herausgeber Richtlinienassembly, die sich aus diesem Befehl ergibt. Der Assemblydateiname muss das folgende Format aufweisen:
 
-  **Policy.** *majornumber* **.** *minornumber* **.** *MainAssemblyName* **. dll**
+  "Policy. majornumber. minornumber. MainAssemblyName. dll"
 
-- Das *keypairren File* -Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly-und Herausgeber richtlinienassembly mit demselben Schlüsselpaar signieren.
+- Das `keyPairFile`-Argument ist der Name der Datei, die das Schlüsselpaar enthält. Sie müssen die Assembly-und Herausgeber richtlinienassembly mit demselben Schlüsselpaar signieren.
 
-- Das *ProcessorArchitecture* -Argument identifiziert die Plattform, auf die eine prozessorspezifische Assembly abzielt.
+- Das `processorArchitecture`-Argument identifiziert die Plattform, auf die eine prozessorspezifische Assembly abzielt.
 
   > [!NOTE]
   > Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar.
 
 Die Möglichkeit, eine bestimmte Prozessorarchitektur als Ziel zu erreichen, ist ab .NET Framework 2,0 verfügbar. Der folgende Befehl erstellt eine Herausgeber richtlinienassembly namens `policy.1.0.myAssembly` aus einer Herausgeber Richtlinien Datei namens `pub.config`, weist der Assembly einen starken Namen zu, indem das Schlüsselpaar in der `sgKey.snk` Datei verwendet wird, und gibt an, dass die Assembly auf den x86-Prozessor ausgerichtet Architektur.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Verwenden Sie das [Global Assembly Cache-Tool (Gacutil. exe)](../tools/gacutil-e
 
 Geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
-**gacutil/i**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 Der folgende Befehl fügt dem globalen Assemblycache `policy.1.0.myAssembly.dll` hinzu.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

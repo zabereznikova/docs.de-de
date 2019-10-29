@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920034"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040864"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen mithilfe der <xref:System.Windows.Window>-Klasse ihre eigenen Fenster bereit. In diesem Thema wird <xref:System.Windows.Window> vorgestellt, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
@@ -442,7 +442,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Nicht rechteckiger Fensterstil  
- Es gibt auch Situationen, in denen die Rahmen Stile, die <xref:System.Windows.Window.WindowStyle%2A> können, nicht ausreichen. Beispielsweise können Sie eine Anwendung mit einem nicht rechteckigen Rahmen erstellen, wie [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] verwendet.  
+ Es gibt auch Situationen, in denen die Rahmen Stile, die <xref:System.Windows.Window.WindowStyle%2A> können, nicht ausreichen. Beispielsweise können Sie eine Anwendung mit einem nicht rechteckigen Rahmen erstellen, wie z. b. Microsoft Windows Media Player verwendet.  
   
  Sehen Sie sich beispielsweise das in der folgenden Abbildung gezeigte Sprechblasen Fenster an:  
   

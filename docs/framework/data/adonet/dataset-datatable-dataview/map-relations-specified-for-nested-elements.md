@@ -2,12 +2,12 @@
 title: Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: e8cdf73b6277abdaab1256ca87e615a5e25e7336
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786084"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040064"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
 Ein Schema kann eine **msdata: Relationship** -Anmerkung enthalten, um die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben. Die beiden in **msdata: Relationship** angegebenen Elemente können im Schema, jedoch nicht vorhanden sein. Der Mapping-Prozess verwendet **msdata: Relationship** im Schema, um die PRIMARY KEY/Foreign Key-Beziehung zwischen den beiden Spalten zu generieren.  
@@ -56,14 +56,14 @@ Ein Schema kann eine **msdata: Relationship** -Anmerkung enthalten, um die Zuord
   
 - Eine **Bestellung** und eine **Order Detail** -Tabelle.  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
 - Eine Beziehung zwischen der **Order** -Tabelle und der **Order Detail** -Tabelle. Die Eigenschaft " **schsted** " für diese Beziehung wird auf " **true** " festgelegt, da die Elemente **Order** und **Order Detail** im Schema scht sind.  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Codieren und Decodieren eines WDP-Bilds'
+title: 'Gewusst wie: Codieren und Decodieren eines WDP-Bilds'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
-ms.openlocfilehash: b143106092235b42044d264189c135d2cd65426c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c5c312c7e58d48a865e493c38c3defd3f5f3d1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947523"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040775"
 ---
-# <a name="how-to-encode-and-decode-a-wdp-image"></a>Vorgehensweise: Codieren und Decodieren eines WDP-Bilds
-Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> und <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> Objekte.  
+# <a name="how-to-encode-and-decode-a-wdp-image"></a>Gewusst wie: Codieren und Decodieren eines WDP-Bilds
+In den folgenden Beispielen wird veranschaulicht, wie Sie ein Microsoft Windows Media-Foto mithilfe der spezifischen <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> und <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> Objekte decodieren und codieren.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird veranschaulicht, wie zum Decodieren einer [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] -Bild mithilfe einer <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> aus einer <xref:System.Uri>.  
+ In diesem Beispiel wird veranschaulicht, wie ein Windows Media-Fotobild mithilfe eines <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> aus einem <xref:System.Uri>decodiert wird.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#1)]
  [!code-csharp[WdpBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#1)]
  [!code-vb[WdpBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird veranschaulicht, wie zum Codieren einer <xref:System.Windows.Media.Imaging.BitmapSource> in einer [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] -Bild mithilfe einer <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.  
+ In diesem Beispiel wird veranschaulicht, wie ein <xref:System.Windows.Media.Imaging.BitmapSource> mithilfe eines <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>in ein Windows Media-Fotobild codiert wird.  
   
  [!code-cpp[WdpBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#4)]
  [!code-csharp[WdpBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#4)]

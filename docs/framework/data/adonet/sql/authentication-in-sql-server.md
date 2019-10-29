@@ -2,12 +2,12 @@
 title: Authentifizierung in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794292"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040267"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
@@ -21,8 +21,8 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
   
  Bei der Windows-Authentifizierung sind die Benutzer bereits bei Windows angemeldet und müssen sich nicht noch einmal bei SQL Server anmelden. Im folgenden `SqlConnection.ConnectionString` wird die Windows-Authentifizierung angegeben, ohne dass Benutzer einen Benutzernamen oder ein Kennwort angeben müssen.  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -66,7 +66,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 > [!IMPORTANT]
 > SQL Server wird mit einer SQL Server-Anmeldung mit dem Namen `sa` (kurz für "Systemadministrator") installiert. Weisen Sie der `sa`-Anmeldung ein starkes Kennwort zu, und verwenden Sie die `sa`-Anmeldung nicht in Ihrer Anwendung. Die `sa`-Anmeldung wird der festen Serverrolle `sysadmin` zugeordnet, die nicht widerrufbare administrative Anmeldeinformationen für den gesamten Server besitzt. Wenn es einem Angreifer gelingt, sich als Systemadministrator Zugriff zu verschaffen, stehen ihm Tür und Tor offen. Alle Member der Windows-Gruppe `BUILTIN\Administrators` (der lokalen Administratorgruppe) gehören standardmäßig der Rolle `sysadmin` an, können aber aus dieser Rolle entfernt werden.  
   
- SQL Server bietet Windows-Kenn Wort Richtlinien Mechanismen für SQL Server Anmeldungen, wenn es unter [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] oder höheren Versionen ausgeführt wird. Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. SQL Server können die gleichen Komplexitäts-und Ablauf Richtlinien anwenden [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] , die in SQL Server verwendet werden.  
+ SQL Server bietet Windows-Kenn Wort Richtlinien Mechanismen für SQL Server Anmeldungen, wenn diese unter [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] oder höheren Versionen ausgeführt werden. Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. SQL Server können die gleichen Komplexitäts-und Ablauf Richtlinien anwenden, die in [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] für in SQL Server verwendete Kenn Wörter verwendet werden.  
   
 > [!IMPORTANT]
 > Das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann zu einer Anfälligkeit für Angriffe durch Einschleusung von Verbindungszeichenfolgen führen. Verwenden Sie zum Erstellen syntaktisch gültiger Verbindungszeichenfolgen zur Laufzeit den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../connection-string-builders.md).  

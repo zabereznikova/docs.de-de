@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782433"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040437"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelungen in SQL Server
 Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch ein Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Durch das Spiegeln wird sichergestellt, dass jederzeit zwei separate Kopien der Daten vorhanden sind. Dies gewährleistet Hochverfügbarkeit und vollständige Datenredundanz. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Außerdem unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, über den der Name eines Failover-Partnerservers im <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> angegeben werden kann.  
@@ -26,7 +26,7 @@ Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auc
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Angeben des Failoverpartners in der Verbindungszeichenfolge  
  Wenn Sie den Namen eines Failover-Partnerservers in der Verbindungszeichenfolge angeben, versucht der Client transparent, eine Verbindung mit dem Failover-Partnerserver herzustellen, wenn die Prinzipaldatenbank beim ersten Verbindungsversuch der Clientanwendung nicht verfügbar ist.  
   
-```  
+```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   

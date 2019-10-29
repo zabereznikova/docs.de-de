@@ -2,12 +2,12 @@
 title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854293"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039889"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 
@@ -29,7 +29,7 @@ Eine DbModificationCommandTree ist eine Objektmodelldarstellung eines DML- Ände
 
 DbModificationCommandTree und seine Implementierungen, die vom Entity Framework erstellt werden, stellen immer einen einzelnen Zeilen Vorgang dar. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.
 
-![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diagramm](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree verfügt über eine Zieleigenschaft, die den Zielsatz für den Änderungsvorgang darstellt. Die Ausdruckseigenschaft des Ziels, mit der der Eingabesatz definiert wird, ist immer DbScanExpression.  Ein DbScanExpression kann entweder eine Tabelle oder eine Sicht darstellen oder einen Satz von Daten, der mit einer Abfrage definiert wird, wenn die Metadateneigenschaft "definierende Abfrage" des Ziels nicht NULL ist.
 
@@ -62,9 +62,7 @@ Der Returning-Wert legt eine Projektion der Ergebnisse fest, die auf Grundlage d
 
 SetClauses legt die Liste der SET-Klauseln zum Einfügen oder Aktualisieren fest, mit denen der Einfüge- oder Aktualisierungsvorgang definiert wird.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Die Elemente der Liste werden als Typ DbModificationClause angegeben, der eine einzelne Klausel in einer INSERT-oder Update-Änderungs Operation angibt. DbSetClause erbt von DbModificationClause und gibt die-Klausel in einem Änderungs Vorgang an, der den Wert einer Eigenschaft festlegt. Ab Version 3,5 der .NET Framework weisen alle Elemente in setklauseln den Typ setclause auf.
 
 Property legt die zu aktualisierende Eigenschaft fest. Es handelt sich stets um einen DbPropertyExpression für einen DbVariableReferenceExpression, der einen Verweis auf das Ziel der entsprechenden DbModificationCommandTree darstellt.
 
@@ -116,7 +114,7 @@ Vorausgesetzt, die Instanz von DbPropertyExpression stellt immer die Eingabetabe
 
 Der generierte Einfügebefehl folgt für eine bestimmte DbInsertCommandTree im Beispielanbieter einer der beiden folgenden Einfügevorlagen.
 
-Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das Prädikat Element "\@ @ROWCOUNT > 0" ist true, wenn eine Zeile eingefügt wurde. Das Prädikat Element "keymembership i = keyvaluei &#124; SCOPE_IDENTITY ()" nimmt nur dann die Form "keymembership i = SCOPE_IDENTITY ()" an, wenn "keymitgliedi" ein vom Speicher generierter Schlüssel ist, da SCOPE_IDENTITY () den letzten Identitäts Wert zurückgibt, der in eine Identität eingefügt wurde ( vom Speicher generierte Spalte.
+Die erste Vorlage verfügt über einen Befehl, mit dem der Einfügevorgang mithilfe der Werte in der Liste mit SetClauses durchgeführt werden kann, sowie über eine SELECT-Anweisung, um die in der Returning-Eigenschaft für die eingefügte Zeile angegebenen Eigenschaften zurückzugeben, sofern die Returning-Eigenschaft nicht NULL ist. Das Prädikat Element "\@@ROWCOUNT > 0" ist true, wenn eine Zeile eingefügt wurde. Das Prädikat Element "keymembership i = keyvaluei &#124; SCOPE_IDENTITY ()" nimmt nur dann die Form "keymembership i = SCOPE_IDENTITY ()" an, wenn "keymitgliedi" ein vom Speicher generierter Schlüssel ist, da SCOPE_IDENTITY () den letzten Identitäts Wert zurückgibt, der in eine Identität eingefügt wurde ( vom Speicher generierte Spalte.
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Mit diesem Code wird die folgende Befehlsstruktur erzeugt, die an den Anbieter übergeben wird:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Die SET-Klausel hat die gefälschte SET-Klausel@i ("= 0") nur, wenn keine Set-Klauseln angegeben sind. Auf diese Weise wird sichergestellt, dass alle im Speicher berechneten Spalten erneut berechnet werden.
+Die SET-Klausel hat die gefälschte SET-Klausel ("@i = 0") nur, wenn keine Set-Klauseln angegeben sind. Auf diese Weise wird sichergestellt, dass alle im Speicher berechneten Spalten erneut berechnet werden.
 
 Nur wenn die Returning-Eigenschaft nicht NULL ist, wird eine Auswahlanweisung generiert, um die in der Returning-Eigenschaft angegebenen Eigenschaften zurückzugeben.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Mit diesem Benutzercode wird die folgende Befehlsstruktur erstellt, die an den Anbieter übergeben wird:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Mit diesem Benutzercode wird die folgende Befehlsstruktur erstellt, die an den Anbieter übergeben wird.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

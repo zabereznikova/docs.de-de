@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040454"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -17,7 +17,7 @@ Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, 
 ## <a name="context-switching-with-the-execute-as-statement"></a>Kontextwechsel mit der EXECUTE AS-Anweisung  
  Mit der Transact-SQL-EXECUTE AS-Anweisung können Sie den Ausführungskontext einer Anweisung wechseln, indem ein Identitätswechsel zu einer anderen Anmeldung oder einem anderen Datenbankbenutzer erfolgt. Diese Vorgehensweise empfiehlt sich, wenn Abfragen und Prozeduren unter einem anderen Benutzernamen getestet werden sollen.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. Erstellen Sie einen Proxybenutzer in der Datenbank, der keiner Anmeldung zugeordnet wird. Dieser Schritt ist nicht zwingend erforderlich, erleichtert aber das Verwalten der Berechtigungen.  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. Fügen Sie der gespeicherten Prozedur oder der benutzerdefinierten Funktion die EXECUTE AS-Klausel hinzu.  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Verwenden von EXECUTE AS mit REVERT  
  Mit der Transact-SQL-REVERT-Anweisung  können Sie zum ursprünglichen Ausführungskontext zurückkehren.  
   
- Mit der optionalen-Klausel ohne Revert Cookie = @variableNamekann der Ausführungs Kontext zurück zum Aufrufer gewechselt werden, wenn @variableName die Variable den korrekten Wert enthält. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert von @variableName nur dem Aufrufer der EXECUTE AS-Anweisung bekannt ist, kann der Aufrufer sicherstellen, dass der Ausführungs Kontext vom Endbenutzer, der die Anwendung aufruft, nicht geändert werden kann. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungspooling in ADO.net finden Sie unter [SQL Server Verbindungspooling (ADO.net)](../sql-server-connection-pooling.md).  
+ Mit der optionalen-Klausel ohne Revert Cookie = @variableNamekönnen Sie den Ausführungs Kontext zurück zum Aufrufer wechseln, wenn die @variableName Variable den korrekten Wert enthält. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert von @variableName nur dem Aufrufer der EXECUTE AS-Anweisung bekannt ist, kann der Aufrufer sicherstellen, dass der Ausführungs Kontext vom Endbenutzer, der die Anwendung aufruft, nicht geändert werden kann. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungspooling in ADO.net finden Sie unter [SQL Server Verbindungspooling (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Angeben des Ausführungskontexts  
  Neben dem Angeben eines Benutzers können Sie EXECUTE AS auch zusammen mit den folgenden Schlüsselwörtern verwenden.  

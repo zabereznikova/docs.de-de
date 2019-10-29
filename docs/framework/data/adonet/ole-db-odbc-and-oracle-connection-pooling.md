@@ -2,12 +2,12 @@
 title: OLE DB-, ODBC- und Oracle-Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4b801032e67d1c4c51fed8556ff1fea05c214aff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794693"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039843"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB-, ODBC- und Oracle-Verbindungspooling
 Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. In diesem Abschnitt wird das Verbindungspooling für die .NET Framework-Datenanbieter für OLE DB, ODBC und Oracle erläutert.  
@@ -15,7 +15,7 @@ Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung we
 ## <a name="connection-pooling-for-oledb"></a>Verbindungspooling für OLE DB  
  Der .NET Framework-Datenanbieter für OLE DB vereinigt automatisch Verbindungen mithilfe des OLE DB-Sitzungspoolings. Mithilfe von Argumenten für Verbindungszeichenfolgen können OLE DB-Dienste, einschließlich Pooling, aktiviert und deaktiviert werden. Beispielsweise werden mit der folgenden Verbindungszeichenfolge das OLE DB-Sitzungspooling und die automatische Eintragung von Transaktionen deaktiviert.  
   
-```  
+```csharp
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  In der folgenden Tabelle werden die <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>-Werte beschrieben, die zum Anpassen des Verbindungspoolingverhaltens verwendet werden können.  
   
-|Name|Default|Beschreibung|  
+|-Name|Default|Beschreibung|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|Wenn eine Verbindung an den Pool zurückgegeben wird, wird die Erstellungszeit mit der aktuellen Zeit verglichen. Wenn diese Zeitspanne (in Sekunden) größer ist als der für die `Connection Lifetime` angegebene Wert, wird die Verbindung zerstört. Dies ist hilfreich bei Gruppenkonfigurationen, um einen Lastenausgleich zwischen einem bereits aktiven Server und einem Server zu erzwingen, der gerade erst online gegangen ist.<br /><br /> Der Wert 0 (null) bewirkt, dass an den Pool zurückgegebene Verbindungen den maximalen Timeout besitzen.|  
 |`Enlist`|"true"|Im Falle von `true` wird die Verbindung automatisch von der Poolfunktion im aktuellen Transaktionskontext des Erstellungsthreads aufgelistet, wenn ein Transaktionskontext vorhanden ist.|  

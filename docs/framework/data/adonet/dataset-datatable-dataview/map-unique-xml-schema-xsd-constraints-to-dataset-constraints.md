@@ -2,12 +2,12 @@
 title: Zuordnen von eindeutigen XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784409"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040364"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von eindeutigen XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 In einem XSD-Schema (XML Schema Definition Language) gibt das **Unique** -Element die Eindeutigkeits Einschränkung für ein Element oder Attribut an. Beim Übersetzen eines XML-Schemas in ein relationales Schema wird die im XML-Schema für ein Element oder Attribut angegebene eindeutige Einschränkung einer eindeutigen Einschränkung in der <xref:System.Data.DataTable> des entsprechenden <xref:System.Data.DataSet> zugeordnet, das erstellt wird.  
@@ -16,8 +16,8 @@ In einem XSD-Schema (XML Schema Definition Language) gibt das **Unique** -Elemen
   
 |Attributname|Beschreibung|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls stellt das **Name** -Attribut den Wert des Einschränkungs namens bereit.|  
-|**msdata:PrimaryKey**|Wenn `PrimaryKey="true"` im **Unique** -Element vorhanden ist, wird eine Unique-Einschränkung erstellt, bei der die **IsPrimaryKey** -Eigenschaft auf **true**festgelegt ist.|  
+|**msdata: einschränintname**|Wenn dieses Attribut angegeben ist, wird dessen Wert als Einschränkungsname verwendet. Andernfalls stellt das **Name** -Attribut den Wert des Einschränkungs namens bereit.|  
+|**msdata: PrimaryKey**|Wenn `PrimaryKey="true"` im **Unique** -Element vorhanden ist, wird eine Unique-Einschränkung erstellt, bei der die **IsPrimaryKey** -Eigenschaft auf **true**festgelegt ist.|  
   
  Das folgende Beispiel zeigt ein XML-Schema, das das **Unique** -Element verwendet, um eine Eindeutigkeits Einschränkung anzugeben.  
   
@@ -50,13 +50,13 @@ In einem XSD-Schema (XML Schema Definition Language) gibt das **Unique** -Elemen
   
  Das **Unique** -Element im Schema gibt an, dass der Wert des untergeordneten **CustomerID-** Elements für alle **Kunden** Elemente in einer Dokument Instanz eindeutig sein muss. Beim Aufbau des **DataSets**liest der Mapping-Prozess dieses Schema und generiert die folgende Tabelle:  
   
-```  
+```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  Der Mapping-Prozess erstellt auch eine Unique-Einschränkung für die **CustomerID-** Spalte, wie im folgenden **DataSet**gezeigt. (Zur Vereinfachung werden nur relevante Eigenschaften gezeigt.)  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
@@ -64,7 +64,7 @@ TableName: Customers
       Unique: True  
   ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
-      Columns: CustomerID   
+      Columns: CustomerID
       IsPrimaryKey: False  
 ```  
   
@@ -86,10 +86,10 @@ TableName: Customers
   
  Dies ist die Einschränkung, die im resultierenden **DataSet**erstellt wird.  
   
-```  
+```text  
 ConstraintName: SomeName  
   Table: Customers  
-  Columns: CustomerID CompanyName   
+  Columns: CustomerID CompanyName
   IsPrimaryKey: False  
 ```  
   

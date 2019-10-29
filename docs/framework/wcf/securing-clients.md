@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f8fe5c5e0afac071ce7e036ceccd0b66351b0e1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321263"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040882"
 ---
 # <a name="securing-clients"></a>Sichern von Clients
 In Windows Communication Foundation (WCF) bestimmt der Dienst die Sicherheitsanforderungen für Clients. d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zum Erstellen eines sicheren Diensts finden Sie unter [Sichern von Diensten](securing-services.md).  
@@ -76,7 +76,7 @@ In Windows Communication Foundation (WCF) bestimmt der Dienst die Sicherheitsanf
  Durch Hinzufügen eines [\<-Verhaltens >](../configure-apps/file-schema/wcf/behaviors.md) Abschnitts der Konfigurationsdatei für den Client und Verwenden des `clientCredentials`-Elements (siehe unten).  
   
 #### <a name="setting-a-clientcredentials-value-in-code"></a>Festlegen eines \<clientanmelde Informations > Werts im Code  
- Um einen [\<clientanmelde->](../configure-apps/file-schema/wcf/clientcredentials.md) Wert im Code festzulegen, müssen Sie auf die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft der <xref:System.ServiceModel.ClientBase%601>-Klasse zugreifen. Die Eigenschaft gibt ein <xref:System.ServiceModel.Description.ClientCredentials>-Objekt zurück, das Zugriff auf verschiedene Typen von Anmeldeinformationen zulässt (siehe Tabelle unten).  
+ Um einen [\<Clientanmelde->](../configure-apps/file-schema/wcf/clientcredentials.md) Wert im Code festzulegen, müssen Sie auf die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft der <xref:System.ServiceModel.ClientBase%601>-Klasse zugreifen. Die Eigenschaft gibt ein <xref:System.ServiceModel.Description.ClientCredentials>-Objekt zurück, das Zugriff auf verschiedene Typen von Anmeldeinformationen zulässt (siehe Tabelle unten).  
   
 |ClientCredential-Eigenschaft|Beschreibung|Notizen|  
 |-------------------------------|-----------------|-----------|  
@@ -95,14 +95,15 @@ In Windows Communication Foundation (WCF) bestimmt der Dienst die Sicherheitsanf
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
-      <endpointBehaviors>  
+      <endpointBehaviors>
         <behavior name="myEndpointBehavior">  
           <clientCredentials>  
             <clientCertificate findvalue="myMachineName"   
             storeLocation="Current" X509FindType="FindBySubjectName" />  
           </clientCredentials>  
-        </behavior>              
-    </behaviors>  
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
   </system.serviceModel>  
 </configuration>  
 ```  

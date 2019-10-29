@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 561655f1d3de6efcac79c89907602cbf51bd3ff8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8784d6980d3edb1bbdd7b39a81e7e33bfec81242
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052238"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039602"
 ---
 # <a name="virtualcercall-mda"></a>VirtualCERCall-MDA
 Der `virtualCERCall`-MDA (Assistent für verwaltetes Debuggen) wird als Warnung aktiviert und gibt an, dass eine Aufrufwebsite in einem Aufrufdiagramm eines eingeschränkten Ausführungsbereichs (CER) auf ein virtuelles Ziel verweist, also ein virtueller Aufruf an eine virtuelle, nicht finale Methode oder ein Aufruf, der eine Schnittstelle verwendet. Die Common Language Runtime (CLR) kann die Zielmethode dieser Aufrufe der Intermediate Language und der Metadatenanalyse nicht allein vorhersagen. Folglich kann die Aufrufstruktur nicht als Teil des CER-Diagramms vorbereitet und Threadabbrüche in dieser Unterstruktur nicht automatisch blockiert werden. Dieser MDA gibt eine Warnung für die Fälle aus, in denen ein CER erweitert werden muss. Dazu werden explizite Aufrufe der <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>-Methode verwendet, sobald die zusätzlichen Informationen, die zur Berechnung des Aufrufsziels erforderlich sind, zur Laufzeit bekannt sind.  
@@ -33,7 +33,7 @@ Der `virtualCERCall`-MDA (Assistent für verwaltetes Debuggen) wird als Warnung 
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
   
 ```output
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
@@ -51,7 +51,7 @@ declaringType name="VirtualCERCall+MyClass"
 ```xml  
 <mdaConfig>  
   <assistants>  
-    < VirtualCERCall />  
+    <VirtualCERCall />  
   </assistants>  
 </mdaConfig>  
 ```  
@@ -99,5 +99,5 @@ void MethodWithCer(MyClass object)
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)
