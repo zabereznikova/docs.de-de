@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET für Ap
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250323"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774374"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -44,9 +44,9 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
     * Verwenden Sie den PowerShell-Befehl `java -version`, um die Installation zu überprüfen.
 
 4. Installieren Sie [Apache Maven 3.6.0 oder höher](https://maven.apache.org/download.cgi).
-    * Laden Sie [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip) herunter.
-    * Extrahieren Sie die Datei in ein lokales Verzeichnis. Beispielsweise `c:\bin\apache-maven-3.6.0\`.
-    * Fügen Sie Ihrer [PATH-Umgebungsvariable](https://www.java.com/en/download/help/path.xml) Apache Maven hinzu. Wenn Sie bei der Extraktion `c:\bin\apache-maven-3.6.0\` als Zielverzeichnis angegeben haben, fügen Sie PATH `c:\bin\apache-maven-3.6.0\bin` hinzu.
+    * Laden Sie [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip) herunter.
+    * Extrahieren Sie die Datei in ein lokales Verzeichnis. Beispielsweise `c:\bin\apache-maven-3.6.2\`.
+    * Fügen Sie Ihrer [PATH-Umgebungsvariable](https://www.java.com/en/download/help/path.xml) Apache Maven hinzu. Wenn Sie bei der Extraktion `c:\bin\apache-maven-3.6.2\` als Zielverzeichnis angegeben haben, fügen Sie PATH `c:\bin\apache-maven-3.6.2\bin` hinzu.
     * Verwenden Sie den PowerShell-Befehl `mvn -version`, um die Installation zu überprüfen.
 
 5. Installieren Sie [Apache Spark 2.3 oder höher](https://spark.apache.org/downloads.html). Apache Spark 2.4 und höher wird nicht unterstützt.

@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 3674508c25e9a4b166f994e7ca16df04e484956b
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 4f50d4d446896e12b5beb86fc649ea4fa7c82718
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306359"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775544"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -76,7 +76,7 @@ Verwenden Sie die übliche Groß-/Kleinschreibung. Schreiben Sie das erste Wort 
 
 In Ihrem Thema **darf** nur eine Überschrift der ersten Ebene (H1) enthalten sein, die als Titel auf der Seite angezeigt wird.
 
-Wenn Ihre Überschrift mit dem Zeichen `#` endet, müssen Sie ein zusätzliches `#`-Zeichen am Ende einfügen, damit der Titel richtig gerendert wird. Beispielsweise `# Async Programming in F# #`.
+Wenn die Überschrift mit einem `#`-Zeichen endet, müssen Sie sie mit Escapezeichen versehen, damit der Titel richtig dargestellt wird. Beispielsweise `# Async programming in F\#`.
 
 Überschriften der zweiten Ebene generieren das Inhaltsverzeichnis auf der Seite, das im Abschnitt „In diesem Artikel“ unterhalb des Titels auf der Seite angezeigt wird.
 
