@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579206"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039013"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
 
@@ -85,7 +85,7 @@ Unabhängig von der Operatorrangfolge und -assoziativität werden die Operanden 
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatoren werten Operanden bedingt aus. Das heißt, der Wert des ersten Operanden eines solchen Operators definiert, ob (oder welche) andere(n) Operanden ausgewertet werden sollen. Diese Operatoren sind die bedingten logischen Operatoren [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) und [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), die [NULL-Sammeloperatoren `??` und `??=`](null-coalescing-operator.md), die [NULL-bedingten Operatoren `?.` und `?[]`](member-access-operators.md#null-conditional-operators--and-) sowie der [bedingte Operator `?:`](conditional-operator.md). Weitere Einzelheiten finden Sie in der Beschreibung jedes Operators.
+In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatoren werten Operanden jedoch bedingt aus. Das heißt, der Wert des Operanden ganz links in einem solchen Operator definiert, ob (oder welche) andere(n) Operanden ausgewertet werden sollen. Diese Operatoren sind die bedingten logischen Operatoren [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) und [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-), die [NULL-Sammeloperatoren `??` und `??=`](null-coalescing-operator.md), die [NULL-bedingten Operatoren `?.` und `?[]`](member-access-operators.md#null-conditional-operators--and-) sowie der [bedingte Operator `?:`](conditional-operator.md). Weitere Informationen finden Sie in der Beschreibung jedes Operators.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

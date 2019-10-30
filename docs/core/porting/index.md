@@ -4,12 +4,12 @@ description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen
 author: cartermp
 ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798807"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038529"
 ---
 # <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Übersicht über den Vorgang der Portierung von .NET Framework zu .NET Core
 
