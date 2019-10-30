@@ -14,38 +14,36 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d71b7e1265110a70329377ce8ab7430e1943c49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 993d16818b25dfefe1f53c7afd06bc9857d9eb24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121520"
 ---
-# <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="9841b-102">IHostSecurityContext-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9841b-102">IHostSecurityContext Interface</span></span>
-<span data-ttu-id="9841b-103">Ermöglicht die common Language Runtime (CLR), die Informationen vom Host implementierte Kontext beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="9841b-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  
+# <a name="ihostsecuritycontext-interface"></a><span data-ttu-id="d15b1-102">IHostSecurityContext-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d15b1-102">IHostSecurityContext Interface</span></span>
+<span data-ttu-id="d15b1-103">Ermöglicht dem Common Language Runtime (CLR), Sicherheitskontext Informationen beizubehalten, die vom Host implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="d15b1-103">Allows the common language runtime (CLR) to maintain security context information implemented by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9841b-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="9841b-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d15b1-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="d15b1-104">Methods</span></span>  
   
-|<span data-ttu-id="9841b-105">Methode</span><span class="sxs-lookup"><span data-stu-id="9841b-105">Method</span></span>|<span data-ttu-id="9841b-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9841b-106">Description</span></span>|  
+|<span data-ttu-id="d15b1-105">Methode</span><span class="sxs-lookup"><span data-stu-id="d15b1-105">Method</span></span>|<span data-ttu-id="d15b1-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d15b1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9841b-107">Capture-Methode</span><span class="sxs-lookup"><span data-stu-id="9841b-107">Capture Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|<span data-ttu-id="9841b-108">Ruft einen Klon der `IHostSecurityContext` Instanz zurückgegeben, von einem Aufruf von [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="9841b-108">Gets a clone of the `IHostSecurityContext` instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>|  
+|[<span data-ttu-id="d15b1-107">Capture-Methode</span><span class="sxs-lookup"><span data-stu-id="d15b1-107">Capture Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|<span data-ttu-id="d15b1-108">Ruft einen Klon der `IHostSecurityContext` Instanz ab, die von einem [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)-Befehl zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="d15b1-108">Gets a clone of the `IHostSecurityContext` instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9841b-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9841b-109">Remarks</span></span>  
- <span data-ttu-id="9841b-110">Ein Host kann alle Codezugriff auf Threadtoken von der CLR und die Benutzer Code steuern.</span><span class="sxs-lookup"><span data-stu-id="9841b-110">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="9841b-111">Sie können auch sicherstellen, dass vollständige Informationen über asynchrone Vorgänge oder Codepunkte mit eingeschränktem Codezugriff übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="9841b-111">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> <span data-ttu-id="9841b-112">`IHostSecurityContext` kapselt dieses Sicherheitskontextinformationen, die für die Laufzeit nicht transparent ist.</span><span class="sxs-lookup"><span data-stu-id="9841b-112">`IHostSecurityContext` encapsulates this security context information, which is opaque to the runtime.</span></span> <span data-ttu-id="9841b-113">Die Laufzeit erfasst diese Informationen mithilfe `Capture`, und verschiebt ihn für Threadpool Worker Element Dispatch, Modul und jeder Klasse Konstruktoren und Finalizerausführung.</span><span class="sxs-lookup"><span data-stu-id="9841b-113">The runtime captures this information using `Capture`, and moves it across thread pool worker item dispatch, finalizer execution, and module and class constructors.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d15b1-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d15b1-109">Remarks</span></span>  
+ <span data-ttu-id="d15b1-110">Ein Host kann den gesamten Code Zugriff auf Thread Token sowohl durch den CLR-als auch durch den Benutzercode steuern.</span><span class="sxs-lookup"><span data-stu-id="d15b1-110">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="d15b1-111">Außerdem kann sichergestellt werden, dass die umfassenden Sicherheitskontext Informationen über asynchrone Vorgänge oder Code Punkte mit eingeschränktem Code Zugriff übermittelt werden.</span><span class="sxs-lookup"><span data-stu-id="d15b1-111">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> <span data-ttu-id="d15b1-112">`IHostSecurityContext` kapselt diese Sicherheitskontext Informationen, die für die Laufzeit nicht transparent sind.</span><span class="sxs-lookup"><span data-stu-id="d15b1-112">`IHostSecurityContext` encapsulates this security context information, which is opaque to the runtime.</span></span> <span data-ttu-id="d15b1-113">Die Common Language Runtime erfasst diese Informationen mithilfe `Capture`und verschiebt Sie über die Verteilung des workerelements des Thread Pools, die Finalizer-Ausführung sowie Module-und Klassenkonstruktoren.</span><span class="sxs-lookup"><span data-stu-id="d15b1-113">The runtime captures this information using `Capture`, and moves it across thread pool worker item dispatch, finalizer execution, and module and class constructors.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9841b-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9841b-114">Requirements</span></span>  
- <span data-ttu-id="9841b-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9841b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d15b1-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d15b1-114">Requirements</span></span>  
+ <span data-ttu-id="d15b1-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d15b1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9841b-116">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9841b-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d15b1-116">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="d15b1-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9841b-117">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="9841b-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d15b1-117">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d15b1-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9841b-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9841b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d15b1-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d15b1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9841b-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9841b-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d15b1-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d15b1-119">See also</span></span>
 
-- [<span data-ttu-id="9841b-120">ICLRHostProtectionManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9841b-120">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [<span data-ttu-id="9841b-121">IHostSecurityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9841b-121">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [<span data-ttu-id="9841b-122">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="9841b-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="d15b1-120">ICLRHostProtectionManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d15b1-120">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [<span data-ttu-id="d15b1-121">IHostSecurityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d15b1-121">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="d15b1-122">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d15b1-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

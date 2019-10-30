@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136479"
 ---
-# <a name="getcorrequiredversion-function"></a><span data-ttu-id="54f27-102">GetCORRequiredVersion-Funktion</span><span class="sxs-lookup"><span data-stu-id="54f27-102">GetCORRequiredVersion Function</span></span>
-<span data-ttu-id="54f27-103">Ruft ab, die erforderlich common Language Runtime (CLR)-Versionsnummer.</span><span class="sxs-lookup"><span data-stu-id="54f27-103">Gets the required common language runtime (CLR) version number.</span></span>  
+# <a name="getcorrequiredversion-function"></a><span data-ttu-id="74533-102">GetCORRequiredVersion-Funktion</span><span class="sxs-lookup"><span data-stu-id="74533-102">GetCORRequiredVersion Function</span></span>
+<span data-ttu-id="74533-103">Ruft die erforderliche Common Language Runtime (CLR)-Versionsnummer ab.</span><span class="sxs-lookup"><span data-stu-id="74533-103">Gets the required common language runtime (CLR) version number.</span></span>  
   
- <span data-ttu-id="54f27-104">Diese Funktion ist in .NET Framework 4 veraltet.</span><span class="sxs-lookup"><span data-stu-id="54f27-104">This function has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="74533-104">Diese Funktion wurde im .NET Framework 4 als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="74533-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54f27-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="54f27-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="74533-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="74533-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCORRequiredVersion (  
@@ -38,25 +36,25 @@ HRESULT GetCORRequiredVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54f27-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="54f27-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="74533-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="74533-106">Parameters</span></span>  
  `pbuffer`  
- <span data-ttu-id="54f27-107">[out] Ein Puffer mit der eine Zeichenfolge, die Versionsnummer angibt.</span><span class="sxs-lookup"><span data-stu-id="54f27-107">[out] A buffer containing a string that specifies the version number.</span></span>  
+ <span data-ttu-id="74533-107">vorgenommen Ein Puffer, der eine Zeichenfolge enthält, die die Versionsnummer angibt.</span><span class="sxs-lookup"><span data-stu-id="74533-107">[out] A buffer containing a string that specifies the version number.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="54f27-108">[in] Die Größe des Puffers in Bytes.</span><span class="sxs-lookup"><span data-stu-id="54f27-108">[in] The size, in bytes, of the buffer.</span></span>  
+ <span data-ttu-id="74533-108">in Die Größe des Puffers in Bytes.</span><span class="sxs-lookup"><span data-stu-id="74533-108">[in] The size, in bytes, of the buffer.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="54f27-109">[out] Die Anzahl der Bytes im Puffer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="54f27-109">[out] The number of bytes returned in the buffer.</span></span>  
+ <span data-ttu-id="74533-109">vorgenommen Die Anzahl von Bytes, die im Puffer zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="74533-109">[out] The number of bytes returned in the buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54f27-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="54f27-110">Requirements</span></span>  
- <span data-ttu-id="54f27-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54f27-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="74533-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="74533-110">Requirements</span></span>  
+ <span data-ttu-id="74533-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="74533-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54f27-112">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="54f27-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="74533-112">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="74533-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="54f27-113">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="54f27-113">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="74533-113">**Bibliothek:** Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="74533-113">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="54f27-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54f27-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="74533-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74533-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54f27-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="54f27-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74533-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="74533-115">See also</span></span>
 
-- [<span data-ttu-id="54f27-116">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="54f27-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="74533-116">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="74533-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

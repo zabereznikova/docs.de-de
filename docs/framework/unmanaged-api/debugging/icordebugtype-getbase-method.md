@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122336"
 ---
-# <a name="icordebugtypegetbase-method"></a><span data-ttu-id="799ac-102">ICorDebugType::GetBase-Methode</span><span class="sxs-lookup"><span data-stu-id="799ac-102">ICorDebugType::GetBase Method</span></span>
-<span data-ttu-id="799ac-103">Ruft einen Schnittstellenzeiger einen ICorDebugType, der den Basistyp darstellt, sofern vorhanden, der dem Typ zugeordnet, die von diesem `ICorDebugType`.</span><span class="sxs-lookup"><span data-stu-id="799ac-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  
+# <a name="icordebugtypegetbase-method"></a><span data-ttu-id="37eac-102">ICorDebugType::GetBase-Methode</span><span class="sxs-lookup"><span data-stu-id="37eac-102">ICorDebugType::GetBase Method</span></span>
+<span data-ttu-id="37eac-103">Ruft einen Schnittstellen Zeiger auf einen ICorDebugType ab, der den Basistyp des von dieser `ICorDebugType`dargestellten Typs darstellt, sofern vorhanden.</span><span class="sxs-lookup"><span data-stu-id="37eac-103">Gets an interface pointer to an ICorDebugType that represents the base type, if one exists, of the type represented by this `ICorDebugType`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="799ac-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="799ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37eac-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="37eac-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBase (  
@@ -35,18 +33,18 @@ HRESULT GetBase (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="799ac-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="799ac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="37eac-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="37eac-105">Parameters</span></span>  
  `pBase`  
- <span data-ttu-id="799ac-106">[out] Ein Zeiger auf die Adresse einer `ICorDebugType` -Objekt, das den Basistyp darstellt.</span><span class="sxs-lookup"><span data-stu-id="799ac-106">[out] A pointer to the address of an `ICorDebugType` object that represents the base type.</span></span>  
+ <span data-ttu-id="37eac-106">vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das den Basistyp darstellt.</span><span class="sxs-lookup"><span data-stu-id="37eac-106">[out] A pointer to the address of an `ICorDebugType` object that represents the base type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="799ac-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="799ac-107">Remarks</span></span>  
- <span data-ttu-id="799ac-108">Suche nach der Basistyp für einen Typ ist hilfreich, die allgemeine Funktionalität für den Debugger, z. B. das ausgeben, die alle Felder eines Objekts oder die übergeordneten Klassen implementieren.</span><span class="sxs-lookup"><span data-stu-id="799ac-108">Looking up the base type for a type is useful to implement common debugger functionality, such as printing out all the fields of an object or its parent classes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37eac-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="37eac-107">Remarks</span></span>  
+ <span data-ttu-id="37eac-108">Das Suchen des Basistyps für einen Typ ist nützlich, um allgemeine Debuggerfunktionen zu implementieren, wie z. b. das Drucken aller Felder eines Objekts oder der übergeordneten Klassen.</span><span class="sxs-lookup"><span data-stu-id="37eac-108">Looking up the base type for a type is useful to implement common debugger functionality, such as printing out all the fields of an object or its parent classes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="799ac-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="799ac-109">Requirements</span></span>  
- <span data-ttu-id="799ac-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="799ac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37eac-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="37eac-109">Requirements</span></span>  
+ <span data-ttu-id="37eac-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37eac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="799ac-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="799ac-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="37eac-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37eac-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="799ac-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="799ac-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37eac-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37eac-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="799ac-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="799ac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="37eac-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37eac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

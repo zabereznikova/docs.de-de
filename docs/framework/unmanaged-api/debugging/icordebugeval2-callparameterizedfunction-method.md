@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753321"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137629"
 ---
-# <a name="icordebugeval2callparameterizedfunction-method"></a><span data-ttu-id="4fd6d-102">ICorDebugEval2::CallParameterizedFunction-Methode</span><span class="sxs-lookup"><span data-stu-id="4fd6d-102">ICorDebugEval2::CallParameterizedFunction Method</span></span>
-<span data-ttu-id="4fd6d-103">Richtet einen Aufruf der angegebenen ICorDebugFunction, die innerhalb einer Klasse geschachtelt werden können, deren Konstruktor akzeptiert <xref:System.Type> dauern, Parameter und kann selbst <xref:System.Type> Parameter.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-103">Sets up a call to the specified ICorDebugFunction, which can be nested inside a class whose constructor takes <xref:System.Type> parameters, or can itself take <xref:System.Type> parameters.</span></span>  
+# <a name="icordebugeval2callparameterizedfunction-method"></a><span data-ttu-id="63646-102">ICorDebugEval2::CallParameterizedFunction-Methode</span><span class="sxs-lookup"><span data-stu-id="63646-102">ICorDebugEval2::CallParameterizedFunction Method</span></span>
+<span data-ttu-id="63646-103">Richtet einen Aufrufen der angegebenen ICorDebugFunction ein, die in einer Klasse geschachtelt werden kann, deren Konstruktor <xref:System.Type> Parameter annimmt, oder selbst <xref:System.Type> Parameter annehmen kann.</span><span class="sxs-lookup"><span data-stu-id="63646-103">Sets up a call to the specified ICorDebugFunction, which can be nested inside a class whose constructor takes <xref:System.Type> parameters, or can itself take <xref:System.Type> parameters.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4fd6d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4fd6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63646-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="63646-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CallParameterizedFunction (  
@@ -39,34 +37,34 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4fd6d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4fd6d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63646-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="63646-105">Parameters</span></span>  
  `pFunction`  
- <span data-ttu-id="4fd6d-106">[in] Ein Zeiger auf ein `ICorDebugFunction` Objekt, das die aufzurufende Funktion darstellt.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-106">[in] A pointer to an `ICorDebugFunction` object that represents the function to be called.</span></span>  
+ <span data-ttu-id="63646-106">in Ein Zeiger auf ein `ICorDebugFunction` Objekt, das die aufzurufende Funktion darstellt.</span><span class="sxs-lookup"><span data-stu-id="63646-106">[in] A pointer to an `ICorDebugFunction` object that represents the function to be called.</span></span>  
   
  `nTypeArgs`  
- <span data-ttu-id="4fd6d-107">[in] Die Anzahl von Argumenten, die die Funktion akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-107">[in] The number of arguments that the function takes.</span></span>  
+ <span data-ttu-id="63646-107">in Die Anzahl von Argumenten, die von der Funktion benötigt werden.</span><span class="sxs-lookup"><span data-stu-id="63646-107">[in] The number of arguments that the function takes.</span></span>  
   
  `ppTypeArgs`  
- <span data-ttu-id="4fd6d-108">[in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugType-Objekt verweist, die ein Funktionsargument für die darstellt.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a function argument.</span></span>  
+ <span data-ttu-id="63646-108">in Ein Array von Zeigern, von denen jedes auf ein ICorDebugType-Objekt verweist, das ein Funktions Argument darstellt.</span><span class="sxs-lookup"><span data-stu-id="63646-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a function argument.</span></span>  
   
  `nArgs`  
- <span data-ttu-id="4fd6d-109">[in] Die Anzahl der Werte in der Funktion übergeben.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-109">[in] The number of values passed in the function.</span></span>  
+ <span data-ttu-id="63646-109">in Die Anzahl der in der Funktion bestandenen Werte.</span><span class="sxs-lookup"><span data-stu-id="63646-109">[in] The number of values passed in the function.</span></span>  
   
  `ppArgs`  
- <span data-ttu-id="4fd6d-110">[in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugValue-Objekt verweist, die einen Wert darstellt, die an eine Funktion übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-110">[in] An array of pointers, each of which points to an ICorDebugValue object that represents a value passed in a function argument.</span></span>  
+ <span data-ttu-id="63646-110">in Ein Array von Zeigern, von denen jedes auf ein ICorDebug Value-Objekt verweist, das einen Wert darstellt, der in einem Funktions Argument übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="63646-110">[in] An array of pointers, each of which points to an ICorDebugValue object that represents a value passed in a function argument.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4fd6d-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4fd6d-111">Remarks</span></span>  
- <span data-ttu-id="4fd6d-112">`CallParameterizedFunction` entspricht dem [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) außer die Funktion innerhalb einer Klasse mit den beiden Typparametern sein kann, selbst in Anspruch nehmen kann Typparameter oder beides.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-112">`CallParameterizedFunction` is like [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) except that the function may be inside a class with type parameters, may itself take type parameters, or both.</span></span> <span data-ttu-id="4fd6d-113">Die Typargumente sollte zuerst für die Klasse, und klicken Sie dann für die Funktion angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-113">The type arguments should be given first for the class, and then for the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="63646-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="63646-111">Remarks</span></span>  
+ <span data-ttu-id="63646-112">`CallParameterizedFunction` ist wie [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , mit der Ausnahme, dass sich die Funktion in einer Klasse mit Typparametern befinden kann, dass Sie selbst Typparameter annehmen kann.</span><span class="sxs-lookup"><span data-stu-id="63646-112">`CallParameterizedFunction` is like [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) except that the function may be inside a class with type parameters, may itself take type parameters, or both.</span></span> <span data-ttu-id="63646-113">Die Typargumente sollten zuerst für die-Klasse und dann für die-Funktion angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="63646-113">The type arguments should be given first for the class, and then for the function.</span></span>  
   
- <span data-ttu-id="4fd6d-114">Wenn die Funktion in einer anderen Anwendungsdomäne ist, wird ein Übergang erfolgen.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-114">If the function is in a different application domain, a transition will occur.</span></span> <span data-ttu-id="4fd6d-115">Allerdings müssen alle Argumente von Typ und Wert in der Zielanwendungsdomäne sein.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-115">However, all type and value arguments must be in the target application domain.</span></span>  
+ <span data-ttu-id="63646-114">Wenn sich die Funktion in einer anderen Anwendungsdomäne befindet, erfolgt ein Übergang.</span><span class="sxs-lookup"><span data-stu-id="63646-114">If the function is in a different application domain, a transition will occur.</span></span> <span data-ttu-id="63646-115">Alle Type-und Value-Argumente müssen sich jedoch in der Ziel Anwendungsdomäne befinden.</span><span class="sxs-lookup"><span data-stu-id="63646-115">However, all type and value arguments must be in the target application domain.</span></span>  
   
- <span data-ttu-id="4fd6d-116">Die funktionsauswertung kann nur in begrenzten Szenarios ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-116">Function evaluation can be performed only in limited scenarios.</span></span> <span data-ttu-id="4fd6d-117">Wenn `CallParameterizedFunction` oder `ICorDebugEval::CallFunction` ein Fehler auftritt, das zurückgegebene HRESULT werden angegeben, die meisten allgemeine mögliche Ursache für Fehler.</span><span class="sxs-lookup"><span data-stu-id="4fd6d-117">If `CallParameterizedFunction` or `ICorDebugEval::CallFunction` fails, the returned HRESULT will indicate the most general possible reason for failure.</span></span>  
+ <span data-ttu-id="63646-116">Die Funktions Auswertung kann nur in begrenzten Szenarios ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="63646-116">Function evaluation can be performed only in limited scenarios.</span></span> <span data-ttu-id="63646-117">Wenn `CallParameterizedFunction` oder `ICorDebugEval::CallFunction` fehlschlägt, gibt das zurückgegebene HRESULT den allgemeineren möglichen Grund für den Fehler an.</span><span class="sxs-lookup"><span data-stu-id="63646-117">If `CallParameterizedFunction` or `ICorDebugEval::CallFunction` fails, the returned HRESULT will indicate the most general possible reason for failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4fd6d-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4fd6d-118">Requirements</span></span>  
- <span data-ttu-id="4fd6d-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fd6d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63646-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="63646-118">Requirements</span></span>  
+ <span data-ttu-id="63646-119">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63646-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4fd6d-120">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4fd6d-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="63646-120">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="63646-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4fd6d-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4fd6d-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="63646-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63646-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4fd6d-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fd6d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="63646-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63646-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

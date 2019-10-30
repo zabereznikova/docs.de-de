@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 808e1f1d-52f4-47c4-83cc-dcf47d075219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7354536db483ad93d29fef29745af44a6f90884c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 935d8e9fa3ed15be03c6cd05b1bc3c4919d0cc2b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127858"
 ---
-# <a name="iclrvalidatorformateventinfo-method"></a><span data-ttu-id="a7915-102">ICLRValidator::FormatEventInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="a7915-102">ICLRValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="a7915-103">Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.</span><span class="sxs-lookup"><span data-stu-id="a7915-103">Gets a detailed message about the specified validation error.</span></span>  
+# <a name="iclrvalidatorformateventinfo-method"></a><span data-ttu-id="ce658-102">ICLRValidator::FormatEventInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="ce658-102">ICLRValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="ce658-103">Ruft eine ausführliche Meldung über den angegebenen Validierungs Fehler ab.</span><span class="sxs-lookup"><span data-stu-id="ce658-103">Gets a detailed message about the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7915-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a7915-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce658-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ce658-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FormatEventInfo (  
@@ -39,43 +37,43 @@ HRESULT FormatEventInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a7915-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a7915-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce658-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ce658-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="a7915-106">[in] Der HRESULT-Wert, der an den Fehlerhandler für die Überprüfung übergeben wurde.</span><span class="sxs-lookup"><span data-stu-id="a7915-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="ce658-106">in Der HRESULT-Wert, der an den Validierungs Fehlerhandler übermittelt wurde.</span><span class="sxs-lookup"><span data-stu-id="ce658-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="a7915-107">[in] Ein `VEContext` Instanz, die Kontextinformationen über die Validierungsfehler enthält.</span><span class="sxs-lookup"><span data-stu-id="a7915-107">[in] A `VEContext` instance that contains context information about the validation errors.</span></span>  
+ <span data-ttu-id="ce658-107">in Eine `VEContext`-Instanz, die Kontextinformationen über die Validierungs Fehler enthält.</span><span class="sxs-lookup"><span data-stu-id="ce658-107">[in] A `VEContext` instance that contains context information about the validation errors.</span></span>  
   
  `msg`  
- <span data-ttu-id="a7915-108">[in, out] Die Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="a7915-108">[in, out] The friendly error message.</span></span>  
+ <span data-ttu-id="ce658-108">[in, out] Die Anzeige Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="ce658-108">[in, out] The friendly error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="a7915-109">[in] Die maximale Länge der Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="a7915-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="ce658-109">in Die maximale Länge der Fehlermeldung.</span><span class="sxs-lookup"><span data-stu-id="ce658-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="a7915-110">[in] Ein sicheres Array zusätzlicher Parameter in der Nachricht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7915-110">[in] A safe array of additional parameters to be used in the message.</span></span>  
+ <span data-ttu-id="ce658-110">in Ein sicheres Array zusätzlicher Parameter, die in der Nachricht verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ce658-110">[in] A safe array of additional parameters to be used in the message.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a7915-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a7915-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ce658-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ce658-111">Return Value</span></span>  
   
-|<span data-ttu-id="a7915-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a7915-112">HRESULT</span></span>|<span data-ttu-id="a7915-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a7915-113">Description</span></span>|  
+|<span data-ttu-id="ce658-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ce658-112">HRESULT</span></span>|<span data-ttu-id="ce658-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ce658-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a7915-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="a7915-114">S_OK</span></span>|<span data-ttu-id="a7915-115">`FormatEventInfo` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a7915-115">`FormatEventInfo` returned successfully.</span></span>|  
-|<span data-ttu-id="a7915-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a7915-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a7915-117">Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="a7915-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a7915-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a7915-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a7915-119">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="a7915-119">The call timed out.</span></span>|  
-|<span data-ttu-id="a7915-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a7915-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a7915-121">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="a7915-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a7915-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a7915-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a7915-123">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="a7915-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a7915-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a7915-124">E_FAIL</span></span>|<span data-ttu-id="a7915-125">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="a7915-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a7915-126">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a7915-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a7915-127">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="a7915-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ce658-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ce658-114">S_OK</span></span>|<span data-ttu-id="ce658-115">`FormatEventInfo` erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="ce658-115">`FormatEventInfo` returned successfully.</span></span>|  
+|<span data-ttu-id="ce658-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ce658-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ce658-117">Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="ce658-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ce658-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ce658-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ce658-119">Timeout des Aufrufes.</span><span class="sxs-lookup"><span data-stu-id="ce658-119">The call timed out.</span></span>|  
+|<span data-ttu-id="ce658-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ce658-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ce658-121">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="ce658-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ce658-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ce658-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ce658-123">Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.</span><span class="sxs-lookup"><span data-stu-id="ce658-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ce658-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ce658-124">E_FAIL</span></span>|<span data-ttu-id="ce658-125">Ein unbekannter schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="ce658-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ce658-126">Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="ce658-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ce658-127">Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="ce658-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a7915-128">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a7915-128">Requirements</span></span>  
- <span data-ttu-id="a7915-129">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7915-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce658-128">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ce658-128">Requirements</span></span>  
+ <span data-ttu-id="ce658-129">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce658-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a7915-130">**Header:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="a7915-130">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="ce658-130">**Header:** IValidator. idl, IValidator. h</span><span class="sxs-lookup"><span data-stu-id="ce658-130">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="a7915-131">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="a7915-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ce658-131">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="ce658-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a7915-132">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7915-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ce658-132">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce658-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7915-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a7915-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce658-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce658-133">See also</span></span>
 
-- [<span data-ttu-id="a7915-134">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a7915-134">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="a7915-135">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a7915-135">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+- [<span data-ttu-id="ce658-134">ICLRErrorReportingManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce658-134">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="ce658-135">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce658-135">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

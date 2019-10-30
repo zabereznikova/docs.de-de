@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d70f7dd872cefbadce56c577ce2ecc9cbcb663b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2faf22b48dd0b809d6c3668a37f2119733a9b18
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765846"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129447"
 ---
-# <a name="ehostbindingpolicymodifyflags-enumeration"></a><span data-ttu-id="79a10-102">EHostBindingPolicyModifyFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="79a10-102">EHostBindingPolicyModifyFlags Enumeration</span></span>
-<span data-ttu-id="79a10-103">Ermöglicht dem Host an den Typ der Umleitung, die die common Language Runtime (CLR) durchführen sollten, wenn Änderungen der Richtlinie aus einer Assembly der Ereignisquelle in eine Zielassembly angewendet.</span><span class="sxs-lookup"><span data-stu-id="79a10-103">Allows the host to specify the type of redirection the common language runtime (CLR) should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
+# <a name="ehostbindingpolicymodifyflags-enumeration"></a><span data-ttu-id="554a5-102">EHostBindingPolicyModifyFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="554a5-102">EHostBindingPolicyModifyFlags Enumeration</span></span>
+<span data-ttu-id="554a5-103">Ermöglicht dem Host, die Art der Umleitung anzugeben, die Common Language Runtime (CLR) beim Anwenden von Richtlinien Änderungen von einer Quellassembly auf eine Zielassembly ausführen soll.</span><span class="sxs-lookup"><span data-stu-id="554a5-103">Allows the host to specify the type of redirection the common language runtime (CLR) should perform when applying policy modifications from a source assembly to a target assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79a10-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="79a10-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="554a5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="554a5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum _hostBindingPolicyModifyFlags {  
@@ -37,28 +35,28 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="79a10-105">Member</span><span class="sxs-lookup"><span data-stu-id="79a10-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="554a5-105">Member</span><span class="sxs-lookup"><span data-stu-id="554a5-105">Members</span></span>  
   
-|<span data-ttu-id="79a10-106">Member</span><span class="sxs-lookup"><span data-stu-id="79a10-106">Member</span></span>|<span data-ttu-id="79a10-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="79a10-107">Description</span></span>|  
+|<span data-ttu-id="554a5-106">Member</span><span class="sxs-lookup"><span data-stu-id="554a5-106">Member</span></span>|<span data-ttu-id="554a5-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="554a5-107">Description</span></span>|  
 |------------|-----------------|  
-|`HOST_BINDING_POLICY_MODIFY_CHAIN`|<span data-ttu-id="79a10-108">Gibt an, dass die CLR Richtlinienwerte der Quellassembly auf die der Zielassembly verkettet wird.</span><span class="sxs-lookup"><span data-stu-id="79a10-108">Specifies that the CLR will chain policy values of the source assembly onto those of the target assembly.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|<span data-ttu-id="79a10-109">Gibt an, dass die CLR die Standardaktion ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="79a10-109">Specifies that the CLR will perform the default action.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_MAX`|<span data-ttu-id="79a10-110">Gibt an, dass die CLR die Richtlinienwerte der Zielassembly auf die maximalen Werte festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="79a10-110">Specifies that the CLR will set the policy values of the target assembly to the maximum values.</span></span>|  
-|`HOST_BINDING_POLICY_MODIFY_REMOVE`|<span data-ttu-id="79a10-111">Gibt an, dass die CLR Richtlinienwerte der Zielassembly mit denen der Quellassembly ersetzt wird.</span><span class="sxs-lookup"><span data-stu-id="79a10-111">Specifies that the CLR will replace policy values of the target assembly with those of the source assembly.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_CHAIN`|<span data-ttu-id="554a5-108">Gibt an, dass die CLR Richtlinien Werte der Quellassembly auf die der Zielassembly verkettet.</span><span class="sxs-lookup"><span data-stu-id="554a5-108">Specifies that the CLR will chain policy values of the source assembly onto those of the target assembly.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_DEFAULT`|<span data-ttu-id="554a5-109">Gibt an, dass die CLR die Standardaktion ausführt.</span><span class="sxs-lookup"><span data-stu-id="554a5-109">Specifies that the CLR will perform the default action.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_MAX`|<span data-ttu-id="554a5-110">Gibt an, dass die CLR die Richtlinien Werte der Zielassembly auf die maximalen Werte festlegt.</span><span class="sxs-lookup"><span data-stu-id="554a5-110">Specifies that the CLR will set the policy values of the target assembly to the maximum values.</span></span>|  
+|`HOST_BINDING_POLICY_MODIFY_REMOVE`|<span data-ttu-id="554a5-111">Gibt an, dass die CLR Richtlinien Werte der Zielassembly durch die der Quellassembly ersetzen soll.</span><span class="sxs-lookup"><span data-stu-id="554a5-111">Specifies that the CLR will replace policy values of the target assembly with those of the source assembly.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="79a10-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="79a10-112">Remarks</span></span>  
- <span data-ttu-id="79a10-113">Die [ICLRHostBindingPolicyManager:: ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) Methode nimmt einen Parameter vom Typ `EHostBindingPolicyModifyFlags`.</span><span class="sxs-lookup"><span data-stu-id="79a10-113">The [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) method takes a parameter of type `EHostBindingPolicyModifyFlags`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="554a5-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="554a5-112">Remarks</span></span>  
+ <span data-ttu-id="554a5-113">Die [ICLRHostBindingPolicyManager:: ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) -Methode nimmt einen Parameter vom Typ "`EHostBindingPolicyModifyFlags`" an.</span><span class="sxs-lookup"><span data-stu-id="554a5-113">The [ICLRHostBindingPolicyManager::ModifyApplicationPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) method takes a parameter of type `EHostBindingPolicyModifyFlags`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79a10-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="79a10-114">Requirements</span></span>  
- <span data-ttu-id="79a10-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79a10-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="554a5-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="554a5-114">Requirements</span></span>  
+ <span data-ttu-id="554a5-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="554a5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79a10-116">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="79a10-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="554a5-116">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="554a5-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="79a10-117">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79a10-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="554a5-117">**Bibliothek:** Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="554a5-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="79a10-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79a10-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="554a5-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="554a5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79a10-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="79a10-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="554a5-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="554a5-119">See also</span></span>
 
-- [<span data-ttu-id="79a10-120">ICLRHostBindingPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="79a10-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
-- [<span data-ttu-id="79a10-121">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="79a10-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="554a5-120">ICLRHostBindingPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="554a5-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [<span data-ttu-id="554a5-121">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="554a5-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

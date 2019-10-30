@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122859"
 ---
-# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="14b48-102">ICorDebugAssemblyEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="14b48-102">ICorDebugAssemblyEnum::Next Method</span></span>
-<span data-ttu-id="14b48-103">Ruft die angegebene Anzahl von Assemblys aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.</span><span class="sxs-lookup"><span data-stu-id="14b48-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
+# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="60dba-102">ICorDebugAssemblyEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="60dba-102">ICorDebugAssemblyEnum::Next Method</span></span>
+<span data-ttu-id="60dba-103">Ruft die angegebene Anzahl von Assemblys aus der Auflistung ab, beginnend bei der aktuellen Cursorposition.</span><span class="sxs-lookup"><span data-stu-id="60dba-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14b48-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="14b48-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60dba-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="60dba-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="14b48-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="14b48-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="60dba-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="60dba-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="14b48-106">[in] Die Anzahl der Assemblys abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="14b48-106">[in] The number of assemblies to be retrieved.</span></span>  
+ <span data-ttu-id="60dba-106">in Die Anzahl der abzurufenden Assemblys.</span><span class="sxs-lookup"><span data-stu-id="60dba-106">[in] The number of assemblies to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="14b48-107">[out] Ein Array von Zeigern, von denen jeder zu einem ICorDebugAssembly-Objekt verweist, die eine Assembly darstellt.</span><span class="sxs-lookup"><span data-stu-id="14b48-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
+ <span data-ttu-id="60dba-107">vorgenommen Ein Array von Zeigern, von denen jedes auf ein ICorDebug-Objekt verweist, das eine Assembly darstellt.</span><span class="sxs-lookup"><span data-stu-id="60dba-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="14b48-108">[out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Assemblys.</span><span class="sxs-lookup"><span data-stu-id="14b48-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="14b48-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="14b48-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="60dba-108">vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Assemblys.</span><span class="sxs-lookup"><span data-stu-id="60dba-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="60dba-109">Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.</span><span class="sxs-lookup"><span data-stu-id="60dba-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14b48-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="14b48-110">Requirements</span></span>  
- <span data-ttu-id="14b48-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14b48-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="60dba-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="60dba-110">Requirements</span></span>  
+ <span data-ttu-id="60dba-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60dba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14b48-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14b48-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="60dba-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="60dba-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="14b48-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14b48-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="60dba-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="60dba-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="14b48-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14b48-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="60dba-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60dba-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

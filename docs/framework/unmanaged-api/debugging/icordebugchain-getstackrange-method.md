@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a6db1990df2ed6b29d548c147ed40b5bc98254d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123863"
 ---
-# <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="79ec5-102">ICorDebugChain::GetStackRange-Methode</span><span class="sxs-lookup"><span data-stu-id="79ec5-102">ICorDebugChain::GetStackRange Method</span></span>
-<span data-ttu-id="79ec5-103">Ruft den Adressbereich des Stack-Segments für diese Kette ab.</span><span class="sxs-lookup"><span data-stu-id="79ec5-103">Gets the address range of the stack segment for this chain.</span></span>  
+# <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="f281d-102">ICorDebugChain::GetStackRange-Methode</span><span class="sxs-lookup"><span data-stu-id="f281d-102">ICorDebugChain::GetStackRange Method</span></span>
+<span data-ttu-id="f281d-103">Ruft den Adressbereich des Stapel Segments für diese Kette ab.</span><span class="sxs-lookup"><span data-stu-id="f281d-103">Gets the address range of the stack segment for this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79ec5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="79ec5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f281d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f281d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackRange (  
@@ -36,21 +34,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79ec5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="79ec5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f281d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f281d-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="79ec5-106">[out] Ein Zeiger auf eine `CORDB_ADDRESS` Wert, der die Startadresse des Stack-Segments.</span><span class="sxs-lookup"><span data-stu-id="79ec5-106">[out] A pointer to a `CORDB_ADDRESS` value that is the starting address of the stack segment.</span></span>  
+ <span data-ttu-id="f281d-106">vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS`-Wert, der die Startadresse des Stapel Segments ist.</span><span class="sxs-lookup"><span data-stu-id="f281d-106">[out] A pointer to a `CORDB_ADDRESS` value that is the starting address of the stack segment.</span></span>  
   
  `pEnd`  
- <span data-ttu-id="79ec5-107">[out] Ein Zeiger auf eine `CORDB_ADDRESS` Wert, der die Endadresse des Stack-Segments.</span><span class="sxs-lookup"><span data-stu-id="79ec5-107">[out] A pointer to a `CORDB_ADDRESS` value that is the ending address of the stack segment.</span></span>  
+ <span data-ttu-id="f281d-107">vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS` Wert, der die Endadresse des Stapel Segments ist.</span><span class="sxs-lookup"><span data-stu-id="f281d-107">[out] A pointer to a `CORDB_ADDRESS` value that is the ending address of the stack segment.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="79ec5-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="79ec5-108">Remarks</span></span>  
- <span data-ttu-id="79ec5-109">Der numerische Bereich ist nur für den Vergleich der Stack-Frame-Standorte von Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="79ec5-109">The numeric range is meaningful only for comparison of stack frame locations.</span></span> <span data-ttu-id="79ec5-110">Sie können keine Annahmen über was tatsächlich auf dem Stapel gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="79ec5-110">You cannot make any assumptions about what is actually stored on the stack.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f281d-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f281d-108">Remarks</span></span>  
+ <span data-ttu-id="f281d-109">Der numerische Bereich ist nur für den Vergleich von Stapel Rahmen Positionen sinnvoll.</span><span class="sxs-lookup"><span data-stu-id="f281d-109">The numeric range is meaningful only for comparison of stack frame locations.</span></span> <span data-ttu-id="f281d-110">Sie können keine Annahmen darüber treffen, was tatsächlich im Stapel gespeichert ist.</span><span class="sxs-lookup"><span data-stu-id="f281d-110">You cannot make any assumptions about what is actually stored on the stack.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79ec5-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="79ec5-111">Requirements</span></span>  
- <span data-ttu-id="79ec5-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79ec5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f281d-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f281d-111">Requirements</span></span>  
+ <span data-ttu-id="f281d-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f281d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79ec5-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="79ec5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f281d-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f281d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="79ec5-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79ec5-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f281d-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f281d-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="79ec5-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79ec5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f281d-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f281d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

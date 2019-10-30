@@ -14,37 +14,35 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b24e278b3449d0e17377495cef0f445c1ebed734
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80bb68486e555d6c96cf8ee56ed6d60e41c7c5c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763270"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127800"
 ---
-# <a name="icorconfiguration-interface"></a><span data-ttu-id="0db92-102">ICorConfiguration-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0db92-102">ICorConfiguration Interface</span></span>
-<span data-ttu-id="0db92-103">Stellt Methoden für die common Language Runtime (CLR) konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="0db92-103">Provides methods for configuring the common language runtime (CLR).</span></span>  
+# <a name="icorconfiguration-interface"></a><span data-ttu-id="52274-102">ICorConfiguration-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="52274-102">ICorConfiguration Interface</span></span>
+<span data-ttu-id="52274-103">Stellt Methoden zum Konfigurieren des Common Language Runtime (CLR) bereit.</span><span class="sxs-lookup"><span data-stu-id="52274-103">Provides methods for configuring the common language runtime (CLR).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0db92-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="0db92-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="52274-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="52274-104">Methods</span></span>  
   
-|<span data-ttu-id="0db92-105">Methode</span><span class="sxs-lookup"><span data-stu-id="0db92-105">Method</span></span>|<span data-ttu-id="0db92-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0db92-106">Description</span></span>|  
+|<span data-ttu-id="52274-105">Methode</span><span class="sxs-lookup"><span data-stu-id="52274-105">Method</span></span>|<span data-ttu-id="52274-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="52274-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0db92-107">AddDebuggerSpecialThread-Methode</span><span class="sxs-lookup"><span data-stu-id="0db92-107">AddDebuggerSpecialThread Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-adddebuggerspecialthread-method.md)|<span data-ttu-id="0db92-108">Zeigt das Debuggen von Diensten an, dass ein bestimmter Thread darf weiterhin ausgeführt, während der Debugger eine Anwendung, die während des Szenarios des verwalteten oder nicht verwalteten Debuggens beendet hat.</span><span class="sxs-lookup"><span data-stu-id="0db92-108">Indicates to the debugging services that a particular thread should be allowed to continue executing while the debugger has an application stopped during managed or unmanaged debugging scenarios.</span></span>|  
-|[<span data-ttu-id="0db92-109">SetDebuggerThreadControl-Methode</span><span class="sxs-lookup"><span data-stu-id="0db92-109">SetDebuggerThreadControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setdebuggerthreadcontrol-method.md)|<span data-ttu-id="0db92-110">Legt die Rückrufschnittstelle, die die Debuggen von Diensten für das Debuggen von aufrufen, wenn die CLR-Threads blockiert und freigegeben werden.</span><span class="sxs-lookup"><span data-stu-id="0db92-110">Sets the callback interface that the debugging services will call as CLR threads are blocked and unblocked for debugging.</span></span>|  
-|[<span data-ttu-id="0db92-111">SetGCHostControl-Methode</span><span class="sxs-lookup"><span data-stu-id="0db92-111">SetGCHostControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setgchostcontrol-method.md)|<span data-ttu-id="0db92-112">Legt die Rückrufschnittstelle, die vom Garbage Collector verwendet werden, um den Host zum Ändern der Grenzen des virtuellen Arbeitsspeichers anzufordern.</span><span class="sxs-lookup"><span data-stu-id="0db92-112">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>|  
-|[<span data-ttu-id="0db92-113">SetGCThreadControl-Methode</span><span class="sxs-lookup"><span data-stu-id="0db92-113">SetGCThreadControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setgcthreadcontrol-method.md)|<span data-ttu-id="0db92-114">Legt die Rückrufschnittstelle für die Planung von Threads für nicht-Runtime-Aufgaben, die für eine Garbagecollection andernfalls blockiert würden.</span><span class="sxs-lookup"><span data-stu-id="0db92-114">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>|  
+|[<span data-ttu-id="52274-107">AddDebuggerSpecialThread-Methode</span><span class="sxs-lookup"><span data-stu-id="52274-107">AddDebuggerSpecialThread Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-adddebuggerspecialthread-method.md)|<span data-ttu-id="52274-108">Gibt den Debugdiensten an, dass ein bestimmter Thread weiter ausgeführt werden darf, während der Debugger eine Anwendung während verwalteter oder nicht verwalteter debuggingszenarien beendet hat.</span><span class="sxs-lookup"><span data-stu-id="52274-108">Indicates to the debugging services that a particular thread should be allowed to continue executing while the debugger has an application stopped during managed or unmanaged debugging scenarios.</span></span>|  
+|[<span data-ttu-id="52274-109">SetDebuggerThreadControl-Methode</span><span class="sxs-lookup"><span data-stu-id="52274-109">SetDebuggerThreadControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setdebuggerthreadcontrol-method.md)|<span data-ttu-id="52274-110">Legt die Rückruf Schnittstelle fest, die von den Debugdiensten aufgerufen wird, wenn CLR-Threads blockiert und für das Debuggen blockiert werden.</span><span class="sxs-lookup"><span data-stu-id="52274-110">Sets the callback interface that the debugging services will call as CLR threads are blocked and unblocked for debugging.</span></span>|  
+|[<span data-ttu-id="52274-111">SetGCHostControl-Methode</span><span class="sxs-lookup"><span data-stu-id="52274-111">SetGCHostControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setgchostcontrol-method.md)|<span data-ttu-id="52274-112">Legt die Rückruf Schnittstelle fest, die vom Garbage Collector verwendet werden soll, um den Host zum Ändern der Grenzwerte für den virtuellen Arbeitsspeicher anzufordern.</span><span class="sxs-lookup"><span data-stu-id="52274-112">Sets the callback interface to be used by the garbage collector to request the host to change the limits of virtual memory.</span></span>|  
+|[<span data-ttu-id="52274-113">SetGCThreadControl-Methode</span><span class="sxs-lookup"><span data-stu-id="52274-113">SetGCThreadControl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-setgcthreadcontrol-method.md)|<span data-ttu-id="52274-114">Legt die Rückruf Schnittstelle für das Planen von Threads für nicht-Lauf Zeit Aufgaben fest, die andernfalls für eine Garbage Collection blockiert werden.</span><span class="sxs-lookup"><span data-stu-id="52274-114">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0db92-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0db92-115">Requirements</span></span>  
- <span data-ttu-id="0db92-116">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0db92-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52274-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="52274-115">Requirements</span></span>  
+ <span data-ttu-id="52274-116">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52274-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0db92-117">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0db92-117">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="52274-117">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="52274-117">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0db92-118">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0db92-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="52274-118">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="52274-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0db92-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0db92-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="52274-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52274-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0db92-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0db92-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52274-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="52274-120">See also</span></span>
 
-- [<span data-ttu-id="0db92-121">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="0db92-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="0db92-122">CorRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="0db92-122">CorRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [<span data-ttu-id="52274-121">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="52274-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="52274-122">CorRuntimeHost-Co-Klasse</span><span class="sxs-lookup"><span data-stu-id="52274-122">CorRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

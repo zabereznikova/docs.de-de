@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130601"
 ---
-# <a name="icordebugmanagedcallback2changeconnection-method"></a><span data-ttu-id="a2cd9-102">ICorDebugManagedCallback2::ChangeConnection-Methode</span><span class="sxs-lookup"><span data-stu-id="a2cd9-102">ICorDebugManagedCallback2::ChangeConnection Method</span></span>
-<span data-ttu-id="a2cd9-103">Benachrichtigt den Debugger an, dass der Satz von Aufgaben im Zusammenhang mit der angegebenen Verbindung geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-103">Notifies the debugger that the set of tasks associated with the specified connection has changed.</span></span>  
+# <a name="icordebugmanagedcallback2changeconnection-method"></a><span data-ttu-id="522b4-102">ICorDebugManagedCallback2::ChangeConnection-Methode</span><span class="sxs-lookup"><span data-stu-id="522b4-102">ICorDebugManagedCallback2::ChangeConnection Method</span></span>
+<span data-ttu-id="522b4-103">Benachrichtigt den Debugger, dass sich der Satz der Tasks, die der angegebenen Verbindung zugeordnet sind, geändert hat.</span><span class="sxs-lookup"><span data-stu-id="522b4-103">Notifies the debugger that the set of tasks associated with the specified connection has changed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2cd9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a2cd9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="522b4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="522b4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ChangeConnection (  
@@ -36,32 +34,32 @@ HRESULT ChangeConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a2cd9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a2cd9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="522b4-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="522b4-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="a2cd9-106">[in] Ein Zeiger auf ein "ICorDebugProcess"-Objekt, das den Prozess mit der die geänderte Verbindung darstellt.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-106">[in] A pointer to an "ICorDebugProcess" object that represents the process containing the connection that changed.</span></span>  
+ <span data-ttu-id="522b4-106">in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der die geänderte Verbindung enthält.</span><span class="sxs-lookup"><span data-stu-id="522b4-106">[in] A pointer to an "ICorDebugProcess" object that represents the process containing the connection that changed.</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="a2cd9-107">[in] Die ID der Verbindung, die geändert werden soll.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-107">[in] The ID of the connection that changed.</span></span>  
+ <span data-ttu-id="522b4-107">in Die ID der Verbindung, die geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="522b4-107">[in] The ID of the connection that changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2cd9-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a2cd9-108">Remarks</span></span>  
- <span data-ttu-id="a2cd9-109">Ein `ChangeConnection` Rückruf wird in den folgenden Fällen ausgelöst werden:</span><span class="sxs-lookup"><span data-stu-id="a2cd9-109">A `ChangeConnection` callback will be fired in either of the following cases:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="522b4-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="522b4-108">Remarks</span></span>  
+ <span data-ttu-id="522b4-109">Ein `ChangeConnection` Rückruf wird in einem der folgenden Fälle ausgelöst:</span><span class="sxs-lookup"><span data-stu-id="522b4-109">A `ChangeConnection` callback will be fired in either of the following cases:</span></span>  
   
-- <span data-ttu-id="a2cd9-110">Wenn Fügt einen Debugger an einen Prozess aus, der Verbindungen enthält ein.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-110">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="a2cd9-111">In diesem Fall die Laufzeit generiert und ein [ICorDebugManagedCallback2:: CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) Ereignis und einem `ChangeConnection` Ereignis für jede Verbindung im Prozess.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-111">In this case, the runtime will generate and dispatch a [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) event and a `ChangeConnection` event for each connection in the process.</span></span> <span data-ttu-id="a2cd9-112">Ein `ChangeConnection` Ereignis wird generiert, für jede vorhandene Verbindung, unabhängig davon, ob die Verbindung der Satz von Aufgaben seit ihrer Erstellung geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-112">A `ChangeConnection` event is generated for every existing connection, regardless of whether that connection’s set of tasks has been changed since its creation.</span></span>  
+- <span data-ttu-id="522b4-110">Wenn ein Debugger an einen Prozess angefügt wird, der Verbindungen enthält.</span><span class="sxs-lookup"><span data-stu-id="522b4-110">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="522b4-111">In diesem Fall generiert und verteilt die Common Language Runtime ein [ICorDebugManagedCallback2:: forateconnetction](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) -Ereignis und ein `ChangeConnection`-Ereignis für jede Verbindung im Prozess.</span><span class="sxs-lookup"><span data-stu-id="522b4-111">In this case, the runtime will generate and dispatch a [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) event and a `ChangeConnection` event for each connection in the process.</span></span> <span data-ttu-id="522b4-112">Ein `ChangeConnection` Ereignis wird für jede vorhandene Verbindung generiert, unabhängig davon, ob der Satz von Tasks der Verbindung seit seiner Erstellung geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="522b4-112">A `ChangeConnection` event is generated for every existing connection, regardless of whether that connection’s set of tasks has been changed since its creation.</span></span>  
   
-- <span data-ttu-id="a2cd9-113">Wenn ein Host ruft [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in die [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="a2cd9-113">When a host calls [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+- <span data-ttu-id="522b4-113">Wenn ein Host [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in der [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md)aufruft.</span><span class="sxs-lookup"><span data-stu-id="522b4-113">When a host calls [ICLRDebugManager::SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
- <span data-ttu-id="a2cd9-114">Der Debugger sollten alle Threads im Prozess übernimmt diese die neuen Änderungen überprüfen.</span><span class="sxs-lookup"><span data-stu-id="a2cd9-114">The debugger should scan all threads in the process to pick up the new changes.</span></span>  
+ <span data-ttu-id="522b4-114">Der Debugger sollte alle Threads im Prozess Scannen, um die neuen Änderungen zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="522b4-114">The debugger should scan all threads in the process to pick up the new changes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2cd9-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a2cd9-115">Requirements</span></span>  
- <span data-ttu-id="a2cd9-116">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2cd9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="522b4-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="522b4-115">Requirements</span></span>  
+ <span data-ttu-id="522b4-116">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="522b4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2cd9-117">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a2cd9-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="522b4-117">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="522b4-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a2cd9-118">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2cd9-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="522b4-118">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="522b4-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a2cd9-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2cd9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="522b4-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="522b4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2cd9-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2cd9-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="522b4-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="522b4-120">See also</span></span>
 
-- [<span data-ttu-id="a2cd9-121">ICorDebugManagedCallback2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a2cd9-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="a2cd9-122">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a2cd9-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="522b4-121">ICorDebugManagedCallback2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="522b4-121">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="522b4-122">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="522b4-122">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
