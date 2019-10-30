@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86b8737577bdb5f61f1061cb217620fae03ebd0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755450"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139373"
 ---
-# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="eed1a-102">ICorDebugProcess::ModifyLogSwitch-Methode</span><span class="sxs-lookup"><span data-stu-id="eed1a-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
-<span data-ttu-id="eed1a-103">Legt den Schweregrad der angegebenen Log-Schalter fest.</span><span class="sxs-lookup"><span data-stu-id="eed1a-103">Sets the severity level of the specified log switch.</span></span>  
+# <a name="icordebugprocessmodifylogswitch-method"></a><span data-ttu-id="517fe-102">ICorDebugProcess::ModifyLogSwitch-Methode</span><span class="sxs-lookup"><span data-stu-id="517fe-102">ICorDebugProcess::ModifyLogSwitch Method</span></span>
+<span data-ttu-id="517fe-103">Legt den Schweregrad des angegebenen Protokoll Schalters fest.</span><span class="sxs-lookup"><span data-stu-id="517fe-103">Sets the severity level of the specified log switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eed1a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eed1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="517fe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="517fe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ModifyLogSwitch(  
@@ -35,21 +33,21 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eed1a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="eed1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="517fe-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="517fe-105">Parameters</span></span>  
  `pLogSwitchName`  
- <span data-ttu-id="eed1a-106">[in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Log-Schalter angibt.</span><span class="sxs-lookup"><span data-stu-id="eed1a-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
+ <span data-ttu-id="517fe-106">in Ein Zeiger auf eine Zeichenfolge, die den Namen des Protokoll Schalters angibt.</span><span class="sxs-lookup"><span data-stu-id="517fe-106">[in] A pointer to a string that specifies the name of the log switch.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="eed1a-107">[in] Der Schweregrad für die angegebene Log-Schalter festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="eed1a-107">[in] The severity level to be set for the specified log switch.</span></span>  
+ <span data-ttu-id="517fe-107">in Der Schweregrad, der für den angegebenen Protokoll Schalter festgelegt werden soll.</span><span class="sxs-lookup"><span data-stu-id="517fe-107">[in] The severity level to be set for the specified log switch.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="eed1a-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="eed1a-108">Remarks</span></span>  
- <span data-ttu-id="eed1a-109">Diese Methode ist nur gültig, nachdem die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="eed1a-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="517fe-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="517fe-108">Remarks</span></span>  
+ <span data-ttu-id="517fe-109">Diese Methode ist nur gültig, nachdem der [ICorDebugManagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) up-Rückruf aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="517fe-109">This method is valid only after the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback has occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eed1a-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eed1a-110">Requirements</span></span>  
- <span data-ttu-id="eed1a-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eed1a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="517fe-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="517fe-110">Requirements</span></span>  
+ <span data-ttu-id="517fe-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="517fe-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eed1a-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eed1a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="517fe-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="517fe-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eed1a-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eed1a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="517fe-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="517fe-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eed1a-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eed1a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="517fe-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="517fe-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

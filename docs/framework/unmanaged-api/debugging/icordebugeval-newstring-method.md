@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753340"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137641"
 ---
-# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="75f89-102">ICorDebugEval::NewString-Methode</span><span class="sxs-lookup"><span data-stu-id="75f89-102">ICorDebugEval::NewString Method</span></span>
-<span data-ttu-id="75f89-103">Weist eine neue Zeichenfolgeninstanz mit dem angegebenen Inhalt.</span><span class="sxs-lookup"><span data-stu-id="75f89-103">Allocates a new string instance with the specified contents.</span></span>  
+# <a name="icordebugevalnewstring-method"></a><span data-ttu-id="8db57-102">ICorDebugEval::NewString-Methode</span><span class="sxs-lookup"><span data-stu-id="8db57-102">ICorDebugEval::NewString Method</span></span>
+<span data-ttu-id="8db57-103">Weist dem angegebenen Inhalt eine neue Zeichen folgen Instanz zu.</span><span class="sxs-lookup"><span data-stu-id="8db57-103">Allocates a new string instance with the specified contents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75f89-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="75f89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8db57-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8db57-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT NewString (  
@@ -35,18 +33,18 @@ HRESULT NewString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="75f89-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="75f89-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8db57-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8db57-105">Parameters</span></span>  
  `string`  
- <span data-ttu-id="75f89-106">[in] Zeiger auf den Inhalt der Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="75f89-106">[in] Pointer to the contents for the string.</span></span>  
+ <span data-ttu-id="8db57-106">in Zeiger auf den Inhalt der Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="8db57-106">[in] Pointer to the contents for the string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="75f89-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="75f89-107">Remarks</span></span>  
- <span data-ttu-id="75f89-108">Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="75f89-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8db57-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8db57-107">Remarks</span></span>  
+ <span data-ttu-id="8db57-108">Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="8db57-108">The string is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75f89-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="75f89-109">Requirements</span></span>  
- <span data-ttu-id="75f89-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75f89-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8db57-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8db57-109">Requirements</span></span>  
+ <span data-ttu-id="8db57-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8db57-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="75f89-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="75f89-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8db57-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8db57-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="75f89-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="75f89-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8db57-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8db57-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="75f89-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75f89-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8db57-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8db57-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

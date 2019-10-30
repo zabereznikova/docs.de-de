@@ -7,51 +7,51 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921302"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119216"
 ---
-# <a name="app-settings-schema"></a><span data-ttu-id="aaee3-102">Schema für App-Einstellungen</span><span class="sxs-lookup"><span data-stu-id="aaee3-102">App Settings schema</span></span>
+# <a name="app-settings-schema"></a><span data-ttu-id="5a7be-102">Schema für App-Einstellungen</span><span class="sxs-lookup"><span data-stu-id="5a7be-102">App Settings schema</span></span>
 
-<span data-ttu-id="aaee3-103">Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung.</span><span class="sxs-lookup"><span data-stu-id="aaee3-103">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span>
+<span data-ttu-id="5a7be-103">Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung.</span><span class="sxs-lookup"><span data-stu-id="5a7be-103">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span>
 
-<span data-ttu-id="aaee3-104">[ **\<configuration>** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="aaee3-104">[**\<configuration>**](../configuration-element.md) </span></span>  
-<span data-ttu-id="aaee3-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="aaee3-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md) </span></span>  
-<span data-ttu-id="aaee3-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md) </span><span class="sxs-lookup"><span data-stu-id="aaee3-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-appsettings.md) </span></span>  
-<span data-ttu-id="aaee3-107">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md) </span><span class="sxs-lookup"><span data-stu-id="aaee3-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md) </span></span>  
-<span data-ttu-id="aaee3-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)</span><span class="sxs-lookup"><span data-stu-id="aaee3-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)</span></span>
+<span data-ttu-id="5a7be-104">[ **\<configuration>** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="5a7be-104">[**\<configuration>**](../configuration-element.md) </span></span>  
+<span data-ttu-id="5a7be-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md) </span><span class="sxs-lookup"><span data-stu-id="5a7be-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md) </span></span>  
+<span data-ttu-id="5a7be-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md) </span><span class="sxs-lookup"><span data-stu-id="5a7be-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-appsettings.md) </span></span>  
+<span data-ttu-id="5a7be-107">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md) </span><span class="sxs-lookup"><span data-stu-id="5a7be-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md) </span></span>  
+<span data-ttu-id="5a7be-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)</span><span class="sxs-lookup"><span data-stu-id="5a7be-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)</span></span>
 
-| <span data-ttu-id="aaee3-109">Element</span><span class="sxs-lookup"><span data-stu-id="aaee3-109">Element</span></span> | <span data-ttu-id="aaee3-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="aaee3-110">Description</span></span> |
+| <span data-ttu-id="5a7be-109">Element</span><span class="sxs-lookup"><span data-stu-id="5a7be-109">Element</span></span> | <span data-ttu-id="5a7be-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5a7be-110">Description</span></span> |
 | ------- | ----------- |
-| [<span data-ttu-id="aaee3-111"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="aaee3-111">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="aaee3-112">Enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von App-Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="aaee3-112">Contains **\<add>**, **\<clear>**, and **\<remove>** tags to control application settings.</span></span> <span data-ttu-id="aaee3-113">Verfügt über ein optionales **file**-Attribut.</span><span class="sxs-lookup"><span data-stu-id="aaee3-113">Has an optional **file** attribute.</span></span> |
-| [<span data-ttu-id="aaee3-114"> **\<add>** </span><span class="sxs-lookup"><span data-stu-id="aaee3-114">**\<add>**</span></span>](add-element-for-appsettings.md) | <span data-ttu-id="aaee3-115">Definiert eine Einstellung.</span><span class="sxs-lookup"><span data-stu-id="aaee3-115">Defines a setting.</span></span> <span data-ttu-id="aaee3-116">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="aaee3-116">Child of **\<appSettings>**.</span></span> <span data-ttu-id="aaee3-117">Erfordert **key**- und **value**-Attribute.</span><span class="sxs-lookup"><span data-stu-id="aaee3-117">Requires **key** and **value** attributes.</span></span> |
-| [<span data-ttu-id="aaee3-118"> **\<clear>** </span><span class="sxs-lookup"><span data-stu-id="aaee3-118">**\<clear>**</span></span>](clear-element-for-appsettings.md) | <span data-ttu-id="aaee3-119">Löscht alle Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="aaee3-119">Clears all settings.</span></span> <span data-ttu-id="aaee3-120">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="aaee3-120">Child of **\<appSettings>**.</span></span> <span data-ttu-id="aaee3-121">Besitzt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="aaee3-121">Has no attributes.</span></span> |
-| [<span data-ttu-id="aaee3-122"> **\<remove>** </span><span class="sxs-lookup"><span data-stu-id="aaee3-122">**\<remove>**</span></span>](remove-element-for-appsettings.md) | <span data-ttu-id="aaee3-123">Entfernt eine Einstellung.</span><span class="sxs-lookup"><span data-stu-id="aaee3-123">Removes a setting.</span></span> <span data-ttu-id="aaee3-124">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="aaee3-124">Child of **\<appSettings>**.</span></span> <span data-ttu-id="aaee3-125">Erfordert ein **key**-Attribut.</span><span class="sxs-lookup"><span data-stu-id="aaee3-125">Requires a **key** attribute.</span></span> |
+| [<span data-ttu-id="5a7be-111"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="5a7be-111">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="5a7be-112">Enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von App-Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="5a7be-112">Contains **\<add>**, **\<clear>**, and **\<remove>** tags to control application settings.</span></span> <span data-ttu-id="5a7be-113">Verfügt über ein optionales **file**-Attribut.</span><span class="sxs-lookup"><span data-stu-id="5a7be-113">Has an optional **file** attribute.</span></span> |
+| [<span data-ttu-id="5a7be-114"> **\<add>** </span><span class="sxs-lookup"><span data-stu-id="5a7be-114">**\<add>**</span></span>](add-element-for-appsettings.md) | <span data-ttu-id="5a7be-115">Definiert eine Einstellung.</span><span class="sxs-lookup"><span data-stu-id="5a7be-115">Defines a setting.</span></span> <span data-ttu-id="5a7be-116">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="5a7be-116">Child of **\<appSettings>**.</span></span> <span data-ttu-id="5a7be-117">Erfordert **key**- und **value**-Attribute.</span><span class="sxs-lookup"><span data-stu-id="5a7be-117">Requires **key** and **value** attributes.</span></span> |
+| [<span data-ttu-id="5a7be-118"> **\<clear>** </span><span class="sxs-lookup"><span data-stu-id="5a7be-118">**\<clear>**</span></span>](clear-element-for-appsettings.md) | <span data-ttu-id="5a7be-119">Löscht alle Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="5a7be-119">Clears all settings.</span></span> <span data-ttu-id="5a7be-120">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="5a7be-120">Child of **\<appSettings>**.</span></span> <span data-ttu-id="5a7be-121">Besitzt keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="5a7be-121">Has no attributes.</span></span> |
+| [<span data-ttu-id="5a7be-122"> **\<remove>** </span><span class="sxs-lookup"><span data-stu-id="5a7be-122">**\<remove>**</span></span>](remove-element-for-appsettings.md) | <span data-ttu-id="5a7be-123">Entfernt eine Einstellung.</span><span class="sxs-lookup"><span data-stu-id="5a7be-123">Removes a setting.</span></span> <span data-ttu-id="5a7be-124">Untergeordnetes Element von **\<appSettings>** .</span><span class="sxs-lookup"><span data-stu-id="5a7be-124">Child of **\<appSettings>**.</span></span> <span data-ttu-id="5a7be-125">Erfordert ein **key**-Attribut.</span><span class="sxs-lookup"><span data-stu-id="5a7be-125">Requires a **key** attribute.</span></span> |
 
-## <a name="appsettings-element"></a><span data-ttu-id="aaee3-126">\<appSettings>-Element</span><span class="sxs-lookup"><span data-stu-id="aaee3-126">\<appSettings> element</span></span>
+## <a name="appsettings-element"></a><span data-ttu-id="5a7be-126">\<appSettings>-Element</span><span class="sxs-lookup"><span data-stu-id="5a7be-126">\<appSettings> element</span></span>
 
-<span data-ttu-id="aaee3-127">Dieses Element enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von Anwendungseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="aaee3-127">This element contains **\<add>**, **\<clear>**, and **\<remove>** tags to control application settings.</span></span> <span data-ttu-id="aaee3-128">Es definiert ein optionales Attribut für **file**.</span><span class="sxs-lookup"><span data-stu-id="aaee3-128">It defines an optional attribute for **file**.</span></span>
+<span data-ttu-id="5a7be-127">Dieses Element enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von Anwendungseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="5a7be-127">This element contains **\<add>**, **\<clear>**, and **\<remove>** tags to control application settings.</span></span> <span data-ttu-id="5a7be-128">Es definiert ein optionales Attribut für **file**.</span><span class="sxs-lookup"><span data-stu-id="5a7be-128">It defines an optional attribute for **file**.</span></span>
 
-## <a name="add-element"></a><span data-ttu-id="aaee3-129">\<add>-Element</span><span class="sxs-lookup"><span data-stu-id="aaee3-129">\<add> element</span></span>
+## <a name="add-element"></a><span data-ttu-id="5a7be-129">\<add>-Element</span><span class="sxs-lookup"><span data-stu-id="5a7be-129">\<add> element</span></span>
 
-<span data-ttu-id="aaee3-130">Fügt der Auflistung der Anwendungseinstellungen eine benutzerdefinierte Anwendungseinstellung als Name/Wertpaar hinzu.</span><span class="sxs-lookup"><span data-stu-id="aaee3-130">Adds a custom application setting as a name/value pair to the application settings collection.</span></span> <span data-ttu-id="aaee3-131">Es definiert Attribute für **key** und **value**</span><span class="sxs-lookup"><span data-stu-id="aaee3-131">It defines attributes for **key** and **value**.</span></span>
+<span data-ttu-id="5a7be-130">Fügt der Auflistung der Anwendungseinstellungen eine benutzerdefinierte Anwendungseinstellung als Name/Wertpaar hinzu.</span><span class="sxs-lookup"><span data-stu-id="5a7be-130">Adds a custom application setting as a name/value pair to the application settings collection.</span></span> <span data-ttu-id="5a7be-131">Es definiert Attribute für **key** und **value**</span><span class="sxs-lookup"><span data-stu-id="5a7be-131">It defines attributes for **key** and **value**.</span></span>
 
-## <a name="clear-element"></a><span data-ttu-id="aaee3-132">\<clear>-Element</span><span class="sxs-lookup"><span data-stu-id="aaee3-132">\<clear> element</span></span>
+## <a name="clear-element"></a><span data-ttu-id="5a7be-132">\<clear>-Element</span><span class="sxs-lookup"><span data-stu-id="5a7be-132">\<clear> element</span></span>
 
-<span data-ttu-id="aaee3-133">Entfernt alle Verweise auf geerbte benutzerdefinierte Anwendungseinstellung und lässt nur die Verweise zu, die durch **\<add>** -Elemente hinzugefügt werden, die dem **\<clear>** -Element folgen.</span><span class="sxs-lookup"><span data-stu-id="aaee3-133">Removes all references to inherited custom application settings and allows only the references that are added by **\<add>** elements following the **\<clear>** element.</span></span> <span data-ttu-id="aaee3-134">Es definiert keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="aaee3-134">It defines no attributes.</span></span>
+<span data-ttu-id="5a7be-133">Entfernt alle Verweise auf geerbte benutzerdefinierte Anwendungseinstellung und lässt nur die Verweise zu, die durch **\<add>** -Elemente hinzugefügt werden, die dem **\<clear>** -Element folgen.</span><span class="sxs-lookup"><span data-stu-id="5a7be-133">Removes all references to inherited custom application settings and allows only the references that are added by **\<add>** elements following the **\<clear>** element.</span></span> <span data-ttu-id="5a7be-134">Es definiert keine Attribute.</span><span class="sxs-lookup"><span data-stu-id="5a7be-134">It defines no attributes.</span></span>
 
-## <a name="remove-element"></a><span data-ttu-id="aaee3-135">\<remove>-Element</span><span class="sxs-lookup"><span data-stu-id="aaee3-135">\<remove> element</span></span>
+## <a name="remove-element"></a><span data-ttu-id="5a7be-135">\<remove>-Element</span><span class="sxs-lookup"><span data-stu-id="5a7be-135">\<remove> element</span></span>
 
-<span data-ttu-id="aaee3-136">Entfernt einen Verweis auf eine geerbte benutzerdefinierte Anwendungseinstellung aus der Auflistung der Anwendungseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="aaee3-136">Removes a reference to an inherited custom application setting from the application settings collection.</span></span> <span data-ttu-id="aaee3-137">Definiert ein Attribut für **key**.</span><span class="sxs-lookup"><span data-stu-id="aaee3-137">It defines an attribute for **key**.</span></span>
+<span data-ttu-id="5a7be-136">Entfernt einen Verweis auf eine geerbte benutzerdefinierte Anwendungseinstellung aus der Auflistung der Anwendungseinstellungen.</span><span class="sxs-lookup"><span data-stu-id="5a7be-136">Removes a reference to an inherited custom application setting from the application settings collection.</span></span> <span data-ttu-id="5a7be-137">Definiert ein Attribut für **key**.</span><span class="sxs-lookup"><span data-stu-id="5a7be-137">It defines an attribute for **key**.</span></span>
 
-## <a name="example"></a><span data-ttu-id="aaee3-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="aaee3-138">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a7be-138">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5a7be-138">Example</span></span>
 
-<span data-ttu-id="aaee3-139">Das folgende Beispiel zeigt eine externe Anwendungseinstellungsdatei (*custom.config*), die eine benutzerdefinierte Anwendungseinstellung definiert.</span><span class="sxs-lookup"><span data-stu-id="aaee3-139">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
+<span data-ttu-id="5a7be-139">Das folgende Beispiel zeigt eine externe Anwendungseinstellungsdatei (*custom.config*), die eine benutzerdefinierte Anwendungseinstellung definiert.</span><span class="sxs-lookup"><span data-stu-id="5a7be-139">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -60,7 +60,7 @@ ms.locfileid: "69921302"
 </appSettings>
 ```
 
-<span data-ttu-id="aaee3-140">Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstellung in der externen Einstellungsdatei verarbeitet und eine eigene Anwendungseinstellung festlegt.</span><span class="sxs-lookup"><span data-stu-id="aaee3-140">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
+<span data-ttu-id="5a7be-140">Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstellung in der externen Einstellungsdatei verarbeitet und eine eigene Anwendungseinstellung festlegt.</span><span class="sxs-lookup"><span data-stu-id="5a7be-140">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
 
 ```xml
 <configuration>
@@ -70,7 +70,7 @@ ms.locfileid: "69921302"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="aaee3-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aaee3-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a7be-141">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a7be-141">See also</span></span>
 
-- [<span data-ttu-id="aaee3-142">Übersicht über Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="aaee3-142">Application Settings Overview</span></span>](../../../winforms/advanced/application-settings-overview.md)
-- [<span data-ttu-id="aaee3-143">Architektur der Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="aaee3-143">Application Settings Architecture</span></span>](../../../winforms/advanced/application-settings-architecture.md)
+- [<span data-ttu-id="5a7be-142">Übersicht über Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="5a7be-142">Application Settings Overview</span></span>](../../../winforms/advanced/application-settings-overview.md)
+- [<span data-ttu-id="5a7be-143">Architektur der Anwendungseinstellungen</span><span class="sxs-lookup"><span data-stu-id="5a7be-143">Application Settings Architecture</span></span>](../../../winforms/advanced/application-settings-architecture.md)

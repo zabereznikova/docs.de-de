@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b30f6f5ce22290dc3750cef0171349ec5ff2f76a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773558"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126737"
 ---
-# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="40049-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream-Methode</span><span class="sxs-lookup"><span data-stu-id="40049-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
-<span data-ttu-id="40049-103">Ruft die kanonische Assemblyidentitätsdaten für die Assembly im angegebenen Stream.</span><span class="sxs-lookup"><span data-stu-id="40049-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
+# <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a><span data-ttu-id="0a4bb-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream-Methode</span><span class="sxs-lookup"><span data-stu-id="0a4bb-102">ICLRAssemblyIdentityManager::GetBindingIdentityFromStream Method</span></span>
+<span data-ttu-id="0a4bb-103">Ruft die kanonischen Assemblyidentitätsdaten für die Assembly im angegebenen Stream ab.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-103">Gets the canonical assembly identity data for the assembly in the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40049-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="40049-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a4bb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0a4bb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBindingIdentityFromStream (  
@@ -38,42 +36,42 @@ HRESULT GetBindingIdentityFromStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40049-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="40049-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a4bb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0a4bb-105">Parameters</span></span>  
  `pStream`  
- <span data-ttu-id="40049-106">[in] Der Assemblystream,, die ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="40049-106">[in] The assembly stream to be evaluated.</span></span>  
+ <span data-ttu-id="0a4bb-106">in Der Assemblystream, der ausgewertet werden soll.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-106">[in] The assembly stream to be evaluated.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="40049-107">[in] Für eine zukünftige Erweiterbarkeit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="40049-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="40049-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ist der einzige Wert, den die aktuelle Version der common Language Runtime (CLR) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="40049-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
+ <span data-ttu-id="0a4bb-107">in Wird für zukünftige Erweiterbarkeit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="0a4bb-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT ist der einzige Wert, der von der aktuellen Version des Common Language Runtime (CLR) unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="40049-109">[out] Ein Puffer mit nicht transparenten Assemblyidentitätsdaten.</span><span class="sxs-lookup"><span data-stu-id="40049-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
+ <span data-ttu-id="0a4bb-109">vorgenommen Ein Puffer, der die nicht transparenten Assembly-Identitätsdaten enthält.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-109">[out] A buffer containing the opaque assembly identity data.</span></span>  
   
  `pcchBufferSize`  
- <span data-ttu-id="40049-110">[in, out] Die Größe des `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="40049-110">[in, out] The size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="0a4bb-110">[in, out] Die Größe der `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-110">[in, out] The size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="40049-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="40049-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a4bb-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0a4bb-111">Return Value</span></span>  
   
-|<span data-ttu-id="40049-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="40049-112">HRESULT</span></span>|<span data-ttu-id="40049-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="40049-113">Description</span></span>|  
+|<span data-ttu-id="0a4bb-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0a4bb-112">HRESULT</span></span>|<span data-ttu-id="0a4bb-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0a4bb-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="40049-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="40049-114">S_OK</span></span>|<span data-ttu-id="40049-115">Die Methode wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="40049-115">The method returned successfully.</span></span>|  
-|<span data-ttu-id="40049-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="40049-116">E_INVALIDARG</span></span>|<span data-ttu-id="40049-117">Die angegebene `pStream` ist null.</span><span class="sxs-lookup"><span data-stu-id="40049-117">The supplied `pStream` is null.</span></span>|  
-|<span data-ttu-id="40049-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="40049-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="40049-119">Die Größe des `pwzBuffer` ist zu klein.</span><span class="sxs-lookup"><span data-stu-id="40049-119">The size of `pwzBuffer` is too small.</span></span>|  
-|<span data-ttu-id="40049-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="40049-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="40049-121">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="40049-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="40049-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="40049-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="40049-123">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="40049-123">The call timed out.</span></span>|  
-|<span data-ttu-id="40049-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="40049-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="40049-125">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="40049-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="40049-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="40049-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="40049-127">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="40049-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="40049-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="40049-128">E_FAIL</span></span>|<span data-ttu-id="40049-129">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="40049-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="40049-130">Wenn eine Methode E_FAIL zurückgegeben wird, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="40049-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="40049-131">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="40049-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0a4bb-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="0a4bb-114">S_OK</span></span>|<span data-ttu-id="0a4bb-115">Die Methode wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-115">The method returned successfully.</span></span>|  
+|<span data-ttu-id="0a4bb-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="0a4bb-116">E_INVALIDARG</span></span>|<span data-ttu-id="0a4bb-117">Der angegebene `pStream` ist NULL.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-117">The supplied `pStream` is null.</span></span>|  
+|<span data-ttu-id="0a4bb-118">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="0a4bb-118">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="0a4bb-119">Die Größe der `pwzBuffer` ist zu klein.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-119">The size of `pwzBuffer` is too small.</span></span>|  
+|<span data-ttu-id="0a4bb-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0a4bb-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0a4bb-121">Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0a4bb-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0a4bb-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0a4bb-123">Timeout des Aufrufes.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-123">The call timed out.</span></span>|  
+|<span data-ttu-id="0a4bb-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0a4bb-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0a4bb-125">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="0a4bb-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0a4bb-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0a4bb-127">Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="0a4bb-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0a4bb-128">E_FAIL</span></span>|<span data-ttu-id="0a4bb-129">Ein unbekannter schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0a4bb-130">Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-130">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0a4bb-131">Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="0a4bb-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="40049-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="40049-132">Requirements</span></span>  
- <span data-ttu-id="40049-133">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40049-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a4bb-132">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0a4bb-132">Requirements</span></span>  
+ <span data-ttu-id="0a4bb-133">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a4bb-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40049-134">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="40049-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0a4bb-134">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="0a4bb-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="40049-135">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="40049-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0a4bb-135">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0a4bb-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="40049-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40049-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0a4bb-136">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a4bb-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40049-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="40049-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a4bb-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0a4bb-137">See also</span></span>
 
-- [<span data-ttu-id="40049-138">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="40049-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="40049-139">ICLRAssemblyReferenceList-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="40049-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="0a4bb-138">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0a4bb-138">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="0a4bb-139">ICLRAssemblyReferenceList-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0a4bb-139">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

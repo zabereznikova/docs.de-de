@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139673"
 ---
-# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="76e8b-102">ICorDebugProcess::SetThreadContext-Methode</span><span class="sxs-lookup"><span data-stu-id="76e8b-102">ICorDebugProcess::SetThreadContext Method</span></span>
-<span data-ttu-id="76e8b-103">Legt den Kontext für den angegebenen Thread in diesem Prozess fest.</span><span class="sxs-lookup"><span data-stu-id="76e8b-103">Sets the context for the given thread in this process.</span></span>  
+# <a name="icordebugprocesssetthreadcontext-method"></a><span data-ttu-id="c836e-102">ICorDebugProcess::SetThreadContext-Methode</span><span class="sxs-lookup"><span data-stu-id="c836e-102">ICorDebugProcess::SetThreadContext Method</span></span>
+<span data-ttu-id="c836e-103">Legt den Kontext für den angegebenen Thread in diesem Prozess fest.</span><span class="sxs-lookup"><span data-stu-id="c836e-103">Sets the context for the given thread in this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76e8b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="76e8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c836e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c836e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetThreadContext(  
@@ -37,30 +35,30 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="76e8b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="76e8b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c836e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c836e-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="76e8b-106">[in] Die ID des Threads für den Kontext festgelegt werden soll.</span><span class="sxs-lookup"><span data-stu-id="76e8b-106">[in] The ID of the thread for which to set the context.</span></span>  
+ <span data-ttu-id="c836e-106">in Die ID des Threads, für den der Kontext festgelegt werden soll.</span><span class="sxs-lookup"><span data-stu-id="c836e-106">[in] The ID of the thread for which to set the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="76e8b-107">[in] Die Größe des `context`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="76e8b-107">[in] The size of the `context` array.</span></span>  
+ <span data-ttu-id="c836e-107">[in] Die Größe des `context`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="c836e-107">[in] The size of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="76e8b-108">[in] Ein Array von Bytes, die Kontext des Threads zu beschreiben.</span><span class="sxs-lookup"><span data-stu-id="76e8b-108">[in] An array of bytes that describe the thread's context.</span></span>  
+ <span data-ttu-id="c836e-108">in Ein Bytearray, das den Thread Kontext beschreibt.</span><span class="sxs-lookup"><span data-stu-id="c836e-108">[in] An array of bytes that describe the thread's context.</span></span>  
   
- <span data-ttu-id="76e8b-109">Der Kontext gibt die Architektur des Prozessors auf dem der Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="76e8b-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
+ <span data-ttu-id="c836e-109">Der Kontext gibt die Architektur des Prozessors an, auf dem der Thread ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="c836e-109">The context specifies the architecture of the processor on which the thread is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="76e8b-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="76e8b-110">Remarks</span></span>  
- <span data-ttu-id="76e8b-111">Der Debugger sollte diese Methode anstelle der Win32-Aufrufen `SetThreadContext` Funktion, da der Thread tatsächlich "gehackte" sind, möglicherweise in der der Kontext vorübergehend geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="76e8b-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="76e8b-112">Diese Methode sollte verwendet werden, nur wenn ein Thread in systemeigenem Code.</span><span class="sxs-lookup"><span data-stu-id="76e8b-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="76e8b-113">Verwendung [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="76e8b-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="76e8b-114">Sie müssen nicht den Kontext eines Threads während eines Out-of-Band (OOB) Debug-Ereignisses zu ändern.</span><span class="sxs-lookup"><span data-stu-id="76e8b-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c836e-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c836e-110">Remarks</span></span>  
+ <span data-ttu-id="c836e-111">Der Debugger sollte diese Methode anstelle der Win32-`SetThreadContext`-Funktion aufzurufen, da der Thread tatsächlich den Zustand "entführt" aufweisen kann, in dem der Kontext vorübergehend geändert wurde.</span><span class="sxs-lookup"><span data-stu-id="c836e-111">The debugger should call this method rather than the Win32 `SetThreadContext` function, because the thread may actually be in a "hijacked" state, in which its context has been temporarily changed.</span></span> <span data-ttu-id="c836e-112">Diese Methode sollte nur verwendet werden, wenn sich ein Thread in nativem Code befindet.</span><span class="sxs-lookup"><span data-stu-id="c836e-112">This method should be used only when a thread is in native code.</span></span> <span data-ttu-id="c836e-113">Verwenden Sie [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="c836e-113">Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) for threads in managed code.</span></span> <span data-ttu-id="c836e-114">Sie sollten den Kontext eines Threads nie während eines OOB-Debugereignisses (Out-of-Band) ändern.</span><span class="sxs-lookup"><span data-stu-id="c836e-114">You should never need to modify the context of a thread during an out-of-band (OOB) debug event.</span></span>  
   
- <span data-ttu-id="76e8b-115">Die übergebenen Daten muss ein Context-Struktur für die aktuelle Plattform.</span><span class="sxs-lookup"><span data-stu-id="76e8b-115">The data passed must be a context structure for the current platform.</span></span>  
+ <span data-ttu-id="c836e-115">Die Daten, die übermittelt werden, müssen eine Kontext Struktur für die aktuelle Plattform sein.</span><span class="sxs-lookup"><span data-stu-id="c836e-115">The data passed must be a context structure for the current platform.</span></span>  
   
- <span data-ttu-id="76e8b-116">Diese Methode kann die Laufzeit beschädigt werden, wenn nicht ordnungsgemäß verwendet.</span><span class="sxs-lookup"><span data-stu-id="76e8b-116">This method can corrupt the runtime if used improperly.</span></span>  
+ <span data-ttu-id="c836e-116">Diese Methode kann die Laufzeit beschädigt werden, wenn Sie nicht ordnungsgemäß verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c836e-116">This method can corrupt the runtime if used improperly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76e8b-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="76e8b-117">Requirements</span></span>  
- <span data-ttu-id="76e8b-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76e8b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c836e-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c836e-117">Requirements</span></span>  
+ <span data-ttu-id="c836e-118">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c836e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76e8b-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76e8b-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c836e-119">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c836e-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="76e8b-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76e8b-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c836e-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c836e-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="76e8b-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76e8b-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c836e-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c836e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
