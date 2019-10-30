@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bb04ba090be9cab551bc39d8d9f1be974c747d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752955"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085135"
 ---
-# <a name="icordebugevalcreatevalue-method"></a><span data-ttu-id="e0b06-102">ICorDebugEval::CreateValue-Methode</span><span class="sxs-lookup"><span data-stu-id="e0b06-102">ICorDebugEval::CreateValue Method</span></span>
-<span data-ttu-id="e0b06-103">Erstellt einen Wert des angegebenen Typs mit einem Anfangswert von 0 (null) oder Null.</span><span class="sxs-lookup"><span data-stu-id="e0b06-103">Creates a value of the specified type, with an initial value of zero or null.</span></span>  
+# <a name="icordebugevalcreatevalue-method"></a><span data-ttu-id="dd1d0-102">ICorDebugEval::CreateValue-Methode</span><span class="sxs-lookup"><span data-stu-id="dd1d0-102">ICorDebugEval::CreateValue Method</span></span>
+<span data-ttu-id="dd1d0-103">Erstellt einen Wert vom angegebenen Typ mit einem Anfangswert von 0 (null) oder NULL.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-103">Creates a value of the specified type, with an initial value of zero or null.</span></span>  
   
- <span data-ttu-id="e0b06-104">Diese Methode ist in .NET Framework, Version 2.0, veraltet.</span><span class="sxs-lookup"><span data-stu-id="e0b06-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="e0b06-105">Verwendung [ICorDebugEval2:: CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) stattdessen.</span><span class="sxs-lookup"><span data-stu-id="e0b06-105">Use [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) instead.</span></span>  
+ <span data-ttu-id="dd1d0-104">Diese Methode ist in der .NET Framework Version 2,0 veraltet.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="dd1d0-105">Verwenden Sie stattdessen [ICorDebugEval2:: kreatevaluefortype](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) .</span><span class="sxs-lookup"><span data-stu-id="dd1d0-105">Use [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0b06-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="e0b06-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dd1d0-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="dd1d0-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateValue (  
@@ -39,33 +37,33 @@ HRESULT CreateValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0b06-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="e0b06-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dd1d0-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="dd1d0-107">Parameters</span></span>  
  `elementType`  
- <span data-ttu-id="e0b06-108">[in] Der Wert der [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) -Enumeration, der den Typ des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="e0b06-108">[in] A value of the [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) enumeration that specifies the type of the value.</span></span>  
+ <span data-ttu-id="dd1d0-108">in Ein Wert der [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) -Enumeration, der den Typ des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-108">[in] A value of the [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) enumeration that specifies the type of the value.</span></span>  
   
  `pElementClass`  
- <span data-ttu-id="e0b06-109">[in] Zeiger auf ein [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) Objekt, das die Klasse des-Werts angibt, wenn der Typ nicht um einen primitiven Typ ist.</span><span class="sxs-lookup"><span data-stu-id="e0b06-109">[in] Pointer to an [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) object that specifies the class of the value, if the type is not a primitive type.</span></span>  
+ <span data-ttu-id="dd1d0-109">in Ein Zeiger auf ein [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) -Objekt, das die Klasse des Werts angibt, wenn der Typ kein primitiver Typ ist.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-109">[in] Pointer to an [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md) object that specifies the class of the value, if the type is not a primitive type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="e0b06-110">[out] Zeiger auf die Adresse ein "ICorDebugValue"-Objekt, das den Wert darstellt.</span><span class="sxs-lookup"><span data-stu-id="e0b06-110">[out] Pointer to the address of an "ICorDebugValue" object that represents the value.</span></span>  
+ <span data-ttu-id="dd1d0-110">vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert darstellt.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-110">[out] Pointer to the address of an "ICorDebugValue" object that represents the value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e0b06-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e0b06-111">Remarks</span></span>  
- <span data-ttu-id="e0b06-112">`CreateValue` erstellt eine `ICorDebugValue` Objekt des angegebenen Typs für den Zweck der Verwendung in eine funktionsauswertung.</span><span class="sxs-lookup"><span data-stu-id="e0b06-112">`CreateValue` creates an `ICorDebugValue` object of the given type for the sole purpose of using it in a function evaluation.</span></span> <span data-ttu-id="e0b06-113">Dieser Wertobjekt kann verwendet werden, Benutzerkonstanten als Parameter übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="e0b06-113">This value object can be used to pass user constants as parameters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dd1d0-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dd1d0-111">Remarks</span></span>  
+ <span data-ttu-id="dd1d0-112">`CreateValue` erstellt ein `ICorDebugValue` Objekt des angegebenen Typs für den alleinigen Zweck der Verwendung in einer Funktions Auswertung.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-112">`CreateValue` creates an `ICorDebugValue` object of the given type for the sole purpose of using it in a function evaluation.</span></span> <span data-ttu-id="dd1d0-113">Dieses Wertobjekt kann verwendet werden, um Benutzer Konstanten als Parameter zu übergeben.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-113">This value object can be used to pass user constants as parameters.</span></span>  
   
- <span data-ttu-id="e0b06-114">Wenn der Typ des Werts ein primitiver Typ ist, wird ihren anfänglichen Wert 0 (null) oder null.</span><span class="sxs-lookup"><span data-stu-id="e0b06-114">If the type of the value is a primitive type, its initial value is zero or null.</span></span> <span data-ttu-id="e0b06-115">Verwendung [ICorDebugGenericValue:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) zum Festlegen des Werts eines primitiven Typs.</span><span class="sxs-lookup"><span data-stu-id="e0b06-115">Use [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) to set the value of a primitive type.</span></span>  
+ <span data-ttu-id="dd1d0-114">Wenn der Typ des Werts ein primitiver Typ ist, ist der anfängliche Wert 0 (null) oder NULL.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-114">If the type of the value is a primitive type, its initial value is zero or null.</span></span> <span data-ttu-id="dd1d0-115">Verwenden Sie [ICorDebugGenericValue:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) , um den Wert eines primitiven Typs festzulegen.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-115">Use [ICorDebugGenericValue::SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md) to set the value of a primitive type.</span></span>  
   
- <span data-ttu-id="e0b06-116">Wenn der Wert des `elementType` ELEMENT_TYPE_CLASS lautet, erhalten Sie eine "ICorDebugReferenceValue" (im zurückgegebenen `ppValue`), der null-Objektverweis darstellt.</span><span class="sxs-lookup"><span data-stu-id="e0b06-116">If the value of `elementType` is ELEMENT_TYPE_CLASS, you get an "ICorDebugReferenceValue" (returned in `ppValue`) representing the null object reference.</span></span> <span data-ttu-id="e0b06-117">Sie können dieses Objekt verwenden, null, eine funktionsauswertung übergeben, die Objektverweisparameter verfügt.</span><span class="sxs-lookup"><span data-stu-id="e0b06-117">You can use this object to pass null to a function evaluation that has object reference parameters.</span></span> <span data-ttu-id="e0b06-118">Sie können nicht festgelegt werden die `ICorDebugValue` auf nichts, es bleibt immer null.</span><span class="sxs-lookup"><span data-stu-id="e0b06-118">You cannot set the `ICorDebugValue` to anything; it always remains null.</span></span>  
+ <span data-ttu-id="dd1d0-116">Wenn der Wert von `elementType` ELEMENT_TYPE_CLASS ist, erhalten Sie einen "ICorDebugReferenceValue" (zurückgegeben in `ppValue`), der den NULL-Objekt Verweis darstellt.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-116">If the value of `elementType` is ELEMENT_TYPE_CLASS, you get an "ICorDebugReferenceValue" (returned in `ppValue`) representing the null object reference.</span></span> <span data-ttu-id="dd1d0-117">Sie können dieses Objekt verwenden, um NULL an eine Funktions Auswertung zu übergeben, die über Objekt Verweis Parameter verfügt.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-117">You can use this object to pass null to a function evaluation that has object reference parameters.</span></span> <span data-ttu-id="dd1d0-118">Sie können den `ICorDebugValue` nicht auf irgendetwas festlegen. Sie bleibt immer NULL.</span><span class="sxs-lookup"><span data-stu-id="dd1d0-118">You cannot set the `ICorDebugValue` to anything; it always remains null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0b06-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e0b06-119">Requirements</span></span>  
- <span data-ttu-id="e0b06-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0b06-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd1d0-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dd1d0-119">Requirements</span></span>  
+ <span data-ttu-id="dd1d0-120">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd1d0-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0b06-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0b06-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="dd1d0-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd1d0-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e0b06-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0b06-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dd1d0-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd1d0-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e0b06-123">**.NET Framework-Versionen:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="e0b06-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="dd1d0-123">**.NET Framework Versionen:** 1,1, 1,0</span><span class="sxs-lookup"><span data-stu-id="dd1d0-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0b06-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0b06-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd1d0-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dd1d0-124">See also</span></span>
 
-- [<span data-ttu-id="e0b06-125">CreateValueForType-Methode</span><span class="sxs-lookup"><span data-stu-id="e0b06-125">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
-- [<span data-ttu-id="e0b06-126">ICorDebugEval-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e0b06-126">ICorDebugEval Interface</span></span>](icordebugeval-interface.md)
+- [<span data-ttu-id="dd1d0-125">CreateValueForType-Methode</span><span class="sxs-lookup"><span data-stu-id="dd1d0-125">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
+- [<span data-ttu-id="dd1d0-126">ICorDebugEval-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="dd1d0-126">ICorDebugEval Interface</span></span>](icordebugeval-interface.md)

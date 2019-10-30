@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737606"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088687"
 ---
-# <a name="icordebugarrayvaluegetbaseindicies-method"></a><span data-ttu-id="9bbde-102">ICorDebugArrayValue::GetBaseIndicies-Methode</span><span class="sxs-lookup"><span data-stu-id="9bbde-102">ICorDebugArrayValue::GetBaseIndicies Method</span></span>
-<span data-ttu-id="9bbde-103">Ruft den Basisindex für jede Dimension im Array ab.</span><span class="sxs-lookup"><span data-stu-id="9bbde-103">Gets the base index of each dimension in the array.</span></span>  
+# <a name="icordebugarrayvaluegetbaseindicies-method"></a><span data-ttu-id="bb099-102">ICorDebugArrayValue::GetBaseIndicies-Methode</span><span class="sxs-lookup"><span data-stu-id="bb099-102">ICorDebugArrayValue::GetBaseIndicies Method</span></span>
+<span data-ttu-id="bb099-103">Ruft den Basis Index jeder Dimension im Array ab.</span><span class="sxs-lookup"><span data-stu-id="bb099-103">Gets the base index of each dimension in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9bbde-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9bbde-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb099-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bb099-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBaseIndicies (  
@@ -37,18 +35,18 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9bbde-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9bbde-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bb099-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="bb099-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="9bbde-106">[in] Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="9bbde-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span> <span data-ttu-id="9bbde-107">Dieser Wert ist auch die Größe der `indicies` Arrays, da seine Größe gleich der Anzahl der Dimensionen ist die `ICorDebugArrayValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="9bbde-107">This value is also the size of the `indicies` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="bb099-106">in Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekts.</span><span class="sxs-lookup"><span data-stu-id="bb099-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span> <span data-ttu-id="bb099-107">Dieser Wert ist auch die Größe des `indicies` Arrays, da seine Größe gleich der Anzahl der Dimensionen des `ICorDebugArrayValue` Objekts ist.</span><span class="sxs-lookup"><span data-stu-id="bb099-107">This value is also the size of the `indicies` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indicies`  
- <span data-ttu-id="9bbde-108">[out] Ein Array von Ganzzahlen, von denen jeder der Basisindex (d. h. den Startindex) einer Dimension dieses wird `ICorDebugArrayValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="9bbde-108">[out] An array of integers, each of which is the base index (that is, the starting index) of a dimension of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="bb099-108">vorgenommen Ein Array von ganzen Zahlen, von denen jeder der Basis Index (d. h. der Start Index) einer Dimension dieses `ICorDebugArrayValue` Objekts ist.</span><span class="sxs-lookup"><span data-stu-id="bb099-108">[out] An array of integers, each of which is the base index (that is, the starting index) of a dimension of this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9bbde-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9bbde-109">Requirements</span></span>  
- <span data-ttu-id="9bbde-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9bbde-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bb099-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="bb099-109">Requirements</span></span>  
+ <span data-ttu-id="bb099-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb099-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9bbde-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9bbde-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bb099-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb099-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9bbde-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9bbde-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bb099-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb099-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9bbde-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9bbde-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="bb099-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb099-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

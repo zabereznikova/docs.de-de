@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737567"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088501"
 ---
-# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="8c929-102">ICorDebugArrayValue::GetDimensions-Methode</span><span class="sxs-lookup"><span data-stu-id="8c929-102">ICorDebugArrayValue::GetDimensions Method</span></span>
-<span data-ttu-id="8c929-103">Ruft die Anzahl der Elemente in jeder Dimension dieses Array ab.</span><span class="sxs-lookup"><span data-stu-id="8c929-103">Gets the number of elements in each dimension of this array.</span></span>  
+# <a name="icordebugarrayvaluegetdimensions-method"></a><span data-ttu-id="44f95-102">ICorDebugArrayValue::GetDimensions-Methode</span><span class="sxs-lookup"><span data-stu-id="44f95-102">ICorDebugArrayValue::GetDimensions Method</span></span>
+<span data-ttu-id="44f95-103">Ruft die Anzahl der Elemente in jeder Dimension dieses Arrays ab.</span><span class="sxs-lookup"><span data-stu-id="44f95-103">Gets the number of elements in each dimension of this array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c929-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8c929-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44f95-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="44f95-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDimensions (  
@@ -37,20 +35,20 @@ HRESULT GetDimensions (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8c929-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8c929-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="44f95-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="44f95-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="8c929-106">[in] Die Anzahl der Dimensionen dieses ICorDebugArrayValue-Objekts.</span><span class="sxs-lookup"><span data-stu-id="8c929-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
+ <span data-ttu-id="44f95-106">in Die Anzahl der Dimensionen dieses ICorDebugArrayValue-Objekts.</span><span class="sxs-lookup"><span data-stu-id="44f95-106">[in] The number of dimensions of this ICorDebugArrayValue object.</span></span>  
   
- <span data-ttu-id="8c929-107">Dieser Wert ist auch die Größe der `dims` Arrays, da seine Größe gleich der Anzahl der Dimensionen ist die `ICorDebugArrayValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="8c929-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="44f95-107">Dieser Wert ist auch die Größe des `dims` Arrays, da seine Größe gleich der Anzahl der Dimensionen des `ICorDebugArrayValue` Objekts ist.</span><span class="sxs-lookup"><span data-stu-id="44f95-107">This value is also the size of the `dims` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `dims`  
- <span data-ttu-id="8c929-108">[out] Ein Array von Ganzzahlen, von denen jeder die Anzahl der Elemente in einer Dimension in diesem gibt `ICorDebugArrayValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="8c929-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="44f95-108">vorgenommen Ein Array von ganzen Zahlen, von denen jede die Anzahl der Elemente in einer Dimension in diesem `ICorDebugArrayValue` Objekt angibt.</span><span class="sxs-lookup"><span data-stu-id="44f95-108">[out] An array of integers, each of which specifies the number of elements in a dimension in this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c929-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8c929-109">Requirements</span></span>  
- <span data-ttu-id="8c929-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c929-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44f95-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="44f95-109">Requirements</span></span>  
+ <span data-ttu-id="44f95-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44f95-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c929-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8c929-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="44f95-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="44f95-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8c929-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c929-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="44f95-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44f95-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c929-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c929-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="44f95-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44f95-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

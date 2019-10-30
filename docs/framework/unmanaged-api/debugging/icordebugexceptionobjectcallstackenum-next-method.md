@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3328a2c0-1e48-4a54-802a-9b474cf82c21
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 322699186b45546bd26be9ec4ce96a69a6315dcb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c742f541b358b40e6e2fd44ca437b0dd72e29b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754253"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091087"
 ---
-# <a name="icordebugexceptionobjectcallstackenumnext-method"></a><span data-ttu-id="a695a-102">ICorDebugExceptionObjectCallStackEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="a695a-102">ICorDebugExceptionObjectCallStackEnum::Next Method</span></span>
-<span data-ttu-id="a695a-103">Ruft die angegebene Anzahl von [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Instanzen, die Informationen aus der Aufrufliste ein Exception-Objekt enthalten.</span><span class="sxs-lookup"><span data-stu-id="a695a-103">Gets the specified number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances that contain information from an exception object's call stack.</span></span>  
+# <a name="icordebugexceptionobjectcallstackenumnext-method"></a><span data-ttu-id="e6e84-102">ICorDebugExceptionObjectCallStackEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="e6e84-102">ICorDebugExceptionObjectCallStackEnum::Next Method</span></span>
+<span data-ttu-id="e6e84-103">Ruft die angegebene Anzahl von [cordebugexceptionobjectstackframe](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) -Instanzen ab, die Informationen aus der-Rückruf Stapel eines Ausnahme Objekts enthalten.</span><span class="sxs-lookup"><span data-stu-id="e6e84-103">Gets the specified number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances that contain information from an exception object's call stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a695a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a695a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6e84-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e6e84-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -37,28 +35,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a695a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a695a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6e84-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e6e84-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="a695a-106">[in] Die Anzahl der [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Instanzen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a695a-106">[in] The number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances to be retrieved.</span></span>  
+ <span data-ttu-id="e6e84-106">in Die Anzahl der abzurufenden [cordebugexceptionobjectstackframe](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) -Instanzen.</span><span class="sxs-lookup"><span data-stu-id="e6e84-106">[in] The number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="a695a-107">[out] Ein Array von Zeigern, die jeweils auf eine [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="a695a-107">[out] An array of pointers, each of which points to a [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) object.</span></span>  
+ <span data-ttu-id="e6e84-107">vorgenommen Ein Array von Zeigern, von denen jedes auf ein [cordebugexceptionobjectstackframe](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) -Objekt verweist.</span><span class="sxs-lookup"><span data-stu-id="e6e84-107">[out] An array of pointers, each of which points to a [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="a695a-108">[out] Ein Zeiger auf die Anzahl der [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) Instanzen, die tatsächlich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a695a-108">[out] A pointer to the number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances actually returned.</span></span>  
+ <span data-ttu-id="e6e84-108">vorgenommen Ein Zeiger auf die Anzahl der [cordebugexceptionobjectstackframe](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) -Instanzen, die tatsächlich zurückgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e6e84-108">[out] A pointer to the number of [CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) instances actually returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a695a-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a695a-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6e84-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e6e84-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a695a-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a695a-110">Requirements</span></span>  
- <span data-ttu-id="a695a-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a695a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6e84-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e6e84-110">Requirements</span></span>  
+ <span data-ttu-id="e6e84-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6e84-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a695a-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a695a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e6e84-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6e84-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a695a-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a695a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6e84-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6e84-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a695a-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a695a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e6e84-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6e84-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a695a-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a695a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6e84-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6e84-115">See also</span></span>
 
-- [<span data-ttu-id="a695a-116">ICorDebugExceptionObjectCallStackEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a695a-116">ICorDebugExceptionObjectCallStackEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)
-- [<span data-ttu-id="a695a-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="a695a-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e6e84-116">ICorDebugExceptionObjectCallStackEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e6e84-116">ICorDebugExceptionObjectCallStackEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)
+- [<span data-ttu-id="e6e84-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="e6e84-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
