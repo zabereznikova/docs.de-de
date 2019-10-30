@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 13d89a4a-5d9d-4a79-9600-5e2a98c3d166
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b08937182797c8e94048d734d65473fad21b85cc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0682c0786182422587adb976ff6bc2455b9e5cdc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128934"
 ---
-# <a name="icordebugobjectvalueisvalueclass-method"></a><span data-ttu-id="d2524-102">ICorDebugObjectValue::IsValueClass-Methode</span><span class="sxs-lookup"><span data-stu-id="d2524-102">ICorDebugObjectValue::IsValueClass Method</span></span>
-<span data-ttu-id="d2524-103">Ruft einen Wert, der angibt, ob der Wert dieses Objekts ein Werttyp ist.</span><span class="sxs-lookup"><span data-stu-id="d2524-103">Gets a value that indicates whether this object value is a value type.</span></span>  
+# <a name="icordebugobjectvalueisvalueclass-method"></a><span data-ttu-id="379d8-102">ICorDebugObjectValue::IsValueClass-Methode</span><span class="sxs-lookup"><span data-stu-id="379d8-102">ICorDebugObjectValue::IsValueClass Method</span></span>
+<span data-ttu-id="379d8-103">Ruft einen Wert ab, der angibt, ob dieser Objektwert ein Werttyp ist.</span><span class="sxs-lookup"><span data-stu-id="379d8-103">Gets a value that indicates whether this object value is a value type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2524-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d2524-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="379d8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="379d8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsValueClass (  
@@ -35,17 +33,17 @@ HRESULT IsValueClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2524-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d2524-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="379d8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="379d8-105">Parameters</span></span>  
  `pbIsValueClass`  
- <span data-ttu-id="d2524-106">[out] Ein Zeiger auf einen booleschen Wert, der `true` der Objektwert, der von diesem "ICorDebugObjectValue" dargestellten ist ein Werttyp, anstatt einen Verweistyp handelt; andernfalls `pbIsValueClass` ist `false`.</span><span class="sxs-lookup"><span data-stu-id="d2524-106">[out] A pointer to a Boolean value that is `true` if the object value, represented by this "ICorDebugObjectValue", is a value type rather than a reference type; otherwise, `pbIsValueClass` is `false`.</span></span>  
+ <span data-ttu-id="379d8-106">vorgenommen Ein Zeiger auf einen booleschen Wert, der `true` wird, wenn der Objektwert, der durch diesen "ICorDebugObjectValue" dargestellt wird, ein Werttyp anstelle eines Verweis Typs ist. Andernfalls wird `pbIsValueClass` `false`.</span><span class="sxs-lookup"><span data-stu-id="379d8-106">[out] A pointer to a Boolean value that is `true` if the object value, represented by this "ICorDebugObjectValue", is a value type rather than a reference type; otherwise, `pbIsValueClass` is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2524-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d2524-107">Requirements</span></span>  
- <span data-ttu-id="d2524-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2524-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="379d8-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="379d8-107">Requirements</span></span>  
+ <span data-ttu-id="379d8-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="379d8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2524-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2524-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="379d8-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="379d8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d2524-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2524-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="379d8-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="379d8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2524-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2524-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="379d8-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="379d8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2524-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d2524-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="379d8-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="379d8-112">See also</span></span>
