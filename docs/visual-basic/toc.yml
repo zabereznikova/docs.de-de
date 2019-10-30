@@ -104,7 +104,7 @@
       href: programming-guide/program-structure/coding-conventions.md
     - name: Bedingte Kompilierung
       href: programming-guide/program-structure/conditional-compilation.md
-    - name: 'Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code'
+    - name: 'Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code'
       href: programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
     - name: 'Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten'
       href: programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
@@ -148,7 +148,7 @@
         - name: Zusammengesetzte Datentypen
           href: programming-guide/language-features/data-types/composite-data-types.md
           items:
-            - name: 'Gewusst wie: Ablegen mehrerer Werte in einer Variablen'
+            - name: 'Vorgehensweise: Ablegen mehrerer Werte in einer Variablen'
               href: programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
         - name: Generische Typen
           href: programming-guide/language-features/data-types/generic-types.md
@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Ungültige Datensatzlänge.
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 'Eine Konvertierung des anonymen Typs in eine Ausdrucksbaumstruktur ist nicht möglich, da sie ein Feld enthält, das in der Initialisierung eines anderen Feldes verwendet wird'
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt.'
+          href: language-reference/error-messages/bc42358.md
+        - name: 'Der anonyme Typ kann nicht in eine Ausdrucksbaumstruktur konvertiert werden, weil eine Eigenschaft des Typs für das Initialisieren einer anderen Eigenschaft verwendet wird.'
+          href: language-reference/error-messages/bc36548.md
         - name: ActiveX-Komponente kann nicht erstellt werden
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Auf "<name>" kann nicht verwiesen werden, da es ein Member des auf Werttypen basierenden Felds "<name>" der Klasse "<classname>" ist, die "System.MarshalByRefObject" als Basisklasse hat.'

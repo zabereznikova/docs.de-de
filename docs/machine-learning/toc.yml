@@ -30,6 +30,8 @@
         - name: Filmempfehlung (Matrixfaktorisierung)
           href: tutorials/movie-recommendation.md
         - name: Bildklassifizierung (induktive Übertragung)
+          href: tutorials/image-classification-api-transfer-learning.md
+        - name: Klassifizieren von Bildern (Modellzusammenstellung)
           href: tutorials/image-classification.md
         - name: Produktvertriebsanalyse (Anomalieerkennung)
           href: tutorials/sales-anomaly-detection.md
@@ -93,6 +95,8 @@
               href: how-to-guides/serve-model-web-api-ml-net.md
     - name: Tools
       items:
+        - name: Laden von Daten in den Modellgenerator
+          href: how-to-guides/load-data-model-builder.md
         - name: Installieren des Modellgenerators
           href: how-to-guides/install-model-builder.md
         - name: Installieren der CLI
