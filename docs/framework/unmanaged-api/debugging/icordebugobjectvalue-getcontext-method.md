@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4ad5ce0296dde073b58b3ea9986cae05c6699dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e855d9ec4105559bb72f48ecb594707f0a0ec4c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095913"
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="90876-102">ICorDebugObjectValue::GetContext-Methode</span><span class="sxs-lookup"><span data-stu-id="90876-102">ICorDebugObjectValue::GetContext Method</span></span>
-<span data-ttu-id="90876-103">`GetContext` in dieser Version von .NET Framework ist nicht implementiert werden.</span><span class="sxs-lookup"><span data-stu-id="90876-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="3f47a-102">ICorDebugObjectValue::GetContext-Methode</span><span class="sxs-lookup"><span data-stu-id="3f47a-102">ICorDebugObjectValue::GetContext Method</span></span>
+<span data-ttu-id="3f47a-103">`GetContext` ist in dieser Version des .NET Framework nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="3f47a-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90876-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="90876-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f47a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f47a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContext (  
@@ -35,7 +33,7 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="90876-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="90876-105">Requirements</span></span>  
- <span data-ttu-id="90876-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90876-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f47a-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3f47a-105">Requirements</span></span>  
+ <span data-ttu-id="3f47a-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f47a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90876-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="90876-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f47a-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f47a-107">See also</span></span>
