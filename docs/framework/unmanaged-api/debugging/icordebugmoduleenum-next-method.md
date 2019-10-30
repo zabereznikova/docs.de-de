@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096930"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next-Methode
-Ruft die Anzahl der "ICorDebugModule"-Instanzen, die anhand des `celt` aus der Enumeration, die an der aktuellen Position ab.  
+Ruft die Anzahl der "ICorDebug Module"-Instanzen ab, die durch `celt` aus der-Enumeration angegeben werden, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugModule` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugModule` Instanzen, die abgerufen werden sollen.  
   
  `modules`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugModule` Objekt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugModule` Objekt zeigt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugModule` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugModule` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

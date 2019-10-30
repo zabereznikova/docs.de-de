@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092039"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK-Funktionszeiger
-Verweist auf eine Funktion, die benachrichtigt den Host, die ein Wait-handle (<xref:System.Threading.WaitHandle>) hat signalisiert wurde oder das Timeout.  
+Verweist auf eine Funktion, die den Host benachrichtigt, dass ein Wait-Handle (<xref:System.Threading.WaitHandle>) entweder signalisiert oder abgelaufen ist.  
   
- Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
+ Dieser Funktionszeiger wurde in der .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +37,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parameter  
  `lpParameter`  
- [in] Ein Zeiger auf ein Objekt, das vom Host definierten Informationen enthält.  
+ in Ein Zeiger auf ein Objekt, das vom Host definierte Informationen enthält.  
   
  `TimerOrWaitFired`  
- [in] `true` Wenn Wait-Handles, die ein Timeout oder `false` , wenn ein Signal gesendet wurde.  
+ [in] `true`, wenn das Wait-Handle abgelaufen ist, oder `false`, wenn es signalisiert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion, die die `WAITORTIMERCALLBACK` ist eine Callback-Funktion und muss vom Writer der hostanwendung implementiert werden.  
+ Die Funktion, zu der `WAITORTIMERCALLBACK` Punkte eine Rückruffunktion ist und vom Writer der Hostinganwendung implementiert werden muss.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorWks.dll  
+ **Bibliothek:** Mscorwert. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

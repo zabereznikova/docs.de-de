@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089045"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType-Methode
-Ruft einen Zeiger auf eine Funktion, die einer bestimmten Signatur ab.  
+Ruft einen Zeiger auf eine Funktion ab, die über eine angegebene Signatur verfügt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +37,16 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>Parameter  
  `nTypeArgs`  
- [in] Die Anzahl der Argumente des Typs für die Funktion.  
+ in Die Anzahl der Typargumente für die Funktion.  
   
  `ppTypeArgs`  
- [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugType-Objekt verweist, die ein Argument vom Typ der Funktion darstellt. Das erste Element ist der Rückgabetyp ein; jedes andere Element ist ein Parameter.  
+ in Ein Array von Zeigern, von denen jedes auf ein ICorDebugType-Objekt verweist, das ein Typargument der Funktion darstellt. Das erste Element ist der Rückgabetyp. Jedes der anderen Elemente ist ein Parametertyp.  
   
  `ppType`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugType` -Objekt, das den Zeiger auf die Funktion darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das den Zeiger auf die Funktion darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

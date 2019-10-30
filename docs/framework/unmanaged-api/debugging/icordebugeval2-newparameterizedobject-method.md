@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084846"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject-Methode
-Instanziiert ein neues Objekt für den parametrisierten Typ und die Konstruktormethode des Objekts aufgerufen.  
+Instanziiert ein neues parametrisiertes Typobjekt und ruft die Konstruktormethode des Objekts auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,25 +39,25 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>Parameter  
  `pConstructor`  
- [in] Ein Zeiger auf ein ICorDebugFunction-Objekt, das den Konstruktor des Objekts zu instanziierenden darstellt.  
+ in Ein Zeiger auf ein ICorDebugFunction-Objekt, das den Konstruktor des Objekts darstellt, das instanziiert werden soll.  
   
  `nTypeArgs`  
- [in] Die Anzahl von Typargumenten übergeben.  
+ in Die Anzahl der bestandenen Typargumente.  
   
  `ppTypeArgs`  
- [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugType-Objekt verweist, die ein Typargument für das Objekt darstellt, die instanziiert wird.  
+ in Ein Array von Zeigern, von denen jedes auf ein ICorDebugType-Objekt verweist, das ein Typargument für das Objekt darstellt, das instanziiert wird.  
   
  `nArgs`  
- [in] Die Anzahl von Argumenten, die an den Konstruktor übergeben werden.  
+ in Die Anzahl von Argumenten, die an den Konstruktor übergeben werden.  
   
  `ppArgs`  
- [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugValue-Objekt verweist, die einen Wert des Arguments darstellt, der an den Konstruktor übergeben wird.  
+ in Ein Array von Zeigern, von denen jedes auf ein ICorDebugValue-Objekt verweist, das einen Argument Wert darstellt, der an den Konstruktor übergeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Konstruktor des Objekts dauert <xref:System.Type> Parameter.  
+ Der Konstruktor des Objekts kann <xref:System.Type> Parameter annehmen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

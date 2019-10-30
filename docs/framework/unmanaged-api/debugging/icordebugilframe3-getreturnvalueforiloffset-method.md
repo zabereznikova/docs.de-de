@@ -13,14 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5832ec095ea0e96327f6a9636193da9c0c8a5dd2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988264"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090364"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset-Methode
 Ruft ein ICorDebug Value-Objekt ab, das den Rückgabewert einer Funktion kapselt.  
@@ -55,20 +53,20 @@ HRESULT GetReturnValueForILOffset(
  Wenn Sie die [ICorDebugCode3:: getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) -Methode einem IL-Offset an eine Funktions Aufrufsite übergeben, wird mindestens ein System eigenes Offset zurückgegeben. In diesem Fall kann der Debugger Haltepunkte für diese systemeigenen Offsets in der Funktion festlegen. Wenn der Debugger auf einen der Haltepunkte trifft, können Sie den gleichen IL-Offset übergeben, den Sie an diese Methode übergeben haben, um den Rückgabewert abzurufen. Der Debugger sollte dann alle von ihm festgelegten Haltepunkte entfernen.  
   
 > [!WARNING]
-> Die [ICorDebugCode3:: getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) -Methode `ICorDebugILFrame3::GetReturnValueForILOffset` und-Methoden ermöglichen es Ihnen, Rückgabewert Informationen nur für Verweis Typen zu erhalten. Das Abrufen von Rückgabewertinformationen für Werttypen wird nicht unterstützt (alle Typen, die von <xref:System.ValueType> abgeleitet werden).  
+> Die [ICorDebugCode3:: getreturnvalueliveoffset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) und die `ICorDebugILFrame3::GetReturnValueForILOffset`-Methoden ermöglichen es Ihnen, Rückgabewert Informationen nur für Verweis Typen zu erhalten. Das Abrufen von Rückgabewertinformationen für Werttypen wird nicht unterstützt (alle Typen, die von <xref:System.ValueType> abgeleitet werden).  
   
- Der durch den `ILOffset` -Parameter angegebene IL-Offset sollte sich an einer Funktions Aufrufsite befinden, und die zu debuggende Komponente sollte an einem Haltepunkt angehalten werden, der bei dem systemeigenen Offset festgelegt ist, der von der [ICorDebugCode3:: getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) -Methode für denselben IL-Offset Wenn die zu debuggende Komponente nicht an der korrekten Position für den festgelegten IL-Offset angehalten wird, schlägt die API fehl.  
+ Der durch den `ILOffset`-Parameter angegebene IL-Offset sollte sich an einer Funktions Aufrufsite befinden, und die zu debuggende Komponente sollte an einem Haltepunkt angehalten werden, der bei dem systemeigenen Offset festgelegt wird, der von der [ICorDebugCode3:: getreturnvalueliveoffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) -Methode für den gleichen IL-Offset Wenn die zu debuggende Komponente nicht an der korrekten Position für den festgelegten IL-Offset angehalten wird, schlägt die API fehl.  
   
  Wenn der Funktionsaufruf keinen Wert zurückgibt, schlägt die API fehl.  
   
  Die `ICorDebugILFrame3::GetReturnValueForILOffset`-Methode ist nur auf x86- und AMD64-basierten Systemen verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   

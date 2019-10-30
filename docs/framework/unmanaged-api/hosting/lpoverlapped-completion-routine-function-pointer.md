@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768378"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090909"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE-Funktionszeiger
+# <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE-Funktionszeiger
 Zeigt auf eine Funktion, die den Host benachrichtigt, wenn eine überlappende (d. h. asynchrone) E/A auf einem Gerät abgeschlossen ist.  
   
- Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
+ Dieser Funktionszeiger wurde in der .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,25 +38,25 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 ## <a name="parameters"></a>Parameter  
  `dwErrorCode`  
- [in] Ein Wert, der einen Fehlercode ist, wenn das Gerät geschlossen wurde. Andernfalls ist dieser Wert 0 (null).  
+ in Ein-Wert, bei dem es sich um einen Fehlercode handelt, wenn das Gerät geschlossen wurde. Andernfalls ist dieser Wert 0 (null).  
   
- Schließen eines Geräts bewirkt, dass alle ausstehenden e/a an das Gerät nicht sofort abgeschlossen werden.  
+ Das Schließen eines Geräts bewirkt, dass alle ausstehenden e/a-Vorgänge auf dem Gerät sofort abgeschlossen werden.  
   
  `dwNumberOfBytesTransfered`  
- [in] Die Anzahl der Bytes der e/a-Vorgang übertragen.  
+ in Die Anzahl von Bytes, die vom e/a-Vorgang übertragen werden.  
   
  `lpOverlapped`  
- [in] Ein Zeiger auf eine Struktur, die Informationen enthält, die verwendet werden, um die e/a-Anforderung abgeschlossen werden.  
+ in Ein Zeiger auf eine-Struktur, die Informationen enthält, die verwendet werden, um die e/a-Anforderung abzuschließen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion, die die `LPOVERLAPPED_COMPLETION_ROUTINE` ist eine Callback-Funktion und muss vom Writer der hostanwendung implementiert werden. Die Callback-Funktion kann der Host die abgeschlossene e/a-Anforderung zu verarbeiten.  
+ Die Funktion, zu der `LPOVERLAPPED_COMPLETION_ROUTINE` Punkte eine Rückruffunktion ist und vom Writer der Hostinganwendung implementiert werden muss. Die Rückruffunktion ermöglicht es dem Host, die abgeschlossene e/a-Anforderung zu verarbeiten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorWks.dll  
+ **Bibliothek:** Mscorwert. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

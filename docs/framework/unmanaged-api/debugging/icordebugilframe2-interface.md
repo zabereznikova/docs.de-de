@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917008"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095089"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2-Schnittstelle
 
@@ -31,7 +29,7 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[EnumerateTypeParameters-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Ruft ein ICorDebugTypeEnum-Objekt ab, <xref:System.Type> das die Parameter in diesem Frame enthält.|  
+|[EnumerateTypeParameters-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Ruft ein ICorDebugTypeEnum-Objekt ab, das die <xref:System.Type> Parameter in diesem Frame enthält.|  
 |[RemapFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ordnet eine bearbeitete Funktion neu zu, indem der neue MSIL-Offset angegeben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -40,11 +38,11 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

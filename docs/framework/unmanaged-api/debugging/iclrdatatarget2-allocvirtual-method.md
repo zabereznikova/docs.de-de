@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091145"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual-Methode
-Wird aufgerufen, durch die common Language Runtime (CLR) Datenzugriffsdiensten der Speicher im Adressraum dieses Prozesses Ziel reserviert werden.  
+Wird von den Common Language Runtime (CLR)-Datenzugriffs Diensten aufgerufen, um Speicher im Adressraum dieses Ziel Prozesses zuzuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,29 +39,29 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Parameter  
  `addr`  
- [in] Ein `CLRDATA_ADDRESS` Wert, der angibt, der die angeforderte Startadresse des Arbeitsspeichers, die zugeordnet werden.  
+ in Ein `CLRDATA_ADDRESS` Wert, der die angeforderte Startadresse des zugeordneten Speichers angibt.  
   
  `size`  
- [in] Die Größe in Bytes, des Arbeitsspeichers, die zugeordnet werden.  
+ in Die Größe des zugeordneten Speichers in Byte.  
   
  `typeFlags`  
- [in] Flags, die die Zuordnung von Arbeitsspeicher zu steuern. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
+ in Flags, die die Speicher Belegung steuern. Weitere Informationen finden Sie unter Win32-`VirtualAlloc` Funktion.  
   
  `protectFlags`  
- [in] Die Schutzattribute für den zugeordneten Speicher. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
+ in Die Schutz Attribute für den zugewiesenen Arbeitsspeicher. Weitere Informationen finden Sie unter Win32-`VirtualAlloc` Funktion.  
   
  `virt`  
- [out] Ein Zeiger auf eine `CLRDATA_ADDRESS` -Wert, der die eigentliche Startadresse des zugeordneten Speichers angibt.  
+ vorgenommen Ein Zeiger auf einen `CLRDATA_ADDRESS` Wert, der die tatsächliche Startadresse des zugeordneten Speichers angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `AllocVirtual` Methode dient als ein logischer Wrapper für die Win32- `VirtualAlloc` Funktion.  
+ Die `AllocVirtual`-Methode dient als logischer Wrapper für die Win32-`VirtualAlloc`-Funktion.  
   
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
