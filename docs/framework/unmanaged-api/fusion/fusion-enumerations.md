@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e7670e19d764518cc8d88f702f169610b72642a9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108504"
 ---
 # <a name="fusion-enumerations"></a>Fusionsenumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die von der Fusion-API verwendet werden.  
@@ -35,7 +33,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt die Äquivalenz zweier Assemblyidentitäten an, die durch die [CompareAssemblyIdentity](compareassemblyidentity-function.md) -Funktion bestimmt werden.  
   
  [CREATE_ASM_NAME_OBJ_FLAGS-Enumeration](create-asm-name-obj-flags-enumeration.md)  
- Gibt die Attribute eines `IAssemblyName` Objekts an, wenn es von der Funktion " [kreateassemblynameobject](createassemblynameobject-function.md) " erstellt wird.  
+ Gibt die Attribute eines `IAssemblyName` Objekts an, wenn es von [der Funktion "](createassemblynameobject-function.md) -Funktion von" erstellt wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Fusion-Schnittstellen](fusion-interfaces.md)  

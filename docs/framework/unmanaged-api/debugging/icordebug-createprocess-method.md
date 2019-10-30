@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738332"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110995"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess-Methode
-Startet einen Prozess und seine primäre Thread unter der Kontrolle des Debuggers.  
+Startet einen Prozess und seinen primären Thread unter der Kontrolle des Debuggers.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,52 +46,52 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parameter  
  `lpApplicationName`  
- [in] Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Modul der gestartete Prozess ausgeführt werden soll. Das Modul wird im Kontext des aufrufenden Prozesses ausgeführt.  
+ in Zeiger auf eine auf NULL endende Zeichenfolge, die das Modul angibt, das vom gestarteten Prozess ausgeführt werden soll. Das Modul wird im Sicherheitskontext des aufrufenden Prozesses ausgeführt.  
   
  `lpCommandLine`  
- [in] Zeiger auf eine auf Null endende Zeichenfolge, die angibt, die Befehlszeile der gestartete Prozess ausgeführt werden soll. Der Name der Anwendung (z. B. "SomeApp.exe") muss das erste Argument sein.  
+ in Zeiger auf eine auf NULL endende Zeichenfolge, die die Befehlszeile angibt, die vom gestarteten Prozess ausgeführt werden soll. Der Anwendungsname (z. b. "someapp. exe") muss das erste Argument sein.  
   
  `lpProcessAttributes`  
- [in] Zeiger auf eine Win32- `SECURITY_ATTRIBUTES` -Struktur, die die Sicherheitsbeschreibung für den Prozess angibt. Wenn `lpProcessAttributes` ist null ist, ruft der Prozess eine standardmäßige Sicherheitsbeschreibung.  
+ in Ein Zeiger auf eine Win32-`SECURITY_ATTRIBUTES`-Struktur, die die Sicherheits Beschreibung für den Prozess angibt. Wenn `lpProcessAttributes` NULL ist, erhält der Prozess eine Standard Sicherheits Beschreibung.  
   
  `lpThreadAttributes`  
- [in] Zeiger auf eine Win32- `SECURITY_ATTRIBUTES` -Struktur, die die Sicherheitsbeschreibung für den primären Thread des Prozesses angibt. Wenn `lpThreadAttributes` ist null, der Thread Ruft eine standardmäßige Sicherheitsbeschreibung.  
+ in Ein Zeiger auf eine Win32-`SECURITY_ATTRIBUTES`-Struktur, die die Sicherheits Beschreibung für den primären Thread des Prozesses angibt. Wenn `lpThreadAttributes` NULL ist, erhält der Thread eine Standard Sicherheits Beschreibung.  
   
  `bInheritHandles`  
- [in] Legen Sie auf `true` um anzugeben, dass jede vererbbar Handle in den aufrufenden Prozess, durch den Prozess gestartet geerbt wird oder `false` , um anzugeben, dass die Handles nicht geerbt werden. Die vererbten Handles besitzen die gleichen Wert und dieselben Zugriffsrechte wie die ursprünglichen Handles.  
+ in Legen Sie diese Einstellung auf `true` fest, um anzugeben, dass jedes vererbbare Handle im aufrufenden Prozess vom gestarteten Prozess geerbt wird, oder `false`, um anzugeben, dass die Handles nicht vererbt werden. Die geerbten Handles haben den gleichen Wert und die gleichen Zugriffsrechte wie die ursprünglichen Handles.  
   
  `dwCreationFlags`  
- [in] Eine bitweise Kombination der [Win32 Prozesserstellungsflags](https://go.microsoft.com/fwlink/?linkid=69981) , die die Prioritätsklasse und das Verhalten des gestarteten Prozess steuern.  
+ in Eine bitweise Kombination der [Win32-Prozesserstellungsflags](https://go.microsoft.com/fwlink/?linkid=69981) , die die Prioritäts Klasse und das Verhalten des gestarteten Prozesses steuern.  
   
  `lpEnvironment`  
- [in] Zeiger auf eine Umgebungsblock für den neuen Prozess.  
+ in Zeiger auf einen Umgebungsblock für den neuen Prozess.  
   
  `lpCurrentDirectory`  
- [in] Zeiger auf eine auf Null endende Zeichenfolge, die den vollständigen Pfad zum aktuellen Verzeichnis für den Prozess angibt. Wenn dieser Parameter null ist, wird der neue Prozess das gleiche aktuelle Laufwerk und Verzeichnis wie der aufrufende Prozess haben.  
+ in Ein Zeiger auf eine mit NULL endenden Zeichenfolge, die den vollständigen Pfad zum aktuellen Verzeichnis für den Prozess angibt. Wenn dieser Parameter NULL ist, weist der neue Prozess dasselbe aktuelle Laufwerk und Verzeichnis wie der aufrufende Prozess auf.  
   
  `lpStartupInfo`  
- [in] Zeiger auf eine Win32- `STARTUPINFOW` Struktur, die der Windowstation, Desktop, standard-Handles und der Darstellung des Hauptfensters der gestartete Prozess angibt.  
+ in Ein Zeiger auf eine Win32-`STARTUPINFOW`-Struktur, die die Fenster Station, den Desktop, die Standard Handles und die Darstellung des Hauptfensters für den gestarteten Prozess angibt.  
   
  `lpProcessInformation`  
- [in] Zeiger auf eine Win32- `PROCESS_INFORMATION` Struktur, die erforderlichen Informationen zu den zu startenden Prozess angibt.  
+ in Ein Zeiger auf eine Win32-`PROCESS_INFORMATION`-Struktur, die die Identifikationsinformationen über den Prozess angibt, der gestartet werden soll.  
   
  `debuggingFlags`  
- [in] Der Wert, die angibt, die Debugoptionen CorDebugCreateProcessFlags-Enumeration.  
+ in Ein Wert der cordebugkreateprocessflags-Enumeration, der die Debugoptionen angibt.  
   
  `ppProcess`  
- [out] Ein Zeiger auf die Adresse des ein ICorDebugProcess-Objekt, das den Prozess darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugProcess-Objekts, das den Prozess darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Parameter dieser Methode sind identisch mit denen der Win32- `CreateProcess` Methode.  
+ Die Parameter dieser Methode sind identisch mit denen der Win32-`CreateProcess`-Methode.  
   
- Legen Sie zum Aktivieren von nicht verwaltetem Debuggen im gemischten Modus `dwCreationFlags` auf DEBUG_PROCESS &#124; nur diesen Prozess debuggen. Wenn Sie nur verwaltete Debuggen verwenden möchten, legen Sie diese Flags nicht.  
+ Um das nicht verwaltete Debuggen im gemischten Modus zu aktivieren, &#124; legen Sie `dwCreationFlags` auf DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS fest. Wenn Sie nur verwaltetes Debuggen verwenden möchten, legen Sie diese Flags nicht fest.  
   
- Wenn der Debugger und der Prozess debuggt (den angefügten Prozess) gemeinsam eine Konsole, und wenn interop-Debuggen verwendet wird, es ist möglich, dass der angefügte Prozess Konsole sperren und ein Debug-Ereignis beenden. Der Debugger wird dann jeder Versuch, verwenden Sie die Konsole blockiert. Um dieses Problem zu vermeiden, legen Sie die CREATE_NEW_CONSOLE-Flag in der `dwCreationFlags` Parameter.  
+ Wenn der Debugger und der zu debuggende Prozess (der angefügte Prozess) eine einzelne Konsole gemeinsam verwenden und das Interop-Debuggen verwendet wird, ist es möglich, dass der angefügte Prozess Konsolen Sperren aufrechterhalten und bei einem Debugereignis angehalten wird. Der Debugger blockiert dann den Versuch, die Konsole zu verwenden. Um dieses Problem zu vermeiden, legen Sie das CREATE_NEW_CONSOLE-Flag im `dwCreationFlags`-Parameter fest.  
   
- Interop-Debuggen wird auf Win9x und nicht-X86 Plattformen wie z. B. IA-64- und AMD64-basierten Plattformen nicht unterstützt.  
+ Interop-Debuggen wird auf Win9x-und nicht-x86-Plattformen wie IA-64-basierten und AMD64-basierten Plattformen nicht unterstützt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

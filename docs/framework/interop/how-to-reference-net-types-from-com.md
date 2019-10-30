@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verweisen auf .NET-Typen in COM'
+title: 'Gewusst wie: Verweisen auf .NET-Typen in COM'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124174"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>Vorgehensweise: Verweisen auf .NET-Typen in COM
+# <a name="how-to-reference-net-types-from-com"></a>Gewusst wie: Verweisen auf .NET-Typen in COM
 Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM und .NET Framework. Microsoft Visual Basic-Clients können ein .NET-Objekt im Objektkatalog anzeigen. Dort werden Objektmethoden und –syntax sowie Eigenschaften und Felder in gleicher Weise angegeben wie für ein beliebiges anderes COM-Objekt.  
   
  Der Prozess zum Importieren einer Typbibliothek ist etwas komplizierter für C++-Clients, obwohl dieselben Tools verwendet werden wie beim Exportieren von Metadaten in eine COM-Typbibliothek. Zum Verweisen auf .NET-Objektmember von einem nicht verwalteten C++-Client aus verweisen Sie auf die TLB-Datei (die mit Tlbexp.exe erstellt wurde) mit der **#import**-Anweisung. Zum Verweisen auf eine Typbibliothek von C++ müssen Sie entweder die **raw_interfaces_only**-Option angeben oder die Definitionen in die Basisklassenbibliothek Mscorlib.tlb importieren.  
@@ -34,7 +32,7 @@ Hinsichtlich Clientcode und Servercode bestehen kaum Unterschiede zwischen COM u
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     - oder -   
+     - oder -  
   
 - Schließen Sie eine #import-Anweisung für Mscorlib.tlb ein. Beispiel:  
   

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111027"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator-Schnittstelle
-Wird von der Datenzugriffsdienstebene zum Suchen von Metadaten von Assemblys in einem Zielprozess.  
+Wird von der Ebene der Datenzugriffs Dienste verwendet, um Metadaten von Assemblys in einem Ziel Prozess zu suchen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetMetaData-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Ruft die Metadaten eines Bilds aus dem Zielprozess ab.|  
+|[GetMetaData-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Ruft die Metadaten eines Bilds aus dem Ziel Prozess ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. Beispielsweise würde die Implementierung für einen aktiven Prozess von der ein Speicherabbild unterscheiden.  
+ Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. Beispielsweise unterscheidet sich die Implementierung für einen Live Prozess von der eines Speicher Abbilds.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

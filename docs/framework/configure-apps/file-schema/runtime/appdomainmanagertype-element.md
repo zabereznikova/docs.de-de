@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainManagerType element
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ffb297cc38f20917e720b216607e9ccfc966866
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: bae4aa39f9c43480ac2ef984f78834b68646742d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252829"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118240"
 ---
-# <a name="appdomainmanagertype-element"></a>\<AppDomainManagerType >-Element
+# <a name="appdomainmanagertype-element"></a>\<AppDomainManagerType-> Element
 Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsdomäne dient.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppDomainManagerType >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,20 +46,20 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Um den Typ des Anwendungs Domänen-Managers anzugeben, müssen Sie sowohl dieses Element als auch das [ \<AppDomainManagerAssembly->](appdomainmanagerassembly-element.md) Element angeben. Wenn keines dieser Elemente angegeben ist, wird das andere ignoriert.  
+ Um den Typ des Anwendungs Domänen-Managers anzugeben, müssen Sie sowohl dieses Element als auch das [\<AppDomainManagerAssembly >](appdomainmanagerassembly-element.md) -Element angeben. Wenn keines dieser Elemente angegeben ist, wird das andere ignoriert.  
   
- Wenn die Standard Anwendungsdomäne geladen wird, <xref:System.TypeLoadException> wird ausgelöst, wenn der angegebene Typ nicht in der Assembly vorhanden ist, die durch das [ \<> Element AppDomainManagerAssembly](appdomainmanagerassembly-element.md) angegeben wird. der Prozess kann nicht gestartet werden.  
+ Wenn die Standard Anwendungsdomäne geladen wird, wird <xref:System.TypeLoadException> ausgelöst, wenn der angegebene Typ nicht in der Assembly vorhanden ist, die vom [\<AppDomainManagerAssembly->](appdomainmanagerassembly-element.md) Element angegeben wird. und der Prozess kann nicht gestartet werden.  
   
- Wenn Sie den Anwendungs Domänen-Manager für die Standard Anwendungsdomäne angeben, erben andere Anwendungs Domänen, die aus der Standard Anwendungsdomäne erstellt wurden, den Typ des Anwendungs Domänen-Managers. Verwenden Sie <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> die <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> Eigenschaften und, um einen anderen Anwendungs Domänen-Manager-Typ für eine neue Anwendungsdomäne anzugeben.  
+ Wenn Sie den Anwendungs Domänen-Manager für die Standard Anwendungsdomäne angeben, erben andere Anwendungs Domänen, die aus der Standard Anwendungsdomäne erstellt wurden, den Typ des Anwendungs Domänen-Managers. Verwenden Sie die Eigenschaften <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> und <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>, um einen anderen Anwendungs Domänen-Manager-Typ für eine neue Anwendungsdomäne anzugeben.  
   
- Die Angabe des Anwendungs Domänen-Manager-Typs erfordert, dass die Anwendung volle Vertrauenswürdigkeit besitzt. (Eine Anwendung, die auf dem Desktop ausgeführt wird, hat beispielsweise volle Vertrauenswürdigkeit.) Wenn die Anwendung nicht über volle Vertrauenswürdigkeit verfügt, <xref:System.TypeLoadException> wird eine ausgelöst.  
+ Die Angabe des Anwendungs Domänen-Manager-Typs erfordert, dass die Anwendung volle Vertrauenswürdigkeit besitzt. (Eine Anwendung, die auf dem Desktop ausgeführt wird, hat beispielsweise volle Vertrauenswürdigkeit.) Wenn die Anwendung nicht voll vertrauenswürdig ist, wird ein <xref:System.TypeLoadException> ausgelöst.  
   
- Das Format des Typs und Namespace entspricht dem Format, das für die <xref:System.Type.FullName%2A?displayProperty=nameWithType> Eigenschaft verwendet wird.  
+ Das Format des Typs und Namespace entspricht dem Format, das für die <xref:System.Type.FullName%2A?displayProperty=nameWithType>-Eigenschaft verwendet wird.  
   
  Dieses Konfigurationselement ist nur in den .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass der Anwendungs Domänen-Manager für die Standard Anwendungsdomäne `MyMgr` eines Prozesses der `AdMgrExample` Typ in der Assembly ist.  
+ Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass der Anwendungs Domänen-Manager für die Standard Anwendungsdomäne eines Prozesses der `MyMgr` Typ in der `AdMgrExample` Assembly ist.  
   
 ```xml  
 <configuration>  
@@ -77,7 +75,7 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<AppDomainManagerAssembly-> Element](appdomainmanagerassembly-element.md)
+- [\<AppDomainManagerAssembly >-Element](appdomainmanagerassembly-element.md)
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [SetAppDomainManagerType-Methode](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

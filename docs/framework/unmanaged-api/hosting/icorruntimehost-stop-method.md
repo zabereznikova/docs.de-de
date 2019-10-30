@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca51b87e7afc8e9e48d541a32b3bd60a19a5ff70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5fcf8bc861b2ef0b8ea9f5a5e46585564cc26615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965969"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127700"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop-Methode
 Beendet die Ausführung von Code in der Laufzeit für den aktuellen Prozess.  
@@ -43,17 +41,17 @@ HRESULT Stop ();
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist normalerweise nicht erforderlich, `Stop` die-Methode aufzurufen, da der Code nicht mehr ausgeführt wird, wenn der Prozess beendet wird.  
+ Es ist in der Regel nicht erforderlich, die `Stop`-Methode aufzurufen, da der Code beim Beenden des Prozesses beendet wird.  
   
 > [!NOTE]
-> Nach einem-Aufrufvorgang `Stop`kann die CLR nicht mehr in demselben Prozess initialisiert werden.  
+> Nach einem `Stop`-Aufrufvorgang kann die CLR nicht in demselben Prozess erneut initialisiert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework Versionen:** 1,0, 1,1  
   

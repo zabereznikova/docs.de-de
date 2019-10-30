@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 223989d883c421be228fb3d6a608643a5246c060
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1384acff4ea3d1aa820b065cd2c56f649f0cbdbb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763702"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127923"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory-Methode
-Ruft einen Wert, der angibt, ob dieses Modul nur im Arbeitsspeicher vorhanden ist.  
+Ruft einen Wert ab, der angibt, ob dieses Modul nur im Arbeitsspeicher vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT IsInMemory(
   
 ## <a name="parameters"></a>Parameter  
  `pInMemory`  
- [out] `true` Wenn dieses Modul nur im Speicher vorhanden ist, andernfalls `false`.  
+ [out] `true`, wenn dieses Modul nur im Arbeitsspeicher vorhanden ist. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die common Language Runtime (CLR) unterstützt das Laden der Module von unformatierte Bytedatenströme. Solcher Module heißen *in-Memory-Module* und sind nicht auf dem Datenträger vorhanden.  
+ Der Common Language Runtime (CLR) unterstützt das Laden von Modulen aus unformatierten Datenströmen. Solche Module werden als *in-Memory-Module* bezeichnet und sind auf dem Datenträger nicht vorhanden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

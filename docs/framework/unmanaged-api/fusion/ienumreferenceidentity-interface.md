@@ -14,29 +14,27 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796434"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131747"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity-Schnittstelle
-Dient als Enumerator für eine Auflistung von `IReferenceIdentity` -Objekten.  
+Dient als Enumerator für eine Auflistung von `IReferenceIdentity`-Objekten.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumReferenceIdentity` ab, der dieselben Member wie dieses `IEnumReferenceIdentity`enthält.|  
-|`IEnumReferenceIdentity::Next`|Ruft die angegebene Anzahl von `IReferenceIdentity` -Objekten ab der aktuellen Position ab.|  
+|`IEnumReferenceIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf einen neuen `IEnumReferenceIdentity` ab, der dieselben Member wie diese `IEnumReferenceIdentity`enthält.|  
+|`IEnumReferenceIdentity::Next`|Ruft die angegebene Anzahl von `IReferenceIdentity` Objekten ab der aktuellen Position ab.|  
 |`IEnumReferenceIdentity::Reset`|Verschiebt den Anweisungs Zeiger an den Anfang dieses `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Skip`|Verschiebt den Anweisungs Zeiger um die angegebene Anzahl von Elementen, beginnend an der aktuellen Position.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

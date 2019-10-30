@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108008"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB-Struktur
-Enthält Informationen zu einem einzelnen Attribut in einer Assembly und besteht aus drei `DWORD`s. Jeder `DWORD` ist ein Offset in einem Zeichen Puffer, der von `CurrentIntoBuffer` der-Methode der [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) -Schnittstelle erzeugt wird.  
+Enthält Informationen zu einem einzelnen Attribut in einer Assembly und besteht aus drei `DWORD`s. Jede `DWORD` ist ein Offset in einem Zeichen Puffer, der durch die `CurrentIntoBuffer`-Methode der [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) -Schnittstelle erzeugt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|Der dritte Offset im Zeichen Puffer. Dieser Speicherort markiert den Anfang des Attribut Werts.|  
   
 ## <a name="sample"></a>Beispiel  
- Im folgenden Beispiel werden mehrere grundlegende Schritte veranschaulicht, die letztendlich zu einer `IDENTITY_ATTRIBUTE_BLOB` aufgefüllten Struktur führen:  
+ Im folgenden Beispiel werden mehrere grundlegende Schritte veranschaulicht, die letztendlich zu einer `IDENTITY_ATTRIBUTE_BLOB` Struktur führen:  
   
 1. Rufen Sie eine [IReferenceIdentity](ireferenceidentity-interface.md) für die Assembly ab.  
   
-2. Rufen Sie `IReferenceIdentity::EnumAttributes` die-Methode auf, und rufen Sie eine [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)ab.  
+2. Rufen Sie die `IReferenceIdentity::EnumAttributes`-Methode auf, und rufen Sie eine [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)ab.  
   
-3. Erstellen Sie einen Zeichen Puffer, und wandeln Sie ihn `IDENTITY_ATTRIBUTE_BLOB` als-Struktur um.  
+3. Erstellen Sie einen Zeichen Puffer, und wandeln Sie ihn als `IDENTITY_ATTRIBUTE_BLOB`-Struktur um.  
   
-4. Ruft die `CurrentIntoBuffer` -Methode `IEnumIDENTITY_ATTRIBUTE` der-Schnittstelle auf. Diese Methode kopiert die Attribute `Namespace`, `Name`und `Value` in den Zeichen Puffer. Die drei Offsets für diese Zeichen folgen werden in der `IDENTITY_ATTRIBUTE_BLOB` -Struktur verfügbar.  
+4. Ruft die `CurrentIntoBuffer`-Methode der `IEnumIDENTITY_ATTRIBUTE`-Schnittstelle auf. Diese Methode kopiert die Attribute `Namespace`, `Name`und `Value` in den Zeichen Puffer. Die drei Offsets für diese Zeichen folgen werden in der `IDENTITY_ATTRIBUTE_BLOB` Struktur verfügbar.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -236,7 +234,7 @@ Exit:
  Version = 2.0.0.0  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

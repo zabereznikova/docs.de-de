@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1aabfad14ee2eb35916bbf115631602276cd1fc3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796853"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109891"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory-Funktion
 Ruft den Pfad des Verzeichnisses für den Anwendungs Verlauf ab.  
@@ -48,17 +46,17 @@ HRESULT GetHistoryFileDirectory (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`wzDir`oder `pdwSize` ist NULL, oder die Versions Zeichenfolge ist falsch.|  
+|E_INVALIDARG|`wzDir` oder `pdwSize` ist NULL, oder die Versions Zeichenfolge ist falsch.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nach erfolgreichem Abschluss wird `pdwSize` das-Argument auf die Länge der Pfad Zeichenfolge festgelegt.  
+ Nach erfolgreichem Abschluss wird das `pdwSize`-Argument auf die Länge der Pfad Zeichenfolge festgelegt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Fern** "Fusion. dll" und "mscorwert. dll". Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
+ **Bibliothek:** "Fusion. dll" und "mscorwert. dll". Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e32ce10b708afa5741d83cbd05f14accb4b2014f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137901"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode-Methode
-Ruft die ICorDebugCode-Instanz, die diesem ICorDebugFunction-Objekt zugeordneten Codes Microsoft intermediate Language (MSIL) darstellt.  
+Ruft die ICorDebugCode-Instanz ab, die den MSIL-Code (Microsoft Intermediate Language) darstellt, der mit diesem ICorDebugFunction-Objekt verknüpft ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parameter  
  `ppCode`  
- [out] Ein Zeiger auf die `ICorDebugCode` -Instanz oder null, wenn die Funktion nicht in MSIL kompiliert wurde.  
+ vorgenommen Ein Zeiger auf die `ICorDebugCode` Instanz oder NULL, wenn die Funktion nicht in MSIL kompiliert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Bearbeiten und Fortfahren wurde zugelassen. auf diese Funktion, die `GetILCode` Methode den MSIL-Code für diese Funktion die bearbeitete Version des Codes in der common Language Runtime (CLR) erhalten.  
+ Wenn "Bearbeiten und Fortfahren" für diese Funktion zulässig ist, erhält die `GetILCode` Methode den MSIL-Code, der der bearbeiteten Version des Codes der Funktion in der Common Language Runtime (CLR) entspricht.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -14,42 +14,40 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 518248651de6d8afdf25692c5f48da52b11eb0f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47c6dd9045636bcfbe07c909fec3fda515d28ee8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763398"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124523"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2-Schnittstelle
-Bietet alle Funktionen des die [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Schnittstelle; darüber hinaus bietet Methoden, mit denen Threadabbrüche um verzögert werden, für den aktuellen Thread.  
+Stellt die gesamte Funktionalität der [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Schnittstelle bereit. Außerdem stellt Methoden bereit, mit denen Thread Abbrüche im aktuellen Thread verzögert werden können.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[BeginPreventAsyncAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Verzögerungen bei der neuer Thread abgebrochen werden Anforderungen für den aktuellen Thread.|  
-|[EndPreventAsyncAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Ermöglicht, dass neue oder bricht ausstehende Thread Abort-Anforderungen zu einer Thread ab, für den aktuellen Thread.|  
+|[BeginPreventAsyncAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-beginpreventasyncabort-method.md)|Verzögert neue Thread Abbruch Anforderungen für den aktuellen Thread.|  
+|[EndPreventAsyncAbort-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-endpreventasyncabort-method.md)|Ermöglicht es, dass neue oder ausstehende Thread Abbruch Anforderungen dazu führen, dass Threads im aktuellen Thread abgebrochen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICLRTask2` Schnittstelle erbt die `ICLRTask` Schnittstelle und fügt die Methoden, die der Host verzögert Threadabbrüche, um einen Bereich von Code zu schützen, die nicht fehlschlagen darf. Aufrufen von `BeginPreventAsyncAbort` erhöht den Zähler Verzögerung Threadabbruchs für den aktuellen Thread aufrufen und `EndPreventAsyncAbort` verringert es. Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` können geschachtelt werden. Solange der Zähler größer als 0 (null) ist, verzögert Threadabbrüche für den aktuellen Thread werden.  
+ Die `ICLRTask2`-Schnittstelle erbt die `ICLRTask`-Schnittstelle und fügt Methoden hinzu, mit denen der Host Thread Abbrüche verzögern kann, um einen Code Bereich zu schützen, der nicht fehlschlagen darf. Durch Aufrufen von `BeginPreventAsyncAbort` wird der Delay-Thread-Abort-Leistungswert für den aktuellen Thread erhöht, und der Aufruf von `EndPreventAsyncAbort` Dekremente ihn. Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` können eingebettet werden. Solange der Leistungswert größer als 0 (null) ist, werden Thread Abbrüche für den aktuellen Thread verzögert.  
   
- Wenn Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` sind nicht gekoppelt werden, es ist möglich, einen Zustand zu erreichen, in welchem Thread Threadabbrüche für den aktuellen Thread nicht übermittelt werden.  
+ Wenn Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` nicht gekoppelt sind, ist es möglich, einen Zustand zu erreichen, in dem Thread Abbrüche nicht an den aktuellen Thread übermittelt werden können.  
   
- Die Verzögerung wird für einen Thread, der selbst abbricht, nicht berücksichtigt.  
+ Die Verzögerung wird für einen Thread, der sich selbst abbricht, nicht berücksichtigt.  
   
- Die Funktionalität, die von dieser Funktion verfügbar gemacht wird, wird intern von der virtuellen Maschine (VM) verwendet. Falsche Verwendung dieser Methoden möglicherweise nicht definiertes Verhalten auf dem virtuellen Computer. Zum Beispiel der Aufruf `EndPreventAsyncAbort` erst nach Aufrufen von `BeginPreventAsyncAbort` konnte den Zähler auf 0 festgelegt, wenn es zuvor von der virtuellen Computer erhöht wurde. Auf ähnliche Weise wird der interne Zähler nicht auf Überläufe überprüft. Wenn es die ganzzahligen Grenzwert überschreitet, da er sowohl auf dem Host und auf dem virtuellen Computer um eins erhöht wird, ist das resultierende Verhalten nicht angegeben.  
+ Die Funktionalität, die von diesem Feature verfügbar gemacht wird, wird intern vom virtuellen Computer (VM) verwendet. Der Missbrauch dieser Methoden kann zu einem nicht angegebenen Verhalten auf dem virtuellen Computer führen. Wenn Sie z. b. `EndPreventAsyncAbort` aufrufen, ohne zuerst `BeginPreventAsyncAbort` aufrufen, können Sie den-Wert auf NULL festlegen, wenn der virtuelle Computer ihn zuvor erhöht hat. Auf ähnliche Weise wird der interne Counter nicht auf einen Überlauf geprüft. Wenn Sie die ganzzahlige Beschränkung überschreitet, weil Sie sowohl vom Host als auch vom virtuellen Computer inkrementiert wird, ist das resultierende Verhalten nicht angegeben.  
   
- Für Informationen zu Elementen von geerbt `ICLRTask` und zur Verwendung dieser Schnittstelle, finden Sie unter den [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Schnittstelle.  
+ Informationen zu Membern, die von `ICLRTask` geerbt werden, sowie zu den anderen Verwendungsmöglichkeiten dieser Schnittstelle finden Sie in der [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

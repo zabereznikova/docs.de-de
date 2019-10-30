@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129451"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost-Co-Klasse
-Stellt Schnittstellen für die Verwaltung der Ausführung von Code von der Laufzeit bereit.  
+Stellt Schnittstellen zum Verwalten der Codeausführung durch die Laufzeit bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,15 +37,15 @@ coclass CLRRuntimeHost {
   
 |Interface|Beschreibung|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Stellt Methoden zum Steuern der Ausführung von Anwendungen von der Laufzeit bereit.|  
-|[ICLRValidator-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Stellt Methoden für die Überprüfung von portierbare ausführbare Images und detaillierte Melden von Validierungsfehlern.|  
+|[ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Stellt Methoden zum Steuern der Ausführung von Anwendungen durch die Laufzeit bereit.|  
+|[ICLRValidator-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Stellt Methoden für die Validierung von portablen ausführbaren Images sowie für die ausführliche Berichterstellung von Validierungs Fehlern bereit.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

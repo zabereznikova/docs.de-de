@@ -12,14 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fea08331fffb85c91721d60764bae8bfe8b30e27
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: b59fbc2acefa907bb3f881b7ed183388d2e4c368
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103370"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind-Enumeration
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -43,14 +41,14 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|Der Debugger hat Zugriff auf Informationen aus der ReJIT-Instrumentierung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Member der `ILCodeKind` -Enumeration kann an die Methoden [enumeratelocalvariablesex](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) und [getlocalvariableex](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) weitergegeben werden, um zu bestimmen, ob der Debugger auf Variablen zugreifen kann, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurden, und auf die [ Getcodeex](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) -Methode, um zu bestimmen, ob der Debugger auf instrumentierte Il zugreifen kann.  
+ Ein Member der `ILCodeKind`-Enumeration kann an die Methoden [enumeratelocalvariablesex](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) und [getlocalvariableex](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) weitergegeben werden, um zu bestimmen, ob der Debugger auf Variablen zugreifen kann, die in der Profiler-ReJIT-Instrumentation hinzugefügt wurden, und auf [getcodeex. ](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)Methode, um zu bestimmen, ob der Debugger auf instrumentierte Il zugreifen kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
@@ -58,4 +56,4 @@ typedef enum ILCodeKind {
 
 - [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [ICorDebugILFrame4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [ReJIT Leitfaden](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)
+- [ReJIT: Anleitung](https://blogs.msdn.microsoft.com/davbr/2011/10/12/rejit-a-how-to-guide/)

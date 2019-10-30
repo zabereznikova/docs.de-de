@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5c03b7010418f75aff984102d7fa4fb089c4d59
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122933"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion-Methode
-Wird aufgerufen, indem [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) zum Berichten an den Debugger des Ergebnis der Versuch, einen angegebenen Speicherbereich aufzulisten.  
+Wird von [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) aufgerufen, um dem Debugger das Ergebnis eines Versuchs, einen angegebenen Bereich des Speichers aufzulisten, zu melden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- [in] Die Startadresse des Arbeitsspeicherbereichs, die aufgelistet werden soll.  
+ in Die Startadresse des Speicherbereichs, der aufgelistet werden soll.  
   
  `size`  
- [in] Die Größe des Arbeitsspeicherbereichs in Bytes.  
+ in Die Größe des Arbeitsspeicher Bereichs in Bytes.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICLRDataEnumMemoryRegions::EnumMemoryRegions` Methode wird diese Callback-Methode aufrufen, nach jedem Versuch, einen Speicher aufzulisten. Die Enumeration wird fortgesetzt, selbst wenn diese Methode einen HRESULT-Fehler zurückgegeben.  
+ Die `ICLRDataEnumMemoryRegions::EnumMemoryRegions`-Methode ruft diese Rückruf Methode nach jedem Versuch auf, einen Speicherbereich aufzulisten. Die Enumeration wird auch dann fortgesetzt, wenn diese Methode ein HRESULT zurückgibt, das einen Fehler angibt.  
   
- Regionen, die von diesem Rückruf gemeldeten können es sich um Duplikate oder überlappende Bereiche sein.  
+ Die von diesem Rückruf gemeldeten Regionen können Duplikate oder überlappende Bereiche sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

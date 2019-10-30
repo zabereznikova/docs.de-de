@@ -10,14 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6ed7d25593f9dd5d5d01f8c06024dcf8acfcfea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916478"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097451"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat-Aufzählung
 Beschreibt das Format der Daten in einem Byte-Array, das Informationen über ein systemeigenes Ausnahme-Debug-Ereignis enthält.  
@@ -39,17 +37,17 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Die Daten stellen einen 64-Bit-Windows-Ausnahmedatensatz dar.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Member der `CorDebugRecordFormat` -Enumeration wird an die [decodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) -Methode übermittelt, um das Format des Bytearrays `pRecord` in seinem Argument anzugeben.  
+ Ein Member der `CorDebugRecordFormat` Enumeration wird an die [decodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) -Methode übermittelt, um das Format des Bytearrays im `pRecord`-Argument anzugeben.  
   
 > [!NOTE]
 > Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

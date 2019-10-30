@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739760"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097934"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult-Enumeration
 Stellt Details darüber bereit, wie der Wert des Anweisungszeigers (IP) abgerufen wurde.  
@@ -43,18 +41,18 @@ typedef enum CorDebugMappingResult {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|Der systemeigene Code ist im Prolog, sodass der Wert, der die IP-Adresse 0 ist.|  
-|`MAPPING_EPILOG`|Der systemeigene Code ist in einem Epilog, daher ist der Wert, der die IP-Adresse die Adresse der letzten Anweisung der Methode.|  
-|`MAPPING_NO_INFO`|Keine Informationen über die Zuordnung ist für die Methode verfügbar, sodass der Wert, der die IP-Adresse 0 ist.|  
-|`MAPPING_UNMAPPED_ADDRESS`|Obwohl der Zuordnungsinformationen für die Methode wird, kann nicht die aktuelle Adresse Microsoft intermediate Language (MSIL)-Code zugeordnet werden. Der Wert, der die IP-Adresse ist 0.|  
-|`MAPPING_EXACT`|Die Methode ordnet genau MSIL-Code oder der Frame hat interpretiert, sodass der Wert, der die IP-Adresse korrekt ist.|  
-|`MAPPING_APPROXIMATE`|Die Methode wurde erfolgreich zugeordnet, aber der Wert, der die IP-Adresse ist möglicherweise ungefähre.|  
+|`MAPPING_PROLOG`|Der Native Code befindet sich im Prolog, sodass der Wert der IP-Adresse 0 ist.|  
+|`MAPPING_EPILOG`|Der Native Code befindet sich in einem Epilog, sodass der Wert der IP-Adresse die Adresse der letzten Anweisung der Methode ist.|  
+|`MAPPING_NO_INFO`|Es sind keine Mapping-Informationen für die-Methode verfügbar, daher ist der Wert der IP-Adresse 0.|  
+|`MAPPING_UNMAPPED_ADDRESS`|Obwohl die-Methode Zuordnungsinformationen enthält, kann die aktuelle Adresse nicht dem MSIL-Code (Microsoft Intermediate Language) zugeordnet werden. Der Wert der IP-Adresse ist 0 (null).|  
+|`MAPPING_EXACT`|Entweder wird die-Methode exakt dem MSIL-Code zugeordnet, oder der Frame wurde interpretiert, sodass der Wert der IP-Adresse korrekt ist.|  
+|`MAPPING_APPROXIMATE`|Die Methode wurde erfolgreich zugeordnet, aber der Wert der IP-Adresse kann ungefähre Werte aufweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) Methode, um den Wert des Anweisungszeigers abzurufen.  
+ Sie können die [ICorDebugILFrame:: GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) -Methode verwenden, um den Wert des Anweisungs Zeigers zu erhalten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

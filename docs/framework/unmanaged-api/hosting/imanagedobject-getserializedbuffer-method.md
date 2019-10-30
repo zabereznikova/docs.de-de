@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65ac35e254368b53ac2751e84be7dfe052fa0b53
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a55ae265230c4da3cc0a19b06a7597be8661beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103244"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer-Methode
-Ruft eine Zeichenfolgendarstellung von diesem verwalteten Objekt ab.  
+Ruft die Zeichen folgen Darstellung dieses verwalteten Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT GetSerializedBuffer (
   
 ## <a name="parameters"></a>Parameter  
  `pBSTR`  
- [out] Ein Zeiger auf eine Zeichenfolge, die das serialisierte Objekt ist.  
+ vorgenommen Ein Zeiger auf eine Zeichenfolge, die das serialisierte Objekt ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetSerializedBuffer` Methode serialisiert das Objekt aus, damit es an den Client gemarshallt werden kann.  
+ Die `GetSerializedBuffer`-Methode serialisiert das-Objekt, sodass es an den Client gemarshallt werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

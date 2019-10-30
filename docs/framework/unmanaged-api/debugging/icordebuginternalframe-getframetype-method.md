@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760049"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122717"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType-Methode
-Ruft den Typ des diesem internen Frames.  
+Ruft den Typ dieses internen Frames ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parameter  
  `pType`  
- [out] Ein Zeiger auf einen Wert der CorDebugInternalFrameType-Enumeration, der den Typ der internen Frames dargestellt, die von diesem angibt `ICorDebugInternalFrame` Objekt.  
+ vorgenommen Ein Zeiger auf einen Wert der CorDebugInternalFrameType-Enumeration, der den Typ des internen Frames angibt, der von diesem `ICorDebugInternalFrame` Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Typ der internen Frames wird nie STUBFRAME_NONE. Nicht erkannte interne Rahmentypen ignorieren Debugger ordnungsgemäß.  
+ Der interne Frame-Typ wird nie STUBFRAME_NONE sein. -Buggers sollten nicht erkannte interne Frame Typen ordnungsgemäß ignorieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

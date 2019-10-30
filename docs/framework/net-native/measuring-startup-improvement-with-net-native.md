@@ -2,14 +2,12 @@
 title: Messung der Startverbesserung mit .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128357"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Messung der Startverbesserung mit .NET Native
 Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesserung ist besonders deutlich auf tragbaren Geräten mit geringem Energieverbrauch und bei komplexen Apps. Dieses Thema soll Ihnen den Einstieg in die grundlegende Instrumentierung erleichtern, die Sie benötigen, um diese Startverbesserung zu messen.  
@@ -47,7 +45,7 @@ Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesse
   
 - Wenn Ihre App das Synchronisieren neuer Nachrichten abgeschlossen hat.  
   
- Das Instrumentieren einer APP ist einfach: Nennen Sie einfach die entsprechende Methode für die abgeleitete Klasse. Mit `AppEventSource` aus dem vorherigen Beispiel können Sie eine Anwendung wie folgt instrumentieren:  
+ Das Instrumentieren einer App ist einfach: Rufen Sie nur die entsprechende Methode für die abgeleitete Klasse auf. Mit `AppEventSource` aus dem vorherigen Beispiel können Sie eine Anwendung wie folgt instrumentieren:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   

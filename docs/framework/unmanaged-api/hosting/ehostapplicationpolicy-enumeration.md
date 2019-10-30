@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0be52d90-1976-4bf7-9717-908833a8a78d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7626ccd827accea380f990ef1f7bc92ea6cb0fc1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6903092984bd8bb387a65e1d100fb09f3eb0b0a5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755755"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136538"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy-Enumeration
-Gibt an, wie Sie zum Ändern einer [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) Schnittstellenobjekt. Diese Enumeration ist veraltet.  
+Gibt an, wie ein [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) -Schnittstellen Objekt geändert wird. Diese Enumeration ist veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +33,11 @@ typedef enum _HostApplicationPolicy {
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

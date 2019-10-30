@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101851"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin-Funktion
 
@@ -61,7 +59,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Es ist ein allgemeiner Fehler aufgetreten. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft wurde nicht gefunden. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Die angegebene Eigenschaft wurde nicht gefunden. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
@@ -72,13 +70,13 @@ Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: ge
 
 Da eine Klasse Eigenschaften von einer oder mehreren Basisklassen erben kann, möchten Entwickler häufig die Eigenschaft bestimmen, in der eine bestimmte Methode definiert ist.
 
-Der `pstrClassName` -Parameter darf nicht auf einen gültigen `BSTR` verweisen, bevor die-Funktion aufgerufen wird, `out` da es sich hierbei um einen Parameter handelt. dieser Zeiger wird nicht aufgehoben, nachdem die Funktion zurückgegeben wurde.
+Der `pstrClassName`-Parameter darf nicht auf einen gültigen `BSTR` zeigen, bevor die Funktion aufgerufen wird, da es sich hierbei um einen `out`-Parameter handelt. die Zuordnung dieses Zeigers wird nicht aufgehoben, wenn die Funktion zurückgibt.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

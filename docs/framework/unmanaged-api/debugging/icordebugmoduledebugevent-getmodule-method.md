@@ -1,17 +1,15 @@
 ---
-title: ICorDebugModuleDebugEvent::GetModule-Methode
+title: 'Icordebugmoduledebugevent:: GetModule-Methode'
 ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e68fab11a881854ae4c3fe073f73150694d31ae5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5dc26d0367d01bc8da957c3ce648c3e529dddb08
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965106"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096937"
 ---
-# <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent::GetModule-Methode
+# <a name="icordebugmoduledebugeventgetmodule-method"></a>Icordebugmoduledebugevent:: GetModule-Methode
 Ruft das zusammengeführte Modul ab, das soeben geladen oder entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,11 +31,11 @@ HRESULT GetModule(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

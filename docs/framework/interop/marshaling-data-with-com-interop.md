@@ -4,14 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113999"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Marshallen von Daten mit COM-Interop
 COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten aus verwaltetem Code als auch das Bereitstellen verwalteter Objekte für COM. Die Unterstützung für das Marshalling von Daten zu und von COM ist umfangreich und stellt fast immer das richtige Marshallingverhalten bereit.  
@@ -28,7 +26,7 @@ COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten au
 [Vorgehensweise: Manuelles Erstellen von Wrappern](how-to-create-wrappers-manually.md)   
 Beschreibt, wie Sie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen. 
  
- [Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Beschreibt, wie Sie verwalteten DCOM-Code zu WCF für die sicherste Lösung migrieren.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

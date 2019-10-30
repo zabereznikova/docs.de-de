@@ -14,14 +14,12 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798181"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107290"
 ---
 # <a name="writepropertyvalue-function"></a>Funktion "schreitepropertyvalue"
 Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird.
@@ -64,21 +62,21 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Es ist ein Typen Konflikt aufgetreten. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 beim | Es ist ein Typen Konflikt aufgetreten. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen aufzurufenden Befehl an die [IWbemClassObject:: Write-PropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) -Methode.
 
-Verwenden Sie diese Funktion, um die Zeichenfolge und alle`DWORD` anderen nicht-`QWORD` oder nicht-Daten festzulegen.
+Verwenden Sie diese Funktion, um Zeichen folgen und alle anderen nicht-`DWORD` oder nicht`QWORD` Daten festzulegen.
 
-Für nicht-Zeichen folgen- `lNumBytes` Eigenschaftswerte muss die richtige Datengröße des angegebenen Eigenschaftentyps sein. Für Zeichen folgen Eigenschafts `lNumBytes` Werte muss die Länge der angegebenen Zeichenfolge in Bytes sein, und die Zeichenfolge selbst muss eine gerade Länge in Bytes aufweisen und mit einem NULL-Terminierungs Zeichen befolgt werden.
+Für nicht-Zeichen folgen-Eigenschaftswerte müssen `lNumBytes` die richtige Datengröße des angegebenen Eigenschaftentyps sein. Bei Zeichen folgen Eigenschafts Werten muss `lNumBytes` die Länge der angegebenen Zeichenfolge in Bytes sein, und die Zeichenfolge selbst muss eine gerade Länge in Bytes aufweisen und mit einem NULL-Terminierungs Zeichen befolgt werden.
 
 ## <a name="requirements"></a>Anforderungen  
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

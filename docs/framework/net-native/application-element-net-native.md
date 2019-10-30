@@ -2,14 +2,12 @@
 title: <Application>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2183a64f4e30a5188940abd5108a7ca1bddfe120
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128517"
 ---
 # <a name="application-element-net-native"></a>\<Application >-Element (.net Native)
 Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind, und wendet Laufzeitreflektionsrichtlinien auf alle Programmelemente in einer App an.  
@@ -87,7 +85,7 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Bibliotheks > Element](library-element-net-native.md)
-- [\<Direktiven > Element](directives-element-net-native.md)
+- [\<-Bibliotheks > Element](library-element-net-native.md)
+- [\<-Direktiven > Element](directives-element-net-native.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)

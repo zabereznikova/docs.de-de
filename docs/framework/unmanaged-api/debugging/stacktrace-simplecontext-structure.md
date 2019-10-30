@@ -15,16 +15,14 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139128"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext-Struktur
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext-Struktur
 Stellt einen einfachen Kontext bereit, der statt einer vollständigen `CONTEXT`-Struktur verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,17 +40,17 @@ struct StackTrace_SimpleContext
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`StackOffset`|Der Stapelzeiger oder der EINGABETASTE Stapelzeiger (ESP) auf X86 Plattformen.|  
-|`FrameOffset`|Die Frameoffset oder die EBP-Register auf X86 Plattformen.|  
-|`InstructionOffset`|Der Anweisungszeiger oder der EINGABETASTE Anweisungszeiger (EIP) auf X86 Plattformen.|  
+|`StackOffset`|Der Stapelzeiger oder der Eingabe Stapelzeiger (ESP) auf x86-Plattformen.|  
+|`FrameOffset`|Der Frame Offset oder das EBP-Register auf x86-Plattformen.|  
+|`InstructionOffset`|Der Anweisungs Zeiger oder der Eingabe Anweisungs Zeiger (EIP) auf x86-Plattformen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Da die Funktionen der Aufrufliste-Ablaufverfolgung in der Regel nur die Adresse, Frameoffset und Stapeladresse zurückgeben müssen, können Sie optional mithilfe der `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur.  
+ Da Stapel Überwachungsfunktionen in der Regel nur die Adresse, den Frame Offset und die Stapel Adresse zurückgeben müssen, können Sie optional die `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** SOS_Stacktrace.h  
+ **Header:** SOS_Stacktrace. h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

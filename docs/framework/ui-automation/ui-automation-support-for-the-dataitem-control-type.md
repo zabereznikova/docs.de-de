@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 63d957eaaff7503aa8ba4dde9d836aea28f419ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fc41b3eb775e80ae85026b226a60ce6a1d31c761
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71041800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123109"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp
 > [!NOTE]
-> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „DataItem“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71041800"
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die Eigenschaften, deren Werte oder Definitionen für Datenelement-Steuerelemente besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
   
-|Eigenschaft|Wert|Hinweise|  
+|property|Wert|Notizen|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -53,7 +53,7 @@ ms.locfileid: "71041800"
 ## <a name="required-ui-automation-control-patterns"></a>Erforderliche Benutzeroberflächenautomatisierungs-Steuerelementmuster  
  Die folgende Tabelle enthält die [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Steuerelementmuster, die von allen DataItem-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
-|Steuerelementmuster|Unterstützung|Hinweise|  
+|Steuerelementmuster|Unterstützung|Notizen|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Variabel|Wenn das Datenelement-Steuerelement erweitert oder reduziert werden kann, um Informationen ein- bzw. auszublenden, muss das ExpandCollapse-Muster unterstützt werden.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Variabel|Datenelemente unterstützen das GridItem-Muster, wenn in einem Container, in dem eine räumliche Navigation von Element zu Element möglich ist, eine Auflistung von Datenelementen verfügbar ist.|  
@@ -66,26 +66,26 @@ ms.locfileid: "71041800"
 ## <a name="working-with-data-items-in-large-lists"></a>Arbeiten mit Datenelementen in umfangreichen Listen  
  Bei umfangreichen Listen handelt es sich häufig um Daten, die in [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Frameworks virtualisiert sind, um die Leistung zu verbessern. Aus diesem Grund kann ein Benutzeroberflächenautomatisierungs-Client die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Abfragefeature nicht dazu verwenden, den Inhalt der gesamten Struktur auf die gleiche Weise abzurufen wie den anderer Elementcontainer. Ein Client muss das Element per Bildlauf anzeigen (oder das Steuerelement erweitern, um alle hilfreichen Optionen anzuzeigen), bevor er auf sämtliche Informationen des Datenelements zugreifen kann.  
   
- Wird `SetFocus` im [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Element für das Datenelement aufgerufen, wird der [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] -Fall erfolgreich zurückgegeben, und der Fokus wechselt zu dem Edit-Element innerhalb der Teilstruktur des Datenelements.  
+ Wenn `SetFocus` für das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Element für das Datenelement aufgerufen wird, wird der Microsoft Windows-Explorer-Fall erfolgreich zurückgegeben und bewirkt, dass der Fokus auf den Bearbeitungsvorgang innerhalb der Datenelement-Teilstruktur festgelegt wird.  
   
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Datenelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Notizen|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Required|None|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Required|None|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Required|None|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|None|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|None|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Variabel|None|  
-|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Required|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Required|None|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Erforderlich|None|  
-|Durch geänderte<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|None|  
-|Durch geänderte<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Variabel|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keiner|  
   
 ## <a name="dataitem-control-type-example"></a>Beispiel für DataItem-Steuerelementtyp  
  Das folgende Bild zeigt einen DataItem-Steuerelementtyp in einem ListView-Steuerelement mit Unterstützung für detaillierte Informationen für die Spalten.  
@@ -96,7 +96,7 @@ ms.locfileid: "71041800"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Steuerelementansicht|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Inhaltsansicht|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Group "Configuration Manager" (Tabelle, Raster)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-Image "Accounts Receivable. doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edit "date modified" (TableItem, GridItem, Wert "8/25/2006 3:29 pm")<br />-Edit "size" (GridItem, TableItem, Wert "11,0 KB)<br />-DataItem "Accounts bezahlbar. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-   ...|-Group "Configuration Manager" (Tabelle, Raster)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-Image "Accounts Receivable. doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edit "date modified" (TableItem, GridItem, Wert "8/25/2006 3:29 pm")<br />-Edit "size" (GridItem, TableItem, Wert "11,0 KB)<br />-DataItem "Accounts bezahlbar. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-   …|  
+|-Group "Configuration Manager" (Tabelle, Raster)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-Image "Accounts Receivable. doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edit "date modified" (TableItem, GridItem, Wert "8/25/2006 3:29 pm")<br />-Edit "size" (GridItem, TableItem, Wert "11,0 KB)<br />-DataItem "Accounts bezahlbar. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-   ...|-Group "Configuration Manager" (Tabelle, Raster)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />-Image "Accounts Receivable. doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edit "date modified" (TableItem, GridItem, Wert "8/25/2006 3:29 pm")<br />-Edit "size" (GridItem, TableItem, Wert "11,0 KB)<br />-DataItem "Accounts bezahlbar. doc" (TableItem, GridItem, SelectionItem, aufrufen)<br />- ...|  
   
  Wenn ein Raster eine Liste wählbarer Elemente darstellt, können die entsprechenden Benutzeroberflächenelemente mit dem Steuerelementtyp „ListItem“ statt mit dem Steuerelementtyp „DataItem“ verfügbar gemacht werden. Im vorherigen Beispiel können die DataItem-Elemente („Accounts Receivable.doc“ und „Accounts Payable.doc“) unter Group („Contoso“) verbessert werden, wenn Sie diese als ListItem-Steuerelementtypen verfügbar machen, da dieser Typ bereits das Steuerelementmuster „SelectionItem“ unterstützt.  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eb9e565-f358-43ce-900e-a8f8a5aa6cfb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 522ed80f161f114af25e1fa7ad041c8238073d6f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6f20fb2e9e026253fb02b47dfcd63cf655acc4ee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796372"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131648"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId-Schnittstelle
 Stellt einen Verweis auf den eindeutigen Bezeichner für die Anwendung im aktuellen Gültigkeitsbereich dar.  
@@ -30,14 +28,14 @@ Stellt einen Verweis auf den eindeutigen Bezeichner für die Anwendung im aktuel
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|Ruft einen Zeiger auf eine Zeichen folgen Darstellung des Code Bezeichners für die Anwendung ab, `IReferenceAppId`auf die von verwiesen wird.|  
-|`IReferenceAppId::put_CodeBase`|Legt den Code Bezeichner für die Anwendung fest, `IReferenceAppId`auf die von verwiesen wird.|  
-|`IReferenceAppId::EnumAppPath`|Ruft einen Schnittstellen Zeiger auf eine `IEnumReferenceIdentity` -Instanz ab `IReferenceIdentity` , die die-Instanzen enthält `IReferenceAppId`, die Elemente dieser darstellen.|  
-|`IReferenceAppId::get_SubscriptionId`|Ruft einen Zeiger auf eine Zeichen folgen Darstellung des Tokenbezeichners für ein Abonnement `IReferenceAppId`für dieses ab.|  
-|`IReferenceAppId::put_SubscriptionId`|Legt den Tokenbezeichner für ein Abonnement `IReferenceAppId` auf den angegebenen Zeichen folgen Wert fest.|  
+|`IReferenceAppId::get_CodeBase`|Ruft einen Zeiger auf eine Zeichen folgen Darstellung des Code Bezeichners für die Anwendung ab, auf die von diesem `IReferenceAppId`verwiesen wird.|  
+|`IReferenceAppId::put_CodeBase`|Legt den Code Bezeichner für die Anwendung fest, auf die von diesem `IReferenceAppId`verwiesen wird.|  
+|`IReferenceAppId::EnumAppPath`|Ruft einen Schnittstellen Zeiger auf eine `IEnumReferenceIdentity`-Instanz ab, die die `IReferenceIdentity`-Instanzen enthält, die Elemente dieser `IReferenceAppId`darstellen.|  
+|`IReferenceAppId::get_SubscriptionId`|Ruft einen Zeiger auf eine Zeichen folgen Darstellung des Tokenbezeichners für ein Abonnement für dieses `IReferenceAppId`ab.|  
+|`IReferenceAppId::put_SubscriptionId`|Legt den Tokenbezeichner für ein Abonnement dieses `IReferenceAppId` auf den angegebenen Zeichen folgen Wert fest.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   

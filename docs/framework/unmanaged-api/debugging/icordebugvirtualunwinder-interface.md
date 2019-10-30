@@ -2,21 +2,19 @@
 title: ICorDebugVirtualUnwinder-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f78417d613023bb4fb7325560c0c06abe0874aba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 532052aa4f869861fbdb40ba0126bfd800eba942
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121874"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder-Schnittstelle
 Stellt Methoden bereit, um die Stapelentladung zu unterstützen.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Name|  
+|Methode|-Name|  
 |------------|----------|  
 |[GetContext-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-getcontext-method.md)|Ruft den aktuellen Kontext dieses Entladers ab.|  
 |[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-next-method.md)|Wechselt zum Kontext eines Aufrufers.|  
@@ -28,11 +26,11 @@ Stellt Methoden bereit, um die Stapelentladung zu unterstützen.
 > Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Wenn Sie diese Schnittstelle für ICorDebug-Szenarien außerhalb von .NET Native implementieren, ignoriert die Common Language Runtime diese Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

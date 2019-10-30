@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetNames function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 748767596a8f4680a2d7b63cb0579acaed5f53f8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5b03ed6a68fbe288e93dedb4f425f1511563dfeb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798512"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102528"
 ---
 # <a name="getnames-function"></a>GetNames-Funktion
 Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. 
@@ -50,16 +48,16 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszQualifierName`  
-in Ein Zeiger auf einen gültigen `LPCWSTR` , der einen Qualifizierernamen angibt, der als Teil eines Filters fungiert. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ". Dieser Parameter kann `null` sein. 
+in Ein Zeiger auf einen gültigen `LPCWSTR`, der einen Qualifizierernamen angibt, der als Teil eines Filters fungiert. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ". Dieser Parameter kann `null` sein. 
 
 `lFlags`  
 in Eine Kombination von Bitfeldern. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
 
 `pQualifierValue`   
-in Ein Zeiger auf eine gültige `VARIANT` -Struktur, die mit einem Filter Wert initialisiert wurde. Dieser Parameter kann `null` sein. 
+in Ein Zeiger auf eine gültige `VARIANT`-Struktur, die mit einem Filter Wert initialisiert wurde. Dieser Parameter kann `null` sein. 
 
 `pstrNames`  
-vorgenommen Eine `SAFEARRAY` -Struktur, die Eigenschaftsnamen enthält. Bei einem Eintrag muss dieser Parameter immer ein Zeiger auf `null`sein. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ". 
+vorgenommen Eine `SAFEARRAY`-Struktur, die Eigenschaftsnamen enthält. Bei einem Eintrag muss dieser Parameter immer ein Zeiger auf `null`sein. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ". 
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -76,18 +74,18 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) -Methode.
 
-Der zurückgegebene benannte wird durch eine Kombination von Flags und Parametern gesteuert. Die-Funktion kann z. b. die Namen aller Eigenschaften oder nur die Namen der Schlüsseleigenschaften zurückgeben.  Der primäre Filter wird im- `lFlags` Parameter angegeben, und die anderen Parameter variieren in Abhängigkeit davon.
+Der zurückgegebene benannte wird durch eine Kombination von Flags und Parametern gesteuert. Die-Funktion kann z. b. die Namen aller Eigenschaften oder nur die Namen der Schlüsseleigenschaften zurückgeben.  Der primäre Filter wird im `lFlags`-Parameter angegeben, und die anderen Parameter variieren in Abhängigkeit davon.
 
 Die Flagwerte in `lFlags` sind Bitfelder.
 
 Die Flags, die als `lEnumFlags` Argument übermittelt werden können, sind Bitfelder, die in der *wbemcli. h* -Header Datei definiert sind, oder Sie können Sie als Konstanten im Code definieren.  Sie können ein Flag aus jeder Gruppe mit einem beliebigen Flag aus einer beliebigen anderen Gruppe kombinieren. Flags aus derselben Gruppe schließen sich jedoch gegenseitig aus. 
 
-| Gruppen-1-Flags |Wert  |Description  |
+| Gruppen-1-Flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Gibt alle Eigenschaftsnamen zurück. `strQualifierName`und `pQualifierVal` werden nicht verwendet. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Gibt nur Eigenschaften zurück, die einen Qualifizierer des Namens aufweisen `strQualifierName` , der durch den-Parameter angegeben wird. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Gibt nur Eigenschaften zurück, die über keinen Qualifizierer des Namens verfügen, `strQualifierName` der durch den-Parameter angegeben wird. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Gibt nur Eigenschaften zurück, die über einen Qualifizierer des namens `wszQualifierName` verfügen, der durch den-Parameter angegeben wird, und einen `pQualifierVal` Wert aufweisen, der mit dem von der-Struktur angegebenen Wenn dieses Flag verwendet wird, müssen Sie sowohl ein `wszQualifierName` als auch ein `pQualifierValue`angeben. |
+| `WBEM_FLAG_ALWAYS` | 0 | Gibt alle Eigenschaftsnamen zurück. `strQualifierName` und `pQualifierVal` werden nicht verwendet. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Gibt nur Eigenschaften zurück, die über einen Qualifizierer des Namens verfügen, der vom `strQualifierName`-Parameter angegeben wird. Wenn dieses Flag verwendet wird, müssen Sie `strQualifierName`angeben. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Gibt nur Eigenschaften zurück, die über keinen Qualifizierer des Namens verfügen, der durch den `strQualifierName`-Parameter angegeben wird. Wenn dieses Flag verwendet wird, müssen Sie `strQualifierName`angeben. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Gibt nur Eigenschaften zurück, die über einen Qualifizierer des Namens verfügen, der durch den `wszQualifierName`-Parameter angegeben wird, sowie einen Wert, der mit dem von der `pQualifierVal` Struktur angegebenen Wert identisch ist Wenn dieses Flag verwendet wird, müssen Sie sowohl eine `wszQualifierName` als auch eine `pQualifierValue`angeben. |
 
 | Gruppen-2-Flags |Wert  |Beschreibung  |
 |---------|---------|---------|
@@ -101,12 +99,12 @@ Die Flags, die als `lEnumFlags` Argument übermittelt werden können, sind Bitfe
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Gibt nur die Namen der Systemeigenschaften zurück. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Gibt nur die Namen von nicht-Systemeigenschaften zurück. |
 
-Die-Funktion weist immer einen neuen `SAFEARRAY` zu, wenn `WBEM_S_NO_ERROR`Sie zurück `pstrNames` gibt, und ist immer darauf festgelegt, darauf zu verweisen. Das zurückgegebene Array kann 0 Elemente aufweisen, wenn keine Eigenschaften den angegebenen Filtern entsprechen. Wenn die Funktion einen anderen Wert als `WBM_S_NO_ERROR`zurückgibt, wird keine neue `SAFEARRAY` Struktur zurückgegeben.
+Die Funktion weist immer einen neuen `SAFEARRAY` zu, wenn `WBEM_S_NO_ERROR`zurückgegeben wird, und `pstrNames` immer auf Sie verweist. Das zurückgegebene Array kann 0 Elemente aufweisen, wenn keine Eigenschaften den angegebenen Filtern entsprechen. Wenn die Funktion einen anderen Wert als `WBM_S_NO_ERROR`zurückgibt, wird keine neue `SAFEARRAY` Struktur zurückgegeben.
  
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

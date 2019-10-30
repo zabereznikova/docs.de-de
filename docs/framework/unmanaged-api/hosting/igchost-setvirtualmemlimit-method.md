@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e7c2d0-e58c-4650-b40c-47b2be2cda45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c43c2259d5b899f05e42437aa121dde57ce4b0c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c060e4883335a8318970b5fbd74bf72c9e13f5bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766487"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134859"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit-Methode
-Legt die maximale Größe des virtuellen Arbeitsspeichers von der Laufzeit fest.  
+Legt die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT SetVirtualMemLimit (
   
 ## <a name="parameters"></a>Parameter  
  `sztMaxVirtualMemMB`  
- [in] Die maximale Größe in Megabyte an virtuellem Arbeitsspeicher von der Runtime.  
+ in Die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit in Megabyte.  
   
 ## <a name="remarks"></a>Hinweise  
- Die maximale Größe des virtuellen Arbeitsspeichers von der Runtime kann dynamisch geändert werden.  
+ Die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit kann dynamisch geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132e0868426670ba61d8ee12ba7007be1a8a52de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139399"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue-Methode
-Ruft den Wert eines Arguments oder einer lokalen Variablen, die im angegebenen Register für diesen Frame native gespeichert ist.  
+Ruft den Wert eines Arguments oder einer lokalen Variablen ab, das im angegebenen Register für diesen systemeigenen Frame gespeichert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +38,22 @@ HRESULT GetLocalRegisterValue (
   
 ## <a name="parameters"></a>Parameter  
  `reg`  
- [in] Der Wert der "CorDebugRegister"-Enumeration, die die Registrierung mit dem Wert angibt.  
+ in Ein Wert der CorDebugRegister-Enumeration, der das Register angibt, das den Wert enthält.  
   
  `cbSigBlob`  
- [in] Eine ganze Zahl, die die Größe der die binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.  
+ in Eine ganze Zahl, die die Größe der binären Metadatensignatur angibt, auf die vom `pvSigBlob`-Parameter verwiesen wird.  
   
  `pvSigBlob`  
- [in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der der Typ des Werts verweist.  
+ in Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur des Werttyps zeigt.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse eines "ICorDebugValue"-Objekts, die den abgerufenen Wert, der im angegebenen Register gespeichert ist.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den abgerufenen Wert darstellt, der im angegebenen Register gespeichert ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetLocalRegisterValue` Methode kann verwendet werden, entweder in einem nativen Rahmen oder eine just-in-Time (JIT)-kompilierten Rahmen.  
+ Die `GetLocalRegisterValue`-Methode kann entweder in einem nativen Frame oder einem JIT-kompilierten Frame (Just-in-Time) verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
