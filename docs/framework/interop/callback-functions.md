@@ -5,14 +5,12 @@ helpviewer_keywords:
 - callback function
 - platform invoke, calling unmanaged functions
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb30e7daed938b14bd0d936352c7455db6975e73
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0fbf6df93e3ef9ee6380ed35f98018d157599e2a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051905"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123746"
 ---
 # <a name="callback-functions"></a>Rückruffunktionen
 Eine Rückruffunktion ist ein Code innerhalb einer verwalteten Anwendung, mit dem eine nicht verwaltete DLL-Funktion eine Aufgabe ausführen kann. Aufrufe einer Rückruffunktion werden indirekt von einer verwalteten Anwendung über eine DLL-Funktion und zurück an die verwaltete Implementierung übergeben. Einige der vielen DLL-Funktionen, die mit dem Plattformaufruf aufgerufen werden, erfordern eine Rückruffunktion in verwaltetem Code zur ordnungsgemäßen Ausführung.  
@@ -29,5 +27,5 @@ Eine Rückruffunktion ist ein Code innerhalb einer verwalteten Anwendung, mit de
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Implementieren von Rückruffunktionen](how-to-implement-callback-functions.md)
+- [Gewusst wie: Implementieren von Rückruffunktionen](how-to-implement-callback-functions.md)
 - [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36ff06b4bbe916e7038840d9bf3cbc455f161b70
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141446"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx-Methode
-Ruft den öffentlichen Schlüssel aus einem öffentlichen/privaten Schlüsselpaar und ein Hash-Algorithmus und eines Signaturalgorithmus angibt.  
+Ruft den öffentlichen Schlüssel aus einem Paar aus öffentlichem und privatem Schlüssel ab und gibt einen Hash Algorithmus und einen Signatur Algorithmus an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,40 +41,40 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>Parameter  
  `pwzKeyContainer`  
- [in] Der Name des Schlüsselcontainers, die das öffentlich/privat-Schlüsselpaar enthält. Wenn `pbKeyBlob` null ist, `szKeyContainer` müssen einen gültigen Container innerhalb der Kryptografiedienstanbieter (CSP) angeben. In diesem Fall die `StrongNameGetPublicKeyEx` Methode extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar im Container gespeichert.  
+ in Der Name des Schlüssel Containers, der das Paar aus öffentlichem und privatem Schlüssel enthält. Wenn `pbKeyBlob` NULL ist, muss `szKeyContainer` einen gültigen Container innerhalb des Kryptografiedienstanbieters (kryptografischen Service Provider, CSP) angeben. In diesem Fall extrahiert die `StrongNameGetPublicKeyEx`-Methode den öffentlichen Schlüssel aus dem Schlüsselpaar, das im Container gespeichert ist.  
   
- Wenn `pbKeyBlob` ist nicht null ist, das Schlüsselpaar wird davon ausgegangen, dass im Schlüssel binary large Object (BLOB) enthalten sein soll.  
+ Wenn `pbKeyBlob` nicht NULL ist, wird angenommen, dass das Schlüsselpaar im Schlüssel Binary Large Object (BLOB) enthalten ist.  
   
- Die Schlüssel müssen 1024-Bit-Rivest-Shamir-Adleman (RSA) Signaturschlüssel sein. Es werden keine anderen Arten von Schlüsseln zu diesem Zeitpunkt unterstützt.  
+ Die Schlüssel müssen 1024-Bit-Rivest-Shamir-Adleman (RSA)-Signatur Schlüssel sein. Zurzeit werden keine anderen Schlüsseltypen unterstützt.  
   
  `pbKeyBlob`  
- [in] Ein Zeiger auf das öffentlich/privat-Schlüsselpaar. Dieses Paar hat das Format, das erstellt wird, durch die Win32- `CryptExportKey` Funktion. Wenn `pbKeyBlob` null festgelegt ist, die mit angegebenen Container `szKeyContainer` wird davon ausgegangen, dass das Schlüsselpaar enthält.  
+ in Ein Zeiger auf das Paar aus öffentlichem und privatem Schlüssel. Dieses Paar weist das Format auf, das von der Win32-`CryptExportKey`-Funktion erstellt wird. Wenn `pbKeyBlob` NULL ist, wird angenommen, dass der von `szKeyContainer` angegebene Schlüssel Container das Schlüsselpaar enthält.  
   
  `cbKeyBlob`  
- [in] Die Größe in Bytes, des `pbKeyBlob`.  
+ in Die Größe `pbKeyBlob`in Byte.  
   
  `ppbPublicKeyBlob`  
- [out] Die zurückgegebene öffentliches Schlüssel-BLOB. Die `ppbPublicKeyBlob` Parameter von der common Language Runtime zugeordnet ist, und an den Aufrufer zurückgegeben. Der Aufrufer muss den Arbeitsspeicher freigeben, mithilfe der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode.  
+ vorgenommen Das zurückgegebene BLOB für öffentliche Schlüssel. Der `ppbPublicKeyBlob`-Parameter wird vom Common Language Runtime zugeordnet und an den Aufrufer zurückgegeben. Der Aufrufer muss den Speicher mithilfe der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) -Methode freigeben.  
   
  `pcbPublicKeyBlob`  
- [out] Die Größe des zurückgegebenen öffentliche Schlüssel-BLOB.  
+ vorgenommen Die Größe des zurückgegebenen BLOBs für öffentliche Schlüssel.  
   
  `uHashAlgId`  
- [in] Der Hashalgorithmus der Assembly. Finden Sie im Abschnitt "Hinweise" eine Liste der akzeptierten Werte.  
+ in Der Assembly-Hash Algorithmus. Eine Liste der akzeptierten Werte finden Sie im Abschnitt "Hinweise".  
   
  `uReserved`  
- [in] Für die zukünftige Verwendung reserviert. Der Standardwert ist null.  
+ in Für zukünftige Verwendung reserviert. der Standardwert ist NULL.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Der öffentliche Schlüssel befindet sich einem [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) Struktur.  
+ Der öffentliche Schlüssel ist in einer [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) -Struktur enthalten.  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgende Tabelle zeigt den Satz von zulässigen Werten für die `uHashAlgId` Parameter.  
+ In der folgenden Tabelle wird der Satz akzeptierter Werte für den `uHashAlgId`-Parameter angezeigt.  
   
-|Name|Wert|  
+|-Name|Wert|  
 |----------|-----------|  
 |Keiner|0|  
 |SHA-1|0x8004|  
@@ -85,11 +83,11 @@ HRESULT StrongNameGetPublicKey (
 |SHA-512|0x800e|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

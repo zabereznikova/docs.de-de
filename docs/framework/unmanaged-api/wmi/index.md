@@ -1,15 +1,13 @@
 ---
 title: WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 description: Fasst die nicht verwaltete .NET Framework-API für WMI und Informationen zu Leistungsindikatoren zusammen.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049309"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127422"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 
@@ -19,7 +17,7 @@ Die .NET Framework-WMI und Leistungsindikatoren für die nicht verwaltete API be
 
 Die API umfasst die folgenden Funktionen:
 
-| Funktion | Beschreibung |
+| Funktion | BESCHREIBUNG |
 |---------|---------|
 | [BeginEnumeration-Funktion](beginenumeration.md) | Setzt den Enumerator auf den Anfang einer Enumeration von WMI-Objekteigenschaften zurück. |
 | [BeginMethodEnumeration-Funktion](beginmethodenumeration.md) |  Startet eine Enumeration der verfügbaren Methoden für ein Objekt. |

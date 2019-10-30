@@ -2,14 +2,12 @@
 title: 'Icordebugmemorybuffer:: getstartaddress-Methode'
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1394624051baa9e7dd21e29788d5fab28332081b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: e2876398ceaf863bbb3c7e576d59b89c52f1bdaf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987546"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127990"
 ---
 # <a name="icordebugmemorybuffergetstartaddress-method"></a>Icordebugmemorybuffer:: getstartaddress-Methode
 Ruft die Startadresse des Speicherpuffers ab.  
@@ -32,11 +30,11 @@ HRESULT GetStartAddress(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

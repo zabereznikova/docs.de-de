@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752849"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129808"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML-Methode
-Ruft den vollständigen XML-Stream zugeordnete managed debugging Assistant (MDA) durch dargestellt [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Ruft den vollständigen XML-Stream ab, der dem von [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)dargestellten Assistenten für verwaltetes Debuggen (MDA) zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,16 +41,16 @@ HRESULT GetXML (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Ein Zeiger auf die Länge des XML-Stream.  
+ vorgenommen Ein Zeiger auf die Länge des XML-Streams.  
   
  `szName`  
- [out] Ein Array, in dem den XML-Stream gespeichert werden soll. Das Array kann leer sein.  
+ vorgenommen Ein Array, in dem der XML-Stream gespeichert werden soll. Das Array ist möglicherweise leer.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetXML` Methode möglicherweise Leistungseinbußen führen kann, abhängig von der Größe des zugeordneten XML-Streams.  
+ Abhängig von der Größe des zugeordneten XML-Streams kann sich die `GetXML`-Methode potenziell auf die Leistung auswirken.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -63,4 +61,4 @@ HRESULT GetXML (
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMDA-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

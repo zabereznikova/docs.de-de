@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39c35884d0fb53baefafbf86391a349e141418a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749164"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141317"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem-Methode
-Fügt eine Funktion für die Ausführung und gibt ein Objekt mit Daten, die von dieser Funktion verwendet werden. Die Funktion ausgeführt wird, wenn ein Thread verfügbar wird.  
+Fügt eine Funktion zur Ausführung in die Warteschlange ein und gibt ein Objekt an, das von dieser Funktion zu verwendende Daten enthält. Die Funktion wird ausgeführt, wenn ein Thread verfügbar wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,34 +37,34 @@ HRESULT QueueUserWorkItem (
   
 ## <a name="parameters"></a>Parameter  
  `Function`  
- [in] Ein Funktionszeiger, der zum Ausführen der Funktion darstellt.  
+ in Ein Funktionszeiger, der die auszuführende Funktion darstellt.  
   
  `Context`  
- [in] Ein Objekt, das Daten enthält, die von verwendet werden sollen `Function`.  
+ in Ein-Objekt, das Daten enthält, die von `Function`verwendet werden sollen.  
   
  `Flags`  
- [in] Einer der Flags, die Werte, für die Win32-gemäß `QueueUserWorkItem` Methode, die Ausführung zu steuern.  
+ in Einer der Flags-Werte, wie für die Win32-`QueueUserWorkItem`-Methode definiert, die die Ausführung steuern.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`QueueUserWorkItem` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `QueueUserWorkItem` Stellt eine Arbeitsaufgabe an einen Arbeitsthread im Threadpool der Warteschleife hinzu. Die Signatur und Parametertypen sind identisch mit denen der entsprechenden Win32-Funktion, die den gleichen Namen hat. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
+ `QueueUserWorkItem` fügt eine Arbeitsaufgabe einem Arbeits Thread im Thread Pool in die Warteschlange. Die Signatur-und Parametertypen sind identisch mit denen der entsprechenden Win32-Funktion, die denselben Namen hat. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

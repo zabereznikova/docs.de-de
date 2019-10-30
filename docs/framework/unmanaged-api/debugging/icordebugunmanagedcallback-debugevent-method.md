@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1c75e1844fca4e592faa924a55432dd42fa7355
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d865f837d38894e8449af671e2d12e7676dd040
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772619"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129138"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent-Methode
-Benachrichtigt den Debugger, dass ein systemeigenes Ereignis ausgelöst wurde.  
+Benachrichtigt den Debugger, dass ein natives Ereignis ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +36,22 @@ HRESULT DebugEvent (
   
 ## <a name="parameters"></a>Parameter  
  `pDebugEvent`  
- [in] Ein Zeiger auf das systemeigene-Ereignis.  
+ in Ein Zeiger auf das Native Ereignis.  
   
  `fOutOfBand`  
- [in] `true`, wenn die Interaktion mit dem verwalteten Prozesszustand nicht möglich ist, nachdem ein nicht verwaltetes Ereignis, bis der Debugger ruft auftritt [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)ist, andernfalls `false`.  
+ [in] `true`, wenn die Interaktion mit dem verwalteten Prozessstatus nach einem nicht verwalteten Ereignis nicht mehr möglich ist, bis der Debugger [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)aufruft. Andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Ist der im Debugmodus befindlichen Thread ein Win32-Thread, verwenden Sie keine Member des Win32-Schnittstelle zu debuggen. Rufen Sie `ICorDebugController::Continue` nur in einem Win32-Thread und nur, wenn nach einem Out-of-Band-Ereignis fortfahren.  
+ Wenn es sich bei dem gedebuggten Thread um einen Win32-Thread handelt, dürfen Sie keine Member der Win32-Debugschnittstelle verwenden. Sie können `ICorDebugController::Continue` nur in einem Win32-Thread und nur bei der Fortsetzung eines Out-of-Band-Ereignisses abrufen.  
   
- Die `DebugEvent` Rückruf befolgt nicht die Standardregeln für Rückrufe. Beim Aufruf `DebugEvent`, der Prozess werden in den unformatierten, Betriebssystem-Debug-Zustand "beendet". Der Prozess wird nicht synchronisiert werden. Er wechselt automatisch in den Status "synchronisiert" bei Bedarf, um Anforderungen für Informationen zu verwaltetem Code zu erfüllen, durch die in anderen geschachtelten möglicherweise `DebugEvent` Rückrufe.  
+ Der `DebugEvent`-Rückruf befolgt nicht die Standardregeln für Rückrufe. Wenn Sie `DebugEvent`aufgerufen wird, befindet sich der Prozess im unformatierten Zustand "OS-Debug beendet". Der Prozess wird nicht synchronisiert. Wenn dies erforderlich ist, wird automatisch der synchronisierte Status eingegeben, um Anforderungen nach Informationen über verwalteten Code zu erfüllen. Dies kann zu anderen Sch`DebugEvent` Rückrufen führen.  
   
- Rufen Sie [ICorDebugProcess:: ClearCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) für den Prozess, um ein Ausnahmeereignis vor dem Fortsetzen des Prozesses zu ignorieren. Das Aufrufen dieser Methode sendet DBG_CONTINUE anstatt DBG_EXCEPTION_NOT_HANDLED in der Anforderung weiter und automatisch löscht Out-of-Band-Haltepunkte und Ausnahmen von einem Schritt. Out-of-Band-Ereignisse können zu jedem Zeitpunkt stammen, selbst wenn die Anwendung im Debugmodus befindlichen beendet wird und wenn bereits eine ausstehende in-Band-Ereignis.  
+ Aufrufen von [ICorDebugProcess:: cleareption TException](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md) für den Prozess, um ein Ausnahme Ereignis zu ignorieren, bevor der Prozess fortgesetzt wird. Wenn Sie diese Methode aufrufen, wird DBG_CONTINUE anstelle von DBG_EXCEPTION_NOT_HANDLED für die Continue-Anforderung gesendet, und Out-of-Band-Haltepunkte und einstufige Ausnahmen werden automatisch gelöscht. Out-of-Band-Ereignisse können jederzeit auftreten, auch wenn die zu debuggenden Anwendung beendet wird und ein ausstehendes in-Band-Ereignis bereits vorhanden ist.  
   
- In .NET Framework, Version 2.0 sollte der Debugger sofort nach einem Haltepunktereignis für die Out-of-Band-fortfahren. Der Debugger verwendet werden soll die [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) und [ICorDebugProcess2:: ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) Methoden zum Hinzufügen und Entfernen von Haltepunkten. Diese Methoden werden über die Out-of-Band-Haltepunkte automatisch übersprungen. Daher muss die einzigen Out-of-Band-Haltepunkte, die weitergeleitet werden unformatierte Haltepunkte, die bereits im Anweisungsstream, z. B. durch einen Aufruf der Win32- `DebugBreak` Funktion. Versuchen Sie nicht mit `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess:: GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md), sowie alle anderen Mitglieder der [Debug-API](../../../../docs/framework/unmanaged-api/debugging/index.md).  
+ In der .NET Framework Version 2,0 sollte der Debugger unmittelbar hinter einem Out-of-Band-breakpointereignis fortfahren. Der Debugger sollte die Methoden [ICorDebugProcess2:: abtmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) und [ICorDebugProcess2:: ClearUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md) verwenden, um Breakpoints hinzuzufügen und zu entfernen. Diese Methoden überspringen alle out-of-Band-Haltepunkte automatisch. Daher sollten die einzigen out-of-Band-Haltepunkte, die verteilt werden, unformatierte Haltepunkte sein, die sich bereits im Anweisungs Datenstrom befinden, z. b. ein aufzurufende Win32-`DebugBreak` Funktion. Versuchen Sie nicht, `ICorDebugProcess::ClearCurrentException`, [ICorDebugProcess:: GetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)oder einen anderen Member der Debug- [API](../../../../docs/framework/unmanaged-api/debugging/index.md)zu verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

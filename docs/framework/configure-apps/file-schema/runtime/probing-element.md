@@ -9,22 +9,20 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae789e99a1306102c67f2252760e215989132406
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115861"
 ---
-# <a name="probing-element"></a>\<Überprüfung > Elements
+# <a name="probing-element"></a>\<> Element
 Gibt Anwendungs Basis Verzeichnisse für das Common Language Runtime an, das beim Laden von Assemblys gesucht werden soll.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<probing>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<durchsuchen **>**  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b411a51a5640a924d3eeae5d52102a842966d3fa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855498"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134997"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx-Methode
 Generiert gemäß den angegebenen Flags eine Signatur mit starkem Namen für die angegebene Assembly.  
@@ -48,15 +46,15 @@ HRESULT StrongNameSignatureGenerationEx (
  `wszKeyContainer`  
  in Der Name des Schlüssel Containers, der das Paar aus öffentlichem und privatem Schlüssel enthält.  
   
- Wenn `pbKeyBlob` NULL ist, `wszKeyContainer` muss einen gültigen Container innerhalb des Kryptografiedienstanbieters (kryptografischen Service Provider, CSP) angeben. In diesem Fall wird das im Container gespeicherte Schlüsselpaar zum Signieren der Datei verwendet.  
+ Wenn `pbKeyBlob` NULL ist, muss `wszKeyContainer` einen gültigen Container innerhalb des Kryptografiedienstanbieters (kryptografischen Service Provider, CSP) angeben. In diesem Fall wird das im Container gespeicherte Schlüsselpaar zum Signieren der Datei verwendet.  
   
  Wenn `pbKeyBlob` nicht NULL ist, wird angenommen, dass das Schlüsselpaar im Schlüssel Binary Large Object (BLOB) enthalten ist.  
   
  `pbKeyBlob`  
- in Ein Zeiger auf das Paar aus öffentlichem und privatem Schlüssel. Dieses Paar weist das Format auf, das von der `CryptExportKey` Win32-Funktion erstellt wird. Wenn `pbKeyBlob` NULL ist, wird angenommen, dass der `wszKeyContainer` von angegebene Schlüssel Container das Schlüsselpaar enthält.  
+ in Ein Zeiger auf das Paar aus öffentlichem und privatem Schlüssel. Dieses Paar weist das Format auf, das von der Win32-`CryptExportKey`-Funktion erstellt wird. Wenn `pbKeyBlob` NULL ist, wird angenommen, dass der von `wszKeyContainer` angegebene Schlüssel Container das Schlüsselpaar enthält.  
   
  `cbKeyBlob`  
- in Die Größe von `pbKeyBlob`in Bytes.  
+ in Die Größe `pbKeyBlob`in Byte.  
   
  `ppbSignatureBlob`  
  vorgenommen Ein Zeiger auf den Speicherort, an den der Common Language Runtime die Signatur zurückgibt. Wenn `ppbSignatureBlob` NULL ist, speichert die Laufzeit die Signatur in der durch `wszFilePath`angegebenen Datei.  
@@ -69,28 +67,28 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  in Einer oder mehrere der folgenden Werte:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001)-berechnen Sie alle Hashes für verknüpfte Module neu.  
+- `SN_SIGN_ALL_FILES` (0x00000001)-Alle Hashes für verknüpfte Module neu berechnen.  
   
-- `SN_TEST_SIGN`(0x00000002): Test-Signieren der Assembly.  
+- `SN_TEST_SIGN` (0x00000002): die Assembly wird getestet.  
   
 ## <a name="return-value"></a>Rückgabewert  
  `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Geben Sie NULL `wszFilePath` für an, um die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.  
+ Geben Sie NULL für `wszFilePath` an, um die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.  
   
  Die Signatur kann entweder direkt in der Datei gespeichert oder an den Aufrufer zurückgegeben werden.  
   
- Wenn `SN_SIGN_ALL_FILES` angegeben ist, aber kein öffentlicher Schlüssel enthalten ist (sowohl `pbKeyBlob` als `wszFilePath` auch sind null), werden Hashwerte für verknüpfte Module neu berechnet, die Assembly wird jedoch nicht neu signiert.  
+ Wenn `SN_SIGN_ALL_FILES` angegeben ist, aber kein öffentlicher Schlüssel enthalten ist (sowohl `pbKeyBlob` als auch `wszFilePath` sind null), werden Hashwerte für verknüpfte Module neu berechnet, die Assembly wird jedoch nicht neu signiert.  
   
- Wenn `SN_TEST_SIGN` angegeben wird, wird der Common Language Runtime-Header nicht geändert, um anzugeben, dass die Assembly mit einem starken Namen signiert ist.  
+ Wenn `SN_TEST_SIGN` angegeben wird, wird der Common Language Runtime Header nicht geändert, um anzugeben, dass die Assembly mit einem starken Namen signiert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

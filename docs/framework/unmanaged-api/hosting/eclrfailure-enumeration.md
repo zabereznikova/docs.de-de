@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131127"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure-Enumeration
-Beschreibt die Fehler, die für die ein Host Richtlinienaktionen festlegen kann.  
+Beschreibt den Satz von Fehlern, bei denen ein Host Richtlinien Aktionen festlegen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,23 +42,23 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Fehler beim Versuch, eine Ressource (z. B. ein Thread, einen Speicherblock oder eine Sperre) reservieren in einen nicht-kritische Codebereich.|  
-|`FAIL_CriticalResource`|Fehler beim Versuch, reservieren eine Ressource (z. B. ein Thread, einen Speicherblock oder eine Sperre) in einem kritischen Bereich des Codes.|  
-|`FAIL_FatalRuntime`|Die common Language Runtime (CLR) ist nicht mehr in der Lage, verwalteten Code im Prozess ausgeführt. Damit geben Aufrufe alle Hostingfunktionen HOST_E_CLRNOTAVAILABLE einen HRESULT-Wert zurück.|  
-|`FAIL_OrphanedLock`|Hat Fehler durch einen Thread eine Sperre nach dem Beenden einer <xref:System.AppDomain> Objekt. Der Host kann nicht dazu, die dazu führen, dass einen Thread abgebrochen festlegen.|  
-|`FAIL_StackOverflow`|Es ist ein Stapelüberlauf aufgetreten.|  
-|`FAIL_AccessViolation`|Es wurde versucht, das Lesen und Schreiben von geschütztem Arbeitsspeicher. In .NET Framework 4 unterstützt nicht.|  
-|`FAIL_CodeContract`|Ein Code-Contract-Fehler aufgetreten. Finden Sie unter [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_NonCriticalResource`|Beim Versuch, eine Ressource (z. b. einen Thread, einen Speicherblock oder eine Sperre) in einem nicht kritischen Code Bereich zuzuordnen, ist ein Fehler aufgetreten.|  
+|`FAIL_CriticalResource`|Beim Versuch, eine Ressource (z. b. einen Thread, einen Speicherblock oder eine Sperre) in einem kritischen Code Bereich zuzuordnen, ist ein Fehler aufgetreten.|  
+|`FAIL_FatalRuntime`|Der Common Language Runtime (CLR) ist nicht mehr in der Lage, verwalteten Code im Prozess auszuführen. Bei Aufrufen von-Hostingfunktionen wird ein HRESULT-Wert von HOST_E_CLRNOTAVAILABLE zurückgegeben.|  
+|`FAIL_OrphanedLock`|Ein Thread konnte eine Sperre nicht freigeben, wenn er von einem <xref:System.AppDomain> Objekt zurückgegeben wurde. Dieser Fehler kann vom Host nicht festgelegt werden, damit ein Thread abgebrochen wird.|  
+|`FAIL_StackOverflow`|Ein Stapelüberlauf ist aufgetreten.|  
+|`FAIL_AccessViolation`|Es wurde versucht, geschützten Speicher zu lesen oder zu schreiben. Wird in der .NET Framework 4 nicht unterstützt.|  
+|`FAIL_CodeContract`|Ein Code Vertrags Fehler ist aufgetreten. Siehe [Code Verträge](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter den [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) -Methode für eine Liste der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, die der Host kann mit der Aktionen für fehlerbedingungen an. Weitere Informationen zu wichtigen und nicht kritische Bereiche des Codes, finden Sie unter [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ In der [ICLRPolicyManager:: abtactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) -Methode finden Sie eine Liste der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, mit denen der Host die Richtlinien Aktionen für Fehlerbedingungen angeben kann. Weitere Informationen zu kritischen und nicht kritischen Codebereichen finden Sie unter [eclroperations](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

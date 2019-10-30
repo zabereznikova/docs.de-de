@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c8b4d4c7edec47ab4acaae2a5cd93ad474612063
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 96bb3a530bf4c63c3662ecfa635a929381fc0de6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855542"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121534"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture-Methode
 Ruft einen Klon der [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) -Instanz ab, die von einem [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)-Befehl zurückgegeben wird.  
@@ -37,13 +35,13 @@ HRESULT Capture (
   
 ## <a name="parameters"></a>Parameter  
  `ppClonedContext`  
- vorgenommen Ein Zeiger auf die Adresse eines Klons des `IHostSecurityContext` zu erfassenden Objekts.  
+ vorgenommen Ein Zeiger auf die Adresse eines Klons des zu erfassenden `IHostSecurityContext` Objekts.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Capture`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Capture` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -54,11 +52,11 @@ HRESULT Capture (
  Der von `Capture` zurückgegebene Schnittstellen Zeiger ist ein Klon des erfassten Kontexts. Wenn diese Informationen über einen asynchronen Codepunkt verschoben werden, wird die Lebensdauer von der des Zeigers getrennt, für den der-Befehl durchgeführt wurde. Der ursprüngliche Zeiger kann daher freigegeben werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

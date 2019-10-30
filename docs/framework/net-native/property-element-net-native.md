@@ -2,16 +2,14 @@
 title: <Property>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54daf15c593327bf3255f40f6eb6931ffc8bd3c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128213"
 ---
-# <a name="property-element-net-native"></a>\<Property >-Element (.net Native)
+# <a name="property-element-net-native"></a>\<Eigenschaft > Element (.net Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -75,7 +73,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
  Die Datei wendet den Wert `All` auf die `Activate`-Richtlinie für die `Book`-Klasse an, die den Zugriff auf Klassenkonstruktoren über Reflektion ermöglicht. Die `Browse`-Richtlinie für die `Book`-Klasse wird vom übergeordneten Namespace geerbt. Diese wird auf `Required Public` festgelegt, wodurch Metadaten zur Laufzeit verfügbar werden.  
   
- Der Quellcode für das Beispiel lautet wie folgt. Die `outputBlock` -Variable stellt <xref:Windows.UI.Xaml.Controls.TextBlock> ein-Steuerelement dar.  
+ Der Quellcode für das Beispiel lautet wie folgt. Die `outputBlock` Variable stellt ein <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement dar.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

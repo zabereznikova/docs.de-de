@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5e2d68d1e2dcaa656df4e35b135eeaf522878c6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137126"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3-Schnittstelle
 Steuert benutzerdefinierte Debuggerbenachrichtigungen.  
@@ -39,11 +37,11 @@ Steuert benutzerdefinierte Debuggerbenachrichtigungen.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fab037cb-fda6-40fb-9367-921e435dd5a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9f58e66286f5e3e169507efd2f87ce10e9d323b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 828e4dc67cb93d0a35879e94b54c9fac6e5bda16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124085"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange-Methode
-Ruft den Bereich der absoluten Adresse dieses Stapelrahmens ab.  
+Ruft den absoluten Adressbereich dieses Stapel Rahmens ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parameter  
  `pStart`  
- [out] Ein Zeiger auf eine `CORDB_ADDRESS` , die angibt, dass der Startadresse des Stapelrahmens dargestellt durch diese `ICorDebugFrame` Objekt.  
+ vorgenommen Ein Zeiger auf eine `CORDB_ADDRESS`, die die Startadresse des Stapel Rahmens angibt, der durch dieses `ICorDebugFrame`-Objekt dargestellt wird.  
   
  `pEnd`  
- [out] Ein Zeiger auf eine `CORDB_ADDRESS` , die angibt, dass der Endadresse des Stapelrahmens dargestellt durch diese `ICorDebugFrame` Objekt.  
+ vorgenommen Ein Zeiger auf eine `CORDB_ADDRESS`, die die Endadresse des Stapel Rahmens angibt, der durch dieses `ICorDebugFrame`-Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Adressbereich des Stapels eignet sich für die Zusammenführung von mehrere Debug-Engines erfassten stapelüberwachungen überlappender. Der numerische Bereich bietet keine Informationen über den Inhalt des Stapelrahmens. Es ist sinnvoll, nur für den Vergleich der Stack-Frame-Standorte.  
+ Der Adressbereich des Stapels eignet sich für die Zusammenfassung von verschachtelten Stapel Überwachungen, die von mehreren Debugmodulen gesammelt werden. Der numerische Bereich enthält keine Informationen über den Inhalt des Stapel Rahmens. Dies ist nur für den Vergleich von Stapel Rahmen Standorten sinnvoll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25e40103a2925cbd2a181b8e39c3873e4d7c842c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 96dedcd27e87c5afc504e7840100eb121410675e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940044"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130763"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback-Schnittstelle
 Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.  
@@ -48,8 +46,8 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
 |[LoadAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Benachrichtigt den Debugger, dass eine CLR-Assembly erfolgreich geladen wurde.|  
 |[LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Benachrichtigt den Debugger, dass eine Klasse geladen wurde.|  
 |[LoadModule-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Benachrichtigt den Debugger, dass ein CLR-Modul erfolgreich geladen wurde.|  
-|[LogMessage-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Benachrichtigt den Debugger, dass ein von CLR verwalteter Thread eine Methode in der <xref:System.Diagnostics.EventLog> -Klasse aufgerufen hat, um ein Ereignis zu protokollieren.|  
-|[LogSwitch-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Benachrichtigt den Debugger, dass ein von CLR verwalteter Thread eine Methode in der <xref:System.Diagnostics.Switch> -Klasse aufgerufen hat, um einen Debug/Tracing-Switch zu erstellen, zu ändern oder zu löschen.|  
+|[LogMessage-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Benachrichtigt den Debugger, dass ein von CLR verwalteter Thread eine Methode in der <xref:System.Diagnostics.EventLog>-Klasse aufgerufen hat, um ein Ereignis zu protokollieren.|  
+|[LogSwitch-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Benachrichtigt den Debugger, dass ein von CLR verwalteter Thread eine Methode in der <xref:System.Diagnostics.Switch>-Klasse aufgerufen hat, um einen Debug/Tracing-Switch zu erstellen, zu ändern oder zu löschen.|  
 |[NameChange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Benachrichtigt den Debugger, dass sich der Name einer Anwendungsdomäne oder eines Threads geändert hat.|  
 |[StepComplete-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Benachrichtigt den Debugger, dass ein Schritt abgeschlossen wurde.|  
 |[UnloadAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Benachrichtigt den Debugger, dass eine CLR-Assembly entladen wurde.|  
@@ -60,7 +58,7 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
 ## <a name="remarks"></a>Hinweise  
  Alle Rückrufe werden serialisiert, im gleichen Thread aufgerufen und mit dem Prozess im synchronisierten Zustand aufgerufen.  
   
- Jede Rückruf Implementierung muss [icordbugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufrufen, um die Ausführung fortzusetzen. Wenn `ICorDebugController::Continue` nicht vor der Rückgabe des Rückrufs aufgerufen wird, bleibt der Prozess angehalten, und es werden keine weiteren Ereignis `ICorDebugController::Continue` Rückrufe ausgeführt, bis aufgerufen wird.  
+ Jede Rückruf Implementierung muss [icordbugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufrufen, um die Ausführung fortzusetzen. Wenn `ICorDebugController::Continue` vor der Rückgabe des Rückrufs nicht aufgerufen wird, bleibt der Prozess angehalten, und es treten keine weiteren Ereignis Rückrufe auf, bis `ICorDebugController::Continue` aufgerufen wird.  
   
  Ein Debugger muss [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) implementieren, wenn er .NET Framework Version 2,0-Anwendungen debuggt. Eine Instanz von `ICorDebugManagedCallback` oder `ICorDebugManagedCallback2` wird als Rückruf Objekt an [ICorDebug:: SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)übermittelt.  
   
@@ -68,11 +66,11 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

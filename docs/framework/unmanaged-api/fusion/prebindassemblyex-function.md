@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd285233-a4a2-4b52-bbca-0025a60e4864
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db3ba3380d1fc30a8f34683618b5cc326d7d1906
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123056"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx-Funktion
 Ruft den anzeigen Amen für eine Assembly nach der Richtlinie ab.  
@@ -58,17 +56,17 @@ HRESULT PreBindAssemblyEx (
  vorgenommen Enthält den anzeigen Amen nach der Richtlinie.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved` muss ein NULL-Verweis sein.  
   
 ## <a name="remarks"></a>Hinweise  
  Der `ppNamePostPolicy` Output-Parameter wird nur festgelegt, wenn die Funktion HRESULT FUSION_E_REF_DEF_MISMATCH zurückgibt. Andernfalls ist der Wert NULL.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

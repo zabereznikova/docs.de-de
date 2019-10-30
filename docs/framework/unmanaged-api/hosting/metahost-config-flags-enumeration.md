@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13a7ad5b59dd318f823645d28f9c3ccbec8a8cb0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07cab119810c4da25d16a4ad7c13f2d2bda16455
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781089"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140310"
 ---
-# <a name="metahostconfigflags-enumeration"></a>METAHOST_CONFIG_FLAGS-Enumeration
-Beschreibt die möglichen Flags, die zurückgegeben werden, der `pdwConfigFlags` Parameter der der [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) -Methode, gibt das Vorhandensein und die Einstellung des der `useLegacyV2RuntimeActivationPolicy` -Attribut in der [ \<Startup >-Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) der Konfigurationsdatei.  
+# <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS-Enumeration
+Beschreibt die möglichen Flags, die im `pdwConfigFlags`-Parameter der [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) -Methode zurückgegeben werden, und gibt das vorhanden sein und das Festlegen des `useLegacyV2RuntimeActivationPolicy` Attributs im [\<Startup-> Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) der Konfigurationsdatei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,19 +39,19 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|Die `useLegacyV2RuntimeActivationPolicy` Attribut wurde nicht im der [ \<Startup >-Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md).|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|Die `useLegacyV2RuntimeActivationPolicy` Attribut war vorhanden und auf `true`.|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_FALSE`|Die `useLegacyV2RuntimeActivationPolicy` Attribut war vorhanden und auf `false`.|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK`|Übernehmen Sie auf den zurückgegebenen Wert diese Maske `pdwConfigFlags` um die Werte zu erhalten, die relevant für `useLegacyV2RuntimeActivationPolicy`.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|Das `useLegacyV2RuntimeActivationPolicy`-Attribut war im [\<Startup >-Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)nicht vorhanden.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|Das `useLegacyV2RuntimeActivationPolicy`-Attribut war vorhanden und auf `true`festgelegt.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_FALSE`|Das `useLegacyV2RuntimeActivationPolicy`-Attribut war vorhanden und auf `false`festgelegt.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK`|Wenden Sie diese Maske auf den in `pdwConfigFlags` zurückgegebenen Wert an, um die für `useLegacyV2RuntimeActivationPolicy`relevanten Werte zu erhalten.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Metahost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

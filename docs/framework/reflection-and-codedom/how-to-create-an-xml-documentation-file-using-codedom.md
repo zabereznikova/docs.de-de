@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
+title: 'Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 283fc91762bc4065bd9bd09efaa2bc0061451ef9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962723"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130188"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
 CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation erstellt. Der Vorgang bringt die Erstellung des CodeDOM-Diagramms mit sich, das die XML-Dokumentationskommentare enthält, das Generieren des Codes und Kompilieren des generierten Codes mit der Compileroption, die die Ausgabe der XML-Dokumentation erstellt.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>SO erstellen Sie ein CodeDOM-Diagramm, das XML-Dokumentationskommentare enthält  

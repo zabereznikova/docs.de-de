@@ -21,14 +21,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57f0a13a5e57898add667082d670de39431f940f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130052"
 ---
 # <a name="reflection-in-net"></a>Reflektion in .NET
 
@@ -77,12 +75,12 @@ Diese Laufzeitklassen sind `internal` (`Friend` in Visual Basic). Sie werden nic
 |-----------|-----------------|  
 |[Anzeigen von Typinformationen](viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|  
 |[Reflektion und generische Typen](reflection-and-generic-types.md)|Erläutert, wie die Reflektion die Typparameter und die Typargumente von generischen Typen und generischen Methoden behandelt.|  
-|[Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
+|[Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
 |[Dynamically Loading and Using Types (Dynamisches Laden und Verwenden von Typen)](dynamically-loading-and-using-types.md)|Beschreibt die benutzerdefinierte Bindungsschnittstelle der Reflektion, die spätes Binden unterstützt.|  
-|[Vorgehensweise: Load Assemblies into the Reflection-Only Context](how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
+|[Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](how-to-load-assemblies-into-the-reflection-only-context.md)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
 |[Accessing Custom Attributes (Zugreifen auf benutzerdefinierte Attribute)](accessing-custom-attributes.md)|Zeigt, wie mithilfe der Reflektion das Vorhandensein von Attributen und Werten abgefragt werden kann.|  
 |[Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](specifying-fully-qualified-type-names.md)|Beschreibt das Format von vollqualifizierten Typnamen mit den Begriffen von BNF (Backus-Naur Form) sowie die Syntax, die erforderlich ist, um Sonderzeichen, Assemblynamen, Zeiger, Verweise und Arrays anzugeben.|  
-|[Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion](how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  
+|[ How to: Hook Up a Delegate Using Reflection (Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion)](how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  
 |[Ausgeben von dynamischen Methoden und Assemblys](emitting-dynamic-methods-and-assemblies.md)|Erläutert, wie dynamische Assemblys und dynamische Methoden generiert werden.|  
   
 ## <a name="reference"></a>Referenz  

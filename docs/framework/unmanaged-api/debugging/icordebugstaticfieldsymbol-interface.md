@@ -2,14 +2,12 @@
 title: ICorDebugStaticFieldSymbol-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f4e245e96ac9d47db10072e50a5b3c516d5dd27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0891df1fc0528ff485605b2c4168fcff0adff990
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131704"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol-Schnittstelle
 Stellt die Debugsymbolinformationen für ein statisches Feld dar.  
@@ -29,11 +27,11 @@ Stellt die Debugsymbolinformationen für ein statisches Feld dar.
 > Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Wenn Sie diese Schnittstelle für ICorDebug-Szenarien außerhalb von .NET Native implementieren, ignoriert die Common Language Runtime diese Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6ecd2b49d6850a8fae25ddca54f855fdda2ccabb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120351"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Getcurrentapartmenttype-Funktion
 Ruft den Typ des Apartments ab, in dem die aufrufende Funktion ausgeführt wird.   
@@ -51,7 +49,7 @@ vorgenommen Ein Zeiger auf einen [apttype](/windows/win32/api/objidlbase/ne-obji
 
 ## <a name="return-value"></a>Rückgabewert
 
-|Konstante  |Wert  |Description  |
+|Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `S_OK` | 0 | Die Funktion wurde erfolgreich abgeschlossen. |
 | `E_FAIL` | 0x80000008 | Der Aufrufer wird nicht in einem Apartment ausgeführt. |
@@ -61,9 +59,9 @@ vorgenommen Ein Zeiger auf einen [apttype](/windows/win32/api/objidlbase/ne-obji
 Diese Funktion umschließt einen Aufrufen der [icomthreadinginfo:: getcurrentapartmenttype](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) -Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

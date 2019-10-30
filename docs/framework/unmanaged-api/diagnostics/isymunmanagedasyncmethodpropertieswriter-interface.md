@@ -2,17 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db065357e22ac576600a3ca61dda0882b9206a86
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940100"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129155"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle
-Können Sie Informationen zu optionalen Async-Methode für jedes methodensymbol definieren. Verwenden Sie immer mit einer geöffneten Methode; d. h. zwischen den Aufrufen der [OpenMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) und [CloseMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
+Ermöglicht das definieren Optionaler Async-Methoden Informationen für jedes Methoden Symbol. Immer mit einer geöffneten Methode verwenden; Das heißt, zwischen Aufrufen der [OpenMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) und der [CloseMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -25,12 +23,12 @@ Können Sie Informationen zu optionalen Async-Methode für jedes methodensymbol 
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[DefineAsyncStepInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Definieren Sie eine Gruppe von Async "await" Vorgänge in der aktuellen Methode.<br /><br /> Jede Offset "yield" entspricht einem "await" return-Anweisung, Identifizieren einer potenziellen "yield". Jede `breakpointMethod` / `breakpointOffset` Paar identifiziert, in dem der asynchrone Vorgang fortgesetzt wird; es kann sein, in einer anderen Methode.|  
-|[DefineCatchHandlerILOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Legt fest, die IL-offset für den vom Compiler generierter Catch-Handler, der eine asynchrone Methode umschließt.<br /><br /> Der IL-Offset des generierten Catch wird vom Debugger zum Catch als handele es sich um nicht-benutzerseitiger Code verarbeiten kann, obwohl es in einer Code-Methode für Benutzer auftreten kann. Es wird insbesondere verwendet, als Reaktion auf eine **CatchHandlerFound** Ausnahmeereignisses.|  
-|[DefineKickoffMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Legt die Start-Methode, die den asynchronen Vorgang initiiert.|  
+|[DefineAsyncStepInfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)|Definieren Sie eine Gruppe von asynchronen warte Vorgängen in der aktuellen Methode.<br /><br /> Jeder yield-Offset entspricht der Return-Anweisung, die eine mögliche Rendite identifiziert. Jede `breakpointMethod`/`breakpointOffset` Paars identifiziert, wo der asynchrone Vorgang fortgesetzt wird. Sie kann sich in einer anderen Methode befinden.|  
+|[DefineCatchHandlerILOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|Legt den IL-Offset für den vom Compiler generierten catch-Handler fest, der eine Async-Methode umschließt.<br /><br /> Der IL-Offset des generierten catch wird vom Debugger verwendet, um den catch so zu behandeln, als ob es sich um Nichtbenutzer Code handelt, auch wenn er in einer Benutzercode Methode auftreten kann. Insbesondere wird **er als Reaktion auf ein Ereignis** vom Typ "Ereignis Ereignis Ereignis-Ausnahme" verwendet.|  
+|[DefineKickoffMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Legt die Anfangs Methode fest, die den asynchronen Vorgang initiiert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

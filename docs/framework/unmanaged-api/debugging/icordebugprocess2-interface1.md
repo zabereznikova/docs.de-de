@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73332138-5fea-441f-b893-61af87d45a42
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5519714ff2b4ee67d0e59001bf5b454cdc25d648
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 213eb86c36225a6194af83c04c469fbe0cc51b63
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137152"
 ---
 # <a name="icordebugprocess2-interface"></a>ICorDebugProcess2-Schnittstelle
 Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die einen Prozess darstellt, der verwalteten Code ausführt.  
@@ -30,8 +28,8 @@ Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die einen Prozess 
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Entfernt einen Haltepunkt am angegebenen Offset, der durch einen früheren-Aufrufsatz `ICorDebugProcess2::SetUnmanagedBreakpoint`festgelegt wurde.|  
-|[GetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Ruft die Flags ab, die für die Common Language Runtime (CLR) festgelegt werden müssen, um das Bild in den Prozess `ICorDebugProcess2`zu laden, auf den von verwiesen wird.|  
+|[ClearUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Entfernt einen Haltepunkt am angegebenen Offset, der durch einen früheren-Aufruf`ICorDebugProcess2::SetUnmanagedBreakpoint`festgelegt wurde.|  
+|[GetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Ruft die Flags ab, die für die Common Language Runtime (CLR) festgelegt werden müssen, um das Bild in den Prozess zu laden, auf den von diesem `ICorDebugProcess2`verwiesen wird.|  
 |[GetReferenceValueFromGCHandle-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|Ruft einen Verweis Zeiger auf das angegebene verwaltete Objekt ab, das über ein Garbage Collection Handle verfügt.|  
 |[GetThreadForTaskID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|Ruft den Thread ab, in dem die Aufgabe mit dem angegebenen Bezeichner ausgeführt wird.|  
 |[GetVersion-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|Ruft die Version der CLR ab, auf der der Prozess ausgeführt wird, der debuggt wird.|  
@@ -44,11 +42,11 @@ Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die einen Prozess 
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

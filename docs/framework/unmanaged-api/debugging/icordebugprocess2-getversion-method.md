@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948868"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137189"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion-Methode
 
-Ruft die Versionsnummer der die common Language Runtime (CLR), die in diesem Prozess ausgeführt wird.
+Ruft die Versionsnummer der Common Language Runtime (CLR) ab, die in diesem Prozess ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +37,15 @@ HRESULT GetVersion (
 ## <a name="parameters"></a>Parameter
 
 `version`\
-[out] Ein Zeiger auf eine COR_VERSION-Struktur, die die Versionsnummer der Laufzeit speichert.
+vorgenommen Ein Zeiger auf eine COR_VERSION-Struktur, die die Versionsnummer der Laufzeit speichert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `GetVersion` Methode gibt einen Fehlercode zurück, wenn keine Laufzeit im Prozess geladen wurde.
+Die `GetVersion`-Methode gibt einen Fehlercode zurück, wenn keine Laufzeit in den Prozess geladen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 

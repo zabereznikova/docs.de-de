@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739090"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134143"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack-Funktion
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_getmanagedexcepstack-Funktion
 Gibt bei Angabe der Adresse eines verwalteten Ausnahmeobjekts eine Zeichenfolgenversion der enthaltenen Stapelüberwachung zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,24 +37,24 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Parameter  
  `Client`  
- [in] Der Client, der gedebuggt wird.  
+ in Der Client, der deentschlgt wird.  
   
  `StackObjAddr`  
- [in] Ein Zeiger des verwalteten Objekts abgeleitet <xref:System.Exception>.  
+ in Ein von <xref:System.Exception>abgeleiteter verwalteter Objekt Zeiger.  
   
  szStackString  
- [out] Die zurückgegebene Zeichenfolge.  
+ vorgenommen Die zurückgegebene Zeichenfolge.  
   
  `cbString`  
- [out] Die Anzahl der Zeichen in den Puffer verfügbar.  
+ vorgenommen Die Anzahl von Zeichen, die im Zeichen folgen Puffer verfügbar sind.  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist kein verwalteter Code für den Thread aktuell im Kontext, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einer Funktion 0xa0 und Fehlercode 0 x 1000 zurück.  
+ Wenn im Thread derzeit kein verwalteter Code vorhanden ist, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einem Einrichtungs Wert von 0xa0 und dem Fehlercode 0x1000 zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** SOS_Stacktrace.h  
+ **Header:** SOS_Stacktrace. h  
   
  **.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

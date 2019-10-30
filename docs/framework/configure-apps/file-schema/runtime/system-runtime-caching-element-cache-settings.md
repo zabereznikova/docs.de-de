@@ -6,21 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e36e2ed96a0748a69f2bd9ee32432901f0bf0898
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252290"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115509"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching >-Element (Cache Einstellungen)
 
 Stellt die Konfiguration für die standardmäßige speicherinterne Implementierung <xref:System.Runtime.Caching.ObjectCache> über den `memoryCache` -Eintrag in der Konfigurationsdatei bereit.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. Caching->**  
+&nbsp;&nbsp; **\<System. Runtime. Caching >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,11 +53,11 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 Die Klassen in diesem Namespace bieten eine Möglichkeit, Zwischenspeicherfunktionen wie jene in ASP.NET zu verwenden, jedoch ohne eine Abhängigkeit von der `System.Web` -Assembly. Weitere Informationen finden Sie unter [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> Die Ausgabe zwischen Speicherungs Funktionen und- <xref:System.Runtime.Caching> Typen im-Namespace sind neu in .NET Framework 4.  
+> Die Funktionen und Typen der Ausgabe Zwischenspeicherung in den <xref:System.Runtime.Caching>-Namespace sind neu in .NET Framework 4.  
   
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird. Der Name des Caches wird auf den Standardnamen des Cache Eintrags festgelegt, `name` indem das-Attribut auf "Default" festgelegt wird.  
+Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird. Der Name des Caches wird auf den Standardnamen des Cache Eintrags festgelegt, indem das `name`-Attribut auf "Default" festgelegt wird.  
   
 Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut werden auf 0 (Null) festgelegt. Werden diese Attribute auf 0 (Null) festgelegt, wird die <xref:System.Runtime.Caching.MemoryCache> -Heuristik zum automatischen Anpassen als Standard verwendet. Die Cacheimplementierung sollte die aktuelle Auslastung des Arbeitsspeichers alle zwei Minuten mit den absoluten und prozentualen Speichergrenzen vergleichen.  
   

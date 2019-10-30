@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 621b4543-a8f7-4117-98e4-930992cd688a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17cb3440c5b33d461b1624608ce115e1942d6beb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129722"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType-Methode
 Diese Methode ist noch nicht implementiert.  
@@ -38,6 +36,6 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die Schnittstellenzeiger auf die "ICorDebugFunction" und "ICorDebugType"-Instanzen, die am stärksten abgeleiteten Methode und Typ für den angegebenen Memberverweis darstellen.  
+ Ruft Schnittstellen Zeiger auf die "ICorDebugFunction"-und "ICorDebugType"-Instanzen ab, die die am häufigsten abgeleitete Methode und den Typ für den angegebenen Element Verweis darstellen.  
   
 ## <a name="see-also"></a>Siehe auch

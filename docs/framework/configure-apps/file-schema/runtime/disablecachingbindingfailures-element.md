@@ -10,21 +10,19 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252683"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117497"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disablecachingbindingfailure-> Element
+# <a name="disablecachingbindingfailures-element"></a>\<disablecachingbindingfailure >-Element
 Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, die auftreten, da die Assembly nicht durchsuchen gefunden wurde.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disablecachingbindingfailure >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +41,7 @@ Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, 
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Deaktivieren Sie nicht das Zwischenspeichern von Bindungs Fehlern, die auftreten, da die Assembly nicht durchsuchen gefunden wurde. Dies ist das Standard Bindungsverhalten, beginnend mit dem .NET Framework-Version 2,0.|  
 |1|Hiermit deaktivieren Sie das Zwischenspeichern von Bindungs Fehlern, die auftreten, da die Assembly nicht durch Tests gefunden wurde. Diese Einstellung kehrt zum Bindungsverhalten der .NET Framework Version 1,1 zurück.|  
@@ -59,9 +57,9 @@ Gibt an, ob das Zwischenspeichern von Bindungs Fehlern deaktiviert werden soll, 
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beginnend mit der .NET Framework Version 2,0 besteht das Standardverhalten beim Laden von Assemblys darin, alle Bindungs-und Ladefehler zwischenzuspeichern. Das heißt, wenn ein Versuch, eine Assembly zu laden, fehlschlägt, schlagen nachfolgende Anforderungen zum Laden derselben Assembly sofort fehl, ohne dass versucht wird, die Assembly zu finden. Dieses Element deaktiviert dieses Standardverhalten bei Bindungs Fehlern, die auftreten, da die Assembly nicht im Überprüfungs Pfad gefunden werden konnte. Diese Fehler <xref:System.IO.FileNotFoundException>lösen aus.  
+ Beginnend mit der .NET Framework Version 2,0 besteht das Standardverhalten beim Laden von Assemblys darin, alle Bindungs-und Ladefehler zwischenzuspeichern. Das heißt, wenn ein Versuch, eine Assembly zu laden, fehlschlägt, schlagen nachfolgende Anforderungen zum Laden derselben Assembly sofort fehl, ohne dass versucht wird, die Assembly zu finden. Dieses Element deaktiviert dieses Standardverhalten bei Bindungs Fehlern, die auftreten, da die Assembly nicht im Überprüfungs Pfad gefunden werden konnte. Diese Fehler lösen <xref:System.IO.FileNotFoundException>aus.  
   
- Einige Bindungs-und Ladefehler sind von diesem Element nicht betroffen und werden immer zwischengespeichert. Diese Fehler treten auf, weil die Assembly gefunden wurde, aber nicht geladen werden konnte. Sie lösen <xref:System.IO.FileLoadException>oderaus. <xref:System.BadImageFormatException> In der folgenden Liste sind einige Beispiele für derartige Fehler enthalten.  
+ Einige Bindungs-und Ladefehler sind von diesem Element nicht betroffen und werden immer zwischengespeichert. Diese Fehler treten auf, weil die Assembly gefunden wurde, aber nicht geladen werden konnte. Sie lösen <xref:System.BadImageFormatException> oder <xref:System.IO.FileLoadException>aus. In der folgenden Liste sind einige Beispiele für derartige Fehler enthalten.  
   
 - Wenn Sie versuchen, eine Datei zu laden, ist keine gültige Assembly. nachfolgende Versuche, die Assembly zu laden, schlagen auch dann fehl, wenn die ungültige Datei durch die richtige Assembly ersetzt wird.  
   

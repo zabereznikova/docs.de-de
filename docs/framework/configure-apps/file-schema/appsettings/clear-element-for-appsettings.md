@@ -7,14 +7,14 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c3e1c3a3cfd61a9fa8e7abdae9a25ec1bc674492
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921313"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119231"
 ---
 # <a name="clear-element-for-appsettings"></a>\<> Element für \<appSettings löschen >
 
@@ -22,7 +22,7 @@ Löscht benutzerdefinierte Anwendungseinstellungen.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Löschen >**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<löschen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ Löscht benutzerdefinierte Anwendungseinstellungen.
 
 ## <a name="attributes"></a>Attribute
 
-None
+Keiner
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -44,7 +44,7 @@ None
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="example"></a>Beispiel
 

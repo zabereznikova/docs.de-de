@@ -12,17 +12,15 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b667ac16a4bbe6bdab1814b66fb1121b34b2d945
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111995"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord-Methode
-Wird durch die Common Language Runtime (CLR)- Datenzugriffsdienste aufgerufen, um den Ausnahmedatensatz abzurufen, der dem Zielprozess zugordnet ist. Bei einem dumpziel wäre dies z. b. äquivalent zu dem Ausnahme Daten Satz, der über das `ExceptionParam` -Argument an die [minidumpschreitedump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion in der Windows-Debug-Hilfe-Bibliothek (dbghelp) weitergeleitet wird.  
+Wird durch die Common Language Runtime (CLR)- Datenzugriffsdienste aufgerufen, um den Ausnahmedatensatz abzurufen, der dem Zielprozess zugordnet ist. Bei einem dumpziel wäre dies z. b. äquivalent zu dem Ausnahme Daten Satz, der über das `ExceptionParam`-Argument an die [minidumpschreitedump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion in der Windows-Debug-Hilfe-Bibliothek (dbghelp) weitergegeben wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +34,7 @@ HRESULT GetExceptionRecord(
   
 ## <a name="parameters"></a>Parameter  
  `bufferSize`  
- [in] Die Eingabepuffergröße, in Bytes. Dieser muss gleich `sizeof(` [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`sein.  
+ [in] Die Eingabepuffergröße, in Bytes. Dieser muss gleich `sizeof(`[MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`sein.  
   
  `bufferUsed`  
  [out] Ein Zeiger auf ein `ULONG32`-Typ, der die Anzahl von Bytes empfängt, die tatsächlich in den Puffer geschrieben werden.  
@@ -59,11 +57,11 @@ HRESULT GetExceptionRecord(
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   

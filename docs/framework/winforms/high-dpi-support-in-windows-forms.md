@@ -1,5 +1,5 @@
 ---
-title: Hohe DPI-Unterstützung in Windows Forms
+title: Hohe dpi-Unterstützung in Windows Forms
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,36 +7,34 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139079"
 ---
-# <a name="high-dpi-support-in-windows-forms"></a>Hohe DPI-Unterstützung in Windows Forms
+# <a name="high-dpi-support-in-windows-forms"></a>Hohe dpi-Unterstützung in Windows Forms
 
-Ab .NET Framework 4.7 enthält Windows Forms-Erweiterungen für allgemeine hohen dpi-WERTEN und dynamische DPI-Szenarien. Dazu gehören:
+Ab .NET Framework 4,7 umfasst Windows Forms Verbesserungen für gängige Szenarien mit hoher dpi und dynamischer dpi. Dazu gehören:
 
-- Verbesserungen bei der die Skalierung und das Layout einer Reihe von Windows Forms-Steuerelemente, z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement und die <xref:System.Windows.Forms.CheckedListBox> Steuerelement.
+- Verbesserungen an der Skalierung und dem Layout mehrerer Windows Forms Steuerelemente, wie z. b. das <xref:System.Windows.Forms.MonthCalendar>-Steuerelement und das <xref:System.Windows.Forms.CheckedListBox>-Steuerelement.
 
-- Single-Pass-Skalierung.  In .NET Framework 4.6 und früheren Versionen Skalierung über mehrere Durchläufe erfolgt die verursacht einige Steuerelemente skaliert werden, mehr als notwendig war.
+- Skalierung mit einem Durchlauf  In den .NET Framework 4,6 und früheren Versionen wurde die Skalierung über mehrere Durchgänge durchgeführt, was dazu führte, dass einige Steuerelemente mehr als notwendig skaliert wurden.
 
-- Unterstützung für dynamische DPI-Szenarien, in denen der Benutzer den Faktor für die DPI-Einstellung oder Skalierung geändert wird, nachdem eine Windows Forms-Anwendung gestartet wurde.
+- Unterstützung für dynamische dpi-Szenarien, in denen der Benutzer den dpi-oder Skalierungsfaktor ändert, nachdem eine Windows Forms Anwendung gestartet wurde.
 
-In Versionen von .NET Framework ab .NET Framework 4.7 ist die verbesserte Unterstützung für hohe DPI-Werte ein optionales Feature. Sie müssen Ihre Anwendung nutzen, konfigurieren.
+In Versionen der .NET Framework ab .NET Framework 4,7 ist die erweiterte Unterstützung für hohe dpi-Funktionen eine Opt-in-Funktion. Sie müssen Ihre Anwendung so konfigurieren, dass Sie von ihr genutzt wird.
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Konfigurieren der Windows Forms-app für die Unterstützung hoher DPI-Wert
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Konfigurieren Ihrer Windows Forms-App für hohe dpi-Unterstützung
 
-Die neuen Windows Forms-Funktionen, die hohe DPI-Unterstützung unterstützen stehen nur in Anwendungen, die .NET Framework 4.7 und auf Windows-Betriebssystemen ab Windows 10 Creators Update ausgeführt werden.
+Die neuen Windows Forms Features, die ein hohes dpi-Bewusstsein unterstützen, stehen nur in Anwendungen zur Verfügung, die auf die .NET Framework 4,7 abzielen und auf Windows-Betriebssystemen mit Windows 10 Creators Update ausgeführt werden.
 
-Um Unterstützung für hohe DPI-Werte in der Windows Forms-Anwendung konfigurieren zu können, müssen Sie außerdem Folgendes ausführen:
+Außerdem müssen Sie die folgenden Schritte ausführen, um die Unterstützung für hohe dpi-Unterstützung in Ihrer Windows Forms Anwendung zu konfigurieren:
 
-- Deklarieren Sie die Kompatibilität mit Windows 10.
+- Deklarieren Sie Kompatibilität mit Windows 10.
 
-  Zu diesem Zweck fügen Sie Folgendes zur Manifestdatei:
+  Fügen Sie hierzu der Manifest-Datei Folgendes hinzu:
 
   ```xml
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -47,9 +45,9 @@ Um Unterstützung für hohe DPI-Werte in der Windows Forms-Anwendung konfigurier
   </compatibility>
   ```
 
-- Aktivieren Sie monitorspezifische DPI-Unterstützung in den *"App.config"* Datei.
+- Aktivieren Sie die dpi-Informationen pro Monitor in der Datei " *app. config* ".
 
-  Windows Forms wird ein neuer [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) Element zur Unterstützung der neuen Features und Anpassungen, die ab .NET Framework 4.7 hinzugefügt. Um die neuen Funktionen nutzen, die hohe DPI-Werte unterstützen, fügen Sie Folgendes der Konfigurationsdatei Ihrer Anwendung.
+  Windows Forms führt ein neues [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) Element ein, um neue Features und Anpassungen zu unterstützen, die ab dem .NET Framework 4,7 hinzugefügt wurden. Fügen Sie der Anwendungs Konfigurationsdatei Folgendes hinzu, um die neuen Features zu nutzen, die hohe dpi-Unterstützung unterstützen.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -58,11 +56,11 @@ Um Unterstützung für hohe DPI-Werte in der Windows Forms-Anwendung konfigurier
   ```
 
   > [!IMPORTANT]
-  > In früheren Versionen von .NET Framework müssen Sie das Manifest hinzuzufügende Unterstützung hohen DPI-Wert verwendet. Dieser Ansatz wird nicht mehr empfohlen, da er auf die Datei "App.config" definierte Einstellungen überschreibt.
+  > In früheren Versionen der .NET Framework wurde das Manifest verwendet, um eine hohe dpi-Unterstützung hinzuzufügen. Diese Vorgehensweise wird nicht mehr empfohlen, da Sie Einstellungen überschreibt, die in der Datei "App. config" definiert sind.
 
-- Rufen Sie die statische <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Methode.
+- Ruft die statische <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Methode auf.
 
-  Dies sollte der erste Methodenaufruf in der Einstiegspunkt für Ihre Anwendung sein. Zum Beispiel:
+  Dies sollte der erste Methoden aufzurufen in Ihrem Anwendungs Einstiegspunkt sein. Beispiel:
 
   ```csharp
   static void Main()
@@ -73,9 +71,9 @@ Um Unterstützung für hohe DPI-Werte in der Windows Forms-Anwendung konfigurier
   }
   ```
 
-## <a name="opting-out-of-individual-high-dpi-features"></a>Deaktivieren der einzelnen Funktionen für hohe DPI-Wert
+## <a name="opting-out-of-individual-high-dpi-features"></a>Deaktivieren einzelner hoher dpi-Features
 
-Festlegen der `DpiAwareness` Wert `PerMonitorV2` hohe DPI-Awareness-Funktionen, die von .NET Framework-Versionen ab .NET Framework 4.7 unterstützt werden können. In der Regel ist dies ausreichend, für die meisten Windows Forms-Anwendungen. Möglicherweise möchten jedoch ein oder mehrere einzelne Features deaktivieren. Der wichtigste Grund dafür ist, dass es sich bei Ihrem vorhandenen Code der Anwendung bereits die Funktion behandelt.  Beispielsweise wenn Ihre Anwendung die automatische Skalierung, können Sie die automatische Größenänderung-Funktion wie folgt deaktivieren möchten:
+Wenn Sie den `DpiAwareness` Wert auf `PerMonitorV2` festlegen, werden alle hohen dpi-Funktionen aktiviert, die von .NET Framework Versionen ab dem .NET Framework 4,7 unterstützt werden. Dies ist in der Regel für die meisten Windows Forms Anwendungen ausreichend. Möglicherweise möchten Sie jedoch eine oder mehrere einzelne Features ablehnen. Der wichtigste Grund hierfür ist, dass Ihr vorhandener Anwendungscode diese Funktion bereits behandelt.  Wenn Ihre Anwendung z. b. die automatische Skalierung verarbeitet, empfiehlt es sich, das Feature für die automatische Anpassung der Größe wie folgt zu deaktivieren:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,31 +82,31 @@ Festlegen der `DpiAwareness` Wert `PerMonitorV2` hohe DPI-Awareness-Funktionen, 
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-Eine Liste der einzelnen Schlüssel und deren Werte, finden Sie unter [hinzufügen Konfigurationselement für Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Eine Liste der einzelnen Schlüssel und deren Werte finden Sie unter [Windows Forms Add Configuration-Elements](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
-## <a name="new-dpi-change-events"></a>Änderungsereignisse für die neue DPI-Wert
+## <a name="new-dpi-change-events"></a>Neue dpi-Änderungs Ereignisse
 
-Drei neue Ereignisse, die ab .NET Framework 4.7, können Sie programmgesteuerte Behandlung der dynamische DPI-Änderungen:
+Beginnend mit dem .NET Framework 4,7 können Sie mithilfe von drei neuen Ereignissen dynamische dpi-Änderungen Programm gesteuert behandeln:
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, der Fehler wird ausgelöst, wenn die DPI-Einstellung für ein Steuerelement programmgesteuert, nachdem ein DPI-Änderungsereignis für das übergeordnete Steuerelement geändert wird oder Formular auftritt.
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, der Fehler wird ausgelöst, wenn die DPI-Einstellung für ein Steuerelement programmgesteuert, bevor ein DPI-Änderungsereignis für das übergeordnete Steuerelement geändert wird oder Formular auftritt.
-- <xref:System.Windows.Forms.Form.DpiChanged>, der Fehler wird ausgelöst, wenn die DPI-Einstellung auf dem Anzeigegerät ändert, in dem das Formular zurzeit angezeigt wird.
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, das ausgelöst wird, wenn die dpi-Einstellung für ein Steuerelement Programm gesteuert geändert wird, nachdem ein dpi-Änderungs Ereignis für das übergeordnete Steuerelement oder Formular aufgetreten ist.
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, das ausgelöst wird, wenn die dpi-Einstellung für ein Steuerelement Programm gesteuert geändert wird, bevor ein dpi-Änderungs Ereignis für das übergeordnete Steuerelement oder Formular aufgetreten ist.
+- <xref:System.Windows.Forms.Form.DpiChanged>, das ausgelöst wird, wenn die dpi-Einstellung auf dem Anzeigegerät geändert wird, auf dem das Formular derzeit angezeigt wird.
 
-## <a name="new-helper-methods-and-properties"></a>Neue Helper-Methoden und Eigenschaften
+## <a name="new-helper-methods-and-properties"></a>Neue Hilfsmethoden und-Eigenschaften
 
-.NET Framework 4.7 fügt auch eine Reihe von neuen Helper-Methoden und Eigenschaften, die Aufschluss über die DPI-Skalierung und ermöglichen es Ihnen, führen Sie die DPI-Skalierung. Dazu gehören:
+Der .NET Framework 4,7 fügt auch eine Reihe neuer Hilfsmethoden und-Eigenschaften hinzu, die Informationen zur DPI-Skalierung bereitstellen und Ihnen die Durchführung der DPI-Skalierung ermöglichen. Dazu gehören:
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, die konvertiert einen Wert von logischen Koordinaten an.
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, der einen Wert von "logisch" in "Geräte Pixel" konvertiert.
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, die skaliert, dass ein Bitmap-Bild, um den logischen DPI-Wert für ein Gerät.
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, das ein Bitmap-Bild auf den logischen dpi-Wert für ein Gerät skaliert.
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, womit der DPI-Wert für das aktuelle Gerät.
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, die den dpi-Wert für das aktuelle Gerät zurückgibt.
 
-## <a name="versioning-considerations"></a>Überlegungen zur Versionskontrolle
+## <a name="versioning-considerations"></a>Überlegungen zur Versionsverwaltung
 
-Zusätzlich zu der auf .NET Framework 4.7 und Windows 10 Creators Update ausgeführt wird, kann Ihre Anwendung auch in einer Umgebung ausführen in dem er nicht kompatibel mit hohen DPI-Verbesserungen ist. In diesem Fall müssen Sie einen Fallback für Ihre Anwendung zu entwickeln. Hierzu können Sie zum Ausführen [benutzerdefinierte Zeichnung](./controls/user-drawn-controls.md) für die Skalierung.
+Neben der Ausführung auf .NET Framework 4,7-und Windows 10 Creators Update kann die Anwendung auch in einer Umgebung ausgeführt werden, in der Sie nicht mit hohen dpi-Verbesserungen kompatibel ist. In diesem Fall müssen Sie ein Fall Back für Ihre Anwendung entwickeln. Hierfür können Sie eine [benutzerdefinierte Zeichnung](./controls/user-drawn-controls.md) zum Verarbeiten der Skalierung durchführen.
 
-Zu diesem Zweck müssen Sie auch das Betriebssystem zu ermitteln, auf dem Ihre app ausgeführt wird. Sie können dies tun, mit den folgenden Code:
+Zu diesem Zweck müssen Sie auch das Betriebssystem bestimmen, unter dem Ihre APP ausgeführt wird. Hierfür können Sie Code wie den folgenden verwenden:
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,9 +120,9 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-Beachten Sie, dass die Anwendung erfolgreich Windows 10 erkennen wird nicht, wenn es als ein unterstütztes Betriebssystem im Anwendungsmanifest aufgeführt war nicht.
+Beachten Sie, dass Ihre Anwendung Windows 10 nicht erfolgreich erkennt, wenn Sie nicht als unterstütztes Betriebssystem im Anwendungs Manifest aufgeführt ist.
 
-Sie können auch die Version von .NET Framework überprüfen, denen die Anwendung erstellt wurde:
+Sie können auch die Version der .NET Framework überprüfen, für die die Anwendung erstellt wurde:
 
 ```csharp
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
@@ -132,5 +130,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows Forms hinzufügen Konfigurationselement](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Konfigurations Element Windows Forms hinzufügen](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Anpassen der Größe und Skalieren von Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

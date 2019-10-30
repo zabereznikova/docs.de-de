@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e6121cc3-2f11-42c7-bdae-47808581ff71
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b2860e811a16406a71d7ab8df123f2b32aaf13e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dc91723f009d46f9c57b1c99aa66ba7a1b127e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126635"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList-Methode
-Ruft einen Wert, der angibt, ob der Name einer Assembly in der Liste mit dem angegebene Namen übereinstimmt.  
+Ruft einen Wert ab, der angibt, ob der angegebene Name mit dem Namen einer Assembly in der Liste übereinstimmt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +35,22 @@ HRESULT IsStringAssemblyReferenceInList (
   
 ## <a name="parameters"></a>Parameter  
  `pwzAssemblyName`  
- [in] Der Name der Assembly nach dem gesucht werden soll.  
+ in Der Name der Assembly, für die gesucht werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Zeichenfolge, die in der Liste angezeigt werden.|  
-|S_FALSE|Die Zeichenfolge wird in der Liste nicht angezeigt.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben, kann die common Language Runtime nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|S_OK|Die Zeichenfolge wird in der Liste angezeigt.|  
+|S_FALSE|Die Zeichenfolge wird nicht in der Liste angezeigt.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die Common Language Runtime nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

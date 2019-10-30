@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b518a3be939c70b207a71d79a3d362dba26fd3d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774201"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140353"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName-Methode
-Ruft den Namen der Anwendungsdomäne, die von diesem dargestellt wird [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Ruft den Namen der Anwendungsdomäne ab, die von dieser [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,20 +41,20 @@ HRESULT GetName (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Ein Zeiger auf die Anzahl der Breitzeichen, einschließlich des Null-Zeichen im zurückgegebenen den `szName` Array.  
+ vorgenommen Ein Zeiger auf die Anzahl der breit Zeichen, einschließlich des NULL-Zeichens, die im `szName` Array zurückgegeben werden.  
   
  `szName`  
- [out] Ein Array, in dem Sie den Namen zu speichern.  
+ vorgenommen Ein Array, in dem der Name gespeichert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `szName` nicht Null ist, wird die `GetName` -Methode kopiert bis zu `cchName` Zeichen betragen (einschließlich der null-Terminator) in `szName`. Wenn eine Wert ungleich Null, im zurückgegeben wird `pcchName`, die tatsächliche Anzahl der Zeichen im Namen (einschließlich der null-Terminator) befindet sich in der `szName` Array.  
+ Wenn `szName` ungleich NULL ist, kopiert die Methode `GetName` bis zu `cchName` Zeichen (einschließlich des NULL-Terminator) in `szName`. Wenn ein nicht-NULL-Wert in `pcchName`zurückgegeben wird, wird die tatsächliche Anzahl der Zeichen im Namen (einschließlich des NULL-Terminator) im `szName` Array gespeichert.  
   
- Die `GetName` Methodenrückgabe ein S_OK HRESULT unabhängig davon, wie viele Zeichen kopiert wurden.  
+ Die `GetName`-Methode gibt ein S_OK HRESULT zurück, unabhängig davon, wie viele Zeichen kopiert wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   

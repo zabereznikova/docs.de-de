@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8d916aa5e19b8ce583984d9a8e9708d34cf0adfb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: faf14245cd9dd7aa4bf8e89d5a05901279956509
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128270"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException-Klasse (.NET Native)
 **.Net für Windows-Apps für Windows 10, nur .net Native**  
@@ -22,7 +20,7 @@ ms.locfileid: "71049547"
  **Namespace:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> Die `MissingInteropDataException` -Klasse ist ausschließlich für die interne Verwendung durch die .net Native-Toolkette vorgesehen. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+> Die `MissingInteropDataException`-Klasse ist ausschließlich für die interne Verwendung durch die .net Native-Toolkette vorgesehen. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
 ## <a name="syntax"></a>Syntax  
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
@@ -38,7 +36,7 @@ ms.locfileid: "71049547"
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|Beschreibung|  
+|property|Beschreibung|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public string HelpLink { get; set; }`|Ruft einen Link zur Hilfedatei ab, die dieser Ausnahme zugeordnet ist, oder legt einen Link fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
@@ -72,7 +70,7 @@ ms.locfileid: "71049547"
 ## <a name="usage-details"></a>Details zur Verwendung  
  Die `MissingInteropDataException`-Ausnahme wird ausgelöst, wenn ein Methodenaufruf an eine COM- oder Windows-Runtime-Komponente nicht erfolgreich ausgeführt werden kann, weil Typinformationen nicht zur Verfügung stehen.  
   
- Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die laufzeitdirektivendatei (XML \*-Konfiguration),. rd. XML, definiert. Um das Auslösen dieser Ausnahme durch die App zu verhindern, müssen Sie diese Datei ändern und die Metadaten definieren, die zur Laufzeit vorhanden sein müssen. In den meisten Fällen beheben Sie diesen Fehler, indem Sie einem geeigneten Programmelement in der Laufzeitanweisungsdatei ein `MarshalObject`-, `MarshalDelegate`- oder `MarshalStructure`-Attribut hinzufügen. Informationen zum Format von Laufzeitanweisungen finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md).  
+ Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die laufzeitdirektivendatei (XML-Konfiguration) \*. rd. XML definiert. Um das Auslösen dieser Ausnahme durch die App zu verhindern, müssen Sie diese Datei ändern und die Metadaten definieren, die zur Laufzeit vorhanden sein müssen. In den meisten Fällen beheben Sie diesen Fehler, indem Sie einem geeigneten Programmelement in der Laufzeitanweisungsdatei ein `MarshalObject`-, `MarshalDelegate`- oder `MarshalStructure`-Attribut hinzufügen. Informationen zum Format von Laufzeitanweisungen finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
 > Da diese Ausnahme anzeigt, dass von der Anwendung benötigte Metadaten zur Laufzeit nicht verfügbar sind, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und durch Hinzufügen des entsprechenden Eintrags zu einer Laufzeitdirektivendatei beseitigen.  

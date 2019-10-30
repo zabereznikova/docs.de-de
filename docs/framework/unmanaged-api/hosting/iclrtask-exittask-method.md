@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 746c85a6-4b33-4f72-a2e9-379fdf2e96af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81afc2aa738c719456091c3f28f3ca33682776e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f6ccf2eb25e96e0f94c558fb642b153ae3472c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759008"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124895"
 ---
 # <a name="iclrtaskexittask-method"></a>ICLRTask::ExitTask-Methode
-Benachrichtigt die common Language Runtime (CLR), die die Aufgabe von der aktuellen dargestellt [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz beendet wird und versucht, die den Task ordnungsgemäß heruntergefahren.  
+Benachrichtigt den Common Language Runtime (CLR), dass die durch die aktuelle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) -Instanz dargestellte Aufgabe beendet wird, und versucht, die Aufgabe ordnungsgemäß zu schließen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +35,22 @@ HRESULT ExitTask ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ExitTask` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`ExitTask` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExitTask` versucht, ein fehlerfreies Herunterfahren der eine Aufgabe, ähnlich wie beim Trennen eines Threads von einer nicht verwalteten Typbibliothek.  
+ `ExitTask` versucht, eine Aufgabe ordnungsgemäß herunterzufahren, analog zum Trennen eines Threads von einer nicht verwalteten Typbibliothek.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

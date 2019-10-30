@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72fa83a1-8997-41d7-b355-ab177a24a303
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 597381c8ab31e86a02f870a24f165676d200b66e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 208d567aa5c19ddcf8bf9b13b452cb4fc48c976f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126764"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor-Schnittstelle
 Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anwendungsdomäne überprüfen.  
@@ -35,7 +33,7 @@ Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anw
 |[GetCurrentCpuTime-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Ruft die gesamte Prozessorzeit ab, die während der Ausführung in der aktuellen Anwendungsdomäne von allen Threads verwendet wurde, seit die Anwendungsdomäne erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICLRAppDomainResourceMonitor` -Schnittstelle bietet eine ähnliche Funktionalität wie die folgenden verwalteten Eigenschaften:  
+ Die `ICLRAppDomainResourceMonitor`-Schnittstelle bietet ähnliche Funktionen wie die folgenden verwalteten Eigenschaften:  
   
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
@@ -48,17 +46,17 @@ Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anw
 - <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<appdomainresourcemonitoring-> Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [\<appdomainresourcemonitoring > Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Überwachung von Anwendungsdomänenressourcen](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122336"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase-Methode
-Ruft einen Schnittstellenzeiger einen ICorDebugType, der den Basistyp darstellt, sofern vorhanden, der dem Typ zugeordnet, die von diesem `ICorDebugType`.  
+Ruft einen Schnittstellen Zeiger auf einen ICorDebugType ab, der den Basistyp des von dieser `ICorDebugType`dargestellten Typs darstellt, sofern vorhanden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parameter  
  `pBase`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugType` -Objekt, das den Basistyp darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das den Basistyp darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Suche nach der Basistyp für einen Typ ist hilfreich, die allgemeine Funktionalität für den Debugger, z. B. das ausgeben, die alle Felder eines Objekts oder die übergeordneten Klassen implementieren.  
+ Das Suchen des Basistyps für einen Typ ist nützlich, um allgemeine Debuggerfunktionen zu implementieren, wie z. b. das Drucken aller Felder eines Objekts oder der übergeordneten Klassen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

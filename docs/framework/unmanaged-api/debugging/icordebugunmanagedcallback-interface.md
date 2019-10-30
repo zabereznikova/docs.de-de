@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a34454e7e007b4eba557c712cb824362aa5047c3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6de440d10f02f177e62ca3d2bd29fd5e98ea9388
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952976"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137142"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback-Schnittstelle
 Stellt Benachrichtigungen zu systemeigenen Ereignissen bereit, die nicht direkt mit dem Common Language Runtime (CLR) verknüpft sind.  
@@ -38,11 +36,11 @@ Stellt Benachrichtigungen zu systemeigenen Ereignissen bereit, die nicht direkt 
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

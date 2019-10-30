@@ -17,14 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121848"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses-Methode
 Listet die Prozesse auf, die auf einem Remotecomputer ausgeführt werden.  
@@ -43,7 +41,7 @@ HRESULT EnumProcesses (
  [out] Die Anzahl der in `ppProcs` zurückgegebenen Prozesse. Dieser Wert kann 0 (null) sein.  
   
  `ppProcs`  
- [out] Ein Array von [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) Strukturen, die auf dem Remotecomputer ausgeführten Prozesse darstellen.  
+ vorgenommen Ein Array von [coreclrdebugprocinfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) -Strukturen, die die Prozesse darstellen, die auf dem Remote Computer ausgeführt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -56,16 +54,16 @@ HRESULT EnumProcesses (
  Andere Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Um den Arbeitsspeicher freizugeben, der von dieser Methode belegt wurde, rufen Sie die [ICoreClrDebugTarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) Methode.  
+ Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CoreClrRemoteDebuggingInterfaces.h  
+ **Header:** Coreclrremotedebugginginterfaces. h  
   
- **Bibliothek:** mscordbi_macx86.dll  
+ **Bibliothek:** mscordbi_macx86. dll  
   
- **.NET Framework-Versionen:** 3.5 SP1  
+ **.NET Framework Versionen:** 3,5 SP1  
   
 ## <a name="see-also"></a>Siehe auch
 

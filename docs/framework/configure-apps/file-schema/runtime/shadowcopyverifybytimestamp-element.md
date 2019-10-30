@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79d44ff255b1fc12efc6e8488eeab231b9276b90
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115725"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp>-Element
 Gibt an, ob beim Schatten kopieren das standardmäßige Startverhalten verwendet wird, das in der .NET Framework 4 eingeführt wurde, oder ob das Startverhalten früherer Versionen der .NET Framework wieder hergestellt wird.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowcopyverifybytimestamp->**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowcopyverifybytimestamp >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +39,7 @@ Gibt an, ob beim Schatten kopieren das standardmäßige Startverhalten verwendet
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Beim Start von werden nur Assemblys kopiert, die aktualisiert wurden, seit Sie zuletzt in das schattenkopiesverzeichnis kopiert wurden. Dies ist die Standardeinstellung für die .NET Framework 4.|  
-|false|Setzt auf das Startverhalten vorheriger Versionen der .NET Framework zurück, bei der alle Dateien beim Start kopiert wurden.|  
+|False|Setzt auf das Startverhalten vorheriger Versionen der .NET Framework zurück, bei der alle Dateien beim Start kopiert wurden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

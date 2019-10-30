@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9e9f627f1ba213f663f042d1107afd1eb05b56b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757868"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131023"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument-Methode
-Ruft den Wert des angegebenen Arguments in Microsoft intermediate Language (MSIL) Stapelrahmens ab.  
+Ruft den Wert des angegebenen Arguments in diesem MSIL-Stapel Rahmen (Microsoft Intermediate Language) ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT GetArgument (
   
 ## <a name="parameters"></a>Parameter  
  `dwIndex`  
- [in] Der Index des Arguments in den MSIL-Stapelrahmens.  
+ in Der Index des Arguments in diesem MSIL-Stapel Rahmen.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den abgerufenen Wert darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den abgerufenen Wert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetArgument` Methode kann verwendet werden, entweder in einem Stapelrahmen des MSIL oder in einem just-in-Time (JIT) kompilierten Rahmen.  
+ Die `GetArgument`-Methode kann entweder in einem MSIL-Stapel Rahmen oder in einem JIT-kompilierten Frame (Just-in-Time) verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

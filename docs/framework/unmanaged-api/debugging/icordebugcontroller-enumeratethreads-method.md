@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73b84179717e4b96a5c3637b85ae936a23bbf42d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 291f6c05171b5e507afaa70537aafdc9002a506e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125407"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads-Methode
-Ruft einen Enumerator für die aktiv verwalteten Threads im Prozess ab.  
+Ruft einen Enumerator für die aktiven verwalteten Threads im Prozess ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT EnumerateThreads (
   
 ## <a name="parameters"></a>Parameter  
  `ppThreads`  
- [out] Ein Zeiger auf die Adresse des "ICorDebugThreadEnum"-Objekts, das einen Enumerator für alle verwalteten Threads darstellt, die im Prozess aktiv sind.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugThreadEnum-Objekts, das einen Enumerator für alle verwalteten Threads darstellt, die im Prozess aktiv sind.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Thread wird als aktiv betrachtet, nachdem die [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) Rückruf wurde gesendet wurden und vor der [ICorDebugManagedCallback:: ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) Rückruf wurde gesendet wurden . Ein verwalteter Thread kann nicht verwalteter Frames auf seinen Stapel unbedingt. Threads aufgelistet werden können, sogar vor dem [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf. Die Enumeration wird auf natürliche Weise leer sein.  
+ Ein Thread wird als aktiv betrachtet, nachdem der [ICorDebugManagedCallback:: aliatethread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) -Rückruf gesendet wurde und bevor der [ICorDebugManagedCallback:: ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) -Rückruf gesendet wurde. Ein verwalteter Thread verfügt möglicherweise nicht unbedingt über verwaltete Frames auf dem Stapel. Threads können auch vor dem Rückruf [ICorDebugManagedCallback:: forateprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) aufgezählt werden. Die Enumeration ist natürlich leer.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

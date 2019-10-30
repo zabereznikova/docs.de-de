@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee6bcbc9f3377735ed289d52afddb6efa755b16d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134077"
 ---
 # <a name="icordebug-interface"></a>ICorDebug-Schnittstelle
 Stellt Methoden bereit, mit denen Entwickler Anwendungen in der Common Language Runtime-Umgebung (CLR) Debuggen können.  
@@ -41,22 +39,22 @@ Stellt Methoden bereit, mit denen Entwickler Anwendungen in der Common Language 
 |[Initialize-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Initialisiert das `ICorDebug`-Objekt.|  
 |[SetManagedHandler-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Gibt das Ereignishandlerobjekt für verwaltete Ereignisse an.|  
 |[SetUnmanagedHandler-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Gibt das Ereignishandlerobjekt für nicht verwaltete Ereignisse an.|  
-|[Terminate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Beendet das `ICorDebug` -Objekt.|  
+|[Terminate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Beendet das `ICorDebug`-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebug`stellt eine Ereignis Verarbeitungs Schleife für einen Debuggerprozess dar. Der Debugger muss auf den Rückruf für den [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) -Rückruf von allen debuggten Prozessen warten, bevor er diese Schnittstelle freigibt.  
+ `ICorDebug` stellt eine Ereignis Verarbeitungs Schleife für einen Debuggerprozess dar. Der Debugger muss auf den Rückruf für den [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) -Rückruf von allen debuggten Prozessen warten, bevor er diese Schnittstelle freigibt.  
   
- Das `ICorDebug` -Objekt ist das erste Objekt, das alle weiteren verwalteten debuggingelemente steuert. In den .NET Framework Versionen 1,0 und 1,1 war dieses Objekt ein `CoClass` aus com erstelltes-Objekt. In der .NET Framework Version 2,0 ist dieses Objekt kein- `CoClass` Objekt mehr. Sie muss von der Funktion " [dedeedebugginginterfakefromversion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) " erstellt werden, die Versions abhängig ist. Diese neue Erstellungs Funktion ermöglicht es Clients, eine bestimmte Implementierung `ICorDebug`von zu erhalten, wodurch auch eine bestimmte Version der Debug-API emuliert wird.  
+ Das `ICorDebug`-Objekt ist das erste Objekt, das alle weiteren verwalteten Debuggen steuert. In den .NET Framework Versionen 1,0 und 1,1 war dieses Objekt ein `CoClass` Objekt, das aus com erstellt wurde. In der .NET Framework Version 2,0 ist dieses Objekt kein `CoClass` Objekt mehr. Sie muss von der Funktion " [dedeedebugginginterfakefromversion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) " erstellt werden, die Versions abhängig ist. Diese neue Erstellungs Funktion ermöglicht es Clients, eine bestimmte Implementierung von `ICorDebug`zu erhalten, wodurch auch eine bestimmte Version der Debug-API emuliert wird.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

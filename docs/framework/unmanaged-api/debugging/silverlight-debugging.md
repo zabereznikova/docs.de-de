@@ -5,14 +5,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7af03197a43976c47b7ddc30346d622e6b97207
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763662"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139137"
 ---
 # <a name="silverlight-debugging"></a>Silverlight-Debugging
 In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschrieben, mit denen die Common Language Runtime (CLR) das Debuggen von Silverlight-basierten Anwendungen unterstützt, die unter Windows oder auf der Macintosh-Plattform ausgeführt werden.  
@@ -22,7 +20,7 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
   
  [CloseCLREnumeration-Funktion](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- Schließt alle gültigen CLR weiterhin-Startup-Ereignisse in ein Array von Handles, die vom der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), und den Speicher für den Pfad von Handle- und Zeichenfolgenarrays freigegeben.  
+ Schließt alle gültigen CLR-Continue-Startup-Ereignisse in einem Array von Handles, die von der [enumerateclrs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)zurückgegeben werden, und gibt den Arbeitsspeicher für die Array-und Zeichen folgen Pfad Arrays frei.  
   
  [CreateCoreClrDebugTarget-Funktion](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  Erstellt eine Verbindung mit einem Remoteziel für eine Prozess- und Runtime-Enumeration.  
@@ -34,7 +32,7 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  Erstellt eine Versionszeichenfolge aus einem CLR-Pfad in einem Zielprozess.  
   
  [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- Akzeptiert eine CLR-Versionszeichenfolge Merry [CreateVersionStringFromModule-Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)Funktion, und gibt eine entsprechende Debuggerschnittstelle zurück.  
+ Akzeptiert eine CLR-Versions Zeichenfolge, die von der Funktion "die Funktion" der Funktion "" der Funktion "" der [Funktion "Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)" zurückgegeben wird  
   
  [CoreClrDebugProcInfo-Struktur](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  Entspricht einem Prozess, der auf einem Remotecomputer ausgeführt wird.  

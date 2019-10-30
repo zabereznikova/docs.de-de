@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c381f524-94cf-4fa2-9298-50f847a03431
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3e808c7ed03d7b4cc9dfe77389df6b2eff491f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bf1b830f55110c00356527bc9caa41dfd94ae377
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937723"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130453"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting-Methode
 Benachrichtigt den Host darüber, dass die Common Language Runtime (CLR) die Ausführung von Aufgaben angehalten, um eine Garbage Collection auszuführen.  
@@ -37,7 +35,7 @@ HRESULT SuspensionStarting ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SuspensionStarting`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SuspensionStarting` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -51,11 +49,11 @@ HRESULT SuspensionStarting ();
 > Planen Sie diese Aufgabe nicht neu. Der Host muss einen Task neu planen, wenn [ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-threadisblockingforsuspension-method.md) aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

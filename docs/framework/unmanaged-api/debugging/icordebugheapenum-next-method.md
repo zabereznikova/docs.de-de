@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aef821c10b8b44e54967245aaab3956c16ea15b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1beb69bfaad9acb9c269ad8becb81bea64edb6a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757384"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138471"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next-Methode
-Ruft die angegebene Anzahl von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Instanzen, die Informationen zu Objekten im verwalteten Heap enthalten.  
+Ruft die angegebene Anzahl von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen ab, die Informationen zu Objekten im verwalteten Heap enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +39,16 @@ HRESULT Next(
  [in] Die Anzahl der abzurufenden Objekte.  
   
  Objekte  
- [out] Ein Array von Zeigern, die jeweils auf eine [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Objekt, das Informationen zu einem Objekt auf dem verwalteten Heap bereitstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Objekt verweist, das Informationen zu einem Objekt auf dem verwalteten Heap bereitstellt.  
   
  pceltFetched  
- [out] Ein Zeiger auf die Anzahl der [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) tatsächlich zurückgegebenen Objekte `objects`. Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Objekte, die tatsächlich in `objects`zurückgegeben werden. Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Das `COR_HEAPOBJECT.type`-Feld ist der Bezeichner einer geschachtelten COM-Schnittstelle mit Referenzzählung. Diese Referenz muss von dem Aufrufer von `ICorDebugHeapEnum::Next` freigegeben werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

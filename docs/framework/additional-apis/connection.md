@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c50f673e77ef384ccf33803e14d60c322b6c0365
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a305b28a34a70112cc80c33b11f30ab02213f0c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120066"
 ---
 # <a name="connection-class"></a>Verbindungsklasse
 
-Die `Connection` Klasse analysiert Serverantworten, warteschlangenanforderungen und Anforderungen der Pipeline.
+Die `Connection`-Klasse analysiert Server Antworten, Warteschlangen Anforderungen und Pipeline Anforderungen.
 
 ## <a name="syntax"></a>Syntax
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> Die `Connection` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden soll.
+> Die `Connection`-Klasse ist intern und sollte nicht direkt im Code verwendet werden.
 > 
-> Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System.dll")
+**Assembly:** System (in "System. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

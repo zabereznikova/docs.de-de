@@ -18,21 +18,19 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a53c8b7b88bd25a6611c33218c7a386de55889e9
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 669e147f9c7b4ba901ade38f1ab8b41163c4f125
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114029"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Eigenschaften und Ereignisse enthalten. Sie können auch über statische und nicht statische Methoden verfügen. Ein deutlicher Unterschied ist, dass Strukturen Werttypen sind, während Klassen Verweistypen sind.  
   
  In der folgende Tabelle werden Marshallingoptionen für Klassen, Strukturen und Unions aufgelistet. Ihre Verwendung wird beschrieben, und es werden Links zu den entsprechenden Plattformaufrufbeispielen bereitgestellt.  
   
-|Typ|Beschreibung|Beispiel|  
+|Geben Sie Folgendes ein:|Beschreibung|Beispiel|  
 |----------|-----------------|------------|  
 |Klasse als Wert.|Übergibt eine Klasse mit ganzzahligen Membern als In/Out-Parameter, wie der verwaltete Fall.|SysTime-Beispiel|  
 |Struktur als Wert.|Übergibt Strukturen als In-Parameter.|Beispiel für Strukturen|  

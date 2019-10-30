@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8609b32ad2dea699b5b248b2b8bb3d81ec744043
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779474"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134753"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension-Methode
-Benachrichtigt den Host an, dass der Thread, der den Aufruf ausgeführt hat zu blockieren, z. B. für eine Garbagecollection oder einer anderen Unterbrechung.  
+Benachrichtigt den Host, dass der Thread, der den-Befehl aufruft, blockiert wird, möglicherweise für eine Garbage Collection oder eine andere Unterbrechung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,14 +32,14 @@ HRESULT ThreadIsBlockingForSuspension ( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host kann wählen, in der `ThreadIsBlockingForSuspension` Rückruf an, ob ein Thread verlegt.  
+ Der Host kann innerhalb des `ThreadIsBlockingForSuspension` Rückrufs auswählen, ob ein Thread neu geplant werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

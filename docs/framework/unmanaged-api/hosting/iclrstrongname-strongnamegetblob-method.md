@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: a24218f8-7196-44be-b7a2-ee9cdd7a85c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbc0262062eddb363b0a00535a2d099100124b67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d7f1a71658b53a1b4167c767eb89c873308421b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135131"
 ---
 # <a name="iclrstrongnamestrongnamegetblob-method"></a>ICLRStrongName::StrongNameGetBlob-Methode
 Füllt den angegebenen Puffer mit der binären Darstellung der ausführbaren Datei an der angegebenen Adresse auf.  
@@ -40,23 +38,23 @@ HRESULT StrongNameGetBlob (
   
 ## <a name="parameters"></a>Parameter  
  `wszFilePath`  
- [in] Ein gültiger Pfad zur ausführbaren Datei geladen werden.  
+ in Ein gültiger Pfad zur ausführbaren Datei, die geladen werden soll.  
   
  `pbBlob`  
- [in] Der Puffer, in dem die ausführbare Datei geladen werden soll.  
+ in Der Puffer, in den die ausführbare Datei geladen werden soll.  
   
  `pcbBlob`  
- [in, out] Die maximale Größe in Bytes, des angeforderten `pbBlob`. Bei der Rückgabe die tatsächliche Größe in Bytes der `pbBlob`.  
+ [in, out] Die angeforderte maximale Größe des `pbBlob`in Byte. Bei der Rückgabe die tatsächliche Größe (in Bytes) der `pbBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

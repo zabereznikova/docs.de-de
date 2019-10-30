@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f8e9284283247ec46a225470ae3063dac539f43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139646"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup-Methode
-Ruft ein Schnittstellenzeiger geben IAppDomainSetup auf eine <xref:System.AppDomainSetup?displayProperty=nameWithType> Instanz. `IAppDomainSetup` Stellt Methoden zum Aspekte einer Anwendungsdomäne zu konfigurieren, bevor es erstellt wird.  
+Ruft einen Schnittstellen Zeiger vom Typ IAppDomainSetup auf eine <xref:System.AppDomainSetup?displayProperty=nameWithType> Instanz ab. `IAppDomainSetup` stellt Methoden bereit, um Aspekte einer Anwendungsdomäne vor der Erstellung zu konfigurieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,28 +35,28 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomainSetup`  
- [out] Einen Schnittstellenzeiger auf ein <xref:System.AppDomainSetup?displayProperty=nameWithType> Instanz. Dieser Parameter wird als typisiert `IUnknown`, sodass Aufrufer, in der Regel aufrufen müssen `QueryInterface` für diesen Zeiger auf einen Schnittstellenzeiger des Typs erhalten `IAppDomainSetup`.  
+ vorgenommen Ein Schnittstellen Zeiger auf eine <xref:System.AppDomainSetup?displayProperty=nameWithType>-Instanz. Dieser Parameter wird als `IUnknown`typisiert. Daher sollten Aufrufer in der Regel `QueryInterface` auf diesem Zeiger aufrufen, um einen Schnittstellen Zeiger vom Typ `IAppDomainSetup`zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Der Vorgang war erfolgreich.|  
-|S_FALSE|Der Vorgang konnte nicht abgeschlossen.|  
-|E_FAIL|Ein Unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
+|S_FALSE|Der Vorgang konnte nicht ausgeführt werden.|  
+|E_FAIL|Ein unbekannter, schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die Common Language Runtime (CLR) im Prozess nicht mehr verwendet werden. Nachfolgende Aufrufe von Hosting-APIs geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Zeiger, die von dieser Methode zurückgegebene wird in der Regel als Parameter an übergeben die [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) Methode.  
+ Der von dieser Methode zurückgegebene Zeiger wird in der Regel als Parameter an die Methode " [kreatedomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) " übergeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework Version:** 1.0, 1.1  
+ **.NET Framework Version:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Siehe auch
 

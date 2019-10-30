@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f49fac3951c130c3cf06b6861beb06b89c27dfb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a4f7d4f422d80d044bcb92065dbefc7f421a069
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122606"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint-Methode
-Benachrichtigt den Debugger an, wenn ein Breakpoint erreicht wird.  
+Benachrichtigt den Debugger, wenn ein Breakpoint erreicht wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +37,16 @@ HRESULT Breakpoint (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die den Haltepunkt enthält.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die den Breakpoint enthält.  
   
  `pThread`  
- [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, der den Haltepunkt enthält.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, der den Breakpoint enthält.  
   
  `pBreakpoint`  
- [in] Ein Zeiger auf ein ICorDebugBreakpoint-Objekt, das den Haltepunkt darstellt.  
+ in Ein Zeiger auf ein icordebubreakpoint-Objekt, das den Breakpoint darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

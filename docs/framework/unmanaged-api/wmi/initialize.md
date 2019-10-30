@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Initialize function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b1f96b6285911b12d72ac136127d736b75d44023
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127390"
 ---
 # <a name="initialize-function"></a>Initialize-Funktion
 
@@ -41,7 +39,7 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-in `true` , um anzugeben, dass Aufrufe von QueryInterface für WMI-Objekte zulässig sind. `false` andernfalls.
+[in] `true`, um anzugeben, dass Aufrufe von QueryInterface für WMI-Objekte zulässig sind. Andernfalls `false`.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -49,9 +47,9 @@ Die Funktion gibt immer `S_OK` (0) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.def
+**Header:** WMINet_Utils. def
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

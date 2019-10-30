@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747182"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127151"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext-Methode
 Ruft den Kontext des aktuellen Threads ab.  
@@ -39,18 +37,18 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parameter  
  `contextSize`  
- [in] Die Größe in Bytes, der die `context` Array.  
+ in Die Größe des `context` Arrays in Bytes.  
   
  `context`  
- [in, out] Ein Array von Bytes, aus denen die Win32 `CONTEXT` Struktur für die aktuelle Plattform.  
+ [in, out] Ein Bytearray, das die Win32-`CONTEXT`-Struktur für die aktuelle Plattform zusammensetzt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger sollte diese Funktion anstelle der Win32-Aufrufen `GetThreadContext` Funktion, da der Thread im Zustand "gehackte" sein kann, in dem der Kontext vorübergehend geändert wurde. Die zurückgegebenen Daten sind eine Win32- `CONTEXT` Struktur für die aktuelle Plattform.  
+ Der Debugger sollte diese Funktion anstelle der Win32-`GetThreadContext`-Funktion aufgerufen werden, da sich der Thread möglicherweise in einem "geversteckten" Zustand befindet, in dem der Kontext vorübergehend geändert wurde. Die zurückgegebenen Daten sind eine Win32-`CONTEXT` Struktur für die aktuelle Plattform.  
   
- Für nichtblatt-Frames, sollten Clients überprüfen, welche Register gültig sind, mithilfe von [ICorDebugRegisterSet:: GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).  
+ Für nicht blattrahmen sollten Clients überprüfen, welche Register gültig sind, indem Sie [icorunbugregisterset:: GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

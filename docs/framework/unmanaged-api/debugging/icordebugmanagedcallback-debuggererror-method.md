@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137372"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError-Methode
-Benachrichtigt den Debugger, dass ein Fehler aufgetreten ist, bei dem Versuch, ein Ereignis von der common Language Runtime (CLR) zu behandeln.  
+Benachrichtigt den Debugger, dass beim Verarbeiten eines Ereignisses aus dem Common Language Runtime (CLR) ein Fehler aufgetreten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +37,21 @@ HRESULT DebuggerError (
   
 ## <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, in dem das Ereignis aufgetreten ist.  
+ in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem das Ereignis aufgetreten ist.  
   
  `errorHR`  
- [in] Der HRESULT-Wert, der aus dem Ereignishandler zurückgegeben wurde.  
+ in Der HRESULT-Wert, der vom Ereignishandler zurückgegeben wurde.  
   
  `errorCode`  
- [in] Eine ganze Zahl, die den CLR-Fehler angibt.  
+ in Eine ganze Zahl, die den CLR-Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Prozess kann in den Pass-Through-Modus, je nach Art des Fehlers platziert werden.  
+ Der Prozess kann je nach Art des Fehlers in den Pass-Through-Modus versetzt werden.  
   
- Die `DebugError` -Rückruf gibt an, dass das Debuggen von Diensten aufgrund eines Fehlers deaktiviert wurden, sodass der Debugger die Fehlermeldung dem Benutzer verfügbar machen soll. [ICorDebugProcess:: GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) kann sicher aufrufen, aber alle anderen Methoden, einschließlich [ICorDebug:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), sollte nicht aufgerufen werden. Der Debugger sollte Betriebssystemfunktionen zum Beenden von Prozessen verwenden.  
+ Der `DebugError` Rückruf gibt an, dass debuggingdienste aufgrund eines Fehlers deaktiviert wurden. Daher sollten Debugger dem Benutzer die Fehlermeldung zur Verfügung stellen. [ICorDebugProcess:: GetId](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) kann sicher aufgerufen werden, aber alle anderen Methoden, einschließlich [ICorDebug::](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)End, dürfen nicht aufgerufen werden. Der Debugger sollte Betriebssystemfunktionen zum Beenden von Prozessen verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

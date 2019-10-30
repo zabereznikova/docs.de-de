@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 71e9149bafc866f89253c4318ac69f2705431e48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3011a8c7e5cf278768587633967b2e9491cf87ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137340"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP-Methode
-Ruft der systemeigene Code offset-Speicherort, der der Anweisungszeiger derzeit festgelegt ist.  
+Ruft den Speicherort des systemeigenen Codes ab, auf den der Anweisungs Zeiger aktuell festgelegt ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parameter  
  `pnOffset`  
- [out] Ein Zeiger auf die Offsetposition im nativen Code.  
+ vorgenommen Ein Zeiger auf die Offset Position im systemeigenen Code.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Stapelrahmen, der durch diesen "ICorDebugNativeFrame" dargestellt wird, aktiv ist, ist der Offset der Adresse, der die nächste Anweisung ausgeführt werden. Wenn dieses Stapelrahmens nicht aktiv ist, ist der Offset der Adresse der nächsten Anweisung wird ausgeführt, wenn der Stapelrahmen erneut aktiviert wird.  
+ Wenn der Stapel Rahmen, der durch diesen "ICorDebugNativeFrame" dargestellt wird, aktiv ist, entspricht der Offset der Adresse der nächsten Anweisung, die ausgeführt werden soll. Wenn dieser Stapel Rahmen nicht aktiv ist, ist der Offset die Adresse der nächsten Anweisung, die ausgeführt werden soll, wenn der Stapel Rahmen erneut aktiviert wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

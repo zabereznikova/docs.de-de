@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fbed34f53ff43ca7887a58b3c879eaa74703da3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7eb2796de060b3a5dc8e8c08d07e6aeeb3daecb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131267"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote-Schnittstelle
 Bietet die Möglichkeit, einen verwalteten Debugger an einen Remotezielprozess anzufügen oder dort zu starten.  
@@ -62,20 +60,20 @@ interface ICorDebugRemote : IUnknown
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remotecomputer an, für das verwaltete Debuggen.|  
-|[ICorDebugRemote::DebugActiveProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Startet einen Prozess auf einem Remotecomputer unter dem Debugger.|  
+|[ICorDebugRemote::CreateProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remote Computer für verwaltetes Debuggen.|  
+|[ICorDebugRemote::DebugActiveProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Startet einen Prozess auf einem Remote Computer unter dem Debugger.|  
   
 ## <a name="remarks"></a>Hinweise  
- Derzeit wird diese Funktion unterstützt, nur für das Debuggen ein Silverlight-Anwendung-Ziel, das auf einem Macintosh-Remotecomputer ausgeführt wird.  
+ Diese Funktion wird zurzeit nur für das Debuggen eines Silverlight-basierten Anwendungs Ziels unterstützt, das auf einem Macintosh-Remote Computer ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
+ **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Siehe auch
 

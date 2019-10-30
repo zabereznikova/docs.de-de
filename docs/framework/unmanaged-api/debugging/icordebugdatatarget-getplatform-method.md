@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1065c8d710ddbd6088ee0db694a43e098564e707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5715f0634346dd0c6591cfe5687690aa0fba95f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750375"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125318"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform-Methode
-Enthält Informationen über die Plattform, einschließlich der Prozessorarchitektur und Betriebssystem, auf dem der Zielprozess ausgeführt wird.  
+Bietet Informationen zur-Plattform, einschließlich Prozessorarchitektur und Betriebssystem, auf denen der Ziel Prozess ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,21 +33,21 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 ## <a name="parameters"></a>Parameter  
  `pTargetPlatform`  
- [out] Ein Zeiger auf eine [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) Enumeration, die die Zielplattform beschreibt.  
+ vorgenommen Ein Zeiger auf eine [cordebugplatformenum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) -Enumeration, die die Zielplattform beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorDebugPlatformEnum` Rückgabewert der Enumeration wird verwendet, durch die [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Schnittstelle, um zu bestimmen, die Details des Zielprozesses z. B. die Größe des Zeigers, Adresse Speicherplatz Layout, Registersatz, Anweisungsformat, Layout mit Ausrichtung von Kontext und Aufrufkonventionen.  
+ Der `CorDebugPlatformEnum` enumerationsrückgabetyp wird von der [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Schnittstelle verwendet, um Details des Ziel Prozesses zu bestimmen, z. b. Zeiger Größe, Adressraum Layout, Register Satz, Anweisungs Format, Kontext Layout und Aufruf Konventionen.  
   
- Die `pTargetPlatform` Wert bezieht sich möglicherweise auf eine Plattform, die für das Ziel anstelle der tatsächlichen Hardware verwendet emuliert wird. Beispielsweise ein Prozess, der in der Windows für die Umgebung für Windows (WOW), auf einer 64-Bit-Edition des Betriebssystems Windows ausgeführt wird verwenden sollte die `CORDB_PLATFORM_WINDOWS_X86` Wert, der die [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) Enumeration.  
+ Der `pTargetPlatform` Wert bezieht sich möglicherweise auf eine Plattform, die für das Ziel emuliert wird, anstatt die tatsächlich verwendete Hardware anzugeben. Beispielsweise sollte ein Prozess, der in der WOW-Umgebung (Windows on Windows) auf einer 64-Bit-Edition des Windows-Betriebssystems ausgeführt wird, den `CORDB_PLATFORM_WINDOWS_X86` Wert der [cordebugplatformenum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) -Enumeration verwenden.  
   
- Diese Methode muss erfolgreich sein. Wenn ein Fehler auftritt, ist die Zielplattform unbrauchbar. Die Methode kann den folgenden Gründen fehlschlagen:  
+ Diese Methode muss erfolgreich sein. Wenn dies nicht möglich ist, ist die Zielplattform unbrauchbar. Die-Methode kann aus den folgenden Gründen fehlschlagen:  
   
-- Die Plattform, die emuliert wird, für das Ziel kann nicht verwendet werden.  
+- Die Plattform, die für das Ziel emuliert wird, ist unbrauchbar.  
   
 - Die tatsächliche Hardware auf der Zielplattform ist unbrauchbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

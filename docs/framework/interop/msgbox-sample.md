@@ -9,14 +9,12 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9469cc5db1ada479e97026cae40b3019ae10c2c6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124112"
 ---
 # <a name="msgbox-sample"></a>MsgBox-Beispiel
 Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Parameter übergeben werden und wann das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>-Feld, das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld und das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>-Feld zu verwenden sind.  
@@ -48,5 +46,5 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
 
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)
-- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
-- [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md)
+- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
+- [Festlegen eines Zeichensatzes](specifying-a-character-set.md)

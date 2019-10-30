@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7a7f733-677d-481c-b3d5-444fcc502b8e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2022fcbbaaa419048203ecbacfb294160cab5752
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2506de5f04840f130fab28518f9db7b58eb6e9ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779744"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133822"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads-Methode
-Ruft die minimale Anzahl von Threads, die der Host zum Verarbeiten von e/a-Anforderungen bereitstellt.  
+Ruft die Mindestanzahl von Threads ab, die der Host für die Verarbeitung von e/a-Anforderungen bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,29 +35,29 @@ HRESULT GetMinThreads (
   
 ## <a name="parameters"></a>Parameter  
  `pdwMinIOCompletionThreads`  
- [out] Ein Zeiger auf die minimale Anzahl von Threads, die der Host für Prozess e/a-Anforderungen bereitstellt.  
+ vorgenommen Ein Zeiger auf die Mindestanzahl von Threads, die der Host für die Verarbeitung von e/a-Anforderungen bereitstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetMinThreads` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`GetMinThreads` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_NOTIMPL|Der Host stellt keine Implementierung von `GetMinThreads`.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_NOTIMPL|Der Host stellt keine Implementierung von `GetMinThreads`bereit.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Host sollten die exklusive Kontrolle über die Anzahl der Threads zugewiesen, die e/a-Anforderungen verarbeiten, beispielsweise die Implementierung, Leistung und Skalierbarkeit. Aus diesem Grund der Host ist nicht erforderlich, implementiert `GetMinThreads`. In diesem Fall sollte der Host E_NOTIMPL von dieser Methode zurückgeben.  
+ Ein Host möchte möglicherweise die exklusive Kontrolle über die Anzahl von Threads, die für e/a-Anforderungen des Diensts zugewiesen sind, aus Gründen wie Implementierung, Leistung oder Skalierbarkeit. Aus diesem Grund ist es nicht erforderlich, dass der Host `GetMinThreads`implementiert. In diesem Fall sollte der Host E_NOTIMPL von dieser Methode zurückgeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

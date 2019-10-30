@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb3044927e0d9975ed9347cd4f4896b3b75d3e29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1d6ddfe7834a1c6f22b9195042d32363d6ea6cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133040"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask-Methode
-Ruft einen Schnittstellenzeiger auf die Aufgabe, die derzeit für den Betriebssystem-Thread ausgeführt wird, von dem dieser Aufruf erfolgt.  
+Ruft einen Schnittstellen Zeiger auf die Aufgabe ab, die derzeit auf dem Betriebssystem Thread ausgeführt wird, von dem dieser aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,29 +35,29 @@ HRESULT GetCurrentTask (
   
 ## <a name="parameters"></a>Parameter  
  `pTask`  
- [out] Ein Zeiger auf die Adresse einer [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) -Instanz, der aktuell ausgeführten Aufgabe oder Null, darstellt, wenn keine Aufgabe derzeit ausgeführt wird.  
+ vorgenommen Ein Zeiger auf die Adresse einer [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) -Instanz, die den derzeit ausgeführten Task darstellt, oder NULL, wenn derzeit keine Aufgabe ausgeführt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`GetCurrentTask` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask` wurde ein Betriebssystemthread außerhalb der Kontrolle des Hosts aufgerufen werden.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` wurde in einem Betriebssystem Thread außerhalb der Kontrolle des Hosts aufgerufen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host kann auch festlegen, die `pTask` Parameter auf null, um zu verhindern, dass eine Aufgabe, die sie nicht initiiert haben in der CLR.  
+ Der Host kann auch den `pTask`-Parameter auf NULL festlegen, um zu verhindern, dass eine Aufgabe, die nicht initiiert wurde, in die CLR wechselt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

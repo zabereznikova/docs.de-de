@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739466"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120194"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState-Enumeration
 Gibt den Benutzerzustand eines Threads an.  
@@ -46,23 +44,23 @@ typedef enum CorDebugUserState {
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|Ein Beenden des Threads wurde angefordert.|  
-|`USER_SUSPEND_REQUESTED`|Führt zu eine Unterbrechung des Threads wurde angefordert.|  
+|`USER_STOP_REQUESTED`|Die Beendigung des Threads wurde angefordert.|  
+|`USER_SUSPEND_REQUESTED`|Es wurde eine Unterbrechung des Threads angefordert.|  
 |`USER_BACKGROUND`|Der Thread wird im Hintergrund ausgeführt.|  
-|`USER_UNSTARTED`|Der Thread wurde nicht gestartet, ausgeführt.|  
+|`USER_UNSTARTED`|Der Thread wurde nicht gestartet.|  
 |`USER_STOPPED`|Der Thread wurde beendet.|  
-|`USER_WAIT_SLEEP_JOIN`|Der Thread wartet darauf, dass ein anderer Thread eine Aufgabe auszuführen.|  
+|`USER_WAIT_SLEEP_JOIN`|Der Thread wartet auf den Abschluss einer Aufgabe durch einen anderen Thread.|  
 |`USER_SUSPENDED`|Der Thread wurde angehalten.|  
-|`USER_UNSAFE_POINT`|Der Thread ist an einem unsicheren Punkt. Ist der Thread zu einem Zeitpunkt in der Ausführung, in dem sie die automatische speicherbereinigung blockiert möglicherweise.<br /><br /> Debuggen von Ereignisse von unsicheren Punkten verteilt werden können, aber einen Thread an einem unsicheren Punkt angehalten wird sehr wahrscheinlich einen Deadlock bis der Thread fortgesetzt wird. Die sicheren und unsicheren Punkte werden durch den just-in-Time (JIT) und die Garbage Collection-Implementierung bestimmt.|  
-|`USER_THREADPOOL`|Der Thread ist aus dem Threadpool.|  
+|`USER_UNSAFE_POINT`|Der Thread befindet sich an einem unsicheren Punkt. Das heißt, der Thread befindet sich an einem Punkt in der Ausführung, an dem er Garbage Collection blockieren kann.<br /><br /> Debugereignisse können von unsicheren Punkten aus verteilt werden, aber das Anhalten eines Threads an einem unsicheren Punkt führt wahrscheinlich zu einem Deadlock, bis der Thread fortgesetzt wird. Die sicheren und unsicheren Punkte werden durch die Just-in-time (JIT)-und Garbage Collection-Implementierung festgelegt.|  
+|`USER_THREADPOOL`|Der Thread wird aus dem Thread Pool entfernt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Benutzerzustand eines Threads ist der Zustand, den der Thread wurde bei der Überprüfung durch den Debugger. Ein Thread möglicherweise eine Kombination von Benutzerstatus.  
+ Der Benutzer Zustand eines Threads ist der Zustand, den der Thread aufweist, wenn er vom Debugger überprüft wird. Ein Thread kann eine Kombination aus Benutzer Zuständen aufweisen.  
   
- Verwenden der [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) Methode, um den Benutzerzustand eines Threads abzurufen.  
+ Verwenden Sie die [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) -Methode, um den Benutzer Zustand eines Threads abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce969c9d-6538-4c34-8784-148ffd99fe7a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0dad50f1acac38f8cdc505026e88d42882deb580
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131724"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem-Methode
 Ruft einen Zeiger auf das nächste [IInstallReferenceItem](iinstallreferenceitem-interface.md) -Objekt ab, das in diesem [IInstallReferenceEnum](iinstallreferenceenum-interface.md) -Objekt enthalten ist.  
@@ -39,16 +37,16 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="parameters"></a>Parameter  
  `ppRefItem`  
- vorgenommen Der zurück `IInstallReferenceItem` gegebene Zeiger.  
+ vorgenommen Der zurückgegebene `IInstallReferenceItem` Zeiger.  
   
  `dwFlags`  
- [in] Für zukünftige Erweiterungen reserviert. `dwFlags`muss 0 (null) sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `dwFlags` muss 0 (null) sein.  
   
  `pvReserved`  
- [in] Für zukünftige Erweiterungen reserviert. `pvReserved`muss ein NULL-Verweis sein.  
+ [in] Für zukünftige Erweiterungen reserviert. `pvReserved` muss ein NULL-Verweis sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

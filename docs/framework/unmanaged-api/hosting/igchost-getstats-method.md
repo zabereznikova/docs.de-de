@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e374c03ca90c904cd4ef8a4585cb35ccf43cb43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c86786a34ff236fb57a1ea6bc4d00b9cd5c4a717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134897"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats-Methode
-Ruft die Statistiken für den aktuellen Zustand des Garbage Collection-Systems ab.  
+Ruft die Statistiken für den aktuellen Status des Garbage Collection Systems ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT GetStats (
   
 ## <a name="parameters"></a>Parameter  
  `pStats`  
- [in, out] Ein Zeiger auf eine [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) -Struktur, die die Statistik für den aktuellen Zustand des Garbage Collection-Systems enthält.  
+ [in, out] Ein Zeiger auf eine [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) -Struktur, die die Statistiken für den aktuellen Status des Garbage Collection Systems enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Statistik kann von einem System für die intelligente Zuordnung verwendet werden, die Garbage Collection-System ausgeführt werden können. Beispielsweise kann das Zuordnungssystem nach der Überprüfung der Statistik, die es benötigt mehr Arbeitsspeicher hinzufügen oder erzwingen Sie eine Sammlung.  
+ Die Statistiken können von einem intelligenten Zuordnungs System verwendet werden, um das Garbage Collection System zu unterstützen. Beispielsweise kann das Zuordnungs System nach dem Überprüfen der Statistik feststellen, dass es mehr Arbeitsspeicher hinzufügen oder eine Sammlung erzwingen muss.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

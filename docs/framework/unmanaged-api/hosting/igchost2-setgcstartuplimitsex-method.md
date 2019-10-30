@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e834042c5e00709fcb2198c1496a8a630841d069
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134819"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx-Methode
-Legt die Größe des Segments und die maximale Größe für Generation 0 fest.  
+Legt die Segmentgröße und die maximale Größe für die Generation 0 fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Parameter  
  `SegmentSize`  
- [in] Die Größe des Segments, die von der Garbage Collection-System verwendet werden soll.  
+ in Die Größe des Segments, das vom Garbage Collection System verwendet wird.  
   
  `MaxGen0Size`  
- [in] Die maximale Größe für Generation 0.  
+ in Die maximale Größe für die Generation 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte, die `SetGCStartupLimitsEx` legt können angegeben werden, nur verwendet werden, bevor der Host gestartet wird. Diese Werte können nicht später geändert werden.  
+ Die Werte, die `SetGCStartupLimitsEx` festgelegt haben, können nur angegeben werden, bevor der Host gestartet wird. Diese Werte können später nicht mehr geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** GCHost.idl, GCHost.h  
+ **Header:** Gchost. idl, gchost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

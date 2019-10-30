@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc9a0a6c-d592-4fb7-86ed-62684da3b0e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45a409bda8861701e68d3ea1a956a4c35ce88ddd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccb5cda11a2466496a4b3981e8185cbb7130f66f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738780"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122898"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID-Methode
-Ruft den Bezeichner für den aktuellen Thread ab.  
+Ruft den Betriebssystem Bezeichner für den aktuellen Thread ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT GetCurrentThreadID (
   
 ## <a name="parameters"></a>Parameter  
  `threadID`  
- [out] Ein Zeiger auf die Betriebssystem-ID des aktuellen Threads für den Zielprozess.  
+ vorgenommen Ein Zeiger auf den Betriebssystem Bezeichner des aktuellen Threads für den Ziel Prozess.  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist kein aktueller Thread für den Zielprozess die `GetCurrentThreadID` -Methode schlägt möglicherweise fehl.  
+ Wenn es keinen aktuellen Thread für den Ziel Prozess gibt, schlägt die `GetCurrentThreadID` Methode möglicherweise fehl.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

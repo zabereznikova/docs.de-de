@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetSlotIndex-Methode
+title: 'Icordebugvariablehome:: gezlotindex-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760345"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121056"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex-Methode
-Ruft den verwalteten slotindex einer lokalen Variablen ab.  
+# <a name="icordebugvariablehomegetslotindex-method"></a>Icordebugvariablehome:: gezlotindex-Methode
+Ruft den verwalteten Slot-Index einer lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,21 +35,21 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>Parameter  
  `pSlotIndex`  
- [out] Ein Zeiger auf den slotindex einer lokalen Variablen.  
+ vorgenommen Ein Zeiger auf den slotindex einer lokalen Variablen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte an.  
+ Die-Methode gibt die folgenden Werte zurück.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Aufruf der Methode wurde in einen Slot-Indexwert `pSlotIndex`.|  
-|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz darstellt, ein Funktionsargument.|  
+|`S_OK`|Der Methodenaufrufe hat einen Slot-Index-Wert in `pSlotIndex`zurückgegeben.|  
+|`E_FAIL`|Die aktuelle [icorentbugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Instanz stellt ein Funktions Argument dar.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Slot-Index kann zum Abrufen der Metadaten für diese lokale Variable verwendet werden.  
+ Der Slot-Index kann verwendet werden, um die Metadaten für diese lokale Variable abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

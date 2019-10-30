@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln'
+title: 'Gewusst wie: Erstellen von Zeitzonen ohne Anpassungsregeln'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - time zones [.NET Framework], creating
 - adjustment rule [.NET Framework]
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 510112c8b19ec002d1dcf918eb983b55dee68fd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 344d8307318d5a2e50eddb39ef488cd8c5f2fdac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106668"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129109"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Gewusst wie: Erstellen von Zeitzonen ohne Anpassungsregeln
 
 Die genauen Zeitzoneninformationen, die von einer Anwendung benötigt werden, sind möglicherweise aus verschiedenen Gründen nicht auf einem bestimmten System vorhanden:
 
@@ -29,12 +27,12 @@ Die genauen Zeitzoneninformationen, die von einer Anwendung benötigt werden, si
 
 - Die Zeitzone ist zwar vorhanden, verfügt jedoch nicht über genaue Informationen zu Zeit Zonen Anpassungen für einen bestimmten historischen Zeitraum.
 
-In diesen Fällen können Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> -Methode zum Definieren der Zeitzone, die für Ihre Anwendung erforderlich ist, aufzurufen. Sie können die über Ladungen dieser Methode verwenden, um eine Zeitzone mit oder ohne Anpassungsregeln zu erstellen. Wenn die Zeitzone die Sommerzeit unterstützt, können Sie Anpassungen mit festgelegten oder Gleit Komma Anpassungsregeln definieren. (Informationen zu Definitionen dieser Begriffe finden Sie im Abschnitt "Zeit Zonen Terminologie" unter [Übersicht über](../../../docs/standard/datetime/time-zone-overview.md)die Zeitzone.)
+In diesen Fällen können Sie die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>-Methode aufzurufen, um die für die Anwendung erforderliche Zeitzone zu definieren. Sie können die über Ladungen dieser Methode verwenden, um eine Zeitzone mit oder ohne Anpassungsregeln zu erstellen. Wenn die Zeitzone die Sommerzeit unterstützt, können Sie Anpassungen mit festgelegten oder Gleit Komma Anpassungsregeln definieren. (Informationen zu Definitionen dieser Begriffe finden Sie im Abschnitt "Zeit Zonen Terminologie" unter [Übersicht über](../../../docs/standard/datetime/time-zone-overview.md)die Zeitzone.)
 
 > [!IMPORTANT]
-> Benutzerdefinierte Zeitzonen, die durch den <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Aufruf der-Methode erstellt wurden, werden nicht zur Registrierung hinzugefügt. Stattdessen kann nur über den Objekt Verweis darauf zugegriffen werden, der durch den <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> -Methoden-Befehl zurückgegeben wird.
+> Benutzerdefinierte Zeitzonen, die durch den Aufruf der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>-Methode erstellt wurden, werden nicht zur Registrierung hinzugefügt. Stattdessen kann nur über den Objekt Verweis darauf zugegriffen werden, der vom <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>-Methoden aufrufzeichen zurückgegeben wird.
 
-In diesem Thema wird gezeigt, wie Sie eine Zeitzone ohne Anpassungsregeln erstellen. Informationen zum Erstellen einer Zeitzone, die Anpassungsregeln für die Sommerzeit unter [stützt, finden Sie unter Gewusst wie: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+In diesem Thema wird gezeigt, wie Sie eine Zeitzone ohne Anpassungsregeln erstellen. Informationen zum Erstellen einer Zeitzone, die Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter Gewusst [wie: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-without-adjustment-rules"></a>So erstellen Sie eine Zeitzone ohne Anpassungsregeln
 
@@ -46,9 +44,9 @@ In diesem Thema wird gezeigt, wie Sie eine Zeitzone ohne Anpassungsregeln erstel
 
 3. Wenn Sie einen anderen Bezeichner als den Standardnamen der Zeitzone verwenden möchten, definieren Sie den Zeit Zonen Bezeichner.
 
-4. Instanziieren Sie <xref:System.TimeSpan> ein-Objekt, das den Zeit Zonen Offset von UTC definiert. Zeitzonen mit Uhrzeiten, die später als UTC liegen, haben einen positiven Offset. Zeitzonen mit Zeiten, die älter sind als UTC, haben einen negativen Offset.
+4. Instanziieren Sie ein <xref:System.TimeSpan> Objekt, das den Zeit Zonen Offset von UTC definiert. Zeitzonen mit Uhrzeiten, die später als UTC liegen, haben einen positiven Offset. Zeitzonen mit Zeiten, die älter sind als UTC, haben einen negativen Offset.
 
-5. Ruft die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> -Methode auf, um die neue Zeitzone zu instanziieren.
+5. Ruft die <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>-Methode auf, um die neue Zeitzone zu instanziieren.
 
 ## <a name="example"></a>Beispiel
 
@@ -57,7 +55,7 @@ Im folgenden Beispiel wird eine benutzerdefinierte Zeitzone für Mawson (Antarkt
 [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
 [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
 
-Die Zeichenfolge, die <xref:System.TimeZoneInfo.DisplayName%2A> der-Eigenschaft zugewiesen ist, folgt einem Standardformat, bei dem der Offset der Zeitzone von UTC eine benutzerfreundliche Beschreibung der Zeitzone folgt.
+Die Zeichenfolge, die der <xref:System.TimeZoneInfo.DisplayName%2A>-Eigenschaft zugewiesen ist, folgt einem Standardformat, in dem der Offset der Zeitzone von UTC eine benutzerfreundliche Beschreibung der Zeitzone folgt.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137099"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress-Methode
-Ruft die Adresse des Objekts "ICorDebugValue", der gerade gedebuggt wird.  
+Ruft die Adresse dieses ICorDebugValue-Objekts ab, das gerade gedebuggt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parameter  
  `pAddress`  
- [out] Zeiger auf eine `CORDB_ADDRESS` Objekt, das die Adresse des Wertobjekts angibt.  
+ vorgenommen Ein Zeiger auf ein `CORDB_ADDRESS` Objekt, das die Adresse dieses Wert Objekts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert nicht verfügbar ist, wird 0 (null) zurückgegeben. Dies kann passieren, wenn der Wert, zumindest teilweise in Registern ist oder in einem Garbage Collector-Handle (`GCHandle`).  
+ Wenn der Wert nicht verfügbar ist, wird 0 (null) zurückgegeben. Dies kann vorkommen, wenn der Wert mindestens teilweise in Registern oder in einem Garbage Collector handle (`GCHandle`) gespeichert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

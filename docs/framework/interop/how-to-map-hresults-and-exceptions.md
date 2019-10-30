@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
+title: 'Gewusst wie: Zuordnen von HRESULTs und Ausnahmen'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
+ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306546"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123877"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
+# <a name="how-to-map-hresults-and-exceptions"></a>Gewusst wie: Zuordnen von HRESULTs und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
   
  Benutzerdefinierte Ausnahmeklassen können jedes angemessene HRESULT angeben. Diese Ausnahmeklassen können durch eine dynamische Änderung einstellen, dass das HRESULT zurückgegeben wird, wenn die Ausnahme durch Festlegen des **HResult**-Felds für das Ausnahmeobjekt generiert wird. Weitere Informationen zur Ausnahme wird dem Client über die **IErrorInfo**-Schnittstelle zur Verfügung gestellt, die auf das .NET-Objekt im nicht verwalteten Prozess implementiert wird.  
@@ -46,7 +44,7 @@ COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melde
     }  
     ```  
   
- Es wird möglicherweise ein Programm (in einer beliebigen Programmiersprache) auftreten, das verwalteten und nicht verwalteten Code gleichzeitig verwendet. Beispielsweise verwendet der benutzerdefinierte Marshaller im folgenden Codebeispiel die Methode **Marshal.ThrowExceptionForHR(Int HResult)**, um eine Ausnahme mit einem bestimmten HRESULT-Wert auszulösen. Die Methode sucht das HRESULT und generiert den entsprechenden Ausnahmetyp. Im folgenden Codefragment generiert HRESULT z.B. **ArgumentException**.  
+ Es wird möglicherweise ein Programm (in einer beliebigen Programmiersprache) auftreten, das verwalteten und nicht verwalteten Code gleichzeitig verwendet. Beispielsweise verwendet der benutzerdefinierte Marshaller im folgenden Codebeispiel die Methode **Marshal.ThrowExceptionForHR(Int HResult)** , um eine Ausnahme mit einem bestimmten HRESULT-Wert auszulösen. Die Methode sucht das HRESULT und generiert den entsprechenden Ausnahmetyp. Im folgenden Codefragment generiert HRESULT z.B. **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -75,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Ausnahme**|  
+|**COR_E_EXCEPTION**|**Exception**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND oder ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -97,7 +95,7 @@ CMyClass::MethodThatThrows
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE oder E_POINTER**|**NullReferenceException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY oder**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG oder ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
@@ -136,7 +134,7 @@ CMyClass::MethodThatThrows
 |**HelpLink**|Wenn **IErrorInfo->HelpContext** ungleich 0 ist, wird die Zeichenfolge durch Verketten von **IErrorInfo->GetHelpFile** und „#“ sowie **IErrorInfo->GetHelpContext** gebildet. Andernfalls wird die Zeichenfolge aus **IErrorInfo->GetHelpFile** zurückgegeben.|  
 |**InnerException**|Immer ein NULL-Verweis (**Nothing** in Visual Basic).|  
 |**Meldung**|Von **IErrorInfo->GetDescription** zurückgegebene Zeichenfolge.|  
-|**Quelle**|Von **IErrorInfo->GetSource** zurückgegebene Zeichenfolge.|  
+|**Source**|Von **IErrorInfo->GetSource** zurückgegebene Zeichenfolge.|  
 |**StackTrace**|Die Stapelüberwachung.|  
 |**TargetSite**|Der Name der Methode, die das fehlerhafte HRESULT zurückgegeben hat.|  
   

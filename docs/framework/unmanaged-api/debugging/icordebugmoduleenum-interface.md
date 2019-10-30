@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fb93cd6-6d47-4fdc-a9a0-047726fd03a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 682fe190126d4f40013678d996804e9f3481bc02
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eaf00369cf77aaa1ba16879bae1b74aba2eb9eab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965083"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123542"
 ---
 # <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum-Schnittstelle
 
@@ -31,7 +29,7 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugModule-Arrays auf.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugModule` -Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugModule` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -39,11 +37,11 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugModule-Arrays auf.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

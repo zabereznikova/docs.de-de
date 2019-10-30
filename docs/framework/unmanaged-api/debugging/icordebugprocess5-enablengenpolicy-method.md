@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129689"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy-Methode
-Legt einen Wert, der bestimmt, wie eine Anwendung für systemeigene Images während der Ausführung unter einem verwalteten Debugger geladen.  
+Legt einen Wert fest, der bestimmt, wie eine Anwendung systemeigene Images lädt, während Sie unter einem verwalteten Debugger ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>Parameter  
  `ePolicy`  
- [in] Ein [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) Konstante, die bestimmt, wie eine Anwendung für systemeigene Images während der Ausführung unter einem verwalteten Debugger geladen.  
+ in Eine [cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) -Konstante, die bestimmt, wie eine Anwendung systemeigene Images lädt, während Sie unter einem verwalteten Debugger ausgeführt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Richtlinie erfolgreich festgelegt wurde, gibt die Methode `S_OK`. Wenn `ePolicy` liegt außerhalb des Bereichs, der durch definierten Enumerationswerte [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), gibt die Methode zurück `E_INVALIDARG` und Aufruf der Methode hat keine Auswirkungen. Die Methode gibt zurück, wenn die Richtlinie das Native Image Generator (Ngen.exe) kann nicht aktualisiert werden, `E_FAIL`.  
+ Wenn die Richtlinie erfolgreich festgelegt wurde, gibt die Methode `S_OK`zurück. Wenn `ePolicy` außerhalb des Bereichs der durch [cordebugngenpolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)definierten Enumerationswerte liegt, gibt die Methode `E_INVALIDARG` zurück, und der Methodenaufruf hat keine Auswirkungen. Wenn die Richtlinie des Native Image Generator (Ngen. exe) nicht aktualisiert werden kann, gibt die Methode `E_FAIL`zurück.  
   
- Die `ICorDebugProcess5::EnableNGenPolicy` Methode kann zu einem beliebigen Zeitpunkt während der Lebensdauer des Prozesses aufgerufen werden. Die Richtlinie gilt für alle Module, die geladen werden, nachdem die Richtlinie festgelegt wird.  
+ Die `ICorDebugProcess5::EnableNGenPolicy`-Methode kann zu einem beliebigen Zeitpunkt während der Lebensdauer des Prozesses aufgerufen werden. Die Richtlinie ist für alle Module wirksam, die geladen werden, nachdem die Richtlinie festgelegt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

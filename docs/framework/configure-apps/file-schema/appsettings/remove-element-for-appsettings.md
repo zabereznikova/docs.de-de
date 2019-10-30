@@ -7,16 +7,16 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0695d5638589d1afe48553fe32b8d070e3938353
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921282"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119207"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Entfernen Sie > Element \<für appSettings >
+# <a name="remove-element-for-appsettings"></a>\<> Element für \<appSettings entfernen >
 
 Entfernt benutzerdefinierte Anwendungseinstellungen.
 
@@ -46,11 +46,11 @@ Entfernt benutzerdefinierte Anwendungseinstellungen.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationseinstellung `ApplicationName`für entfernt wird:
+Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationseinstellung für `ApplicationName`entfernt wird:
 
 ```xml
 <appSettings>

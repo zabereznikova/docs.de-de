@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798647"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130442"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi-Funktion
 
@@ -53,7 +51,7 @@ HRESULT ExecNotificationQueryWmi (
 in Eine Zeichenfolge mit der gültigen von der Windows-Verwaltung unterstützten Abfragesprache. Der Wert muss "WQL" und das Akronym für WMI-Abfragesprache sein.
 
 `strQuery`\
-in Der Text der Abfrage. Dieser Parameter darf nicht `null`sein.
+in Der Text der Abfrage. Dieser Parameter kann nicht `null`werden.
 
 `lFlags`\
 in Eine Kombination der beiden folgenden Flags, die sich auf das Verhalten dieser Funktion auswirken. Diese Werte sind in der Header Datei " *wbemcli. h* " definiert, oder Sie können Sie als Konstanten im Code definieren.
@@ -64,7 +62,7 @@ in Eine Kombination der beiden folgenden Flags, die sich auf das Verhalten diese
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die-Funktion gibt einen vorwärts-Enumerator zurück. In der Regel sind vorwärts-Enumeratoren schneller und verbrauchen weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber Sie erlauben keine Aufrufe von [Klonen](clone.md). |
 
 `pCtx`\
-in Normalerweise ist `null`dieser Wert. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Ereignisse bereitstellt.
+in In der Regel ist dieser Wert `null`. Andernfalls handelt es sich um einen Zeiger auf eine [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, der die angeforderten Ereignisse bereitstellt.
 
 `ppEnum`\
 vorgenommen Wenn kein Fehler auftritt, empfängt den Zeiger auf den Enumerator, der dem Aufrufer das Abrufen der Instanzen im Resultset der Abfrage ermöglicht. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
@@ -98,7 +96,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Die Abfrage gibt eine Klasse an, die nicht vorhanden ist. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Es wurde eine zu viel Genauigkeit bei der Übermittlung von Ereignissen angefordert. Es muss eine größere Abruf Toleranz angegeben werden. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Die Abfrage fordert mehr Informationen an als die Windows-Verwaltung bereitstellen kann. Dieser `HRESULT` Wert wird zurückgegeben, wenn eine Ereignis Abfrage eine Anforderung zum Abfragen aller Objekte in einem Namespace ergibt. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Die Abfrage fordert mehr Informationen an als die Windows-Verwaltung bereitstellen kann. Diese `HRESULT` wird zurückgegeben, wenn eine Ereignis Abfrage eine Anforderung zum Abfragen aller Objekte in einem Namespace ergibt. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Die Abfrage enthielt einen Syntax Fehler. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Die angeforderte Abfragesprache wird nicht unterstützt. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Die Abfrage ist zu komplex. |
@@ -114,15 +112,15 @@ Diese Funktion umschließt einen Aufruf der [IWbemServices:: ExecNotificationQue
 
 Nachdem die Funktion zurückgegeben wurde, übergibt der Aufrufer regelmäßig das zurückgegebene `ppEnum` Objekt an die [Next](next.md) -Funktion, um festzustellen, ob Ereignisse verfügbar sind.
 
-Die Anzahl der `AND` Schlüsselwörter und, die `OR` in WQL-Abfragen verwendet werden können, ist begrenzt. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, `WBEM_E_QUOTA_VIOLATION` kann dazu führen, dass WMI den Fehlercode ( `HRESULT` oder 0x8004106c) als-Wert zurückgibt. Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
+Es gibt Grenzwerte für die Anzahl der `AND`-und `OR` Schlüsselwörter, die in WQL-Abfragen verwendet werden können. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den `WBEM_E_QUOTA_VIOLATION` Fehlercode (oder 0x8004106c) als `HRESULT` Wert zurückgibt. Das Limit von WQL-Schlüsselwörtern hängt von der Komplexität der Abfrage ab.
 
 Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, indem Sie die [GetErrorInfo](geterrorinfo.md) -Funktion aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** WMINet_Utils.idl
+**Header:** WMINet_Utils. idl
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

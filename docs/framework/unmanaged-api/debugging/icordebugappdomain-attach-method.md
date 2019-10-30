@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66ec64b1a855a3d31f14f3ef29dde0b82361f5d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738094"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133985"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach-Methode
 Fügt den Debugger an die Anwendungsdomäne an.  
@@ -34,10 +32,10 @@ HRESULT Attach ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger muss an die Anwendungsdomäne zum Empfangen von Ereignissen und zum Aktivieren des Debuggens der Anwendungsdomäne angefügt werden.  
+ Der Debugger muss an die Anwendungsdomäne angefügt werden, um Ereignisse zu empfangen und das Debuggen der Anwendungsdomäne zu ermöglichen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

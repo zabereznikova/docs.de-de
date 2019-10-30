@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119338"
 ---
 # <a name="add-element-for-appsettings"></a>\<> Element für \<appSettings hinzufügen >
 
@@ -22,7 +22,7 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 
 [ **\<configuration>** ](../configuration-element.md)   
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<hinzufügen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 |           | Beschreibung |
 | --------- | ----------- |
 | **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzu zufügenden Schlüssels an. |
-| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzu zufügenden Schlüssels an. |
+| **Wert** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzu zufügenden Schlüssels an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -47,7 +47,7 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="example"></a>Beispiel
 
@@ -59,7 +59,7 @@ Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationsei
 </appSettings>
 ```
 
-Im folgenden Beispiel wird das `<add>` -Element verwendet, um zwei Kompatibilitäts Einstellungen in einer ASP.NET-Anwendung zu definieren:
+Im folgenden Beispiel wird das `<add>`-Element verwendet, um zwei Kompatibilitäts Einstellungen in einer ASP.NET-Anwendung zu definieren:
 
 ```xml
 <appSettings>

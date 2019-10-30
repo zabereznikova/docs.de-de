@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._HttpResponse Field
+title: HttpWebRequest. _HttpResponse-Feld
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d993021ccb87ccafb5f6f2fc4c6c7c288288adae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120081"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>"HttpWebRequest". \_HttpResponse-Feld
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_Feld "HttpResponse"
 
-`HttpWebRequest._HttpResponse` ist ein <xref:System.Net.HttpWebResponse> , die Details der HTTP-Antwort aus einer HTTP-Anforderung enthält. Es kann sein `null` erst eine HTTP-Antwort empfangen wird.
+`HttpWebRequest._HttpResponse` ist eine <xref:System.Net.HttpWebResponse>, die HTTP-Antwort Details aus einer HTTP-Anforderung enthält. Sie kann `null` werden, bis eine HTTP-Antwort empfangen wird.
 
 ## <a name="syntax"></a>Syntax
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> Die `HttpWebRequest._HttpResponse` Feld ist intern und nicht direkt in Ihrem Code verwendet werden sollen.
+> Das `HttpWebRequest._HttpResponse` Feld ist intern und sollte nicht direkt im Code verwendet werden.
 > 
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System.dll")
+**Assembly:** System (in "System. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

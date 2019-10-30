@@ -10,17 +10,15 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df113a2839b0f2651e15f4029d86cc5efc171c63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6591f7d7b632bcdbdabb1633f7431d79da7ff6e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111817"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3-Schnittstelle
-Eine Unterklasse von [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , Zugriff auf Informationen über die Ausnahme bereitstellt.  
+Eine Unterklasse von [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , die Zugriff auf Ausnahme Informationen bietet.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -34,9 +32,9 @@ Eine Unterklasse von [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/
  Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. So hätte ein Liveprozess z. B. eine andere Implementierung als ein Speicherabbild. Das Ziel unterstützt möglicherweise keine Änderung seiner Arbeitsspeicherbereiche.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

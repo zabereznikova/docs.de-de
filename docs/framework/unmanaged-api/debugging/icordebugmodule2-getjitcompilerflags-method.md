@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7212d9f4-989b-44e3-b8d4-ffc35922f6a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88277be93d3a0e445e97217655d3d524962dd01d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1216629fc7e1c3e720d5f296b9293b3c4b7f8721
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764221"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127892"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags-Methode
-Ruft die Flags, die just-in-Time (JIT)-Kompilierung für dieses ICorDebugModule2 steuern.  
+Ruft die Flags ab, die die Just-in-time (JIT)-Kompilierung dieses ICorDebugModule2 steuern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetJITCompilerFlags (
   
 ## <a name="parameters"></a>Parameter  
  `pdwFlags`  
- [out] Ein Zeiger auf den Wert der [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) -Enumeration, der die JIT-Kompilierung steuert.  
+ vorgenommen Ein Zeiger auf einen Wert der [corentbugjitcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) -Enumeration, der die JIT-Kompilierung steuert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

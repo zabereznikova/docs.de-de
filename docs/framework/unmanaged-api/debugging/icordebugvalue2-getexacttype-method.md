@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c28ff84b08802246d587bfa130ae5915177932ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140255"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType-Methode
-Ruft einen Schnittstellenzeiger auf ein "ICorDebugType"-Objekt, das darstellt ab der <xref:System.Type> dieses Werts.  
+Ruft einen Schnittstellen Zeiger auf ein ICorDebugType-Objekt ab, das die <xref:System.Type> dieses Werts darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetExactType (
   
 ## <a name="parameters"></a>Parameter  
  `ppType`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugType` Objekt, das darstellt der <xref:System.Type> des Werts von diesem Objekt "ICorDebugValue2" dargestellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das die <xref:System.Type> des Werts darstellt, der durch dieses "ICorDebugValue2"-Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Generika-bewusste `GetExactType` Methode ersetzt sowohl die [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) und [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) Methoden aller Informationen über den Typ eines Werts zurückgeben .  
+ Die Generika unterstützende `GetExactType` Methode ersetzt sowohl die [ICorDebugObjectValue:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) -Methode als auch die [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) -Methode, die jeweils Informationen über den Typ eines Werts zurückgeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

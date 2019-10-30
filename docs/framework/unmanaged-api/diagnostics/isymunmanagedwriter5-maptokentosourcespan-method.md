@@ -2,19 +2,17 @@
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan-Methode
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08c219dd033b39fc07159875b184cdf70e3aa3ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 876804e7b825443116b1f44a02a685a73153915c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121623"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan-Methode
-Zuordnungen in die Zeile für die angegebene Quelle das angegebene Metadatentoken umfassen, in der angegebenen Quelldatei.  
+Ordnet das angegebene Metadatentoken der angegebenen Quellzeilen Spanne in der angegebenen Quelldatei zu.  
   
- Muss aufgerufen werden, zwischen den Aufrufen [OpenMapTokensToSourceSpans-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) und [CloseMapTokensToSourceSpans-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md).  
+ Muss zwischen Aufrufen der [openmaptokenstosourcespans-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md) und der [closemaptokenstosourcespans-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-closemaptokenstosourcespans-method.md)aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +35,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
  Gibt `HRESULT`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** CorSym.idl, CorSym.h  
+ **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 

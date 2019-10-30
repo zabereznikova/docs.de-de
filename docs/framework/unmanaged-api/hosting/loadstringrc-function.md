@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768467"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122019"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC-Funktion
 Übersetzt einen HRESULT-Wert in eine Fehlermeldung, wobei die Standardkultur des aktuellen Threads verwendet wird.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,34 +39,34 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Parameter  
  `iResourceID`  
- [in] Ein HRESULT.  
+ in Ein HRESULT.  
   
  `szBuffer`  
- [out] Ein Puffer, der die Fehlermeldung nach dem erfolgreichen Abschluss enthält.  
+ vorgenommen Ein Puffer, der die Fehlermeldung nach erfolgreichem Abschluss enthält.  
   
  `iMax`  
- [in] Die Größe des Puffers für die Fehlermeldung.  
+ in Die Größe des Fehlermeldungs Puffers.  
   
  `bQuiet`  
- [in] Ignoriert.  
+ in Erten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt Component Object Model (COM) Standardfehlercodes in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`szBuffer` ist null oder `iMax` ist 0 (null).|  
+|E_INVALIDARG|`szBuffer` ist NULL, oder `iMax` ist 0 (null).|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Methode nicht erfolgreich abgeschlossen wird `szBuffer` enthält eine leere Zeichenfolge.  
+ Wenn die Methode nicht erfolgreich abgeschlossen wird, enthält `szBuffer` eine leere Zeichenfolge.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** "Mscoree.dll" und "Mscorwks.dll". Verwenden Sie "Mscoree.dll" anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.  
+ **Bibliothek:** "Mscoree. dll" und "mscorwert. dll". Verwenden Sie "mscoree. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

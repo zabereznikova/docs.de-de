@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98b097ef-2276-4dd9-8551-b03c972e8179
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b6ac83cdd0c88e87fdfd552c76c906a334f8928
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120303"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString-Methode
 Ruft die einer bestimmten [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle zugeordneten Common Language Runtime (CLR) ab.  
@@ -43,7 +41,7 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>Parameter  
  `pwzBuffer`  
- vorgenommen Die .NET Framework Kompilierungs Version im Format "v*A*. *B* [. *X*] ". *A*, *B*und *X* sind Dezimalzahlen, die der Hauptversion, der neben Version und der Buildnummer entsprechen. *X* ist optional. Wenn *X* nicht vorhanden ist, gibt es keinen nachfolgenden Zeitraum.  
+ vorgenommen Die .NET Framework Kompilierungs Version im Format "v*A*. *B*[. *X*] ". *A*, *B*und *X* sind Dezimalzahlen, die der Hauptversion, der neben Version und der Buildnummer entsprechen. *X* ist optional. Wenn *X* nicht vorhanden ist, gibt es keinen nachfolgenden Zeitraum.  
   
 > [!NOTE]
 > Dieser Parameter muss dem Verzeichnisnamen für die .NET Framework Version entsprechen, wie er unter "c:\WINDOWS\Microsoft.NET\Framework" angezeigt wird.  
@@ -51,7 +49,7 @@ HRESULT GetVersionString(
  Beispiel Werte sind "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" und "v 4.0". *x*", wobei *x* von der installierten Buildnummer abhängig ist. Beachten Sie, dass das Präfix "v" obligatorisch ist.  
   
  `pchBuffer`  
- [in, out] Gibt die Größe von `pwzBuffer` an, um Pufferüberläufe zu vermeiden. Wenn `pwzBuffer` ist `null`, `pwzBuffer` wird die erforderliche Größe von zurückgegeben, um die vorab Zuordnung zuzulassen. `pchBuffer`  
+ [in, out] Gibt die Größe der `pwzBuffer` an, um Pufferüberläufe zu vermeiden. Wenn `pwzBuffer` `null`ist, gibt `pchBuffer` die erforderliche Größe `pwzBuffer` zurück, um die vorab Zuordnung zuzulassen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -62,11 +60,11 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` oder `pchBuffer` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

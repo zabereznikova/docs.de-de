@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc91ff0676fcec5d614f9d6fa4850eb2c81086b4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8d8efccde56d8d37a75b1d9bbec706411c6b1f45
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134781"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding-Methode
-Benachrichtigt den Host, dass die Laufzeit Threads nach einer Garbagecollection oder einer anderen Unterbrechung fortgesetzt wird.  
+Benachrichtigt den Host, dass die Laufzeit Threads nach einem Garbage Collection oder einer anderen Unterbrechung fortsetzt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Parameter  
  `Generation`  
- [in] Die Objektgeneration, für die eine Garbagecollection durchgeführt wurde.  
+ in Die Generierung, auf der ein Garbage Collection ausgeführt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Darf nicht verlegt werden alle Threads, während die `SuspensionEnding` Rückruf.  
+ Planen Sie keine Threads während des `SuspensionEnding` Rückrufs neu.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

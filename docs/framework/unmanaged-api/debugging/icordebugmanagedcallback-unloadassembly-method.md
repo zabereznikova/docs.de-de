@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761297"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130659"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly-Methode
-Benachrichtigt den Debugger, dass eine common Language Runtime-Assembly entladen wurde.  
+Benachrichtigt den Debugger, dass eine Common Language Runtime Assembly entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT UnloadAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die Assembly enthält.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Assembly enthalten ist.  
   
  `pAssembly`  
- [in] Ein Zeiger auf ein ICorDebugAssembly-Objekt, das die Assembly darstellt.  
+ in Ein Zeiger auf ein ICorDebug-Objekt, das die Assembly darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Assembly sollte nach dieser Rückruf nicht verwendet werden.  
+ Die Assembly sollte nach diesem Rückruf nicht verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

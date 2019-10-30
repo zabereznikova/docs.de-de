@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a43d5e15c02a97ff10a6a5afd439cadebb6b33d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795485"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109215"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO-Struktur
 Enthält Informationen zu einer Assembly, die im globalen Assemblycache registriert ist.  
@@ -43,13 +41,13 @@ typedef struct _ASSEMBLY_INFO {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Die Größe der-Struktur in Bytes. Dieses Feld ist für die spätere Erweiterbarkeit reserviert.|  
-|`dwAssemblyFlags`|Flags, die Installationsdetails über die Assembly angeben. Die folgenden Werte werden unterstützt:<br /><br /> : Der ASSEMBLYINFO_FLAG_INSTALLED-Wert, der angibt, dass die Assembly installiert ist. Die aktuelle Version des-.NET Framework legt `dwAssemblyFlags` immer auf diesen Wert fest.<br />: Der ASSEMBLYINFO_FLAG_PAYLOADRESIDENT-Wert, der angibt, dass die Assembly eine Nutzlast ist. Die aktuelle Version des .NET Framework nie auf diesen `dwAssemblyFlags` Wert festgelegt.|  
+|`dwAssemblyFlags`|Flags, die Installationsdetails über die Assembly angeben. Die folgenden Werte werden unterstützt:<br /><br /> : Der ASSEMBLYINFO_FLAG_INSTALLED-Wert, der angibt, dass die Assembly installiert ist. Die aktuelle Version des .NET Framework legt `dwAssemblyFlags` immer auf diesen Wert fest.<br />: Der ASSEMBLYINFO_FLAG_PAYLOADRESIDENT-Wert, der angibt, dass die Assembly eine Nutzlast ist. Die aktuelle Version des .NET Framework legt `dwAssemblyFlags` nicht auf diesen Wert fest.|  
 |`uliAssemblySizeInKB`|Die Gesamtgröße der Dateien in Kilobyte, die in der Assembly enthalten sind.|  
 |`pszCurrentAssemblyPathBuf`|Ein Zeiger auf einen Zeichen folgen Puffer, der den aktuellen Pfad zur Manifest-Datei enthält. Der Pfad muss mit einem NULL-Zeichen enden.|  
-|`cchBuf`|Die Anzahl der breit Zeichen, einschließlich des NULL-Abschluss Zeichens `pszCurrentAssemblyPathBuf` , das enthält.|  
+|`cchBuf`|Die Anzahl der breit Zeichen, einschließlich des NULL-Abschluss Zeichens, das `pszCurrentAssemblyPathBuf` enthält.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

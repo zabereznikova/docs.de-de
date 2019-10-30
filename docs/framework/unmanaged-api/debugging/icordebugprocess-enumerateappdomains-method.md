@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3c0f20cc93b02e048c9d1952188af3d21d37221
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e09e25503ad00ab3542f0c4f50221b6014b25561
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766121"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128882"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains-Methode
-Listet alle Anwendungsdomänen in diesem Prozess.  
+Listet alle Anwendungs Domänen in diesem Prozess auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +34,13 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>Parameter  
  `ppAppDomains`  
- [out] Ein Zeiger auf die Adresse einer [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) , einen Enumerator für die Anwendungsdomänen in diesem Prozess.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) , der ein Enumerator für die Anwendungs Domänen in diesem Prozess ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode kann verwendet werden, bevor die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf.  
+ Diese Methode kann vor dem [ICorDebugManagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) -Rückruf verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b07029990ef529ded57bc569beff1061ad0f938
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140865"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime-Methode
 
-Stellt auf Basis einer Hostingrichtlinie, einer verwalteten Assembly, einer Versionszeichenfolge und eines Konfigurationsstreams eine Schnittstelle mit einer bevorzugten Version der Common Language Runtime (CLR) bereit. Diese Methode nicht geladen werden oder aktiviert die CLR, sondern gibt einfach die [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle, die das Richtlinienergebnis darstellt. Diese Methode ersetzt die [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), und [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) Methoden.
+Stellt auf Basis einer Hostingrichtlinie, einer verwalteten Assembly, einer Versionszeichenfolge und eines Konfigurationsstreams eine Schnittstelle mit einer bevorzugten Version der Common Language Runtime (CLR) bereit. Diese Methode lädt oder aktiviert die CLR nicht, sondern gibt einfach die [iclrruntimeingefo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle zurück, die das Richtlinien Ergebnis darstellt. Diese Methode ersetzt die Methoden [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)und [getcorrequirements dversion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) .
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,18 +44,18 @@ HRESULT GetRequestedRuntime(
 
 ## <a name="parameters"></a>Parameter
 
-|Name|Beschreibung|
+|-Name|Beschreibung|
 |----------|-----------------|
-|`dwPolicyFlags`|[in] erforderlich. Gibt einen Member der [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) Enumeration, der eine Bindungsrichtlinie und eine beliebige Anzahl von Modifizierern darstellt. Die einzige Richtlinie, die derzeit verfügbaren [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Modifizierer sind [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), und [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
+|`dwPolicyFlags`|[in] erforderlich. Gibt einen Member der [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) -Enumeration an, die eine Bindungs Richtlinie und eine beliebige Anzahl von modifiziererelementen darstellt. Die einzige Richtlinie, die derzeit verfügbar ist, ist [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Modifiziererer sind [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)und [METAHOST_POLICY_. ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
 |`pwzBinary`|[in] Optional. Gibt den Pfad der Assemblydatei an.|
 |`pCfgStream`|[in] Optional. Gibt die Konfigurationsdatei als einen <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> an.|
 |`pwzVersion`|[in, out] Optional. Gibt die bevorzugte CLR-Version an, die geladen werden soll, oder gibt diese zurück.|
 |`pcchVersion`|[in, out] Erforderlich. Gibt die erwartete Größe von `pwzVersion` als Eingabe an, um Pufferüberläufe zu vermeiden. Wenn `pwzVersion` gleich NULL ist, enthält `pcchVersion` die erwartete Größe von `pwzVersion`, wenn `GetRequestedRuntime` beendet wird, um die Vorabbelegung zu ermöglichen; andernfalls enthält `pcchVersion` die Anzahl der in `pwzVersion` geschriebenen Zeichen.|
-|`pwzImageVersion`|[out] Optional. Wenn `GetRequestedRuntime` zurückgibt, enthält die CLR Version entspricht der [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle, die zurückgegeben wird.|
+|`pwzImageVersion`|[out] Optional. Wenn `GetRequestedRuntime` zurückgibt, enthält die CLR-Version, die der zurückgegebenen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle entspricht.|
 |`pcchImageVersion`|[in, out] Optional. Gibt die Größe von `pwzImageVersion` als Eingabe an, um Pufferüberläufe zu vermeiden. Wenn `pwzImageVersion` gleich NULL ist, enthält `pcchImageVersion` die erforderliche Größe von `pwzImageVersion`, wenn `GetRequestedRuntime` beendet wird, um die Vorabbelegung zu ermöglichen.|
-|`pdwConfigFlags`|[out] Optional. Wenn `GetRequestedRuntime` mithilfe einer Konfigurationsdatei während des Bindungsvorgangs, bei der Ausgabe `pdwConfigFlags` enthält eine [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) Wert, der angibt, ob die [ \<Start >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) Element verfügt über die `useLegacyV2RuntimeActivationPolicy` -Attributsatz und der Wert des Attributs. Anwenden der [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) -Maske auf `pdwConfigFlags` um die Werte zu erhalten, die relevant für `useLegacyV2RuntimeActivationPolicy`.|
-|`riid`|[in] Gibt den Schnittstellenbezeichner "IID_ICLRRuntimeInfo" für die angeforderte [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle.|
-|`ppRuntime`|[out] Wenn `GetRequestedRuntime` zurückgibt, enthält einen Zeiger auf den entsprechenden [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle.|
+|`pdwConfigFlags`|[out] Optional. Wenn `GetRequestedRuntime` während des Bindungs Vorgangs eine Konfigurationsdatei verwendet, enthält `pdwConfigFlags` einen [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) -Wert, der angibt, ob für das [\<Startup->](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) Element das `useLegacyV2RuntimeActivationPolicy`-Attribut festgelegt ist und der Wert von das Attribut. Wenden Sie die [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) mask auf `pdwConfigFlags` an, um die für `useLegacyV2RuntimeActivationPolicy`relevanten Werte zu erhalten.|
+|`riid`|in Gibt den Schnittstellen Bezeichner IID_ICLRRuntimeInfo für die angeforderte [iclrruntimeingefo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle an.|
+|`ppRuntime`|vorgenommen Wenn `GetRequestedRuntime` zurückgibt, enthält dieser einen Zeiger auf die entsprechende [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -78,18 +76,18 @@ Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zur�
 |HRESULT|Beschreibung|
 |-------------|-----------------|
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|
-|E_POINTER|`pwzVersion` ist ungleich NULL, und `pcchVersion` ist gleich NULL.<br /><br /> - oder - <br /><br /> `pwzImageVersion` ist ungleich NULL, und `pcchImageVersion` ist gleich NULL.|
+|E_POINTER|`pwzVersion` ist ungleich NULL, und `pcchVersion` ist gleich NULL.<br /><br /> - oder -<br /><br /> `pwzImageVersion` ist ungleich NULL, und `pcchImageVersion` ist gleich NULL.|
 |E_INVALIDARG|`dwPolicyFlags` gibt nicht `METAHOST_POLICY_HIGHCOMPAT` an.|
-|ERROR_INSUFFICIENT_BUFFER|`pwzVersion` ist nicht genügend Arbeitsspeicher zugewiesen.<br /><br /> - oder - <br /><br /> `pwzImageVersion` ist nicht genügend Arbeitsspeicher zugewiesen.|
+|ERROR_INSUFFICIENT_BUFFER|`pwzVersion` ist nicht genügend Arbeitsspeicher zugewiesen.<br /><br /> - oder -<br /><br /> `pwzImageVersion` ist nicht genügend Arbeitsspeicher zugewiesen.|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` enthält METAHOST_POLICY_APPLY_UPGRADE_POLICY und sowohl `pwzVersion` als auch `pcchVersion` sind gleich NULL.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** MetaHost.h
+**Header:** MetaHost. h
 
-**Bibliothek:** Als Ressource in MSCorEE.dll enthalten
+**Bibliothek:** Als Ressource in Mscoree. dll enthalten
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745638"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123826"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread-Methode
-Ruft den physischen Thread, die, den diese Kette von Aufrufen ist, Teil ab.  
+Ruft den physischen Thread ab, zu dem diese rufkette gehört.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Parameter  
  `ppThread`  
- [out] Ein Zeiger auf ein ICorDebugThread-Objekt, das den physischen Thread darstellt, ist dieser Aufrufkette Teil.  
+ vorgenommen Ein Zeiger auf ein ICorDebugThread-Objekt, das den physischen Thread darstellt, zu dem diese rufkette gehört.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

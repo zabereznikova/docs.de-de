@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29fc1b491aa4e340c3d8ad6f761d0d6d901649ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85f06b49aab1f1d1745bd7e359ed311c2ba1e44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130984"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable-Methode
-Ruft den Wert der angegebenen lokalen Variable in Microsoft intermediate Language (MSIL) Stapelrahmens ab.  
+Ruft den Wert der angegebenen lokalen Variablen in diesem MSIL-Stapel Rahmen (Microsoft Intermediate Language) ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT GetLocalVariable (
   
 ## <a name="parameters"></a>Parameter  
  `dwIndex`  
- [in] Der Index der lokalen Variablen in diesen Stapelrahmen des MSIL.  
+ in Der Index der lokalen Variablen in diesem MSIL-Stapel Rahmen.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den abgerufenen Wert darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den abgerufenen Wert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetLocalVariable` Methode kann verwendet werden, entweder in einem Stapelrahmen des MSIL oder in einem just-in-Time (JIT) kompilierten Rahmen.  
+ Die `GetLocalVariable`-Methode kann entweder in einem MSIL-Stapel Rahmen oder in einem JIT-kompilierten Frame (Just-in-Time) verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

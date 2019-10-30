@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483d647028d1a05ea20ab836730099afe3e09374
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763300"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127844"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator-Schnittstelle
-Stellt Methoden zum Überprüfen der übertragbaren ausführbaren Datei (PE)-Abbildern, und Melden von Validierungsfehlern.  
+Stellt Methoden zum Überprüfen von PE-Images (portable ausführbare Dateien) und zum Melden von Validierungs Fehlern bereit.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[FormatEventInfo-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.|  
-|[Validate-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Überprüft die übertragbare ausführbare Datei oder der Microsoft intermediate Language (MSIL) in der angegebenen Datei.|  
+|[FormatEventInfo-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Ruft eine ausführliche Meldung über den angegebenen Validierungs Fehler ab.|  
+|[Validate-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Überprüft die portable ausführbare Datei oder Microsoft Intermediate Language (MSIL) in der angegebenen Datei.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** IValidator.idl, IValidator.h  
+ **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

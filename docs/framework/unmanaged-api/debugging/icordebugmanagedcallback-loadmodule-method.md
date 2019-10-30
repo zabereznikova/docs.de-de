@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66ec04e9-87cb-42ce-9720-81522abb5d5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d13c5be314dc39f3e7b42a8d6b13f6a25751067d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761418"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130712"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule-Methode
-Benachrichtigt den Debugger, dass ein common Language Runtime (CLR)-Modul wurde erfolgreich geladen wurde.  
+Benachrichtigt den Debugger, dass ein Common Language Runtime (CLR)-Modul erfolgreich geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT LoadModule (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der das Modul geladen wurde.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in die das Modul geladen wurde.  
   
  `pModule`  
- [in] Ein Zeiger auf ein ICorDebugModule-Objekt, das CLR-Modul darstellt.  
+ in Ein Zeiger auf ein ICorDebug Module-Objekt, das das CLR-Modul darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `LoadModule` Rückruf stellt einen geeigneten Zeitpunkt zum Überprüfen der Metadaten für das Modul, Festlegen von just-in-Time (JIT) Compilerflags aktivieren oder Deaktivieren von Rückrufen für das Modul beim Laden.  
+ Der `LoadModule`-Rückruf bietet eine angemessene Zeit zum Überprüfen der Metadaten für das Modul, zum Festlegen von Just-in-time (JIT)-Compilerflags oder zum Aktivieren oder Deaktivieren von Rückrufe zum Laden von Klassen für das Modul.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

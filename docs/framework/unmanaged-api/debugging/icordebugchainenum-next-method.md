@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4e8b1a76bcc56424e61991d36c94c5f2dfab8aa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745608"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125815"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next-Methode
-Ruft die angegebene Anzahl von ICorDebugChain-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebug-Ketten Instanzen ab der aktuellen Position aus der-Enumeration ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugChain` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugChain` Instanzen, die abgerufen werden sollen.  
   
  `chains`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugChain` Objekt, das eine Kette darstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugChain` Objekt verweist, das eine Kette darstellt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der `ICorDebugChain` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugChain` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed37e6eae3ec4f6e69215be6a42afe7fe86ff393
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d5047b1d44f836d10b659f18cf885eba3b0e973
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768653"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139829"
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>ICorDebugReferenceValue::IsNull-Methode
-Ruft einen Wert, der angibt, ob dieser ICorDebugReferenceValue einen null-Wert in diesem Fall ist die `ICorDebugReferenceValue` verweist nicht auf ein Objekt.  
+Ruft einen Wert ab, der angibt, ob dieser ICorDebugReferenceValue ein NULL-Wert ist. in diesem Fall zeigt der `ICorDebugReferenceValue` nicht auf ein Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT IsNull (
   
 ## <a name="parameters"></a>Parameter  
  `pbNull`  
- [out] Ein Zeiger auf einen booleschen Wert, der `true` Wenn diese `ICorDebugReferenceValue` Objekt ist null ist, andernfalls `pbNull` ist `false`.  
+ vorgenommen Ein Zeiger auf einen booleschen Wert, der `true` wird, wenn dieses `ICorDebugReferenceValue` Objekt NULL ist. Andernfalls wird `pbNull` `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f823f660efee2d53bc1f6fa50d8878f496417379
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 208d5d2e3ca571a1c23a9322c05e784bd2238d61
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124696"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount-Methode
-Ruft die Anzahl der Elemente in der Enumeration.  
+Ruft die Anzahl der Elemente in der-Enumeration ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parameter  
  `pcelt`  
- [out] Ein Zeiger auf die Anzahl der Elemente in der Enumeration.  
+ vorgenommen Ein Zeiger auf die Anzahl der Elemente in der-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

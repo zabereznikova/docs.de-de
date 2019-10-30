@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1492c6d72d68a95a79925d7789a710b5b5ed14b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d34577f0f785bc851646423b8cd732ab4d1dae0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738709"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113861"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext-Methode
-Ruft den aktuellen Ausführungskontext für den angegebenen Thread im Zielprozess. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  
+Ruft den aktuellen Ausführungs Kontext für den angegebenen Thread im Ziel Prozess ab. Diese Methode wird vom Common Language Runtime Data Access Services aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,26 +39,26 @@ HRESULT GetThreadContext (
   
 ## <a name="parameters"></a>Parameter  
  `threadID`  
- [in] Der Betriebssystem-Bezeichner eines Threads im Zielprozess.  
+ in Der Betriebssystem Bezeichner eines Threads im Ziel Prozess.  
   
  `contextFlags`  
- [in] Flags, die angeben, welche Teile des Kontexts zurückgegeben. Die Implementierung gibt immer mindestens diese Teile des Kontexts zurück.  
+ in Flags, die angeben, welche Teile des Kontexts zurückgegeben werden sollen. Die-Implementierung gibt mindestens diese Teile des Kontexts zurück.  
   
  `contextSize`  
- [in] Die Größe des Kontexts.  
+ in Die Größe des Kontexts.  
   
  `context`  
- [out] Zeiger auf einen Puffer, in dem Kontext platziert werden soll.  
+ vorgenommen Zeiger auf einen Puffer, in den der Kontext platziert werden soll.  
   
- Die Daten in die `context` Puffer muss im Format von Win32 `CONTEXT` Struktur. Den Kontext angibt, macht prozessorspezifische Registerdaten, also die Definition von Win32 `CONTEXT` Struktur hängt von der Prozessorarchitektur. Finden Sie in der Headerdatei "WinNT.h" für die Definition von Win32 `CONTEXT` Struktur.  
+ Die Daten im `context` Puffer müssen das Format der Win32-`CONTEXT` Struktur aufweisen. Der Kontext gibt prozessorspezifische Register Daten an, sodass die Definition der Win32-`CONTEXT` Struktur von der Architektur des Prozessors abhängig ist. Die Definition der Win32-`CONTEXT` Struktur finden Sie in der Header Datei "Winnt. h".  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

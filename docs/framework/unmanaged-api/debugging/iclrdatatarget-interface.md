@@ -14,41 +14,39 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ed3cb62b56e80a7fe4ea54b43ac9f4a28b8d102
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51b246e45b8bbdf809f5e90ac2bc29ca724751fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698108"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113494"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget-Schnittstelle
-Stellt Methoden für die Interaktion mit der common Language Runtime (CLR) ein Target-Element.  
+Stellt Methoden für die Interaktion mit einem Ziel Element des Common Language Runtime (CLR) bereit.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetCurrentThreadID-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Ruft den Bezeichner für den aktuellen Thread ab.|  
+|[GetCurrentThreadID-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getcurrentthreadid-method.md)|Ruft den Betriebssystem Bezeichner für den aktuellen Thread ab.|  
 |[GetImageBase-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getimagebase-method.md)|Ruft die Basis Speicheradresse für das angegebene Bild ab.|  
-|[GetMachineType-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Ruft einen Bezeichner für die Art der Anweisungssatz, der der Zielprozess verwendet.|  
-|[GetPointerSize-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Ruft die Größe in Bytes, der einen Zeiger auf das aktuelle Ziel.|  
+|[GetMachineType-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getmachinetype-method.md)|Ruft einen Bezeichner für die Art von Anweisungs Satz ab, die vom Ziel Prozess verwendet wird.|  
+|[GetPointerSize-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getpointersize-method.md)|Ruft die Größe eines Zeigers auf das aktuelle Ziel in Bytes ab.|  
 |[GetThreadContext-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|Ruft einen Zeiger auf den Kontext des Threads mit dem angegebenen Bezeichner ab.|  
-|[GetTLSValue-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Ruft einen Wert im lokalen Threadspeicher (TLS) am angegebenen Index für den angegebenen Thread an.|  
-|[ReadVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Liest Daten aus der angegebenen virtuellen Speicheradresse in den angegebenen Puffer.|  
-|[Request-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Aufgerufen von der common Language Runtime (CLR) Datenzugriffsdiensten der zum Anfordern eines Vorgangs, wie durch die Implementierung definiert.|  
-|[SetThreadContext-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Legt den aktuellen Kontext des angegebenen Threads im Zielprozess fest.|  
-|[SetTLSValue-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Legt einen Wert in den lokalen Threadspeicher (TLS) des angegebenen Threads im Zielprozess.|  
-|[WriteVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Schreibt Daten aus dem angegebenen Puffer an die Adresse des angegebenen virtuellen Speicher an.|  
+|[GetTLSValue-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|Ruft einen Wert im lokalen Thread Speicher (TLS) am angegebenen Index für den angegebenen Thread ab.|  
+|[ReadVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|Liest Daten aus der angegebenen Adresse des virtuellen Speichers in den angegebenen Puffer.|  
+|[Request-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|Wird von den Common Language Runtime (CLR)-Datenzugriffs Diensten aufgerufen, um einen Vorgang anzufordern, wie in der-Implementierung definiert.|  
+|[SetThreadContext-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|Legt den aktuellen Kontext des angegebenen Threads im Ziel Prozess fest.|  
+|[SetTLSValue-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|Legt einen Wert im lokalen Thread Speicher (TLS) des angegebenen Threads im Ziel Prozess fest.|  
+|[WriteVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|Schreibt Daten aus dem angegebenen Puffer in die angegebene Adresse für den virtuellen Speicher.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der API-Client (d. h. der Debugger), muss diese Schnittstelle für das betreffende Zielframework-Element entsprechend implementieren. So hätte ein Liveprozess z. B. eine andere Implementierung als ein Speicherabbild.  
+ Der API-Client (d. h. der Debugger) muss diese Schnittstelle entsprechend für das jeweilige Ziel Element implementieren. So hätte ein Liveprozess z. B. eine andere Implementierung als ein Speicherabbild.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

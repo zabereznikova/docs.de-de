@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87cdf61cfcd0aee661edf9e7d0c053c858f9d854
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748186"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135196"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile-Methode
 Generiert einen Hashwert für den Inhalt der angegebenen Datei.  
@@ -41,32 +39,32 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>Parameter  
  `szFilePath`  
- [in] Der Name der Datei für den Hash.  
+ in Der Name der zu hashenden Datei.  
   
  `piHashAlg`  
- [in, out] Der Algorithmus beim Generieren des Hashs verwendet werden soll. Gültige Algorithmen sind durch Win32 Crypto-API definiert. Wenn `piHashAlg` ist auf 0 festgelegt, den Standardalgorithmus CALG_SHA-1 verwendet.  
+ [in, out] Der Algorithmus, der beim Erzeugen des Hashwerts verwendet werden soll. Gültige Algorithmen sind die, die von der Win32-CryptoAPI definiert werden. Wenn `piHashAlg` auf 0 festgelegt ist, wird der Standard Algorithmus CALG_SHA-1 verwendet.  
   
  `pbHash`  
- [out] Ein Bytearray, die den generierten Hash enthält.  
+ vorgenommen Ein Bytearray, das den generierten Hash enthält.  
   
  `cchHash`  
- [in] Die maximale Größe des Puffers, `pbHash` verweist auf.  
+ in Die maximale Puffergröße, auf die `pbHash` zeigt.  
   
  `pchHash`  
- [out] Die Größe in Bytes, des zurückgegebenen `pbHash`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist identisch mit der [ICLRStrongName:: GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) -Methode, mit der Ausnahme, dass die Datei den Namen Spezifikation ist ANSI anstelle von Unicode.  
+ Diese Methode ist identisch mit der [ICLRStrongName:: GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) -Methode, mit der Ausnahme, dass die Dateinamen Spezifikation ANSI anstelle von Unicode ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

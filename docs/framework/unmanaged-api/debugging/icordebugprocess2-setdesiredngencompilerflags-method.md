@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137164"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags-Methode
-Legt die Flags, die in einem vorkompilierten Abbild in der Reihenfolge für die Laufzeit beim Laden von Images in den aktuellen Prozess eingebettet werden müssen.  
+Legt die Flags fest, die in ein vorkompiliertes Bild eingebettet werden müssen, damit die Common Language Runtime dieses Bild in den aktuellen Prozess lädt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>Parameter  
  `pdwFlags`  
- [in] Der Wert der [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) Enumeration, der angibt, die Compilerflags verwendet, um das richtige vorkompilierte Abbild auszuwählen.  
+ in Ein Wert der [corentbugjitcompilerflags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) -Enumeration, der die Compilerflags angibt, die zum Auswählen des richtigen vorkompilierten Bilds verwendet werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetDesiredNGENCompilerFlags` -Methode gibt die Flags, die in einem vorkompilierten Abbild eingebettet werden müssen, damit die Laufzeit dieses Abbild in diesen Prozess geladen werden. Die Flags, die von dieser Methode festgelegte werden verwendet, nur für die richtige vorkompilierte Abbild auszuwählen. Wenn kein solches Image vorhanden ist, wird die Laufzeit die Microsoft intermediate Language (MSIL)-Image und der just-in-Time-Compiler (JIT) stattdessen geladen werden. In diesem Fall muss der Debugger weiterhin verwenden die [ICorDebugModule2:: SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) Methode, um die Flags für die JIT-Kompilierung wie gewünscht festgelegt.  
+ Die `SetDesiredNGENCompilerFlags`-Methode gibt die Flags an, die in ein vorkompiliertes Bild eingebettet werden müssen, damit die Laufzeit dieses Bild in diesen Prozess lädt. Die von dieser Methode festgelegten Flags werden nur zur Auswahl des richtigen vorkompilierten Bilds verwendet. Wenn kein solches Image vorhanden ist, lädt die Runtime stattdessen das MSIL-Image (Microsoft Intermediate Language) und den JIT-Compiler (Just-in-Time). In diesem Fall muss der Debugger weiterhin die [ICorDebugModule2:: SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) -Methode verwenden, um die Flags für die JIT-Kompilierung wie gewünscht festzulegen.  
   
- Wenn ein Image geladen wird, aber einige JIT-Kompilierung erfolgen muss für das Bild (das der Fall sein wird, wenn das Bild Generika enthält), die vom angegebenen Compilerflags der `SetDesiredNGENCompilerFlags` Methode gilt für die zusätzliche JIT-Kompilierung.  
+ Wenn ein Bild geladen wird, aber einige JIT-Kompilierungen für dieses Bild stattfinden müssen (Dies ist der Fall, wenn das Image Generika enthält), gelten die von der `SetDesiredNGENCompilerFlags`-Methode angegebenen Compilerflags für die zusätzliche JIT-Kompilierung.  
   
- Die `SetDesiredNGENCompilerFlags` -Methode muss aufgerufen werden, während die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf. Versucht, rufen Sie die `SetDesiredNGENCompilerFlags` Methode danach schlägt fehl. Darüber hinaus versuchen, Flags festzulegen, die entweder nicht definiert, der `CorDebugJITCompilerFlags` Enumeration sind nicht zulässig, für den Prozess ein Fehler auf.  
+ Die `SetDesiredNGENCompilerFlags`-Methode muss während des [ICorDebugManagedCallback::](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) -Rückruf aufgerufen werden. Versuche, die `SetDesiredNGENCompilerFlags`-Methode später aufzurufen, schlagen fehl. Außerdem schlagen Versuche, Flags festzulegen, die entweder nicht in der `CorDebugJITCompilerFlags` Enumeration definiert sind oder für den angegebenen Prozess nicht zulässig sind, fehl.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

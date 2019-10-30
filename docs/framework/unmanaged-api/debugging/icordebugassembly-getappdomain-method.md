@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737355"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132730"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain-Methode
-Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne, der diesen `ICorDebugAssembly` Instanz.  
+Ruft einen Schnittstellen Zeiger auf die Anwendungsdomäne ab, die diese `ICorDebugAssembly` Instanz enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +35,13 @@ HRESULT GetAppDomain (
   
 ## <a name="parameters"></a>Parameter  
  `ppAppDomain`  
- [out] Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn diese Assembly die Systemassembly `GetAppDomain` gibt null zurück.  
+ Wenn diese Assembly die Systemassembly ist, gibt `GetAppDomain` NULL zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

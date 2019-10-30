@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116460"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacykorruptedstateexceptionspolicy > Element
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacybeschädigte tedstateexceptionspolicy > Element
 Gibt an, ob durch den Common Language Runtime verwalteter Code Zugriffs Verletzungen und andere beschädigte Zustands Ausnahmen abfangen kann.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacybeschädigte tedstateexceptionspolicy >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,13 +54,13 @@ Gibt an, ob durch den Common Language Runtime verwalteter Code Zugriffs Verletzu
 ## <a name="remarks"></a>Hinweise  
  In der .NET Framework Version 3,5 und früher ermöglichte der Common Language Runtime verwalteten Code das Abfangen von Ausnahmen, die von beschädigten Prozesszuständen ausgelöst wurden. Eine Zugriffsverletzung ist ein Beispiel für diese Art von Ausnahme.  
   
- Ab .NET Framework 4 fängt der verwaltete Code diese Typen von Ausnahmen in `catch` -Blöcken nicht mehr ab. Sie können diese Änderung jedoch außer Kraft setzen und die Behandlung von beschädigten Zustands Ausnahmen auf zwei Arten beibehalten:  
+ Ab .NET Framework 4 fängt der verwaltete Code diese Typen von Ausnahmen nicht mehr in `catch` Blöcken ab. Sie können diese Änderung jedoch außer Kraft setzen und die Behandlung von beschädigten Zustands Ausnahmen auf zwei Arten beibehalten:  
   
-- Legen Sie `<legacyCorruptedStateExceptionsPolicy>` das- `enabled` Attribut des `true`-Elements auf fest. Diese Konfigurationseinstellung wird Processwide angewendet und wirkt sich auf alle Methoden aus.  
+- Legen Sie das `enabled`-Attribut des `<legacyCorruptedStateExceptionsPolicy>` Elements auf `true`fest. Diese Konfigurationseinstellung wird Processwide angewendet und wirkt sich auf alle Methoden aus.  
   
- -oder-  
+ - oder -  
   
-- Wenden Sie <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> das-Attribut auf die Methode an, `catch` die den Ausnahmen Block enthält.  
+- Wenden Sie das <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>-Attribut auf die Methode an, die die Ausnahmen `catch` Block enthält.  
   
  Dieses Konfigurationselement ist nur in den .NET Framework 4 und höher verfügbar.  
   

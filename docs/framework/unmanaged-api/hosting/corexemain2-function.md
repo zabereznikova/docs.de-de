@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758549"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136963"
 ---
-# <a name="corexemain2-function"></a>_CorExeMain2-Funktion
+# <a name="_corexemain2-function"></a>_CorExeMain2-Funktion
 Führt den Einstiegspunkt im angegebenen Speicherabbildcode aus. Diese Funktion wird vom Betriebssystemladeprogramm aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,26 +38,26 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 ## <a name="parameters"></a>Parameter  
  `pUnmappedPE`  
- [in] Ein Zeiger auf den Speicher abgebildeten Code.  
+ in Ein Zeiger auf den Speicher Abbild-Code.  
   
  `cUnmappedPE`  
- [in] Die Anzahl der Elemente `pUnmappedPE` enthalten kann.  
+ in Die Anzahl der Elemente, die `pUnmappedPE` enthalten kann.  
   
  `pImageNameIn`  
- [in] Ein Zeiger auf den Namen des ausführbaren Images.  
+ in Ein Zeiger auf den Namen des ausführbaren Bilds.  
   
  `pLoadersFileName`  
- [in] Der Name der Ladeprogrammdatei.  
+ in Der Name der Lade Datei.  
   
  `pCmdLine`  
- [in] Befehlszeilenparameter, sofern vorhanden.  
+ in Befehlszeilenparameter (sofern vorhanden).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

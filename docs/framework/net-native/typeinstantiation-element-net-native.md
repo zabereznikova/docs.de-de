@@ -2,14 +2,12 @@
 title: <TypeInstantiation>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 375c95a30f4f60bb711e176cb6c2d0c5fd763e2f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049116"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128677"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<Typeingabe > Element (.net Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Typ an.  
@@ -86,7 +84,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Application>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
+|[\<Anwendung>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
 |[\<Assembly>](assembly-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
 |[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.|  
 |[\<Namespace>](namespace-element-net-native.md)|Wendet die Reflektionsrichtlinie auf alle Typen in einem Namespace an.|  
@@ -99,11 +97,11 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
  Wenn ein `<TypeInstantiation>`-Element ein untergeordnetes Element eines [\<Assembly>](assembly-element-net-native.md)-, [\<Namespace>](namespace-element-net-native.md)- oder [\<Type>](type-element-net-native.md)-Elements ist, überschreibt es die vom übergeordneten Element definierten Richtlinieneinstellungen. Wenn ein [\<Type>](type-element-net-native.md)-Element eine entsprechende generische Typdefinition definiert, überschreibt das `<TypeInstantiation>`-Element die Laufzeitreflektionsrichtlinie nur für Instanziierungen des angegebenen konstruierten generischen Typs.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird Reflektion zum Abrufen der generischen Typdefinition von einem konstruierten <xref:System.Collections.Generic.Dictionary%602>-Objekt verwendet. Außerdem wird Reflektion zum Anzeigen von Informationen über <xref:System.Type>-Objekte verwendet, die konstruierte generische Typen und generische Typdefinitionen darstellen. Die Variable `b` im Beispiel ist ein <xref:Windows.UI.Xaml.Controls.TextBlock> -Steuerelement.  
+ Im folgenden Beispiel wird Reflektion zum Abrufen der generischen Typdefinition von einem konstruierten <xref:System.Collections.Generic.Dictionary%602>-Objekt verwendet. Außerdem wird Reflektion zum Anzeigen von Informationen über <xref:System.Type>-Objekte verwendet, die konstruierte generische Typen und generische Typdefinitionen darstellen. Bei der Variablen `b` im Beispiel handelt es sich um ein <xref:Windows.UI.Xaml.Controls.TextBlock>-Steuerelement.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   
- Nach der Kompilierung mit der .net Native-Toolkette löst das Beispiel eine [MissingMetadataException](missingmetadataexception-class-net-native.md) -Ausnahme in der Zeile <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType> aus, die die-Methode aufruft. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitanweisungsdatei hinzufügen:  
+ Nach der Kompilierung mit der .net Native-Toolkette löst das Beispiel eine [MissingMetadataException](missingmetadataexception-class-net-native.md) -Ausnahme in der Zeile aus, die die <xref:System.Type.GetGenericTypeDefinition%2A?displayProperty=nameWithType>-Methode aufruft. Sie können die Ausnahme eliminieren und die erforderlichen Metadaten bereitstellen, indem Sie folgendes `<TypeInstantiation>`-Element in der Laufzeitanweisungsdatei hinzufügen:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

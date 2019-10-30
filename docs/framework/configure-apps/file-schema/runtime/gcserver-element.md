@@ -8,21 +8,19 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa03179df1cd2595b4be428106dd3ec10b309317
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 98ecc7069df20a92492e9a6276a0d88331ccc0bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252555"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116669"
 ---
-# <a name="gcserver-element"></a>\<gcserver->-Element
+# <a name="gcserver-element"></a>\<gcserver >-Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer>**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcserver >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +63,7 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server au
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden. Wenn es in der Computerkonfigurationsdatei enthalten ist, wird es ignoriert.  
   
 > [!NOTE]
-> In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Beginnend mit dem .NET Framework 4,5 ist der Server Garbage Collection gleichzeitig. Um nicht gleichzeitige Server Garbage Collection zu verwenden, legen `<gcServer>` Sie das `true` -Element auf und das [ \<gcConcurrent-> Element](gcconcurrent-element.md) auf `false`fest.  
+> In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Beginnend mit dem .NET Framework 4,5 ist der Server Garbage Collection gleichzeitig. Um nicht gleichzeitige Server Garbage Collection zu verwenden, legen Sie das `<gcServer>`-Element auf `true` und das [\<gcConcurrent-> Element](gcconcurrent-element.md) auf `false`fest.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Garbage Collection auf dem Server aktiviert.  

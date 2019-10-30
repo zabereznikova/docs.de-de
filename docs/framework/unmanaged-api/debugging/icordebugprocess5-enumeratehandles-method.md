@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 229717ba1d7f004dc1ed020eddb2929079aa9285
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767577"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129681"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles-Methode
-Ruft einen Enumerator für die Objekt-Handles in einem Prozess ab.  
+Ruft einen Enumerator für Objekt Handles in einem Prozess ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,24 +34,24 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Parameter  
  `types`  
- [in] Eine bitweise Kombination von [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Werte, der angibt, den Typ des Handles in die Auflistung eingeschlossen werden sollen.  
+ in Eine bitweise Kombination von [corgkreferencetype](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Werten, die den Typ der Handles angibt, die in der Auflistung enthalten sein sollen.  
   
  `ppENum`  
- [out] Ein Zeiger auf die Adresse einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , einen Enumerator für die Objekte, das speicherbereinigt werden soll.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) -Enumerationsobjekts, bei dem es sich um einen Enumerator für die Objekte handelt, für die eine Garbage Collection durchgeführt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- `EnumerateHandles` ist eine Hilfsfunktion, die Überprüfung der Handletabelle unterstützt. Es ähnelt der [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, außer dass statt Auffüllen einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) Auflistung mit allen Objekten, das speicherbereinigt werden soll es enthält nur Objekte, die Handles aus der Handletabelle verfügen.  
+ `EnumerateHandles` ist eine Hilfsfunktion, die die Überprüfung der Handle-Tabelle unterstützt. Sie ähnelt der [ICorDebugProcess5:: enumerategkreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, mit dem Unterschied, dass Sie keine [icordebuggkreferenceenumerationsauflistung](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) mit allen Objekten auffüllen, die für die Garbage Collection freigegeben werden sollen. Sie enthält nur Objekte, die über Handles aus verfügen. die Handle-Tabelle.  
   
- Die `types` Parameter gibt die Typen von Handles in die Auflistung eingeschlossen werden sollen. `types` die folgenden drei Elemente von möglich die [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
+ Der `types`-Parameter gibt die Handle-Typen an, die in die Auflistung eingeschlossen werden sollen. `types` kann eines der folgenden drei Member der [corgkreferencetype](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) -Enumeration sein:  
   
-- `CorHandleStrongOnly` (Handles auf zuverlässige Verweise nur).  
+- `CorHandleStrongOnly` (nur Handles zu starken verweisen).  
   
-- `CorHandleWeakOnly` (um nur schwache Verweise Handles).  
+- `CorHandleWeakOnly` (nur Handles für schwache Verweise).  
   
 - `CorHandleAll` (alle Handles).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

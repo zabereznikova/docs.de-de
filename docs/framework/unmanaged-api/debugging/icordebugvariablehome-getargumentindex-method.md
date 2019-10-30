@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetArgumentIndex-Methode
+title: 'Icordebugvariablehome:: getargumentindex-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetArgumentIndex
@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2457dff3063e47f1fb9d040caac1bc08441e1739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986790"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125154"
 ---
-# <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome::GetArgumentIndex-Methode
+# <a name="icordebugvariablehomegetargumentindex-method"></a>Icordebugvariablehome:: getargumentindex-Methode
 
-Ruft den Index ein Funktionsargument ab.
+Ruft den Index eines Funktionsarguments ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,24 +37,24 @@ HRESULT GetArgumentIndex(
 ## <a name="parameters"></a>Parameter
 
 `pArgumentIndex`\
-[out] Ein Zeiger auf den Argumentindex.
+vorgenommen Ein Zeiger auf den Argument index.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Methode gibt die folgenden Werte an.
+Die-Methode gibt die folgenden Werte zurück.
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|`S_OK`|Aufruf der Methode wurde einen gültiges Argument-Index.|
-|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz stellt eine lokale Variable dar.|
+|`S_OK`|Der Methodenaufrufe hat einen gültigen Argument Index zurückgegeben.|
+|`E_FAIL`|Die aktuelle [icorentbugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Instanz stellt eine lokale Variable dar.|
 
 ## <a name="remarks"></a>Hinweise
 
-Der Argumentindex kann zum Abrufen von Metadaten für dieses Argument verwendet werden.
+Der Argument Index kann zum Abrufen von Metadaten für dieses Argument verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94d8fbf4d93bbfbaaeb7c1268004aada22b9b7df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d6caa02333229bcd49f4c6ccf8b93265181a0b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137086"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize-Methode
-Ruft die Größe des dieses "ICorDebugValue"-Objekts in Bytes ab.  
+Ruft die Größe des "ICorDebug Value"-Objekts in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT GetSize (
   
 ## <a name="parameters"></a>Parameter  
  `pSize`  
- [out] Die Größe des dieses Wertobjekts in Bytes.  
+ vorgenommen Die Größe (in Bytes) dieses Wert Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Typ des Werts ein Verweistyp ist, gibt diese Methode auf, die Größe des Zeigers, anstatt die Größe des Objekts.  
+ Wenn der Typ des Werts ein Referenztyp ist, gibt diese Methode die Größe des Zeigers anstelle der Größe des-Objekts zurück.  
   
- Die `ICorDebugValue::GetSize` Methodenrückgabe `COR_E_OVERFLOW` für Objekte, die größer als 4 GB auf 64-Bit-Plattformen sind. Verwenden der [icordebugvalue3:: Getsize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) Methode stattdessen für Objekte, die größer sind als 4 GB.  
+ Die `ICorDebugValue::GetSize`-Methode gibt `COR_E_OVERFLOW` für Objekte zurück, die auf 64-Bit-Plattformen größer als 4 GB sind. Verwenden Sie stattdessen die [ICorDebugValue3:: GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) -Methode für Objekte, die größer als 4 GB sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

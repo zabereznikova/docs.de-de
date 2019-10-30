@@ -2,14 +2,12 @@
 title: MissingMetadataException-Klasse (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 251d63fe8e025fe73b148c7deb368ab95ca3b1f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049478"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128287"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException-Klasse (.NET Native)
 
@@ -20,7 +18,7 @@ Die Ausnahme, die ausgelöst wird, wenn Reflektion verwendet wird, um Metadaten 
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> Die `MissingMetadataException` -Klasse ist ausschließlich für die interne Verwendung durch die .net Native-Toolkette vorgesehen. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+> Die `MissingMetadataException`-Klasse ist ausschließlich für die interne Verwendung durch die .net Native-Toolkette vorgesehen. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +37,7 @@ Die `MissingMetadataException`-Klasse verfügt über die folgenden Member:
 
 ## <a name="properties"></a>Eigenschaften
 
-|Eigenschaft|Beschreibung|
+|property|Beschreibung|
 |--------------|-----------------|
 |`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public string HelpLink { get; set; }`|Ruft einen Link zur Hilfedatei ab, die dieser Ausnahme zugeordnet ist, oder legt einen Link fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
@@ -74,7 +72,7 @@ Die `MissingMetadataException`-Klasse verfügt über die folgenden Member:
 
 Die `MissingMetadataException`-Ausnahme wird ausgelöst, wenn Reflektion verwendet wird, um auf Metadaten zuzugreifen, die in einer Assembly nicht verfügbar sind.
 
-Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die laufzeitdirektivendatei (XML \*-Konfiguration),. rd. XML, definiert. Um zu verhindern, dass Ihre App diese Ausnahme auslöst, müssen Sie „\*.rd.xml“ ändern, um die Metadaten zu definieren, die zur Laufzeit vorhanden sein müssen. Informationen zum Format der Datei „\*.rd.xml“ finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md).
+Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die laufzeitdirektivendatei (XML-Konfiguration) \*. rd. XML definiert. Um zu verhindern, dass Ihre App diese Ausnahme auslöst, müssen Sie „\*.rd.xml“ ändern, um die Metadaten zu definieren, die zur Laufzeit vorhanden sein müssen. Informationen zum Format der Datei „\*.rd.xml“ finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md).
 
 > [!IMPORTANT]
 > Da diese Ausnahme anzeigt, dass von der Anwendung benötigte Metadaten zur Laufzeit nicht verfügbar sind, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und mithilfe einer Laufzeitanweisungsdatei beseitigen. Um den Eintrag zu erhalten, den Sie zur Laufzeitdirektivendatei hinzufügen können, um die Ausnahme zu beseitigen, können Sie eine der beiden Problembehandlungen verwenden:

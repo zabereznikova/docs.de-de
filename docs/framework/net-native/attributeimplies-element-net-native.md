@@ -2,16 +2,14 @@
 title: <AttributeImplies>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d15d572ee70e9c7a8cb29010d6debbd1874e5ae2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128481"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<Attributeimplies > Element (.net Native)
+# <a name="attributeimplies-element-net-native"></a>\<attributeimplies > Element (.net Native)
 Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut angewendet wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -69,7 +67,7 @@ Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut ang
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Type >-Element](type-element-net-native.md)
+- [\<Typ > Element](type-element-net-native.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

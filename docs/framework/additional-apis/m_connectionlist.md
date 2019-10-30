@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup.m_ConnectionList-Feld
+title: Connectiongroup. m_ConnectionList-Feld
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301395"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120015"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList-Feld
+# <a name="connectiongroupm_connectionlist-field"></a>Connectiongroup. m\_connectionlist-Feld
 
-`ConnectionGroup.m_ConnectionList` ist ein <xref:System.Collections.ArrayList> von Verbindungsobjekten, die den gleichen URI und die Freigabe dient, die gleichen Werte für einige andere Eigenschaften wie Ablauf und Authentifizierung.
+`ConnectionGroup.m_ConnectionList` ist eine <xref:System.Collections.ArrayList> von Verbindungs Objekten, die denselben URI verwenden und dieselben Werte für einige andere Eigenschaften wie Ablauf und Authentifizierung verwenden.
 
 ## <a name="syntax"></a>Syntax
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Die `ConnectionGroup.m_ConnectionList` Feld privat ist und nicht direkt in Ihrem Code verwendet werden soll.
+> Das `ConnectionGroup.m_ConnectionList` Feld ist privat und sollte nicht direkt im Code verwendet werden.
 > 
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System.dll")
+**Assembly:** System (in "System. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

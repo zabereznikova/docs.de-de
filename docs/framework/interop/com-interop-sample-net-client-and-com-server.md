@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 721e94c0f7a83de8a70942272e7c31374f7004a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051851"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123694"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM-Interop-Beispiel: .NET-Client und COM-Server
 In diesem Beispiel wird veranschaulicht, wie ein [.NET Client](#cpconcominteropsamplenetclientcomserveranchor1), der für den Zugriff auf einen [COM-Server](#cpconcominteropsamplenetclientcomserveranchor2) erstellt wurde, eine Instanz einer COM-Co-Klasse erstellt und Klassenmember aufruft, um Hypothekenberechnungen durchzuführen.  

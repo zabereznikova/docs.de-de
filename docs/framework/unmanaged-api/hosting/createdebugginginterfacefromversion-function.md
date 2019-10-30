@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e23dfb86c2129a02a0ca95de8c89d8294e97ad81
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136836"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion-Funktion
-Erstellt eine [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
+Erstellt ein [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
   
- Diese Funktion ist in .NET Framework 4 veraltet. Um eine Schnittstelle für die common Language Runtime (CLR) 2.0 zu erhalten, verwenden Sie stattdessen die [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) Methode, und geben Sie die Klassen-ID CLSID_CLRDebuggingLegacy und der schnittstellenkennung IID_ICorDebug. Erhalten eine Schnittstelle für die CLR 4 oder höher, rufen Sie die [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) Funktion, und geben Sie die Klassen-ID CLSID_CLRDebugging und der schnittstellenkennung IID_ICLRDebugging.  
+ Diese Funktion ist in der .NET Framework 4 veraltet. Um eine Schnittstelle für die Common Language Runtime (CLR) 2,0 abzurufen, verwenden Sie stattdessen die [iclrruntimeingefo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) -Methode, und geben Sie den Klassen Bezeichner CLSID_CLRDebuggingLegacy und den Schnittstellen Bezeichner IID_ICorDebug an. Um eine Schnittstelle für CLR 4 oder höher abzurufen, müssen Sie die [clrkreateinstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) -Funktion aufrufen und die Klassen-ID CLSID_CLRDebugging und den Schnittstellen Bezeichner IID_ICLRDebugging angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,31 +39,31 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>Parameter  
  `iDebuggerVersion`  
- [in] Die Version des `ICorDebug` , die vom Debugger erwartet wird. Finden Sie unter den [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) -Enumeration für gültige Werte.  
+ in Die Version von `ICorDebug`, die vom Debugger erwartet wird. Gültige Werte finden Sie in der [Cordebug](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) -Enumeration.  
   
  `szDebuggeeVersion`  
- [in] Version der common Language Runtime die Anwendung oder den Prozess zu debuggende zugeordnet. Finden Sie unter den [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) oder [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) Methode für die Informationen zum Abrufen dieses Werts.  
+ in Die Common Language Runtime Version, die der zu debuggenden Anwendung oder dem Prozess zugeordnet ist. Informationen zum Abrufen dieses Werts finden Sie in der [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) -Methode oder der [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) -Methode.  
   
  `ppCordb`  
- [out] Der Speicherort, der einen Zeiger auf empfängt die `ICorDebug` Objekt.  
+ vorgenommen Der Speicherort, der einen Zeiger auf das `ICorDebug` Objekt empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt die standard-COM-Fehlercodes zurück, wie in der Datei "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt Standard-COM-Fehlercodes zurück, wie in der Datei "Winerror. h" zusätzlich zu den folgenden Werten definiert.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`szDebuggeeVersion` oder `ppCordb` ist Null, oder die Version Zeichenfolge ist falsch.|  
+|E_INVALIDARG|`szDebuggeeVersion` oder `ppCordb` ist NULL, oder die Versions Zeichenfolge ist falsch.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `szDebuggeeVersion` Parameter ist die entsprechende Version von "mscordbi.dll" zugeordnet.  
+ Der `szDebuggeeVersion`-Parameter ist der entsprechenden Version von mscordbi. dll zugeordnet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

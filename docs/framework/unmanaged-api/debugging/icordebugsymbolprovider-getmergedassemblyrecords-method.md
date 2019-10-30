@@ -1,17 +1,15 @@
 ---
-title: ICorDebugSymbolProvider::GetMergedAssemblyRecords-Methode
+title: 'Icordebugsymbolprovider:: getmergedassemblyrecords-Methode'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f7859b095d80edb5592af1386457ad72b85bc48
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957389"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138874"
 ---
-# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords-Methode
+# <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Icordebugsymbolprovider:: getmergedassemblyrecords-Methode
 Ruft die Symboldatensätze für alle zusammengeführten Assemblys ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,11 +38,11 @@ HRESULT GetMergedAssemblyRecords(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

@@ -2,16 +2,14 @@
 title: <Library>-Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc3c85ab99574c96d8a68d4221f218a1340e4122
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049648"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128369"
 ---
-# <a name="library-element-net-native"></a>\<Bibliotheks > Element (.net Native)
+# <a name="library-element-net-native"></a>\<-Bibliotheks > Element (.net Native)
 Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind.  
   
  \<Directives>-Element  
@@ -58,7 +56,7 @@ Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur La
   
  Das `<Library>`-Element dient als Container für die Definition der Programmelemente, deren Metadaten zur Laufzeit benötigt werden. Dieses Element drückt keine Richtlinie aus. Zur Kompilierzeit durchsuchen die Compilertools nur die im `<Library>`-Element bezeichnete Bibliothek nach Programmelementen, die durch seine untergeordneten Elemente identifiziert werden. Im Gegensatz dazu durchsuchen Compilertools alle Bibliotheken, auch die .NET Framework-Kernbibliotheken, nach Programmelementen, die durch untergeordnete Elemente des [\<Application>](application-element-net-native.md)-Elements identifiziert werden.  
   
- `<Library>`-Direktiven können bedingt verwendet werden. Wenn der Name des `<Library>` Elements mit einem Sternchen (\*) beginnt und endet, wirkt sich `<Library>` die Direktive nur dann aus, wenn die APP auf die zwischen den Sternchen angegebene Assembly verweist. Beispielsweise gilt die folgende Lauf Zeit Direktive nur, wenn von der APP auf die Assembly Utilities. dll verwiesen wird.  
+ `<Library>`-Direktiven können bedingt verwendet werden. Wenn der Name des `<Library>` Elements mit einem Sternchen (\*) beginnt und endet, wirkt sich die `<Library>`-Direktive nur aus, wenn die APP auf die zwischen den Sternchen angegebene Assembly verweist. Beispielsweise gilt die folgende Lauf Zeit Direktive nur, wenn von der APP auf die Assembly Utilities. dll verwiesen wird.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -70,7 +68,7 @@ Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur La
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Application >-Element](application-element-net-native.md)
-- [\<Direktiven > Element](directives-element-net-native.md)
+- [\<Anwendungs > Element](application-element-net-native.md)
+- [\<-Direktiven > Element](directives-element-net-native.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

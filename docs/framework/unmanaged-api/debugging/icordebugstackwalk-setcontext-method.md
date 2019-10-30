@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131813"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext-Methode
-Legt die [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) aktuellen Kontext des Objekts, auf einen gültigen Kontext für den Thread.  
+Legt den aktuellen Kontext des [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) -Objekts auf einen gültigen Kontext für den Thread fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,35 +35,35 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parameter  
  `flag`  
- [in] Ein [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) Flag, das angibt, ob der Kontext aus dem aktiven Frame im Stapel ist oder ein Kontext an, die durch das Entladen des Stapels abgerufen.  
+ in Ein [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) -Flag, das angibt, ob der Kontext vom aktiven Frame im Stapel stammt, oder ein Kontext, der durch das Entwickeln des Stapels abgerufen wird.  
   
  `contextSize`  
- [in] Die Größe des reservierten der `CONTEXT` Puffer.  
+ in Die zugeordnete Größe des `CONTEXT` Puffers.  
   
  `context`  
- [in] Die `CONTEXT` Puffer.  
+ in Der `CONTEXT` Puffer.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die `ICorDebugStackWalk` der Objektkontext wurde erfolgreich festgelegt.|  
-|E_FAIL|Die `ICorDebugStackWalk` der Objektkontext wurde nicht festgelegt.|  
-|E_INVALIDARG|Der Kontext ist null.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Der Kontextpuffer ist zu klein.|  
+|S_OK|Der Kontext des `ICorDebugStackWalk` Objekts wurde erfolgreich festgelegt.|  
+|E_FAIL|Der Kontext des `ICorDebugStackWalk` Objekts wurde nicht festgelegt.|  
+|E_INVALIDARG|Der Kontext ist NULL.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Der Kontext Puffer ist zu klein.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode wird den aktuellen Kontext des Threads nicht geändert werden.  
+ Diese Methode ändert nicht den aktuellen Kontext des Threads.  
   
- Festlegen des aktuellen Kontexts auf einen ungültigen Kontext kann zu unvorhersehbaren Ergebnissen aus der Stapeldurchlauf führen.  
+ Wenn Sie den aktuellen Kontext auf einen ungültigen Kontext festlegen, kann dies zu unvorhersehbaren Ergebnissen des Stapel Spaziergängers führen.  
   
- Sie können eine genaue bitweise Kopie dieses Kontexts abrufen, indem Sie sofort Aufrufen der [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) Methode.  
+ Sie können eine genaue bitweise Kopie dieses Kontexts abrufen, indem Sie direkt die [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) -Methode aufrufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

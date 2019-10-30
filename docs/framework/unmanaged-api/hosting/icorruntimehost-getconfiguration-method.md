@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1a044d1600f7e21e3abfbf704daef5213617b4c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87549118742da797ef0dd1b08ae9e72c466f7841
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780045"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139564"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration-Methode
-Ruft ein Objekt, das den Host Geben Sie die Rückrufkonfiguration, der die common Language Runtime (CLR) ermöglicht.  
+Ruft ein Objekt ab, mit dem der Host die Rückruf Konfiguration des Common Language Runtime (CLR) angeben kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +35,19 @@ HRESULT GetConfiguration(
   
 ## <a name="parameters"></a>Parameter  
  `pConfiguration`  
- [out] Ein Zeiger auf die Adresse einer [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) -Objekt, das zum Konfigurieren der CLR verwendet werden kann.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md) -Objekts, das verwendet werden kann, um die CLR zu konfigurieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR muss vor der Initialisierung so konfiguriert werden. andernfalls die `GetConfiguration` Methode gibt einen HRESULT, der angibt, eines Fehlers zurück.  
+ Die CLR muss vor der Initialisierung konfiguriert werden. Andernfalls gibt die `GetConfiguration`-Methode ein HRESULT zurück, das auf einen Fehler hinweist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** 1.0, 1.1  
+ **.NET Framework Versionen:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Siehe auch
 

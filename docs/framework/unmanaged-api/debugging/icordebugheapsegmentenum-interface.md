@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73036d1c12c46cbfda8031073a005bc9b376040e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9679029cd54ac44832add9bc4f47f8c8e9a26a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756209"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138450"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum-Schnittstelle
 Stellt einen Enumerator für die Speicherbereiche des verwalteten Heaps bereit. Diese Schnittstelle ist eine Unterklasse der ICorDebugEnum-Schnittstelle.  
@@ -30,17 +28,17 @@ Stellt einen Enumerator für die Speicherbereiche des verwalteten Heaps bereit. 
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Ruft die angegebene Anzahl von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Instanzen, die Informationen zu Regionen des verwalteten Heaps enthalten.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|Ruft die angegebene Anzahl von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen ab, die Informationen zu Regionen des verwalteten Heaps enthalten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICorDebugHeapSegmentEnum` -Schnittstelle implementiert, die ICorDebugEnum-Schnittstelle.  
+ Die `ICorDebugHeapSegmentEnum`-Schnittstelle implementiert die ICorDebugEnum-Schnittstelle.  
   
- Ein `ICorDebugHeapSegmentEnum` Instanz wird mit aufgefüllt [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Instanzen durch Aufrufen der [icordebugprocess5:: Enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) Methode. Die [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Objekte in der Auflistung aufgelistet werden können, durch den Aufruf der [icordebugheapsegmentenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md) Methode.  
+ Eine `ICorDebugHeapSegmentEnum` Instanz wird durch Aufrufen der [ICorDebugProcess5:: enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) -Methode mit [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen aufgefüllt. Die [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Objekte in der Auflistung können durch Aufrufen der [icordebugheapsegmenterum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md) -Methode aufgelistet werden.  
   
- Ein `ICorDebugHeapSegmentEnum` Auflistungsobjekt Listet alle Speicherbereiche, die verwaltete Objekte enthalten können, aber dies garantiert nicht, dass verwaltete Objekte tatsächlich in diesen Regionen befinden. Es kann Informationen zu Regionen, leer oder reservierten Speicher enthalten.  
+ Ein `ICorDebugHeapSegmentEnum` Auflistungs Objekt listet alle Speicherbereiche auf, die verwaltete Objekte enthalten können, garantiert jedoch nicht, dass sich verwaltete Objekte tatsächlich in diesen Regionen befinden. Sie kann Informationen über leere oder reservierte Speicherbereiche enthalten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

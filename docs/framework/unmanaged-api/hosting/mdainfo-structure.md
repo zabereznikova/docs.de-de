@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a2f513d40d722f1b0aad823ac7c0d93bda5615f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123264"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo-Struktur
-Enthält Informationen über die `Event_MDAFired` -Ereignis, das die Erstellung einer-Assistent für verwaltetes Debuggen (MDA) ausgelöst.  
+Stellt Details zum `Event_MDAFired` Ereignis bereit, das die Erstellung eines Assistenten für verwaltetes Debuggen (MDA) auslöst.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,30 +37,30 @@ typedef struct _MDAInfo {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`lpMDACaption`|Der Titel des aktuellen MDA. Der Titel beschreibt die Art des Fehlers, der ausgelöst der `Event_MDAFired` Ereignis.|  
-|`lpMDAMessage`|Die Ausgabenachricht, die von der aktuellen MDA bereitgestellt wird.|  
+|`lpMDACaption`|Der Titel des aktuellen MDA. Der Titel beschreibt die Art des Fehlers, der das `Event_MDAFired` Ereignis ausgelöst hat.|  
+|`lpMDAMessage`|Die vom aktuellen MDA bereitgestellte Ausgabe Meldung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwaltetes Debuggen (MDA) Debugginghilfen, die in Verbindung mit der common Language Runtime (CLR) zum Ausführen von Aufgaben wie das Identifizieren von ungültiger Bedingungen funktionieren in der Common Language Runtime-ausführungs-Engine oder zusätzliche Informationen über den Status der Ausgabe der -Engine. MDAs generieren XML-Nachrichten über Ereignisse, die andernfalls nur schwer abgefangen werden. Sie sind besonders nützlich für das Debuggen von Übergängen zwischen verwaltetem und nicht verwaltetem Code.  
+ Assistenten für verwaltetes Debuggen (MDAs) sind Debugginghilfen, die in Verbindung mit dem Common Language Runtime (CLR) funktionieren, um Aufgaben wie das Identifizieren von ungültigen Bedingungen in der Lauf Zeit Ausführungs-Engine oder das Sichern zusätzlicher Informationen über den Zustand des ge. MDAs generiert XML-Meldungen über Ereignisse, die andernfalls schwierig zu erfassen sind. Sie sind besonders nützlich zum Debuggen von Übergängen zwischen verwaltetem und nicht verwaltetem Code.  
   
- Die Common Language Runtime verwendet die folgenden Schritte aus, wenn ein Ereignis, das die Erstellung eines MDA wird ausgelöst, die ausgelöst wird:  
+ Die Laufzeit führt die folgenden Schritte aus, wenn ein Ereignis ausgelöst wird, das die Erstellung eines MDA auslöst:  
   
-- Wenn der Host nicht registriert wurde ein [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) Instanz durch den Aufruf [ICLROnEventManager:: RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) benachrichtigt werden sollen ein `Event_MDAFired` Ereignis die Laufzeit fortgesetzt wird, mit der standardmäßig nicht gehosteten Verhalten.  
+- Wenn der Host keine [iaktiononclrevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) -Instanz durch Aufrufen von [ICLROnEventManager:: registeraktiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) registriert hat, um über ein `Event_MDAFired` Ereignis benachrichtigt zu werden, wird die Laufzeit mit dem standardmäßigen, nicht gehosteten Verhalten fortgesetzt.  
   
-- Wenn der Host einen Handler für dieses Ereignis registriert hat, überprüft die Laufzeit, um festzustellen, ob ein Debugger an den Prozess angefügt ist. Wenn es sich handelt, unterbricht die Runtime den Debugger. Wenn der Debugger weiterhin auftritt, wird mit dem Host. Wenn kein Debugger angefügt ist, ruft die Runtime `IActionOnCLREvent::OnEvent` und übergibt einen Zeiger auf ein `MDAInfo` -Instanz als die `data` Parameter.  
+- Wenn der Host einen Handler für dieses Ereignis registriert hat, prüft die Laufzeit, ob ein Debugger an den Prozess angefügt ist. Wenn dies der Fall ist, unterbricht die Laufzeit den Debugger. Wenn der Debugger fortgesetzt wird, ruft er den Host auf. Wenn kein Debugger angefügt ist, ruft die Laufzeit `IActionOnCLREvent::OnEvent` auf und übergibt einen Zeiger auf eine `MDAInfo` Instanz als `data` Parameter.  
   
- Der Host kann auswählen, um MDAs zu aktivieren und benachrichtigt werden, wenn ein MDA aktiviert wird. Dies ermöglicht dem Host ein Standardverhalten außer Kraft setzen und den verwalteten Thread abzubrechen, der das Ereignis, um zu verhindern, dass sie den Verarbeitungsstatus beschädigen ausgelöst hat. Weitere Informationen zum Verwenden von MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Der Host kann MDAs aktivieren und benachrichtigt werden, wenn ein MDA aktiviert wird. Dadurch erhält der Host die Möglichkeit, das Standardverhalten zu überschreiben und den verwalteten Thread abzubrechen, der das Ereignis ausgelöst hat, um zu verhindern, dass der Prozessstatus beschädigt wird. Weitere Informationen zur Verwendung von MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcb78dd5374ff97f23d7dfea63fe33fa96836958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124531"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask-Methode
 Fordert explizit an, dass die Common Language Runtime (CLR) eine neue Aufgabe erstellt.  
@@ -52,19 +50,19 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Ressource zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR erstellt bei der Initialisierung automatisch eine neue Aufgabe, wenn Benutzercode einen Thread mithilfe von Typen im <xref:System.Threading> -Namespace oder durch Erhöhen der Größe des Thread Pools erstellt. Außerdem werden Aufgaben erstellt, wenn von nicht verwaltetem Code eine verwaltete Funktion aufgerufen wird.  
+ Die CLR erstellt bei der Initialisierung automatisch eine neue Aufgabe, wenn Benutzercode einen Thread mithilfe von Typen im <xref:System.Threading> Namespace erstellt oder wenn die Größe des Thread Pools zunimmt. Außerdem werden Aufgaben erstellt, wenn von nicht verwaltetem Code eine verwaltete Funktion aufgerufen wird.  
   
- `CreateTask`ermöglicht dem Host, eine explizite Anforderung zu erstellen, dass die CLR eine neue Aufgabe erstellt. Beispielsweise kann der Host diese Methode aufrufen, um Datenstrukturen vorab zu initialisieren.  
+ `CreateTask` ermöglicht es dem Host, eine explizite Anforderung zu erstellen, dass die CLR eine neue Aufgabe erstellt. Beispielsweise kann der Host diese Methode aufrufen, um Datenstrukturen vorab zu initialisieren.  
   
 > [!IMPORTANT]
 > Die neue Aufgabe wird in einem angehaltenen Zustand zurückgegeben und bleibt angehalten, bis der Host [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)explizit aufruft.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

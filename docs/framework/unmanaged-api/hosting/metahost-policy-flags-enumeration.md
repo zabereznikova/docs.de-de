@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d35bd5f8aaa2dc0df0044671414a5a936fed24d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a028d2a8116de4df79f662ee8b2768e6e070428a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141398"
 ---
-# <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS-Enumeration
-Enthält Bindungsrichtlinien für die, die für die meisten Laufzeithosts gelten. Diese Enumeration wird verwendet, durch die [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) Methode.  
+# <a name="metahost_policy_flags-enumeration"></a>METAHOST_POLICY_FLAGS-Enumeration
+Stellt Bindungs Richtlinien bereit, die den meisten Lauf Zeit Hosts gemeinsam sind. Diese Enumeration wird von der [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) -Methode verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,22 +43,22 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`METAHOST_POLICY_HIGHCOMPAT`|Definiert die hohe Kompatibilität-Richtlinie, die keine common Language Runtime (CLR) halten, die in den aktuellen Prozess geladen wird. Stattdessen betrachtet sie als nur die installierten CLRs und die Einstellungen der Komponente, wie von der Assemblydatei selbst, die deklarierten integriert-mit-Version oder die Konfigurationsdatei abgeleitet.|  
-|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Das Ergebnis der Version Bind Upgraderichtlinie gilt, wenn eine genaue Übereinstimmung basierend auf den Inhalt der HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft nicht gefunden wird,\\. NETFramework\Policy\Upgrades. Dies hat dieselbe Wirkung wie das [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
-|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Bindungsergebnisse werden zurückgegeben, als ob das Abbild bereitgestellt, um den Aufruf in einen neuen Prozess gestartet wurden. Derzeit `GetRequestedRuntime` ignoriert den Satz von ladbare Laufzeiten und für die Festlegung installierter Runtimes bindet. Dieses Flag ermöglicht, einen Host aus, um zu bestimmen, welche Laufzeit eine EXE-Datei gebunden wird, wenn er gestartet wird.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Ein Fehlerdialogfeld wird angezeigt, wenn `GetRequestedRuntime` kann eine Runtime ermitteln, die mit den Eingabeparametern kompatibel ist. Ab .NET Framework 4.5 wird dauert das Dialogfeld "Fehler" das Formular eines Dialogfelds für Windows-Features mit der Frage, ob der Benutzer das entsprechende Feature aktivieren möchten.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` wird das Bild (und alle entsprechenden Konfigurationsdatei) als zusätzliche Eingabe an den Bindungsprozess verwendet. In der Standardeinstellung `GetRequestedRuntime` kein Fallback auf den Prozess-Image-Pfad (in der Regel die EXE-Datei, die zum Starten des Prozesses verwendet wurde) beim Bestimmen der Laufzeit zum Binden an.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` müssen überprüfen, ob die entsprechende SKU installiert wird, wenn keine Informationen verfügbar, in der Konfigurationsdatei sind. Dadurch können Anwendungen, die keine Konfigurationsdateien, um auf kleineren SKUs als die standardmäßige Installation von .NET Framework ordnungsgemäß abgebrochen haben. In der Standardeinstellung `GetRequestedRuntime` überprüft nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut in der Konfigurationsdatei angegeben ist `<supportedRuntime />` Element.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` SEM_FAILCRITICALERRORS ignorieren soll (das wird festgelegt, durch den Aufruf der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion), und zeigen Sie im Dialogfeld "Fehler". Standardmäßig unterdrückt SEM_FAILCRITICALERRORS das Fehlerdialogfeld. Es wurde von einem anderen Prozess geerbt, und der automatische Fehler ist möglicherweise in Ihrem Szenario nicht erwünscht.|  
+|`METAHOST_POLICY_HIGHCOMPAT`|Definiert die Richtlinie für hohe Kompatibilität, bei der keine Common Language Runtime (CLR) berücksichtigt werden, die in den aktuellen Prozess geladen werden. Stattdessen werden nur die installierten clrs und die Einstellungen der Komponente, die von der Assemblydatei selbst abgeleitet sind, die deklarierte integrierte Version oder die Konfigurationsdatei berücksichtigt.|  
+|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Wendet die Upgraderichtlinie auf das Versions Bindungs Ergebnis an, wenn keine genaue Entsprechung gefunden wurde, basierend auf dem Inhalt von HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft-\\. Netframework\policy\upgrades. Dies hat die gleiche Wirkung wie [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
+|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Bindungs Ergebnisse werden zurückgegeben, als ob das Bild, das für den-Rückruf bereitgestellt wird, in einem neuen Prozess gestartet wurde. Zurzeit ignoriert `GetRequestedRuntime` den Satz von Lade baren Laufzeiten und bindet Sie an den Satz installierter Laufzeiten. Mit diesem Flag kann ein Host ermitteln, an welche Laufzeit eine exe-Datei beim Start gebunden wird.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Wenn `GetRequestedRuntime` keine Laufzeit finden kann, die mit den Eingabe Parametern kompatibel ist, wird ein Fehler Dialogfeld angezeigt. Beginnend mit dem .NET Framework 4,5 kann dieses Dialogfeld "Fehler" in Form eines Windows-Features angezeigt werden, in dem Sie gefragt werden, ob der Benutzer die entsprechende Funktion aktivieren möchte.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` verwendet das Prozess Image (und die entsprechende Konfigurationsdatei) als zusätzliche Eingabe für den Bindungsprozess. Standardmäßig wird `GetRequestedRuntime` nicht auf den Prozess Image Pfad (in der Regel die exe-Datei, die zum Starten des Prozesses verwendet wurde) zurückgreifen, wenn die Laufzeit bestimmt wird, an die die Bindung erfolgen soll.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` müssen prüfen, ob die entsprechende SKU installiert ist, wenn in der Konfigurationsdatei keine Informationen verfügbar sind. Dadurch können Anwendungen, die keine Konfigurationsdateien aufweisen, auf kleineren SKUs ordnungsgemäß fehlschlagen als die Standardinstallation der .NET Framework. Standardmäßig überprüft `GetRequestedRuntime` nicht, ob die entsprechende SKU installiert ist, es sei denn, das SKU-Attribut ist in der Konfigurationsdatei `<supportedRuntime />` Element angegeben.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` sollte SEM_FAILCRITICALERRORS (durch Aufrufen der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) -Funktion festgelegt) ignorieren und das Fehler Dialogfeld anzeigen. Standardmäßig unterdrückt SEM_FAILCRITICALERRORS das Fehler Dialogfeld. Möglicherweise wurde sie von einem anderen Prozess geerbt, und der automatische Fehler ist in Ihrem Szenario nicht erwünscht.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Metahost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9600573a0a730cee10247d5644d587e75856cdd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141179"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy-Methode
-Wertet Richtlinien für die Bindung für den Host.  
+Wertet die Bindungs Richtlinie im Namen des Hosts aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,45 +40,45 @@ HRESULT EvaluatePolicy (
   
 ## <a name="parameters"></a>Parameter  
  `pwzReferenceIdentity`  
- [in] Ein Verweis auf die Assembly, bevor die richtlinienauswertung.  
+ in Ein Verweis auf die Assembly vor der Richtlinien Auswertung.  
   
  `pbApplicationPolicy`  
- [in] Ein Zeiger auf einen Puffer, der die Daten der enthält.  
+ in Ein Zeiger auf einen Puffer, der die Richtlinien Daten enthält.  
   
  `cbAppPolicySize`  
- [in] Die Größe der `pbApplicationPolicy` Puffer.  
+ in Die Größe des `pbApplicationPolicy` Puffers.  
   
  `pwzPostPolicyReferenceIdentity`  
- [out] Ein Verweis auf die Assembly nach der Auswertung der Daten der neuen.  
+ vorgenommen Ein Verweis auf die Assembly nach der Auswertung der neuen Richtlinien Daten.  
   
  `pcchPostPolicyReferenceIdentity`  
- [in, out] Ein Zeiger auf die Größe des Puffers Assembly Identität Verweis nach der Auswertung der Daten der neuen.  
+ [in, out] Ein Zeiger auf die Größe des assemblyidentitätsverweispuffers nach der Auswertung der neuen Richtlinien Daten.  
   
  `pdwPoliciesApplied`  
- [out] Ein Zeiger auf eine logische OR-Kombination von [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) Werte, der angibt, welche Richtlinien angewendet wurden.  
+ vorgenommen Ein Zeiger auf eine logische OR-Kombination von [EBindPolicyLevels](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) -Werten, die angibt, welche Richtlinien angewendet wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Auswertung wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|Entweder `pwzReferenceIdentity` oder `pbApplicationPolicy` ist ein null-Verweis.|  
+|E_INVALIDARG|Entweder `pwzReferenceIdentity` oder `pbApplicationPolicy` ist ein NULL-Verweis.|  
 |ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` ist zu klein.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `EvaluatePolicy` Methode ermöglicht es dem Host Bindungsrichtlinie hostspezifische Assembly verwalten beeinflussen Anforderungen an. Die Richtlinien-Engine selbst bleibt in der CLR.  
+ Mit der `EvaluatePolicy`-Methode kann der Host die Bindungs Richtlinie so beeinflussen, dass Host spezifische assemblyversionsanforderungen verwaltet werden. Die Richtlinien-Engine selbst verbleibt innerhalb der CLR.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779105"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131940"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE-Funktion
-Stellt sicher, dass die common Language Runtime-Ausführungsmodul in einen Prozess geladen wird. Diese Funktion ist in .NET Framework 4 veraltet. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
+Stellt sicher, dass die Common Language Runtime Ausführungs-Engine in einen Prozess geladen wird. Diese Funktion ist in der .NET Framework 4 veraltet. Verwenden Sie stattdessen die [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,26 +35,26 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Parameter  
  `fFlags`  
- [in] Eines der [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) Enumerationskonstanten.  
+ in Eine der [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) -Enumerationskonstanten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt die standard-COM-Fehlercodes zurück, wie in "Winerror.h", und die Werte in der folgenden Tabelle definiert.  
+ Diese Methode gibt in WinError. h definierte Standard-COM-Fehlercodes und die Werte in der folgenden Tabelle zurück.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
-|S_OK|Die ausführungs-Engine wurde erfolgreich geladen.|  
-|S_FALSE|Die ausführungs-Engine ist bereits geladen.|  
-|E_FAIL|Die ausführungs-Engine konnte nicht geladen werden.|  
+|S_OK|Die Ausführungs-Engine wurde erfolgreich geladen.|  
+|S_FALSE|Die Ausführungs-Engine ist bereits geladen.|  
+|E_FAIL|Die Ausführungs-Engine konnte nicht geladen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode lädt die ausführungs-Engine auf, wenn es nicht bereits geladen wurde.  
+ Diese Methode lädt die Ausführungs-Engine, wenn Sie noch nicht geladen wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

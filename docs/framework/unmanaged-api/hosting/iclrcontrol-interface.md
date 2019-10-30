@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: a24fd905-1fa6-45a0-ad65-e9e2ee58861e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f70e7958cc9ac198738ed72732fe7b6563c89067
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 914a2f6103fb0ffb9a7b9fcb895ecf0cd62f3c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126594"
 ---
 # <a name="iclrcontrol-interface"></a>ICLRControl-Schnittstelle
-Stellt Methoden, mit denen einen Host aus, um Verweise auf abzurufen, und konfigurieren Sie Aspekte, die common Language Runtime (CLR) bereit.  
+Stellt Methoden bereit, mit denen ein Host Verweise auf die Common Language Runtime (CLR) erhalten und Aspekte von diesen konfigurieren kann.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetCLRManager-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|Ruft einen Schnittstellenzeiger auf eine Instanz eines der Managertypen, mit denen der Host zum Konfigurieren der CLR ab.|  
-|[SetAppDomainManagerType-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|Legt die von abgeleiteten Typs <xref:System.AppDomainManager> als Typ für Anwendungsdomänen-Manager.|  
+|[GetCLRManager-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|Ruft einen Schnittstellen Zeiger auf eine Instanz eines beliebigen Manager Typs ab, der vom Host zum Konfigurieren der CLR verwendet werden kann.|  
+|[SetAppDomainManagerType-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|Legt einen Typ fest, der von <xref:System.AppDomainManager> als Typ für Anwendungs Domänen-Manager abgeleitet ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

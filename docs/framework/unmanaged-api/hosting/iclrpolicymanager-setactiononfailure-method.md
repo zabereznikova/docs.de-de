@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76f064d1683615ef8f665cf1facaa31d61b294a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 143052febe136e969987c35bc06f6c3b3356aedf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759597"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140780"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure-Methode
-Gibt die Richtlinienaktion, die die common Language Runtime (CLR) ausgeführt werden soll, wenn der angegebene Fehler auftritt.  
+Gibt die Richtlinien Aktion an, die vom Common Language Runtime (CLR) ausgeführt werden soll, wenn der angegebene Fehler auftritt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,45 +36,45 @@ HRESULT SetActionOnFailure (
   
 ## <a name="parameters"></a>Parameter  
  `failure`  
- [in] Eines der [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte, der Art des Fehlers für die auszuführende Aktion angibt.  
+ in Einer der [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) -Werte, der den Typ des Fehlers angibt, für den eine Aktion ausgeführt werden soll.  
   
  `action`  
- [in] Eines der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, der angibt, der Aktion, die ausgeführt wird, wenn ein Fehler auftritt. Eine Liste der unterstützten Werte finden Sie im Abschnitt "Hinweise".  
+ in Einer der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, der die Aktion angibt, die durchgeführt werden soll, wenn ein Fehler auftritt. Eine Liste der unterstützten Werte finden Sie im Abschnitt "Hinweise".  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`SetActionOnFailure` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_INVALIDARG|Eine Richtlinienaktion kann nicht festgelegt werden, für den angegebenen Vorgang, oder eine ungültige Richtlinie-Aktion wurde für den Vorgang angegeben.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_INVALIDARG|Eine Richtlinien Aktion kann für den angegebenen Vorgang nicht festgelegt werden, oder für den Vorgang wurde eine ungültige Richtlinien Aktion angegeben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig löst die CLR eine Ausnahme aus, wenn ein Fehler auftritt, eine Ressource, z. B. Arbeitsspeicher reservieren. `SetActionOnFailure` ermöglicht dem Host, um dieses Verhalten zu überschreiben, indem Sie die Richtlinie für Aktionen, bei einem Fehler angeben. In der folgende Tabelle werden die Kombinationen von [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) und [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) Werte, die unterstützt werden. (Das Präfix FAIL_ aus weggelassen [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte.)  
+ Standardmäßig löst die CLR eine Ausnahme aus, wenn Sie eine Ressource, z. b. Arbeitsspeicher, nicht zuordnen kann. `SetActionOnFailure` ermöglicht dem Host, dieses Verhalten durch Angeben der Richtlinien Aktion, die bei einem Fehler ausgeführt werden soll, zu überschreiben. In der folgenden Tabelle werden die Kombinationen der unterstützten [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) -und [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte angezeigt. (Das FAIL_-Präfix wird in [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) -Werten weggelassen.)  
   
-||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
+||Nicht criticalresource|Criticalresource|Fatalruntime|Waisen-edlock|StackOverflow|Zugriffsverletzung|Code Contract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|X|X||||Nicht zutreffend||  
-|eThrowException|X|X||||Nicht zutreffend||  
-|`eAbortThread`|X|X||||Nicht zutreffend|X|  
-|`eRudeAbortThread`|X|X||||Nicht zutreffend|X|  
-|`eUnloadAppDomain`|X|X||X||Nicht zutreffend|X|  
-|`eRudeUnloadAppDomain`|X|X||X|X|Nicht zutreffend|X|  
-|`eExitProcess`|X|X||X|X|Nicht zutreffend|X|  
-|eFastExitProcess|X|X||X|X|Nicht zutreffend||  
-|`eRudeExitProcess`|X|X|X|X|X|Nicht zutreffend||  
-|`eDisableRuntime`|X|X|X|X|X|Nicht zutreffend||  
+|`eNoAction`|w|w||||Nicht zutreffend||  
+|ethrowexception|w|w||||Nicht zutreffend||  
+|`eAbortThread`|w|w||||Nicht zutreffend|w|  
+|`eRudeAbortThread`|w|w||||Nicht zutreffend|w|  
+|`eUnloadAppDomain`|w|w||w||Nicht zutreffend|w|  
+|`eRudeUnloadAppDomain`|w|w||w|w|Nicht zutreffend|w|  
+|`eExitProcess`|w|w||w|w|Nicht zutreffend|w|  
+|efastexitprocess|w|w||w|w|Nicht zutreffend||  
+|`eRudeExitProcess`|w|w|w|w|w|Nicht zutreffend||  
+|`eDisableRuntime`|w|w|w|w|w|Nicht zutreffend||  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

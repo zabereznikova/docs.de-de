@@ -6,33 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141215"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Übersicht über das PrintPreviewDialog-Steuerelement (Windows Forms)
 
-Die Windows-Formulare <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement ist ein vorkonfiguriertes Dialogfeld zum Anzeigen verwendet wie ein [PrintDocument](printdocument-component-windows-forms.md) wird angezeigt, gedruckt. Verwenden Sie es in Ihrer Windows-basierte Anwendung als einfache Lösung anstatt ein eigenes Dialogfeld zu konfigurieren. Das Steuerelement enthält Schaltflächen zum Drucken, Vergrößern, Anzeigen mindestens einer Seite und Schließen des Dialogfelds.
+Das Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement ist ein vorkonfiguriertes Dialogfeld, in dem angezeigt wird, wie ein [PrintDocument](printdocument-component-windows-forms.md) angezeigt wird, wenn es gedruckt wird. Verwenden Sie es in Ihrer Windows-basierten Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren. Das Steuerelement enthält Schaltflächen zum Drucken, Vergrößern, Anzeigen mindestens einer Seite und Schließen des Dialogfelds.
 
-## <a name="key-properties-and-methods"></a>Wichtige Eigenschaften und Methoden
+## <a name="key-properties-and-methods"></a>Schlüsseleigenschaften und-Methoden
 
-Die Schlüsseleigenschaft des Steuerelements ist <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, wodurch das Dokument, in der Vorschau angezeigt werden. Das Dokument muss ein <xref:System.Drawing.Printing.PrintDocument> Objekt. Um das Dialogfeld anzuzeigen, rufen Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A> Methode. Anti-Aliasing kann legen Sie den Text, der reibungslose angezeigt werden kann, jedoch auch die Anzeige langsamer; um es zu verwenden, legen die <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> Eigenschaft `true`.
+Die Schlüsseleigenschaft des Steuer Elements ist <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, wodurch das Dokument als Vorschau angezeigt wird. Das Dokument muss ein <xref:System.Drawing.Printing.PrintDocument> Objekt sein. Um das Dialogfeld anzuzeigen, müssen Sie dessen <xref:System.Windows.Forms.Form.ShowDialog%2A>-Methode aufrufen. Antialiasing kann dazu führen, dass der Text glatter erscheint, aber auch die Anzeige langsamer wird. Legen Sie die <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>-Eigenschaft auf `true`fest, um Sie zu verwenden.
 
-Bestimmte Eigenschaften stehen über die <xref:System.Windows.Forms.PrintPreviewControl> , die die <xref:System.Windows.Forms.PrintPreviewDialog> enthält. (Sie müssen keine Hiermit <xref:System.Windows.Forms.PrintPreviewControl> dem Formular wird es automatisch in enthalten die <xref:System.Windows.Forms.PrintPreviewDialog> Wenn Sie das Dialogfeld zum Formular hinzufügen.) Beispiele für Eigenschaften, die über die <xref:System.Windows.Forms.PrintPreviewControl> sind die <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> und <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> Eigenschaften, die bestimmen, die Anzahl der Seiten, die horizontal und vertikal auf dem Steuerelement angezeigt. Sie erreichen die <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> Eigenschaft als `PrintPreviewDialog1.PrintPreviewControl.Columns` in Visual Basic `printPreviewDialog1.PrintPreviewControl.Columns` in visuellen C#, oder `printPreviewDialog1->PrintPreviewControl->Columns` in Visual C++.
+Bestimmte Eigenschaften sind über die <xref:System.Windows.Forms.PrintPreviewControl> verfügbar, die die <xref:System.Windows.Forms.PrintPreviewDialog> enthält. (Sie müssen diese <xref:System.Windows.Forms.PrintPreviewControl> dem Formular nicht hinzufügen. Sie ist automatisch im <xref:System.Windows.Forms.PrintPreviewDialog> enthalten, wenn Sie das Dialogfeld zum Formular hinzufügen.) Beispiele für Eigenschaften, die über die <xref:System.Windows.Forms.PrintPreviewControl> verfügbar sind, sind die Eigenschaften <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> und <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>, die bestimmen, wie viele Seiten horizontal und vertikal auf dem Steuerelement angezeigt werden. Sie können auf die <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>-Eigenschaft als `PrintPreviewDialog1.PrintPreviewControl.Columns` in Visual Basic, `printPreviewDialog1.PrintPreviewControl.Columns` in C#Visual oder `printPreviewDialog1->PrintPreviewControl->Columns` in Visual C++zugreifen.
 
 ## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog-Leistung
 
-Unter den folgenden Bedingungen die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement nur sehr langsam initialisiert:
+Unter den folgenden Bedingungen wird das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement sehr langsam initialisiert:
 
-- Wird verwendet, ein Netzwerkdrucker.
-- Benutzereinstellungen für diesen Drucker, z. B. duplex-Einstellungen werden geändert.
+- Ein Netzwerkdrucker wird verwendet.
+- Die Benutzereinstellungen für diesen Drucker (z. b. Duplex Einstellungen) werden geändert.
 
-Für apps, die auf .NET Framework 4.5.2 ausgeführt werden, können Sie den folgenden Schlüssel zum Hinzufügen der \<AppSettings > Abschnitt der Konfigurationsdatei zur Verbesserung der Leistung von <xref:System.Windows.Forms.PrintPreviewDialog> Initialisierung zu steuern:
+Für apps, die auf dem .NET Framework 4.5.2 ausgeführt werden, können Sie den folgenden Schlüssel zum \<appSettings-> Abschnitt der Konfigurationsdatei hinzufügen, um die Leistung der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerungs Initialisierung zu verbessern:
 
 ```xml
 <appSettings>
@@ -40,9 +38,9 @@ Für apps, die auf .NET Framework 4.5.2 ausgeführt werden, können Sie den folg
 </appSettings>
 ```
 
-Wenn die `EnablePrintPreviewOptimization` Schlüssel auf einen anderen Wert festgelegt ist, oder wenn der Schlüssel nicht vorhanden ist, wird die Optimierung wird nicht angewendet.
+Wenn der `EnablePrintPreviewOptimization` Schlüssel auf einen anderen Wert festgelegt ist, oder wenn der Schlüssel nicht vorhanden ist, wird die Optimierung nicht angewendet.
 
-Für apps, die auf die .NET Framework 4.6 oder höher ausgeführt wird, können Sie die folgende Option zum Hinzufügen der [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) Element in der [ \<Runtime >](../../configure-apps/file-schema/runtime/index.md) im Abschnitt Ihrer Datei "App.config":
+Für apps, die unter .NET Framework 4,6 oder höheren Versionen ausgeführt werden, können Sie den folgenden Schalter dem [\<appcontexungwitchoverrides->](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) -Element im [\<Runtime->](../../configure-apps/file-schema/runtime/index.md) Abschnitt der APP-Konfigurationsdatei hinzufügen:
 
 ```xml
 <runtime >
@@ -51,9 +49,9 @@ Für apps, die auf die .NET Framework 4.6 oder höher ausgeführt wird, können 
 </runtime >
 ```
 
-Wenn der Switch nicht vorhanden ist, oder wenn sie auf einen anderen Wert festgelegt ist, wird die Optimierung nicht angewendet.
+Wenn der Schalter nicht vorhanden ist oder auf einen anderen Wert festgelegt ist, wird die Optimierung nicht angewendet.
 
-Bei Verwendung der <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> Ereignis zum Ändern von Druckereinstellungen fest, die Leistung der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement wird nicht verbessert werden, auch wenn eine Optimierung Konfigurationsschalters festgelegt ist.
+Wenn Sie das <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>-Ereignis verwenden, um Druckereinstellungen zu ändern, wird die Leistung des <xref:System.Windows.Forms.PrintPreviewDialog> Steuer Elements nicht verbessert, auch wenn ein Optimierungs Konfigurationsschalter festgelegt ist.
 
 ## <a name="see-also"></a>Siehe auch
 

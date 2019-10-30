@@ -2,21 +2,19 @@
 title: <EnableAmPmParseAdjustment>-Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117369"
 ---
-# <a name="enableampmparseadjustment-element"></a>\<Enableampmparameseadjustment-> Element
+# <a name="enableampmparseadjustment-element"></a>\<enableampmparameseanpass> Element
 Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regeln zum Analysieren von Datums Zeichenfolgen verwenden, die einen Tag, einen Monat, eine Stunde und einen am/pm-Kenn Zeichner enthalten.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Enableampmparameseanpassungs->**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<enableampmparameseadjustment >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +33,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
   
 ### <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Datums-und Uhrzeit-Analyse-Methoden verwenden keine angepassten Regeln für das Parsen von Datums Zeichenfolgen, die nur einen Tag, einen Monat, eine Stunde und am/pm-Kenn Zeichner enthalten.|  
 |1|Datums-und Uhrzeit-Analyse-Methoden verwenden angepasste Regeln zum Parsen von Datums Zeichenfolgen, die nur einen Tag, einen Monat, eine Stunde und am/pm-Kenn Zeichner enthalten.|  
@@ -51,7 +49,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `<EnableAmPmParseAdjustment>` -Element steuert, wie die folgenden Methoden eine Datums Zeichenfolge analysieren, die einen numerischen Tag und Monat gefolgt von einer Stunde und einem am/pm-Kenn Zeichner (z. b. "4/10 6 am") enthält:  
+ Das `<EnableAmPmParseAdjustment>`-Element steuert, wie die folgenden Methoden eine Datums Zeichenfolge analysieren, die einen numerischen Tag und Monat gefolgt von einer Stunde und einem am/pm-Kenn Zeichner (z. b. "4/10 6 am") enthält:  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -65,7 +63,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
   
  Es sind keine anderen Muster betroffen.  
   
- Das `<EnableAmPmParseAdjustment>` -Element hat keine Auswirkung auf <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>die <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>Methoden <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>,, <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> und.  
+ Das `<EnableAmPmParseAdjustment>`-Element hat keine Auswirkung auf die Methoden <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>und <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
 > In .net Core und .net Native sind die angepassten am/pm-Analyse-Regeln standardmäßig aktiviert.  
@@ -74,14 +72,14 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
   
  Wenn die Regel für die Verarbeitung von Regeln aktiviert ist, interpretiert die-Methode für den Tag und den Monat so, dass Sie zum aktuellen Jahr gehört, und interpretiert die Uhrzeit als Stunde der 12-Stunden-Uhr.  
   
- In der folgenden Tabelle wird der Unterschied <xref:System.DateTime> im-Wert <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> veranschaulicht, wenn die-Methode verwendet wird, um die Zeichenfolge "" `<EnableAmPmParseAdjustment>` 4/10 6 am `enabled` zu analysieren, wobei die-Eigenschaft des Elements auf "0" oder "1" festgelegt ist. Dabei wird davon ausgegangen, dass das heutige Datum der 5. Januar 2017 ist, und zeigt das Datum so an, als ob es mit der Format Zeichenfolge "G" der angegebenen Kultur formatiert wird.  
+ In der folgenden Tabelle wird der Unterschied im <xref:System.DateTime> Wert veranschaulicht, wenn die <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>-Methode verwendet wird, um die Zeichenfolge "" 4/10 6 am zu analysieren, wobei die `enabled`-Eigenschaft des `<EnableAmPmParseAdjustment>` Elements auf "0" oder "1" festgelegt ist. Dabei wird davon ausgegangen, dass das heutige Datum der 5. Januar 2017 ist, und zeigt das Datum so an, als ob es mit der Format Zeichenfolge "G" der angegebenen Kultur formatiert wird.  
   
-|Kulturname|enabled="0"|enabled="1"|  
+|Kulturname|aktiviert = "0"|aktiviert = "1"|  
 |------------------|------------------|------------------|  
-|en-US|1/5/2017 4:00:00 UHR|4/10/2017 6:00:00 UHR|  
+|en-US|1/5/2017 4:00:00 Uhr|4/10/2017 6:00:00 Uhr|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Runtime-> Element](runtime-element.md)
+- [\<Lauf Zeit > Element](runtime-element.md)
 - [\<configuration> Element](../configuration-element.md)

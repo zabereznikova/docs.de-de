@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a874646a6746a9b2fc8ce597e6c1ca47340c199a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52c19f8663a776215241ddb16f3aa9ba00c0d36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759649"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137353"
 ---
 # <a name="icordebugmanagedcallbackevalcomplete-method"></a>ICorDebugManagedCallback::EvalComplete-Methode
-Benachrichtigt den Debugger an, dass eine Auswertung abgeschlossen ist.  
+Benachrichtigt den Debugger, dass eine Auswertung abgeschlossen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +37,16 @@ HRESULT EvalComplete (
   
 ## <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Auswertung ausgeführt wurde.  
+ in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Auswertung durchgeführt wurde.  
   
  `pThread`  
- [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Evaluierung ausgeführt wurde.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Auswertung durchgeführt wurde.  
   
  `pEval`  
- [in] Ein Zeiger auf ein ICorDebugEval-Objekt, das den Code darstellt, der die Auswertung ausgeführt werden soll.  
+ in Ein Zeiger auf ein ICorDebugEval-Objekt, das den Code darstellt, der die Auswertung durchgeführt hat.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

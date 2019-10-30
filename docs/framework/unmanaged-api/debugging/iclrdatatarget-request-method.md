@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113356"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request-Methode
-Aufgerufen von der common Language Runtime (CLR) Datenzugriffsdiensten der zum Anfordern eines Vorgangs, wie durch die Implementierung definiert.  
+Wird von den Common Language Runtime (CLR)-Datenzugriffs Diensten aufgerufen, um einen Vorgang anzufordern, wie in der-Implementierung definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,29 +41,29 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parameter  
  `reqCode`  
- [in] Vom Benutzer definiert.  
+ in Benutzer definiert.  
   
  `inBufferSize`  
- [in] Die Größe des Eingabepuffers, die für die eingehende Anforderung verwendet wird.  
+ in Die Größe des Eingabe Puffers, der für die eingehende Anforderung verwendet wird.  
   
  `inBuffer`  
- [in] Ein Puffer, der die Anforderung enthält.  
+ in Ein Puffer, der die Anforderung enthält.  
   
  `outBufferSize`  
- [in] Die Größe des Ausgabepuffers, die für die Antwort verwendet wird.  
+ in Die Größe des Ausgabepuffers, der für die Antwort verwendet wird.  
   
  `outBuffer`  
- [out] Ein Puffer mit der Antwort.  
+ vorgenommen Ein Puffer, der die Antwort enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Request` Methode ermöglicht das Hinzufügen nicht angegebener benutzerdefinierter Vorgänge. Diese Methode, also bereitstellt Erweiterbarkeit ohne Revision der Definition der Schnittstelle.  
+ Die `Request`-Methode vereinfacht das Hinzufügen von nicht angegebenen benutzerdefinierten Vorgängen. Das heißt, diese Methode bietet Erweiterbarkeit, ohne dass eine Revision der Schnittstellen Definition erforderlich ist.  
   
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

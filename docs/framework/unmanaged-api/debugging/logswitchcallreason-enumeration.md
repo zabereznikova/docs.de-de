@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a6ca9f4d74c508ac0a2af68c2a5b0a3e6d6b217
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752573"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139183"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason-Enumeration
 Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
@@ -40,12 +38,12 @@ typedef enum LogSwitchCallReason {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Eine Debug-/Ablaufverfolgungsschalter wurde erstellt.|  
-|`SWITCH_MODIFY`|Eine Debug-/Ablaufverfolgungsschalter wurde geändert.|  
-|`SWITCH_DELETE`|Eine Debug-/Ablaufverfolgungsschalter wurde gelöscht.|  
+|`SWITCH_CREATE`|Ein Debugger/Ablauf Verfolgungs Schalter wurde erstellt.|  
+|`SWITCH_MODIFY`|Ein Debugger/Ablauf Verfolgungs Schalter wurde geändert.|  
+|`SWITCH_DELETE`|Ein Debugger/Ablauf Verfolgungs Schalter wurde gelöscht.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

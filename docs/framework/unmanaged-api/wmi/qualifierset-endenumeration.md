@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82627fa416f71e123ed2c03bae4584e4433310eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127287"
 ---
 # <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration-Funktion
 Beendet die Enumeration, die mit einem aufrufsbefehl der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) -Funktion gestartet wurde.  
@@ -49,7 +47,7 @@ in Ein Zeiger auf eine [iwbemqualifierset](/windows/desktop/api/wbemcli/nn-wbemc
 
 Der folgende Wert, der von dieser Funktion zurückgegeben wird, ist in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstante im Code definieren:
 
-|Konstante  |Wert  |Description  |
+|Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
@@ -61,9 +59,9 @@ Dieser Befehl wird empfohlen, ist jedoch nicht erforderlich. Es werden sofort di
 
 ## <a name="requirements"></a>Anforderungen  
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
-**Header:** WMINet_Utils.idl  
+**Header:** WMINet_Utils. idl  
   
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

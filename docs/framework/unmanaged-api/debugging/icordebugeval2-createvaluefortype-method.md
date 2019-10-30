@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137611"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType-Methode
-Ruft einen Zeiger auf einen neuen ICorDebugValue des angegebenen Typs mit einem Anfangswert von 0 (null) oder Null ab.  
+Ruft einen Zeiger auf einen neuen ICorDebugValue des angegebenen Typs mit einem Anfangswert von 0 (null) oder NULL ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +36,18 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>Parameter  
  `pType`  
- [in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ darstellt.  
+ in Zeiger auf ein ICorDebugType-Objekt, das den Typ darstellt.  
   
  `ppValue`  
- [out] Zeiger auf die Adresse einer `ICorDebugValue` -Objekt, das den Wert darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugValue` Objekts, das den Wert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateValueForType` generalisiert [ICorDebugEval:: CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) dadurch, dass Sie einen beliebigen Objekttyp an, einschließlich Typen konstruiert z. B. `List<int>`. Der einzige Zweck dieser Methode wird zum Generieren eines Werts, das an eine funktionsauswertung übergeben werden kann.  
+ `CreateValueForType` generalisiert [ICorDebugEval:: foratevalue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , indem es Ihnen ermöglicht, einen beliebigen Objekttyp anzugeben, einschließlich konstruierter Typen, z. b. `List<int>`. Der einzige Zweck dieser Methode besteht darin, einen Wert zu generieren, der an eine Funktions Auswertung übermittelt werden kann.  
   
- Der Typ muss es sich um eine Klasse oder ein Werttyp sein. Sie können nicht diese Methode verwenden, um Arraywerte oder Zeichenfolgenwerte zu erstellen.  
+ Der Typ muss eine Klasse oder ein Werttyp sein. Sie können diese Methode nicht verwenden, um Array Werte oder Zeichen folgen Werte zu erstellen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

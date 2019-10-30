@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c9486b8ad0acb53e13f6a9202ce2d713ffe5fce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764998"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140466"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset-Methode
-Verschiebt den Cursor auf den Anfang der Enumeration.  
+Verschiebt den Cursor von an den Anfang der-Enumeration.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +32,12 @@ HRESULT Reset ();
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `Reset` nimmt keine Parameter.  
+ `Reset` nimmt keine Parameter an.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   

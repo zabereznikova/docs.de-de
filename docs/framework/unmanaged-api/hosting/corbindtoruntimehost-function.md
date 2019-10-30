@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e1965917e8a1c5ae07cf119df3664b969a979be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a6d9708e7281a72c88ba28012006784f7b0ee9d9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969248"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124355"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost-Funktion
 Ermöglicht es Hosts, eine angegebene Version der Common Language Runtime (CLR) in einen Prozess zu laden.  
@@ -56,7 +54,7 @@ HRESULT CorBindToRuntimeHost (
  `pwszBuildFlavor`  
  [in] Eine Zeichenfolge, die angibt, ob der Serverbuild oder der Arbeitsstationsbuild der CLR geladen werden soll. Gültige Werte sind `svr` und `wks`. Der Serverbuild wurde so optimiert, dass mehrere Prozessoren zur Ausführung der Garbage Collection genutzt werden können. Der Arbeitsstationsbuild wurde für die Ausführung von Clientanwendungen auf einem Computer mit einem einzelnen Prozessor optimiert.  
   
- Wenn `pwszBuildFlavor` auf NULL festgelegt ist, wird der Arbeitsstations Build geladen. Bei der Ausführung auf einem Computer mit einem einzelnen Prozessor wird der Arbeitsstations Build immer geladen, `pwszBuildFlavor` auch wenn auf `svr`festgelegt ist. Wenn `pwszBuildFlavor` jedoch auf `svr` festgelegt ist und gleichzeitige Garbage Collection angegeben ist ( `startupFlags` siehe Beschreibung des Parameters), wird der Serverbuild geladen.  
+ Wenn `pwszBuildFlavor` auf NULL festgelegt ist, wird der Arbeitsstations Build geladen. Bei der Ausführung auf einem Computer mit einem einzelnen Prozessor wird der Arbeitsstations Build immer geladen, auch wenn `pwszBuildFlavor` auf `svr`festgelegt ist. Wenn `pwszBuildFlavor` jedoch auf `svr` festgelegt ist und gleichzeitige Garbage Collection angegeben ist (siehe Beschreibung des Parameters `startupFlags`), wird der Serverbuild geladen.  
   
 > [!NOTE]
 > Die gleichzeitige Garbage Collection wird nicht in Anwendungen unterstützt, die den WOW64 x86-Emulator auf 64-Bit-Systemen mit einer Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet) ausführen. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).  
@@ -80,11 +78,11 @@ HRESULT CorBindToRuntimeHost (
  [out] Ein Schnittstellenzeiger auf die Version der Common Language Runtime, die geladen wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.idl  
+ **Header:** Mscoree. idl  
   
- **Fern** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

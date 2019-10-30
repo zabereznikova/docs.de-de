@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127026"
 ---
-# <a name="hosttype-enumeration"></a>HOST_TYPE-Enumeration
-Enthält Werte, die den Typ des Hosts angeben, die eine Anwendung ausgeführt werden.  
+# <a name="host_type-enumeration"></a>HOST_TYPE-Enumeration
+Enthält Werte, die den Typ des Hosts angeben, von dem eine Anwendung gestartet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung über AppLaunch.exe.<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdigen Anwendungen.|  
-|`HOST_TYPE_CORFLAG`|Starten Sie die Anwendung direkt auf. Starten Sie die Anwendung über einen eigenen .exe-Datei, also.<br /><br /> Verwenden Sie diesen Wert für voll vertrauenswürdige Anwendungen.|  
-|`HOST_TYPE_DEFAULT`|Same as HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung aus "AppLaunch. exe".<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdige Anwendungen.|  
+|`HOST_TYPE_CORFLAG`|Starten Sie die Anwendung direkt. Das heißt, Sie starten die Anwendung aus ihrer eigenen exe-Datei.<br /><br /> Verwenden Sie diesen Wert für voll vertrauenswürdige Anwendungen.|  
+|`HOST_TYPE_DEFAULT`|Identisch mit HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

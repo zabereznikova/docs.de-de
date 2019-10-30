@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37278ecf7d7b97a1a4b2b7bfeb0a645495e6eee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122923"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions-Schnittstelle
 Stellt eine Methode bereit, um Speicherbereiche aufzulisten, die von Aufrufern angegeben werden.  
@@ -30,12 +28,12 @@ Stellt eine Methode bereit, um Speicherbereiche aufzulisten, die von Aufrufern a
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[EnumMemoryRegions-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Listet die angegebenen Bereiche des Arbeitsspeichers.|  
+|[EnumMemoryRegions-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Listet angegebene Speicherbereiche auf.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

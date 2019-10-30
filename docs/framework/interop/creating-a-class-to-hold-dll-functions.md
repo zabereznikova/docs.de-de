@@ -10,14 +10,12 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 275aa5bb664e9f5a50f44a72f2506d7984234b31
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051825"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123625"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Erstellen einer Klasse zum Halten von DLL-Funktionen
 Das Umschließen einer häufig verwendeten DLL-Funktion in einer verwalteten Klasse ist als effektiver Ansatz zu verstehen, Plattformfunktionen zu kapseln. Obwohl es nicht in jedem Fall erforderlich ist, können Sie mithilfe von Klassenwrappern DLL-Funktionen mit weniger Aufwand und geringerer Fehleranfälligkeit definieren. Wenn Sie in Visual Basic oder C# programmieren, müssen Sie die DLL-Funktionen innerhalb einer Klasse oder eines Visual Basic-Moduls deklarieren.  
@@ -40,5 +38,5 @@ Das Umschließen einer häufig verwendeten DLL-Funktion in einer verwalteten Kla
 
 - [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)
 - [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)
-- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
+- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
 - [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)

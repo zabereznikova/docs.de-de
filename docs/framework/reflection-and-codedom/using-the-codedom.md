@@ -20,14 +20,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045747"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130008"
 ---
 # <a name="using-the-codedom"></a>Verwenden von CodeDOM
 CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente darstellen. Ein Programm kann entworfen werden, das ein Quellcodemodell mithilfe von CodeDOM-Elementen erstellt, um ein Objektdiagramm zusammenzustellen. Dieses Objektdiagramm kann mit einem CodeDOM-Code-Generator für eine unterstützte Programmiersprache als Quellcode gerendert werden. CodeDOM kann auch verwendet werden, um Quellcode in eine binäre Assembly zu kompilieren.  

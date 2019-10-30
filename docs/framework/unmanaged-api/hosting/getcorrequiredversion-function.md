@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736294"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136479"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion-Funktion
-Ruft ab, die erforderlich common Language Runtime (CLR)-Versionsnummer.  
+Ruft die erforderliche Common Language Runtime (CLR)-Versionsnummer ab.  
   
- Diese Funktion ist in .NET Framework 4 veraltet.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +38,20 @@ HRESULT GetCORRequiredVersion (
   
 ## <a name="parameters"></a>Parameter  
  `pbuffer`  
- [out] Ein Puffer mit der eine Zeichenfolge, die Versionsnummer angibt.  
+ vorgenommen Ein Puffer, der eine Zeichenfolge enthält, die die Versionsnummer angibt.  
   
  `cchBuffer`  
- [in] Die Größe des Puffers in Bytes.  
+ in Die Größe des Puffers in Bytes.  
   
  `dwLength`  
- [out] Die Anzahl der Bytes im Puffer zurückgegeben.  
+ vorgenommen Die Anzahl von Bytes, die im Puffer zurückgegeben werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

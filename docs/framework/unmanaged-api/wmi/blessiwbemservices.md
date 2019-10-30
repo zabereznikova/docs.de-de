@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855975"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138778"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
 Gibt an, ob die Benutzer Anmelde Informationen den Zugriff auf die angegebene [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Klasse zulassen.   
@@ -50,7 +48,7 @@ in Ein Zeiger auf das [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iw
 in Der Benutzername.
 
 `strPassword`\
-in Das Kennwort, `strUser`das zugeordnet ist.
+in Das `strUser`zugeordnete Kennwort.
 
 `strAuthority`\
 in Der Domänen Name des Benutzers. Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.
@@ -75,9 +73,9 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 ## <a name="requirements"></a>Anforderungen  
 
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

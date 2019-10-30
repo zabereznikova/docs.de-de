@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1876601-6ab9-48e1-8ebd-184af1d0cd76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5096eb1064485c02b599659cc9ae889e7151581c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 46082ddcee0163d5e61b3e468eb32c71e9f242ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128630"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>IHostMemoryManager::ReleasedVirtualAddressSpace-Methode
-Benachrichtigt den Host, dass die common Language Runtime (CLR) über den angegebenen Speicher abgeschlossen ist.  
+Benachrichtigt den Host, dass die Common Language Runtime (CLR) die Verwendung des angegebenen Speichers abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +35,17 @@ HRESULT ReleasedVirtualAddressSpace(
   
 ## <a name="parameters"></a>Parameter  
  `startAddress`  
- [in] Zeiger auf die Startadresse des Arbeitsspeichers, der freigegeben werden.  
+ in Ein Zeiger auf die Startadresse des frei zugegenden Speichers.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReleasedVirtualAddressSpace` -Methode ist eine Rückrufmethode und muss vom Writer der hostanwendung implementiert werden. Sie wird von der CLR aufgerufen.  
+ Bei der `ReleasedVirtualAddressSpace`-Methode handelt es sich um eine Rückruf Methode, die vom Writer der Host Anwendung implementiert werden muss. Sie wird von der CLR aufgerufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738694"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113700"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue-Methode
-Ruft einen Wert aus dem lokalen Threadspeicher (TLS), der den angegebenen Thread im Zielprozess. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime (CLR) aufgerufen.  
+Ruft einen Wert aus dem lokalen Thread Speicher (TLS) des angegebenen Threads im Ziel Prozess ab. Diese Methode wird vom Common Language Runtime (CLR)-Datenzugriffs Dienst aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +37,21 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Parameter  
  `threadID`  
- [in] Der Betriebssystem-Bezeichner eines Threads im Zielprozess.  
+ in Der Betriebssystem Bezeichner eines Threads im Ziel Prozess.  
   
  `index`  
- [in] Der Index der Position. Dieser Wert muss ein gültiger Index im lokalen Speicher des angegebenen Threads sein.  
+ in Der Index des Speicher Orts. Dieser Wert muss ein gültiger Index im lokalen Speicher des angegebenen Threads sein.  
   
  `value`  
- [out] Ein Zeiger auf eine `CLRDATA_ADDRESS` Wert zurückgegeben, der den Wert angibt, aus dem angegebenen TLS-Speicherort.  
+ vorgenommen Ein Zeiger auf einen `CLRDATA_ADDRESS` Wert, der den Wert angibt, der vom angegebenen TLS-Speicherort zurückgegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

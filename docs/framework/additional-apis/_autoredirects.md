@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._AutoRedirects Field
+title: HttpWebRequest. _AutoRedirects-Feld
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dde9cdeeca1cc8cca13322747d625b505e7f453
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 82acb409f09826d70f8f050c932ab4aebc4fd172
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120097"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest.\_AutoRedirects Field
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_autoreumleitungen-Feld
 
-`HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32> , die die Anzahl von umleitungen, die für diese vorgenommen wiedergibt <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32>, der die Anzahl der Umleitungen angibt, die für diesen <xref:System.Net.HttpWebRequest>vorgenommen wurden.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> Die `HttpWebRequest._AutoRedirects` Feld ist intern und nicht direkt in Ihrem Code verwendet werden soll.
+> Das `HttpWebRequest._AutoRedirects` Feld ist intern und sollte nicht direkt im Code verwendet werden.
 > 
-> Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Anforderungen
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** System (in "System.dll")
+**Assembly:** System (in "System. dll")
 
-**.NET Framework-Versionen:** Verfügbar seit 2.0.
+**.NET Framework Versionen:** Verfügbar seit 2,0.

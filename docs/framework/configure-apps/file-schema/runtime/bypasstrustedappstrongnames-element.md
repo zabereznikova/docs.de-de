@@ -7,22 +7,20 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 35b4c6201b5181b8d7241906f60a731e4175d523
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 50e67e97d74b896a680cc18270d32aa7a8eb8035
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118179"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames>-Element
 
-Gibt an, ob die Überprüfung von starken Namen für vollständig vertrauenswürdige Assemblys umgangen werden soll, <xref:System.AppDomain>die in eine vollständige Vertrauenswürdigkeit geladen werden.
+Gibt an, ob die Überprüfung von starken Namen für vollständig vertrauenswürdige Assemblys umgangen werden soll, die in eine voll vertrauenswürdige <xref:System.AppDomain>geladen werden.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasstrustedappstrongnames >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,14 +37,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob das Umgehungs Feature aktiviert ist, das das Validieren starker Namen für vollständig vertrauenswürdige Assemblys vermeidet. Wenn diese Funktion aktiviert ist, werden starke Namen nicht auf Richtigkeit überprüft, wenn die Assembly geladen wird. Die Standardeinstellung ist `true`.|
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob das Umgehungs Feature aktiviert ist, das das Validieren starker Namen für vollständig vertrauenswürdige Assemblys vermeidet. Wenn diese Funktion aktiviert ist, werden starke Namen nicht auf Richtigkeit überprüft, wenn die Assembly geladen wird. Der Standardwert ist `true`.|
 
 ## <a name="enabled-attribute"></a>Enabled-Attribut
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|`true`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden nicht überprüft, wenn die Assemblys in <xref:System.AppDomain>eine voll vertrauenswürdige Assembly geladen werden. Dies ist die Standardeinstellung.|
-|`false`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden überprüft, wenn die Assemblys in <xref:System.AppDomain>eine voll vertrauenswürdige Assembly geladen werden. Die Signatur des starken Namens wird nur zur Richtigkeit der Signatur geprüft. Er wird nicht mit einem anderen starken Namen für eine Entsprechung verglichen.|
+|`true`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden nicht überprüft, wenn die Assemblys in eine voll vertrauenswürdige <xref:System.AppDomain>geladen werden. Dies ist die Standardeinstellung.|
+|`false`|Signaturen mit starkem Namen für vollständig vertrauenswürdige Assemblys werden überprüft, wenn die Assemblys in eine voll vertrauenswürdige <xref:System.AppDomain>geladen werden. Die Signatur des starken Namens wird nur zur Richtigkeit der Signatur geprüft. Er wird nicht mit einem anderen starken Namen für eine Entsprechung verglichen.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -65,7 +63,7 @@ Die Strong-Name-Bypass-Funktion vermeidet den Aufwand der Signatur Überprüfung
 
 Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert ist und die folgenden Eigenschaften aufweist:
 
-- Voll vertrauenswürdig ohne <xref:System.Security.Policy.StrongName> den Beweis (z. b `MyComputer` . hat einen Zonen Nachweis).
+- Voll vertrauenswürdig ohne den <xref:System.Security.Policy.StrongName> Beweis (z. b. hat `MyComputer` Zonenbeweis).
 
 - Geladen in eine voll vertrauenswürdige <xref:System.AppDomain>
 
@@ -74,7 +72,7 @@ Das Bypass-Feature gilt für jede Assembly, die mit einem starken Namen signiert
 - Nicht verzögert signiert
 
 > [!NOTE]
-> Wenn das Umgehungs Feature für alle Anwendungen auf dem Computer mithilfe eines Registrierungsschlüssels ausgeschaltet wurde, hat diese Einstellung keine Auswirkungen. Weitere Informationen finden Sie unter [Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+> Wenn das Umgehungs Feature für alle Anwendungen auf dem Computer mithilfe eines Registrierungsschlüssels ausgeschaltet wurde, hat diese Einstellung keine Auswirkungen. Weitere Informationen finden Sie unter Gewusst [wie: Deaktivieren des Strong-Name-Bypass-Features](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -92,4 +90,4 @@ Im folgenden Beispiel wird gezeigt, wie das Verhalten angegeben wird, mit dem di
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Vorgehensweise: Deaktivieren des Strong-Name-Bypass-Features](../../../../standard/assembly/disable-strong-name-bypass-feature.md)
+- [Gewusst wie: Deaktivieren des Strong-Name-Bypass-Features](../../../../standard/assembly/disable-strong-name-bypass-feature.md)

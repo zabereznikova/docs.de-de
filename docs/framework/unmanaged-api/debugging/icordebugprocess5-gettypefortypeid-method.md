@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767615"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121272"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID-Methode
-Konvertiert einen Typ-ID zu einem ICorDebugType-Wert.  
+Konvertiert einen Typbezeichner in einen ICorDebugType-Wert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +36,16 @@ HRESULT GetTypeForTypeID(
   
 ## <a name="parameters"></a>Parameter  
  `id`  
- [in] Der Typbezeichner.  
+ in Der Typbezeichner.  
   
  `ppType`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugType-Objekts.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugType-Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- In einigen Fällen Methoden, die Typ-ID zurückgeben können ein NULL-Wert zurückgeben `COR_TYPEID` Wert. Wenn dieser Wert, als übergeben wird die `id` -Argument, das `GetTypeForTypeID` Methode fehlschlagen und zurückgegeben `E_FAIL`.  
+ In einigen Fällen können Methoden, die einen Typbezeichner zurückgeben, einen NULL-`COR_TYPEID` Wert zurückgeben. Wenn dieser Wert als `id` Argument übermittelt wird, schlägt die `GetTypeForTypeID` Methode fehl und gibt `E_FAIL`zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

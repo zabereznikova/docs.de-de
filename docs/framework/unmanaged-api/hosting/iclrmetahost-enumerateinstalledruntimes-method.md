@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b116a1f422daa20a2b51f0a5fc12d6065c2a01e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9415d5189edb901822abad9269e0150e7601a963
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779814"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140967"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes-Methode
-Gibt eine Enumeration, die eine gültige enthält [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle für jede Version von die common Language Runtime (CLR), die auf einem Computer installiert ist.  
+Gibt eine Enumeration zurück, die eine gültige [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstelle für jede Version der Common Language Runtime (CLR) enthält, die auf einem Computer installiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +34,7 @@ HRESULT EnumerateInstalledRuntimes (
   
 ## <a name="parameters"></a>Parameter  
  `ppEnumerator`  
- [out] Eine Enumeration von [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstellen, die für jede Version der CLR, die auf dem Computer installiert ist.  
+ vorgenommen Eine Enumeration von [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) -Schnittstellen, die jeder Version der CLR entsprechen, die auf dem Computer installiert ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -47,11 +45,11 @@ HRESULT EnumerateInstalledRuntimes (
 |E_POINTER|`ppEnumerator` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

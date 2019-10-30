@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1201ac0dca9cbd48c24b2621eba079ae672fd310
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134712"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject-Methode
-Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne der common Language Runtime (CLR) ab.  
+Ruft einen Schnittstellen Zeiger auf die Common Language Runtime (CLR)-Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +35,16 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parameter  
  `ppObject`  
- [out] Ein Zeiger auf die Adresse eines Objekts der ICorDebugValue-Schnittstelle, die die CLR die Anwendungsdomäne darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Schnittstellen Objekts, das die CLR-Anwendungsdomäne darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn eine verwaltete <xref:System.AppDomain?displayProperty=nameWithType> Objekt noch nicht für diese Anwendungsdomäne erstellt wurde, gibt die Methode zurück `S_FALSE` und `NULL` in `*ppObject`.  
+ Wenn ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt für diese Anwendungsdomäne nicht erstellt wurde, gibt die Methode `S_FALSE` zurück und platziert `NULL` in `*ppObject`.  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Anwendungsdomäne, in einem Prozess ist möglicherweise ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt in der Laufzeit, die es darstellt. Diese Funktion ruft ICorDebugValue-Schnittstellenobjekts, das dieser verwalteten entspricht <xref:System.AppDomain?displayProperty=nameWithType> Objekt.  
+ Jede Anwendungsdomäne in einem Prozess kann über ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt in der Laufzeit verfügen, das Sie darstellt. Diese Funktion Ruft ein icorentbugvalue-Schnittstellen Objekt ab, das diesem verwalteten <xref:System.AppDomain?displayProperty=nameWithType> Objekt entspricht.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

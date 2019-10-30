@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808e1f1d-52f4-47c4-83cc-dcf47d075219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7354536db483ad93d29fef29745af44a6f90884c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 935d8e9fa3ed15be03c6cd05b1bc3c4919d0cc2b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127858"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo-Methode
-Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.  
+Ruft eine ausführliche Meldung über den angegebenen Validierungs Fehler ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,37 +39,37 @@ HRESULT FormatEventInfo (
   
 ## <a name="parameters"></a>Parameter  
  `hVECode`  
- [in] Der HRESULT-Wert, der an den Fehlerhandler für die Überprüfung übergeben wurde.  
+ in Der HRESULT-Wert, der an den Validierungs Fehlerhandler übermittelt wurde.  
   
  `Context`  
- [in] Ein `VEContext` Instanz, die Kontextinformationen über die Validierungsfehler enthält.  
+ in Eine `VEContext`-Instanz, die Kontextinformationen über die Validierungs Fehler enthält.  
   
  `msg`  
- [in, out] Die Fehlermeldung.  
+ [in, out] Die Anzeige Fehlermeldung.  
   
  `ulMaxLength`  
- [in] Die maximale Länge der Fehlermeldung.  
+ in Die maximale Länge der Fehlermeldung.  
   
  `psa`  
- [in] Ein sicheres Array zusätzlicher Parameter in der Nachricht verwendet werden.  
+ in Ein sicheres Array zusätzlicher Parameter, die in der Nachricht verwendet werden sollen.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`FormatEventInfo` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`FormatEventInfo` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** IValidator.idl, IValidator.h  
+ **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

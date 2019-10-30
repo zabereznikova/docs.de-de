@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799185"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140668"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle-Funktion
 Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihandle unter Verwendung des angegebenen Hashalgorithmus.  
@@ -51,17 +49,17 @@ HRESULT GetHashFromHandle (
  vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- in Die angeforderte maximale Größe `pbHash`von.  
+ in Die angeforderte maximale Größe `pbHash`.  
   
  `pchHash`  
  vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** StrongName. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

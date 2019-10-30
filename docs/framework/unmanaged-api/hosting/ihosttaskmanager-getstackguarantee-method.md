@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8176d732-c25c-4520-811d-e3310f339947
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739670fb84eb0145fd8bf8073f453518487c38b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 22ec34c82d0f8e550dfc8941f2c048ebed6cf1d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749573"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133035"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>IHostTaskManager::GetStackGuarantee-Methode
-Ruft die Menge an Stapelspeicher, der garantiert verfügbar, sobald ein Stack-Vorgang abgeschlossen wird, aber vor dem Endtag eines Prozesses ab.  
+Ruft die Menge des Stapel Platzes ab, der nach Abschluss eines Stapel Vorgangs garantiert verfügbar ist, jedoch vor dem Schließen eines Prozesses.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +35,14 @@ HRESULT GetStackGuarantee(
   
 ## <a name="parameters"></a>Parameter  
  `pGuarantee`  
- [out] Ein Zeiger auf die Anzahl der Bytes, die verfügbar sind.  
+ vorgenommen Ein Zeiger auf die Anzahl der verfügbaren Bytes.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

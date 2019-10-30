@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252698"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117630"
 ---
-# <a name="developmentmode-element"></a>\<DevelopmentMode-> Element
+# <a name="developmentmode-element"></a>\<DevelopmentMode >-Element
 Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<DevelopmentMode->**  
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
+&nbsp;&nbsp;&nbsp;&nbsp; **\<DevelopmentMode >**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +36,7 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**developerInstallation**|Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.|  
+|**DeveloperInstallation**|Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.|  
   
 ## <a name="developerinstallation-attribute"></a>DeveloperInstallation-Attribut  
   
@@ -75,4 +73,4 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Vorgehensweise: Suchen von Assemblys mit DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Gewusst wie: Suchen von Assemblys mit DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130238"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
 
@@ -36,7 +34,7 @@ Die Reflektionsausgabe bietet die folgenden Funktionen:
   
 Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
   
-In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungen). Die Dokumentation ist online auf [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](https://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.  
+In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) und der [Ecma-Website](https://go.microsoft.com/fwlink/?LinkId=116487) verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   
@@ -71,7 +69,7 @@ Hier werden verwaltete Klassen aufgeführt, die zum Durchsuchen von Metadaten un
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
-[Reflexion](reflection.md)  
+[Reflektion](reflection.md)  
 Erläutert das Durchsuchen von Metadaten und verwaltetem Code.  
   
 [Assemblys in .NET](../../standard/assembly/index.md)  

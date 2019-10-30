@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120644"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod-Funktion
 Löscht die angegebene Methode aus einer CIM-Klassendefinition.
@@ -47,7 +45,7 @@ in Dieser Parameter wird nicht verwendet.
 in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`  
-in Der Name der Methode, die aus der Klassen Tabelle entfernt werden soll. `wszName`muss ein Zeiger auf einen gültigen `LPCWSTR`sein.
+in Der Name der Methode, die aus der Klassen Tabelle entfernt werden soll. `wszName` muss ein Zeiger auf einen gültigen `LPCWSTR`sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -55,7 +53,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Methode ist nicht vorhanden. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 angezeigt | Die angegebene Methode ist nicht vorhanden. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
@@ -66,9 +64,9 @@ Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject::D e
 Das Löschen von Methoden wird für [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Zeiger, die auf CIM-Instanzen verweisen, nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   

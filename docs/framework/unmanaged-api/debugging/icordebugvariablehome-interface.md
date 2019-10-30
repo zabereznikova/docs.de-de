@@ -16,32 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 339a0f502b7e47f7bee82a0da92185481d909e64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 306a07450b8ae6d29875ca0cc4679390472e4d1d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768868"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121043"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome-Schnittstelle
-Stellt eine lokale Variable oder ein Argument einer Funktion.  
+Stellt eine lokale Variable oder ein Argument einer Funktion dar.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetArgumentIndex-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Ruft den Index ein Funktionsargument ab.|  
-|[GetCode-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Ruft die Instanz von "ICorDebugCode", der diesen `ICorDebugVariableHome` Objekt.|  
-|[GetLiveRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Ruft ab, der systemeigenen Bereich, in dem diese Variable ist.|  
-|[GetLocationType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Ruft den Typ des systemeigenen Speicherorts für den Wert der Variablen ab.|  
-|[GetOffset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Ruft den Offset aus dem Basis-Register für eine Variable ab.|  
-|[GetRegister-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Ruft ab, das Register, die eine Variable mit einem Standort enthält `VLT_REGISTER`, und registrieren Sie die Basis für eine Variable mit einem Speicherort `VLT_REGISTER_RELATIVE`.|  
-|[GetSlotIndex-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Ruft den verwalteten slotindex einer lokalen Variablen ab.|  
+|[GetArgumentIndex-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Ruft den Index eines Funktionsarguments ab.|  
+|[GetCode-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Ruft die ICorDebugCode-Instanz ab, die dieses `ICorDebugVariableHome` Objekt enthält.|  
+|[GetLiveRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Ruft den systemeigenen Bereich ab, in dem diese Variable Live ist.|  
+|[GetLocationType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Ruft den Typ des systemeigenen Speicher Orts der Variablen ab.|  
+|[GetOffset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Ruft den Offset aus dem Basisregister für eine Variable ab.|  
+|[GetRegister-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Ruft das Register ab, das eine Variable mit dem Speicherorttyp `VLT_REGISTER`enthält, und das Basisregister für eine Variable mit dem Speicherorttyp `VLT_REGISTER_RELATIVE`.|  
+|[GetSlotIndex-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Ruft den verwalteten Slot-Index einer lokalen Variablen ab.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codefragment verwendet den [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) Objekt mit dem Namen `pCode4`.  
+ Das folgende Code Fragment verwendet das [ICorDebugCode4](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md) -Objekt mit dem Namen `pCode4`.  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -83,7 +81,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

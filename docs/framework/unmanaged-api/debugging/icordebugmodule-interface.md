@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dce4f5859568c1288610e171286a5919dc8b19b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 971d6a6a2157c48dcb9105e9f523b1f077098479
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962430"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129486"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule-Schnittstelle
 
@@ -55,11 +53,11 @@ Stellt ein Common Language Runtime (CLR)-Modul dar, bei dem es sich entweder um 
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

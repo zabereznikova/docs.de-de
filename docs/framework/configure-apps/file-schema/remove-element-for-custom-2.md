@@ -1,5 +1,5 @@
 ---
-title: <remove>-Element für NameValueSectionHandler und diktarysectionhandler
+title: <remove>-Element für "NameValueSectionHandler" und "diktarysectionhandler"
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd338ff2d613be31ab1524f6baed6107f803a688
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dc1519a794e24e04074dd2a674ecc2c0f3666521
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920949"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118562"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Entfernen Sie > Element für NameValueSectionHandler und "diktarysectionhandler".
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<> Element für NameValueSectionHandler und "diktarysectionhandler" entfernen
 
 Entfernt eine zuvor definierte Einstellung.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
+&nbsp;&nbsp;[ **\<sectionName->** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<entfernen >**
 
 ## <a name="syntax"></a>Syntax
@@ -40,21 +40,21 @@ Entfernt eine zuvor definierte Einstellung.
 
 | Element | Beschreibung |
 | ------- | ------------|
-| [sectionName > Element  **\<** ](custom-element-2.md) | Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, die <xref:System.Configuration.NameValueSectionHandler> die <xref:System.Configuration.DictionarySectionHandler> -Klasse und die-Klasse verwenden. |
+| [ **\<sectionName >** Gewisses](custom-element-2.md) | Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, in denen die Klassen <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> verwendet werden. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können das  **\<remove >** -Element verwenden, um Einstellungen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Sie können das **\<remove >** -Element verwenden, um Einstellungen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie das  **\<remove >** -Element in einer Anwendungs Konfigurationsdatei verwendet wird, um zuvor in der Computer Konfigurationsdatei definierte Einstellungen zu entfernen.
+Im folgenden Beispiel wird gezeigt, wie das **\<remove >** -Elements in einer Anwendungs Konfigurationsdatei verwendet wird, um die zuvor in der Computer Konfigurationsdatei definierten Einstellungen zu entfernen.
 
-Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt  **\<mySection >** und `key1` fügt ihm `key2`zwei Einstellungen hinzu:
+Der folgende Computer Konfigurationsdatei-Code deklariert den Abschnitt **\<mySection >** und fügt ihm zwei Einstellungen hinzu, `key1` und `key2`:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt  **\
 </configuration>
 ```
 
-Der folgende Anwendungs Konfigurationsdatei-Code `key2` entfernt die Einstellung aus  **\<dem mySection->** :
+Der folgende Anwendungs Konfigurationsdatei-Code entfernt die `key2` Einstellung aus **\<mySection->** :
 
 ```xml
 <!--Application configuration file -->

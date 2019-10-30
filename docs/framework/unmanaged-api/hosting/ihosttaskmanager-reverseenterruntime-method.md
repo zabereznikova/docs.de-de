@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6e5beabb5ac1b5a4b2a34ae8e18b7fad7c86504
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 390a29760c0f3680ca082561607ab678e8bd1e8b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959051"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133007"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime-Methode
 Benachrichtigt den Host, dass ein-Rückruf aus nicht verwaltetem Code in die Common Language Runtime (CLR) erfolgt.  
@@ -37,7 +35,7 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ReverseEnterRuntime` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -46,17 +44,17 @@ HRESULT ReverseEnterRuntime ();
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Ressourcen Zuordnung abzuschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Aufruf der CLR aus einer Sequenz erfolgt, die aus verwaltetem Code stammt, `ReverseEnterRuntime` entspricht jeder Aufruf von einem Aufruf von [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
+ Wenn der Aufruf der CLR aus einer Sequenz erfolgt, die aus verwaltetem Code stammt, entspricht jeder Aufruf von `ReverseEnterRuntime` einem Aufruf von [ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
-> Aufrufe können aus nicht verwaltetem Code stammen, ohne dass Sie eingefügt werden. In diesem Fall gibt es keinen Aufruf von ' [enumkotime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)', ' [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)' `ReverseLeaveRuntime`oder ' ', `ReverseEnterRuntime` und die Anzahl der Aufrufe von entspricht nicht der Anzahl von `ReverseLeaveRuntime`Aufrufen an.  
+> Aufrufe können aus nicht verwaltetem Code stammen, ohne dass Sie eingefügt werden. In diesem Fall gibt es keinen Aufruf von " [enumuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)", " [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)" oder "`ReverseLeaveRuntime`", und die Anzahl der Aufrufe an `ReverseEnterRuntime` entspricht nicht der Anzahl von Aufrufen `ReverseLeaveRuntime`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

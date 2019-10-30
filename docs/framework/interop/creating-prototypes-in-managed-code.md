@@ -17,14 +17,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f32924c8c104f37fdb98a2a9ff104b6f6c19e478
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
-ms.translationtype: HT
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123620"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
 In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
@@ -89,11 +87,11 @@ extern "C" int MessageBox(
   
  In der folgenden Tabelle ist der vollständige Satz an Attributfeldern aufgeführt, die den Plattformaufruf betreffen. Für jedes Feld enthält die Tabelle den Standardwert und einen Link zu Informationen darüber, wie diese Felder zum Definieren nicht verwalteter DLL-Funktionen verwendet werden.  
   
-|Feld|BESCHREIBUNG|  
+|Feld|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Aktiviert oder deaktiviert die Zuordnung mit ähnlichen Zeichen.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Gibt die Aufrufkonvention an, die bei der Übergabe von Methodenargumenten verwendet wird. Der Standardwert ist `WinAPI`, was dem `__stdcall` für Intel-basierte 32-Bit-Plattformen entspricht.|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Die Namenszerlegung für Steuerelemente und die Art und Weise, in der Zeichenfolgenargumente an die Funktion gemarshallt werden sollen. Die Standardeinstellung ist `CharSet.Ansi`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Die Namenszerlegung für Steuerelemente und die Art und Weise, in der Zeichenfolgenargumente an die Funktion gemarshallt werden sollen. Der Standardwert ist `CharSet.Ansi`.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Gibt den aufzurufenden DLL-Einstiegspunkt an.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Kontrolliert, ob ein Einstiegspunkt geändert werden muss, um dem Zeichensatz zu entsprechen. Der Standardwert variiert je nach Programmiersprache.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Kontrolliert, ob die verwaltete Methodensignatur in eine nicht verwaltete Signatur transformiert werden soll, die ein HRESULT zurückgibt und über ein zusätzliches [out, retval]-Argument für den Rückgabewert verfügt.<br /><br /> Der Standardwert ist `true` (die Signatur wird nicht transformiert).|  

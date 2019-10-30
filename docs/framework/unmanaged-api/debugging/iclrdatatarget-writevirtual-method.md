@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112739"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual-Methode
-Schreibt Daten aus dem angegebenen Puffer an die Adresse des angegebenen virtuellen Speicher an.  
+Schreibt Daten aus dem angegebenen Puffer in die angegebene Adresse für den virtuellen Speicher.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +39,21 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- [in] Eine CLRDATA_ADDRESS, speichert die Adresse des virtuellen Arbeitsspeichers.  
+ in Ein CLRDATA_ADDRESS, in dem die Adresse des virtuellen Speichers gespeichert wird.  
   
  `buffer`  
- [in] Ein Zeiger auf einen Puffer, der den Datenspeicher geschrieben werden.  
+ in Ein Zeiger auf einen Puffer, in dem die zu schreibenden Daten gespeichert werden.  
   
  `bytesRequested`  
- [in] Die Anzahl der zu schreibenden Bytes.  
+ in Die Anzahl der Bytes, die geschrieben werden sollen.  
   
  `bytesWritten`  
- [out] Ein Zeiger auf die tatsächliche Anzahl der Bytes, die geschrieben wurden.  
+ vorgenommen Ein Zeiger auf die tatsächliche Anzahl der geschriebenen Bytes.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ClrData.idl, ClrData.h  
+ **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   

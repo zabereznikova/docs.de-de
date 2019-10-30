@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9c2ebb2bc9c1137a4e3716d98387278959f77d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 516ba1325404e757af8e38de239864b21b1640f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140757"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout-Methode
-Legt einen Timeoutwert für den angegebenen Vorgang fest.  
+Legt einen Timeout Wert für den angegebenen Vorgang fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +36,7 @@ HRESULT SetTimeout (
   
 ## <a name="parameters"></a>Parameter  
  `operation`  
- [in] Eines der [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) Werte, der angibt, die common Language Runtime (CLR)-Vorgang für die einen Timeout festgelegt. Die folgenden Werte werden unterstützt:  
+ in Einer der [eclroperations](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) -Werte, der den Common Language Runtime (CLR)-Vorgang angibt, für den ein Timeout festgelegt werden soll. Die folgenden Werte werden unterstützt:  
   
 - OPR_AppDomainUnload  
   
@@ -49,26 +47,26 @@ HRESULT SetTimeout (
 - OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- [in] Der neue Timeoutwert in Millisekunden. Der Wert INFINITE bewirkt, dass den Vorgang nicht zu einem Timeout.  
+ in Der neue Timeout Wert in Millisekunden. Der Wert unendlich bewirkt, dass für den Vorgang kein Timeout auftritt.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`SetTimeout` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`SetTimeout` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_INVALIDARG|Ein Timeout kann nicht festgelegt werden für den angegebenen `operation`, oder es wurde ein ungültiger Wert für bereitgestellt `operation`.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_INVALIDARG|Für den angegebenen `operation`kann kein Timeout festgelegt werden, oder für `operation`wurde ein ungültiger Wert angegeben.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

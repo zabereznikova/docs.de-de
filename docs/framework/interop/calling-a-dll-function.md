@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b842f44711d38a996b9d710dbe8bd369d30c5443
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123721"
 ---
 # <a name="calling-a-dll-function"></a>Aufrufen einer DLL-Funktion
 Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen. Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.  
@@ -30,12 +28,12 @@ Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Auf
  [Rückruffunktionen](callback-functions.md)  
  Enthält grundlegende Informationen über Rückruffunktionen.  
   
- [Vorgehensweise: Implementieren von Rückruffunktionen](how-to-implement-callback-functions.md)  
+ [Gewusst wie: Implementieren von Rückruffunktionen](how-to-implement-callback-functions.md)  
  Beschreibt das Implementieren von Rückruffunktionen in verwaltetem Code.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
- Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf  
+ Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf.  
   
  [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)  
  Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.

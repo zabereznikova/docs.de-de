@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d9f0eff35dbe0058398d2d1c851ef85effa9cd28
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765157"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122420"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException-Methode
-Gibt an, ob der Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.  
+Gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,21 +35,21 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parameter  
  `ppBlockingObjectEnum`  
- [out] Ein Zeiger auf die Adresse des eine geordnete Enumeration von [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) Strukturen.  
+ vorgenommen Ein Zeiger auf die Adresse einer geordneten Enumeration von [Cordebug-blockingobject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) -Strukturen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Der Thread ist seit seiner Erstellung eine nicht behandelte Ausnahme aufgetreten.|  
-|S_FALSE|Der Thread ist nie eine nicht behandelte Ausnahme aufgetreten.|  
+|S_OK|Der Thread weist seit seiner Erstellung eine nicht behandelte Ausnahme auf.|  
+|S_FALSE|Der Thread weist nie eine nicht behandelte Ausnahme auf.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode gibt an, ob der Thread jemals eine nicht behandelte Ausnahme aufgetreten ist. Mit der Zeit wird der Rückruf nicht behandelte Ausnahme ausgelöst oder systemeigenes JIT-attach initiiert wird, diese Methode wird immer S_OK zurück. Es gibt keine Garantie, die die [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) Methode gibt zurück, die nicht behandelte Ausnahme; allerdings es tritt ein, wenn der Prozess nicht noch fortgesetzt wurde nach dem Abrufen des nicht behandelten Ausnahmerückrufs oder nach systemeigenes JIT-attach. Außerdem ist es möglich (wenn auch unwahrscheinlich), sodass mehr als ein Thread mit einem Ausnahmefehler, die zum Zeitpunkt der nativen JIT-attach wird ausgelöst. In diesem Fall besteht keine Möglichkeit festzustellen, welche Ausnahme ausgelöst, der JIT-attach zur Verfügung.  
+ Diese Methode gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist. Zum Zeitpunkt der Auslösung des nicht behandelten Ausnahme Rückrufs oder zum Initiieren des systemeigenen JIT-Anfügens wird von dieser Methode garantiert S_OK zurückgegeben. Es gibt keine Garantie dafür, dass die [ICorDebugThread. geteption TException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) -Methode die nicht behandelte Ausnahme zurückgibt. Dies ist jedoch der Fall, wenn der Prozess noch nicht fortgesetzt wurde, nachdem der Rückruf für nicht behandelte Ausnahmen oder das systemeigene JIT-Anfügen erhalten wurde. Darüber hinaus ist es möglich (auch wenn unwahrscheinlich), dass zum Zeitpunkt der Auslösung des nativen JIT-Anfügens mehr als ein Thread mit einer nicht behandelten Ausnahme vorhanden ist. In einem solchen Fall gibt es keine Möglichkeit, zu bestimmen, welche Ausnahme das JIT-attach ausgelöst hat.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

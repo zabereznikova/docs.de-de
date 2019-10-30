@@ -13,17 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7325e84d8fe4df9a31543426c6376d0941306fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 199f58456e64ccf7ef771d42d5c7d64b189cb670
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125499"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes-Methode
-Stellt einen Enumerator für die Schnittstellentypen bereit, dass das aktuelle Objekt umgewandelt oder als verwendet wurde.  
+Stellt einen Enumerator für die Schnittstellentypen bereit, in die das aktuelle-Objekt umgewandelt oder verwendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +33,15 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>Parameter  
  `bIInspectableOnly`  
- [in] Ein Wert, der angibt, ob die Methode nur Windows-Runtime-Schnittstellen zurückgibt (`IInspectable` Schnittstellen) oder alle COM-Schnittstellen, die von den Runtime callable Wrapper (RCW) zwischengespeichert.  
+ in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen (`IInspectable` Schnittstellen) oder alle vom Runtime Callable Wrapper (RCW) zwischengespeicherten com-Schnittstellen zurückgibt.  
   
  `ppInterfacesEnum`  
- [out] Ein Zeiger auf die Adresse des ein ICorDebugTypeEnum-Enumerator, der Zugriff auf ICorDebugType-Objekte enthält, die zwischengespeicherten Schnittstellentypen darstellen laut gefiltert `bIInspectableOnly`.  
+ vorgenommen Ein Zeiger auf die Adresse eines icordebugtypeenumerators, der den Zugriff auf ICorDebugType-Objekte bereitstellt, die zwischengespeicherte Schnittstellentypen darstellen, die nach `bIInspectableOnly`gefiltert sind.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

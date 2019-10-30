@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen'
+title: 'Gewusst wie: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: 3a9bf79a9d505fef53b62cb589920adcf95ae92a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124418"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Gewusst wie: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen
 
 Sie können eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung von den meisten Webservern bereitstellen, sofern Sie mit den entsprechenden Multipurpose Internet Mail Extensions (MIME)-Typen konfiguriert sind. Standardmäßig ist Microsoft Internetinformationsdienste (IIS) 7,0 mit diesen MIME-Typen konfiguriert, Microsoft Internetinformationsdienste (IIS) 5,0 und Microsoft Internetinformationsdienste (IIS) 6,0 hingegen nicht.
 
-In diesem Thema wird beschrieben, wie Sie Microsoft Internetinformationsdienste (IIS) 5,0 und Microsoft Internetinformationsdienste (IIS) 6,0 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zum Bereitstellen von Anwendungen konfigurieren.
+In diesem Thema wird beschrieben, wie Sie Microsoft Internetinformationsdienste (IIS) 5,0 und Microsoft Internetinformationsdienste (IIS) 6,0 zum Bereitstellen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen konfigurieren.
 
 > [!NOTE]
 > Sie können die *userAgent* -Zeichenfolge in der Registrierung überprüfen, um zu bestimmen, ob ein System .NET Framework installiert ist. Ausführliche Informationen und ein Skript, das die *userAgent* -Zeichenfolge untersucht, um zu bestimmen, ob .NET Framework auf einem System installiert ist, finden Sie unter [erkennen, ob die .NET Framework 3,0 installiert ist](how-to-detect-whether-the-net-framework-3-0-is-installed.md).
@@ -63,7 +63,7 @@ Sie müssen mehrere MIME-Typen und-Dateierweiterungen registrieren, damit der Br
 > [!NOTE]
 > Sie müssen keine MIME-Typen oder Dateierweiterungen auf Client Systemen registrieren. Sie werden automatisch registriert, wenn Sie Microsoft .NET Framework installieren.
 
-Im folgenden Microsoft Visual Basic Scripting Edition-Beispiel (VBScript) werden IIS automatisch die erforderlichen MIME-Typen hinzugefügt. Um das Skript zu verwenden, kopieren Sie den Code in eine VBS-Datei auf dem Server. Führen Sie das Skript dann aus, indem Sie die Datei über die Befehlszeile oder durch Doppelklicken auf die Datei im [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] ausführen.
+Im folgenden Microsoft Visual Basic Scripting Edition-Beispiel (VBScript) werden IIS automatisch die erforderlichen MIME-Typen hinzugefügt. Um das Skript zu verwenden, kopieren Sie den Code in eine VBS-Datei auf dem Server. Führen Sie dann das Skript aus, indem Sie die Datei über die Befehlszeile ausführen oder in Microsoft Windows-Explorer auf die Datei doppelklicken.
 
 ```vb
 ' This script adds the necessary Windows Presentation Foundation MIME types

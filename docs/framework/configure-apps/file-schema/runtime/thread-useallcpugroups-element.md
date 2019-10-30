@@ -2,21 +2,19 @@
 title: <Thread_UseAllCpuGroups>-Element
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115407"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups >-Element
 
 Gibt an, ob verwaltete Threads von der Laufzeit auf alle CPU-Gruppen verteilt werden.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
+&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>Syntax
@@ -41,7 +39,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |Wert|Beschreibung|
 |-----------|-----------------|
 |`false`|Verwaltete Threads werden von der Laufzeit nicht auf mehrere CPU-Gruppen verteilt. Dies ist die Standardeinstellung.|
-|`true`|Die Laufzeit verteilt verwaltete Threads auf mehrere CPU-Gruppen, wenn der Computer über mehrere CPU-Gruppen verfügt und das [ \<gccpugroup->](gccpugroup-element.md) Element aktiviert ist.|
+|`true`|Die Laufzeit verteilt verwaltete Threads auf mehrere CPU-Gruppen, wenn der Computer über mehrere CPU-Gruppen verfügt und das [\<gccpugroup->](gccpugroup-element.md) Element aktiviert ist.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -56,7 +54,7 @@ Keine
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn ein Computer über mehrere CPU-Gruppen verfügt, wird durch Aktivieren dieses Elements die Laufzeit angewiesen, verwaltete Threads auf alle CPU-Gruppen zu verteilen. Um dieses Feature verwenden zu können, müssen Sie auch das [ \<> Element gccpugroup](gccpugroup-element.md) aktivieren, das Garbage Collection auf alle CPU-Gruppen erweitert und beim Erstellen und Ausgleichen von Heaps alle Kerne berücksichtigt. Zum Aktivieren des [ \<gccpugroup->](gccpugroup-element.md) Elements muss das [ \<gcserver->](gcserver-element.md) Element aktiviert werden. Wenn diese Elemente nicht aktiviert sind, hat das Aktivieren des Elements `<Thread_UseAllCpuGroups>` keine Auswirkungen.
+Wenn ein Computer über mehrere CPU-Gruppen verfügt, wird durch Aktivieren dieses Elements die Laufzeit angewiesen, verwaltete Threads auf alle CPU-Gruppen zu verteilen. Um dieses Feature verwenden zu können, müssen Sie auch das [\<gccpugroup->](gccpugroup-element.md) Element aktivieren, das Garbage Collection auf alle CPU-Gruppen erweitert und beim Erstellen und Ausgleichen von Heaps alle Kerne berücksichtigt. Zum Aktivieren des [\<gccpugroup->](gccpugroup-element.md) Elements muss das [\<gcserver->](gcserver-element.md) Element aktiviert werden. Wenn diese Elemente nicht aktiviert sind, hat das Aktivieren des Elements `<Thread_UseAllCpuGroups>` keine Auswirkungen.
 
 ## <a name="example"></a>Beispiel
 
@@ -76,4 +74,4 @@ Im folgenden Beispiel wird dargestellt, wie Unterstützung für mehrere CPU-Grup
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [\<Gccpugroup-> Element](gccpugroup-element.md)
+- [\<gccpugroup >-Element](gccpugroup-element.md)

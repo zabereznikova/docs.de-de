@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVirtualUnwinder::GetContext-Methode
+title: 'Icordebugvirtualunwinder:: GetContext-Methode'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a6a8be489ff2a99bb9da393577514b2442d50db8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ce54bfd01abb8bd4efd5e46eff1ef831a9f0c8fd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121896"
 ---
-# <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext-Methode
+# <a name="icordebugvirtualunwindergetcontext-method"></a>Icordebugvirtualunwinder:: GetContext-Methode
 Ruft den aktuellen Kontext dieses Entladers ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,11 +48,11 @@ HRESULT GetContext(
  Da beim Entladen möglicherweise nur eine Teilmenge der Register (z. B. nur die nicht permanenten Register) wiederhergestellt werden, stimmt der Kontext möglicherweise nicht genau mit dem Registrierungszustand zum Zeitpunkt des eigentlichen Methodenaufrufs überein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

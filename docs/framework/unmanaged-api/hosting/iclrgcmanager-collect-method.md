@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3064a5793c6158ead85a9ff6d9b09f077d0bd603
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7dae98d1f2dc2448bd3a5df2d6143b7be0bb734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129260"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect-Methode
 Erzwingt eine Garbage Collection für die angegebene Generierung.  
@@ -43,7 +41,7 @@ HRESULT Collect (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Collect`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Collect` erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -51,14 +49,14 @@ HRESULT Collect (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR nicht mehr innerhalb des Prozesses verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Collect` -Methode erzwingt, dass die CLR-Garbage Collector eine Auflistung unabhängig vom aktuellen Zustand ausführen.  
+ Die `Collect`-Methode zwingt den CLR-Garbage Collector, eine Auflistung unabhängig vom aktuellen Zustand auszuführen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

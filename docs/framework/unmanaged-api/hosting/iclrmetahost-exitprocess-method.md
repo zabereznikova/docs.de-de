@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0288c9912125e20cfb9f9aaaac5003ae9e0b51e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8643c54950486b6374045ff83928c8c7fb568a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779786"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140950"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess-Methode
-Versucht, alle geladenen Laufzeiten ordnungsgemäß herunterzufahren und beendet dann den Prozess. Hat Vorrang vor den [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) Funktion.  
+Versucht, alle geladenen Laufzeiten ordnungsgemäß herunterzufahren, und beendet dann den Vorgang. Ersetzt die [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) -Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +34,19 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parameter  
  `iExitCode`  
- [in] Der Exitcode für den Prozess.  
+ in Der Exitcode für den Prozess.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt nie, sodass der Rückgabewert nicht definiert ist.  
+ Diese Methode gibt nie zurück, sodass Ihr Rückgabewert nicht definiert ist.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MetaHost.h  
+ **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

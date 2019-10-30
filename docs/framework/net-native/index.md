@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049656"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128377"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilieren von Anwendungen mit .NET Native
 
@@ -65,9 +63,9 @@ Für Windows-Apps für Windows 10 laden Sie Binärdateien für die Kompilierung 
 
 Weitere Informationen zum Entwickeln von Anwendungen mit der .NET Native-Codekompilierung finden Sie in den folgenden Themen:
 
-- [Einführung in die .net Native Code Kompilierung: Exemplarische Vorgehensweise für Entwickler](getting-started-with-net-native.md)
+- [Erste Schritte mit der .NET Native-Codekompilierung: exemplarische Vorgehensweise für Entwickler](getting-started-with-net-native.md)
 
-- [.Net Native und Kompilierung:](net-native-and-compilation.md) Wie .net Native das Projekt in systemeigenen Code kompiliert.
+- [.NET Native und Kompilierung:](net-native-and-compilation.md) So kompiliert .NET Native Ihr Projekt in systemeigenen Code.
 
 - [Reflection and .NET Native (Reflektion und .NET Native)](reflection-and-net-native.md)
 

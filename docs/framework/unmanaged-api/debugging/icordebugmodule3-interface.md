@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960995"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122561"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3-Schnittstelle
 Erstellt einen Symbolreader für ein dynamisches Modul.  
@@ -52,11 +50,11 @@ interface ICorDebugModule3 : IUnknown
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework Versionen:** 4,5, 4, 3,5 SP1
   

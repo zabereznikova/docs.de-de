@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8541e7761e2f8e1839d028fdaea3eb71307ba615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779178"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131198"
 ---
-# <a name="corexemain-function"></a>_CorExeMain-Funktion
-Initialisiert die common Language Runtime (CLR), sucht den verwalteten Einstiegspunkt im CLR-Header der ausführbaren Assembly und startet die Ausführung.  
+# <a name="_corexemain-function"></a>_CorExeMain-Funktion
+Initialisiert den Common Language Runtime (CLR), den verwalteten Einstiegspunkt im CLR-Header der ausführbaren Assembly und beginnt die Ausführung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +34,20 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion wird vom Ladeprogramm in Prozesse, die von verwalteten ausführbare Assemblys erstellt aufgerufen. Für DLL-Assemblys, die das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) stattdessen funktionieren.  
+ Diese Funktion wird vom Lade Programm in Prozessen aufgerufen, die aus verwalteten ausführbaren Assemblys erstellt wurden. Bei dll-Assemblys Ruft das Lade Modul stattdessen die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) -Funktion auf.  
   
- Vom Ladeprogramm des Betriebssystems ruft diese Methode unabhängig von der Einstiegspunkt in die Image-Datei angegeben.  
+ Das Betriebssystem-Lade Modul ruft diese Methode unabhängig vom Einstiegspunkt auf, der in der Bilddatei angegeben ist.  
   
- In Windows 98, Windows ME, Windows NT und Windows 2000 die `_CorExeMain` Funktion wird durch einen Fixup im Betriebssystem-Lader indirekt aufgerufen. In allen anderen Versionen von Windows spricht man direkt vom Ladeprogramm Betriebssystems.  
+ In Windows 98, Windows Me, Windows NT und Windows 2000 wird die `_CorExeMain`-Funktion indirekt über einen Fixup im Betriebssystem-Lade Modul aufgerufen. In allen anderen Versionen von Windows wird Sie direkt vom Betriebssystem-Lade Modul aufgerufen.  
   
- Weitere Informationen finden Sie im Abschnitt "Hinweise" in der [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) Thema.  
+ Weitere Informationen finden Sie im Abschnitt "Hinweise" des Themas [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

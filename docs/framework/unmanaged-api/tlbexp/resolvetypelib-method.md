@@ -13,14 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124145"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib-Methode
 Löst den einfachen Namen einer Typbibliothek auf, indem der voll qualifizierte Pfad zurückgegeben wird.  
@@ -58,19 +56,19 @@ HRESULT ResolveTypeLib(
  in Ein [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) -Flag, das die Betriebsumgebung identifiziert. Allgemeine Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- vorgenommen Ein Zeiger auf einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert, der den vollständigen Pfad der Typbibliothek mit `bstrSimpleName` dem Namen im-Parameter enthält.  
+ vorgenommen Ein Zeiger auf einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert, der den vollständigen Pfad der Typbibliothek mit dem Namen im `bstrSimpleName`-Parameter enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ResolveTypeLib` -Methode wird von der [LoadTypeLibWithResolver-Funktion](loadtypelibwithresolver-function.md) während der Verarbeitung von [Tlbexp. exe (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md) aufgerufen.  
+ Die `ResolveTypeLib`-Methode wird von der [LoadTypeLibWithResolver-Funktion](loadtypelibwithresolver-function.md) während der Verarbeitung von [Tlbexp. exe (Type Library Exporter)](../../tools/tlbexp-exe-type-library-exporter.md) aufgerufen.  
   
- Benutzerdefinierte Implementierungen dieser Schnittstelle müssen einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert zurückgeben, der den vollständigen Pfad der Typbibliothek mit dem Namen im `bstrSimpleName` -Parameter enthält.  
+ Benutzerdefinierte Implementierungen dieser Schnittstelle müssen einen [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) -Wert zurückgeben, der den vollständigen Pfad der Typbibliothek mit dem Namen im `bstrSimpleName`-Parameter enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** TlbRef.idl, TlbRef.h  
+ **Header:** TlbRef. idl, TlbRef. h  
   
- **Fern** TlbRef.lib  
+ **Bibliothek:** TlbRef. lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

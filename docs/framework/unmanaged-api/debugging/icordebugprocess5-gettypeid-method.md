@@ -17,17 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07c23a32037e83a878bb3136c48176f19249b207
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948693"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121263"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID-Methode
-Konvertiert eine Objektadresse für einen [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) Bezeichner.  
+Konvertiert eine Objekt Adresse in einen [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Bezeichner.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,15 +38,15 @@ HRESULT GetTypeID(
   
 ## <a name="parameters"></a>Parameter  
  `obj`  
- [in] Die Adresse des Objekts.  
+ in Die Objekt Adresse.  
   
  `pId`  
- Ein Zeiger auf die [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Wert, der das Objekt identifiziert.  
+ Ein Zeiger auf den [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Wert, der das Objekt identifiziert.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

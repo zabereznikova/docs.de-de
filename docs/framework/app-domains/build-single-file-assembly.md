@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework'
+title: 'Gewusst wie: Erstellen einer .NET Framework Einzeldateiassembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,16 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98f06e62e1070f78faa77ef7d83fd80a62984684
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991246"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119952"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Gewusst wie: Erstellen einer .NET Framework Einzeldateiassembly
 
 Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../standard/assembly/manifest.md). Sie können Befehlszeilencompiler oder Visual Studio verwenden, um eine Einzeldateiassembly für das .NET Framework zu erstellen. Standardmäßig erstellt der Compiler eine Assemblydatei mit einer *EXE*-Erweiterung.
 
@@ -90,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)
-- [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](build-multifile-assembly.md)
+- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](build-multifile-assembly.md)
 - [Programmieren mit Assemblys](../../standard/assembly/program.md)

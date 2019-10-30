@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123270"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate-Methode
-Überprüft die angegebene Datei (portable Executable) oder Microsoft intermediate Language (MSIL)-Datei.  
+Überprüft die angegebene PE-Datei (portable ausführbare Datei) oder die MSIL-Datei (Microsoft Intermediate Language).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,34 +42,34 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parameter  
  `veh`  
- [in] Ein Zeiger auf ein `IVEHandler` -Instanz, die Validierungsfehler behandelt.  
+ in Ein Zeiger auf eine `IVEHandler`-Instanz, die Validierungs Fehler behandelt.  
   
  `pAppDomain`  
- [in] Ein Zeiger auf die Anwendungsdomäne, in der die Datei geladen wird.  
+ in Ein Zeiger auf die Anwendungsdomäne, in der die Datei geladen wird.  
   
  `ulFlags`  
- [in] Eine bitweise Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der angibt, Überprüfungen, die ausgeführt werden soll.  
+ in Eine bitweise Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) -Werten, die die auszuführenden Validierungen angeben.  
   
  `ulMaxError`  
- [in] Die maximale Anzahl von Fehlern, die vor dem Beenden der Überprüfungsprozess zulassen.  
+ in Die maximal zulässige Anzahl von Fehlern, bevor die Überprüfung beendet wird.  
   
  `token`  
- [in] Nicht verwendet.  
+ in Nicht verwendet.  
   
  `fileName`  
- [in] Eine Zeichenfolge, die mit dem Namen der Datei, die überprüft werden soll.  
+ in Eine Zeichenfolge, die den Namen der zu validierenden Datei angibt.  
   
  `pe`  
- [in] Ein Zeiger auf den Speicherpuffer, die in dem die Datei gespeichert ist.  
+ in Ein Zeiger auf den Speicherpuffer, in dem die Datei gespeichert ist.  
   
  `ulSize`  
- [in] Die Größe in Bytes der Datei, die überprüft werden.  
+ in Die Größe (in Bytes) der zu validierenden Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** IValidator.idl, IValidator.h  
+ **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

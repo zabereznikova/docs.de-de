@@ -14,30 +14,28 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4424509c16dd1d9f83db117ae7343fa03995297e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985508"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126909"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback-Schnittstelle
-Stellt Methoden für Rückrufe innerhalb einer Apartment. Ein *Apartment* ist ein logischer Container innerhalb eines Prozesses für Objekte, die die gleichen Thread zugriffsanforderungen gemeinsam nutzen.  
+Stellt Methoden bereit, um Rückrufe in einem Apartment zu erstellen. Ein *Apartment* ist ein logischer Container innerhalb eines Prozesses für-Objekte, die die gleichen Thread Zugriffs Anforderungen haben.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[DoCallback-Methode](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Führt die angegebene Funktion innerhalb eines Apartments an.|  
+|[DoCallback-Methode](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Führt die angegebene Funktion in einem Apartment aus.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

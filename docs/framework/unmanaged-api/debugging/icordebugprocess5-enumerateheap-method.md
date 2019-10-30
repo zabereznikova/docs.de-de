@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d080145ac63882e04412b44c34d040a75746243
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8cfc9cdf6580a002f6ac15080012a9e8c63be20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767527"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129651"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap-Methode
-Ruft einen Enumerator für die Objekte ab, auf dem verwalteten Heap.  
+Ruft einen Enumerator für die Objekte im verwalteten Heap ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +35,15 @@ HRESULT EnumerateHeap(
   
 ## <a name="parameters"></a>Parameter  
  `ppObject`  
- [out] Ein Zeiger auf die Adresse des ein [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) Schnittstellenobjekt, das einen Enumerator für die Objekte, die auf dem verwalteten Heap gespeichert sind.  
+ vorgenommen Ein Zeiger auf die Adresse eines [icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Schnittstellen Objekts, bei dem es sich um einen Enumerator für die Objekte handelt, die sich auf dem verwalteten Heap befinden.  
   
 ## <a name="remarks"></a>Hinweise  
- Vor dem Aufruf der `ICorDebugProcess5::EnumerateHeap` -Methode, die Sie aufrufen sollten die [icordebugprocess5:: Getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) Methode, und untersuchen Sie den Wert des der `areGCStructuresValid` Feld des zurückgegebenen [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) Objekt, um sicherzustellen, dass die Garbage Collection-Heap im aktuellen Zustand aufzählbar ist. Darüber hinaus die `ICorDebugProcess5::EnumerateHeap` gibt `E_FAIL` Wenn Sie zu früh während der Lebensdauer des Prozesses, bevor Speicher anfügen, für der verwaltete Heap zugeordnet ist.  
+ Bevor Sie die `ICorDebugProcess5::EnumerateHeap`-Methode aufrufen, sollten Sie die [ICorDebugProcess5:: getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) -Methode aufrufen und den Wert des `areGCStructuresValid` Felds des zurückgegebenen [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) -Objekts überprüfen, um sicherzustellen, dass der Garbage Collection Heap in seinem der aktuelle Zustand ist "Enumerable". Außerdem gibt die `ICorDebugProcess5::EnumerateHeap` `E_FAIL` zurück, wenn Sie zu früh an der Lebensdauer des Prozesses anfügen, bevor der Arbeitsspeicher für den verwalteten Heap zugeordnet wird.  
   
- Die [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Schnittstellenobjekt wird einen Standardenumerator, die von der ICorDebugEnum-Schnittstelle, die Sie zum Aufzählen kann abgeleitet [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Objekte. Diese Methode füllt den [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Auflistungsobjekts mit [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Instanzen, die Informationen zu allen Objekten bereitstellen. Die Auflistung kann auch enthalten [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen, die Informationen über Objekte bereitzustellen, die nicht von einem Stamm verfügen Objekt aber noch nicht vom Garbage Collector erfasst wurden.  
+ Das [icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Schnittstellen Objekt ist ein Standard-Enumerator, der von der ICorDebugEnum-Schnittstelle abgeleitet wird und die das Auflisten von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Objekten ermöglicht. Diese Methode füllt das [icordebugheapenum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Auflistungs Objekt mit [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen auf, die Informationen zu allen Objekten bereitstellen. Die Auflistung kann auch [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) -Instanzen enthalten, die Informationen zu Objekten bereitstellen, die nicht von einem Objekt stammen, aber noch nicht von der Garbage Collector erfasst wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

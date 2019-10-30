@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111365"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary-Methode
 
@@ -64,22 +62,22 @@ Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zur�
 
 ## <a name="remarks"></a>Hinweise
 
-`ProvideLibrary`ermöglicht es dem Debugger, Module bereitzustellen, die zum Debuggen bestimmter CLR-Dateien wie mscordbi. dll und mscordacwert. dll erforderlich sind. Die Modul Handles müssen gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) -Methode anzeigt, dass Sie freigegeben werden können. an diesem Punkt ist es die Aufgabe des Aufrufers, die Handles freizugeben.
+mit `ProvideLibrary` kann der Debugger Module bereitstellen, die zum Debuggen bestimmter CLR-Dateien wie mscordbi. dll und mscordacwert. dll erforderlich sind. Die Modul Handles müssen gültig bleiben, bis ein Aufruf der [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) -Methode anzeigt, dass Sie freigegeben werden können. an diesem Punkt ist es die Aufgabe des Aufrufers, die Handles freizugeben.
 
 Der Debugger kann beliebige verfügbare Mittel verwenden, um das Debug-Modul zu suchen oder zu beschaffen.
 
 > [!IMPORTANT]
-> Diese Funktion ermöglicht es dem API-Aufrufer, Module bereitzustellen, die ausführbare und möglicherweise bösartigen Code enthalten. Als Sicherheitsmaßnahme sollte der Aufrufer nicht verwenden `ProvideLibrary` , um Code zu verteilen, der nicht für die Selbstausführung bereit ist.
+> Diese Funktion ermöglicht es dem API-Aufrufer, Module bereitzustellen, die ausführbare und möglicherweise bösartigen Code enthalten. Als Sicherheitsmaßnahme sollte der Aufrufer nicht `ProvideLibrary` verwenden, um Code zu verteilen, der nicht für die Selbstausführung bereit ist.
 >
 > Wenn in einer bereits veröffentlichten Bibliothek, wie z. b. mscordbi. dll oder mscordacwks. dll, ein schwerwiegendes Sicherheitsproblem entdeckt wird, kann das Shim gepatcht werden, um die ungültigen Versionen der Dateien zu erkennen. Der Shim kann dann Anforderungen für die gepatchten Versionen der Dateien ausgeben und die ungültigen Versionen ablehnen, wenn Sie als Antwort auf eine Anforderung bereitgestellt werden. Dies kann nur auftreten, wenn der Benutzer auf eine neue Version des Shims gepatcht hat. Nicht gepatchte Versionen bleiben anfällig.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Cordebug. idl, Cordebug. h
+**Header:** CorDebug.idl, CorDebug.h
 
-**Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 

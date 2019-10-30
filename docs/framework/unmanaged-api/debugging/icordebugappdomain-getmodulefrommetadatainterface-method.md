@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737902"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110346"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface-Methode
-Ruft das Modul, das die angegebenen Metadaten-Schnittstelle entspricht.  
+Ruft das Modul ab, das der angegebenen Metadatenschnittstelle entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +36,13 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Parameter  
  `pIMetaData`  
- [in] Ein Zeiger auf ein Objekt, der die [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ in Ein Zeiger auf ein Objekt, bei dem es sich um eine der [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)handelt.  
   
  `ppModule`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugModule-Objekts, das das Modul entspricht, den angegebenen Metadaten-Schnittstelle darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebug Module-Objekts, das das Modul darstellt, das der angegebenen Metadatenschnittstelle entspricht.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

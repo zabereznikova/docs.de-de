@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119082"
 ---
-# <a name="clear-element-for-configsections"></a>\<Löschen Sie > Element \<für configabschnitts >
+# <a name="clear-element-for-configsections"></a>\<> Element für \<configabschnitts löschen >
 
 Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Löschen >**
+&nbsp;&nbsp;[ **\<configabschnitts >** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<löschen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ Löscht alle zuvor definierten Abschnitte und Abschnitts Gruppen.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-None
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 
-Mit dem  **\<Clear >** -Element werden alle Abschnitte und Abschnitts Gruppen aus der Anwendung entfernt, die zuvor in der aktuellen Konfigurationsdatei oder auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Das **\<Clear >** -Element entfernt alle Abschnitte und Abschnitts Gruppen aus der Anwendung, die zuvor in der aktuellen Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationsdatei Hierarchie definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel werden eine Computer Konfigurationsdatei und eine Anwendungs Konfigurationsdatei definiert, und es wird gezeigt, wie das  **\<Clear >** -Element in einer Anwendungs Konfigurationsdatei verwendet wird, um die zuvor in der Computerkonfiguration definierten Abschnitte Datei.
+In diesem Beispiel werden eine Computer Konfigurationsdatei und eine Anwendungs Konfigurationsdatei definiert. Außerdem wird gezeigt, wie das **\<Clear >** -Element in einer Anwendungs Konfigurationsdatei verwendet wird, um die zuvor in der Computer Konfigurationsdatei definierten Abschnitte zu löschen
 
-Der folgende Computer Konfigurationsdatei-Code deklariert zwei  **\<Abschnitte: Sample section >** und  **\<anotherSampleSection >** , die vor der Anwendungs Konfigurationsdatei gelesen werden:
+Der folgende Computer Konfigurationsdatei-Code deklariert zwei Abschnitte, **\<sampleSection >** und **\<anotherSampleSection->** , die vor der Anwendungs Konfigurationsdatei gelesen werden:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ Der folgende Computer Konfigurationsdatei-Code deklariert zwei  **\<Abschnitte: 
 </configuration>
 ```
 
-Der folgende Anwendungs Konfigurationsdatei-Code löscht alle zuvor deklarierten Abschnitte. Die Anwendung kann in keinem der Abschnitte, die in der Computer Konfigurationsdatei deklariert wurden, Einstellungen verwenden oder abrufen. Es können jedoch Einstellungen aus  **\<der anotherSection->** verwendet werden, da es hinter das  **\<Clear >** -Element liegt.
+Der folgende Anwendungs Konfigurationsdatei-Code löscht alle zuvor deklarierten Abschnitte. Die Anwendung kann in keinem der Abschnitte, die in der Computer Konfigurationsdatei deklariert wurden, Einstellungen verwenden oder abrufen. Es können jedoch Einstellungen aus **\<anotherSection->** verwendet werden, da es nach dem **\<Clear >** -Element liegt.
 
 ```xml
 <!-- Application configuration file -->

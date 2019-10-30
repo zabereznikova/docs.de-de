@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916233"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141464"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS-Enumeration
 Enthält Werte, die das Startverhalten der Common Language Runtime (CLR) angeben. Standardmäßig erfolgt die Garbage Collection nicht gleichzeitig, und nur die Basisklassenbibliothek wird in den domänenneutralen Bereich geladen.  
@@ -57,7 +55,7 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis**:  Die gleichzeitige Garbage Collection wird nicht in Anwendungen unterstützt, die den WOW64 x86-Emulator auf 64-Bit-Systemen mit einer Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet) ausführen. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis:**  Das parallele Garbage Collection wird in Anwendungen, die den WOW64 x86-Emulator auf 64-Bit-Systemen ausführen, die die Intel Itanium-Architektur (ehemals IA-64) implementieren, nicht unterstützt. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Gibt an, dass eine Ladeprogrammoptimierung stattfinden soll.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Gibt an, dass keine Assemblys als domänenneutral geladen werden.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Gibt an, dass alle Assemblys als domänenneutral geladen werden.|  
@@ -72,14 +70,14 @@ typedef enum {
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Gibt an, dass verwaltete Identitätswechsel und durch Plattformaufruf erreichte Identitätswechsel über asynchrone Punkte übergeben werden. Standardmäßig werden nur verwaltete Identitätswechsel über asynchrone Punkte übergeben.|  
 |`STARTUP_TRIM_GC_COMMIT`|Gibt an, dass von der Garbage Collection weniger belegter Speicher verwendet wird, wenn der verfügbare Systemarbeitsspeicher zu gering ist. Siehe `gcTrimCommitOnLowMemory` in [Optimierung für](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)frei gegebenes Webhosting.|  
 |`STARTUP_ETW`|Gibt an, dass die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert ist. Ab Windows Vista ist die Ereignis Ablauf Verfolgung immer aktiviert, sodass dieses Flag keine Auswirkung hat. Siehe [Steuern der .NET Framework Protokollierung](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Weitere Informationen <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> finden Sie unter der-Eigenschaft und der [ \<appdomainresourcemonitoring-> Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Weitere Informationen finden Sie in der <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>-Eigenschaft und [\<appdomainresourcemonitoring >-Elements](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

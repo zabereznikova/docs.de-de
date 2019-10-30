@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 639b34093e79933b4daaa0e3ae5223f1a1a51bf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5924a3914c7fe04413b4a6744bce263b56165d78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140218"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>ICorDebugValueBreakpoint::GetValue-Methode
-Ruft einen Schnittstellenzeiger auf ein "ICorDebugValue"-Objekt, das den Wert des Objekts darstellt, auf denen der Haltepunkt gesetzt ist.  
+Ruft einen Schnittstellen Zeiger auf ein icordebuvalue-Objekt ab, das den Wert des Objekts darstellt, für das der Breakpoint festgelegt ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parameter  
  `ppValue`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugValue` Objekt.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugValue` Objekts.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

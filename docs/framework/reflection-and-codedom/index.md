@@ -5,14 +5,12 @@ helpviewer_keywords:
 - .NET Framework, dynamic programming
 - dynamic programming [.NET Framework]
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d34c52294ab662f757de9efb52ba18cc96423af6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 687f077cb609a2185fcb044c33bce5c636522381
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130099"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Dynamische Programmierung in .NET Framework
 In diesem Abschnitt der Dokumentation sind Informationen zur dynamischen Programmierung im .NET Framework enthalten.  

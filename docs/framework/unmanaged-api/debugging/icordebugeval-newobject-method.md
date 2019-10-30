@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 362c01e0b08145919793cec011a856f0090e5c47
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137623"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject-Methode
-Reserviert eine neue Objektinstanz, und der angegebene Konstruktor-Methode aufgerufen.  
+Ordnet eine neue Objektinstanz zu und ruft die angegebene Konstruktormethode auf.  
   
- Diese Methode ist in .NET Framework, Version 2.0, veraltet. Verwendung [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) stattdessen.  
+ Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,22 +39,22 @@ HRESULT NewObject (
   
 ## <a name="parameters"></a>Parameter  
  `pConstructor`  
- [in] Der Konstruktor aufgerufen werden soll.  
+ in Der aufzurufende Konstruktor.  
   
  `nArgs`  
  [in] Die Größe des `ppArgs`-Arrays.  
   
  `ppArgs`  
- [in] Ein Array von ICorDebugValue-Objekten, von denen jeder ein Argument an den Konstruktor zu übergebenden darstellt.  
+ in Ein Array von ICorDebugValue-Objekten, von denen jedes ein Argument darstellt, das an den Konstruktor übergeben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** 1.1, 1.0  
+ **.NET Framework Versionen:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Siehe auch
 

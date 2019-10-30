@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139363"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory-Methode
-Liest einen angegebenen Bereich des Arbeitsspeichers für diesen Prozess.  
+Liest einen angegebenen Speicherbereich für diesen Prozess.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +37,26 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- [in] Ein `CORDB_ADDRESS` Wert, der angibt, die Basisadresse des Arbeitsspeichers, die gelesen werden.  
+ in Ein `CORDB_ADDRESS` Wert, der die Basisadresse des zu lesenden Speichers angibt.  
   
  `size`  
- [in] Die Anzahl der Bytes, die aus dem Arbeitsspeicher gelesen werden.  
+ in Die Anzahl der Bytes, die aus dem Arbeitsspeicher gelesen werden sollen.  
   
  `buffer`  
- [out] Ein Puffer, der den Inhalt des Arbeitsspeichers empfängt.  
+ vorgenommen Ein Puffer, der den Inhalt des Arbeitsspeichers empfängt.  
   
  `read`  
- [out] Ein Zeiger auf die Anzahl der Bytes, die in den angegebenen Puffer übertragen werden.  
+ vorgenommen Ein Zeiger auf die Anzahl von Bytes, die in den angegebenen Puffer übertragen werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReadMemory` Methode dient in erster Linie von interop-Debuggen verwendet werden, um Speicherbereiche zu überprüfen, die durch den nicht verwalteten Teil der zu debuggenden Komponente verwendet werden. Diese Methode kann auch verwendet werden, zum Lesen von Microsoft intermediate Language (MSIL)-Code und das native JIT-kompiliertem Code.  
+ Die `ReadMemory`-Methode ist hauptsächlich für das Interop-Debuggen vorgesehen, um Speicherbereiche zu überprüfen, die vom nicht verwalteten Teil der zu debuggenden Komponente verwendet werden. Diese Methode kann auch zum Lesen von MSIL-Code (Microsoft Intermediate Language) und nativem JIT-kompiliertem Code verwendet werden.  
   
- Alle verwalteten Haltepunkte aus den Daten, die in zurückgegeben werden, entfernt werden die `buffer` Parameter. Werden keine Anpassungen vorgenommen werden, für native Haltepunkte, indem festlegen [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Alle verwalteten Breakpoints werden aus den Daten entfernt, die im `buffer`-Parameter zurückgegeben werden. Für Native Breakpoints, die von [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)festgelegt werden, werden keine Anpassungen vorgenommen.  
   
- Kein Zwischenspeichern der Prozessspeicher wird ausgeführt.  
+ Es wird kein Zwischenspeichern des Prozess Arbeitsspeichers ausgeführt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

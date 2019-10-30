@@ -18,14 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925317"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136933"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess-Funktion
 Beendet den aktuellen nicht verwalteten Prozess.  
@@ -47,14 +45,14 @@ void STDMETHODCALLTYPE CorExitProcess (
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
-> Beginnend mit dem .NET Framework 4 wird `CorExitProcess` jede gestartete Laufzeit im Prozess beendet, nicht nur die Laufzeit, an die die Legacy-APIs gebunden wurden.  
+> Beginnend mit dem .NET Framework 4 beendet `CorExitProcess` jede gestartete Laufzeit im Prozess, nicht nur die Laufzeit, an die die Legacy-APIs gebunden wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Fern** MSCorEE.dll  
+ **Bibliothek:** Mscoree. dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

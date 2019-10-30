@@ -14,14 +14,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 656b82daffc62824ed663ea7080bd6d20cd0dadc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045816"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130033"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Angeben vollqualifizierter Typnamen
 
@@ -128,7 +126,7 @@ Verwenden Sie den umgekehrten Schrägstrich (\\) als Escapezeichen, um die folge
 |\\*|Zeigertyp|
 |\\[|Arraydimensionstrennzeichen|
 |\\]|Arraydimensionstrennzeichen|
-|\\.|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|
+|\\|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|
 |\\\| Bei Bedarf kann der umgekehrte Schrägstrich als Zeichenfolgenliteral verwendet werden.|
 
 Beachten Sie, dass in allen TypeSpec-Komponenten außer AssemblyNameSpec Leerzeichen relevant sind. In AssemblyNameSpec sind Leerzeichen vor dem Trennzeichen „,“ (Komma) relevant, aber dahinter werden sie nicht beachtet.

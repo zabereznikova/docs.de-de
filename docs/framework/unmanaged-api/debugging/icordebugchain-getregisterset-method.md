@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745279"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123830"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet-Methode
-Ruft ab, das Register, die für den aktiven Teil des dieser Kette festgelegt.  
+Ruft den Register Satz für den aktiven Teil dieser Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parameter  
  `ppRegisters`  
- [out] Ein Zeiger auf die Adresse einer [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) -Objekt, das Register darstellt, die für den aktiven Teil des dieser Kette festgelegt.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) -Objekts, das den Register Satz für den aktiven Teil dieser Kette darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

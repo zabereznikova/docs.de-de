@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 739f0efdb50f8eba4875a42d5173f741b6ee94b3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051892"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123734"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blitfähige und nicht blitfähige Typen
 Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltetem und unverwaltetem Speicher und erfordern keine besondere Behandlung durch den Interop-Marshaller. Diese Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist, wenn sie zwischen verwaltetem und nicht verwaltetem Code übergeben werden.  
@@ -75,4 +73,4 @@ Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltete
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)

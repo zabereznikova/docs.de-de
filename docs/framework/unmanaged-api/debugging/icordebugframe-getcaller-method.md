@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a637cebb9e1aef20c600353eb14fe900ad7513c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754169"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114799"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller-Methode
-Ruft einen Zeiger auf das ICorDebugFrame-Objekt, in der aktuellen Kette, die diesem Frame aufgerufen.  
+Ruft einen Zeiger auf das ICorDebug Frame-Objekt in der aktuellen Kette ab, das diesen Frame aufgerufen hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +35,10 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parameter  
  `ppFrame`  
- [out] Ein Zeiger auf die Adresse einer `ICorDebugFrame` -Objekt, das den Aufrufframe darstellt. Dieser Wert ist null, wenn der aufgerufene Frame in der aktuellen Kette der äußerste Frame ist.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugFrame` Objekts, das den aufrufenden Frame darstellt. Dieser Wert ist NULL, wenn der aufgerufene Frame der äußerste Frame in der aktuellen Kette ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748784"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125396"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks-Methode
-Ruft einen Wert, der angibt, ob die verwalteten Rückrufe derzeit für den angegebenen Thread in der Warteschlange befinden.  
+Ruft einen Wert ab, der angibt, ob verwaltete Rückrufe zurzeit für den angegebenen Thread in die Warteschlange eingereiht werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +36,20 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>Parameter  
  `pThread`  
- [in] Ein Zeiger auf ein "ICorDebugThread"-Objekt, das den Thread darstellt.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt.  
   
  `pbQueued`  
- [out] Ein Zeiger auf einen Wert `true` , wenn die verwalteten Rückrufe aktuell, in der Warteschlange für den angegebenen Thread ist, andernfalls sind `false`.  
+ vorgenommen Ein Zeiger auf einen Wert, der `true` wird, wenn verwaltete Rückrufe aktuell für den angegebenen Thread in die Warteschlange eingereiht werden. Andernfalls `false`.  
   
- Wenn Null, für angegeben wird die `pThread` Parameter `HasQueuedCallbacks` zurück `true` Wenn sind verwaltete Rückrufe in der Warteschlange für einen beliebigen Thread.  
+ Wenn NULL für den `pThread`-Parameter angegeben wird, gibt `HasQueuedCallbacks` `true` zurück, wenn derzeit verwaltete Rückrufe für einen beliebigen Thread in die Warteschlange eingereiht werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Rückrufe werden verteilten einzeln nacheinander, jedes Mal [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird. Der Debugger kann dieses Flag überprüfen, wenn sie mehrere Debug-Ereignisse melden, die gleichzeitig auftreten will.  
+ Rückrufe werden einzeln verteilt, jedes Mal, wenn " [icordbugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) " aufgerufen wird. Der Debugger kann dieses Flag überprüfen, wenn mehrere Debugereignisse, die gleichzeitig auftreten, gemeldet werden sollen.  
   
- Wenn Debugereignisse in der Warteschlange befinden, haben sie bereits erfolgt, damit der Debugger die gesamte Warteschlange aus, um sicherzustellen, dass des Zustands der zu debuggenden Komponente ausgleichen muss. (Rufen `ICorDebugController::Continue` an die Warteschlange zu leeren.) Wenn die Warteschlange zwei Debugereignisse Thread enthält z. B. *X*, und der Debugger hält die Threads *X* nach dem die erste Debug-Ereignis und ruft dann `ICorDebugController::Continue`, das zweite Debugereignis für Thread *X* wird weitergeleitet werden, auch wenn der Thread angehalten wurde.  
+ Wenn Debugereignisse in die Warteschlange eingereiht werden, sind Sie bereits aufgetreten, sodass der Debugger die gesamte Warteschlange entfernen muss, um sicherzustellen, dass der Zustand der zu debuggenden Komponente sicher ist. (Wenden Sie `ICorDebugController::Continue` an, um die Warteschlange zu leeren.) Wenn die Warteschlange z. b. zwei Debuggingereignisse für Thread *x*enthält und der Debugger Thread *x* nach dem ersten Debugereignis anhält und dann `ICorDebugController::Continue`aufruft, wird das zweite Debugereignis für Thread *x* gesendet, obwohl der der Thread wurde angehalten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -1,17 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::GetSize-Methode
+title: 'Icordebugvariablesymbol:: gezlotindex-Methode'
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58bb2cc63f2336ca9cfbed8ebeac0d607c18b2c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a7a7ecf7d3e3d0d2125b03d3604c44138a2be0cc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968158"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120971"
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSize-Methode
+# <a name="icordebugvariablesymbolgetslotindex-method"></a>Icordebugvariablesymbol:: gezlotindex-Methode
 Ruft den verwalteten Slotindex einer lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,11 +34,11 @@ HRESULT GetSlotIndex(
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cordebug. idl, Cordebug. h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

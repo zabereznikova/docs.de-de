@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Mehrfachdateiassembly'
+title: 'Gewusst wie: Erstellen einer Mehrfachdateiassembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,16 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b95d686529da83a5a52edb80219874530212dcc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991261"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119941"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Vorgehensweise: Erstellen einer Mehrfachdateiassembly
+# <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
 
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
 
@@ -229,6 +227,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
-- [Vorgehensweise: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)
+- [Vorgehensweise: Anzeigen des assemblyinhalts](../../standard/assembly/view-contents.md)
 - [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)

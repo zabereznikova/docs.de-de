@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ae09b4f1cd069edf81be583c7c4226717736094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764274"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134598"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next-Methode
-Ruft die angegebene Anzahl von Instanzen von "ICorDebugValue" aus der Enumeration ab, an der aktuellen Position ab.  
+Ruft die angegebene Anzahl von "ICorDebug Value"-Instanzen aus der-Enumeration ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +38,16 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der `ICorDebugValue` Instanzen abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugValue` Instanzen, die abgerufen werden sollen.  
   
  `values`  
- [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugValue` Objekt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugValue` Objekt zeigt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugValue` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
+ vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugValue` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

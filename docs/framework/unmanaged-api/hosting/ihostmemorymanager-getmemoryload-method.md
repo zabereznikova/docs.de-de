@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 917ebe3c2001a9bc87978685d7f9a19eb3d98220
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2210dcd9e8a8af92b7905ec680c53c1119e6a3cf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767196"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136705"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad-Methode
-Ruft die Menge des physischen Arbeitsspeichers, die derzeit verwendet wird und daher nicht verfügbar ist, durch den Host gemeldet wird.  
+Ruft die Menge des physischen Speichers ab, der zurzeit verwendet wird und daher nicht verfügbar ist, wie vom Host gemeldet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,33 +36,33 @@ HRESULT GetMemoryLoad (
   
 ## <a name="parameters"></a>Parameter  
  `pMemoryLoad`  
- [out] Ein Zeiger auf den ungefähren Prozentsatz des beanspruchten physikalischen Speichers, der zurzeit verwendet wird.  
+ vorgenommen Ein Zeiger auf den ungefähren Prozentsatz des gesamten physischen Speichers, der zurzeit verwendet wird.  
   
  `pAvailableBytes`  
- [out] Ein Zeiger auf die Anzahl der Bytes, die die common Language Runtime (CLR) zur Verfügung.  
+ vorgenommen Ein Zeiger auf die Anzahl der Bytes, die für die Common Language Runtime (CLR) verfügbar sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`GetMemoryLoad` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `GetMemoryLoad` Dient als Wrapper für Win32 `GlobalMemoryStatus` Funktion. Der Wert des `pMemoryLoad` entspricht der `dwMemoryLoad` im Feld der `MEMORYSTATUS` aus zurückgegebene Struktur `GlobalMemoryStatus`.  
+ `GetMemoryLoad` umschließt die Win32-`GlobalMemoryStatus`-Funktion. Der Wert von `pMemoryLoad` entspricht dem Feld `dwMemoryLoad` in der `MEMORYSTATUS` Struktur, die von `GlobalMemoryStatus`zurückgegeben wurde.  
   
- Die Laufzeit verwendet den zurückgegebenen Wert als eine Heuristik, für den Garbage Collector. Z. B. wenn der Host meldet, dass der Großteil des Arbeitsspeichers verwendet wird, kann der Garbage Collector festlegen, ob Erfassen von mehrere Generationen, die die Menge an Arbeitsspeicher zu erhöhen, die möglicherweise verfügbar gemacht werden kann.  
+ Die Laufzeit verwendet den Rückgabewert als heuristisch für die Garbage Collector. Wenn der Host z. b. meldet, dass der größte Teil des Arbeitsspeichers verwendet wird, kann der Garbage Collector die Erfassung aus mehreren Generierungen wählen, um die Menge an Arbeitsspeicher zu erhöhen, die potenziell verfügbar werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

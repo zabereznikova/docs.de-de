@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a93d700c9c398076d87156cd2eb9c6d0d08cccfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124485"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly-Methode
-Ruft einen Verweis auf eine Assembly, die nicht verwiesen wird die [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) von zurückgegebene [IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Ruft die common Language Runtime (CLR) `ProvideAssembly` für jede Assembly, die nicht in der Liste angezeigt wird.  
+Ruft einen Verweis auf eine Assembly ab, auf die von [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , die von [IHostAssemblyManager:: getnonhoststoreassemblys](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)zurückgegeben wird, nicht verwiesen wird. Der Common Language Runtime (CLR) ruft `ProvideAssembly` für jede Assembly auf, die nicht in der Liste angezeigt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,42 +39,42 @@ HRESULT ProvideAssembly (
   
 ## <a name="parameters"></a>Parameter  
  `pBindInfo`  
- [in] Ein Zeiger auf ein [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) -Instanz, die vom Host verwendet, um bestimmte Bindungsmerkmale, einschließlich das Vorhandensein oder fehlen, versionsverwaltung, Richtlinien zu ermitteln und die Assembly zum Binden an.  
+ in Ein Zeiger auf eine [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) -Instanz, die der Host verwendet, um bestimmte Bindungseigenschaften zu bestimmen, einschließlich der Anwesenheit oder Abwesenheit jeglicher Versions Richtlinien und der Assembly, an die die Bindung erfolgen soll.  
   
  `pAssemblyId`  
- [out] Ein Zeiger auf einen eindeutigen Bezeichner für die angeforderte Assembly für diese `IStream`.  
+ vorgenommen Ein Zeiger auf einen eindeutigen Bezeichner für die angeforderte Assembly für dieses `IStream`.  
   
  `pHostContext`  
- [out] Ein Zeiger auf hostspezifische Daten an, die verwendet wird, um zu bestimmen, die Beweise für die angeforderte Assembly ohne die Notwendigkeit einer Plattform Plattformaufrufs. `pHostContext` entspricht der <xref:System.Reflection.Assembly.HostContext%2A> Eigenschaft der verwalteten <xref:System.Reflection.Assembly> Klasse.  
+ vorgenommen Ein Zeiger auf Host spezifische Daten, die verwendet werden, um den Beweis der angeforderten Assembly zu bestimmen, ohne dass ein Platt Form Aufruf erforderlich ist. `pHostContext` entspricht der <xref:System.Reflection.Assembly.HostContext%2A>-Eigenschaft der verwalteten <xref:System.Reflection.Assembly>-Klasse.  
   
  `ppStmAssemblyImage`  
- [out] Ein Zeiger auf die Adresse einer `IStream` , enthält das PE (portable Executable)-Image geladen werden, oder null, wenn die Assembly nicht gefunden werden konnte.  
+ vorgenommen Ein Zeiger auf die Adresse einer `IStream`, die das zu ladende portable ausführbare Image (PE) enthält, oder NULL, wenn die Assembly nicht gefunden werden konnte.  
   
  `ppStmPDB`  
- [out] Ein Zeiger auf die Adresse einer `IStream` , enthält die Programm-Debuginformationen (PDB) oder Null, wenn die PDB-Datei nicht gefunden werden kann.  
+ vorgenommen Ein Zeiger auf die Adresse einer `IStream`, die die Programm Debuginformationen (PDB) enthält, oder NULL, wenn die PDB-Datei nicht gefunden wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`ProvideAssembly` erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |COR_E_FILENOTFOUND (0x80070002)|Die angeforderte Assembly konnte nicht gefunden werden.|  
-|E_NOT_SUFFICIENT_BUFFER|Durch die angegebene Puffergröße `pAssemblyId` ist nicht groß genug für den Bezeichner, der der Host zurückgeben möchte.|  
+|E_NOT_SUFFICIENT_BUFFER|Die durch `pAssemblyId` angegebene Puffergröße ist nicht groß genug zum Speichern des Bezeichners, den der Host zurückgeben möchte.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Identitätswert zurückgegeben wird, für die `pAssemblyId` vom Host angegeben ist. Bezeichner müssen innerhalb der Lebensdauer eines Prozesses eindeutig sein. Die CLR verwendet diesen Wert als eindeutiger Bezeichner für den Stream. Er überprüft jeden Wert mit den Werten für `pAssemblyId` zurückgegeben, die von anderen Aufrufen von `ProvideAssembly`. Wenn der Host die gleiche zurückgibt `pAssemblyId` Wert für eine andere `IStream`, die CLR wird überprüft, ob der Inhalt des Streams bereits zugeordnet wurde. Wenn dies der Fall ist, lädt die Runtime die vorhandene Kopie des Bildes statt ein neues zuzuordnen.  
+ Der für `pAssemblyId` zurückgegebene Identitäts Wert wird vom Host angegeben. Bezeichner müssen innerhalb der Lebensdauer eines Prozesses eindeutig sein. Die CLR verwendet diesen Wert als eindeutigen Bezeichner für den Datenstrom. Jeder Wert wird anhand der Werte für `pAssemblyId` überprüft, die von anderen Aufrufen von `ProvideAssembly`zurückgegeben werden. Wenn der Host denselben `pAssemblyId` Wert für einen anderen `IStream`zurückgibt, überprüft die CLR, ob der Inhalt dieses Streams bereits zugeordnet wurde. Wenn dies der Fall ist, lädt die Laufzeit die vorhandene Kopie des Bilds, anstatt eine neue zu ordnen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

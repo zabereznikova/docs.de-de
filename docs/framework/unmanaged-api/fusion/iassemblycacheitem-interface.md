@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2493b5338824e1eab3f82a9023bbcced59a98fc8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134468"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem-Schnittstelle
 Stellt eine einzelne Assembly im globalen Assemblycache dar.  
@@ -35,7 +33,7 @@ Stellt eine einzelne Assembly im globalen Assemblycache dar.
 |[CreateStream-Methode](iassemblycacheitem-createstream-method.md)|Erstellt einen Stream mit dem angegebenen Namen und Format.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   

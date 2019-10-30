@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5944edd1-0914-4efa-aba0-d5a277c38b1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 57de11c1c40c05befcf3c99c31c2e07e1ecaec5a
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 21f90e06b3b02ebc6c97610b6edc35697601f0ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273971"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132285"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject-Struktur
 Definiert ein Objekt, das einen Thread blockiert, und den spezifischen Grund, aus dem der Thread blockiert wird.  
@@ -48,11 +46,11 @@ CorDebugBlockingReason blockingReason;
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl  
+ **Header:** Cordebug. idl  
   
- **Fern** CorGuids.lib  
+ **Bibliothek:** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

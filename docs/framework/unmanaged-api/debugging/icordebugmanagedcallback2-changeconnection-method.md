@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f8a8f84d3dfd8f1e64197078d7e20d2aebef2323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130601"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection-Methode
-Benachrichtigt den Debugger an, dass der Satz von Aufgaben im Zusammenhang mit der angegebenen Verbindung geändert wurde.  
+Benachrichtigt den Debugger, dass sich der Satz der Tasks, die der angegebenen Verbindung zugeordnet sind, geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +36,22 @@ HRESULT ChangeConnection (
   
 ## <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein "ICorDebugProcess"-Objekt, das den Prozess mit der die geänderte Verbindung darstellt.  
+ in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der die geänderte Verbindung enthält.  
   
  `dwConnectionId`  
- [in] Die ID der Verbindung, die geändert werden soll.  
+ in Die ID der Verbindung, die geändert wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `ChangeConnection` Rückruf wird in den folgenden Fällen ausgelöst werden:  
+ Ein `ChangeConnection` Rückruf wird in einem der folgenden Fälle ausgelöst:  
   
-- Wenn Fügt einen Debugger an einen Prozess aus, der Verbindungen enthält ein. In diesem Fall die Laufzeit generiert und ein [ICorDebugManagedCallback2:: CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) Ereignis und einem `ChangeConnection` Ereignis für jede Verbindung im Prozess. Ein `ChangeConnection` Ereignis wird generiert, für jede vorhandene Verbindung, unabhängig davon, ob die Verbindung der Satz von Aufgaben seit ihrer Erstellung geändert wurde.  
+- Wenn ein Debugger an einen Prozess angefügt wird, der Verbindungen enthält. In diesem Fall generiert und verteilt die Common Language Runtime ein [ICorDebugManagedCallback2:: forateconnetction](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) -Ereignis und ein `ChangeConnection`-Ereignis für jede Verbindung im Prozess. Ein `ChangeConnection` Ereignis wird für jede vorhandene Verbindung generiert, unabhängig davon, ob der Satz von Tasks der Verbindung seit seiner Erstellung geändert wurde.  
   
-- Wenn ein Host ruft [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in die [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Wenn ein Host [ICLRDebugManager:: SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) in der [Hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md)aufruft.  
   
- Der Debugger sollten alle Threads im Prozess übernimmt diese die neuen Änderungen überprüfen.  
+ Der Debugger sollte alle Threads im Prozess Scannen, um die neuen Änderungen zu überprüfen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

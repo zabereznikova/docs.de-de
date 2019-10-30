@@ -7,14 +7,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489235"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126395"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Typäquivalenz und eingebettete Interop-Typen
 
@@ -57,4 +55,4 @@ Wenn ein Typ nicht über das <xref:System.Runtime.InteropServices.TypeIdentifier
 
 - <xref:System.Type.IsEquivalentTo%2A>
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
+- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
